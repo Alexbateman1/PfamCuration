@@ -1,0 +1,79 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	2	Heunggongvirae
+1	1	Duplodnaviria
+1	0	Viruses
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A172JI92	UNCHARACTERIZED PROTEIN {    126.9    8.2e-34   1   1.0   3.8
+	Iterate                   	     1	    47	   126.8
+
+A0A2G4F5P9	UNCHARACTERIZED PROTEIN {     26.1      0.024   3   7.8   0.8
+	Iterate                   	   156	   176	     4.0
+	Iterate                   	   197	   221	     3.2
+	Iterate                   	   320	   339	     3.1
+	PF00400	WD40            	    83	   120	    30.9
+	PF00400	WD40            	   123	   161	    42.9
+	PF00400	WD40            	   164	   202	    37.8
+	PF23381	Beta-prop_IFT122_1st	   189	   448	   222.2
+	PF00400	WD40            	   205	   243	    45.9
+	PF00400	WD40            	   246	   284	    47.2
+	PF00400	WD40            	   287	   325	    44.8
+	PF12894	ANAPC4_WD40     	   303	   388	    24.2
+	PF00400	WD40            	   328	   366	    43.5
+	PF00400	WD40            	   369	   407	      33
+	PF00400	WD40            	   410	   448	    39.6
+	PF00400	WD40            	   451	   489	    41.2
+	PF00400	WD40            	   492	   530	    44.5
+	PF00400	WD40            	   533	   571	      44
+	PF00400	WD40            	   574	   612	    44.7
+	PF00400	WD40            	   636	   667	    29.1
+
+A0AAE9LUX4	UNCHARACTERIZED PROTEIN {     27.4     0.0094   1   1.2   0.3
+	Iterate                   	     1	    49	    27.3
+
+K9EXL1	LPXTG-DOMAIN-CONTAINING PROTE     30.4     0.0011   3   3.3   0.3
+	Iterate                   	   146	   177	    13.8
+	Iterate                   	   243	   274	     9.5
+	Iterate                   	   340	   367	     3.2
+	PF17573	GA-like         	    41	    90	    41.1
+	PF01378	IgG_binding_B   	   129	   198	    74.9
+	PF01378	IgG_binding_B   	   226	   295	    76.1
+	PF01378	IgG_binding_B   	   323	   390	   116.5
+
+M3CBA0	UNCHARACTERIZED PROTEIN {ECO:     25.4      0.039   2   7.1   0.8
+	Iterate                   	   138	   171	     3.4
+	Iterate                   	   168	   198	     3.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LED0/Iterate
+GA   27.00 27.00;
+TC   31.00 103.50;
+NC   24.50 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

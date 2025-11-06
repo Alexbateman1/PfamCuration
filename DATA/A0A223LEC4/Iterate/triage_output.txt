@@ -1,0 +1,71 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Bacillus phage PBS1.
+2	5	Takahashivirus
+2	4	Caudoviricetes
+2	3	Uroviricota
+2	2	Heunggongvirae
+2	1	Duplodnaviria
+2	0	Viruses
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A172JI81	VIRION PROTEIN {ECO:00080     72.6    1.8e-16   1   1.0   8.5
+	Iterate                   	     1	   167	    72.3
+
+A0A172JI82	VIRION PROTEIN {ECO:00080    375.6   1.2e-109   1   1.0   9.9
+	Iterate                   	     1	   164	   375.4
+
+A0A2U1KG59	PROTEIN KINASE-LIKE DOMAI     22.6       0.43   2   2.6   1.6
+	Iterate                   	   538	   646	    11.7
+	Iterate                   	   225	   301	     9.4
+	PF08263	LRRNT_2         	    26	    65	      17
+	PF13855	LRR_8           	   116	   176	    33.4
+	PF00560	LRR_1           	   141	   163	    12.7
+	PF08263	LRRNT_2         	   338	   377	      17
+	PF13855	LRR_8           	   428	   488	    38.7
+	PF00560	LRR_1           	   453	   475	    15.1
+	PF07714	PK_Tyr_Ser-Thr  	   673	   914	    93.4
+	PF00069	Pkinase         	   673	   914	    91.1
+
+A0A6J8CY87	UNCHARACTERIZED PROTEIN {     30.3     0.0019   4   4.5  10.5
+	Iterate                   	   127	   202	    13.0
+	Iterate                   	    84	   133	     8.6
+	Iterate                   	    40	    89	     7.4
+	Iterate                   	     2	    48	     6.2
+
+A0AAE0VRI4	UNCHARACTERIZED PROTEIN {     29.0     0.0044   6   7.1   2.4
+	Iterate                   	   257	   306	     6.0
+	Iterate                   	    95	   137	     5.2
+	Iterate                   	   186	   259	     4.3
+	Iterate                   	   231	   275	     1.9
+	Iterate                   	   290	   331	     1.7
+	Iterate                   	     3	    44	     1.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LEC4/Iterate
+GA   27.00 27.00;
+TC   293.00 292.90;
+NC   25.10 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

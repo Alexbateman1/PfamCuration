@@ -1,0 +1,65 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Bacillus phage PBS1.
+2	5	Takahashivirus
+2	4	Caudoviricetes
+2	3	Uroviricota
+2	2	Heunggongvirae
+2	1	Duplodnaviria
+2	0	Viruses
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A172JI67	UNCHARACTERIZED PROTEIN {    263.8      8e-76   1   1.0   9.9
+	Iterate                   	     1	   119	   263.6
+
+A0A172JI75	UNCHARACTERIZED PROTEIN {     90.0    5.7e-22   1   1.0   6.2
+	Iterate                   	     1	   116	    89.8
+
+A0A9D4IUZ9	UNCHARACTERIZED PROTEIN {     40.2    1.6e-06   7   9.8  18.0
+	Iterate                   	   171	   221	     7.1
+	Iterate                   	    49	    99	     6.6
+	Iterate                   	   256	   302	     6.2
+	Iterate                   	     8	    54	     6.0
+	Iterate                   	   105	   138	     6.0
+	Iterate                   	   220	   270	     3.8
+	Iterate                   	   147	   193	     3.6
+
+A7TAT5	UNCHARACTERIZED PROTEIN {ECO:     26.9      0.021   4   4.2   1.9
+	Iterate                   	    38	    98	     9.0
+	Iterate                   	    24	    83	     8.9
+	Iterate                   	     1	    56	     7.4
+	Iterate                   	    98	   143	     6.0
+
+G8NS60	GP5 DOMAIN PROTEIN {ECO:00003     25.1      0.077   3   6.3   8.7
+	Iterate                   	   459	   525	     8.9
+	Iterate                   	   270	   325	     6.3
+	Iterate                   	   161	   212	     5.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LED1/Iterate
+GA   27.00 27.00;
+TC   30.90 209.30;
+NC   26.70 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

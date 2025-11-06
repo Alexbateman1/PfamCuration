@@ -1,0 +1,108 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	2	Heunggongvirae
+1	1	Duplodnaviria
+1	0	Viruses
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A141HRS1	UNCHARACTERIZED PROTEIN {     69.6    1.3e-15   1   2.0   5.0
+	Iterate                   	     2	   234	    65.3
+
+A0A172JIJ7	UNCHARACTERIZED PROTEIN {    486.2   4.2e-143   1   1.0  14.2
+	Iterate                   	    11	   224	   486.0
+
+A0A433T1K7	EGF-LIKE DOMAIN-CONTAININ     22.5       0.32   4   4.1   0.0
+	Iterate                   	   219	   277	     8.1
+	Iterate                   	   303	   367	     4.1
+	Iterate                   	   522	   578	     2.3
+	Iterate                   	   388	   447	     1.9
+	PF07645	EGF_CA          	   163	   204	    29.4
+	PF00008	EGF             	   170	   199	    26.6
+	PF12661	hEGF            	   175	   196	    14.7
+	PF07645	EGF_CA          	   206	   246	    35.1
+	PF12946	EGF_MSP1_1      	   209	   247	    32.8
+	PF12661	hEGF            	   218	   239	    17.7
+	PF07645	EGF_CA          	   248	   288	    36.8
+	PF06247	Plasmod_Pvs28   	   251	   289	    28.5
+	PF12946	EGF_MSP1_1      	   251	   289	    31.7
+	PF12661	hEGF            	   260	   281	    19.5
+	PF07645	EGF_CA          	   290	   330	    31.2
+	PF12946	EGF_MSP1_1      	   293	   331	    32.4
+	PF12661	hEGF            	   302	   323	    16.5
+	PF07645	EGF_CA          	   332	   372	    35.8
+	PF12946	EGF_MSP1_1      	   335	   373	    29.5
+	PF12661	hEGF            	   344	   365	    21.1
+	PF07645	EGF_CA          	   374	   414	    34.2
+	PF12946	EGF_MSP1_1      	   377	   415	    29.4
+	PF12661	hEGF            	   386	   407	    16.8
+	PF07645	EGF_CA          	   416	   456	    40.8
+	PF12661	hEGF            	   428	   449	    22.5
+	PF07645	EGF_CA          	   459	   501	    34.9
+	PF06247	Plasmod_Pvs28   	   462	   502	    28.7
+	PF12946	EGF_MSP1_1      	   469	   502	    34.1
+	PF07645	EGF_CA          	   508	   548	      36
+	PF06247	Plasmod_Pvs28   	   511	   549	    31.6
+	PF12946	EGF_MSP1_1      	   511	   549	    32.7
+	PF12661	hEGF            	   520	   541	    22.5
+	PF07645	EGF_CA          	   550	   590	    36.2
+	PF06247	Plasmod_Pvs28   	   553	   591	    27.3
+	PF12946	EGF_MSP1_1      	   553	   591	    31.1
+	PF12661	hEGF            	   562	   583	    22.6
+
+A0A6J8CJQ8	UNCHARACTERIZED PROTEIN {     23.9       0.12   5   4.8   2.6
+	Iterate                   	   169	   209	     6.1
+	Iterate                   	    59	    98	     4.2
+	Iterate                   	     8	    64	     3.9
+	Iterate                   	   103	   146	     3.4
+	Iterate                   	   132	   171	     2.3
+
+A0A9J5ZFS8	AUXIN-INDUCED SAUR {ECO:0     46.3    1.7e-08   7   8.6   0.1
+	Iterate                   	   980	  1099	    10.9
+	Iterate                   	   116	   250	     7.5
+	Iterate                   	   291	   356	     3.0
+	Iterate                   	   398	   495	     2.9
+	Iterate                   	    41	   109	     2.4
+	Iterate                   	   706	   772	     2.2
+	Iterate                   	   795	   940	     1.9
+	PF02519	Auxin_inducible 	     1	    94	    63.9
+	PF02519	Auxin_inducible 	   136	   238	   106.8
+	PF02519	Auxin_inducible 	   257	   344	    75.6
+	PF02519	Auxin_inducible 	   381	   483	   105.2
+	PF02519	Auxin_inducible 	   528	   624	   104.5
+	PF02519	Auxin_inducible 	   658	   761	    94.1
+	PF02519	Auxin_inducible 	   826	   928	   113.7
+	PF02519	Auxin_inducible 	  1000	  1086	    97.8
+	PF02519	Auxin_inducible 	  1147	  1249	   103.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LEQ6/Iterate
+GA   27.00 27.00;
+TC   362.40 361.90;
+NC   26.70 23.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

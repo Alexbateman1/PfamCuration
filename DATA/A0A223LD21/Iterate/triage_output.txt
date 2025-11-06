@@ -1,0 +1,64 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	2	Heunggongvirae
+1	1	Duplodnaviria
+1	0	Viruses
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A141HSA2	UNCHARACTERIZED PROTEIN {    142.0    1.1e-37   1   1.9  17.5
+	Iterate                   	     1	   242	   138.3
+
+A0A172JI58	UNCHARACTERIZED PROTEIN {    601.8   5.3e-178   1   1.0  17.4
+	Iterate                   	     1	   257	   601.7
+
+A0A9D4DSR9	UNCHARACTERIZED PROTEIN {     33.8    0.00011   5   6.4   6.5
+	Iterate                   	   316	   367	     8.8
+	Iterate                   	   229	   310	     6.5
+	Iterate                   	   173	   215	     5.5
+	Iterate                   	   126	   167	     4.4
+	Iterate                   	   216	   262	     4.4
+
+A0A9D4F9R2	REVERSE TRANSCRIPTASE DOM     42.5    2.6e-07   4   7.5   6.7
+	Iterate                   	   345	   398	    14.0
+	Iterate                   	   132	   191	     8.4
+	Iterate                   	     3	    43	     4.7
+	Iterate                   	   102	   145	     3.1
+
+A0A9D4QTJ2	UNCHARACTERIZED PROTEIN {     36.2    2.1e-05   4   5.9   5.4
+	Iterate                   	   131	   184	     9.8
+	Iterate                   	   223	   283	     6.6
+	Iterate                   	   178	   224	     6.0
+	Iterate                   	     5	    51	     5.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LD21/Iterate
+GA   27.00 27.00;
+TC   27.00 440.20;
+NC   26.60 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

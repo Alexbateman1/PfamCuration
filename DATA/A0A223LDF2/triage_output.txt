@@ -1,0 +1,58 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Clostridium
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	5	Clostridiaceae
+1	4	Eubacteriales
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	3	Clostridia
+1	2	Heunggongvirae
+1	2	Bacillota
+1	1	Duplodnaviria
+1	1	Bacillati
+1	0	Viruses
+1	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A141HS20	UNCHARACTERIZED PROTEIN {    121.1    1.3e-31   1   1.0   0.4
+	A0A223LDF2                	     1	   112	   120.9
+
+A0A172JHW8	VIRION PROTEIN {ECO:00080    262.1    2.3e-75   1   1.0   2.7
+	A0A223LDF2                	     1	   113	   261.9
+
+A0A1S9CQM0	UNCHARACTERIZED PROTEIN {     35.0    6.9e-05   1   1.3   1.0
+	A0A223LDF2                	    22	   126	    34.5
+
+W6N5T4	PHAGE PROTEIN {ECO:0008006|GO     33.2    0.00025   1   2.0   0.1
+	A0A223LDF2                	    21	   113	    31.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LDF2
+GA   27.00 27.00;
+TC   27.00 31.20;
+NC   26.40 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

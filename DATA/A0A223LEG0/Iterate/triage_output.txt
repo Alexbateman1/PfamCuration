@@ -1,0 +1,81 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	2	Heunggongvirae
+1	1	Duplodnaviria
+1	0	Viruses
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A141HSE8	UNCHARACTERIZED PROTEIN {     62.4    2.3e-13   1   1.2   1.2
+	Iterate                   	     1	    84	    62.1
+
+A0A172JIA7	UNCHARACTERIZED PROTEIN {    256.8    1.2e-73   1   1.0   5.5
+	Iterate                   	     1	   117	   256.7
+
+A0A1G6QYH9	HISTIDINE KINASE {ECO:000     23.9       0.19   2   6.0   0.0
+	Iterate                   	   749	   814	     9.3
+	Iterate                   	   993	  1078	     3.6
+	PF12860	PAS_7           	    36	   150	    93.4
+	PF12860	PAS_7           	   163	   277	    66.6
+	PF12860	PAS_7           	   290	   404	    77.4
+	PF12860	PAS_7           	   417	   533	    65.1
+	PF12860	PAS_7           	   546	   660	    76.6
+	PF12860	PAS_7           	   673	   787	    54.6
+	PF12860	PAS_7           	   800	   914	    70.3
+	PF12860	PAS_7           	   927	  1036	      79
+	PF12860	PAS_7           	  1049	  1161	    67.1
+	PF13188	PAS_8           	  1168	  1236	    15.1
+	PF12860	PAS_7           	  1174	  1288	      58
+	PF00512	HisKA           	  1303	  1368	    61.7
+	PF02518	HATPase_c       	  1414	  1527	    89.2
+
+A0A248SJ11	UNCHARACTERIZED PROTEIN {     34.4    0.00011  11  17.0  88.8
+	Iterate                   	  1628	  1709	    14.2
+	Iterate                   	  1082	  1178	    12.4
+	Iterate                   	   533	   638	    10.9
+	Iterate                   	  1496	  1591	     8.5
+	Iterate                   	   169	   240	     7.8
+	Iterate                   	  1378	  1459	     6.7
+	Iterate                   	  1588	  1646	     6.5
+	Iterate                   	  1353	  1408	     5.3
+	Iterate                   	   421	   491	     4.1
+	Iterate                   	   642	   704	     4.1
+	Iterate                   	  1172	  1271	     2.9
+
+A0A6H0QV22	PUTATIVE TAIL FIBER PROTE     28.3     0.0088   3   3.2   0.0
+	Iterate                   	   146	   201	    13.5
+	Iterate                   	   102	   164	    10.7
+	Iterate                   	   182	   229	     6.4
+	PF10983	DUF2793         	    26	   105	    62.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LEG0/Iterate
+GA   27.00 27.00;
+TC   27.10 143.50;
+NC   24.70 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

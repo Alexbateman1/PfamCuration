@@ -1,0 +1,79 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	Eldridgevirus eldridge.
+1	7	Sophritavirus sophrita.
+1	7	Eldridgevirus
+1	6	Sophritavirus
+1	6	Bastillevirinae
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	5	Joanripponvirinae
+1	5	Herelleviridae
+3	4	Caudoviricetes
+3	3	Uroviricota
+3	2	Heunggongvirae
+3	1	Duplodnaviria
+3	0	Viruses
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0Y0AJF4	UNCHARACTERIZED PROTEIN {    209.0    1.6e-58   1   1.0   0.9
+	Iterate                   	     1	   147	   208.9
+
+A0A141HRQ1	UNCHARACTERIZED PROTEIN {    250.1    3.4e-71   1   1.0  12.3
+	Iterate                   	     1	   159	   250.0
+
+A0A172JHQ8	UNCHARACTERIZED PROTEIN {    262.3    6.3e-75   1   1.0  12.8
+	Iterate                   	     1	   159	   262.1
+
+A0A498NQW0	GTPASE IMAP FAMILY MEMBER     57.7    5.8e-12   7   7.9  13.4
+	Iterate                   	   677	   730	     9.5
+	Iterate                   	   564	   636	     8.8
+	Iterate                   	   943	  1015	     8.4
+	Iterate                   	   114	   181	     8.3
+	Iterate                   	   393	   464	     8.1
+	Iterate                   	  1016	  1072	     8.1
+	Iterate                   	  1553	  1621	     7.4
+	PF04548	AIG1            	    12	   124	    37.9
+	PF01926	MMR_HSR1        	    13	   129	      24
+	PF04548	AIG1            	   181	   388	   110.7
+	PF01926	MMR_HSR1        	   182	   300	    22.9
+	PF04548	AIG1            	   464	   576	    38.3
+	PF04548	AIG1            	   730	   937	   111.4
+	PF01926	MMR_HSR1        	   731	   850	    26.7
+	PF04548	AIG1            	  1072	  1188	    40.8
+	PF01926	MMR_HSR1        	  1073	  1196	    24.9
+	PF04548	AIG1            	  1222	  1429	   111.6
+	PF01926	MMR_HSR1        	  1223	  1343	    27.7
+	PF04548	AIG1            	  1450	  1562	    36.7
+
+A0AAE8YV97	UNCHARACTERIZED PROTEIN {     53.2    1.3e-10   1   1.0   4.0
+	Iterate                   	     5	   150	    53.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LCA5/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.40 95.90;
+NC   26.10 24.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

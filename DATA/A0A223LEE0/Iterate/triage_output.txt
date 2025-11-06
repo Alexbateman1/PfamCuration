@@ -1,0 +1,71 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Bacillusamyloliquefaciens group.
+1	6	Peribacillus
+1	6	Oikeobacillus
+1	6	Bacillus phage PBS1.
+1	6	Bacillus.
+1	6	Bacillus
+4	5	Bacillaceae
+1	5	Takahashivirus
+4	4	Bacillales
+1	4	Caudoviricetes
+4	3	Bacilli
+1	3	Uroviricota
+4	2	Bacillota
+1	2	Heunggongvirae
+4	1	Bacillati
+1	1	Duplodnaviria
+4	0	Bacteria
+1	0	Viruses
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0F5HV58	YTZI PROTEIN {ECO:0008006     39.1    2.6e-06   1   1.0   0.6
+	Iterate                   	     1	    49	    39.0
+
+A0A172JI83	PUTATIVE SECRETED/MEMBRAN    135.3    2.4e-36   1   1.0   1.3
+	Iterate                   	     1	    50	   135.2
+
+A0A927CUM4	UNCHARACTERIZED PROTEIN {     35.4    3.8e-05   1   1.1   0.2
+	Iterate                   	     1	    49	    35.2
+
+A0A9P1JH55	UNCHARACTERIZED PROTEIN {     40.0    1.4e-06   1   1.1   0.5
+	Iterate                   	     1	    47	    40.0
+
+A0AAE0Z2N0	UNCHARACTERIZED PROTEIN {     68.3      2e-15   5  19.7  16.2
+	Iterate                   	   187	   212	     5.6
+	Iterate                   	   231	   250	     4.2
+	Iterate                   	   351	   380	     3.9
+	Iterate                   	   127	   153	     3.8
+	Iterate                   	   248	   273	     3.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0F5HV58.1	AF-A0A0F5HV58-F1-model_v4_TED01:18-45	1	AF-A0A0F5HV58-F1-model_v4_TED01	18-45	56.0%
+A0A269PM47.1	AF-A0A269PM47-F1-model_v4_TED01:9-203	1	AF-A0A269PM47-F1-model_v4_TED01	9-203	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LEE0/Iterate
+GA   27.00 27.00;
+TC   27.70 45.70;
+NC   26.50 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

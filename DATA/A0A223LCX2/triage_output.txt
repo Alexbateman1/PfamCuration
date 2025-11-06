@@ -1,0 +1,68 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	2	Heunggongvirae
+1	1	Duplodnaviria
+1	0	Viruses
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A172JI26	UNCHARACTERIZED PROTEIN {    143.9      7e-39   1   1.0   7.4
+	A0A223LCX2                	     1	    62	   143.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q2KC97 (E-value: 9.4e-07, Score: 34.4)
+Mentioned as: Q2KC97
+Description: Rhizobiocin/RTX toxin and hemolysin-type calcium binding protein
+Organism: Rhizobium etli (strain ATCC 51251 / DSM 11541 / JCM 21823 / NBRC 15573 / CFN 42)
+PMID: 29720870
+Source: EuropePMC
+Title: Exploring Proteins Containing Amyloidogenic Regions in the Proteomes of Bacteria of the Order <i>Rhizobiales</i>
+Journal: Evolutionary bioinformatics online (2018)
+Snippet: membrane Q98HJ2 Rhizobium etli (strain CFN 42/ATCC 51251) Rhizobiocin/RTX toxin and hemolysin-type calcium-binding protein, extracellular Q2KC97 Rhizobium meliloti (strain 1021) Uncharacterized protein, contains YadA domain, outer membrane Q92KQ7 Methylobacterium radiotolerans Adhesin Ata autotransporter, contains YadA_Head domain, outer membrane A0A154NLS6 Mesorhizobium ciceri biovar biserrulae (strain HAMBI 2942)
+
+================================================================================
+Protein: Q1ML69 (E-value: 8.7e-06, Score: 31.3)
+Mentioned as: Q1ML69
+Description: Calcium binding RTX Zn-metalloprotease
+Organism: Rhizobium johnstonii (strain DSM 114642 / LMG 32736 / 3841)
+PMID: 35875570
+Source: EuropePMC
+Title: RapD Is a Multimeric Calcium-Binding Protein That Interacts With the <i>Rhizobium leguminosarum</i> Biofilm Exopolysaccharide, Influencing the Polymer Lengths
+Journal: Frontiers in microbiology (2022)
+Snippet: three novel PrsDE dependent extracellular proteins were detected in Rlv 3841: a calcium-binding RTX Zn-metalloprotease (Q1ML69), the RapB protein (Q1MCD0), and the PlyC glycanase (Q1MEW3). These proteins were previously proposed in silico as putative TISS substrates ( Krehenbrink and Downie, 2008 ; Table 1 and Supplementary
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LCX2
+GA   27.00 27.00;
+TC   34.40 143.80;
+NC   25.10 22.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

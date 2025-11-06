@@ -1,0 +1,58 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	Okubovirus SPO1.
+1	7	Okubovirus
+1	6	Spounavirinae
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	5	Herelleviridae
+2	4	Caudoviricetes
+2	3	Uroviricota
+2	2	Heunggongvirae
+2	1	Duplodnaviria
+2	0	Viruses
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A172JIJ9	DUF4878 DOMAIN-CONTAINING    253.6    7.5e-73   1   1.0   2.9
+	Iterate                   	     1	   110	   253.4
+
+A0A7T7ZAV9	LYSIS PROTEIN {ECO:000031    142.1    3.1e-38   1   1.0   1.5
+	Iterate                   	     1	   111	   142.0
+
+A0AAE7S8C9	LYSIS PROTEIN {ECO:000031    134.0    1.1e-35   1   1.0   2.7
+	Iterate                   	     1	   111	   133.8
+
+A0AAE9GB46	UNCHARACTERIZED PROTEIN {     65.3    2.3e-14   1   1.0   0.0
+	Iterate                   	     1	   108	    65.2
+
+B6V300	GP34.46 {ECO:0000313|EMBL:ACI     63.9    6.2e-14   1   1.0   0.1
+	Iterate                   	     1	   108	    63.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LD81/Iterate
+GA   27.00 27.00;
+TC   27.80 175.70;
+NC   25.60 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

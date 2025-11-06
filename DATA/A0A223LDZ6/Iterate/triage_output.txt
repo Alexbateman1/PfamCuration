@@ -1,0 +1,89 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Bacillus phage PBS1.
+1	6	Filobacillus
+2	5	Takahashivirus
+1	5	Bacillaceae
+2	4	Caudoviricetes
+1	4	Bacillales
+2	3	Uroviricota
+1	3	Bacilli
+2	2	Heunggongvirae
+1	2	Bacillota
+2	1	Duplodnaviria
+1	1	Bacillati
+2	0	Viruses
+1	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A141HRR4	UNCHARACTERIZED PROTEIN {    692.6   2.1e-204   1   1.0  43.4
+	Iterate                   	     1	   596	   692.5
+
+A0A172JIH2	VIRION PROTEIN {ECO:00003   1430.6          0   1   1.0  51.1
+	Iterate                   	     1	   599	  1430.5
+
+A0A2V5K1H3	SLH DOMAIN-CONTAINING PRO    111.0    2.8e-28   8   8.7  49.0
+	Iterate                   	   682	   769	    20.8
+	Iterate                   	   598	   685	    18.9
+	Iterate                   	   764	   851	    18.7
+	Iterate                   	   514	   603	    18.3
+	Iterate                   	   933	  1017	    17.3
+	Iterate                   	   848	   937	    16.7
+	Iterate                   	  1013	  1105	    16.0
+	Iterate                   	  1096	  1179	    14.7
+	PF00395	SLH             	    65	   105	    37.1
+	PF00395	SLH             	   121	   164	      40
+	PF00395	SLH             	   185	   229	    47.9
+
+A0A4S4BEF3	DUF5011 DOMAIN-CONTAINING    112.1    1.3e-28   6   6.2   0.6
+	Iterate                   	   152	   252	    21.6
+	Iterate                   	   328	   414	    19.2
+	Iterate                   	   408	   496	    17.7
+	Iterate                   	   246	   339	    17.6
+	Iterate                   	    69	   182	    16.5
+	Iterate                   	     3	    90	    14.9
+	PF16403	Bact_surface_Ig-like	   490	   561	    48.8
+	PF16403	Bact_surface_Ig-like	   569	   641	    70.3
+	PF16403	Bact_surface_Ig-like	   649	   720	    68.3
+	PF12733	Cadherin-like   	   723	   822	    49.8
+	PF00395	SLH             	  1070	  1112	    32.5
+	PF00395	SLH             	  1129	  1172	    39.2
+	PF00395	SLH             	  1199	  1243	    38.5
+
+A0A4S4BL13	BACTERIAL IG-LIKE DOMAIN-     80.3    5.2e-19   5   5.1   0.3
+	Iterate                   	   587	   673	    17.5
+	Iterate                   	   409	   514	    17.2
+	Iterate                   	   493	   593	    16.0
+	Iterate                   	   340	   435	    14.4
+	Iterate                   	   663	   731	    11.6
+	PF16640	Big_3_5         	   175	   264	    54.4
+	PF09479	Flg_new         	   269	   332	    42.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LDZ6/Iterate
+GA   27.00 27.00;
+TC   28.20 27.40;
+NC   26.80 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,71 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	2	Heunggongvirae
+1	1	Duplodnaviria
+1	0	Viruses
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A141HRX1	UNCHARACTERIZED PROTEIN {     50.5    1.2e-09   1   1.0   2.7
+	Iterate                   	     1	    74	    50.3
+
+A0A172JI80	ZN FINGER PROTEIN {ECO:00    220.9    8.1e-63   1   1.0  12.1
+	Iterate                   	     1	    96	   220.8
+
+A0A210Q0G9	BILE SALT-ACTIVATED LIPAS     33.7    0.00021   9   7.7  20.8
+	Iterate                   	    75	   124	     7.9
+	Iterate                   	   135	   191	     7.7
+	Iterate                   	   250	   301	     7.5
+	Iterate                   	    31	    81	     6.9
+	Iterate                   	    87	   136	     6.7
+	Iterate                   	   108	   167	     5.6
+	Iterate                   	   175	   224	     5.5
+	Iterate                   	   206	   254	     5.1
+	Iterate                   	     5	    44	     3.3
+
+A0AA88HQJ8	GCF C-TERMINAL DOMAIN-CON     30.1     0.0028   6   6.3   0.3
+	Iterate                   	   326	   385	     3.4
+	Iterate                   	   409	   468	     3.4
+	Iterate                   	   492	   552	     3.4
+	Iterate                   	   912	   971	     3.4
+	Iterate                   	   995	  1054	     3.4
+	Iterate                   	  1078	  1138	     3.4
+	PF07842	GCFC            	    81	   230	   158.8
+	PF07842	GCFC            	   667	   816	   158.8
+	PF07842	GCFC            	  1254	  1372	   119.5
+
+Q980N0	TRANSCRIPTION ELONGATION FACT     25.1      0.098   1   1.3   0.1
+	Iterate                   	     7	    96	    24.7
+	PF05129	Zn_ribbon_Elf1  	     2	    75	    66.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LD48/Iterate
+GA   27.00 27.00;
+TC   137.70 137.60;
+NC   24.10 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

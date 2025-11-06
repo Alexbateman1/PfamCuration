@@ -1,0 +1,93 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Bacillus phage PBS1.
+3	5	Takahashivirus
+3	4	Caudoviricetes
+3	3	Uroviricota
+3	2	Heunggongvirae
+3	1	Duplodnaviria
+3	0	Viruses
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A141HRR2	UNCHARACTERIZED PROTEIN {    237.5    4.8e-67   1   1.0  16.8
+	Iterate                   	     1	   174	   237.4
+
+A0A172JII9	VIRION PROTEIN {ECO:00080    402.3   1.3e-117   1   1.0  10.0
+	Iterate                   	     1	   178	   402.2
+
+A0A3B1JSH2	UNCHARACTERIZED PROTEIN {     85.5    2.3e-20  10  11.9  73.3
+	Iterate                   	   884	  1013	    18.6
+	Iterate                   	   119	   254	    12.9
+	Iterate                   	   358	   476	    12.0
+	Iterate                   	   610	   728	    11.9
+	Iterate                   	   201	   335	    11.7
+	Iterate                   	   696	   812	    11.7
+	Iterate                   	   782	   896	    11.6
+	Iterate                   	   480	   584	    10.1
+	Iterate                   	   995	  1092	     9.9
+	Iterate                   	    19	   140	     9.6
+	PF05557	MAD             	     2	   435	    30.8
+	PF28019	HmpF            	    17	   455	      54
+	PF28256	CCDC171         	   218	   487	    33.9
+	PF27605	ODF2_C          	   897	  1076	    38.5
+
+A0A8S1X5G3	UNCHARACTERIZED PROTEIN {     34.0    0.00014   7   7.1  14.6
+	Iterate                   	   265	   361	     8.4
+	Iterate                   	   386	   460	     7.5
+	Iterate                   	   487	   561	     7.5
+	Iterate                   	   531	   602	     7.1
+	Iterate                   	   437	   504	     7.0
+	Iterate                   	   568	   693	     6.8
+	Iterate                   	   341	   403	     6.4
+
+A0AAD9JXU0	UNCHARACTERIZED PROTEIN {     34.2    0.00013   6   6.9  60.8
+	Iterate                   	    93	   217	    14.2
+	Iterate                   	     2	   129	    10.9
+	Iterate                   	   293	   432	     9.4
+	Iterate                   	   480	   615	     9.1
+	Iterate                   	   189	   333	     8.9
+	Iterate                   	   405	   520	     7.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: D2HC79 (E-value: 0.0004, Score: 25.4)
+Mentioned as: D2HC79
+Description: Apolipoprotein A-IV (Fragment)
+Organism: Ailuropoda melanoleuca
+PMID: 25919366
+Source: EuropePMC
+Title: Proteomic Analysis of Plasma from California Sea Lions (Zalophus californianus) Reveals Apolipoprotein E as a Candidate Biomarker of Chronic Domoic Acid Toxicosis
+Journal: PloS one (2014)
+Snippet: 0.846 G1LGY8 Immunoglobulin J chain 2583 -2.00 0.015 0.763 Q7M2U7 ApoE 3465 -1.96 0.009 0.783 D2HC79 ApoA-IV 3536 -1.96 0.013 0.767 G1LGY8 Unknown 3501 -1.89 0.004 0.813 E2QYB2 Unknown 3535 -1.80 0.028 0.738 D2HC79 ApoA-IV 3252 -1.38 0.017 0.758 D2HC77 ApoA-1 2452 -1.36 0.015 0.763 G1KZV4
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LEQ3/Iterate
+GA   27.00 27.00;
+TC   28.20 30.20;
+NC   26.30 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,67 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	2	Heunggongvirae
+1	1	Duplodnaviria
+1	0	Viruses
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A141HRW3	UNCHARACTERIZED PROTEIN {     61.6    3.4e-13   1   1.0   0.3
+	Iterate                   	     1	    79	    61.5
+
+A0A172JHT3	VIRION PROTEIN {ECO:00080    201.9      6e-57   1   1.0   8.7
+	Iterate                   	     1	    87	   201.8
+
+A0AAD4MJN1	UNCHARACTERIZED PROTEIN {     34.5     0.0001  11  11.1  76.2
+	Iterate                   	    14	    88	    12.2
+	Iterate                   	    86	   152	     7.7
+	Iterate                   	   296	   375	     6.8
+	Iterate                   	   474	   550	     6.7
+	Iterate                   	    57	   136	     6.6
+	Iterate                   	   153	   224	     6.3
+	Iterate                   	   267	   343	     6.3
+	Iterate                   	   121	   204	     5.8
+	Iterate                   	   375	   454	     5.4
+	Iterate                   	   410	   504	     5.2
+	Iterate                   	   330	   426	     4.2
+
+A0AAE0Z7U2	UNCHARACTERIZED PROTEIN {     29.8     0.0031   1   9.0   0.0
+	Iterate                   	   433	   485	     3.7
+
+A0AAE1AQ63	UNCHARACTERIZED PROTEIN {     32.1    0.00056   4  11.9   9.3
+	Iterate                   	    84	   130	     4.1
+	Iterate                   	   522	   570	     3.9
+	Iterate                   	    47	    89	     3.8
+	Iterate                   	   487	   525	     2.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LCC0/Iterate
+GA   27.00 27.00;
+TC   28.20 160.80;
+NC   23.80 19.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

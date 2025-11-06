@@ -1,0 +1,97 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Bacillus phage PBS1.
+2	5	Takahashivirus
+2	4	Caudoviricetes
+2	3	Uroviricota
+2	2	Heunggongvirae
+2	1	Duplodnaviria
+2	0	Viruses
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A141HSG3	VIRION STRUCTURAL PROTEIN    671.8   1.4e-198   1   1.0  32.3
+	Iterate                   	     1	   368	   671.6
+
+A0A172JIB9	VIRION PROTEIN {ECO:00003    688.4   1.2e-203   1   1.0  26.3
+	Iterate                   	     1	   372	   688.3
+
+A0A172JIC4	VIRION PROTEIN {ECO:00080     30.8    0.00072   1   1.4   2.3
+	Iterate                   	     3	   192	    30.1
+
+A0A6A6DG76	ANKYRIN {ECO:0008006|GOOG     23.4       0.13   6   4.4  23.9
+	Iterate                   	   183	   256	    11.9
+	Iterate                   	    24	    98	    11.7
+	Iterate                   	   121	   190	    11.5
+	Iterate                   	   215	   285	     8.9
+	Iterate                   	     5	    64	     7.9
+	Iterate                   	    60	   129	     6.2
+	PF23397	DUF7104         	     3	    32	    55.2
+	PF23397	DUF7104         	    35	    65	    60.5
+	PF23397	DUF7104         	    67	    97	    63.1
+	PF23397	DUF7104         	    99	   128	    49.1
+	PF23397	DUF7104         	   130	   160	      51
+	PF23397	DUF7104         	   162	   192	    66.4
+	PF23397	DUF7104         	   194	   224	    67.3
+	PF23397	DUF7104         	   226	   256	    64.4
+	PF23397	DUF7104         	   258	   281	    35.3
+
+Q2U1P0	HETEROKARYON INCOMPATIBILITY      23.1       0.15  12   8.7  37.7
+	Iterate                   	   529	   603	     8.0
+	Iterate                   	   794	   860	     7.5
+	Iterate                   	   570	   637	     6.9
+	Iterate                   	   378	   448	     6.6
+	Iterate                   	   631	   699	     6.3
+	Iterate                   	   424	   483	     6.2
+	Iterate                   	   731	   795	     5.8
+	Iterate                   	   832	   895	     4.9
+	Iterate                   	   448	   516	     4.5
+	Iterate                   	   690	   764	     4.4
+	Iterate                   	   762	   828	     3.9
+	Iterate                   	   854	   910	     3.6
+	PF06985	HET             	    47	   207	   124.7
+	PF23397	DUF7104         	   360	   387	    30.3
+	PF23397	DUF7104         	   390	   419	    36.6
+	PF23397	DUF7104         	   422	   451	    41.4
+	PF23397	DUF7104         	   454	   483	    38.9
+	PF23397	DUF7104         	   486	   515	    40.5
+	PF23397	DUF7104         	   545	   573	    33.5
+	PF23397	DUF7104         	   576	   605	    40.9
+	PF23397	DUF7104         	   608	   637	    38.4
+	PF23397	DUF7104         	   640	   669	    38.9
+	PF23397	DUF7104         	   672	   699	    32.8
+	PF23397	DUF7104         	   704	   733	    36.9
+	PF23397	DUF7104         	   736	   765	    41.8
+	PF23397	DUF7104         	   768	   797	    41.8
+	PF23397	DUF7104         	   800	   829	    43.9
+	PF23397	DUF7104         	   832	   861	      42
+	PF23397	DUF7104         	   864	   893	    37.8
+	PF23397	DUF7104         	   896	   911	    17.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LC48/Iterate/Iterate
+GA   27.00 27.00;
+TC   240.10 64.00;
+NC   23.60 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

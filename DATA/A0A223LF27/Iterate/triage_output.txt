@@ -1,0 +1,63 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	2	Heunggongvirae
+1	1	Duplodnaviria
+1	0	Viruses
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A172JI08	UNCHARACTERIZED PROTEIN {    214.4    5.7e-61   1   1.0   0.6
+	Iterate                   	     1	    93	   214.3
+
+A0A2L1GQ38	TYPE IV SECRETION PROTEIN     23.1       0.29   2   2.3   0.0
+	Iterate                   	    72	   129	    13.9
+	Iterate                   	   133	   190	     6.8
+	PF25023	TEN_YD-shell    	     2	   100	      30
+	PF05593	RHS_repeat      	    51	    86	    29.8
+	PF05593	RHS_repeat      	    70	   110	    29.7
+	PF05593	RHS_repeat      	   181	   218	    23.8
+
+A0A9P1G0N4	UNCHARACTERIZED PROTEIN {     22.6        0.4   1   6.7   0.2
+	Iterate                   	   104	   139	     3.8
+
+H7C722	UNCHARACTERIZED PROTEIN {ECO:     29.9     0.0021   5   5.2   2.5
+	Iterate                   	    66	   124	     5.7
+	Iterate                   	   252	   310	     5.7
+	Iterate                   	   438	   515	     5.4
+	Iterate                   	   159	   216	     4.1
+	Iterate                   	   345	   402	     4.1
+
+I1TQV3	UNCHARACTERIZED PROTEIN {ECO:     28.3     0.0068   1   1.7   0.0
+	Iterate                   	     6	    97	    27.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LF27/Iterate
+GA   27.00 27.00;
+TC   28.00 172.50;
+NC   26.70 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

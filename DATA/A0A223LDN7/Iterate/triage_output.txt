@@ -1,0 +1,69 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thornevirus SP15.
+1	6	Bacillus phage PBS1.
+1	5	Thornevirus
+1	5	Takahashivirus
+2	4	Caudoviricetes
+2	3	Uroviricota
+2	2	Heunggongvirae
+2	1	Duplodnaviria
+2	0	Viruses
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A127AWK3	UNCHARACTERIZED PROTEIN {     57.8    7.4e-12   1   1.1   1.7
+	Iterate                   	     1	   136	    57.7
+
+A0A172JHY5	UNCHARACTERIZED PROTEIN {    304.3    5.7e-88   1   1.0  12.2
+	Iterate                   	     1	   135	   304.1
+
+A0A1D3CR03	REPETITIVE PROLINE-RICH C     26.5      0.034   3   2.4   2.0
+	Iterate                   	    56	   104	    14.0
+	Iterate                   	    10	    57	    11.3
+	Iterate                   	    35	    69	     8.4
+
+A0A4Z2BHD2	UNCHARACTERIZED PROTEIN {     30.0     0.0029   3  10.5   9.4
+	Iterate                   	   257	   329	     5.2
+	Iterate                   	    68	   156	     3.3
+	Iterate                   	   322	   383	     3.1
+
+R7UGM5	UNCHARACTERIZED PROTEIN {ECO:     29.1     0.0056   8   9.5  12.1
+	Iterate                   	    12	    71	     4.9
+	Iterate                   	   148	   189	     3.2
+	Iterate                   	   181	   227	     3.0
+	Iterate                   	   114	   144	     2.7
+	Iterate                   	   255	   289	     2.6
+	Iterate                   	   215	   246	     2.5
+	Iterate                   	   234	   264	     2.5
+	Iterate                   	   299	   345	     2.3
+	PF01559	Zein            	     2	   163	    29.2
+	PF01559	Zein            	   155	   348	    25.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LDN7/Iterate
+GA   27.00 27.00;
+TC   35.50 241.70;
+NC   26.90 25.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

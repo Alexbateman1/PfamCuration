@@ -1,0 +1,67 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Bacillus phage PBS1.
+2	5	Takahashivirus
+2	4	Caudoviricetes
+2	3	Uroviricota
+2	2	Heunggongvirae
+2	1	Duplodnaviria
+2	0	Viruses
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A172JHU9	ZN FINGER PROTEIN OF DNAJ     27.5      0.012   1   1.8   9.2
+	Iterate                   	     4	   139	    26.6
+
+A0A172JHV0	UNCHARACTERIZED PROTEIN {    334.0      4e-97   1   1.0  15.4
+	Iterate                   	     1	   148	   333.9
+
+A0A172JHV2	ZN FINGER PROTEIN OF DNAJ     31.7    0.00061   1   2.2  11.7
+	Iterate                   	     1	   130	    31.7
+
+A0A7M7LR36	PROTEIN G12 {ECO:0008006|     28.3     0.0069   4   6.2   5.0
+	Iterate                   	   475	   547	     5.8
+	Iterate                   	   671	   743	     5.8
+	Iterate                   	   867	   939	     5.8
+	Iterate                   	  1063	  1137	     5.7
+	PF06757	Ins_allergen_rp 	    36	   208	   193.4
+	PF06757	Ins_allergen_rp 	   230	   404	     194
+	PF06757	Ins_allergen_rp 	   426	   600	   192.2
+	PF06757	Ins_allergen_rp 	   622	   796	   192.2
+	PF06757	Ins_allergen_rp 	   818	   992	   192.2
+	PF06757	Ins_allergen_rp 	  1014	  1188	   187.8
+	PF06757	Ins_allergen_rp 	  1211	  1383	   159.6
+
+A0A9D4DCQ2	UNCHARACTERIZED PROTEIN {     28.8     0.0049   4   9.5  13.2
+	Iterate                   	   497	   553	     8.5
+	Iterate                   	   299	   354	     5.1
+	Iterate                   	   449	   503	     4.2
+	Iterate                   	    22	    90	     4.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LEV3/Iterate
+GA   27.00 27.00;
+TC   30.00 216.30;
+NC   26.50 23.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

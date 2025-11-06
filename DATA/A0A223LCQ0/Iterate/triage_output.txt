@@ -1,0 +1,80 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Bacillus phage PBS1.
+1	5	Takahashivirus
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	2	Heunggongvirae
+1	1	Duplodnaviria
+1	0	Viruses
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A141HS87	UNCHARACTERIZED PROTEIN {    166.1    2.3e-45   1   2.1   4.0
+	Iterate                   	     1	   151	   166.1
+
+A0A172JI28	VIRION PROTEIN {ECO:00003    340.0    6.3e-99   1   1.0   9.2
+	Iterate                   	     1	   152	   339.8
+
+A0A1Q9ESS4	UNCHARACTERIZED PROTEIN {     32.9    0.00025   7   6.9   0.0
+	Iterate                   	   119	   168	     3.1
+	Iterate                   	   191	   241	     3.1
+	Iterate                   	   264	   314	     3.1
+	Iterate                   	   337	   387	     3.1
+	Iterate                   	   410	   460	     3.1
+	Iterate                   	   483	   533	     3.1
+	Iterate                   	   556	   605	     3.1
+
+A0A2J7ZXM3	VACUOLAR PROTEIN SORTING-     24.0       0.14   2   2.4   4.6
+	Iterate                   	    14	    73	    14.4
+	Iterate                   	   241	   297	    10.6
+	PF04212	MIT             	     9	    73	      70
+	PF09336	Vps4_C          	   159	   223	      67
+	PF04212	MIT             	   234	   285	    36.6
+	PF07728	AAA_5           	   347	   469	    22.3
+	PF00004	AAA             	   348	   477	   143.3
+	PF09336	Vps4_C          	   551	   615	    64.2
+
+A0A811U2U5	(MEDITERRANEAN FRUIT FLY)     62.7    1.6e-13  14  14.7  19.4
+	Iterate                   	   499	   551	     4.4
+	Iterate                   	  1645	  1700	     4.4
+	Iterate                   	  4713	  4768	     4.4
+	Iterate                   	  1266	  1317	     4.2
+	Iterate                   	  2414	  2466	     4.2
+	Iterate                   	  2804	  2855	     4.2
+	Iterate                   	  3193	  3244	     4.2
+	Iterate                   	  5105	  5156	     4.2
+	Iterate                   	  5494	  5545	     4.2
+	Iterate                   	  6639	  6693	     4.2
+	Iterate                   	   888	   932	     3.6
+	Iterate                   	  3582	  3626	     3.6
+	Iterate                   	  5883	  5927	     3.6
+	Iterate                   	  2037	  2080	     3.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LCQ0/Iterate
+GA   27.00 27.00;
+TC   306.70 306.50;
+NC   26.80 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

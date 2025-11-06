@@ -1,0 +1,74 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Bacillus phage PBS1.
+2	5	Takahashivirus
+2	4	Caudoviricetes
+2	3	Uroviricota
+2	2	Heunggongvirae
+2	1	Duplodnaviria
+2	0	Viruses
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A127VCD4	DTDP-4-DEHYDRORHAMNOSE RE     26.0      0.046   1   1.6   0.0
+	Iterate                   	    19	    92	    24.7
+	PF04321	RmlD_sub_bind   	     1	   284	     321
+	PF01370	Epimerase       	     3	   209	      67
+	PF02719	Polysacc_synt_2 	     3	   164	    30.6
+	PF16363	GDP_Man_Dehyd   	    16	   216	    43.5
+
+A0A172JI67	UNCHARACTERIZED PROTEIN {     91.0    3.3e-22   1   1.0   5.6
+	Iterate                   	     1	   119	    90.8
+
+A0A172JI75	UNCHARACTERIZED PROTEIN {    254.1    8.2e-73   1   1.0  11.6
+	Iterate                   	     1	   116	   254.0
+
+A0A498MMC0	HETEROGENEOUS NUCLEAR RIB     25.5      0.067   5   5.6   7.2
+	Iterate                   	   839	   914	     5.5
+	Iterate                   	  2676	  2750	     5.1
+	Iterate                   	  3548	  3622	     4.9
+	Iterate                   	  4420	  4494	     4.9
+	Iterate                   	  1806	  1881	     3.5
+	PF02037	SAP             	     5	    41	    40.1
+	PF00622	SPRY            	   331	   453	    68.1
+	PF13671	AAA_33          	   490	   592	    56.9
+	PF13181	TPR_8           	   948	   972	    14.1
+	PF13553	FIIND           	  1475	  1603	   110.4
+	PF00619	CARD            	  1668	  1750	    32.5
+	PF13553	FIIND           	  2445	  2573	   108.7
+	PF13553	FIIND           	  3317	  3445	   109.1
+	PF13553	FIIND           	  4189	  4317	   109.1
+
+A0A834CQA8	GALECTIN-3-BINDING PROTEI     22.5       0.58   2   2.9   1.2
+	Iterate                   	   478	   545	    10.3
+	Iterate                   	   249	   317	     9.7
+	PF07707	BACK            	   153	   255	    47.9
+	PF07707	BACK            	   382	   484	    51.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A223LDN0/Iterate
+GA   27.00 27.00;
+TC   30.90 209.30;
+NC   26.70 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---
