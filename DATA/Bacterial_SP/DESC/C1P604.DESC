@@ -1,0 +1,27 @@
+ID   YobI
+DE   Stress response protein YobI
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:C1P604
+GA   27.00 27.00;
+TC   53.40 53.40;
+NC   24.90 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   19121005
+RT   Small membrane proteins found by comparative genomics and ribosome
+RT   binding site models.
+RA   Hemm MR, Paul BJ, Schneider TD, Storz G, Rudd KE;
+RL   Mol Microbiol 2008;70:1487-1501.
+RN   [2]
+RM   19734316
+RT   Small stress response proteins in Escherichia coli: proteins missed by
+RT   classical proteomic studies.
+RA   Hemm MR, Paul BJ, Miranda-Rios J, Zhang A, Soltanzad N, Storz G;
+RL   J Bacteriol 2010;192:46-58.
+CC   This entry represents the YobI family of small stress response
+CC   proteins of 21 amino acids found in Escherichia coli. The protein is
+CC   expressed during stationary phase and is induced at 45 degrees Celsius
+CC   [1,2]. The function of this family remains to be determined.
+//
