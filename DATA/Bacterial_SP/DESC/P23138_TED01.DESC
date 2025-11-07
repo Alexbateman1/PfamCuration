@@ -1,0 +1,18 @@
+ID   PolyA_pol_C
+DE   Poly(A) polymerase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P23138_TED01
+GA   27.00 27.00;
+TC   27.10 27.20;
+NC   26.90 26.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of polynucleotide
+CC   adenylyltransferase (also known as poly(A) polymerase or CCA tRNA
+CC   nucleotidyltransferase) found in Alphaproteobacteria. The
+CC   full-length proteins typically contain an N-terminal PolyA_pol
+CC   domain (Pfam:PF01743) and a PolyA_pol_RNAbd domain (Pfam:PF12627).
+CC   This domain is found in 30 proteins across Alphaproteobacteria,
+CC   primarily in Rhodospirillales.
+//

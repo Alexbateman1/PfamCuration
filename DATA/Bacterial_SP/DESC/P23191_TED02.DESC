@@ -1,0 +1,18 @@
+ID   MboIIR_mid
+DE   Type IIS restriction enzyme MboII middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P23191_TED02
+GA   27.00 27.00;
+TC   27.00 27.50;
+NC   26.90 22.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the middle domain of type IIS restriction
+CC   enzyme MboII (also called MboIIR), found in Helicobacter species and
+CC   Campylobacter jejuni. Type IIS restriction enzymes recognise
+CC   asymmetric DNA sequences and cleave at defined distances outside
+CC   their recognition sites. MboIIR is encoded by HP1366 in Helicobacter
+CC   pylori and is part of restriction-modification systems. This domain
+CC   is found in nine proteins across Campylobacterota.
+//

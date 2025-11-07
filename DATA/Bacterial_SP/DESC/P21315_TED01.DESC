@@ -1,0 +1,17 @@
+ID   Phage_Cox
+DE   Phage regulator Cox-like protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P21315_TED01
+GA   27.00 27.00;
+TC   27.30 27.10;
+NC   26.50 26.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a DNA-binding regulator protein found in
+CC   bacteriophages and prophages of Enterobacteriaceae and Vibrionaceae.
+CC   These proteins function as regulators for prophage expression. The
+CC   protein P21315 (protein ORFa in retron Ec67) is annotated as a phage
+CC   regulator. This family is found in 41 proteins across bacterial and
+CC   viral taxa, primarily in Gammaproteobacteria and bacteriophages.
+//

@@ -1,0 +1,16 @@
+ID   KorB
+DE   Plasmid maintenance protein KorB
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P22404_TED01
+GA   27.00 27.00;
+TC   28.00 75.30;
+NC   26.70 26.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents protein KorB, a plasmid maintenance protein
+CC   found in Streptomyces plasmids. KorB functions as a repressor
+CC   protein involved in plasmid replication and maintenance. This family
+CC   is found in four proteins across Actinomycetes, including
+CC   Streptomyces, Polymorphobacter, and Frankia species.
+//

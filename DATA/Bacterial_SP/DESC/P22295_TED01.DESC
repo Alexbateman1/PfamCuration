@@ -1,0 +1,16 @@
+ID   Helveticin
+DE   Helveticin bacteriocin
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P22295_TED01
+GA   27.00 27.00;
+TC   30.70 120.20;
+NC   24.30 23.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents helveticin, a bacteriocin found in
+CC   Lactobacillus species. Bacteriocins are antimicrobial peptides
+CC   produced by bacteria that inhibit the growth of similar or closely
+CC   related bacterial strains. This family is found in three proteins
+CC   across Lactobacillaceae.
+//
