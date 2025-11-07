@@ -1,0 +1,16 @@
+ID   YdzP
+DE   Membrane protein YdzP
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:C0H3W0_TED01
+GA   27.00 27.00;
+TC   139.90 139.70;
+NC   25.20 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YdzP family of small membrane proteins of
+CC   approximately 55 amino acids found in Bacillus subtilis (residues
+CC   2-56 of 59 amino acids). The protein contains two predicted
+CC   transmembrane helices (residues 1-21 and 30-50) and is localised to
+CC   the cell membrane. The function of this family remains to be
+CC   determined.
