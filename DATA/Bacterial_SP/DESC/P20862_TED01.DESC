@@ -1,4 +1,4 @@
-ID   Fimbrial
+ID   Fimbrial_sub
 DE   Fimbrial subunit
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P20862_TED01
@@ -6,9 +6,8 @@ GA   27.00 27.00;
 TC   31.60 50.90;
 NC   26.20 22.40;
 BM   hmmbuild -o /dev/null HMM SEED
-SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
 TP   Family
-CC   This entry represents a fimbrial subunit protein found in
-CC   Citrobacter species. Fimbrial proteins form hair-like appendages on
-CC   bacterial cell surfaces involved in adhesion to host cells and
-CC   surfaces.
+CC   This entry represents a fimbrial subunit protein found in Citrobacter
+CC   species. Fimbriae are hair-like appendages on the bacterial surface
+CC   involved in adhesion and colonisation.

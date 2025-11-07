@@ -6,12 +6,9 @@ GA   27.00 27.00;
 TC   28.10 27.90;
 NC   26.50 26.10;
 BM   hmmbuild -o /dev/null HMM SEED
-SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
-TP   Domain
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
 CC   This entry represents the N-terminal domain of treponemal membrane
-CC   protein B (TmpB), found in Treponema species. TmpB is localised to
-CC   the cell outer membrane and may serve as a porin or transport
-CC   protein for large molecules. This domain is found in 23 proteins
-CC   across Spirochaetota, including Treponema pallidum and Treponema
-CC   denticola. The protein contains a signal peptide and the mature
-CC   protein is a peripheral membrane protein.
+CC   protein B (TmpB), found in Treponema species including T. pallidum.
+CC   TmpB may serve as a porin or transport protein for large molecules
+CC   and is located in the cell outer membrane.
