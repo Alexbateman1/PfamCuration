@@ -1,0 +1,33 @@
+ID   MifM
+DE   Membrane protein insertion and folding monitor MifM
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q7WY64
+GA   27.00 27.00;
+TC   34.70 68.10;
+NC   26.30 19.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   19779460
+RT   A ribosome-nascent chain sensor of membrane protein biogenesis in
+RT   Bacillus subtilis.
+RA   Chiba S., Lamsa A., Pogliano K.;
+RL   EMBO J. 2009;28:3461-3475.
+RN   [2]
+RM   22864117
+RT   Multisite ribosomal stalling: a unique mode of regulatory nascent
+RT   chain action revealed for MifM.
+RA   Chiba S., Ito K.;
+RL   Mol. Cell 2012;47:863-872.
+CC   This entry represents MifM, a sensor protein of approximately 95
+CC   amino acids that monitors membrane protein insertase activity in
+CC   Bacillus subtilis. MifM acts as a ribosome-nascent chain complex that
+CC   up-regulates translation of the secondary membrane protein insertase
+CC   (MisCB/YqjG) when the primary insertase (MisCA/SpoIIIJ) activity is
+CC   limited [1]. When membrane insertion of MifM is impaired, translation
+CC   arrest is induced via interaction of the C-terminal domain with the
+CC   ribosomal polypeptide exit tunnel, leading to unfolding of an mRNA
+CC   hairpin and translation of the downstream gene encoding MisCB [1,2].
+CC   The protein undergoes multisite stalling and is a single-pass
+CC   membrane protein. The structure has been determined (PDB: 3J9W, 7QGU).
