@@ -1,0 +1,15 @@
+ID   TP_0374_TPR
+DE   TP_0374 tetratricopeptide repeat domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83389_TED01
+GA   27.00 27.00;
+TC   27.40 28.50;
+NC   25.90 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a tetratricopeptide repeat (TPR) domain of
+CC   approximately 210 amino acids found in proteins from Spirochaetes,
+CC   including TP_0374 from Treponema pallidum (the syphilis spirochaete).
+CC   The domain belongs to the TPR-like helical domain superfamily. The
+CC   function of this domain remains to be determined.
