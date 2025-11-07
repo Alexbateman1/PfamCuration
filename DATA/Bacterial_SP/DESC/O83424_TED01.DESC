@@ -1,0 +1,15 @@
+ID   TP_0409
+DE   TP_0409 putative protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83424_TED01
+GA   27.00 27.00;
+TC   27.90 147.70;
+NC   26.30 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents TP_0409, a 61 amino acid putative protein from
+CC   Treponema pallidum. The protein could be the product of a pseudogene. The
+CC   protein is found only in Treponema pallidum. The function of this protein
+CC   remains to be determined.
+//

@@ -1,0 +1,17 @@
+ID   TP_0368_N
+DE   TP_0368 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83383_TED01
+GA   27.00 27.00;
+TC   48.40 63.40;
+NC   21.30 18.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 1-29) of TP_0368, a
+CC   111 amino acid uncharacterised membrane protein from Treponema pallidum.
+CC   The full-length protein contains a transmembrane helix (residues 7-29)
+CC   and is predicted to localise to the membrane. The protein is found only
+CC   in Treponema pallidum. The specific function of this domain remains to be
+CC   determined.
+//

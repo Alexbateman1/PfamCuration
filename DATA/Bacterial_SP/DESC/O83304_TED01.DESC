@@ -1,14 +1,14 @@
-ID   TP_0318
-DE   TP_0318 protein
+ID   TP_0280
+DE   TP_0280 protein
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:O83338_TED01
+SE   TED:O83304_TED01
 GA   27.00 27.00;
-TC   31.90 87.70;
-NC   26.50 25.30;
+TC   27.60 109.70;
+NC   22.40 18.20;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
 TP   Family
-CC   This entry represents TP_0318, a 59 amino acid uncharacterised protein
+CC   This entry represents TP_0280, a 42 amino acid uncharacterised protein
 CC   from Treponema pallidum. The protein is found only in Treponema pallidum.
 CC   The function of this protein remains to be determined.
 //

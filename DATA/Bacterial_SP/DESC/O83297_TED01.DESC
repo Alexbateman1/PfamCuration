@@ -1,0 +1,17 @@
+ID   TP_0273
+DE   TP_0273 membrane protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83297_TED01
+GA   27.00 27.00;
+TC   29.70 29.40;
+NC   26.70 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents TP_0273, a 263 amino acid uncharacterised membrane
+CC   protein from Treponema pallidum. The protein contains four transmembrane
+CC   helices (residues 21-43, 48-70, 127-149, 186-208) and is predicted to
+CC   localise to the plasma membrane. The protein is found in 27 proteins
+CC   across Bacteria, including Spirochaetota and Bacillota. The function of
+CC   this protein remains to be determined.
+//
