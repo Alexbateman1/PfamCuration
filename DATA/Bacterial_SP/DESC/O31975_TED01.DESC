@@ -1,0 +1,19 @@
+ID   YomJ_N
+DE   YomJ N-terminal immunity protein domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31975_TED01
+GA   27.00 27.00;
+TC   57.70 145.60;
+NC   23.20 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 1-64) of YomJ, a
+CC   227 amino acid membrane protein from the SPbeta prophage of Bacillus
+CC   subtilis. Related proteins are annotated as immunity protein D,
+CC   suggesting a role in phage immunity systems. YomJ contains two domains:
+CC   this N-terminal region and a C-terminal domain containing a phage
+CC   glycine zipper motif (Pfam:PF27000, residues 72-182). The protein is
+CC   found in SPbeta phage and related prophages. The function of this
+CC   domain remains to be determined.
+//

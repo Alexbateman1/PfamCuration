@@ -1,0 +1,18 @@
+ID   YokC
+DE   YokC prophage protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O32004_TED01
+GA   27.00 27.00;
+TC   27.10 27.40;
+NC   26.40 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents YokC (residues 2-168), a 171 amino acid
+CC   uncharacterised protein from the SPbeta prophage of Bacillus subtilis.
+CC   Related proteins are annotated as group-specific proteins in phage
+CC   genomes. YokC is found in 9 proteins across diverse bacterial phyla
+CC   including Bacillales, Cyanobacteriota, and Pseudomonadota, as well as
+CC   in bacteriophages. The function of this protein remains to be
+CC   determined.
+//

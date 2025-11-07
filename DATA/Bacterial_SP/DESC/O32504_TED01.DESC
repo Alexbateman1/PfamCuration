@@ -1,0 +1,27 @@
+ID   PprA_N
+DE   PprA N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O32504_TED01
+GA   27.00 27.00;
+TC   83.10 81.80;
+NC   25.50 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   15458422
+RT   PprA: a novel protein from Deinococcus radiodurans that stimulates DNA
+RT   ligation.
+RA   Narumi I., Satoh K., Cui S., Funayama T., Kitayama S., Watanabe H.;
+RL   Mol. Microbiol. 54:278-285(2004).
+CC   This entry represents the N-terminal domain (residues 20-120) of PprA,
+CC   a 300 amino acid DNA repair protein from Deinococcus radiodurans. PprA
+CC   is a double-stranded DNA-binding protein that contributes to extreme
+CC   radioresistance by stimulating DNA end-joining reactions catalysed by
+CC   DNA ligases, playing a critical role in non-homologous end-joining DNA
+CC   repair [1]. PprA contains three domains: this N-terminal region, a
+CC   middle domain, and a C-terminal domain. The protein is found in 17
+CC   proteins across Deinococcales. While the full-length protein is
+CC   involved in DNA repair and radioresistance, the specific function of
+CC   this domain remains to be determined.
+//

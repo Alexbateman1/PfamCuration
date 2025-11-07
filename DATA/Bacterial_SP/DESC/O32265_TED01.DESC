@@ -1,0 +1,16 @@
+ID   YvzA
+DE   YvzA coiled coil protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O32265_TED01
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   26.50 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents YvzA (residues 20-104), a 119 amino acid
+CC   uncharacterised protein from Bacillus subtilis. The protein contains a
+CC   predicted coiled coil region (residues 63-104). YvzA is found in 6
+CC   proteins across Bacillales and Anoxybacillaceae. The function of this
+CC   protein remains to be determined.
+//
