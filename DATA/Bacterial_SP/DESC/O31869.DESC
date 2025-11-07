@@ -1,0 +1,14 @@
+ID   YotF
+DE   SPbeta prophage protein YotF
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31869
+GA   27.00 27.00;
+TC   34.70 68.10;
+NC   26.30 19.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a very small protein family of 25 amino acids
+CC   found in SPbeta prophage-derived proteins from Bacillus subtilis,
+CC   including YotF. The function of this family remains to be
+CC   determined.
