@@ -1,0 +1,21 @@
+ID   FimY
+DE   Fimbriae Y protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P26318_TED01
+GA   27.00 27.00;
+TC   30.30 29.20;
+NC   25.50 24.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   1360005
+RT   Identification of ancillary fim genes affecting fimA expression in
+RT   Salmonella typhimurium.
+RA   Swenson DL, Clegg S;
+RL   J. Bacteriol. 1992;174:7697-7704.
+CC   This entry represents fimbriae Y protein (FimY), a putative
+CC   regulatory protein found in Salmonella and Citrobacter species within
+CC   Enterobacteriaceae. FimY is encoded by gene STM0550 in Salmonella
+CC   typhimurium and affects fimA expression [1]. This family is found in
+CC   11 proteins across Enterobacterales.

@@ -1,0 +1,20 @@
+ID   M_NspV
+DE   Type II methyltransferase M.NspV
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P35678_TED02
+GA   27.00 27.00;
+TC   27.90 27.10;
+NC   26.80 26.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   8367311
+RT   Cloning and expression of the NspV restriction-modification genes of
+RT   Nostoc sp. strain PCC7524.
+RA   Ueno T., Ito H., Kotani H., Nakajima K.;
+RL   Nucleic Acids Res. 21:3899-3899(1993).
+CC   This entry represents type II methyltransferase M.NspV, a gamma
+CC   subtype methylase found in bacteria and archaea. The enzyme
+CC   recognises the double-stranded sequence 5'-TTCGAA-3' and methylates
+CC   it to protect against the NspV endonuclease [1].

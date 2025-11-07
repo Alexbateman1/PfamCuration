@@ -1,0 +1,14 @@
+ID   SpdD
+DE   Plasmid spread protein SpdD
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P22407_TED01
+GA   27.00 27.00;
+TC   27.50 86.20;
+NC   26.70 21.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents SpdD, a plasmid spread protein found in
+CC   Streptomyces and Actinacidiphila species. SpdD proteins are involved
+CC   in plasmid transfer and maintenance systems. This family is found in
+CC   nine proteins across Actinomycetota.

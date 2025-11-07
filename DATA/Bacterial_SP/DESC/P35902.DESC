@@ -1,0 +1,21 @@
+ID   HDAH_N
+DE   Histone deacetylase-like amidohydrolase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P35902/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   26956223
+RT   Substrate specificity and function of acetylpolyamine amidohydrolases
+RT   from Pseudomonas aeruginosa.
+RA   Kraemer A., Herzer J., Overhage J., Meyer-Almes F.J.;
+RL   BMC Biochem. 17:4-4(2016).
+CC   This entry represents the N-terminal domain of histone
+CC   deacetylase-like amidohydrolase (HDAH) found in bacteria. The full
+CC   protein catalyses deacetylation of acetylated lysine residues and
+CC   exhibits activity against artificial histone deacetylase substrates
+CC   [1]. The function of this domain remains to be determined.

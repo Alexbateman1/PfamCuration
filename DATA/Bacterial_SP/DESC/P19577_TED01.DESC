@@ -1,0 +1,17 @@
+ID   Ank_prot
+DE   Ankyrin repeat protein fragment
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P19577_TED01
+GA   27.00 27.00;
+TC   28.40 28.10;
+NC   25.90 19.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a short ankyrin repeat-containing region found
+CC   in Dichelobacter nodosus. The full-length protein P19577 is an
+CC   extracellular serine protease containing multiple ankyrin repeats
+CC   (Pfam:PF00023, Pfam:PF12796, Pfam:PF13606, Pfam:PF13637,
+CC   Pfam:PF13857). Ankyrin repeats mediate protein-protein interactions.
+CC   The function of this specific repeat region remains to be
+CC   determined.

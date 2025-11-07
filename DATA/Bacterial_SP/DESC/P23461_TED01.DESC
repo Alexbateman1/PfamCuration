@@ -1,0 +1,22 @@
+ID   PucD
+DE   Light-harvesting protein PucD
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P23461_TED01
+GA   27.00 27.00;
+TC   27.10 27.60;
+NC   25.80 26.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   21654848
+RT   Transcriptional response of the photoheterotrophic marine bacterium
+RT   Dinoroseobacter shibae to changing light regimes.
+RA   Tomasch J, Gohl R, Bunk B, Diez MS, Wagner-Dobler I;
+RL   ISME J. 2011;5:1957-1968.
+CC   This entry represents an uncharacterised protein found in
+CC   Alphaproteobacteria, particularly in Roseobacter and Rhodobacter
+CC   species. The seed protein is annotated as a light-harvesting protein
+CC   B-800 (PucD) and the genes are located within the puc operon which
+CC   includes genes Dshi_2897 to Dshi_2900 [1]. This protein family is
+CC   found in 11 proteins across Alphaproteobacteria.
