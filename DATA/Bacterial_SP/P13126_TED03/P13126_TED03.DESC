@@ -1,0 +1,24 @@
+ID   HPI_3rd
+DE   HPI surface protein third domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P13126_TED03
+GA   27.00 27.00;
+TC   34.90 34.90;
+NC   23.60 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   37043530
+RT   Interdigitated immunoglobulin arrays form the hyperstable surface
+RT   layer of the extremophilic bacterium Deinococcus radiodurans.
+RA   von Kugelgen A., van Dorst S., Yamashita K., Sexton D.L.,
+RA   Tocheva E.I., Murshudov G., Alva V., Bharat T.A.M.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2023;120:e2215808120.
+CC   This entry represents the third domain of the hexagonally packed
+CC   intermediate-layer (HPI) surface protein found in Deinococcus
+CC   radiodurans. The HPI protein forms a hyperstable S-layer with
+CC   hexagonal symmetry [1]. While the HPI protein is involved in
+CC   shape maintenance and cell wall organisation, the specific
+CC   function of this domain remains to be determined.
+//

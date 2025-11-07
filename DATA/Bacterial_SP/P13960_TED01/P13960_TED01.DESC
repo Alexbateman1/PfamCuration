@@ -1,0 +1,15 @@
+ID   RepA
+DE   RepA replication protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P13960_TED01
+GA   27.00 27.00;
+TC   141.30 140.60;
+NC   25.20 17.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the RepA replication protein family found
+CC   in Enterobacteriaceae. This family is approximately 87 amino
+CC   acids in length. The function of this protein family remains to
+CC   be determined.
+//
