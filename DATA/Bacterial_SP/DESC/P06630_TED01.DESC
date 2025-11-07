@@ -1,0 +1,16 @@
+ID   Eag
+DE   Uncharacterised sporulation protein Eag family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P06630_TED01
+GA   27.00 27.00;
+TC   29.00 29.00;
+NC   25.60 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the Eag (formerly YkvC) protein family, small
+CC   membrane proteins found in Bacillota, particularly Bacillaceae and
+CC   Clostridiaceae. Members are approximately 65-130 amino acids in
+CC   length and are annotated with involvement in sporulation processes.
+CC   The specific function of this family remains to be determined.
+//

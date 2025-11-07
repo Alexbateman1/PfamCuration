@@ -1,12 +1,12 @@
 ID   DUF
 DE   Domain of unknown function
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P06529_TED04
+SE   TED:P06529_TED03
 GA   27.00 27.00;
-TC   27.00 212.50;
-NC   26.80 22.60;
+TC   27.70 176.20;
+NC   21.60 20.20;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
 TP   Domain
 CC   This entry represents an uncharacterised protein domain found in
 CC   Bacillales and the fungus Batrachochytrium. The function of this
