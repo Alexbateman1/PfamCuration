@@ -1,0 +1,15 @@
+ID   YlaA_C
+DE   YlaA C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O07625_TED02
+GA   27.00 27.00;
+TC   28.80 287.30;
+NC   26.20 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 126 amino
+CC   acids found in protein YlaA from Bacillus species. The full-length
+CC   protein YlaA is 646 amino acids and contains eight transmembrane
+CC   helices. The protein is predicted to be localised to the cell
+CC   membrane. The function of this domain remains to be determined.
