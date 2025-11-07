@@ -1,0 +1,31 @@
+ID   YeeK
+DE   Spore coat protein YeeK
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31510
+GA   27.00 27.00;
+TC   29.80 287.80;
+NC   26.70 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   10714992
+RT   The Bacillus subtilis yabG gene is transcribed by SigK RNA polymerase
+RT   during sporulation, and yabG mutant spores have altered coat protein
+RT   composition.
+RA   Takamatsu H, Kodama T, Imamura A, Asai K, Kobayashi K, Nakayama T,
+RA   Ogasawara N, Watabe K;
+RL   J Bacteriol 2000;182:1883-1888.
+RN   [2]
+RM   19060142
+RT   Expression of yeeK during Bacillus subtilis sporulation and
+RT   localization of YeeK to the inner spore coat using fluorescence
+RT   microscopy.
+RA   Takamatsu H, Imamura D, Kuwana R, Watabe K;
+RL   J Bacteriol 2009;191:1220-1229.
+CC   This entry represents the YeeK family of spore coat proteins of 145
+CC   amino acids found in Bacillus subtilis. YeeK is part of the inner
+CC   spore coat and contains PG repeats (residues 9-47) and GGY repeats
+CC   (residues 57-80). Expression starts 5 hours after onset of
+CC   sporulation and is induced by SigK and GerE [1,2].
+//

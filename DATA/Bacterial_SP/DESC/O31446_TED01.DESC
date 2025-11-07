@@ -1,0 +1,16 @@
+ID   YbfF
+DE   Membrane protein YbfF
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31446_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 43.40;
+NC   26.40 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the YbfF family of membrane proteins of 303 amino
+CC   acids found in Bacillus. The protein contains four predicted
+CC   transmembrane helices (residues 55-77, 92-111, 208-230, 240-257) and
+CC   is localised to the cell membrane. The function of this family remains
+CC   to be determined.
+//

@@ -1,0 +1,23 @@
+ID   PhrI
+DE   Phosphatase RapI inhibitor
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31492
+GA   27.00 27.00;
+TC   29.10 107.50;
+NC   22.90 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   16105942
+RT   Regulation of a Bacillus subtilis mobile genetic element by
+RT   intercellular signaling and the global DNA damage response.
+RA   Auchtung JM, Lee CA, Monson RE, Lehman AP, Grossman AD;
+RL   Proc Natl Acad Sci U S A 2005;102:12554-12559.
+CC   This entry represents the PhrI family, an intercellular signalling
+CC   peptide found in Bacillus subtilis (39 amino acids). The mature
+CC   peptide (residues 35-39) inhibits excision of the mobile genetic
+CC   element ICEBs1 when cells are crowded. PhrI is secreted during
+CC   production but acts intracellularly after reimport. PhrI expression is
+CC   stimulated by low nutrient availability and high cell density [1].
+//
