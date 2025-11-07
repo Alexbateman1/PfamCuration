@@ -1,0 +1,15 @@
+ID   TP_1000
+DE   TP_1000 protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83965_TED01
+GA   27.00 27.00;
+TC   29.80 54.20;
+NC   24.90 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents TP_1000, a 223 amino acid uncharacterised protein
+CC   from Treponema pallidum. The protein is annotated as ENOG5031UE2. The
+CC   protein is found in 3 proteins in Treponema. The function of this protein
+CC   remains to be determined.
+//

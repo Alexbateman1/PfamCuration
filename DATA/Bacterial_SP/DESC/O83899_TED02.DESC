@@ -1,0 +1,16 @@
+ID   TP_0929_2nd
+DE   TP_0929 second domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83899_TED02
+GA   27.00 27.00;
+TC   27.60 27.20;
+NC   26.00 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the second domain of TP_0929, a 256 amino acid
+CC   uncharacterised protein from Treponema pallidum. The protein is annotated
+CC   as COG0760. The domain is found in 32 proteins across Bacteria, including
+CC   Spirochaetota (Spirochaetaceae and Treponemataceae). The specific function
+CC   of this domain remains to be determined.
+//
