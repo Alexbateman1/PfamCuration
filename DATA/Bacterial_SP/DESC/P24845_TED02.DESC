@@ -1,0 +1,14 @@
+ID   DUF
+DE   Uncharacterised domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P24845_TED02/Iterate
+GA   27.00 27.00;
+TC   27.40 79.10;
+NC   25.70 21.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in Leptospira
+CC   species within Spirochaetota. This domain is found in 4 proteins
+CC   across Leptospiraceae. The function of this domain remains to be
+CC   determined.

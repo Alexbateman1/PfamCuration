@@ -1,0 +1,15 @@
+ID   DUF
+DE   Uncharacterised domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P23555_TED01
+GA   27.00 27.00;
+TC   27.60 91.80;
+NC   24.30 26.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Caldicellulosiruptor species. The full-length protein containing this
+CC   domain is annotated as peptidase M23 and contains LysM (Pfam:PF01476)
+CC   G5 (Pfam:PF07501) and Peptidase_M23 (Pfam:PF01551) domains. The
+CC   function of this domain remains to be determined.

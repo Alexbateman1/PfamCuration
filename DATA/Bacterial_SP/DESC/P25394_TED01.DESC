@@ -1,0 +1,15 @@
+ID   F107_fimbrial
+DE   F107 fimbrial protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P25394_TED01
+GA   27.00 27.00;
+TC   27.00 77.90;
+NC   26.90 24.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents F107 fimbrial proteins (also called FedA or
+CC   PefA) found in Escherichia coli, Salmonella and related
+CC   Enterobacteriaceae. These are plasmid-encoded fimbriae major
+CC   fimbrial subunits. Related proteins include K99 fimbrial protein.
+CC   This family is found in 4 proteins across Enterobacterales.
