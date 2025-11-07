@@ -1,5 +1,5 @@
-ID   BciD_rSAM
-DE   BciD radical SAM domain
+ID   RadSAM_Chloro
+DE   Radical SAM domain from Chlorobiaceae
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:N0DKX5_TED01
 GA   27.00 27.00;
@@ -8,15 +8,10 @@ NC   26.70 20.60;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
 TP   Domain
-RN   [1]
-RM   23560066
-RT   Specific gene bciD for C7-methyl oxidation in bacteriochlorophyll e
-RT   biosynthesis of brown-colored green sulfur bacteria.
-RA   Harada J., Mizoguchi T., Satoh S., Tsukatani Y., Yokono M., Noguchi
-RA   M., Tanaka A., Tamiaki H.;
-RL   PLoS ONE 8:e60026-e60026(2013).
-CC   This entry represents the radical S-adenosyl-L-methionine (SAM) domain
-CC   of approximately 75 amino acids found in BciD from brown-coloured
-CC   green sulfur bacteria such as Chlorobium phaeobacteroides. BciD is
-CC   involved in bacteriochlorophyll e biosynthesis, specifically in C7-
-CC   methyl oxidation [1].
+CC   This entry represents a radical S-adenosyl-L-methionine (SAM) domain
+CC   of approximately 75 amino acids found in proteins from Chlorobiaceae
+CC   (green sulphur bacteria). The domain is found in both small radical
+CC   SAM proteins and in larger proteins containing Ankyrin repeat
+CC   domains. Radical SAM enzymes catalyse diverse reactions using a
+CC   [4Fe-4S] cluster to generate radical intermediates. The specific
+CC   function of this domain remains to be determined.
