@@ -1,0 +1,15 @@
+ID   YozX_C
+DE   Uncharacterised protein YozX C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:C0H425_TED02
+GA   27.00 27.00;
+TC   29.10 101.30;
+NC   26.10 18.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal region of approximately 37 amino
+CC   acids (residues 38-74) found in protein YozX from Bacillus subtilis
+CC   (74 amino acids). The function of this domain remains to be
+CC   determined.
+//
