@@ -1,0 +1,17 @@
+ID   YorC_C
+DE   YorC C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31910_TED02
+GA   27.00 27.00;
+TC   27.80 120.50;
+NC   26.20 19.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain (residues 74-122) of YorC,
+CC   an uncharacterised protein from the SPbeta prophage of Bacillus
+CC   subtilis. YorC is a 126 amino acid protein containing an N-terminal
+CC   domain (residues 3-68) and this C-terminal region. The protein is found
+CC   in SPbeta phage and related prophages. The function of this domain
+CC   remains to be determined.
+//

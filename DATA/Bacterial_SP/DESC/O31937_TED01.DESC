@@ -1,0 +1,19 @@
+ID   YopA_N
+DE   YopA N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31937_TED01
+GA   27.00 27.00;
+TC   29.50 205.30;
+NC   22.10 19.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 18-110) of YopA,
+CC   an uncharacterised protein from the SPbeta prophage of Bacillus
+CC   subtilis. YopA is a 438 amino acid membrane protein containing three
+CC   distinct domains: this N-terminal region, a middle domain (YopA_M,
+CC   residues 113-248), and a C-terminal domain (YopA_C, residues 273-429).
+CC   The protein contains a transmembrane helix (residues 391-411) and is
+CC   predicted to be localised to the cell membrane. The function of this
+CC   domain remains to be determined.
+//
