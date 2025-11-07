@@ -1,0 +1,14 @@
+ID   HP1070
+DE   Helicobacter pylori protein HP1070
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O07680
+GA   27.00 27.00;
+TC   27.00 160.80;
+NC   26.20 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents protein HP_1070 (also known as ORFX) from
+CC   Helicobacter pylori, a protein of 84 amino acids. The protein shows
+CC   high sequence variability between different H. pylori strains. The
+CC   function of this protein remains to be determined.

@@ -1,0 +1,17 @@
+ID   SteA_N
+DE   Secreted effector protein SteA N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:D0ZXR5_TED01
+GA   27.00 27.00;
+TC   28.40 28.80;
+NC   23.00 24.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of approximately 162
+CC   amino acids found in secreted effector protein SteA (Salmonella
+CC   translocated effector A) from Salmonella and Chitinimonas species.
+CC   Effector proteins function to alter host cell physiology and promote
+CC   bacterial survival in host tissues. SteA is secreted via type III
+CC   secretion systems 1 and 2 (SPI-1 and SPI-2 T3SS). The function of
+CC   this domain remains to be determined.

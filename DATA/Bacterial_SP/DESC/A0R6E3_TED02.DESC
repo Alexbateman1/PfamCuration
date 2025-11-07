@@ -1,0 +1,28 @@
+ID   DUF
+DE   Domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0R6E3_TED02
+GA   27.00 27.00;
+TC   27.40 28.50;
+NC   25.90 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   20094657
+RT   Expansion of the mycobacterial 'PUPylome'.
+RA   Watrous J., Burns K., Liu W.T., Patel A., Hook V., Bafna V., Barry
+RA   C.E. III, Bark S., Dorrestein P.C.;
+RL   Mol. Biosyst. 2010;6:376-385.
+RN   [2]
+RM   30416491
+RT   Identification of Enolase as the Target of 2-Aminothiazoles in
+RT   Mycobacterium tuberculosis.
+RA   Wescott H.H., Zuniga E.S., Bajpai A., Trujillo C., Ehrt S.,
+RA   Schnappinger D., Roberts D.M., Parish T.;
+RL   Front. Microbiol. 2018;9:2542-2542.
+CC   This entry represents a domain found in proteins from Mycobacterium
+CC   species, including MSMEG_6518 from Mycolicibacterium smegmatis. The
+CC   full-length protein is subject to pupylation [1] and binds
+CC   2-aminothiazole antibiotics, which are antitubercular agents [2]. The
+CC   function of this domain remains to be determined.

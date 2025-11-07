@@ -1,0 +1,21 @@
+ID   Cyt_c_polyheme
+DE   C-type polyheme cytochrome domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:D7ALQ0_TED01
+GA   27.00 27.00;
+TC   28.00 29.20;
+NC   26.30 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   12644478
+RT   OmcB, a c-type polyheme cytochrome, involved in Fe(III) reduction
+RT   in Geobacter sulfurreducens.
+RA   Leang C., Coppi M.V., Lovley D.R.;
+RL   J. Bacteriol. 185:2096-2103(2003).
+CC   This entry represents a domain of approximately 127 amino acids found
+CC   in C-type polyheme cytochromes from Geobacter and related bacteria.
+CC   These cytochromes are involved in anaerobic respiration with Fe(3+)
+CC   as terminal electron acceptor, acting as electron-transport mediators
+CC   in the dissimilatory reduction of Fe(3+) [1].

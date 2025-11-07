@@ -1,0 +1,27 @@
+ID   TatB_C
+DE   Sec-independent protein translocase TatB C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0R2D1_TED02
+GA   27.00 27.00;
+TC   28.00 27.90;
+NC   26.40 25.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16952959
+RT   Inactivation of Rv2525c, a substrate of the twin arginine
+RT   translocation (Tat) system of Mycobacterium tuberculosis,
+RT   increases beta-lactam susceptibility and virulence.
+RA   Saint-Joanis B, Demangel C, Jackson M, Brodin P, Marsollier L,
+RA   Boshoff H, Cole ST;
+RL   J. Bacteriol. 2006;188:6669-6679.
+CC   This entry represents the C-terminal domain of TatB,
+CC   approximately 40 amino acids in length, found in Actinomycetes
+CC   including Mycobacterium and Corynebacterium species. TatB is part
+CC   of the twin-arginine translocation (Tat) system that transports
+CC   large folded proteins containing a twin-arginine motif across
+CC   membranes [1]. Together with TatC, TatB forms a receptor directly
+CC   interacting with Tat signal peptides. The full-length TatB protein
+CC   is essential for growth in Mycobacterium tuberculosis [1]. This
+CC   domain follows the N-terminal TatA_B_E domain (Pfam:PF02416).

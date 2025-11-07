@@ -1,0 +1,20 @@
+ID   BotA
+DE   Bottromycin precursor peptide BotA
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:K4JY29
+GA   27.00 27.00;
+TC   27.00 102.10;
+NC   25.50 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   22984777
+RT   Structure and biosynthesis of the antibiotic bottromycin D.
+RA   Hou J., Robbel L., Marahiel M.A.;
+RL   Org. Lett. 14:4494-4497(2012).
+CC   This entry represents the bottromycin precursor peptide BotA from
+CC   Streptomyces species, a protein of approximately 44 amino acids. BotA
+CC   is the precursor for bottromycin, a ribosomally synthesised and post-
+CC   translationally modified peptide (RiPP) antibiotic with activity
+CC   against Gram-positive bacteria [1].

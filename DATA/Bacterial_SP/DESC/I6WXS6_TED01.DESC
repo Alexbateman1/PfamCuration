@@ -1,0 +1,15 @@
+ID   VapB51
+DE   Putative antitoxin VapB51
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:I6WXS6_TED01
+GA   27.00 27.00;
+TC   59.70 59.10;
+NC   25.00 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of 33 amino acids found in the
+CC   putative antitoxin VapB51 from Mycobacterium tuberculosis. VapB51 is
+CC   possibly the antitoxin component of a type II toxin-antitoxin system,
+CC   with VapC51 as its cognate toxin. The specific function of this
+CC   domain remains to be determined.

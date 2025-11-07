@@ -1,0 +1,16 @@
+ID   DcsG
+DE   D-cycloserine biosynthesis ATP-grasp domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:D2Z030_TED03
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an ATP-grasp domain of approximately 69 amino
+CC   acids found in enzymes involved in cycloserine biosynthesis from
+CC   Streptomyces and Lysobacter species. This domain is part of
+CC   O-ureido-D-serine cyclo-ligase (DcsG), which catalyses the ATP-
+CC   dependent cyclisation of O-ureido-D-serine to form D-cycloserine, an
+CC   antibacterial agent that inhibits bacterial cell wall synthesis.

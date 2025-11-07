@@ -1,0 +1,25 @@
+ID   FapA
+DE   Functional amyloid chaperone FapA
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A5W4A3
+GA   27.00 27.00;
+TC   27.40 27.10;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   23504942
+RT   Expression of Fap amyloids in Pseudomonas aeruginosa, P.
+RT   fluorescens, and P. putida results in aggregation and increased
+RT   biofilm formation.
+RA   Dueholm M.S., Soendergaard M.T., Nilsson M., Christiansen G.,
+RA   Stensballe A., Overgaard M.T., Givskov M., Tolker-Nielsen T.,
+RA   Otzen D.E., Nielsen P.H.;
+RL   MicrobiologyOpen 2:365-382(2013).
+CC   This entry represents the functional amyloid chaperone FapA from
+CC   Pseudomonas and related genera. FapA is an intrinsically disordered
+CC   chaperone for fibril amyloid FapC that guards against fibrillation
+CC   within the periplasm. Upon overexpression of the endogenous six-gene
+CC   locus (fapA-fapF), cells form large clumps during liquid growth, make
+CC   large amounts of biofilm and produce amyloid fibrils [1].

@@ -1,0 +1,15 @@
+ID   YyzN
+DE   Membrane protein YyzN
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:C0H3T8_TED01
+GA   27.00 27.00;
+TC   27.70 61.20;
+NC   25.80 22.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the YyzN family of small membrane proteins of
+CC   approximately 52 amino acids found in Bacillus and related bacteria.
+CC   The protein contains two predicted transmembrane helices (residues
+CC   4-24 and 25-45) and is localised to the cell membrane. The function
+CC   of this family remains to be determined.

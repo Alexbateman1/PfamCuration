@@ -1,0 +1,16 @@
+ID   SteB
+DE   Secreted effector protein SteB
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:D0ZI38_TED01
+GA   27.00 27.00;
+TC   27.00 28.40;
+NC   26.40 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents secreted effector protein SteB (Salmonella
+CC   translocated effector B) of approximately 127 amino acids from
+CC   Salmonella species. Effector proteins function to alter host cell
+CC   physiology and promote bacterial survival in host tissues. SteB is
+CC   secreted via type III secretion systems 1 and 2 (SPI-1 and SPI-2
+CC   T3SS), and delivered into the host cytoplasm.

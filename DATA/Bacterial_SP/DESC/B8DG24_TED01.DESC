@@ -1,0 +1,17 @@
+ID   YneA_N
+DE   Cell division suppressor YneA N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:B8DG24_TED01
+GA   27.00 27.00;
+TC   27.00 28.10;
+NC   26.30 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of approximately 35 amino
+CC   acids found in cell division suppressor protein YneA from Listeria
+CC   monocytogenes and related Bacilli. YneA is a 109 amino acid protein
+CC   that inhibits cell division during the SOS response by suppressing
+CC   recruitment of FtsL and DivIC to the division machinery. The protein
+CC   also contains a LysM domain (Pfam:PF01476). The specific function of
+CC   this N-terminal domain remains to be determined.

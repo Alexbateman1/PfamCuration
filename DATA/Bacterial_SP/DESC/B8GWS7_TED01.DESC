@@ -1,0 +1,23 @@
+ID   SidA
+DE   Cell division inhibitor SidA
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:B8GWS7_TED01
+GA   27.00 27.00;
+TC   37.80 58.90;
+NC   25.90 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   21685367
+RT   A DNA damage checkpoint in Caulobacter crescentus inhibits cell
+RT   division through a direct interaction with FtsW.
+RA   Modell J.W., Hopkins A.C., Laub M.T.;
+RL   Genes Dev. 25:1328-1343(2011).
+CC   This entry represents the SidA (SOS-induced inhibitor of cell
+CC   division A) family of proteins from Caulobacter species and related
+CC   Alphaproteobacteria, proteins of approximately 29 amino acids. SidA
+CC   inhibits cell division by binding directly to FtsW to prevent the
+CC   final constriction of the FtsZ ring [1]. The protein contains a
+CC   single transmembrane helix (residues 9-29) and is localised to the
+CC   cell inner membrane. SidA is induced in response to DNA damage [1].
