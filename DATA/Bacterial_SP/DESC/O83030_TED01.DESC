@@ -1,0 +1,38 @@
+ID   DR_1725
+DE   DR_1725 WD repeat domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83030_TED01
+GA   27.00 27.00;
+TC   27.20 111.60;
+NC   26.70 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   10567266
+RT   Genome sequence of the radioresistant bacterium Deinococcus radiodurans
+RT   R1.
+RA   White O., Eisen J.A., Heidelberg J.F., Hickey E.K., Peterson J.D.,
+RA   Dodson R.J., Haft D.H., Gwinn M.L., Nelson W.C., Richardson D.L.,
+RA   Moffat K.S., Qin H., Jiang L., Pamphile W., Crosby M., Shen M.,
+RA   Vamathevan J.J., Lam P., McDonald L.A., Utterback T.R., Zalewski C.,
+RA   Makarova K.S., Aravind L., Daly M.J., Minton K.W., Fleischmann R.D.,
+RA   Ketchum K.A., Nelson K.E., Salzberg S.L., Smith H.O., Venter J.C.,
+RA   Fraser C.M.;
+RL   Science 1999;286:1571-1577.
+RN   [2]
+RM   11238985
+RT   Genome of the extremely radiation-resistant bacterium Deinococcus
+RT   radiodurans viewed from the perspective of comparative genomics.
+RA   Makarova K.S., Aravind L., Wolf Y.I., Tatusov R.L., Minton K.W.,
+RA   Koonin E.V., Daly M.J.;
+RL   Microbiol. Mol. Biol. Rev. 2001;65:44-79.
+CC   This entry represents the C-terminal domain (residues 146-263) of
+CC   DR_1725, a 263 amino acid uncharacterised WD repeat-containing protein
+CC   from Deinococcus radiodurans [1]. The protein is annotated as COG2319 in
+CC   the eggNOG database and contains a WD repeat region (residues 53-89). A
+CC   study identified DR_1725 as belonging to the YWTD class of propellers
+CC   rather than WD40s [2]. The protein is found in 5 proteins across
+CC   Deinococcaceae (Deinococcus). The specific function of this domain
+CC   remains to be determined.
+//
