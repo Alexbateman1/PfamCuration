@@ -1,0 +1,18 @@
+ID   BB_0028_N
+DE   BB_0028 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O51059_TED01
+GA   27.00 27.00;
+TC   27.10 236.90;
+NC   26.70 20.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 30-168) of
+CC   BB_0028, a 349 amino acid lipoprotein from Borreliella burgdorferi.
+CC   BB_0028 is synthesised as a precursor with an N-terminal signal
+CC   peptide (residues 1-29) and is predicted to be a lipoprotein. The
+CC   protein is found in 3 proteins across Borreliella and Borrelia species.
+CC   While the full-length protein has been detected at the protein level,
+CC   the specific function of this domain remains to be determined.
+//
