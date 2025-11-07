@@ -1,0 +1,29 @@
+ID   SpiC
+DE   Salmonella pathogenicity island 2 protein C
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:D0ZWR8_TED01
+GA   27.00 27.00;
+TC   34.00 33.80;
+NC   23.40 22.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   12174087
+RT   SpiC is required for secretion of Salmonella pathogenicity island
+RT   2 type III secretion system proteins.
+RA   Yu X.-J., Ruiz-Albert J., Unsworth K.E., Garvis S., Liu M.,
+RA   Holden D.W.;
+RL   Cell. Microbiol. 4:531-540(2002).
+RN   [2]
+RM   12193612
+RT   SpiC is required for translocation of Salmonella pathogenicity
+RT   island 2 effectors and secretion of translocon proteins SseB and
+RT   SseC.
+RA   Freeman J.A., Rappl C., Kuhle V., Hensel M., Miller S.I.;
+RL   J. Bacteriol. 184:4971-4980(2002).
+CC   This entry represents Salmonella pathogenicity island 2 protein C
+CC   (SpiC) of approximately 128 amino acids from Salmonella and related
+CC   bacteria. SpiC is a virulence protein that plays a central role in
+CC   mammalian macrophage infection, by inhibiting phagosome-lysosome
+CC   fusion and cellular trafficking [1,2].
