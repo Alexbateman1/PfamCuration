@@ -1,0 +1,16 @@
+ID   YmaG
+DE   Membrane protein YmaG
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31793/Iterate
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the YmaG family of membrane proteins of 91
+CC   amino acids found in Bacillales. The protein contains a predicted
+CC   transmembrane helix (residues 50-70) and is localised to the cell
+CC   membrane. This family is found in 81 proteins across Bacillota. The
+CC   function of this family remains to be determined.
+//
