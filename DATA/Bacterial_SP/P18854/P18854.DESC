@@ -1,0 +1,15 @@
+ID   TrpL
+DE   Tryptophan operon leader peptide
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P18854
+GA   27.00 27.00;
+TC   36.90 36.90;
+NC   24.70 14.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the tryptophan operon leader peptide, a short
+CC   14 amino acid peptide involved in regulating tryptophan
+CC   biosynthesis. The leader peptide is involved in attenuation control
+CC   of the trp operon.
+//
