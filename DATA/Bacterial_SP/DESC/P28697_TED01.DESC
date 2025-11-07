@@ -1,0 +1,21 @@
+ID   MbiA
+DE   Protein MbiA
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P28697_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.70 26.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   28159884
+RT   Identification of MbiA, a periplasmic peptidyl-prolyl cis/trans
+RT   isomerase from Escherichia coli involved in biofilm formation and
+RT   motility.
+RA   Fang X, Gomelsky M;
+RL   J. Bacteriol. 2017;199:e00729-16.
+CC   This entry represents protein MbiA (modifier of biofilm) found in
+CC   Escherichia coli. MbiA is a peptidyl-prolyl cis-trans isomerase
+CC   (PPIase) that regulates biofilm formation and motility via
+CC   isomerisation of proline residues in bacterial proteins [1].
