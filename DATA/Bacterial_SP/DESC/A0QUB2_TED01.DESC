@@ -1,0 +1,25 @@
+ID   SecB_like
+DE   SecB-like chaperone
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0QUB2_TED01
+GA   27.00 27.00;
+TC   27.70 27.60;
+NC   26.20 24.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   23264229
+RT   TAC from Mycobacterium tuberculosis: a paradigm for stress-
+RT   responsive toxin-antitoxin systems controlled by SecB-like
+RT   chaperones.
+RA   Sala A, Calderon V, Bordes P, Genevaux P;
+RL   Cell Stress Chaperones 2013;18:129-135.
+CC   This entry represents a small chaperone family of approximately 118
+CC   amino acids from Actinomycetes, including Mycolicibacterium and
+CC   Microbacterium species. Members belong to the SecB-like superfamily.
+CC   The characterised member SmegB (A0QUB2) from Mycolicibacterium
+CC   smegmatis is a chaperone component of an orphan antitoxin chaperone
+CC   (AC) system [1]. When expressed in E.coli, it complements the cold-
+CC   sensitive phenotype of a secB deletion, suggesting a generic
+CC   chaperone function [1].
