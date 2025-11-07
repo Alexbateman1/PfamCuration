@@ -1,0 +1,23 @@
+ID   FixT
+DE   Antikinase FixT family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O86464_TED01
+GA   27.00 27.00;
+TC   27.90 27.60;
+NC   25.40 24.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   10542296
+RT   Inhibition of the FixL sensor kinase by the FixT protein in
+RT   Sinorhizobium meliloti.
+RA   Garnerone A.-M., Cabanes D., Foussard M., Boistard P., Batut J.;
+RL   J. Biol. Chem. 1999;274:32500-32506.
+CC   This entry represents the FixT transcriptional regulator family,
+CC   found predominantly in Alphaproteobacteria including Sinorhizobium
+CC   and Rhizobium species. FixT prevents transcription of the
+CC   intermediate key regulatory genes nifA and fixK by acting as an
+CC   inhibitor of the sensor histidine kinase FixL, preventing production
+CC   or accumulation of its phosphorylated form [1].
+**

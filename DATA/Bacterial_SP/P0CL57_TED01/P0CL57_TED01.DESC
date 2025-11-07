@@ -1,0 +1,23 @@
+ID   MazE1
+DE   MazE1 antitoxin family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P0CL57_TED01
+GA   27.00 27.00;
+TC   29.80 97.90;
+NC   26.90 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   15718296
+RT   Toxin-antitoxin loci are highly abundant in free-living but lost
+RT   from host-associated prokaryotes.
+RA   Pandey D.P., Gerdes K.;
+RL   Nucleic Acids Res. 2005;33:966-976.
+CC   This entry represents the MazE1 antitoxin family found in
+CC   Mycobacterium tuberculosis complex. The family is approximately 57
+CC   amino acids in length. MazE1 is the antitoxin component of a type
+CC   II toxin-antitoxin system that forms a complex with cognate toxin
+CC   MazF1 [1]. The function of this protein family remains to be
+CC   determined.
+//

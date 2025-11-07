@@ -1,0 +1,15 @@
+ID   VirE3
+DE   VirE locus virulence protein VirE3 family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P08061_TED01
+GA   27.00 27.00;
+TC   27.10 114.90;
+NC   25.30 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the VirE3 protein family found in
+CC   Agrobacterium tumefaciens. VirE3 is a virulence protein encoded
+CC   on the Ti plasmid, located within the VirE locus. The specific
+CC   function of VirE3 in virulence remains to be determined.
+//

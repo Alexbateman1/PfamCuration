@@ -1,0 +1,14 @@
+ID   DUF
+DE   Domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P06529_TED01
+GA   27.00 27.00;
+TC   27.10 107.50;
+NC   26.60 19.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein family found in
+CC   Bacillales, including Bacillus, Sporosarcina, and related genera.
+CC   The function of this family remains to be determined.
+//

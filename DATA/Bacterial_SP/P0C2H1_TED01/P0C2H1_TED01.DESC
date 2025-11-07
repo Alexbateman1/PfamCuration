@@ -1,0 +1,16 @@
+ID   SPD_2304
+DE   SPD_2304 membrane protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P0C2H1_TED01
+GA   27.00 27.00;
+TC   28.10 132.00;
+NC   26.90 19.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the SPD_2304 membrane protein family found
+CC   on plasmid pDP1 of Streptococcus pneumoniae. The family is
+CC   approximately 56 amino acids in length with two predicted
+CC   transmembrane helices. Three proteins are found in the database.
+CC   The function of this protein family remains to be determined.
+//
