@@ -6,9 +6,6 @@ GA   27.00 27.00;
 TC   35.70 41.50;
 NC   22.80 21.80;
 BM   hmmbuild -o /dev/null HMM SEED
-SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
 TP   Family
-CC   This entry represents toxin ArtA, found in Escherichia coli and
-CC   related Enterobacteriaceae. ArtA is a transmembrane protein
-CC   involved in toxin activity. This family is found in both bacterial
-CC   and eukaryotic sequences, including Myxozoan parasites.
+CC   This entry represents the toxin ArtA found in Escherichia coli.

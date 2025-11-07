@@ -1,16 +1,15 @@
-ID   RepA_N
-DE   Replication initiation protein RepA N-terminal domain
+ID   IncFII_rep_N
+DE   IncFII plasmid replication initiation protein N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P18023_TED01
+SE   TED:P18023_TED01/Iterate
 GA   27.00 27.00;
 TC   27.70 64.90;
 NC   24.90 25.00;
 BM   hmmbuild -o /dev/null HMM SEED
-SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents the N-terminal domain of replication
-CC   initiation protein RepA found in Escherichia coli plasmids. RepA
-CC   proteins are involved in plasmid DNA replication. The full-length
-CC   protein typically contains an IncFII_repA domain (Pfam:PF02387) in
-CC   the C-terminal region. The function of this N-terminal domain
-CC   remains to be determined.
+CC   This entry represents the N-terminal domain of IncFII plasmid
+CC   replication initiation proteins found in Enterobacteriaceae. The
+CC   full-length protein also contains the IncFII_repA domain
+CC   (Pfam:PF02387). The function of this N-terminal domain remains to
+CC   be determined.
