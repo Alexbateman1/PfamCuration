@@ -1,0 +1,17 @@
+ID   TmpB_mid
+DE   Treponemal membrane protein B middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P19649_TED02
+GA   27.00 27.00;
+TC   27.70 145.50;
+NC   25.60 25.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the middle domain of treponemal membrane
+CC   protein B (TmpB), found in Treponema pallidum. TmpB is localised to
+CC   the cell outer membrane and may serve as a porin or transport
+CC   protein for large molecules. The protein contains a signal peptide
+CC   and the mature protein is a peripheral membrane protein. The
+CC   function of this middle domain remains to be determined.
+//

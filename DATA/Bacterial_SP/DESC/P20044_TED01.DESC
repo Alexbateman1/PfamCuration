@@ -1,0 +1,16 @@
+ID   RepA_dom
+DE   Plasmid replication protein RepA domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P20044_TED01
+GA   27.00 27.00;
+TC   27.60 38.60;
+NC   26.20 22.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of plasmid replication protein RepA,
+CC   found in Lactobacillaceae species including Lentilactobacillus,
+CC   Loigolactobacillus, Leuconostoc, and Amylolactobacillus. RepA
+CC   proteins are involved in plasmid DNA replication initiation. This
+CC   domain is found in five proteins across bacterial taxa.
+//

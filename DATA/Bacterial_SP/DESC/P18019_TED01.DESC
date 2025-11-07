@@ -1,0 +1,15 @@
+ID   DUF
+DE   Uncharacterised protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P18019_TED01
+GA   27.00 27.00;
+TC   33.90 139.10;
+NC   26.60 23.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in species
+CC   within the Peptostreptococcaceae family, including Romboutsia and
+CC   Paraclostridium. The function of this protein remains to be
+CC   determined.
+//

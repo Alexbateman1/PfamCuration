@@ -1,0 +1,17 @@
+ID   Ank_rep
+DE   Ankyrin repeat region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P19577_TED02
+GA   27.00 27.00;
+TC   27.30 27.50;
+NC   26.60 21.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an ankyrin repeat-containing region found in
+CC   Dichelobacter nodosus extracellular serine protease. The full-length
+CC   protein contains extensive ankyrin repeats (Pfam:PF00023,
+CC   Pfam:PF12796, Pfam:PF13606, Pfam:PF13637, Pfam:PF13857). Ankyrin
+CC   repeats mediate protein-protein interactions. The function of this
+CC   specific repeat region remains to be determined.
+//
