@@ -1,0 +1,14 @@
+ID   DUF
+DE   Domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P07935_TED01
+GA   27.00 27.00;
+TC   27.30 77.90;
+NC   26.60 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised vegetative protein family
+CC   found in Myxococcota. The function of this family remains to be
+CC   determined.
+//

@@ -1,0 +1,16 @@
+ID   TraEE
+DE   Conjugal transfer entry exclusion protein TraEE family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P09129_TED01
+GA   27.00 27.00;
+TC   27.30 29.70;
+NC   25.90 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the conjugal transfer entry exclusion
+CC   protein family, found in Enterobacteriaceae and related
+CC   Gammaproteobacteria. These proteins are typically associated with
+CC   plasmid conjugation systems. The function of this family remains
+CC   to be determined.
+//

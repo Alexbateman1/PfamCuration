@@ -1,0 +1,23 @@
+ID   OWP_6th
+DE   Outer cell wall protein domain 6
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P09333_TED06
+GA   27.00 27.00;
+TC   27.20 31.60;
+NC   26.90 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   2428810
+RT   Characterization of the genes coding for two major cell wall
+RT   proteins from protein-producing Bacillus brevis 47: complete
+RT   nucleotide sequence of the outer wall protein gene.
+RA   Tsuboi A., Uchihi R., Tabata R., Takahashi Y., Hashiba H., Sasaki T.,
+RA   Yamagata H., Tsukagoshi N., Udaka S.;
+RL   J. Bacteriol. 1986;168:365-373.
+CC   This entry represents the sixth domain of the outer cell wall
+CC   protein from Bacillales and related bacteria. The outer cell wall
+CC   protein binds to the middle cell wall protein [1]. The specific
+CC   function of this domain remains to be determined.
+//
