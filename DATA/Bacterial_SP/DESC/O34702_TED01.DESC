@@ -1,0 +1,15 @@
+ID   YotC
+DE   YotC prophage protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O34702_TED01
+GA   27.00 27.00;
+TC   27.60 144.10;
+NC   26.90 24.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents YotC (residues 3-53), a 63 amino acid protein from
+CC   the SPbeta prophage of Bacillus subtilis. The protein is found in 2
+CC   proteins across SPbeta phage and related prophages. The function of this
+CC   protein remains to be determined.
+//

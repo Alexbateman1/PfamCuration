@@ -1,0 +1,17 @@
+ID   YotD
+DE   YotD prophage protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O34407_TED01
+GA   27.00 27.00;
+TC   30.10 86.10;
+NC   26.70 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents YotD (residues 6-36), a 43 amino acid
+CC   uncharacterised protein from the SPbeta prophage of Bacillus subtilis.
+CC   Related proteins are annotated as rubrerythrin family proteins,
+CC   although the functional significance of this annotation remains to be
+CC   validated. The protein is found in SPbeta phage and related prophages.
+CC   The function of this protein remains to be determined.
+//

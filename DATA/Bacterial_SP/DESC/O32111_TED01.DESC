@@ -1,0 +1,16 @@
+ID   YuzG
+DE   YuzG membrane protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O32111_TED01
+GA   27.00 27.00;
+TC   27.80 66.40;
+NC   24.80 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents YuzG (residues 20-46), a 46 amino acid
+CC   uncharacterised protein from Bacillus subtilis. The protein contains a
+CC   single transmembrane helix (residues 20-42) and is predicted to be
+CC   localised to the membrane. YuzG is found in 2 proteins across
+CC   Bacillales. The function of this protein remains to be determined.
+//

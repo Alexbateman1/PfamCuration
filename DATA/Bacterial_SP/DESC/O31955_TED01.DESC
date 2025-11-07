@@ -1,0 +1,15 @@
+ID   YonC
+DE   YonC prophage protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31955_TED01
+GA   27.00 27.00;
+TC   28.40 122.50;
+NC   26.70 20.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents YonC (residues 11-176), a 178 amino acid
+CC   uncharacterised protein from the SPbeta prophage of Bacillus subtilis.
+CC   The protein is found in SPbeta phage and related prophages across
+CC   Bacillales. The function of this protein remains to be determined.
+//

@@ -1,0 +1,23 @@
+ID   PhrE
+DE   Phosphatase RapE inhibitor PhrE
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O32025
+GA   27.00 27.00;
+TC   27.00 97.10;
+NC   26.90 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   10629174
+RT   Differential processing of propeptide inhibitors of Rap phosphatases
+RT   in Bacillus subtilis.
+RA   Jiang M., Grau R., Perego M.;
+RL   J. Bacteriol. 182:303-310(2000).
+CC   This entry represents PhrE, a 44 amino acid signalling peptide from
+CC   Bacillus subtilis involved in the regulation of sporulation. PhrE is
+CC   synthesised as a propeptide that is secreted, processed to the mature
+CC   pentapeptide (residues 31-35), and then reimported into the cell where
+CC   it inhibits the RapE phosphatase [1]. PhrE belongs to the Phr family
+CC   of signalling peptides and is found in 3 proteins across Bacillales.
+//

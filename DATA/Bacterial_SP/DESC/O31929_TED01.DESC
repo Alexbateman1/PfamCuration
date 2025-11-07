@@ -1,0 +1,19 @@
+ID   YopI_N
+DE   YopI N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31929_TED01
+GA   27.00 27.00;
+TC   27.20 28.10;
+NC   24.90 24.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 1-34) of YopI, an
+CC   uncharacterised membrane protein from the SPbeta prophage of Bacillus
+CC   subtilis. YopI is a 177 amino acid protein containing a transmembrane
+CC   helix (residues 11-31) in this N-terminal region. The full-length
+CC   protein is found across diverse bacterial orders including Bacillales,
+CC   Eubacteriales, Peptostreptococcales and Lactobacillales, with eight
+CC   homologues identified. The protein is predicted to be localised to the
+CC   cell membrane. The function of this domain remains to be determined.
+//

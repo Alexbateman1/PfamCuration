@@ -1,0 +1,19 @@
+ID   YorJ_C
+DE   YorJ DNA primase core domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31904_TED03
+GA   27.00 27.00;
+TC   27.40 32.60;
+NC   26.70 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal DNA primase core domain of YorJ
+CC   (residues 234-370), an uncharacterised protein from the SPbeta
+CC   prophage of Bacillus subtilis. YorJ is annotated in InterPro as
+CC   belonging to the phage SP-beta YorJ family (IPR016622) and contains a
+CC   zinc finger CHC2-type domain at the N-terminus. The protein spans 378
+CC   amino acids and is found primarily in bacteriophages, with 12 homologues
+CC   identified across Bacteria and Viruses. The specific function of this
+CC   domain remains to be determined.
+//
