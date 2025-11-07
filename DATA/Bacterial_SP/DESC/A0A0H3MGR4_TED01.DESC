@@ -1,0 +1,32 @@
+ID   IncG
+DE   Chlamydial inclusion membrane protein G
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0H3MGR4_TED01
+GA   27.00 27.00;
+TC   153.60 153.20;
+NC   22.50 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   11260479
+RT   Mammalian 14-3-3beta associates with the Chlamydia trachomatis
+RT   inclusion membrane via its interaction with IncG.
+RA   Scidmore M.A., Hackstadt T.;
+RL   Mol. Microbiol. 2001;39:1638-1650.
+RN   [2]
+RM   14500499
+RT   Identification of two eukaryote-like serine/threonine kinases
+RT   encoded by Chlamydia trachomatis serovar L2 and characterization of
+RT   interacting partners of Pkn1.
+RA   Verma A., Maurelli A.T.;
+RL   Infect. Immun. 2003;71:5772-5784.
+CC   This entry represents the inclusion membrane protein G (IncG) from
+CC   Chlamydia species. IncG is secreted, probably via a type III
+CC   secretion system, and localises to the inclusion membrane of the
+CC   pathogen-containing vacuole [1]. The protein binds to host cell
+CC   14-3-3 beta (YWHAB), with phosphorylation of serine-166 required for
+CC   this interaction [1]. IncG is phosphorylated by the chlamydial
+CC   kinase Pkn1 [2]. The protein is thought to be involved in early
+CC   modification events of the chlamydial inclusion and has been shown to
+CC   associate with lipid droplets [1].

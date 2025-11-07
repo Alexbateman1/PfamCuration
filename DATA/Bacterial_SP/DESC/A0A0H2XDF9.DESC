@@ -1,0 +1,22 @@
+ID   DUF
+DE   Domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0H2XDF9
+GA   27.00 27.00;
+TC   27.50 74.00;
+NC   26.00 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   24033479
+RT   Secretion of atypical protein substrates by the ESAT-6 secretion
+RT   system of Staphylococcus aureus.
+RA   Jager F., Kneuper H., Palmer T.;
+RL   Mol. Microbiol. 2013;90:734-743.
+CC   This entry represents an uncharacterised protein family of
+CC   approximately 105 amino acids found in Staphylococcus species. The
+CC   protein SAUSA300_0287 from Staphylococcus aureus has been identified
+CC   as EsxD, which interacts with EsxB in the context of the ESAT-6
+CC   secretion system [1]. However, the specific function of this protein
+CC   family remains to be determined.
