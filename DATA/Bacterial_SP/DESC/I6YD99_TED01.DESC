@@ -1,0 +1,14 @@
+ID   Rv2386A
+DE   Mycobacterium tuberculosis protein Rv2386A
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:I6YD99_TED01
+GA   27.00 27.00;
+TC   27.00 104.20;
+NC   26.90 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a small protein of approximately 52 amino acids
+CC   found in Mycobacterium species, particularly M. tuberculosis. The
+CC   protein is identified by the locus designation Rv2386A/RVBD_2386A. The
+CC   function of this protein remains to be determined.

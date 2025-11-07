@@ -1,0 +1,15 @@
+ID   YugM
+DE   YugM family membrane protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O05245
+GA   27.00 27.00;
+TC   27.10 226.20;
+NC   24.10 23.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YugM family of membrane proteins from
+CC   Bacillus species, proteins of approximately 123 amino acids. YugM
+CC   contains three predicted transmembrane helices and is predicted to be
+CC   localised to the cell membrane. The function of this family remains to
+CC   be determined.
