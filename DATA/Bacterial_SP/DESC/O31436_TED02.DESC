@@ -1,0 +1,16 @@
+ID   YbdN_C
+DE   Uncharacterised protein YbdN C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31436_TED02
+GA   27.00 27.00;
+TC   28.40 27.80;
+NC   25.70 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal region of approximately 130 amino
+CC   acids (residues 153-282) found in protein YbdN from Bacillus subtilis
+CC   (285 amino acids). The protein contains a predicted signal peptide
+CC   (residues 1-25) indicating it is likely secreted. The function of this
+CC   domain remains to be determined.
+//
