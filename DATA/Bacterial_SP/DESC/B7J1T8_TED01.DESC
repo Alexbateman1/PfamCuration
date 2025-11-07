@@ -1,0 +1,23 @@
+ID   Borrelia_P22
+DE   Borrelia outer surface 22 kDa lipoprotein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:B7J1T8_TED01
+GA   27.00 27.00;
+TC   29.10 322.40;
+NC   23.80 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   31486526
+RT   Structural analysis of Borrelia burgdorferi periplasmic lipoprotein
+RT   BB0365 involved in Lyme disease infection.
+RA   Brangulis K, Akopjana I, Petrovskis I, Kazaks A, Jekabsons A,
+RA   Jaudzems K, Viksna A, Bertins M, Tars K;
+RL   FEBS Lett. 2020;594:317-326.
+CC   This entry represents a 22 kDa outer surface lipoprotein from
+CC   Borreliella burgdorferi (Borrelia burgdorferi), also known as P22 or
+CC   antigen IPLA7. The protein is anchored to the cell outer membrane by
+CC   lipid modification. The structure has been determined by X-ray
+CC   crystallography (PDB: 6R1G) [1], revealing it localises to the
+CC   periplasm and is involved in Lyme disease infection.

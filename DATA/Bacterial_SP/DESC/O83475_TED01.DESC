@@ -1,0 +1,16 @@
+ID   TP013X_lipo
+DE   TP013X lipoprotein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83475_TED01
+GA   27.00 27.00;
+TC   28.20 247.60;
+NC   26.00 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the TP013X lipoprotein family found in
+CC   Treponema pallidum (the syphilis spirochaete). Members include
+CC   TP_0133, TP_0134, TP_0136, and the fused TP_0462/TP_0463 protein.
+CC   These proteins are anchored to the cell membrane by lipid
+CC   modification. The function of this lipoprotein family remains to be
+CC   determined.

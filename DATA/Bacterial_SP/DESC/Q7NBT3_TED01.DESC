@@ -1,0 +1,24 @@
+ID   HMW3_N
+DE   High molecular weight cytadherence protein 3 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q7NBT3_TED01
+GA   27.00 27.00;
+TC   28.50 426.70;
+NC   24.00 22.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16495551
+RT   Identification of fibronectin-binding proteins in Mycoplasma
+RT   gallisepticum strain R.
+RA   May M., Papazisi L., Gorton T.S., Geary S.J.;
+RL   Infect. Immun. 2006;74:1777-1785.
+CC   This entry represents an N-terminal domain of approximately 135
+CC   amino acids found in high molecular weight cytadherence protein 3
+CC   (HMW3/Hlp3) from Mycoplasma species. The full-length protein binds
+CC   fibronectin [1] and is a component of the cytoskeleton-like
+CC   structure that stabilises the mycoplasma cell shape and anchors
+CC   cytadhesin proteins at the attachment organelle. The protein
+CC   localises to the attachment membrane. The function of this domain
+CC   remains to be determined.

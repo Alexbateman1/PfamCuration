@@ -1,0 +1,15 @@
+ID   YgdT
+DE   YgdT protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A385XJL2
+GA   27.00 27.00;
+TC   27.40 111.90;
+NC   25.50 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a small protein family of 48 amino acids found
+CC   in Enterobacteriaceae, including YgdT from Escherichia coli. The
+CC   protein has been suggested to participate in carbohydrate metabolism
+CC   based on co-expression network analysis, but the specific function
+CC   remains to be determined.

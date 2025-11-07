@@ -1,0 +1,16 @@
+ID   MG414_mid
+DE   MG414/MG415 family middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75182_TED02
+GA   27.00 27.00;
+TC   28.20 247.60;
+NC   26.00 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle domain found in the MG414/MG415
+CC   protein family from Mycoplasma species. These proteins are membrane-
+CC   associated, with MG414 (1036aa) containing multiple transmembrane
+CC   regions and MG415 (664aa) containing a signal peptide and C-terminal
+CC   transmembrane region. The function of this domain remains to be
+CC   determined.
