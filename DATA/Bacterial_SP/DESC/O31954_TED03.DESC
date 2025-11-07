@@ -1,0 +1,19 @@
+ID   YonD_C
+DE   YonD C-terminal coiled coil region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31954_TED03
+GA   27.00 27.00;
+TC   27.20 87.40;
+NC   25.30 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal region (residues 323-442) of
+CC   YonD, a 478 amino acid virion structural protein from the SPbeta
+CC   prophage of Bacillus subtilis. YonD contains three domains: an
+CC   N-terminal domain (Pfam:PF27205, residues 25-235), a middle domain
+CC   (Pfam:DUF8531, residues 240-320), and this C-terminal region which
+CC   contains an extended coiled coil (residues 326-419). The protein is
+CC   found in 5 proteins across Bacillales. The specific function of this
+CC   domain remains to be determined.
+//

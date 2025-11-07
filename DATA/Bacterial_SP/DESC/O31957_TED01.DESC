@@ -1,0 +1,17 @@
+ID   YonA_N
+DE   YonA N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31957_TED01
+GA   27.00 27.00;
+TC   28.30 179.80;
+NC   27.10 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 3-81) of YonA, a
+CC   156 amino acid uncharacterised protein from the SPbeta prophage of
+CC   Bacillus subtilis. YonA is divided into two domains: this N-terminal
+CC   region and a C-terminal domain (residues 91-153). The protein is found
+CC   in SPbeta phage and related prophages across Bacillales. The function
+CC   of this domain remains to be determined.
+//

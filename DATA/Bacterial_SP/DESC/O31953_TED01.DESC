@@ -1,0 +1,18 @@
+ID   YonE_C
+DE   YonE portal protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31953_TED01
+GA   27.00 27.00;
+TC   28.70 122.50;
+NC   26.70 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain (residues 415-470) of
+CC   YonE, a 506 amino acid portal protein from the SPbeta prophage of
+CC   Bacillus subtilis. Portal proteins form the gateway through which DNA
+CC   enters and exits the phage capsid during packaging and infection. This
+CC   domain is found in SPbeta phage and related prophages across
+CC   Bacillales. The specific function of this domain remains to be
+CC   determined.
+//
