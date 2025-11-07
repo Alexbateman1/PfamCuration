@@ -1,0 +1,15 @@
+ID   PM1583
+DE   PM1583 family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9CKM8_TED01
+GA   27.00 27.00;
+TC   28.50 426.70;
+NC   24.00 22.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein family of
+CC   approximately 180 amino acids found in Pasteurella species,
+CC   including PM1583 from Pasteurella multocida. The protein contains a
+CC   signal peptide. The function of this family remains to be
+CC   determined.

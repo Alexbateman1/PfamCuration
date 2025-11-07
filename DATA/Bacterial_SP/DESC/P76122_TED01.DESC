@@ -1,0 +1,15 @@
+ID   YddJ
+DE   YddJ family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P76122_TED01
+GA   27.00 27.00;
+TC   27.40 28.50;
+NC   25.90 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of approximately 35 amino acids found
+CC   in proteins from Enterobacteriaceae, including YddJ from Escherichia
+CC   coli. The E. coli protein may be the product of a pseudogene, as it
+CC   is missing approximately 320 N-terminal residues compared to
+CC   orthologues. The function of this domain remains to be determined.
