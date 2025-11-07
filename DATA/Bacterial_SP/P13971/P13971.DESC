@@ -1,0 +1,15 @@
+ID   Sok
+DE   Suppressor of killing Sok protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P13971
+GA   27.00 27.00;
+TC   27.20 178.50;
+NC   26.00 18.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the Sok (suppressor of killing) protein
+CC   family found in Enterobacteriaceae. This family is approximately
+CC   74 amino acids in length. The function of this protein family
+CC   remains to be determined.
+//
