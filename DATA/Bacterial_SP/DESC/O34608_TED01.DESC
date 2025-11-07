@@ -1,0 +1,25 @@
+ID   YdiN_N
+DE   YdiN N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O34608_TED01
+GA   27.00 27.00;
+TC   27.00 91.10;
+NC   26.90 19.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   11751814
+RT   Molecular organization of intrinsic restriction and modification genes
+RT   BsuM of Bacillus subtilis Marburg.
+RA   Ohshima H., Matsuoka S., Asai K., Sadaie Y.;
+RL   J. Bacteriol. 184:381-389(2002).
+CC   This entry represents the N-terminal domain (residues 2-34) of YdiN, a
+CC   71 amino acid protein from Bacillus subtilis. YdiN is synthesised as a
+CC   precursor with an N-terminal signal peptide (residues 1-26) indicating
+CC   secretion or membrane localisation. The protein is encoded in a
+CC   heat-inducible operon with groES, groEL, ydiM, ydiO and ydiP [1]. YdiN
+CC   is found in 1 protein across Bacillales. While disruption of this gene
+CC   shows no BsuMI restriction or methylation-related phenotype [1], the
+CC   specific function of this domain remains to be determined.
+//

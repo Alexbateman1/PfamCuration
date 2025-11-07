@@ -1,0 +1,18 @@
+ID   YodN_C
+DE   YodN C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O34414_TED03
+GA   27.00 27.00;
+TC   27.20 27.30;
+NC   26.80 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain (residues 134-224) of YodN,
+CC   a 226 amino acid protein from Bacillus subtilis. YodN contains two
+CC   defined Pfam domains: YodN_N (Pfam:PF27191, residues 11-55) and
+CC   YodN_2nd (Pfam:PF27175, residues 76-132), with this C-terminal region
+CC   representing a third domain. The protein is found in 72 proteins across
+CC   diverse bacterial groups including Bacillales, Eubacteriales, and
+CC   Burkholderiales. The function of this domain remains to be determined.
+//
