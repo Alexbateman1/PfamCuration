@@ -1,0 +1,29 @@
+ID   YoaJ
+DE   Membrane protein YoaJ
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:C1P603/Iterate/Iterate
+GA   27.00 27.00;
+TC   38.20 38.20;
+NC   23.30 21.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   19121005
+RT   Small membrane proteins found by comparative genomics and ribosome
+RT   binding site models.
+RA   Hemm MR, Paul BJ, Schneider TD, Storz G, Rudd KE;
+RL   Mol Microbiol 2008;70:1487-1501.
+RN   [2]
+RM   19734316
+RT   Small stress response proteins in Escherichia coli: proteins missed by
+RT   classical proteomic studies.
+RA   Hemm MR, Paul BJ, Miranda-Rios J, Zhang A, Soltanzad N, Storz G;
+RL   J Bacteriol 2010;192:46-58.
+CC   This entry represents the YoaJ family of small membrane proteins of 24
+CC   amino acids found in Enterobacteriaceae. The protein contains a
+CC   predicted transmembrane helix (residues 4-24) and is localised to the
+CC   cell inner membrane. YoaJ is constitutively expressed and induced by
+CC   thiol oxidant diamide, slightly at 45 degrees Celsius and slightly at
+CC   pH 5.5 [1,2]. The function of this family remains to be determined.
+//

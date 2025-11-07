@@ -1,0 +1,13 @@
+ID   YdzX
+DE   Uncharacterised protein YdzX
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:C0H3X2_TED01
+GA   27.00 27.00;
+TC   29.30 165.40;
+NC   24.80 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the C-terminal region of approximately 64 amino
+CC   acids found in protein YdzX from Bacillus subtilis (residues 30-93 of
+CC   95 amino acids). The function of this family remains to be determined.

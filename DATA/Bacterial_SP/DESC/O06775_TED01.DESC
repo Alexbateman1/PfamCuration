@@ -1,0 +1,23 @@
+ID   VapB8_C
+DE   Antitoxin VapB8 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O06775_TED01/Iterate
+GA   27.00 27.00;
+TC   27.60 32.50;
+NC   23.60 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   15718296
+RT   Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.
+RA   Pandey DP, Gerdes K;
+RL   Nucleic Acids Res 2005;33:966-976.
+CC   This entry represents the C-terminal region of approximately 35 amino
+CC   acids (residues 54-88) found in antitoxin VapB8 from Mycobacterium
+CC   tuberculosis (90 amino acids). VapB8 is the antitoxin component of the
+CC   VapBC8 toxin-antitoxin system [1]. The protein has a disordered N-
+CC   terminal region (residues 1-56). The function of this domain remains
+CC   to be determined.
+//

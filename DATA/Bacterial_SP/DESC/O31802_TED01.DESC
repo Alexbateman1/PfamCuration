@@ -1,0 +1,23 @@
+ID   YnzH
+DE   Spore coat protein YnzH
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31802_TED01/Iterate
+GA   27.00 27.00;
+TC   27.00 44.00;
+NC   24.00 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   18065538
+RT   CotC-CotU heterodimerization during assembly of the Bacillus subtilis
+RT   spore coat.
+RA   Zilhao R, Naclerio G, Henriques AO, Baccigalupi L, Ricca E,
+RA   Moran CP Jr;
+RL   J Bacteriol 2008;190:1267-1274.
+CC   This entry represents a region of approximately 83 amino acids
+CC   (residues 1-83) found in protein YnzH from Bacillus subtilis (86
+CC   amino acids). The protein shows similarity to spore coat protein C
+CC   (CotC) and interacts with CotC during spore coat assembly [1]. The
+CC   function of this family remains to be determined.
+//

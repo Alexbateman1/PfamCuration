@@ -1,0 +1,17 @@
+ID   YotK
+DE   SPbeta prophage-derived protein YotK
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31866_TED01/Iterate
+GA   27.00 27.00;
+TC   27.40 88.90;
+NC   25.70 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a region of approximately 54 amino acids
+CC   (residues 2-55) found in protein YotK from Bacillus subtilis (61 amino
+CC   acids). The protein contains a predicted coiled coil region (residues
+CC   7-57) and is derived from the SPbeta prophage. This family is found in
+CC   2 proteins across Bacteria and Viruses. The function of this family
+CC   remains to be determined.
+//

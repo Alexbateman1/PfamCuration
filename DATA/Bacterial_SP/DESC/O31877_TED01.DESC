@@ -1,0 +1,17 @@
+ID   YosL
+DE   SPbeta prophage-derived protein YosL
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31877_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   30.10 32.00;
+NC   25.80 24.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a region of approximately 57 amino acids
+CC   (residues 11-67) found in protein YosL from Bacillus subtilis (117
+CC   amino acids), derived from the SPbeta prophage. The protein shows
+CC   structural similarity to the Arc ribbon-helix-helix domain. This family
+CC   is found in 3 proteins across Bacteria and Viruses. The function of
+CC   this family remains to be determined.
+//

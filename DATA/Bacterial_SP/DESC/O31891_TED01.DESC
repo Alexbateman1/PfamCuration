@@ -1,0 +1,17 @@
+ID   YorX
+DE   SPbeta prophage-derived protein YorX
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31891_TED01/Iterate
+GA   27.00 27.00;
+TC   31.40 139.30;
+NC   23.40 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a region of approximately 71 amino acids
+CC   (residues 1-71) found in protein YorX from Bacillus subtilis (75 amino
+CC   acids), derived from the SPbeta prophage. The protein shows similarity
+CC   to the DUF3892 domain. This family is found in 2 proteins across
+CC   Bacteria and Viruses. The function of this family remains to be
+CC   determined.
+//

@@ -1,0 +1,15 @@
+ID   YouA_C
+DE   SPbeta prophage-derived protein YouA C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:C0H440_TED02/Iterate
+GA   27.00 27.00;
+TC   41.90 89.60;
+NC   25.20 24.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal region of approximately 122 amino
+CC   acids (residues 80-201) found in protein YouA from Bacillus subtilis
+CC   (203 amino acids). YouA is derived from the SPbeta prophage. The
+CC   function of this domain remains to be determined.
+//
