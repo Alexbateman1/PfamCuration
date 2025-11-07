@@ -1,0 +1,22 @@
+ID   RhsIC
+DE   Immunity protein RhsIC
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:E0SGL8_TED01
+GA   27.00 27.00;
+TC   29.00 30.80;
+NC   25.40 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   23572593
+RT   Rhs proteins from diverse bacteria mediate intercellular competition.
+RA   Koskiniemi S., Lamoureux J.G., Nikolakakis K.C., t'Kint de Roodenbeke
+RA   C., Kaplan M.D., Low D.A., Hayes C.S.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 110:7032-7037(2013).
+CC   This entry represents the immunity protein RhsIC of approximately 140
+CC   amino acids found in bacteria such as Dickeya dadantii and related
+CC   species. RhsIC is the immunity protein component of a toxin-immunity
+CC   protein module, which functions as a cellular contact-dependent growth
+CC   inhibition (CDI) system. RhsIC blocks the toxic effects of the
+CC   cognate toxin RhsC in E.coli [1].

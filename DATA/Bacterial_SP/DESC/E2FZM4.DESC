@@ -1,0 +1,20 @@
+ID   SocA
+DE   Small ORF induced by copper A
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:E2FZM4
+GA   27.00 27.00;
+TC   28.10 153.60;
+NC   26.60 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   21166899
+RT   A novel copper-responsive regulon in Mycobacterium tuberculosis.
+RA   Festa R.A., Jones M.B., Butler-Wu S., Sinsimer D., Gerads R.,
+RA   Bishai W.R., Peterson S.N., Darwin K.H.;
+RL   Mol. Microbiol. 79:133-148(2011).
+CC   This entry represents the small ORF induced by copper A (SocA) from
+CC   Mycobacterium tuberculosis, a protein of 61 amino acids. SocA is
+CC   repressed by RicR and induced by copper [1]. SocA contains a signal
+CC   peptide. The function of this protein remains to be determined.

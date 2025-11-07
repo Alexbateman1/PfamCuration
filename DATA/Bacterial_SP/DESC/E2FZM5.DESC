@@ -1,0 +1,21 @@
+ID   SocB
+DE   Small ORF induced by copper B
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:E2FZM5
+GA   27.00 27.00;
+TC   27.70 144.20;
+NC   26.20 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   21166899
+RT   A novel copper-responsive regulon in Mycobacterium tuberculosis.
+RA   Festa R.A., Jones M.B., Butler-Wu S., Sinsimer D., Gerads R.,
+RA   Bishai W.R., Peterson S.N., Darwin K.H.;
+RL   Mol. Microbiol. 79:133-148(2011).
+CC   This entry represents the small ORF induced by copper B (SocB) from
+CC   Mycobacterium tuberculosis, a protein of 54 amino acids. SocB is
+CC   repressed by RicR and induced by copper [1]. The protein is predicted
+CC   to be disordered. The function of this protein remains to be
+CC   determined.

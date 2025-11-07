@@ -1,0 +1,16 @@
+ID   P65_repeat
+DE   Proline-rich P65 protein repeat domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:E1QC64_TED01
+GA   27.00 27.00;
+TC   27.20 138.90;
+NC   26.90 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of approximately 70 amino acids found
+CC   in the proline-rich P65 protein from Mycoplasma species. The P65
+CC   protein contains pentapeptide and hexapeptide repeats forming a
+CC   proline-rich acidic domain. The P65 protein is a peripheral membrane
+CC   protein, probably with epitopes exposed at the cell surface. The
+CC   specific function of this domain remains to be determined.

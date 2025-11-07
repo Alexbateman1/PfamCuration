@@ -1,0 +1,28 @@
+ID   Astexin-1
+DE   Astexin-1 lasso peptide precursor
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:E8RMD3
+GA   27.00 27.00;
+TC   30.00 138.80;
+NC   25.70 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   22949633
+RT   Precursor-centric genome-mining approach for lasso peptide discovery.
+RA   Maksimov M.O., Pelczer I., Link A.J.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:15223-15228(2012).
+RN   [2]
+RM   23601645
+RT   The astexin-1 lasso peptides: biosynthesis, stability, and structural
+RT   studies.
+RA   Zimmermann M., Hegemann J.D., Xie X., Marahiel M.A.;
+RL   Chem. Biol. 20:558-569(2013).
+CC   This entry represents the astexin-1 precursor from Asticcacaulis
+CC   excentricus, a ribosomally synthesised and post-translationally
+CC   modified peptide (RiPP) of 51 amino acids. The mature peptide
+CC   (residues 29-51) is a class II lasso peptide with an isopeptide bond
+CC   between Asp-29 and Gly-37. Astexin-1 shows weak antimicrobial
+CC   activity against the phylogenetic relative Caulobacter crescentus [1,
+CC   2].
