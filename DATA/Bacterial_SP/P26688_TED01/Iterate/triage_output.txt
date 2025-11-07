@@ -1,0 +1,182 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   CBHE_COXBU              Reviewed;         341 AA.
+AC   P26688;
+DE   RecName: Full=Protein CbhE;
+GN   Name=cbhE; OrderedLocusNames=CBUA0016;
+OS   Coxiella burnetii (strain RSA 493 / Nine Mile phase I).
+OG   Plasmid pQpH1.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Legionellales; Coxiellaceae; Coxiella.
+OX   NCBI_TaxID=227377;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=1879692; DOI=10.1016/0378-1119(91)90401-v;
+RA   Minnick M.F., Small C.L., Frazier M.E., Mallavia L.P.;
+RT   "Analysis of the cbhE' plasmid gene from acute disease-causing isolates of
+RT   Coxiella burnetii.";
+RL   Gene 103:113-118(1991).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=RSA 493 / Nine Mile phase I;
+RX   PubMed=12704232; DOI=10.1073/pnas.0931379100;
+RA   Seshadri R., Paulsen I.T., Eisen J.A., Read T.D., Nelson K.E., Nelson W.C.,
+RA   Ward N.L., Tettelin H., Davidsen T.M., Beanan M.J., DeBoy R.T.,
+RA   Daugherty S.C., Brinkac L.M., Madupu R., Dodson R.J., Khouri H.M.,
+RA   Lee K.H., Carty H.A., Scanlan D., Heinzen R.A., Thompson H.A., Samuel J.E.,
+RA   Fraser C.M., Heidelberg J.F.;
+RT   "Complete genome sequence of the Q-fever pathogen, Coxiella burnetii.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:5455-5460(2003).
+CC   -!- FUNCTION: May be involved in the pathogenesis of acute Q fever.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000305}.
+DR   EMBL; M58166; AAA23306.1; -; Genomic_DNA.
+DR   EMBL; AE016829; AAO91593.1; -; Genomic_DNA.
+DR   PIR; JQ1189; JQ1189.
+DR   RefSeq; NP_819033.1; NC_004704.2.
+DR   RefSeq; WP_011109641.1; NC_004704.2.
+DR   AlphaFoldDB; P26688; -.
+DR   EnsemblBacteria; AAO91593; AAO91593; CBUA0016.
+DR   GeneID; 1207846; -.
+DR   KEGG; cbu:CBUA0016; -.
+DR   PATRIC; fig|227377.7.peg.2107; -.
+DR   eggNOG; ENOG502ZIQN; Bacteria.
+DR   HOGENOM; CLU_815632_0_0_6; -.
+DR   Proteomes; UP000002671; Plasmid pQpH1.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cytoplasm; Plasmid; Reference proteome.
+FT   CHAIN           1..341
+FT                   /note="Protein CbhE"
+FT                   /id="PRO_0000089372"
+FT   REGION          287..341
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        287..297
+FT                   /note="Acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        323..332
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   CONFLICT        176
+FT                   /note="E -> A (in Ref. 1; AAA23306)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   341 AA;  39501 MW;  0850F00BD87C986E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	CandidatusWilliamhamiltonella.
+2	6	Candidatus Fukatsuia.
+1	6	Coxiella.
+1	6	aphid secondary symbionts
+2	5	Yersiniaceae
+1	5	Enterobacteriaceae
+1	5	Coxiellaceae
+3	4	Enterobacterales
+1	4	Legionellales
+4	3	Gammaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A249DZH1	UNCHARACTERIZED PROTEIN {     97.3    3.9e-24   2   2.2   6.0
+	Iterate                   	   125	   316	    79.1
+	Iterate                   	    27	   131	    20.6
+
+A0A2U8I4V2	UNCHARACTERIZED PROTEIN {     85.7    1.4e-20   2   2.1   2.0
+	Iterate                   	   131	   327	    80.9
+	Iterate                   	    34	   118	     3.9
+
+A0A2U8I9H6	TRANSGLUTAMINASE-LIKE DOM     95.5    1.4e-23   2   2.1   4.0
+	Iterate                   	   129	   335	    84.2
+	Iterate                   	    34	   101	    12.6
+
+A0A4E9F7P2	UNCHARACTERIZED PROTEIN {     83.1    8.4e-20  21  27.2  25.1
+	Iterate                   	   666	   782	     5.0
+	Iterate                   	  1576	  1692	     4.7
+	Iterate                   	  2039	  2112	     4.0
+	Iterate                   	  2385	  2459	     4.0
+	Iterate                   	  2553	  2682	     3.5
+	Iterate                   	  1293	  1412	     2.7
+	Iterate                   	  1363	  1483	     2.7
+	Iterate                   	  1853	  1973	     2.7
+	Iterate                   	  1781	  1903	     2.4
+	Iterate                   	   603	   710	     2.2
+	Iterate                   	  1092	  1202	     2.1
+	Iterate                   	   451	   572	     2.0
+	Iterate                   	  1544	  1622	     1.7
+	Iterate                   	  2245	  2323	     1.7
+	Iterate                   	   779	   854	     1.6
+	Iterate                   	   848	   923	     1.6
+	Iterate                   	   917	   992	     1.6
+	Iterate                   	  1478	  1553	     1.6
+	Iterate                   	  2178	  2253	     1.6
+	Iterate                   	  2314	  2391	     1.6
+	Iterate                   	  1969	  2042	     1.5
+
+P26688	PROTEIN CBHE                       642.4   2.5e-190   1   1.1   4.8
+	Iterate                   	    13	   284	   642.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS2209931 (E-value: 2.2e-192, Score: 642.4)
+Mentioned as: CBUA0016
+Description: CbhE protein
+Organism: Coxiella burnetii RSA 493
+PMID: 36385554
+Source: EuropePMC
+Title: The endogenous Coxiella burnetii plasmid encodes a functional toxin-antitoxin system
+Journal: Molecular microbiology (2022)
+Snippet: ). Using this technique, Colonne et al.( 2016 ) created gene deletions of cbuA0015 and cbuA0016 and showed these mutants had a small atypical CCV in infected THP1 macrophages (Colonne et al., 2016 ). Recently, a new shuttle vector (pQGK) was developed and was used to
+
+================================================================================
+Protein: VIMSS2209931 (E-value: 2.2e-192, Score: 642.4)
+Mentioned as: CBUA0016
+Description: CbhE protein
+Organism: Coxiella burnetii RSA 493
+PMID: 31501284
+Source: EuropePMC
+Title: Dependency of <i>Coxiella burnetii</i> Type 4B Secretion on the Chaperone IcmS
+Journal: Journal of bacteriology (2019)
+
+================================================================================
+Protein: VIMSS2209931 (E-value: 2.2e-192, Score: 642.4)
+Mentioned as: CBUA0016
+Description: CbhE protein
+Organism: Coxiella burnetii RSA 493
+PMID: 24610709
+Source: EuropePMC
+Title: Essential role for the response regulator PmrA in Coxiella burnetii type 4B secretion and colonization of mammalian host cells
+Journal: Journal of bacteriology (2014)
+Snippet: cbu1752 cloned into pJB-CAT-CyaA cbuA0015 cloned into pJB-CAT-CyaA cbuA0016 cloned into pJB-CAT-CyaA Omsland et al. (24) Beare et al. (12) This study This study
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P26688.2	AF-P26688-F1-model_v4_TED01:13-56_71-284	1	AF-P26688-F1-model_v4_TED01	13-284	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P26688_TED01/Iterate
+GA   27.00 27.00;
+TC   32.20 79.10;
+NC   23.60 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

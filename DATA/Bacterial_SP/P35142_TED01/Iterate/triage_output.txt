@@ -1,0 +1,146 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   SASG_ALKPO              Reviewed;          54 AA.
+AC   P35142; D3FUN9;
+DE   RecName: Full=Small, acid-soluble spore protein gamma-type;
+DE            Short=SASP;
+GN   Name=sspA; OrderedLocusNames=BpOF4_10780;
+OS   Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
+OS   (Bacillus pseudofirmus).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae;
+OC   Alkalihalophilus.
+OX   NCBI_TaxID=398511;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=8449416; DOI=10.1016/0378-1119(93)90749-s;
+RA   Quirk P.G.;
+RT   "A gene encoding a small, acid-soluble spore protein from alkaliphilic
+RT   Bacillus firmus OF4.";
+RL   Gene 125:81-83(1993).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-2126 / JCM 17055 / OF4;
+RX   PubMed=21951522; DOI=10.1111/j.1462-2920.2011.02591.x;
+RA   Janto B., Ahmed A., Ito M., Liu J., Hicks D.B., Pagni S., Fackelmayer O.J.,
+RA   Smith T.A., Earl J., Elbourne L.D., Hassan K., Paulsen I.T., Kolsto A.B.,
+RA   Tourasse N.J., Ehrlich G.D., Boissy R., Ivey D.M., Li G., Xue Y., Ma Y.,
+RA   Hu F.Z., Krulwich T.A.;
+RT   "Genome of alkaliphilic Bacillus pseudofirmus OF4 reveals adaptations that
+RT   support the ability to grow in an external pH range from 7.5 to 11.4.";
+RL   Environ. Microbiol. 13:3289-3309(2011).
+CC   -!- FUNCTION: SASP are proteins degraded in the first minutes of spore
+CC       germination and provide amino acids for both new protein synthesis and
+CC       metabolism. These proteins may be involved in dormant spore's high
+CC       resistance to UV light.
+CC   -!- SIMILARITY: Belongs to the gamma-type SASP family. {ECO:0000305}.
+DR   EMBL; M96341; AAB01348.1; -; Genomic_DNA.
+DR   EMBL; CP001878; ADC50209.1; -; Genomic_DNA.
+DR   RefSeq; WP_012957575.1; NC_013791.2.
+DR   AlphaFoldDB; P35142; -.
+DR   SMR; P35142; -.
+DR   STRING; 398511.BpOF4_10780; -.
+DR   KEGG; bpf:BpOF4_10780; -.
+DR   HOGENOM; CLU_3040544_0_0_9; -.
+DR   Proteomes; UP000001544; Chromosome.
+DR   GO; GO:0030435; P:sporulation resulting in formation of a cellular spore; IEA:UniProtKB-KW.
+PE   3: Inferred from homology;
+KW   Reference proteome; Sporulation.
+FT   CHAIN           1..54
+FT                   /note="Small, acid-soluble spore protein gamma-type"
+FT                   /id="PRO_0000196322"
+FT   REGION          1..54
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        10..21
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        29..44
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        45..54
+FT                   /note="Basic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   SITE            27..28
+FT                   /note="Cleavage; by spore protease"
+FT                   /evidence="ECO:0000250"
+SQ   SEQUENCE   54 AA;  6343 MW;  4F8B4F6A2866A970 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Halalkalibacter
+1	6	Alkalihalophilus
+2	5	Bacillaceae
+2	4	Bacillales
+2	3	Bacilli
+2	2	Bacillota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1M7RSW7	NUCLEOID-ASSOCIATED PROTE     24.6       0.11   1   1.4   0.1
+	Iterate                   	     7	    37	    23.7
+	PF02575	YbaB_DNA_bd     	     8	    98	   109.7
+
+A0A1Q9DM40	14-3-3-LIKE PROTEIN {ECO:     33.6    0.00018   8   8.9  64.9
+	Iterate                   	   118	   164	     9.0
+	Iterate                   	   359	   405	     9.0
+	Iterate                   	   600	   646	     9.0
+	Iterate                   	   836	   882	     9.0
+	Iterate                   	  1077	  1123	     9.0
+	Iterate                   	  1318	  1364	     9.0
+	Iterate                   	  1573	  1619	     9.0
+	Iterate                   	  1819	  1865	     9.0
+	PF00244	14-3-3          	    10	   234	   314.5
+	PF00244	14-3-3          	   251	   475	   315.3
+	PF00244	14-3-3          	   492	   716	   315.3
+	PF00244	14-3-3          	   733	   952	   300.8
+	PF00244	14-3-3          	   969	  1193	   315.3
+	PF00244	14-3-3          	  1210	  1434	   315.3
+	PF00244	14-3-3          	  1451	  1689	   300.8
+	PF00244	14-3-3          	  1692	  1935	   298.9
+	PF04658	TAFII55_N       	  1997	  2076	    26.3
+	PF00481	PP2C            	  2183	  2307	    30.5
+
+A0A498JGY5	EUKARYOTIC TRANSLATION IN     27.7      0.012   3   5.7  18.3
+	Iterate                   	   571	   610	    11.6
+	Iterate                   	   892	   931	    11.6
+	Iterate                   	  1213	  1252	    11.6
+	PF02854	MIF4G           	   279	   502	   165.7
+	PF02854	MIF4G           	   600	   823	   162.7
+	PF02854	MIF4G           	   921	  1144	   170.4
+	PF02854	MIF4G           	  1242	  1464	   174.4
+	PF02847	MA3             	  1701	  1815	    61.8
+
+A0A562Q820	SMALL ACID-SOLUBLE SPORE      29.3     0.0038   1   1.6  12.2
+	Iterate                   	     5	    48	    28.1
+
+P35142	SMALL, ACID-SOLUBLE SPORE PROTE    109.6    3.3e-28   1   1.0  39.1
+	Iterate                   	     2	    53	   109.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P35142.1	AF-P35142-F1-model_v4_TED01:2-53	1	AF-P35142-F1-model_v4_TED01	2-53	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P35142_TED01/Iterate
+GA   27.00 27.00;
+TC   93.80 93.70;
+NC   22.30 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

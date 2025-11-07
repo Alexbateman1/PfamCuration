@@ -1,0 +1,153 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   RELB1_CAUVC             Reviewed;          87 AA.
+AC   Q9AA08;
+DE   RecName: Full=Antitoxin RelB1;
+GN   Name=relB1; OrderedLocusNames=CC_0803;
+OS   Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+OS   (Caulobacter crescentus).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Caulobacterales; Caulobacteraceae; Caulobacter.
+OX   NCBI_TaxID=190650;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 19089 / CIP 103742 / CB 15;
+RX   PubMed=11259647; DOI=10.1073/pnas.061029298;
+RA   Nierman W.C., Feldblyum T.V., Laub M.T., Paulsen I.T., Nelson K.E.,
+RA   Eisen J.A., Heidelberg J.F., Alley M.R.K., Ohta N., Maddock J.R.,
+RA   Potocka I., Nelson W.C., Newton A., Stephens C., Phadke N.D., Ely B.,
+RA   DeBoy R.T., Dodson R.J., Durkin A.S., Gwinn M.L., Haft D.H., Kolonay J.F.,
+RA   Smit J., Craven M.B., Khouri H.M., Shetty J., Berry K.J., Utterback T.R.,
+RA   Tran K., Wolf A.M., Vamathevan J.J., Ermolaeva M.D., White O.,
+RA   Salzberg S.L., Venter J.C., Shapiro L., Fraser C.M.;
+RT   "Complete genome sequence of Caulobacter crescentus.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:4136-4141(2001).
+RN   [2]
+RP   POSSIBLE FUNCTION.
+RC   STRAIN=ATCC 19089 / CIP 103742 / CB 15;
+RX   PubMed=15718296; DOI=10.1093/nar/gki201;
+RA   Pandey D.P., Gerdes K.;
+RT   "Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.";
+RL   Nucleic Acids Res. 33:966-976(2005).
+RN   [3]
+RP   FUNCTION AS AN ANTITOXIN, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC 19089 / CIP 103742 / CB 15;
+RX   PubMed=20487277; DOI=10.1111/j.1365-2958.2010.07207.x;
+RA   Fiebig A., Castro Rojas C.M., Siegal-Gaskins D., Crosson S.;
+RT   "Interaction specificity, toxicity and regulation of a paralogous set of
+RT   ParE/RelE-family toxin-antitoxin systems.";
+RL   Mol. Microbiol. 77:236-251(2010).
+CC   -!- FUNCTION: Antitoxin component of a type II toxin-antitoxin (TA) system.
+CC       Neutralizes the effect of cognate toxin RelE1, but no other RelE or
+CC       ParE toxin. {ECO:0000269|PubMed:20487277}.
+CC   -!- DISRUPTION PHENOTYPE: Cannot be disrupted, suggesting it is a
+CC       functional antitoxin. No visible phenotype when the relBE1 operon is
+CC       deleted. {ECO:0000269|PubMed:20487277}.
+DR   EMBL; AE005673; AAK22788.1; -; Genomic_DNA.
+DR   PIR; H87348; H87348.
+DR   RefSeq; NP_419620.1; NC_002696.2.
+DR   RefSeq; WP_010918688.1; NC_002696.2.
+DR   AlphaFoldDB; Q9AA08; -.
+DR   SMR; Q9AA08; -.
+DR   STRING; 190650.CC_0803; -.
+DR   EnsemblBacteria; AAK22788; AAK22788; CC_0803.
+DR   KEGG; ccr:CC_0803; -.
+DR   PATRIC; fig|190650.5.peg.815; -.
+DR   HOGENOM; CLU_2477681_0_0_5; -.
+DR   BioCyc; CAULO:CC0803-MONOMER; -.
+DR   Proteomes; UP000001816; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome; Toxin-antitoxin system.
+FT   CHAIN           1..87
+FT                   /note="Antitoxin RelB1"
+FT                   /id="PRO_0000408464"
+SQ   SEQUENCE   87 AA;  9198 MW;  1506C1096F869DD6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Caulobacter.
+2	5	Caulobacteraceae
+2	4	Caulobacterales
+2	3	Alphaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3C4R1	ANTITOXIN PROTEIN RELB-1     102.4    2.8e-26   1   1.4   2.0
+	Iterate                   	    11	    49	   101.7
+
+A0A232EF26	CCHC-TYPE DOMAIN-CONTAINI     29.7     0.0017   3   4.4   8.2
+	Iterate                   	    96	   116	    10.3
+	Iterate                   	   249	   269	    10.3
+	Iterate                   	   138	   158	     7.3
+
+A0A559JFD6	UNCHARACTERIZED PROTEIN {     37.3    7.4e-06   4   5.4   0.4
+	Iterate                   	   108	   139	     7.8
+	Iterate                   	   174	   202	     7.6
+	Iterate                   	   240	   268	     7.6
+	Iterate                   	    42	    70	     7.3
+
+A0A9Q0EDP8	UNCHARACTERIZED PROTEIN {     33.1    0.00015   0  16.5  12.5
+
+Q9AA08	ANTITOXIN RELB1                   102.4    2.8e-26   1   1.4   2.0
+	Iterate                   	    11	    49	   101.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS5848077 (E-value: 2.5e-28, Score: 102.4)
+Mentioned as: CCNA_00845
+Description: antitoxin protein relB-1
+Organism: Caulobacter crescentus NA1000
+PMID: 24398711
+Source: EuropePMC
+Title: The functions of DNA methylation by CcrM in Caulobacter crescentus: a global approach
+Journal: Nucleic acids research (2014)
+Snippet: genes activated in ccrM CCNA_00379 Thiol:disulfide interchange protein DsbA 0.69 0.53 No No No 5 CCNA_00845 Antitoxin protein RelB-1 0.82 ND No No No 1 CCNA_00893 Transcriptional regulatory protein 0.53 ND No No No 0 CCNA_01946 Tyrosyl-tRNA synthetase 0.89 0.28 No No No 4 CCNA_02635 Cell
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9AA08.1	AF-Q9AA08-F1-model_v4_TED02:50-87	1	AF-Q9AA08-F1-model_v4_TED02	50-87	0
+Q9AA08.1	AF-Q9AA08-F1-model_v4_TED01:11-49	1	AF-Q9AA08-F1-model_v4_TED01	11-49	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9AA08_TED01/Iterate
+GA   27.00 27.00;
+TC   28.90 101.70;
+NC   25.50 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for Q9AA08
+RN   [1]
+RM   15718296
+RT   "Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.";
+RA   Pandey D.P., Gerdes K.;
+RL   Nucleic Acids Res. 33:966-976(2005).
+RC   Function description for Q9AA08
+RN   [2]
+RM   20487277
+RT   "Interaction specificity, toxicity and regulation of a paralogous set of
+RT   ParE/RelE-family toxin-antitoxin systems.";
+RA   Fiebig A., Castro Rojas C.M., Siegal-Gaskins D., Crosson S.;
+RL   Mol. Microbiol. 77:236-251(2010).
+
+--- End of Current DESC file ---

@@ -1,0 +1,187 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PEPT_FUSNN              Reviewed;         412 AA.
+AC   P58794;
+DE   RecName: Full=Peptidase T {ECO:0000255|HAMAP-Rule:MF_00550};
+DE            EC=3.4.11.4 {ECO:0000255|HAMAP-Rule:MF_00550};
+DE   AltName: Full=Aminotripeptidase {ECO:0000255|HAMAP-Rule:MF_00550};
+DE            Short=Tripeptidase {ECO:0000255|HAMAP-Rule:MF_00550};
+DE   AltName: Full=Tripeptide aminopeptidase {ECO:0000255|HAMAP-Rule:MF_00550};
+GN   Name=pepT {ECO:0000255|HAMAP-Rule:MF_00550}; OrderedLocusNames=FN0733;
+OS   Fusobacterium nucleatum subsp. nucleatum (strain ATCC 25586 / DSM 15643 /
+OS   BCRC 10681 / CIP 101130 / JCM 8532 / KCTC 2640 / LMG 13131 / VPI 4355).
+OC   Bacteria; Fusobacteriati; Fusobacteriota; Fusobacteriia; Fusobacteriales;
+OC   Fusobacteriaceae; Fusobacterium.
+OX   NCBI_TaxID=190304;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 25586 / DSM 15643 / BCRC 10681 / CIP 101130 / JCM 8532 /
+RC   KCTC 2640 / LMG 13131 / VPI 4355;
+RX   PubMed=11889109; DOI=10.1128/jb.184.7.2005-2018.2002;
+RA   Kapatral V., Anderson I., Ivanova N., Reznik G., Los T., Lykidis A.,
+RA   Bhattacharyya A., Bartman A., Gardner W., Grechkin G., Zhu L., Vasieva O.,
+RA   Chu L., Kogan Y., Chaga O., Goltsman E., Bernal A., Larsen N., D'Souza M.,
+RA   Walunas T., Pusch G., Haselkorn R., Fonstein M., Kyrpides N.C.,
+RA   Overbeek R.;
+RT   "Genome sequence and analysis of the oral bacterium Fusobacterium nucleatum
+RT   strain ATCC 25586.";
+RL   J. Bacteriol. 184:2005-2018(2002).
+CC   -!- FUNCTION: Cleaves the N-terminal amino acid of tripeptides.
+CC       {ECO:0000255|HAMAP-Rule:MF_00550}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=Release of the N-terminal residue from a tripeptide.;
+CC         EC=3.4.11.4; Evidence={ECO:0000255|HAMAP-Rule:MF_00550};
+CC   -!- COFACTOR:
+CC       Name=Zn(2+); Xref=ChEBI:CHEBI:29105; Evidence={ECO:0000255|HAMAP-
+CC         Rule:MF_00550};
+CC       Note=Binds 2 Zn(2+) ions per subunit. {ECO:0000255|HAMAP-
+CC       Rule:MF_00550};
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000255|HAMAP-Rule:MF_00550}.
+CC   -!- SIMILARITY: Belongs to the peptidase M20B family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00550}.
+DR   EMBL; AE009951; AAL94929.1; -; Genomic_DNA.
+DR   RefSeq; NP_603630.1; NC_003454.1.
+DR   RefSeq; WP_011016614.1; NZ_CP028101.1.
+DR   AlphaFoldDB; P58794; -.
+DR   SMR; P58794; -.
+DR   FunCoup; P58794; 17.
+DR   STRING; 190304.FN0733; -.
+DR   MEROPS; M20.003; -.
+DR   PaxDb; 190304-FN0733; -.
+DR   EnsemblBacteria; AAL94929; AAL94929; FN0733.
+DR   GeneID; 79783726; -.
+DR   KEGG; fnu:FN0733; -.
+DR   PATRIC; fig|190304.8.peg.1296; -.
+DR   eggNOG; COG2195; Bacteria.
+DR   HOGENOM; CLU_053676_0_0_0; -.
+DR   InParanoid; P58794; -.
+DR   BioCyc; FNUC190304:G1FZS-1319-MONOMER; -.
+DR   Proteomes; UP000002521; Chromosome.
+DR   GO; GO:0005829; C:cytosol; IBA:GO_Central.
+DR   GO; GO:0008237; F:metallopeptidase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0045148; F:tripeptide aminopeptidase activity; IBA:GO_Central.
+DR   GO; GO:0008270; F:zinc ion binding; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043171; P:peptide catabolic process; IEA:UniProtKB-UniRule.
+DR   GO; GO:0006508; P:proteolysis; IEA:UniProtKB-UniRule.
+DR   CDD; cd03892; M20_peptT; 1.
+DR   FunFam; 3.30.70.360:FF:000002; Peptidase T; 1.
+DR   Gene3D; 3.30.70.360; -; 1.
+DR   Gene3D; 3.40.630.10; Zn peptidases; 1.
+DR   HAMAP; MF_00550; Aminopeptidase_M20; 1.
+DR   InterPro; IPR001261; ArgE/DapE_CS.
+DR   InterPro; IPR036264; Bact_exopeptidase_dim_dom.
+DR   InterPro; IPR002933; Peptidase_M20.
+DR   InterPro; IPR011650; Peptidase_M20_dimer.
+DR   InterPro; IPR010161; Peptidase_M20B.
+DR   NCBIfam; TIGR01882; peptidase-T; 1.
+DR   NCBIfam; NF003976; PRK05469.1; 1.
+DR   NCBIfam; NF009920; PRK13381.1; 1.
+DR   PANTHER; PTHR42994; PEPTIDASE T; 1.
+DR   PANTHER; PTHR42994:SF1; PEPTIDASE T; 1.
+DR   Pfam; PF07687; M20_dimer; 1.
+DR   Pfam; PF01546; Peptidase_M20; 1.
+DR   PIRSF; PIRSF037215; Peptidase_M20B; 1.
+DR   SUPFAM; SSF55031; Bacterial exopeptidase dimerisation domain; 1.
+DR   SUPFAM; SSF53187; Zn-dependent exopeptidases; 1.
+DR   PROSITE; PS00758; ARGE_DAPE_CPG2_1; 1.
+DR   PROSITE; PS00759; ARGE_DAPE_CPG2_2; 1.
+PE   3: Inferred from homology;
+KW   Aminopeptidase; Cytoplasm; Hydrolase; Metal-binding; Metalloprotease;
+KW   Protease; Reference proteome; Zinc.
+FT   CHAIN           1..412
+FT                   /note="Peptidase T"
+FT                   /id="PRO_0000185295"
+FT   ACT_SITE        85
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00550"
+FT   ACT_SITE        179
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00550"
+FT   BINDING         83
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00550"
+FT   BINDING         145
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00550"
+FT   BINDING         145
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00550"
+FT   BINDING         180
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00550"
+FT   BINDING         202
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00550"
+FT   BINDING         384
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00550"
+SQ   SEQUENCE   412 AA;  46271 MW;  204F09B343DE85EC CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Fusobacterium.
+1	5	Fusobacteriaceae
+1	4	Fusobacteriales
+1	3	Fusobacteriia
+1	2	Fusobacteriota
+1	1	Fusobacteriati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P58794	PEPTIDASE T {ECO:0000255|HAMAP-     34.1    8.2e-05   1   2.5   3.3
+	P81207                    	     1	    20	    33.6
+	PF01546	Peptidase_M20   	   134	   408	    54.2
+	PF07687	M20_dimer       	   211	   315	    51.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS194119 (E-value: 7.3e-07, Score: 34.1)
+Mentioned as: FN0733
+Description: Peptidase T
+Organism: Fusobacterium nucleatum subsp. nucleatum ATCC 25586
+PMID: 25155235
+Source: EuropePMC
+Title: Proteomics of Fusobacterium nucleatum within a model developing oral microbial community
+Journal: MicrobiologyOpen (2014)
+Snippet: 16 17 29 32 14 Covers FN0060, FN0061, FN0266, FN0278, FN0370, FN0477, FN0549, FN0583, FN0590, FN0733, FN0752, FN0775, FN0873, FN0887, FN0920, FN0928, FN1029, FN1063, FN1128, FN1145, FN1186, FN1205, FN1271, FN1277, FN1280, FN1281, FN1297, FN1322, FN1426, FN1449, FN1728, FN1804, FN1826, FN1906, FN1931, FN1950, FN1978, FN2014, FN2016, FN2100.
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P81207
+GA   27.00 27.00;
+TC   28.60 33.60;
+NC   25.90 23.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

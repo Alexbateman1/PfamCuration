@@ -1,0 +1,81 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   LPW_THET8               Reviewed;          11 AA.
+AC   P05624; Q5SH85;
+DE   RecName: Full=trp operon leader peptide;
+GN   Name=trpL; OrderedLocusNames=TTHA1845;
+OS   Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8).
+OC   Bacteria; Thermotogati; Deinococcota; Deinococci; Thermales; Thermaceae;
+OC   Thermus.
+OX   NCBI_TaxID=300852;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=2844259; DOI=10.1016/0167-4781(88)90126-1;
+RA   Sato S., Nakada Y., Kanaya S., Tanaka T.;
+RT   "Molecular cloning and nucleotide sequence of Thermus thermophilus HB8 trpE
+RT   and trpG.";
+RL   Biochim. Biophys. Acta 950:303-312(1988).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 27634 / DSM 579 / HB8;
+RA   Masui R., Kurokawa K., Nakagawa N., Tokunaga F., Koyama Y., Shibata T.,
+RA   Oshima T., Yokoyama S., Yasunaga T., Kuramitsu S.;
+RT   "Complete genome sequence of Thermus thermophilus HB8.";
+RL   Submitted (NOV-2004) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: This protein is involved in control of the biosynthesis of
+CC       tryptophan.
+DR   EMBL; X07744; CAA30565.1; -; Genomic_DNA.
+DR   EMBL; AP008226; BAD71668.1; -; Genomic_DNA.
+DR   EnsemblBacteria; BAD71668; BAD71668; BAD71668.
+DR   KEGG; ttj:TTHA1845; -.
+DR   HOGENOM; CLU_3437634_0_0_0; -.
+DR   Proteomes; UP000000532; Chromosome.
+DR   GO; GO:0000162; P:L-tryptophan biosynthetic process; IEA:UniProtKB-KW.
+PE   4: Predicted;
+KW   Amino-acid biosynthesis; Aromatic amino acid biosynthesis; Leader peptide;
+KW   Reference proteome; Tryptophan biosynthesis.
+FT   PEPTIDE         1..11
+FT                   /note="trp operon leader peptide"
+FT                   /id="PRO_0000044030"
+SQ   SEQUENCE   11 AA;  1228 MW;  364B295A772DC5A7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thermus
+1	5	Thermaceae
+1	4	Thermales
+1	3	Deinococci
+1	2	Deinococcota
+1	1	Thermotogati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P05624	TRP OPERON LEADER PEPTIDE            28.0     0.0051   1   1.0   5.6
+	P05624                    	     1	    11	    28.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P05624
+GA   27.00 27.00;
+TC   28.00 28.00;
+NC   19.10 15.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

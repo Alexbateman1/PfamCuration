@@ -1,0 +1,126 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1078_MYCTU             Reviewed;          82 AA.
+AC   P0DV55;
+DE   RecName: Full=Protein Rv1078A {ECO:0000303|PubMed:34915127};
+GN   OrderedLocusNames=Rv1078A {ECO:0000303|PubMed:34915127};
+OS   Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex.
+OX   NCBI_TaxID=83332;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=9634230; DOI=10.1038/31159;
+RA   Cole S.T., Brosch R., Parkhill J., Garnier T., Churcher C.M., Harris D.E.,
+RA   Gordon S.V., Eiglmeier K., Gas S., Barry C.E. III, Tekaia F., Badcock K.,
+RA   Basham D., Brown D., Chillingworth T., Connor R., Davies R.M., Devlin K.,
+RA   Feltwell T., Gentles S., Hamlin N., Holroyd S., Hornsby T., Jagels K.,
+RA   Krogh A., McLean J., Moule S., Murphy L.D., Oliver S., Osborne J.,
+RA   Quail M.A., Rajandream M.A., Rogers J., Rutter S., Seeger K., Skelton S.,
+RA   Squares S., Squares R., Sulston J.E., Taylor K., Whitehead S.,
+RA   Barrell B.G.;
+RT   "Deciphering the biology of Mycobacterium tuberculosis from the complete
+RT   genome sequence.";
+RL   Nature 393:537-544(1998).
+RN   [2]
+RP   IDENTIFICATION, PROTEIN SEQUENCE OF 22-29, AND PROBABLE SUBCELLULAR
+RP   LOCATION.
+RC   STRAIN=H37Rv;
+RX   PubMed=34915127; DOI=10.1016/j.ygeno.2021.12.001;
+RA   Shi J., Meng S., Wan L., Zhang Z., Jiang S., Zhu H., Dai E., Chang L.,
+RA   Gao H., Wan K., Zhang L., Zhao X., Liu H., Lyu Z., Zhang Y., Xu P.;
+RT   "Deep N-terminomics of Mycobacterium tuberculosis H37Rv extensively correct
+RT   annotated encoding genes.";
+RL   Genomics 114:292-304(2022).
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000305|PubMed:34915127}.
+CC   -!- MISCELLANEOUS: Encoded entirely within Rv1078 (pra), on the same strand
+CC       in another reading frame. {ECO:0000269|PubMed:9634230}.
+DR   EMBL; AL123456; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   TubercuList; Rv1078A; -.
+DR   Proteomes; UP000001584; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+PE   1: Evidence at protein level;
+KW   Cytoplasm; Direct protein sequencing; Reference proteome.
+FT   CHAIN           1..82
+FT                   /note="Protein Rv1078A"
+FT                   /id="PRO_0000455668"
+FT   REGION          35..82
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        35..54
+FT                   /note="Basic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   82 AA;  9527 MW;  3ADA8996C1093CAC CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Mycobacterium tuberculosis complex.
+1	6	Winogradskya.
+1	6	Mycobacterium
+1	5	Mycobacteriaceae
+1	5	Micromonosporaceae
+1	4	Mycobacteriales
+1	4	Micromonosporales
+2	3	Actinomycetes
+2	2	Actinomycetota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A919SLT9	UNCHARACTERIZED PROTEIN {     28.7     0.0061   1   1.3   0.4
+	Iterate                   	     5	    84	    28.1
+
+A0AAE1D3P4	UNCHARACTERIZED PROTEIN {     21.8       0.85   3   5.0   0.5
+	Iterate                   	   231	   277	     5.4
+	Iterate                   	   193	   236	     5.0
+	Iterate                   	   127	   204	     4.1
+
+A0AAE1DDJ9	UNCHARACTERIZED PROTEIN {     25.5      0.062  13  11.2  39.3
+	Iterate                   	   210	   246	     5.8
+	Iterate                   	   133	   168	     5.1
+	Iterate                   	   176	   223	     5.1
+	Iterate                   	   242	   273	     5.0
+	Iterate                   	   367	   427	     4.9
+	Iterate                   	   108	   148	     4.7
+	Iterate                   	   295	   325	     4.5
+	Iterate                   	   306	   335	     4.5
+	Iterate                   	   328	   358	     4.5
+	Iterate                   	   350	   378	     4.4
+	Iterate                   	   232	   261	     4.3
+	Iterate                   	   319	   346	     4.3
+	Iterate                   	   257	   310	     3.2
+
+F4ING4	UNCHARACTERIZED PROTEIN {ECO:     36.9    1.7e-05   2  10.1   0.3
+	Iterate                   	   301	   363	     8.1
+	Iterate                   	  1084	  1147	     4.4
+
+P0DV55	PROTEIN RV1078A {ECO:0000303|P    176.8    3.5e-49   1   1.0  27.5
+	Iterate                   	     1	    82	   176.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DV55/Iterate
+GA   27.00 27.00;
+TC   27.80 117.40;
+NC   25.00 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

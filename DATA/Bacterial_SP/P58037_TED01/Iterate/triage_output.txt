@@ -1,0 +1,109 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YRHD_ECOLI              Reviewed;          51 AA.
+AC   P58037; A0A385XJM5; A5A623;
+DE   RecName: Full=Protein YrhD;
+GN   Name=yrhD; OrderedLocusNames=b4612; ORFNames=b3445.1;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION.
+RA   Rudd K.E.;
+RL   Unpublished observations (JAN-1999).
+DR   EMBL; U00096; AYC08248.1; -; Genomic_DNA.
+DR   AlphaFoldDB; P58037; -.
+DR   EnsemblBacteria; AYC08248; AYC08248; b4612.
+DR   InParanoid; P58037; -.
+DR   BioCyc; EcoCyc:MONOMER0-2826; -.
+DR   PRO; PR:P58037; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..51
+FT                   /note="Protein YrhD"
+FT                   /id="PRO_0000169561"
+SQ   SEQUENCE   51 AA;  6027 MW;  E18EECA6DC018FBB CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A7M5XJG2	CNIDARIAN RESTRICTED PROT     30.7    0.00098   3   3.1   3.7
+	Iterate                   	    29	    77	    13.6
+	Iterate                   	     3	    34	     8.7
+	Iterate                   	    73	   116	     8.6
+
+A0A914JGG8	UNCHARACTERIZED PROTEIN {     39.1    2.4e-06   3  10.1   0.1
+	Iterate                   	   262	   290	     6.1
+	Iterate                   	  1296	  1326	     5.8
+	Iterate                   	  1252	  1288	     3.9
+	PF00514	Arm             	    38	    78	    24.1
+	PF00514	Arm             	   117	   157	    28.8
+	PF00514	Arm             	   425	   451	    24.5
+	PF00514	Arm             	   635	   675	    22.9
+	PF00514	Arm             	   677	   717	    25.6
+	PF00514	Arm             	   954	   994	    36.5
+	PF13513	HEAT_EZ         	   980	  1033	    25.4
+	PF00514	Arm             	  1477	  1517	      23
+	PF00514	Arm             	  1519	  1559	    29.6
+	PF00514	Arm             	  1561	  1601	    32.3
+	PF00514	Arm             	  1685	  1725	    23.1
+
+B7L4X5	YRHD PROTEIN {ECO:0000313|EMB    139.8    8.1e-38   1   1.0   1.9
+	Iterate                   	     4	    54	   139.7
+
+E3NU28	UNCHARACTERIZED PROTEIN {ECO:     26.1      0.027   4   9.1  15.0
+	Iterate                   	   420	   447	     6.4
+	Iterate                   	    87	   116	     5.0
+	Iterate                   	   356	   379	     4.1
+	Iterate                   	     1	    27	     3.8
+
+P58037	PROTEIN YRHD                       140.1    6.6e-38   1   1.0   1.9
+	Iterate                   	     1	    51	   140.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P58037.1	AF-P58037-F1-model_v4_TED01:1-51	1	AF-P58037-F1-model_v4_TED01	1-51	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P58037_TED01/Iterate
+GA   27.00 27.00;
+TC   30.70 139.70;
+NC   26.10 19.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

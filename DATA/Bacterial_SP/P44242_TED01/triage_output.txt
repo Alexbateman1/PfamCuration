@@ -1,0 +1,553 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   S1_BPMU                 Reviewed;         504 AA.
+AC   Q9T1V0;
+DE   RecName: Full=Tail fiber protein S;
+DE   AltName: Full=Gene product 49;
+DE            Short=gp49;
+DE   AltName: Full=Gene product S;
+DE            Short=gpS;
+GN   Name=S; OrderedLocusNames=Mup49;
+OS   Escherichia phage Mu (Bacteriophage Mu).
+OC   Viruses; Duplodnaviria; Heunggongvirae; Uroviricota; Caudoviricetes;
+OC   Muvirus; Muvirus mu.
+OX   NCBI_TaxID=2681603;
+OH   NCBI_TaxID=543; Enterobacteriaceae.
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=11922669; DOI=10.1006/jmbi.2002.5437;
+RA   Morgan G.J., Hatfull G.F., Casjens S., Hendrix R.W.;
+RT   "Bacteriophage Mu genome sequence: analysis and comparison with Mu-like
+RT   prophages in Haemophilus, Neisseria and Deinococcus.";
+RL   J. Mol. Biol. 317:337-359(2002).
+RN   [2]
+RP   FUNCTION.
+RX   PubMed=6250048; DOI=10.1038/286218a0;
+RA   van de Putte P., Cramer S., Giphart-Gassler M.;
+RT   "Invertible DNA determines host specificity of bacteriophage mu.";
+RL   Nature 286:218-222(1980).
+RN   [3]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=3904174; DOI=10.1016/0042-6822(85)90388-5;
+RA   Grundy F.J., Howe M.M.;
+RT   "Morphogenetic structures present in lysates of amber mutants of
+RT   bacteriophage Mu.";
+RL   Virology 143:485-504(1985).
+RN   [4]
+RP   INDUCTION.
+RX   PubMed=8293968; DOI=10.1093/genetics/135.3.619;
+RA   Chiang L.W., Howe M.M.;
+RT   "Mutational analysis of a C-dependent late promoter of bacteriophage Mu.";
+RL   Genetics 135:619-629(1993).
+RN   [5]
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=8599204; DOI=10.1006/viro.1996.0107;
+RA   Grimaud R.;
+RT   "Bacteriophage Mu head assembly.";
+RL   Virology 217:200-210(1996).
+CC   -!- FUNCTION: Component of the tail fiber that acts as a receptor binding
+CC       protein. Binds to the primary receptor, thereby determining the host
+CC       range. Two alternate tail fiber S and S' proteins are encoded extending
+CC       the host range of the virus. {ECO:0000269|PubMed:6250048}.
+CC   -!- SUBCELLULAR LOCATION: Virion {ECO:0000269|PubMed:8599204}. Host
+CC       cytoplasm {ECO:0000305|PubMed:8599204}. Note=Tail fiber.
+CC   -!- INDUCTION: Expressed in the late phase of the viral replicative cycle.
+CC       Expression of late genes is activated by the viral late transcription
+CC       activator C. Expressed alternatively with tail fiber protein S'
+CC       (associated with tail fiber assembly protein U'). The switch from S-U
+CC       to S'-U' occurs through inversion of a DNA segment called G by the
+CC       phage invertase protein Gin. {ECO:0000269|PubMed:8293968}.
+CC   -!- DISRUPTION PHENOTYPE: Viral particles lack tail fibers in inversion-
+CC       defective gin mutants (blocked in G+ orientation; no switch to S'-U').
+CC       {ECO:0000269|PubMed:3904174}.
+CC   -!- MISCELLANEOUS: The orientation of the G segment is defined as G+ and
+CC       G-. G+ orientation provides S-U fibers whereas G- provides S'-U'
+CC       fibers. S-U and S'-U' dont have the same host range (e.g. respectively
+CC       E.coli and C.freundii).
+CC   -!- SIMILARITY: Belongs to the caudovirales tail fiber protein family.
+CC       {ECO:0000305}.
+DR   EMBL; AF083977; AAF01127.1; -; Genomic_DNA.
+DR   RefSeq; NP_050653.1; NC_000929.1.
+DR   PDB; 5YVQ; X-ray; 2.10 A; A=1-504.
+DR   PDB; 8JU3; X-ray; 2.00 A; A=1-177.
+DR   PDB; 9KI1; EM; 3.30 A; j/k/l/m/n/o/p/q/r=1-504.
+DR   PDBsum; 5YVQ; -.
+DR   PDBsum; 8JU3; -.
+DR   PDBsum; 9KI1; -.
+DR   EMDB; EMD-62362; -.
+DR   SMR; Q9T1V0; -.
+DR   GeneID; 2636293; -.
+DR   KEGG; vg:2636293; -.
+DR   Proteomes; UP000002611; Genome.
+DR   GO; GO:0030430; C:host cell cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0098024; C:virus tail, fiber; IEA:UniProtKB-KW.
+DR   GO; GO:0098671; P:adhesion receptor-mediated virion attachment to host cell; IEA:UniProtKB-KW.
+DR   GO; GO:0046718; P:symbiont entry into host cell; IEA:UniProtKB-KW.
+DR   GO; GO:0098678; P:viral tropism switching; IEA:UniProtKB-KW.
+DR   InterPro; IPR048390; Gp34_trimer.
+DR   InterPro; IPR005068; Phage_lambda_Stf-r2.
+DR   InterPro; IPR051934; Phage_Tail_Fiber_Structural.
+DR   PANTHER; PTHR35191; PROPHAGE SIDE TAIL FIBER PROTEIN HOMOLOG STFQ-RELATED; 1.
+DR   PANTHER; PTHR35191:SF1; PROPHAGE SIDE TAIL FIBER PROTEIN HOMOLOG STFQ-RELATED; 1.
+DR   Pfam; PF21446; Gp34_trimer; 1.
+DR   Pfam; PF03406; Phage_fiber_2; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Host cytoplasm; Host-virus interaction; Late protein;
+KW   Reference proteome; Viral attachment to host adhesion receptor;
+KW   Viral attachment to host cell; Viral receptor tropism switching;
+KW   Viral tail fiber protein; Viral tail protein; Virion;
+KW   Virus entry into host cell.
+FT   CHAIN           1..504
+FT                   /note="Tail fiber protein S"
+FT                   /id="PRO_0000077693"
+FT   HELIX           139..148
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   HELIX           153..155
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   TURN            156..159
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   HELIX           163..170
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   HELIX           173..180
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          202..206
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          209..216
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          226..235
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          239..245
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          248..256
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          259..264
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          276..278
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          280..282
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          285..287
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          289..293
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          295..302
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          317..321
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   TURN            322..324
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   HELIX           353..357
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          373..380
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          382..392
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          395..402
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          407..409
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          411..417
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          422..426
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   HELIX           434..437
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          440..446
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          465..471
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          484..494
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+FT   STRAND          497..500
+FT                   /evidence="ECO:0007829|PDB:5YVQ"
+SQ   SEQUENCE   504 AA;  55361 MW;  C564B6746F53993B CRC64;
+//
+ID   VPS_HAEIN               Reviewed;         623 AA.
+AC   P44242;
+DE   RecName: Full=Mu-like prophage FluMu defective tail fiber protein;
+GN   OrderedLocusNames=HI_1522;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+CC   -!- SIMILARITY: To phage Mu protein S. {ECO:0000305}.
+DR   EMBL; L42023; AAC23178.1; -; Genomic_DNA.
+DR   PIR; I64034; I64034.
+DR   RefSeq; NP_439671.1; NC_000907.1.
+DR   AlphaFoldDB; P44242; -.
+DR   SMR; P44242; -.
+DR   STRING; 71421.HI_1522; -.
+DR   EnsemblBacteria; AAC23178; AAC23178; HI_1522.
+DR   KEGG; hin:HI_1522; -.
+DR   PATRIC; fig|71421.8.peg.1593; -.
+DR   eggNOG; COG5301; Bacteria.
+DR   HOGENOM; CLU_438546_0_0_6; -.
+DR   OrthoDB; 5691093at2; -.
+DR   BioCyc; HINF71421:G1GJ1-1544-MONOMER; -.
+DR   Proteomes; UP000000579; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..623
+FT                   /note="Mu-like prophage FluMu defective tail fiber protein"
+FT                   /id="PRO_0000077694"
+SQ   SEQUENCE   623 AA;  67678 MW;  5EE5A8E2818C0060 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	5	Neisseriaceae
+10	5	Enterobacteriaceae
+4	4	Neisseriales
+4	4	Burkholderiales
+14	4	Enterobacterales
+9	3	Betaproteobacteria
+18	3	Gammaproteobacteria
+28	2	Pseudomonadota
+29	1	Pseudomonadati
+29	0	Bacteria
+Total of 31 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A071LSU0	INTEGRASE {ECO:0008006|GO     70.2    6.8e-16   1   1.1   0.0
+	P44242_TED01              	     2	    95	    70.0
+
+A0A071LZJ6	GLYCINE-RICH DOMAIN-CONTA     67.2    5.9e-15   1   1.5   0.0
+	P44242_TED01              	     2	    93	    66.2
+	PF21722	Gly_rich_2      	   119	   308	    43.6
+
+A0A072TEA8	PHAGE LATE CONTROL PROTEI     32.0    0.00055   1   1.7   0.0
+	P44242_TED01              	  1665	  1753	    30.7
+	PF21683	GpP-like_1st    	   441	   523	    58.4
+	PF22255	Gp44-like_2nd   	   525	   610	    85.1
+	PF21929	GpP_4th         	   697	   774	    34.6
+	PF06890	Phage_Mu_Gp45   	   797	   864	    67.1
+	PF07409	GP46            	  1024	  1126	   113.8
+	PF04865	Baseplate_J     	  1216	  1304	    31.8
+	PF26078	Baseplate_J_M   	  1325	  1416	    57.9
+	PF10076	Phage_Mu_Gp48   	  1506	  1663	    82.2
+	PF21882	Gp53-like_C     	  1891	  1977	    39.7
+	PF14301	DUF4376         	  2031	  2150	      56
+
+A0A0H3JMB3	PHAGE TAIL FIBER {ECO:000     76.4    7.8e-18   1   1.4   0.1
+	P44242_TED01              	     2	    96	    75.7
+
+A0A0M2K9U5	PHAGE TAIL COLLAR DOMAIN-     78.9    1.3e-18   1   1.4   0.0
+	P44242_TED01              	     2	    84	    78.0
+	PF07484	Collar          	    88	   137	    51.7
+
+A0A0M3LRW6	DEFECTIVE TAIL FIBER PROT     29.7      0.003   1   2.1   0.0
+	P44242_TED01              	     5	    96	    27.7
+	PF27114	Phage_tail_beta 	    97	   163	      76
+
+A0A117V507	UNCHARACTERIZED PROTEIN {     33.0    0.00027   1   1.7   0.0
+	P44242_TED01              	     3	    84	    31.7
+
+A0A165FTX7	PHAGE TAIL COLLAR DOMAIN-     31.1     0.0011   1   1.8   0.0
+	P44242_TED01              	     5	    74	    29.5
+
+A0A1T0B6K1	UNCHARACTERIZED PROTEIN {    146.9      8e-40   1   2.3   0.1
+	P44242_TED01              	     2	    99	   144.7
+	PF27114	Phage_tail_beta 	   100	   167	    77.8
+
+A0A261QRZ9	PHAGE TAIL PROTEIN {ECO:0     85.5    1.1e-20   1   2.0   0.0
+	P44242_TED01              	     2	    93	    82.6
+	PF03406	Phage_fiber_2   	   122	   163	    38.7
+
+A0A2N9X5V1	PHAGE TAIL COLLAR DOMAIN-     32.7    0.00034   1   1.7   0.0
+	P44242_TED01              	     3	    76	    31.4
+	PF22337	Phage_fiber_rpt 	    81	   112	    29.4
+	PF07484	Collar          	   184	   241	    81.3
+
+A0A2X4U4Z3	PHAGE TAIL FIBRE REPEAT {     65.8    1.6e-14   1   2.0   0.0
+	P44242_TED01              	     2	    89	    64.2
+	PF21722	Gly_rich_2      	    81	   281	    36.2
+
+A0A378BYE4	PUTATIVE PROPHAGE TAIL FI     72.4    1.4e-16   1   1.3   0.0
+	P44242_TED01              	     2	    83	    71.7
+	PF07484	Collar          	    86	   133	    37.5
+
+A0A378BYL4	UNCHARACTERIZED PROTEIN {     52.3    2.6e-10   1   1.8   0.0
+	P44242_TED01              	     2	    93	    50.7
+
+A0A380S8U9	BACTERIOPHAGE TAIL FIBER      28.6     0.0066   1   1.2   0.0
+	P44242_TED01              	    10	    90	    28.2
+
+A0A3L7LS79	UNCHARACTERIZED PROTEIN {     41.3    7.1e-07   1   1.1   0.0
+	P44242_TED01              	     1	    59	    41.3
+
+A0A3S0R3F7	CARBOHYDRATE-BINDING PROT     28.5     0.0071   1   1.9   0.0
+	P44242_TED01              	     9	    86	    26.3
+
+A0A3S4IAD6	PHAGE TAIL FIBER PROTEIN      58.1    4.1e-12   1   1.4   0.0
+	P44242_TED01              	     2	    93	    57.4
+	PF21882	Gp53-like_C     	   133	   221	    38.1
+
+A0A447UW03	PHAGE TAIL FIBER PROTEIN      58.3    3.6e-12   1   1.5   0.0
+	P44242_TED01              	     2	    93	    57.3
+
+A0A448VHU0	PUTATIVE PHAGE TAIL FIBER     30.5     0.0017   1   1.7   0.0
+	P44242_TED01              	     8	    76	    29.0
+	PF07484	Collar          	   273	   330	    88.2
+
+A0A494XL87	UNCHARACTERIZED PROTEIN {     29.9     0.0026   1   1.5   0.0
+	P44242_TED01              	     2	    96	    28.9
+
+A0A6I4YYX0	TAIL FIBER PROTEIN {ECO:0     29.6     0.0032   1   1.6   0.0
+	P44242_TED01              	     3	    98	    28.5
+
+A0A845BND6	PHAGE TAIL PROTEIN {ECO:0     28.9     0.0053   1   2.4   0.2
+	P44242_TED01              	    13	    71	    26.1
+
+A0A848GZB9	PUTATIVE TAIL FIBER PROTE     35.3    5.3e-05   1   1.4   0.0
+	P44242_TED01              	     4	    84	    34.3
+	PF21882	Gp53-like_C     	    92	   173	    41.9
+
+A0A8J7H8C3	PHAGE TAIL PROTEIN {ECO:0     86.9    4.1e-21   1   2.1   0.1
+	P44242_TED01              	     2	    93	    83.7
+	PF03406	Phage_fiber_2   	   122	   162	    39.3
+
+A0A8K0V2E7	TAIL FIBER PROTEIN {ECO:0     67.7    4.1e-15   1   1.6   0.0
+	P44242_TED01              	     2	    87	    66.5
+
+A0A916DFP0	PUTATIVE TAIL FIBER PROTE     30.2     0.0021   1   1.4   0.0
+	P44242_TED01              	     5	    93	    29.5
+	PF21882	Gp53-like_C     	   137	   213	    60.3
+
+A0A9N7Z0F0	GUANYLYL CYCLASE-ACTIVATI     34.8    7.6e-05  12  12.7  42.8
+	P44242_TED01              	   358	   403	     9.3
+	P44242_TED01              	    33	    77	     7.6
+	P44242_TED01              	   198	   253	     7.6
+	P44242_TED01              	    74	   117	     6.8
+	P44242_TED01              	    55	    94	     6.6
+	P44242_TED01              	   118	   157	     6.3
+	P44242_TED01              	   133	   179	     6.0
+	P44242_TED01              	    93	   137	     5.9
+	P44242_TED01              	   346	   368	     5.1
+	P44242_TED01              	   186	   219	     4.0
+	P44242_TED01              	   298	   348	     3.9
+	P44242_TED01              	     1	    37	     3.8
+	PF13833	EF-hand_8       	   443	   485	    17.7
+	PF00036	EF-hand_1       	   459	   487	    27.3
+	PF13202	EF-hand_5       	   460	   484	    20.2
+	PF13499	EF-hand_7       	   493	   570	    47.2
+	PF00036	EF-hand_1       	   495	   523	    26.5
+	PF13202	EF-hand_5       	   497	   520	    19.5
+	PF13405	EF-hand_6       	   499	   524	    24.5
+	PF13833	EF-hand_8       	   511	   571	    20.8
+	PF13202	EF-hand_5       	   545	   569	    20.1
+
+A0A9X3CJ66	UNCHARACTERIZED PROTEIN {     33.8    0.00015   1   1.5   0.0
+	P44242_TED01              	     2	    90	    32.9
+
+A0AAE7WWV1	SGNH/GDSL HYDROLASE FAMIL     31.4    0.00089   1   1.8   0.0
+	P44242_TED01              	    14	    91	    29.9
+	PF13472	Lipase_GDSL_2   	   293	   452	    60.9
+	PF00657	Lipase_GDSL     	   304	   457	    30.4
+
+A7ZK32	PUTATIVE PHAGE TAIL FIBER PRO     75.3    1.8e-17   1   1.8   0.0
+	P44242_TED01              	     2	    94	    73.8
+	PF03406	Phage_fiber_2   	   113	   154	    63.2
+	PF20744	gp37_trimer     	   330	   408	      26
+
+D2TQ77	PHAGE TAIL FIBRE PROTEIN {ECO     76.7    6.4e-18   1   1.5   0.1
+	P44242_TED01              	     2	    96	    75.7
+
+D3V997	TAIL FIBER PROTEIN {ECO:00080     81.8    1.7e-19   1   1.6   0.0
+	P44242_TED01              	     2	    92	    80.6
+
+D4DSI4	UNCHARACTERIZED PROTEIN {ECO:     29.1     0.0045   1   1.3   0.0
+	P44242_TED01              	     2	    84	    28.6
+
+F5RBU3	PHAGE TAIL COLLAR DOMAIN-CONT     31.9    0.00062   1   1.5   0.0
+	P44242_TED01              	     5	    88	    30.9
+
+I2BBY9	TAIL SPIKE TSP1/GP66 N-TERMIN     66.0    1.4e-14   1   1.7   0.0
+	P44242_TED01              	     2	    98	    64.7
+
+I2BBZ1	PUTATIVE TAIL FIBER PROTEIN {     60.8    6.1e-13   1   1.5   0.0
+	P44242_TED01              	     2	    82	    59.7
+	PF07484	Collar          	    86	   133	    38.9
+
+M4M9L1	SGNH HYDROLASE-TYPE ESTERASE      32.7    0.00034   1   1.5   0.0
+	P44242_TED01              	    15	    78	    31.6
+	PF13472	Lipase_GDSL_2   	   194	   372	    50.1
+
+P44242	MU-LIKE PROPHAGE FLUMU DEFECTIVE    218.5    3.6e-62   1   1.8   0.1
+	P44242_TED01              	     2	    98	   217.1
+	PF27114	Phage_tail_beta 	    99	   165	    85.6
+
+Q5FNF8	BACTERIOPHAGE TAIL FIBER PROT     33.7    0.00017   1   1.6   0.0
+	P44242_TED01              	     2	    96	    32.6
+
+Q8EDN9	MU PHAGE TAIL FIBER PROTEIN G     34.8    7.4e-05   1   1.7   0.0
+	P44242_TED01              	     4	    94	    33.6
+
+Q9T1V0	TAIL FIBER PROTEIN S                   75.6    1.5e-17   1   1.9   0.1
+	P44242_TED01              	     2	    94	    73.9
+	PF03406	Phage_fiber_2   	   113	   154	      63
+	PF21446	Gp34_trimer     	   210	   320	   158.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P44242 (E-value: 3.2e-64, Score: 218.5)
+Mentioned as: P44242
+Description: Mu-like prophage FluMu defective tail fiber protein
+Organism: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd)
+PMID: 24391926
+Source: EuropePMC
+Title: Functional annotation of conserved hypothetical proteins from Haemophilus influenzae Rd KW20
+Journal: PloS one (2013)
+Snippet: protein gp47 253. HP HI1521 950386 P44241 Mu-like prophageFluMu protein gp48 254. HP HI1522 950387 P44242 Mu-like prophageFluMu defective tail fiber protein 255. HP HI1522.1 950388 P71390 Mu-like prophage protein Com 256. HP HI1523 949672 P44243 D12 class N6 adenine-specific DNA methyltransferase 257. HP HI1534 950396
+
+================================================================================
+Protein: P44242 (E-value: 3.2e-64, Score: 218.5)
+Mentioned as: P44242
+Description: Mu-like prophage FluMu defective tail fiber protein
+Organism: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd)
+PMID: 22823751
+Source: EuropePMC
+Title: Genomic and proteomic characterization of SuMu, a Mu-like bacteriophage infecting Haemophilus parasuis
+Journal: BMC genomics (2012)
+Snippet: host cells lipopolysaccharide include the tail fiber protein, and gp36, respectively (homologs 6 (YP_249019), 7 (P44242), and 20 (P03743), respectively). The bacteriophage tail sheath protein (gpL), homologs 4 (YP_0010604090) and 5 (YP_004324195), may form the outer contractile sheath of the capsid tail. The baseplate wedge protein
+
+================================================================================
+Protein: P44242 (E-value: 3.2e-64, Score: 218.5)
+Mentioned as: P44242
+Description: Mu-like prophage FluMu defective tail fiber protein
+Organism: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd)
+PMID: 10722605
+Source: EuropePMC
+Title: Molecular and biological analysis of eight genetic islands that distinguish Neisseria meningitidis from the closely related pathogen Neisseria gonorrhoeae
+Journal: Infection and immunity (2000)
+Snippet: 623 296 177 3e-14 3e-71 0.0 36/50 47/65 100 P44242 P44243 P52036 394 Microcin immunity E. coli 344 1e-16 27/42 X57583 330 Phenylalanine-tRNA synthetase alpha
+
+================================================================================
+Protein: Q9T1V0 (E-value: 1.3e-19, Score: 75.6)
+Mentioned as: Q9T1V0
+Description: Tail fiber protein S
+Organism: Escherichia phage Mu
+  SwissProt:  - Tail fiber protein S; Gene product 49; gp49; Gene product S; gpS
+PMID: 34696362
+Source: EuropePMC
+Title: Efficacy of <i>Salmonella</i> Bacteriophage S1 Delivered and Released by Alginate Beads in a Chicken Model of Infection
+Journal: Viruses (2021)
+Snippet: baseplate protein 3 16,21817,381 Q9T1V2 UniProtKB 3 10 10 21 Tail fiber protein S 18,02019,369 Q9T1V0 UniProtKB 6.9 10 18 22 Tail fiber assembly protein U 19,36919,911 Q71TD6 UniProtKB 2.9 10 18 23 Putative tail fiber assembly protein U 19,91420,423 Q71TD7 UniProtKB 6.9 10 18 24
+
+================================================================================
+Protein: Q9T1V0 (E-value: 1.3e-19, Score: 75.6)
+Mentioned as: S1_BPMU
+Description: Tail fiber protein S
+Organism: Escherichia phage Mu
+  SwissProt:  - Tail fiber protein S; Gene product 49; gp49; Gene product S; gpS
+PMID: 3904174
+Source: SwissProt
+Snippet: FUNCTION: Component of the tail fiber that acts as a receptor binding protein. Binds to the primary receptor, thereby determining the host range. Two alternate tail fiber S and S' proteins are encoded extending the host range of the virus. {ECO:0000269|PubMed:6250048}._:::_SUBCELLULAR LOCATION: Virion {ECO:0000269|PubMed:8599204}. Host cytoplasm {ECO:0000305|PubMed:8599204}. Note=Tail fiber._:::_INDUCTION: Expressed in the late phase of the viral replicative cycle. Expression of late genes is ac...
+
+================================================================================
+Protein: Q9T1V0 (E-value: 1.3e-19, Score: 75.6)
+Mentioned as: S1_BPMU
+Description: Tail fiber protein S
+Organism: Escherichia phage Mu
+  SwissProt:  - Tail fiber protein S; Gene product 49; gp49; Gene product S; gpS
+PMID: 6250048
+Source: SwissProt
+Snippet: FUNCTION: Component of the tail fiber that acts as a receptor binding protein. Binds to the primary receptor, thereby determining the host range. Two alternate tail fiber S and S' proteins are encoded extending the host range of the virus. {ECO:0000269|PubMed:6250048}._:::_SUBCELLULAR LOCATION: Virion {ECO:0000269|PubMed:8599204}. Host cytoplasm {ECO:0000305|PubMed:8599204}. Note=Tail fiber._:::_INDUCTION: Expressed in the late phase of the viral replicative cycle. Expression of late genes is ac...
+
+================================================================================
+Protein: VIMSS201842 (E-value: 6.6e-07, Score: 34.8)
+Mentioned as: SO2704
+Description: prophage MuSo2, tail fiber protein, putative
+Organism: Shewanella oneidensis MR-1
+PMID: 20962878
+Source: EuropePMC
+Title: Phage-induced lysis enhances biofilm formation in Shewanella oneidensis MR-1
+Journal: The ISME journal (2011)
+Snippet: Fragment for in-frame deletion of the gene region SO2651- SO2704 in pNTPS-R6K Fragment for in-frame deletion of the gene region SO2939- SO3013 in pNTPS-R6K repA
+
+================================================================================
+Protein: VIMSS201842 (E-value: 6.6e-07, Score: 34.8)
+Mentioned as: SO2704
+Description: prophage MuSo2, tail fiber protein, putative
+Organism: Shewanella oneidensis MR-1
+PMID: 16957260
+Source: EuropePMC
+Title: Global molecular and morphological effects of 24-hour chromium(VI) exposure on Shewanella oneidensis MR-1
+Journal: Applied and environmental microbiology (2006)
+Snippet: (SO2700, 4.3fold) and tail assembly (SO2699, 10.3-fold; SO2704, 17.2-fold), and assembly of the major head subunit (SO0675, 5.9-fold; SO2685, 24.5-fold), as
+
+================================================================================
+Protein: VIMSS201842 (E-value: 6.6e-07, Score: 34.8)
+Mentioned as: SO2704
+Description: prophage MuSo2, tail fiber protein, putative
+Organism: Shewanella oneidensis MR-1
+PMID: 15576789
+Source: EuropePMC
+Title: Transcriptomic and proteomic characterization of the Fur modulon in the metal-reducing bacterium Shewanella oneidensis
+Journal: Journal of bacteriology (2004)
+Snippet: conditions, respectively. i Probable operon SO2684 to SO2704. j Probable operon SO3406-SO3407-SO3408. k Probable operon SO3667-SO3668. Total Proteome methoda 1D
+
+================================================================================
+Protein: VIMSS140207 (E-value: 8.5e-05, Score: 28.1)
+
+... (truncated - showing first 100 of 109 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P44242.1	AF-P44242-F1-model_v4_TED01:2-98	1	AF-P44242-F1-model_v4_TED01	2-98	100.0%
+P44242.1	AF-P44242-F1-model_v4_TED02:99-163	1	AF-P44242-F1-model_v4_TED02	99-163	0
+P44242.1	AF-P44242-F1-model_v4_TED03:245-497	1	AF-P44242-F1-model_v4_TED03	245-497	0
+P44242.1	AF-P44242-F1-model_v4_TED04:505-623	1	AF-P44242-F1-model_v4_TED04	505-623	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44242_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.70 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 5yvq
+RN   [1]
+RM   31209305
+RT   Phage tail fibre assembly proteins employ a modular structure to
+RT   drive the	correct folding of diverse fibres.
+RA   North OI, Sakai K, Yamashita E, Nakagawa A, Iwazaki T, Buttner CR,
+RA   Takeda S, Davidson AR;
+RL   Nat Microbiol. 2019;4:1645-1653.
+RC   Paper describing PDB structure 8ju3
+RN   [2]
+RM   38382161
+RT   Determination of the three-dimensional structure of bacteriophage
+RT   Mu(-) tail  fiber and its characterization.
+RA   Mori Y, Yamashita E, Nakagawa A, Matsuzawa T, Inagaki M, Aiba Y,
+RA   Tanaka S, Hatori S, Ayami M, Takeda S;
+RL   Virology. 2024;593:110017.
+
+--- End of Current DESC file ---

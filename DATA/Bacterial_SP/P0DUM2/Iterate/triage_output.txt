@@ -1,0 +1,221 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TIMP_ECOLI              Reviewed;          41 AA.
+AC   P0DUM3; A0A9F2H0S5;
+DE   RecName: Full=Putative toxic protein TimP {ECO:0000250|UniProtKB:P0DUM2};
+GN   Name=timP {ECO:0000312|EMBL:UMR55116.1};
+GN   Synonyms=ECK4669 {ECO:0000312|EMBL:UMR55116.1}, ryfA;
+GN   OrderedLocusNames=b4812;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+CC   -!- FUNCTION: Putative toxic component of a potential type I toxin-
+CC       antitoxin (TA) system. Neutralized by sRNA antitoxin TimR which binds
+CC       to the 5' UTR of timP mRNA and inhibits translation. The antitoxin gene
+CC       is encoded immediately upstream and transcribed divergently from the
+CC       toxin gene; antitoxin RNA is less stable than timP mRNA.
+CC       {ECO:0000250|UniProtKB:P0DUM2}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane
+CC       {ECO:0000250|UniProtKB:P0DUM2}; Single-pass membrane protein
+CC       {ECO:0000250|UniProtKB:P0DUM2}. Note=The signal sequence is not cleaved
+CC       and anchors the protein in the cell inner membrane.
+CC       {ECO:0000250|UniProtKB:P0DUM2}.
+CC   -!- SIMILARITY: Belongs to the TimP toxin family. {ECO:0000305}.
+DR   EMBL; U00096; UMR55116.1; -; Genomic_DNA.
+DR   AlphaFoldDB; P0DUM3; -.
+DR   InParanoid; P0DUM3; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   NCBIfam; NF040796; toxic_TimP; 1.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Toxin-antitoxin system; Transmembrane.
+FT   CHAIN           1..41
+FT                   /note="Putative toxic protein TimP"
+FT                   /id="PRO_0000453138"
+FT   TRANSMEM        1..17
+FT                   /evidence="ECO:0000250|UniProtKB:P0DUM2"
+SQ   SEQUENCE   41 AA;  4477 MW;  301B1523E10ED6AD CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2V9H9	UNCHARACTERIZED PROTEIN {     39.5    1.8e-06   1   1.2   0.4
+	Iterate                   	     5	    44	    39.2
+
+A0A8U0QPG8	UNCHARACTERIZED PROTEIN L     25.4      0.046   3   3.2   0.1
+	Iterate                   	    46	    62	     9.4
+	Iterate                   	    18	    38	     8.0
+	Iterate                   	    32	    47	     6.5
+
+A0A974XSQ3	RETENTION MODULE-CONTAINI     92.0      7e-23   1  23.1   0.0
+	Iterate                   	   197	   218	     4.6
+	PF17803	Cadherin_4      	   145	   216	      30
+	PF17963	Big_9           	   148	   246	    29.9
+	PF18200	Big_11          	   164	   248	    34.7
+	PF17803	Cadherin_4      	   239	   319	    54.2
+	PF17963	Big_9           	   249	   349	      40
+	PF18200	Big_11          	   265	   351	    40.8
+	PF17803	Cadherin_4      	   342	   422	    51.9
+	PF17963	Big_9           	   352	   452	    34.3
+	PF18200	Big_11          	   368	   454	    40.8
+	PF17803	Cadherin_4      	   445	   525	    50.7
+	PF17963	Big_9           	   455	   555	    34.4
+	PF18200	Big_11          	   471	   557	    42.5
+	PF17803	Cadherin_4      	   548	   628	    50.7
+	PF17963	Big_9           	   558	   658	    34.4
+	PF18200	Big_11          	   574	   660	    42.5
+	PF17803	Cadherin_4      	   651	   729	    53.1
+	PF17892	Cadherin_5      	   658	   761	    27.8
+	PF17963	Big_9           	   661	   759	    38.2
+	PF18200	Big_11          	   677	   761	    52.7
+	PF17803	Cadherin_4      	   752	   830	    51.8
+	PF17892	Cadherin_5      	   759	   861	    27.2
+	PF17963	Big_9           	   762	   860	    36.8
+	PF18200	Big_11          	   778	   862	    53.8
+	PF17803	Cadherin_4      	   853	   931	    51.3
+	PF17963	Big_9           	   863	   961	    36.3
+	PF18200	Big_11          	   879	   963	    53.4
+	PF17803	Cadherin_4      	   954	  1032	    52.6
+	PF17892	Cadherin_5      	   961	  1065	    27.5
+	PF17963	Big_9           	   964	  1062	    37.4
+	PF18200	Big_11          	   980	  1064	    52.3
+	PF17803	Cadherin_4      	  1055	  1135	    50.7
+	PF17963	Big_9           	  1065	  1165	    34.4
+	PF18200	Big_11          	  1081	  1167	    42.5
+	PF17803	Cadherin_4      	  1158	  1236	    52.6
+	PF17892	Cadherin_5      	  1164	  1268	    27.7
+	PF17963	Big_9           	  1168	  1266	    37.4
+	PF18200	Big_11          	  1184	  1268	    52.3
+	PF17803	Cadherin_4      	  1259	  1339	    50.7
+	PF17963	Big_9           	  1269	  1369	    34.4
+	PF18200	Big_11          	  1285	  1371	    42.5
+	PF17803	Cadherin_4      	  1362	  1440	    53.1
+	PF17892	Cadherin_5      	  1369	  1472	    27.5
+	PF17963	Big_9           	  1372	  1470	    38.2
+	PF18200	Big_11          	  1388	  1472	    52.7
+	PF17803	Cadherin_4      	  1463	  1541	    51.8
+	PF17892	Cadherin_5      	  1469	  1574	    26.9
+	PF17963	Big_9           	  1473	  1571	    36.8
+	PF18200	Big_11          	  1489	  1573	    53.8
+	PF17803	Cadherin_4      	  1564	  1642	    51.3
+	PF17892	Cadherin_5      	  1570	  1673	    26.7
+	PF17963	Big_9           	  1574	  1672	    36.3
+	PF18200	Big_11          	  1590	  1674	    53.4
+	PF17803	Cadherin_4      	  1665	  1743	    52.6
+	PF17892	Cadherin_5      	  1672	  1776	    27.8
+	PF17963	Big_9           	  1675	  1773	    37.4
+	PF18200	Big_11          	  1691	  1775	    52.3
+	PF17803	Cadherin_4      	  1766	  1846	    50.7
+	PF17963	Big_9           	  1776	  1876	    34.4
+	PF18200	Big_11          	  1792	  1878	    42.5
+	PF17803	Cadherin_4      	  1869	  1947	    52.6
+	PF17892	Cadherin_5      	  1876	  1979	    27.7
+	PF17963	Big_9           	  1879	  1977	    37.4
+	PF18200	Big_11          	  1895	  1979	    52.3
+	PF17803	Cadherin_4      	  1970	  2050	    50.7
+	PF17963	Big_9           	  1980	  2080	    34.4
+	PF18200	Big_11          	  1996	  2082	    42.5
+	PF17803	Cadherin_4      	  2073	  2151	      52
+	PF17892	Cadherin_5      	  2079	  2183	    26.5
+	PF17963	Big_9           	  2083	  2181	    36.5
+	PF18200	Big_11          	  2099	  2183	    53.4
+	PF17803	Cadherin_4      	  2174	  2254	    50.7
+	PF17963	Big_9           	  2184	  2284	    34.4
+	PF18200	Big_11          	  2200	  2286	    42.5
+	PF17803	Cadherin_4      	  2277	  2357	    50.7
+	PF17963	Big_9           	  2287	  2387	    34.4
+	PF18200	Big_11          	  2303	  2389	    42.5
+	PF17803	Cadherin_4      	  2380	  2460	    50.7
+	PF17963	Big_9           	  2390	  2490	    34.4
+	PF18200	Big_11          	  2406	  2492	    42.5
+	PF17803	Cadherin_4      	  2483	  2561	    53.1
+	PF17892	Cadherin_5      	  2490	  2593	    27.7
+	PF17963	Big_9           	  2493	  2591	    38.2
+	PF18200	Big_11          	  2509	  2593	    52.7
+	PF17803	Cadherin_4      	  2584	  2662	    51.8
+	PF17892	Cadherin_5      	  2591	  2692	    27.3
+	PF17963	Big_9           	  2594	  2692	    36.8
+	PF18200	Big_11          	  2610	  2694	    53.9
+	PF17803	Cadherin_4      	  2685	  2771	    51.6
+	PF17892	Cadherin_5      	  2694	  2804	      36
+	PF17963	Big_9           	  2695	  2802	      59
+	PF17803	Cadherin_4      	  2797	  2873	    34.5
+	PF17963	Big_9           	  2807	  2904	    54.5
+	PF17892	Cadherin_5      	  2844	  2906	    36.7
+	PF00353	HemolysinCabind 	  3191	  3226	    29.7
+
+A0AAE1DHC2	UNCHARACTERIZED PROTEIN {     47.4    6.1e-09   9   8.9   4.2
+	Iterate                   	    82	   102	     5.2
+	Iterate                   	   111	   131	     5.2
+	Iterate                   	   140	   160	     5.2
+	Iterate                   	   169	   189	     5.2
+	Iterate                   	   198	   218	     5.2
+	Iterate                   	   254	   276	     5.1
+	Iterate                   	    26	    44	     2.3
+	Iterate                   	    57	    73	     2.3
+	Iterate                   	   227	   247	     2.3
+
+P0DUM3	PUTATIVE TOXIC PROTEIN TIMP {EC     37.7    6.8e-06   1   1.2   0.6
+	Iterate                   	     1	    40	    37.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS304810 (E-value: 6.1e-30, Score: 108.2)
+Mentioned as: c3046
+Description: Hypothetical protein
+Organism: Escherichia coli CFT073
+PMID: 16714589
+Source: EuropePMC
+Title: Global gene expression profiling of the asymptomatic bacteriuria Escherichia coli strain 83972 in the human urinary tract
+Journal: Infection and immunity (2006)
+Snippet: c4141 b1475 b0873 b3240 b3556 b2732 b3437 b3242 b0872 c3046 c3973 c1382 b1445 b0620 c2901 b3241 b1335 Z1954 b1430 b3238 b0849 b0151 fepE ydhC evgA nlpI Z4919
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DUM2/Iterate
+GA   27.00 27.00;
+TC   27.40 98.20;
+NC   23.80 22.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

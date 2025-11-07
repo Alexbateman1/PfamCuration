@@ -1,0 +1,706 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TSI7_PSEAE              Reviewed;         306 AA.
+AC   Q9I732;
+DE   RecName: Full=Immune protein Tsi7 {ECO:0000303|PubMed:30455305};
+GN   Name=tsi7 {ECO:0000303|PubMed:30455305}; OrderedLocusNames=PA0100;
+OS   Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+OS   14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pseudomonadales; Pseudomonadaceae; Pseudomonas.
+OX   NCBI_TaxID=208964;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=10984043; DOI=10.1038/35023079;
+RA   Stover C.K., Pham X.-Q.T., Erwin A.L., Mizoguchi S.D., Warrener P.,
+RA   Hickey M.J., Brinkman F.S.L., Hufnagle W.O., Kowalik D.J., Lagrou M.,
+RA   Garber R.L., Goltry L., Tolentino E., Westbrock-Wadman S., Yuan Y.,
+RA   Brody L.L., Coulter S.N., Folger K.R., Kas A., Larbig K., Lim R.M.,
+RA   Smith K.A., Spencer D.H., Wong G.K.-S., Wu Z., Paulsen I.T., Reizer J.,
+RA   Saier M.H. Jr., Hancock R.E.W., Lory S., Olson M.V.;
+RT   "Complete genome sequence of Pseudomonas aeruginosa PAO1, an opportunistic
+RT   pathogen.";
+RL   Nature 406:959-964(2000).
+RN   [2]
+RP   FUNCTION, AND INTERACTION WITH TSE7.
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=30455305; DOI=10.1073/pnas.1814181115;
+RA   Pissaridou P., Allsopp L.P., Wettstadt S., Howard S.A., Mavridou D.A.I.,
+RA   Filloux A.;
+RT   "The Pseudomonas aeruginosa T6SS-VgrG1b spike is topped by a PAAR protein
+RT   eliciting DNA damage to bacterial competitors.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 115:12519-12524(2018).
+CC   -!- FUNCTION: Immunity protein that plays a role in preventing early
+CC       activation of toxin Tse7. Protects thereby cells from Tse7 DNase
+CC       activity. {ECO:0000269|PubMed:30455305}.
+CC   -!- SUBUNIT: Interacts with Tse7. {ECO:0000269|PubMed:30455305}.
+DR   EMBL; AE004091; AAG03490.1; -; Genomic_DNA.
+DR   PIR; A83634; A83634.
+DR   RefSeq; NP_248790.1; NC_002516.2.
+DR   RefSeq; WP_003115069.1; NZ_QZGE01000015.1.
+DR   AlphaFoldDB; Q9I732; -.
+DR   SMR; Q9I732; -.
+DR   STRING; 208964.PA0100; -.
+DR   PaxDb; 208964-PA0100; -.
+DR   DNASU; 880727; -.
+DR   GeneID; 880727; -.
+DR   KEGG; pae:PA0100; -.
+DR   PATRIC; fig|208964.12.peg.104; -.
+DR   PseudoCAP; PA0100; -.
+DR   HOGENOM; CLU_071258_0_1_6; -.
+DR   InParanoid; Q9I732; -.
+DR   OrthoDB; 6829668at2; -.
+DR   BioCyc; PAER208964:G1FZ6-102-MONOMER; -.
+DR   Proteomes; UP000002438; Chromosome.
+DR   SUPFAM; SSF63829; Calcium-dependent phosphotriesterase; 1.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..306
+FT                   /note="Immune protein Tsi7"
+FT                   /id="PRO_0000449113"
+SQ   SEQUENCE   306 AA;  33723 MW;  E9EF587A69005111 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	6	Enterobacillus.
+14	6	Marilutibacter.
+9	5	Hafniaceae
+14	5	Lysobacteraceae
+9	4	Burkholderiales
+16	4	Lysobacterales
+11	4	Enterobacterales
+43	3	Gammaproteobacteria
+11	3	Betaproteobacteria
+59	2	Pseudomonadota
+66	1	Pseudomonadati
+72	0	Bacteria
+Total of 72 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A090ADF3	UNCHARACTERIZED PROTEIN {     77.4      5e-18   2   2.4   0.4
+	Q9I732_TED01              	    57	   181	    71.7
+	Q9I732_TED01              	   190	   298	     3.6
+
+A0A090AF03	UNCHARACTERIZED PROTEIN {     48.4    4.7e-09   1   2.2   2.5
+	Q9I732_TED01              	    68	   195	    48.2
+
+A0A090AJY0	GLUCOSYLTRANSFERASE-I {EC     76.7    7.8e-18  10  11.5  40.4
+	Q9I732_TED01              	    57	    98	    14.3
+	Q9I732_TED01              	   218	   256	    13.4
+	Q9I732_TED01              	   254	   296	    12.9
+	Q9I732_TED01              	   332	   373	    12.1
+	Q9I732_TED01              	   420	   462	    10.3
+	Q9I732_TED01              	    17	    59	     9.5
+	Q9I732_TED01              	   178	   216	     8.8
+	Q9I732_TED01              	   136	   177	     7.7
+	Q9I732_TED01              	   293	   334	     5.9
+	Q9I732_TED01              	    99	   138	     3.6
+
+A0A090AMH6	GLUCOSYLTRANSFERASE-I {EC     75.8    1.5e-17  10  11.3  33.3
+	Q9I732_TED01              	   275	   317	    16.8
+	Q9I732_TED01              	   315	   356	    12.5
+	Q9I732_TED01              	   392	   435	    10.6
+	Q9I732_TED01              	     1	    41	    10.2
+	Q9I732_TED01              	    38	    80	     8.0
+	Q9I732_TED01              	   199	   236	     6.9
+	Q9I732_TED01              	   235	   278	     6.7
+	Q9I732_TED01              	   117	   158	     6.4
+	Q9I732_TED01              	   356	   395	     6.2
+	Q9I732_TED01              	    79	   119	     4.9
+	PF22544	HYDIN_VesB_CFA65-like_Ig	   470	   569	    29.2
+	PF22544	HYDIN_VesB_CFA65-like_Ig	   693	   791	    31.4
+
+A0A090BWA4	GLUCOSYLTRANSFERASE-I {EC     72.2      2e-16   8  11.1  31.1
+	Q9I732_TED01              	   265	   305	    16.2
+	Q9I732_TED01              	    25	    66	    13.9
+	Q9I732_TED01              	    60	   110	    12.3
+	Q9I732_TED01              	   108	   149	    11.8
+	Q9I732_TED01              	   185	   225	     8.5
+	Q9I732_TED01              	   226	   266	     8.2
+	Q9I732_TED01              	   336	   383	     8.2
+	Q9I732_TED01              	   147	   187	     6.7
+	PF22544	HYDIN_VesB_CFA65-like_Ig	   585	   685	    31.6
+	PF22544	HYDIN_VesB_CFA65-like_Ig	   809	   907	    32.3
+
+A0A0D6SLM5	UNCHARACTERIZED PROTEIN {     73.6    7.5e-17   1   2.3   3.8
+	Q9I732_TED01              	     1	   114	    70.8
+
+A0A0D6SLS0	UNCHARACTERIZED PROTEIN {    211.1    2.2e-59   1   1.8   2.3
+	Q9I732_TED01              	    65	   193	   209.7
+
+A0A0G3BT35	UNCHARACTERIZED PROTEIN {     74.7    3.3e-17   2   2.9   5.4
+	Q9I732_TED01              	    56	   181	    71.4
+	Q9I732_TED01              	     1	    60	     4.1
+
+A0A0H1AJ73	GLUTAMINE CYCLOTRANSFERAS     77.4    4.9e-18   2   2.7   8.1
+	Q9I732_TED01              	    60	   185	    75.8
+	Q9I732_TED01              	   190	   237	     5.5
+
+A0A0H1AJU4	UNCHARACTERIZED PROTEIN {     79.4    1.2e-18   2   3.0   3.1
+	Q9I732_TED01              	    57	   183	    71.6
+	Q9I732_TED01              	   188	   227	     6.3
+
+A0A0H1AKR8	UNCHARACTERIZED PROTEIN {     55.1    3.8e-11   1   2.3   1.6
+	Q9I732_TED01              	    66	   187	    55.1
+
+A0A0H1ALL9	UNCHARACTERIZED PROTEIN {    101.2    2.1e-25   1   2.3   0.5
+	Q9I732_TED01              	    57	   183	   101.2
+
+A0A0H1AQM8	UNCHARACTERIZED PROTEIN {     89.1    1.2e-21   1   1.9   0.8
+	Q9I732_TED01              	    62	   188	    89.1
+
+A0A0H2LWI3	UNCHARACTERIZED PROTEIN {     76.8    7.4e-18   2   2.6   4.4
+	Q9I732_TED01              	    60	   178	    76.8
+	Q9I732_TED01              	   181	   222	     3.8
+
+A0A0J5Q8S3	UNCHARACTERIZED PROTEIN {     45.4    3.7e-08   1   2.9   1.1
+	Q9I732_TED01              	    58	   180	    45.4
+
+A0A0K1PQV1	BNR REPEAT DOMAIN PROTEIN     62.6    1.9e-13   1   2.8   4.8
+	Q9I732_TED01              	    58	   177	    62.6
+
+A0A0K1Q2Y1	UNCHARACTERIZED PROTEIN {     68.1    3.7e-15   1   2.0   1.4
+	Q9I732_TED01              	    60	   176	    68.1
+
+A0A0M2UY42	GLUCOSYLTRANSFERASE-I {EC     47.3      1e-08   6   6.5  13.8
+	Q9I732_TED01              	   203	   240	    10.6
+	Q9I732_TED01              	   285	   319	    10.5
+	Q9I732_TED01              	   165	   202	     8.9
+	Q9I732_TED01              	    77	   126	     7.5
+	Q9I732_TED01              	   248	   280	     7.4
+	Q9I732_TED01              	   122	   163	     6.8
+
+A0A0M2UYF8	UNCHARACTERIZED PROTEIN {     51.0    7.2e-10   5   6.4  15.7
+	Q9I732_TED01              	    59	    96	    14.5
+	Q9I732_TED01              	   217	   253	    11.3
+	Q9I732_TED01              	   113	   174	    11.0
+	Q9I732_TED01              	   250	   291	     9.5
+	Q9I732_TED01              	   177	   213	     9.4
+
+A0A0M9E5L3	GLUCOSYLTRANSFERASE-I {EC     56.4    1.5e-11   6   6.0  13.6
+	Q9I732_TED01              	    51	    89	    16.2
+	Q9I732_TED01              	    94	   128	    14.1
+	Q9I732_TED01              	    13	    50	    12.5
+	Q9I732_TED01              	   164	   205	    10.1
+	Q9I732_TED01              	   211	   244	     4.7
+	Q9I732_TED01              	   129	   167	     3.9
+
+A0A0N0UZG6	F-BOX ASSOCIATED REGION D     47.7    7.5e-09  11  17.2  58.3
+	Q9I732_TED01              	  1825	  1863	    11.7
+	Q9I732_TED01              	  1973	  2015	     9.8
+	Q9I732_TED01              	  1469	  1510	     8.0
+	Q9I732_TED01              	  1076	  1122	     7.9
+	Q9I732_TED01              	  1861	  1903	     7.9
+	Q9I732_TED01              	  1511	  1548	     5.5
+	Q9I732_TED01              	  1272	  1316	     5.0
+	Q9I732_TED01              	  1126	  1162	     4.4
+	Q9I732_TED01              	  2012	  2053	     4.0
+	Q9I732_TED01              	  2229	  2292	     3.8
+	Q9I732_TED01              	  1409	  1471	     3.6
+	PF17963	Big_9           	   827	   923	    27.3
+	PF13385	Laminin_G_3     	  2573	  2732	    87.2
+	PF04300	FBA             	  3143	  3304	   118.3
+	PF01436	NHL             	  3657	  3683	    23.7
+	PF17963	Big_9           	  4090	  4185	    28.7
+	PF25390	WD40_RLD        	  4174	  4505	   257.4
+	PF00415	RCC1            	  4210	  4257	    36.8
+	PF13540	RCC1_2          	  4244	  4273	    29.1
+	PF00415	RCC1            	  4260	  4307	      34
+	PF13540	RCC1_2          	  4294	  4323	    30.7
+	PF00415	RCC1            	  4310	  4357	    35.2
+	PF25390	WD40_RLD        	  4331	  4554	   160.4
+	PF13540	RCC1_2          	  4344	  4373	    34.3
+	PF00415	RCC1            	  4360	  4407	    43.8
+	PF13540	RCC1_2          	  4394	  4423	    33.4
+	PF00415	RCC1            	  4410	  4456	      42
+	PF13540	RCC1_2          	  4445	  4472	      30
+	PF00415	RCC1            	  4459	  4506	    36.8
+	PF00415	RCC1            	  4509	  4552	      28
+	PF17963	Big_9           	  4543	  4639	    24.8
+	PF17963	Big_9           	  4746	  4844	    24.8
+	PF17963	Big_9           	  4849	  4944	    24.4
+
+A0A0Q6MBV7	PHOTOSYNTHESIS SYSTEM II      88.7    1.6e-21   1   2.5   4.1
+	Q9I732_TED01              	    49	   168	    86.3
+
+A0A0Q6WCS4	UNCHARACTERIZED PROTEIN {     46.0    2.6e-08   1   2.2   3.0
+	Q9I732_TED01              	    10	   123	    46.0
+
+A0A0Q6XF22	UNCHARACTERIZED PROTEIN {     88.0    2.5e-21   1   3.0   4.1
+	Q9I732_TED01              	    29	   151	    86.3
+
+A0A127V9R9	UNCHARACTERIZED PROTEIN {     88.4      2e-21   1   1.9   2.9
+	Q9I732_TED01              	    64	   192	    87.6
+
+A0A127V9S5	UNCHARACTERIZED PROTEIN {     88.2    2.2e-21   1   2.5   5.5
+	Q9I732_TED01              	    64	   193	    87.4
+
+A0A127VAF5	UNCHARACTERIZED PROTEIN {     89.0    1.2e-21   1   2.4   2.0
+	Q9I732_TED01              	    63	   194	    89.0
+
+A0A158FVS6	FG-GAP REPEAT PROTEIN {EC     53.1    1.6e-10   1   2.2   0.3
+	Q9I732_TED01              	    52	   181	    50.1
+
+A0A1G9A687	GLUTAMINE CYCLOTRANSFERAS     86.7    6.6e-21   1   2.3   5.6
+	Q9I732_TED01              	    59	   189	    85.6
+
+A0A1I6JKX2	UNCHARACTERIZED PROTEIN {     53.6    1.1e-10   1   1.9   0.4
+	Q9I732_TED01              	    72	   196	    53.6
+
+A0A1K2HK21	UNCHARACTERIZED PROTEIN {     66.2    1.5e-14   1   1.8   0.8
+	Q9I732_TED01              	    79	   200	    66.2
+
+A0A1M6AFU9	UNCHARACTERIZED PROTEIN {     50.9    7.9e-10   1   2.2   0.6
+	Q9I732_TED01              	    70	   194	    48.2
+
+A0A1P8WJY4	UNCHARACTERIZED PROTEIN {     49.1    2.8e-09   1   2.1   2.1
+	Q9I732_TED01              	    59	   184	    48.2
+
+A0A1V6LX23	PHOTOSYNTHESIS SYSTEM II      49.0    2.9e-09   5   6.8  16.6
+	Q9I732_TED01              	    59	    96	    14.8
+	Q9I732_TED01              	   216	   252	    12.6
+	Q9I732_TED01              	   136	   174	    10.3
+	Q9I732_TED01              	   176	   213	     8.2
+	Q9I732_TED01              	   253	   291	     5.9
+
+A0A1W6L915	UNCHARACTERIZED PROTEIN {     54.3    6.6e-11   1   2.0   4.4
+	Q9I732_TED01              	    59	   183	    54.3
+
+A0A2H3KQD0	GLUCOSYLTRANSFERASE-I {EC     67.4    6.1e-15   9  11.3  42.2
+	Q9I732_TED01              	   426	   466	    16.9
+	Q9I732_TED01              	   542	   583	    16.7
+	Q9I732_TED01              	    39	    84	    15.5
+	Q9I732_TED01              	   464	   505	    10.1
+	Q9I732_TED01              	   137	   172	     9.1
+	Q9I732_TED01              	   367	   427	     5.4
+	Q9I732_TED01              	   248	   291	     5.2
+	Q9I732_TED01              	   169	   211	     5.0
+	Q9I732_TED01              	   506	   544	     4.7
+
+A0A2T4VTM7	UNCHARACTERIZED PROTEIN {     83.1    8.3e-20   1   2.1   1.8
+	Q9I732_TED01              	     2	   113	    82.0
+
+A0A2T5HQ45	UNCHARACTERIZED PROTEIN {    209.1    9.3e-59   1   2.3   5.7
+	Q9I732_TED01              	    62	   191	   208.4
+
+A0A2T5P5Z3	UNCHARACTERIZED PROTEIN {     48.1    5.7e-09   1   2.0   0.8
+	Q9I732_TED01              	    64	   187	    48.1
+
+A0A2U3ID53	UNCHARACTERIZED PROTEIN {     81.7    2.3e-19   1   1.9   2.3
+	Q9I732_TED01              	    58	   177	    80.1
+
+A0A2V3VLI7	UNCHARACTERIZED PROTEIN {     48.9    3.1e-09   1   2.3   0.5
+	Q9I732_TED01              	    74	   182	    46.5
+
+A0A369CH06	UNCHARACTERIZED PROTEIN {     59.5    1.7e-12   1   2.0   1.7
+	Q9I732_TED01              	    57	   184	    59.5
+
+A0A369TGE3	MBL FOLD METALLO-HYDROLAS     58.3    3.9e-12   1   1.6   1.3
+	Q9I732_TED01              	    59	   177	    57.1
+
+A0A370QGE5	UNCHARACTERIZED PROTEIN {     54.7    5.1e-11   1   2.5   1.3
+	Q9I732_TED01              	    74	   198	    54.7
+
+A0A370QLV0	UNCHARACTERIZED PROTEIN {     46.5    1.7e-08   1   2.5   1.3
+	Q9I732_TED01              	   108	   197	    43.9
+
+A0A370QNW7	UNCHARACTERIZED PROTEIN {     53.0    1.7e-10   1   2.5   1.4
+	Q9I732_TED01              	    69	   195	    50.8
+
+A0A370QQL3	UNCHARACTERIZED PROTEIN {     59.3      2e-12   1   2.1   1.6
+	Q9I732_TED01              	    68	   197	    57.6
+
+A0A370R2T9	UNCHARACTERIZED PROTEIN {     51.7    4.3e-10   2   2.8   3.5
+	Q9I732_TED01              	    78	   209	    48.2
+	Q9I732_TED01              	   255	   325	     3.7
+
+A0A370R2U4	UNCHARACTERIZED PROTEIN {     58.2    4.3e-12   1   2.7   0.4
+	Q9I732_TED01              	    81	   205	    58.2
+
+A0A370R2W7	DKNYY FAMILY PROTEIN {ECO     48.9    3.2e-09   1   2.5   1.4
+	Q9I732_TED01              	    89	   210	    45.5
+
+A0A370R2X1	UNCHARACTERIZED PROTEIN {     47.0    1.2e-08   1   2.8   1.1
+	Q9I732_TED01              	    88	   210	    47.0
+
+A0A370R3B1	UNCHARACTERIZED PROTEIN {     57.5    7.1e-12   1   2.3   3.8
+	Q9I732_TED01              	    78	   197	    56.8
+
+A0A401FYR6	CALX-BETA DOMAIN-CONTAINI     82.2    1.6e-19  12  18.4  80.4
+	Q9I732_TED01              	  1351	  1393	    20.8
+	Q9I732_TED01              	   320	   369	    15.3
+	Q9I732_TED01              	  1429	  1469	    14.6
+	Q9I732_TED01              	   651	   688	    13.7
+	Q9I732_TED01              	   372	   408	    13.3
+	Q9I732_TED01              	  1502	  1551	    10.7
+	Q9I732_TED01              	  1305	  1352	     8.1
+	Q9I732_TED01              	   521	   567	     7.6
+	Q9I732_TED01              	   449	   490	     6.2
+	Q9I732_TED01              	   693	   731	     5.3
+	Q9I732_TED01              	   408	   451	     5.2
+	Q9I732_TED01              	   729	   770	     3.8
+	PF03160	Calx-beta       	  1191	  1306	    80.7
+
+A0A401FYS8	GLUCOSYLTRANSFERASE-I {EC     74.1      5e-17  11  11.3  33.1
+	Q9I732_TED01              	   355	   395	    12.6
+	Q9I732_TED01              	    28	    73	    12.2
+	Q9I732_TED01              	   440	   476	    11.3
+	Q9I732_TED01              	   514	   553	     9.8
+	Q9I732_TED01              	   327	   356	     8.8
+	Q9I732_TED01              	   110	   152	     8.1
+	Q9I732_TED01              	   148	   190	     7.6
+	Q9I732_TED01              	   395	   437	     6.0
+	Q9I732_TED01              	   477	   515	     5.7
+	Q9I732_TED01              	    74	   113	     4.6
+	Q9I732_TED01              	   263	   313	     3.6
+
+A0A4R1EZY5	UNCHARACTERIZED PROTEIN {     71.3    3.7e-16   1   2.5   1.8
+	Q9I732_TED01              	    58	   177	    71.3
+
+A0A514BMT7	WD40 REPEAT DOMAIN-CONTAI    115.3    9.3e-30   1   1.9   0.4
+	Q9I732_TED01              	    57	   183	   113.7
+
+A0A514BMU4	WD40 REPEAT DOMAIN-CONTAI     52.3    2.8e-10   1   2.3   2.0
+	Q9I732_TED01              	    55	   181	    51.7
+
+A0A514BMV1	UNCHARACTERIZED PROTEIN {     74.4    4.2e-17   1   2.8   0.8
+	Q9I732_TED01              	    57	   183	    69.2
+
+A0A514BMZ8	WD40 REPEAT DOMAIN-CONTAI     64.4    5.2e-14   1   2.4   3.4
+	Q9I732_TED01              	    66	   184	    62.1
+
+A0A514BQA8	EXO-ALPHA-SIALIDASE {ECO:    141.5    7.4e-38   1   2.2   3.3
+	Q9I732_TED01              	    58	   186	   141.5
+
+A0A514BSK6	WD40 REPEAT DOMAIN-CONTAI     75.8    1.6e-17   1   2.5   2.7
+	Q9I732_TED01              	     1	    65	    75.8
+
+A0A514BTL6	UNCHARACTERIZED PROTEIN {     61.5    3.9e-13   2   2.9   4.2
+	Q9I732_TED01              	    57	   190	    56.2
+	Q9I732_TED01              	   189	   239	     5.5
+
+A0A514BTQ6	WD40 REPEAT DOMAIN-CONTAI    194.7    2.6e-54   1   2.9   5.5
+	Q9I732_TED01              	    62	   190	   194.7
+
+A0A514BUW2	WG REPEAT-CONTAINING PROT     54.0    8.7e-11   1   2.8   1.5
+	Q9I732_TED01              	    56	   183	    49.6
+
+A0A514BUW5	UNCHARACTERIZED PROTEIN {     56.6    1.3e-11   2   2.5  10.0
+	Q9I732_TED01              	    70	   189	    56.2
+	Q9I732_TED01              	   201	   244	     4.1
+
+A0A514BVS2	PHOTOSYNTHESIS SYSTEM II      67.0      8e-15   2   2.5   6.2
+	Q9I732_TED01              	    55	   183	    62.8
+	Q9I732_TED01              	   187	   233	     6.4
+
+A0A514BW29	WD40 REPEAT DOMAIN-CONTAI     77.9    3.5e-18   2   2.8   8.2
+	Q9I732_TED01              	     1	   122	    74.7
+	Q9I732_TED01              	   127	   181	     3.6
+
+A0A564WAX3	UNCHARACTERIZED PROTEIN {     47.2      1e-08   2   2.5   2.6
+	Q9I732_TED01              	    57	   176	    40.4
+	Q9I732_TED01              	   180	   247	     6.4
+
+A0A5B8XYR0	UNCHARACTERIZED PROTEIN {     56.8    1.1e-11   1   2.0   1.8
+	Q9I732_TED01              	     2	   117	    55.7
+
+A0A5J6P895	UNCHARACTERIZED PROTEIN {     52.3    2.7e-10   1   2.5   2.3
+	Q9I732_TED01              	    87	   217	    51.0
+
+A0A5J6P9E6	UNCHARACTERIZED PROTEIN {     53.3    1.3e-10   1   2.5   2.1
+	Q9I732_TED01              	    79	   212	    51.7
+
+A0A5J6PCD7	WD40 REPEAT DOMAIN-CONTAI     55.5    2.8e-11   1   2.5   2.6
+	Q9I732_TED01              	    82	   212	    54.2
+
+A0A5R8QGG4	WD40 REPEAT DOMAIN-CONTAI     68.4      3e-15   1   2.6   1.0
+	Q9I732_TED01              	    81	   204	    68.4
+
+A0A5R8QGR4	WD40 REPEAT DOMAIN-CONTAI     54.7    5.2e-11   1   2.2   3.0
+	Q9I732_TED01              	    66	   194	    54.7
+
+A0A7L6AWN0	UNCHARACTERIZED PROTEIN {     67.3    6.6e-15   1   3.3  10.0
+	Q9I732_TED01              	    83	   181	    66.8
+
+A0A7U7PRQ0	UNCHARACTERIZED PROTEIN {     52.7    2.1e-10   1   1.9   1.8
+	Q9I732_TED01              	    80	   199	    51.9
+
+A0A7W9F0H7	WD40 REPEAT DOMAIN-CONTAI     59.2    2.1e-12   1   2.7   4.3
+	Q9I732_TED01              	    55	   179	    56.3
+
+A0A7Y7NB76	WD40 REPEAT DOMAIN-CONTAI     59.5    1.7e-12   1   1.9   1.9
+	Q9I732_TED01              	    62	   184	    57.8
+
+A0A839LK77	UNCHARACTERIZED PROTEIN {     60.3    9.2e-13   1   1.9   2.2
+	Q9I732_TED01              	    77	   198	    60.3
+
+A0A850GB90	UNCHARACTERIZED PROTEIN {     50.5    9.8e-10   1   2.3   2.1
+	Q9I732_TED01              	    82	   211	    49.3
+
+A0A8J3ZKM4	UNCHARACTERIZED PROTEIN {     67.8    4.4e-15   1   2.2   0.6
+	Q9I732_TED01              	    60	   190	    67.8
+
+A0A8S0H5U0	TECTONIN BETA-PROPELLER R     61.5    4.1e-13   1   2.3   0.1
+	Q9I732_TED01              	    90	   177	    58.4
+
+A0A8S0WHA9	UNCHARACTERIZED PROTEIN {     59.1    2.3e-12   1   2.8   1.8
+	Q9I732_TED01              	    63	   190	    56.7
+
+A0A917YWI9	UNCHARACTERIZED PROTEIN {     48.1    5.5e-09   1   2.3   0.6
+	Q9I732_TED01              	    58	   186	    44.8
+
+A0A927KQD0	UNCHARACTERIZED PROTEIN {     77.5    4.5e-18   1   1.6   2.7
+	Q9I732_TED01              	    62	   188	    76.3
+
+A0A937A1K8	GLUTAMINE CYCLOTRANSFERAS     70.9      5e-16   1   2.5   3.9
+	Q9I732_TED01              	    57	   183	    70.5
+
+A0A975BD13	GLUCOSYLTRANSFERASE-I {EC     49.5    2.1e-09   6   6.0  16.5
+	Q9I732_TED01              	   145	   185	    14.1
+	Q9I732_TED01              	   109	   147	    12.1
+	Q9I732_TED01              	    33	    69	    11.6
+	Q9I732_TED01              	   226	   264	     8.3
+	Q9I732_TED01              	    72	   111	     6.3
+	Q9I732_TED01              	   187	   225	     4.9
+
+A0A975BD56	CALX-LIKE DOMAIN-CONTAINI     84.1    4.2e-20  16  23.5  84.5
+	Q9I732_TED01              	   891	   929	    15.3
+	Q9I732_TED01              	  1057	  1127	    10.3
+	Q9I732_TED01              	   930	   968	     8.9
+	Q9I732_TED01              	  1866	  1903	     8.9
+	Q9I732_TED01              	  1291	  1333	     8.7
+	Q9I732_TED01              	   287	   326	     8.0
+	Q9I732_TED01              	  1215	  1290	     7.4
+	Q9I732_TED01              	   387	   448	     7.0
+	Q9I732_TED01              	  1340	  1372	     6.8
+	Q9I732_TED01              	  1904	  1944	     6.6
+	Q9I732_TED01              	  1015	  1050	     6.5
+	Q9I732_TED01              	   325	   365	     5.9
+	Q9I732_TED01              	   122	   158	     5.6
+	Q9I732_TED01              	  1374	  1410	     4.0
+	Q9I732_TED01              	  1178	  1209	     3.7
+	Q9I732_TED01              	    39	    80	     3.4
+	PF03160	Calx-beta       	  1739	  1858	    55.5
+
+A0A975EDS4	GLUCOSYLTRANSFERASE-I {EC     59.4    1.7e-12   8   9.8  29.3
+	Q9I732_TED01              	   173	   221	    13.5
+	Q9I732_TED01              	   411	   455	    12.9
+	Q9I732_TED01              	    48	    96	    11.5
+	Q9I732_TED01              	   140	   176	    10.5
+	Q9I732_TED01              	   221	   260	     8.1
+	Q9I732_TED01              	   467	   532	     6.1
+	Q9I732_TED01              	    97	   135	     5.2
+	Q9I732_TED01              	   261	   298	     4.3
+
+A0A975GE66	CALX-LIKE DOMAIN-CONTAINI     92.7    9.1e-23  19  26.2  99.6
+	Q9I732_TED01              	   249	   310	    11.8
+	Q9I732_TED01              	  1846	  1882	    11.6
+	Q9I732_TED01              	  1333	  1367	     9.8
+	Q9I732_TED01              	    83	   118	     9.3
+	Q9I732_TED01              	  1879	  1922	     9.1
+	Q9I732_TED01              	   119	   157	     8.9
+	Q9I732_TED01              	  1284	  1319	     8.9
+	Q9I732_TED01              	   424	   474	     7.3
+	Q9I732_TED01              	   878	   949	     6.3
+	Q9I732_TED01              	  1963	  2000	     6.2
+	Q9I732_TED01              	  2039	  2081	     6.1
+	Q9I732_TED01              	    33	    75	     6.0
+	Q9I732_TED01              	  1192	  1234	     6.0
+	Q9I732_TED01              	  1242	  1280	     5.9
+	Q9I732_TED01              	  1025	  1066	     5.7
+	Q9I732_TED01              	  2001	  2039	     5.3
+	Q9I732_TED01              	   476	   513	     4.4
+	Q9I732_TED01              	  1067	  1148	     4.2
+	Q9I732_TED01              	   991	  1027	     3.8
+
+A0A975GE69	BETA-PROPELLER REPEAT-CON    119.9    3.6e-31  23  27.0 105.3
+	Q9I732_TED01              	   266	   338	    16.1
+	Q9I732_TED01              	   114	   147	    11.8
+	Q9I732_TED01              	  1782	  1822	    10.4
+	Q9I732_TED01              	  1233	  1301	    10.0
+	Q9I732_TED01              	   437	   499	     9.8
+	Q9I732_TED01              	  1979	  2023	     9.6
+	Q9I732_TED01              	  1051	  1092	     9.4
+	Q9I732_TED01              	  1822	  1863	     8.6
+	Q9I732_TED01              	  1938	  1981	     8.6
+	Q9I732_TED01              	  1351	  1388	     7.7
+	Q9I732_TED01              	  1389	  1427	     7.3
+	Q9I732_TED01              	    67	   108	     6.8
+	Q9I732_TED01              	   926	   975	     6.8
+	Q9I732_TED01              	  1888	  1941	     6.8
+	Q9I732_TED01              	   145	   186	     6.6
+	Q9I732_TED01              	   501	   538	     6.6
+	Q9I732_TED01              	  1306	  1340	     5.7
+	Q9I732_TED01              	  1161	  1209	     5.5
+	Q9I732_TED01              	   972	  1014	     4.7
+	Q9I732_TED01              	   188	   224	     4.5
+	Q9I732_TED01              	  1219	  1255	     4.4
+	Q9I732_TED01              	  1012	  1053	     3.8
+	Q9I732_TED01              	   340	   379	     3.4
+
+A0AA42NP01	UNCHARACTERIZED PROTEIN {     56.4    1.5e-11   1   2.3   1.5
+	Q9I732_TED01              	    93	   218	    54.2
+
+A0AA42NQE8	UNCHARACTERIZED PROTEIN {     52.0    3.5e-10   1   2.3   1.3
+	Q9I732_TED01              	    93	   218	    49.7
+
+A0AA42NR46	UNCHARACTERIZED PROTEIN {     53.7      1e-10   1   2.3   1.8
+	Q9I732_TED01              	    76	   211	    51.5
+
+A0LG17	BACTERIAL REPEAT DOMAIN-CONTA     56.0    2.1e-11   8  11.3  31.7
+	Q9I732_TED01              	    74	   112	    10.9
+	Q9I732_TED01              	    34	    73	     9.1
+	Q9I732_TED01              	   409	   468	     8.3
+	Q9I732_TED01              	   148	   191	     8.1
+	Q9I732_TED01              	   188	   229	     8.0
+	Q9I732_TED01              	   284	   349	     7.9
+	Q9I732_TED01              	   350	   391	     6.9
+	Q9I732_TED01              	   115	   151	     6.1
+	PF18998	Flg_new_2       	   584	   657	    20.3
+	PF18998	Flg_new_2       	   658	   731	    26.9
+	PF18998	Flg_new_2       	   732	   805	    25.7
+	PF18998	Flg_new_2       	   806	   879	    27.5
+	PF18998	Flg_new_2       	   880	   953	    24.7
+	PF18998	Flg_new_2       	   954	  1024	      19
+
+A9GN82	GLUCOSYLTRANSFERASE-I {ECO:00    134.5    1.1e-35  13  13.7  42.3
+	Q9I732_TED01              	   454	   496	    15.5
+	Q9I732_TED01              	   298	   340	    15.4
+	Q9I732_TED01              	   572	   612	    15.4
+	Q9I732_TED01              	   145	   184	    14.3
+	Q9I732_TED01              	   183	   223	    13.2
+	Q9I732_TED01              	   497	   535	    12.6
+	Q9I732_TED01              	   338	   379	    12.3
+	Q9I732_TED01              	   260	   301	    11.9
+	Q9I732_TED01              	   222	   262	    11.8
+	Q9I732_TED01              	   376	   418	    11.5
+	Q9I732_TED01              	   538	   574	    10.4
+	Q9I732_TED01              	   416	   457	     9.2
+	Q9I732_TED01              	   610	   651	     7.3
+
+B4EVA9	PHAGE PROTEIN {ECO:0008006|GO     60.7    7.1e-13   1   2.2   1.9
+	Q9I732_TED01              	    78	   200	    60.7
+
+B4EVB5	PHAGE PROTEIN {ECO:0008006|GO     60.1    1.1e-12   1   2.2   1.5
+	Q9I732_TED01              	    78	   200	    60.1
+
+I3IQD4	GLUCOSYLTRANSFERASE-I {ECO:00     55.6    2.6e-11   6   6.7  21.3
+	Q9I732_TED01              	   159	   196	    15.6
+	Q9I732_TED01              	   194	   235	    14.7
+	Q9I732_TED01              	    78	   118	    14.5
+	Q9I732_TED01              	   274	   313	    11.2
+	Q9I732_TED01              	   115	   157	     6.9
+	Q9I732_TED01              	   241	   275	     3.9
+
+Q9I732	IMMUNE PROTEIN TSI7 {ECO:000030    297.2    5.3e-86   1   3.0   6.0
+	Q9I732_TED01              	    62	   190	   297.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS56550 (E-value: 4.7e-88, Score: 297.2)
+Mentioned as: PA0100
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 37253075
+Source: EuropePMC
+Title: Effectiveness of Pseudomonas aeruginosa type VI secretion system relies on toxin potency and type IV pili-dependent interaction
+Journal: PLoS pathogens (2023)
+Snippet: depletes prey ATP/ADP pool, contains RHS and PAAR domains [ 63 ] Tse7 (PA0099) Tsi7 (PA0100) Tox-GHH2 nuclease, contains PAAR domain [ 54 , 61 ] Tse8 (PA4163) Tsi8 (PA4164) Targets transamidosome complex disrupting protein synthesis [ 53 , 64 ] H2-T6SS Tle1 (PA3290) Tli1a (PA3291)
+
+================================================================================
+Protein: VIMSS56550 (E-value: 4.7e-88, Score: 297.2)
+Mentioned as: PA0100
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 33707614
+Source: EuropePMC
+Title: Pseudomonas fluorescens F113 type VI secretion systems mediate bacterial killing and adaption to the rhizosphere microbiome
+Journal: Scientific reports (2021)
+Snippet: P. aeruginosa PAO1 VgrG1b cluster 53 . In PAO1 cluster, PA0095, PA0096, PA0097, PA0098, PA0099, PA0100, and PA0101 encode VgrG1b, an OB-fold, an immunoglobulin-like and a thiolase-like protein, a PAAR protein with a C-terminal cytotoxic domain, an immunity protein, and a heat repeat-containing protein respectively (Table
+
+================================================================================
+Protein: VIMSS56550 (E-value: 4.7e-88, Score: 297.2)
+Mentioned as: PA0100
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 32430407
+Source: EuropePMC
+Title: Overexpression of the Small RNA PA0805.1 in Pseudomonas aeruginosa Modulates the Expression of a Large Set of Genes and Proteins, Resulting in Altered Motility, Cytotoxicity, and Tobramycin Resistance
+Journal: mSystems (2020)
+Snippet: protein 1.63 2.0E07 PA0098 Hypothetical protein 1.67 6.2E04 PA0099 Type vi effector protein 1.57 6.4E06 PA0100 Hypothetical protein 1.52 2.0E06 1.29 4.4E04 PA1659 hsiF2 Type VI secretion system lysozyme-like protein 1.61 1.3E04 PA1661 hsiH2 Type VI secretion protein 1.53 8.1E03 PA1666 lip2 Type VI secretion system
+
+================================================================================
+Protein: VIMSS873634 (E-value: 4.4e-15, Score: 61.2)
+Mentioned as: PFL_2999
+Description: conserved hypothetical protein
+Organism: Pseudomonas fluorescens Pf-5
+PMID: 33257523
+Source: EuropePMC
+Title: Elucidating Essential Genes in Plant-Associated Pseudomonas protegens Pf-5 Using Transposon Insertion Sequencing
+Journal: Journal of bacteriology (2021)
+
+================================================================================
+Protein: VIMSS5782818 (E-value: 6.3e-15, Score: 60.7)
+Mentioned as: PMI0756
+Description: hypothetical protein
+Organism: Proteus mirabilis HI4320
+PMID: 26542036
+Source: EuropePMC
+Title: Proteus mirabilis and Urinary Tract Infections
+Journal: Microbiology spectrum (2015)
+Snippet: wild type as self, and thus form a Dienes line with HI4320, identified hypothetical protein PMI0756 as a putative component of the T6SS. A secondary screen to identify additional mutants that no longer form a Dienes line with the PMI0756 mutant identified two groups of mutants.
+
+================================================================================
+Protein: VIMSS5782818 (E-value: 6.3e-15, Score: 60.7)
+Mentioned as: PMI0756
+Description: hypothetical protein
+Organism: Proteus mirabilis HI4320
+PMID: 24039579
+Source: EuropePMC
+Title: Multicellular bacteria deploy the type VI secretion system to preemptively strike neighboring cells
+Journal: PLoS pathogens (2013)
+Snippet: (center) were assessed for Dienes line formation against 9C1 with pBAD containing the indicated genes. PMI0756 is necessary and sufficient to restore 9C1 immunity against parental HI4320 (white arrows), while all three genes encoded by PMI0756, PMI0757, and PMI0758 are necessary and sufficient to restore both
+
+================================================================================
+Protein: VIMSS5782824 (E-value: 1e-14, Score: 60.1)
+Mentioned as: PMI0762
+Description: hypothetical protein
+Organism: Proteus mirabilis HI4320
+PMID: 29155899
+Source: EuropePMC
+Title: Subtle variation within conserved effector operon gene products contributes to T6SS-mediated killing and immunity
+Journal: PLoS pathogens (2017)
+Snippet: that the P . mirabilis HI4320 genome encodes an additional copy of pefE ( pefE2; PMI0762) a few genes downstream of the pef operon ( Fig 3A ). Located immediately upstream of pefE2 are two transposase pseudogenes and a recombination hot-spot ( rhs ) gene fragment
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9I732.1	AF-Q9I732-F1-model_v4_TED01:62-190	1	AF-Q9I732-F1-model_v4_TED01	62-190	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9I732_TED01
+GA   27.00 27.00;
+TC   27.00 27.80;
+NC   26.90 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

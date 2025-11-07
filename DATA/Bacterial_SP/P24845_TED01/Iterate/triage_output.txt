@@ -1,0 +1,82 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Leptospira.
+2	5	Leptospiraceae
+2	4	Leptospirales
+2	3	Spirochaetia
+2	2	Spirochaetota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A915PVK6	UNCHARACTERIZED PROTEIN {     43.5    1.2e-07   9   9.9  14.9
+	Iterate                   	   102	   133	     6.3
+	Iterate                   	   144	   175	     6.3
+	Iterate                   	   228	   259	     6.3
+	Iterate                   	    76	   104	     6.1
+	Iterate                   	   130	   158	     6.1
+	Iterate                   	   200	   229	     6.1
+	Iterate                   	   172	   200	     6.0
+	Iterate                   	    90	   115	     5.8
+	Iterate                   	   158	   184	     5.8
+
+A0AAD8BPE9	BASEMENT MEMBRANE-SPECIFI     46.6    1.3e-08   8  14.4  47.7
+	Iterate                   	   920	   967	    11.5
+	Iterate                   	   984	  1037	    11.4
+	Iterate                   	  1026	  1074	     8.8
+	Iterate                   	   878	   923	     7.8
+	Iterate                   	  1124	  1166	     7.3
+	Iterate                   	   856	   900	     7.2
+	Iterate                   	   955	   999	     5.8
+	Iterate                   	   900	   939	     5.2
+	PF07679	I-set           	    23	   123	    31.8
+	PF07686	V-set           	    28	   124	      27
+	PF13927	Ig_3            	   565	   647	    31.7
+	PF07679	I-set           	   567	   660	    30.6
+	PF00047	ig              	   570	   656	    27.9
+
+A0AAE0PXI6	RIBONUCLEASE H {ECO:00002     31.4    0.00077   3   3.7  10.3
+	Iterate                   	  1973	  2032	    13.9
+	Iterate                   	  1300	  1356	    11.0
+	Iterate                   	   343	   398	    10.9
+	PF00078	RVT_1           	   536	   775	     132
+	PF03372	Exo_endo_phos   	  1048	  1204	    28.8
+	PF00078	RVT_1           	  1477	  1638	    82.6
+
+M3H1Q7	SIGMA FACTOR REGULATORY PROTE    142.4    1.7e-38   1   1.8   5.4
+	Iterate                   	   288	   363	   141.0
+
+M3HP20	SIGMA FACTOR REGULATORY PROTE    118.9    3.7e-31   1   1.6   4.6
+	Iterate                   	   290	   346	   117.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+M3H1Q7.1	AF-M3H1Q7-F1-model_v4_TED02:115-346	1	AF-M3H1Q7-F1-model_v4_TED02	115-346	77.6%
+M3H1Q7.1	AF-M3H1Q7-F1-model_v4_TED03:398-433	1	AF-M3H1Q7-F1-model_v4_TED03	398-433	0
+M3H1Q7.1	AF-M3H1Q7-F1-model_v4_TED01:2-66	1	AF-M3H1Q7-F1-model_v4_TED01	2-66	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P24845_TED01/Iterate
+GA   27.00 27.00;
+TC   27.00 99.80;
+NC   23.80 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

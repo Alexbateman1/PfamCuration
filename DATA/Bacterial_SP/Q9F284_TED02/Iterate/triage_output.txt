@@ -1,0 +1,432 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   CGIA_ZOBGA              Reviewed;         491 AA.
+AC   Q9F284; G0KZI8;
+DE   RecName: Full=Iota-carrageenase;
+DE            EC=3.2.1.157;
+DE   Flags: Precursor;
+GN   Name=cgiA {ECO:0000312|EMBL:CAC07822.1};
+GN   OrderedLocusNames=zobellia_4265;
+OS   Zobellia galactanivorans (strain DSM 12802 / CCUG 47099 / CIP 106680 /
+OS   NCIMB 13871 / Dsij).
+OC   Bacteria; Pseudomonadati; Bacteroidota; Flavobacteriia; Flavobacteriales;
+OC   Flavobacteriaceae; Zobellia.
+OX   NCBI_TaxID=63186;
+RN   [1] {ECO:0000305, ECO:0000312|EMBL:CAC07822.1}
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], PROTEIN SEQUENCE OF 39-48 AND 395-399,
+RP   FUNCTION, CATALYTIC ACTIVITY, AND SUBCELLULAR LOCATION.
+RC   STRAIN=DSM 12802 / CCUG 47099 / CIP 106680 / KCTC 12921 / NCIMB 13871
+RC   / Dsij {ECO:0000312|EMBL:CAC07822.1};
+RX   PubMed=10934194; DOI=10.1074/jbc.m003404200;
+RA   Barbeyron T., Michel G., Potin P., Henrissat B., Kloareg B.;
+RT   "iota-Carrageenases constitute a novel family of glycoside hydrolases,
+RT   unrelated to that of kappa-carrageenases.";
+RL   J. Biol. Chem. 275:35499-35505(2000).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DSM 12802 / CCUG 47099 / CIP 106680 / KCTC 12921 / NCIMB 13871
+RC   / Dsij;
+RG   Genoscope - CEA;
+RT   "Complete genome sequence of Zobellia galactanivorans Dsij.";
+RL   Submitted (JUL-2009) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Hydrolyzes iota-carrageenans, sulfated 1,3-alpha-1,4-beta
+CC       galactans from red algal cell walls, with an inversion of anomeric
+CC       configuration. Also active against hybrid iota-/nu-carrageenan, not
+CC       active against kappa- or lambda-carrageenans.
+CC       {ECO:0000250|UniProtKB:Q9F5I8, ECO:0000269|PubMed:10934194}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=Endohydrolysis of 1,4-beta-D-linkages between D-galactose 4-
+CC         sulfate and 3,6-anhydro-D-galactose-2-sulfate in iota-carrageenans.;
+CC         EC=3.2.1.157; Evidence={ECO:0000269|PubMed:10934194};
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000269|PubMed:10934194}.
+CC   -!- SIMILARITY: Belongs to the glycosyl hydrolase 82 family. {ECO:0000305}.
+DR   EMBL; AJ272071; CAC07822.1; -; Genomic_DNA.
+DR   EMBL; FP476056; CAZ98400.1; -; Genomic_DNA.
+DR   RefSeq; WP_013995588.1; NC_015844.1.
+DR   AlphaFoldDB; Q9F284; -.
+DR   SMR; Q9F284; -.
+DR   CAZy; GH82; Glycoside Hydrolase Family 82.
+DR   KEGG; zga:ZOBELLIA_4265; -.
+DR   PATRIC; fig|63186.3.peg.4175; -.
+DR   HOGENOM; CLU_555168_0_0_10; -.
+DR   OrthoDB; 6376028at2; -.
+DR   BioCyc; MetaCyc:MONOMER-16653; -.
+DR   BRENDA; 3.2.1.157; 7557.
+DR   Proteomes; UP000008898; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0033952; F:iota-carrageenase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0071555; P:cell wall organization; IEA:UniProtKB-KW.
+DR   GO; GO:0000272; P:polysaccharide catabolic process; IEA:UniProtKB-KW.
+DR   Gene3D; 2.160.20.10; Single-stranded right-handed beta-helix, Pectin lyase-like; 1.
+DR   InterPro; IPR012334; Pectin_lyas_fold.
+DR   InterPro; IPR011050; Pectin_lyase_fold/virulence.
+DR   SUPFAM; SSF51126; Pectin lyase-like; 1.
+PE   1: Evidence at protein level;
+KW   Carbohydrate metabolism; Cell wall biogenesis/degradation;
+KW   Direct protein sequencing; Disulfide bond; Glycosidase; Hydrolase;
+KW   Polysaccharide degradation; Reference proteome; Secreted; Signal.
+FT   SIGNAL          1..19
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           20..491
+FT                   /note="Iota-carrageenase"
+FT                   /evidence="ECO:0000255"
+FT                   /id="PRO_5000065975"
+FT   DISULFID        422..490
+FT                   /evidence="ECO:0000250|UniProtKB:Q9F5I8"
+SQ   SEQUENCE   491 AA;  53395 MW;  AE310457609FC77C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Cellulophaga.
+1	6	Zobellia.
+1	6	Flavivirga.
+4	5	Flavobacteriaceae
+4	4	Flavobacteriales
+4	3	Flavobacteriia
+4	2	Bacteroidota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1B8A9U1	UNCHARACTERIZED PROTEIN {    119.9    1.8e-31  21  24.6  29.2
+	Iterate                   	  1222	  1264	    10.2
+	Iterate                   	  1300	  1347	     8.6
+	Iterate                   	   610	   653	     7.2
+	Iterate                   	   718	   755	     7.0
+	Iterate                   	   820	   857	     7.0
+	Iterate                   	   508	   549	     6.3
+	Iterate                   	   678	   720	     6.3
+	Iterate                   	   783	   823	     6.2
+	Iterate                   	   581	   618	     6.1
+	Iterate                   	   480	   518	     4.8
+	Iterate                   	  1145	  1196	     4.5
+	Iterate                   	  1262	  1295	     3.8
+	Iterate                   	   544	   584	     3.6
+	Iterate                   	   752	   789	     3.5
+	Iterate                   	  1058	  1096	     3.5
+	Iterate                   	   651	   686	     3.4
+	Iterate                   	  1018	  1058	     3.4
+	Iterate                   	  1093	  1129	     3.4
+	Iterate                   	   953	   990	     3.1
+	Iterate                   	   882	   921	     3.0
+	Iterate                   	  1195	  1227	     3.0
+	PF00023	Ank             	   366	   395	    21.2
+	PF12796	Ank_2           	   367	   463	      79
+	PF13637	Ank_4           	   367	   417	    40.9
+	PF13857	Ank_5           	   382	   437	    28.2
+	PF00023	Ank             	   396	   429	    27.4
+	PF13606	Ank_3           	   396	   426	    21.6
+	PF13637	Ank_4           	   404	   452	    31.3
+	PF00023	Ank             	   431	   464	    28.8
+	PF13606	Ank_3           	   431	   461	    22.9
+	PF13637	Ank_4           	   436	   487	    38.1
+	PF12796	Ank_2           	   456	   532	    55.3
+	PF00023	Ank             	   466	   499	      28
+	PF13606	Ank_3           	   466	   496	    22.3
+	PF13637	Ank_4           	   471	   521	    41.2
+	PF00023	Ank             	   500	   533	      29
+	PF13606	Ank_3           	   500	   529	    18.4
+	PF13637	Ank_4           	   505	   555	    40.1
+	PF12796	Ank_2           	   524	   600	    58.3
+	PF00023	Ank             	   534	   567	    29.1
+	PF13606	Ank_3           	   534	   564	    21.7
+	PF13637	Ank_4           	   539	   589	    41.1
+	PF12796	Ank_2           	   558	   634	    60.7
+	PF00023	Ank             	   568	   601	      29
+	PF13606	Ank_3           	   568	   597	    18.4
+	PF13637	Ank_4           	   573	   623	    40.1
+	PF12796	Ank_2           	   593	   668	    58.2
+	PF00023	Ank             	   602	   635	    29.1
+	PF13606	Ank_3           	   602	   632	    21.7
+	PF13637	Ank_4           	   607	   657	    41.8
+	PF13857	Ank_5           	   622	   678	    27.7
+	PF12796	Ank_2           	   626	   702	    59.6
+	PF00023	Ank             	   636	   669	    28.7
+	PF13606	Ank_3           	   636	   666	    21.1
+	PF13637	Ank_4           	   641	   691	    40.8
+	PF12796	Ank_2           	   657	   736	      61
+	PF00023	Ank             	   670	   703	      29
+	PF13606	Ank_3           	   670	   699	    18.4
+	PF13637	Ank_4           	   675	   725	    40.1
+	PF12796	Ank_2           	   696	   770	    58.2
+	PF00023	Ank             	   704	   737	    29.1
+	PF13606	Ank_3           	   704	   734	    21.7
+	PF13637	Ank_4           	   709	   759	    41.8
+	PF13857	Ank_5           	   724	   780	    27.7
+	PF12796	Ank_2           	   727	   804	    59.7
+	PF00023	Ank             	   738	   771	    28.7
+	PF13606	Ank_3           	   738	   768	    21.1
+	PF13637	Ank_4           	   743	   793	    40.8
+	PF12796	Ank_2           	   762	   838	    60.8
+	PF00023	Ank             	   772	   805	      29
+	PF13606	Ank_3           	   772	   801	    18.4
+	PF13637	Ank_4           	   777	   827	    40.1
+	PF12796	Ank_2           	   798	   872	    56.1
+	PF00023	Ank             	   806	   839	    29.1
+	PF13606	Ank_3           	   806	   836	    21.7
+	PF13637	Ank_4           	   811	   861	    41.9
+	PF12796	Ank_2           	   829	   906	    57.9
+	PF00023	Ank             	   840	   873	    26.1
+	PF13606	Ank_3           	   840	   870	    19.3
+	PF13637	Ank_4           	   845	   895	    36.9
+	PF12796	Ank_2           	   864	   937	    51.2
+	PF00023	Ank             	   874	   907	    27.9
+	PF13606	Ank_3           	   874	   903	    19.1
+	PF13637	Ank_4           	   879	   929	    33.7
+	PF12796	Ank_2           	   899	   974	    53.2
+	PF00023	Ank             	   908	   941	    20.6
+	PF13637	Ank_4           	   914	   963	    33.7
+	PF12796	Ank_2           	   932	  1008	    63.6
+	PF00023	Ank             	   942	   975	    29.8
+	PF13606	Ank_3           	   942	   972	    22.3
+	PF13637	Ank_4           	   947	   997	      47
+	PF12796	Ank_2           	   966	  1042	    64.3
+	PF00023	Ank             	   976	  1009	    32.7
+	PF13606	Ank_3           	   976	  1006	    23.4
+	PF13637	Ank_4           	   981	  1031	    44.7
+	PF13857	Ank_5           	   996	  1052	    27.9
+	PF12796	Ank_2           	   997	  1076	    64.2
+	PF00023	Ank             	  1010	  1043	    29.8
+	PF13606	Ank_3           	  1010	  1040	    22.3
+	PF13637	Ank_4           	  1015	  1065	    44.1
+	PF13857	Ank_5           	  1030	  1086	    27.5
+	PF12796	Ank_2           	  1033	  1110	      62
+	PF00023	Ank             	  1044	  1077	    28.5
+	PF13606	Ank_3           	  1044	  1074	    22.7
+	PF13637	Ank_4           	  1049	  1099	    40.3
+	PF12796	Ank_2           	  1060	  1144	    63.5
+	PF00023	Ank             	  1078	  1111	    26.3
+	PF13606	Ank_3           	  1078	  1108	    21.5
+	PF13637	Ank_4           	  1083	  1133	      39
+	PF12796	Ank_2           	  1102	  1178	      54
+	PF00023	Ank             	  1112	  1145	    30.1
+	PF13606	Ank_3           	  1112	  1142	    21.6
+	PF13637	Ank_4           	  1117	  1167	    37.6
+	PF00023	Ank             	  1146	  1179	      21
+	PF12796	Ank_2           	  1151	  1246	    78.7
+	PF13637	Ank_4           	  1152	  1201	    40.8
+	PF13857	Ank_5           	  1166	  1222	    27.5
+	PF00023	Ank             	  1180	  1213	    29.8
+	PF13606	Ank_3           	  1180	  1210	    22.3
+	PF13637	Ank_4           	  1185	  1235	    44.2
+	PF13857	Ank_5           	  1200	  1254	    28.9
+	PF12796	Ank_2           	  1204	  1280	      63
+	PF00023	Ank             	  1214	  1247	    29.8
+	PF13606	Ank_3           	  1214	  1244	    22.9
+	PF13637	Ank_4           	  1219	  1269	    42.3
+	PF12796	Ank_2           	  1238	  1297	    41.2
+	PF00023	Ank             	  1248	  1281	    28.6
+	PF13606	Ank_3           	  1248	  1278	    22.6
+	PF13637	Ank_4           	  1253	  1297	    28.6
+	PF00023	Ank             	  1282	  1328	    20.9
+	PF12796	Ank_2           	  1300	  1395	    75.3
+	PF13637	Ank_4           	  1301	  1350	    38.9
+	PF00023	Ank             	  1329	  1362	    28.4
+	PF13606	Ank_3           	  1329	  1358	    18.4
+	PF13637	Ank_4           	  1334	  1384	    32.4
+	PF00023	Ank             	  1363	  1396	    25.4
+	PF13606	Ank_3           	  1363	  1393	    19.3
+
+A0A1B8AAL3	UNCHARACTERIZED PROTEIN {    124.0    9.3e-33  21  28.0  41.0
+	Iterate                   	  1003	  1040	     8.0
+	Iterate                   	  1213	  1255	     8.0
+	Iterate                   	   962	  1005	     7.4
+	Iterate                   	  1533	  1576	     7.4
+	Iterate                   	  1614	  1655	     7.3
+	Iterate                   	  1140	  1176	     6.5
+	Iterate                   	  1356	  1395	     6.3
+	Iterate                   	   644	   686	     6.1
+	Iterate                   	   474	   514	     6.0
+	Iterate                   	   508	   549	     4.9
+	Iterate                   	   576	   617	     4.8
+	Iterate                   	  1416	  1463	     4.8
+	Iterate                   	  1573	  1608	     4.8
+	Iterate                   	   846	   890	     4.7
+	Iterate                   	  1097	  1141	     4.7
+	Iterate                   	  1171	  1207	     4.7
+	Iterate                   	   888	   928	     4.3
+	Iterate                   	  1458	  1497	     4.3
+	Iterate                   	  1495	  1527	     3.4
+	Iterate                   	   781	   823	     3.1
+	Iterate                   	  1324	  1359	     2.9
+	PF12796	Ank_2           	   332	   428	    47.9
+	PF00023	Ank             	   366	   395	    20.9
+	PF13637	Ank_4           	   367	   417	    40.6
+	PF12796	Ank_2           	   367	   463	    78.7
+	PF13857	Ank_5           	   382	   437	    27.9
+	PF00023	Ank             	   396	   429	    27.1
+	PF13606	Ank_3           	   396	   426	    21.3
+	PF13637	Ank_4           	   404	   452	      31
+	PF12796	Ank_2           	   421	   498	    53.9
+	PF00023	Ank             	   431	   464	    28.5
+	PF13606	Ank_3           	   431	   461	    22.6
+	PF13637	Ank_4           	   436	   487	    39.9
+	PF00023	Ank             	   466	   499	    28.2
+	PF13606	Ank_3           	   466	   495	      19
+	PF13637	Ank_4           	   471	   521	    42.9
+	PF12796	Ank_2           	   491	   566	      58
+	PF00023	Ank             	   500	   533	    28.4
+	PF13606	Ank_3           	   500	   529	    19.3
+	PF13637	Ank_4           	   505	   555	    39.7
+	PF00023	Ank             	   534	   567	    26.2
+	PF13606	Ank_3           	   534	   564	    19.6
+	PF13637	Ank_4           	   539	   589	    37.2
+	PF12796	Ank_2           	   557	   634	    58.1
+	PF00023	Ank             	   568	   601	    27.4
+	PF13606	Ank_3           	   568	   597	    18.7
+	PF13637	Ank_4           	   573	   623	    39.1
+	PF00023	Ank             	   602	   635	    26.2
+	PF13606	Ank_3           	   602	   632	    19.6
+	PF13637	Ank_4           	   607	   657	    39.2
+	PF12796	Ank_2           	   625	   702	    58.1
+	PF00023	Ank             	   636	   669	    29.5
+	PF13606	Ank_3           	   636	   665	    18.5
+	PF13637	Ank_4           	   641	   691	    40.2
+	PF00023	Ank             	   670	   703	    26.2
+	PF13606	Ank_3           	   670	   700	    19.6
+	PF13637	Ank_4           	   675	   725	    37.2
+	PF12796	Ank_2           	   694	   771	    55.6
+	PF00023	Ank             	   704	   737	      29
+	PF13606	Ank_3           	   704	   734	    22.1
+	PF13637	Ank_4           	   709	   760	    41.4
+	PF00023	Ank             	   739	   772	    26.7
+	PF13606	Ank_3           	   739	   769	    21.2
+	PF13637	Ank_4           	   744	   794	    36.2
+	PF12796	Ank_2           	   763	   839	    62.7
+	PF00023	Ank             	   773	   806	    28.3
+	PF13606	Ank_3           	   773	   803	    21.7
+	PF13637	Ank_4           	   778	   828	    42.1
+	PF00023	Ank             	   807	   840	    29.6
+	PF13606	Ank_3           	   807	   837	    22.2
+	PF13637	Ank_4           	   812	   862	    37.7
+	PF13857	Ank_5           	   827	   883	    28.3
+	PF12796	Ank_2           	   831	   906	      53
+	PF00023	Ank             	   841	   874	    24.7
+	PF13637	Ank_4           	   847	   896	    41.2
+	PF00023	Ank             	   875	   908	    27.4
+	PF13606	Ank_3           	   875	   904	    18.7
+	PF13637	Ank_4           	   880	   930	    34.4
+	PF12796	Ank_2           	   899	   960	    37.6
+	PF00023	Ank             	   909	   942	    25.3
+	PF13606	Ank_3           	   909	   939	    19.1
+	PF13637	Ank_4           	   914	   958	    23.4
+	PF00023	Ank             	   943	   989	    19.9
+	PF12796	Ank_2           	   961	  1056	    81.8
+	PF13637	Ank_4           	   962	  1011	    40.7
+	PF13857	Ank_5           	   976	  1032	    30.5
+	PF00023	Ank             	   990	  1023	    30.9
+	PF13606	Ank_3           	   990	  1020	    22.2
+	PF13637	Ank_4           	   995	  1045	    44.9
+	PF13857	Ank_5           	  1010	  1066	    32.5
+	PF12796	Ank_2           	  1014	  1090	    63.3
+	PF00023	Ank             	  1024	  1057	    30.1
+	PF13606	Ank_3           	  1024	  1054	    22.2
+	PF13637	Ank_4           	  1029	  1079	    42.3
+	PF13857	Ank_5           	  1044	  1100	    27.8
+	PF12796	Ank_2           	  1047	  1124	    56.8
+	PF00023	Ank             	  1058	  1091	    31.9
+	PF13606	Ank_3           	  1058	  1088	    22.8
+	PF13637	Ank_4           	  1063	  1113	    37.7
+	PF12796	Ank_2           	  1082	  1158	    54.9
+	PF00023	Ank             	  1092	  1125	    25.1
+	PF13637	Ank_4           	  1098	  1147	    41.2
+	PF12796	Ank_2           	  1116	  1192	    62.4
+	PF00023	Ank             	  1126	  1159	    27.4
+	PF13606	Ank_3           	  1126	  1155	    18.7
+	PF13637	Ank_4           	  1131	  1181	    36.5
+	PF12796	Ank_2           	  1152	  1211	    39.1
+	PF00023	Ank             	  1160	  1193	    29.2
+	PF13606	Ank_3           	  1160	  1190	    22.4
+	PF13637	Ank_4           	  1165	  1209	    28.6
+	PF12796	Ank_2           	  1186	  1273	    49.6
+	PF00023	Ank             	  1194	  1240	    19.9
+	PF13637	Ank_4           	  1213	  1262	    42.5
+	PF13857	Ank_5           	  1227	  1281	    27.8
+	PF00023	Ank             	  1241	  1274	    30.4
+	PF13606	Ank_3           	  1241	  1271	    22.2
+	PF13637	Ank_4           	  1246	  1297	    41.9
+	PF12796	Ank_2           	  1266	  1342	    57.9
+	PF00023	Ank             	  1276	  1309	    26.7
+	PF13606	Ank_3           	  1276	  1306	    21.2
+	PF13637	Ank_4           	  1281	  1331	    37.3
+	PF00023	Ank             	  1310	  1343	    29.5
+	PF13606	Ank_3           	  1310	  1340	    22.1
+	PF13637	Ank_4           	  1315	  1365	    43.8
+	PF13857	Ank_5           	  1330	  1386	    28.6
+	PF12796	Ank_2           	  1334	  1410	    63.4
+	PF00023	Ank             	  1344	  1377	    30.1
+	PF13606	Ank_3           	  1344	  1374	    22.1
+	PF13637	Ank_4           	  1349	  1399	    40.4
+	PF00023	Ank             	  1378	  1411	    29.8
+	PF13606	Ank_3           	  1378	  1408	    21.4
+	PF13637	Ank_4           	  1383	  1433	    37.3
+	PF12796	Ank_2           	  1402	  1478	    54.9
+	PF00023	Ank             	  1412	  1445	    25.1
+	PF13637	Ank_4           	  1417	  1467	    41.2
+	PF00023	Ank             	  1446	  1479	    27.4
+	PF13606	Ank_3           	  1446	  1475	    18.7
+	PF13637	Ank_4           	  1451	  1501	    34.4
+	PF12796	Ank_2           	  1471	  1529	    38.8
+	PF00023	Ank             	  1480	  1513	    27.2
+	PF13606	Ank_3           	  1480	  1510	    20.9
+	PF13637	Ank_4           	  1485	  1529	    29.4
+	PF00023	Ank             	  1514	  1560	    19.9
+	PF12796	Ank_2           	  1532	  1612	    61.2
+	PF13637	Ank_4           	  1533	  1582	    40.7
+	PF13857	Ank_5           	  1547	  1603	    29.8
+	PF00023	Ank             	  1561	  1594	    30.3
+	PF13606	Ank_3           	  1561	  1591	    22.2
+	PF13637	Ank_4           	  1566	  1610	    30.9
+	PF00023	Ank             	  1595	  1641	    19.9
+	PF12796	Ank_2           	  1607	  1674	    47.9
+	PF13637	Ank_4           	  1614	  1663	    39.7
+	PF00023	Ank             	  1642	  1675	    29.3
+	PF13606	Ank_3           	  1642	  1672	    22.6
+
+E6XD22	RHAMNOGALACTURONASE A/B/EPIME    103.6    2.2e-26   1   1.9   2.7
+	Iterate                   	   325	   377	   103.6
+	PF12708	Pect-lyase_RHGA_epim	    63	   274	    27.6
+
+F0RBP4	IOTA-CARRAGEENASE {ECO:000800    114.3      1e-29   1   1.7   2.9
+	Iterate                   	   321	   373	   113.1
+
+Q9F284	IOTA-CARRAGEENASE EC=3.2.1.157     133.3    1.2e-35   1   1.6   6.4
+	Iterate                   	   321	   373	   132.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1E5TA37.1	AF-A0A1E5TA37-F1-model_v4_TED01:60-324_387-494	1	AF-A0A1E5TA37-F1-model_v4_TED01	60-494	100.0%
+A0A1E5TA37.1	AF-A0A1E5TA37-F1-model_v4_TED02:326-381	1	AF-A0A1E5TA37-F1-model_v4_TED02	326-381	100.0%
+Q9F284.1	AF-Q9F284-F1-model_v4_TED01:53-319_386-473	1	AF-Q9F284-F1-model_v4_TED01	53-473	100.0%
+Q9F284.1	AF-Q9F284-F1-model_v4_TED02:321-373	1	AF-Q9F284-F1-model_v4_TED02	321-373	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9F284_TED02/Iterate
+GA   27.00 27.00;
+TC   27.10 107.40;
+NC   26.30 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for Q9F284
+RN   [1]
+RM   10934194
+RT   "iota-Carrageenases constitute a novel family of glycoside hydrolases,
+RT   unrelated to that of kappa-carrageenases.";
+RA   Barbeyron T., Michel G., Potin P., Henrissat B., Kloareg B.;
+RL   J. Biol. Chem. 275:35499-35505(2000).
+
+--- End of Current DESC file ---

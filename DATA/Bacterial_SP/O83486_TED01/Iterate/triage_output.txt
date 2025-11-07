@@ -1,0 +1,135 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y473_TREPA              Reviewed;         214 AA.
+AC   O83486;
+DE   RecName: Full=Uncharacterized protein TP_0473;
+GN   OrderedLocusNames=TP_0473;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000520; AAC65467.1; -; Genomic_DNA.
+DR   PIR; G71318; G71318.
+DR   RefSeq; WP_010881922.1; NC_021490.2.
+DR   AlphaFoldDB; O83486; -.
+DR   IntAct; O83486; 2.
+DR   STRING; 243276.TP_0473; -.
+DR   EnsemblBacteria; AAC65467; AAC65467; TP_0473.
+DR   KEGG; tpa:TP_0473; -.
+DR   KEGG; tpw:TPANIC_0473; -.
+DR   HOGENOM; CLU_1288413_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..214
+FT                   /note="Uncharacterized protein TP_0473"
+FT                   /id="PRO_0000202261"
+FT   TRANSMEM        4..23
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        35..57
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        67..89
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        96..118
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        128..150
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        155..177
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        187..209
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   214 AA;  24002 MW;  1497AA7E15DFAE92 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Treponema.
+2	5	Treponemataceae
+2	4	Spirochaetales
+2	3	Spirochaetia
+2	2	Spirochaetota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GUV7	UNCHARACTERIZED PROTEIN {     45.1    5.7e-08   1   2.2  20.3
+	Iterate                   	    59	   205	    45.1
+
+A0A2U9AW79	UNCHARACTERIZED PROTEIN {     22.4       0.58   4   4.3   2.3
+	Iterate                   	   105	   189	     6.4
+	Iterate                   	     7	    53	     5.6
+	Iterate                   	    67	   109	     3.7
+	Iterate                   	   185	   232	     3.5
+
+A0A7R9KNL6	GUANYLATE CYCLASE {ECO:00     25.5      0.064   2   2.4   0.4
+	Iterate                   	   524	   594	    11.7
+	Iterate                   	    10	    75	    11.5
+	PF07700	HNOB            	     3	   117	   118.7
+	PF07701	HNOBA           	   162	   387	   183.9
+	PF00211	Guanylate_cyc   	   393	   510	    91.8
+	PF07700	HNOB            	   475	   596	    92.8
+
+A0AA88R9I3	METHIONINE GAMMA-LYASE {E     26.6       0.03   3   3.3   9.0
+	Iterate                   	   361	   426	    13.8
+	Iterate                   	    96	   161	    12.3
+	Iterate                   	   514	   614	     4.2
+	PF01053	Cys_Met_Meta_PP 	    38	   276	   197.2
+	PF00155	Aminotran_1_2   	    94	   251	    38.1
+	PF00266	Aminotran_5     	   105	   248	    24.8
+	PF01053	Cys_Met_Meta_PP 	   303	   728	   260.6
+	PF00155	Aminotran_1_2   	   359	   521	      35
+	PF00266	Aminotran_5     	   375	   534	    24.5
+
+O83486	UNCHARACTERIZED PROTEIN TP_0473    330.6    6.4e-96   1   1.5  18.2
+	Iterate                   	    65	   213	   330.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83486.1	AF-O83486-F1-model_v4_TED01:65-213	1	AF-O83486-F1-model_v4_TED01	65-213	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83486_TED01/Iterate
+GA   27.00 27.00;
+TC   45.10 45.10;
+NC   26.60 21.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

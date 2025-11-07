@@ -1,0 +1,193 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   FPTB_PSEAE              Reviewed;          93 AA.
+AC   P42513;
+DE   RecName: Full=Protein FptB;
+DE   Flags: Precursor;
+GN   Name=fptB; OrderedLocusNames=PA4220;
+OS   Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+OS   14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pseudomonadales; Pseudomonadaceae; Pseudomonas.
+OX   NCBI_TaxID=208964;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=PAO / IA602;
+RX   PubMed=8288523; DOI=10.1128/jb.176.2.307-319.1994;
+RA   Ankenbauer R.G., Quan H.N.;
+RT   "FptA, the Fe(III)-pyochelin receptor of Pseudomonas aeruginosa: a
+RT   phenolate siderophore receptor homologous to hydroxamate siderophore
+RT   receptors.";
+RL   J. Bacteriol. 176:307-319(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=10984043; DOI=10.1038/35023079;
+RA   Stover C.K., Pham X.-Q.T., Erwin A.L., Mizoguchi S.D., Warrener P.,
+RA   Hickey M.J., Brinkman F.S.L., Hufnagle W.O., Kowalik D.J., Lagrou M.,
+RA   Garber R.L., Goltry L., Tolentino E., Westbrock-Wadman S., Yuan Y.,
+RA   Brody L.L., Coulter S.N., Folger K.R., Kas A., Larbig K., Lim R.M.,
+RA   Smith K.A., Spencer D.H., Wong G.K.-S., Wu Z., Paulsen I.T., Reizer J.,
+RA   Saier M.H. Jr., Hancock R.E.W., Lory S., Olson M.V.;
+RT   "Complete genome sequence of Pseudomonas aeruginosa PAO1, an opportunistic
+RT   pathogen.";
+RL   Nature 406:959-964(2000).
+CC   -!- FUNCTION: May play some role in transport of Fe(3+)-pyochelin.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; U03161; AAC43214.1; -; Unassigned_DNA.
+DR   EMBL; AE004091; AAG07608.1; -; Genomic_DNA.
+DR   PIR; B36942; B36942.
+DR   RefSeq; NP_252910.1; NC_002516.2.
+DR   RefSeq; WP_003107348.1; NZ_QZGE01000042.1.
+DR   AlphaFoldDB; P42513; -.
+DR   STRING; 208964.PA4220; -.
+DR   PaxDb; 208964-PA4220; -.
+DR   DNASU; 880418; -.
+DR   GeneID; 880418; -.
+DR   KEGG; pae:PA4220; -.
+DR   PATRIC; fig|208964.12.peg.4421; -.
+DR   PseudoCAP; PA4220; -.
+DR   HOGENOM; CLU_2397275_0_0_6; -.
+DR   InParanoid; P42513; -.
+DR   BioCyc; PAER208964:G1FZ6-4293-MONOMER; -.
+DR   Proteomes; UP000002438; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   3: Inferred from homology;
+KW   Cell membrane; Membrane; Reference proteome; Signal; Transmembrane;
+KW   Transmembrane helix.
+FT   SIGNAL          1..25
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           26..93
+FT                   /note="Protein FptB"
+FT                   /id="PRO_0000021287"
+FT   TRANSMEM        44..64
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        71..91
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   93 AA;  9569 MW;  2474A94EB08244D7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	pseudomallei group.
+1	7	Burkholderiacepacia complex.
+2	6	Pseudomonas.
+2	6	Burkholderia
+1	6	Rhodospirillum.
+1	6	Pollutimonas.
+1	6	Burkholderia.
+3	5	Burkholderiaceae
+2	5	Pseudomonadaceae
+1	5	Rhodospirillaceae
+1	5	Alcaligenaceae
+4	4	Burkholderiales
+2	4	Pseudomonadales
+1	4	Rhodospirillales
+4	3	Betaproteobacteria
+2	3	Gammaproteobacteria
+1	3	Alphaproteobacteria
+7	2	Pseudomonadota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0C5E339	UNCHARACTERIZED PROTEIN {     55.7    2.4e-11   1   1.1  13.3
+	Iterate                   	    17	    90	    55.4
+
+A0A1M5MST1	UNCHARACTERIZED PROTEIN {    114.8    8.6e-30   1   1.1  13.5
+	Iterate                   	    18	    90	   114.5
+
+A0A553GYA6	PROTEIN FPTB {ECO:0000313    118.1      8e-31   1   1.1  13.7
+	Iterate                   	    12	    85	   117.8
+
+P42513	PROTEIN FPTB                       104.5    1.4e-26   1   1.1  15.5
+	Iterate                   	    17	    90	   104.2
+
+Q2RW48	UNCHARACTERIZED PROTEIN {ECO:    113.8    1.8e-29   1   1.1  15.5
+	Iterate                   	    17	    90	   113.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS2195315 (E-value: 1.6e-24, Score: 91.2)
+Mentioned as: PA14_09350
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa UCBPP-PA14
+PMID: 28611763
+Source: EuropePMC
+Title: Lauroyl Arginate Ethyl Blocks the Iron Signals Necessary for <i>Pseudomonas aeruginosa</i> Biofilm Development
+Journal: Frontiers in microbiology (2017)
+Snippet: ID Gene name Gene product Fold-change Pyochelin system PA14_09340 fptA Fe(III)-pyochelin outer membrane receptor 4.8 PA14_09350 fptB Hypothetical protein 4.9 PA14_09380 fptX Probable transporter 7.1 PA14_09210 pchA Salicylate biosynthesis isochorismate synthase 6.4 PA14_09220 pchB Salicylate biosynthesis protein PchB 7.8 PA14_09230 pchC Pyochelin biosynthetic protein PchC 5.4
+
+================================================================================
+Protein: VIMSS60670 (E-value: 2.4e-24, Score: 90.6)
+Mentioned as: PA4220
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 37921470
+Source: EuropePMC
+Title: A gene network-driven approach to infer novel pathogenicity-associated genes: application to <i>Pseudomonas aeruginosa</i> PAO1
+Journal: mSystems (2023)
+Snippet: module 42, such as pchB , pchC , pchD , pchE , pchG , and PA4220 , were found to lie within pathways for pyochelin biosynthesis and metabolism ( 117 ). Mammalian hosts contain hemoproteins and extracellular proteins such as transferrin, lactoferrin, and ferritin ( 118
+
+================================================================================
+Protein: VIMSS60670 (E-value: 2.4e-24, Score: 90.6)
+Mentioned as: PA4220
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 36036571
+Source: EuropePMC
+Title: Pf4 Phage Variant Infection Reduces Virulence-Associated Traits in <i>Pseudomonas aeruginosa</i>
+Journal: Microbiology spectrum (2022)
+Snippet: Fur, RsmA, PvdS, OxyR 33.33 PA4168 fpvB Second ferric pyoverdine receptor FpvB Fur 4.07 Pyochelin PA4220 fptB Hypothetical protein Fur, RsmA, PchR 6.99 PA4221 fptA Fe(III)-pyochelin OM receptor precursor Fur, RsmA, PchR 6.49 PA4223 pchH Probable ATP-binding component of ABC transporter Fur, RsmA, PchR 2.43 PA4224
+
+================================================================================
+Protein: VIMSS60670 (E-value: 2.4e-24, Score: 90.6)
+Mentioned as: PA4220
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 28732084
+Source: EuropePMC
+Title: Increased ParB level affects expression of stress response, adaptation and virulence operons and potentiates repression of promoters adjacent to the high affinity binding sites parS3 and parS4 in Pseudomonas aeruginosa
+Journal: PloS one (2017)
+Snippet: synthase component II PA1003 mvfR -2,2 5 transcriptional regulator MvfR Pyochelin and pyoverdine biosynthesis genes PA4220 -2,0 5 hypothetical protein PA4221 fptA -2,6 5 Fe(III)-pyochelin outer membrane receptor precursor PA4224 pchG -2,6 -2,5 6 pyochelin biosynthetic protein PchG PA4225 pchF -2,4 -2,9 6 pyochelin synthetase PA4228
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B6S2U8.1	AF-A0A0B6S2U8-F1-model_v4_TED01:4-63	1	AF-A0A0B6S2U8-F1-model_v4_TED01	4-63	68.9%
+A0A0C5E339.1	AF-A0A0C5E339-F1-model_v4_TED01:20-87	1	AF-A0A0C5E339-F1-model_v4_TED01	20-87	91.9%
+A0A1M5MST1.1	AF-A0A1M5MST1-F1-model_v4_TED01:4-67	1	AF-A0A1M5MST1-F1-model_v4_TED01	4-67	68.5%
+A0A553GYA6.1	AF-A0A553GYA6-F1-model_v4_TED01:2-85	1	AF-A0A553GYA6-F1-model_v4_TED01	2-85	100.0%
+A0A8A8D8E1.1	AF-A0A8A8D8E1-F1-model_v4_TED01:19-85	1	AF-A0A8A8D8E1-F1-model_v4_TED01	19-85	91.8%
+P42513.1	AF-P42513-F1-model_v4_TED01:17-90	1	AF-P42513-F1-model_v4_TED01	17-90	100.0%
+Q2RW48.1	AF-Q2RW48-F1-model_v4_TED01:2-92	1	AF-Q2RW48-F1-model_v4_TED01	2-92	100.0%
+Q63MQ8.1	AF-Q63MQ8-F1-model_v4_TED01:3-85	1	AF-Q63MQ8-F1-model_v4_TED01	3-85	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P42513_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.80 30.90;
+NC   25.40 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

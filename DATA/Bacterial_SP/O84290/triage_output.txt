@@ -1,0 +1,247 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   INCM_CHLTR              Reviewed;         563 AA.
+AC   O84290;
+DE   RecName: Full=Inclusion membrane protein M {ECO:0000305|PubMed:36877064};
+DE   AltName: Full=Inc mediating multinucleation {ECO:0000303|PubMed:36877064};
+GN   Name=incM {ECO:0000303|PubMed:36877064}; OrderedLocusNames=CT_288;
+OS   Chlamydia trachomatis serovar D (strain ATCC VR-885 / DSM 19411 / UW-3/Cx).
+OC   Bacteria; Pseudomonadati; Chlamydiota; Chlamydiia; Chlamydiales;
+OC   Chlamydiaceae; Chlamydia/Chlamydophila group; Chlamydia.
+OX   NCBI_TaxID=272561;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC VR-885 / DSM 19411 / UW-3/Cx;
+RX   PubMed=9784136; DOI=10.1126/science.282.5389.754;
+RA   Stephens R.S., Kalman S., Lammel C.J., Fan J., Marathe R., Aravind L.,
+RA   Mitchell W.P., Olinger L., Tatusov R.L., Zhao Q., Koonin E.V., Davis R.W.;
+RT   "Genome sequence of an obligate intracellular pathogen of humans: Chlamydia
+RT   trachomatis.";
+RL   Science 282:754-759(1998).
+RN   [2]
+RP   INTERACTION WITH HUMAN CCDC46, AND SUBCELLULAR LOCATION.
+RC   STRAIN=434/Bu / ATCC VR-902B;
+RX   PubMed=30094225; DOI=10.3389/fcimb.2018.00254;
+RA   Almeida F., Luis M.P., Pereira I.S., Pais S.V., Mota L.J.;
+RT   "The Human Centrosomal Protein CCDC146 Binds Chlamydia trachomatis
+RT   Inclusion Membrane Protein CT288 and Is Recruited to the Periphery of the
+RT   Chlamydia-Containing Vacuole.";
+RL   Front. Cell. Infect. Microbiol. 8:254-254(2018).
+RN   [3]
+RP   FUNCTION, AND SUBCELLULAR LOCATION.
+RC   STRAIN=434/Bu / ATCC VR-902B;
+RX   PubMed=36877064; DOI=10.1128/iai.00405-22;
+RA   Luis M.P., Pereira I.S., Bugalhao J.N., Simoes C.N., Mota C., Romao M.J.,
+RA   Mota L.J.;
+RT   "The Chlamydia trachomatis IncM Protein Interferes with Host Cell
+RT   Cytokinesis, Centrosome Positioning, and Golgi Distribution and Contributes
+RT   to the Stability of the Pathogen-Containing Vacuole.";
+RL   Infect. Immun. 91:e0040522-e0040522(2023).
+CC   -!- FUNCTION: Interferes with host cell cytokinesis, centrosome positioning
+CC       and Golgi distribution, and contributes to the morphology and stability
+CC       of the pathogen-containing vacuole (PubMed:36877064). May exert its
+CC       effects by acting directly or indirectly on host microtubules
+CC       (PubMed:36877064). {ECO:0000269|PubMed:36877064}.
+CC   -!- SUBUNIT: Interacts with host CCDC146. In host cells infected with
+CC       C.trachomatis incM, CCDC146 is recruited to the periphery of the
+CC       pathogen-containing vacuole but recruitment is not dependent on incM.
+CC       {ECO:0000269|PubMed:30094225}.
+CC   -!- SUBCELLULAR LOCATION: Host vacuole, host pathogen-containing vacuole,
+CC       host pathogen-containing vacuole membrane {ECO:0000269|PubMed:30094225,
+CC       ECO:0000269|PubMed:36877064}; Multi-pass membrane protein
+CC       {ECO:0000255}. Host vacuole, host pathogen-containing vacuole, host
+CC       pathogen-containing vacuole lumen {ECO:0000269|PubMed:36877064}.
+CC       Secreted {ECO:0000305}. Note=At 12 hours post-infection (pi), detected
+CC       at the vacuole membrane (PubMed:36877064). At 24 hours pi, detected at
+CC       the membrane and within the vacuole (PubMed:36877064). At 40 hours pi,
+CC       located predominantly within the vacuole with low levels in the
+CC       membrane (PubMed:36877064). Secreted, probably by a type III secretion
+CC       system (Probable). {ECO:0000269|PubMed:36877064, ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the chlamydial CPn_0065/CT_288/TC_0561 family.
+CC       {ECO:0000305}.
+DR   EMBL; AE001273; AAC67881.1; -; Genomic_DNA.
+DR   PIR; E71533; E71533.
+DR   RefSeq; NP_219793.1; NC_000117.1.
+DR   RefSeq; WP_010725149.1; NC_000117.1.
+DR   AlphaFoldDB; O84290; -.
+DR   SMR; O84290; -.
+DR   STRING; 272561.CT_288; -.
+DR   EnsemblBacteria; AAC67881; AAC67881; CT_288.
+DR   GeneID; 884832; -.
+DR   KEGG; ctr:CT_288; -.
+DR   PATRIC; fig|272561.5.peg.308; -.
+DR   HOGENOM; CLU_482906_0_0_0; -.
+DR   InParanoid; O84290; -.
+DR   OrthoDB; 19205at2; -.
+DR   Proteomes; UP000000431; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0033644; C:host cell membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0140222; C:pathogen-containing vacuole lumen; IDA:UniProtKB.
+DR   GO; GO:0140221; C:pathogen-containing vacuole membrane; IDA:UniProtKB.
+PE   1: Evidence at protein level;
+KW   Host membrane; Membrane; Reference proteome; Secreted; Transmembrane;
+KW   Transmembrane helix; Virulence.
+FT   CHAIN           1..563
+FT                   /note="Inclusion membrane protein M"
+FT                   /id="PRO_0000218353"
+FT   TOPO_DOM        1..36
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000305"
+FT   TRANSMEM        37..57
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        58
+FT                   /note="Vacuolar"
+FT                   /evidence="ECO:0000305"
+FT   TRANSMEM        59..79
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        80..252
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000305"
+FT   TRANSMEM        253..273
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        274
+FT                   /note="Vacuolar"
+FT                   /evidence="ECO:0000305"
+FT   TRANSMEM        275..295
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        296..563
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   563 AA;  63099 MW;  6D56E13FC7962ED3 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Chlamydia.
+1	6	Chlamydia/Chlamydophila group
+1	5	Chlamydiaceae
+1	4	Chlamydiales
+1	3	Chlamydiia
+1	2	Chlamydiota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O84290	INCLUSION MEMBRANE PROTEIN M {E   1336.5          0   1   1.0  12.4
+	O84290                    	     1	   563	  1336.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3794461 (E-value: 0.0, Score: 1272.7)
+Mentioned as: CTL0540
+Description: candidate inclusion membrane protein
+Organism: Chlamydia trachomatis 434/Bu
+PMID: 39950807
+Source: EuropePMC
+Title: A platform supporting generation and isolation of random transposon mutants in &lt;i&gt;Chlamydia trachomatis&lt;/i&gt;
+Journal: Journal of bacteriology (2025)
+Snippet: N Reverse nfo Deoxyribonuclease IV 278/289aa CTL0889 CT_625 N Reverse incM Inclusion membrane protein 561/565aa CTL0540 CT_288 N Reverse dre1 Inclusion membrane protein 46/242aa CTL0444 CT_192 N Intergenic Reverse Intergenic N/A N/A IG before CTL0260 IG before CT_ 005 IG before 1/2 Forward Intergenic N/A N/A
+
+================================================================================
+Protein: VIMSS3794461 (E-value: 0.0, Score: 1272.7)
+Mentioned as: CTL0540
+Description: candidate inclusion membrane protein
+Organism: Chlamydia trachomatis 434/Bu
+PMID: 38112466
+Source: EuropePMC
+Title: Requirement of GrgA for <i>Chlamydia</i> infectious progeny production, optimal growth, and efficient plasmid maintenance
+Journal: mBio (2024)
+Snippet: membrane protein 2.67 DT ctl0081 T3SS effector protein 2.67 T tsp Tail-specific protease 2.66 T ctl0540 Putative inclusion membrane protein 2.57 IT ctl0003 Putative T3SS chaperone 2.53 DT omcB Outer membrane protein OmcB 2.46 DT T ctl0884 Putative T3SS effector 2.45 DT ctl0255 T3SS effector 2.26
+
+================================================================================
+Protein: VIMSS3794461 (E-value: 0.0, Score: 1272.7)
+Mentioned as: CTL0540
+Description: candidate inclusion membrane protein
+Organism: Chlamydia trachomatis 434/Bu
+PMID: 36877064
+Source: EuropePMC
+Title: The Chlamydia trachomatis IncM Protein Interferes with Host Cell Cytokinesis, Centrosome Positioning, and Golgi Distribution and Contributes to the Stability of the Pathogen-Containing Vacuole
+Journal: Infection and immunity (2023)
+
+================================================================================
+Protein: VIMSS370875 (E-value: 1.4e-244, Score: 818.3)
+Mentioned as: TC0561
+Description: conserved hypothetical protein
+Organism: Chlamydia muridarum Nigg
+PMID: 22454599
+Source: EuropePMC
+Title: Evolution and conservation of predicted inclusion membrane proteins in chlamydiae
+Journal: Comparative and functional genomics (2012)
+Snippet: CCA00576 CF0425 CP0595 CCA00430 CCA00424 CF0583 CP0649 CCA00398 CF0609 CP0387 CCA00397 CF0610 CCA00352 CP0313 CT288 TC0561 CCA00351 CF0654 CP0709 TC0573 CT300 TC0574 CT324 TC0598 CCA00700 CF0311 CP0703 CT345 TC0624 CT357 TC0636 CT358 TC0637 CF0218 CCA00361 CF0646 CP0322 CCA00360 CF0647 CP0321 CCA00334/00339 CF667/668/669 CCA00325 CF0677/678 CP0742 CCA00318
+
+================================================================================
+Protein: VIMSS370875 (E-value: 1.4e-244, Score: 818.3)
+Mentioned as: TC0561
+Description: conserved hypothetical protein
+Organism: Chlamydia muridarum Nigg
+PMID: 20956570
+Source: EuropePMC
+Title: Identification of immunodominant antigens by probing a whole Chlamydia trachomatis open reading frame proteome microarray using sera from immunized mice
+Journal: Infection and immunity (2011)
+Snippet: TC0519 TC0521 TC0522 TC0527 TC0536 TC0539 TC0551 TC0557 TC0561 TC0574 TC0582 TC0588 TC0589 TC0590 TC0596 TC0619 TC0623 TC0629 TC0631 TC0632 TC0638 TC0652 TC0660
+
+================================================================================
+Protein: VIMSS28409 (E-value: 7.3e-22, Score: 83.1)
+Mentioned as: CPn0065
+Description: CT288 hypothetical protein
+Organism: Chlamydophila pneumoniae CWL029
+PMID: 39099397
+Source: EuropePMC
+Title: Direct targeting of host microtubule and actin cytoskeletons by a chlamydial pathogenic effector protein
+Journal: Journal of cell science (2024)
+Snippet: to Cpn . Interestingly, one of the identified Cpn modulators altering the MT cytoskeleton is CPn0065, which has a Ctr homolog named IncM. A recent publication uncovers the role of IncM in MT modulation, suggesting that the hijacking of the MT cytoskeleton during a chlamydial infection
+
+================================================================================
+Protein: VIMSS28409 (E-value: 7.3e-22, Score: 83.1)
+Mentioned as: CPn0065
+Description: CT288 hypothetical protein
+Organism: Chlamydophila pneumoniae CWL029
+PMID: 37108781
+Source: EuropePMC
+Title: A Functional Yeast-Based Screen Identifies the Host Microtubule Cytoskeleton as a Target of Numerous <i>Chlamydia pneumoniae</i> Proteins
+Journal: International journal of molecular sciences (2023)
+Snippet: date in relation to chlamydial infection. As shown in Table S2 , 5/13 proteins, namely, CPn0065, CPn0312, CPn0443, CPn0565 and CPn0821, had a putative homolog in Ctr and other chlamydia, while 1/13, namely, CPn0186, had a homolog in Ctr only. The identity between homologs is limited
+
+================================================================================
+Protein: VIMSS28409 (E-value: 7.3e-22, Score: 83.1)
+Mentioned as: CPn0065
+Description: CT288 hypothetical protein
+Organism: Chlamydophila pneumoniae CWL029
+PMID: 21324157
+Source: EuropePMC
+Title: Multi-genome identification and characterization of chlamydiae-specific type III secretion substrates: the Inc proteins
+Journal: BMC genomics (2011)
+Snippet: [2-16] 9 [25-46] DUF1978 coiled coils CPn0049 505 160 3 [49-69] & [102-118] 2 [120-141] CPn0065 774 576 4 [33-55] 6 [61-88] & [242-263] 6 [269-291] coiled coils CPn0066 462 577 5 [358-379] 14 [393-413] 12 [425-445] & [484-507] & [542-566] DUF687 CPn0067 no ortholog 367
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O84290
+GA   27.00 27.00;
+TC   1336.50 1336.30;
+NC   24.50 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

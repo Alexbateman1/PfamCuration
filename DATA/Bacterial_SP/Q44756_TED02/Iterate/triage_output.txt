@@ -1,0 +1,162 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y268_BORBU              Reviewed;         159 AA.
+AC   Q44756;
+DE   RecName: Full=Uncharacterized protein BB_0268;
+DE   AltName: Full=ORF36;
+GN   OrderedLocusNames=BB_0268;
+OS   Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)
+OS   (Borrelia burgdorferi).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Borreliaceae; Borreliella.
+OX   NCBI_TaxID=224326;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RA   Dunn J.J., Butler-Loffredo L., Kieleczawa J., Medalle J., Luft B.J.;
+RL   Submitted (DEC-1995) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RX   PubMed=9403685; DOI=10.1038/37551;
+RA   Fraser C.M., Casjens S., Huang W.M., Sutton G.G., Clayton R.A.,
+RA   Lathigra R., White O., Ketchum K.A., Dodson R.J., Hickey E.K., Gwinn M.L.,
+RA   Dougherty B.A., Tomb J.-F., Fleischmann R.D., Richardson D.L.,
+RA   Peterson J.D., Kerlavage A.R., Quackenbush J., Salzberg S.L., Hanson M.,
+RA   van Vugt R., Palmer N., Adams M.D., Gocayne J.D., Weidman J.F.,
+RA   Utterback T.R., Watthey L., McDonald L.A., Artiach P., Bowman C.,
+RA   Garland S.A., Fujii C., Cotton M.D., Horst K., Roberts K.M., Hatch B.,
+RA   Smith H.O., Venter J.C.;
+RT   "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.";
+RL   Nature 390:580-586(1997).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; U43739; AAA85592.1; -; Genomic_DNA.
+DR   EMBL; AE000783; AAC66680.1; -; Genomic_DNA.
+DR   PIR; D70133; D70133.
+DR   RefSeq; NP_212402.1; NC_001318.1.
+DR   AlphaFoldDB; Q44756; -.
+DR   SMR; Q44756; -.
+DR   STRING; 224326.BB_0268; -.
+DR   PaxDb; 224326-BB_0268; -.
+DR   EnsemblBacteria; AAC66680; AAC66680; BB_0268.
+DR   KEGG; bbu:BB_0268; -.
+DR   PATRIC; fig|224326.49.peg.667; -.
+DR   HOGENOM; CLU_1632186_0_0_12; -.
+DR   OrthoDB; 350988at2; -.
+DR   Proteomes; UP000001807; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..159
+FT                   /note="Uncharacterized protein BB_0268"
+FT                   /id="PRO_0000174389"
+FT   TRANSMEM        17..37
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        40..60
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   159 AA;  18344 MW;  B7B29A8BFA919B27 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Borrelia.
+1	6	Borreliella.
+3	5	Borreliaceae
+3	4	Spirochaetales
+3	3	Spirochaetia
+3	2	Spirochaetota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A9J6G2U1	UNCHARACTERIZED PROTEIN {     25.6       0.04   1   1.6   4.7
+	Iterate                   	    87	   122	    24.6
+	PF04258	Peptidase_A22B  	   129	   188	    60.7
+
+A0ABF7PV90	UNCHARACTERIZED PROTEIN {     41.7    3.7e-07   1   1.8   7.3
+	Iterate                   	    32	    72	    41.7
+
+A7TCB1	UNCHARACTERIZED PROTEIN {ECO:     33.5    0.00014   6   9.1  11.8
+	Iterate                   	    87	   105	     7.6
+	Iterate                   	    64	    81	     6.7
+	Iterate                   	   111	   130	     5.3
+	Iterate                   	    13	    33	     3.1
+	Iterate                   	   159	   178	     3.1
+	Iterate                   	     6	    25	     3.0
+
+Q44756	UNCHARACTERIZED PROTEIN BB_0268     99.2    3.9e-25   1   1.7  11.9
+	Iterate                   	    32	    72	    99.2
+
+W6TIH2	PUTATIVE CYTOSOLIC PROTEIN {E     43.7    8.9e-08   1   1.7   8.1
+	Iterate                   	    32	    73	    42.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS43910 (E-value: 2.2e-18, Score: 71.1)
+Mentioned as: BB0268
+Description: conserved hypothetical protein
+Organism: Borrelia burgdorferi B31
+PMID: 39614093
+Source: EuropePMC
+Title: Broadly conserved FlgV controls flagellar assembly and Borrelia burgdorferi dissemination in mice
+Journal: Nature communications (2024)
+Snippet: 28 is absent in the Lyme spirochete Borrelia burgdorferi . Here, we show that gene bb0268 ( flgV ) in B. burgdorferi , previously and incorrectly annotated to encode the RNA-binding protein Hfq, is instead a structural flagellar component that modulates flagellar assembly. The flgV gene
+
+================================================================================
+Protein: VIMSS43910 (E-value: 2.2e-18, Score: 71.1)
+Mentioned as: BB0268
+Description: conserved hypothetical protein
+Organism: Borrelia burgdorferi B31
+PMID: 37086029
+Source: EuropePMC
+Title: c-di-GMP regulates activity of the PlzA RNA chaperone from the Lyme disease spirochete
+Journal: Molecular microbiology (2023)
+Snippet: have not been extensively studied ( Samuels et al., 2021 ). In 2010, we identified BB0268 as a unique RNA chaperone ( Lybecker et al., 2010 ). BB0268 partially complements an Escherichia coli hfq mutant and the hfq gene of E. coli partially complements several defects
+
+================================================================================
+Protein: VIMSS43910 (E-value: 2.2e-18, Score: 71.1)
+Mentioned as: BB0268
+Description: conserved hypothetical protein
+Organism: Borrelia burgdorferi B31
+PMID: 37402717
+Source: EuropePMC
+Title: Extensive diversity in RNA termination and regulation revealed by transcriptome mapping for the Lyme pathogen Borrelia burgdorferi
+Journal: Nature communications (2023)
+Snippet: of 2022-08-03) were imported to supplement the gene information reported from NCBI. Reference to gene bb0268 as hfq was removed, as this gene was previously misannotated. Collectively, these data resulted in Supplementary Data 3 . Analysis of 3 ends Each identified 3 end and its surrounding
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q44756.1	AF-Q44756-F1-model_v4_TED01:2-31	1	AF-Q44756-F1-model_v4_TED01	2-31	0
+Q44756.1	AF-Q44756-F1-model_v4_TED02:32-72	1	AF-Q44756-F1-model_v4_TED02	32-72	100.0%
+W6TIH2.1	AF-W6TIH2-F1-model_v4_TED01:9-65	1	AF-W6TIH2-F1-model_v4_TED01	9-65	69.4%
+W6TIH2.1	AF-W6TIH2-F1-model_v4_TED02:134-162	1	AF-W6TIH2-F1-model_v4_TED02	134-162	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q44756_TED02/Iterate
+GA   27.00 27.00;
+TC   27.00 69.20;
+NC   23.20 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

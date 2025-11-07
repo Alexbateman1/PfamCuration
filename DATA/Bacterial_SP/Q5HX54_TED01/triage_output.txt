@@ -1,0 +1,249 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TOLB_CAMJE              Reviewed;         402 AA.
+AC   Q9PJ14; Q0PC25;
+DE   RecName: Full=Tol-Pal system protein TolB {ECO:0000255|HAMAP-Rule:MF_00671};
+DE   Flags: Precursor;
+GN   Name=tolB {ECO:0000255|HAMAP-Rule:MF_00671}; OrderedLocusNames=Cj0112;
+OS   Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 /
+OS   NCTC 11168).
+OC   Bacteria; Pseudomonadati; Campylobacterota; Epsilonproteobacteria;
+OC   Campylobacterales; Campylobacteraceae; Campylobacter.
+OX   NCBI_TaxID=192222;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700819 / NCTC 11168;
+RX   PubMed=10688204; DOI=10.1038/35001088;
+RA   Parkhill J., Wren B.W., Mungall K.L., Ketley J.M., Churcher C.M.,
+RA   Basham D., Chillingworth T., Davies R.M., Feltwell T., Holroyd S.,
+RA   Jagels K., Karlyshev A.V., Moule S., Pallen M.J., Penn C.W., Quail M.A.,
+RA   Rajandream M.A., Rutherford K.M., van Vliet A.H.M., Whitehead S.,
+RA   Barrell B.G.;
+RT   "The genome sequence of the food-borne pathogen Campylobacter jejuni
+RT   reveals hypervariable sequences.";
+RL   Nature 403:665-668(2000).
+CC   -!- FUNCTION: Part of the Tol-Pal system, which plays a role in outer
+CC       membrane invagination during cell division and is important for
+CC       maintaining outer membrane integrity. {ECO:0000255|HAMAP-
+CC       Rule:MF_00671}.
+CC   -!- SUBUNIT: The Tol-Pal system is composed of five core proteins: the
+CC       inner membrane proteins TolA, TolQ and TolR, the periplasmic protein
+CC       TolB and the outer membrane protein Pal. They form a network linking
+CC       the inner and outer membranes and the peptidoglycan layer.
+CC       {ECO:0000255|HAMAP-Rule:MF_00671}.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000255|HAMAP-Rule:MF_00671}.
+CC   -!- SIMILARITY: Belongs to the TolB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00671}.
+DR   EMBL; AL111168; CAL34283.1; -; Genomic_DNA.
+DR   PIR; H81427; H81427.
+DR   RefSeq; WP_002858647.1; NZ_SZUC01000005.1.
+DR   RefSeq; YP_002343572.1; NC_002163.1.
+DR   AlphaFoldDB; Q9PJ14; -.
+DR   SMR; Q9PJ14; -.
+DR   STRING; 192222.Cj0112; -.
+DR   PaxDb; 192222-Cj0112; -.
+DR   EnsemblBacteria; CAL34283; CAL34283; Cj0112.
+DR   GeneID; 904443; -.
+DR   KEGG; cje:Cj0112; -.
+DR   PATRIC; fig|192222.6.peg.110; -.
+DR   eggNOG; COG0823; Bacteria.
+DR   HOGENOM; CLU_665280_0_0_7; -.
+DR   OrthoDB; 9815657at2; -.
+DR   Proteomes; UP000000799; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:0051301; P:cell division; IEA:UniProtKB-KW.
+DR   GO; GO:0017038; P:protein import; IEA:InterPro.
+DR   FunFam; 2.120.10.30:FF:000140; Tol-Pal system protein TolB; 1.
+DR   Gene3D; 2.120.10.30; TolB, C-terminal domain; 1.
+DR   HAMAP; MF_00671; TolB; 1.
+DR   InterPro; IPR011042; 6-blade_b-propeller_TolB-like.
+DR   InterPro; IPR014167; Tol-Pal_TolB.
+DR   NCBIfam; NF003124; PRK04043.1; 1.
+DR   PANTHER; PTHR36842:SF1; PROTEIN TOLB; 1.
+DR   PANTHER; PTHR36842; PROTEIN TOLB HOMOLOG; 1.
+DR   SUPFAM; SSF69304; Tricorn protease N-terminal domain; 1.
+PE   3: Inferred from homology;
+KW   Cell cycle; Cell division; Periplasm; Reference proteome; Signal.
+FT   SIGNAL          1..17
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00671"
+FT   CHAIN           18..402
+FT                   /note="Tol-Pal system protein TolB"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00671"
+FT                   /id="PRO_0000034634"
+SQ   SEQUENCE   402 AA;  44778 MW;  3E6178CE236B28A6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+16	6	Campylobacter.
+16	5	Campylobacteraceae
+17	4	Campylobacterales
+17	3	Epsilonproteobacteria
+17	2	Campylobacterota
+17	1	Pseudomonadati
+17	0	Bacteria
+Total of 17 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A076FCA8	TOL-PAL SYSTEM TRANSLOCAT     43.2    1.3e-07   1   3.2   6.0
+	Q5HX54_TED01              	    33	   149	    37.9
+	PF07676	PD40            	   160	   421	   110.9
+
+A0A128E9T5	TRANSLOCATION PROTEIN TOL     42.6      2e-07   1   3.1   5.6
+	Q5HX54_TED01              	    33	   147	    38.6
+	PF07676	PD40            	   154	   415	   116.1
+
+A0A1S6U8M3	TOL-PAL SYSTEM TRANSLOCAT     37.3      9e-06   1   3.4   1.4
+	Q5HX54_TED01              	    34	   148	    37.3
+	PF07676	PD40            	   158	   420	     117
+
+A0A1X9STL0	TOL-PAL SYSTEM TRANSLOCAT     42.2    2.7e-07   1   2.8   0.5
+	Q5HX54_TED01              	    33	   145	    38.0
+	PF07676	PD40            	   153	   348	    86.7
+
+A0A222MZ09	TOL-PAL SYSTEM TRANSLOCAT    123.7    1.1e-32   1   2.0   3.0
+	Q5HX54_TED01              	    34	   132	   121.9
+	PF07676	PD40            	   140	   401	   113.2
+
+A0A2P8QZB6	TOL-PAL SYSTEM PROTEIN TO     35.0    4.9e-05   1   2.9   3.3
+	Q5HX54_TED01              	    33	   147	    35.0
+	PF07676	PD40            	   149	   415	   116.5
+
+A0A381DJU2	TRANSLOCATION PROTEIN TOL     46.3    1.4e-08   1   2.8   2.5
+	Q5HX54_TED01              	    33	   150	    42.4
+	PF07676	PD40            	   158	   423	   120.1
+
+A0A4U7BKH8	TOL-PAL SYSTEM PROTEIN TO    123.8      1e-32   1   2.2   2.2
+	Q5HX54_TED01              	    35	   134	   123.8
+	PF07676	PD40            	   142	   403	   104.4
+
+A0A6G5QFC1	TOL-PAL SYSTEM TRANSLOCAT     46.3    1.4e-08   1   2.8   2.7
+	Q5HX54_TED01              	    33	   149	    43.5
+	PF07676	PD40            	   154	   420	   131.2
+
+A0A6G5R5W9	TOL-PAL SYSTEM TRANSLOCAT     44.9    3.9e-08   1   2.6   0.6
+	Q5HX54_TED01              	    33	   150	    39.6
+	PF07676	PD40            	   158	   424	   112.3
+
+A0A6L5WLF5	TOL-PAL SYSTEM PROTEIN TO     34.7    5.9e-05   1   3.3   3.6
+	Q5HX54_TED01              	    33	   145	    34.7
+	PF07676	PD40            	   153	   413	   106.4
+
+A0A7M1LEY3	TOL-PAL SYSTEM PROTEIN TO     35.0    4.7e-05   1   2.5   1.7
+	Q5HX54_TED01              	    33	   139	    35.0
+	PF07676	PD40            	   147	   407	   118.7
+
+A0A842J3A3	TOL-PAL SYSTEM PROTEIN TO     42.1    2.9e-07   1   2.6   0.6
+	Q5HX54_TED01              	    33	   150	    37.2
+	PF07676	PD40            	   158	   424	   108.9
+
+A7H012	TOL-PAL SYSTEM TRANSLOCATION      47.2    7.5e-09   2   3.5   3.7
+	Q5HX54_TED01              	    33	   150	    40.9
+	Q5HX54_TED01              	   160	   224	     3.1
+	PF07676	PD40            	   158	   421	   122.2
+
+B9KES8	TOL-PAL SYSTEM TRANSLOCATION      85.0    1.3e-20   1   1.8   1.4
+	Q5HX54_TED01              	    33	   130	    83.6
+	PF07676	PD40            	   138	   399	   108.5
+
+C8PEV5	PUTATIVE TOL-PAL SYSTEM BETA      39.3    2.2e-06   1   2.9   3.9
+	Q5HX54_TED01              	    33	   147	    37.7
+	PF07676	PD40            	   156	   415	     123
+
+D1AZU0	TOLB DOMAIN PROTEIN {ECO:0000     47.2    7.7e-09   1   2.8   0.5
+	Q5HX54_TED01              	    34	   150	    41.8
+	PF07676	PD40            	   154	   422	   119.2
+
+Q9PJ14	TOL-PAL SYSTEM PROTEIN TOLB {EC    210.0    1.4e-59   1   2.5   7.8
+	Q5HX54_TED01              	    34	   132	   210.0
+	PF07676	PD40            	   140	   402	     117
+
+S3XQ10	TOL-PAL SYSTEM BETA PROPELLER     38.7    3.5e-06   2   3.4   6.8
+	Q5HX54_TED01              	    33	   147	    33.3
+	Q5HX54_TED01              	   151	   227	     3.6
+	PF07676	PD40            	   155	   415	   110.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q5HX54 (E-value: 2e-62, Score: 212.5)
+Mentioned as: Q5HX54
+Description: Tol-Pal system protein TolB
+Organism: Campylobacter jejuni (strain RM1221)
+PMID: 23463356
+Source: EuropePMC
+Title: Metabolomic and proteomic insights into carbaryl catabolism by Burkholderia sp. C3 and degradation of ten N-methylcarbamates.
+Journal: Biodegradation (2013)
+Snippet: Primary metabolism, stress Aldehyde-alcohol dehydrogenase (AdhE) 33/3 P0A9Q7 Primary metabolism, stress Protein TolB precursor 49/7 Q5HX54 Primary metabolism, transport Major ferric ion-binding protein 18/5 P0A0Y3 Primary metabolism, transport Manganese transport protein (MntH) 27/4 O69443 Primary metabolism, transport Cell division inhibitor (SurA) 12/2 P0A241 Sensors/regulators Methyl-accepting chemotaxis
+
+================================================================================
+Protein: VIMSS46052 (E-value: 1.2e-61, Score: 210.0)
+Mentioned as: Cj0112
+Description: periplasmic protein
+Organism: Campylobacter jejuni subsp. jejuni NCTC 11168
+PMID: 34462533
+Source: EuropePMC
+Title: Campylobacter jejuni genotypes are associated with post-infection irritable bowel syndrome in humans
+Journal: Communications biology (2021)
+Snippet: risk of subsequent PI-IBS. Variant gene.family (PIRATE) Locus ID (NCTC11168) gene.name Prediction accuracy 203498_C_C-core g00050 Cj0112 tolB 60.8% 1123058_C_C-core g01209 Cj0118 ttcA 60.8% 816843_T_T-core g02780 Cj0231c nrdB 60.8% 690709_G_G-core g01096 Cj0289c NA 60.8% # 622830_C_C-core g00792 Cj0513 purS 60.8% * 859191_C_C-core g00505 Cj0720c flaC 60.8% 1267111_G_G-core
+
+================================================================================
+Protein: VIMSS46052 (E-value: 1.2e-61, Score: 210.0)
+Mentioned as: Cj0112
+Description: periplasmic protein
+Organism: Campylobacter jejuni subsp. jejuni NCTC 11168
+PMID: 28400767
+Source: EuropePMC
+Title: The Periplasmic Chaperone Network of <i>Campylobacter jejuni</i>: Evidence that SalC (Cj1289) and PpiD (Cj0694) Are Involved in Maintaining Outer Membrane Integrity
+Journal: Frontiers in microbiology (2017)
+Snippet: of the cj1289 mutant OM but orange in the cj0694 overlay. These were identified as Cj0112 (TolB) a periplasmic component of the OM Tol transport system and Cj0964, a putative periplasmic protein, which may therefore not be bona fide OM-associated proteins. The purity of the OM
+
+================================================================================
+Protein: VIMSS46052 (E-value: 1.2e-61, Score: 210.0)
+Mentioned as: Cj0112
+Description: periplasmic protein
+Organism: Campylobacter jejuni subsp. jejuni NCTC 11168
+PMID: 19303060
+Source: EuropePMC
+Title: Structure and function of a Campylobacter jejuni thioesterase Cj0915, a hexameric hot dog fold enzyme
+Journal: Biochimica et biophysica acta (2009)
+Snippet: conserved even in C. jejuni with the gene locus cj0109 - cj0110 - cj0111 - cj0112 - cj0113 - cj0114 corresponding to TolQ TolR - a putative protein TolB Pal -YbgF. However, unlike this region in other well-conserved organisms, tolA and cj0965c ( ybgC homolog) in
+
+================================================================================
+Protein: VIMSS1956009 (E-value: 9e-61, Score: 207.2)
+Mentioned as: CJJ81176_0147
+Description: tolB protein, putative
+Organism: Campylobacter jejuni subsp. jejuni 81-176
+PMID: 26714783
+Source: EuropePMC
+Title: Polyphosphate kinases modulate Campylobacter jejuni outer membrane constituents and alter its capacity to invade and survive in intestinal epithelial cells in vitro
+Journal: Emerging microbes & infections (2015)
+Snippet: 31 0 1 5 CJJ81176_0097; fliY Flagellar motor switch protein FliY 30 0 0 3 CJJ81176_0147; tolB Translocation protein TolB 45 3 0 6 CJJ81176_0179 Cation ABC transporter, periplasmic cation-binding protein 35 2 10 0 CJJ81176_0205; sodB Superoxide dismutase, Fe 25 17 26 7 CJJ81176_0211 Iron
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q5HX54.1	AF-Q5HX54-F1-model_v4_TED01:34-132	1	AF-Q5HX54-F1-model_v4_TED01	34-132	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q5HX54_TED01
+GA   27.00 27.00;
+TC   31.60 33.30;
+NC   26.60 24.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

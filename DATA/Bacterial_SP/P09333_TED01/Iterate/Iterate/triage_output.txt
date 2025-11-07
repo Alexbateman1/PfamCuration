@@ -1,0 +1,170 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   SLAPO_BREBN             Reviewed;        1004 AA.
+AC   P09333; C0Z743;
+DE   RecName: Full=Outer cell wall protein;
+DE            Short=OWP;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=BBR47_54150;
+OS   Brevibacillus brevis (strain 47 / JCM 6285 / NBRC 100599).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Paenibacillaceae;
+OC   Brevibacillus.
+OX   NCBI_TaxID=358681;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND PROTEIN SEQUENCE OF N-TERMINUS.
+RX   PubMed=2428810; DOI=10.1128/jb.168.1.365-373.1986;
+RA   Tsuboi A., Uchihi R., Tabata R., Takahashi Y., Hashiba H., Sasaki T.,
+RA   Yamagata H., Tsukagoshi N., Udaka S.;
+RT   "Characterization of the genes coding for two major cell wall proteins from
+RT   protein-producing Bacillus brevis 47: complete nucleotide sequence of the
+RT   outer wall protein gene.";
+RL   J. Bacteriol. 168:365-373(1986).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=47 / JCM 6285 / NBRC 100599;
+RA   Hosoyama A., Yamada R., Hongo Y., Terui Y., Ankai A., Masuyama W.,
+RA   Sekiguchi M., Takeda T., Asano K., Ohji S., Ichikawa N., Narita S.,
+RA   Aoki N., Miura H., Matsushita S., Sekigawa T., Yamagata H., Yoshikawa H.,
+RA   Udaka S., Tanikawa S., Fujita N.;
+RT   "Brevibacillus brevis strain 47, complete genome.";
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-85.
+RX   PubMed=2828336; DOI=10.1128/jb.170.2.935-945.1988;
+RA   Tsuboi A., Uchihi R., Adachi T., Sasaki T., Hayakawa S., Yamagata H.,
+RA   Tsukagoshi N., Udaka S.;
+RT   "Characterization of the genes for the hexagonally arranged surface layer
+RT   proteins in protein-producing Bacillus brevis 47: complete nucleotide
+RT   sequence of the middle wall protein gene.";
+RL   J. Bacteriol. 170:935-945(1988).
+CC   -!- FUNCTION: The outer wall protein binds to the middle cell wall protein.
+CC   -!- SUBUNIT: The outer cell wall layer is composed of subunits of the outer
+CC       cell wall protein. These proteins form a hexagonal array with a lattice
+CC       constant of 14.5 nm in the outer cell wall layers.
+CC   -!- SUBCELLULAR LOCATION: Secreted, cell wall, S-layer. Note=This bacterium
+CC       is covered by a S-layer with hexagonal symmetry.
+DR   EMBL; M14238; AAA22373.1; -; Genomic_DNA.
+DR   EMBL; AP008955; BAH46392.1; -; Genomic_DNA.
+DR   EMBL; M19115; AAA22761.1; -; Genomic_DNA.
+DR   PIR; B25039; B25039.
+DR   RefSeq; WP_015893588.1; NC_012491.1.
+DR   AlphaFoldDB; P09333; -.
+DR   SMR; P09333; -.
+DR   STRING; 358681.BBR47_54150; -.
+DR   KEGG; bbe:BBR47_54150; -.
+DR   eggNOG; COG0544; Bacteria.
+DR   HOGENOM; CLU_298927_0_0_9; -.
+DR   Proteomes; UP000001877; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-KW.
+DR   GO; GO:0030115; C:S-layer; IEA:UniProtKB-SubCell.
+DR   Gene3D; 2.60.40.1220; -; 5.
+DR   Gene3D; 2.60.40.10; Immunoglobulins; 1.
+DR   InterPro; IPR014755; Cu-Rt/internalin_Ig-like.
+DR   InterPro; IPR013783; Ig-like_fold.
+PE   1: Evidence at protein level;
+KW   Cell wall; Direct protein sequencing; Reference proteome; S-layer;
+KW   Secreted; Signal.
+FT   SIGNAL          1..24
+FT                   /evidence="ECO:0000269|PubMed:2428810"
+FT   CHAIN           25..1004
+FT                   /note="Outer cell wall protein"
+FT                   /id="PRO_0000032643"
+SQ   SEQUENCE   1004 AA;  106137 MW;  3534F65EBD0EDB9E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	6	Brevibacillus
+9	5	Paenibacillaceae
+9	4	Bacillales
+9	3	Bacilli
+9	2	Bacillota
+9	1	Bacillati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A075R9H2	OUTER CELL WALL PROTEIN {     39.2    3.5e-06   1   1.7   0.9
+	Iterate                   	    29	   129	    38.2
+
+A0A1I3UPM5	IG-LIKE DOMAIN-CONTAINING    163.7    5.3e-45   1   3.1   3.6
+	Iterate                   	    30	   125	   163.7
+	PF13205	Big_5           	   118	   236	    29.6
+	PF13205	Big_5           	   235	   332	    29.9
+
+A0A5P8VU04	VCBS REPEAT-CONTAINING PR     46.0    2.6e-08   6   6.3  16.6
+	Iterate                   	    19	    74	     9.8
+	Iterate                   	   307	   364	     9.8
+	Iterate                   	   250	   322	     9.0
+	Iterate                   	   134	   190	     8.6
+	Iterate                   	    82	   148	     8.4
+	Iterate                   	   198	   261	     8.3
+	PF13517	FG-GAP_3        	     4	    72	    33.9
+
+A0A6M1UBL0	SBSA IG-LIKE DOMAIN-CONTA     56.9    1.1e-11   1   2.6   0.1
+	Iterate                   	    31	   131	    54.2
+
+P09333	OUTER CELL WALL PROTEIN           168.2    2.1e-46   1   3.2   1.9
+	Iterate                   	    30	   126	   168.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A075R7T2.1	AF-A0A075R7T2-F1-model_v4_TED01:25-126	1	AF-A0A075R7T2-F1-model_v4_TED01	25-126	94.2%
+A0A075R7T2.1	AF-A0A075R7T2-F1-model_v4_TED03:208-297	1	AF-A0A075R7T2-F1-model_v4_TED03	208-297	0
+A0A075R7T2.1	AF-A0A075R7T2-F1-model_v4_TED04:307-397	1	AF-A0A075R7T2-F1-model_v4_TED04	307-397	0
+A0A075R7T2.1	AF-A0A075R7T2-F1-model_v4_TED05:406-486	1	AF-A0A075R7T2-F1-model_v4_TED05	406-486	0
+A0A075R7T2.1	AF-A0A075R7T2-F1-model_v4_TED06:497-592	1	AF-A0A075R7T2-F1-model_v4_TED06	497-592	0
+A0A075R7T2.1	AF-A0A075R7T2-F1-model_v4_TED07:616-702	1	AF-A0A075R7T2-F1-model_v4_TED07	616-702	0
+A0A075R7T2.1	AF-A0A075R7T2-F1-model_v4_TED08:714-810	1	AF-A0A075R7T2-F1-model_v4_TED08	714-810	0
+A0A075R7T2.1	AF-A0A075R7T2-F1-model_v4_TED09:830-921	1	AF-A0A075R7T2-F1-model_v4_TED09	830-921	0
+A0A075R7T2.1	AF-A0A075R7T2-F1-model_v4_TED10:1027-1112	1	AF-A0A075R7T2-F1-model_v4_TED10	1027-1112	0
+A0A075R7T2.1	AF-A0A075R7T2-F1-model_v4_TED02:136-203	1	AF-A0A075R7T2-F1-model_v4_TED02	136-203	0
+A0A075R9H2.1	AF-A0A075R9H2-F1-model_v4_TED01:24-126	1	AF-A0A075R9H2-F1-model_v4_TED01	24-126	94.2%
+A0A075R9H2.1	AF-A0A075R9H2-F1-model_v4_TED02:137-210	1	AF-A0A075R9H2-F1-model_v4_TED02	137-210	0
+A0A1I3UPM5.1	AF-A0A1I3UPM5-F1-model_v4_TED01:30-124	1	AF-A0A1I3UPM5-F1-model_v4_TED01	30-124	99.0%
+A0A1I3UPM5.1	AF-A0A1I3UPM5-F1-model_v4_TED02:136-235	1	AF-A0A1I3UPM5-F1-model_v4_TED02	136-235	0
+A0A1I3UPM5.1	AF-A0A1I3UPM5-F1-model_v4_TED03:243-334	1	AF-A0A1I3UPM5-F1-model_v4_TED03	243-334	0
+A0A1I3UPM5.1	AF-A0A1I3UPM5-F1-model_v4_TED04:344-456	1	AF-A0A1I3UPM5-F1-model_v4_TED04	344-456	0
+A0A1I3UPM5.1	AF-A0A1I3UPM5-F1-model_v4_TED05:465-556	1	AF-A0A1I3UPM5-F1-model_v4_TED05	465-556	0
+A0A1I3UPM5.1	AF-A0A1I3UPM5-F1-model_v4_TED06:568-667	1	AF-A0A1I3UPM5-F1-model_v4_TED06	568-667	0
+A0A1I3UPM5.1	AF-A0A1I3UPM5-F1-model_v4_TED07:675-783	1	AF-A0A1I3UPM5-F1-model_v4_TED07	675-783	0
+A0A6M1UBL0.1	AF-A0A6M1UBL0-F1-model_v4_TED01:31-127	1	AF-A0A6M1UBL0-F1-model_v4_TED01	31-127	98.0%
+A0A6M1UBL0.1	AF-A0A6M1UBL0-F1-model_v4_TED02:140-238	1	AF-A0A6M1UBL0-F1-model_v4_TED02	140-238	0
+A0A6M1UBL0.1	AF-A0A6M1UBL0-F1-model_v4_TED03:246-343	1	AF-A0A6M1UBL0-F1-model_v4_TED03	246-343	0
+A0A6M1UBL0.1	AF-A0A6M1UBL0-F1-model_v4_TED04:348-421	1	AF-A0A6M1UBL0-F1-model_v4_TED04	348-421	0
+A0A6M1UBL0.1	AF-A0A6M1UBL0-F1-model_v4_TED05:459-558	1	AF-A0A6M1UBL0-F1-model_v4_TED05	459-558	0
+A0A6M1UBL0.1	AF-A0A6M1UBL0-F1-model_v4_TED06:579-660	1	AF-A0A6M1UBL0-F1-model_v4_TED06	579-660	0
+A0A6M1UBL0.1	AF-A0A6M1UBL0-F1-model_v4_TED07:677-758_766-787	1	AF-A0A6M1UBL0-F1-model_v4_TED07	677-787	0
+A0A6M1UBL0.1	AF-A0A6M1UBL0-F1-model_v4_TED08:799-848_855-904	1	AF-A0A6M1UBL0-F1-model_v4_TED08	799-904	0
+A0A6M1UBL0.1	AF-A0A6M1UBL0-F1-model_v4_TED09:910-1014	1	AF-A0A6M1UBL0-F1-model_v4_TED09	910-1014	0
+P09333.1	AF-P09333-F1-model_v4_TED01:30-126	1	AF-P09333-F1-model_v4_TED01	30-126	100.0%
+P09333.1	AF-P09333-F1-model_v4_TED02:137-219	1	AF-P09333-F1-model_v4_TED02	137-219	0
+P09333.1	AF-P09333-F1-model_v4_TED03:227-309	1	AF-P09333-F1-model_v4_TED03	227-309	0
+P09333.1	AF-P09333-F1-model_v4_TED04:319-413	1	AF-P09333-F1-model_v4_TED04	319-413	0
+P09333.1	AF-P09333-F1-model_v4_TED05:422-512	1	AF-P09333-F1-model_v4_TED05	422-512	0
+P09333.1	AF-P09333-F1-model_v4_TED06:520-621	1	AF-P09333-F1-model_v4_TED06	520-621	0
+P09333.1	AF-P09333-F1-model_v4_TED07:631-725	1	AF-P09333-F1-model_v4_TED07	631-725	0
+P09333.1	AF-P09333-F1-model_v4_TED08:731-822	1	AF-P09333-F1-model_v4_TED08	731-822	0
+P09333.1	AF-P09333-F1-model_v4_TED09:837-904	1	AF-P09333-F1-model_v4_TED09	837-904	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P09333_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   29.20 50.40;
+NC   26.50 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

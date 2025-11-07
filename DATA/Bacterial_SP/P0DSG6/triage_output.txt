@@ -1,0 +1,84 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YHGO_ECOLI              Reviewed;          13 AA.
+AC   P0DSG6; A0A7H2C794;
+DE   RecName: Full=Protein YhgO {ECO:0000303|PubMed:30837344};
+GN   Name=yhgO {ECO:0000303|PubMed:30837344};
+GN   OrderedLocusNames=b4788 {ECO:0000312|EMBL:QNV50541.1};
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION, AND INDUCTION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=30837344; DOI=10.1128/mbio.02819-18;
+RA   Weaver J., Mohammad F., Buskirk A.R., Storz G.;
+RT   "Identifying small proteins by ribosome profiling with stalled initiation
+RT   complexes.";
+RL   MBio 10:0-0(2019).
+CC   -!- INDUCTION: Expressed at low levels in exponential and stationary phase
+CC       in rich medium (at protein level). {ECO:0000269|PubMed:30837344}.
+CC   -!- MISCELLANEOUS: This gene overlaps yhgP on the same strand in another
+CC       reading frame. {ECO:0000269|PubMed:30837344}.
+DR   EMBL; U00096; QNV50541.1; -; Genomic_DNA.
+DR   InParanoid; P0DSG6; -.
+DR   BioCyc; EcoCyc:MONOMER0-4500; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..13
+FT                   /note="Protein YhgO"
+FT                   /id="PRO_0000447148"
+SQ   SEQUENCE   13 AA;  1576 MW;  5E7689F05FFD0447 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P0DSG6	PROTEIN YHGO {ECO:0000303|PUBME     31.8    0.00018   1   1.0   1.8
+	P0DSG6                    	     1	    13	    31.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DSG6
+GA   27.00 27.00;
+TC   27.80 31.80;
+NC   25.30 15.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,559 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   FAPE_PSEAE              Reviewed;         250 AA.
+AC   Q9I2F2;
+DE   RecName: Full=Functional amyloid sbunit FapE {ECO:0000305};
+DE   AltName: Full=Fibril amyloid subunit FapE {ECO:0000305};
+DE   Flags: Precursor;
+GN   Name=fapE {ECO:0000303|PubMed:23504942};
+GN   OrderedLocusNames=PA1952 {ECO:0000303|PubMed:10984043};
+OS   Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+OS   14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pseudomonadales; Pseudomonadaceae; Pseudomonas.
+OX   NCBI_TaxID=208964;
+RN   [1] {ECO:0000312|EMBL:AAG05340.1}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=10984043; DOI=10.1038/35023079;
+RA   Stover C.K., Pham X.-Q.T., Erwin A.L., Mizoguchi S.D., Warrener P.,
+RA   Hickey M.J., Brinkman F.S.L., Hufnagle W.O., Kowalik D.J., Lagrou M.,
+RA   Garber R.L., Goltry L., Tolentino E., Westbrock-Wadman S., Yuan Y.,
+RA   Brody L.L., Coulter S.N., Folger K.R., Kas A., Larbig K., Lim R.M.,
+RA   Smith K.A., Spencer D.H., Wong G.K.-S., Wu Z., Paulsen I.T., Reizer J.,
+RA   Saier M.H. Jr., Hancock R.E.W., Lory S., Olson M.V.;
+RT   "Complete genome sequence of Pseudomonas aeruginosa PAO1, an opportunistic
+RT   pathogen.";
+RL   Nature 406:959-964(2000).
+RN   [2]
+RP   FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=23504942; DOI=10.1002/mbo3.81;
+RA   Dueholm M.S., Soendergaard M.T., Nilsson M., Christiansen G.,
+RA   Stensballe A., Overgaard M.T., Givskov M., Tolker-Nielsen T., Otzen D.E.,
+RA   Nielsen P.H.;
+RT   "Expression of Fap amyloids in Pseudomonas aeruginosa, P. fluorescens, and
+RT   P. putida results in aggregation and increased biofilm formation.";
+RL   MicrobiologyOpen 2:365-382(2013).
+CC   -!- FUNCTION: A minor component of the functional amyloid in this bacterium
+CC       (PubMed:23504942). Upon overexpression of the endogenous six-gene locus
+CC       (fapA-fapF), cells form large clumps during liquid growth, make large
+CC       amounts of biofilm and produce amyloid fibrils.
+CC       {ECO:0000269|PubMed:23504942}.
+CC   -!- SUBUNIT: A minor component of purified amyloid fibrils. Fibrils are
+CC       resistant to boiling in 2% (weight/vol) SDS and require >90% (vol/vol)
+CC       formic acid to dissolve. {ECO:0000269|PubMed:23504942}.
+CC   -!- SUBCELLULAR LOCATION: Fimbrium {ECO:0000269|PubMed:23504942}. Secreted
+CC       {ECO:0000269|PubMed:23504942}. Note=Part of an extracellular amyloid
+CC       fibril. {ECO:0000269|PubMed:23504942}.
+CC   -!- DISRUPTION PHENOTYPE: Deletion of the entire fapA-fapF six-gene locus
+CC       shows no visible growth phenotype. {ECO:0000269|PubMed:23504942}.
+CC   -!- SIMILARITY: Belongs to the FapE family. {ECO:0000305}.
+DR   EMBL; AE004091; AAG05340.1; -; Genomic_DNA.
+DR   PIR; G83400; G83400.
+DR   RefSeq; NP_250642.1; NC_002516.2.
+DR   RefSeq; WP_010895591.1; NZ_QZGE01000030.1.
+DR   AlphaFoldDB; Q9I2F2; -.
+DR   STRING; 208964.PA1952; -.
+DR   PaxDb; 208964-PA1952; -.
+DR   GeneID; 880731; -.
+DR   KEGG; pae:PA1952; -.
+DR   PATRIC; fig|208964.12.peg.2034; -.
+DR   PseudoCAP; PA1952; -.
+DR   HOGENOM; CLU_096100_0_0_6; -.
+DR   InParanoid; Q9I2F2; -.
+DR   OrthoDB; 5585636at2; -.
+DR   BioCyc; PAER208964:G1FZ6-1990-MONOMER; -.
+DR   Proteomes; UP000002438; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0009289; C:pilus; IEA:UniProtKB-SubCell.
+DR   GO; GO:1990000; P:amyloid fibril formation; IMP:PseudoCAP.
+DR   GO; GO:0007155; P:cell adhesion; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   Amyloid; Cell adhesion; Fimbrium; Reference proteome; Secreted; Signal.
+FT   SIGNAL          1..27
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           28..250
+FT                   /note="Functional amyloid sbunit FapE"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT                   /id="PRO_5004327426"
+SQ   SEQUENCE   250 AA;  25619 MW;  B997F6BE28D792C2 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+14	6	Pseudomonas.
+7	5	Rhodanobacteraceae
+18	5	Pseudomonadaceae
+12	5	Lysobacteraceae
+8	4	Oceanospirillales
+19	4	Lysobacterales
+18	4	Pseudomonadales
+49	3	Gammaproteobacteria
+58	2	Pseudomonadota
+58	1	Pseudomonadati
+58	0	Bacteria
+Total of 60 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A024HIF7	FAP SYSTEM OUTER MEMBRANE    151.9    6.2e-41   1   1.1  16.6
+	Q9I2F2_TED01              	    45	   220	   151.7
+
+A0A089WUV1	FAP SYSTEM OUTER MEMBRANE    133.0    4.2e-35   1   1.1  19.8
+	Q9I2F2_TED01              	    44	   224	   132.7
+
+A0A099CSY6	UNCHARACTERIZED PROTEIN {     33.2    0.00018   1   1.3  17.4
+	Q9I2F2_TED01              	    56	   248	    32.5
+
+A0A0A0M6A5	UNCHARACTERIZED PROTEIN {     62.1    2.4e-13   1   1.3  11.9
+	Q9I2F2_TED01              	    54	   248	    61.6
+
+A0A0B3BNH3	FAP SYSTEM OUTER MEMBRANE    133.2    3.5e-35   1   1.1  16.8
+	Q9I2F2_TED01              	    46	   216	   132.9
+
+A0A0C5EUI1	FAP SYSTEM OUTER MEMBRANE    146.5      3e-39   1   1.1  18.5
+	Q9I2F2_TED01              	    45	   224	   146.1
+
+A0A0D0S5K4	FAP SYSTEM PUTATIVE OUTER     60.8      6e-13   1   1.9  13.5
+	Q9I2F2_TED01              	    77	   253	    60.8
+
+A0A0E3Z398	UNCHARACTERIZED PROTEIN {     54.1    7.1e-11   2   2.2  14.2
+	Q9I2F2_TED01              	    42	   164	    44.8
+	Q9I2F2_TED01              	   165	   248	    14.6
+
+A0A0R0A7X1	LIPOPROTEIN {ECO:0008006|     45.3    3.4e-08   2   2.3  18.0
+	Q9I2F2_TED01              	   135	   260	    27.1
+	Q9I2F2_TED01              	    58	   145	    21.7
+
+A0A0R0AK86	UNCHARACTERIZED PROTEIN {     60.2    9.4e-13   1   1.5  12.1
+	Q9I2F2_TED01              	    51	   226	    60.2
+
+A0A0R0BRT4	UNCHARACTERIZED PROTEIN {     44.4    6.5e-08   1   1.3  11.0
+	Q9I2F2_TED01              	    49	   226	    43.7
+
+A0A0R0CN33	FAP SYSTEM OUTER MEMBRANE     52.1    2.8e-10   1   1.2  14.8
+	Q9I2F2_TED01              	    51	   231	    51.5
+
+A0A0R0DFV7	UNCHARACTERIZED PROTEIN {     52.6      2e-10   1   1.4  14.2
+	Q9I2F2_TED01              	    51	   226	    52.3
+
+A0A119A2M2	FAP SYSTEM OUTER MEMBRANE    115.6      9e-30   1   1.1  21.1
+	Q9I2F2_TED01              	    45	   224	   115.3
+
+A0A1A6C0L9	UNCHARACTERIZED PROTEIN {     40.0    1.4e-06   1   1.4  20.3
+	Q9I2F2_TED01              	    70	   245	    39.1
+
+A0A1A6C1G0	UNCHARACTERIZED PROTEIN {     41.6    4.6e-07   1   1.3  14.9
+	Q9I2F2_TED01              	    82	   266	    40.8
+
+A0A1B3W6R0	UNCHARACTERIZED PROTEIN {     66.6      1e-14   1   1.2   8.0
+	Q9I2F2_TED01              	    55	   231	    66.1
+
+A0A1G8L118	FAP SYSTEM OUTER MEMBRANE    163.3    2.1e-44   1   1.1  19.6
+	Q9I2F2_TED01              	    44	   220	   163.0
+
+A0A1G8PGV8	UNCHARACTERIZED PROTEIN {     42.6    2.4e-07   1   1.9   6.3
+	Q9I2F2_TED01              	    66	   245	    42.0
+
+A0A1G9Z1U2	FAP SYSTEM OUTER MEMBRANE    155.9    3.9e-42   1   1.2  11.1
+	Q9I2F2_TED01              	    45	   220	   155.5
+
+A0A1H0D117	FAP SYSTEM OUTER MEMBRANE    151.5    8.3e-41   1   1.1  18.3
+	Q9I2F2_TED01              	    44	   217	   151.3
+
+A0A1H2F0V6	FAP SYSTEM OUTER MEMBRANE    108.8    1.1e-27   1   1.1  12.7
+	Q9I2F2_TED01              	    47	   221	   108.6
+
+A0A1H2HYB2	FAP SYSTEM OUTER MEMBRANE    135.0    9.9e-36   1   1.1  19.4
+	Q9I2F2_TED01              	    46	   228	   134.7
+
+A0A1H2XN17	UNCHARACTERIZED PROTEIN {     40.9      8e-07   1   1.3   6.6
+	Q9I2F2_TED01              	    76	   255	    40.3
+
+A0A1H6WJA7	UNCHARACTERIZED PROTEIN {     59.0    2.2e-12   1   1.3  13.3
+	Q9I2F2_TED01              	    52	   231	    59.0
+
+A0A1H7KD77	UNCHARACTERIZED PROTEIN {     52.6      2e-10   1   1.5  13.0
+	Q9I2F2_TED01              	    60	   247	    52.6
+
+A0A1I3Q606	UNCHARACTERIZED PROTEIN {    109.2    8.2e-28   1   1.1  20.3
+	Q9I2F2_TED01              	    45	   218	   108.9
+
+A0A1I3YTE2	UNCHARACTERIZED PROTEIN {     53.7    9.3e-11   1   1.3  11.3
+	Q9I2F2_TED01              	    53	   229	    53.0
+
+A0A1N6X7Y6	UNCHARACTERIZED PROTEIN {     37.2      1e-05   1   1.1   5.5
+	Q9I2F2_TED01              	    29	   216	    36.9
+
+A0A1T4Q1A9	UNCHARACTERIZED PROTEIN {     71.0    4.5e-16   1   1.2  15.8
+	Q9I2F2_TED01              	    55	   233	    70.4
+
+A0A1V0B761	FAP SYSTEM OUTER MEMBRANE    114.9    1.5e-29   1   1.1  15.0
+	Q9I2F2_TED01              	    47	   220	   114.6
+
+A0A1Y0KYM3	FAP SYSTEM OUTER MEMBRANE    161.5      7e-44   1   1.5  18.1
+	Q9I2F2_TED01              	    45	   229	   160.6
+
+A0A1Y3KT05	FAP SYSTEM OUTER MEMBRANE    134.5    1.5e-35   1   1.1  18.3
+	Q9I2F2_TED01              	    43	   222	   134.2
+
+A0A202BGI6	UNCHARACTERIZED PROTEIN {     35.2    4.4e-05   1   1.9  17.0
+	Q9I2F2_TED01              	    43	   202	    33.4
+
+A0A239BMN8	FAP SYSTEM OUTER MEMBRANE    123.0    4.9e-32   1   1.1  18.4
+	Q9I2F2_TED01              	    43	   222	   122.7
+
+A0A2D2M7J7	FAP SYSTEM OUTER MEMBRANE    120.9    2.1e-31   1   1.1  17.6
+	Q9I2F2_TED01              	    44	   223	   120.6
+
+A0A2I1DKD2	FAP SYSTEM OUTER MEMBRANE     44.7    5.1e-08   1   1.3  11.6
+	Q9I2F2_TED01              	    61	   231	    44.0
+
+A0A2S0P948	FAP SYSTEM OUTER MEMBRANE     62.6    1.6e-13   1   1.1  21.6
+	Q9I2F2_TED01              	    40	   218	    62.4
+
+A0A2Z3R440	PEPTIDASE C39 {ECO:000800     29.3     0.0029   1   1.8  21.3
+	Q9I2F2_TED01              	    65	   240	    29.3
+
+A0A315WYN6	FAP SYSTEM OUTER MEMBRANE    119.7    4.9e-31   1   1.1  14.2
+	Q9I2F2_TED01              	    44	   223	   119.4
+
+A0A316I1V5	UNCHARACTERIZED PROTEIN {     46.7    1.3e-08   1   1.8  20.2
+	Q9I2F2_TED01              	    54	   240	    46.1
+
+A0A369UL88	UNCHARACTERIZED PROTEIN {     67.8    4.2e-15   1   1.3   7.8
+	Q9I2F2_TED01              	    55	   250	    67.0
+
+A0A3M3EQ75	FAP SYSTEM OUTER MEMBRANE    135.3      8e-36   1   1.1  17.5
+	Q9I2F2_TED01              	    51	   230	   135.0
+
+A0A3M4B2C9	FAP SYSTEM OUTER MEMBRANE    108.1    1.8e-27   1   1.1  21.6
+	Q9I2F2_TED01              	    45	   224	   107.8
+
+A0A3N7FM08	UNCHARACTERIZED PROTEIN {     34.2    8.8e-05   1   1.6  16.1
+	Q9I2F2_TED01              	    36	   196	    33.1
+
+A0A3N9U8Z2	UNCHARACTERIZED PROTEIN {     51.6    3.9e-10   1   1.1  13.0
+	Q9I2F2_TED01              	    63	   238	    51.3
+
+A0A3P1SHC7	UNCHARACTERIZED PROTEIN {     30.3     0.0014   1   1.6   0.2
+	Q9I2F2_TED01              	    60	   250	    29.4
+
+A0A427C566	UNCHARACTERIZED PROTEIN {     52.7    1.8e-10   1   1.5  14.7
+	Q9I2F2_TED01              	    58	   233	    51.8
+
+A0A4S3KN34	UNCHARACTERIZED PROTEIN {     29.5     0.0025   1   1.3  11.9
+	Q9I2F2_TED01              	    33	   230	    28.9
+
+A0A4Z1R9U9	UNCHARACTERIZED PROTEIN {     79.4    1.2e-18   1   1.1  14.3
+	Q9I2F2_TED01              	    34	   209	    79.0
+
+A0A510X6V7	UNCHARACTERIZED PROTEIN {     46.4    1.6e-08   1   1.4   3.7
+	Q9I2F2_TED01              	    72	   249	    45.5
+
+A0A547PBT1	UNCHARACTERIZED PROTEIN {     31.2    0.00071   1   1.4   4.4
+	Q9I2F2_TED01              	    41	   231	    30.3
+
+A0A5P9IUB2	UNCHARACTERIZED PROTEIN {     44.1    7.9e-08   1   1.4   4.8
+	Q9I2F2_TED01              	    68	   246	    43.3
+
+A0A6H5KWX4	PROP1-LIKE PPR DOMAIN-CON     67.9    3.9e-15  17  16.1  43.1
+	Q9I2F2_TED01              	   726	   803	    11.3
+	Q9I2F2_TED01              	   962	  1025	    10.2
+	Q9I2F2_TED01              	   264	   323	     7.8
+	Q9I2F2_TED01              	   789	   875	     7.4
+	Q9I2F2_TED01              	   308	   360	     6.9
+	Q9I2F2_TED01              	   867	   921	     6.8
+	Q9I2F2_TED01              	   418	   479	     6.5
+	Q9I2F2_TED01              	   350	   394	     5.7
+	Q9I2F2_TED01              	   386	   429	     5.6
+	Q9I2F2_TED01              	   190	   259	     4.6
+	Q9I2F2_TED01              	   667	   724	     4.4
+	Q9I2F2_TED01              	   627	   673	     4.0
+	Q9I2F2_TED01              	   915	   972	     3.6
+	Q9I2F2_TED01              	   471	   548	     3.5
+	Q9I2F2_TED01              	  1017	  1063	     3.4
+	Q9I2F2_TED01              	   582	   653	     3.0
+	Q9I2F2_TED01              	   232	   289	     2.9
+	PF01535	PPR             	   133	   163	    12.8
+	PF13812	PPR_3           	   153	   217	    38.5
+	PF13041	PPR_2           	   165	   214	      34
+	PF01535	PPR             	   168	   197	    19.2
+	PF13041	PPR_2           	   200	   249	    41.3
+	PF01535	PPR             	   203	   233	    20.1
+	PF13812	PPR_3           	   219	   287	    35.3
+	PF13041	PPR_2           	   235	   284	    36.7
+	PF01535	PPR             	   238	   268	    18.6
+	PF17177	PPR_long        	   238	   392	    33.4
+	PF13041	PPR_2           	   270	   319	    40.4
+	PF01535	PPR             	   273	   303	      22
+	PF13812	PPR_3           	   293	   355	    35.4
+	PF13041	PPR_2           	   305	   354	    36.8
+	PF01535	PPR             	   308	   338	    19.7
+	PF17177	PPR_long        	   312	   461	    27.1
+	PF13041	PPR_2           	   340	   389	    39.8
+	PF01535	PPR             	   343	   373	    22.7
+	PF13812	PPR_3           	   363	   425	    34.3
+	PF13041	PPR_2           	   375	   424	    39.8
+	PF01535	PPR             	   378	   408	    22.7
+	PF17177	PPR_long        	   378	   538	    35.3
+	PF13812	PPR_3           	   398	   460	    34.3
+	PF13041	PPR_2           	   410	   459	    39.8
+	PF17177	PPR_long        	   411	   578	    40.5
+	PF01535	PPR             	   413	   443	    22.7
+	PF13812	PPR_3           	   433	   495	    36.2
+	PF13041	PPR_2           	   445	   494	    41.9
+	PF01535	PPR             	   448	   478	    22.7
+	PF13041	PPR_2           	   480	   529	      38
+	PF01535	PPR             	   483	   513	    23.3
+	PF17177	PPR_long        	   483	   654	    43.1
+	PF13812	PPR_3           	   503	   565	    22.1
+	PF01535	PPR             	   518	   548	    14.1
+	PF13041	PPR_2           	   550	   599	    36.8
+	PF01535	PPR             	   553	   583	    23.2
+	PF13812	PPR_3           	   573	   637	    34.9
+	PF13041	PPR_2           	   585	   634	    40.1
+	PF01535	PPR             	   588	   618	    20.9
+	PF17177	PPR_long        	   619	   789	    44.7
+	PF13041	PPR_2           	   620	   669	    40.5
+	PF01535	PPR             	   623	   653	    18.6
+	PF13812	PPR_3           	   643	   705	    25.9
+	PF01535	PPR             	   658	   688	    22.9
+	PF13041	PPR_2           	   664	   704	    31.1
+	PF01535	PPR             	   693	   723	    22.1
+	PF13812	PPR_3           	   713	   775	    35.3
+	PF13041	PPR_2           	   725	   774	    37.3
+	PF01535	PPR             	   728	   758	    22.3
+	PF13041	PPR_2           	   760	   809	    31.9
+	PF01535	PPR             	   763	   793	    13.7
+	PF17177	PPR_long        	   763	   914	    35.9
+	PF13041	PPR_2           	   795	   844	    39.6
+	PF01535	PPR             	   798	   828	    13.1
+	PF13812	PPR_3           	   818	   879	      42
+	PF13041	PPR_2           	   830	   879	      43
+	PF01535	PPR             	   833	   863	    25.5
+	PF13041	PPR_2           	   865	   914	    40.6
+	PF01535	PPR             	   868	   898	      16
+	PF17177	PPR_long        	   883	   990	    27.1
+	PF13812	PPR_3           	   888	   950	    42.6
+	PF13041	PPR_2           	   900	   949	    38.3
+	PF01535	PPR             	   903	   933	      20
+	PF13041	PPR_2           	   935	   984	    43.9
+	PF01535	PPR             	   938	   968	    23.8
+	PF17177	PPR_long        	   941	  1092	    42.5
+	PF13812	PPR_3           	   958	  1020	    38.7
+	PF13041	PPR_2           	   970	  1019	    42.8
+	PF01535	PPR             	   973	  1003	    23.7
+	PF13041	PPR_2           	  1005	  1054	    43.9
+	PF01535	PPR             	  1008	  1038	    21.9
+	PF13812	PPR_3           	  1028	  1090	    37.4
+	PF13041	PPR_2           	  1040	  1089	    45.9
+	PF01535	PPR             	  1043	  1073	    21.7
+
+A0A7R6PJY6	UNCHARACTERIZED PROTEIN {     32.1    0.00038   1   1.3   0.5
+	Q9I2F2_TED01              	    60	   249	    31.5
+
+A0A7U7ESJ0	FAP SYSTEM OUTER MEMBRANE    158.6    5.7e-43   1   1.1  13.8
+	Q9I2F2_TED01              	    45	   223	   158.3
+
+A0A7V7GWZ1	FAP SYSTEM OUTER MEMBRANE    128.1    1.3e-33   1   1.1  15.1
+	Q9I2F2_TED01              	    45	   219	   127.8
+
+A0A839V7Y1	UNCHARACTERIZED PROTEIN {     44.9    4.6e-08   1   1.1   7.2
+	Q9I2F2_TED01              	    63	   242	    44.5
+
+A0A844GEF1	UNCHARACTERIZED PROTEIN {     33.3    0.00016   1   1.3   3.8
+	Q9I2F2_TED01              	    45	   165	    32.8
+
+A0A845UNU9	UNCHARACTERIZED PROTEIN {     42.0    3.6e-07   1   1.6  12.2
+	Q9I2F2_TED01              	    57	   226	    42.0
+
+A0A853J7F9	UNCHARACTERIZED PROTEIN {     56.9    9.7e-12   1   1.3  12.1
+	Q9I2F2_TED01              	    38	   213	    56.3
+
+A0A8H9YYN0	FAP SYSTEM OUTER MEMBRANE    108.7    1.2e-27   1   1.1  20.6
+	Q9I2F2_TED01              	    45	   224	   108.4
+
+A0A8S0H000	ADHESIN {ECO:0008006|GOOG     75.6    1.7e-17   1   1.1  17.1
+	Q9I2F2_TED01              	     1	   121	    75.4
+
+A0A8S0H6A3	UNCHARACTERIZED PROTEIN {     49.0    2.5e-09   1   1.0   0.0
+	Q9I2F2_TED01              	     3	    60	    48.8
+
+A0A921P0L8	UNCHARACTERIZED PROTEIN {     60.4    8.2e-13   1   1.4  14.4
+	Q9I2F2_TED01              	    59	   256	    59.7
+
+A0A927KMG5	FAP SYSTEM OUTER MEMBRANE     53.5    1.1e-10   1   1.4  11.2
+	Q9I2F2_TED01              	    59	   236	    52.7
+
+A0A940RS55	UNCHARACTERIZED PROTEIN {     51.0    6.3e-10   1   1.4  12.8
+	Q9I2F2_TED01              	    61	   268	    50.3
+
+A0A9W8GJW1	HISTIDINE KINASE {ECO:000     32.4    0.00031  11  14.7  56.8
+	Q9I2F2_TED01              	  1154	  1315	     7.3
+	Q9I2F2_TED01              	  2542	  2695	     7.2
+	Q9I2F2_TED01              	   896	  1040	     7.0
+	Q9I2F2_TED01              	  1010	  1130	     6.4
+	Q9I2F2_TED01              	  1339	  1498	     6.4
+	Q9I2F2_TED01              	  2209	  2325	     5.9
+	Q9I2F2_TED01              	  2336	  2510	     5.7
+	Q9I2F2_TED01              	   659	   855	     5.4
+	Q9I2F2_TED01              	  1821	  1957	     4.9
+	Q9I2F2_TED01              	  2067	  2213	     4.5
+	Q9I2F2_TED01              	  2872	  3019	     2.5
+	PF00672	HAMP            	   483	   535	    26.4
+	PF00672	HAMP            	   575	   626	    27.8
+	PF18947	HAMP_2          	   653	   719	    31.7
+	PF00672	HAMP            	   667	   719	    33.1
+	PF18947	HAMP_2          	   745	   810	    33.6
+	PF00672	HAMP            	   759	   810	    33.7
+	PF18947	HAMP_2          	   837	   902	    33.1
+	PF00672	HAMP            	   851	   902	    31.7
+	PF18947	HAMP_2          	   929	   994	    30.2
+	PF00672	HAMP            	   943	   994	    32.8
+	PF18947	HAMP_2          	  1021	  1086	    30.2
+	PF00672	HAMP            	  1035	  1086	    32.8
+	PF18947	HAMP_2          	  1113	  1178	    32.3
+	PF00672	HAMP            	  1127	  1178	    31.8
+	PF18947	HAMP_2          	  1205	  1270	    30.2
+	PF00672	HAMP            	  1219	  1270	    32.8
+	PF18947	HAMP_2          	  1297	  1362	    32.3
+	PF00672	HAMP            	  1311	  1362	    31.8
+	PF18947	HAMP_2          	  1389	  1454	    30.2
+	PF00672	HAMP            	  1403	  1454	    32.8
+	PF18947	HAMP_2          	  1481	  1546	    32.1
+	PF00672	HAMP            	  1495	  1547	    33.2
+	PF00672	HAMP            	  1587	  1639	    38.1
+	PF18947	HAMP_2          	  1665	  1730	      26
+	PF00672	HAMP            	  1679	  1730	    30.2
+	PF18947	HAMP_2          	  1757	  1823	    25.9
+	PF00672	HAMP            	  1771	  1823	      34
+	PF00672	HAMP            	  1863	  1915	    30.3
+	PF18947	HAMP_2          	  1941	  2007	    32.1
+	PF00672	HAMP            	  1955	  2007	    33.5
+	PF18947	HAMP_2          	  2033	  2099	      26
+	PF00672	HAMP            	  2047	  2099	    33.4
+	PF18947	HAMP_2          	  2125	  2190	    33.2
+	PF00672	HAMP            	  2139	  2190	    33.7
+	PF18947	HAMP_2          	  2217	  2282	    30.2
+	PF00672	HAMP            	  2231	  2282	    32.8
+	PF18947	HAMP_2          	  2309	  2375	    29.3
+	PF00672	HAMP            	  2323	  2375	    30.9
+	PF18947	HAMP_2          	  2401	  2466	      34
+	PF00672	HAMP            	  2415	  2466	    33.7
+	PF18947	HAMP_2          	  2493	  2558	    33.1
+	PF00672	HAMP            	  2507	  2558	    29.1
+	PF18947	HAMP_2          	  2585	  2650	    30.2
+	PF00672	HAMP            	  2599	  2650	    32.8
+	PF18947	HAMP_2          	  2677	  2742	    28.9
+	PF00672	HAMP            	  2691	  2742	    30.2
+	PF18947	HAMP_2          	  2769	  2835	    32.2
+	PF00672	HAMP            	  2783	  2835	    31.5
+	PF18947	HAMP_2          	  2908	  2973	      31
+	PF00672	HAMP            	  2922	  2973	    33.9
+	PF00672	HAMP            	  3014	  3066	    26.4
+	PF00512	HisKA           	  3176	  3241	    62.5
+	PF02518	HATPase_c       	  3288	  3404	   107.3
+	PF00072	Response_reg    	  3771	  3859	    52.3
+
+A0AA36GKG0	TRANSPORTER {ECO:0008006|     33.9    0.00011   1   2.5  13.7
+	Q9I2F2_TED01              	    49	   225	    33.9
+	PF13557	Phenol_MetA_deg 	   378	   641	    24.6
+
+A0AA38XS13	UNCHARACTERIZED PROTEIN {     47.8    5.8e-09   1   1.2  13.5
+	Q9I2F2_TED01              	    50	   227	    47.2
+
+A0AAE2YPY5	UNCHARACTERIZED PROTEIN {     48.7    3.1e-09   1   1.1  14.9
+	Q9I2F2_TED01              	     9	   180	    48.4
+
+A0AAE3HM35	UNCHARACTERIZED PROTEIN {     52.5    2.1e-10   1   1.1   9.1
+	Q9I2F2_TED01              	    62	   240	    52.0
+
+B2FSZ2	FAP SYSTEM OUTER MEMBRANE PRO     40.5      1e-06   1   1.3  16.7
+	Q9I2F2_TED01              	    52	   243	    39.9
+
+C0N2D9	UNCHARACTERIZED PROTEIN {ECO:     57.1    8.2e-12   1   1.2  15.5
+	Q9I2F2_TED01              	    41	   225	    56.7
+
+I4N396	FAP SYSTEM OUTER MEMBRANE PRO    125.6    7.6e-33   1   1.1  21.3
+	Q9I2F2_TED01              	    45	   227	   125.3
+
+Q7P081	UNCHARACTERIZED PROTEIN {ECO:     30.9    0.00089   1   1.9  16.2
+	Q9I2F2_TED01              	    43	   201	    29.1
+
+Q88IZ5	FAP SYSTEM OUTER MEMBRANE PRO    130.5    2.4e-34   1   1.1  20.0
+	Q9I2F2_TED01              	    44	   226	   130.2
+
+Q9I2F2	FUNCTIONAL AMYLOID SBUNIT FAPE     384.6   2.3e-112   1   1.1  16.9
+	Q9I2F2_TED01              	    52	   226	   384.3
+
+W1N3H7	UNCHARACTERIZED PROTEIN {ECO:     44.9    4.5e-08   1   1.2   7.5
+	Q9I2F2_TED01              	    63	   243	    44.5
+
+W7Q2U5	UNCHARACTERIZED PROTEIN {ECO:     62.0    2.6e-13   1   1.1   9.3
+	Q9I2F2_TED01              	    67	   245	    61.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS58402 (E-value: 2.1e-114, Score: 384.6)
+Mentioned as: PA1952
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 38845372
+Source: EuropePMC
+Title: Global transcriptome analysis of Pseudomonas aeruginosa NT06 response to potassium chloride, sodium lactate, sodium citrate, and microaerophilic conditions in a fish ecosystem
+Journal: FEMS microbiology letters (2024)
+Snippet: by NaCl alternative compounds. Simultaneously, the expression of DEGs responsible for biofilm formation and stabilization (PA1952 ( fapE ), PA1181) was repressed. The upregulation of tonB1 , which is involved in iron import into cells, and oprC , the outer membrane porin involved in siderophore transport
+
+================================================================================
+Protein: VIMSS58402 (E-value: 2.1e-114, Score: 384.6)
+Mentioned as: PA1952
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 33757883
+Source: EuropePMC
+Title: A wide-ranging Pseudomonas aeruginosa PeptideAtlas build: A useful proteomic resource for a versatile pathogen
+Journal: Journal of proteomics (2021)
+Snippet: found. In sample 15, in which functional amyloid was induced, 4 of the amyloids, FapE (PA1952), FapD (PA1953), FapC (PA1954), and FapB (PA1955) were uniquely identified [ 43 ]. It is also noteworthy, but not surprising, that the genes involved in alginate biosynthesis (PA3540 to PA
+
+================================================================================
+Protein: VIMSS58402 (E-value: 2.1e-114, Score: 384.6)
+Mentioned as: PA1952
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 31934344
+Source: EuropePMC
+Title: Parallel evolutionary paths to produce more than one <i>Pseudomonas aeruginosa</i> biofilm phenotype
+Journal: NPJ biofilms and microbiomes (2020)
+Snippet: PA4149 acoX 3.5 PA14_39050 PA1971 braZ 2.5 PA14_06730 PA0517 nirC 3.9 PA14_10280 PA4148 3.6 PA14_39260 PA1952 2.7 PA14_06740 PA0518 nirM 4.8 PA14_10400 3.2 PA14_39590 PA1927 metE 4.3 PA14_06750 PA0519 nirS 4.9 PA14_10410 2.9 PA14_39720 PA1918 2.6 PA14_06770 PA0520 nirQ 3.3 PA14_11070 PA4085 cupB2 2.7 PA14_39750 PA1916
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9I2F2.1	AF-Q9I2F2-F1-model_v4_TED01:52-107_120-226	1	AF-Q9I2F2-F1-model_v4_TED01	52-226	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9I2F2_TED01
+GA   27.00 27.00;
+TC   27.20 27.10;
+NC   26.70 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,152 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y4EE_SINFN              Reviewed;         358 AA.
+AC   P55428;
+DE   RecName: Full=Uncharacterized lipoprotein y4eE;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=NGR_a03880; ORFNames=y4eE;
+OS   Sinorhizobium fredii (strain NBRC 101917 / NGR234).
+OG   Plasmid sym pNGR234a.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Rhizobiaceae; Sinorhizobium/Ensifer group; Sinorhizobium.
+OX   NCBI_TaxID=394;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=9163424; DOI=10.1038/387394a0;
+RA   Freiberg C.A., Fellay R., Bairoch A., Broughton W.J., Rosenthal A.,
+RA   Perret X.;
+RT   "Molecular basis of symbiosis between Rhizobium and legumes.";
+RL   Nature 387:394-401(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=19376903; DOI=10.1128/aem.00515-09;
+RA   Schmeisser C., Liesegang H., Krysciak D., Bakkou N., Le Quere A.,
+RA   Wollherr A., Heinemeyer I., Morgenstern B., Pommerening-Roeser A.,
+RA   Flores M., Palacios R., Brenner S., Gottschalk G., Schmitz R.A.,
+RA   Broughton W.J., Perret X., Strittmatter A.W., Streit W.R.;
+RT   "Rhizobium sp. strain NGR234 possesses a remarkable number of secretion
+RT   systems.";
+RL   Appl. Environ. Microbiol. 75:4035-4045(2009).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+DR   EMBL; U00090; AAB91650.1; -; Genomic_DNA.
+DR   RefSeq; NP_443838.1; NC_000914.2.
+DR   RefSeq; WP_010875400.1; NC_000914.2.
+DR   AlphaFoldDB; P55428; -.
+DR   KEGG; rhi:NGR_a03880; -.
+DR   HOGENOM; CLU_760474_0_0_5; -.
+DR   OrthoDB; 8281587at2; -.
+DR   Proteomes; UP000001054; Plasmid pNGR234a.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Plasmid;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..15
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           16..358
+FT                   /note="Uncharacterized lipoprotein y4eE"
+FT                   /id="PRO_0000014161"
+FT   REGION          331..358
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        347..358
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   LIPID           16
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           16
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   358 AA;  38493 MW;  32F02E1F9772C062 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Sinorhizobium.
+1	7	Rhizobium.
+1	6	Sinorhizobium/Ensifer group
+1	6	Rhizobium/Agrobacterium group
+2	5	Rhizobiaceae
+2	4	Hyphomicrobiales
+2	3	Alphaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B4XB08	UNCHARACTERIZED PROTEIN {    580.1   2.9e-171   1   1.0   3.3
+	Iterate                   	    31	   307	   579.8
+
+A0A160T873	BETA-KETOACYL SYNTHASE {E     34.7    5.4e-05   5   5.5   0.1
+	Iterate                   	  2135	  2230	     5.7
+	Iterate                   	  1801	  1910	     5.6
+	Iterate                   	  1916	  2057	     5.5
+	Iterate                   	  1687	  1784	     5.2
+	Iterate                   	  2024	  2131	     5.2
+	PF00109	ketoacyl-synt   	     5	   291	   206.4
+	PF02801	Ketoacyl-synt_C 	   299	   415	   118.9
+	PF00698	Acyl_transf_1   	   613	   932	   131.6
+	PF00109	ketoacyl-synt   	  1223	  1360	    39.9
+	PF02801	Ketoacyl-synt_C 	  1417	  1490	    23.2
+	PF08659	KR              	  2499	  2726	    67.5
+	PF00106	adh_short       	  2567	  2732	    53.8
+	PF13561	adh_short_C2    	  2568	  2710	    46.3
+	PF14765	PS-DH           	  2946	  3091	    47.5
+
+A0A2H3KNV7	BETA-KETOACYL SYNTHASE {E     34.7    5.2e-05   6   6.3   0.8
+	Iterate                   	  2240	  2365	     8.9
+	Iterate                   	  1910	  1997	     5.8
+	Iterate                   	  2019	  2104	     3.6
+	Iterate                   	  1805	  1888	     2.9
+	Iterate                   	  1698	  1780	     2.3
+	Iterate                   	  2141	  2229	     2.1
+	PF00109	ketoacyl-synt   	     7	   292	   210.3
+	PF02801	Ketoacyl-synt_C 	   300	   416	   118.3
+	PF00698	Acyl_transf_1   	   608	   926	   132.6
+	PF00109	ketoacyl-synt   	  1244	  1376	    39.8
+	PF08545	ACP_syn_III     	  1286	  1388	    25.1
+	PF00550	PP-binding      	  2143	  2211	    25.3
+	PF00550	PP-binding      	  2252	  2320	    24.1
+	PF08659	KR              	  2598	  2826	    76.7
+	PF00106	adh_short       	  2672	  2830	    51.8
+	PF13561	adh_short_C2    	  2674	  2807	    44.5
+	PF14765	PS-DH           	  3043	  3196	    52.2
+
+A0AA88Y1E9	ARRESTIN C-TERMINAL-LIKE      23.5       0.14   1   1.2   0.0
+	Iterate                   	    71	   147	    22.9
+	PF00339	Arrestin_N      	    10	   147	    73.6
+	PF02752	Arrestin_C      	   169	   300	      72
+
+P55428	UNCHARACTERIZED LIPOPROTEIN Y4E    661.0     6e-196   1   1.1   5.0
+	Iterate                   	    31	   307	   660.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P55428.1	AF-P55428-F1-model_v4_TED01:31-307	1	AF-P55428-F1-model_v4_TED01	31-307	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P55428_TED01/Iterate
+GA   27.00 27.00;
+TC   34.70 579.80;
+NC   23.50 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

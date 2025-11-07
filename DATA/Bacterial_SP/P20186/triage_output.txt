@@ -1,0 +1,66 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Streptomyces.
+1	6	Streptosporangium.
+1	6	Saccharopolyspora.
+1	6	Actinopolymorpha.
+2	5	Streptomycetaceae
+1	5	Streptosporangiaceae
+1	5	Pseudonocardiaceae
+1	5	Actinopolymorphaceae
+2	4	Kitasatosporales
+1	4	Streptosporangiales
+1	4	Pseudonocardiales
+1	4	Propionibacteriales
+5	3	Actinomycetes
+5	2	Actinomycetota
+5	1	Bacillati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A101N3A3	UNCHARACTERIZED PROTEIN {     42.9    2.2e-07   1   1.1   9.2
+	P20186                    	    25	    70	    42.5
+
+A0A1Q5D8L5	REJ DOMAIN-CONTAINING PRO    107.4    5.3e-27   1   1.0  18.4
+	P20186                    	     1	    66	   107.3
+
+A0A239LMN7	UNCHARACTERIZED PROTEIN {     41.3    6.7e-07   1   1.1   7.7
+	P20186                    	    19	   107	    41.0
+
+A0A840QEL0	UNCHARACTERIZED PROTEIN {     55.9    2.3e-11   1   1.0  23.4
+	P20186                    	     1	   104	    55.8
+
+A0A918J828	UNCHARACTERIZED PROTEIN {     37.2    1.1e-05   1   1.7  32.3
+	P20186                    	     1	   168	    35.9
+
+A0A927MPS5	UNCHARACTERIZED PROTEIN {    107.3    5.4e-27   1   1.3  14.9
+	P20186                    	    47	   129	   106.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P20186
+GA   27.00 27.00;
+TC   37.20 35.90;
+NC   25.40 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

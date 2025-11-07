@@ -1,0 +1,62 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Budvicia.
+1	5	Budviciaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2C6DAL6	VI POLYSACCHARIDE BIOSYNT    106.5    3.3e-27   1   2.1   1.1
+	Q04974_TED03              	   501	   597	   105.2
+	PF27354	TviD_N          	     9	   270	   311.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS155965 (E-value: 4.9e-65, Score: 221.2)
+Mentioned as: STY4659
+Description: Vi polysaccharide biosynthesis protein
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 12923078
+Source: EuropePMC
+Title: Composition, acquisition, and distribution of the Vi exopolysaccharide-encoding Salmonella enterica pathogenicity island SPI-7
+Journal: Journal of bacteriology (2003)
+Snippet: between the normally overlapping tviD and tviE genes (STY4659 and STY4656, respectively), leading to disruption of the ShineDalgarno ribosome binding site for
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q04974.2	AF-Q04974-F1-model_v4_TED01:7-97_170-278	1	AF-Q04974-F1-model_v4_TED01	7-278	0
+Q04974.2	AF-Q04974-F1-model_v4_TED02:113-166	1	AF-Q04974-F1-model_v4_TED02	113-166	0
+Q04974.2	AF-Q04974-F1-model_v4_TED03:500-596	1	AF-Q04974-F1-model_v4_TED03	500-596	100.0%
+Q04974.2	AF-Q04974-F1-model_v4_TED04:761-827	1	AF-Q04974-F1-model_v4_TED04	761-827	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q04974_TED03
+GA   27.00 27.00;
+TC   30.40 105.20;
+NC   25.60 17.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

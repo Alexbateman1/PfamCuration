@@ -1,0 +1,158 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y271_SYNY3              Reviewed;         172 AA.
+AC   P73892;
+DE   RecName: Full=Uncharacterized protein slr0271;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=slr0271;
+OS   Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa).
+OC   Bacteria; Bacillati; Cyanobacteriota; Cyanophyceae; Synechococcales;
+OC   Merismopediaceae; Synechocystis.
+OX   NCBI_TaxID=1111708;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 27184 / PCC 6803 / Kazusa;
+RX   PubMed=8905231; DOI=10.1093/dnares/3.3.109;
+RA   Kaneko T., Sato S., Kotani H., Tanaka A., Asamizu E., Nakamura Y.,
+RA   Miyajima N., Hirosawa M., Sugiura M., Sasamoto S., Kimura T., Hosouchi T.,
+RA   Matsuno A., Muraki A., Nakazaki N., Naruo K., Okumura S., Shimpo S.,
+RA   Takeuchi C., Wada T., Watanabe A., Yamada M., Yasuda M., Tabata S.;
+RT   "Sequence analysis of the genome of the unicellular cyanobacterium
+RT   Synechocystis sp. strain PCC6803. II. Sequence determination of the entire
+RT   genome and assignment of potential protein-coding regions.";
+RL   DNA Res. 3:109-136(1996).
+DR   EMBL; BA000022; BAA17956.1; -; Genomic_DNA.
+DR   PIR; S75094; S75094.
+DR   AlphaFoldDB; P73892; -.
+DR   STRING; 1148.gene:10498825; -.
+DR   PaxDb; 1148-1653039; -.
+DR   EnsemblBacteria; BAA17956; BAA17956; BAA17956.
+DR   KEGG; syn:slr0271; -.
+DR   InParanoid; P73892; -.
+DR   Proteomes; UP000001425; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..24
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           25..172
+FT                   /note="Uncharacterized protein slr0271"
+FT                   /id="PRO_0000014235"
+SQ   SEQUENCE   172 AA;  19439 MW;  2606EE8318D440CA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Thiospirillum.
+1	6	Synechocystis.
+2	5	Chromatiaceae
+1	5	Merismopediaceae
+2	4	Chromatiales
+1	4	Synechococcales
+2	3	Gammaproteobacteria
+1	3	Cyanophyceae
+2	2	Pseudomonadota
+1	2	Cyanobacteriota
+2	1	Pseudomonadati
+1	1	Bacillati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A367QIA4	UNCHARACTERIZED PROTEIN {     51.6    2.8e-10   6   6.3   0.5
+	P73892_TED02              	   167	   212	    10.5
+	P73892_TED02              	   214	   259	     8.7
+	P73892_TED02              	   308	   353	     6.2
+	P73892_TED02              	   261	   306	     6.1
+	P73892_TED02              	   355	   400	     6.1
+	P73892_TED02              	   402	   446	     6.1
+
+A0A839HC60	PAN DOMAIN-CONTAINING PRO     50.0    8.4e-10   1   1.4   0.0
+	P73892_TED02              	    35	    87	    49.3
+	PF14295	PAN_4           	   101	   152	    39.4
+
+A0A839HCV8	UNCHARACTERIZED PROTEIN {    155.2    1.2e-42   2   2.3   0.2
+	P73892_TED02              	   250	   302	    76.8
+	P73892_TED02              	   186	   238	    76.4
+
+A0A8J8CLD7	UNCHARACTERIZED PROTEIN {     57.7    3.4e-12   3   3.3   1.0
+	P73892_TED02              	   208	   253	    19.0
+	P73892_TED02              	   161	   206	    18.6
+	P73892_TED02              	   255	   302	    17.3
+
+A0A9D4MZZ6	UNCHARACTERIZED PROTEIN {     48.7    2.2e-09   4  19.2   8.3
+	P73892_TED02              	   406	   427	     3.0
+	P73892_TED02              	   497	   516	     2.9
+	P73892_TED02              	   354	   371	     2.8
+	P73892_TED02              	   471	   490	     2.8
+
+A0AA50DYV1	UNCHARACTERIZED PROTEIN {    250.2    2.4e-72   2   2.4   6.2
+	P73892_TED02              	   123	   172	   138.7
+	P73892_TED02              	    65	   114	   114.2
+
+P73892	UNCHARACTERIZED PROTEIN SLR0271    250.2    2.4e-72   2   2.4   6.2
+	P73892_TED02              	   123	   172	   138.7
+	P73892_TED02              	    65	   114	   114.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS11667 (E-value: 2.2e-74, Score: 250.2)
+Mentioned as: slr0271
+Description: unknown protein
+Organism: Synechocystis sp. PCC 6803
+PMID: 39702692
+Source: EuropePMC
+Title: Efficient Multiplex Genome Editing of the Cyanobacterium Synechocystis sp. PCC6803 via CRISPR-Cas12a
+Journal: Biotechnology and bioengineering (2025)
+Snippet: chromosome (Pinto et al. 2015 ). The neutral genes chosen are sll1476 (N5), slr1396 (N10), slr0271 (N15). We began by conducting single knockouts for each gene, using replicative plasmids each containing a specific gRNA. For each knockout, we supplemented with 2g of repair template DNA plasmid,
+
+================================================================================
+Protein: VIMSS11667 (E-value: 2.2e-74, Score: 250.2)
+Mentioned as: slr0271
+Description: unknown protein
+Organism: Synechocystis sp. PCC 6803
+PMID: 34246263
+Source: EuropePMC
+Title: Comparison of alternative integration sites in the chromosome and the native plasmids of the cyanobacterium Synechocystis sp. PCC 6803 in respect to expression efficiency and copy number
+Journal: Microbial cell factories (2021)
+Snippet: GFP/ A. victoria [ 65 ] slr1396 (N.A.) Chrom GFP/ A. victoria [ 65 ] slr0271 (N.A.) Chrom GFP/ A. victoria [ 65 ] slr0397 (N.A.) Chrom GFP/ A. victoria [ 65 ] I.R.* pCA2.4 YFP [ 36 ] N.A.: Not assigned; gene encoding protein of
+
+================================================================================
+Protein: VIMSS11667 (E-value: 2.2e-74, Score: 250.2)
+Mentioned as: slr0271
+Description: unknown protein
+Organism: Synechocystis sp. PCC 6803
+PMID: 32582060
+Source: EuropePMC
+Title: Impact of RNase E and RNase J on Global mRNA Metabolism in the Cyanobacterium <i>Synechocystis</i> PCC6803
+Journal: Frontiers in microbiology (2020)
+Snippet: in a neutral site of the genome between the two bidirectional gene units sll0452 and slr0271 . For homologous recombination 700 bp regions upstream and downstream of the insertion site were amplified with primers HP2086/HP2087 and HP2090/HP2091, respectively. Assembled fragments were cloned in the pCR2-Blunt II
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P73892.1	AF-P73892-F1-model_v4_TED01:65-115	1	AF-P73892-F1-model_v4_TED01	65-115	0
+P73892.1	AF-P73892-F1-model_v4_TED02:123-172	1	AF-P73892-F1-model_v4_TED02	123-172	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P73892_TED02
+GA   27.00 27.00;
+TC   27.10 49.30;
+NC   26.80 21.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

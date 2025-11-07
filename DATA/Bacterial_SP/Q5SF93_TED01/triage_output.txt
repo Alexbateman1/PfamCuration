@@ -1,0 +1,329 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   AAAP_ANAMF              Reviewed;         324 AA.
+AC   Q5SF95; B9KJ36;
+DE   RecName: Full=Appendage-associated protein;
+DE   Flags: Precursor;
+GN   Name=aaaP1; OrderedLocusNames=AMF_659;
+GN   and
+GN   Name=aaaP2; OrderedLocusNames=AMF_663;
+OS   Anaplasma marginale (strain Florida).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Anaplasmataceae; Anaplasma.
+OX   NCBI_TaxID=320483;
+RN   [1] {ECO:0000305, ECO:0000312|EMBL:AAS83465.1}
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], FUNCTION, AND SUBCELLULAR LOCATION.
+RX   PubMed=15557651; DOI=10.1128/iai.72.12.7257-7264.2004;
+RA   Stich R.W., Olah G.A., Brayton K.A., Brown W.C., Fecheimer M.,
+RA   Green-Church K., Jittapalapong S., Kocan K.M., McGuire T.C.,
+RA   Rurangirwa F.R., Palmer G.H.;
+RT   "Identification of a novel Anaplasma marginale appendage-associated protein
+RT   that localizes with actin filaments during intraerythrocytic infection.";
+RL   Infect. Immun. 72:7257-7264(2004).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Florida;
+RX   PubMed=19134224; DOI=10.1186/1471-2164-10-16;
+RA   Dark M.J., Herndon D.R., Kappmeyer L.S., Gonzales M.P., Nordeen E.,
+RA   Palmer G.H., Knowles D.P. Jr., Brayton K.A.;
+RT   "Conservation in the face of diversity: multistrain analysis of an
+RT   intracellular bacterium.";
+RL   BMC Genomics 10:16-16(2009).
+CC   -!- FUNCTION: Associates with actin filament appendages that are formed in
+CC       the inclusion appendages of the parasitophorous vacuole during
+CC       infection of the host erythrocyte. {ECO:0000269|PubMed:15557651}.
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000269|PubMed:15557651}.
+DR   EMBL; AY514451; AAS83465.1; -; Genomic_DNA.
+DR   EMBL; CP001079; ACM49498.1; -; Genomic_DNA.
+DR   EMBL; CP001079; ACM49501.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q5SF95; -.
+DR   SMR; Q5SF95; -.
+DR   STRING; 320483.AMF_659; -.
+DR   KEGG; amf:AMF_659; -.
+DR   KEGG; amf:AMF_663; -.
+DR   PATRIC; fig|320483.3.peg.758; -.
+DR   HOGENOM; CLU_856975_0_0_5; -.
+DR   Proteomes; UP000007307; Chromosome.
+DR   GO; GO:0020003; C:symbiont-containing vacuole; IDA:UniProtKB.
+DR   GO; GO:0051015; F:actin filament binding; IDA:UniProtKB.
+DR   GO; GO:0051701; P:biological process involved in interaction with host; IDA:UniProtKB.
+PE   3: Inferred from homology;
+KW   Coiled coil; Reference proteome; Secreted; Signal.
+FT   SIGNAL          1..32
+FT                   /evidence="ECO:0000250|UniProtKB:Q5SF96"
+FT   CHAIN           33..324
+FT                   /note="Appendage-associated protein"
+FT                   /evidence="ECO:0000250|UniProtKB:Q5SF96"
+FT                   /id="PRO_0000258015"
+FT   COILED          195..255
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   324 AA;  34908 MW;  48D24D13ECF20068 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	16	Hevea
+1	15	Micrandreae
+1	14	Crotonoideae
+1	13	Euphorbiaceae
+1	12	Malpighiales
+1	11	fabids
+1	10	rosids
+1	9	Pentapetalae
+1	8	Gunneridae
+1	7	eudicotyledons
+3	6	Anaplasma.
+1	6	Magnoliopsida
+3	5	Anaplasmataceae
+1	5	Spermatophyta
+3	4	Rickettsiales
+1	4	Tracheophyta
+3	3	Alphaproteobacteria
+1	3	Embryophyta
+3	2	Pseudomonadota
+1	2	Streptophyta
+3	1	Pseudomonadati
+1	1	Viridiplantae
+3	0	Bacteria
+1	0	Eukaryota
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A015JL61	SKT5P {ECO:0000313|EMBL:E     27.8      0.012   1   9.4   0.0
+	Q5SF93_TED01              	  1618	  1710	     3.8
+	PF00069	Pkinase         	   308	   558	   143.7
+	PF07714	PK_Tyr_Ser-Thr  	   308	   557	   165.7
+	PF03109	ABC1            	   345	   471	    23.4
+	PF08238	Sel1            	   751	   766	     9.1
+	PF08238	Sel1            	   767	   802	    40.4
+	PF08238	Sel1            	   803	   838	    37.6
+	PF08238	Sel1            	   839	   874	    35.7
+	PF08238	Sel1            	   875	   910	    32.2
+	PF08238	Sel1            	   911	   946	    40.6
+	PF08238	Sel1            	   947	   982	      36
+	PF08238	Sel1            	   985	  1018	    31.8
+	PF08238	Sel1            	  1019	  1054	    31.9
+	PF08238	Sel1            	  1055	  1090	    39.2
+	PF08238	Sel1            	  1091	  1126	    35.3
+	PF08238	Sel1            	  1127	  1162	    34.3
+	PF08238	Sel1            	  1163	  1198	    38.3
+	PF08238	Sel1            	  1199	  1234	      34
+	PF08238	Sel1            	  1237	  1270	    33.8
+	PF08238	Sel1            	  1271	  1306	    35.3
+	PF08238	Sel1            	  1307	  1342	    39.1
+	PF08238	Sel1            	  1343	  1378	    39.1
+	PF08238	Sel1            	  1379	  1414	      40
+	PF08238	Sel1            	  1415	  1450	      36
+	PF08238	Sel1            	  1451	  1486	    39.6
+	PF08238	Sel1            	  1487	  1522	    37.7
+	PF08238	Sel1            	  1523	  1558	    40.2
+	PF08238	Sel1            	  1559	  1594	    43.1
+	PF08238	Sel1            	  1596	  1630	    37.5
+	PF08238	Sel1            	  1631	  1666	    37.5
+	PF08238	Sel1            	  1667	  1702	    41.9
+
+A0A1X7N903	REACTIVE INTERMEDIATE/IMI     26.6      0.027   3   3.2   0.0
+	Q5SF93_TED01              	   181	   252	     9.7
+	Q5SF93_TED01              	   325	   412	     7.0
+	Q5SF93_TED01              	    44	   126	     6.1
+	PF01042	Ribonuc_L-PSP   	    12	   129	    96.7
+	PF01042	Ribonuc_L-PSP   	   151	   276	    83.2
+	PF01042	Ribonuc_L-PSP   	   298	   415	    89.8
+
+A0A398B685	REACTIVE INTERMEDIATE/IMI     25.7      0.054   3   3.2   0.0
+	Q5SF93_TED01              	    45	   126	     7.7
+	Q5SF93_TED01              	   330	   411	     7.2
+	Q5SF93_TED01              	   182	   251	     6.8
+	PF01042	Ribonuc_L-PSP   	    12	   130	    95.4
+	PF01042	Ribonuc_L-PSP   	   151	   276	    83.2
+	PF01042	Ribonuc_L-PSP   	   298	   415	    90.3
+
+A0A6A6JZF8	UNCHARACTERIZED PROTEIN {    170.9    2.6e-47  14  13.5  72.6
+	Q5SF93_TED01              	   383	   468	    25.1
+	Q5SF93_TED01              	   648	   733	    19.1
+	Q5SF93_TED01              	    65	   136	    18.7
+	Q5SF93_TED01              	   277	   348	    18.7
+	Q5SF93_TED01              	   330	   401	    18.7
+	Q5SF93_TED01              	   542	   613	    18.7
+	Q5SF93_TED01              	   595	   666	    18.7
+	Q5SF93_TED01              	   216	   295	    18.1
+	Q5SF93_TED01              	   118	   189	    18.0
+	Q5SF93_TED01              	   481	   560	    18.0
+	Q5SF93_TED01              	     6	    83	    17.3
+	Q5SF93_TED01              	   436	   506	    13.6
+	Q5SF93_TED01              	   171	   229	    13.1
+	Q5SF93_TED01              	   694	   758	     5.3
+
+A0A6A6JZJ4	REMORIN C-TERMINAL DOMAIN     66.0    1.4e-14   3   2.6  11.2
+	Q5SF93_TED01              	    23	    93	    51.2
+	Q5SF93_TED01              	    73	   116	    25.9
+	Q5SF93_TED01              	    89	   143	    11.5
+
+A0A6A6K0Y7	UNCHARACTERIZED PROTEIN {    102.3    6.4e-26   8   6.3  55.1
+	Q5SF93_TED01              	    22	    88	    26.5
+	Q5SF93_TED01              	    65	   110	    23.9
+	Q5SF93_TED01              	   206	   260	    23.6
+	Q5SF93_TED01              	    85	   134	    23.5
+	Q5SF93_TED01              	   185	   232	    23.2
+	Q5SF93_TED01              	   106	   151	    22.7
+	Q5SF93_TED01              	   146	   188	    22.2
+	Q5SF93_TED01              	   129	   171	    21.6
+
+A0A813E977	UNCHARACTERIZED PROTEIN {     29.3     0.0041   0   8.8   0.1
+
+A0A8C9XEK8	UNCHARACTERIZED PROTEIN {     32.2    0.00051   4   8.1   6.4
+	Q5SF93_TED01              	    89	   169	     5.9
+	Q5SF93_TED01              	   164	   197	     3.9
+	Q5SF93_TED01              	     2	    32	     3.8
+	Q5SF93_TED01              	    26	    65	     3.5
+
+A0A8D0A3S1	UNCHARACTERIZED PROTEIN {     29.6     0.0033   5   8.4   8.3
+	Q5SF93_TED01              	   176	   260	     5.3
+	Q5SF93_TED01              	    62	   131	     4.9
+	Q5SF93_TED01              	     9	    75	     4.6
+	Q5SF93_TED01              	   123	   193	     4.2
+	Q5SF93_TED01              	   232	   272	     3.3
+
+A0A8D0CQG9	UNCHARACTERIZED PROTEIN {     35.0    6.4e-05   4  11.5  13.9
+	Q5SF93_TED01              	   146	   217	     4.7
+	Q5SF93_TED01              	   303	   370	     4.0
+	Q5SF93_TED01              	    46	    97	     3.9
+	Q5SF93_TED01              	    81	   150	     3.4
+
+A0A9J7L7N4	MUCIN-1-LIKE {ECO:0000313     25.9      0.046   3   6.7   2.8
+	Q5SF93_TED01              	   348	   398	     4.8
+	Q5SF93_TED01              	   194	   249	     4.6
+	Q5SF93_TED01              	   216	   265	     3.3
+
+B9KJ37	APPENDAGE-ASSOCIATED PROTEIN-    413.1   6.6e-123  10  10.4  67.1
+	Q5SF93_TED01              	    33	   103	   128.8
+	Q5SF93_TED01              	   211	   277	    86.6
+	Q5SF93_TED01              	   125	   171	    55.6
+	Q5SF93_TED01              	   264	   304	    55.1
+	Q5SF93_TED01              	   167	   210	    34.6
+	Q5SF93_TED01              	   299	   344	    34.4
+	Q5SF93_TED01              	   327	   368	    32.0
+	Q5SF93_TED01              	   387	   436	    23.0
+	Q5SF93_TED01              	    98	   128	    18.3
+	Q5SF93_TED01              	   365	   391	    17.7
+
+B9KJ38	APPENDAGE-ASSOCIATED PROTEIN-    227.9    4.3e-65   4   4.2  26.4
+	Q5SF93_TED01              	    43	   137	   118.0
+	Q5SF93_TED01              	   153	   201	    65.2
+	Q5SF93_TED01              	   198	   257	    56.9
+	Q5SF93_TED01              	   130	   155	    12.8
+
+B9KJ40	APPENDAGE-ASSOCIATED PROTEIN-     29.3     0.0039   1   2.3   0.8
+	Q5SF93_TED01              	    32	    82	    25.1
+
+Q5SF95	APPENDAGE-ASSOCIATED PROTEIN       311.2    4.2e-91   4   4.2  29.1
+	Q5SF93_TED01              	    17	   110	   200.7
+	Q5SF93_TED01              	   103	   160	    81.5
+	Q5SF93_TED01              	   175	   245	    32.7
+	Q5SF93_TED01              	   152	   190	    32.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS821053 (E-value: 8e-88, Score: 294.1)
+Mentioned as: AM879
+Description: hypothetical protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 21189322
+Source: EuropePMC
+Title: Identification of Anaplasma marginale outer membrane protein antigens conserved between A. marginale sensu stricto strains and the live A. marginale subsp. centrale vaccine
+Journal: Infection and immunity (2011)
+Snippet: to the Anaplasma appendage-associated protein family (AM878, AM879, and AM880), AM1010 (a conserved lipoprotein family protein), chaperone protein DnaK, malonyl
+
+================================================================================
+Protein: VIMSS821053 (E-value: 8e-88, Score: 294.1)
+Mentioned as: AM879
+Description: hypothetical protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 19134224
+Source: EuropePMC
+Title: Conservation in the face of diversity: multistrain analysis of an intracellular bacterium
+Journal: BMC genomics (2009)
+Snippet: deduced AAAP amino acid sequences from the St. Maries and Florida strains St. Maries aaap AM879 AM880 Florida aaap 45.0% 49.4% 49.6% alp1 46.1% 73.8% 24.1% alp2 33.4% 40.3% 58.2% alp3 11.7% 30.7% 24.6% High density sequence coverage of additional strains An additional two transmissible strains
+
+================================================================================
+Protein: VIMSS821053 (E-value: 8e-88, Score: 294.1)
+Mentioned as: AM879
+Description: hypothetical protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 16299305
+Source: EuropePMC
+Title: Identification of novel antigenic proteins in a complex Anaplasma marginale outer membrane immunogen by mass spectrometry and genomic mapping
+Journal: Infection and immunity (2005)
+Snippet: 4 5 13 17 165 180 Membrane associated 34, 31 AM879 AM880 a Number of peptides identified from each protein. Percentage of coverage by the identified peptides. c
+
+================================================================================
+Protein: VIMSS821052 (E-value: 6.1e-77, Score: 259.3)
+Mentioned as: AM878
+Description: appendage-associated protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 38727242
+Source: EuropePMC
+Title: Identification of <i>Anaplasma marginale</i> adhesins for entry into <i>Dermacentor andersoni</i> tick cells using phage display
+Journal: Infection and immunity (2024)
+
+================================================================================
+Protein: VIMSS821052 (E-value: 6.1e-77, Score: 259.3)
+Mentioned as: AM878
+Description: appendage-associated protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 28754151
+Source: EuropePMC
+Title: Identification of Anaplasma ovis appendage-associated protein (AAAP) for development of an indirect ELISA and its application
+Journal: Parasites & vectors (2017)
+Snippet: acid sequence of aaap showed 31% identity to the appendage-associated protein of A. marginale (AAAP; AM878; GenBank accession no. AAV86790) (Fig. 3 ). Fig. 2 Silver staining of SDS-PAGE gel for analysis of A. ovis lysates immune- precipitation. Lane 1: A. ovis lysates; Lanes 24: A.
+
+================================================================================
+Protein: VIMSS821052 (E-value: 6.1e-77, Score: 259.3)
+Mentioned as: AM878
+Description: appendage-associated protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 24751137
+Source: EuropePMC
+Title: Global transcriptional analysis reveals surface remodeling of Anaplasma marginale in the tick vector
+Journal: Parasites & vectors (2014)
+Snippet: -3.6 90.7 330.6 AM1140 OpAG3 -4.0 434.0 1727.4 AM573 Paralog of AM560 -4.2 13.5 56.5 AM878 AAAP -4.4 21.6 95.9 AM1315 VirB9-2 -4.7 898.2 4221.0 AM779 Outer membrane protein -4.8 317.5 1533.7 AM532 MLP2 -4.9 78.7 386.4 AM535 MLP3 -5.1 31.6 162.4 AM127 Undefined product -5.2
+
+================================================================================
+Protein: VIMSS821054 (E-value: 5.6e-54, Score: 185.7)
+Mentioned as: AM880
+Description: hypothetical protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 20439479
+Source: EuropePMC
+Title: Identification of Anaplasma marginale proteins specifically upregulated during colonization of the tick vector
+Journal: Infection and immunity (2010)
+Snippet: AM944 (groEL), AM254 (tuf), AM666 (atpD), AM956 (pepA), AM880 (alp2), AM564 (mdh), FIG. 2. Identification of Anaplasma marginale proteins uniquely expressed or
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q5SF93.1	AF-Q5SF93-F1-model_v4_TED01:13-106	1	AF-Q5SF93-F1-model_v4_TED01	13-106	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q5SF93_TED01
+GA   27.00 27.00;
+TC   27.80 32.00;
+NC   26.60 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

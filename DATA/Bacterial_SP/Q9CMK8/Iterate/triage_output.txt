@@ -1,0 +1,92 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y812_PASMU              Reviewed;          42 AA.
+AC   Q9CMK8;
+DE   RecName: Full=Uncharacterized protein PM0812;
+GN   OrderedLocusNames=PM0812;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK02896.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q9CMK8; -.
+DR   EnsemblBacteria; AAK02896; AAK02896; PM0812.
+DR   KEGG; pmu:PM0812; -.
+DR   HOGENOM; CLU_3255393_0_0_6; -.
+DR   Proteomes; UP000000809; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..42
+FT                   /note="Uncharacterized protein PM0812"
+FT                   /id="PRO_0000216307"
+SQ   SEQUENCE   42 AA;  4478 MW;  0E12AD2F524DC25A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pasteurella.
+1	6	Cricetibacter.
+2	5	Pasteurellaceae
+2	4	Pasteurellales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A098F316	UNCHARACTERIZED PROTEIN {     28.2     0.0061   8  10.2  19.3
+	Iterate                   	   171	   190	     6.0
+	Iterate                   	   154	   172	     4.3
+	Iterate                   	   136	   157	     4.1
+	Iterate                   	    69	    89	     3.4
+	Iterate                   	   100	   123	     3.3
+	Iterate                   	     2	    18	     2.8
+	Iterate                   	    52	    66	     2.8
+	Iterate                   	   117	   140	     2.7
+
+A0A2G9RC56	UNCHARACTERIZED PROTEIN {     27.3      0.011   3   6.6   3.2
+	Iterate                   	     3	    28	     7.2
+	Iterate                   	   130	   151	     5.7
+	Iterate                   	   267	   289	     4.5
+
+A0A4R2SZI8	UNCHARACTERIZED PROTEIN {     45.0    3.3e-08   1   1.0   0.9
+	Iterate                   	     1	    41	    44.9
+
+A0A9D4HGW9	UNCHARACTERIZED PROTEIN {     30.1     0.0015   1  13.2  18.6
+	Iterate                   	   367	   399	     5.5
+
+Q9CMK8	UNCHARACTERIZED PROTEIN PM0812     113.5    1.2e-29   1   1.0   4.6
+	Iterate                   	     1	    42	   113.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CMK8/Iterate
+GA   27.00 27.00;
+TC   95.10 95.00;
+NC   26.70 23.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

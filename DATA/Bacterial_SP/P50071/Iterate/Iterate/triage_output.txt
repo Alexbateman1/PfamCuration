@@ -1,0 +1,100 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Streptomyces aurantiacus group.
+8	6	Streptomyces.
+1	6	Streptomyces
+9	5	Streptomycetaceae
+9	4	Kitasatosporales
+9	3	Actinomycetes
+9	2	Actinomycetota
+9	1	Bacillati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A6B2RST8	DNA GYRASE SUBUNIT A {ECO     47.8    4.2e-09   1   1.7   9.1
+	Iterate                   	     1	    21	    46.6
+	PF00521	DNA_topoisoIV   	    47	   491	   515.9
+	PF03989	DNA_gyraseA_C   	   522	   569	    53.7
+	PF03989	DNA_gyraseA_C   	   572	   622	    36.3
+	PF03989	DNA_gyraseA_C   	   628	   678	    29.8
+	PF03989	DNA_gyraseA_C   	   681	   730	    36.6
+	PF03989	DNA_gyraseA_C   	   733	   781	    46.3
+	PF03989	DNA_gyraseA_C   	   784	   830	    44.7
+
+A0A6C0Q638	DNA GYRASE SUBUNIT A {ECO     45.9    1.7e-08   1   1.6  10.1
+	Iterate                   	     1	    21	    44.8
+	PF00521	DNA_topoisoIV   	    47	   491	   512.1
+	PF03989	DNA_gyraseA_C   	   522	   569	      50
+	PF03989	DNA_gyraseA_C   	   572	   622	    38.5
+	PF03989	DNA_gyraseA_C   	   628	   678	    30.1
+	PF03989	DNA_gyraseA_C   	   681	   730	    36.4
+	PF03989	DNA_gyraseA_C   	   733	   781	      49
+	PF03989	DNA_gyraseA_C   	   784	   830	    44.7
+
+A0A6I4NC70	DNA GYRASE SUBUNIT A {ECO     41.0    5.7e-07   1   1.6  11.0
+	Iterate                   	     1	    21	    40.0
+	PF00521	DNA_topoisoIV   	    47	   491	   520.7
+	PF03989	DNA_gyraseA_C   	   522	   569	    50.7
+	PF03989	DNA_gyraseA_C   	   572	   622	    36.9
+	PF03989	DNA_gyraseA_C   	   628	   678	    30.4
+	PF03989	DNA_gyraseA_C   	   681	   730	      35
+	PF03989	DNA_gyraseA_C   	   733	   781	    49.4
+	PF03989	DNA_gyraseA_C   	   784	   830	    44.8
+
+A0A9Q0I3T9	UNCHARACTERIZED PROTEIN {     76.8    3.1e-18  14  13.9  14.7
+	Iterate                   	    23	    35	     6.1
+	Iterate                   	    41	    53	     6.1
+	Iterate                   	    77	    89	     6.1
+	Iterate                   	   113	   125	     6.1
+	Iterate                   	   131	   143	     6.1
+	Iterate                   	   149	   161	     6.1
+	Iterate                   	   167	   179	     6.1
+	Iterate                   	   185	   197	     6.1
+	Iterate                   	   203	   215	     6.1
+	Iterate                   	    59	    71	     3.0
+	Iterate                   	    95	   107	     3.0
+	Iterate                   	   221	   233	     3.0
+	Iterate                   	   239	   251	     3.0
+	Iterate                   	   257	   269	     3.0
+
+G2NEY2	DNA GYRASE SUBUNIT A {ECO:000     41.1    5.2e-07   1   1.6   8.2
+	Iterate                   	     1	    21	    40.1
+	PF00521	DNA_topoisoIV   	    47	   491	   517.9
+	PF03989	DNA_gyraseA_C   	   522	   569	    52.4
+	PF03989	DNA_gyraseA_C   	   572	   622	    36.3
+	PF03989	DNA_gyraseA_C   	   628	   678	    28.6
+	PF03989	DNA_gyraseA_C   	   681	   730	    36.4
+	PF03989	DNA_gyraseA_C   	   733	   781	    46.7
+	PF03989	DNA_gyraseA_C   	   784	   830	    44.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A6B2RST8.1	AF-A0A6B2RST8-F1-model_v4_TED01:42-205	1	AF-A0A6B2RST8-F1-model_v4_TED01	42-205	0
+A0A6B2RST8.1	AF-A0A6B2RST8-F1-model_v4_TED02:265-344	1	AF-A0A6B2RST8-F1-model_v4_TED02	265-344	0
+A0A6B2RST8.1	AF-A0A6B2RST8-F1-model_v4_TED03:382-498	1	AF-A0A6B2RST8-F1-model_v4_TED03	382-498	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P50071/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.20 27.30;
+NC   26.40 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

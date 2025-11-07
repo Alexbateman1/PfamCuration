@@ -1,0 +1,53 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Rhodobacter.
+1	5	Rhodobacter group
+1	4	Rhodobacterales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+D5APH6	DIGUANYLATE CYCLASE/PHOSPHODI    164.6    2.6e-45   1   2.5   9.0
+	Q02999_TED01              	    12	    86	   162.2
+	PF13188	PAS_8           	   212	   279	      19
+	PF00989	PAS             	   212	   307	      32
+	PF08448	PAS_4           	   218	   340	    54.4
+	PF13426	PAS_9           	   222	   337	    20.9
+	PF13188	PAS_8           	   343	   406	    25.1
+	PF08448	PAS_4           	   349	   468	      41
+	PF13426	PAS_9           	   353	   465	    26.3
+	PF00990	GGDEF           	   477	   633	   123.2
+	PF00563	EAL             	   650	   889	   207.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q02999.1	AF-Q02999-F1-model_v4_TED02:89-146	1	AF-Q02999-F1-model_v4_TED02	89-146	0
+Q02999.1	AF-Q02999-F1-model_v4_TED01:12-86	1	AF-Q02999-F1-model_v4_TED01	12-86	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q02999_TED01
+GA   27.00 27.00;
+TC   28.60 162.20;
+NC   26.80 25.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

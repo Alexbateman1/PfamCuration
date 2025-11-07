@@ -1,0 +1,76 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Lactobacillus
+3	5	Lactobacillaceae
+3	4	Lactobacillales
+3	3	Bacilli
+3	2	Bacillota
+3	1	Bacillati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0R1U053	HELVETICIN ORF 2 {ECO:000     87.5    2.9e-21   1   1.1   1.7
+	Iterate                   	    33	   104	    87.1
+
+A0A556UCA1	HELVETICIN {ECO:0000313|E     72.8    1.1e-16   1   1.1   1.4
+	Iterate                   	    33	   104	    72.6
+
+A0A556UCD0	HELVETICIN {ECO:0000313|E     72.8    1.1e-16   1   1.1   1.4
+	Iterate                   	    33	   104	    72.6
+
+B0S311	PUTATIVE BIOFILM-ASSOCIATED S     37.6    1.1e-05  10  10.9  37.0
+	Iterate                   	   725	   764	     5.7
+	Iterate                   	   849	   888	     5.7
+	Iterate                   	   973	  1012	     5.7
+	Iterate                   	  1097	  1136	     5.7
+	Iterate                   	  1221	  1260	     5.7
+	Iterate                   	  1345	  1384	     5.7
+	Iterate                   	  1469	  1508	     5.7
+	Iterate                   	  1593	  1632	     5.7
+	Iterate                   	  1717	  1756	     5.7
+	Iterate                   	  1841	  1880	     5.7
+	PF05345	He_PIG          	   587	   694	    25.9
+	PF17936	Big_6           	  1969	  2052	    39.3
+	PF17936	Big_6           	  2055	  2137	    45.4
+	PF17936	Big_6           	  2141	  2223	    38.5
+	PF17936	Big_6           	  2227	  2310	    38.7
+	PF17936	Big_6           	  2313	  2396	    36.3
+	PF00746	Gram_pos_anchor 	  2535	  2577	    21.6
+
+I7IYV0	HELVETICIN {ECO:0008006|GOOGL    104.3    1.6e-26   1   1.1   1.6
+	Iterate                   	    33	   104	   104.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0R1U053.1	AF-A0A0R1U053-F1-model_v4_TED02:32-104	1	AF-A0A0R1U053-F1-model_v4_TED02	32-104	100.0%
+A0A0R1U053.1	AF-A0A0R1U053-F1-model_v4_TED01:2-30	1	AF-A0A0R1U053-F1-model_v4_TED01	2-30	0
+A0A437SU05.1	AF-A0A437SU05-F1-model_v4_TED01:2-31	1	AF-A0A437SU05-F1-model_v4_TED01	2-31	0
+A0A437SU05.1	AF-A0A437SU05-F1-model_v4_TED02:33-110	1	AF-A0A437SU05-F1-model_v4_TED02	33-110	100.0%
+A0A556UCD0.1	AF-A0A556UCD0-F1-model_v4_TED01:4-108	1	AF-A0A556UCD0-F1-model_v4_TED01	4-108	100.0%
+I7IYV0.1	AF-I7IYV0-F1-model_v4_TED01:4-107	1	AF-I7IYV0-F1-model_v4_TED01	4-107	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P22295_TED01/Iterate
+GA   27.00 27.00;
+TC   30.70 120.20;
+NC   24.30 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

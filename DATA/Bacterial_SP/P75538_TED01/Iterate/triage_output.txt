@@ -1,0 +1,348 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y233_MYCPN              Reviewed;         454 AA.
+AC   P75538;
+DE   RecName: Full=Uncharacterized lipoprotein MG095 homolog;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=MPN_233; ORFNames=G07_orf454, MP598;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+DR   EMBL; U00089; AAB96246.1; -; Genomic_DNA.
+DR   PIR; S73924; S73924.
+DR   RefSeq; NP_109921.1; NC_000912.1.
+DR   RefSeq; WP_010874590.1; NC_000912.1.
+DR   AlphaFoldDB; P75538; -.
+DR   SMR; P75538; -.
+DR   STRING; 272634.MPN_233; -.
+DR   EnsemblBacteria; AAB96246; AAB96246; MPN_233.
+DR   KEGG; mpn:MPN_233; -.
+DR   PATRIC; fig|272634.6.peg.252; -.
+DR   HOGENOM; CLU_692268_0_0_14; -.
+DR   OrthoDB; 9963286at2; -.
+DR   BioCyc; MPNE272634:G1GJ3-372-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal.
+FT   SIGNAL          1..21
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           22..454
+FT                   /note="Uncharacterized lipoprotein MG095 homolog"
+FT                   /id="PRO_0000014027"
+FT   REGION          55..87
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        55..64
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        65..87
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   LIPID           22
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           22
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   454 AA;  49820 MW;  D6209DA59DC842EC CRC64;
+//
+ID   Y095_MYCGE              Reviewed;         398 AA.
+AC   P47341;
+DE   RecName: Full=Uncharacterized lipoprotein MG095;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=MG095;
+OS   Mycoplasma genitalium (strain ATCC 33530 / DSM 19775 / NCTC 10195 / G37)
+OS   (Mycoplasmoides genitalium).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=243273;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 33530 / DSM 19775 / NCTC 10195 / G37;
+RX   PubMed=7569993; DOI=10.1126/science.270.5235.397;
+RA   Fraser C.M., Gocayne J.D., White O., Adams M.D., Clayton R.A.,
+RA   Fleischmann R.D., Bult C.J., Kerlavage A.R., Sutton G.G., Kelley J.M.,
+RA   Fritchman J.L., Weidman J.F., Small K.V., Sandusky M., Fuhrmann J.L.,
+RA   Nguyen D.T., Utterback T.R., Saudek D.M., Phillips C.A., Merrick J.M.,
+RA   Tomb J.-F., Dougherty B.A., Bott K.F., Hu P.-C., Lucier T.S.,
+RA   Peterson S.N., Smith H.O., Hutchison C.A. III, Venter J.C.;
+RT   "The minimal gene complement of Mycoplasma genitalium.";
+RL   Science 270:397-403(1995).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+DR   EMBL; L43967; AAC71313.1; -; Genomic_DNA.
+DR   PIR; E64210; E64210.
+DR   RefSeq; WP_009885652.1; NC_000908.2.
+DR   AlphaFoldDB; P47341; -.
+DR   STRING; 243273.MG_095; -.
+DR   GeneID; 88282218; -.
+DR   KEGG; mge:MG_095; -.
+DR   eggNOG; ENOG5030N7N; Bacteria.
+DR   HOGENOM; CLU_692268_0_0_14; -.
+DR   InParanoid; P47341; -.
+DR   OrthoDB; 9963286at2; -.
+DR   BioCyc; MGEN243273:G1GJ2-107-MONOMER; -.
+DR   Proteomes; UP000000807; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal.
+FT   SIGNAL          1..22
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           23..398
+FT                   /note="Uncharacterized lipoprotein MG095"
+FT                   /id="PRO_0000014026"
+FT   LIPID           23
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           23
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   398 AA;  44932 MW;  27EF30901AE78F07 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	5	Mycoplasmoides
+2	4	Mycoplasmoidaceae
+2	3	Mycoplasmoidales
+2	2	Mycoplasmatota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A8S1ST48	TETRATRICOPEPTIDE REPEAT      45.0    4.2e-08   8  14.5  25.8
+	Iterate                   	   733	   775	     6.1
+	Iterate                   	   564	   600	     5.4
+	Iterate                   	   598	   635	     5.4
+	Iterate                   	   632	   669	     5.4
+	Iterate                   	   666	   702	     5.4
+	Iterate                   	   701	   737	     5.4
+	Iterate                   	   226	   260	     5.3
+	Iterate                   	   532	   565	     5.2
+	PF13432	TPR_16          	   176	   255	    25.4
+	PF00515	TPR_1           	   187	   220	    32.4
+	PF13181	TPR_8           	   187	   220	    20.6
+	PF13414	TPR_11          	   194	   232	    31.7
+	PF13431	TPR_17          	   209	   242	    24.6
+	PF07719	TPR_2           	   221	   254	    32.3
+	PF00515	TPR_1           	   222	   254	      41
+	PF13181	TPR_8           	   222	   254	    28.8
+	PF13432	TPR_16          	   225	   293	    25.5
+	PF13431	TPR_17          	   243	   276	    26.3
+	PF07719	TPR_2           	   255	   288	      27
+	PF00515	TPR_1           	   256	   288	    42.2
+	PF13181	TPR_8           	   256	   288	      29
+	PF13432	TPR_16          	   259	   323	      22
+	PF13414	TPR_11          	   264	   302	    29.6
+	PF13431	TPR_17          	   277	   310	    26.3
+	PF07719	TPR_2           	   289	   322	      27
+	PF00515	TPR_1           	   290	   322	    42.2
+	PF13181	TPR_8           	   290	   322	      29
+	PF13432	TPR_16          	   294	   357	    21.8
+	PF13414	TPR_11          	   298	   336	    29.6
+	PF13431	TPR_17          	   311	   344	    26.3
+	PF07719	TPR_2           	   323	   356	      27
+	PF00515	TPR_1           	   324	   356	    42.2
+	PF13181	TPR_8           	   324	   356	      29
+	PF13432	TPR_16          	   327	   391	      22
+	PF13414	TPR_11          	   332	   370	    29.6
+	PF13431	TPR_17          	   345	   378	    26.3
+	PF07719	TPR_2           	   357	   390	      27
+	PF00515	TPR_1           	   358	   390	    42.2
+	PF13181	TPR_8           	   358	   390	      29
+	PF13432	TPR_16          	   361	   425	      22
+	PF13414	TPR_11          	   366	   404	    29.6
+	PF13431	TPR_17          	   379	   412	    26.3
+	PF07719	TPR_2           	   391	   424	      27
+	PF00515	TPR_1           	   392	   424	    42.2
+	PF13181	TPR_8           	   392	   424	      29
+	PF13432	TPR_16          	   395	   459	      22
+	PF13414	TPR_11          	   398	   438	    29.8
+	PF13431	TPR_17          	   413	   446	    26.3
+	PF07719	TPR_2           	   425	   458	      27
+	PF00515	TPR_1           	   426	   458	    42.2
+	PF13181	TPR_8           	   426	   458	      29
+	PF13432	TPR_16          	   429	   493	    21.8
+	PF13414	TPR_11          	   434	   472	    29.6
+	PF13431	TPR_17          	   447	   480	    25.6
+	PF07719	TPR_2           	   459	   492	    26.8
+	PF00515	TPR_1           	   460	   492	    41.3
+	PF13181	TPR_8           	   460	   492	    27.3
+	PF13432	TPR_16          	   463	   527	    20.8
+	PF12895	ANAPC3          	   471	   553	    28.6
+	PF13431	TPR_17          	   481	   514	    27.3
+	PF00515	TPR_1           	   494	   526	    39.5
+	PF13181	TPR_8           	   494	   526	    22.9
+	PF13432	TPR_16          	   497	   561	    24.8
+	PF13414	TPR_11          	   500	   538	    33.9
+	PF13431	TPR_17          	   515	   548	    24.6
+	PF07719	TPR_2           	   527	   560	    32.3
+	PF00515	TPR_1           	   528	   560	      41
+	PF13181	TPR_8           	   528	   560	    28.8
+	PF13432	TPR_16          	   531	   595	      25
+	PF13431	TPR_17          	   549	   582	    22.2
+	PF07719	TPR_2           	   561	   594	    30.7
+	PF00515	TPR_1           	   562	   594	    39.7
+	PF13181	TPR_8           	   562	   594	    26.9
+	PF13432	TPR_16          	   565	   629	    23.8
+	PF13431	TPR_17          	   583	   616	    22.2
+	PF07719	TPR_2           	   595	   628	    30.7
+	PF00515	TPR_1           	   596	   628	    39.7
+	PF13181	TPR_8           	   596	   628	    26.9
+	PF13432	TPR_16          	   599	   663	    23.8
+	PF13431	TPR_17          	   617	   650	    22.2
+	PF07719	TPR_2           	   629	   662	    30.7
+	PF00515	TPR_1           	   630	   662	    39.7
+	PF13181	TPR_8           	   630	   662	    26.9
+	PF13432	TPR_16          	   633	   697	    23.8
+	PF13431	TPR_17          	   651	   684	    22.2
+	PF07719	TPR_2           	   663	   696	    30.7
+	PF00515	TPR_1           	   664	   696	    39.7
+	PF13181	TPR_8           	   664	   696	    26.9
+	PF13432	TPR_16          	   667	   736	    23.8
+	PF13431	TPR_17          	   685	   718	    22.2
+	PF07719	TPR_2           	   697	   730	    30.7
+	PF00515	TPR_1           	   698	   730	    39.7
+	PF13181	TPR_8           	   698	   730	    26.9
+	PF13432	TPR_16          	   701	   765	    26.8
+	PF13414	TPR_11          	   709	   743	    27.4
+	PF13431	TPR_17          	   719	   752	    22.7
+	PF13424	TPR_12          	   729	   797	      31
+	PF07719	TPR_2           	   731	   764	      31
+	PF00515	TPR_1           	   732	   764	    40.4
+	PF13181	TPR_8           	   732	   764	    31.7
+	PF13432	TPR_16          	   735	   797	    25.5
+	PF13414	TPR_11          	   738	   779	    34.9
+	PF13431	TPR_17          	   753	   786	    23.7
+	PF07719	TPR_2           	   765	   798	      27
+	PF00515	TPR_1           	   766	   797	    34.9
+	PF13181	TPR_8           	   766	   795	    21.5
+
+A0A8S1XPC6	TETRATRICOPEPTIDE REPEAT      40.7    9.4e-07   7   8.8  15.5
+	Iterate                   	   429	   464	     6.6
+	Iterate                   	   258	   294	     6.2
+	Iterate                   	   291	   329	     6.2
+	Iterate                   	   326	   362	     6.2
+	Iterate                   	   393	   430	     6.2
+	Iterate                   	   360	   395	     6.1
+	Iterate                   	   226	   259	     6.0
+	PF13181	TPR_8           	   187	   220	    21.3
+	PF00515	TPR_1           	   187	   220	    33.1
+	PF13432	TPR_16          	   191	   255	    26.2
+	PF13414	TPR_11          	   194	   232	    32.4
+	PF13431	TPR_17          	   209	   242	    25.3
+	PF07719	TPR_2           	   221	   254	    33.1
+	PF13174	TPR_6           	   222	   253	    12.6
+	PF13181	TPR_8           	   222	   254	    29.6
+	PF00515	TPR_1           	   222	   254	    41.7
+	PF13414	TPR_11          	   233	   266	      27
+	PF13431	TPR_17          	   243	   276	      23
+	PF07719	TPR_2           	   255	   288	    31.5
+	PF13181	TPR_8           	   256	   288	    27.7
+	PF00515	TPR_1           	   256	   288	    40.5
+	PF13432	TPR_16          	   259	   323	    24.6
+	PF13414	TPR_11          	   267	   300	      27
+	PF13431	TPR_17          	   277	   310	      23
+	PF07719	TPR_2           	   289	   322	    31.5
+	PF13181	TPR_8           	   290	   322	    27.7
+	PF00515	TPR_1           	   290	   322	    40.5
+	PF13432	TPR_16          	   293	   357	    24.6
+	PF13414	TPR_11          	   301	   334	      27
+	PF13431	TPR_17          	   311	   344	      23
+	PF07719	TPR_2           	   323	   356	    31.5
+	PF13181	TPR_8           	   324	   356	    27.7
+	PF00515	TPR_1           	   324	   356	    40.5
+	PF13432	TPR_16          	   327	   391	    24.6
+	PF13414	TPR_11          	   335	   368	      27
+	PF13431	TPR_17          	   345	   378	      23
+	PF07719	TPR_2           	   357	   390	    31.5
+	PF13181	TPR_8           	   358	   390	    27.7
+	PF00515	TPR_1           	   358	   390	    40.5
+	PF13432	TPR_16          	   361	   425	    24.6
+	PF13414	TPR_11          	   369	   402	      27
+	PF13431	TPR_17          	   379	   412	      23
+	PF07719	TPR_2           	   391	   424	    31.5
+	PF13181	TPR_8           	   392	   424	    27.7
+	PF00515	TPR_1           	   392	   424	    40.5
+	PF13432	TPR_16          	   395	   459	    27.6
+	PF13414	TPR_11          	   403	   437	    28.1
+	PF13431	TPR_17          	   413	   446	    23.5
+	PF13424	TPR_12          	   423	   491	    31.8
+	PF07719	TPR_2           	   425	   458	    31.8
+	PF13181	TPR_8           	   426	   458	    32.5
+	PF00515	TPR_1           	   426	   458	    41.1
+	PF13432	TPR_16          	   429	   491	    26.3
+	PF13414	TPR_11          	   432	   473	    35.6
+	PF13431	TPR_17          	   447	   480	    24.4
+	PF07719	TPR_2           	   459	   492	    27.7
+	PF13181	TPR_8           	   460	   489	    22.3
+	PF00515	TPR_1           	   460	   491	    35.6
+	PF13181	TPR_8           	   494	   521	      12
+
+A0A9D3YAG4	UNCHARACTERIZED PROTEIN {     46.2    1.8e-08   0  11.6   0.0
+
+P47341	UNCHARACTERIZED LIPOPROTEIN MG0     63.2    8.4e-14   1   1.9   5.5
+	Iterate                   	   336	   393	    61.6
+
+P75538	UNCHARACTERIZED LIPOPROTEIN MG0    141.3    3.6e-38   1   2.1   5.8
+	Iterate                   	   388	   445	   141.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS13689 (E-value: 1.9e-34, Score: 122.8)
+Mentioned as: MPN233
+Description: excreted conserved protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 39533283
+Source: EuropePMC
+Title: Heterologous protein exposure and secretion optimization in Mycoplasma pneumoniae
+Journal: Microbial cell factories (2024)
+Snippet: these criteria we selected the lipoprotein signal peptides (liposignal) corresponding to MPN052, MPN058, MPN162, MPN200, MPN233, MPN284, MPN288, MPN415 and MPN523 lipoproteins that were mainly found in the cells and not in the supernatant. We included in the liposignals of these proteins four more amino acids
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P47341.1	AF-P47341-F1-model_v4_TED01:50-178_198-397	1	AF-P47341-F1-model_v4_TED01	50-397	100.0%
+P75538.1	AF-P75538-F1-model_v4_TED01:388-445	1	AF-P75538-F1-model_v4_TED01	388-445	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75538_TED01/Iterate
+GA   27.00 27.00;
+TC   27.20 122.80;
+NC   26.50 18.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

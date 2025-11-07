@@ -1,0 +1,116 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y084_TREPA              Reviewed;          77 AA.
+AC   O83122;
+DE   RecName: Full=Uncharacterized protein TP_0084;
+GN   OrderedLocusNames=TP_0084;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65088.1; -; Genomic_DNA.
+DR   PIR; E71367; E71367.
+DR   RefSeq; WP_010881533.1; NC_021490.2.
+DR   AlphaFoldDB; O83122; -.
+DR   SMR; O83122; -.
+DR   IntAct; O83122; 15.
+DR   EnsemblBacteria; AAC65088; AAC65088; TP_0084.
+DR   KEGG; tpa:TP_0084; -.
+DR   KEGG; tpw:TPANIC_0084; -.
+DR   eggNOG; ENOG5032FFX; Bacteria.
+DR   HOGENOM; CLU_2636990_0_0_12; -.
+DR   OrthoDB; 361409at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..77
+FT                   /note="Uncharacterized protein TP_0084"
+FT                   /id="PRO_0000202188"
+SQ   SEQUENCE   77 AA;  8224 MW;  09046A5D92463942 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Treponema.
+3	5	Treponemataceae
+3	4	Spirochaetales
+3	3	Spirochaetia
+3	2	Spirochaetota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GQA7	THIOREDOXIN FAMILY PROTEI    102.4    5.6e-26   1   1.0   0.8
+	O83122_TED01              	     1	    75	   102.2
+
+A0AAD6AGD4	UNCHARACTERIZED PROTEIN {     97.3    2.1e-24   1  24.8  16.8
+	O83122_TED01              	   843	   883	     4.4
+
+O83122	UNCHARACTERIZED PROTEIN TP_0084    179.5    4.8e-50   1   1.0   0.6
+	O83122_TED01              	     1	    75	   179.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS5651557 (E-value: 4.3e-52, Score: 179.5)
+Mentioned as: TPASS_0084
+Description: hypothetical protein
+Organism: Treponema pallidum subsp. pallidum SS14
+PMID: 29758067
+Source: EuropePMC
+Title: Correction: Identification of Functional Candidates amongst Hypothetical Proteins of Treponema pallidum ssp. pallidum
+Journal: PloS one (2018)
+Snippet: B2S229 Xanthine dehydrogenase(Molibdoprotein binding, FAD binding) 21. HP TPASS_0083 6333811 B2S231 glycosyl hydrolase 22. HP TPASS_0084 6333817 B2S232 Thioredoxin 23. HP TPASS_0086 6333164 B2S234 PilZ domain containing protein(c-di-GMP binding) 24. HP TPASS_0095 6332871 B2S243 Tetratricopeptide repeat containing protein 25. HP TPASS_0121 6333137 B2S269 Lysine-2,3-aminomutase 26. HP
+
+================================================================================
+Protein: VIMSS5651557 (E-value: 4.3e-52, Score: 179.5)
+Mentioned as: TPASS_0084
+Description: hypothetical protein
+Organism: Treponema pallidum subsp. pallidum SS14
+PMID: 25894582
+Source: EuropePMC
+Title: Identification of functional candidates amongst hypothetical proteins of Treponema pallidum ssp. pallidum
+Journal: PloS one (2015)
+Snippet: TPASS_0081 6332890 B2S229 Xanthine dehydrogenase(Molibdoprotein binding, FAD binding) HP TPASS_0083 6333811 B2S231 glycosyl hydrolase HP TPASS_0084 6333817 B2S232 Thioredoxin HP TPASS_0086 6333164 B2S234 PilZ domain containing protein(c-di-GMP binding) HP TPASS_0095 6332871 B2S243 Tetratricopeptide repeat containing protein HP TPASS_0121 6333137 B2S269 Lysine-2,3-aminomutase HP TPASS_0123 6332867 B2S271 Tetratricopeptide
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83122.1	AF-O83122-F1-model_v4_TED01:1-75	1	AF-O83122-F1-model_v4_TED01	1-75	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83122_TED01
+GA   27.00 27.00;
+TC   31.20 78.80;
+NC   25.30 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

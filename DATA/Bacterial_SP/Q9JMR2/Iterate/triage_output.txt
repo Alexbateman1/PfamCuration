@@ -1,0 +1,69 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Escherichia.
+5	5	Enterobacteriaceae
+5	4	Enterobacterales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2XIY0	UNCHARACTERIZED PROTEIN {     46.4    2.2e-08   1   1.4   4.6
+	Iterate                   	    15	   111	    45.8
+
+A7ZH46	UNCHARACTERIZED PROTEIN {ECO:    127.8      1e-33   1   1.6   9.1
+	Iterate                   	    93	   200	   126.3
+
+B7LI58	UNCHARACTERIZED PROTEIN {ECO:    208.0    1.2e-58   1   1.0   8.6
+	Iterate                   	     1	   105	   207.8
+
+B7UTF8	UNCHARACTERIZED PROTEIN {ECO:     51.5    5.8e-10   1   1.6   5.7
+	Iterate                   	    61	   136	    51.0
+
+O82907	PLASMID PO157 DNA, COMPLETE S     70.1    9.5e-16   1   1.6   7.9
+	Iterate                   	    35	   131	    69.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS898142 (E-value: 0.00011, Score: 27.7)
+Mentioned as: SC121
+Description: hypothetical protein
+Organism: Salmonella enterica subsp. enterica serovar Choleraesuis str. SC-B67
+PMID: 407126
+Source: EuropePMC
+Title: Isolation of spontaneously derived mutants of Caulobacter crescentus
+Journal: Genetics (1977)
+Snippet: Caulobacter histidine auxotrophs ~~ ~~ ~ Phage resistance? Strain CB15 SC121 SC122 SC135 PC7 PClO PC1 7 WS5 WS13 Selected marker his$ his his his his his his
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9JMR2/Iterate
+GA   27.00 27.00;
+TC   32.80 54.00;
+NC   22.60 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

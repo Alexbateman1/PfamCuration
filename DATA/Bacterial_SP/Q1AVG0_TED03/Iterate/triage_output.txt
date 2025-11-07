@@ -1,0 +1,841 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   CPGS_METKA              Reviewed;         456 AA.
+AC   Q8TY02;
+DE   RecName: Full=Cyclic 2,3-diphosphoglycerate synthetase {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            Short=cDPGS {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            EC=6.5.1.9 {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   Name=cpgS {ECO:0000255|HAMAP-Rule:MF_01908}; OrderedLocusNames=MK0505;
+OS   Methanopyrus kandleri (strain AV19 / DSM 6324 / JCM 9639 / NBRC 100938).
+OC   Archaea; Methanobacteriati; Methanobacteriota; Methanomada group;
+OC   Methanopyri; Methanopyrales; Methanopyraceae; Methanopyrus.
+OX   NCBI_TaxID=190192;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=AV19 / DSM 6324 / JCM 9639 / NBRC 100938;
+RX   PubMed=11930014; DOI=10.1073/pnas.032671499;
+RA   Slesarev A.I., Mezhevaya K.V., Makarova K.S., Polushin N.N.,
+RA   Shcherbinina O.V., Shakhova V.V., Belova G.I., Aravind L., Natale D.A.,
+RA   Rogozin I.B., Tatusov R.L., Wolf Y.I., Stetter K.O., Malykh A.G.,
+RA   Koonin E.V., Kozyavkin S.A.;
+RT   "The complete genome of hyperthermophile Methanopyrus kandleri AV19 and
+RT   monophyly of archaeal methanogens.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:4644-4649(2002).
+CC   -!- FUNCTION: Catalyzes the formation of cyclic 2,3-diphosphoglycerate
+CC       (cDPG) by formation of an intramolecular phosphoanhydride bond at the
+CC       expense of ATP. {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(2R)-2,3-bisphosphoglycerate + ATP + H(+) = cyclic (2R)-2,3-
+CC         bisphosphoglycerate + ADP + phosphate; Xref=Rhea:RHEA:42412,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:58248, ChEBI:CHEBI:79081, ChEBI:CHEBI:456216; EC=6.5.1.9;
+CC         Evidence={ECO:0000255|HAMAP-Rule:MF_01908};
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- SIMILARITY: Belongs to the cyclic 2,3-diphosphoglycerate synthetase
+CC       family. {ECO:0000255|HAMAP-Rule:MF_01908}.
+DR   EMBL; AE009439; AAM01720.1; -; Genomic_DNA.
+DR   RefSeq; WP_011018875.1; NC_003551.1.
+DR   AlphaFoldDB; Q8TY02; -.
+DR   SMR; Q8TY02; -.
+DR   STRING; 190192.MK0505; -.
+DR   PaxDb; 190192-MK0505; -.
+DR   EnsemblBacteria; AAM01720; AAM01720; MK0505.
+DR   GeneID; 1476606; -.
+DR   KEGG; mka:MK0505; -.
+DR   PATRIC; fig|190192.8.peg.536; -.
+DR   HOGENOM; CLU_638764_0_0_2; -.
+DR   InParanoid; Q8TY02; -.
+DR   OrthoDB; 85545at2157; -.
+DR   Proteomes; UP000001826; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0036356; F:cyclic 2,3-diphosphoglycerate synthetase activity; IEA:InterPro.
+DR   GO; GO:0016874; F:ligase activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0006094; P:gluconeogenesis; IEA:InterPro.
+DR   HAMAP; MF_01908; Cyc_PG_syn; 1.
+DR   InterPro; IPR016557; Cyc_diphosphoglycerate_synth.
+DR   InterPro; IPR027417; P-loop_NTPase.
+DR   PIRSF; PIRSF009445; Cyc_PG_syn; 1.
+DR   SUPFAM; SSF52540; P-loop containing nucleoside triphosphate hydrolases; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Cytoplasm; Ligase; Nucleotide-binding; Reference proteome.
+FT   CHAIN           1..456
+FT                   /note="Cyclic 2,3-diphosphoglycerate synthetase"
+FT                   /id="PRO_0000313691"
+SQ   SEQUENCE   456 AA;  49620 MW;  0957551F80576226 CRC64;
+//
+ID   CPGS_THEKO              Reviewed;         432 AA.
+AC   Q5JDW8;
+DE   RecName: Full=Cyclic 2,3-diphosphoglycerate synthetase {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            Short=cDPGS {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            EC=6.5.1.9 {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   Name=cpgS {ECO:0000255|HAMAP-Rule:MF_01908}; OrderedLocusNames=TK1039;
+OS   Thermococcus kodakarensis (strain ATCC BAA-918 / JCM 12380 / KOD1)
+OS   (Pyrococcus kodakaraensis (strain KOD1)).
+OC   Archaea; Methanobacteriati; Methanobacteriota; Thermococci; Thermococcales;
+OC   Thermococcaceae; Thermococcus.
+OX   NCBI_TaxID=69014;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-918 / JCM 12380 / KOD1;
+RX   PubMed=15710748; DOI=10.1101/gr.3003105;
+RA   Fukui T., Atomi H., Kanai T., Matsumi R., Fujiwara S., Imanaka T.;
+RT   "Complete genome sequence of the hyperthermophilic archaeon Thermococcus
+RT   kodakaraensis KOD1 and comparison with Pyrococcus genomes.";
+RL   Genome Res. 15:352-363(2005).
+CC   -!- FUNCTION: Catalyzes the formation of cyclic 2,3-diphosphoglycerate
+CC       (cDPG) by formation of an intramolecular phosphoanhydride bond at the
+CC       expense of ATP. {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(2R)-2,3-bisphosphoglycerate + ATP + H(+) = cyclic (2R)-2,3-
+CC         bisphosphoglycerate + ADP + phosphate; Xref=Rhea:RHEA:42412,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:58248, ChEBI:CHEBI:79081, ChEBI:CHEBI:456216; EC=6.5.1.9;
+CC         Evidence={ECO:0000255|HAMAP-Rule:MF_01908};
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- SIMILARITY: Belongs to the cyclic 2,3-diphosphoglycerate synthetase
+CC       family. {ECO:0000255|HAMAP-Rule:MF_01908}.
+DR   EMBL; AP006878; BAD85228.1; -; Genomic_DNA.
+DR   RefSeq; WP_011249990.1; NC_006624.1.
+DR   AlphaFoldDB; Q5JDW8; -.
+DR   SMR; Q5JDW8; -.
+DR   STRING; 69014.TK1039; -.
+DR   EnsemblBacteria; BAD85228; BAD85228; TK1039.
+DR   GeneID; 78447552; -.
+DR   KEGG; tko:TK1039; -.
+DR   PATRIC; fig|69014.16.peg.1016; -.
+DR   eggNOG; arCOG01230; Archaea.
+DR   HOGENOM; CLU_638764_0_0_2; -.
+DR   InParanoid; Q5JDW8; -.
+DR   OrthoDB; 85545at2157; -.
+DR   PhylomeDB; Q5JDW8; -.
+DR   Proteomes; UP000000536; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0036356; F:cyclic 2,3-diphosphoglycerate synthetase activity; IEA:InterPro.
+DR   GO; GO:0016874; F:ligase activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0006094; P:gluconeogenesis; IEA:InterPro.
+DR   HAMAP; MF_01908; Cyc_PG_syn; 1.
+DR   InterPro; IPR016557; Cyc_diphosphoglycerate_synth.
+DR   PIRSF; PIRSF009445; Cyc_PG_syn; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Cytoplasm; Ligase; Nucleotide-binding; Reference proteome.
+FT   CHAIN           1..432
+FT                   /note="Cyclic 2,3-diphosphoglycerate synthetase"
+FT                   /id="PRO_0000313697"
+SQ   SEQUENCE   432 AA;  47355 MW;  DD38349C98486D1D CRC64;
+//
+ID   CPGS_METST              Reviewed;         461 AA.
+AC   Q2NHT6;
+DE   RecName: Full=Cyclic 2,3-diphosphoglycerate synthetase {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            Short=cDPGS {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            EC=6.5.1.9 {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   Name=cpgS {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   OrderedLocusNames=Msp_0129;
+OS   Methanosphaera stadtmanae (strain ATCC 43021 / DSM 3091 / JCM 11832 /
+OS   MCB-3).
+OC   Archaea; Methanobacteriati; Methanobacteriota; Methanomada group;
+OC   Methanobacteria; Methanobacteriales; Methanobacteriaceae; Methanosphaera.
+OX   NCBI_TaxID=339860;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 43021 / DSM 3091 / JCM 11832 / MCB-3;
+RX   PubMed=16385054; DOI=10.1128/jb.188.2.642-658.2006;
+RA   Fricke W.F., Seedorf H., Henne A., Kruer M., Liesegang H., Hedderich R.,
+RA   Gottschalk G., Thauer R.K.;
+RT   "The genome sequence of Methanosphaera stadtmanae reveals why this human
+RT   intestinal archaeon is restricted to methanol and H2 for methane formation
+RT   and ATP synthesis.";
+RL   J. Bacteriol. 188:642-658(2006).
+CC   -!- FUNCTION: Catalyzes the formation of cyclic 2,3-diphosphoglycerate
+CC       (cDPG) by formation of an intramolecular phosphoanhydride bond at the
+CC       expense of ATP. {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(2R)-2,3-bisphosphoglycerate + ATP + H(+) = cyclic (2R)-2,3-
+CC         bisphosphoglycerate + ADP + phosphate; Xref=Rhea:RHEA:42412,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:58248, ChEBI:CHEBI:79081, ChEBI:CHEBI:456216; EC=6.5.1.9;
+CC         Evidence={ECO:0000255|HAMAP-Rule:MF_01908};
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- SIMILARITY: Belongs to the cyclic 2,3-diphosphoglycerate synthetase
+CC       family. {ECO:0000255|HAMAP-Rule:MF_01908}.
+DR   EMBL; CP000102; ABC56547.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q2NHT6; -.
+DR   SMR; Q2NHT6; -.
+DR   KEGG; mst:Msp_0129; -.
+DR   eggNOG; arCOG01230; Archaea.
+DR   HOGENOM; CLU_638764_0_0_2; -.
+DR   Proteomes; UP000001931; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0036356; F:cyclic 2,3-diphosphoglycerate synthetase activity; IEA:InterPro.
+DR   GO; GO:0016874; F:ligase activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0006094; P:gluconeogenesis; IEA:InterPro.
+DR   HAMAP; MF_01908; Cyc_PG_syn; 1.
+DR   InterPro; IPR016557; Cyc_diphosphoglycerate_synth.
+DR   PIRSF; PIRSF009445; Cyc_PG_syn; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Cytoplasm; Ligase; Nucleotide-binding; Reference proteome.
+FT   CHAIN           1..461
+FT                   /note="Cyclic 2,3-diphosphoglycerate synthetase"
+FT                   /id="PRO_0000313692"
+SQ   SEQUENCE   461 AA;  51303 MW;  DB5CF42BDA5624EC CRC64;
+//
+ID   CPGS_THEGJ              Reviewed;         438 AA.
+AC   C5A4R5;
+DE   RecName: Full=Cyclic 2,3-diphosphoglycerate synthetase {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            Short=cDPGS {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            EC=6.5.1.9 {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   Name=cpgS {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   OrderedLocusNames=TGAM_0725;
+OS   Thermococcus gammatolerans (strain DSM 15229 / JCM 11827 / EJ3).
+OC   Archaea; Methanobacteriati; Methanobacteriota; Thermococci; Thermococcales;
+OC   Thermococcaceae; Thermococcus.
+OX   NCBI_TaxID=593117;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DSM 15229 / JCM 11827 / EJ3;
+RX   PubMed=19558674; DOI=10.1186/gb-2009-10-6-r70;
+RA   Zivanovic Y., Armengaud J., Lagorce A., Leplat C., Guerin P., Dutertre M.,
+RA   Anthouard V., Forterre P., Wincker P., Confalonieri F.;
+RT   "Genome analysis and genome-wide proteomics of Thermococcus gammatolerans,
+RT   the most radioresistant organism known amongst the Archaea.";
+RL   Genome Biol. 10:R70.1-R70.23(2007).
+CC   -!- FUNCTION: Catalyzes the formation of cyclic 2,3-diphosphoglycerate
+CC       (cDPG) by formation of an intramolecular phosphoanhydride bond at the
+CC       expense of ATP. {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(2R)-2,3-bisphosphoglycerate + ATP + H(+) = cyclic (2R)-2,3-
+CC         bisphosphoglycerate + ADP + phosphate; Xref=Rhea:RHEA:42412,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:58248, ChEBI:CHEBI:79081, ChEBI:CHEBI:456216; EC=6.5.1.9;
+CC         Evidence={ECO:0000255|HAMAP-Rule:MF_01908};
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- SIMILARITY: Belongs to the cyclic 2,3-diphosphoglycerate synthetase
+CC       family. {ECO:0000255|HAMAP-Rule:MF_01908}.
+DR   EMBL; CP001398; ACS33227.1; -; Genomic_DNA.
+DR   RefSeq; WP_015858345.1; NC_012804.1.
+DR   AlphaFoldDB; C5A4R5; -.
+DR   SMR; C5A4R5; -.
+DR   STRING; 593117.TGAM_0725; -.
+DR   PaxDb; 593117-TGAM_0725; -.
+DR   GeneID; 7987699; -.
+DR   KEGG; tga:TGAM_0725; -.
+DR   PATRIC; fig|593117.10.peg.725; -.
+DR   eggNOG; arCOG01230; Archaea.
+DR   HOGENOM; CLU_638764_0_0_2; -.
+DR   OrthoDB; 85545at2157; -.
+DR   Proteomes; UP000001488; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0036356; F:cyclic 2,3-diphosphoglycerate synthetase activity; IEA:InterPro.
+DR   GO; GO:0016874; F:ligase activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0006094; P:gluconeogenesis; IEA:InterPro.
+DR   HAMAP; MF_01908; Cyc_PG_syn; 1.
+DR   InterPro; IPR016557; Cyc_diphosphoglycerate_synth.
+DR   PIRSF; PIRSF009445; Cyc_PG_syn; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Cytoplasm; Ligase; Nucleotide-binding; Reference proteome.
+FT   CHAIN           1..438
+FT                   /note="Cyclic 2,3-diphosphoglycerate synthetase"
+FT                   /id="PRO_1000216178"
+SQ   SEQUENCE   438 AA;  47622 MW;  B483A2657283FEF5 CRC64;
+//
+ID   CPGS_METFV              Reviewed;         460 AA.
+AC   O93732; E3GWZ2;
+DE   RecName: Full=Cyclic 2,3-diphosphoglycerate synthetase;
+DE            Short=cDPGS;
+DE            EC=6.5.1.9 {ECO:0000269|PubMed:2226838};
+GN   Name=cpgS; OrderedLocusNames=Mfer_0077;
+OS   Methanothermus fervidus (strain ATCC 43054 / DSM 2088 / JCM 10308 / V24 S).
+OC   Archaea; Methanobacteriati; Methanobacteriota; Methanomada group;
+OC   Methanobacteria; Methanobacteriales; Methanothermaceae; Methanothermus.
+OX   NCBI_TaxID=523846;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], PROTEIN SEQUENCE OF 2-21, FUNCTION,
+RP   BIOPHYSICOCHEMICAL PROPERTIES, SUBUNIT, AND MASS SPECTROMETRY.
+RC   STRAIN=ATCC 43054 / DSM 2088 / JCM 10308 / V24 S;
+RX   PubMed=9811660; DOI=10.1128/jb.180.22.5997-6004.1998;
+RA   Matussek K., Moritz P., Brunner N., Eckerskorn C., Hensel R.;
+RT   "Cloning, sequencing, and expression of the gene encoding cyclic 2,3-
+RT   diphosphoglycerate synthetase, the key enzyme of cyclic 2,3-
+RT   diphosphoglycerate metabolism in Methanothermus fervidus.";
+RL   J. Bacteriol. 180:5997-6004(1998).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 43054 / DSM 2088 / JCM 10308 / V24 S;
+RX   PubMed=21304736; DOI=10.4056/sigs.1283367;
+RA   Anderson I., Djao O.D., Misra M., Chertkov O., Nolan M., Lucas S.,
+RA   Lapidus A., Del Rio T.G., Tice H., Cheng J.F., Tapia R., Han C.,
+RA   Goodwin L., Pitluck S., Liolios K., Ivanova N., Mavromatis K.,
+RA   Mikhailova N., Pati A., Brambilla E., Chen A., Palaniappan K., Land M.,
+RA   Hauser L., Chang Y.J., Jeffries C.D., Sikorski J., Spring S., Rohde M.,
+RA   Eichinger K., Huber H., Wirth R., Goker M., Detter J.C., Woyke T.,
+RA   Bristow J., Eisen J.A., Markowitz V., Hugenholtz P., Klenk H.P.,
+RA   Kyrpides N.C.;
+RT   "Complete genome sequence of Methanothermus fervidus type strain (V24S).";
+RL   Stand. Genomic Sci. 3:315-324(2010).
+RN   [3]
+RP   FUNCTION, CATALYTIC ACTIVITY, AND BIOPHYSICOCHEMICAL PROPERTIES.
+RC   STRAIN=ATCC 43054 / DSM 2088 / JCM 10308 / V24 S;
+RX   PubMed=2226838; DOI=10.1016/0014-5793(90)80456-s;
+RA   Lehmacher A., Vogt A.-B., Hensel R.;
+RT   "Biosynthesis of cyclic 2,3-diphosphoglycerate. Isolation and
+RT   characterization of 2-phosphoglycerate kinase and cyclic 2,3-
+RT   diphosphoglycerate synthetase from Methanothermus fervidus.";
+RL   FEBS Lett. 272:94-98(1990).
+CC   -!- FUNCTION: Catalyzes the formation of cyclic 2,3-diphosphoglycerate
+CC       (cDPG) by formation of an intramolecular phosphoanhydride bond at the
+CC       expense of ATP. It is also able to catalyze the hydrolysis of cDPG but
+CC       with significant slower rates (8-10 times). May be involved in
+CC       thermoadaptation. {ECO:0000269|PubMed:2226838,
+CC       ECO:0000269|PubMed:9811660}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(2R)-2,3-bisphosphoglycerate + ATP + H(+) = cyclic (2R)-2,3-
+CC         bisphosphoglycerate + ADP + phosphate; Xref=Rhea:RHEA:42412,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:58248, ChEBI:CHEBI:79081, ChEBI:CHEBI:456216; EC=6.5.1.9;
+CC         Evidence={ECO:0000269|PubMed:2226838};
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=3 mM for ATP (at pH 7.0 and 83 degrees Celsius)
+CC         {ECO:0000269|PubMed:2226838, ECO:0000269|PubMed:9811660};
+CC         KM=5.8 mM for 2,3 diphosphoglycerate (at pH 7.0 and 83 degrees
+CC         Celsius) {ECO:0000269|PubMed:2226838, ECO:0000269|PubMed:9811660};
+CC         KM=4.7 mM for ADP (at pH 7.0 and 83 degrees Celsius)
+CC         {ECO:0000269|PubMed:2226838, ECO:0000269|PubMed:9811660};
+CC         KM=41.2 mM for cyclic 2,3-diphosphoglycerate (at pH 7.0 and 83
+CC         degrees Celsius) {ECO:0000269|PubMed:2226838,
+CC         ECO:0000269|PubMed:9811660};
+CC         Vmax=32 umol/min/mg enzyme for cDPG synthesis (at pH 7.0 and 83
+CC         degrees Celsius) {ECO:0000269|PubMed:2226838,
+CC         ECO:0000269|PubMed:9811660};
+CC         Vmax=4 umol/min/mg enzyme for cDPG hydrolysis (at pH 7.0 and 83
+CC         degrees Celsius) {ECO:0000269|PubMed:2226838,
+CC         ECO:0000269|PubMed:9811660};
+CC       pH dependence:
+CC         Optimum pH is 5.0-7.5. {ECO:0000269|PubMed:2226838,
+CC         ECO:0000269|PubMed:9811660};
+CC       Temperature dependence:
+CC         Optimum temperature is 75-80 degrees Celsius.
+CC         {ECO:0000269|PubMed:2226838, ECO:0000269|PubMed:9811660};
+CC   -!- SUBUNIT: Homodimer. {ECO:0000305|PubMed:9811660}.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000250}.
+CC   -!- MASS SPECTROMETRY: Mass=50663; Mass_error=6; Method=Electrospray;
+CC       Evidence={ECO:0000269|PubMed:9811660};
+CC   -!- SIMILARITY: Belongs to the cyclic 2,3-diphosphoglycerate synthetase
+CC       family. {ECO:0000305}.
+DR   EMBL; Y09856; CAA70986.1; -; Genomic_DNA.
+DR   EMBL; CP002278; ADP76881.1; -; Genomic_DNA.
+DR   PDB; 8ORK; X-ray; 1.64 A; AAA=1-460.
+DR   PDB; 8ORU; X-ray; 2.23 A; AAA/BBB/CCC/DDD=2-460.
+DR   PDBsum; 8ORK; -.
+DR   PDBsum; 8ORU; -.
+DR   AlphaFoldDB; O93732; -.
+DR   SMR; O93732; -.
+DR   STRING; 523846.Mfer_0077; -.
+DR   KEGG; mfv:Mfer_0077; -.
+DR   HOGENOM; CLU_638764_0_0_2; -.
+DR   OrthoDB; 85545at2157; -.
+DR   BioCyc; MetaCyc:MONOMER-20994; -.
+DR   BRENDA; 6.5.1.9; 3286.
+DR   SABIO-RK; O93732; -.
+DR   Proteomes; UP000002315; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0036356; F:cyclic 2,3-diphosphoglycerate synthetase activity; IEA:InterPro.
+DR   GO; GO:0016874; F:ligase activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0006094; P:gluconeogenesis; IEA:InterPro.
+DR   HAMAP; MF_01908; Cyc_PG_syn; 1.
+DR   InterPro; IPR016557; Cyc_diphosphoglycerate_synth.
+DR   PIRSF; PIRSF009445; Cyc_PG_syn; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; ATP-binding; Cytoplasm; Direct protein sequencing; Ligase;
+KW   Nucleotide-binding; Reference proteome.
+FT   INIT_MET        1
+FT                   /note="Removed"
+FT                   /evidence="ECO:0000269|PubMed:9811660"
+FT   CHAIN           2..460
+FT                   /note="Cyclic 2,3-diphosphoglycerate synthetase"
+FT                   /id="PRO_0000313693"
+SQ   SEQUENCE   460 AA;  50788 MW;  A671E3011CB1FE4D CRC64;
+//
+ID   CPGS_THESM              Reviewed;         434 AA.
+AC   C6A0T3;
+DE   RecName: Full=Cyclic 2,3-diphosphoglycerate synthetase {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            Short=cDPGS {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            EC=6.5.1.9 {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   Name=cpgS {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   OrderedLocusNames=TSIB_0160;
+OS   Thermococcus sibiricus (strain DSM 12597 / MM 739).
+OC   Archaea; Methanobacteriati; Methanobacteriota; Thermococci; Thermococcales;
+OC   Thermococcaceae; Thermococcus.
+OX   NCBI_TaxID=604354;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DSM 12597 / MM 739;
+RX   PubMed=19447963; DOI=10.1128/aem.00718-09;
+RA   Mardanov A.V., Ravin N.V., Svetlitchnyi V.A., Beletsky A.V.,
+RA   Miroshnichenko M.L., Bonch-Osmolovskaya E.A., Skryabin K.G.;
+RT   "Metabolic versatility and indigenous origin of the archaeon Thermococcus
+RT   sibiricus, isolated from a siberian oil reservoir, as revealed by genome
+RT   analysis.";
+RL   Appl. Environ. Microbiol. 75:4580-4588(2009).
+CC   -!- FUNCTION: Catalyzes the formation of cyclic 2,3-diphosphoglycerate
+CC       (cDPG) by formation of an intramolecular phosphoanhydride bond at the
+CC       expense of ATP. {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(2R)-2,3-bisphosphoglycerate + ATP + H(+) = cyclic (2R)-2,3-
+CC         bisphosphoglycerate + ADP + phosphate; Xref=Rhea:RHEA:42412,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:58248, ChEBI:CHEBI:79081, ChEBI:CHEBI:456216; EC=6.5.1.9;
+CC         Evidence={ECO:0000255|HAMAP-Rule:MF_01908};
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- SIMILARITY: Belongs to the cyclic 2,3-diphosphoglycerate synthetase
+CC       family. {ECO:0000255|HAMAP-Rule:MF_01908}.
+DR   EMBL; CP001463; ACS89228.1; -; Genomic_DNA.
+DR   RefSeq; WP_012766189.1; NC_012883.1.
+DR   AlphaFoldDB; C6A0T3; -.
+DR   SMR; C6A0T3; -.
+DR   STRING; 604354.TSIB_0160; -.
+DR   GeneID; 8095132; -.
+DR   KEGG; tsi:TSIB_0160; -.
+DR   eggNOG; arCOG01230; Archaea.
+DR   HOGENOM; CLU_638764_0_0_2; -.
+DR   OrthoDB; 85545at2157; -.
+DR   Proteomes; UP000009079; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0036356; F:cyclic 2,3-diphosphoglycerate synthetase activity; IEA:InterPro.
+DR   GO; GO:0016874; F:ligase activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0006094; P:gluconeogenesis; IEA:InterPro.
+DR   Gene3D; 3.40.50.300; P-loop containing nucleotide triphosphate hydrolases; 1.
+DR   HAMAP; MF_01908; Cyc_PG_syn; 1.
+DR   InterPro; IPR053199; cDPG_synthetase-like.
+DR   InterPro; IPR016557; Cyc_diphosphoglycerate_synth.
+DR   InterPro; IPR027417; P-loop_NTPase.
+DR   PANTHER; PTHR42869; SLL0572 PROTEIN; 1.
+DR   PANTHER; PTHR42869:SF1; SLL0572 PROTEIN; 1.
+DR   PIRSF; PIRSF009445; Cyc_PG_syn; 1.
+DR   SUPFAM; SSF52540; P-loop containing nucleoside triphosphate hydrolases; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Cytoplasm; Ligase; Nucleotide-binding; Reference proteome.
+FT   CHAIN           1..434
+FT                   /note="Cyclic 2,3-diphosphoglycerate synthetase"
+FT                   /id="PRO_1000216179"
+SQ   SEQUENCE   434 AA;  47998 MW;  DD99DB334D50CD0C CRC64;
+//
+ID   CPGS_METTH              Reviewed;         464 AA.
+AC   O26325;
+DE   RecName: Full=Cyclic 2,3-diphosphoglycerate synthetase;
+DE            Short=cDPGS;
+DE            EC=6.5.1.9 {ECO:0000269|Ref.2};
+GN   Name=cpgS; OrderedLocusNames=MTH_223;
+OS   Methanothermobacter thermautotrophicus (strain ATCC 29096 / DSM 1053 / JCM
+OS   10044 / NBRC 100330 / Delta H) (Methanobacterium thermoautotrophicum).
+OC   Archaea; Methanobacteriati; Methanobacteriota; Methanomada group;
+OC   Methanobacteria; Methanobacteriales; Methanobacteriaceae;
+OC   Methanothermobacter.
+OX   NCBI_TaxID=187420;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29096 / DSM 1053 / JCM 10044 / NBRC 100330 / Delta H;
+RX   PubMed=9371463; DOI=10.1128/jb.179.22.7135-7155.1997;
+RA   Smith D.R., Doucette-Stamm L.A., Deloughery C., Lee H.-M., Dubois J.,
+RA   Aldredge T., Bashirzadeh R., Blakely D., Cook R., Gilbert K., Harrison D.,
+RA   Hoang L., Keagle P., Lumm W., Pothier B., Qiu D., Spadafora R., Vicare R.,
+RA   Wang Y., Wierzbowski J., Gibson R., Jiwani N., Caruso A., Bush D.,
+RA   Safer H., Patwell D., Prabhakar S., McDougall S., Shimer G., Goyal A.,
+RA   Pietrovski S., Church G.M., Daniels C.J., Mao J.-I., Rice P., Noelling J.,
+RA   Reeve J.N.;
+RT   "Complete genome sequence of Methanobacterium thermoautotrophicum deltaH:
+RT   functional analysis and comparative genomics.";
+RL   J. Bacteriol. 179:7135-7155(1997).
+RN   [2]
+RP   FUNCTION, CATALYTIC ACTIVITY, ACTIVITY REGULATION, BIOPHYSICOCHEMICAL
+RP   PROPERTIES, INDUCTION, AND SUBCELLULAR LOCATION.
+RC   STRAIN=ATCC 29096 / DSM 1053 / JCM 10044 / NBRC 100330 / Delta H;
+RX   DOI=10.1007/BF00314474;
+RA   van Alebeek G.-J.W.M., Tafazzul G., Kreuwels M.J.J., Keltjens J.T.,
+RA   Vogels G.D.;
+RT   "Cyclic 2,3-diphosphoglycerate metabolism in Methanobacterium
+RT   thermoautotrophicum (strain Delta H): characterization of the synthetase
+RT   reaction.";
+RL   Arch. Microbiol. 162:193-198(1994).
+CC   -!- FUNCTION: Catalyzes the formation of cyclic 2,3-diphosphoglycerate
+CC       (cDPG) by formation of an intramolecular phosphoanhydride bond at the
+CC       expense of ATP. Not able to catalyze cDPG hydrolysis. May be involved
+CC       in osmotic balance. {ECO:0000269|Ref.2}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(2R)-2,3-bisphosphoglycerate + ATP + H(+) = cyclic (2R)-2,3-
+CC         bisphosphoglycerate + ADP + phosphate; Xref=Rhea:RHEA:42412,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:58248, ChEBI:CHEBI:79081, ChEBI:CHEBI:456216; EC=6.5.1.9;
+CC         Evidence={ECO:0000269|Ref.2};
+CC   -!- ACTIVITY REGULATION: Activity decreases in response to phosphate
+CC       limitation. {ECO:0000269|Ref.2}.
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=2 mM for ATP {ECO:0000269|Ref.2};
+CC         KM=21 mM for 2,3 diphosphoglycerate {ECO:0000269|Ref.2};
+CC       pH dependence:
+CC         Optimum pH is 6.0. {ECO:0000269|Ref.2};
+CC       Temperature dependence:
+CC         Optimum temperature is 65 degrees Celsius. {ECO:0000269|Ref.2};
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|Ref.2}.
+CC   -!- INDUCTION: Constitutively expressed. {ECO:0000269|Ref.2}.
+CC   -!- SIMILARITY: Belongs to the cyclic 2,3-diphosphoglycerate synthetase
+CC       family. {ECO:0000305}.
+DR   EMBL; AE000666; AAB84729.1; -; Genomic_DNA.
+DR   PIR; F69127; F69127.
+DR   AlphaFoldDB; O26325; -.
+DR   SMR; O26325; -.
+DR   STRING; 187420.MTH_223; -.
+DR   PaxDb; 187420-MTH_223; -.
+DR   EnsemblBacteria; AAB84729; AAB84729; MTH_223.
+DR   KEGG; mth:MTH_223; -.
+DR   PATRIC; fig|187420.15.peg.192; -.
+DR   HOGENOM; CLU_638764_0_0_2; -.
+DR   InParanoid; O26325; -.
+DR   Proteomes; UP000005223; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0036356; F:cyclic 2,3-diphosphoglycerate synthetase activity; IEA:InterPro.
+DR   GO; GO:0016874; F:ligase activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0006094; P:gluconeogenesis; IEA:InterPro.
+DR   HAMAP; MF_01908; Cyc_PG_syn; 1.
+DR   InterPro; IPR016557; Cyc_diphosphoglycerate_synth.
+DR   PIRSF; PIRSF009445; Cyc_PG_syn; 1.
+PE   1: Evidence at protein level;
+KW   ATP-binding; Cytoplasm; Ligase; Nucleotide-binding; Reference proteome.
+FT   CHAIN           1..464
+FT                   /note="Cyclic 2,3-diphosphoglycerate synthetase"
+FT                   /id="PRO_0000313689"
+SQ   SEQUENCE   464 AA;  51320 MW;  0E73237125CE399F CRC64;
+//
+ID   CPGS_RUBXD              Reviewed;         442 AA.
+AC   Q1AVG0;
+DE   RecName: Full=Cyclic 2,3-diphosphoglycerate synthetase {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            Short=cDPGS {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            EC=6.5.1.9 {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   Name=cpgS {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   OrderedLocusNames=Rxyl_1657;
+OS   Rubrobacter xylanophilus (strain DSM 9941 / JCM 11954 / NBRC 16129 /
+OS   PRD-1).
+OC   Bacteria; Bacillati; Actinomycetota; Rubrobacteria; Rubrobacterales;
+OC   Rubrobacteraceae; Rubrobacter.
+OX   NCBI_TaxID=266117;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DSM 9941 / JCM 11954 / NBRC 16129 / PRD-1;
+RG   US DOE Joint Genome Institute;
+RA   Copeland A., Lucas S., Lapidus A., Barry K., Detter J.C.,
+RA   Glavina del Rio T., Hammon N., Israni S., Dalin E., Tice H., Pitluck S.,
+RA   Munk A.C., Brettin T., Bruce D., Han C., Tapia R., Gilna P., Schmutz J.,
+RA   Larimer F., Land M., Hauser L., Kyrpides N., Lykidis A., da Costa M.S.,
+RA   Rainey F.A., Empadinhas N., Jolivet E., Battista J.R., Richardson P.;
+RT   "Complete sequence of Rubrobacter xylanophilus DSM 9941.";
+RL   Submitted (JUN-2006) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Catalyzes the formation of cyclic 2,3-diphosphoglycerate
+CC       (cDPG) by formation of an intramolecular phosphoanhydride bond at the
+CC       expense of ATP. {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(2R)-2,3-bisphosphoglycerate + ATP + H(+) = cyclic (2R)-2,3-
+CC         bisphosphoglycerate + ADP + phosphate; Xref=Rhea:RHEA:42412,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:58248, ChEBI:CHEBI:79081, ChEBI:CHEBI:456216; EC=6.5.1.9;
+CC         Evidence={ECO:0000255|HAMAP-Rule:MF_01908};
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- SIMILARITY: Belongs to the cyclic 2,3-diphosphoglycerate synthetase
+CC       family. {ECO:0000255|HAMAP-Rule:MF_01908}.
+DR   EMBL; CP000386; ABG04618.1; -; Genomic_DNA.
+DR   RefSeq; WP_011564635.1; NC_008148.1.
+DR   AlphaFoldDB; Q1AVG0; -.
+DR   SMR; Q1AVG0; -.
+DR   STRING; 266117.Rxyl_1657; -.
+DR   KEGG; rxy:Rxyl_1657; -.
+DR   eggNOG; COG2403; Bacteria.
+DR   HOGENOM; CLU_638764_0_0_11; -.
+DR   PhylomeDB; Q1AVG0; -.
+DR   Proteomes; UP000006637; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0036356; F:cyclic 2,3-diphosphoglycerate synthetase activity; IEA:InterPro.
+DR   GO; GO:0016874; F:ligase activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0006094; P:gluconeogenesis; IEA:InterPro.
+DR   HAMAP; MF_01908; Cyc_PG_syn; 1.
+DR   InterPro; IPR016557; Cyc_diphosphoglycerate_synth.
+DR   PIRSF; PIRSF009445; Cyc_PG_syn; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Cytoplasm; Ligase; Nucleotide-binding; Reference proteome.
+FT   CHAIN           1..442
+FT                   /note="Cyclic 2,3-diphosphoglycerate synthetase"
+FT                   /id="PRO_0000313688"
+SQ   SEQUENCE   442 AA;  47038 MW;  66A18168B15375FD CRC64;
+//
+ID   CPGS_PYRFU              Reviewed;         431 AA.
+AC   Q8U4K6;
+DE   RecName: Full=Cyclic 2,3-diphosphoglycerate synthetase {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            Short=cDPGS {ECO:0000255|HAMAP-Rule:MF_01908};
+DE            EC=6.5.1.9 {ECO:0000255|HAMAP-Rule:MF_01908};
+GN   Name=cpgS {ECO:0000255|HAMAP-Rule:MF_01908}; OrderedLocusNames=PF0079;
+OS   Pyrococcus furiosus (strain ATCC 43587 / DSM 3638 / JCM 8422 / Vc1).
+OC   Archaea; Methanobacteriati; Methanobacteriota; Thermococci; Thermococcales;
+OC   Thermococcaceae; Pyrococcus.
+OX   NCBI_TaxID=186497;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 43587 / DSM 3638 / JCM 8422 / Vc1;
+RX   PubMed=10430560; DOI=10.1093/genetics/152.4.1299;
+RA   Maeder D.L., Weiss R.B., Dunn D.M., Cherry J.L., Gonzalez J.M.,
+RA   DiRuggiero J., Robb F.T.;
+RT   "Divergence of the hyperthermophilic archaea Pyrococcus furiosus and P.
+RT   horikoshii inferred from complete genomic sequences.";
+RL   Genetics 152:1299-1305(1999).
+CC   -!- FUNCTION: Catalyzes the formation of cyclic 2,3-diphosphoglycerate
+CC       (cDPG) by formation of an intramolecular phosphoanhydride bond at the
+CC       expense of ATP. {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(2R)-2,3-bisphosphoglycerate + ATP + H(+) = cyclic (2R)-2,3-
+CC         bisphosphoglycerate + ADP + phosphate; Xref=Rhea:RHEA:42412,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:58248, ChEBI:CHEBI:79081, ChEBI:CHEBI:456216; EC=6.5.1.9;
+CC         Evidence={ECO:0000255|HAMAP-Rule:MF_01908};
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000255|HAMAP-Rule:MF_01908}.
+CC   -!- SIMILARITY: Belongs to the cyclic 2,3-diphosphoglycerate synthetase
+CC       family. {ECO:0000255|HAMAP-Rule:MF_01908}.
+DR   EMBL; AE009950; AAL80203.1; -; Genomic_DNA.
+DR   RefSeq; WP_011011191.1; NC_003413.1.
+DR   AlphaFoldDB; Q8U4K6; -.
+DR   SMR; Q8U4K6; -.
+DR   STRING; 186497.PF0079; -.
+DR   PaxDb; 186497-PF0079; -.
+DR   GeneID; 1467908; -.
+DR   KEGG; pfu:PF0079; -.
+DR   PATRIC; fig|186497.12.peg.83; -.
+DR   eggNOG; arCOG01230; Archaea.
+DR   HOGENOM; CLU_638764_0_0_2; -.
+DR   OrthoDB; 85545at2157; -.
+DR   PhylomeDB; Q8U4K6; -.
+DR   Proteomes; UP000001013; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0036356; F:cyclic 2,3-diphosphoglycerate synthetase activity; IEA:InterPro.
+DR   GO; GO:0016874; F:ligase activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0006094; P:gluconeogenesis; IEA:InterPro.
+DR   Gene3D; 3.40.50.300; P-loop containing nucleotide triphosphate hydrolases; 1.
+DR   HAMAP; MF_01908; Cyc_PG_syn; 1.
+DR   InterPro; IPR016557; Cyc_diphosphoglycerate_synth.
+DR   InterPro; IPR027417; P-loop_NTPase.
+DR   PIRSF; PIRSF009445; Cyc_PG_syn; 1.
+DR   SUPFAM; SSF52540; P-loop containing nucleoside triphosphate hydrolases; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Cytoplasm; Ligase; Nucleotide-binding; Reference proteome.
+FT   CHAIN           1..431
+FT                   /note="Cyclic 2,3-diphosphoglycerate synthetase"
+FT                   /id="PRO_0000313695"
+SQ   SEQUENCE   431 AA;  47393 MW;  7D536F9EFB44F5D1 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	7	Methanobrevibacter
+3	7	Methanobacterium.
+5	6	Rubrobacter.
+3	6	Thermococcus.
+14	6	Methanobacteriaceae
+5	5	Rubrobacteraceae
+4	5	Thermococcaceae
+15	5	Methanobacteriales
+5	4	Rubrobacterales
+4	4	Thermococcales
+15	4	Methanobacteria
+5	3	Rubrobacteria
+4	3	Thermococci
+16	3	Methanomada group
+7	2	Actinomycetota
+21	2	Methanobacteriota
+7	1	Bacillati
+21	1	Methanobacteriati
+8	0	Bacteria
+21	0	Archaea
+Total of 29 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+C5A4R5	CYCLIC 2,3-DIPHOSPHOGLYCERATE S     66.1    1.3e-14   1   1.7   0.1
+	Iterate                   	   320	   408	    64.9
+	PF27272	CpgS_N          	     2	   110	   125.2
+
+C6A0T3	CYCLIC 2,3-DIPHOSPHOGLYCERATE S     75.3    1.8e-17   1   2.0   0.1
+	Iterate                   	   319	   409	    73.3
+	PF27272	CpgS_N          	     2	   109	   133.2
+
+O26325	CYCLIC 2,3-DIPHOSPHOGLYCERATE S     68.9    1.7e-15   1   1.8   0.0
+	Iterate                   	   341	   432	    67.5
+	PF27272	CpgS_N          	     8	   127	   161.4
+
+O93732	CYCLIC 2,3-DIPHOSPHOGLYCERATE S     78.6    1.7e-18   1   1.6   0.3
+	Iterate                   	   339	   430	    77.4
+	PF27272	CpgS_N          	     6	   125	   166.4
+
+Q1AVG0	CYCLIC 2,3-DIPHOSPHOGLYCERATE S    204.2    1.1e-57   1   1.8   1.8
+	Iterate                   	   325	   415	   202.9
+	PF27272	CpgS_N          	     2	   111	   124.3
+
+Q2NHT6	CYCLIC 2,3-DIPHOSPHOGLYCERATE S     69.9    8.6e-16   1   1.5   0.0
+	Iterate                   	   341	   432	    69.0
+	PF27272	CpgS_N          	     8	   126	   153.2
+
+Q5JDW8	CYCLIC 2,3-DIPHOSPHOGLYCERATE S     76.3    8.3e-18   1   1.6   0.0
+	Iterate                   	   319	   407	    75.2
+	PF27272	CpgS_N          	     2	   109	   131.2
+
+Q8TY02	CYCLIC 2,3-DIPHOSPHOGLYCERATE S     83.2      6e-20   1   2.2   1.1
+	Iterate                   	   337	   428	    81.7
+	PF27272	CpgS_N          	     6	   123	   144.3
+
+Q8U4K6	CYCLIC 2,3-DIPHOSPHOGLYCERATE S     45.1    4.6e-08   1   1.6   0.1
+	Iterate                   	   318	   405	    44.0
+	PF27272	CpgS_N          	     2	   108	   123.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS939248 (E-value: 7.3e-29, Score: 105.2)
+Mentioned as: TK1039
+Description: cyclic 2,3-diphospoglycerate synthetase
+Organism: Thermococcus kodakaraensis KOD1
+PMID: 34894218
+Source: EuropePMC
+Title: Deep Conservation of Histone Variants in Thermococcales Archaea
+Journal: Genome biology and evolution (2022)
+Snippet: (see d ). ( f, g ) Thermococcales GTDB species tree showing syntenic regions for TK1039 (light green, in f ) and TK0752 (blue, in g ) commonly found located close to the bacteria-type singlet or doublet histones. Genes are colored to indicate homology (see fig.
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A023X335.1	AF-A0A023X335-F1-model_v4_TED01:3-112	1	AF-A0A023X335-F1-model_v4_TED01	3-112	0
+A0A023X335.1	AF-A0A023X335-F1-model_v4_TED02:125-323_421-448	1	AF-A0A023X335-F1-model_v4_TED02	125-448	100.0%
+A0A023X335.1	AF-A0A023X335-F1-model_v4_TED03:325-417	1	AF-A0A023X335-F1-model_v4_TED03	325-417	100.0%
+A0A0U2L4X1.1	AF-A0A0U2L4X1-F1-model_v4_TED01:6-124	1	AF-A0A0U2L4X1-F1-model_v4_TED01	6-124	0
+A0A0U2L4X1.1	AF-A0A0U2L4X1-F1-model_v4_TED02:137-336_433-456	1	AF-A0A0U2L4X1-F1-model_v4_TED02	137-456	100.0%
+A0A0U2L4X1.1	AF-A0A0U2L4X1-F1-model_v4_TED03:337-429	1	AF-A0A0U2L4X1-F1-model_v4_TED03	337-429	100.0%
+A0A126QZ55.1	AF-A0A126QZ55-F1-model_v4_TED01:5-124	1	AF-A0A126QZ55-F1-model_v4_TED01	5-124	0
+A0A126QZ55.1	AF-A0A126QZ55-F1-model_v4_TED02:137-337_435-463	1	AF-A0A126QZ55-F1-model_v4_TED02	137-463	100.0%
+A0A126QZ55.1	AF-A0A126QZ55-F1-model_v4_TED03:338-430	1	AF-A0A126QZ55-F1-model_v4_TED03	338-430	100.0%
+A0A166CR67.1	AF-A0A166CR67-F1-model_v4_TED01:6-125	1	AF-A0A166CR67-F1-model_v4_TED01	6-125	0
+A0A166CR67.1	AF-A0A166CR67-F1-model_v4_TED02:138-336_435-459	1	AF-A0A166CR67-F1-model_v4_TED02	138-459	100.0%
+A0A166CR67.1	AF-A0A166CR67-F1-model_v4_TED03:338-430	1	AF-A0A166CR67-F1-model_v4_TED03	338-430	100.0%
+A0A166E948.1	AF-A0A166E948-F1-model_v4_TED01:6-125	1	AF-A0A166E948-F1-model_v4_TED01	6-125	0
+A0A166E948.1	AF-A0A166E948-F1-model_v4_TED02:138-337_435-461	1	AF-A0A166E948-F1-model_v4_TED02	138-461	100.0%
+A0A166E948.1	AF-A0A166E948-F1-model_v4_TED03:338-431	1	AF-A0A166E948-F1-model_v4_TED03	338-431	100.0%
+A0A166FD03.1	AF-A0A166FD03-F1-model_v4_TED01:6-125	1	AF-A0A166FD03-F1-model_v4_TED01	6-125	0
+A0A166FD03.1	AF-A0A166FD03-F1-model_v4_TED02:138-337_435-460	1	AF-A0A166FD03-F1-model_v4_TED02	138-460	100.0%
+A0A166FD03.1	AF-A0A166FD03-F1-model_v4_TED03:338-430	1	AF-A0A166FD03-F1-model_v4_TED03	338-430	100.0%
+A0A1D2RCE0.1	AF-A0A1D2RCE0-F1-model_v4_TED01:7-121	1	AF-A0A1D2RCE0-F1-model_v4_TED01	7-121	0
+A0A1D2RCE0.1	AF-A0A1D2RCE0-F1-model_v4_TED02:335-430	1	AF-A0A1D2RCE0-F1-model_v4_TED02	335-430	100.0%
+A0A1Q6DSD4.1	AF-A0A1Q6DSD4-F1-model_v4_TED01:15-141	1	AF-A0A1Q6DSD4-F1-model_v4_TED01	15-141	0
+A0A1Q6DSD4.1	AF-A0A1Q6DSD4-F1-model_v4_TED02:154-353_451-475	1	AF-A0A1Q6DSD4-F1-model_v4_TED02	154-475	100.0%
+A0A1Q6DSD4.1	AF-A0A1Q6DSD4-F1-model_v4_TED03:355-446	1	AF-A0A1Q6DSD4-F1-model_v4_TED03	355-446	100.0%
+A0A1V1RG67.1	AF-A0A1V1RG67-F1-model_v4_TED01:4-112	1	AF-A0A1V1RG67-F1-model_v4_TED01	4-112	0
+A0A1V1RG67.1	AF-A0A1V1RG67-F1-model_v4_TED02:125-324_422-444	1	AF-A0A1V1RG67-F1-model_v4_TED02	125-444	100.0%
+A0A1V1RG67.1	AF-A0A1V1RG67-F1-model_v4_TED03:325-417	1	AF-A0A1V1RG67-F1-model_v4_TED03	325-417	100.0%
+A0A328P8M7.1	AF-A0A328P8M7-F1-model_v4_TED01:4-123	1	AF-A0A328P8M7-F1-model_v4_TED01	4-123	0
+A0A328P8M7.1	AF-A0A328P8M7-F1-model_v4_TED02:136-335_433-459	1	AF-A0A328P8M7-F1-model_v4_TED02	136-459	100.0%
+A0A328P8M7.1	AF-A0A328P8M7-F1-model_v4_TED03:337-430	1	AF-A0A328P8M7-F1-model_v4_TED03	337-430	100.0%
+A0A328SHD9.1	AF-A0A328SHD9-F1-model_v4_TED01:6-124	1	AF-A0A328SHD9-F1-model_v4_TED01	6-124	0
+A0A328SHD9.1	AF-A0A328SHD9-F1-model_v4_TED02:137-337_435-457	1	AF-A0A328SHD9-F1-model_v4_TED02	137-457	100.0%
+A0A328SHD9.1	AF-A0A328SHD9-F1-model_v4_TED03:340-431	1	AF-A0A328SHD9-F1-model_v4_TED03	340-431	98.9%
+A0A4V2NX06.1	AF-A0A4V2NX06-F1-model_v4_TED01:3-111	1	AF-A0A4V2NX06-F1-model_v4_TED01	3-111	0
+A0A4V2NX06.1	AF-A0A4V2NX06-F1-model_v4_TED02:124-320_420-439	1	AF-A0A4V2NX06-F1-model_v4_TED02	124-439	100.0%
+A0A4V2NX06.1	AF-A0A4V2NX06-F1-model_v4_TED03:324-416	1	AF-A0A4V2NX06-F1-model_v4_TED03	324-416	100.0%
+A0A540WAJ8.1	AF-A0A540WAJ8-F1-model_v4_TED01:32-137	1	AF-A0A540WAJ8-F1-model_v4_TED01	32-137	0
+A0A540WAJ8.1	AF-A0A540WAJ8-F1-model_v4_TED02:149-332_439-454	1	AF-A0A540WAJ8-F1-model_v4_TED02	149-454	100.0%
+A0A540WAJ8.1	AF-A0A540WAJ8-F1-model_v4_TED03:341-429	1	AF-A0A540WAJ8-F1-model_v4_TED03	341-429	98.9%
+A0A5D0MDR6.1	AF-A0A5D0MDR6-F1-model_v4_TED01:10-137	1	AF-A0A5D0MDR6-F1-model_v4_TED01	10-137	0
+A0A5D0MDR6.1	AF-A0A5D0MDR6-F1-model_v4_TED02:150-342_450-467	1	AF-A0A5D0MDR6-F1-model_v4_TED02	150-467	100.0%
+A0A5D0MDR6.1	AF-A0A5D0MDR6-F1-model_v4_TED03:350-441	1	AF-A0A5D0MDR6-F1-model_v4_TED03	350-441	98.9%
+A0A6G8QA90.1	AF-A0A6G8QA90-F1-model_v4_TED01:9-106	1	AF-A0A6G8QA90-F1-model_v4_TED01	9-106	0
+A0A6G8QA90.1	AF-A0A6G8QA90-F1-model_v4_TED02:119-315_415-429	1	AF-A0A6G8QA90-F1-model_v4_TED02	119-429	100.0%
+A0A6G8QA90.1	AF-A0A6G8QA90-F1-model_v4_TED03:319-410	1	AF-A0A6G8QA90-F1-model_v4_TED03	319-410	100.0%
+A0A6I4MQ00.1	AF-A0A6I4MQ00-F1-model_v4_TED02:135-329_433-452	1	AF-A0A6I4MQ00-F1-model_v4_TED02	135-452	100.0%
+A0A6I4MQ00.1	AF-A0A6I4MQ00-F1-model_v4_TED03:333-426	1	AF-A0A6I4MQ00-F1-model_v4_TED03	333-426	100.0%
+A0A6I4MQ00.1	AF-A0A6I4MQ00-F1-model_v4_TED01:42-50_61-122	1	AF-A0A6I4MQ00-F1-model_v4_TED01	42-122	0
+A0A7J9WHM3.1	AF-A0A7J9WHM3-F1-model_v4_TED01:33-153	1	AF-A0A7J9WHM3-F1-model_v4_TED01	33-153	0
+A0A7J9WHM3.1	AF-A0A7J9WHM3-F1-model_v4_TED02:166-364_459-492	1	AF-A0A7J9WHM3-F1-model_v4_TED02	166-492	100.0%
+A0A7J9WHM3.1	AF-A0A7J9WHM3-F1-model_v4_TED03:365-455	1	AF-A0A7J9WHM3-F1-model_v4_TED03	365-455	98.9%
+A0A7M2YY08.1	AF-A0A7M2YY08-F1-model_v4_TED01:3-101	1	AF-A0A7M2YY08-F1-model_v4_TED01	3-101	0
+A0A7M2YY08.1	AF-A0A7M2YY08-F1-model_v4_TED02:113-298_405-423	1	AF-A0A7M2YY08-F1-model_v4_TED02	113-423	100.0%
+A0A7M2YY08.1	AF-A0A7M2YY08-F1-model_v4_TED03:306-396	1	AF-A0A7M2YY08-F1-model_v4_TED03	306-396	100.0%
+C5A4R5.1	AF-C5A4R5-F1-model_v4_TED01:3-110	1	AF-C5A4R5-F1-model_v4_TED01	3-110	0
+C5A4R5.1	AF-C5A4R5-F1-model_v4_TED02:122-318_413-437	1	AF-C5A4R5-F1-model_v4_TED02	122-437	100.0%
+C5A4R5.1	AF-C5A4R5-F1-model_v4_TED03:319-408	1	AF-C5A4R5-F1-model_v4_TED03	319-408	100.0%
+C6A0T3.1	AF-C6A0T3-F1-model_v4_TED01:1-107	1	AF-C6A0T3-F1-model_v4_TED01	1-107	0
+C6A0T3.1	AF-C6A0T3-F1-model_v4_TED02:113-315_412-429	1	AF-C6A0T3-F1-model_v4_TED02	113-429	100.0%
+C6A0T3.1	AF-C6A0T3-F1-model_v4_TED03:316-408	1	AF-C6A0T3-F1-model_v4_TED03	316-408	98.9%
+O26325.1	AF-O26325-F1-model_v4_TED01:8-127	1	AF-O26325-F1-model_v4_TED01	8-127	0
+O26325.1	AF-O26325-F1-model_v4_TED02:140-339_437-463	1	AF-O26325-F1-model_v4_TED02	140-463	100.0%
+O26325.1	AF-O26325-F1-model_v4_TED03:340-432	1	AF-O26325-F1-model_v4_TED03	340-432	100.0%
+O93732.1	AF-O93732-F1-model_v4_TED01:6-125	1	AF-O93732-F1-model_v4_TED01	6-125	0
+O93732.1	AF-O93732-F1-model_v4_TED02:138-337_435-460	1	AF-O93732-F1-model_v4_TED02	138-460	100.0%
+O93732.1	AF-O93732-F1-model_v4_TED03:338-430	1	AF-O93732-F1-model_v4_TED03	338-430	100.0%
+Q1AVG0.1	AF-Q1AVG0-F1-model_v4_TED01:3-111	1	AF-Q1AVG0-F1-model_v4_TED01	3-111	0
+Q1AVG0.1	AF-Q1AVG0-F1-model_v4_TED02:124-322_421-432	1	AF-Q1AVG0-F1-model_v4_TED02	124-432	100.0%
+Q1AVG0.1	AF-Q1AVG0-F1-model_v4_TED03:325-415	1	AF-Q1AVG0-F1-model_v4_TED03	325-415	100.0%
+Q2NHT6.1	AF-Q2NHT6-F1-model_v4_TED01:9-127	1	AF-Q2NHT6-F1-model_v4_TED01	9-127	0
+Q2NHT6.1	AF-Q2NHT6-F1-model_v4_TED02:139-339_437-460	1	AF-Q2NHT6-F1-model_v4_TED02	139-460	100.0%
+Q2NHT6.1	AF-Q2NHT6-F1-model_v4_TED03:341-434	1	AF-Q2NHT6-F1-model_v4_TED03	341-434	100.0%
+Q5JDW8.1	AF-Q5JDW8-F1-model_v4_TED01:3-109	1	AF-Q5JDW8-F1-model_v4_TED01	3-109	0
+Q5JDW8.1	AF-Q5JDW8-F1-model_v4_TED02:121-317_412-431	1	AF-Q5JDW8-F1-model_v4_TED02	121-431	100.0%
+Q5JDW8.1	AF-Q5JDW8-F1-model_v4_TED03:318-407	1	AF-Q5JDW8-F1-model_v4_TED03	318-407	100.0%
+Q8TY02.1	AF-Q8TY02-F1-model_v4_TED01:7-123	1	AF-Q8TY02-F1-model_v4_TED01	7-123	0
+Q8TY02.1	AF-Q8TY02-F1-model_v4_TED02:136-335_431-456	1	AF-Q8TY02-F1-model_v4_TED02	136-456	100.0%
+Q8TY02.1	AF-Q8TY02-F1-model_v4_TED03:337-429	1	AF-Q8TY02-F1-model_v4_TED03	337-429	100.0%
+Q8U4K6.1	AF-Q8U4K6-F1-model_v4_TED01:3-108	1	AF-Q8U4K6-F1-model_v4_TED01	3-108	0
+Q8U4K6.1	AF-Q8U4K6-F1-model_v4_TED02:120-315_410-428	1	AF-Q8U4K6-F1-model_v4_TED02	120-428	100.0%
+Q8U4K6.1	AF-Q8U4K6-F1-model_v4_TED03:316-405	1	AF-Q8U4K6-F1-model_v4_TED03	316-405	100.0%
+R9SKC5.1	AF-R9SKC5-F1-model_v4_TED01:3-122	1	AF-R9SKC5-F1-model_v4_TED01	3-122	0
+R9SKC5.1	AF-R9SKC5-F1-model_v4_TED02:135-334_432-456	1	AF-R9SKC5-F1-model_v4_TED02	135-456	100.0%
+R9SKC5.1	AF-R9SKC5-F1-model_v4_TED03:335-428	1	AF-R9SKC5-F1-model_v4_TED03	335-428	100.0%
+U6EDM6.1	AF-U6EDM6-F1-model_v4_TED01:6-125	1	AF-U6EDM6-F1-model_v4_TED01	6-125	0
+U6EDM6.1	AF-U6EDM6-F1-model_v4_TED02:138-337_434-455	1	AF-U6EDM6-F1-model_v4_TED02	138-455	100.0%
+U6EDM6.1	AF-U6EDM6-F1-model_v4_TED03:338-429	1	AF-U6EDM6-F1-model_v4_TED03	338-429	98.9%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q1AVG0_TED03/Iterate
+GA   27.00 27.00;
+TC   40.60 88.60;
+NC   25.80 21.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RC   Function description for O93732
+RN   [1]
+RM   9811660
+RT   "Cloning, sequencing, and expression of the gene encoding cyclic 2,3-
+RT   diphosphoglycerate synthetase, the key enzyme of cyclic 2,3-
+RT   diphosphoglycerate metabolism in Methanothermus fervidus.";
+RA   Matussek K., Moritz P., Brunner N., Eckerskorn C., Hensel R.;
+RL   J. Bacteriol. 180:5997-6004(1998).
+RC   Function description for O93732
+RN   [2]
+RM   2226838
+RT   "Biosynthesis of cyclic 2,3-diphosphoglycerate. Isolation and
+RT   characterization of 2-phosphoglycerate kinase and cyclic 2,3-
+RT   diphosphoglycerate synthetase from Methanothermus fervidus.";
+RA   Lehmacher A., Vogt A.-B., Hensel R.;
+RL   FEBS Lett. 272:94-98(1990).
+
+--- End of Current DESC file ---

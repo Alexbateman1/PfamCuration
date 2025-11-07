@@ -1,0 +1,43 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Streptococcus
+1	5	Streptococcaceae
+1	4	Lactobacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q5M2J7	CARBONIC ANHYDRASE {ECO:00002     27.2     0.0087   1   2.0   2.7
+	P83329                    	     2	    18	    27.2
+	PF00484	Pro_CA          	    31	   160	    53.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P83329
+GA   27.00 27.00;
+TC   27.20 27.20;
+NC   24.10 23.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,198 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   SLAPO_BREBN             Reviewed;        1004 AA.
+AC   P09333; C0Z743;
+DE   RecName: Full=Outer cell wall protein;
+DE            Short=OWP;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=BBR47_54150;
+OS   Brevibacillus brevis (strain 47 / JCM 6285 / NBRC 100599).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Paenibacillaceae;
+OC   Brevibacillus.
+OX   NCBI_TaxID=358681;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND PROTEIN SEQUENCE OF N-TERMINUS.
+RX   PubMed=2428810; DOI=10.1128/jb.168.1.365-373.1986;
+RA   Tsuboi A., Uchihi R., Tabata R., Takahashi Y., Hashiba H., Sasaki T.,
+RA   Yamagata H., Tsukagoshi N., Udaka S.;
+RT   "Characterization of the genes coding for two major cell wall proteins from
+RT   protein-producing Bacillus brevis 47: complete nucleotide sequence of the
+RT   outer wall protein gene.";
+RL   J. Bacteriol. 168:365-373(1986).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=47 / JCM 6285 / NBRC 100599;
+RA   Hosoyama A., Yamada R., Hongo Y., Terui Y., Ankai A., Masuyama W.,
+RA   Sekiguchi M., Takeda T., Asano K., Ohji S., Ichikawa N., Narita S.,
+RA   Aoki N., Miura H., Matsushita S., Sekigawa T., Yamagata H., Yoshikawa H.,
+RA   Udaka S., Tanikawa S., Fujita N.;
+RT   "Brevibacillus brevis strain 47, complete genome.";
+RL   Submitted (MAR-2005) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-85.
+RX   PubMed=2828336; DOI=10.1128/jb.170.2.935-945.1988;
+RA   Tsuboi A., Uchihi R., Adachi T., Sasaki T., Hayakawa S., Yamagata H.,
+RA   Tsukagoshi N., Udaka S.;
+RT   "Characterization of the genes for the hexagonally arranged surface layer
+RT   proteins in protein-producing Bacillus brevis 47: complete nucleotide
+RT   sequence of the middle wall protein gene.";
+RL   J. Bacteriol. 170:935-945(1988).
+CC   -!- FUNCTION: The outer wall protein binds to the middle cell wall protein.
+CC   -!- SUBUNIT: The outer cell wall layer is composed of subunits of the outer
+CC       cell wall protein. These proteins form a hexagonal array with a lattice
+CC       constant of 14.5 nm in the outer cell wall layers.
+CC   -!- SUBCELLULAR LOCATION: Secreted, cell wall, S-layer. Note=This bacterium
+CC       is covered by a S-layer with hexagonal symmetry.
+DR   EMBL; M14238; AAA22373.1; -; Genomic_DNA.
+DR   EMBL; AP008955; BAH46392.1; -; Genomic_DNA.
+DR   EMBL; M19115; AAA22761.1; -; Genomic_DNA.
+DR   PIR; B25039; B25039.
+DR   RefSeq; WP_015893588.1; NC_012491.1.
+DR   AlphaFoldDB; P09333; -.
+DR   SMR; P09333; -.
+DR   STRING; 358681.BBR47_54150; -.
+DR   KEGG; bbe:BBR47_54150; -.
+DR   eggNOG; COG0544; Bacteria.
+DR   HOGENOM; CLU_298927_0_0_9; -.
+DR   Proteomes; UP000001877; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-KW.
+DR   GO; GO:0030115; C:S-layer; IEA:UniProtKB-SubCell.
+DR   Gene3D; 2.60.40.1220; -; 5.
+DR   Gene3D; 2.60.40.10; Immunoglobulins; 1.
+DR   InterPro; IPR014755; Cu-Rt/internalin_Ig-like.
+DR   InterPro; IPR013783; Ig-like_fold.
+PE   1: Evidence at protein level;
+KW   Cell wall; Direct protein sequencing; Reference proteome; S-layer;
+KW   Secreted; Signal.
+FT   SIGNAL          1..24
+FT                   /evidence="ECO:0000269|PubMed:2428810"
+FT   CHAIN           25..1004
+FT                   /note="Outer cell wall protein"
+FT                   /id="PRO_0000032643"
+SQ   SEQUENCE   1004 AA;  106137 MW;  3534F65EBD0EDB9E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Ureibacillus
+1	6	Gottfriedia
+1	6	Fictibacillus
+1	6	Brevibacillus
+1	6	Anaerobacillus
+2	5	Caryophanaceae
+2	5	Bacillaceae
+1	5	Paenibacillaceae
+1	5	Fictibacillaceae
+6	4	Bacillales
+6	3	Bacilli
+6	2	Bacillota
+6	1	Bacillati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A167UUG2	BACTERIAL IG-LIKE DOMAIN      81.2    2.2e-19   5   7.4  39.7
+	P09333_TED03              	    95	   177	    79.3
+	P09333_TED03              	     1	    84	     6.6
+	P09333_TED03              	   396	   484	     6.2
+	P09333_TED03              	   499	   579	     5.7
+	P09333_TED03              	   289	   330	     4.9
+	PF13205	Big_5           	   275	   375	    24.9
+
+A0A176J8A5	SBSC C-TERMINAL DOMAIN-CO     64.6    3.4e-14   3   7.1   1.7
+	P09333_TED03              	   363	   446	    64.6
+	P09333_TED03              	   265	   354	    11.7
+	P09333_TED03              	   455	   537	     3.2
+	PF18058	SbsC_C          	    49	   175	     113
+	PF13205	Big_5           	   548	   650	    28.2
+
+A0A1B1Z8L3	SLH DOMAIN-CONTAINING PRO     86.5    5.1e-21   5   6.6  32.5
+	P09333_TED03              	   418	   499	    84.5
+	P09333_TED03              	   718	   801	     5.7
+	P09333_TED03              	   923	  1005	     4.4
+	P09333_TED03              	   318	   406	     3.5
+	P09333_TED03              	   821	   908	     3.2
+	PF00395	SLH             	    31	    73	    39.3
+	PF00395	SLH             	    90	   133	      40
+	PF00395	SLH             	   151	   193	    32.2
+
+A0A1S2LZQ8	S-LAYER HOMOLOGY DOMAIN-C     82.4      1e-19   3   7.8   1.1
+	P09333_TED03              	   341	   423	    82.4
+	P09333_TED03              	   739	   823	     9.4
+	P09333_TED03              	   635	   714	     3.1
+	PF00395	SLH             	    40	    83	    47.6
+	PF00395	SLH             	   107	   150	    36.8
+	PF00395	SLH             	   167	   208	    25.5
+	PF13205	Big_5           	   524	   625	    31.7
+	PF07532	Big_4           	  1035	  1091	    31.3
+
+A0A396SFY7	SLH DOMAIN-CONTAINING PRO     66.7    7.6e-15   3   6.9   0.2
+	P09333_TED03              	   377	   459	    66.7
+	P09333_TED03              	   677	   762	    11.7
+	P09333_TED03              	   283	   368	    11.6
+	PF00395	SLH             	    29	    73	    43.3
+	PF00395	SLH             	    89	   131	    25.9
+	PF00395	SLH             	   148	   191	      35
+	PF07532	Big_4           	   210	   265	    51.5
+	PF04234	CopC            	   563	   649	    26.9
+
+A0A494YUS0	SLH DOMAIN-CONTAINING PRO     67.6    4.1e-15   3   6.4   0.1
+	P09333_TED03              	   381	   463	    67.6
+	P09333_TED03              	   287	   372	    11.9
+	P09333_TED03              	   682	   769	     5.6
+	PF00395	SLH             	    29	    71	    43.9
+	PF00395	SLH             	    94	   139	    15.7
+
+A0A812TWL9	UNCHARACTERIZED PROTEIN {     47.7    6.5e-09  10  12.1   8.2
+	P09333_TED03              	   243	   278	     3.7
+	P09333_TED03              	   212	   245	     3.6
+	P09333_TED03              	   372	   403	     3.5
+	P09333_TED03              	   435	   467	     3.5
+	P09333_TED03              	   275	   306	     3.4
+	P09333_TED03              	   308	   341	     3.4
+	P09333_TED03              	   404	   438	     3.4
+	P09333_TED03              	   148	   177	     3.2
+	P09333_TED03              	   180	   208	     3.2
+	P09333_TED03              	   340	   368	     3.1
+
+A0A940NUL3	UNCHARACTERIZED PROTEIN {     80.9    2.8e-19   1   7.1   3.8
+	P09333_TED03              	   503	   585	    80.9
+
+P09333	OUTER CELL WALL PROTEIN           182.1    7.4e-51   3   6.9   5.9
+	P09333_TED03              	   227	   309	   182.1
+	P09333_TED03              	   632	   718	     4.5
+	P09333_TED03              	   530	   583	     3.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P09333.1	AF-P09333-F1-model_v4_TED01:30-126	1	AF-P09333-F1-model_v4_TED01	30-126	0
+P09333.1	AF-P09333-F1-model_v4_TED02:137-219	1	AF-P09333-F1-model_v4_TED02	137-219	0
+P09333.1	AF-P09333-F1-model_v4_TED03:227-309	1	AF-P09333-F1-model_v4_TED03	227-309	100.0%
+P09333.1	AF-P09333-F1-model_v4_TED04:319-413	1	AF-P09333-F1-model_v4_TED04	319-413	0
+P09333.1	AF-P09333-F1-model_v4_TED05:422-512	1	AF-P09333-F1-model_v4_TED05	422-512	0
+P09333.1	AF-P09333-F1-model_v4_TED06:520-621	1	AF-P09333-F1-model_v4_TED06	520-621	0
+P09333.1	AF-P09333-F1-model_v4_TED07:631-725	1	AF-P09333-F1-model_v4_TED07	631-725	0
+P09333.1	AF-P09333-F1-model_v4_TED08:731-822	1	AF-P09333-F1-model_v4_TED08	731-822	0
+P09333.1	AF-P09333-F1-model_v4_TED09:837-904	1	AF-P09333-F1-model_v4_TED09	837-904	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P09333_TED03
+GA   27.00 27.00;
+TC   27.10 45.30;
+NC   25.90 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

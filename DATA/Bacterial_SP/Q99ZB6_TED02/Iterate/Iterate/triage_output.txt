@@ -1,0 +1,178 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MALA_STRP1              Reviewed;         271 AA.
+AC   Q99ZB6; Q48Y92;
+DE   RecName: Full=Maltodextrose utilization protein MalA;
+GN   Name=malA; OrderedLocusNames=SPy_1298, M5005_Spy1062;
+OS   Streptococcus pyogenes serotype M1.
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae;
+OC   Streptococcus.
+OX   NCBI_TaxID=301447;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700294 / SF370 / Serotype M1;
+RX   PubMed=11296296; DOI=10.1073/pnas.071559398;
+RA   Ferretti J.J., McShan W.M., Ajdic D.J., Savic D.J., Savic G., Lyon K.,
+RA   Primeaux C., Sezate S., Suvorov A.N., Kenton S., Lai H.S., Lin S.P.,
+RA   Qian Y., Jia H.G., Najar F.Z., Ren Q., Zhu H., Song L., White J., Yuan X.,
+RA   Clifton S.W., Roe B.A., McLaughlin R.E.;
+RT   "Complete genome sequence of an M1 strain of Streptococcus pyogenes.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:4658-4663(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-947 / MGAS5005 / Serotype M1;
+RX   PubMed=16088826; DOI=10.1086/432514;
+RA   Sumby P., Porcella S.F., Madrigal A.G., Barbian K.D., Virtaneva K.,
+RA   Ricklefs S.M., Sturdevant D.E., Graham M.R., Vuopio-Varkila J., Hoe N.P.,
+RA   Musser J.M.;
+RT   "Evolutionary origin and emergence of a highly successful clone of serotype
+RT   M1 group A Streptococcus involved multiple horizontal gene transfer
+RT   events.";
+RL   J. Infect. Dis. 192:771-782(2005).
+CC   -!- FUNCTION: Has a role in maltotetraose utilization. {ECO:0000250}.
+DR   EMBL; AE004092; AAK34146.1; -; Genomic_DNA.
+DR   EMBL; CP000017; AAZ51680.1; -; Genomic_DNA.
+DR   RefSeq; NP_269425.1; NC_002737.2.
+DR   AlphaFoldDB; Q99ZB6; -.
+DR   KEGG; spy:SPy_1298; -.
+DR   KEGG; spz:M5005_Spy1062; -.
+DR   PATRIC; fig|160490.10.peg.1138; -.
+DR   HOGENOM; CLU_082338_0_0_9; -.
+DR   OMA; PITLHYA; -.
+DR   Proteomes; UP000000750; Chromosome.
+DR   InterPro; IPR016546; Maltodextrose_util_MalA.
+DR   PIRSF; PIRSF009136; Maltodextrose_util_MalA; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome.
+FT   CHAIN           1..271
+FT                   /note="Maltodextrose utilization protein MalA"
+FT                   /id="PRO_0000084558"
+SQ   SEQUENCE   271 AA;  30941 MW;  7E2484B0D68539F4 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Streptococcus
+1	6	Granulicatella.
+1	6	Aerococcus
+2	5	Streptococcaceae
+1	5	Carnobacteriaceae
+1	5	Aerococcaceae
+4	4	Lactobacillales
+4	3	Bacilli
+4	2	Bacillota
+4	1	Bacillati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0X8F8W7	MALTODEXTROSE UTILIZATION    156.0    8.8e-43   1   1.2   0.1
+	Iterate                   	    60	   153	   155.5
+
+A0A1H9HQZ2	MALTODEXTRIN UTILIZATION      63.7    5.4e-14   1   1.4   0.1
+	Iterate                   	    57	   150	    63.0
+
+A0A3L9DNU7	DUF1189 DOMAIN-CONTAINING    147.0    5.7e-40   1   1.3   0.1
+	Iterate                   	    57	   149	   146.4
+
+A0A5J6WTX6	RETENTION MODULE-CONTAINI     58.6      2e-12  11  20.6  30.2
+	Iterate                   	   810	   846	     3.1
+	Iterate                   	   911	   945	     3.1
+	Iterate                   	  1106	  1143	     3.1
+	Iterate                   	  1700	  1737	     3.1
+	Iterate                   	   517	   549	     2.8
+	Iterate                   	  1012	  1044	     2.8
+	Iterate                   	  1210	  1242	     2.8
+	Iterate                   	  1606	  1638	     2.8
+	Iterate                   	  1804	  1836	     2.8
+	Iterate                   	  1501	  1539	     2.5
+	Iterate                   	  2095	  2133	     2.5
+	PF17803	Cadherin_4      	   259	   329	    41.3
+	PF17892	Cadherin_5      	   262	   361	    53.7
+	PF17963	Big_9           	   263	   359	    61.1
+	PF17803	Cadherin_4      	   354	   430	    31.1
+	PF17803	Cadherin_4      	   460	   528	    40.1
+	PF17963	Big_9           	   470	   568	    24.8
+	PF17803	Cadherin_4      	   559	   627	    46.9
+	PF17963	Big_9           	   569	   667	    28.8
+	PF17803	Cadherin_4      	   658	   726	    44.4
+	PF17963	Big_9           	   668	   766	    28.6
+	PF17803	Cadherin_4      	   757	   825	    43.7
+	PF17963	Big_9           	   767	   865	    26.7
+	PF17803	Cadherin_4      	   856	   924	    49.3
+	PF17963	Big_9           	   866	   964	    30.6
+	PF17803	Cadherin_4      	   955	  1023	    45.8
+	PF17963	Big_9           	   965	  1063	    29.5
+	PF17803	Cadherin_4      	  1054	  1122	    47.9
+	PF17963	Big_9           	  1064	  1162	    29.2
+	PF17803	Cadherin_4      	  1153	  1221	    45.8
+	PF17963	Big_9           	  1163	  1261	    29.5
+	PF17803	Cadherin_4      	  1252	  1320	    47.9
+	PF17963	Big_9           	  1262	  1360	    32.1
+	PF17803	Cadherin_4      	  1351	  1419	    43.1
+	PF17963	Big_9           	  1361	  1459	    23.6
+	PF17803	Cadherin_4      	  1450	  1518	    45.7
+	PF17963	Big_9           	  1460	  1558	    28.2
+	PF17803	Cadherin_4      	  1549	  1617	      40
+	PF17963	Big_9           	  1559	  1657	    25.3
+	PF17803	Cadherin_4      	  1648	  1716	    47.9
+	PF17963	Big_9           	  1658	  1756	    29.2
+	PF17803	Cadherin_4      	  1747	  1815	    45.8
+	PF17963	Big_9           	  1757	  1855	    29.5
+	PF17803	Cadherin_4      	  1846	  1914	    47.9
+	PF17963	Big_9           	  1856	  1954	    32.1
+	PF17803	Cadherin_4      	  1945	  2013	    43.1
+	PF17963	Big_9           	  1955	  2053	    23.6
+	PF17803	Cadherin_4      	  2044	  2112	    45.7
+	PF17963	Big_9           	  2054	  2152	    28.2
+	PF17803	Cadherin_4      	  2143	  2211	    41.5
+	PF17963	Big_9           	  2153	  2251	    26.7
+	PF17803	Cadherin_4      	  2242	  2310	    46.7
+	PF17963	Big_9           	  2252	  2350	    32.3
+	PF17803	Cadherin_4      	  2341	  2409	    48.1
+	PF17963	Big_9           	  2351	  2449	    30.8
+	PF17803	Cadherin_4      	  2440	  2508	    48.1
+	PF17963	Big_9           	  2450	  2548	      29
+	PF00353	HemolysinCabind 	  3351	  3382	    14.7
+	PF00092	VWA             	  3597	  3735	    28.4
+	PF00353	HemolysinCabind 	  3883	  3902	    15.9
+	PF00353	HemolysinCabind 	  3950	  3984	    32.8
+	PF00353	HemolysinCabind 	  3976	  4011	    36.2
+	PF00353	HemolysinCabind 	  3985	  4020	    34.5
+	PF00353	HemolysinCabind 	  4012	  4047	    30.7
+
+Q99ZB6	MALTODEXTROSE UTILIZATION PROTE    151.5    2.3e-41   1   1.2   0.3
+	Iterate                   	    61	   154	   151.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0X8F8W7.1	AF-A0A0X8F8W7-F1-model_v4_TED01:7-54_177-267	1	AF-A0A0X8F8W7-F1-model_v4_TED01	7-267	100.0%
+A0A0X8F8W7.1	AF-A0A0X8F8W7-F1-model_v4_TED02:64-171	1	AF-A0A0X8F8W7-F1-model_v4_TED02	64-171	95.7%
+A0A1H9HQZ2.1	AF-A0A1H9HQZ2-F1-model_v4_TED01:5-51_173-264	1	AF-A0A1H9HQZ2-F1-model_v4_TED01	5-264	100.0%
+A0A1H9HQZ2.1	AF-A0A1H9HQZ2-F1-model_v4_TED02:57-168	1	AF-A0A1H9HQZ2-F1-model_v4_TED02	57-168	100.0%
+A0A3L9DNU7.1	AF-A0A3L9DNU7-F1-model_v4_TED01:5-52_172-265	1	AF-A0A3L9DNU7-F1-model_v4_TED01	5-265	100.0%
+A0A3L9DNU7.1	AF-A0A3L9DNU7-F1-model_v4_TED02:61-168	1	AF-A0A3L9DNU7-F1-model_v4_TED02	61-168	95.7%
+Q99ZB6.1	AF-Q99ZB6-F1-model_v4_TED01:8-54_176-266	1	AF-Q99ZB6-F1-model_v4_TED01	8-266	100.0%
+Q99ZB6.1	AF-Q99ZB6-F1-model_v4_TED02:61-154	1	AF-Q99ZB6-F1-model_v4_TED02	61-154	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q99ZB6_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   29.30 133.80;
+NC   25.30 22.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

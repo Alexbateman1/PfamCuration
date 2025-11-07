@@ -1,0 +1,100 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	10	Physcomitrium.
+1	10	Diploscapter.
+1	9	Rhabditidae
+1	9	Funariaceae
+1	8	Rhabditoidea
+1	8	Funariales
+1	8	Dispira.
+1	7	Rhabditomorpha
+1	7	Funariidae
+1	7	Dimargaritaceae
+1	6	Thiomargarita.
+1	6	Rhabditina
+1	6	Dimargaritales
+1	6	Bryopsida
+1	6	Alicyclobacillus
+1	5	Thiotrichaceae
+1	5	Rhabditida
+1	5	Dimargaritomycetes
+1	5	Bryophytina
+1	5	Alicyclobacillaceae
+1	4	Thiotrichales
+1	4	Kickxellomycotina
+1	4	Chromadorea
+1	4	Bryophyta
+1	4	Bacillales
+1	3	Zoopagomycota
+1	3	Nematoda
+1	3	Gammaproteobacteria
+1	3	Embryophyta
+1	3	Bacilli
+1	2	Streptophyta
+1	2	Pseudomonadota
+1	2	Fungi incertae sedis
+1	2	Ecdysozoa
+1	2	Bacillota
+1	1	Viridiplantae
+1	1	Pseudomonadati
+1	1	Metazoa
+1	1	Fungi
+1	1	Bacillati
+3	0	Eukaryota
+2	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1Y3KLC8	UNCHARACTERIZED PROTEIN {    395.7   1.9e-114   1   1.3   0.0
+	Iterate                   	     1	   622	   395.0
+
+A0A2A2JZA4	UNCHARACTERIZED PROTEIN {    363.3   1.2e-104   1   1.3   0.0
+	Iterate                   	     1	   604	   362.6
+
+A0A2N5GUR5	UNCHARACTERIZED PROTEIN {     86.6    6.9e-21   1   1.3  15.5
+	Iterate                   	     1	   525	    86.0
+
+A0A419Z145	UNCHARACTERIZED PROTEIN {    230.5    1.9e-64   1   1.5   0.0
+	Iterate                   	     1	   627	   229.4
+
+A0A4E0R5J3	UNCHARACTERIZED PROTEIN {     88.3    2.1e-21   2   2.4   5.3
+	Iterate                   	   154	   575	    85.5
+	Iterate                   	     1	   105	     3.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Y3KLC8.1	AF-A0A1Y3KLC8-F1-model_v4_TED01:6-152	1	AF-A0A1Y3KLC8-F1-model_v4_TED01	6-152	23.6%
+A0A1Y3KLC8.1	AF-A0A1Y3KLC8-F1-model_v4_TED03:336-533	1	AF-A0A1Y3KLC8-F1-model_v4_TED03	336-533	31.8%
+A0A1Y3KLC8.1	AF-A0A1Y3KLC8-F1-model_v4_TED04:538-630	1	AF-A0A1Y3KLC8-F1-model_v4_TED04	538-630	13.7%
+A0A1Y3KLC8.1	AF-A0A1Y3KLC8-F1-model_v4_TED02:185-275	1	AF-A0A1Y3KLC8-F1-model_v4_TED02	185-275	14.6%
+A0A2N5GUR5.1	AF-A0A2N5GUR5-F1-model_v4_TED01:8-161	1	AF-A0A2N5GUR5-F1-model_v4_TED01	8-161	27.0%
+A0A2N5GUR5.1	AF-A0A2N5GUR5-F1-model_v4_TED02:197-304	1	AF-A0A2N5GUR5-F1-model_v4_TED02	197-304	18.9%
+A0A2N5GUR5.1	AF-A0A2N5GUR5-F1-model_v4_TED03:337-632	1	AF-A0A2N5GUR5-F1-model_v4_TED03	337-632	41.2%
+A0A419Z145.1	AF-A0A419Z145-F1-model_v4_TED01:4-158	1	AF-A0A419Z145-F1-model_v4_TED01	4-158	25.0%
+A0A419Z145.1	AF-A0A419Z145-F1-model_v4_TED02:177-310	1	AF-A0A419Z145-F1-model_v4_TED02	177-310	21.6%
+A0A419Z145.1	AF-A0A419Z145-F1-model_v4_TED03:335-634	1	AF-A0A419Z145-F1-model_v4_TED03	335-634	46.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DW36/Iterate
+GA   27.00 27.00;
+TC   27.90 28.30;
+NC   26.10 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

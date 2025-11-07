@@ -1,0 +1,92 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YZ01_AQUAE              Reviewed;         133 AA.
+AC   O66398;
+DE   RecName: Full=Uncharacterized protein aq_aa01;
+GN   OrderedLocusNames=aq_aa01;
+OS   Aquifex aeolicus (strain VF5).
+OG   Plasmid ece1.
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000667; AAC07950.1; -; Genomic_DNA.
+DR   AlphaFoldDB; O66398; -.
+DR   SMR; O66398; -.
+DR   EnsemblBacteria; AAC07950; AAC07950; aq_aa01.
+DR   HOGENOM; CLU_1902321_0_0_0; -.
+DR   InParanoid; O66398; -.
+DR   Proteomes; UP000000798; Plasmid ece1.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..133
+FT                   /note="Uncharacterized protein aq_aa01"
+FT                   /id="PRO_0000186979"
+SQ   SEQUENCE   133 AA;  15783 MW;  D498BC670ACF15CE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Anaerobacillus
+3	5	Bacillaceae
+6	4	Bacillales
+2	4	Eubacteriales
+6	3	Bacilli
+3	3	Clostridia
+10	2	Bacillota
+2	1	Pseudomonadati
+10	1	Bacillati
+12	0	Bacteria
+Total of 12 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1I5P0Y5	UNCHARACTERIZED PROTEIN {    213.4    3.9e-60   1   1.0  10.3
+	Iterate                   	    15	   139	   213.2
+
+A6Q187	UNCHARACTERIZED PROTEIN {ECO:     42.4      3e-07   1   1.3   1.9
+	Iterate                   	    26	   149	    42.0
+
+A6Q271	PHAGE HEAD MORPHOGENESIS DOMA    130.5    1.7e-34   2   2.3   3.7
+	Iterate                   	   357	   481	   130.5
+	Iterate                   	   297	   361	     2.6
+
+M5AAH5	PHAGE HEAD MORPHOGENESIS PROT    130.5    1.7e-34   2   2.3   3.7
+	Iterate                   	   357	   481	   130.5
+	Iterate                   	   297	   361	     2.6
+
+O66398	UNCHARACTERIZED PROTEIN AQ_AA01    202.2    1.1e-56   1   1.0   0.4
+	Iterate                   	    15	   127	   201.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1I5P0Y5.1	AF-A0A1I5P0Y5-F1-model_v4_TED01:4-142	1	AF-A0A1I5P0Y5-F1-model_v4_TED01	4-142	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66398_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.00 27.10;
+NC   26.80 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,258 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1822_CORGL             Reviewed;         279 AA.
+AC   Q8NPJ0; Q6M4F8;
+DE   RecName: Full=Uncharacterized protein Cgl1822/cg2042 {ECO:0000305};
+DE   Flags: Precursor;
+GN   OrderedLocusNames=cg2042, Cgl1822;
+OS   Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM 1318 / BCRC
+OS   11384 / CCUG 27702 / LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 /
+OS   534).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Corynebacteriaceae; Corynebacterium.
+OX   NCBI_TaxID=196627;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 /
+RC   LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534;
+RX   PubMed=12743753; DOI=10.1007/s00253-003-1328-1;
+RA   Ikeda M., Nakagawa S.;
+RT   "The Corynebacterium glutamicum genome: features and impacts on
+RT   biotechnological processes.";
+RL   Appl. Microbiol. Biotechnol. 62:99-109(2003).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 /
+RC   LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534;
+RX   PubMed=12948626; DOI=10.1016/s0168-1656(03)00154-8;
+RA   Kalinowski J., Bathe B., Bartels D., Bischoff N., Bott M., Burkovski A.,
+RA   Dusch N., Eggeling L., Eikmanns B.J., Gaigalat L., Goesmann A.,
+RA   Hartmann M., Huthmacher K., Kraemer R., Linke B., McHardy A.C., Meyer F.,
+RA   Moeckel B., Pfefferle W., Puehler A., Rey D.A., Rueckert C., Rupp O.,
+RA   Sahm H., Wendisch V.F., Wiegraebe I., Tauch A.;
+RT   "The complete Corynebacterium glutamicum ATCC 13032 genome sequence and its
+RT   impact on the production of L-aspartate-derived amino acids and vitamins.";
+RL   J. Biotechnol. 104:5-25(2003).
+DR   EMBL; BA000036; BAB99215.1; -; Genomic_DNA.
+DR   EMBL; BX927153; CAF20201.1; -; Genomic_DNA.
+DR   RefSeq; NP_601025.1; NC_003450.3.
+DR   RefSeq; WP_011265822.1; NC_003450.3.
+DR   AlphaFoldDB; Q8NPJ0; -.
+DR   STRING; 196627.cg2042; -.
+DR   GeneID; 1019779; -.
+DR   KEGG; cgb:cg2042; -.
+DR   KEGG; cgl:Cgl1822; -.
+DR   PATRIC; fig|196627.13.peg.1764; -.
+DR   HOGENOM; CLU_996438_0_0_11; -.
+DR   OrthoDB; 4385401at2; -.
+DR   BioCyc; CORYNE:G18NG-11414-MONOMER; -.
+DR   BRENDA; 2.4.2.47; 960.
+DR   Proteomes; UP000000582; Chromosome.
+DR   Proteomes; UP000001009; Chromosome.
+DR   NCBIfam; NF038186; YPDG_rpt; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..31
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           32..279
+FT                   /note="Uncharacterized protein Cgl1822/cg2042"
+FT                   /id="PRO_0000420581"
+SQ   SEQUENCE   279 AA;  29952 MW;  F91AB45E09B3E59D CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Corynebacterium.
+3	5	Corynebacteriaceae
+3	4	Mycobacteriales
+3	3	Actinomycetes
+3	2	Actinomycetota
+3	1	Bacillati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1E9AD04	GRAM-POSITIVE COCCI SURFA     59.4    1.6e-12   9  13.1  25.5
+	Iterate                   	  1453	  1508	    12.0
+	Iterate                   	   655	   729	     8.4
+	Iterate                   	   766	   828	     6.3
+	Iterate                   	   846	   922	     6.3
+	Iterate                   	  1996	  2050	     4.8
+	Iterate                   	  1794	  1848	     4.7
+	Iterate                   	  1895	  1949	     4.7
+	Iterate                   	   567	   616	     4.4
+	Iterate                   	   964	  1023	     3.7
+	PF04650	YSIRK_signal    	    15	    40	    45.5
+	PF18957	RibLong         	   529	   615	    53.7
+	PF18957	RibLong         	   635	   729	    64.3
+	PF18957	RibLong         	   733	   827	      68
+	PF18957	RibLong         	   831	   924	    70.8
+	PF18957	RibLong         	   928	  1022	    62.7
+	PF18957	RibLong         	  1026	  1118	    80.1
+	PF18957	RibLong         	  1122	  1214	    79.5
+	PF18957	RibLong         	  1218	  1310	    85.8
+	PF18957	RibLong         	  1314	  1406	    86.2
+	PF18957	RibLong         	  1415	  1507	    88.9
+	PF08428	Rib             	  1422	  1508	    22.9
+	PF18957	RibLong         	  1756	  1848	    85.1
+	PF18957	RibLong         	  1857	  1949	    85.9
+	PF18957	RibLong         	  1958	  2050	    87.3
+	PF00746	Gram_pos_anchor 	  2146	  2188	    33.5
+
+F8E3C8	CELL SURFACE PROTEIN {ECO:000     78.1    2.4e-18   6   6.8   7.5
+	Iterate                   	   618	   671	    12.6
+	Iterate                   	   725	   778	    12.6
+	Iterate                   	   832	   885	    12.6
+	Iterate                   	   939	   992	    12.6
+	Iterate                   	  1046	  1099	    12.6
+	Iterate                   	  1153	  1206	    12.6
+	PF18957	RibLong         	   573	   670	    91.3
+	PF18957	RibLong         	   680	   777	    90.4
+	PF18957	RibLong         	   787	   884	    90.4
+	PF18957	RibLong         	   894	   991	    90.4
+	PF18957	RibLong         	  1001	  1098	    90.4
+	PF18957	RibLong         	  1108	  1205	    90.4
+
+Q8NPH5	UNCHARACTERIZED PROTEIN {ECO:    140.3      1e-37   1   1.0   0.5
+	Iterate                   	     1	    82	   140.1
+
+Q8NPH6	LONG RIB DOMAIN-CONTAINING PR    149.5    1.3e-40   1   2.2   0.4
+	Iterate                   	   158	   259	   145.7
+	PF18957	RibLong         	    38	   151	    36.4
+
+Q8NPJ0	UNCHARACTERIZED PROTEIN CGL182    227.2    8.3e-65   1   1.9   2.0
+	Iterate                   	   162	   262	   227.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS5916973 (E-value: 1e-60, Score: 207.5)
+Mentioned as: cg2057
+Description: putative secreted protein
+Organism: Corynebacterium glutamicum ATCC 13032
+PMID: 17204139
+Source: EuropePMC
+Title: The alternative sigma factor SigB of Corynebacterium glutamicum modulates global gene expression during transition from exponential growth to stationary phase
+Journal: BMC genomics (2007)
+Snippet: protein 1.59 cg1286 conserved hypothetical protein 1.55 cg1304 secreted protein 1.58 cg1417 GCN5-related N-acetyltransferase 1.41 cg2057 secreted protein 1.35 cg2105 conserved hypothetical protein 1.14 cg2797 conserved hypothetical protein 1.21 cg2850 conserved hypothetical protein 1.14 cg3022 conserved hypothetical protein 1.15 cg3329 conserved hypothetical protein 1.09 cg3330 putative
+
+================================================================================
+Protein: VIMSS5916974 (E-value: 1.6e-38, Score: 136.2)
+Mentioned as: cg2058
+Description: hypothetical protein
+Organism: Corynebacterium glutamicum ATCC 13032
+PMID: 21799779
+Source: EuropePMC
+Title: The two-component signal transduction system CopRS of Corynebacterium glutamicum is required for adaptation to copper-excess stress
+Journal: PloS one (2011)
+Snippet: cg1514 NCgl1289 protein of unknown function 0.32 cg1918 NCgl1635 secreted protein of unknown function 0.32 cg2058 protein of unknown function 0.25 cg2348 NCgl2059 lipoprotein of unknown function 4.55 cg2799 NCgl2452 secreted protein of unknown function 3.88 cg3343 NCgl2912 secreted membrane protein of unknown function 0.31 cg3344
+
+================================================================================
+Protein: Q5FIM8 (E-value: 8.2e-13, Score: 53.6)
+Mentioned as: Q5FIM8
+Description: Surface protein
+Organism: Lactobacillus acidophilus (strain ATCC 700396 / NCK56 / N2 / NCFM)
+PMID: 40274962
+Source: EuropePMC
+Title: Calcium modulates growth and biofilm formation of Lactobacillus acidophilus ATCC 4356 and Lactiplantibacillus plantarum ATCC 14917
+Journal: Scientific reports (2025)
+
+================================================================================
+Protein: Q5FIM8 (E-value: 8.2e-13, Score: 53.6)
+Mentioned as: Q5FIM8
+Description: Surface protein
+Organism: Lactobacillus acidophilus (strain ATCC 700396 / NCK56 / N2 / NCFM)
+PMID: 31818940
+Source: EuropePMC
+Title: Defining the remarkable structural malleability of a bacterial surface protein Rib domain implicated in infection
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2019)
+Snippet: of protein sequence repeats. The domain architecture of S. agalactiae Rib, S. pyogenes R28, and Q5FIM8 proteins are at the top of the figure, with the domains used for structure solution indicated. Structure of RibR and R28N. Structures of single Rib domains with 38% sequence identity
+
+================================================================================
+Protein: Q02192 (E-value: 1.1e-12, Score: 53.3)
+Mentioned as: Q02192
+Description: C protein alpha-antigen
+Organism: Streptococcus agalactiae serotype Ia (strain ATCC 27591 / A909 / CDC SS700)
+PMID: 39550419
+Source: EuropePMC
+Title: Bioinformatics analysis to design a multi-epitope mRNA vaccine against S. agalactiae exploiting pathogenic proteins
+Journal: Scientific reports (2024)
+Snippet: antigenic sequences The complete nucleotide and amino acid sequences of the C antigen (accession number: Q02192), Rib (accession number: P72362), and Sip (accession number: UZH94930) of S. agalactia were retrieved in FASTA file format from the NCBI ( https://www.ncbi.nlm.nih.gov/ ) and UniProt knowledgebase ( https://www.uniprot.org/ )
+
+================================================================================
+Protein: Q02192 (E-value: 1.1e-12, Score: 53.3)
+Mentioned as: Q02192
+Description: C protein alpha-antigen
+Organism: Streptococcus agalactiae serotype Ia (strain ATCC 27591 / A909 / CDC SS700)
+PMID: 16848907
+Source: EuropePMC
+Title: NERVE: new enhanced reverse vaccinology environment
+Journal: BMC biotechnology (2006)
+Snippet: GBS80 , C5a-ase , C protein alpha-antigen , C protein beta-antigen Q3K3Z5 Q3K246 Q3K250 Q3K0M1 Q02192 Q3K3P4 [8] Neisseria meningitidis B MC58 NspA , PorA , TbpA , TbpB , GNA33 , GNA992 , NadA , App , GNA1870 Q7DDM2 Q51240 Q9K0U9 Q9K0V0 Q7DDU3 Q7DDJ2 Q9JXK7
+
+================================================================================
+Protein: Q02192 (E-value: 1.1e-12, Score: 53.3)
+Mentioned as: Q02192
+Description: C protein alpha-antigen
+Organism: Streptococcus agalactiae serotype Ia (strain ATCC 27591 / A909 / CDC SS700)
+PMID: 15968079
+Source: EuropePMC
+Title: Complete genome sequence and analysis of the multiresistant nosocomial pathogen Corynebacterium jeikeium K411, a lipid-requiring bacterium of the human skin flora
+Journal: Journal of bacteriology (2005)
+Snippet: pyogenes Streptococcus agalactiae AAD39085 Q02192 Corynebacterium diphtheriae Corynebacterium diphtheriae Corynebacterium diphtheriae Corynebacterium
+
+================================================================================
+Protein: VIMSS925565 (E-value: 5e-08, Score: 38.3)
+Mentioned as: M28_Spy1336
+Description: R28 protein
+Organism: Streptococcus pyogenes MGAS6180
+PMID: 26184934
+Source: EuropePMC
+Title: Complete Genome Sequence of Streptococcus pyogenes emm28 Clinical Isolate M28PF1, Responsible for a Puerperal Fever
+Journal: Genome announcements (2015)
+Snippet: intergenic. The M28PF1 M28 protein lacks one 35 amino-acid repeat. One failing PCR overlaps the M28_Spy1336 gene encoding the R28 protein, most certainly due to the large number of repetitions. The R28 repetition number varies, yielding proteins of different sizes ( 8 ). Western blot analysis
+
+================================================================================
+Protein: VIMSS925565 (E-value: 5e-08, Score: 38.3)
+Mentioned as: M28_Spy1336
+Description: R28 protein
+Organism: Streptococcus pyogenes MGAS6180
+PMID: 21457552
+Source: EuropePMC
+Title: Lateral gene transfer of streptococcal ICE element RD2 (region of difference 2) encoding secreted proteins
+Journal: BMC microbiology (2011)
+Snippet: encodes seven secreted extracellular proteins that are expressed in human infections. One of these proteins (M28_Spy1336) is also known as the R28 protein, and has been previously studied in GAS and group B Streptococcus (GBS) [ 4 - 7 ]. The R28 protein has been implicated
+
+================================================================================
+Protein: VIMSS925565 (E-value: 5e-08, Score: 38.3)
+
+... (truncated - showing first 100 of 109 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q8NPH6.1	AF-Q8NPH6-F1-model_v4_TED01:38-152	1	AF-Q8NPH6-F1-model_v4_TED01	38-152	0
+Q8NPH6.1	AF-Q8NPH6-F1-model_v4_TED02:158-259	1	AF-Q8NPH6-F1-model_v4_TED02	158-259	100.0%
+Q8NPJ0.1	AF-Q8NPJ0-F1-model_v4_TED01:38-156	1	AF-Q8NPJ0-F1-model_v4_TED01	38-156	0
+Q8NPJ0.1	AF-Q8NPJ0-F1-model_v4_TED02:162-262	1	AF-Q8NPJ0-F1-model_v4_TED02	162-262	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q8NPJ0_TED02/Iterate
+GA   27.00 27.00;
+TC   27.10 146.30;
+NC   26.90 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

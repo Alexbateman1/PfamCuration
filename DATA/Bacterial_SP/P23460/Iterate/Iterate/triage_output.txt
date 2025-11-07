@@ -1,0 +1,81 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Roseobacter.
+3	6	Roseicyclus.
+2	6	Rhodobacter.
+2	6	Marivita.
+5	5	Paracoccaceae
+2	5	Rhodobacter group
+11	5	Roseobacteraceae
+18	4	Rhodobacterales
+18	3	Alphaproteobacteria
+18	2	Pseudomonadota
+18	1	Pseudomonadati
+18	0	Bacteria
+Total of 18 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1N7IUQ6	UNCHARACTERIZED PROTEIN {    197.5    1.9e-55   1   1.0   0.3
+	Iterate                   	     1	   118	   197.4
+
+A0A640VXG0	UNCHARACTERIZED PROTEIN {    140.7      8e-38   1   1.3   1.2
+	Iterate                   	   115	   230	   140.1
+
+A0A8J7W843	UNCHARACTERIZED PROTEIN {    182.7    7.6e-51   1   1.3   0.5
+	Iterate                   	   110	   227	   182.0
+
+D5AMI7	LIGHT-HARVESTING PROTEIN B-80    196.2    4.8e-55   1   1.2   0.7
+	Iterate                   	   114	   232	   195.8
+
+W8RY60	LIGHT-HARVESTING PROTEIN {ECO    188.8    9.5e-53   1   1.2   1.2
+	Iterate                   	    91	   209	   188.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3609513 (E-value: 3.4e-52, Score: 181.5)
+Mentioned as: Dshi_2897
+Description: hypothetical protein
+Organism: Dinoroseobacter shibae DFL 12
+PMID: 21654848
+Source: EuropePMC
+Title: Transcriptional response of the photoheterotrophic marine bacterium Dinoroseobacter shibae to changing light regimes
+Journal: The ISME journal (2011)
+Snippet: Dshi_3547; the puc operon consists of the genes Dshi_2897 to Dshi_2900. The conserved binding sequence for the transcriptional regulator PpsR is shown in Figure
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A316GN28.1	AF-A0A316GN28-F1-model_v4_TED01:3-108	1	AF-A0A316GN28-F1-model_v4_TED01	3-108	24.5%
+A0A316GN28.1	AF-A0A316GN28-F1-model_v4_TED02:116-147	1	AF-A0A316GN28-F1-model_v4_TED02	116-147	20.6%
+A0A7X6H3J5.1	AF-A0A7X6H3J5-F1-model_v4_TED01:3-104	1	AF-A0A7X6H3J5-F1-model_v4_TED01	3-104	22.1%
+A0A7X6H3J5.1	AF-A0A7X6H3J5-F1-model_v4_TED02:121-155	1	AF-A0A7X6H3J5-F1-model_v4_TED02	121-155	22.7%
+A8LJM7.1	AF-A8LJM7-F1-model_v4_TED01:3-102	1	AF-A8LJM7-F1-model_v4_TED01	3-102	16.6%
+D5AMI7.1	AF-D5AMI7-F1-model_v4_TED01:1-105	1	AF-D5AMI7-F1-model_v4_TED01	1-105	18.6%
+W8RY60.1	AF-W8RY60-F1-model_v4_TED01:9-71	1	AF-W8RY60-F1-model_v4_TED01	9-71	12.1%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P23460/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.60 27.10;
+NC   24.80 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

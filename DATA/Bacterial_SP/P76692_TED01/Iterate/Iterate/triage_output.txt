@@ -1,0 +1,137 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YZGL_ECOLI              Reviewed;          93 AA.
+AC   P76692; A0A385XK09; Q2M791; Q79CZ1;
+DE   RecName: Full=Protein YzgL;
+GN   Name=yzgL; OrderedLocusNames=b3427, JW3390;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- MISCELLANEOUS: Missing up to 410 C-terminal residues compared to
+CC       orthologs. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA58225.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U18997; AAA58225.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; U00096; AYC08247.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE77865.1; -; Genomic_DNA.
+DR   PIR; F65138; Q4ECGG.
+DR   AlphaFoldDB; P76692; -.
+DR   SMR; P76692; -.
+DR   BioGRID; 4261261; 6.
+DR   FunCoup; P76692; 6.
+DR   EnsemblBacteria; AYC08247; AYC08247; b3427.
+DR   KEGG; ecj:JW3390; -.
+DR   PATRIC; fig|1411691.4.peg.3302; -.
+DR   eggNOG; COG0226; Bacteria.
+DR   HOGENOM; CLU_182901_0_0_6; -.
+DR   InParanoid; P76692; -.
+DR   BioCyc; EcoCyc:G7752-MONOMER; -.
+DR   PRO; PR:P76692; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..93
+FT                   /note="Protein YzgL"
+FT                   /id="PRO_0000263029"
+SQ   SEQUENCE   93 AA;  10129 MW;  D2E1308B26F57828 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Shigella.
+4	6	Escherichia.
+2	6	Salmonella.
+10	5	Enterobacteriaceae
+10	4	Enterobacterales
+10	3	Gammaproteobacteria
+10	2	Pseudomonadota
+10	1	Pseudomonadati
+10	0	Bacteria
+Total of 10 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A7ZSW0	PUTATIVE MEMBRANE PROTEIN {EC    251.2    9.2e-72   1   1.4   9.2
+	Iterate                   	     1	   129	   250.5
+	PF12849	PBP_like_2      	   242	   483	   104.7
+
+B7L4V9	PBP DOMAIN-CONTAINING PROTEIN    253.4    1.9e-72   1   1.4   9.3
+	Iterate                   	     5	   133	   252.7
+	PF12849	PBP_like_2      	   246	   487	   106.6
+
+P76692	PROTEIN YZGL                       171.1    5.7e-47   2   2.0  11.5
+	Iterate                   	     1	    79	   163.7
+	Iterate                   	    75	    93	    10.5
+
+Q32AV8	PHOSPHATE TRANSPORT SYSTEM SU    242.3    5.2e-69   1   1.0   9.5
+	Iterate                   	     1	   129	   242.2
+
+Q3YW99	HYPOTHETICAL MEMBRANE PROTEIN    269.3    2.5e-77   1   1.3   8.8
+	Iterate                   	     1	   129	   268.6
+	PF12849	PBP_like_2      	   240	   483	   108.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS75764 (E-value: 1.3e-56, Score: 195.3)
+Mentioned as: Z4789
+Description: orf; hypothetical protein
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 19650909
+Source: EuropePMC
+Title: Global effect of RpoS on gene expression in pathogenic Escherichia coli O157:H7 strain EDL933
+Journal: BMC genomics (2009)
+Snippet: -9 O-Island 102 Putative resolvase Z4048 8.4 0.2 10.4 0.1 -4 O-Island 110 Putative regulator Z4789 3.1 0.2 4.4 0.1 -2 O-Island 133 Unknown Z4851 7.4 0.0 8.6 0.2 -2 O-Island 138 Unknown Z4855 9.4 0.2 10.5 0.1 -2 O-Island 138 Unknown Z4852 8.9 0.2 10.1
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A4Z0L337.1	AF-A0A4Z0L337-F1-model_v4_TED01:1-199	1	AF-A0A4Z0L337-F1-model_v4_TED01	1-199	100.0%
+A0A4Z0L337.1	AF-A0A4Z0L337-F1-model_v4_TED02:209-315_456-490	1	AF-A0A4Z0L337-F1-model_v4_TED02	209-490	0
+A0A4Z0L337.1	AF-A0A4Z0L337-F1-model_v4_TED03:318-453	1	AF-A0A4Z0L337-F1-model_v4_TED03	318-453	0
+P76692.2	AF-P76692-F1-model_v4_TED01:1-93	1	AF-P76692-F1-model_v4_TED01	1-93	100.0%
+Q3YW99.1	AF-Q3YW99-F1-model_v4_TED01:5-203	1	AF-Q3YW99-F1-model_v4_TED01	5-203	96.9%
+Q3YW99.1	AF-Q3YW99-F1-model_v4_TED02:215-320_461-492	1	AF-Q3YW99-F1-model_v4_TED02	215-492	0
+Q3YW99.1	AF-Q3YW99-F1-model_v4_TED03:322-459	1	AF-Q3YW99-F1-model_v4_TED03	322-459	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76692_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.40 39.10;
+NC   26.50 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

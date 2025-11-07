@@ -1,0 +1,151 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YRHA_ECOLI              Reviewed;         138 AA.
+AC   P46856; Q2M7A6;
+DE   RecName: Full=Putative uncharacterized protein YrhA;
+GN   Name=yrhA; OrderedLocusNames=b3443, JW5864;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- CAUTION: Could be the product of a pseudogene. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=BAE77850.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+DR   EMBL; U18997; AAA58241.1; -; Genomic_DNA.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; BAE77850.1; ALT_INIT; Genomic_DNA.
+DR   PIR; F65140; F65140.
+DR   RefSeq; WP_000988497.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P46856; -.
+DR   SMR; P46856; -.
+DR   BioGRID; 4259621; 208.
+DR   FunCoup; P46856; 1.
+DR   KEGG; ecj:JW5864; -.
+DR   KEGG; ecoc:C3026_18655; -.
+DR   PATRIC; fig|83333.103.peg.4342; -.
+DR   EchoBASE; EB2781; -.
+DR   eggNOG; ENOG502ZQ83; Bacteria.
+DR   HOGENOM; CLU_110167_1_0_6; -.
+DR   InParanoid; P46856; -.
+DR   OrthoDB; 6606668at2; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   NCBIfam; NF038335; YPO0640_fam; 1.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..138
+FT                   /note="Putative uncharacterized protein YrhA"
+FT                   /id="PRO_0000169559"
+SQ   SEQUENCE   138 AA;  15950 MW;  1758194A5B688BA6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Escherichia.
+2	5	Erwiniaceae
+10	5	Enterobacteriaceae
+12	4	Enterobacterales
+12	3	Gammaproteobacteria
+12	2	Pseudomonadota
+12	1	Pseudomonadati
+12	0	Bacteria
+Total of 12 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A071LRQ6	KNR4/SMI1-LIKE DOMAIN-CON     52.8    2.1e-10   1   1.2   0.5
+	P46856_TED01              	     4	   140	    52.4
+
+A0A071LZT1	KNR4/SMI1-LIKE DOMAIN-CON     53.7    1.1e-10   1   1.1   0.4
+	P46856_TED01              	     4	   140	    53.3
+
+A0A0H2VBM8	KNR4/SMI1-LIKE DOMAIN-CON    278.1    5.5e-80   1   1.1   5.2
+	P46856_TED01              	     3	   136	   277.8
+
+A0A0H2Z3S0	UNCHARACTERIZED PROTEIN {    277.9    6.2e-80   1   1.1   5.9
+	P46856_TED01              	     3	   136	   277.6
+
+A0A0H3EMW2	UNCHARACTERIZED PROTEIN {    280.4    1.1e-80   1   1.1   5.6
+	P46856_TED01              	     3	   136	   280.1
+
+A0A0M2KFA9	SMI1/KNR4 FAMILY PROTEIN      49.1      3e-09   1   1.2   0.1
+	P46856_TED01              	     2	   140	    48.6
+
+A0A260ZT53	GLYCOSYLTRANSFERASE FAMIL     59.1    2.4e-12   6   9.1  10.3
+	P46856_TED01              	   594	   669	    11.9
+	P46856_TED01              	  1925	  1998	    11.8
+	P46856_TED01              	  2332	  2402	    10.6
+	P46856_TED01              	  1498	  1572	     9.4
+	P46856_TED01              	   180	   254	     7.4
+	P46856_TED01              	  1043	  1113	     2.8
+	PF01697	Glyco_transf_92 	   184	   433	   225.3
+	PF01697	Glyco_transf_92 	   602	   851	     233
+	PF01697	Glyco_transf_92 	  1046	  1300	   234.7
+	PF01697	Glyco_transf_92 	  1502	  1751	   225.1
+	PF01697	Glyco_transf_92 	  1931	  2180	   233.5
+	PF01697	Glyco_transf_92 	  2334	  2581	     235
+
+A0A379LQH8	SMI1/KNR4 FAMILY PROTEIN      48.8    3.5e-09   1   1.2   0.1
+	P46856_TED01              	     4	   140	    48.4
+
+A0A484XT96	UNCHARACTERIZED PROTEIN {    160.3    1.3e-43   1   1.0   2.2
+	P46856_TED01              	     5	   136	   160.1
+
+A7ZSX6	KNR4/SMI1-LIKE DOMAIN-CONTAIN    290.5    8.1e-84   1   1.1   5.7
+	P46856_TED01              	     3	   136	   290.2
+
+A9MS31	DUF4926 DOMAIN-CONTAINING PRO     48.0    6.3e-09   1   1.2   0.4
+	P46856_TED01              	    67	   199	    47.5
+	PF16277	DUF4926         	     5	    63	    71.4
+
+B7L4X4	YRHA PROTEIN {ECO:0000313|EMB    288.0    4.7e-83   1   1.1   6.0
+	P46856_TED01              	     3	   136	   287.7
+
+B7MDS9	UNCHARACTERIZED PROTEIN {ECO:    277.9    6.1e-80   1   1.1   5.9
+	P46856_TED01              	     2	   135	   277.6
+
+P46856	PUTATIVE UNCHARACTERIZED PROTEI    309.1    1.4e-89   1   1.0   4.1
+	P46856_TED01              	     3	   136	   308.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P46856.1	AF-P46856-F1-model_v4_TED01:3-17_24-136	1	AF-P46856-F1-model_v4_TED01	3-136	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P46856_TED01
+GA   27.00 27.00;
+TC   28.50 38.30;
+NC   24.40 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

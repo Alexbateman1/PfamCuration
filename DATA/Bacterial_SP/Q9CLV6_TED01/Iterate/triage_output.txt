@@ -1,0 +1,186 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1095_PASMU             Reviewed;          57 AA.
+AC   Q9CLV6;
+DE   RecName: Full=Uncharacterized protein PM1095;
+GN   OrderedLocusNames=PM1095;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE004439; AAK03179.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q9CLV6; -.
+DR   STRING; 272843.PM1095; -.
+DR   EnsemblBacteria; AAK03179; AAK03179; PM1095.
+DR   KEGG; pmu:PM1095; -.
+DR   HOGENOM; CLU_3064447_0_0_6; -.
+DR   Proteomes; UP000000809; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..57
+FT                   /note="Uncharacterized protein PM1095"
+FT                   /id="PRO_0000216312"
+FT   TRANSMEM        12..34
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   57 AA;  6438 MW;  8F7A36E5B885143D CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Neisseria.
+2	6	Alysiella.
+1	6	Pasteurella.
+1	6	Kingella.
+1	6	Histophilus.
+1	6	Conchiformibius.
+7	5	Neisseriaceae
+2	5	Pasteurellaceae
+7	4	Neisseriales
+2	4	Pasteurellales
+7	3	Betaproteobacteria
+2	3	Gammaproteobacteria
+9	2	Pseudomonadota
+9	1	Pseudomonadati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A376BU59	UNCHARACTERIZED PROTEIN {     30.1     0.0015   1   1.1   0.2
+	Iterate                   	     3	    42	    30.0
+
+A0A448UD02	LIPOPROTEIN {ECO:0008006|     32.5    0.00026   1   1.2   0.1
+	Iterate                   	     2	    39	    32.3
+
+A0A835LHF2	AMINO-ACID PERMEASE BAT1      33.4    0.00014   3   5.4   8.7
+	Iterate                   	   278	   309	    12.3
+	Iterate                   	  1673	  1704	    10.9
+	Iterate                   	   794	   825	    10.8
+	PF13520	AA_permease_2   	    41	   141	    42.2
+	PF00324	AA_permease     	    52	   142	    27.3
+	PF13520	AA_permease_2   	   135	   442	   132.1
+	PF00324	AA_permease     	   141	   463	    61.6
+	PF13520	AA_permease_2   	   499	   959	   188.2
+	PF00324	AA_permease     	   507	   983	    86.4
+	PF13520	AA_permease_2   	   962	  1322	   107.2
+	PF13520	AA_permease_2   	  1378	  1747	   150.5
+	PF00324	AA_permease     	  1389	  1748	    94.7
+
+A0A8S1TQT9	TETRATRICOPEPTIDE REPEAT      59.4    1.1e-12   8  12.8   0.0
+	Iterate                   	   231	   260	     3.6
+	Iterate                   	   265	   294	     3.6
+	Iterate                   	   299	   328	     3.6
+	Iterate                   	   333	   362	     3.6
+	Iterate                   	   367	   396	     3.6
+	Iterate                   	   401	   430	     3.6
+	Iterate                   	   435	   464	     3.6
+	Iterate                   	   469	   498	     3.6
+	PF13432	TPR_16          	   174	   237	    31.1
+	PF14559	TPR_19          	   180	   245	    33.3
+	PF12895	ANAPC3          	   182	   264	    38.2
+	PF13424	TPR_12          	   203	   270	    31.3
+	PF13181	TPR_8           	   204	   237	    17.5
+	PF13181	TPR_8           	   239	   271	    14.3
+	PF13432	TPR_16          	   251	   304	    20.1
+	PF12895	ANAPC3          	   252	   332	    37.1
+	PF13424	TPR_12          	   271	   338	    30.8
+	PF13181	TPR_8           	   273	   305	    14.3
+	PF13432	TPR_16          	   284	   339	    20.2
+	PF12895	ANAPC3          	   284	   366	    37.9
+	PF13424	TPR_12          	   305	   372	    30.8
+	PF13181	TPR_8           	   307	   339	    14.3
+	PF13432	TPR_16          	   319	   373	    20.2
+	PF12895	ANAPC3          	   326	   400	    28.9
+	PF13424	TPR_12          	   339	   406	    30.8
+	PF13181	TPR_8           	   341	   373	    14.3
+	PF12895	ANAPC3          	   352	   434	    37.9
+	PF13432	TPR_16          	   353	   407	    20.2
+	PF13424	TPR_12          	   373	   439	    30.7
+	PF13181	TPR_8           	   375	   407	    14.3
+	PF12895	ANAPC3          	   386	   468	    37.9
+	PF13432	TPR_16          	   387	   441	    20.2
+	PF13424	TPR_12          	   407	   474	    30.8
+	PF13181	TPR_8           	   409	   441	    14.3
+	PF12895	ANAPC3          	   420	   502	    37.9
+	PF13432	TPR_16          	   421	   475	    20.2
+	PF13424	TPR_12          	   441	   508	    30.8
+	PF13181	TPR_8           	   443	   475	    14.3
+	PF12895	ANAPC3          	   454	   536	    38.1
+	PF13432	TPR_16          	   455	   509	    20.2
+	PF13181	TPR_8           	   477	   509	    14.3
+	PF13432	TPR_16          	   488	   543	    18.8
+	PF12895	ANAPC3          	   488	   570	    33.7
+	PF13181	TPR_8           	   511	   543	    12.9
+	PF13432	TPR_16          	   523	   576	    19.2
+	PF12895	ANAPC3          	   556	   638	    37.2
+	PF13432	TPR_16          	   560	   610	    18.1
+	PF13181	TPR_8           	   579	   611	    17.8
+	PF13432	TPR_16          	   588	   646	      23
+	PF13432	TPR_16          	   625	   680	    20.2
+	PF13181	TPR_8           	   647	   679	    21.2
+	PF13181	TPR_8           	   682	   713	    16.9
+
+Q9CLV6	UNCHARACTERIZED PROTEIN PM1095    139.0    1.5e-37   1   1.0   4.1
+	Iterate                   	     3	    55	   138.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS80170 (E-value: 1.3e-39, Score: 139.0)
+Mentioned as: PM1095
+Description: unknown
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 20140235
+Source: EuropePMC
+Title: Fis is essential for capsule production in Pasteurella multocida and regulates expression of other important virulence factors
+Journal: PLoS pathogens (2010)
+Snippet: repressor K 1.36 c 0.004 1244081 htrA Heat shock protein O 1.32 c 0.010 1244442 PM1095 Unknown - 1.32 c 0.031 1244533 exbB Iron regulated virulence protein U 1.24 c 0.023 1244083 dnaK Predicted chaperone K 1.15 c 0.043 1244505 PM1158 Putative methyltransferase H 1.11 c
+
+================================================================================
+Protein: VIMSS80170 (E-value: 1.3e-39, Score: 139.0)
+Mentioned as: PM1095
+Description: unknown
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 12426360
+Source: EuropePMC
+Title: Transcriptional response of Pasteurella multocida to defined iron sources
+Journal: Journal of bacteriology (2002)
+Snippet: min. Genes expressed at reduced levels included PM0133, PM1095, and PM1125. The iron transport protein energy-transducing genes exbB, exbD, and tonB were
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9CLV6.1	AF-Q9CLV6-F1-model_v4_TED01:3-55	1	AF-Q9CLV6-F1-model_v4_TED01	3-55	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CLV6_TED01/Iterate
+GA   27.00 27.00;
+TC   28.40 28.20;
+NC   26.70 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

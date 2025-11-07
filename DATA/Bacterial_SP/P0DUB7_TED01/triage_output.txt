@@ -1,0 +1,62 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Tannerella.
+3	5	Tannerellaceae
+3	4	Bacteroidales
+3	3	Bacteroidia
+3	2	Bacteroidota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+D7JEZ6	LIPOPROTEIN {ECO:0008006|GOOG     44.3    7.7e-08   1   1.2   0.2
+	P0DUB7_TED01              	    36	   127	    43.9
+
+D7JHA4	UNCHARACTERIZED PROTEIN {ECO:     42.3    3.3e-07   1   1.0   0.2
+	P0DUB7_TED01              	     8	    99	    42.1
+
+G8UIJ1	UNCHARACTERIZED PROTEIN {ECO:     68.0    3.3e-15   1   1.0   6.7
+	P0DUB7_TED01              	     1	    36	    68.0
+
+G8UIJ2	PUTATIVE LIPOPROTEIN {ECO:000     56.7    1.1e-11   1   1.2   0.1
+	P0DUB7_TED01              	    37	    65	    56.3
+
+G8UM85	PUTATIVE LIPOPROTEIN {ECO:000    189.4    5.4e-53   1   1.1   0.3
+	P0DUB7_TED01              	    37	   140	   189.1
+
+W2CJE4	DUF306 DOMAIN-CONTAINING PROT     46.2    2.1e-08   4   4.5   0.3
+	P0DUB7_TED01              	   414	   522	    17.8
+	P0DUB7_TED01              	    37	   146	     9.7
+	P0DUB7_TED01              	   161	   272	     7.5
+	P0DUB7_TED01              	   295	   400	     5.5
+	PF03724	META            	   284	   397	    25.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P0DUB7.1	AF-P0DUB7-F1-model_v4_TED01:37-140	1	AF-P0DUB7-F1-model_v4_TED01	37-140	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DUB7_TED01
+GA   27.00 27.00;
+TC   28.70 36.10;
+NC   26.70 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

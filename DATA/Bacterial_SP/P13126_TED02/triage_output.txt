@@ -1,0 +1,90 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Deinococcus.
+1	5	Deinococcaceae
+1	4	Deinococcales
+1	3	Deinococci
+1	2	Deinococcota
+1	1	Thermotogati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0Q5IWI7	UNCHARACTERIZED PROTEIN {     47.5    8.5e-09   2   6.0  14.1
+	P13126_TED02              	   116	   196	    47.5
+	P13126_TED02              	    26	   108	    12.1
+
+A0A1H7C4C6	CONSERVED REPEAT DOMAIN-C    150.0    8.6e-41   3   5.6  56.9
+	P13126_TED02              	   216	   296	    74.3
+	P13126_TED02              	   131	   210	    60.6
+	P13126_TED02              	    48	   125	    34.1
+
+A0A9D3YAB3	UNCHARACTERIZED PROTEIN {     28.4     0.0078   6   6.5  17.4
+	P13126_TED02              	    47	   109	    10.8
+	P13126_TED02              	   134	   187	     8.2
+	P13126_TED02              	   162	   217	     6.1
+	P13126_TED02              	   216	   270	     6.1
+	P13126_TED02              	   101	   159	     5.0
+	P13126_TED02              	    10	    52	     4.9
+
+A0AB34IPT7	PEPTIDASE M12A DOMAIN-CON     32.3    0.00048   9  14.3  41.5
+	P13126_TED02              	  1760	  1803	     5.1
+	P13126_TED02              	   368	   406	     5.0
+	P13126_TED02              	   740	   778	     5.0
+	P13126_TED02              	  1112	  1150	     5.0
+	P13126_TED02              	  2504	  2542	     5.0
+	P13126_TED02              	  2849	  2887	     5.0
+	P13126_TED02              	  3221	  3259	     5.0
+	P13126_TED02              	  3593	  3631	     5.0
+	P13126_TED02              	  3965	  4003	     5.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS6108834 (E-value: 0.0008, Score: 25.0)
+Mentioned as: OG1RF_0165
+Description: cell wall surface anchor protein
+Organism: Enterococcus faecalis OG1RF
+PMID: 18611278
+Source: EuropePMC
+Title: Large scale variation in Enterococcus faecalis illustrated by the genome analysis of strain OG1RF
+Journal: Genome biology (2008)
+Snippet: OG1RF_0186 (corresponding to EF2505 of V583) has four repeats compared to seven in V583, and OG1RF_0165 (corresponding to EF2224 of V583) has eight repeats compared to five in V583. It has been proposed that the repeats are used as a stalk that projects the A region
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P13126.1	AF-P13126-F1-model_v4_TED01:36-126	1	AF-P13126-F1-model_v4_TED01	36-126	0
+P13126.1	AF-P13126-F1-model_v4_TED02:136-216	1	AF-P13126-F1-model_v4_TED02	136-216	100.0%
+P13126.1	AF-P13126-F1-model_v4_TED03:230-310	1	AF-P13126-F1-model_v4_TED03	230-310	0
+P13126.1	AF-P13126-F1-model_v4_TED04:326-448	1	AF-P13126-F1-model_v4_TED04	326-448	0
+P13126.1	AF-P13126-F1-model_v4_TED05:458-615	1	AF-P13126-F1-model_v4_TED05	458-615	0
+P13126.1	AF-P13126-F1-model_v4_TED07:723-772_780-853_925-950	1	AF-P13126-F1-model_v4_TED07	723-950	0
+P13126.1	AF-P13126-F1-model_v4_TED08:971-1031	1	AF-P13126-F1-model_v4_TED08	971-1031	0
+P13126.1	AF-P13126-F1-model_v4_TED06:618-722	1	AF-P13126-F1-model_v4_TED06	618-722	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P13126_TED02
+GA   27.00 27.00;
+TC   28.00 34.10;
+NC   25.80 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

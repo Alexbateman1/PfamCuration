@@ -1,0 +1,108 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y028_BORBU              Reviewed;         349 AA.
+AC   O51059;
+DE   RecName: Full=Uncharacterized protein BB_0028;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=BB_0028;
+OS   Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)
+OS   (Borrelia burgdorferi).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Borreliaceae; Borreliella.
+OX   NCBI_TaxID=224326;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RX   PubMed=9403685; DOI=10.1038/37551;
+RA   Fraser C.M., Casjens S., Huang W.M., Sutton G.G., Clayton R.A.,
+RA   Lathigra R., White O., Ketchum K.A., Dodson R.J., Hickey E.K., Gwinn M.L.,
+RA   Dougherty B.A., Tomb J.-F., Fleischmann R.D., Richardson D.L.,
+RA   Peterson J.D., Kerlavage A.R., Quackenbush J., Salzberg S.L., Hanson M.,
+RA   van Vugt R., Palmer N., Adams M.D., Gocayne J.D., Weidman J.F.,
+RA   Utterback T.R., Watthey L., McDonald L.A., Artiach P., Bowman C.,
+RA   Garland S.A., Fujii C., Cotton M.D., Horst K., Roberts K.M., Hatch B.,
+RA   Smith H.O., Venter J.C.;
+RT   "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.";
+RL   Nature 390:580-586(1997).
+DR   EMBL; AE000783; AAC66428.1; -; Genomic_DNA.
+DR   PIR; D70103; D70103.
+DR   RefSeq; NP_212162.1; NC_001318.1.
+DR   AlphaFoldDB; O51059; -.
+DR   STRING; 224326.BB_0028; -.
+DR   PaxDb; 224326-BB_0028; -.
+DR   EnsemblBacteria; AAC66428; AAC66428; BB_0028.
+DR   KEGG; bbu:BB_0028; -.
+DR   PATRIC; fig|224326.49.peg.427; -.
+DR   HOGENOM; CLU_069545_0_0_12; -.
+DR   OrthoDB; 350340at2; -.
+DR   Proteomes; UP000001807; Chromosome.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..29
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           30..349
+FT                   /note="Uncharacterized protein BB_0028"
+FT                   /id="PRO_0000013749"
+SQ   SEQUENCE   349 AA;  39705 MW;  915B1D34A3214226 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Borrelia.
+1	6	Borreliella.
+3	5	Borreliaceae
+3	4	Spirochaetales
+3	3	Spirochaetia
+3	2	Spirochaetota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A367QKC3	CADHERIN DOMAIN-CONTAININ     38.1      6e-06   3  11.9   3.7
+	Iterate                   	   771	   877	     4.2
+	Iterate                   	   100	   141	     3.4
+	Iterate                   	   630	   674	     3.2
+
+A0A918V755	SECRETION SYSTEM C-TERMIN     33.7    0.00014   3   5.6   3.8
+	Iterate                   	   188	   249	    15.5
+	Iterate                   	    46	   125	     7.6
+	Iterate                   	   109	   163	     4.7
+	PF18962	Por_Secre_tail  	   279	   346	    43.6
+
+A0ABF7PUM3	UNCHARACTERIZED PROTEIN {    168.6    3.2e-46   1   2.2   2.8
+	Iterate                   	    26	   164	   167.0
+
+O51059	UNCHARACTERIZED PROTEIN BB_0028    314.2    3.6e-91   1   2.2   4.7
+	Iterate                   	    30	   168	   313.4
+
+W6THP1	LIPOPROTEIN {ECO:0008006|GOOG    160.7    8.4e-44   1   2.0   5.0
+	Iterate                   	    26	   164	   160.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O51059.1	AF-O51059-F1-model_v4_TED01:30-168	1	AF-O51059-F1-model_v4_TED01	30-168	100.0%
+O51059.1	AF-O51059-F1-model_v4_TED02:177-316	1	AF-O51059-F1-model_v4_TED02	177-316	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O51059_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 236.90;
+NC   26.70 20.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

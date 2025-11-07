@@ -1,0 +1,79 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y940_TREPA              Reviewed;          46 AA.
+AC   O83910;
+DE   RecName: Full=Uncharacterized protein TP_0940;
+GN   OrderedLocusNames=TP_0940;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65899.1; -; Genomic_DNA.
+DR   PIR; H71262; H71262.
+DR   AlphaFoldDB; O83910; -.
+DR   IntAct; O83910; 14.
+DR   STRING; 243276.TP_0940; -.
+DR   EnsemblBacteria; AAC65899; AAC65899; TP_0940.
+DR   KEGG; tpa:TP_0940; -.
+DR   HOGENOM; CLU_3190276_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..46
+FT                   /note="Uncharacterized protein TP_0940"
+FT                   /id="PRO_0000202358"
+SQ   SEQUENCE   46 AA;  4930 MW;  59282C075A0270EE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Treponema.
+1	5	Treponemataceae
+1	4	Spirochaetales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O83910	UNCHARACTERIZED PROTEIN TP_0940    131.4    4.1e-35   1   1.0   3.8
+	O83910                    	     1	    46	   131.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83910
+GA   27.00 27.00;
+TC   27.50 131.30;
+NC   23.90 20.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

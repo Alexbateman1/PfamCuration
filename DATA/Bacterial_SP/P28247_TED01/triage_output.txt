@@ -1,0 +1,43 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Cronobacter.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A7MLN2	UNCHARACTERIZED PROTEIN {ECO:     45.6    2.9e-08   1   1.5   2.7
+	P28247_TED01              	   119	   171	    44.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P28247.2	AF-P28247-F1-model_v4_TED01:45-97	1	AF-P28247-F1-model_v4_TED01	45-97	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P28247_TED01
+GA   27.00 27.00;
+TC   27.00 44.70;
+NC   25.80 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

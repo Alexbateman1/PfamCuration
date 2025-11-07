@@ -1,0 +1,948 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PGLY_STRCO              Reviewed;        1294 AA.
+AC   O86682; Q53942;
+DE   RecName: Full=ATPase PglY {ECO:0000303|PubMed:25592393};
+DE   AltName: Full=Bacteriophage (PhiC31) resistance gene PglY;
+DE   AltName: Full=ORF1 {ECO:0000303|PubMed:7642495};
+GN   Name=pglY {ECO:0000303|PubMed:7642495};
+GN   OrderedLocusNames=SCO6635 {ECO:0000312|EMBL:CAA20546.1};
+OS   Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales;
+OC   Streptomycetaceae; Streptomyces; Streptomyces albidoflavus group.
+OX   NCBI_TaxID=100226;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], FUNCTION IN ANTIVIRAL DEFENSE,
+RP   INDUCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC BAA-471 / A3(2) / M145;
+RX   PubMed=7642495; DOI=10.1128/jb.177.16.4681-4689.1995;
+RA   Bedford D.J., Laity C., Buttner M.J.;
+RT   "Two genes involved in the phase-variable phi C31 resistance mechanism of
+RT   Streptomyces coelicolor A3(2).";
+RL   J. Bacteriol. 177:4681-4689(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-471 / A3(2) / M145;
+RX   PubMed=12000953; DOI=10.1038/417141a;
+RA   Bentley S.D., Chater K.F., Cerdeno-Tarraga A.-M., Challis G.L.,
+RA   Thomson N.R., James K.D., Harris D.E., Quail M.A., Kieser H., Harper D.,
+RA   Bateman A., Brown S., Chandra G., Chen C.W., Collins M., Cronin A.,
+RA   Fraser A., Goble A., Hidalgo J., Hornsby T., Howarth S., Huang C.-H.,
+RA   Kieser T., Larke L., Murphy L.D., Oliver K., O'Neil S., Rabbinowitsch E.,
+RA   Rajandream M.A., Rutherford K.M., Rutter S., Seeger K., Saunders D.,
+RA   Sharp S., Squares R., Squares S., Taylor K., Warren T., Wietzorrek A.,
+RA   Woodward J.R., Barrell B.G., Parkhill J., Hopwood D.A.;
+RT   "Complete genome sequence of the model actinomycete Streptomyces coelicolor
+RT   A3(2).";
+RL   Nature 417:141-147(2002).
+RN   [3]
+RP   GENETIC ANALYSIS, AND PHASE REVERSION.
+RC   STRAIN=ATCC BAA-471 / A3(2) / M145;
+RX   PubMed=8446035; DOI=10.1111/j.1365-2958.1993.tb01124.x;
+RA   Laity C., Chater K.F., Lewis C.G., Buttner M.J.;
+RT   "Genetic analysis of the phi C31-specific phage growth limitation (Pgl)
+RT   system of Streptomyces coelicolor A3(2).";
+RL   Mol. Microbiol. 7:329-336(1993).
+RN   [4]
+RP   FUNCTION IN ANTIVIRAL DEFENSE, AND DISRUPTION PHENOTYPE.
+RX   PubMed=11972785; DOI=10.1046/j.1365-2958.2002.02896.x;
+RA   Sumby P., Smith M.C.;
+RT   "Genetics of the phage growth limitation (Pgl) system of Streptomyces
+RT   coelicolor A3(2).";
+RL   Mol. Microbiol. 44:489-500(2002).
+RN   [5]
+RP   CLASSIFICATION AND NOMENCLATURE.
+RX   PubMed=25452498; DOI=10.15252/embj.201489455;
+RA   Goldfarb T., Sberro H., Weinstock E., Cohen O., Doron S.,
+RA   Charpak-Amikam Y., Afik S., Ofir G., Sorek R.;
+RT   "BREX is a novel phage resistance system widespread in microbial genomes.";
+RL   EMBO J. 34:169-183(2015).
+RN   [6]
+RP   FUNCTION AS AN ATPASE, AND MUTAGENESIS OF 81-LYS-SER-82.
+RC   STRAIN=ATCC BAA-471 / A3(2) / M145;
+RX   PubMed=25592393; DOI=10.1016/j.virol.2014.12.036;
+RA   Hoskisson P.A., Sumby P., Smith M.C.M.;
+RT   "The phage growth limitation system in Streptomyces coelicolor A(3)2 is a
+RT   toxin/antitoxin system, comprising enzymes with DNA methyltransferase,
+RT   protein kinase and ATPase activity.";
+RL   Virology 477:100-109(2015).
+CC   -!- FUNCTION: BREX systems (bacteriophage exclusion) provide immunity
+CC       against bacteriophage. Part of a type 2 BREX system (Probable).
+CC       Previously called the phage growth limitation (Pgl) system, it confers
+CC       protection against bacteriophage phiC31. The bacteria allows one cycle
+CC       of phage infection, but subsequent cycles are impaired, protecting the
+CC       original bacterial colony (Probable) (PubMed:7642495). The system
+CC       undergoes high rates (10(-3) to 10(-4)) of phase reversion, i.e. loss
+CC       and regain of phiC31 resistance (PubMed:8446035). When the pglW-pglX-
+CC       pglY-pglZ genes are transformed into a susceptible S.lividans (strain
+CC       1326) they confer resistance to infection by phage phiC31 and phiBT1;
+CC       all 4 genes are necessary (PubMed:11972785).
+CC       {ECO:0000269|PubMed:11972785, ECO:0000269|PubMed:7642495,
+CC       ECO:0000269|PubMed:8446035, ECO:0000305|PubMed:11972785,
+CC       ECO:0000305|PubMed:25452498}.
+CC   -!- FUNCTION: Hydrolyzes ATP but not AMP, ADP, GMP, GDP or GTP; activity is
+CC       inhibited by the non-hydrolyzable ATP analog 5-adenylyl beta,gamma-
+CC       imidodiphosphate. {ECO:0000269|PubMed:25592393}.
+CC   -!- INDUCTION: Constitutively expressed, not induced by bacteriophage
+CC       phiC31, probably part of a pglY-pglZ operon.
+CC       {ECO:0000269|PubMed:7642495}.
+CC   -!- DISRUPTION PHENOTYPE: Strain is no longer resistant to plaque formation
+CC       by bacteriophage phiC31 (a Pgl- phenotype).
+CC       {ECO:0000269|PubMed:7642495}.
+DR   EMBL; L37531; AAB00365.1; -; Genomic_DNA.
+DR   EMBL; AL939128; CAA20546.1; -; Genomic_DNA.
+DR   PIR; T35044; T35044.
+DR   RefSeq; NP_630711.1; NC_003888.3.
+DR   AlphaFoldDB; O86682; -.
+DR   STRING; 100226.gene:17764293; -.
+DR   PaxDb; 100226-SCO6635; -.
+DR   KEGG; sco:SCO6635; -.
+DR   PATRIC; fig|100226.15.peg.6740; -.
+DR   eggNOG; COG1483; Bacteria.
+DR   HOGENOM; CLU_269246_0_0_11; -.
+DR   InParanoid; O86682; -.
+DR   OrthoDB; 3201900at2; -.
+DR   Proteomes; UP000001973; Chromosome.
+DR   GO; GO:0051607; P:defense response to virus; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   Antiviral defense; Reference proteome.
+FT   CHAIN           1..1294
+FT                   /note="ATPase PglY"
+FT                   /id="PRO_0000452161"
+FT   REGION          1205..1263
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1228..1244
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1252..1263
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MUTAGEN         81..82
+FT                   /note="KS->AA: Does not restore phage resistance to a
+FT                   deletion mutant, much less ATPase activity."
+FT                   /evidence="ECO:0000269|PubMed:25592393"
+FT   CONFLICT        373
+FT                   /note="K -> N (in Ref. 1; AAB00365)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        914
+FT                   /note="M -> I (in Ref. 1; AAB00365)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        1003
+FT                   /note="E -> A (in Ref. 1; AAB00365)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   1294 AA;  141188 MW;  5515825E3087B4F1 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+24	6	Streptomyces.
+26	5	Streptomycetaceae
+8	4	Streptosporangiales
+26	4	Kitasatosporales
+56	3	Actinomycetes
+8	2	Pseudomonadota
+56	2	Actinomycetota
+56	1	Bacillati
+11	1	Pseudomonadati
+67	0	Bacteria
+Total of 67 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A089X889	BACTERIOPHAGE RESISTANCE     260.3      1e-73   1   1.5   0.0
+	O86682_TED03              	   378	   632	   259.4
+	PF19557	BrxC-PglY_N     	    33	   375	      90
+	PF27141	PglY_4th        	   639	   871	     221
+	PF26381	BREX_PglY_5th   	   889	   991	   102.3
+	PF26382	BREX_PglY_6th   	  1034	  1214	   149.4
+
+A0A0A6UKL7	PHAGE RESISTANCE PROTEIN     296.0    1.2e-84   1   1.3   0.1
+	O86682_TED03              	   357	   607	   295.4
+	PF19557	BrxC-PglY_N     	    29	   354	   106.1
+	PF27141	PglY_4th        	   614	   841	   271.1
+	PF26381	BREX_PglY_5th   	   859	   959	   123.3
+	PF26382	BREX_PglY_6th   	  1003	  1180	   155.2
+
+A0A0F7N279	DUF6079 DOMAIN-CONTAINING    298.0    3.1e-85   1   1.4   0.0
+	O86682_TED03              	   388	   642	   297.2
+	PF19557	BrxC-PglY_N     	    35	   385	     102
+	PF27141	PglY_4th        	   649	   886	   199.3
+	PF26381	BREX_PglY_5th   	   900	  1000	    93.1
+	PF26382	BREX_PglY_6th   	  1043	  1214	   132.7
+
+A0A0N0SUM3	BACTERIOPHAGE RESISTANCE     546.1   5.7e-161   1   1.3   0.0
+	O86682_TED03              	   373	   627	   545.5
+	PF19557	BrxC-PglY_N     	    26	   370	   176.1
+	PF27141	PglY_4th        	   634	   865	   266.2
+	PF26381	BREX_PglY_5th   	   883	   983	     109
+	PF26382	BREX_PglY_6th   	  1027	  1206	   169.6
+
+A0A0P7CSZ2	PHAGE RESISTANCE PROTEIN     272.7    1.6e-77   1   1.9   0.2
+	O86682_TED03              	   366	   635	   270.9
+	PF19557	BrxC-PglY_N     	    31	   363	      73
+	PF27141	PglY_4th        	   642	   872	   252.7
+	PF26381	BREX_PglY_5th   	   890	  1007	    91.6
+	PF26382	BREX_PglY_6th   	  1051	  1258	   141.7
+
+A0A0Q8Z566	PHAGE RESISTANCE PROTEIN     543.7   3.3e-160   1   1.3   0.0
+	O86682_TED03              	   375	   629	   543.0
+	PF19557	BrxC-PglY_N     	    28	   372	   189.5
+	PF27141	PglY_4th        	   636	   867	     261
+	PF26381	BREX_PglY_5th   	   885	   985	   109.4
+	PF26382	BREX_PglY_6th   	  1029	  1208	   174.5
+
+A0A101TCT1	PHAGE RESISTANCE PROTEIN     371.7   9.6e-108   1   1.3   0.0
+	O86682_TED03              	   382	   636	   371.1
+	PF19557	BrxC-PglY_N     	    37	   379	   140.4
+	PF27141	PglY_4th        	   643	   877	   243.6
+	PF26381	BREX_PglY_5th   	   895	   994	      92
+	PF26382	BREX_PglY_6th   	  1038	  1212	     148
+
+A0A166Q100	PHAGE RESISTANCE PROTEIN     297.0    6.3e-85   1   1.4   0.1
+	O86682_TED03              	   360	   616	   296.3
+	PF19557	BrxC-PglY_N     	    30	   357	    86.2
+	PF27141	PglY_4th        	   623	   850	   245.9
+	PF26381	BREX_PglY_5th   	   868	   980	    90.8
+	PF26382	BREX_PglY_6th   	  1024	  1211	   154.4
+
+A0A171A7L2	BACTERIOPHAGE RESISTANCE     533.2   5.1e-157   1   1.4   0.0
+	O86682_TED03              	   371	   625	   532.4
+	PF19557	BrxC-PglY_N     	    27	   368	   175.9
+	PF27141	PglY_4th        	   632	   864	   269.5
+	PF26381	BREX_PglY_5th   	   882	   982	   113.4
+	PF26382	BREX_PglY_6th   	  1026	  1205	   175.5
+
+A0A171DJ54	BACTERIOPHAGE RESISTANCE     469.9   1.1e-137   1   1.6   0.0
+	O86682_TED03              	   374	   627	   468.8
+	PF19557	BrxC-PglY_N     	    27	   371	   165.7
+	PF27141	PglY_4th        	   634	   867	   257.1
+	PF26381	BREX_PglY_5th   	   885	   985	   107.9
+	PF26382	BREX_PglY_6th   	  1029	  1210	     166
+
+A0A1B1MIY3	PGLY {ECO:0000313|EMBL:AN    365.6   7.4e-106   1   1.4   0.0
+	O86682_TED03              	   382	   636	   364.7
+	PF19557	BrxC-PglY_N     	    37	   379	   137.6
+	PF27141	PglY_4th        	   643	   877	     251
+	PF26381	BREX_PglY_5th   	   895	   994	    92.2
+	PF26382	BREX_PglY_6th   	  1038	  1212	   143.2
+
+A0A1C5E8Z0	DUF6079 DOMAIN-CONTAINING    548.6     1e-161   1   1.3   0.0
+	O86682_TED03              	   375	   629	   547.9
+	PF19557	BrxC-PglY_N     	    28	   372	   179.5
+	PF27141	PglY_4th        	   636	   867	   262.4
+	PF26381	BREX_PglY_5th   	   885	   985	   109.5
+	PF26382	BREX_PglY_6th   	  1029	  1208	   177.3
+
+A0A1C5IYU7	PHAGE RESISTANCE PROTEIN     312.3    1.4e-89   1   1.4   0.1
+	O86682_TED03              	   356	   606	   311.5
+	PF19557	BrxC-PglY_N     	    28	   353	   106.9
+	PF27141	PglY_4th        	   613	   840	   266.5
+	PF26381	BREX_PglY_5th   	   858	   958	   120.3
+	PF26382	BREX_PglY_6th   	  1002	  1179	   168.7
+
+A0A1D2IJK8	DUF6079 DOMAIN-CONTAINING    518.9   1.1e-152   1   1.2   0.0
+	O86682_TED03              	   374	   610	   518.5
+	PF19557	BrxC-PglY_N     	    27	   371	   176.2
+
+A0A1G5LUT7	PHAGE RESISTANCE PROTEIN     528.5   1.4e-155   1   1.8   0.1
+	O86682_TED03              	   375	   628	   527.1
+	PF19557	BrxC-PglY_N     	    28	   372	   178.3
+	PF27141	PglY_4th        	   635	   866	   254.4
+	PF26381	BREX_PglY_5th   	   884	   984	   104.7
+	PF26382	BREX_PglY_6th   	  1028	  1207	   172.3
+
+A0A1H2C8S9	PHAGE RESISTANCE PROTEIN     294.3    4.3e-84   1   1.3   0.1
+	O86682_TED03              	   357	   607	   293.6
+	PF19557	BrxC-PglY_N     	    28	   354	   107.5
+	PF27141	PglY_4th        	   614	   841	   269.3
+	PF26381	BREX_PglY_5th   	   859	   959	   124.9
+	PF26382	BREX_PglY_6th   	  1003	  1180	   157.4
+
+A0A1H3T9U7	PHAGE RESISTANCE PROTEIN     309.3    1.1e-88   1   1.3   0.1
+	O86682_TED03              	   356	   606	   308.6
+	PF19557	BrxC-PglY_N     	    28	   353	   107.9
+	PF27141	PglY_4th        	   613	   840	   262.5
+	PF26381	BREX_PglY_5th   	   858	   958	   121.6
+	PF26382	BREX_PglY_6th   	  1002	  1179	   165.8
+
+A0A1H9JRL1	PHAGE RESISTANCE PROTEIN     537.7   2.1e-158   1   1.4   0.0
+	O86682_TED03              	   375	   629	   537.0
+	PF19557	BrxC-PglY_N     	    28	   372	   177.6
+	PF27141	PglY_4th        	   636	   867	   261.7
+	PF26381	BREX_PglY_5th   	   885	   985	   109.8
+	PF26382	BREX_PglY_6th   	  1029	  1208	   173.7
+
+A0A1I0LUS3	PHAGE RESISTANCE PROTEIN     477.3   5.6e-140   1   1.4   0.0
+	O86682_TED03              	   374	   627	   476.5
+	PF19557	BrxC-PglY_N     	    27	   371	   169.3
+	PF27141	PglY_4th        	   634	   867	   262.1
+	PF26381	BREX_PglY_5th   	   885	   985	   109.5
+	PF26382	BREX_PglY_6th   	  1029	  1210	     164
+
+A0A1M6H549	PHAGE RESISTANCE PROTEIN     444.7   5.2e-130   1   1.5   0.0
+	O86682_TED03              	   378	   632	   443.7
+	PF19557	BrxC-PglY_N     	    28	   375	   148.6
+	PF27141	PglY_4th        	   639	   875	   261.2
+	PF26381	BREX_PglY_5th   	   893	   993	   104.9
+	PF26382	BREX_PglY_6th   	  1037	  1218	   175.3
+
+A0A1Q4Y6V7	PHAGE RESISTANCE PROTEIN     210.6    1.5e-58   1   1.4   0.1
+	O86682_TED03              	   358	   596	   209.8
+	PF19557	BrxC-PglY_N     	    33	   355	    70.6
+	PF27141	PglY_4th        	   603	   832	   242.5
+	PF26381	BREX_PglY_5th   	   850	   947	   103.2
+	PF26382	BREX_PglY_6th   	   991	  1164	   135.7
+
+A0A1Q4YIJ6	PHAGE RESISTANCE PROTEIN     440.7   8.6e-129   1   1.6   0.3
+	O86682_TED03              	   381	   635	   439.8
+	PF19557	BrxC-PglY_N     	    31	   378	   142.7
+	PF27141	PglY_4th        	   642	   874	   256.7
+	PF26381	BREX_PglY_5th   	   892	   992	   104.2
+	PF26382	BREX_PglY_6th   	  1036	  1219	   141.5
+
+A0A1Q5KEK4	PHAGE RESISTANCE PROTEIN     440.0   1.4e-128   1   2.0   0.1
+	O86682_TED03              	   376	   632	   438.1
+	PF19557	BrxC-PglY_N     	    28	   373	   158.1
+	PF27141	PglY_4th        	   639	   869	     267
+	PF26381	BREX_PglY_5th   	   887	   987	   107.2
+	PF26382	BREX_PglY_6th   	  1031	  1210	   166.5
+
+A0A1Q5MIT8	PHAGE RESISTANCE PROTEIN     590.6   1.5e-174   1   1.4   0.0
+	O86682_TED03              	   374	   628	   589.9
+	PF19557	BrxC-PglY_N     	    27	   371	   196.9
+	PF27141	PglY_4th        	   635	   866	   265.6
+	PF26381	BREX_PglY_5th   	   884	   984	   108.6
+	PF26382	BREX_PglY_6th   	  1028	  1207	   174.7
+
+A0A1R3UN43	BACTERIOPHAGE (PHIC31) RE    415.0   6.1e-121   1   1.3   0.1
+	O86682_TED03              	   371	   625	   414.3
+	PF19557	BrxC-PglY_N     	    17	   368	   142.4
+	PF27141	PglY_4th        	   632	   868	   259.1
+	PF26381	BREX_PglY_5th   	   886	   986	   106.7
+	PF26382	BREX_PglY_6th   	  1030	  1211	   171.4
+
+A0A1S1PZY3	PHAGE RESISTANCE PROTEIN     290.0    8.8e-83   1   1.8   0.2
+	O86682_TED03              	   384	   651	   288.4
+	PF19557	BrxC-PglY_N     	    29	   150	    53.9
+	PF27141	PglY_4th        	   658	   888	   251.6
+	PF26381	BREX_PglY_5th   	   906	  1027	    94.3
+	PF26382	BREX_PglY_6th   	  1071	  1286	   126.9
+
+A0A1S1QM45	PHAGE RESISTANCE PROTEIN     291.9    2.2e-83   1   2.1   0.6
+	O86682_TED03              	   400	   670	   289.6
+	PF19557	BrxC-PglY_N     	    30	   139	    57.9
+	PF27141	PglY_4th        	   677	   907	   250.1
+	PF26381	BREX_PglY_5th   	   925	  1048	    93.3
+	PF26382	BREX_PglY_6th   	  1092	  1298	   124.3
+
+A0A1V0U3N7	PHAGE RESISTANCE PROTEIN     435.1   4.3e-127   1   1.5   0.0
+	O86682_TED03              	   377	   634	   434.3
+	PF19557	BrxC-PglY_N     	    28	   374	   158.6
+	PF27141	PglY_4th        	   641	   873	   267.7
+	PF26381	BREX_PglY_5th   	   891	   991	    98.7
+	PF26382	BREX_PglY_6th   	  1035	  1214	   170.4
+
+A0A1V4AEV2	PHAGE RESISTANCE PROTEIN     270.7    6.5e-77   1   1.4   0.0
+	O86682_TED03              	   377	   631	   269.9
+	PF19557	BrxC-PglY_N     	    33	   374	      84
+	PF27141	PglY_4th        	   638	   871	   218.6
+	PF26381	BREX_PglY_5th   	   889	   991	   100.8
+	PF26382	BREX_PglY_6th   	  1034	  1216	   141.4
+
+A0A221NT32	PHAGE RESISTANCE PROTEIN     534.1   2.7e-157   1   1.4   0.0
+	O86682_TED03              	   375	   629	   533.4
+	PF19557	BrxC-PglY_N     	    27	   372	     176
+	PF27141	PglY_4th        	   636	   867	   264.7
+	PF26381	BREX_PglY_5th   	   885	   985	   110.4
+	PF26382	BREX_PglY_6th   	  1029	  1208	   171.8
+
+A0A231H511	DUF6079 DOMAIN-CONTAINING    420.1   1.7e-122   1   1.3   0.0
+	O86682_TED03              	   372	   626	   419.4
+	PF19557	BrxC-PglY_N     	    27	   369	   126.8
+	PF27141	PglY_4th        	   633	   867	   241.9
+	PF26381	BREX_PglY_5th   	   885	   985	   105.8
+	PF26382	BREX_PglY_6th   	  1028	  1206	   163.5
+
+A0A285LLU6	PHAGE RESISTANCE PROTEIN     426.3   2.2e-124   1   1.4   0.0
+	O86682_TED03              	   373	   627	   425.5
+	PF19557	BrxC-PglY_N     	    27	   370	   128.5
+	PF27141	PglY_4th        	   634	   868	   245.9
+	PF26381	BREX_PglY_5th   	   886	   986	   111.5
+	PF26382	BREX_PglY_6th   	  1029	  1208	   153.8
+
+A0A2G5J593	PHAGE RESISTANCE PROTEIN     444.0   8.4e-130   1   1.8   0.0
+	O86682_TED03              	   379	   636	   442.4
+	PF19557	BrxC-PglY_N     	    30	   376	   156.8
+	PF27141	PglY_4th        	   643	   874	   262.3
+	PF26381	BREX_PglY_5th   	   892	   992	   101.1
+	PF26382	BREX_PglY_6th   	  1036	  1215	   167.7
+
+A0A2G5J5E8	PHAGE RESISTANCE PROTEIN     369.0   6.6e-107   1   1.4   0.1
+	O86682_TED03              	   382	   636	   368.2
+	PF19557	BrxC-PglY_N     	    37	   379	   140.4
+	PF27141	PglY_4th        	   643	   877	   245.7
+	PF26381	BREX_PglY_5th   	   895	   994	    91.6
+	PF26382	BREX_PglY_6th   	  1038	  1212	   142.5
+
+A0A2I2KNI6	BACTERIOPHAGE RESISTANCE     298.9    1.6e-85   1   1.5   0.1
+	O86682_TED03              	   376	   632	   297.9
+	PF19557	BrxC-PglY_N     	    31	   160	    54.4
+	PF27141	PglY_4th        	   639	   869	     242
+	PF26381	BREX_PglY_5th   	   887	   991	     105
+	PF26382	BREX_PglY_6th   	  1035	  1226	     142
+
+A0A2M8LUZ3	PHAGE RESISTANCE PROTEIN     548.8   8.5e-162   1   1.3   0.0
+	O86682_TED03              	   374	   628	   548.2
+	PF19557	BrxC-PglY_N     	    27	   371	   183.8
+	PF27141	PglY_4th        	   635	   866	   263.6
+	PF26381	BREX_PglY_5th   	   884	   984	   106.8
+	PF26382	BREX_PglY_6th   	  1028	  1207	   175.5
+
+A0A2P4UNL6	DUF6079 DOMAIN-CONTAINING    383.3   2.8e-111   1   1.5   0.1
+	O86682_TED03              	   375	   629	   382.4
+	PF19557	BrxC-PglY_N     	    27	   372	   131.8
+	PF27141	PglY_4th        	   636	   869	   271.6
+	PF26381	BREX_PglY_5th   	   887	   987	   113.1
+	PF26382	BREX_PglY_6th   	  1031	  1208	     166
+
+A0A2P8Q544	PHAGE RESISTANCE PROTEIN     547.0   3.1e-161   1   1.4   0.0
+	O86682_TED03              	   375	   629	   546.3
+	PF19557	BrxC-PglY_N     	    28	   372	   175.5
+	PF27141	PglY_4th        	   636	   867	   259.2
+	PF26381	BREX_PglY_5th   	   889	   989	   105.8
+	PF26382	BREX_PglY_6th   	  1033	  1212	     178
+
+A0A344TXR1	PHAGE RESISTANCE PROTEIN     446.5   1.5e-130   1   1.5   0.0
+	O86682_TED03              	   375	   631	   445.6
+	PF19557	BrxC-PglY_N     	    28	   372	   163.8
+	PF27141	PglY_4th        	   638	   869	   258.2
+	PF26381	BREX_PglY_5th   	   887	   987	   105.9
+	PF26382	BREX_PglY_6th   	  1031	  1211	   159.5
+
+A0A370AYM4	PHAGE RESISTANCE PROTEIN     450.5   8.6e-132   1   1.4   0.1
+	O86682_TED03              	   395	   649	   449.8
+	PF19557	BrxC-PglY_N     	    31	   392	     133
+	PF27141	PglY_4th        	   656	   888	   247.7
+	PF26381	BREX_PglY_5th   	   906	  1006	   103.9
+	PF26382	BREX_PglY_6th   	  1050	  1232	   158.1
+
+A0A3A9YCZ6	PHAGE RESISTANCE PROTEIN     371.0   1.6e-107   1   1.3   0.1
+	O86682_TED03              	   382	   636	   370.4
+	PF19557	BrxC-PglY_N     	    37	   379	   131.6
+	PF27141	PglY_4th        	   643	   877	   239.6
+	PF26381	BREX_PglY_5th   	   895	   994	    88.1
+	PF26382	BREX_PglY_6th   	  1038	  1212	   149.3
+
+A0A3M0IE31	PHAGE RESISTANCE PROTEIN     548.7   9.4e-162   1   1.4   0.0
+	O86682_TED03              	   374	   628	   548.0
+	PF19557	BrxC-PglY_N     	    27	   371	   179.6
+	PF27141	PglY_4th        	   635	   866	   263.3
+	PF26381	BREX_PglY_5th   	   884	   984	     108
+	PF26382	BREX_PglY_6th   	  1028	  1207	   172.5
+
+A0A3N2PEG2	PHAGE RESISTANCE PROTEIN     275.9    1.8e-78   1   1.9   0.0
+	O86682_TED03              	   355	   612	   274.1
+	PF19557	BrxC-PglY_N     	    29	   352	    86.8
+	PF27141	PglY_4th        	   619	   846	   259.5
+	PF26381	BREX_PglY_5th   	   864	   964	   126.5
+	PF26382	BREX_PglY_6th   	  1008	  1185	   172.1
+
+A0A3Q8V8V8	PHAGE RESISTANCE PROTEIN     583.3   2.6e-172   1   1.3   0.0
+	O86682_TED03              	   374	   628	   582.6
+	PF19557	BrxC-PglY_N     	    27	   371	   188.3
+	PF27141	PglY_4th        	   635	   866	     267
+	PF26381	BREX_PglY_5th   	   884	   984	   110.4
+	PF26382	BREX_PglY_6th   	  1028	  1207	   175.4
+
+A0A4R6P1H1	PHAGE RESISTANCE PROTEIN     419.1   3.5e-122   1   1.3   0.1
+	O86682_TED03              	   373	   627	   418.4
+	PF19557	BrxC-PglY_N     	    27	   370	   130.2
+	PF27141	PglY_4th        	   634	   868	   254.6
+	PF26381	BREX_PglY_5th   	   886	   986	   111.4
+	PF26382	BREX_PglY_6th   	  1029	  1208	   150.3
+
+A0A4V3SUS7	PHAGE RESISTANCE PROTEIN     436.1   2.2e-127   1   1.9   0.0
+	O86682_TED03              	   376	   632	   434.2
+	PF19557	BrxC-PglY_N     	    28	   373	   156.7
+	PF27141	PglY_4th        	   639	   869	   269.6
+	PF26381	BREX_PglY_5th   	   887	   987	   103.6
+	PF26382	BREX_PglY_6th   	  1031	  1210	   167.2
+
+A0A511CXK0	PHAGE RESISTANCE PROTEIN     219.3    3.2e-61   1   1.5   0.2
+	O86682_TED03              	   356	   595	   218.4
+	PF19557	BrxC-PglY_N     	    32	   353	    60.1
+	PF27141	PglY_4th        	   602	   827	   263.4
+	PF26381	BREX_PglY_5th   	   845	   943	    96.3
+	PF26382	BREX_PglY_6th   	   987	  1161	   123.3
+
+A0A543NK31	PHAGE RESISTANCE PROTEIN     482.8   1.2e-141   1   1.9   0.0
+	O86682_TED03              	   369	   623	   481.2
+	PF19557	BrxC-PglY_N     	    27	   366	   144.5
+	PF27141	PglY_4th        	   630	   863	   266.7
+	PF26381	BREX_PglY_5th   	   881	   981	   108.8
+	PF26382	BREX_PglY_6th   	  1025	  1206	   169.3
+
+A0A5M3XP88	PHAGE RESISTANCE PROTEIN     481.0   4.5e-141   1   1.4   0.0
+	O86682_TED03              	   374	   627	   480.2
+	PF19557	BrxC-PglY_N     	    27	   371	   171.7
+	PF27141	PglY_4th        	   634	   867	   262.2
+	PF26381	BREX_PglY_5th   	   885	   985	   109.5
+	PF26382	BREX_PglY_6th   	  1029	  1210	   167.9
+
+A0A5P0YLD9	PHAGE RESISTANCE PROTEIN     544.9   1.4e-160   1   1.3   0.0
+	O86682_TED03              	   374	   628	   544.2
+	PF19557	BrxC-PglY_N     	    27	   371	   180.3
+	PF27141	PglY_4th        	   635	   866	   267.2
+
+A0A5P8K1Z5	PHAGE RESISTANCE PROTEIN     534.2   2.6e-157   1   1.4   0.0
+	O86682_TED03              	   375	   629	   533.5
+	PF19557	BrxC-PglY_N     	    28	   372	   174.1
+	PF27141	PglY_4th        	   636	   867	   262.3
+	PF26381	BREX_PglY_5th   	   885	   985	   106.7
+	PF26382	BREX_PglY_6th   	  1029	  1206	   162.8
+
+A0A640ULR8	PHAGE RESISTANCE PROTEIN     369.0   6.4e-107   1   1.3   0.0
+	O86682_TED03              	   382	   636	   368.5
+	PF19557	BrxC-PglY_N     	    37	   379	   139.9
+	PF27141	PglY_4th        	   643	   877	   237.2
+	PF26381	BREX_PglY_5th   	   895	   994	    91.3
+	PF26382	BREX_PglY_6th   	  1038	  1212	   147.6
+
+A0A646KAP5	PHAGE RESISTANCE PROTEIN     433.8   1.1e-126   1   1.5   0.0
+	O86682_TED03              	   376	   632	   432.9
+	PF19557	BrxC-PglY_N     	    28	   373	   158.7
+	PF27141	PglY_4th        	   639	   870	   263.4
+	PF26381	BREX_PglY_5th   	   888	   988	     100
+	PF26382	BREX_PglY_6th   	  1032	  1211	   168.6
+
+A0A6B3GN73	PHAGE RESISTANCE PROTEIN     366.3   4.5e-106   1   1.4   0.1
+	O86682_TED03              	   382	   636	   365.6
+	PF19557	BrxC-PglY_N     	    37	   379	   137.8
+	PF27141	PglY_4th        	   643	   877	   251.6
+	PF26381	BREX_PglY_5th   	   895	   994	    91.2
+	PF26382	BREX_PglY_6th   	  1038	  1213	   155.9
+
+A0A6G2BHB0	PHAGE RESISTANCE PROTEIN     559.4     5e-165   1   1.4   0.0
+	O86682_TED03              	   374	   628	   558.7
+	PF19557	BrxC-PglY_N     	    27	   371	   187.8
+	PF27141	PglY_4th        	   635	   866	     266
+	PF26381	BREX_PglY_5th   	   884	   984	     105
+	PF26382	BREX_PglY_6th   	  1028	  1207	   176.7
+
+A0A6H9UZ15	PHAGE RESISTANCE PROTEIN     449.1   2.3e-131   1   1.4   0.1
+	O86682_TED03              	   381	   635	   448.4
+	PF19557	BrxC-PglY_N     	    31	   378	   146.6
+	PF27141	PglY_4th        	   642	   874	   267.2
+	PF26381	BREX_PglY_5th   	   892	   992	   101.4
+	PF26382	BREX_PglY_6th   	  1036	  1218	   172.7
+
+A0A6I5WJ61	PHAGE RESISTANCE PROTEIN     299.4    1.1e-85   1   1.4   0.1
+	O86682_TED03              	   356	   606	   298.7
+	PF19557	BrxC-PglY_N     	    28	   353	   108.1
+	PF27141	PglY_4th        	   613	   840	   269.5
+	PF26381	BREX_PglY_5th   	   858	   958	   117.3
+	PF26382	BREX_PglY_6th   	  1002	  1177	   166.8
+
+A0A7K0DCP9	PHAGE RESISTANCE PROTEIN     372.9   4.1e-108   1   1.3   0.0
+	O86682_TED03              	   386	   639	   372.2
+	PF19557	BrxC-PglY_N     	    33	   383	   114.9
+	PF27141	PglY_4th        	   646	   880	   242.1
+	PF26381	BREX_PglY_5th   	   897	   996	   103.7
+	PF26382	BREX_PglY_6th   	  1040	  1216	   137.5
+
+A0A7K2JZ62	PHAGE RESISTANCE PROTEIN     587.3   1.5e-173   1   1.3   0.0
+	O86682_TED03              	   374	   628	   586.7
+	PF19557	BrxC-PglY_N     	    27	   371	   184.1
+	PF27141	PglY_4th        	   635	   866	   268.4
+	PF26381	BREX_PglY_5th   	   884	   984	   110.4
+	PF26382	BREX_PglY_6th   	  1028	  1207	   178.7
+
+A0A7K3GH18	PHAGE RESISTANCE PROTEIN     571.3   1.2e-168   1   1.4   0.0
+	O86682_TED03              	   374	   628	   570.5
+	PF19557	BrxC-PglY_N     	    27	   371	   179.4
+	PF27141	PglY_4th        	   635	   866	   265.3
+	PF26381	BREX_PglY_5th   	   884	   984	     106
+	PF26382	BREX_PglY_6th   	  1028	  1207	   178.8
+
+A0A7M2ST93	PHAGE RESISTANCE PROTEIN     257.7      6e-73   1   1.4   0.0
+	O86682_TED03              	   378	   632	   256.9
+	PF19557	BrxC-PglY_N     	    33	   375	    98.7
+	PF27141	PglY_4th        	   639	   871	   219.9
+	PF26381	BREX_PglY_5th   	   889	   991	    93.7
+	PF26382	BREX_PglY_6th   	  1034	  1216	   147.3
+
+A0A7W3QIR8	PHAGE RESISTANCE PROTEIN     456.2   1.5e-133   1   1.3   0.0
+	O86682_TED03              	   370	   624	   455.7
+	PF19557	BrxC-PglY_N     	    28	   367	   137.7
+	PF27141	PglY_4th        	   631	   864	     263
+	PF26381	BREX_PglY_5th   	   882	   982	   100.7
+	PF26382	BREX_PglY_6th   	  1026	  1204	   168.1
+
+A0A7W9KDM6	PHAGE RESISTANCE PROTEIN     435.5   3.2e-127   1   1.4   0.0
+	O86682_TED03              	   384	   639	   434.8
+	PF19557	BrxC-PglY_N     	    29	   381	   148.4
+	PF27141	PglY_4th        	   646	   879	   238.1
+	PF26381	BREX_PglY_5th   	   897	   997	   115.9
+	PF26382	BREX_PglY_6th   	  1041	  1223	   157.7
+
+A0A7X0M8J4	PHAGE RESISTANCE PROTEIN     326.0    8.5e-94   1   1.4   0.1
+	O86682_TED03              	   374	   625	   325.3
+	PF19557	BrxC-PglY_N     	    29	   142	    53.6
+	PF19557	BrxC-PglY_N     	   255	   371	    34.2
+	PF27141	PglY_4th        	   632	   863	   269.5
+	PF26381	BREX_PglY_5th   	   883	   984	   118.1
+	PF26382	BREX_PglY_6th   	  1026	  1203	   152.2
+
+A0A7X6CXW8	PHAGE RESISTANCE PROTEIN     367.8   1.5e-106   1   1.3   0.0
+	O86682_TED03              	   382	   636	   367.1
+	PF19557	BrxC-PglY_N     	    37	   379	     138
+	PF27141	PglY_4th        	   643	   877	     246
+	PF26381	BREX_PglY_5th   	   895	   994	    96.3
+	PF26382	BREX_PglY_6th   	  1038	  1213	   154.9
+
+A0A7Y0B3G1	PHAGE RESISTANCE PROTEIN     462.4     2e-135   1   1.7   0.1
+	O86682_TED03              	   383	   637	   461.2
+	PF19557	BrxC-PglY_N     	    31	   380	   142.5
+	PF27141	PglY_4th        	   644	   877	   259.7
+	PF26381	BREX_PglY_5th   	   895	   995	   109.2
+	PF26382	BREX_PglY_6th   	  1039	  1221	   168.1
+
+A0A7Y9BKD9	PHAGE RESISTANCE PROTEIN     446.7   1.3e-130   1   1.4   0.0
+	O86682_TED03              	   375	   631	   445.8
+	PF19557	BrxC-PglY_N     	    28	   372	   164.1
+	PF27141	PglY_4th        	   638	   869	   258.2
+	PF26381	BREX_PglY_5th   	   887	   987	   105.9
+	PF26382	BREX_PglY_6th   	  1031	  1211	   160.8
+
+A0A7Y9RVX7	PHAGE RESISTANCE PROTEIN     209.2      4e-58   2   3.0   6.4
+	O86682_TED03              	   353	   595	   199.3
+	O86682_TED03              	   956	  1061	    10.6
+	PF19557	BrxC-PglY_N     	    25	   350	    63.4
+	PF27141	PglY_4th        	   602	   835	   273.7
+	PF26381	BREX_PglY_5th   	   851	   954	    95.1
+	PF26382	BREX_PglY_6th   	   997	  1172	   127.8
+
+A0A839HMT3	PHAGE RESISTANCE PROTEIN     207.9    9.5e-58   1   1.7   0.3
+	O86682_TED03              	   355	   593	   206.7
+	PF19557	BrxC-PglY_N     	    22	   132	    56.7
+	PF27141	PglY_4th        	   601	   825	   268.6
+	PF26381	BREX_PglY_5th   	   838	   937	   105.9
+	PF26382	BREX_PglY_6th   	   979	  1153	   138.9
+
+A0A840PC77	PHAGE RESISTANCE PROTEIN     484.4   4.1e-142   1   1.3   0.0
+	O86682_TED03              	   374	   627	   483.7
+	PF19557	BrxC-PglY_N     	    27	   371	   177.4
+	PF27141	PglY_4th        	   634	   867	   259.6
+	PF26381	BREX_PglY_5th   	   885	   985	   105.1
+	PF26382	BREX_PglY_6th   	  1029	  1210	   176.1
+
+A0A917QTB1	PHAGE RESISTANCE PROTEIN     392.4   4.8e-114   1   1.3   0.0
+	O86682_TED03              	   378	   632	   391.8
+	PF19557	BrxC-PglY_N     	    31	   375	   129.6
+	PF27141	PglY_4th        	   639	   873	   239.2
+	PF26381	BREX_PglY_5th   	   891	   991	   114.3
+	PF26382	BREX_PglY_6th   	  1036	  1215	   148.1
+
+A0A918A4F1	PHAGE RESISTANCE PROTEIN     477.1   6.7e-140   1   1.6   0.0
+	O86682_TED03              	   371	   625	   476.0
+	PF19557	BrxC-PglY_N     	    27	   368	     155
+	PF27141	PglY_4th        	   632	   867	   263.4
+	PF26381	BREX_PglY_5th   	   885	   985	   111.6
+	PF26382	BREX_PglY_6th   	  1029	  1207	   169.8
+
+A0A918B8D0	PHAGE RESISTANCE PROTEIN     436.7   1.4e-127   1   1.3   0.0
+	O86682_TED03              	   379	   636	   436.0
+	PF19557	BrxC-PglY_N     	    30	   376	   155.5
+	PF27141	PglY_4th        	   643	   874	   259.7
+	PF26381	BREX_PglY_5th   	   892	   992	   104.6
+	PF26382	BREX_PglY_6th   	  1036	  1215	   161.2
+
+A0A918DAS1	PHAGE RESISTANCE PROTEIN     446.8   1.2e-130   1   1.3   0.0
+	O86682_TED03              	   381	   635	   446.1
+	PF19557	BrxC-PglY_N     	    31	   378	   145.1
+	PF27141	PglY_4th        	   642	   874	   260.8
+	PF26381	BREX_PglY_5th   	   892	   992	     101
+	PF26382	BREX_PglY_6th   	  1036	  1218	   170.1
+
+A0A918DMT9	PHAGE RESISTANCE PROTEIN     488.4   2.5e-143   1   1.4   0.1
+	O86682_TED03              	   377	   631	   487.6
+	PF19557	BrxC-PglY_N     	    27	   374	   145.3
+	PF27141	PglY_4th        	   638	   873	   263.5
+	PF26381	BREX_PglY_5th   	   891	   991	   107.1
+	PF26382	BREX_PglY_6th   	  1035	  1213	   170.8
+
+A0A918EKP2	PHAGE RESISTANCE PROTEIN     574.9   9.6e-170   1   1.4   0.0
+	O86682_TED03              	   375	   629	   574.2
+	PF19557	BrxC-PglY_N     	    27	   372	   185.2
+	PF27141	PglY_4th        	   636	   867	   266.2
+	PF26381	BREX_PglY_5th   	   885	   985	   108.3
+	PF26382	BREX_PglY_6th   	  1029	  1208	   175.4
+
+A0A918I3Z0	PHAGE RESISTANCE PROTEIN     368.6   8.8e-107   1   1.3   0.1
+	O86682_TED03              	   381	   634	   368.0
+	PF19557	BrxC-PglY_N     	    37	   378	   129.2
+	PF27141	PglY_4th        	   641	   875	     245
+	PF26381	BREX_PglY_5th   	   893	   992	    95.5
+	PF26382	BREX_PglY_6th   	  1036	  1210	   145.5
+
+A0A918Y6X4	PHAGE RESISTANCE PROTEIN     577.0   2.1e-170   1   1.9   0.0
+	O86682_TED03              	   373	   627	   575.0
+	PF19557	BrxC-PglY_N     	    27	   370	   186.5
+	PF27141	PglY_4th        	   634	   865	   265.2
+	PF26381	BREX_PglY_5th   	   883	   983	   108.9
+	PF26382	BREX_PglY_6th   	  1027	  1206	   180.1
+
+A0A918ZK74	PHAGE RESISTANCE PROTEIN     363.2   3.8e-105   1   1.3   0.1
+	O86682_TED03              	   382	   636	   362.6
+	PF19557	BrxC-PglY_N     	    37	   379	   138.1
+	PF27141	PglY_4th        	   643	   877	   256.3
+	PF26381	BREX_PglY_5th   	   895	   994	    94.4
+	PF26382	BREX_PglY_6th   	  1038	  1213	   153.3
+
+A0A919AUP5	PHAGE RESISTANCE PROTEIN     372.5   5.5e-108   1   1.3   0.1
+	O86682_TED03              	   382	   635	   372.0
+	PF19557	BrxC-PglY_N     	    37	   379	   132.5
+	PF27141	PglY_4th        	   642	   876	   251.7
+	PF26381	BREX_PglY_5th   	   894	   993	    94.7
+	PF26382	BREX_PglY_6th   	  1037	  1211	   151.4
+
+A0A919BS56	PHAGE RESISTANCE PROTEIN     368.6   8.7e-107   1   1.3   0.1
+	O86682_TED03              	   381	   634	   368.0
+	PF19557	BrxC-PglY_N     	    37	   378	   129.2
+	PF27141	PglY_4th        	   641	   875	     245
+	PF26381	BREX_PglY_5th   	   893	   992	    95.5
+	PF26382	BREX_PglY_6th   	  1036	  1210	   145.5
+
+A0A919DBA4	PHAGE RESISTANCE PROTEIN     448.1   4.6e-131   1   1.3   0.0
+	O86682_TED03              	   381	   635	   447.5
+	PF19557	BrxC-PglY_N     	    31	   378	   145.4
+	PF27141	PglY_4th        	   642	   874	   267.4
+	PF26381	BREX_PglY_5th   	   892	   992	   103.4
+	PF26382	BREX_PglY_6th   	  1036	  1218	   172.2
+
+A0A919HCN7	PHAGE RESISTANCE PROTEIN     423.2   1.8e-123   1   1.3   0.0
+	O86682_TED03              	   378	   634	   422.6
+	PF19557	BrxC-PglY_N     	    30	   375	   147.2
+	PF27141	PglY_4th        	   641	   872	   259.1
+	PF26381	BREX_PglY_5th   	   886	   986	   102.1
+	PF26382	BREX_PglY_6th   	  1030	  1204	   167.1
+
+A0A919PMS7	PHAGE RESISTANCE PROTEIN     300.1    7.2e-86   1   1.3   0.0
+	O86682_TED03              	   351	   599	   299.5
+	PF19557	BrxC-PglY_N     	    29	   119	    49.8
+	PF19557	BrxC-PglY_N     	   209	   348	    45.8
+	PF27141	PglY_4th        	   606	   833	   276.6
+	PF26381	BREX_PglY_5th   	   851	   951	   121.5
+	PF26382	BREX_PglY_6th   	   995	  1171	   149.5
+
+A0A939JNN0	PHAGE RESISTANCE PROTEIN     439.2   2.5e-128   1   1.4   0.0
+	O86682_TED03              	   378	   634	   438.4
+	PF19557	BrxC-PglY_N     	    28	   375	   149.1
+	PF27141	PglY_4th        	   641	   872	   263.7
+	PF26381	BREX_PglY_5th   	   890	   990	   101.7
+	PF26382	BREX_PglY_6th   	  1034	  1213	   177.3
+
+A0A944HRN8	PHAGE RESISTANCE PROTEIN     426.4   1.9e-124   1   1.3   0.0
+	O86682_TED03              	   376	   632	   425.8
+	PF19557	BrxC-PglY_N     	    28	   373	   153.6
+	PF27141	PglY_4th        	   639	   870	   264.6
+	PF26381	BREX_PglY_5th   	   888	   988	   101.1
+	PF26382	BREX_PglY_6th   	  1032	  1211	   177.2
+
+A0A949JLE1	PHAGE RESISTANCE PROTEIN     359.4   5.7e-104   1   1.4   0.0
+	O86682_TED03              	   382	   636	   358.6
+	PF19557	BrxC-PglY_N     	    37	   379	   135.4
+	PF27141	PglY_4th        	   643	   877	   244.1
+	PF26381	BREX_PglY_5th   	   895	   994	      92
+	PF26382	BREX_PglY_6th   	  1038	  1213	   152.3
+
+A0A9W5UQN5	PHAGE RESISTANCE PROTEIN     305.3    1.8e-87   1   1.4   0.1
+	O86682_TED03              	   356	   606	   304.6
+	PF19557	BrxC-PglY_N     	    28	   353	   102.7
+	PF27141	PglY_4th        	   613	   840	   274.1
+	PF26381	BREX_PglY_5th   	   858	   958	   121.6
+	PF26382	BREX_PglY_6th   	  1002	  1177	   156.1
+
+A0A9W6HXN1	PHAGE RESISTANCE PROTEIN     202.3    4.8e-56   1   2.2   0.8
+	O86682_TED03              	   348	   583	   195.4
+	PF19557	BrxC-PglY_N     	    25	   161	    48.2
+	PF27141	PglY_4th        	   590	   818	     250
+	PF26381	BREX_PglY_5th   	   836	   935	      94
+	PF26382	BREX_PglY_6th   	   978	  1149	   144.7
+
+A0A9W6UJN4	PHAGE RESISTANCE PROTEIN     370.1     3e-107   1   1.4   0.1
+	O86682_TED03              	   382	   636	   369.4
+	PF19557	BrxC-PglY_N     	    37	   379	   137.6
+	PF27141	PglY_4th        	   643	   877	   242.3
+	PF26381	BREX_PglY_5th   	   895	   994	    95.5
+	PF26382	BREX_PglY_6th   	  1038	  1212	   149.6
+
+E3IUG6	BACTERIOPHAGE RESISTANCE PROT    298.5    2.1e-85   1   1.6   0.1
+	O86682_TED03              	   361	   617	   297.5
+	PF19557	BrxC-PglY_N     	    30	   358	    81.8
+	PF27141	PglY_4th        	   624	   854	     257
+	PF26381	BREX_PglY_5th   	   872	   982	      97
+	PF26382	BREX_PglY_6th   	  1026	  1216	   135.9
+
+H6RC29	BACTERIOPHAGE (PHIC31) RESIST    427.7   8.1e-125   1   1.4   0.0
+	O86682_TED03              	   372	   626	   427.0
+	PF19557	BrxC-PglY_N     	    27	   369	   126.4
+	PF27141	PglY_4th        	   633	   867	   249.5
+	PF26381	BREX_PglY_5th   	   885	   985	   111.2
+	PF26382	BREX_PglY_6th   	  1028	  1207	   163.1
+
+K0JWJ5	BACTERIOPHAGE RESISTANCE PROT    205.4    5.7e-57   1   1.4   0.1
+	O86682_TED03              	   358	   596	   204.6
+	PF19557	BrxC-PglY_N     	    33	   355	    69.8
+	PF27141	PglY_4th        	   603	   832	   242.6
+	PF26381	BREX_PglY_5th   	   850	   948	   101.1
+	PF26382	BREX_PglY_6th   	   992	  1165	   129.3
+
+K4R6U9	BACTERIOPHAGE RESISTANCE PROT    367.9   1.4e-106   1   1.3   0.1
+	O86682_TED03              	   382	   636	   367.3
+	PF19557	BrxC-PglY_N     	    37	   379	   135.7
+	PF27141	PglY_4th        	   643	   877	   244.8
+	PF26381	BREX_PglY_5th   	   895	   994	      88
+	PF26382	BREX_PglY_6th   	  1038	  1212	   151.8
+
+K4RB61	BACTERIOPHAGE RESISTANCE PROT    546.1   5.7e-161   1   1.3   0.0
+	O86682_TED03              	   373	   627	   545.5
+	PF19557	BrxC-PglY_N     	    26	   370	   174.7
+	PF27141	PglY_4th        	   634	   865	   265.4
+	PF26381	BREX_PglY_5th   	   883	   983	   108.3
+	PF26382	BREX_PglY_6th   	  1027	  1206	   167.9
+
+L7F158	PHAGE RESISTANCE PROTEIN {ECO    548.1   1.4e-161   1   1.3   0.0
+	O86682_TED03              	   375	   629	   547.5
+	PF19557	BrxC-PglY_N     	    28	   372	   177.4
+	PF27141	PglY_4th        	   636	   867	   256.8
+	PF26381	BREX_PglY_5th   	   885	   985	   107.4
+	PF26382	BREX_PglY_6th   	  1029	  1208	   175.8
+
+O86682	ATPASE PGLY {ECO:0000303|PUBMED    591.9   6.1e-175   1   1.4   0.0
+	O86682_TED03              	   374	   628	   591.1
+	PF19557	BrxC-PglY_N     	    27	   371	   204.7
+	PF27141	PglY_4th        	   635	   866	   263.1
+	PF26381	BREX_PglY_5th   	   884	   984	   107.5
+	PF26382	BREX_PglY_6th   	  1028	  1207	   176.9
+
+S2YZA5	PHAGE RESISTANCE PROTEIN {ECO    543.8   2.9e-160   1   1.4   0.0
+	O86682_TED03              	   374	   628	   543.0
+	PF19557	BrxC-PglY_N     	    27	   371	   183.3
+	PF27141	PglY_4th        	   635	   866	   263.6
+	PF26381	BREX_PglY_5th   	   884	   984	   106.5
+	PF26382	BREX_PglY_6th   	  1028	  1207	     178
+
+U5W4X5	BACTERIOPHAGE RESISTANCE PROT    298.3    2.6e-85   1   1.5   0.1
+	O86682_TED03              	   356	   606	   297.4
+	PF19557	BrxC-PglY_N     	    29	   353	   102.9
+	PF27141	PglY_4th        	   613	   840	   273.6
+	PF26381	BREX_PglY_5th   	   858	   958	   118.6
+	PF26382	BREX_PglY_6th   	  1002	  1179	     157
+
+V6KZI7	PHAGE RESISTANCE PROTEIN {ECO    429.9   1.7e-125   1   2.0   0.0
+	O86682_TED03              	   376	   632	   428.0
+	PF19557	BrxC-PglY_N     	    28	   373	     158
+	PF27141	PglY_4th        	   639	   869	   271.8
+	PF26381	BREX_PglY_5th   	   887	   987	   103.5
+	PF26382	BREX_PglY_6th   	  1031	  1210	   165.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS246803 (E-value: 5.4e-177, Score: 591.9)
+Mentioned as: SCO6635
+Description: bacteriophage (phiC31) resistance gene pglY
+Organism: Streptomyces coelicolor A3(2)
+PMID: 23496097
+Source: EuropePMC
+Title: Pre-sporulation stages of Streptomyces differentiation: state-of-the-art and future perspectives
+Journal: FEMS microbiology letters (2013)
+Snippet: SCO5449 SCO6517 SCO7841 SCO0742 SCO1848 SCO3261 SCO4405 SCO5451 SCO6633 SCO7845 SCO0755 SCO1850 SCO3351 SCO4508 SCO5580 SCO6635 SCP1.110 SCO0756 SCO1852 SCO3369 SCO4585 SCO5603 SCO6677 SCP1.136 SCO0824 SCO1966 SCO3370 SCO4620 SCO5633 SCO6683 SCP1.169 SCO1144 SCO2000 SCO3372 SCO4685 SCO5648 SCO6684 SCP1.205c SCO1147 SCO2257 SCO3418 SCO4797 SCO5668 SCO6719 SCP1.216Ac SCO1148
+
+================================================================================
+Protein: VIMSS246803 (E-value: 5.4e-177, Score: 591.9)
+Mentioned as: SCO6635
+Description: bacteriophage (phiC31) resistance gene pglY
+Organism: Streptomyces coelicolor A3(2)
+PMID: 21122120
+Source: EuropePMC
+Title: Metabolic and evolutionary insights into the closely-related species Streptomyces coelicolor and Streptomyces lividans deduced from high-resolution comparative genomic hybridization
+Journal: BMC genomics (2010)
+Snippet: gene pglZ (SCO6636), although it and TK24 both lack the C31 phage resistance gene pglY (SCO6635). Both of these genes are present in S. lividans 66. The differences in act biosynthesis between S. lividans and S. coelicolor may be due to absence/divergence of genes relating to
+
+================================================================================
+Protein: VIMSS246803 (E-value: 5.4e-177, Score: 591.9)
+Mentioned as: SCO6635
+Description: bacteriophage (phiC31) resistance gene pglY
+Organism: Streptomyces coelicolor A3(2)
+PMID: 7642495
+Source: EuropePMC
+Title: Two genes involved in the phase-variable phi C31 resistance mechanism of Streptomyces coelicolor A3(2)
+Journal: Journal of bacteriology (1995)
+
+================================================================================
+Protein: VIMSS1248498 (E-value: 3.4e-43, Score: 153.5)
+Mentioned as: Francci3_2954
+Description: bacteriophage (phiC31) resistance gene PglY
+Organism: Frankia sp. CcI3
+PMID: 21867524
+Source: EuropePMC
+Title: Transcriptomes of Frankia sp. strain CcI3 in growth transitions
+Journal: BMC microbiology (2011)
+Snippet: Francci3_2344 phage integrase 1.59 1.20* -1.32 Francci3_2443 putative phage-related terminase large subunit 1.34 1.84 1.37 Francci3_2954 bacteriophage (phiC31) resistance gene PglY 1.57 1.38 -1.14* Francci3_2955 bacteriophage (phiC31) resistance gene PglZ 1.47 1.22* -1.21* Francci3_3052 phage integrase 1.07* 1.43 1.34 Francci3_3350 phage integrase 1.42 1.74 1.22 Francci3_3388
+
+================================================================================
+Protein: VIMSS1076365 (E-value: 2.6e-42, Score: 150.6)
+Mentioned as: BTH_I0115
+Description: pglY
+Organism: Burkholderia thailandensis E264
+PMID: 29914944
+Source: EuropePMC
+Title: Thailandamide, a Fatty Acid Synthesis Antibiotic That Is Coexpressed with a Resistant Target Gene
+Journal: Antimicrobial agents and chemotherapy (2018)
+Snippet: antibiotic. Three transposons inserted into the genes for BTH_I0115 and BTH_I0116 that are homologous to the phage resistance proteins PglY and PglZ of
+
+================================================================================
+Protein: VIMSS1076365 (E-value: 2.6e-42, Score: 150.6)
+Mentioned as: BTH_I0115
+Description: pglY
+Organism: Burkholderia thailandensis E264
+PMID: 23872555
+Source: EuropePMC
+Title: Characterization of the Burkholderia thailandensis SOS response by using whole-transcriptome shotgun sequencing
+Journal: Applied and environmental microbiology (2013)
+Snippet: designed to amplify an internal gene amplicon within BTH_I0115 (GI1), BTH_II1333 (GI13), and BTH_II1031 (GI12) (Table 1). A total of 10 plaques, all turbid
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O86682.1	AF-O86682-F1-model_v4_TED01:33-153_284-369	1	AF-O86682-F1-model_v4_TED01	33-369	0
+O86682.1	AF-O86682-F1-model_v4_TED02:160-181_206-217_225-262	1	AF-O86682-F1-model_v4_TED02	160-262	0
+O86682.1	AF-O86682-F1-model_v4_TED03:374-628	1	AF-O86682-F1-model_v4_TED03	374-628	100.0%
+O86682.1	AF-O86682-F1-model_v4_TED04:635-866	1	AF-O86682-F1-model_v4_TED04	635-866	0
+O86682.1	AF-O86682-F1-model_v4_TED05:884-984	1	AF-O86682-F1-model_v4_TED05	884-984	0
+O86682.1	AF-O86682-F1-model_v4_TED06:1028-1207	1	AF-O86682-F1-model_v4_TED06	1028-1207	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O86682_TED03
+GA   27.00 27.00;
+TC   27.80 27.50;
+NC   26.50 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

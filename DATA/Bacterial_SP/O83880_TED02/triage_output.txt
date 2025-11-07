@@ -1,0 +1,124 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y910_TREPA              Reviewed;         306 AA.
+AC   O83880;
+DE   RecName: Full=Uncharacterized protein TP_0910;
+GN   OrderedLocusNames=TP_0910;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65870.1; -; Genomic_DNA.
+DR   PIR; C71268; C71268.
+DR   RefSeq; WP_010882353.1; NC_021490.2.
+DR   AlphaFoldDB; O83880; -.
+DR   SMR; O83880; -.
+DR   STRING; 243276.TP_0910; -.
+DR   EnsemblBacteria; AAC65870; AAC65870; TP_0910.
+DR   KEGG; tpa:TP_0910; -.
+DR   KEGG; tpw:TPANIC_0910; -.
+DR   eggNOG; ENOG5031CIN; Bacteria.
+DR   HOGENOM; CLU_943144_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..306
+FT                   /note="Uncharacterized protein TP_0910"
+FT                   /id="PRO_0000202349"
+SQ   SEQUENCE   306 AA;  33814 MW;  BC80543B5FAB29D8 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Treponema.
+1	5	Treponemataceae
+1	4	Spirochaetales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O83880	UNCHARACTERIZED PROTEIN TP_0910    201.1    1.1e-56   1   1.9   0.5
+	O83880_TED02              	    87	   173	   201.1
+	PF29192	S1_TP0910       	     2	    74	    66.6
+	PF29193	TP0910_C        	   192	   304	    81.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS6878103 (E-value: 0.00011, Score: 27.9)
+Mentioned as: Npun_R6612
+Description: WD-40 repeat-containing protein
+Organism: Nostoc punctiforme
+PMID: 35755816
+Source: EuropePMC
+Title: New β-Propellers Are Continuously Amplified From Single Blades in all Major Lineages of the β-Propeller Superfamily
+Journal: Frontiers in molecular biosciences (2022)
+Snippet: diversification. The most symmetric -propeller known to date is that of the WRAP domain in Npun_R6612 from the cyanobacterium Nostoc punctiforme PCC73102, with only 10 point mutations across 14 predicted blades ( Chaudhuri et al., 2008 ; Dunin-Horkawicz et al., 2014 ). The near identity of
+
+================================================================================
+Protein: VIMSS6878103 (E-value: 0.00011, Score: 27.9)
+Mentioned as: Npun_R6612
+Description: WD-40 repeat-containing protein
+Organism: Nostoc punctiforme
+PMID: 31613220
+Source: EuropePMC
+Title: Structural diversity of oligomeric β-propellers with different numbers of identical blades
+Journal: eLife (2019)
+Snippet: to another highly symmetric -propeller of the WD40 family, found in the C-terminal part of Npun_R6612 from the multicellular cyanobacterium Nostoc punctiforme PCC 73102 and referred to henceforth as WRAP (WD40-family Recently Amplified Propeller; ACC84870.1). WRAP, which we identified during a systematic bioinformatic survey of -propellers
+
+================================================================================
+Protein: VIMSS6878103 (E-value: 0.00011, Score: 27.9)
+Mentioned as: Npun_R6612
+Description: WD-40 repeat-containing protein
+Organism: Nostoc punctiforme
+PMID: 28878378
+Source: EuropePMC
+Title: Prokaryotic and Highly-Repetitive WD40 Proteins: A Systematic Study
+Journal: Scientific reports (2017)
+Snippet: repeats can be regarded as forming two typical WD40 domains. For example, B2J0I0_NOSP7 (Gene symbol: Npun_R6612 , PDB ID: 2YMU, Zeth, et al . unpublished), containing 14 repeats, forms two WD40 domains (Supplementary Fig. S1c ). Accordingly, the number of repeats of a WD40 protein can
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83880.1	AF-O83880-F1-model_v4_TED02:87-173	1	AF-O83880-F1-model_v4_TED02	87-173	100.0%
+O83880.1	AF-O83880-F1-model_v4_TED03:193-303	1	AF-O83880-F1-model_v4_TED03	193-303	0
+O83880.1	AF-O83880-F1-model_v4_TED01:6-74	1	AF-O83880-F1-model_v4_TED01	6-74	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83880_TED02
+GA   27.00 27.00;
+TC   27.90 201.10;
+NC   24.80 23.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,644 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   SQVD_CLOS9              Reviewed;         447 AA.
+AC   J1H1H5;
+DE   RecName: Full=Sulfoquinovose isomerase {ECO:0000303|Ref.2};
+DE            Short=SQ isomerase {ECO:0000303|Ref.2};
+DE            EC=5.3.1.31 {ECO:0000269|Ref.2};
+GN   Name=sqvD {ECO:0000303|Ref.2};
+GN   ORFNames=HMPREF1141_0611 {ECO:0000312|EMBL:EJF39088.1};
+OS   Clostridium sp. (strain MSTE9).
+OC   Bacteria; Bacillati; Bacillota; Clostridia; Eubacteriales; Clostridiaceae;
+OC   Clostridium.
+OX   NCBI_TaxID=1105031;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=MSTE9;
+RA   Harkins D.M., Madupu R., Durkin A.S., Torralba M., Methe B., Sutton G.G.,
+RA   Nelson K.E.;
+RL   Submitted (MAY-2012) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   FUNCTION, AND CATALYTIC ACTIVITY.
+RC   STRAIN=MSTE9;
+RX   DOI=10.1021/acscatal.1c04321;
+RA   Liu J., Wei Y., Ma K., An J., Liu X., Liu Y., Ang E.L., Zhao H., Zhang Y.;
+RT   "Mechanistically diverse pathways for sulfoquinovose degradation in
+RT   bacteria.";
+RL   ACS Catal. 11:14740-14750(2021).
+CC   -!- FUNCTION: Part of the sulfo-TK pathway, a D-sulfoquinovose degradation
+CC       pathway that produces 2-hydroxyethane-1-sulfonate (isethionate)
+CC       (Ref.2). Catalyzes the isomerization of sulfoquinovose (SQ) to 6-deoxy-
+CC       6-sulfo-D-fructose (SF) (Ref.2). {ECO:0000269|Ref.2}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=6-sulfo-beta-D-quinovose = 6-deoxy-6-sulfo-D-fructose;
+CC         Xref=Rhea:RHEA:40439, ChEBI:CHEBI:77133, ChEBI:CHEBI:142957;
+CC         EC=5.3.1.31; Evidence={ECO:0000269|Ref.2};
+CC       PhysiologicalDirection=left-to-right; Xref=Rhea:RHEA:40440;
+CC         Evidence={ECO:0000269|Ref.2};
+CC   -!- SIMILARITY: Belongs to the SqvD family. {ECO:0000305}.
+DR   EMBL; AKFU01000044; EJF39088.1; -; Genomic_DNA.
+DR   RefSeq; WP_009065217.1; NZ_AKFU01000044.1.
+DR   AlphaFoldDB; J1H1H5; -.
+DR   SMR; J1H1H5; -.
+DR   STRING; 1105031.HMPREF1141_0611; -.
+DR   PATRIC; fig|1105031.3.peg.2803; -.
+DR   eggNOG; COG2407; Bacteria.
+DR   BioCyc; MetaCyc:MONOMER-21936; -.
+DR   Proteomes; UP000004073; Unassembled WGS sequence.
+DR   GO; GO:0005737; C:cytoplasm; IEA:InterPro.
+DR   GO; GO:0008736; F:L-fucose isomerase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0005996; P:monosaccharide metabolic process; IEA:InterPro.
+DR   InterPro; IPR009015; Fucose_isomerase_N/cen_sf.
+DR   PANTHER; PTHR36120; FUCOSE ISOMERASE; 1.
+DR   PANTHER; PTHR36120:SF1; L-FUCOSE ISOMERASE C-TERMINAL DOMAIN-CONTAINING PROTEIN; 1.
+DR   SUPFAM; SSF53743; FucI/AraA N-terminal and middle domains; 1.
+PE   1: Evidence at protein level;
+KW   Carbohydrate metabolism; Isomerase; Reference proteome.
+FT   CHAIN           1..447
+FT                   /note="Sulfoquinovose isomerase"
+FT                   /id="PRO_0000458934"
+SQ   SEQUENCE   447 AA;  49143 MW;  7B1C19FE89AE86D4 CRC64;
+//
+ID   SQVD_ALKUR              Reviewed;         443 AA.
+AC   A0A2P6MHU9;
+DE   RecName: Full=Sulfoquinovose isomerase {ECO:0000303|Ref.2};
+DE            Short=SQ isomerase {ECO:0000303|Ref.2};
+DE            EC=5.3.1.31 {ECO:0000269|Ref.2};
+GN   Name=sqvD {ECO:0000303|Ref.2};
+GN   ORFNames=C6I21_08110 {ECO:0000312|EMBL:PRO65851.1};
+OS   Alkalicoccus urumqiensis (Bacillus urumqiensis).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae;
+OC   Alkalicoccus.
+OX   NCBI_TaxID=1548213;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DSM 29145 / JCM 30195 / BZ-SZ-XJ18;
+RA   Zhao B., Liao Z.;
+RT   "Bacillus urumqiensis sp. nov., a moderately haloalkaliphilic bacterium
+RT   isolated from a salt lake.";
+RL   Submitted (MAR-2018) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   FUNCTION, AND CATALYTIC ACTIVITY.
+RX   DOI=10.1021/acscatal.1c04321;
+RA   Liu J., Wei Y., Ma K., An J., Liu X., Liu Y., Ang E.L., Zhao H., Zhang Y.;
+RT   "Mechanistically diverse pathways for sulfoquinovose degradation in
+RT   bacteria.";
+RL   ACS Catal. 11:14740-14750(2021).
+CC   -!- FUNCTION: Part of the sulfo-EMP2 pathway, a D-sulfoquinovose
+CC       degradation pathway that produces sulfolactate (SL) (Ref.2). Catalyzes
+CC       the isomerization of sulfoquinovose (SQ) to 6-deoxy-6-sulfo-D-fructose
+CC       (SF) (Ref.2). {ECO:0000269|Ref.2}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=6-sulfo-beta-D-quinovose = 6-deoxy-6-sulfo-D-fructose;
+CC         Xref=Rhea:RHEA:40439, ChEBI:CHEBI:77133, ChEBI:CHEBI:142957;
+CC         EC=5.3.1.31; Evidence={ECO:0000269|Ref.2};
+CC       PhysiologicalDirection=left-to-right; Xref=Rhea:RHEA:40440;
+CC         Evidence={ECO:0000269|Ref.2};
+CC   -!- SIMILARITY: Belongs to the SqvD family. {ECO:0000305}.
+DR   EMBL; PVNS01000006; PRO65851.1; -; Genomic_DNA.
+DR   RefSeq; WP_105958947.1; NZ_PVNS01000006.1.
+DR   AlphaFoldDB; A0A2P6MHU9; -.
+DR   SMR; A0A2P6MHU9; -.
+DR   OrthoDB; 5838738at2; -.
+DR   BioCyc; MetaCyc:MONOMER-21941; -.
+DR   Proteomes; UP000243650; Unassembled WGS sequence.
+DR   GO; GO:0005737; C:cytoplasm; IEA:InterPro.
+DR   GO; GO:0008736; F:L-fucose isomerase activity; IEA:InterPro.
+DR   GO; GO:0006004; P:fucose metabolic process; IEA:InterPro.
+DR   InterPro; IPR015888; Fuc_isomerase_C.
+DR   InterPro; IPR009015; Fucose_isomerase_N/cen_sf.
+DR   PANTHER; PTHR36120; FUCOSE ISOMERASE; 1.
+DR   PANTHER; PTHR36120:SF1; L-FUCOSE ISOMERASE C-TERMINAL DOMAIN-CONTAINING PROTEIN; 1.
+DR   Pfam; PF02952; Fucose_iso_C; 1.
+DR   SUPFAM; SSF53743; FucI/AraA N-terminal and middle domains; 1.
+PE   1: Evidence at protein level;
+KW   Carbohydrate metabolism; Isomerase; Reference proteome.
+FT   CHAIN           1..443
+FT                   /note="Sulfoquinovose isomerase"
+FT                   /id="PRO_0000458933"
+SQ   SEQUENCE   443 AA;  49089 MW;  D03D76790A7A3423 CRC64;
+//
+ID   SQVD_PRIM1              Reviewed;         446 AA.
+AC   D5E1S9;
+DE   RecName: Full=Sulfoquinovose isomerase {ECO:0000305};
+DE            Short=SQ isomerase {ECO:0000305};
+DE            EC=5.3.1.31 {ECO:0000269|PubMed:33036753};
+GN   Name=sqvD {ECO:0000303|PubMed:33036753};
+GN   OrderedLocusNames=BMQ_3645 {ECO:0000312|EMBL:ADE70658.1};
+OS   Priestia megaterium (strain ATCC 12872 / QMB1551) (Bacillus megaterium).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae; Priestia.
+OX   NCBI_TaxID=545693;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 12872 / DSM 1804 / QMB1551;
+RX   PubMed=21705586; DOI=10.1128/jb.00449-11;
+RA   Eppinger M., Bunk B., Johns M.A., Edirisinghe J.N., Kutumbaka K.K.,
+RA   Koenig S.S., Creasy H.H., Rosovitz M.J., Riley D.R., Daugherty S.,
+RA   Martin M., Elbourne L.D., Paulsen I., Biedendieck R., Braun C.,
+RA   Grayburn S., Dhingra S., Lukyanchuk V., Ball B., Ul-Qamar R., Seibel J.,
+RA   Bremer E., Jahn D., Ravel J., Vary P.S.;
+RT   "Genome sequences of the biotechnologically important Bacillus megaterium
+RT   strains QM B1551 and DSM319.";
+RL   J. Bacteriol. 193:4199-4213(2011).
+RN   [2]
+RP   FUNCTION, AND CATALYTIC ACTIVITY.
+RC   STRAIN=ATCC 12872 / DSM 1804 / QMB1551;
+RX   PubMed=33036753; DOI=10.1016/j.bbrc.2020.09.124;
+RA   Liu Y., Wei Y., Zhou Y., Ang E.L., Zhao H., Zhang Y.;
+RT   "A transaldolase-dependent sulfoglycolysis pathway in Bacillus megaterium
+RT   DSM 1804.";
+RL   Biochem. Biophys. Res. Commun. 533:1109-1114(2020).
+CC   -!- FUNCTION: Part of the sulfo-TAL (or sulfo-SFT) pathway, a D-
+CC       sulfoquinovose degradation pathway that produces sulfolactate (SL)
+CC       (PubMed:33036753). Catalyzes the isomerization of sulfoquinovose (SQ)
+CC       to 6-deoxy-6-sulfo-D-fructose (SF) (PubMed:33036753).
+CC       {ECO:0000269|PubMed:33036753}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=6-sulfo-beta-D-quinovose = 6-deoxy-6-sulfo-D-fructose;
+CC         Xref=Rhea:RHEA:40439, ChEBI:CHEBI:77133, ChEBI:CHEBI:142957;
+CC         EC=5.3.1.31; Evidence={ECO:0000269|PubMed:33036753};
+CC       PhysiologicalDirection=left-to-right; Xref=Rhea:RHEA:40440;
+CC         Evidence={ECO:0000269|PubMed:33036753};
+CC   -!- SIMILARITY: Belongs to the SqvD family. {ECO:0000305}.
+DR   EMBL; CP001983; ADE70658.1; -; Genomic_DNA.
+DR   RefSeq; WP_013058332.1; NC_014019.1.
+DR   AlphaFoldDB; D5E1S9; -.
+DR   SMR; D5E1S9; -.
+DR   STRING; 545693.BMQ_3645; -.
+DR   KEGG; bmq:BMQ_3645; -.
+DR   eggNOG; COG2407; Bacteria.
+DR   HOGENOM; CLU_045643_1_0_9; -.
+DR   Proteomes; UP000000935; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:InterPro.
+DR   GO; GO:0008736; F:L-fucose isomerase activity; IEA:InterPro.
+DR   GO; GO:0006004; P:fucose metabolic process; IEA:InterPro.
+DR   InterPro; IPR004216; Fuc/Ara_isomerase_C.
+DR   InterPro; IPR015888; Fuc_isomerase_C.
+DR   InterPro; IPR009015; Fucose_isomerase_N/cen_sf.
+DR   PANTHER; PTHR36120; FUCOSE ISOMERASE; 1.
+DR   PANTHER; PTHR36120:SF1; L-FUCOSE ISOMERASE C-TERMINAL DOMAIN-CONTAINING PROTEIN; 1.
+DR   Pfam; PF02952; Fucose_iso_C; 1.
+DR   SUPFAM; SSF50443; FucI/AraA C-terminal domain-like; 1.
+DR   SUPFAM; SSF53743; FucI/AraA N-terminal and middle domains; 1.
+PE   1: Evidence at protein level;
+KW   Carbohydrate metabolism; Isomerase; Reference proteome.
+FT   CHAIN           1..446
+FT                   /note="Sulfoquinovose isomerase"
+FT                   /id="PRO_0000458970"
+SQ   SEQUENCE   446 AA;  49723 MW;  C12E11E0BEA00A34 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	5	Roseobacteraceae
+13	5	Bacillaceae
+21	4	Bacillales
+14	4	Rhodobacterales
+12	4	Hyphomicrobiales
+26	3	Alphaproteobacteria
+24	3	Bacilli
+11	3	Clostridia
+37	2	Bacillota
+29	2	Pseudomonadota
+45	1	Bacillati
+31	1	Pseudomonadati
+77	0	Bacteria
+Total of 77 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0A1MDT6	L-FUCOSE ISOMERASE C-TERM     63.3    1.1e-13   1   1.3   0.0
+	J1H1H5_TED01              	     6	   152	    62.6
+	PF02952	Fucose_iso_C    	   373	   471	    35.2
+
+A0A0A5GM86	L-FUCOSE ISOMERASE C-TERM     78.1    3.1e-18   1   1.3   0.0
+	J1H1H5_TED01              	     6	   157	    77.5
+	PF02952	Fucose_iso_C    	   348	   445	    31.3
+
+A0A0D0Y624	L-FUCOSE ISOMERASE LIKE P     48.2      5e-09   1   1.3   0.0
+	J1H1H5_TED01              	     5	   155	    47.6
+	PF02952	Fucose_iso_C    	   334	   442	    40.2
+
+A0A0J6CYV1	L-FUCOSE ISOMERASE C-TERM     74.2    4.9e-17   1   1.3   0.0
+	J1H1H5_TED01              	     7	   159	    73.7
+	PF02952	Fucose_iso_C    	   349	   446	    30.5
+
+A0A0K2SGX8	FUCOSE ISOMERASE {ECO:000     41.0    8.1e-07   1   1.3   0.2
+	J1H1H5_TED01              	    73	   168	    40.2
+
+A0A0M2PL73	L-FUCOSE ISOMERASE C-TERM     83.9    5.2e-20   1   1.4   0.0
+	J1H1H5_TED01              	     7	   155	    82.9
+	PF02952	Fucose_iso_C    	   349	   445	    29.7
+
+A0A0R1RGS4	L-FUCOSE ISOMERASE C-TERM     44.6    6.6e-08   1   1.4   0.0
+	J1H1H5_TED01              	     5	   154	    43.7
+	PF02952	Fucose_iso_C    	   329	   441	    45.5
+
+A0A0R2A4P8	L-FUCOSE ISOMERASE C-TERM     46.4    1.8e-08   1   1.4   0.0
+	J1H1H5_TED01              	     5	   155	    45.7
+	PF02952	Fucose_iso_C    	   330	   442	    42.4
+
+A0A0R2F7C6	L-FUCOSE ISOMERASE C-TERM     42.6    2.6e-07   1   1.3   0.0
+	J1H1H5_TED01              	     5	   155	    41.9
+	PF02952	Fucose_iso_C    	   331	   444	    42.5
+
+A0A0U3WCF3	L-FUCOSE ISOMERASE C-TERM     50.6    9.1e-10   1   1.3   0.0
+	J1H1H5_TED01              	     1	   140	    50.0
+	PF02952	Fucose_iso_C    	   331	   429	    30.2
+
+A0A179T6S9	L-FUCOSE ISOMERASE C-TERM     85.2      2e-20   1   1.3   0.0
+	J1H1H5_TED01              	     7	   157	    84.6
+	PF02952	Fucose_iso_C    	   340	   444	    33.9
+
+A0A180FB55	L-FUCOSE ISOMERASE {ECO:0    107.7    2.4e-27   1   1.4   0.0
+	J1H1H5_TED01              	     6	   156	   106.9
+
+A0A1B2IVK3	L-FUCOSE ISOMERASE C-TERM     48.1    5.5e-09   1   1.3   0.0
+	J1H1H5_TED01              	     5	   155	    47.4
+	PF02952	Fucose_iso_C    	   349	   443	    43.7
+
+A0A1B3XN51	L-FUCOSE ISOMERASE C-TERM     88.5      2e-21   1   1.4   0.0
+	J1H1H5_TED01              	     7	   158	    87.7
+
+A0A1C1YX93	L-FUCOSE ISOMERASE C-TERM     38.6    4.5e-06   1   1.3   0.0
+	J1H1H5_TED01              	     9	   140	    37.9
+	PF02952	Fucose_iso_C    	   340	   462	    34.7
+
+A0A1D3TV16	L-FUCOSE ISOMERASE {ECO:0    201.6    2.8e-56   1   1.3   0.0
+	J1H1H5_TED01              	    34	   184	   201.0
+
+A0A1G9D206	L-FUCOSE ISOMERASE {ECO:0     38.4    5.3e-06   1   1.5   0.0
+	J1H1H5_TED01              	     4	   141	    37.4
+	PF02952	Fucose_iso_C    	   371	   462	    35.3
+
+A0A1H0Z2C2	L-FUCOSE ISOMERASE {ECO:0     61.8    3.2e-13   1   1.3   0.0
+	J1H1H5_TED01              	     5	   155	    61.2
+	PF02952	Fucose_iso_C    	   341	   444	      31
+
+A0A1H2UAK1	L-FUCOSE ISOMERASE {ECO:0     78.2      3e-18   1   1.3   0.0
+	J1H1H5_TED01              	     7	   158	    77.5
+
+A0A1H5VTW0	L-FUCOSE ISOMERASE {ECO:0    181.3    5.2e-50   1   1.3   0.0
+	J1H1H5_TED01              	     7	   158	   180.7
+
+A0A1H6SR79	L-FUCOSE ISOMERASE {ECO:0    164.2    9.4e-45   1   2.2   0.1
+	J1H1H5_TED01              	     7	   172	   159.1
+
+A0A1H7KJU7	L-FUCOSE ISOMERASE {ECO:0    159.4    2.9e-43   1   1.3   0.0
+	J1H1H5_TED01              	     6	   157	   158.7
+	PF02952	Fucose_iso_C    	   350	   446	    34.3
+
+A0A1H9XPU4	L-FUCOSE ISOMERASE {ECO:0     38.0    7.1e-06   1   1.3   0.0
+	J1H1H5_TED01              	    10	   154	    37.2
+	PF02952	Fucose_iso_C    	   348	   473	      42
+
+A0A1I0BJN8	L-FUCOSE ISOMERASE {ECO:0    194.8    3.5e-54   1   1.3   0.0
+	J1H1H5_TED01              	     6	   157	   194.3
+	PF02952	Fucose_iso_C    	   344	   446	    33.7
+
+A0A1I3QII2	L-FUCOSE ISOMERASE {ECO:0     38.3    5.7e-06   1   1.7   0.1
+	J1H1H5_TED01              	     4	   140	    36.9
+	PF02952	Fucose_iso_C    	   319	   440	    41.3
+
+A0A1I4NIS2	L-FUCOSE ISOMERASE {ECO:0     89.0    1.3e-21   1   1.3   0.0
+	J1H1H5_TED01              	     5	   155	    88.4
+
+A0A1I5BYN2	L-FUCOSE ISOMERASE {ECO:0    169.3    2.5e-46   1   1.3   0.0
+	J1H1H5_TED01              	     5	   155	   168.7
+	PF02952	Fucose_iso_C    	   322	   444	    29.5
+
+A0A1L3MMF3	L-FUCOSE ISOMERASE C-TERM     93.5    5.8e-23   1   1.4   0.0
+	J1H1H5_TED01              	     7	   158	    92.7
+
+A0A1L3SU35	L-FUCOSE ISOMERASE C-TERM     39.3    2.7e-06   1   1.3   0.0
+	J1H1H5_TED01              	    13	   162	    38.7
+	PF02952	Fucose_iso_C    	   348	   470	    41.1
+
+A0A1M5WNM6	L-FUCOSE ISOMERASE {ECO:0    199.0    1.8e-55   1   1.3   0.0
+	J1H1H5_TED01              	     7	   157	   198.4
+	PF02952	Fucose_iso_C    	   324	   446	      32
+
+A0A1M6MZY1	L-FUCOSE ISOMERASE {ECO:0     44.6    6.3e-08   1   1.3   0.0
+	J1H1H5_TED01              	     4	   158	    44.0
+	PF24856	AraA_central    	   173	   301	    26.3
+	PF02952	Fucose_iso_C    	   320	   444	    35.4
+
+A0A1Q9PMM3	L-FUCOSE ISOMERASE C-TERM     83.3      8e-20   1   1.3   0.0
+	J1H1H5_TED01              	     7	   155	    82.5
+	PF02952	Fucose_iso_C    	   348	   445	    30.7
+
+A0A1S9BS87	FUCOSE ISOMERASE {ECO:000    200.6    5.6e-56   1   1.2   0.0
+	J1H1H5_TED01              	     6	   157	   200.1
+	PF02952	Fucose_iso_C    	   346	   446	    29.4
+
+A0A1T4PA23	L-FUCOSE ISOMERASE {ECO:0     38.4    5.3e-06   1   1.3   0.0
+	J1H1H5_TED01              	     7	   156	    37.8
+	PF02952	Fucose_iso_C    	   322	   445	    45.9
+
+A0A1T4SIL9	FUCOSE ISOMERASE {ECO:000     39.9    1.8e-06   1   1.2   0.0
+	J1H1H5_TED01              	    10	   160	    39.5
+
+A0A1T4T3C4	L-FUCOSE ISOMERASE {ECO:0     38.4    5.4e-06   1   1.3   0.0
+	J1H1H5_TED01              	     7	   156	    37.8
+	PF02952	Fucose_iso_C    	   322	   445	    44.9
+
+A0A1T4TFY5	FUCOSE ISOMERASE {ECO:000     39.6    2.2e-06   1   1.2   0.0
+	J1H1H5_TED01              	    38	   187	    39.1
+
+A0A1T5MN82	L-FUCOSE ISOMERASE {ECO:0     42.8    2.3e-07   1   1.3   0.0
+	J1H1H5_TED01              	     4	   158	    42.2
+	PF24856	AraA_central    	   171	   301	    32.3
+	PF02952	Fucose_iso_C    	   320	   443	    35.6
+
+A0A1V2YCD3	FUCOSE ISOMERASE {ECO:000    184.6      5e-51   1   1.4   0.0
+	J1H1H5_TED01              	     7	   157	   183.8
+	PF02952	Fucose_iso_C    	   324	   445	    37.8
+
+A0A1Y4TE84	FUCOSE ISOMERASE {ECO:000    188.1      4e-52   1   1.3   0.0
+	J1H1H5_TED01              	     6	   157	   187.6
+
+A0A226CYV5	RAS-RELATED PROTEIN RAB-3     42.9    2.1e-07   1  15.9   0.2
+	J1H1H5_TED01              	  1980	  2054	     3.1
+	PF27509	DUF8349         	    98	   158	      32
+	PF27509	DUF8349         	   153	   236	    45.8
+	PF27509	DUF8349         	   189	   288	    51.9
+	PF27509	DUF8349         	   231	   328	    41.8
+	PF27509	DUF8349         	   382	   449	    35.5
+	PF27509	DUF8349         	   438	   537	    73.1
+	PF27509	DUF8349         	   521	   612	    59.3
+	PF27509	DUF8349         	   577	   647	    35.7
+	PF27509	DUF8349         	   605	   709	    38.6
+	PF27509	DUF8349         	   648	   745	    32.5
+	PF27509	DUF8349         	   701	   799	    36.3
+	PF27509	DUF8349         	   765	   827	    34.9
+	PF27509	DUF8349         	   821	   909	    60.8
+	PF27509	DUF8349         	   889	   969	      51
+	PF27509	DUF8349         	   944	  1040	    47.3
+	PF27509	DUF8349         	  1036	  1134	   107.9
+	PF27509	DUF8349         	  1136	  1231	    65.6
+	PF27509	DUF8349         	  1232	  1326	      54
+	PF27509	DUF8349         	  1308	  1373	    45.1
+	PF27509	DUF8349         	  1364	  1456	    75.3
+	PF27509	DUF8349         	  1446	  1529	    51.1
+	PF27509	DUF8349         	  1525	  1613	    50.6
+	PF27509	DUF8349         	  1599	  1697	    71.1
+	PF27509	DUF8349         	  1698	  1785	    33.2
+	PF27509	DUF8349         	  1888	  1985	    54.8
+	PF27509	DUF8349         	  1978	  2072	    45.3
+	PF27509	DUF8349         	  2110	  2205	    63.6
+	PF27509	DUF8349         	  2171	  2263	    70.4
+
+A0A229UQQ9	L-FUCOSE ISOMERASE C-TERM     74.1    5.2e-17   1   1.3   0.0
+	J1H1H5_TED01              	     7	   158	    73.5
+
+A0A239TE29	L-FUCOSE ISOMERASE AND RE     95.1    1.8e-23   1   1.3   0.0
+	J1H1H5_TED01              	     6	   155	    94.4
+	PF02952	Fucose_iso_C    	   351	   443	    30.8
+
+A0A249KRL8	PUTATIVE FUCOSE ISOMERASE     56.5    1.4e-11   1   1.3   0.0
+	J1H1H5_TED01              	     5	   145	    55.8
+
+A0A265N9L3	L-FUCOSE ISOMERASE C-TERM     79.6    1.1e-18   1   1.3   0.0
+	J1H1H5_TED01              	     7	   158	    78.9
+	PF02952	Fucose_iso_C    	   343	   446	    35.4
+
+A0A286I9A3	L-FUCOSE ISOMERASE-LIKE P     47.0    1.2e-08   1   1.3   0.0
+	J1H1H5_TED01              	     9	   145	    46.2
+	PF02952	Fucose_iso_C    	   341	   462	      39
+
+A0A2P6MHU9	SULFOQUINOVOSE ISOMERASE {ECO:0     64.0    6.7e-14   1   1.3   0.0
+	J1H1H5_TED01              	     5	   154	    63.3
+	PF02952	Fucose_iso_C    	   342	   442	    33.4
+
+A0A2P8HKY6	L-FUCOSE ISOMERASE-LIKE P     81.9    2.1e-19   1   1.3   0.0
+	J1H1H5_TED01              	     7	   157	    81.2
+
+A0A315ZLM1	L-FUCOSE ISOMERASE {ECO:0    207.9    3.2e-58   1   1.3   0.0
+	J1H1H5_TED01              	     8	   158	   207.4
+	PF02952	Fucose_iso_C    	   325	   447	    33.7
+
+A0A323TC87	L-FUCOSE ISOMERASE C-TERM     63.3    1.1e-13   1   1.4   0.0
+	J1H1H5_TED01              	     6	   155	    62.6
+	PF02952	Fucose_iso_C    	   340	   444	    33.3
+
+A0A328VGB2	L-FUCOSE ISOMERASE C-TERM     42.4    3.2e-07   1   1.4   0.0
+	J1H1H5_TED01              	     3	   155	    41.7
+	PF02952	Fucose_iso_C    	   320	   442	    32.5
+
+A0A345XPE4	FUCOSE ISOMERASE {ECO:000     42.8    2.3e-07   1   1.4   0.0
+	J1H1H5_TED01              	     5	   148	    42.0
+
+A0A366XQJ1	L-FUCOSE ISOMERASE C-TERM     87.2    4.9e-21   1   1.3   0.0
+	J1H1H5_TED01              	    21	   172	    86.6
+	PF02952	Fucose_iso_C    	   357	   458	    35.3
+
+A0A371S2Z6	L-FUCOSE ISOMERASE C-TERM     70.4    7.6e-16   1   1.4   0.0
+	J1H1H5_TED01              	     7	   158	    69.6
+	PF02952	Fucose_iso_C    	   346	   444	    32.8
+
+A0A3R9PLJ9	L-FUCOSE ISOMERASE C-TERM     74.8    3.3e-17   1   1.3   0.0
+	J1H1H5_TED01              	     5	   156	    74.2
+	PF02952	Fucose_iso_C    	   347	   444	    29.8
+
+A0A415X7K6	FUCOSE ISOMERASE {ECO:000    193.7    7.6e-54   1   1.3   0.0
+	J1H1H5_TED01              	     8	   158	   193.1
+
+A0A428J120	FUCOSE ISOMERASE {ECO:000    158.1    7.3e-43   1   1.2   0.0
+	J1H1H5_TED01              	     7	   157	   157.5
+
+A0A4Q0VG93	UNCHARACTERIZED PROTEIN {     47.5    8.3e-09   1   1.3   0.0
+	J1H1H5_TED01              	     4	   154	    46.9
+
+A0A4Q1SQG8	L-FUCOSE ISOMERASE C-TERM     87.3    4.4e-21   1   1.3   0.0
+	J1H1H5_TED01              	     7	   157	    86.7
+	PF02952	Fucose_iso_C    	   346	   444	    36.1
+
+A0A4Q9DKM0	FUCOSE ISOMERASE {ECO:000     75.9    1.5e-17   1   1.3   0.0
+	J1H1H5_TED01              	     7	   160	    75.2
+
+A0A4R5KRN4	FUCOSE ISOMERASE {ECO:000     87.1    5.2e-21   1   1.2   0.0
+	J1H1H5_TED01              	     7	   160	    86.6
+
+A0A4R5XL61	L-FUCOSE ISOMERASE C-TERM     83.5    6.8e-20   1   1.4   0.0
+	J1H1H5_TED01              	     6	   157	    82.7
+	PF02952	Fucose_iso_C    	   346	   445	    31.3
+
+A0A4R6JGJ8	L-FUCOSE ISOMERASE-LIKE P     44.4    7.6e-08   1   1.2   0.0
+	J1H1H5_TED01              	     8	   153	    43.8
+	PF02952	Fucose_iso_C    	   346	   470	    34.4
+
+A0A4S4BPX4	L-FUCOSE ISOMERASE C-TERM     85.0    2.3e-20   1   1.5   0.0
+	J1H1H5_TED01              	     7	   155	    84.0
+	PF02952	Fucose_iso_C    	   349	   445	    30.3
+
+A0A4V3D5T3	L-FUCOSE ISOMERASE-LIKE P     61.8    3.3e-13   1   1.4   0.0
+	J1H1H5_TED01              	     6	   157	    61.1
+	PF02952	Fucose_iso_C    	   346	   443	    30.3
+
+A0A4Y9AE00	UNCHARACTERIZED PROTEIN {     65.2    2.8e-14   1   1.3   0.0
+	J1H1H5_TED01              	     7	   157	    64.6
+
+A0A543HA52	L-FUCOSE ISOMERASE-LIKE P     39.9    1.8e-06   1   1.2   0.0
+	J1H1H5_TED01              	    31	   177	    39.3
+	PF02952	Fucose_iso_C    	   369	   494	    32.8
+
+A0A545SZ93	FUCOSE ISOMERASE {ECO:000     43.8    1.1e-07   1   1.5   0.0
+	J1H1H5_TED01              	    14	   165	    42.9
+
+A0A5B8L4R1	L-FUCOSE ISOMERASE C-TERM     40.8    9.4e-07   1   1.3   0.0
+	J1H1H5_TED01              	    14	   155	    40.1
+	PF02952	Fucose_iso_C    	   349	   471	    40.3
+
+A0A5P9HLX3	L-FUCOSE ISOMERASE C-TERM     81.6    2.5e-19   1   1.2   0.0
+	J1H1H5_TED01              	     7	   158	    81.1
+	PF02952	Fucose_iso_C    	   346	   445	    35.6
+
+A0A6N1VI15	L-FUCOSE ISOMERASE C-TERM     38.7    4.2e-06   1   1.5   0.0
+	J1H1H5_TED01              	     7	   152	    37.6
+	PF02952	Fucose_iso_C    	   340	   463	    38.6
+
+A0A7G6E4F6	SUGAR ISOMERASE {ECO:0000    113.0    5.5e-29   1   1.2   0.0
+	J1H1H5_TED01              	     7	   159	   112.5
+	PF02952	Fucose_iso_C    	   349	   446	    34.2
+
+A0A7K3LYN1	FUCOSE ISOMERASE {ECO:000     45.9    2.6e-08   1   1.2   0.0
+	J1H1H5_TED01              	     5	   148	    45.3
+
+A0A7W1WP24	L-FUCOSE ISOMERASE C-TERM     80.5    5.6e-19   1   1.3   0.0
+	J1H1H5_TED01              	     7	   154	    79.8
+	PF02952	Fucose_iso_C    	   350	   445	      30
+
+A0A7W2G547	L-FUCOSE/L-ARABINOSE ISOM     55.0      4e-11   1   1.2   0.0
+	J1H1H5_TED01              	     4	   158	    54.4
+
+A0A7X3CUY2	L-FUCOSE ISOMERASE C-TERM     91.8    1.8e-22   1   1.2   0.0
+	J1H1H5_TED01              	     7	   158	    91.3
+	PF02952	Fucose_iso_C    	   347	   445	    32.3
+
+A0A7X3LUY0	L-FUCOSE ISOMERASE C-TERM     39.3    2.7e-06   1   1.3   0.0
+	J1H1H5_TED01              	     5	   152	    38.6
+	PF02952	Fucose_iso_C    	   340	   462	    38.7
+
+A0A7X5KLM9	FUCOSE ISOMERASE {ECO:000    147.0    1.9e-39   1   1.2   0.0
+	J1H1H5_TED01              	     7	   157	   146.4
+
+A0A839A997	L-FUCOSE ISOMERASE C-TERM     45.0    4.8e-08   1   1.3   0.0
+	J1H1H5_TED01              	     5	   152	    44.3
+	PF02952	Fucose_iso_C    	   340	   462	    38.5
+
+A0A840QGK2	L-FUCOSE ISOMERASE-LIKE P     38.0    6.8e-06   1   1.3   0.0
+	J1H1H5_TED01              	     8	   151	    37.4
+	PF02952	Fucose_iso_C    	   345	   470	    30.4
+
+A0A848C744	FUCOSE ISOMERASE {ECO:000    167.5    9.1e-46   1   1.3   0.0
+	J1H1H5_TED01              	     7	   157	   166.9
+	PF02952	Fucose_iso_C    	   302	   446	      39
+
+A0A916YVK8	FUCOSE ISOMERASE {ECO:000     79.5    1.1e-18   1   1.3   0.0
+	J1H1H5_TED01              	     7	   158	    79.0
+	PF02952	Fucose_iso_C    	   348	   446	    32.5
+
+A0A919YTJ3	FUCOSE ISOMERASE {ECO:000     72.1    2.1e-16   1   1.3   0.0
+	J1H1H5_TED01              	     7	   159	    71.5
+
+A0A926NP94	L-FUCOSE ISOMERASE C-TERM     81.2    3.3e-19   1   1.3   0.0
+	J1H1H5_TED01              	     7	   155	    80.5
+	PF02952	Fucose_iso_C    	   341	   445	    30.5
+
+A0A930Y073	L-FUCOSE ISOMERASE C-TERM     47.8    6.6e-09   1   1.4   0.0
+	J1H1H5_TED01              	     6	   153	    47.0
+	PF02952	Fucose_iso_C    	   346	   469	    38.7
+
+A0A944QAX2	L-FUCOSE ISOMERASE C-TERM     43.7    1.3e-07   1   1.3   0.0
+	J1H1H5_TED01              	    11	   153	    42.9
+	PF02952	Fucose_iso_C    	   349	   474	    29.6
+
+A0A949K279	FUCOSE ISOMERASE {ECO:000    213.4    6.5e-60   1   1.3   0.0
+	J1H1H5_TED01              	     7	   157	   212.8
+
+A0A968GCI6	FUCOSE ISOMERASE {ECO:000    159.1    3.4e-43   1   1.3   0.0
+	J1H1H5_TED01              	     7	   157	   158.5
+	PF02952	Fucose_iso_C    	   347	   446	    32.7
+
+A0A972JSE2	FUCOSE ISOMERASE {ECO:000     38.2    6.1e-06   1   1.3   0.1
+	J1H1H5_TED01              	    13	   167	    37.5
+
+A0A9X2FLC8	L-FUCOSE ISOMERASE C-TERM     40.2    1.4e-06   1   1.3   0.0
+	J1H1H5_TED01              	     5	   155	    39.6
+	PF02952	Fucose_iso_C    	   350	   442	    35.2
+
+D5E1S9	SULFOQUINOVOSE ISOMERASE {ECO:0     88.5    1.9e-21   1   1.5   0.0
+	J1H1H5_TED01              	     7	   157	    87.5
+	PF02952	Fucose_iso_C    	   342	   445	    30.6
+
+E0MRC2	L-FUCOSE ISOMERASE C-TERMINAL     39.0    3.4e-06   1   1.2   0.0
+	J1H1H5_TED01              	     4	   143	    38.4
+	PF02952	Fucose_iso_C    	   330	   452	      33
+
+E7GS12	L-FUCOSE ISOMERASE C-TERMINAL    207.1    5.8e-58   1   1.2   0.0
+	J1H1H5_TED01              	     6	   156	   206.6
+
+F2N821	L-FUCOSE ISOMERASE-LIKE PROTE     58.1    4.5e-12   1   1.2   0.0
+	J1H1H5_TED01              	     6	   143	    57.4
+
+F3ZZ52	L-FUCOSE ISOMERASE {ECO:00003     44.2    8.4e-08   1   1.3   0.0
+	J1H1H5_TED01              	    14	   164	    43.6
+	PF02952	Fucose_iso_C    	   337	   451	    34.1
+
+F6DQQ6	L-FUCOSE ISOMERASE-LIKE PROTE     95.2    1.7e-23   1   1.4   0.0
+	J1H1H5_TED01              	     6	   156	    94.4
+	PF02952	Fucose_iso_C    	   345	   443	    38.8
+
+G8QU46	L-FUCOSE ISOMERASE FAMILY PRO    168.2    5.5e-46   1   1.4   0.0
+	J1H1H5_TED01              	     8	   157	   167.4
+
+I0I8B2	FUCOSE ISOMERASE {ECO:0008006     39.0    3.5e-06   1   1.3   0.1
+	J1H1H5_TED01              	    12	   167	    38.3
+
+J1H1H5	SULFOQUINOVOSE ISOMERASE {ECO:0    352.4     1e-102   1   1.3   0.1
+	J1H1H5_TED01              	     7	   157	   351.8
+
+R4K076	L-FUCOSE ISOMERASE FAMILY PRO    109.1    8.8e-28   1   1.3   0.0
+	J1H1H5_TED01              	     6	   156	   108.5
+	PF02952	Fucose_iso_C    	   346	   444	    30.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: R2XKF3 (E-value: 9.4e-11, Score: 47.1)
+Mentioned as: R2XKF3
+Description: L-fucose isomerase C-terminal domain-containing protein
+Organism: Enterococcus gilvus ATCC BAA-350
+PMID: 39429772
+Source: EuropePMC
+Title: Study of sulfoglycolysis in <i>Enterococcus gilvus</i> reveals a widespread bifurcated pathway for dihydroxypropanesulfonate degradation
+Journal: iScience (2024)
+Snippet: in E.gilvus SqvU (Uniprot: R2VCK9 ), sugar transporter; YihQ (Uniprot: R2XZF3 ), sulfoquinovosidase; SqvD (Uniprot: R2XKF3 ), SQ isomerase; SqvA (Uniprot: R2VCR4 ), SF transaldolase; YihU (Uniprot: R2XLK5 ), SLA reductase; HpfG (Uniprot: R2VCM5 ), DHPS dehydratase; HpfH (Uniprot: R2VCS2 ), activating enzyme for HpfG; HpfD
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+J1H1H5.1	AF-J1H1H5-F1-model_v4_TED01:7-157	1	AF-J1H1H5-F1-model_v4_TED01	7-157	100.0%
+J1H1H5.1	AF-J1H1H5-F1-model_v4_TED02:159-446	1	AF-J1H1H5-F1-model_v4_TED02	159-446	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:J1H1H5_TED01
+GA   27.00 27.00;
+TC   27.30 27.40;
+NC   26.20 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

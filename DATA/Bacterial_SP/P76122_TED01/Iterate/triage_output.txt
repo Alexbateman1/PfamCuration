@@ -1,0 +1,167 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YDDJ_ECOLI              Reviewed;         111 AA.
+AC   P76122; Q2MBA7;
+DE   RecName: Full=Putative protein YddJ;
+GN   Name=yddJ; OrderedLocusNames=b1470, JW1466;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- CAUTION: Could be the product of a pseudogene, it is missing about 320
+CC       N-terminal residues compared to orthologs. {ECO:0000305}.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; BAE76449.1; -; Genomic_DNA.
+DR   PIR; A64900; A64900.
+DR   RefSeq; WP_011443590.1; NZ_CP009789.1.
+DR   AlphaFoldDB; P76122; -.
+DR   BioGRID; 4260182; 19.
+DR   FunCoup; P76122; 146.
+DR   IntAct; P76122; 3.
+DR   KEGG; ecj:JW1466; -.
+DR   PATRIC; fig|1411691.4.peg.798; -.
+DR   EchoBASE; EB3543; -.
+DR   eggNOG; COG4886; Bacteria.
+DR   HOGENOM; CLU_173164_0_0_6; -.
+DR   InParanoid; P76122; -.
+DR   PRO; PR:P76122; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..111
+FT                   /note="Putative protein YddJ"
+FT                   /id="PRO_0000168944"
+SQ   SEQUENCE   111 AA;  12872 MW;  189B7DC06E7F6410 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Escherichia.
+1	6	Shigella.
+5	5	Enterobacteriaceae
+5	4	Enterobacterales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A7ZLR3	LEUCINE-RICH REPEAT PROTEIN {     82.8      5e-20   1   2.6  12.0
+	Iterate                   	   391	   425	    82.8
+
+B7L7H1	LEUCINE-RICH REPEAT DOMAIN-CO     82.8      5e-20   1   3.0  12.0
+	Iterate                   	   391	   425	    82.8
+
+P76122	PUTATIVE PROTEIN YDDJ               90.9    1.4e-22   1   1.3  13.0
+	Iterate                   	    59	    93	    90.4
+
+Q32FW6	LEUCINE-RICH REPEAT PROTEIN {     86.4    3.7e-21   1   1.3  12.0
+	Iterate                   	    59	    93	    85.8
+
+Q8X9Y4	T3SS EFFECTOR-LIKE PROTEIN ES     79.3    6.1e-19   1   2.2  11.9
+	Iterate                   	   365	   399	    77.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS15591 (E-value: 1.2e-24, Score: 90.9)
+Mentioned as: b1470
+Description: hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 19168658
+Source: EuropePMC
+Title: Reconfiguring the quorum-sensing regulator SdiA of Escherichia coli to control biofilm formation via indole and N-acylhomoserine lactones
+Journal: Applied and environmental microbiology (2009)
+Snippet: b1375 b1376 b1406 b1423 b1440 b1441 b1442 b1443 b1444 b1470 b1487 b1536 b1629 b1690 b1729 b1784 b1955 b1967 b2014 b2080 b2112 b2135 b2165 b2660 b2654 b2655
+
+================================================================================
+Protein: VIMSS15591 (E-value: 1.2e-24, Score: 90.9)
+Mentioned as: b1470
+Description: hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 16385049
+Source: EuropePMC
+Title: YdgG (TqsA) controls biofilm formation in Escherichia coli K-12 through autoinducer 2 transport
+Journal: Journal of bacteriology (2006)
+Snippet: b0690 b1058 b0248 b0519 b4026 b1742 b0689 b4249 b0685 b3948 b4047 b1470 b0844 b4185 b1877 b0787 b0309 b1500 12.1 11.3 11.3 8.6 7.5 7.5 7 6.1 6.1 5.3 4.9 4.9 4.9
+
+================================================================================
+Protein: VIMSS93542 (E-value: 5.5e-21, Score: 79.3)
+Mentioned as: ECs2073
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 29718957
+Source: EuropePMC
+Title: Sulfamethoxazole - Trimethoprim represses csgD but maintains virulence genes at 30°C in a clinical Escherichia coli O157:H7 isolate
+Journal: PloS one (2018)
+Snippet: -1.21 * -0.43 ECs1996 hypothetical protein NleG5-1 Sp10 0.40 -0.79 * -0.39 0.46 -0.28 0.18 ECs2073 hypothetical protein EspR1 No $ 0.54 0.90 * 1.44 * 0.99 0 0.99 * ECs2074 hypothetical protein EspR2 No $ 0.18 1.17 * 1.35 1.06 0.04 1.1 * ECs2075 IpaH-like
+
+================================================================================
+Protein: VIMSS93542 (E-value: 5.5e-21, Score: 79.3)
+Mentioned as: ECs2073
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 19709428
+Source: EuropePMC
+Title: Two distinct groups of porcine enteropathogenic Escherichia coli strains of serogroup O45 are revealed by comparative genomic hybridization and virulence gene microarray
+Journal: BMC genomics (2009)
+Snippet: Z1019 (ECs0876) PPR - - - - - + + + + + espR1 Z2242 (ECs2073) LRR - - - - - + + + + + espL3' Z5199 (ECs4642) AR - - - - - + + + + + espL3' Z5200 (ECs4643) AR -
+
+================================================================================
+Protein: VIMSS93542 (E-value: 5.5e-21, Score: 79.3)
+Mentioned as: ECs2073
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 16990433
+Source: EuropePMC
+Title: An extensive repertoire of type III secretion effectors in Escherichia coli O157 and the role of lambdoid phages in their dissemination
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2006)
+Snippet: ECs1821 ECs1824 ECs1825 ECs1828 ECs1994 ECs1995 ECs1996 ECs2073 ECs20745 ECs2154 ECs2155 ECs2156 ECs2226** ECs22278 ECs2229 ECs2427 ECs2672 ECs2674 ECs2714 PPR
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76122.1	AF-P76122-F1-model_v4_TED01:59-93	1	AF-P76122-F1-model_v4_TED01	59-93	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76122_TED01/Iterate
+GA   27.00 27.00;
+TC   27.60 77.30;
+NC   26.40 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

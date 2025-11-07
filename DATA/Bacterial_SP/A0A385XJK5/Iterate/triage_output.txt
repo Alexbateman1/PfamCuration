@@ -1,0 +1,100 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YPAB_ECOLI              Reviewed;          47 AA.
+AC   A0A385XJK5;
+DE   RecName: Full=Protein YpaB;
+GN   Name=ypaB; OrderedLocusNames=b4605;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+DR   EMBL; U00096; AYC08230.1; -; Genomic_DNA.
+DR   AlphaFoldDB; A0A385XJK5; -.
+DR   EnsemblBacteria; AYC08230; AYC08230; b4605.
+DR   InParanoid; A0A385XJK5; -.
+DR   PRO; PR:A0A385XJK5; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..47
+FT                   /note="Protein YpaB"
+FT                   /id="PRO_0000446260"
+SQ   SEQUENCE   47 AA;  5325 MW;  1C384C53F4E22156 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Punavirus P1.
+1	6	Escherichia.
+1	5	Punavirus
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	2	Heunggongvirae
+1	1	Pseudomonadati
+1	1	Duplodnaviria
+1	0	Viruses
+1	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A385XJK5	PROTEIN YPAB                       135.3      2e-36   1   1.0   1.2
+	Iterate                   	     1	    47	   135.2
+
+A0A3B3I9Z4	UNCHARACTERIZED PROTEIN {     28.6      0.004   5   6.8   1.0
+	Iterate                   	   101	   125	     4.6
+	Iterate                   	    53	    74	     4.3
+	Iterate                   	   118	   145	     4.0
+	Iterate                   	     4	    30	     3.5
+	Iterate                   	    69	    96	     3.0
+
+A0AAD8F3L7	UNCHARACTERIZED PROTEIN {     24.5      0.074   5   7.1  26.7
+	Iterate                   	    63	    94	    18.0
+	Iterate                   	    78	   112	     8.3
+	Iterate                   	    17	    78	     7.6
+	Iterate                   	   163	   188	     6.9
+	Iterate                   	   131	   167	     5.0
+
+A0AAE9KLV5	UNCHARACTERIZED PROTEIN {     31.3    0.00056   1   1.1   0.2
+	Iterate                   	     1	    34	    31.2
+
+Q71T71	UPFO {ECO:0000313|EMBL:AAQ1407     58.6    1.7e-12   1   1.1   0.1
+	Iterate                   	     1	    43	    58.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A385XJK5/Iterate
+GA   27.00 27.00;
+TC   77.60 77.60;
+NC   25.30 17.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

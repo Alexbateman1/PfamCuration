@@ -1,0 +1,155 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YBBD_ECOLI              Reviewed;          86 AA.
+AC   P33669; P77722; Q2MBS7;
+DE   RecName: Full=Putative uncharacterized protein YbbD;
+GN   Name=ybbD; OrderedLocusNames=b0501, JW0489;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=K12;
+RX   PubMed=1766878; DOI=10.1093/nar/19.25.7177;
+RA   Sadosky A.B., Gray J.A., Hill C.W.;
+RT   "The RhsD-E subfamily of Escherichia coli K-12.";
+RL   Nucleic Acids Res. 19:7177-7183(1991).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RA   Chung E., Allen E., Araujo R., Aparicio A.M., Davis K., Duncan M.,
+RA   Federspiel N., Hyman R., Kalman S., Komp C., Kurdi O., Lew H., Lin D.,
+RA   Namath A., Oefner P., Roberts D., Schramm S., Davis R.W.;
+RT   "Sequence of minutes 4-25 of Escherichia coli.";
+RL   Submitted (JAN-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- CAUTION: Could be the product of a pseudogene. {ECO:0000305}.
+DR   EMBL; X60999; CAA43316.1; -; Genomic_DNA.
+DR   EMBL; U82664; AAB40254.1; -; Genomic_DNA.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; BAE76279.1; -; Genomic_DNA.
+DR   PIR; C64781; C64781.
+DR   RefSeq; WP_001320180.1; NZ_SSZK01000024.1.
+DR   AlphaFoldDB; P33669; -.
+DR   SMR; P33669; -.
+DR   BioGRID; 4259868; 17.
+DR   FunCoup; P33669; 18.
+DR   KEGG; ecj:JW0489; -.
+DR   KEGG; ecoc:C3026_02460; -.
+DR   PATRIC; fig|83333.103.peg.1267; -.
+DR   EchoBASE; EB1720; -.
+DR   HOGENOM; CLU_2492898_0_0_6; -.
+DR   InParanoid; P33669; -.
+DR   OrthoDB; 6637339at2; -.
+DR   PhylomeDB; P33669; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   NCBIfam; NF011297; PRK14710.1-1; 1.
+PE   5: Uncertain;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..86
+FT                   /note="Putative uncharacterized protein YbbD"
+FT                   /id="PRO_0000168637"
+FT   TRANSMEM        12..32
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   CONFLICT        68..86
+FT                   /note="VDISIYTNVEDDYFFLIFP -> RGYINIHKCRR (in Ref. 1)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   86 AA;  10052 MW;  3999F351D708821C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+3	5	Enterobacteriaceae
+3	4	Enterobacterales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A151Z0D6	UNCHARACTERIZED PROTEIN {     22.6       0.38   1   1.2   0.2
+	Iterate                   	    33	    57	    22.1
+
+A0AAE1EY69	UNCHARACTERIZED PROTEIN {     22.2        0.5   3   3.4   0.3
+	Iterate                   	   110	   135	     6.1
+	Iterate                   	   236	   261	     6.1
+	Iterate                   	   362	   387	     6.1
+
+B7L7C7	INNER MEMBRANE PROTEIN {ECO:0     64.2    3.2e-14   1   1.6  11.1
+	Iterate                   	     1	    34	    63.2
+	PF26610	YbbD_head       	    37	    86	    46.8
+
+P33669	PUTATIVE UNCHARACTERIZED PROTEI     78.7      9e-19   1   1.5  15.9
+	Iterate                   	     1	    34	    77.7
+	PF26610	YbbD_head       	    37	    86	    49.3
+
+Q8XCZ4	UNCHARACTERIZED PROTEIN {ECO:     73.5    3.8e-17   1   1.5  16.8
+	Iterate                   	     1	    34	    72.5
+	PF26610	YbbD_head       	    37	    86	    49.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS72039 (E-value: 3.4e-19, Score: 73.5)
+Mentioned as: Z0653
+Description: orf, hypothetical protein
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 36539909
+Source: EuropePMC
+Title: Nauclea officinalis: A Chinese medicinal herb with phytochemical, biological, and pharmacological effects
+Journal: Chinese medicine (2022)
+Snippet: Medicine ZYYCXTD-D-202005 Lu Cheng The Fundamental Research Funds for the Central public welfare research institutes Z0653 Lu Cheng issue-copyright-statement The Author(s) 2022 Introduction Nauclea officinalis ( N. officinalis ), also known as Dan Mu, is a traditional herbal medicine distributed in Hainan, Yunnan, and Guangxi in
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P33669.2	AF-P33669-F1-model_v4_TED02:38-83	1	AF-P33669-F1-model_v4_TED02	38-83	0
+P33669.2	AF-P33669-F1-model_v4_TED01:1-34	1	AF-P33669-F1-model_v4_TED01	1-34	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P33669_TED01/Iterate
+GA   27.00 27.00;
+TC   64.20 63.20;
+NC   22.60 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,85 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   LPAS_STRMU              Reviewed;          42 AA.
+AC   P10540;
+DE   RecName: Full=Aspartate-semialdehyde dehydrogenase leader peptide;
+GN   OrderedLocusNames=SMU_988.1;
+OS   Streptococcus mutans serotype c (strain ATCC 700610 / UA159).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae;
+OC   Streptococcus.
+OX   NCBI_TaxID=210007;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=2434499; DOI=10.1016/s0021-9258(18)61509-1;
+RA   Cardineau G.A., Curtiss R. III;
+RT   "Nucleotide sequence of the asd gene of Streptococcus mutans.
+RT   Identification of the promoter region and evidence for attenuator-like
+RT   sequences preceding the structural gene.";
+RL   J. Biol. Chem. 262:3344-3353(1987).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700610 / UA159;
+RX   PubMed=12397186; DOI=10.1073/pnas.172501299;
+RA   Ajdic D.J., McShan W.M., McLaughlin R.E., Savic G., Chang J., Carson M.B.,
+RA   Primeaux C., Tian R., Kenton S., Jia H.G., Lin S.P., Qian Y., Li S.,
+RA   Zhu H., Najar F.Z., Lai H., White J., Roe B.A., Ferretti J.J.;
+RT   "Genome sequence of Streptococcus mutans UA159, a cariogenic dental
+RT   pathogen.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:14434-14439(2002).
+DR   EMBL; J02667; AAA26849.1; -; Genomic_DNA.
+DR   EMBL; AE014133; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   PIR; B29137; B29137.
+DR   RefSeq; WP_002262852.1; NC_004350.2.
+DR   AlphaFoldDB; P10540; -.
+DR   Proteomes; UP000002512; Chromosome.
+PE   4: Predicted;
+KW   Leader peptide; Reference proteome.
+FT   CHAIN           1..42
+FT                   /note="Aspartate-semialdehyde dehydrogenase leader peptide"
+FT                   /id="PRO_0000196520"
+FT   CONFLICT        41..42
+FT                   /note="FV -> LYKK (in Ref. 1; AAA26849)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   42 AA;  4921 MW;  3FA10938F239FAED CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Streptococcus
+1	5	Streptococcaceae
+1	4	Lactobacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P10540	ASPARTATE-SEMIALDEHYDE DEHYDROG    116.3      2e-30   1   1.0  10.3
+	P10540_TED01              	     1	    42	   116.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P10540.2	AF-P10540-F1-model_v4_TED01:1-42	1	AF-P10540-F1-model_v4_TED01	1-42	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P10540_TED01
+GA   27.00 27.00;
+TC   32.20 116.20;
+NC   25.00 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

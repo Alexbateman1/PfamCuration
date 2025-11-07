@@ -1,0 +1,304 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y252_RICPR              Reviewed;         163 AA.
+AC   Q9ZDS3;
+DE   RecName: Full=Uncharacterized protein RP252;
+GN   OrderedLocusNames=RP252;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AJ235271; CAA14714.1; -; Genomic_DNA.
+DR   PIR; H71679; H71679.
+DR   RefSeq; NP_220637.1; NC_000963.1.
+DR   RefSeq; WP_010886246.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZDS3; -.
+DR   SMR; Q9ZDS3; -.
+DR   STRING; 272947.gene:17555333; -.
+DR   EnsemblBacteria; CAA14714; CAA14714; CAA14714.
+DR   KEGG; rpr:RP252; -.
+DR   PATRIC; fig|272947.5.peg.259; -.
+DR   eggNOG; COG1585; Bacteria.
+DR   HOGENOM; CLU_137957_0_0_5; -.
+DR   OrthoDB; 7161183at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   Gene3D; 2.40.50.140; Nucleic acid-binding proteins; 1.
+DR   InterPro; IPR012340; NA-bd_OB-fold.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..163
+FT                   /note="Uncharacterized protein RP252"
+FT                   /id="PRO_0000101342"
+FT   TRANSMEM        7..27
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        51..71
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   163 AA;  18595 MW;  49CAB6B4185C1400 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Marinomonas.
+4	6	Dyadobacter.
+7	5	Alteromonadaceae
+6	5	Spirosomataceae
+5	5	Oceanospirillaceae
+9	4	Alteromonadales
+8	4	Cytophagales
+5	4	Oceanospirillales
+8	3	Cytophagia
+20	3	Gammaproteobacteria
+9	2	Bacteroidota
+23	2	Pseudomonadota
+32	1	Pseudomonadati
+32	0	Bacteria
+Total of 32 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A261DB24	MEMBRANE PROTEIN {ECO:000     59.6    1.4e-12   1   1.4  10.4
+	Iterate                   	     2	    84	    58.7
+
+A0A813RDJ1	UDP-N-ACETYLGLUCOSAMINE--     43.0    2.1e-07   3  10.9   2.6
+	Iterate                   	   573	   635	     5.7
+	Iterate                   	   490	   553	     4.2
+	Iterate                   	   153	   196	     3.9
+	PF13424	TPR_12          	     2	    63	    36.7
+	PF13424	TPR_12          	    29	   105	    51.5
+	PF13374	TPR_10          	    30	    71	    22.2
+	PF13181	TPR_8           	    31	    63	    13.1
+	PF13181	TPR_8           	    73	   102	    12.1
+	PF13424	TPR_12          	   111	   187	    55.4
+	PF13374	TPR_10          	   112	   153	    31.4
+	PF13181	TPR_8           	   113	   146	    20.8
+	PF00515	TPR_1           	   113	   145	    29.5
+	PF13181	TPR_8           	   155	   188	    13.5
+	PF13424	TPR_12          	   195	   271	    73.6
+	PF13374	TPR_10          	   196	   237	    25.7
+	PF13181	TPR_8           	   197	   230	    15.8
+	PF00515	TPR_1           	   197	   230	      31
+	PF13374	TPR_10          	   238	   279	    29.2
+	PF13181	TPR_8           	   239	   272	    18.6
+	PF13176	TPR_7           	   241	   275	    15.6
+	PF13424	TPR_12          	   279	   355	    64.1
+	PF13374	TPR_10          	   281	   321	    24.7
+	PF13181	TPR_8           	   281	   314	    22.5
+	PF13374	TPR_10          	   322	   363	    36.4
+	PF13424	TPR_12          	   322	   397	    57.7
+	PF13181	TPR_8           	   323	   356	    22.6
+	PF00515	TPR_1           	   323	   355	    28.7
+	PF13374	TPR_10          	   364	   405	      30
+	PF13181	TPR_8           	   365	   397	    16.2
+	PF13424	TPR_12          	   405	   481	    66.5
+	PF13374	TPR_10          	   406	   447	    26.9
+	PF13374	TPR_10          	   448	   489	    26.9
+	PF13181	TPR_8           	   449	   482	    27.5
+	PF00515	TPR_1           	   449	   481	    28.2
+	PF13424	TPR_12          	   489	   565	    67.5
+	PF07719	TPR_2           	   491	   523	    24.1
+	PF13181	TPR_8           	   491	   524	    20.1
+	PF00515	TPR_1           	   491	   523	    34.7
+	PF13374	TPR_10          	   494	   531	    29.2
+	PF13374	TPR_10          	   532	   573	    35.4
+	PF13181	TPR_8           	   533	   566	    22.9
+	PF00515	TPR_1           	   533	   565	      29
+	PF13424	TPR_12          	   573	   649	    61.8
+	PF13374	TPR_10          	   574	   615	    15.6
+	PF13181	TPR_8           	   575	   608	    16.7
+	PF00515	TPR_1           	   575	   608	    30.5
+	PF13374	TPR_10          	   616	   657	    33.5
+	PF13181	TPR_8           	   617	   650	    20.3
+	PF00515	TPR_1           	   617	   650	    31.6
+	PF13176	TPR_7           	   619	   653	    15.9
+	PF13424	TPR_12          	   657	   733	    50.4
+	PF07719	TPR_2           	   659	   692	      23
+	PF13181	TPR_8           	   659	   692	    20.1
+	PF00515	TPR_1           	   659	   692	    33.2
+	PF13181	TPR_8           	   701	   733	    25.2
+
+A0A913X6Z1	NB-ARC DOMAIN-CONTAINING      80.4    4.5e-19   9  13.0  11.0
+	Iterate                   	  1192	  1237	    11.1
+	Iterate                   	   902	   943	    10.6
+	Iterate                   	   857	   902	     9.0
+	Iterate                   	  1157	  1200	     6.4
+	Iterate                   	  1115	  1157	     5.5
+	Iterate                   	   986	  1031	     5.3
+	Iterate                   	  1072	  1116	     5.3
+	Iterate                   	   941	   979	     5.2
+	Iterate                   	  1029	  1065	     5.1
+	PF00931	NB-ARC          	   211	   403	    25.2
+	PF13424	TPR_12          	   690	   766	    58.7
+	PF13374	TPR_10          	   691	   732	    27.7
+	PF00515	TPR_1           	   692	   722	    28.4
+	PF13181	TPR_8           	   692	   723	    27.3
+	PF13374	TPR_10          	   733	   774	    32.3
+	PF00515	TPR_1           	   734	   764	    29.5
+	PF13181	TPR_8           	   735	   766	    27.3
+	PF13176	TPR_7           	   736	   767	    19.8
+	PF13424	TPR_12          	   739	   808	    52.7
+	PF13424	TPR_12          	   774	   850	      55
+	PF13374	TPR_10          	   775	   816	    33.3
+	PF13181	TPR_8           	   776	   808	    24.7
+	PF13176	TPR_7           	   778	   808	    14.3
+	PF13424	TPR_12          	   816	   892	    54.8
+	PF13374	TPR_10          	   817	   858	    33.3
+	PF13181	TPR_8           	   818	   850	    24.7
+	PF13176	TPR_7           	   820	   850	    14.3
+	PF13424	TPR_12          	   858	   934	    57.4
+	PF13374	TPR_10          	   859	   900	    34.5
+	PF13181	TPR_8           	   860	   890	    20.2
+	PF13424	TPR_12          	   900	   976	    66.5
+	PF13374	TPR_10          	   901	   942	    37.4
+	PF13181	TPR_8           	   902	   931	    19.4
+	PF13424	TPR_12          	   942	  1018	    72.9
+	PF13374	TPR_10          	   943	   984	      40
+	PF13181	TPR_8           	   945	   976	    27.3
+	PF13176	TPR_7           	   946	   977	    14.1
+	PF13374	TPR_10          	   985	  1026	    40.7
+	PF07719	TPR_2           	   986	  1018	    24.8
+	PF13181	TPR_8           	   986	  1018	    21.7
+	PF13176	TPR_7           	   988	  1019	    17.8
+	PF13424	TPR_12          	  1028	  1110	    72.4
+	PF13374	TPR_10          	  1029	  1070	      40
+	PF13181	TPR_8           	  1031	  1062	    27.3
+	PF13176	TPR_7           	  1032	  1063	    14.1
+	PF13374	TPR_10          	  1071	  1112	    40.7
+	PF07719	TPR_2           	  1072	  1104	    24.8
+	PF13181	TPR_8           	  1072	  1104	    21.7
+	PF13176	TPR_7           	  1074	  1105	    17.8
+	PF13424	TPR_12          	  1114	  1190	    72.2
+	PF13374	TPR_10          	  1115	  1156	    37.6
+	PF00515	TPR_1           	  1116	  1146	      28
+	PF13181	TPR_8           	  1117	  1148	    28.2
+	PF13176	TPR_7           	  1118	  1149	    15.3
+	PF13374	TPR_10          	  1157	  1198	    38.5
+	PF00515	TPR_1           	  1158	  1188	    29.6
+	PF07719	TPR_2           	  1158	  1190	    25.2
+	PF13181	TPR_8           	  1159	  1190	    27.1
+	PF13176	TPR_7           	  1160	  1190	    15.6
+	PF13424	TPR_12          	  1198	  1264	    51.8
+	PF13374	TPR_10          	  1199	  1240	    41.1
+	PF13181	TPR_8           	  1200	  1232	    25.6
+
+A0A913YJM0	NB-ARC DOMAIN-CONTAINING      89.7    5.7e-22  10  14.8  13.9
+	Iterate                   	  1277	  1339	    11.2
+	Iterate                   	   900	   945	    10.6
+	Iterate                   	   859	   902	     8.8
+	Iterate                   	  1112	  1158	     7.3
+	Iterate                   	  1155	  1200	     6.4
+	Iterate                   	  1239	  1283	     6.3
+	Iterate                   	   986	  1031	     5.2
+	Iterate                   	  1072	  1117	     5.2
+	Iterate                   	   943	   979	     5.0
+	Iterate                   	  1029	  1065	     5.0
+	PF00931	NB-ARC          	   211	   403	    25.1
+	PF13424	TPR_12          	   690	   766	    58.6
+	PF13374	TPR_10          	   691	   732	    27.6
+	PF00515	TPR_1           	   692	   722	    28.3
+	PF13181	TPR_8           	   692	   723	    27.3
+	PF13374	TPR_10          	   733	   774	    32.2
+	PF00515	TPR_1           	   734	   764	    29.4
+	PF13181	TPR_8           	   735	   766	    27.2
+	PF13176	TPR_7           	   736	   767	    19.7
+	PF13424	TPR_12          	   744	   808	    46.9
+	PF13424	TPR_12          	   774	   850	    54.9
+	PF13374	TPR_10          	   775	   816	    33.2
+	PF13181	TPR_8           	   776	   808	    24.6
+	PF13176	TPR_7           	   778	   808	    14.2
+	PF13424	TPR_12          	   816	   892	    54.7
+	PF13374	TPR_10          	   817	   858	    33.2
+	PF13181	TPR_8           	   818	   850	    24.6
+	PF13176	TPR_7           	   820	   850	    14.2
+	PF13424	TPR_12          	   858	   934	    57.3
+	PF13374	TPR_10          	   859	   900	    34.4
+	PF13181	TPR_8           	   860	   890	    20.1
+	PF13424	TPR_12          	   900	   976	    66.4
+	PF13374	TPR_10          	   901	   942	    37.3
+	PF13181	TPR_8           	   902	   931	    19.3
+	PF13424	TPR_12          	   942	  1018	    72.8
+	PF13374	TPR_10          	   943	   984	    39.9
+	PF13181	TPR_8           	   945	   976	    27.2
+	PF13176	TPR_7           	   946	   977	      14
+	PF13374	TPR_10          	   985	  1026	    40.6
+	PF07719	TPR_2           	   986	  1018	    24.7
+	PF13181	TPR_8           	   986	  1018	    21.6
+	PF13176	TPR_7           	   988	  1019	    17.7
+	PF13424	TPR_12          	  1028	  1109	    72.4
+	PF13374	TPR_10          	  1029	  1070	    39.9
+	PF13181	TPR_8           	  1031	  1062	    27.2
+	PF13176	TPR_7           	  1032	  1063	      14
+	PF13374	TPR_10          	  1071	  1112	    40.6
+	PF07719	TPR_2           	  1072	  1104	    24.7
+	PF13181	TPR_8           	  1072	  1104	    21.6
+	PF13176	TPR_7           	  1074	  1105	    17.7
+	PF13424	TPR_12          	  1114	  1190	    70.9
+	PF13374	TPR_10          	  1115	  1156	    36.9
+	PF13181	TPR_8           	  1117	  1145	    23.7
+	PF13424	TPR_12          	  1156	  1232	      79
+	PF13374	TPR_10          	  1157	  1198	    40.2
+	PF07719	TPR_2           	  1158	  1190	      24
+	PF13181	TPR_8           	  1158	  1190	    21.3
+	PF13176	TPR_7           	  1160	  1191	    17.5
+	PF13424	TPR_12          	  1198	  1274	    78.3
+	PF13374	TPR_10          	  1199	  1240	    37.2
+	PF07719	TPR_2           	  1200	  1231	    24.2
+	PF00515	TPR_1           	  1200	  1230	    30.2
+	PF13181	TPR_8           	  1201	  1232	    20.8
+	PF13176	TPR_7           	  1202	  1233	      20
+	PF13374	TPR_10          	  1241	  1282	    38.4
+	PF07719	TPR_2           	  1242	  1274	    25.1
+	PF00515	TPR_1           	  1242	  1272	    29.5
+	PF13181	TPR_8           	  1243	  1274	      27
+	PF13176	TPR_7           	  1244	  1274	    15.5
+	PF13424	TPR_12          	  1282	  1348	    51.7
+	PF13374	TPR_10          	  1283	  1324	      41
+	PF13181	TPR_8           	  1284	  1316	    25.5
+
+Q9ZDS3	UNCHARACTERIZED PROTEIN RP252      190.4    2.1e-53   1   1.5  15.3
+	Iterate                   	     2	    87	   190.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A261DB24.1	AF-A0A261DB24-F1-model_v4_TED01:9-82	1	AF-A0A261DB24-F1-model_v4_TED01	9-82	89.2%
+A0A261DB24.1	AF-A0A261DB24-F1-model_v4_TED02:90-150	1	AF-A0A261DB24-F1-model_v4_TED02	90-150	0
+A0A429XV17.1	AF-A0A429XV17-F1-model_v4_TED01:2-83	1	AF-A0A429XV17-F1-model_v4_TED01	2-83	96.5%
+A0A429XV17.1	AF-A0A429XV17-F1-model_v4_TED02:89-154	1	AF-A0A429XV17-F1-model_v4_TED02	89-154	0
+Q9ZDS3.1	AF-Q9ZDS3-F1-model_v4_TED01:2-87	1	AF-Q9ZDS3-F1-model_v4_TED01	2-87	100.0%
+Q9ZDS3.1	AF-Q9ZDS3-F1-model_v4_TED02:94-153	1	AF-Q9ZDS3-F1-model_v4_TED02	94-153	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZDS3_TED01/Iterate
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

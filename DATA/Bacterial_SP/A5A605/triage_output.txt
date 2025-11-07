@@ -1,0 +1,109 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YKFM_ECOLI              Reviewed;         159 AA.
+AC   A5A605; P71282;
+DE   RecName: Full=Uncharacterized protein YkfM;
+GN   Name=ykfM; OrderedLocusNames=b4586;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RA   Schramm S., Duncan M., Allen E., Araujo R., Aparicio A., Chung E.,
+RA   Davis K., Federspiel N., Hyman R., Kalman S., Komp C., Kurdi O.,
+RA   Lashkari D., Lew H., Lin D., Namath A., Oefner P., Roberts D., Davis R.W.;
+RT   "Sequence of minutes 4-25 of Escherichia coli.";
+RL   Submitted (SEP-1996) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; U70214; AAB08639.1; -; Genomic_DNA.
+DR   EMBL; U00096; ABP93434.1; -; Genomic_DNA.
+DR   RefSeq; WP_001236645.1; NZ_LN832404.1.
+DR   RefSeq; YP_001165307.1; NC_000913.3.
+DR   AlphaFoldDB; A5A605; -.
+DR   FunCoup; A5A605; 1.
+DR   STRING; 511145.b4586; -.
+DR   PaxDb; 511145-b4586; -.
+DR   EnsemblBacteria; ABP93434; ABP93434; b4586.
+DR   GeneID; 5061498; -.
+DR   KEGG; eco:b4586; -.
+DR   KEGG; ecoc:C3026_01020; -.
+DR   PATRIC; fig|83333.103.peg.967; -.
+DR   eggNOG; ENOG5031M8I; Bacteria.
+DR   InParanoid; A5A605; -.
+DR   OMA; GCVNANY; -.
+DR   OrthoDB; 9907086at2; -.
+DR   BioCyc; EcoCyc:MONOMER0-2812; -.
+DR   PRO; PR:A5A605; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0006974; P:DNA damage response; IMP:EcoCyc.
+DR   GO; GO:0046677; P:response to antibiotic; IMP:EcoCyc.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..159
+FT                   /note="Uncharacterized protein YkfM"
+FT                   /id="PRO_0000311774"
+FT   TRANSMEM        10..30
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        52..72
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        96..116
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   159 AA;  18118 MW;  147435AC28DD6BBA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A5A605	UNCHARACTERIZED PROTEIN YKFM       362.2   1.3e-105   1   1.0  14.5
+	A5A605                    	     1	   159	   362.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A5A605
+GA   27.00 27.00;
+TC   362.20 362.00;
+NC   22.70 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

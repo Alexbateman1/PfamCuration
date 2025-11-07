@@ -1,0 +1,160 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y381_MYCGE              Reviewed;         218 AA.
+AC   P47621;
+DE   RecName: Full=Uncharacterized protein MG381;
+GN   OrderedLocusNames=MG381;
+OS   Mycoplasma genitalium (strain ATCC 33530 / DSM 19775 / NCTC 10195 / G37)
+OS   (Mycoplasmoides genitalium).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=243273;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 33530 / DSM 19775 / NCTC 10195 / G37;
+RX   PubMed=7569993; DOI=10.1126/science.270.5235.397;
+RA   Fraser C.M., Gocayne J.D., White O., Adams M.D., Clayton R.A.,
+RA   Fleischmann R.D., Bult C.J., Kerlavage A.R., Sutton G.G., Kelley J.M.,
+RA   Fritchman J.L., Weidman J.F., Small K.V., Sandusky M., Fuhrmann J.L.,
+RA   Nguyen D.T., Utterback T.R., Saudek D.M., Phillips C.A., Merrick J.M.,
+RA   Tomb J.-F., Dougherty B.A., Bott K.F., Hu P.-C., Lucier T.S.,
+RA   Peterson S.N., Smith H.O., Hutchison C.A. III, Venter J.C.;
+RT   "The minimal gene complement of Mycoplasma genitalium.";
+RL   Science 270:397-403(1995).
+DR   EMBL; L43967; AAC71608.1; -; Genomic_DNA.
+DR   PIR; B64242; B64242.
+DR   RefSeq; WP_010869459.1; NC_000908.2.
+DR   AlphaFoldDB; P47621; -.
+DR   STRING; 243273.MG_381; -.
+DR   GeneID; 88282564; -.
+DR   KEGG; mge:MG_381; -.
+DR   HOGENOM; CLU_1265785_0_0_14; -.
+DR   InParanoid; P47621; -.
+DR   OrthoDB; 9939799at2; -.
+DR   BioCyc; MGEN243273:G1GJ2-475-MONOMER; -.
+DR   Proteomes; UP000000807; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..218
+FT                   /note="Uncharacterized protein MG381"
+FT                   /id="PRO_0000210582"
+SQ   SEQUENCE   218 AA;  25500 MW;  2623C57B77CF639D CRC64;
+//
+ID   Y559_MYCPN              Reviewed;         235 AA.
+AC   P75219;
+DE   RecName: Full=Uncharacterized protein MG381 homolog;
+GN   OrderedLocusNames=MPN_559; ORFNames=H03_orf235, MP283;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+DR   EMBL; U00089; AAB95931.1; -; Genomic_DNA.
+DR   PIR; S73609; S73609.
+DR   RefSeq; NP_110248.1; NC_000912.1.
+DR   RefSeq; WP_010874916.1; NZ_OU342337.1.
+DR   AlphaFoldDB; P75219; -.
+DR   IntAct; P75219; 1.
+DR   STRING; 272634.MPN_559; -.
+DR   EnsemblBacteria; AAB95931; AAB95931; MPN_559.
+DR   KEGG; mpn:MPN_559; -.
+DR   PATRIC; fig|272634.6.peg.621; -.
+DR   HOGENOM; CLU_1265785_0_0_14; -.
+DR   OrthoDB; 9939799at2; -.
+DR   BioCyc; MPNE272634:G1GJ3-917-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..235
+FT                   /note="Uncharacterized protein MG381 homolog"
+FT                   /id="PRO_0000210583"
+SQ   SEQUENCE   235 AA;  26761 MW;  032202285D244A0B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	5	Mycoplasmoides
+2	4	Mycoplasmoidaceae
+2	3	Mycoplasmoidales
+2	2	Mycoplasmatota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A7J9D1Q5	BED-TYPE DOMAIN-CONTAININ     23.4       0.18   1   1.5   1.7
+	Iterate                   	   101	   257	    23.4
+	PF02892	zf-BED          	    25	    77	    24.3
+
+A0A9P0XG55	UNCHARACTERIZED PROTEIN {     24.4      0.089   4   4.4   1.1
+	Iterate                   	  2239	  2312	     4.8
+	Iterate                   	  2817	  2890	     4.8
+	Iterate                   	  3395	  3468	     4.8
+	Iterate                   	  3973	  4046	     4.8
+	PF00109	ketoacyl-synt   	    23	   261	   240.1
+	PF02801	Ketoacyl-synt_C 	   265	   382	   108.9
+	PF16197	KAsynt_C_assoc  	   385	   495	   112.2
+	PF00698	Acyl_transf_1   	   521	   835	   230.6
+	PF21089	PKS_DH_N        	   876	   973	    28.4
+	PF21149	FAS_pseudo-KR   	  1319	  1410	    90.7
+	PF00107	ADH_zinc_N      	  1570	  1704	    54.4
+	PF13602	ADH_zinc_N_2    	  1608	  1745	      54
+	PF08659	KR              	  1776	  1956	   133.2
+	PF00550	PP-binding      	  2015	  2080	    27.7
+	PF00975	Thioesterase    	  2144	  2246	    38.9
+	PF08659	KR              	  2367	  2534	    81.7
+	PF00550	PP-binding      	  2593	  2658	    27.7
+	PF00975	Thioesterase    	  2722	  2973	    39.8
+	PF08659	KR              	  2945	  3112	    81.7
+	PF00550	PP-binding      	  3171	  3236	    27.7
+	PF00975	Thioesterase    	  3300	  3402	    38.9
+	PF08659	KR              	  3523	  3690	    81.7
+	PF00550	PP-binding      	  3749	  3814	    27.7
+	PF00975	Thioesterase    	  3878	  4129	    39.8
+
+L0P8V4	SAM DOMAIN-CONTAINING PROTEIN     22.9       0.26   1   1.1   0.3
+	Iterate                   	     2	    94	    22.7
+	PF18016	SAM_3           	     7	    68	    25.4
+	PF07647	SAM_2           	    11	    75	    73.3
+	PF00536	SAM_1           	    12	    75	    64.3
+
+P47621	UNCHARACTERIZED PROTEIN MG381      480.6   2.1e-141   1   1.0  18.2
+	Iterate                   	     5	   214	   480.4
+
+P75219	UNCHARACTERIZED PROTEIN MG381 H    264.4    3.1e-75   1   1.0   3.2
+	Iterate                   	    18	   227	   264.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P47621.1	AF-P47621-F1-model_v4_TED01:5-214	1	AF-P47621-F1-model_v4_TED01	5-214	100.0%
+P75219.1	AF-P75219-F1-model_v4_TED01:14-225	1	AF-P75219-F1-model_v4_TED01	14-225	97.2%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P47621_TED01/Iterate
+GA   27.00 27.00;
+TC   28.70 426.50;
+NC   25.10 23.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

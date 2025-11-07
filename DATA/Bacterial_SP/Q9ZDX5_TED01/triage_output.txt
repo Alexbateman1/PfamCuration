@@ -1,0 +1,175 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   HOLA_RICPR              Reviewed;         321 AA.
+AC   Q9ZDX5;
+DE   RecName: Full=Probable DNA polymerase III subunit delta {ECO:0000305};
+DE            EC=2.7.7.7;
+GN   Name=holA {ECO:0000305}; OrderedLocusNames=RP189;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+CC   -!- FUNCTION: Part of the beta sliding clamp loading complex, which
+CC       hydrolyzes ATP to load the beta clamp onto primed DNA to form the DNA
+CC       replication pre-initiation complex. DNA polymerase III is a complex,
+CC       multichain enzyme responsible for most of the replicative synthesis in
+CC       bacteria. This DNA polymerase also exhibits 3'-5' exonuclease activity.
+CC       The delta subunit is the wrench that will open the beta subunit dimer.
+CC       The DNA clamp loading complex (tau(3),delta,delta') is thought to load
+CC       beta dimers onto DNA by binding ATP which alters the complex's
+CC       conformation so it can bind beta sliding clamp dimers and open them at
+CC       one interface. Primed DNA is recognized, ATP is hydrolyzed releasing
+CC       the clamp loading complex and closing the beta sliding clamp ring
+CC       around the primed DNA. {ECO:0000250|UniProtKB:P28630}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=DNA(n) + a 2'-deoxyribonucleoside 5'-triphosphate = DNA(n+1) +
+CC         diphosphate; Xref=Rhea:RHEA:22508, Rhea:RHEA-COMP:17339, Rhea:RHEA-
+CC         COMP:17340, ChEBI:CHEBI:33019, ChEBI:CHEBI:61560, ChEBI:CHEBI:173112;
+CC         EC=2.7.7.7;
+CC   -!- SUBUNIT: Component of the DNA clamp loading complex consisting of
+CC       tau(3):delta(1):delta'(1) (By similarity). The DNA polymerase III
+CC       holoenzyme complex contains at least 10 different subunits organized
+CC       into 3 functionally essential subassemblies: the Pol III core, the beta
+CC       sliding clamp processivity factor and the clamp-loading complex. The
+CC       Pol III core (subunits alpha, epsilon and theta) contains the
+CC       polymerase and the 3'-5' exonuclease proofreading activities. The
+CC       polymerase is tethered to the template via the dimeric beta sliding
+CC       clamp processivity factor. The DNA clamp-loading complex assembles the
+CC       beta sliding clamp onto the primed template and plays a central role in
+CC       the organization and communication at the replication fork (By
+CC       similarity). {ECO:0000250|UniProtKB:P28630,
+CC       ECO:0000250|UniProtKB:P54459}.
+CC   -!- SIMILARITY: Belongs to the DNA polymerase HolA subunit family.
+CC       {ECO:0000305}.
+DR   EMBL; AJ235270; CAA14655.1; -; Genomic_DNA.
+DR   PIR; H71729; H71729.
+DR   RefSeq; NP_220578.1; NC_000963.1.
+DR   RefSeq; WP_004598599.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZDX5; -.
+DR   SMR; Q9ZDX5; -.
+DR   STRING; 272947.gene:17555271; -.
+DR   EnsemblBacteria; CAA14655; CAA14655; CAA14655.
+DR   GeneID; 57569316; -.
+DR   KEGG; rpr:RP189; -.
+DR   PATRIC; fig|272947.5.peg.196; -.
+DR   eggNOG; COG1466; Bacteria.
+DR   HOGENOM; CLU_818440_0_0_5; -.
+DR   OrthoDB; 9804983at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   GO; GO:0009360; C:DNA polymerase III complex; IEA:TreeGrafter.
+DR   GO; GO:0003677; F:DNA binding; IEA:InterPro.
+DR   GO; GO:0003887; F:DNA-directed DNA polymerase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0006261; P:DNA-templated DNA replication; IEA:TreeGrafter.
+DR   Gene3D; 1.10.8.60; -; 1.
+DR   Gene3D; 1.20.272.10; -; 1.
+DR   InterPro; IPR008921; DNA_pol3_clamp-load_cplx_C.
+DR   InterPro; IPR005790; DNA_polIII_delta.
+DR   InterPro; IPR027417; P-loop_NTPase.
+DR   NCBIfam; TIGR01128; holA; 1.
+DR   NCBIfam; NF005134; PRK06585.1-1; 1.
+DR   PANTHER; PTHR34388; DNA POLYMERASE III SUBUNIT DELTA; 1.
+DR   PANTHER; PTHR34388:SF1; DNA POLYMERASE III SUBUNIT DELTA; 1.
+DR   SUPFAM; SSF52540; P-loop containing nucleoside triphosphate hydrolases; 1.
+DR   SUPFAM; SSF48019; post-AAA+ oligomerization domain-like; 1.
+PE   3: Inferred from homology;
+KW   DNA replication; DNA-directed DNA polymerase; Nucleotidyltransferase;
+KW   Reference proteome; Transferase.
+FT   CHAIN           1..321
+FT                   /note="Probable DNA polymerase III subunit delta"
+FT                   /id="PRO_0000101329"
+SQ   SEQUENCE   321 AA;  36654 MW;  3E5F47D104DD8A73 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+3	7	Orientia.
+1	7	Rickettsia
+1	7	Candidatus Sneabacter.
+5	6	Rickettsieae
+1	6	Candidatus Phycorickettsia.
+6	5	Rickettsiaceae
+6	4	Rickettsiales
+6	3	Alphaproteobacteria
+6	2	Pseudomonadota
+6	1	Pseudomonadati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A077FK41	DNA-DIRECTED DNA POLYMERA     37.0    1.5e-05   1   2.0   1.2
+	Q9ZDX5_TED01              	     3	   139	    37.0
+	PF21694	DNA_pol3_delta_C	   217	   334	    31.3
+
+A0A0F3MA04	DNA-DIRECTED DNA POLYMERA     66.9    8.5e-15   1   2.2   0.7
+	Q9ZDX5_TED01              	     3	   130	    66.9
+
+A0A0F3MMM0	DNA-DIRECTED DNA POLYMERA     68.4    2.8e-15   1   1.9   1.9
+	Q9ZDX5_TED01              	     3	   130	    68.0
+
+A0A261DBN3	DNA-DIRECTED DNA POLYMERA    143.9    1.2e-38   1   1.9   2.2
+	Q9ZDX5_TED01              	     3	   130	   143.6
+
+A0A2P1P9Z8	DNA-DIRECTED DNA POLYMERA     38.7    4.4e-06   1   2.3   0.2
+	Q9ZDX5_TED01              	     3	   126	    38.7
+
+A0A5C0UJ41	DNA-DIRECTED DNA POLYMERA     44.8    5.8e-08   1   2.2   1.8
+	Q9ZDX5_TED01              	     5	   130	    42.4
+
+A0A7J5ZEB5	C-TYPE LECTIN DOMAIN-CONT     42.6    2.8e-07   6   6.2   1.7
+	Q9ZDX5_TED01              	   244	   308	     6.8
+	Q9ZDX5_TED01              	   534	   596	     6.6
+	Q9ZDX5_TED01              	   342	   403	     6.5
+	Q9ZDX5_TED01              	   438	   499	     6.5
+	Q9ZDX5_TED01              	    39	    89	     4.7
+	Q9ZDX5_TED01              	   135	   198	     3.8
+	PF00059	Lectin_C        	    48	   145	      43
+	PF00059	Lectin_C        	   162	   254	      36
+	PF00059	Lectin_C        	   271	   352	    27.1
+	PF00059	Lectin_C        	   367	   448	    27.1
+	PF00059	Lectin_C        	   463	   544	    27.1
+	PF00059	Lectin_C        	   559	   646	      35
+
+A5CCT5	DNA-DIRECTED DNA POLYMERASE {     64.6    4.3e-14   1   2.4   0.6
+	Q9ZDX5_TED01              	     3	   130	    64.6
+
+Q9ZDX5	PROBABLE DNA POLYMERASE III SUB    284.4    4.1e-82   1   2.2   3.0
+	Q9ZDX5_TED01              	     3	   130	   284.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZDX5.1	AF-Q9ZDX5-F1-model_v4_TED01:3-130	1	AF-Q9ZDX5-F1-model_v4_TED01	3-130	100.0%
+Q9ZDX5.1	AF-Q9ZDX5-F1-model_v4_TED02:136-198	1	AF-Q9ZDX5-F1-model_v4_TED02	136-198	0
+Q9ZDX5.1	AF-Q9ZDX5-F1-model_v4_TED03:207-321	1	AF-Q9ZDX5-F1-model_v4_TED03	207-321	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZDX5_TED01
+GA   27.00 27.00;
+TC   29.20 27.30;
+NC   25.40 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,133 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y148_TREPA              Reviewed;         192 AA.
+AC   O83183;
+DE   RecName: Full=Uncharacterized protein TP_0148;
+GN   OrderedLocusNames=TP_0148;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000520; AAC65140.1; -; Genomic_DNA.
+DR   PIR; E71361; E71361.
+DR   RefSeq; WP_010881595.1; NC_021490.2.
+DR   AlphaFoldDB; O83183; -.
+DR   SMR; O83183; -.
+DR   IntAct; O83183; 2.
+DR   STRING; 243276.TP_0148; -.
+DR   EnsemblBacteria; AAC65140; AAC65140; TP_0148.
+DR   KEGG; tpa:TP_0148; -.
+DR   KEGG; tpw:TPANIC_0148; -.
+DR   eggNOG; ENOG5032PC1; Bacteria.
+DR   HOGENOM; CLU_1433901_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..192
+FT                   /note="Uncharacterized protein TP_0148"
+FT                   /id="PRO_0000202200"
+FT   TRANSMEM        5..22
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        42..61
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        66..88
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        101..118
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        122..139
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        159..181
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   192 AA;  21083 MW;  D85FBDB80F7A89F7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Treponema.
+5	5	Treponemataceae
+5	4	Spirochaetales
+5	3	Spirochaetia
+5	2	Spirochaetota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GZY5	UNCHARACTERIZED PROTEIN {     66.4    1.9e-14   1   1.0  11.2
+	O83183_TED01              	     3	   174	    66.1
+
+O83183	UNCHARACTERIZED PROTEIN TP_0148    396.4   8.2e-116   1   1.0  13.4
+	O83183_TED01              	     6	   177	   396.2
+
+Q73MW2	MEMBRANE PROTEIN, PUTATIVE {E     28.6     0.0073   1   1.5   9.0
+	O83183_TED01              	     5	   175	    27.5
+
+S3L6T9	PREPILIN TYPE IV ENDOPEPTIDAS     51.7    5.8e-10   1   1.1   7.1
+	O83183_TED01              	     7	   179	    51.4
+
+S5ZQI1	MEMBRANE PROTEIN {ECO:0000313     61.7      5e-13   1   1.0   6.4
+	O83183_TED01              	     7	   178	    61.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS25968 (E-value: 7.3e-118, Score: 396.4)
+Mentioned as: TP0148
+Description: T. pallidum predicted coding region TP0148
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 25944861
+Source: EuropePMC
+Title: Evidence for Posttranslational Protein Flavinylation in the Syphilis Spirochete Treponema pallidum: Structural and Biochemical Insights from the Catalytic Core of a Periplasmic Flavin-Trafficking Protein
+Journal: mBio (2015)
+Snippet: on an rnfBCDGEA type of system ( 24 ) and the predicted transmembrane helices of TP0148, TP0149, and TP0150. Also, TP0149 has ~30% identity to Pseudomonas brassicacearum RnfE (according to the KEGG gene function identification tool). OM , outer membrane; CM , cytoplasmic membrane; ox, oxidized;
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83183.1	AF-O83183-F1-model_v4_TED01:6-177	1	AF-O83183-F1-model_v4_TED01	6-177	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83183_TED01
+GA   27.00 27.00;
+TC   27.30 27.50;
+NC   25.20 25.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

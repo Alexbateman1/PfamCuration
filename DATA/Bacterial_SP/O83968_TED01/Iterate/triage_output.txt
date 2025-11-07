@@ -1,0 +1,156 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1003_TREPA             Reviewed;         345 AA.
+AC   O83968;
+DE   RecName: Full=Uncharacterized protein TP_1003;
+GN   OrderedLocusNames=TP_1003;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000520; AAC65959.1; -; Genomic_DNA.
+DR   PIR; E71254; E71254.
+DR   RefSeq; WP_010882447.1; NC_021490.2.
+DR   AlphaFoldDB; O83968; -.
+DR   IntAct; O83968; 1.
+DR   STRING; 243276.TP_1003; -.
+DR   EnsemblBacteria; AAC65959; AAC65959; TP_1003.
+DR   KEGG; tpa:TP_1003; -.
+DR   KEGG; tpw:TPANIC_1003; -.
+DR   HOGENOM; CLU_803954_0_0_12; -.
+DR   OrthoDB; 358842at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..345
+FT                   /note="Uncharacterized protein TP_1003"
+FT                   /id="PRO_0000202372"
+FT   TRANSMEM        9..31
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        84..103
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        116..138
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        148..170
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        182..204
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        269..286
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        291..308
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        313..335
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   345 AA;  37828 MW;  8745F06B874BA070 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+10	6	Treponema.
+11	5	Treponemataceae
+12	4	Spirochaetales
+12	3	Spirochaetia
+12	2	Spirochaetota
+12	1	Pseudomonadati
+12	0	Bacteria
+Total of 12 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GPL3	UNCHARACTERIZED PROTEIN {    110.8    3.9e-28   2   2.3  32.8
+	Iterate                   	    56	   188	    78.8
+	Iterate                   	   182	   275	    42.0
+
+A0AAE3EJ49	UNCHARACTERIZED PROTEIN {     61.9    2.9e-13   3   3.0  20.4
+	Iterate                   	    56	   181	    34.3
+	Iterate                   	   174	   271	    28.1
+	Iterate                   	     2	    52	     9.4
+
+O83968	UNCHARACTERIZED PROTEIN TP_100    786.5   1.3e-233   1   1.0  26.6
+	Iterate                   	     2	   343	   786.3
+
+Q73MR3	MEMBRANE PROTEIN, PUTATIVE {E     52.5    2.1e-10   3   3.0  37.4
+	Iterate                   	    57	   200	    49.7
+	Iterate                   	   180	   280	     9.4
+	Iterate                   	     2	    48	     4.4
+
+S3L6X5	LIPOPROTEIN {ECO:0008006|GOOG     67.4      6e-15   3   3.0  38.1
+	Iterate                   	    32	   199	    66.5
+	Iterate                   	     2	    44	     6.2
+	Iterate                   	   184	   273	     4.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26820 (E-value: 1.2e-235, Score: 786.5)
+Mentioned as: TP1003
+Description: T. pallidum predicted coding region TP1003
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 32236138
+Source: EuropePMC
+Title: Whole genome sequence of the Treponema pallidum subsp. endemicum strain Iraq B: A subpopulation of bejel treponemes contains full-length tprF and tprG genes similar to those present in T. p. subsp. pertenue strains
+Journal: PloS one (2020)
+Snippet: (TP0814a, TP0814b) hypothetical proteins G/V (TP0815) GNAT family acetyltransferase 1091347 G C A/P 1005 9.3 (TP1003) hypothetical protein Minor alleles with a frequency over 8% and depth coverage over 100x are shown. The tprK (TP0897) gene was excluded from the analysis. Intrastrain heterogeneity in the length
+
+================================================================================
+Protein: VIMSS26820 (E-value: 1.2e-235, Score: 786.5)
+Mentioned as: TP1003
+Description: T. pallidum predicted coding region TP1003
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 28886021
+Source: EuropePMC
+Title: Complete genome sequences of two strains of Treponema pallidum subsp. pertenue from Ghana, Africa: Identical genome sequences in samples isolated more than 7 years apart
+Journal: PLoS neglected tropical diseases (2017)
+Snippet: TP0919 997862998179 997894 thioredoxin G/A A/G non-synonymous TP0967 10509091052456 1051146 hypothetical protein T T/C synonymous TP1003 10931881094225 1093898 hypothetical protein, putative membrane protein C C/A synonymous *IGR, intergenic region **NA, not applicable Molecular analysis of rabbit chromosomal DNA in Ghana-051 and CDC 2575 samples Since consensus
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83968.1	AF-O83968-F1-model_v4_TED01:2-203_260-343	1	AF-O83968-F1-model_v4_TED01	2-343	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83968_TED01/Iterate
+GA   27.00 27.00;
+TC   27.60 27.60;
+NC   26.50 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

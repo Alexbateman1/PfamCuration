@@ -1,0 +1,59 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+14	8	Trichinella.
+14	7	Trichinellidae
+14	6	Trichinellida
+14	5	Dorylaimia
+14	4	Enoplea
+14	3	Nematoda
+14	2	Ecdysozoa
+14	1	Metazoa
+14	0	Eukaryota
+Total of 14 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0V0RHD0	UNCHARACTERIZED PROTEIN {    124.7    6.9e-33   1   1.2   0.4
+	Iterate                   	    20	   108	   124.2
+
+A0A0V0VWB0	UNCHARACTERIZED PROTEIN {    111.5    9.2e-29   1   1.4   0.6
+	Iterate                   	    49	   134	   110.8
+
+A0A0V1C8T7	FLYWCH-TYPE DOMAIN-CONTAI    190.6      2e-53   1   1.2   2.3
+	Iterate                   	    32	   127	   190.0
+
+A0A0V1KPE0	UNCHARACTERIZED PROTEIN {    218.4    4.1e-62   1   1.0   2.7
+	Iterate                   	     6	    97	   218.2
+
+A0A0V1PAA1	UNCHARACTERIZED PROTEIN {    207.1    1.5e-58   1   1.0   2.3
+	Iterate                   	     7	    98	   206.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0V0VWB0.1	AF-A0A0V0VWB0-F1-model_v4_TED01:2-69	1	AF-A0A0V0VWB0-F1-model_v4_TED01	2-69	32.3%
+A0A0V1KPE0.1	AF-A0A0V1KPE0-F1-model_v4_TED01:29-54_89-113	1	AF-A0A0V1KPE0-F1-model_v4_TED01	29-113	75.0%
+A0A0V1MGF1.1	AF-A0A0V1MGF1-F1-model_v4_TED01:9-144	1	AF-A0A0V1MGF1-F1-model_v4_TED01	9-144	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P26800/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.50 27.50;
+NC   26.40 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

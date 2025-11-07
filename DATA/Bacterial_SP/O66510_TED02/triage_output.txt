@@ -1,0 +1,89 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y106_AQUAE              Reviewed;         239 AA.
+AC   O66510;
+DE   RecName: Full=Uncharacterized protein aq_106;
+GN   OrderedLocusNames=aq_106;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000657; AAC06464.1; -; Genomic_DNA.
+DR   PIR; C70310; C70310.
+DR   AlphaFoldDB; O66510; -.
+DR   STRING; 224324.aq_106; -.
+DR   EnsemblBacteria; AAC06464; AAC06464; aq_106.
+DR   HOGENOM; CLU_1159226_0_0_0; -.
+DR   InParanoid; O66510; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..239
+FT                   /note="Uncharacterized protein aq_106"
+FT                   /id="PRO_0000186839"
+FT   TRANSMEM        125..144
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        149..171
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        197..216
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   239 AA;  27364 MW;  4FE9DED5DF63831A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Aquifex
+1	5	Aquificaceae
+1	4	Aquificales
+1	3	Aquificia
+1	2	Aquificota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O66510	UNCHARACTERIZED PROTEIN AQ_106     174.1    3.2e-48   1   1.9  14.4
+	O66510_TED02              	   150	   230	   174.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O66510.1	AF-O66510-F1-model_v4_TED01:24-87	1	AF-O66510-F1-model_v4_TED01	24-87	0
+O66510.1	AF-O66510-F1-model_v4_TED02:150-230	1	AF-O66510-F1-model_v4_TED02	150-230	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66510_TED02
+GA   27.00 27.00;
+TC   31.20 174.10;
+NC   26.70 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

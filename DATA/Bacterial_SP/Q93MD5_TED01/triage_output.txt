@@ -1,0 +1,324 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y3012_CLOPE             Reviewed;         161 AA.
+AC   Q93MD5;
+DE   RecName: Full=Uncharacterized protein PCP12;
+GN   OrderedLocusNames=PCP12;
+OS   Clostridium perfringens (strain 13 / Type A).
+OG   Plasmid pCP13.
+OC   Bacteria; Bacillati; Bacillota; Clostridia; Eubacteriales; Clostridiaceae;
+OC   Clostridium.
+OX   NCBI_TaxID=195102;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=13 / Type A;
+RX   PubMed=11792842; DOI=10.1073/pnas.022493799;
+RA   Shimizu T., Ohtani K., Hirakawa H., Ohshima K., Yamashita A., Shiba T.,
+RA   Ogasawara N., Hattori M., Kuhara S., Hayashi H.;
+RT   "Complete genome sequence of Clostridium perfringens, an anaerobic flesh-
+RT   eater.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:996-1001(2002).
+CC   -!- SIMILARITY: To C.perfringens pIP404 ORF6. {ECO:0000305}.
+DR   EMBL; AP003515; BAB62450.1; -; Genomic_DNA.
+DR   RefSeq; WP_003449978.1; NC_003042.1.
+DR   AlphaFoldDB; Q93MD5; -.
+DR   SMR; Q93MD5; -.
+DR   KEGG; cpe:PCP12; -.
+DR   HOGENOM; CLU_1640845_0_0_9; -.
+DR   Proteomes; UP000000818; Plasmid pCP13.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..161
+FT                   /note="Uncharacterized protein PCP12"
+FT                   /id="PRO_0000208255"
+SQ   SEQUENCE   161 AA;  19180 MW;  DBE5BE41BBE4CEDE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Clostridium
+1	6	Zhenpiania.
+1	6	Youxingia.
+1	6	Pusillibacter.
+1	6	Merdimmobilis.
+1	6	Ligaoa.
+1	6	Brotaphodocola.
+1	6	Blautia.
+4	5	Oscillospiraceae
+2	5	Lachnospiraceae
+2	5	Clostridiaceae
+1	5	Anaerovoracaceae
+6	4	Eubacteriales
+2	4	Lachnospirales
+1	4	Peptostreptococcales
+9	3	Clostridia
+9	2	Bacillota
+9	1	Bacillati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A417P7R4	DUF536 DOMAIN-CONTAINING      30.6     0.0012   1   1.1   3.3
+	Q93MD5_TED01              	     5	   114	    30.3
+
+A0A5C1YPS5	T-SNARE COILED-COIL HOMOL     43.7    1.2e-07   5   5.2   7.4
+	Q93MD5_TED01              	   166	   211	    12.9
+	Q93MD5_TED01              	    80	   129	    10.6
+	Q93MD5_TED01              	     5	    82	     9.1
+	Q93MD5_TED01              	   208	   256	     6.2
+	Q93MD5_TED01              	   124	   169	     5.2
+
+A0A6P4YR82	ABNORMAL SPINDLE-LIKE MIC     30.7     0.0012   2   2.7   3.8
+	Q93MD5_TED01              	  2329	  2458	    18.0
+	Q93MD5_TED01              	  2038	  2167	    12.8
+	PF13914	Phostensin      	   685	   809	    58.8
+	PF15780	ASH             	   953	  1049	    66.3
+	PF00307	CH              	  1679	  1784	    29.9
+	PF00307	CH              	  1829	  1963	    23.7
+	PF00612	IQ              	  1996	  2016	    13.3
+	PF00612	IQ              	  2019	  2039	    20.2
+	PF00612	IQ              	  2042	  2062	    14.2
+	PF00612	IQ              	  2092	  2112	    14.5
+	PF00612	IQ              	  2142	  2162	    14.1
+	PF00612	IQ              	  2165	  2185	    19.6
+	PF00612	IQ              	  2188	  2208	    13.3
+	PF00612	IQ              	  2215	  2235	    13.4
+	PF00612	IQ              	  2238	  2258	    19.1
+	PF00612	IQ              	  2261	  2281	    13.9
+	PF00612	IQ              	  2288	  2308	    13.4
+	PF00612	IQ              	  2311	  2331	    19.6
+	PF00612	IQ              	  2334	  2354	    13.3
+	PF00612	IQ              	  2384	  2404	    11.4
+	PF00612	IQ              	  2457	  2477	    19.5
+	PF00612	IQ              	  2480	  2500	    15.2
+	PF00612	IQ              	  2507	  2527	    15.1
+	PF00612	IQ              	  2530	  2550	    15.9
+	PF00612	IQ              	  2553	  2573	    13.2
+	PF00612	IQ              	  2579	  2596	      16
+	PF00612	IQ              	  2642	  2662	    16.6
+	PF00612	IQ              	  2683	  2703	    16.6
+	PF00612	IQ              	  2706	  2726	    18.7
+
+A0A830ZZ45	DUF536 DOMAIN-CONTAINING      32.1    0.00044   1   1.1   2.1
+	Q93MD5_TED01              	     6	   135	    31.9
+
+A0A8K0EW34	ASPM PROTEIN {ECO:0000313     41.9    4.1e-07   3   3.9  12.6
+	Q93MD5_TED01              	  1246	  1371	    16.7
+	Q93MD5_TED01              	  1538	  1666	    15.5
+	Q93MD5_TED01              	  1027	  1153	    15.1
+	PF15780	ASH             	    45	   141	      60
+	PF00307	CH              	   670	   775	    25.5
+	PF00307	CH              	   817	   953	    25.9
+	PF00612	IQ              	   986	  1006	    14.1
+	PF00612	IQ              	  1009	  1029	    12.6
+	PF00612	IQ              	  1032	  1052	    15.7
+	PF00612	IQ              	  1059	  1079	    11.1
+	PF00612	IQ              	  1082	  1102	    12.9
+	PF00612	IQ              	  1155	  1175	    20.1
+	PF00612	IQ              	  1205	  1225	    15.8
+	PF00612	IQ              	  1251	  1271	    15.7
+	PF00612	IQ              	  1278	  1298	    12.8
+	PF00612	IQ              	  1301	  1321	    12.7
+	PF00612	IQ              	  1374	  1394	    14.9
+	PF00612	IQ              	  1397	  1417	    12.7
+	PF00612	IQ              	  1424	  1444	    15.3
+	PF00612	IQ              	  1447	  1467	    19.9
+	PF00612	IQ              	  1470	  1490	    12.8
+	PF00612	IQ              	  1497	  1517	    15.1
+	PF00612	IQ              	  1543	  1563	    15.7
+	PF00612	IQ              	  1570	  1590	    11.1
+	PF00612	IQ              	  1593	  1613	    14.6
+	PF00612	IQ              	  1666	  1686	    20.1
+	PF00612	IQ              	  1689	  1709	    16.4
+	PF00612	IQ              	  1716	  1735	    15.6
+	PF00612	IQ              	  1739	  1759	    15.5
+	PF00612	IQ              	  1762	  1782	    14.5
+	PF00612	IQ              	  1788	  1805	    14.1
+	PF00612	IQ              	  1851	  1871	    16.8
+	PF00612	IQ              	  1892	  1912	    13.3
+	PF00612	IQ              	  1915	  1935	    20.1
+
+A0A8K0EYR6	ASPM PROTEIN {ECO:0000313     39.8    1.9e-06   3   4.0  14.3
+	Q93MD5_TED01              	  1246	  1371	    16.7
+	Q93MD5_TED01              	  1538	  1666	    15.6
+	Q93MD5_TED01              	  1027	  1153	    15.1
+	PF15780	ASH             	    45	   141	      60
+	PF00307	CH              	   670	   775	    25.5
+	PF00307	CH              	   817	   953	    25.9
+	PF00612	IQ              	   986	  1006	    14.1
+	PF00612	IQ              	  1009	  1029	    12.6
+	PF00612	IQ              	  1032	  1052	    15.7
+	PF00612	IQ              	  1059	  1079	    11.1
+	PF00612	IQ              	  1082	  1102	    12.9
+	PF00612	IQ              	  1155	  1175	    20.1
+	PF00612	IQ              	  1205	  1225	    15.8
+	PF00612	IQ              	  1251	  1271	    15.7
+	PF00612	IQ              	  1278	  1298	    12.8
+	PF00612	IQ              	  1301	  1321	    12.7
+	PF00612	IQ              	  1374	  1394	    14.9
+	PF00612	IQ              	  1397	  1417	    12.7
+	PF00612	IQ              	  1424	  1444	    15.3
+	PF00612	IQ              	  1447	  1467	    19.9
+	PF00612	IQ              	  1470	  1490	    11.3
+	PF00612	IQ              	  1497	  1517	    15.5
+	PF00612	IQ              	  1520	  1540	    20.1
+	PF00612	IQ              	  1570	  1590	    11.1
+	PF00612	IQ              	  1593	  1613	    14.6
+	PF00612	IQ              	  1666	  1686	    20.1
+	PF00612	IQ              	  1689	  1709	    16.4
+	PF00612	IQ              	  1716	  1735	    15.6
+	PF00612	IQ              	  1739	  1759	    15.5
+	PF00612	IQ              	  1762	  1782	    14.5
+	PF00612	IQ              	  1788	  1805	    14.1
+	PF00612	IQ              	  1851	  1871	    16.8
+	PF00612	IQ              	  1892	  1912	    13.3
+	PF00612	IQ              	  1915	  1935	    20.1
+
+A0A926I5T5	DUF536 DOMAIN-CONTAINING      32.1    0.00044   1   1.1   2.1
+	Q93MD5_TED01              	     6	   135	    31.9
+
+A0A9J7LJA3	ABNORMAL SPINDLE-LIKE MIC     34.8    6.4e-05   4   4.6  14.4
+	Q93MD5_TED01              	  1303	  1448	    13.9
+	Q93MD5_TED01              	  1177	  1303	    11.1
+	Q93MD5_TED01              	  1540	  1667	     9.7
+	Q93MD5_TED01              	  1021	  1156	     6.5
+	PF15780	ASH             	    59	   155	    63.8
+	PF00307	CH              	   671	   776	      27
+	PF00307	CH              	   817	   954	    25.7
+	PF00612	IQ              	   987	  1007	    11.7
+	PF00612	IQ              	  1010	  1030	    21.5
+	PF00612	IQ              	  1083	  1103	    15.1
+	PF00612	IQ              	  1133	  1153	    15.4
+	PF00612	IQ              	  1156	  1176	    21.2
+	PF00612	IQ              	  1179	  1199	    13.8
+	PF00612	IQ              	  1229	  1249	      15
+	PF00612	IQ              	  1279	  1299	      16
+	PF00612	IQ              	  1302	  1322	    16.3
+	PF00612	IQ              	  1375	  1395	    15.1
+	PF00612	IQ              	  1425	  1445	    16.3
+	PF00612	IQ              	  1448	  1468	    19.5
+	PF00612	IQ              	  1498	  1518	    17.9
+	PF00612	IQ              	  1521	  1541	    19.8
+	PF00612	IQ              	  1594	  1614	      15
+	PF00612	IQ              	  1644	  1664	    15.6
+	PF00612	IQ              	  1667	  1687	    19.3
+	PF00612	IQ              	  1690	  1710	      12
+	PF00612	IQ              	  1717	  1736	    15.8
+	PF00612	IQ              	  1740	  1760	    15.6
+	PF00612	IQ              	  1763	  1783	    13.4
+	PF00612	IQ              	  1789	  1809	    17.1
+	PF00612	IQ              	  1852	  1872	    17.5
+	PF00612	IQ              	  1893	  1913	    18.6
+	PF00612	IQ              	  1916	  1936	    15.9
+
+A0AAE3DMF1	DUF536 DOMAIN-CONTAINING      32.6     0.0003   1   1.1   3.3
+	Q93MD5_TED01              	     5	   114	    32.3
+
+B0WJM6	MYOSIN LIGHT CHAIN KINASE {EC     72.9    1.2e-16  37  37.1 482.7
+	Q93MD5_TED01              	  2252	  2336	    10.1
+	Q93MD5_TED01              	  2385	  2476	     9.5
+	Q93MD5_TED01              	  2872	  2969	     9.4
+	Q93MD5_TED01              	  1670	  1757	     9.1
+	Q93MD5_TED01              	  2465	  2558	     8.8
+	Q93MD5_TED01              	  2630	  2719	     8.8
+	Q93MD5_TED01              	  2718	  2807	     8.8
+	Q93MD5_TED01              	  2552	  2640	     8.7
+	Q93MD5_TED01              	  1247	  1342	     8.6
+	Q93MD5_TED01              	  1909	  2012	     8.6
+	Q93MD5_TED01              	    10	    95	     8.5
+	Q93MD5_TED01              	   176	   261	     8.4
+	Q93MD5_TED01              	   914	  1008	     8.4
+	Q93MD5_TED01              	   665	   759	     8.1
+	Q93MD5_TED01              	   259	   344	     8.0
+	Q93MD5_TED01              	   831	   925	     8.0
+	Q93MD5_TED01              	  1004	  1093	     8.0
+	Q93MD5_TED01              	  1999	  2086	     8.0
+	Q93MD5_TED01              	   415	   509	     7.9
+	Q93MD5_TED01              	   582	   678	     7.9
+	Q93MD5_TED01              	  1338	  1428	     7.9
+	Q93MD5_TED01              	  1421	  1511	     7.9
+	Q93MD5_TED01              	  2085	  2170	     7.9
+	Q93MD5_TED01              	   753	   841	     7.8
+	Q93MD5_TED01              	  1079	  1179	     7.8
+	Q93MD5_TED01              	  2169	  2258	     7.7
+	Q93MD5_TED01              	  2804	  2890	     7.5
+	Q93MD5_TED01              	  1754	  1843	     7.3
+	Q93MD5_TED01              	  2963	  3043	     7.3
+	Q93MD5_TED01              	    84	   178	     6.8
+	Q93MD5_TED01              	   343	   427	     6.7
+	Q93MD5_TED01              	  1171	  1257	     6.6
+	Q93MD5_TED01              	  1502	  1594	     6.6
+	Q93MD5_TED01              	  1586	  1677	     6.2
+	Q93MD5_TED01              	   498	   598	     6.0
+	Q93MD5_TED01              	  1824	  1921	     4.6
+	Q93MD5_TED01              	  2334	  2390	     2.9
+	PF00041	fn3             	  3069	  3158	    25.9
+
+Q93MD5	UNCHARACTERIZED PROTEIN PCP12     335.7    1.5e-97   1   1.0  25.1
+	Q93MD5_TED01              	     4	   160	   335.6
+
+W6RZQ9	HELIX-TURN-HELIX DOMAIN-CONTA     35.8    3.2e-05   1   1.4  20.8
+	Q93MD5_TED01              	     5	   172	    35.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS122624 (E-value: 1.4e-99, Score: 335.7)
+Mentioned as: PCP12
+Description: conserved hypothetical protein
+Organism: Clostridium perfringens str. 13
+PMID: 39484691
+Source: EuropePMC
+Title: Advances research in porcine enteric coronavirus therapies and antiviral drugs
+Journal: The veterinary quarterly (2024)
+Snippet: (Chen etal. 2020b ) PCP11 In vitro Replication > 625 PEDV (Chen etal. 2020b ) PCP12 In vitro Attachment, entry, replication > 5000 PEDV (Chen etal. 2020b ) PCP13 In vitro Attachment, entry, replication > 2500 PEDV (Chen etal. 2020b ) Aloe Aloe extract In vitro
+
+================================================================================
+Protein: VIMSS122624 (E-value: 1.4e-99, Score: 335.7)
+Mentioned as: PCP12
+Description: conserved hypothetical protein
+Organism: Clostridium perfringens str. 13
+PMID: 35321661
+Source: EuropePMC
+Title: Analysis of the complete genome sequences of Clostridium perfringens strains harbouring the binary enterotoxin BEC gene and comparative genomics of pCP13-like family plasmids
+Journal: BMC genomics (2022)
+Snippet: Type I partitioning system centromere binding protein 3 22082570 363(+) PCP03 Hypothetical 4 27303308 579() PCP12 Hypothetical with SMC_N superfamily domain 5* 36204033 414(+) Hypothetical 6* 40915125 1035(+) ABC transporter permease 7* 51516326 1176(+) ABC transporter permease ( FtsX) 8* 63237006 684(+) ABC transporter ATP-binding protein
+
+================================================================================
+Protein: VIMSS122624 (E-value: 1.4e-99, Score: 335.7)
+Mentioned as: PCP12
+Description: conserved hypothetical protein
+Organism: Clostridium perfringens str. 13
+PMID: 29588405
+Source: EuropePMC
+Title: Concurrent Host-Pathogen Transcriptional Responses in a <i>Clostridium perfringens</i> Murine Myonecrosis Infection
+Journal: mBio (2018)
+Snippet: higher level ( TableS5 ). Presumptive upregulated genes encoded a putative MerR family regulatory protein (PCP12), transposases (PCP05 and PCP10), a resolvase (PCP32), and PemK (PCP58), which is an orthologue of a toxic RNase that is part of a toxin-antitoxin module involved in stable plasmid maintenance
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q93MD5.1	AF-Q93MD5-F1-model_v4_TED01:4-58_87-160	1	AF-Q93MD5-F1-model_v4_TED01	4-160	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q93MD5_TED01
+GA   27.00 27.00;
+TC   27.70 27.40;
+NC   25.40 23.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,100 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+3	5	Enterobacteriaceae
+3	4	Enterobacterales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2XIZ4	SOK {ECO:0000313|EMBL:ABD    190.9    1.1e-53   1   1.0   2.4
+	Iterate                   	     1	    74	   190.7
+
+A0A0H3EUL8	SOK PROTEIN {ECO:0000313|    190.9    1.1e-53   1   1.0   2.4
+	Iterate                   	     1	    74	   190.7
+
+A0A1L9BBC0	SECRETED PROTEIN {ECO:000     37.9      6e-06   2   9.2   4.6
+	Iterate                   	   347	   391	    12.3
+	Iterate                   	   143	   176	     4.3
+
+A0AAD6QA14	NAD-DEPENDENT EPIMERASE/D     34.1    9.4e-05   5   6.3   5.7
+	Iterate                   	    46	    93	     7.2
+	Iterate                   	   329	   372	     7.0
+	Iterate                   	    13	    49	     6.7
+	Iterate                   	   981	  1024	     3.8
+	Iterate                   	  1336	  1379	     3.8
+	PF01073	3Beta_HSD       	    46	   284	    40.7
+	PF01370	Epimerase       	    46	   291	    65.3
+	PF07993	NAD_binding_4   	    47	   252	    31.5
+	PF16363	GDP_Man_Dehyd   	    47	   310	    32.8
+	PF05368	NmrA            	   317	   423	    30.7
+	PF01370	Epimerase       	   321	   568	    82.3
+	PF16363	GDP_Man_Dehyd   	   322	   526	    44.1
+	PF01073	3Beta_HSD       	   322	   574	    48.9
+	PF07993	NAD_binding_4   	   323	   525	    37.4
+	PF05368	NmrA            	   643	   750	    36.1
+	PF01370	Epimerase       	   647	   892	    83.2
+	PF01073	3Beta_HSD       	   648	   891	    65.6
+	PF07993	NAD_binding_4   	   649	   869	    41.6
+	PF16363	GDP_Man_Dehyd   	   649	   923	    37.6
+	PF13460	NAD_binding_10  	   651	   830	    39.8
+	PF01370	Epimerase       	   973	  1217	    79.9
+	PF16363	GDP_Man_Dehyd   	   974	  1192	      43
+	PF01073	3Beta_HSD       	   974	  1208	    47.2
+	PF07993	NAD_binding_4   	   975	  1185	    40.4
+	PF13460	NAD_binding_10  	   977	  1130	    28.5
+	PF05368	NmrA            	  1324	  1430	    29.3
+	PF01370	Epimerase       	  1328	  1575	    76.2
+	PF16363	GDP_Man_Dehyd   	  1329	  1540	    42.2
+	PF01073	3Beta_HSD       	  1329	  1563	    46.7
+	PF07993	NAD_binding_4   	  1330	  1556	    41.1
+	PF13460	NAD_binding_10  	  1332	  1481	    27.6
+
+B7LX04	PROTEIN SOK {ECO:0000313|EMBL    178.6    7.3e-50   1   1.0   1.9
+	Iterate                   	     1	    71	   178.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P13971 (E-value: 9.9e-56, Score: 190.9)
+Mentioned as: P13971
+Description: Protein sok
+Organism: Escherichia coli
+PMID: 16251312
+Source: EuropePMC
+Title: DNA sequence and comparative genomics of pAPEC-O2-R, an avian pathogenic Escherichia coli transmissible R plasmid
+Journal: Antimicrobial agents and chemotherapy (2005)
+Snippet: 100 100 100 99 93 97 98 NP_052939 P13971 NP_061443 SO1898 BAA75128 AAD47188 BAA97930 Escherichia Escherichia Escherichia Escherichia coli coli coli coli plasmid
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P13971/Iterate
+GA   27.00 27.00;
+TC   27.20 178.50;
+NC   26.00 18.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

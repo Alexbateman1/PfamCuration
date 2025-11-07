@@ -1,0 +1,106 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1849_AQUAE             Reviewed;         219 AA.
+AC   O67701;
+DE   RecName: Full=Uncharacterized protein aq_1849;
+GN   OrderedLocusNames=aq_1849;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000657; AAC07668.1; -; Genomic_DNA.
+DR   PIR; C70459; C70459.
+DR   RefSeq; NP_214269.1; NC_000918.1.
+DR   AlphaFoldDB; O67701; -.
+DR   SMR; O67701; -.
+DR   STRING; 224324.aq_1849; -.
+DR   EnsemblBacteria; AAC07668; AAC07668; aq_1849.
+DR   KEGG; aae:aq_1849; -.
+DR   HOGENOM; CLU_1259291_0_0_0; -.
+DR   InParanoid; O67701; -.
+DR   OrthoDB; 9825532at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Coiled coil; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..219
+FT                   /note="Uncharacterized protein aq_1849"
+FT                   /id="PRO_0000186952"
+FT   TRANSMEM        28..50
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   COILED          155..218
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   219 AA;  25129 MW;  EA7E43C875301C3F CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Hydrogenivirga
+1	6	Aquifex
+2	5	Aquificaceae
+2	4	Aquificales
+2	3	Aquificia
+2	2	Aquificota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A497XTG9	5-BROMO-4-CHLOROINDOLYL P     52.2    3.2e-10   1   1.1   4.5
+	O67701_TED01              	    14	   233	    52.0
+
+A4H7R4	KINESIN K39 {ECO:0000313|EMBL     51.5    5.4e-10  10  15.5  25.5
+	O67701_TED01              	   723	   839	     4.8
+	O67701_TED01              	  1924	  2055	     4.5
+	O67701_TED01              	   854	   937	     3.9
+	O67701_TED01              	  1166	  1259	     3.9
+	O67701_TED01              	  1734	  1814	     3.9
+	O67701_TED01              	  1815	  1905	     3.9
+	O67701_TED01              	  1314	  1391	     3.8
+	O67701_TED01              	   952	  1029	     3.7
+	O67701_TED01              	  1437	  1520	     3.7
+	O67701_TED01              	  1684	  1753	     3.7
+	PF16796	Microtub_bd     	    36	   202	    71.3
+	PF00225	Kinesin         	    43	   406	   348.6
+
+O67701	UNCHARACTERIZED PROTEIN AQ_184    474.5   2.1e-139   1   1.0  15.9
+	O67701_TED01              	     4	   218	   474.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O67701.1	AF-O67701-F1-model_v4_TED01:4-218	1	AF-O67701-F1-model_v4_TED01	4-218	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67701_TED01
+GA   27.00 27.00;
+TC   27.20 48.60;
+NC   26.80 24.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

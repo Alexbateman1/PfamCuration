@@ -1,0 +1,85 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	5	Kyanoviridae
+2	5	Anaerolineaceae
+2	4	Caudoviricetes
+2	4	Anaerolineales
+2	3	Uroviricota
+2	3	Anaerolineae
+2	2	Heunggongvirae
+2	2	Chloroflexota
+2	2	Candidatus Kryptoniota
+5	1	Pseudomonadati
+3	1	Bacillati
+2	1	Duplodnaviria
+8	0	Bacteria
+2	0	Viruses
+Total of 10 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1I4VVQ7	RESTRICTION ENDONUCLEASE     222.5    2.9e-62   1   1.0   4.4
+	Iterate                   	     4	   234	   222.3
+
+A0A2N3I988	UNCHARACTERIZED PROTEIN {    217.8    7.9e-61   1   1.0   5.0
+	Iterate                   	    13	   246	   217.6
+
+A0A6S4QU93	RESTRICTION ENDONUCLEASE     236.7    1.3e-66   1   1.0   6.8
+	Iterate                   	     3	   236	   236.5
+
+B5ZA77	TYPEII RESTRICTION ENZYME {EC    257.7    5.2e-73   1   1.0   3.7
+	Iterate                   	     3	   227	   257.4
+
+E8N0X2	TYPE II RESTRICTION ENZYME {E    225.3    4.1e-63   1   1.0   0.1
+	Iterate                   	     3	   235	   225.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS5835762 (E-value: 5e-111, Score: 375.0)
+Mentioned as: HPG27_290
+Description: typeII restriction enzyme
+Organism: Helicobacter pylori G27
+PMID: 22507395
+Source: EuropePMC
+Title: Detailed analysis of Helicobacter pylori Fur-regulated promoters reveals a Fur box core sequence and novel Fur-regulated genes
+Journal: Molecular microbiology (2012)
+Snippet: TTA 2/15 HPG27_261 (+) hypothetical protein 3. 323622 TAATAAT C T TT C TTA 2/15 HPG27_290 (-) type II restriction enzyme 4. 389931 TAA A AAT A ATT T TTA 2/15 HPG27_357 (-) phosphatidyl serine synthase 5. 537753 TAATA TA G ATTATTA 2/15 HPG27_495 (+) cagM
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0P1MSS9.1	AF-A0A0P1MSS9-F1-model_v4_TED01:2-73_108-234	1	AF-A0A0P1MSS9-F1-model_v4_TED01	2-234	100.0%
+A0A0P1MSS9.1	AF-A0A0P1MSS9-F1-model_v4_TED02:78-104	1	AF-A0A0P1MSS9-F1-model_v4_TED02	78-104	11.7%
+A0A2N3I988.1	AF-A0A2N3I988-F1-model_v4_TED01:2-85_120-246	1	AF-A0A2N3I988-F1-model_v4_TED01	2-246	100.0%
+A0A2N3I988.1	AF-A0A2N3I988-F1-model_v4_TED02:91-118	1	AF-A0A2N3I988-F1-model_v4_TED02	91-118	11.5%
+A0A656D3Q3.1	AF-A0A656D3Q3-F1-model_v4_TED01:2-73_109-234	1	AF-A0A656D3Q3-F1-model_v4_TED01	2-234	100.0%
+A0A656D3Q3.1	AF-A0A656D3Q3-F1-model_v4_TED02:78-107	1	AF-A0A656D3Q3-F1-model_v4_TED02	78-107	13.0%
+A0A6S4QU93.1	AF-A0A6S4QU93-F1-model_v4_TED01:9-77_112-237	1	AF-A0A6S4QU93-F1-model_v4_TED01	9-237	97.4%
+B5ZA77.1	AF-B5ZA77-F1-model_v4_TED01:2-69_104-229	1	AF-B5ZA77-F1-model_v4_TED01	2-229	100.0%
+B5ZA77.1	AF-B5ZA77-F1-model_v4_TED02:73-102	1	AF-B5ZA77-F1-model_v4_TED02	73-102	13.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P05301_TED01/Iterate
+GA   27.00 27.00;
+TC   48.60 37.40;
+NC   26.30 24.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,38 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+Total of 0 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+F5LRC7	NEAMINE PHOSPHORIBOSYLTRANSFE    235.2    4.4e-67   1   1.4   0.4
+	Q4H4F7_TED02              	   277	   387	   234.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q4H4F7.1	AF-Q4H4F7-F1-model_v4_TED01:9-265	1	AF-Q4H4F7-F1-model_v4_TED01	9-265	0
+Q4H4F7.1	AF-Q4H4F7-F1-model_v4_TED02:277-387	1	AF-Q4H4F7-F1-model_v4_TED02	277-387	100.0%
+Q4H4F7.1	AF-Q4H4F7-F1-model_v4_TED03:392-603	1	AF-Q4H4F7-F1-model_v4_TED03	392-603	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q4H4F7_TED02
+GA   27.00 27.00;
+TC   27.20 234.50;
+NC   26.50 25.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

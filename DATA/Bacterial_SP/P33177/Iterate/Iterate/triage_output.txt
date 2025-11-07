@@ -1,0 +1,254 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   NIFD_NOSS1              Reviewed;         497 AA.
+AC   P00464;
+DE   RecName: Full=Nitrogenase molybdenum-iron protein alpha chain;
+DE            EC=1.18.6.1;
+DE   AltName: Full=Dinitrogenase;
+DE   AltName: Full=Nitrogenase component I;
+GN   Name=nifD; OrderedLocusNames=all1454;
+OS   Nostoc sp. (strain PCC 7120 / SAG 25.82 / UTEX 2576).
+OC   Bacteria; Bacillati; Cyanobacteriota; Cyanophyceae; Nostocales;
+OC   Nostocaceae; Nostoc.
+OX   NCBI_TaxID=103690;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=16593347; DOI=10.1073/pnas.80.15.4723;
+RA   Lammers P.J., Haselkorn R.;
+RT   "Sequence of the nifD gene coding for the alpha subunit of dinitrogenase
+RT   from the cyanobacterium Anabaena.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 80:4723-4727(1983).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=PCC 7120 / SAG 25.82 / UTEX 2576;
+RX   PubMed=11759840; DOI=10.1093/dnares/8.5.205;
+RA   Kaneko T., Nakamura Y., Wolk C.P., Kuritz T., Sasamoto S., Watanabe A.,
+RA   Iriguchi M., Ishikawa A., Kawashima K., Kimura T., Kishida Y., Kohara M.,
+RA   Matsumoto M., Matsuno A., Muraki A., Nakazaki N., Shimpo S., Sugimoto M.,
+RA   Takazawa M., Yamada M., Yasuda M., Tabata S.;
+RT   "Complete genomic sequence of the filamentous nitrogen-fixing
+RT   cyanobacterium Anabaena sp. strain PCC 7120.";
+RL   DNA Res. 8:205-213(2001).
+CC   -!- FUNCTION: This molybdenum-iron protein is part of the nitrogenase
+CC       complex that catalyzes the key enzymatic reactions in nitrogen
+CC       fixation.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=N2 + 8 reduced [2Fe-2S]-[ferredoxin] + 16 ATP + 16 H2O = H2 +
+CC         8 oxidized [2Fe-2S]-[ferredoxin] + 2 NH4(+) + 16 ADP + 16 phosphate +
+CC         6 H(+); Xref=Rhea:RHEA:21448, Rhea:RHEA-COMP:10000, Rhea:RHEA-
+CC         COMP:10001, ChEBI:CHEBI:15377, ChEBI:CHEBI:15378, ChEBI:CHEBI:17997,
+CC         ChEBI:CHEBI:18276, ChEBI:CHEBI:28938, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:33737, ChEBI:CHEBI:33738, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:456216; EC=1.18.6.1;
+CC   -!- COFACTOR:
+CC       Name=[8Fe-7S] cluster; Xref=ChEBI:CHEBI:21143; Evidence={ECO:0000250};
+CC       Note=Binds 1 [8Fe-7S] cluster per heterodimer. {ECO:0000250};
+CC   -!- COFACTOR:
+CC       Name=[7Fe-Mo-9S-C-homocitryl] cluster; Xref=ChEBI:CHEBI:30409;
+CC         Evidence={ECO:0000250};
+CC       Note=Binds 1 [7Fe-Mo-9S-C-homocitryl] cluster per subunit.
+CC       {ECO:0000250};
+CC   -!- SUBUNIT: Tetramer of two alpha and two beta chains. Forms complex with
+CC       the iron protein (nitrogenase component 2).
+CC   -!- SIMILARITY: Belongs to the NifD/NifK/NifE/NifN family. {ECO:0000305}.
+DR   EMBL; V01482; CAA24730.1; -; Genomic_DNA.
+DR   EMBL; BA000019; BAB73398.1; -; Genomic_DNA.
+DR   PIR; A00542; NIAIMA.
+DR   PIR; AF1986; AF1986.
+DR   AlphaFoldDB; P00464; -.
+DR   SMR; P00464; -.
+DR   STRING; 103690.gene:10493456; -.
+DR   KEGG; ana:all1454; -.
+DR   eggNOG; COG2710; Bacteria.
+DR   Proteomes; UP000002483; Chromosome.
+DR   GO; GO:0016612; C:molybdenum-iron nitrogenase complex; IEA:InterPro.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0051536; F:iron-sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0016163; F:nitrogenase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0009399; P:nitrogen fixation; IEA:UniProtKB-KW.
+DR   CDD; cd01976; Nitrogenase_MoFe_alpha; 1.
+DR   Gene3D; 3.40.50.1980; Nitrogenase molybdenum iron protein domain; 3.
+DR   InterPro; IPR000510; Nase/OxRdtase_comp1.
+DR   InterPro; IPR010143; Nase_comp1_asu.
+DR   InterPro; IPR000318; Nase_comp1_CS.
+DR   InterPro; IPR005972; Nase_Mo-Fe_asu.
+DR   NCBIfam; TIGR01862; N2-ase-Ialpha; 1.
+DR   NCBIfam; TIGR01282; nifD; 1.
+DR   PANTHER; PTHR43457; NITROGENASE MOLYBDENUM-IRON PROTEIN ALPHA CHAIN; 1.
+DR   PANTHER; PTHR43457:SF1; NITROGENASE MOLYBDENUM-IRON PROTEIN ALPHA CHAIN; 1.
+DR   Pfam; PF00148; Oxidored_nitro; 1.
+DR   SUPFAM; SSF53807; Helical backbone' metal receptor; 1.
+DR   PROSITE; PS00699; NITROGENASE_1_1; 1.
+DR   PROSITE; PS00090; NITROGENASE_1_2; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Iron; Iron-sulfur; Metal-binding; Molybdenum;
+KW   Nitrogen fixation; Nucleotide-binding; Oxidoreductase; Reference proteome.
+FT   CHAIN           1..497
+FT                   /note="Nitrogenase molybdenum-iron protein alpha chain"
+FT                   /id="PRO_0000153053"
+FT   BINDING         64
+FT                   /ligand="[8Fe-7S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21143"
+FT                   /ligand_note="ligand shared with beta chain"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         90
+FT                   /ligand="[8Fe-7S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21143"
+FT                   /ligand_note="ligand shared with beta chain"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         156
+FT                   /ligand="[8Fe-7S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21143"
+FT                   /ligand_note="ligand shared with beta chain"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         282
+FT                   /ligand="[7Fe-Mo-9S-C-homocitryl] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:30409"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         449
+FT                   /ligand="[7Fe-Mo-9S-C-homocitryl] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:30409"
+FT                   /evidence="ECO:0000250"
+FT   CONFLICT        160
+FT                   /note="L -> S (in Ref. 1; CAA24730)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        219
+FT                   /note="N -> T (in Ref. 1; CAA24730)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        455..496
+FT                   /note="GPYHGYDGFAIFARDMDLALNSPTWSLIGAPWKKAAAKAKAA -> ELGDGV
+FT                   QMSDEVRFFCEGRKKSLFL (in Ref. 1)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   497 AA;  55889 MW;  062CF54FAC302694 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Nostoc.
+3	5	Nodulariaceae
+11	5	Nostocaceae
+22	4	Nostocales
+23	3	Cyanophyceae
+23	2	Cyanobacteriota
+23	1	Bacillati
+23	0	Bacteria
+Total of 23 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1Z4N5E5	NITROGENASE PROTEIN ALPHA     56.6    7.5e-12   1   1.6   3.3
+	Iterate                   	     1	    23	    55.6
+	PF00148	Oxidored_nitro  	    64	   475	   305.8
+
+A0A367QIC9	NITROGENASE PROTEIN ALPHA     57.2      5e-12   1   1.8   2.4
+	Iterate                   	     1	    23	    55.8
+	PF00148	Oxidored_nitro  	    64	   457	   291.9
+
+A0A367QYL1	NITROGENASE PROTEIN ALPHA     57.1    5.4e-12   1   1.7   2.4
+	Iterate                   	     1	    23	    55.8
+	PF00148	Oxidored_nitro  	    64	   457	   290.4
+
+A0A8J7LAJ3	NITROGENASE PROTEIN ALPHA     57.1    5.2e-12   1   1.7   2.4
+	Iterate                   	     1	    23	    55.8
+	PF00148	Oxidored_nitro  	    64	   457	   289.4
+
+P00464	NITROGENASE MOLYBDENUM-IRON PRO     53.4    7.4e-11   1   2.1   4.7
+	Iterate                   	     1	    23	    53.4
+	PF00148	Oxidored_nitro  	    64	   475	   305.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3143219 (E-value: 5.3e-12, Score: 50.7)
+Mentioned as: ZP_01628430
+Description: Nitrogenase molybdenum-iron protein alpha chain
+Organism: Nodularia spumigena CCY9414
+PMID: 21079771
+Source: EuropePMC
+Title: Distribution analysis of hydrogenases in surface waters of marine and freshwater environments
+Journal: PloS one (2010)
+Snippet: coastal 5.9 ZP_01727423 ZP_01730229 ZP_01728928 ZP_01727766 Nodularia spumigena CCY 9414 coastal 5.3 ZP_01629499 ZP_01630855 ZP_01628406 ZP_01628430 Spirulina subsalsa FACHB351 coastal AY345592 Synechococcus sp. CC9605 coastal 2.51 Synechococcus sp. CC9902 coastal 2.23 Synechococcus sp. BL107 coastal 2.3 Synechococcus sp. WH 5701 coastal 3.0 ZP_01085930 ZP_01085923 Crocosphaera watsonii
+
+================================================================================
+Protein: VIMSS163797 (E-value: 8e-12, Score: 50.1)
+Mentioned as: all1454
+Description: nitrogenase molybdenum-iron protein alpha chain
+Organism: Nostoc sp. PCC 7120
+PMID: 33946501
+Source: EuropePMC
+Title: β-N-Methylamino-L-Alanine (BMAA) Causes Severe Stress in <i>Nostoc</i> sp. PCC 7120 Cells under Diazotrophic Conditions: A Proteomic Study
+Journal: Toxins (2021)
+Snippet: (3 proteins) 1 NifK all1440 # nifK|nitrogenase molybdenum-iron protein subunit 0.199 0.0021 *** 2 nifD all1454 # molybdenum-iron protein subunit in nitrogenase 0.59 0.0131 ** 3 Apb2 all1939 transcription regulation of hepA and hepC genes 1.49 0.0286 ** ABC-transporters and transporters (3 proteins) 4 Alr3938 alr3938
+
+================================================================================
+Protein: VIMSS163797 (E-value: 8e-12, Score: 50.1)
+Mentioned as: all1454
+Description: nitrogenase molybdenum-iron protein alpha chain
+Organism: Nostoc sp. PCC 7120
+PMID: 32397431
+Source: EuropePMC
+Title: The First Proteomics Study of <i>Nostoc</i> sp. PCC 7120 Exposed to Cyanotoxin BMAA under Nitrogen Starvation
+Journal: Toxins (2020)
+Snippet: encoded by genes, which are under the control of NtcA ( alr0608 , all2319 , all1454 , alr0599 , alr4380 , alr0140 , all4662 , all5263 , alr1524 , alr5275 , alr4566 , alr4505 , all1411 , asl4547 , alr2889 , asr3294 , all4662 ) (
+
+================================================================================
+Protein: VIMSS163797 (E-value: 8e-12, Score: 50.1)
+Mentioned as: all1454
+Description: nitrogenase molybdenum-iron protein alpha chain
+Organism: Nostoc sp. PCC 7120
+PMID: 29440250
+Source: EuropePMC
+Title: Functional Overlap of <i>hetP</i> and <i>hetZ</i> in Regulation of Heterocyst Differentiation in Anabaena sp. Strain PCC 7120
+Journal: Journal of bacteriology (2018)
+Snippet: all1433 all1435 all1436 all1437 all1438 all1439 all1440 all1454 all1455 all1456 all1457 all1516 all1517 all2512 all2868 all3793 all4460 all4617 all5341 all5342
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0T7BYF9.1	AF-A0A0T7BYF9-F1-model_v4_TED01:2-62_353-453	1	AF-A0A0T7BYF9-F1-model_v4_TED01	2-453	95.5%
+A0A0T7BYF9.1	AF-A0A0T7BYF9-F1-model_v4_TED02:65-190_192-218	1	AF-A0A0T7BYF9-F1-model_v4_TED02	65-218	0
+A0A0T7BYF9.1	AF-A0A0T7BYF9-F1-model_v4_TED03:229-307_315-334	1	AF-A0A0T7BYF9-F1-model_v4_TED03	229-334	0
+A0A1Y0RQ20.1	AF-A0A1Y0RQ20-F1-model_v4_TED01:15-68_362-456	1	AF-A0A1Y0RQ20-F1-model_v4_TED01	15-456	54.8%
+A0A1Y0RQ20.1	AF-A0A1Y0RQ20-F1-model_v4_TED02:74-227	1	AF-A0A1Y0RQ20-F1-model_v4_TED02	74-227	0
+A0A1Y0RQ20.1	AF-A0A1Y0RQ20-F1-model_v4_TED03:238-354	1	AF-A0A1Y0RQ20-F1-model_v4_TED03	238-354	0
+A0A1Z4RDV0.1	AF-A0A1Z4RDV0-F1-model_v4_TED01:17-50	1	AF-A0A1Z4RDV0-F1-model_v4_TED01	17-50	27.3%
+A0A1Z4RDV0.1	AF-A0A1Z4RDV0-F1-model_v4_TED02:65-218	1	AF-A0A1Z4RDV0-F1-model_v4_TED02	65-218	0
+A0A218QUD5.1	AF-A0A218QUD5-F1-model_v4_TED01:8-63_356-451	1	AF-A0A218QUD5-F1-model_v4_TED01	8-451	69.6%
+A0A218QUD5.1	AF-A0A218QUD5-F1-model_v4_TED02:66-219	1	AF-A0A218QUD5-F1-model_v4_TED02	66-219	0
+A0A218QUD5.1	AF-A0A218QUD5-F1-model_v4_TED03:230-345	1	AF-A0A218QUD5-F1-model_v4_TED03	230-345	0
+A0A480A2N8.1	AF-A0A480A2N8-F1-model_v4_TED01:3-61_353-452	1	AF-A0A480A2N8-F1-model_v4_TED01	3-452	91.3%
+A0A480A2N8.1	AF-A0A480A2N8-F1-model_v4_TED02:64-217	1	AF-A0A480A2N8-F1-model_v4_TED02	64-217	0
+A0A480A2N8.1	AF-A0A480A2N8-F1-model_v4_TED03:228-343	1	AF-A0A480A2N8-F1-model_v4_TED03	228-343	0
+G6FYF1.1	AF-G6FYF1-F1-model_v4_TED01:1-62_353-453	1	AF-G6FYF1-F1-model_v4_TED01	1-453	100.0%
+G6FYF1.1	AF-G6FYF1-F1-model_v4_TED02:65-190	1	AF-G6FYF1-F1-model_v4_TED02	65-190	0
+G6FYF1.1	AF-G6FYF1-F1-model_v4_TED03:228-338	1	AF-G6FYF1-F1-model_v4_TED03	228-338	0
+K7WKU8.1	AF-K7WKU8-F1-model_v4_TED01:2-63_354-500	1	AF-K7WKU8-F1-model_v4_TED01	2-500	95.7%
+K7WKU8.1	AF-K7WKU8-F1-model_v4_TED02:66-191_194-219	1	AF-K7WKU8-F1-model_v4_TED02	66-219	0
+K7WKU8.1	AF-K7WKU8-F1-model_v4_TED03:230-346	1	AF-K7WKU8-F1-model_v4_TED03	230-346	0
+K9RNI0.1	AF-K9RNI0-F1-model_v4_TED01:4-58	1	AF-K9RNI0-F1-model_v4_TED01	4-58	87.0%
+P00464.2	AF-P00464-F1-model_v4_TED03:230-340	1	AF-P00464-F1-model_v4_TED03	230-340	0
+P00464.2	AF-P00464-F1-model_v4_TED01:2-63_341-497	1	AF-P00464-F1-model_v4_TED01	2-497	95.7%
+P00464.2	AF-P00464-F1-model_v4_TED02:66-207	1	AF-P00464-F1-model_v4_TED02	66-207	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P33177/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 30.90;
+NC   25.20 23.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

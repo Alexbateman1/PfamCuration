@@ -1,0 +1,92 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1773_PASMU             Reviewed;         140 AA.
+AC   Q9CK61;
+DE   RecName: Full=Uncharacterized protein PM1773;
+GN   OrderedLocusNames=PM1773;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK03857.1; -; Genomic_DNA.
+DR   RefSeq; WP_010907326.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CK61; -.
+DR   SMR; Q9CK61; -.
+DR   STRING; 272843.PM1773; -.
+DR   EnsemblBacteria; AAK03857; AAK03857; PM1773.
+DR   KEGG; pmu:PM1773; -.
+DR   PATRIC; fig|272843.6.peg.1796; -.
+DR   HOGENOM; CLU_1833282_0_0_6; -.
+DR   OrthoDB; 5681214at2; -.
+DR   Proteomes; UP000000809; Chromosome.
+PE   4: Predicted;
+KW   Coiled coil; Reference proteome.
+FT   CHAIN           1..140
+FT                   /note="Uncharacterized protein PM1773"
+FT                   /id="PRO_0000216331"
+FT   COILED          27..65
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   140 AA;  15951 MW;  E24970184AF10481 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	5	Pasteurellaceae
+3	5	Enterobacteriaceae
+9	4	Pasteurellales
+10	4	Enterobacterales
+20	3	Gammaproteobacteria
+20	2	Pseudomonadota
+20	1	Pseudomonadati
+20	0	Bacteria
+Total of 20 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A198FF07	PHAGE PROTEIN {ECO:000800     45.3    3.2e-08   1   1.1   0.0
+	Iterate                   	    12	   131	    45.2
+
+A0A4R1KY17	TRANSCRIPTIONAL REGULATOR     50.5    7.9e-10   1   1.0   0.1
+	Iterate                   	     4	   110	    50.3
+
+A0A4V2T1Y8	UNCHARACTERIZED PROTEIN {    252.8    2.2e-72   1   1.0   0.6
+	Iterate                   	     3	   132	   252.7
+
+E0SLX4	UNCHARACTERIZED PROTEIN {ECO:     48.2    4.1e-09   1   1.0   0.0
+	Iterate                   	     2	    99	    48.0
+
+Q9CK61	UNCHARACTERIZED PROTEIN PM1773    243.3      2e-69   1   1.0   0.2
+	Iterate                   	     3	   130	   243.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A4V2T1Y8.1	AF-A0A4V2T1Y8-F1-model_v4_TED01:9-133	1	AF-A0A4V2T1Y8-F1-model_v4_TED01	9-133	95.4%
+Q9CK61.1	AF-Q9CK61-F1-model_v4_TED01:3-130	1	AF-Q9CK61-F1-model_v4_TED01	3-130	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CK61_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.30 27.00;
+NC   25.30 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,733 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YFDO_ECOLI              Reviewed;         122 AA.
+AC   P0AD35; A0A385XNB2; P76511; P76943;
+DE   RecName: Full=Protein YfdO;
+GN   Name=yfdO; Synonyms=oweS; OrderedLocusNames=b2358, JW2355;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9205837; DOI=10.1093/dnares/4.2.91;
+RA   Yamamoto Y., Aiba H., Baba T., Hayashi K., Inada T., Isono K., Itoh T.,
+RA   Kimura S., Kitagawa M., Makino K., Miki T., Mitsuhashi N., Mizobuchi K.,
+RA   Mori H., Nakade S., Nakamura Y., Nashimoto H., Oshima T., Oyama S.,
+RA   Saito N., Sampei G., Satoh Y., Sivasundaram S., Tagami H., Takahashi H.,
+RA   Takeda J., Takemoto K., Uehara K., Wada C., Yamagata S., Horiuchi T.;
+RT   "Construction of a contiguous 874-kb sequence of the Escherichia coli-K12
+RT   genome corresponding to 50.0-68.8 min on the linkage map and analysis of
+RT   its sequence features.";
+RL   DNA Res. 4:91-113(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / BW25113;
+RX   PubMed=21266997; DOI=10.1038/ncomms1146;
+RA   Wang X., Kim Y., Ma Q., Hong S.H., Pokusaeva K., Sturino J.M., Wood T.K.;
+RT   "Cryptic prophages help bacteria cope with adverse environments.";
+RL   Nat. Commun. 1:147-147(2010).
+CC   -!- DISRUPTION PHENOTYPE: Deletion of this gene, or the entire CPS-53
+CC       prophage, reduces viability under oxidative stress.
+CC       {ECO:0000269|PubMed:21266997}.
+CC   -!- MISCELLANEOUS: Encoded by the CPS-53 [KpLE1] prophage. Missing about
+CC       200 N-terminal amino acids compared to orthologs. {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the phage O protein family. {ECO:0000305}.
+DR   EMBL; U00096; AYC08232.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA16223.2; -; Genomic_DNA.
+DR   PIR; C65009; C65009.
+DR   AlphaFoldDB; P0AD35; -.
+DR   BioGRID; 4261573; 60.
+DR   FunCoup; P0AD35; 304.
+DR   IntAct; P0AD35; 2.
+DR   EnsemblBacteria; AYC08232; AYC08232; b2358.
+DR   KEGG; ecj:JW2355; -.
+DR   PATRIC; fig|83333.103.peg.3244; -.
+DR   EchoBASE; EB3889; -.
+DR   eggNOG; COG1846; Bacteria.
+DR   HOGENOM; CLU_146068_0_0_6; -.
+DR   InParanoid; P0AD35; -.
+DR   OMA; KNIMSPX; -.
+DR   OrthoDB; 5675294at2; -.
+DR   BioCyc; EcoCyc:G7227-MONOMER; -.
+DR   PRO; PR:P0AD35; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0006979; P:response to oxidative stress; IMP:EcoCyc.
+PE   3: Inferred from homology;
+KW   Reference proteome.
+FT   CHAIN           1..122
+FT                   /note="Protein YfdO"
+FT                   /id="PRO_0000169207"
+SQ   SEQUENCE   122 AA;  14401 MW;  4C05BB95C8C543E7 CRC64;
+//
+ID   VRPO_LAMBD              Reviewed;         333 AA.
+AC   P03688;
+DE   RecName: Full=Replication protein O;
+GN   Name=O;
+OS   Escherichia phage lambda (Bacteriophage lambda).
+OC   Viruses; Duplodnaviria; Heunggongvirae; Uroviricota; Caudoviricetes;
+OC   Lambdavirus; Lambdavirus lambda.
+OX   NCBI_TaxID=2681611;
+OH   NCBI_TaxID=562; Escherichia coli.
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RX   PubMed=6221115; DOI=10.1016/0022-2836(82)90546-0;
+RA   Sanger F., Coulson A.R., Hong G.F., Hill D.F., Petersen G.B.;
+RT   "Nucleotide sequence of bacteriophage lambda DNA.";
+RL   J. Mol. Biol. 162:729-773(1982).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=704348; DOI=10.1093/nar/5.9.3141;
+RA   Scherer G.;
+RT   "Nucleotide sequence of the O gene and of the origin of replication in
+RT   bacteriophage lambda DNA.";
+RL   Nucleic Acids Res. 5:3141-3156(1978).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-162.
+RX   PubMed=478301; DOI=10.1016/0378-1119(79)90060-x;
+RA   Ovchinnikov Y.A., Guryev S.O., Krayev A.S., Monastyrskaya G.S.,
+RA   Skryabin K.G., Sverdlov E.D., Zakharyev V.M., Bayev A.A.;
+RT   "Primary structure of an EcoRI fragment of lambda imm434 DNA containing
+RT   regions cI-cro of phage 434 and cII-o of phage lambda.";
+RL   Gene 6:235-249(1979).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-99.
+RX   PubMed=264238; DOI=10.1038/272410a0;
+RA   Schwarz E., Scherer G., Hobom G., Koessel H.;
+RT   "Nucleotide sequence of cro, cII and part of the O gene in phage lambda
+RT   DNA.";
+RL   Nature 272:410-414(1978).
+CC   -!- FUNCTION: Necessary for the bidirectional replication of DNA. It
+CC       interacts with the ori (origin of replication) region of the genome
+CC       during the initiation of replication.
+CC   -!- SIMILARITY: Belongs to the phage O protein family. {ECO:0000305}.
+CC   -!- CAUTION: The amino end of replication protein O may be as shown or may
+CC       begin at residue 22. There is a UGA terminator after residue 299. In
+CC       vitro, this terminator codon is skipped and read-through occurs. It is
+CC       not known whether read-through occurs in vivo. {ECO:0000305}.
+DR   EMBL; J02459; AAA96584.1; ALT_TERM; Genomic_DNA.
+DR   EMBL; J02460; AAA32247.1; -; Genomic_DNA.
+DR   PIR; F94614; ORBPL.
+DR   RefSeq; NP_040631.1; NC_001416.1.
+DR   SMR; P03688; -.
+DR   IntAct; P03688; 1.
+DR   KEGG; vg:3827060; -.
+DR   Proteomes; UP000001711; Genome.
+DR   GO; GO:0003677; F:DNA binding; IDA:UniProtKB.
+DR   GO; GO:0039686; P:bidirectional double-stranded viral DNA replication; IDA:UniProtKB.
+DR   GO; GO:0006260; P:DNA replication; IEA:UniProtKB-KW.
+DR   FunFam; 1.10.10.10:FF:000345; Replication protein O; 1.
+DR   Gene3D; 1.10.10.10; Winged helix-like DNA-binding domain superfamily/Winged helix DNA-binding domain; 1.
+DR   InterPro; IPR006497; Phage_lambda_VrpO_N.
+DR   InterPro; IPR036388; WH-like_DNA-bd_sf.
+DR   NCBIfam; TIGR01610; phage_O_Nterm; 1.
+DR   Pfam; PF04492; Phage_rep_O; 1.
+PE   3: Inferred from homology;
+KW   DNA replication; DNA-binding; Reference proteome.
+FT   CHAIN           1..333
+FT                   /note="Replication protein O"
+FT                   /id="PRO_0000077702"
+FT   REGION          117..181
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        123..132
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        144..159
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        160..169
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   333 AA;  37772 MW;  362FF405864AA208 CRC64;
+//
+ID   YFDO_ECOL6              Reviewed;         122 AA.
+AC   P0AD36; P76511; P76943;
+DE   RecName: Full=Uncharacterized protein YfdO;
+GN   Name=yfdO; OrderedLocusNames=c3192;
+OS   Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=199310;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CFT073 / ATCC 700928 / UPEC;
+RX   PubMed=12471157; DOI=10.1073/pnas.252529799;
+RA   Welch R.A., Burland V., Plunkett G. III, Redford P., Roesch P., Rasko D.,
+RA   Buckles E.L., Liou S.-R., Boutin A., Hackett J., Stroud D., Mayhew G.F.,
+RA   Rose D.J., Zhou S., Schwartz D.C., Perna N.T., Mobley H.L.T.,
+RA   Donnenberg M.S., Blattner F.R.;
+RT   "Extensive mosaic structure revealed by the complete genome sequence of
+RT   uropathogenic Escherichia coli.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:17020-17024(2002).
+CC   -!- SIMILARITY: Belongs to the phage O protein family. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAN81644.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+DR   EMBL; AE014075; AAN81644.1; ALT_INIT; Genomic_DNA.
+DR   AlphaFoldDB; P0AD36; -.
+DR   STRING; 199310.c3192; -.
+DR   KEGG; ecc:c3192; -.
+DR   eggNOG; COG1846; Bacteria.
+DR   HOGENOM; CLU_047944_1_0_6; -.
+DR   Proteomes; UP000001410; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome.
+FT   CHAIN           1..122
+FT                   /note="Uncharacterized protein YfdO"
+FT                   /id="PRO_0000169208"
+SQ   SEQUENCE   122 AA;  14401 MW;  4C05BB95C8C543E7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+8	6	Escherichia.
+8	5	Fernvirus
+10	5	Enterobacteriaceae
+9	4	Bacillales
+25	4	Caudoviricetes
+15	4	Enterobacterales
+7	3	Actinomycetes
+25	3	Uroviricota
+17	3	Gammaproteobacteria
+14	3	Bacilli
+7	2	Actinomycetota
+25	2	Heunggongvirae
+18	2	Pseudomonadota
+17	2	Bacillota
+25	1	Duplodnaviria
+24	1	Bacillati
+19	1	Pseudomonadati
+43	0	Bacteria
+25	0	Viruses
+Total of 69 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A071M277	PHAGE O PROTEIN FAMILY {E    154.2    3.5e-42   1   1.5   1.0
+	P0AD35_TED01              	   219	   308	   153.2
+
+A0A077KB11	PUTATIVE DNA REPLICATION      61.4    3.3e-13   1   2.1   0.8
+	P0AD35_TED01              	   177	   255	    59.2
+	PF13730	HTH_36          	    12	    66	    48.6
+
+A0A085JGS9	ORIGIN-SPECIFIC REPLICATI     74.2    3.3e-17   1   1.5   0.8
+	P0AD35_TED01              	   227	   304	    73.3
+	PF04492	Phage_rep_O     	    19	   134	    34.8
+
+A0A090V923	PUTATIVE PHAGE REPLICATIO     72.3    1.3e-16   1   1.6   0.4
+	P0AD35_TED01              	   176	   259	    71.3
+	PF04492	Phage_rep_O     	     1	    98	    80.8
+
+A0A0H2V6Q3	PUTATIVE REPLICATION PROT     62.5    1.4e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A0H2YXU4	REPLICATION PROTEIN O OF      62.5    1.4e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A0H2Z1V2	HELIX-TURN-HELIX DOMAIN-C    214.3    6.4e-61   1   1.4   3.8
+	P0AD35_TED01              	   193	   282	   213.5
+	PF13730	HTH_36          	    16	    70	    41.6
+	PF00392	GntR            	    35	    78	    28.5
+
+A0A0H3CKY2	PHAGE O PROTEIN {ECO:0000    174.8    1.4e-48   1   1.4   2.7
+	P0AD35_TED01              	   206	   295	   174.0
+
+A0A0H3EH49	REPLICATION PROTEIN {ECO:    151.4    2.7e-41   1   1.5   1.0
+	P0AD35_TED01              	   210	   299	   150.3
+
+A0A0H3EHP8	REPLICATION PROTEIN O {EC     62.7    1.3e-13   1   1.6   0.4
+	P0AD35_TED01              	   236	   314	    61.2
+	PF04492	Phage_rep_O     	    51	   145	   115.6
+
+A0A0H3FXM0	BACTERIOPHAGE LAMBDA REPL     60.4    6.7e-13   1   1.6   0.7
+	P0AD35_TED01              	   207	   286	    59.3
+	PF04492	Phage_rep_O     	     1	   112	    44.6
+
+A0A0H3JE54	PHAGE REPLICATION PROTEIN     62.5    1.4e-13   1   1.4   0.6
+	P0AD35_TED01              	   171	   249	    61.7
+	PF04492	Phage_rep_O     	     3	    80	    68.8
+
+A0A0H3JGW1	PHAGE REPLICATION PROTEIN     62.4    1.6e-13   1   1.5   0.6
+	P0AD35_TED01              	   209	   287	    61.4
+	PF04492	Phage_rep_O     	    21	   115	   121.7
+
+A0A0H3JHF8	PHAGE REPLICATION PROTEIN    146.5    8.9e-40   1   1.4   0.8
+	P0AD35_TED01              	   209	   299	   145.6
+	PF13730	HTH_36          	    21	    71	    27.8
+
+A0A0J5KQ50	PHAGE O PROTEIN FAMILY {E    171.3    1.6e-47   1   1.5   1.0
+	P0AD35_TED01              	   210	   299	   170.4
+
+A0A0L0AQH9	UNCHARACTERIZED PROTEIN {    158.4    1.7e-43   1   1.6   2.5
+	P0AD35_TED01              	   219	   308	   157.3
+
+A0A0L0GY63	PHAGE O PROTEIN FAMILY {E     85.6    9.3e-21   1   1.3   0.6
+	P0AD35_TED01              	   240	   329	    84.9
+
+A0A0M5M7Y1	REPLICATION PROTEIN O {EC     63.0      1e-13   1   2.2   1.7
+	P0AD35_TED01              	   199	   276	    61.7
+	PF04492	Phage_rep_O     	    21	   115	     122
+
+A0A0N7C014	ORIGIN SPECIFIC REPLICATI     62.4    1.6e-13   1   1.5   0.6
+	P0AD35_TED01              	   209	   287	    61.4
+	PF04492	Phage_rep_O     	    21	   115	   121.7
+
+A0A0P0ZBI4	REPLICATION PROTEIN O {EC     62.4    1.6e-13   1   1.5   0.6
+	P0AD35_TED01              	   209	   287	    61.4
+	PF04492	Phage_rep_O     	    21	   115	   121.7
+
+A0A0Q5DKN5	UNCHARACTERIZED PROTEIN {     68.6    1.8e-15   1   2.0   1.7
+	P0AD35_TED01              	    35	   114	    65.3
+
+A0A0U3UPD5	REPLICATION PROTEIN {ECO:    163.9    3.3e-45   1   1.5   3.2
+	P0AD35_TED01              	   198	   287	   162.9
+
+A0A0U3URZ9	BACTERIOPHAGE LAMBDA REPL     65.2      2e-14   1   1.6   0.8
+	P0AD35_TED01              	   181	   259	    64.1
+	PF04492	Phage_rep_O     	     1	    98	    87.6
+
+A0A1B7JHA8	PHAGE TERMINASE LARGE SUB     79.8    5.7e-19   1   1.9   0.1
+	P0AD35_TED01              	   195	   279	    78.0
+	PF13730	HTH_36          	    16	    70	    52.2
+
+A0A1I9KG10	REPLICATION PROTEIN O {EC     66.6    7.6e-15   1   1.6   0.2
+	P0AD35_TED01              	   228	   307	    65.4
+	PF04492	Phage_rep_O     	    23	   121	    92.4
+
+A0A1P8DTG2	REPLICATION PROTEIN 15 {E     80.6    3.3e-19   1   2.4   2.2
+	P0AD35_TED01              	   196	   275	    79.1
+	PF04492	Phage_rep_O     	    19	   113	   117.2
+
+A0A1S1V4W7	BACTERIOPHAGE REPLICATION     62.5    1.5e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A1U9AJF3	REPLICATION PROTEIN O {EC     62.4    1.6e-13   1   1.5   0.6
+	P0AD35_TED01              	   209	   287	    61.4
+	PF04492	Phage_rep_O     	    21	   115	   121.7
+
+A0A1V3TRT1	UNCHARACTERIZED PROTEIN {     65.0    2.4e-14   1   1.6   0.8
+	P0AD35_TED01              	   180	   247	    63.9
+
+A0A2D0KAH8	REPLICATION PROTEIN {ECO:     64.8    2.9e-14   1   1.5   0.4
+	P0AD35_TED01              	   174	   251	    63.7
+
+A0A2X4TSW5	PHAGE REPLICATION PROTEIN     65.4    1.8e-14   1   1.2   0.5
+	P0AD35_TED01              	     6	    75	    65.1
+
+A0A2Z2FB99	REPLICATION INITIATION PR     71.9    1.6e-16   1   1.5   1.3
+	P0AD35_TED01              	   206	   282	    70.9
+	PF04492	Phage_rep_O     	    20	   118	      85
+
+A0A2Z2FBG9	PRIMOSOMAL PROTEIN I {ECO    162.5    9.3e-45   1   1.4   0.7
+	P0AD35_TED01              	   198	   287	   161.7
+	PF13730	HTH_36          	    16	    70	    40.7
+
+A0A2Z2FDA4	REPLICATION INITIATION PR     66.2      1e-14   1   1.6   1.1
+	P0AD35_TED01              	   226	   298	    65.1
+	PF04492	Phage_rep_O     	     1	   112	    46.5
+
+A0A2Z2GXK0	REPLICATION INITIATION PR     64.9    2.7e-14   1   1.6   0.8
+	P0AD35_TED01              	   226	   299	    63.7
+	PF04492	Phage_rep_O     	     1	   112	    46.5
+
+A0A379B512	UNCHARACTERIZED PROTEIN {     62.4    1.6e-13   1   1.9   0.4
+	P0AD35_TED01              	   190	   259	    60.9
+
+A0A3G3BY72	PRIMOSOMAL PROTEIN I {ECO     60.4    6.4e-13   1   2.1   0.6
+	P0AD35_TED01              	   177	   255	    58.3
+	PF13730	HTH_36          	    12	    66	    48.6
+
+A0A481W2H9	REPLICATION PROTEIN O {EC     73.2    6.7e-17   1   1.6   0.8
+	P0AD35_TED01              	   208	   281	    72.0
+	PF04492	Phage_rep_O     	    20	   118	    85.6
+
+A0A482IKU0	REPLICATION PROTEIN O {EC     95.2    9.2e-24   1   2.3   2.2
+	P0AD35_TED01              	   251	   340	    91.5
+
+A0A482J8F6	REPLICATION PROTEIN O {EC     66.0    1.2e-14   1   1.6   1.0
+	P0AD35_TED01              	   248	   319	    64.8
+	PF04492	Phage_rep_O     	    21	   133	    47.6
+
+A0A482MEI9	REPLICATION PROTEIN O SUP     71.9    1.6e-16   1   1.5   1.3
+	P0AD35_TED01              	   206	   282	    70.9
+	PF04492	Phage_rep_O     	    20	   118	      85
+
+A0A482MFD3	REPLICATION PROTEIN O {EC    145.0    2.7e-39   1   1.1   0.4
+	P0AD35_TED01              	     1	    78	   144.6
+
+A0A484YZS6	PHAGE O PROTEIN {ECO:0000    170.6    2.6e-47   1   1.1   2.3
+	P0AD35_TED01              	    24	   113	   170.2
+
+A0A4R1KXJ4	HELIX-TURN-HELIX PROTEIN      63.7    6.1e-14   1   1.4   0.9
+	P0AD35_TED01              	   192	   263	    62.9
+	PF13730	HTH_36          	    14	    69	    39.6
+
+A0A4R1NGN0	UNCHARACTERIZED PROTEIN {    138.2    3.6e-37   1   1.5   2.5
+	P0AD35_TED01              	   218	   307	   137.3
+
+A0A4Y1NSF4	DNA REPLICATION PROTEIN O     68.8    1.6e-15   1   1.6   0.6
+	P0AD35_TED01              	   209	   292	    67.6
+
+A0A5J6T995	DNA REPLICATION PROTEIN {     65.9    1.3e-14   1   1.6   1.1
+	P0AD35_TED01              	   247	   319	    64.8
+	PF04492	Phage_rep_O     	    21	   133	    47.6
+
+A0A5M7QMI5	REPLICATION PROTEIN {ECO:     59.2    1.6e-12   1   1.7   0.3
+	P0AD35_TED01              	   186	   264	    57.8
+	PF04492	Phage_rep_O     	     4	    98	   121.7
+
+A0A653FQF3	ORIGIN SPECIFIC REPLICATI     62.5    1.5e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A653FQQ5	ORIGIN SPECIFIC REPLICATI     62.7    1.3e-13   1   1.6   0.4
+	P0AD35_TED01              	   236	   314	    61.2
+	PF04492	Phage_rep_O     	    51	   145	   115.6
+
+A0A653FRE3	ORIGIN SPECIFIC REPLICATI     62.5    1.4e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A653FT90	ORIGIN SPECIFIC REPLICATI     62.5    1.5e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A653FTI6	PRIMOSOMAL PROTEIN I {ECO    211.5    4.5e-60   1   1.6   4.6
+	P0AD35_TED01              	   206	   295	   210.5
+
+A0A653FUZ5	PRIMOSOMAL PROTEIN I {ECO    147.8    3.4e-40   1   1.5   1.2
+	P0AD35_TED01              	   210	   299	   146.7
+
+A0A653FVQ1	REPLICATION PROTEIN O {EC     62.5    1.5e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A653FWI5	REPLICATION PROTEIN O {EC     62.5    1.5e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A653FWN5	REPLICATION PROTEIN O {EC     62.5    1.4e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A653FWR2	ORIGIN SPECIFIC REPLICATI     62.5    1.4e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A7G0XSU6	DNA REPLICATION PROTEIN O     62.5    1.5e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A7T6ZMX4	DNA REPLICATION PROTEIN O     73.5    5.2e-17   1   1.9   0.4
+	P0AD35_TED01              	   222	   306	    71.8
+
+A0A807LL88	BACTERIOPHAGE LAMBDA REPL     73.1    7.4e-17   1   1.5   0.7
+	P0AD35_TED01              	   208	   281	    72.0
+	PF04492	Phage_rep_O     	    20	   118	    83.2
+
+A0A896Q9U2	REPLICATION PROTEIN {ECO:     59.9    9.2e-13   1   1.6   1.0
+	P0AD35_TED01              	    51	   131	    59.0
+
+A0A8E7L2B6	REPLICATION PROTEIN O {EC     62.5    1.4e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0A9E7E3D1	DNA REPLICATION PROTEIN O    214.3    6.4e-61   1   1.4   3.8
+	P0AD35_TED01              	   193	   282	   213.5
+	PF13730	HTH_36          	    16	    70	    41.6
+	PF00392	GntR            	    35	    78	    28.5
+
+A0A9E7E4A3	DNA REPLICATION PROTEIN O    214.2    6.5e-61   1   1.4   3.8
+	P0AD35_TED01              	   193	   282	   213.5
+	PF13730	HTH_36          	    16	    70	    41.6
+	PF00392	GntR            	    35	    78	    28.5
+
+A0A9E7J6C8	DNA REPLICATION PROTEIN O    214.2    6.4e-61   1   1.4   3.8
+	P0AD35_TED01              	   193	   282	   213.5
+	PF13730	HTH_36          	    16	    70	    41.6
+	PF00392	GntR            	    35	    78	    28.5
+
+A0A9E7J6G1	DNA REPLICATION PROTEIN O    162.5    8.9e-45   1   1.3   0.7
+	P0AD35_TED01              	   186	   275	   161.8
+	PF13730	HTH_36          	     1	    48	    36.2
+
+A0A9E7T360	PHAGE REPLISOME ORGANISER     59.1    1.6e-12   1   1.6   1.6
+	P0AD35_TED01              	   195	   263	    57.9
+	PF09681	Phage_rep_org_N 	     6	   126	   168.7
+
+A0A9P0V9Q3	BACTERIOPHAGE LAMBDA REPL     66.0    1.2e-14   1   1.6   1.0
+	P0AD35_TED01              	   247	   319	    64.8
+	PF04492	Phage_rep_O     	    21	   133	    47.6
+
+A0A9X9P146	BACTERIOPHAGE LAMBDA REPL     62.5    1.5e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+A0AA51N352	DNA REPLICATION PROTEIN O    162.5    9.2e-45   1   1.3   0.7
+	P0AD35_TED01              	   193	   282	   161.8
+	PF13730	HTH_36          	    16	    70	      40
+
+A0AAD1QTA1	REPLICATION PROTEIN O {EC     62.7    1.3e-13   1   1.6   0.4
+	P0AD35_TED01              	   236	   314	    61.2
+	PF04492	Phage_rep_O     	    51	   145	   115.6
+
+A0AAE7W9B6	PHAGE REPLICATION PROTEIN     78.9    1.2e-18   1   1.5   1.4
+	P0AD35_TED01              	   201	   278	    77.8
+	PF04492	Phage_rep_O     	    19	   117	    82.6
+
+A0AAE9FQ62	DNA REPLICATION PROTEIN O     67.1    5.5e-15   1   1.6   0.5
+	P0AD35_TED01              	   233	   305	    65.8
+	PF04492	Phage_rep_O     	    19	   131	    40.4
+
+A7ZKP0	PHAGE O PROTEIN FAMILY {ECO:0    152.9    9.1e-42   1   1.5   0.9
+	P0AD35_TED01              	   204	   293	   152.0
+	PF13730	HTH_36          	    21	    71	    32.7
+
+A7ZM27	PHAGE O PROTEIN FAMILY {ECO:0    151.5    2.4e-41   1   1.6   0.7
+	P0AD35_TED01              	   210	   299	   150.3
+
+A8AHR6	BACTERIOPHAGE LAMBDA REPLICAT     74.4    2.8e-17   1   1.7   0.2
+	P0AD35_TED01              	   231	   303	    73.0
+	PF04492	Phage_rep_O     	    19	   131	    67.7
+
+B2U008	PHAGE O PROTEIN FAMILY {ECO:0    147.3    5.1e-40   1   1.4   0.8
+	P0AD35_TED01              	   209	   299	   146.4
+	PF13730	HTH_36          	    21	    71	    27.8
+
+B4EVI3	PHAGE REPLICATION PROTEIN {EC     70.8    3.7e-16   1   2.4   0.5
+	P0AD35_TED01              	   220	   292	    65.8
+
+B7L8S4	YBL78 {ECO:0008006|GOOGLE:PRO    149.2    1.3e-40   1   1.5   0.7
+	P0AD35_TED01              	   228	   317	   148.1
+
+B7LB95	REPLICATION PROTEIN O FRM PHA     62.7    1.3e-13   1   1.6   0.4
+	P0AD35_TED01              	   236	   314	    61.2
+	PF04492	Phage_rep_O     	    51	   145	   115.2
+
+B7MJQ3	PHAGE REPLICATION PROTEIN O {    214.3    6.4e-61   1   1.4   3.8
+	P0AD35_TED01              	   193	   282	   213.5
+	PF13730	HTH_36          	    16	    70	    41.6
+	PF00392	GntR            	    35	    78	    28.5
+
+B7UN92	PREDICTED REPLICATION PROTEIN     62.5    1.5e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+B7UQF9	PREDICTED REPLICATION PROTEIN    147.3    5.1e-40   1   1.4   0.8
+	P0AD35_TED01              	   209	   299	   146.4
+	PF13730	HTH_36          	    24	    71	    27.3
+
+D4DVV5	HELIX-TURN-HELIX DOMAIN-CONTA    152.7      1e-41   1   1.3   2.1
+	P0AD35_TED01              	   192	   281	   152.0
+	PF13730	HTH_36          	    16	    67	      45
+
+D8MV72	PHAGE REPLICATION PROTEIN O {     68.8    1.6e-15   1   1.6   0.6
+	P0AD35_TED01              	   208	   291	    67.6
+
+H6WZI2	O PROTEIN {ECO:0000313|EMBL:A     62.4    1.6e-13   1   1.5   0.6
+	P0AD35_TED01              	   209	   287	    61.4
+	PF04492	Phage_rep_O     	    21	   115	     120
+
+K7P7F0	DNA REPLICATION PROTEIN O {EC     62.5    1.4e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+K8W4U9	PHAGE REPLICATION PROTEIN {EC     68.8    1.6e-15   1   2.2   0.2
+	P0AD35_TED01              	   215	   293	    66.2
+
+M1FN81	REPLICATION PROTEIN O {ECO:00     62.5    1.5e-13   1   1.5   0.6
+	P0AD35_TED01              	   196	   274	    61.5
+	PF04492	Phage_rep_O     	    21	   115	   122.7
+
+P03688	REPLICATION PROTEIN O               61.8    2.5e-13   1   2.1   2.4
+	P0AD35_TED01              	   196	   274	    61.2
+	PF04492	Phage_rep_O     	    21	   115	   122.4
+
+P0AD35	PROTEIN YFDO                       217.1    8.5e-62   1   1.1   3.8
+	P0AD35_TED01              	     2	    91	   216.7
+
+P0AD36	UNCHARACTERIZED PROTEIN YFDO       217.1    8.5e-62   1   1.1   3.8
+	P0AD35_TED01              	     2	    91	   216.7
+
+Q6H9X7	PUTATIVE REPLICATION PROTEIN      62.4    1.6e-13   1   1.5   0.6
+	P0AD35_TED01              	   209	   287	    61.4
+	PF04492	Phage_rep_O     	    21	   115	   121.7
+
+Q8ECY6	LAMBDA PHAGE REPLICATION PROT     65.4    1.8e-14   1   1.8   0.6
+	P0AD35_TED01              	   220	   299	    63.8
+	PF04492	Phage_rep_O     	    36	   130	   117.1
+
+Q9EYB5	O PROTEIN {ECO:0000313|EMBL:B     62.4    1.6e-13   1   1.5   0.6
+	P0AD35_TED01              	   209	   287	    61.4
+	PF04492	Phage_rep_O     	    21	   115	   121.7
+
+Q9T206	REPLICATION PROTEIN O {ECO:00     62.4    1.6e-13   1   1.5   0.6
+	P0AD35_TED01              	   209	   287	    61.4
+	PF04492	Phage_rep_O     	    21	   115	   121.7
+
+R8ARG7	HELIX-TURN-HELIX DOMAIN-CONTA     66.2      1e-14   1   1.4   0.7
+	P0AD35_TED01              	   173	   252	    65.4
+	PF13730	HTH_36          	    16	    67	    46.8
+
+S5FM81	O PROTEIN FAMILY PROTEIN {ECO    214.2    6.5e-61   1   1.4   3.8
+	P0AD35_TED01              	   193	   282	   213.5
+	PF13730	HTH_36          	    16	    70	    41.6
+	PF00392	GntR            	    35	    78	    28.5
+
+U5P0A0	REPLICATION PROTEIN {ECO:0000    214.3    6.4e-61   1   1.4   3.8
+	P0AD35_TED01              	   193	   282	   213.5
+	PF13730	HTH_36          	    16	    70	    41.6
+	PF00392	GntR            	    35	    78	    28.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1236755 (E-value: 5.7e-63, Score: 214.3)
+Mentioned as: UTI89_C3000
+Description: hypothetical protein
+Organism: Escherichia coli UTI89
+PMID: 30373517
+Source: EuropePMC
+Title: High-throughput sequencing of sorted expression libraries reveals inhibitors of bacterial cell division
+Journal: BMC genomics (2018)
+Snippet: RS13145 S 2,927,3932,928,805 UTI89_C2990 G 1413 193.2 17,052.9 UTI89_C2991 S UTI89_C2992 S UTI89_C2993 S 2,933,2662,935,042 UTI89_C3000 ymfN K 1777 36.0 3042.5 UTI89_C3001 ymfM RD UTI89_C3002 ymfL S UTI89_C3003 ymfT S UTI89_C3004 ymfK KT 3,029,7763,031,529 UTI89_C3112 nlpD M 1754 92.6 23,091.7 UTI89_C3114 pcm O 3,162,6993,166,774 UTI89_C3238 tas
+
+================================================================================
+Protein: VIMSS1236755 (E-value: 5.7e-63, Score: 214.3)
+Mentioned as: UTI89_C3000
+Description: hypothetical protein
+Organism: Escherichia coli UTI89
+PMID: 28438119
+Source: EuropePMC
+Title: DFI-seq identification of environment-specific gene expression in uropathogenic Escherichia coli
+Journal: BMC microbiology (2017)
+Snippet: hypothetical protein 2 1.711417 ydcX Hypothetical protein (membrane protein) 1 1.634447 UTI89_C2996; UTI89_C2997; UTI89_C2998; yfdN1; UTI89_C3000 bacteriophage V crossover junction endodeoxyribonuclease; hypothetical protein; bacteriophage V DNA adenine methylase; hypothetical protein; hypothetical protein 5 1.618326 Crl DNA-binding transcriptional regulator Crl 1 1.554786 potF putrescine ABC transporter substrate-binding
+
+================================================================================
+Protein: VIMSS304956 (E-value: 5.7e-63, Score: 214.2)
+Mentioned as: c3192
+Description: Unknown protein encoded by cryptic prophage
+Organism: Escherichia coli CFT073
+PMID: 28348816
+Source: EuropePMC
+Title: Genome-wide analysis of the response to nitric oxide in uropathogenic <i>Escherichia coli</i> CFT073
+Journal: Microbial genomics (2015)
+Snippet: 13.08 c0740 c0740 Hypothetical protein 12.95 cyoD c0540 Cytochrome o ubiquinol oxidase protein CyoD 12.89 c3192 c3192 Unknown protein encoded by cryptic prophage 12.77 yfdR c3202 Hypothetical protein YfdR 12.75 yfdN c3191 Hypothetical protein YfdN 12.61 c0939 c0939 Hypothetical protein 12.57 matB c0404 Hypothetical protein YagZ
+
+================================================================================
+Protein: Q8XAD8 (E-value: 8.2e-42, Score: 146.5)
+Mentioned as: Q8XAD8
+Description: Helix-turn-helix domain-containing protein
+Organism: Escherichia coli O157:H7
+PMID: 14733619
+Source: EuropePMC
+Title: Analysis of the lambdoid prophage element e14 in the E. coli K-12 genome
+Journal: BMC microbiology (2004)
+Snippet: of putative replication proteins from E. coli O157:H7 prophage CP-933P [ 10 ] (sprot id: Q8XAD8) and phages P27 [ 48 ], ST64T [ 49 ] and SfV. The rest of the b1149 protein is extremely similar to the C-termini of terminase proteins of ST64B (98%
+
+================================================================================
+Protein: VIMSS202108 (E-value: 1.4e-16, Score: 65.6)
+Mentioned as: SO2985
+Description: prophage LambdaSo, replication protein O
+Organism: Shewanella oneidensis MR-1
+PMID: 16957260
+Source: EuropePMC
+Title: Global molecular and morphological effects of 24-hour chromium(VI) exposure on Shewanella oneidensis MR-1
+Journal: Applied and environmental microbiology (2006)
+Snippet: Six additional ORFs (SO2941, SO2969, SO2973, SO2978, SO2985, and SO3006) with prophage LambdaSo-related functions displayed significant increases (more than
+
+================================================================================
+Protein: VIMSS202108 (E-value: 1.4e-16, Score: 65.6)
+Mentioned as: SO2985
+Description: prophage LambdaSo, replication protein O
+Organism: Shewanella oneidensis MR-1
+PMID: 15866945
+Source: EuropePMC
+Title: Comparative analysis of differentially expressed genes in Shewanella oneidensis MR-1 following exposure to UVC, UVB, and UVA radiation
+Journal: Journal of bacteriology (2005)
+Snippet: and UVA radiationa SO2997 SO2988 SO3001 SO3002 SO2984 SO2985 II II Product(s) SO2983 SO0644 III III III III Conserved hypothetical proteins Conserved
+
+================================================================================
+Protein: VIMSS71758 (E-value: 2.8e-16, Score: 64.7)
+Mentioned as: Z0312
+Description: partial O replication protein for prophage CP-933H
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 15728886
+Source: EuropePMC
+Title: Global expression of prophage genes in Escherichia coli O157:H7 strain EDL933 in response to norfloxacin
+Journal: Antimicrobial agents and chemotherapy (2005)
+Snippet: 3.7 0.0035 0.0019 0.0013 Function Z0311, Z1450, Z3356a Z0312, Z1450, Z3356a Z0949, Z1433, Z3369a Z0950, Z1434, Z3368a Z0951, Z1435, Z3367a Z0951, Z1435, Z3367a
+
+================================================================================
+Protein: VIMSS74476 (E-value: 1.2e-15, Score: 62.6)
+Mentioned as: Z3356
+Description: putative DNA replication protein O of prophage CP-933V
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 37968427
+Source: EuropePMC
+Title: Complex effects of the exo-xis region of the Shiga toxin-converting bacteriophage Φ24<sub>B</sub> genome on the phage development and the Escherichia coli host physiology
+Journal: Journal of applied genetics (2024)
+Snippet: protein 0.585 2.0E02 CP-933R bacteriophage Z2374 Putative holin protein of prophage 0.560 2.3E02 CP-933V bacteriophage Z3356 Putative DNA replication protein O +2.490 7.3E03 Z3366 Putative recombination protein Bet +1.157 1.2E04 Z3367 Putative exonuclease +2.062 4.3E06 CP-933P bacteriophage Z6061 Putative endonuclease +0.783 2.8E02 When analyzing transcripts of
+
+================================================================================
+Protein: VIMSS93080 (E-value: 1.3e-15, Score: 62.5)
+Mentioned as: ECs1611
+Description: putative replication protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 15716450
+Source: EuropePMC
+Title: Evolution of genomic content in the stepwise emergence of Escherichia coli O157:H7
+Journal: Journal of bacteriology (2005)
+Snippet: resistance against acridine (ecs4134 to -4139) and methylviologen (ecs1611 to -1619). Clearly, none of the deleted regions are absolutely required for virulence
+
+================================================================================
+
+... (truncated - showing first 100 of 131 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P0AD35.1	AF-P0AD35-F1-model_v4_TED01:2-23_31-91	1	AF-P0AD35-F1-model_v4_TED01	2-91	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0AD35_TED01
+GA   27.00 27.00;
+TC   27.10 27.60;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

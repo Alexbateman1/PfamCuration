@@ -1,0 +1,170 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   OPPA_LACLA              Reviewed;         600 AA.
+AC   Q9CEK0;
+DE   RecName: Full=Oligopeptide-binding protein OppA {ECO:0000305};
+DE   Flags: Precursor;
+GN   Name=oppA; OrderedLocusNames=LL1837; ORFNames=L88446;
+OS   Lactococcus lactis subsp. lactis (strain IL1403) (Streptococcus lactis).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae;
+OC   Lactococcus.
+OX   NCBI_TaxID=272623;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=IL1403;
+RX   PubMed=11337471; DOI=10.1101/gr.gr-1697r;
+RA   Bolotin A., Wincker P., Mauger S., Jaillon O., Malarme K., Weissenbach J.,
+RA   Ehrlich S.D., Sorokin A.;
+RT   "The complete genome sequence of the lactic acid bacterium Lactococcus
+RT   lactis ssp. lactis IL1403.";
+RL   Genome Res. 11:731-753(2001).
+CC   -!- FUNCTION: Part of the ABC transporter complex OppABCDF involved in the
+CC       uptake of oligopeptides. {ECO:0000250|UniProtKB:Q07741}.
+CC   -!- SUBUNIT: The complex is composed of two ATP-binding proteins (OppD and
+CC       OppF), two transmembrane proteins (OppB and OppC) and a solute-binding
+CC       protein (OppA). {ECO:0000250|UniProtKB:Q07741}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+CC   -!- SIMILARITY: Belongs to the bacterial solute-binding protein 5 family.
+CC       {ECO:0000305}.
+DR   EMBL; AE005176; AAK05935.1; -; Genomic_DNA.
+DR   PIR; E86854; E86854.
+DR   RefSeq; NP_267994.1; NC_002662.1.
+DR   RefSeq; WP_010906162.1; NC_002662.1.
+DR   AlphaFoldDB; Q9CEK0; -.
+DR   SMR; Q9CEK0; -.
+DR   TCDB; 3.A.1.5.10; the atp-binding cassette (abc) superfamily.
+DR   PaxDb; 272623-L88446; -.
+DR   EnsemblBacteria; AAK05935; AAK05935; L88446.
+DR   KEGG; lla:L88446; -.
+DR   PATRIC; fig|272623.7.peg.1968; -.
+DR   eggNOG; COG0747; Bacteria.
+DR   HOGENOM; CLU_017028_8_0_9; -.
+DR   OrthoDB; 9796817at2; -.
+DR   Proteomes; UP000002196; Chromosome.
+DR   GO; GO:0043190; C:ATP-binding cassette (ABC) transporter complex; IEA:InterPro.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-ARBA.
+DR   GO; GO:1904680; F:peptide transmembrane transporter activity; IEA:TreeGrafter.
+DR   GO; GO:0015833; P:peptide transport; IEA:UniProtKB-KW.
+DR   GO; GO:0015031; P:protein transport; IEA:UniProtKB-KW.
+DR   CDD; cd08510; PBP2_Lactococcal_OppA_like; 1.
+DR   Gene3D; 3.10.105.10; Dipeptide-binding Protein, Domain 3; 1.
+DR   Gene3D; 3.40.190.10; Periplasmic binding protein-like II; 1.
+DR   InterPro; IPR030678; Peptide/Ni-bd.
+DR   InterPro; IPR039424; SBP_5.
+DR   InterPro; IPR023765; SBP_5_CS.
+DR   InterPro; IPR000914; SBP_5_dom.
+DR   PANTHER; PTHR30290:SF9; OLIGOPEPTIDE-BINDING PROTEIN APPA; 1.
+DR   PANTHER; PTHR30290; PERIPLASMIC BINDING COMPONENT OF ABC TRANSPORTER; 1.
+DR   Pfam; PF00496; SBP_bac_5; 1.
+DR   PIRSF; PIRSF002741; MppA; 1.
+DR   SUPFAM; SSF53850; Periplasmic binding protein-like II; 1.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+DR   PROSITE; PS01040; SBP_BACTERIAL_5; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Peptide transport;
+KW   Protein transport; Reference proteome; Signal; Transport.
+FT   SIGNAL          1..22
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           23..600
+FT                   /note="Oligopeptide-binding protein OppA"
+FT                   /id="PRO_0000031794"
+FT   LIPID           23
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           23
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   600 AA;  66045 MW;  0413ADD3A05C8147 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Weissella
+4	6	Lactococcus
+2	6	Floricoccus
+8	5	Lactobacillaceae
+6	5	Streptococcaceae
+14	4	Lactobacillales
+15	3	Bacilli
+15	2	Bacillota
+15	1	Bacillati
+15	0	Bacteria
+Total of 15 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0R2H1K9	OLIGOPEPTIDE TRANSPORTER      39.1    2.2e-06   1   1.7   2.9
+	Iterate                   	   578	   608	    38.0
+	PF00496	SBP_bac_5       	   119	   525	   230.7
+
+A0A2A5RM94	OLIGOPEPTIDE ABC TRANSPOR     74.8    1.5e-17   1   2.3   7.7
+	Iterate                   	   566	   596	    74.0
+	PF00496	SBP_bac_5       	   107	   512	   201.3
+
+A0A7X1ZA77	OLIGOPEPTIDE ABC TRANSPOR     78.5    1.1e-18   1   1.8   1.8
+	Iterate                   	   567	   597	    77.1
+	PF00496	SBP_bac_5       	   105	   514	   211.6
+
+Q9CEK0	OLIGOPEPTIDE-BINDING PROTEIN OP     77.2    2.7e-18   1   1.9   4.2
+	Iterate                   	   570	   600	    76.9
+	PF00496	SBP_bac_5       	   109	   516	   227.3
+
+T0SEV2	PEPTIDE-BINDING PROTEIN {ECO:     78.5    1.1e-18   1   2.4   2.8
+	Iterate                   	   570	   600	    78.5
+	PF00496	SBP_bac_5       	   108	   516	   225.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1789298 (E-value: 5e-19, Score: 73.1)
+Mentioned as: LACR_2026
+Description: ABC-type oligopeptide transport system, periplasmic component
+Organism: Lactococcus lactis subsp. cremoris SK11
+PMID: 27973578
+Source: EuropePMC
+Title: Strain-Dependent Transcriptome Signatures for Robustness in Lactococcus lactis
+Journal: PloS one (2016)
+Snippet: regulator positive 2.0 LACR_0398 asnB asparagine synthetase B negative 17.5 LACR_A05 hypothetical protein positive 3.0 LACR_2026 ABC-type oligopeptide transport system, periplasmic component negative 4.4 LACR_2220 hypothetical protein positive 1.4 LACR_2522 hypothetical protein positive 4.4 LACR_1437 transposase positive 9.2 LACR_1714 ArsR family transcriptional regulator positive 3.1 LACR_0904
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0D1M0Q5.1	AF-A0A0D1M0Q5-F1-model_v4_TED01:39-66_245-313_570-597	1	AF-A0A0D1M0Q5-F1-model_v4_TED01	39-597	100.0%
+A0A0D1M0Q5.1	AF-A0A0D1M0Q5-F1-model_v4_TED02:72-231	1	AF-A0A0D1M0Q5-F1-model_v4_TED02	72-231	0
+A0A0D1M0Q5.1	AF-A0A0D1M0Q5-F1-model_v4_TED03:320-563	1	AF-A0A0D1M0Q5-F1-model_v4_TED03	320-563	0
+A0A0R2H1K9.1	AF-A0A0R2H1K9-F1-model_v4_TED01:44-76_85-92_254-324_581-608	1	AF-A0A0R2H1K9-F1-model_v4_TED01	44-608	100.0%
+A0A0R2H1K9.1	AF-A0A0R2H1K9-F1-model_v4_TED02:106-253	1	AF-A0A0R2H1K9-F1-model_v4_TED02	106-253	0
+A0A0R2H1K9.1	AF-A0A0R2H1K9-F1-model_v4_TED03:332-574	1	AF-A0A0R2H1K9-F1-model_v4_TED03	332-574	0
+A0A1E8GLV9.1	AF-A0A1E8GLV9-F1-model_v4_TED01:40-96_253-324_597-624	1	AF-A0A1E8GLV9-F1-model_v4_TED01	40-624	100.0%
+A0A1E8GLV9.1	AF-A0A1E8GLV9-F1-model_v4_TED02:332-590	1	AF-A0A1E8GLV9-F1-model_v4_TED02	332-590	0
+A0A7G9T3P1.1	AF-A0A7G9T3P1-F1-model_v4_TED01:51-74_241-312_568-595	1	AF-A0A7G9T3P1-F1-model_v4_TED01	51-595	100.0%
+A0A7G9T3P1.1	AF-A0A7G9T3P1-F1-model_v4_TED02:92-232	1	AF-A0A7G9T3P1-F1-model_v4_TED02	92-232	0
+A0A7G9T3P1.1	AF-A0A7G9T3P1-F1-model_v4_TED03:320-561	1	AF-A0A7G9T3P1-F1-model_v4_TED03	320-561	0
+A0A7X1ZA77.1	AF-A0A7X1ZA77-F1-model_v4_TED01:47-87_242-293_571-597	1	AF-A0A7X1ZA77-F1-model_v4_TED01	47-597	100.0%
+A0A7X1ZA77.1	AF-A0A7X1ZA77-F1-model_v4_TED02:90-218	1	AF-A0A7X1ZA77-F1-model_v4_TED02	90-218	0
+A0A7X1ZA77.1	AF-A0A7X1ZA77-F1-model_v4_TED03:318-564	1	AF-A0A7X1ZA77-F1-model_v4_TED03	318-564	0
+T0SEV2.1	AF-T0SEV2-F1-model_v4_TED01:45-296_574-593	1	AF-T0SEV2-F1-model_v4_TED01	45-593	77.4%
+T0SEV2.1	AF-T0SEV2-F1-model_v4_TED02:329-567	1	AF-T0SEV2-F1-model_v4_TED02	329-567	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0C2B3_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.40 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

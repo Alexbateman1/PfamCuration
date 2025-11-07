@@ -1,0 +1,85 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1484_HAEIN             Reviewed;          53 AA.
+AC   P44211;
+DE   RecName: Full=Putative uncharacterized protein HI_1484 in Mu-like prophage FluMu region;
+GN   OrderedLocusNames=HI_1484;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+CC   -!- CAUTION: Could be the product of a pseudogene. {ECO:0000305}.
+DR   EMBL; L42023; AAC23139.1; -; Genomic_DNA.
+DR   PIR; E64031; E64031.
+DR   AlphaFoldDB; P44211; -.
+DR   SMR; P44211; -.
+DR   STRING; 71421.HI_1484; -.
+DR   EnsemblBacteria; AAC23139; AAC23139; HI_1484.
+DR   KEGG; hin:HI_1484; -.
+DR   eggNOG; ENOG5031KE6; Bacteria.
+DR   HOGENOM; CLU_3099177_0_0_6; -.
+DR   Proteomes; UP000000579; Chromosome.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..53
+FT                   /note="Putative uncharacterized protein HI_1484 in Mu-like
+FT                   prophage FluMu region"
+FT                   /id="PRO_0000078068"
+SQ   SEQUENCE   53 AA;  6359 MW;  BD868885A9E6DAE4 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Haemophilus.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P44211	PUTATIVE UNCHARACTERIZED PROTE    117.8    7.7e-31   1   1.1   4.6
+	P44211_TED01              	    10	    51	   117.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P44211.1	AF-P44211-F1-model_v4_TED01:10-51	1	AF-P44211-F1-model_v4_TED01	10-51	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44211_TED01
+GA   27.00 27.00;
+TC   30.30 117.60;
+NC   25.70 20.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

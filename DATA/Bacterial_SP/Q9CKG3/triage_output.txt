@@ -1,0 +1,71 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1655_PASMU             Reviewed;         130 AA.
+AC   Q9CKG3;
+DE   RecName: Full=Uncharacterized protein PM1655;
+GN   OrderedLocusNames=PM1655;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK03739.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q9CKG3; -.
+DR   STRING; 272843.PM1655; -.
+DR   EnsemblBacteria; AAK03739; AAK03739; PM1655.
+DR   KEGG; pmu:PM1655; -.
+DR   HOGENOM; CLU_1936024_0_0_6; -.
+DR   Proteomes; UP000000809; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..130
+FT                   /note="Uncharacterized protein PM1655"
+FT                   /id="PRO_0000216328"
+SQ   SEQUENCE   130 AA;  14996 MW;  4179E62B053A3FBF CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pasteurella.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9CKG3	UNCHARACTERIZED PROTEIN PM1655    298.2    2.7e-86   1   1.0  10.3
+	Q9CKG3                    	     1	   130	   298.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CKG3
+GA   27.00 27.00;
+TC   298.20 298.10;
+NC   26.60 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

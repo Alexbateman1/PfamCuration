@@ -1,0 +1,80 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1295_AQUAE             Reviewed;         156 AA.
+AC   O67324;
+DE   RecName: Full=Uncharacterized protein aq_1295;
+GN   OrderedLocusNames=aq_1295;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC07293.1; -; Genomic_DNA.
+DR   PIR; A70412; A70412.
+DR   RefSeq; NP_213888.1; NC_000918.1.
+DR   AlphaFoldDB; O67324; -.
+DR   SMR; O67324; -.
+DR   STRING; 224324.aq_1295; -.
+DR   EnsemblBacteria; AAC07293; AAC07293; aq_1295.
+DR   KEGG; aae:aq_1295; -.
+DR   HOGENOM; CLU_1683003_0_0_0; -.
+DR   InParanoid; O67324; -.
+DR   Proteomes; UP000000798; Chromosome.
+PE   4: Predicted;
+KW   Coiled coil; Reference proteome.
+FT   CHAIN           1..156
+FT                   /note="Uncharacterized protein aq_1295"
+FT                   /id="PRO_0000186918"
+FT   COILED          43..84
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   156 AA;  17852 MW;  53DA269843319407 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Aquifex
+1	5	Aquificaceae
+1	4	Aquificales
+1	3	Aquificia
+1	2	Aquificota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O67324	UNCHARACTERIZED PROTEIN AQ_129    313.8    6.6e-91   1   1.0   6.2
+	O67324_TED01              	    16	   156	   313.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O67324.1	AF-O67324-F1-model_v4_TED01:16-112_128-156	1	AF-O67324-F1-model_v4_TED01	16-156	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67324_TED01
+GA   27.00 27.00;
+TC   30.80 313.60;
+NC   26.80 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

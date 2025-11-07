@@ -1,0 +1,87 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y158_UREPA              Reviewed;         147 AA.
+AC   Q9PQY6;
+DE   RecName: Full=Uncharacterized protein UU158;
+GN   OrderedLocusNames=UU158;
+OS   Ureaplasma parvum serovar 3 (strain ATCC 700970).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Ureaplasma.
+OX   NCBI_TaxID=273119;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700970;
+RX   PubMed=11048724; DOI=10.1038/35037619;
+RA   Glass J.I., Lefkowitz E.J., Glass J.S., Heiner C.R., Chen E.Y.,
+RA   Cassell G.H.;
+RT   "The complete sequence of the mucosal pathogen Ureaplasma urealyticum.";
+RL   Nature 407:757-762(2000).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AF222894; AAF30564.1; -; Genomic_DNA.
+DR   RefSeq; WP_004026698.1; NC_002162.1.
+DR   AlphaFoldDB; Q9PQY6; -.
+DR   STRING; 273119.UU158; -.
+DR   EnsemblBacteria; AAF30564; AAF30564; UU158.
+DR   GeneID; 29672733; -.
+DR   KEGG; uur:UU158; -.
+DR   HOGENOM; CLU_1767264_0_0_14; -.
+DR   OrthoDB; 9901823at2; -.
+DR   Proteomes; UP000000423; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..147
+FT                   /note="Uncharacterized protein UU158"
+FT                   /id="PRO_0000220817"
+FT   TRANSMEM        21..41
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        67..87
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   147 AA;  17616 MW;  4686CECF4438E47A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Ureaplasma
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9PQY6	UNCHARACTERIZED PROTEIN UU158      125.7    2.4e-33   1   1.8   2.9
+	Q9PQY6_TED02              	    61	   109	   125.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9PQY6.1	AF-Q9PQY6-F1-model_v4_TED01:1-59	1	AF-Q9PQY6-F1-model_v4_TED01	1-59	0
+Q9PQY6.1	AF-Q9PQY6-F1-model_v4_TED02:61-109	1	AF-Q9PQY6-F1-model_v4_TED02	61-109	100.0%
+Q9PQY6.1	AF-Q9PQY6-F1-model_v4_TED03:112-147	1	AF-Q9PQY6-F1-model_v4_TED03	112-147	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9PQY6_TED02
+GA   27.00 27.00;
+TC   125.70 125.70;
+NC   23.80 19.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

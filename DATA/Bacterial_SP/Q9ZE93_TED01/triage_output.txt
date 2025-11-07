@@ -1,0 +1,95 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y052_RICPR              Reviewed;          91 AA.
+AC   Q9ZE93;
+DE   RecName: Full=Uncharacterized protein RP052;
+GN   OrderedLocusNames=RP052;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+DR   EMBL; AJ235270; CAA14523.1; -; Genomic_DNA.
+DR   PIR; D71713; D71713.
+DR   RefSeq; NP_220446.1; NC_000963.1.
+DR   RefSeq; WP_010886199.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZE93; -.
+DR   EnsemblBacteria; CAA14523; CAA14523; CAA14523.
+DR   KEGG; rpr:RP052; -.
+DR   PATRIC; fig|272947.5.peg.53; -.
+DR   HOGENOM; CLU_2603790_0_0_5; -.
+DR   Proteomes; UP000002480; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..91
+FT                   /note="Uncharacterized protein RP052"
+FT                   /id="PRO_0000101306"
+SQ   SEQUENCE   91 AA;  10236 MW;  499BC19728D485B1 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+1	7	Rickettsia
+1	6	Rickettsieae
+1	5	Rickettsiaceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9ZE93	UNCHARACTERIZED PROTEIN RP052      174.7    1.3e-48   1   1.1   1.8
+	Q9ZE93_TED01              	    22	    91	   174.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS35748 (E-value: 1.2e-50, Score: 174.7)
+Mentioned as: RP052
+Description: unknown
+Organism: Rickettsia prowazekii str. Madrid E
+PMID: 15317790
+Source: EuropePMC
+Title: Complete genome sequence of Rickettsia typhi and comparison with sequences of other rickettsiae
+Journal: Journal of bacteriology (2004)
+Snippet: RC no. tRNA/rRNA methyltransferase Acetylglutamate kinase RP088 RP052 RP050/RC0076 RC0049 Sco2 protein precursor Rickettsial conserved protein with coenzyme PQQ
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZE93.1	AF-Q9ZE93-F1-model_v4_TED01:22-27_45-91	1	AF-Q9ZE93-F1-model_v4_TED01	22-91	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZE93_TED01
+GA   27.00 27.00;
+TC   27.60 174.50;
+NC   26.60 19.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

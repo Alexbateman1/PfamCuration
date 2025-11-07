@@ -1,0 +1,114 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y032_UREPA              Reviewed;         175 AA.
+AC   Q9PRB3;
+DE   RecName: Full=Uncharacterized protein UU032;
+GN   OrderedLocusNames=UU032;
+OS   Ureaplasma parvum serovar 3 (strain ATCC 700970).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Ureaplasma.
+OX   NCBI_TaxID=273119;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700970;
+RX   PubMed=11048724; DOI=10.1038/35037619;
+RA   Glass J.I., Lefkowitz E.J., Glass J.S., Heiner C.R., Chen E.Y.,
+RA   Cassell G.H.;
+RT   "The complete sequence of the mucosal pathogen Ureaplasma urealyticum.";
+RL   Nature 407:757-762(2000).
+DR   EMBL; AF222894; AAF30437.1; -; Genomic_DNA.
+DR   RefSeq; WP_010891655.1; NC_002162.1.
+DR   AlphaFoldDB; Q9PRB3; -.
+DR   STRING; 273119.UU032; -.
+DR   EnsemblBacteria; AAF30437; AAF30437; UU032.
+DR   GeneID; 29672560; -.
+DR   KEGG; uur:UU032; -.
+DR   PATRIC; fig|273119.6.peg.34; -.
+DR   eggNOG; ENOG5033699; Bacteria.
+DR   HOGENOM; CLU_1522492_0_0_14; -.
+DR   OrthoDB; 3035363at2; -.
+DR   Proteomes; UP000000423; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..175
+FT                   /note="Uncharacterized protein UU032"
+FT                   /id="PRO_0000220783"
+FT   REGION          1..21
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1..10
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   175 AA;  20950 MW;  93FDAD28712E5222 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Bacteroides.
+2	6	Candidatus Phytoplasma
+3	5	Bacteroidaceae
+2	5	Carnobacteriaceae
+2	5	Acholeplasmataceae
+4	4	Bacteroidales
+3	4	Lactobacillales
+2	4	Bacillales
+2	4	Acholeplasmatales
+5	3	Bacilli
+4	3	Bacteroidia
+2	3	Negativicutes
+2	3	Mollicutes
+8	2	Bacillota
+5	2	Bacteroidota
+3	2	Mycoplasmatota
+6	1	Pseudomonadati
+11	1	Bacillati
+18	0	Bacteria
+Total of 19 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A091C2V0	UNCHARACTERIZED PROTEIN {    180.1    1.6e-49   1   1.1   6.8
+	Iterate                   	    31	   172	   179.7
+
+A0A4D5ZLU2	UNCHARACTERIZED PROTEIN {    136.9    3.3e-36   1   1.0   0.8
+	Iterate                   	    37	   178	   136.7
+
+A0A5R8Q9D4	UNCHARACTERIZED PROTEIN {    207.8    4.6e-58   1   1.1   6.6
+	Iterate                   	    32	   177	   207.5
+
+A0A9W5X5A0	UNCHARACTERIZED PROTEIN {    223.5    6.4e-63   1   1.1   6.5
+	Iterate                   	    35	   184	   223.2
+
+Q9PRB3	UNCHARACTERIZED PROTEIN UU032      197.1    8.9e-55   1   1.2   9.0
+	Iterate                   	    32	   171	   196.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A091C2V0.1	AF-A0A091C2V0-F1-model_v4_TED01:26-167	1	AF-A0A091C2V0-F1-model_v4_TED01	26-167	100.0%
+A0A1Y4S5V4.1	AF-A0A1Y4S5V4-F1-model_v4_TED01:25-172	1	AF-A0A1Y4S5V4-F1-model_v4_TED01	25-172	85.1%
+A0A1Y4S5V4.1	AF-A0A1Y4S5V4-F1-model_v4_TED02:197-238	1	AF-A0A1Y4S5V4-F1-model_v4_TED02	197-238	0
+A0A5R8Q9D4.1	AF-A0A5R8Q9D4-F1-model_v4_TED01:31-149	1	AF-A0A5R8Q9D4-F1-model_v4_TED01	31-149	80.6%
+B9DMM9.1	AF-B9DMM9-F1-model_v4_TED01:27-181	1	AF-B9DMM9-F1-model_v4_TED01	27-181	99.3%
+E5BI09.1	AF-E5BI09-F1-model_v4_TED01:24-205	1	AF-E5BI09-F1-model_v4_TED01	24-205	100.0%
+Q9PRB3.1	AF-Q9PRB3-F1-model_v4_TED01:32-147_159-171	1	AF-Q9PRB3-F1-model_v4_TED01	32-171	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9PRB3_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.20 27.60;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

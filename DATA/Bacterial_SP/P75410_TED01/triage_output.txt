@@ -1,0 +1,111 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y371_MYCPN              Reviewed;         211 AA.
+AC   P75410;
+DE   RecName: Full=Uncharacterized protein MPN_371;
+GN   OrderedLocusNames=MPN_371; ORFNames=A19_orf211, MP465;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+RN   [2]
+RP   INDUCTION.
+RC   STRAIN=S1;
+RX   PubMed=20199607; DOI=10.1111/j.1365-2958.2010.07092.x;
+RA   Kannan T.R., Musatovova O., Balasubramanian S., Cagle M., Jordan J.L.,
+RA   Krunkosky T.M., Davis A., Hardy R.D., Baseman J.B.;
+RT   "Mycoplasma pneumoniae Community Acquired Respiratory Distress Syndrome
+RT   toxin expression reveals growth phase and infection-dependent regulation.";
+RL   Mol. Microbiol. 76:1127-1141(2010).
+CC   -!- INDUCTION: Expressed during cell growth. {ECO:0000269|PubMed:20199607}.
+DR   EMBL; U00089; AAB96113.1; -; Genomic_DNA.
+DR   PIR; S73791; S73791.
+DR   AlphaFoldDB; P75410; -.
+DR   STRING; 272634.MPN_371; -.
+DR   EnsemblBacteria; AAB96113; AAB96113; MPN_371.
+DR   KEGG; mpn:MPN_371; -.
+DR   HOGENOM; CLU_1303779_0_0_14; -.
+DR   Proteomes; UP000000808; Chromosome.
+PE   2: Evidence at transcript level;
+KW   Reference proteome.
+FT   CHAIN           1..211
+FT                   /note="Uncharacterized protein MPN_371"
+FT                   /id="PRO_0000210664"
+SQ   SEQUENCE   211 AA;  23592 MW;  A5E240288852DDB2 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Mycoplasmoides
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P75410	UNCHARACTERIZED PROTEIN MPN_371    365.4   1.1e-106   1   1.1   9.5
+	P75410_TED01              	     2	   156	   365.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS13827 (E-value: 9.5e-109, Score: 365.4)
+Mentioned as: MPN371
+Description: hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 34932441
+Source: EuropePMC
+Title: Global Genome Diversity and Recombination in Mycoplasma pneumoniae
+Journal: Emerging infectious diseases (2022)
+Snippet: containing hypothetical proteins (MPN366367), RepMP1, DUF16 domain-containing protein (MPN368), lipoprotein (MPN369), putative adhesin (MPN370), and MPN371 for both clades T21 and T22. Among strains of subtype 1, clade T12 had 3 regions of SNPs predicted to have arisen by homologous recombination: first 34,0697340757 bp sequence coordinates
+
+================================================================================
+Protein: VIMSS13827 (E-value: 9.5e-109, Score: 365.4)
+Mentioned as: MPN371
+Description: hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 20199607
+Source: EuropePMC
+Title: Mycoplasma pneumoniae Community Acquired Respiratory Distress Syndrome toxin expression reveals growth phase and infection-dependent regulation
+Journal: Molecular microbiology (2010)
+Snippet: pneumoniae reference strain M129, the cards gene ( mpn372 , nucleotides 444341-446116) is flanked by mpn371 (nucleotides 444187-443552) and mpn373 (nucleotides 446741-446127) genes. Both mpn371 and mpn373 genes are transcribed from the complementary strand, in contrast to cards , and encode hypothetical proteins of unknown functions
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75410.1	AF-P75410-F1-model_v4_TED01:2-68_82-126_147-156	1	AF-P75410-F1-model_v4_TED01	2-156	100.0%
+P75410.1	AF-P75410-F1-model_v4_TED02:160-194	1	AF-P75410-F1-model_v4_TED02	160-194	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75410_TED01
+GA   27.00 27.00;
+TC   27.50 365.10;
+NC   21.10 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

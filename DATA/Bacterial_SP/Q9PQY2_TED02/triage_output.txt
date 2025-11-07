@@ -1,0 +1,94 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y162_UREPA              Reviewed;         457 AA.
+AC   Q9PQY2;
+DE   RecName: Full=Uncharacterized protein UU162;
+GN   OrderedLocusNames=UU162;
+OS   Ureaplasma parvum serovar 3 (strain ATCC 700970).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Ureaplasma.
+OX   NCBI_TaxID=273119;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700970;
+RX   PubMed=11048724; DOI=10.1038/35037619;
+RA   Glass J.I., Lefkowitz E.J., Glass J.S., Heiner C.R., Chen E.Y.,
+RA   Cassell G.H.;
+RT   "The complete sequence of the mucosal pathogen Ureaplasma urealyticum.";
+RL   Nature 407:757-762(2000).
+DR   EMBL; AF222894; AAF30568.1; -; Genomic_DNA.
+DR   RefSeq; WP_010891694.1; NC_002162.1.
+DR   AlphaFoldDB; Q9PQY2; -.
+DR   STRING; 273119.UU162; -.
+DR   EnsemblBacteria; AAF30568; AAF30568; UU162.
+DR   KEGG; uur:UU162; -.
+DR   HOGENOM; CLU_598441_0_0_14; -.
+DR   Proteomes; UP000000423; Chromosome.
+DR   Gene3D; 1.20.5.320; 6-Phosphogluconate Dehydrogenase, domain 3; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..457
+FT                   /note="Uncharacterized protein UU162"
+FT                   /id="PRO_0000220820"
+FT   REGION          390..423
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   457 AA;  51904 MW;  57D0EFC8D0A4D637 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Ureaplasma
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9PQY2	UNCHARACTERIZED PROTEIN UU162      215.1    4.1e-61   1   2.4  12.6
+	Q9PQY2_TED02              	   238	   335	   215.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS10136632 (E-value: 9e-05, Score: 27.9)
+Mentioned as: MAGa8170
+Description: variable surface lipoprotein F1
+Organism: Mycoplasma agalactiae
+PMID: 20122262
+Source: EuropePMC
+Title: Comparative genomic and proteomic analyses of two Mycoplasma agalactiae strains: clues to the macro- and micro-events that are shaping mycoplasma diversity
+Journal: BMC genomics (2010)
+Snippet: + na Duplicated (MAGa8090) MAGa5860 None vpmaF1 Variable surface lipoprotein F1 (VpmaF1) + na Duplicated (MAGa8170) MAGa5870 None vpmaD2 Variable surface lipoprotein D2 (VpmaD2) + na Duplicated (MAGa8120) MAGa6560 MAG5910 5'Nucleotidase, predicted lipoprotein + + MAGa6940 None CDS14 + na ICE MAGa7130 MAG6170 Hypothetical protein, predicted
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9PQY2.1	AF-Q9PQY2-F1-model_v4_TED01:2-100	1	AF-Q9PQY2-F1-model_v4_TED01	2-100	0
+Q9PQY2.1	AF-Q9PQY2-F1-model_v4_TED02:238-313_320-335	1	AF-Q9PQY2-F1-model_v4_TED02	238-335	100.0%
+Q9PQY2.1	AF-Q9PQY2-F1-model_v4_TED03:336-390	1	AF-Q9PQY2-F1-model_v4_TED03	336-390	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9PQY2_TED02
+GA   27.00 27.00;
+TC   29.10 215.10;
+NC   25.10 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

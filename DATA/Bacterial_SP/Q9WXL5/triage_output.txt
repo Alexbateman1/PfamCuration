@@ -1,0 +1,111 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y451_HELPY              Reviewed;          94 AA.
+AC   Q9WXL5;
+DE   RecName: Full=Putative uncharacterized protein HP_0451;
+GN   OrderedLocusNames=HP_0451;
+OS   Helicobacter pylori (strain ATCC 700392 / 26695) (Campylobacter pylori).
+OC   Bacteria; Pseudomonadati; Campylobacterota; Epsilonproteobacteria;
+OC   Campylobacterales; Helicobacteraceae; Helicobacter.
+OX   NCBI_TaxID=85962;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700392 / 26695;
+RX   PubMed=9252185; DOI=10.1038/41483;
+RA   Tomb J.-F., White O., Kerlavage A.R., Clayton R.A., Sutton G.G.,
+RA   Fleischmann R.D., Ketchum K.A., Klenk H.-P., Gill S.R., Dougherty B.A.,
+RA   Nelson K.E., Quackenbush J., Zhou L., Kirkness E.F., Peterson S.N.,
+RA   Loftus B.J., Richardson D.L., Dodson R.J., Khalak H.G., Glodek A.,
+RA   McKenney K., FitzGerald L.M., Lee N., Adams M.D., Hickey E.K., Berg D.E.,
+RA   Gocayne J.D., Utterback T.R., Peterson J.D., Kelley J.M., Cotton M.D.,
+RA   Weidman J.F., Fujii C., Bowman C., Watthey L., Wallin E., Hayes W.S.,
+RA   Borodovsky M., Karp P.D., Smith H.O., Fraser C.M., Venter J.C.;
+RT   "The complete genome sequence of the gastric pathogen Helicobacter
+RT   pylori.";
+RL   Nature 388:539-547(1997).
+CC   -!- CAUTION: Could be the product of a pseudogene. There is no ortholog for
+CC       HP_0451 in strain J99. {ECO:0000305}.
+DR   EMBL; AE000511; AAD24378.1; -; Genomic_DNA.
+DR   RefSeq; NP_207249.1; NC_000915.1.
+DR   RefSeq; WP_000599839.1; NC_018939.1.
+DR   AlphaFoldDB; Q9WXL5; -.
+DR   SMR; Q9WXL5; -.
+DR   STRING; 85962.HP_0451; -.
+DR   EnsemblBacteria; AAD24378; AAD24378; HP_0451.
+DR   KEGG; hpy:HP_0451; -.
+DR   PATRIC; fig|85962.8.peg.469; -.
+DR   InParanoid; Q9WXL5; -.
+DR   Proteomes; UP000000429; Chromosome.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..94
+FT                   /note="Putative uncharacterized protein HP_0451"
+FT                   /id="PRO_0000128685"
+SQ   SEQUENCE   94 AA;  11482 MW;  D2910A7F4895BD86 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Helicobacter.
+1	5	Helicobacteraceae
+1	4	Campylobacterales
+1	3	Epsilonproteobacteria
+1	2	Campylobacterota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9WXL5	PUTATIVE UNCHARACTERIZED PROTEI    199.8      3e-56   1   1.0  18.8
+	Q9WXL5                    	     1	    94	   199.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS18871 (E-value: 2.6e-58, Score: 199.8)
+Mentioned as: HP0451
+Description: hypothetical protein
+Organism: Helicobacter pylori 26695
+PMID: 18493595
+Source: EuropePMC
+Title: Using macro-arrays to study routes of infection of Helicobacter pylori in three families
+Journal: PloS one (2008)
+Snippet: homolog=DNA transfer protein HP0444 hypothetical protein HP0446 hypothetical protein HP0447 hypothetical protein HP0449 hypothetical protein HP0451 hypothetical protein HP0452 hypothetical protein HP0453 hypothetical protein HP0454 hypothetical protein HP0456 hypothetical protein HP0459 virB4 homolog (virB4) HP0460 hypothetical protein HP0462 type I restriction enzyme S protein (hsdS) HP0469
+
+================================================================================
+Protein: VIMSS18871 (E-value: 2.6e-58, Score: 199.8)
+Mentioned as: HP0451
+Description: hypothetical protein
+Organism: Helicobacter pylori 26695
+PMID: 11179343
+Source: EuropePMC
+Title: Acid-induced gene expression in Helicobacter pylori: study in genomic scale by microarray
+Journal: Infection and immunity (2001)
+Snippet: HP0359 HP0360 HP0361 HP0381 HP0400 HP0402 HP0429 HP0450 HP0451 HP0453 HP0456 HP0458 HP0461 HP0521 HP0527 HP0533 HP0548 HP0610 HP0691 HP0698 HP0705 HP0713 HP0725
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9WXL5
+GA   27.00 27.00;
+TC   199.80 199.60;
+NC   25.80 24.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

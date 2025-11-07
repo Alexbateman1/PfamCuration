@@ -1,0 +1,291 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YQII_ECOLI              Reviewed;         354 AA.
+AC   P76656; Q2M9F5;
+DE   RecName: Full=Uncharacterized protein YqiI;
+DE   Flags: Precursor;
+GN   Name=yqiI; OrderedLocusNames=b3048, JW5509;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- FUNCTION: May be involved in a fimbrial system chaperoned by YqiH and
+CC       exported by YqiG.
+CC   -!- SIMILARITY: To E.coli YbgO. {ECO:0000305}.
+DR   EMBL; U00096; AAC76084.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE77101.1; -; Genomic_DNA.
+DR   PIR; F65092; F65092.
+DR   RefSeq; NP_417520.1; NC_000913.3.
+DR   RefSeq; WP_001269802.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P76656; -.
+DR   SMR; P76656; -.
+DR   BioGRID; 4259336; 125.
+DR   FunCoup; P76656; 54.
+DR   STRING; 511145.b3048; -.
+DR   PaxDb; 511145-b3048; -.
+DR   EnsemblBacteria; AAC76084; AAC76084; b3048.
+DR   GeneID; 947535; -.
+DR   KEGG; ecj:JW5509; -.
+DR   KEGG; eco:b3048; -.
+DR   KEGG; ecoc:C3026_16645; -.
+DR   PATRIC; fig|511145.12.peg.3141; -.
+DR   EchoBASE; EB3981; -.
+DR   eggNOG; COG3539; Bacteria.
+DR   HOGENOM; CLU_064082_2_0_6; -.
+DR   InParanoid; P76656; -.
+DR   OMA; CIDVKGA; -.
+DR   OrthoDB; 8926940at2; -.
+DR   BioCyc; EcoCyc:G7587-MONOMER; -.
+DR   PRO; PR:P76656; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0009289; C:pilus; IEA:InterPro.
+DR   GO; GO:0007155; P:cell adhesion; IEA:InterPro.
+DR   GO; GO:0051595; P:response to methylglyoxal; IMP:EcoCyc.
+DR   FunFam; 2.60.40.1090:FF:000029; Fimbrial family protein; 1.
+DR   Gene3D; 2.60.40.1090; Fimbrial-type adhesion domain; 1.
+DR   InterPro; IPR036937; Adhesion_dom_fimbrial_sf.
+DR   InterPro; IPR008966; Adhesion_dom_sf.
+DR   SUPFAM; SSF49401; Bacterial adhesins; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..21
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           22..354
+FT                   /note="Uncharacterized protein YqiI"
+FT                   /id="PRO_0000013904"
+SQ   SEQUENCE   354 AA;  38555 MW;  78BDBB1E97C9925A CRC64;
+//
+ID   YBGO_ECOLI              Reviewed;         353 AA.
+AC   P75748; Q9R7S8;
+DE   RecName: Full=Uncharacterized protein YbgO;
+DE   Flags: Precursor;
+GN   Name=ybgO; OrderedLocusNames=b0716, JW5098;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=8905232; DOI=10.1093/dnares/3.3.137;
+RA   Oshima T., Aiba H., Baba T., Fujita K., Hayashi K., Honjo A., Ikemoto K.,
+RA   Inada T., Itoh T., Kajihara M., Kanai K., Kashimoto K., Kimura S.,
+RA   Kitagawa M., Makino K., Masuda S., Miki T., Mizobuchi K., Mori H.,
+RA   Motomura K., Nakamura Y., Nashimoto H., Nishio Y., Saito N., Sampei G.,
+RA   Seki Y., Tagami H., Takemoto K., Wada C., Yamamoto Y., Yano M.,
+RA   Horiuchi T.;
+RT   "A 718-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 12.7-28.0 min region on the linkage map.";
+RL   DNA Res. 3:137-155(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- FUNCTION: May be involved in a fimbrial system chaperoned by YbgP and
+CC       exported by YbgQ.
+CC   -!- SIMILARITY: To E.coli YqiI. {ECO:0000305}.
+DR   EMBL; U00096; AAC73810.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA35380.2; -; Genomic_DNA.
+DR   PIR; C64807; C64807.
+DR   RefSeq; NP_415244.4; NC_000913.3.
+DR   RefSeq; WP_001272410.1; NZ_SSZK01000033.1.
+DR   AlphaFoldDB; P75748; -.
+DR   SMR; P75748; -.
+DR   BioGRID; 4259934; 15.
+DR   FunCoup; P75748; 59.
+DR   STRING; 511145.b0716; -.
+DR   PaxDb; 511145-b0716; -.
+DR   EnsemblBacteria; AAC73810; AAC73810; b0716.
+DR   GeneID; 947550; -.
+DR   KEGG; ecj:JW5098; -.
+DR   KEGG; eco:b0716; -.
+DR   KEGG; ecoc:C3026_03580; -.
+DR   PATRIC; fig|1411691.4.peg.1557; -.
+DR   EchoBASE; EB3095; -.
+DR   eggNOG; COG3539; Bacteria.
+DR   HOGENOM; CLU_064082_2_0_6; -.
+DR   InParanoid; P75748; -.
+DR   OMA; TTGYCYK; -.
+DR   OrthoDB; 8926940at2; -.
+DR   PhylomeDB; P75748; -.
+DR   BioCyc; EcoCyc:G6385-MONOMER; -.
+DR   PRO; PR:P75748; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0009289; C:pilus; IEA:InterPro.
+DR   GO; GO:0007155; P:cell adhesion; IEA:InterPro.
+DR   Gene3D; 2.60.40.1090; Fimbrial-type adhesion domain; 1.
+DR   InterPro; IPR036937; Adhesion_dom_fimbrial_sf.
+DR   InterPro; IPR008966; Adhesion_dom_sf.
+DR   SUPFAM; SSF49401; Bacterial adhesins; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           24..353
+FT                   /note="Uncharacterized protein YbgO"
+FT                   /id="PRO_0000013807"
+SQ   SEQUENCE   353 AA;  39539 MW;  18598FDF92E01072 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	7	Enterobactercloacae complex.
+4	6	Shigella.
+3	6	Enterobacter
+11	6	Escherichia.
+20	5	Enterobacteriaceae
+21	4	Enterobacterales
+21	3	Gammaproteobacteria
+21	2	Pseudomonadota
+21	1	Pseudomonadati
+21	0	Bacteria
+Total of 22 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A077ZDQ9	PAPD C AND FIMBRIAL AND P     66.3    1.4e-14   1   1.3   0.4
+	P76656_TED01              	   248	   438	    65.7
+	PF00345	PapD_N          	    18	   140	   115.3
+	PF02753	PapD_C          	   162	   221	    50.6
+
+A0A0H2VCJ9	FIMBRIAL ADHESIN {ECO:000     86.4    9.5e-21   1   1.1   2.0
+	P76656_TED01              	    22	   208	    86.1
+
+A0A0H2Z2U8	YQI FIMBRIAL ADHESIN {ECO     80.1    8.2e-19   1   1.1   2.2
+	P76656_TED01              	    22	   208	    79.7
+
+A0A0H3CQL1	PUTATIVE FIMBRIAL PROTEIN     60.9    6.1e-13   1   1.4   0.2
+	P76656_TED01              	    23	   213	    60.2
+
+A0A0H3CRK9	PUTATIVE FIMBRIAL ADHESIN     83.5    7.7e-20   1   1.2   0.1
+	P76656_TED01              	    22	   213	    83.0
+
+A0A0H3ELL4	PUTATIVE FIMBRIAL ADHESIN     85.6    1.7e-20   1   1.1   2.3
+	P76656_TED01              	    22	   208	    85.2
+
+A0A0L0GQN3	PILUS ASSEMBLY PROTEIN {E     83.9    5.5e-20   1   1.2   0.1
+	P76656_TED01              	    22	   206	    83.5
+
+A0A2N5EK57	FIMBRIAL-TYPE ADHESION DO     51.1    6.5e-10   1   1.4   0.0
+	P76656_TED01              	    21	   208	    50.4
+	PF00419	Fimbrial        	   214	   346	      30
+
+A0A484Y909	PUTATIVE FIMBRIAL PROTEIN     41.1    7.6e-07   1   1.1   0.3
+	P76656_TED01              	    24	   192	    40.8
+
+A7ZJ96	UNCHARACTERIZED PROTEIN {ECO:     67.5    6.2e-15   1   1.3   0.4
+	P76656_TED01              	    24	   214	    66.9
+
+A7ZRS9	FIMBRIAL PROTEIN {ECO:0008006    419.4   7.9e-123   1   1.2   1.2
+	P76656_TED01              	    22	   215	   418.9
+
+B7LAC2	YBGO PROTEIN {ECO:0000313|EMB     67.5    6.2e-15   1   1.3   0.4
+	P76656_TED01              	    24	   214	    66.9
+
+B7LGY2	YQII PROTEIN {ECO:0000313|EMB    419.4   7.9e-123   1   1.2   1.2
+	P76656_TED01              	    22	   215	   418.9
+
+B7MAC2	FIMBRIAL ADHESIN {ECO:0000313     80.1    8.2e-19   1   1.1   2.2
+	P76656_TED01              	    22	   208	    79.7
+
+E2XAE2	FIMBRIAL PROTEIN {ECO:0008006     64.2    6.1e-14   1   1.3   0.4
+	P76656_TED01              	    24	   214	    63.6
+
+E3G3A8	FIMBRIAL ADHESIN {ECO:0008006     80.8    5.1e-19   1   1.3   0.6
+	P76656_TED01              	    22	   208	    80.2
+
+L0M1W1	FIMBRIAL-TYPE ADHESION DOMAIN     66.3    1.4e-14   1   1.2   0.7
+	P76656_TED01              	    24	   214	    65.8
+
+P75748	UNCHARACTERIZED PROTEIN YBGO        67.4    6.4e-15   1   1.3   0.4
+	P76656_TED01              	    24	   214	    66.8
+
+P76656	UNCHARACTERIZED PROTEIN YQII       461.8   8.2e-136   1   1.2   0.9
+	P76656_TED01              	    22	   215	   461.3
+
+Q32IL7	FIMBRIAL-LIKE ADHESIN PROTEIN     64.2    6.1e-14   1   1.3   0.4
+	P76656_TED01              	    24	   214	    63.6
+
+Q3YXJ5	FIMBRIAL PROTEIN {ECO:0008006    419.4   7.9e-123   1   1.2   1.2
+	P76656_TED01              	    22	   215	   418.9
+
+Q3Z487	UNCHARACTERIZED PROTEIN {ECO:     67.4    6.6e-15   1   1.3   0.4
+	P76656_TED01              	    34	   224	    66.8
+
+Q8X9C4	FIMBRIAL PROTEIN {ECO:0000313     62.3    2.4e-13   1   1.3   0.4
+	P76656_TED01              	    24	   214	    61.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS305547 (E-value: 8.4e-23, Score: 86.4)
+Mentioned as: c3794
+Description: Hypothetical protein
+Organism: Escherichia coli CFT073
+PMID: 17145948
+Source: EuropePMC
+Title: Identification of candidates for a subunit vaccine against extraintestinal pathogenic Escherichia coli
+Journal: Infection and immunity (2007)
+Snippet: c4214 c4207 yqiG c3030 c2452 c0021 c3398 c2525 c4209 c3794 c4776 c1174 c4424 c0345 c0426 c3153 c4849 c2482 c3389 c3391 c4204 c1266 c4423 c2524 c3198 ydeH c4775
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76656.1	AF-P76656-F1-model_v4_TED01:22-73_80-215	1	AF-P76656-F1-model_v4_TED01	22-215	100.0%
+P76656.1	AF-P76656-F1-model_v4_TED02:220-352	1	AF-P76656-F1-model_v4_TED02	220-352	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76656_TED01
+GA   27.00 27.00;
+TC   41.10 40.80;
+NC   26.80 19.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,72 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Streptomyces.
+5	5	Streptomycetaceae
+5	4	Kitasatosporales
+5	3	Actinomycetes
+5	2	Actinomycetota
+5	1	Bacillati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2N8NV33	DIPEPTIDYL AMINOPEPTIDASE     30.6    0.00073   1   2.5   1.2
+	Iterate                   	     2	    15	    28.2
+	PF00326	Peptidase_S9    	   441	   650	   169.1
+	PF01738	DLH             	   473	   647	    21.3
+
+A0A833Q7N6	DIPEPTIDYL AMINOPEPTIDASE     31.2    0.00044   2   3.0   4.3
+	Iterate                   	   700	   713	    16.0
+	Iterate                   	    52	    64	    15.5
+	PF20434	BD-FAE          	   467	   655	    33.3
+	PF00326	Peptidase_S9    	   492	   698	   160.4
+	PF01738	DLH             	   534	   700	    39.2
+	PF20434	BD-FAE          	  1092	  1279	    38.5
+	PF00326	Peptidase_S9    	  1116	  1322	   159.5
+	PF01738	DLH             	  1156	  1313	    36.4
+
+A0AA88H8G9	UNCHARACTERIZED PROTEIN {     87.2    1.7e-22   0  22.3   0.0
+
+A0AA88HB77	UNCHARACTERIZED PROTEIN {    102.1      2e-27   0  33.2  11.6
+
+Q2HXD9	S9 FAMILY PEPTIDASE {ECO:0000     32.5    0.00017   1   2.6   1.2
+	Iterate                   	     2	    15	    30.0
+	PF00326	Peptidase_S9    	   440	   651	   149.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q2HXD9.1	AF-Q2HXD9-F1-model_v4_TED01:17-377	1	AF-Q2HXD9-F1-model_v4_TED01	17-377	0
+Q2HXD9.1	AF-Q2HXD9-F1-model_v4_TED02:407-649	1	AF-Q2HXD9-F1-model_v4_TED02	407-649	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P81801/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 3azo
+RN   [1]
+RM   21905123
+RT   Structural evidence that puromycin hydrolase is a new type of
+RT   aminopeptidase with  a prolyl oligopeptidase family fold.
+RA   Matoba Y, Nakayama A, Oda K, Noda M, Kumagai T, Nishimura M, Sugiyama
+RA   M;
+RL   Proteins. 2011;79:2999-3005.
+
+--- End of Current DESC file ---

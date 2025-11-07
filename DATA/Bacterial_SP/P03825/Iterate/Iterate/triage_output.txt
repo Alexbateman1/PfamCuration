@@ -1,0 +1,243 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   GSPB_ECOLI              Reviewed;         139 AA.
+AC   P03825; Q2M6Y7;
+DE   RecName: Full=Putative general secretion pathway protein B {ECO:0000305};
+GN   Name=gspB {ECO:0000303|PubMed:11118204};
+GN   Synonyms=pinO {ECO:0000303|PubMed:1925011,
+GN   ECO:0000303|PubMed:1938934}, pioO {ECO:0000312|EMBL:BAE77969.1}, pno;
+GN   OrderedLocusNames=b3322, JW3284;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=7037196; DOI=10.1016/0092-8674(81)90303-2;
+RA   Olins P.O., Nomura M.;
+RT   "Regulation of the S10 ribosomal protein operon in E. coli: nucleotide
+RT   sequence at the start of the operon.";
+RL   Cell 26:205-211(1981).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   IDENTIFICATION.
+RX   PubMed=1925011; DOI=10.1016/0923-2508(91)90021-2;
+RA   Guzman E.C., Jimenez-Sanchez A.;
+RT   "A calcium-binding protein that may be required for the initiation of
+RT   chromosome replication in Escherichia coli.";
+RL   Res. Microbiol. 142:137-140(1991).
+RN   [5]
+RP   IDENTIFICATION.
+RX   PubMed=1938934; DOI=10.1128/jb.173.23.7409.1991;
+RA   Guzman E.C., Jimenez-Sanchez A.;
+RT   "Location of pinO, a new gene located between tufA and rpsJ, on the
+RT   physical map of the Escherichia coli chromosome.";
+RL   J. Bacteriol. 173:7409-7409(1991).
+RN   [6]
+RP   LACK OF EXPRESSION OF THE OPERON.
+RC   STRAIN=K12 / MC4100 / ATCC 35695 / DSM 6574;
+RX   PubMed=8655552; DOI=10.1128/jb.178.12.3544-3549.1996;
+RA   Francetic O., Pugsley A.P.;
+RT   "The cryptic general secretory pathway (gsp) operon of Escherichia coli K-
+RT   12 encodes functional proteins.";
+RL   J. Bacteriol. 178:3544-3549(1996).
+RN   [7]
+RP   LACK OF EXPRESSION OF THE OPERON, FUNCTION, AND TRANSCRIPTIONAL REGULATION.
+RC   STRAIN=K12 / MC4100 / ATCC 35695 / DSM 6574;
+RX   PubMed=11118204; DOI=10.1093/emboj/19.24.6697;
+RA   Francetic O., Belin D., Badaut C., Pugsley A.P.;
+RT   "Expression of the endogenous type II secretion pathway in Escherichia coli
+RT   leads to chitinase secretion.";
+RL   EMBO J. 19:6697-6703(2000).
+CC   -!- FUNCTION: Part of a cryptic operon that encodes proteins involved in
+CC       type II secretion pathway in other organisms, but is not expressed in
+CC       strain K12 under standard laboratory conditions (PubMed:8655552). May
+CC       play a regulatory role under conditions of derepressed gsp gene
+CC       expression (PubMed:11118204). {ECO:0000269|PubMed:11118204,
+CC       ECO:0000305|PubMed:8655552}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000255}.
+CC   -!- INDUCTION: Silenced by the DNA-binding protein H-NS under standard
+CC       growth conditions. {ECO:0000269|PubMed:11118204}.
+CC   -!- CAUTION: Was originally identified as the 11.3 kDa PinO protein, a
+CC       calcium-binding protein synthesized in the absence of isoleucine in
+CC       relA stains, which may be required for the initiation of chromosome
+CC       replication (PubMed:1925011, PubMed:1938934). But GspB is predicted to
+CC       be 15.9 kDa and has isoleucine residues, and there is no evidence that
+CC       gspB encodes the PinO peptide or that it binds calcium. {ECO:0000305,
+CC       ECO:0000305|PubMed:1925011, ECO:0000305|PubMed:1938934}.
+DR   EMBL; V00344; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; U18997; AAA58119.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC76347.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE77969.1; -; Genomic_DNA.
+DR   PIR; E65125; QQECRP.
+DR   RefSeq; NP_417781.1; NC_000913.3.
+DR   RefSeq; WP_000461450.1; NZ_SSZK01000040.1.
+DR   AlphaFoldDB; P03825; -.
+DR   SMR; P03825; -.
+DR   BioGRID; 4261294; 169.
+DR   FunCoup; P03825; 3.
+DR   STRING; 511145.b3322; -.
+DR   PaxDb; 511145-b3322; -.
+DR   EnsemblBacteria; AAC76347; AAC76347; b3322.
+DR   GeneID; 947826; -.
+DR   KEGG; ecj:JW3284; -.
+DR   KEGG; eco:b3322; -.
+DR   KEGG; ecoc:C3026_18050; -.
+DR   PATRIC; fig|511145.12.peg.3415; -.
+DR   EchoBASE; EB1243; -.
+DR   eggNOG; ENOG5033BEH; Bacteria.
+DR   HOGENOM; CLU_152450_0_0_6; -.
+DR   InParanoid; P03825; -.
+DR   OMA; QSMWHER; -.
+DR   OrthoDB; 6626291at2; -.
+DR   BioCyc; EcoCyc:EG11263-MONOMER; -.
+DR   PRO; PR:P03825; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   NCBIfam; NF007250; PRK09697.1; 1.
+PE   2: Evidence at transcript level;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..139
+FT                   /note="Putative general secretion pathway protein B"
+FT                   /id="PRO_0000058445"
+FT   TRANSMEM        28..48
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   REGION          93..139
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        110..121
+FT                   /note="Acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        122..139
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   CONFLICT        1..66
+FT                   /note="MFEFYIAAREQKETGHPGIFSRQKHSTIIYVICLLLICLWFAGMVLVGGYAR
+FT                   QLWVLWIVKAEVTV -> MTDLPVVCRNGAGWWVCQAAMGALDSKSRSHL (in Ref.
+FT                   1; V00344)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   139 AA;  15876 MW;  36DE3301CB52EE47 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	7	Enterobactercloacae complex.
+4	6	Escherichia.
+3	6	Citrobacter.
+2	6	Enterobacter
+2	5	Yersiniaceae
+11	5	Enterobacteriaceae
+15	4	Enterobacterales
+16	3	Gammaproteobacteria
+16	2	Pseudomonadota
+16	1	Pseudomonadati
+17	0	Bacteria
+Total of 17 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3EMF7	CHROMOSOME REPLICATION PR    193.0    9.6e-54   1   1.0   0.1
+	Iterate                   	     1	   139	   192.8
+
+A0A370Q6T8	TYPE II SECRETION SYSTEM     196.9    6.1e-55   1   1.0   0.0
+	Iterate                   	     1	   142	   196.7
+
+B7MCT7	PART OF GSP DIVERGON INVOLVED    193.0    9.6e-54   1   1.0   0.1
+	Iterate                   	     1	   139	   192.8
+
+P03825	PUTATIVE GENERAL SECRETION PATH    197.9    2.9e-55   1   1.0   0.1
+	Iterate                   	     1	   139	   197.7
+
+Q3YWT7	CALCIUM-BINDING PROTEIN REQUI    193.1    8.8e-54   1   1.0   0.1
+	Iterate                   	     1	   139	   193.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P03825 (E-value: 4.5e-48, Score: 168.4)
+Mentioned as: P03825
+Description: Putative general secretion pathway protein B
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Putative general secretion pathway protein B
+PMID: 17254297
+Source: EuropePMC
+Title: Prediction of the functional class of metal-binding proteins from sequence derived physicochemical properties by support vector machine approach
+Journal: BMC bioinformatics (2006)
+Snippet: + P31032 + P81242 - Q8GNT2 + P03697 + P31178 + P81605 - Q8VYR2 + P03825 + P32505 + P82604 + Q94702 + P12258 + P33353 + P83310 - Q95QY7 - P12608 - P33440 + Q00166 + Q9JJV3 + P14229 + P34806 + Q00167 - Q9LAI0
+
+================================================================================
+Protein: P03825 (E-value: 4.5e-48, Score: 168.4)
+Mentioned as: GSPB_ECOLI
+Description: Putative general secretion pathway protein B
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Putative general secretion pathway protein B
+PMID: 11118204
+Source: SwissProt
+Snippet: FUNCTION: Part of a cryptic operon that encodes proteins involved in type II secretion pathway in other organisms, but is not expressed in strain K12 under standard laboratory conditions (PubMed:8655552). May play a regulatory role under conditions of derepressed gsp gene expression (PubMed:11118204). {ECO:0000269|PubMed:11118204, ECO:0000305|PubMed:8655552}._:::_SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Single-pass membrane protein {ECO:0000255}._:::_INDUCTION: Silenced by the DNA-bind...
+
+================================================================================
+Protein: VIMSS10401639 (E-value: 3.7e-39, Score: 139.4)
+Mentioned as: ROD_45001
+Description: putative T2SS component
+Organism: Citrobacter rodentium ICC168
+PMID: 19897651
+Source: EuropePMC
+Title: The Citrobacter rodentium genome sequence reveals convergent evolution with human pathogenic Escherichia coli
+Journal: Journal of bacteriology (2010)
+Snippet: (T2SS) encoded in a single locus (ROD_44871 to ROD_45001). Nine putative substrates for this secretion system were also identified, including four likely
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A484Z932.1	AF-A0A484Z932-F1-model_v4_TED01:25-62	1	AF-A0A484Z932-F1-model_v4_TED01	25-62	22.8%
+H2IRA4.1	AF-H2IRA4-F1-model_v4_TED01:36-67	1	AF-H2IRA4-F1-model_v4_TED01	36-67	20.6%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P03825/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.50 27.30;
+NC   26.30 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P03825
+RN   [1]
+RM   11118204
+RT   "Expression of the endogenous type II secretion pathway in Escherichia coli
+RT   leads to chitinase secretion.";
+RA   Francetic O., Belin D., Badaut C., Pugsley A.P.;
+RL   EMBO J. 19:6697-6703(2000).
+
+--- End of Current DESC file ---

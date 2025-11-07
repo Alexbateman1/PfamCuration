@@ -1,0 +1,153 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y413_RICPR              Reviewed;         219 AA.
+AC   Q9ZDB9;
+DE   RecName: Full=Uncharacterized lipoprotein RP413;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=RP413;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+DR   EMBL; AJ235271; CAA14870.1; -; Genomic_DNA.
+DR   PIR; D71699; D71699.
+DR   RefSeq; NP_220794.1; NC_000963.1.
+DR   RefSeq; WP_004599457.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZDB9; -.
+DR   SMR; Q9ZDB9; -.
+DR   STRING; 272947.gene:17555493; -.
+DR   EnsemblBacteria; CAA14870; CAA14870; CAA14870.
+DR   KEGG; rpr:RP413; -.
+DR   PATRIC; fig|272947.5.peg.426; -.
+DR   HOGENOM; CLU_1276797_0_0_5; -.
+DR   OrthoDB; 7161167at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Coiled coil; Lipoprotein; Membrane; Palmitate;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..17
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           18..219
+FT                   /note="Uncharacterized lipoprotein RP413"
+FT                   /id="PRO_0000101366"
+FT   REGION          110..136
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COILED          137..165
+FT                   /evidence="ECO:0000255"
+FT   COMPBIAS        112..126
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   LIPID           18
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           18
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   219 AA;  25447 MW;  0E4AB704C993C4D7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+1	7	Rickettsia
+1	6	Rickettsieae
+1	5	Rickettsiaceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A8C6RUS0	PERILIPIN 4 {ECO:0000313|     48.3    4.3e-09   5  13.2   0.1
+	Iterate                   	   238	   260	     3.4
+	Iterate                   	   304	   326	     3.4
+	Iterate                   	   370	   392	     3.4
+	Iterate                   	   436	   458	     3.4
+	Iterate                   	   601	   623	     3.4
+	PF03036	Perilipin       	   761	  1201	    67.1
+
+A0AAE0THT7	UNCHARACTERIZED PROTEIN {     88.5      1e-21   0  23.0  21.3
+
+A7SUF6	UNCHARACTERIZED PROTEIN {ECO:     39.7      2e-06   0  17.4  10.6
+
+L8IDS7	UNCHARACTERIZED PROTEIN {ECO:     36.4    2.3e-05   9   9.0   9.5
+	Iterate                   	    44	    61	     3.6
+	Iterate                   	    62	    79	     3.6
+	Iterate                   	    80	    97	     3.6
+	Iterate                   	    98	   115	     3.6
+	Iterate                   	   116	   133	     3.6
+	Iterate                   	   134	   151	     3.6
+	Iterate                   	   152	   169	     3.6
+	Iterate                   	   170	   187	     3.6
+	Iterate                   	   188	   205	     3.6
+
+Q9ZDB9	UNCHARACTERIZED LIPOPROTEIN RP4     70.1    6.3e-16   1   2.9   7.1
+	Iterate                   	   123	   161	    70.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS614504 (E-value: 6.4e-19, Score: 73.1)
+Mentioned as: RT0399
+Description: rickettsial conserved hypothetical protein
+Organism: Rickettsia typhi str. wilmington
+PMID: 18641131
+Source: EuropePMC
+Title: Characterization of Sec-translocon-dependent extracytoplasmic proteins of Rickettsia typhi
+Journal: Journal of bacteriology (2008)
+Snippet: heme protein FbcH Hypothetical protein RT0390 RT0393 RT0395 RT0399 RT0406 RT0417 RT0438 RT0444 RT0445 RT0465 RT0475 RT0491 RT0492 RT0546 RT0548 RT0551 RT0561
+
+================================================================================
+Protein: VIMSS135491 (E-value: 1.3e-18, Score: 72.2)
+Mentioned as: RC0563
+Description: unknown
+Organism: Rickettsia conorii str. Malish 7
+PMID: 27834404
+Source: EuropePMC
+Title: Small Regulatory RNAs of Rickettsia conorii
+Journal: Scientific reports (2016)
+Snippet: 206 cis peg.632 ( RC0553 ) >/< Rc _sR15 555623 555757 135 riboswitch peg.643 ( RC0563 ) >/> Rc _sR16 559197 559344 148 trans peg.648 ( RC0567 ) peg.649 ( RC0568 ) </>/< Rc _sR17 591563 591758 196 cis peg.691 ( RC0605 ) >/< Rc _sR18
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q1RI56_TED02/Iterate
+GA   27.00 27.00;
+TC   31.20 77.70;
+NC   25.30 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

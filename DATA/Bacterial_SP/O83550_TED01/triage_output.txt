@@ -1,0 +1,97 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y539_TREPA              Reviewed;          73 AA.
+AC   O83550;
+DE   RecName: Full=Uncharacterized protein TP_0539;
+GN   OrderedLocusNames=TP_0539;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65530.1; -; Genomic_DNA.
+DR   PIR; H71311; H71311.
+DR   RefSeq; WP_010881986.1; NC_021490.2.
+DR   AlphaFoldDB; O83550; -.
+DR   IntAct; O83550; 5.
+DR   STRING; 243276.TP_0539; -.
+DR   EnsemblBacteria; AAC65530; AAC65530; TP_0539.
+DR   KEGG; tpa:TP_0539; -.
+DR   KEGG; tpw:TPANIC_0539; -.
+DR   HOGENOM; CLU_2703746_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..73
+FT                   /note="Uncharacterized protein TP_0539"
+FT                   /id="PRO_0000202272"
+SQ   SEQUENCE   73 AA;  7878 MW;  B901D6AAC2B68400 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Treponema.
+1	5	Treponemataceae
+1	4	Spirochaetales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O83550	UNCHARACTERIZED PROTEIN TP_0539     75.4    7.5e-18   1   2.0   6.7
+	O83550_TED01              	    47	    73	    74.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26359 (E-value: 6.7e-20, Score: 75.4)
+Mentioned as: TP0539
+Description: T. pallidum predicted coding region TP0539
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 16423288
+Source: EuropePMC
+Title: Similarity-based gene detection: using COGs to find evolutionarily-conserved ORFs
+Journal: BMC bioinformatics (2006)
+Snippet: protein 400 Tpal 321084-317926 TP0304 region upstream of gene is opposite pyrG 625 Tpal 580802-581407 TP0539 opposite strand pgk a COG identifiers are local to this study. b Coordinates in which the first number is greater than the second indicate that the ORF is on the
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83550.1	AF-O83550-F1-model_v4_TED01:47-73	1	AF-O83550-F1-model_v4_TED01	47-73	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83550_TED01
+GA   27.00 27.00;
+TC   43.80 74.10;
+NC   23.30 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

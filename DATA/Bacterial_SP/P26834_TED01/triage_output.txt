@@ -1,0 +1,132 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y190_CLOPE              Reviewed;         129 AA.
+AC   P26834;
+DE   RecName: Full=Uncharacterized protein CPE0190;
+DE   AltName: Full=ORFC;
+GN   OrderedLocusNames=CPE0190;
+OS   Clostridium perfringens (strain 13 / Type A).
+OC   Bacteria; Bacillati; Bacillota; Clostridia; Eubacteriales; Clostridiaceae;
+OC   Clostridium.
+OX   NCBI_TaxID=195102;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=CPN50;
+RX   PubMed=8177218; DOI=10.1007/bf00280319;
+RA   Canard B., Garnier T., Saint-Joanis B., Cole S.T.;
+RT   "Molecular genetic analysis of the nagH gene encoding a hyaluronidase of
+RT   Clostridium perfringens.";
+RL   Mol. Gen. Genet. 243:215-224(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=13 / Type A;
+RX   PubMed=11792842; DOI=10.1073/pnas.022493799;
+RA   Shimizu T., Ohtani K., Hirakawa H., Ohshima K., Yamashita A., Shiba T.,
+RA   Ogasawara N., Hattori M., Kuhara S., Hayashi H.;
+RT   "Complete genome sequence of Clostridium perfringens, an anaerobic flesh-
+RT   eater.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:996-1001(2002).
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA23258.1; Type=Frameshift; Evidence={ECO:0000305};
+DR   EMBL; M81878; AAA23258.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; BA000016; BAB79896.1; -; Genomic_DNA.
+DR   PIR; S43903; S43903.
+DR   RefSeq; WP_003479965.1; NC_003366.1.
+DR   AlphaFoldDB; P26834; -.
+DR   STRING; 195102.gene:10489434; -.
+DR   KEGG; cpe:CPE0190; -.
+DR   HOGENOM; CLU_151754_0_0_9; -.
+DR   Proteomes; UP000000818; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..129
+FT                   /note="Uncharacterized protein CPE0190"
+FT                   /id="PRO_0000208252"
+SQ   SEQUENCE   129 AA;  14741 MW;  5B5B81F46F164AF6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Clostridium
+1	6	Vagococcus
+1	6	Tissierella.
+1	6	Desulfonispora
+5	5	Clostridiaceae
+1	5	Tissierellaceae
+1	5	Peptococcaceae
+1	5	Enterococcaceae
+6	4	Eubacteriales
+1	4	Tissierellales
+1	4	Lactobacillales
+6	3	Clostridia
+1	3	Tissierellia
+1	3	Bacilli
+8	2	Bacillota
+8	1	Bacillati
+8	0	Bacteria
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1I0XPQ3	UNCHARACTERIZED PROTEIN {     35.6    3.8e-05   1   2.0  13.9
+	P26834_TED01              	     1	    67	    35.6
+
+A0A1M4UY63	VANZ LIKE FAMILY PROTEIN      36.2    2.5e-05   1   2.0   7.2
+	P26834_TED01              	     1	    65	    36.2
+
+A0A1M4YJ44	UNCHARACTERIZED PROTEIN {     32.0    0.00049   1   1.6  11.4
+	P26834_TED01              	     1	    65	    31.0
+
+A0A1W1UWN3	UNCHARACTERIZED PROTEIN {     29.3     0.0035   1   1.0   2.6
+	P26834_TED01              	     1	    40	    29.3
+
+A0A852UMC9	UNCHARACTERIZED PROTEIN {     29.9     0.0024   1   1.6  14.2
+	P26834_TED01              	     1	    61	    28.7
+
+A0A9D4CN23	UNCHARACTERIZED PROTEIN {     35.8    3.4e-05   8   9.1  11.6
+	P26834_TED01              	   275	   324	     6.6
+	P26834_TED01              	   556	   590	     4.4
+	P26834_TED01              	   848	   882	     4.4
+	P26834_TED01              	   179	   215	     4.0
+	P26834_TED01              	   657	   693	     3.5
+	P26834_TED01              	    84	   119	     3.4
+	P26834_TED01              	   365	   400	     3.0
+	P26834_TED01              	   752	   787	     2.9
+
+A0AAF0IAE6	CAAX PROTEASE {ECO:000800     33.5    0.00017   1   2.1   7.9
+	P26834_TED01              	     1	    64	    33.5
+
+A0AB74VBQ4	UNCHARACTERIZED PROTEIN {     29.0     0.0042   1   1.9  10.4
+	P26834_TED01              	     4	    62	    29.0
+
+P26834	UNCHARACTERIZED PROTEIN CPE0190    149.9    7.7e-41   1   1.5  11.0
+	P26834_TED01              	     1	    64	   149.0
+
+U2D7Q8	TAT PATHWAY SIGNAL SEQUENCE D     36.1    2.7e-05   1   2.0  10.1
+	P26834_TED01              	     3	    63	    36.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P26834.2	AF-P26834-F1-model_v4_TED02:66-129	1	AF-P26834-F1-model_v4_TED02	66-129	0
+P26834.2	AF-P26834-F1-model_v4_TED01:1-64	1	AF-P26834-F1-model_v4_TED01	1-64	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P26834_TED01
+GA   27.00 27.00;
+TC   28.30 27.00;
+NC   24.40 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,166 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PARD3_CAUVC             Reviewed;          72 AA.
+AC   P0CW74;
+DE   RecName: Full=Antitoxin ParD3;
+GN   Name=parD3; OrderedLocusNames=CC_2755.1;
+OS   Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+OS   (Caulobacter crescentus).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Caulobacterales; Caulobacteraceae; Caulobacter.
+OX   NCBI_TaxID=190650;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 19089 / CIP 103742 / CB 15;
+RX   PubMed=11259647; DOI=10.1073/pnas.061029298;
+RA   Nierman W.C., Feldblyum T.V., Laub M.T., Paulsen I.T., Nelson K.E.,
+RA   Eisen J.A., Heidelberg J.F., Alley M.R.K., Ohta N., Maddock J.R.,
+RA   Potocka I., Nelson W.C., Newton A., Stephens C., Phadke N.D., Ely B.,
+RA   DeBoy R.T., Dodson R.J., Durkin A.S., Gwinn M.L., Haft D.H., Kolonay J.F.,
+RA   Smit J., Craven M.B., Khouri H.M., Shetty J., Berry K.J., Utterback T.R.,
+RA   Tran K., Wolf A.M., Vamathevan J.J., Ermolaeva M.D., White O.,
+RA   Salzberg S.L., Venter J.C., Shapiro L., Fraser C.M.;
+RT   "Complete genome sequence of Caulobacter crescentus.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:4136-4141(2001).
+RN   [2]
+RP   IDENTIFICATION, AND POSSIBLE FUNCTION.
+RC   STRAIN=ATCC 19089 / CIP 103742 / CB 15;
+RX   PubMed=15718296; DOI=10.1093/nar/gki201;
+RA   Pandey D.P., Gerdes K.;
+RT   "Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.";
+RL   Nucleic Acids Res. 33:966-976(2005).
+RN   [3]
+RP   FUNCTION AS AN ANTITOXIN, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC 19089 / CIP 103742 / CB 15;
+RX   PubMed=20487277; DOI=10.1111/j.1365-2958.2010.07207.x;
+RA   Fiebig A., Castro Rojas C.M., Siegal-Gaskins D., Crosson S.;
+RT   "Interaction specificity, toxicity and regulation of a paralogous set of
+RT   ParE/RelE-family toxin-antitoxin systems.";
+RL   Mol. Microbiol. 77:236-251(2010).
+CC   -!- FUNCTION: Antitoxin component of a type II toxin-antitoxin (TA) system.
+CC       Neutralizes the effect of cognate toxin ParE3, but no other RelE or
+CC       ParE toxin. {ECO:0000269|PubMed:20487277}.
+CC   -!- DISRUPTION PHENOTYPE: Cannot be disrupted, suggesting it is a
+CC       functional antitoxin. No visible phenotype when the parDE3 operon is
+CC       deleted. {ECO:0000269|PubMed:20487277}.
+DR   EMBL; AE005673; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   RefSeq; WP_012640578.1; NC_002696.2.
+DR   AlphaFoldDB; P0CW74; -.
+DR   SMR; P0CW74; -.
+DR   Proteomes; UP000001816; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome; Toxin-antitoxin system.
+FT   CHAIN           1..72
+FT                   /note="Antitoxin ParD3"
+FT                   /id="PRO_0000408463"
+SQ   SEQUENCE   72 AA;  8202 MW;  01B231D47504AF05 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Caulobacter.
+2	5	Caulobacteraceae
+2	4	Caulobacterales
+2	3	Alphaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3CBN7	ANTITOXIN PROTEIN PARD3 {    117.1    1.1e-30   1   1.1   7.1
+	Iterate                   	    29	    72	   116.8
+
+A0A9D4CLZ4	UNCHARACTERIZED PROTEIN {     46.5    1.3e-08   5  10.1   0.0
+	Iterate                   	    91	   113	     6.4
+	Iterate                   	    43	    64	     5.5
+	Iterate                   	    67	    88	     5.5
+	Iterate                   	   163	   184	     5.5
+	Iterate                   	   212	   232	     4.5
+
+A0A9P7AE04	UNCHARACTERIZED PROTEIN {     68.9    1.3e-15   6  19.5  12.4
+	Iterate                   	   196	   221	     5.1
+	Iterate                   	   219	   244	     5.1
+	Iterate                   	   265	   290	     5.1
+	Iterate                   	   311	   336	     5.1
+	Iterate                   	   449	   474	     5.1
+	Iterate                   	   472	   497	     5.1
+
+A0AAD6Z894	UNCHARACTERIZED PROTEIN {     40.4      1e-06   6   6.3   7.7
+	Iterate                   	   159	   178	     8.3
+	Iterate                   	   124	   143	     6.8
+	Iterate                   	   225	   244	     6.8
+	Iterate                   	   256	   275	     6.8
+	Iterate                   	    93	   112	     5.3
+	Iterate                   	   190	   213	     4.9
+
+P0CW74	ANTITOXIN PARD3                   117.1    1.1e-30   1   1.1   7.1
+	Iterate                   	    29	    72	   116.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS5850130 (E-value: 3.4e-28, Score: 102.9)
+Mentioned as: CCNA_02844
+Description: antitoxin protein parD-3
+Organism: Caulobacter crescentus NA1000
+PMID: 30483871
+Source: EuropePMC
+Title: Genome Comparisons of Wild Isolates of Caulobacter crescentus Reveal Rates of Inversion and Horizontal Gene Transfer
+Journal: Current microbiology (2019)
+Snippet: absent CCNA_00469 Glycosyltransferase absent absent CCNA_00761 Hypothetical protein present absent CCNA_02841 Hypothetical protein absent absent CCNA_02844 parD3 antitoxin present absent CCNA_03274 Hypothetical protein present absent CCNA_03630 socA antitoxin protein absent absent Table 5. Genes present in the NA1000 or CB2 genomes, but not in both. Gene
+
+================================================================================
+Protein: VIMSS5850130 (E-value: 3.4e-28, Score: 102.9)
+Mentioned as: CCNA_02844
+Description: antitoxin protein parD-3
+Organism: Caulobacter crescentus NA1000
+PMID: 26750121
+Source: EuropePMC
+Title: Conservation of the Essential Genome Among Caulobacter and Brevundimonas Species
+Journal: Current microbiology (2016)
+Snippet: CCNA_00469 glycosyltransferase none CCNA_00761 hypothetical protein none CCNA_01304 hypothetical protein none CCNA_02841 hypothetical protein none CCNA_02844 antitoxin protein parD-3 K31 CCNA_03307 hypothetical protein none CCNA_03630 socA antitoxin protein none CCNA_03474 SpoVT-AbrB transcription factor, phd antitoxin CB4, K31 CCNA_00364 deoxyhypusine synthase All but DS20 CCNA_01211 hypothetical protein
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0H3CBN7.1	AF-A0A0H3CBN7-F1-model_v4_TED01:21-70	1	AF-A0A0H3CBN7-F1-model_v4_TED01	21-70	95.5%
+A0A0Q8FHW4.1	AF-A0A0Q8FHW4-F1-model_v4_TED01:22-69	1	AF-A0A0Q8FHW4-F1-model_v4_TED01	22-69	97.7%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0CW74_TED01/Iterate
+GA   27.00 27.00;
+TC   27.70 97.50;
+NC   25.20 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for P0CW74
+RN   [1]
+RM   15718296
+RT   "Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.";
+RA   Pandey D.P., Gerdes K.;
+RL   Nucleic Acids Res. 33:966-976(2005).
+RC   Function description for P0CW74
+RN   [2]
+RM   20487277
+RT   "Interaction specificity, toxicity and regulation of a paralogous set of
+RT   ParE/RelE-family toxin-antitoxin systems.";
+RA   Fiebig A., Castro Rojas C.M., Siegal-Gaskins D., Crosson S.;
+RL   Mol. Microbiol. 77:236-251(2010).
+
+--- End of Current DESC file ---

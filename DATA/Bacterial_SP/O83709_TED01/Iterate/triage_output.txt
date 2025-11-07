@@ -1,0 +1,170 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y711_TREPA              Reviewed;         190 AA.
+AC   O83709;
+DE   RecName: Full=Uncharacterized protein TP_0711;
+GN   OrderedLocusNames=TP_0711;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SIMILARITY: To B.burgdorferi BB0265. {ECO:0000305}.
+DR   EMBL; AE000520; AAC65677.1; -; Genomic_DNA.
+DR   PIR; C71290; C71290.
+DR   RefSeq; WP_010882156.1; NC_021490.2.
+DR   AlphaFoldDB; O83709; -.
+DR   IntAct; O83709; 47.
+DR   STRING; 243276.TP_0711; -.
+DR   EnsemblBacteria; AAC65677; AAC65677; TP_0711.
+DR   KEGG; tpa:TP_0711; -.
+DR   KEGG; tpw:TPANIC_0711; -.
+DR   eggNOG; ENOG5032NXZ; Bacteria.
+DR   HOGENOM; CLU_122426_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..190
+FT                   /note="Uncharacterized protein TP_0711"
+FT                   /id="PRO_0000202310"
+FT   TRANSMEM        1..21
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   REGION          103..130
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        103..114
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   190 AA;  21267 MW;  117CE4A992AD58EB CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Treponema.
+3	5	Treponemataceae
+3	4	Spirochaetales
+3	3	Spirochaetia
+3	2	Spirochaetota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GZF3	DUF2802 DOMAIN-CONTAINING     57.7    4.9e-12   1   1.7   2.8
+	Iterate                   	    28	   104	    56.6
+
+A0A1Y3N2N2	NUCLEOSIDE DIPHOSPHATE KI     32.2    0.00047   4   5.1   4.3
+	Iterate                   	   287	   336	     8.2
+	Iterate                   	   608	   636	     7.9
+	Iterate                   	   469	   497	     7.4
+	Iterate                   	   148	   179	     6.2
+	PF00085	Thioredoxin     	     1	    79	    27.7
+	PF00334	NDK             	   141	   276	   151.7
+	PF00334	NDK             	   280	   417	   146.6
+	PF00334	NDK             	   462	   597	   146.9
+	PF00334	NDK             	   602	   737	   146.4
+
+A0A6J0CYQ4	ZINC FINGER PROTEIN 883-L     30.9     0.0012   4   8.5   5.1
+	Iterate                   	   247	   281	     4.9
+	Iterate                   	   324	   365	     4.8
+	Iterate                   	   501	   534	     4.6
+	Iterate                   	   524	   560	     4.3
+	PF00096	zf-C2H2         	   171	   193	    19.9
+	PF00096	zf-C2H2         	   227	   249	    27.2
+	PF00096	zf-C2H2         	   255	   277	    26.4
+	PF00096	zf-C2H2         	   283	   305	    20.2
+	PF00096	zf-C2H2         	   311	   333	    21.8
+	PF00096	zf-C2H2         	   339	   361	    24.5
+	PF00096	zf-C2H2         	   367	   389	    21.6
+	PF00096	zf-C2H2         	   395	   417	    22.1
+	PF00096	zf-C2H2         	   423	   445	    23.5
+	PF00096	zf-C2H2         	   451	   473	    22.2
+	PF00096	zf-C2H2         	   534	   556	    17.7
+
+O83709	UNCHARACTERIZED PROTEIN TP_0711    167.5    2.6e-46   1   1.5   1.9
+	Iterate                   	    28	    95	   167.5
+
+S3MB95	DUF2802 DOMAIN-CONTAINING PRO     27.9       0.01   1   1.3   0.5
+	Iterate                   	    28	    93	    27.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26529 (E-value: 2.9e-34, Score: 122.3)
+Mentioned as: TP0711
+Description: conserved hypothetical protein
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 22661689
+Source: EuropePMC
+Title: Comparative investigation of the genomic regions involved in antigenic variation of the TprK antigen among treponemal species, subspecies, and strains
+Journal: Journal of bacteriology (2012)
+Snippet: TP0438 TP0456 TP0456 TP0458 IGR335 TP0488 IGR364 IGR483 TP0685 TP0711 TP0733 IGR549 TP0856 TP0859 TP0898 TP0898 TP0905 TP0978 TP1030 29 17 25 30 30 22 26 29
+
+================================================================================
+Protein: VIMSS26529 (E-value: 2.9e-34, Score: 122.3)
+Mentioned as: TP0711
+Description: conserved hypothetical protein
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 16936039
+Source: EuropePMC
+Title: Novel conserved assembly factor of the bacterial flagellum
+Journal: Journal of bacteriology (2006)
+Snippet: standard Western blotting procedures. The proteins TP0567 and TP0711 are randomly chosen negative controls to exclude the nonspecific binding of TP0658. Probing
+
+================================================================================
+Protein: VIMSS26529 (E-value: 2.9e-34, Score: 122.3)
+Mentioned as: TP0711
+Description: conserved hypothetical protein
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 12805273
+Source: EuropePMC
+Title: Systematic cloning of Treponema pallidum open reading frames for protein expression and antigen discovery
+Journal: Genome research (2003)
+Snippet: average-sized or within ORFs TP0013, TP0074, TP0350, TP0471, TP0711, and smaller. Another possibility is that these T. pallidum gene TP0782. An additional
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B7GZF3.1	AF-A0A0B7GZF3-F1-model_v4_TED01:36-102	1	AF-A0A0B7GZF3-F1-model_v4_TED01	36-102	82.7%
+A0A0B7GZF3.1	AF-A0A0B7GZF3-F1-model_v4_TED02:161-197	1	AF-A0A0B7GZF3-F1-model_v4_TED02	161-197	0
+O83709.1	AF-O83709-F1-model_v4_TED01:28-95	1	AF-O83709-F1-model_v4_TED01	28-95	100.0%
+O83709.1	AF-O83709-F1-model_v4_TED02:151-190	1	AF-O83709-F1-model_v4_TED02	151-190	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83709_TED01/Iterate
+GA   27.00 27.00;
+TC   27.50 38.40;
+NC   26.90 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

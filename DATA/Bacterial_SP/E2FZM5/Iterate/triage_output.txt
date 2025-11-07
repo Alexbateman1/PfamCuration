@@ -1,0 +1,173 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   SOCB_MYCTU              Reviewed;          54 AA.
+AC   E2FZM5;
+DE   RecName: Full=Uncharacterized protein SocB {ECO:0000305};
+DE   AltName: Full=Small ORF induced by copper B {ECO:0000303|PubMed:21166899};
+GN   Name=socB {ECO:0000303|PubMed:21166899};
+GN   OrderedLocusNames=Rv1706c.2 {ECO:0000305};
+OS   Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex.
+OX   NCBI_TaxID=83332;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], IDENTIFICATION, AND INDUCTION.
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=21166899; DOI=10.1111/j.1365-2958.2010.07431.x;
+RA   Festa R.A., Jones M.B., Butler-Wu S., Sinsimer D., Gerads R., Bishai W.R.,
+RA   Peterson S.N., Darwin K.H.;
+RT   "A novel copper-responsive regulon in Mycobacterium tuberculosis.";
+RL   Mol. Microbiol. 79:133-148(2011).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=9634230; DOI=10.1038/31159;
+RA   Cole S.T., Brosch R., Parkhill J., Garnier T., Churcher C.M., Harris D.E.,
+RA   Gordon S.V., Eiglmeier K., Gas S., Barry C.E. III, Tekaia F., Badcock K.,
+RA   Basham D., Brown D., Chillingworth T., Connor R., Davies R.M., Devlin K.,
+RA   Feltwell T., Gentles S., Hamlin N., Holroyd S., Hornsby T., Jagels K.,
+RA   Krogh A., McLean J., Moule S., Murphy L.D., Oliver S., Osborne J.,
+RA   Quail M.A., Rajandream M.A., Rogers J., Rutter S., Seeger K., Skelton S.,
+RA   Squares S., Squares R., Sulston J.E., Taylor K., Whitehead S.,
+RA   Barrell B.G.;
+RT   "Deciphering the biology of Mycobacterium tuberculosis from the complete
+RT   genome sequence.";
+RL   Nature 393:537-544(1998).
+CC   -!- INDUCTION: Repressed by RicR. Induced by copper.
+CC       {ECO:0000269|PubMed:21166899}.
+DR   EMBL; HM222605; ADH04622.1; -; Genomic_DNA.
+DR   EMBL; AL123456; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   AlphaFoldDB; E2FZM5; -.
+DR   SMR; E2FZM5; -.
+DR   InParanoid; E2FZM5; -.
+DR   Proteomes; UP000001584; Chromosome.
+PE   2: Evidence at transcript level;
+KW   Reference proteome.
+FT   CHAIN           1..54
+FT                   /note="Uncharacterized protein SocB"
+FT                   /id="PRO_0000433097"
+FT   REGION          1..54
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   54 AA;  5927 MW;  22E554F875A81BAF CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	7	Mycobacterium tuberculosis complex.
+2	6	Mycobacterium
+2	5	Mycobacteriaceae
+2	4	Mycobacteriales
+2	3	Actinomycetes
+2	2	Actinomycetota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2K8SUC1	SERINE/THREONINE PROTEIN      33.7    0.00014   5   8.5  10.3
+	Iterate                   	   146	   182	     5.2
+	Iterate                   	   188	   207	     5.0
+	Iterate                   	   230	   249	     5.0
+	Iterate                   	   314	   333	     5.0
+	Iterate                   	   398	   417	     5.0
+	PF00400	WD40            	    68	   106	    50.3
+	PF00400	WD40            	   110	   148	    49.6
+	PF00400	WD40            	   152	   190	    49.6
+	PF23381	Beta-prop_IFT122_1st	   164	   282	   131.9
+	PF23769	Beta-prop_WDR75_2nd	   179	   320	    27.5
+	PF00400	WD40            	   194	   232	    49.6
+	PF08662	eIF2A           	   223	   320	    22.2
+	PF00400	WD40            	   236	   274	    46.2
+	PF00400	WD40            	   278	   316	    49.6
+	PF00400	WD40            	   320	   358	    47.7
+	PF00400	WD40            	   362	   400	      41
+
+A0A8C7IN06	UNCHARACTERIZED PROTEIN {     60.3    7.3e-13  16  14.7  51.0
+	Iterate                   	   316	   344	     8.2
+	Iterate                   	   163	   180	     8.1
+	Iterate                   	   217	   235	     7.9
+	Iterate                   	   226	   244	     7.9
+	Iterate                   	   235	   253	     7.9
+	Iterate                   	   244	   262	     7.9
+	Iterate                   	   289	   307	     7.9
+	Iterate                   	   252	   270	     7.7
+	Iterate                   	   298	   325	     7.7
+	Iterate                   	   181	   208	     7.6
+	Iterate                   	   198	   218	     7.4
+	Iterate                   	   279	   299	     7.4
+	Iterate                   	   207	   227	     7.3
+	Iterate                   	   262	   281	     6.5
+	Iterate                   	   177	   190	     6.1
+	Iterate                   	   276	   289	     4.7
+
+A0A8J5XEF9	FHA DOMAIN-CONTAINING PRO     33.5    0.00017   0  15.3  19.7
+	PF00498	FHA             	    47	   112	    25.3
+
+E2FZM5	UNCHARACTERIZED PROTEIN SOCB {E    144.3    4.1e-39   1   1.0   4.1
+	Iterate                   	     1	    54	   144.2
+
+Q8VJY9	UNCHARACTERIZED PROTEIN {ECO:    144.3    4.1e-39   1   1.0   4.1
+	Iterate                   	     1	    54	   144.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS109628 (E-value: 3.7e-41, Score: 144.3)
+Mentioned as: MT1746.1
+Description: hypothetical protein
+Organism: Mycobacterium tuberculosis CDC1551
+PMID: 23592993
+Source: EuropePMC
+Title: Mycobacterium tuberculosis responds to chloride and pH as synergistic cues to the immune status of its host cell
+Journal: PLoS pathogens (2013)
+Snippet: Name Ratio Acidic pH induced Description MT0772.5 1.59 + PE-PGRS family protein MT1178 1.36 HP MT1746.1 1.73 HP MT2423.1 1.34 HP MT3106.1 1.44 + PE family protein Rv0263c 1.42 + CHP Rv0264c 1.47 + CHP Rv0516c 1.58 CHP Rv1057 1.61 + CHP Rv1115 1.51 HP Rv1187
+
+================================================================================
+Protein: VIMSS109628 (E-value: 3.7e-41, Score: 144.3)
+Mentioned as: MT1746.1
+Description: hypothetical protein
+Organism: Mycobacterium tuberculosis CDC1551
+PMID: 23479444
+Source: EuropePMC
+Title: The pup-proteasome system of Mycobacterium tuberculosis
+Journal: Sub-cellular biochemistry (2013)
+Snippet: Rv0847 lpqS Probable lipoprotein. Unknown function 0.52 0.33 socA small ORF. Unknown function n.i. n.i. MT1746.1 socB small ORF. Unknown function n.i. n.i. MT3039 Rv2963 Probable integral membrane protein. Unknown function 0.6 0.38 a Locus number in Mtb strains CDC1551 and H37Rv b Functional annotations are
+
+================================================================================
+Protein: VIMSS109628 (E-value: 3.7e-41, Score: 144.3)
+Mentioned as: MT1746.1
+Description: hypothetical protein
+Organism: Mycobacterium tuberculosis CDC1551
+PMID: 21166899
+Source: EuropePMC
+Title: A novel copper-responsive regulon in Mycobacterium tuberculosis
+Journal: Molecular microbiology (2011)
+Snippet: Neither was annotated in H37Rv but orfB was annotated in the CDC1551 genome sequence as MT1746.1. A transcript corresponding to the orfAB operon was detected in Mtb H37Rv ( Fig. S2 ). 5RACE analysis suggested that the palindrome was between tentative 10/35 sites of ricR ,
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:E2FZM5/Iterate
+GA   27.00 27.00;
+TC   27.70 144.20;
+NC   26.20 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

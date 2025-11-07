@@ -1,0 +1,128 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y928_TREPA              Reviewed;         246 AA.
+AC   O83898;
+DE   RecName: Full=Uncharacterized protein TP_0928;
+GN   OrderedLocusNames=TP_0928;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000520; AAC65887.1; -; Genomic_DNA.
+DR   PIR; A71264; A71264.
+DR   RefSeq; WP_010882371.1; NC_000919.1.
+DR   AlphaFoldDB; O83898; -.
+DR   IntAct; O83898; 4.
+DR   STRING; 243276.TP_0928; -.
+DR   EnsemblBacteria; AAC65887; AAC65887; TP_0928.
+DR   KEGG; tpa:TP_0928; -.
+DR   HOGENOM; CLU_1128659_0_0_12; -.
+DR   OrthoDB; 362685at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..246
+FT                   /note="Uncharacterized protein TP_0928"
+FT                   /id="PRO_0000202354"
+FT   TRANSMEM        7..29
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   246 AA;  27471 MW;  97A54648E91473E7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Treponema.
+5	5	Treponemataceae
+5	4	Spirochaetales
+5	3	Spirochaetia
+5	2	Spirochaetota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GVR1	PEPTIDYLPROLYL ISOMERASE      62.0    2.3e-13   1   1.5   0.0
+	O83898_TED02              	   114	   189	    61.0
+	PF00639	Rotamase        	   226	   318	    27.7
+	PF27392	TP_0929_3rd     	   380	   446	    97.6
+
+A0AAD8LX52	UNCHARACTERIZED PROTEIN {     44.7      6e-08   7   7.4   0.1
+	O83898_TED02              	   258	   295	     5.4
+	O83898_TED02              	    90	   127	     5.3
+	O83898_TED02              	   146	   186	     4.9
+	O83898_TED02              	   203	   239	     4.9
+	O83898_TED02              	    34	    64	     4.8
+	O83898_TED02              	   314	   344	     4.8
+	O83898_TED02              	   370	   387	     3.7
+
+O83898	UNCHARACTERIZED PROTEIN TP_0928    182.7    5.1e-51   1   2.1   2.1
+	O83898_TED02              	   115	   190	   180.4
+
+Q73JW1	PPIC DOMAIN-CONTAINING PROTEI     41.2    7.4e-07   1   1.5   0.1
+	O83898_TED02              	    88	   159	    40.2
+	PF27392	TP_0929_3rd     	   353	   417	    78.9
+
+S3LCM8	PPIC DOMAIN-CONTAINING PROTEI     41.0    8.6e-07   1   1.5   0.1
+	O83898_TED02              	   115	   190	    40.1
+	PF13145	Rotamase_2      	   208	   333	    32.6
+	PF00639	Rotamase        	   233	   319	    27.8
+	PF27392	TP_0929_3rd     	   380	   446	    84.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26744 (E-value: 4.5e-53, Score: 182.7)
+Mentioned as: TP0928
+Description: T. pallidum predicted coding region TP0928
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 22292095
+Source: EuropePMC
+Title: Whole genome sequences of three Treponema pallidum ssp. pertenue strains: yaws and syphilis treponemes differ in less than 0.2% of the genome sequence
+Journal: PLoS neglected tropical diseases (2012)
+Snippet: TP0782 TP0781_782 TPESAMD_0781 2 TP0859, TP0860 TP0859, TP0860 TPESAMD_0859 2 TP0899, TP0900 TP0899_900 TPESAMD_0899 2 TP0928, TP0929 TP0928_929 TPESAMD_0928 2 a Resequencing of selected Nichols genes (unpublished results) resulted in similar fusions (with the exceptions of TP0126, TP0126a; TP0314, TP0315; and TP0859, TP0860) as in the
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83898.1	AF-O83898-F1-model_v4_TED01:39-113	1	AF-O83898-F1-model_v4_TED01	39-113	0
+O83898.1	AF-O83898-F1-model_v4_TED02:115-190	1	AF-O83898-F1-model_v4_TED02	115-190	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83898_TED02
+GA   27.00 27.00;
+TC   27.90 39.80;
+NC   25.50 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

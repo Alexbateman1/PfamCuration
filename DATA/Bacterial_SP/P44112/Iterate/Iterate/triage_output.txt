@@ -1,0 +1,109 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1099_HAEIN             Reviewed;         102 AA.
+AC   P44112;
+DE   RecName: Full=Uncharacterized protein HI_1099;
+GN   OrderedLocusNames=HI_1099;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; L42023; AAC22755.1; -; Genomic_DNA.
+DR   PIR; D64020; D64020.
+DR   RefSeq; NP_439256.1; NC_000907.1.
+DR   AlphaFoldDB; P44112; -.
+DR   EnsemblBacteria; AAC22755; AAC22755; HI_1099.
+DR   KEGG; hin:HI_1099; -.
+DR   PATRIC; fig|71421.8.peg.1145; -.
+DR   HOGENOM; CLU_180761_1_0_6; -.
+DR   OrthoDB; 5689385at2; -.
+DR   BioCyc; HINF71421:G1GJ1-1134-MONOMER; -.
+DR   Proteomes; UP000000579; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..102
+FT                   /note="Uncharacterized protein HI_1099"
+FT                   /id="PRO_0000078003"
+FT   TRANSMEM        7..23
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   102 AA;  11601 MW;  63FF8D8FC466E782 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Haemophilus.
+3	6	Pasteurella.
+3	6	Actinobacillus.
+21	5	Pasteurellaceae
+22	4	Pasteurellales
+22	3	Gammaproteobacteria
+22	2	Pseudomonadota
+22	1	Pseudomonadati
+22	0	Bacteria
+Total of 22 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1V3IWW5	LIPOPROTEIN {ECO:0008006|     90.4    4.9e-22   1   1.0   0.0
+	Iterate                   	     1	   101	    90.3
+
+A0A2U0THC2	LIPOPROTEIN {ECO:0008006|    101.7    1.5e-25   1   1.0   0.1
+	Iterate                   	     1	    98	   101.5
+
+A0A4R2TBN3	LIPOPROTEIN {ECO:0008006|     92.6    9.9e-23   1   1.0   0.0
+	Iterate                   	     1	   103	    92.6
+
+A6VMM6	LIPOPROTEIN {ECO:0008006|GOOG    187.6    3.2e-52   1   1.0   1.6
+	Iterate                   	     1	   101	   187.5
+
+P44112	UNCHARACTERIZED PROTEIN HI_109    183.9    4.5e-51   1   1.0   1.6
+	Iterate                   	     1	   102	   183.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0J5P509.1	AF-A0A0J5P509-F1-model_v4_TED01:72-101	1	AF-A0A0J5P509-F1-model_v4_TED01	72-101	29.7%
+A0A1T0ARZ5.1	AF-A0A1T0ARZ5-F1-model_v4_TED01:2-98	1	AF-A0A1T0ARZ5-F1-model_v4_TED01	2-98	96.0%
+A0A1V3IWW5.1	AF-A0A1V3IWW5-F1-model_v4_TED01:29-58	1	AF-A0A1V3IWW5-F1-model_v4_TED01	29-58	29.7%
+A0A4V1AY69.1	AF-A0A4V1AY69-F1-model_v4_TED01:75-101	1	AF-A0A4V1AY69-F1-model_v4_TED01	75-101	26.7%
+A0A6H0T7R6.1	AF-A0A6H0T7R6-F1-model_v4_TED01:2-99	1	AF-A0A6H0T7R6-F1-model_v4_TED01	2-99	97.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44112/Iterate/Iterate
+GA   27.00 27.00;
+TC   57.60 57.50;
+NC   26.60 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

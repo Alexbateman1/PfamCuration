@@ -1,0 +1,85 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Rummeliibacillus
+1	6	Bacillus.
+1	5	Caryophanaceae
+1	5	Bacillaceae
+2	4	Bacillales
+2	3	Bacilli
+2	2	Bacillota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A143HE58	HNH NUCLEASE DOMAIN-CONTA     34.4    0.00011   1   1.6   0.6
+	Iterate                   	   194	   292	    34.4
+
+A0A812TGD7	CPK19 PROTEIN {ECO:000031     31.6    0.00084   5   5.4   0.1
+	Iterate                   	   989	  1027	     4.8
+	Iterate                   	  1245	  1283	     4.8
+	Iterate                   	  1501	  1539	     4.8
+	Iterate                   	  2015	  2055	     4.8
+	Iterate                   	  1750	  1789	     4.5
+	PF13499	EF-hand_7       	  2576	  2636	    43.9
+	PF13202	EF-hand_5       	  2576	  2599	    15.5
+	PF13833	EF-hand_8       	  2586	  2638	    33.7
+	PF13202	EF-hand_5       	  2611	  2635	    16.3
+
+A0AAD7NTJ0	VACUOLAR PROTEIN 8 {ECO:0     22.2       0.72   1   6.1   0.1
+	Iterate                   	   890	   949	     5.4
+	PF13646	HEAT_2          	   182	   283	    34.2
+	PF13646	HEAT_2          	   572	   672	    29.9
+	PF04826	Arm_2           	   687	   844	    25.3
+
+A0AAE0YA33	DSBA-LIKE THIOREDOXIN DOM     52.1    3.5e-10  13  11.3   8.2
+	Iterate                   	   677	   768	     4.8
+	Iterate                   	   466	   560	     4.6
+	Iterate                   	   826	   898	     4.3
+	Iterate                   	   256	   330	     4.2
+	Iterate                   	   496	   591	     4.2
+	Iterate                   	   527	   619	     3.9
+	Iterate                   	   766	   833	     3.9
+	Iterate                   	   137	   226	     3.8
+	Iterate                   	   227	   290	     3.8
+	Iterate                   	   287	   377	     3.7
+	Iterate                   	   377	   466	     3.7
+	Iterate                   	   617	   706	     3.7
+	Iterate                   	   437	   502	     3.5
+	PF01323	DSBA            	    23	   111	    25.6
+	PF01323	DSBA            	   896	  1030	    44.2
+
+U5L5V4	UNCHARACTERIZED PROTEIN {ECO:     29.5     0.0038   1   1.3   0.2
+	Iterate                   	   192	   287	    28.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A143HE58.1	AF-A0A143HE58-F1-model_v4_TED01:12-190	1	AF-A0A143HE58-F1-model_v4_TED01	12-190	0
+A0A143HE58.1	AF-A0A143HE58-F1-model_v4_TED02:193-291	1	AF-A0A143HE58-F1-model_v4_TED02	193-291	99.0%
+U5L5V4.1	AF-U5L5V4-F1-model_v4_TED01:12-188	1	AF-U5L5V4-F1-model_v4_TED01	12-188	0
+U5L5V4.1	AF-U5L5V4-F1-model_v4_TED02:191-289	1	AF-U5L5V4-F1-model_v4_TED02	191-289	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A9VQW6_TED02/Iterate
+GA   27.00 27.00;
+TC   28.10 176.50;
+NC   26.90 25.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

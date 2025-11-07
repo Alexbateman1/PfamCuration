@@ -1,0 +1,96 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MAUL_METFK              Reviewed;         157 AA.
+AC   Q50422; Q1H3W4;
+DE   RecName: Full=Methylamine utilization protein MauL;
+GN   Name=mauL; OrderedLocusNames=Mfla_0553;
+OS   Methylobacillus flagellatus (strain ATCC 51484 / DSM 6875 / VKM B-1610 /
+OS   KT).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria;
+OC   Nitrosomonadales; Methylophilaceae; Methylobacillus.
+OX   NCBI_TaxID=265072;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=7635847; DOI=10.1128/jb.177.15.4575-4578.1995;
+RA   Gak E.R., Chistoserdov A.Y., Lidstrom M.E.;
+RT   "Cloning, sequencing, and mutation of a gene for azurin in Methylobacillus
+RT   flagellatum KT.";
+RL   J. Bacteriol. 177:4575-4578(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51484 / DSM 6875 / VKM B-1610 / KT;
+RG   US DOE Joint Genome Institute;
+RA   Copeland A., Lucas S., Lapidus A., Barry K., Detter J.C.,
+RA   Glavina del Rio T., Hammon N., Israni S., Dalin E., Tice H., Pitluck S.,
+RA   Brettin T., Bruce D., Han C., Tapia R., Saunders E., Gilna P., Schmutz J.,
+RA   Larimer F., Land M., Kyrpides N., Anderson I., Richardson P.;
+RT   "Complete sequence of Methylobacillus flagellatus KT.";
+RL   Submitted (MAR-2006) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Probably involved in TTQ prosthetic group biosynthesis.
+CC   -!- PATHWAY: One-carbon metabolism; methylamine degradation.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=ABE48823.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+DR   EMBL; L37429; AAC41471.1; -; Genomic_DNA.
+DR   EMBL; CP000284; ABE48823.1; ALT_INIT; Genomic_DNA.
+DR   AlphaFoldDB; Q50422; -.
+DR   SMR; Q50422; -.
+DR   STRING; 265072.Mfla_0553; -.
+DR   KEGG; mfa:Mfla_0553; -.
+DR   eggNOG; ENOG503456X; Bacteria.
+DR   HOGENOM; CLU_1667333_0_0_4; -.
+DR   OrthoDB; 9757546at2; -.
+DR   UniPathway; UPA00895; -.
+DR   Proteomes; UP000002440; Chromosome.
+DR   CDD; cd04221; MauL; 1.
+DR   InterPro; IPR008972; Cupredoxin.
+DR   InterPro; IPR034242; MauL.
+DR   SUPFAM; SSF49503; Cupredoxins; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..157
+FT                   /note="Methylamine utilization protein MauL"
+FT                   /id="PRO_0000208946"
+SQ   SEQUENCE   157 AA;  18020 MW;  3D7937B5B3605471 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Methylobacillus.
+1	5	Methylophilaceae
+1	4	Nitrosomonadales
+1	3	Betaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q50422	METHYLAMINE UTILIZATION PROTEIN     85.2      1e-20   1   1.6  11.6
+	Q50422_TED01              	    22	    53	    84.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q50422.1	AF-Q50422-F1-model_v4_TED02:59-152	1	AF-Q50422-F1-model_v4_TED02	59-152	0
+Q50422.1	AF-Q50422-F1-model_v4_TED01:22-53	1	AF-Q50422-F1-model_v4_TED01	22-53	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q50422_TED01
+GA   27.00 27.00;
+TC   28.00 84.20;
+NC   26.80 18.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

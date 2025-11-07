@@ -1,0 +1,94 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y331_RICPR              Reviewed;          55 AA.
+AC   Q9ZDJ7;
+DE   RecName: Full=Uncharacterized protein RP331;
+GN   OrderedLocusNames=RP331;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+DR   EMBL; AJ235271; CAA14791.1; -; Genomic_DNA.
+DR   PIR; E71689; E71689.
+DR   RefSeq; NP_220714.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZDJ7; -.
+DR   STRING; 272947.gene:17555411; -.
+DR   EnsemblBacteria; CAA14791; CAA14791; CAA14791.
+DR   KEGG; rpr:RP331; -.
+DR   HOGENOM; CLU_3029535_0_0_5; -.
+DR   Proteomes; UP000002480; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..55
+FT                   /note="Uncharacterized protein RP331"
+FT                   /id="PRO_0000101351"
+SQ   SEQUENCE   55 AA;  6668 MW;  CAD865A115BD8F5A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+1	7	Rickettsia
+1	6	Rickettsieae
+1	5	Rickettsiaceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9ZDJ7	UNCHARACTERIZED PROTEIN RP331      141.8    2.1e-38   1   1.0   5.8
+	Q9ZDJ7_TED01              	     2	    53	   141.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS36016 (E-value: 1.9e-40, Score: 141.8)
+Mentioned as: RP331
+Description: unknown
+Organism: Rickettsia prowazekii str. Madrid E
+PMID: 15317790
+Source: EuropePMC
+Title: Complete genome sequence of Rickettsia typhi and comparison with sequences of other rickettsiae
+Journal: Journal of bacteriology (2004)
+Snippet: RC0033 RP167 RP191 None None None RP257 RP304 None RP331 RP346 RC0209 RC0240 RC0276 None RC0295 RC0343 RC0408 RC0425 None RC0469 None RP382 None RP405 RP406
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZDJ7.1	AF-Q9ZDJ7-F1-model_v4_TED01:2-53	1	AF-Q9ZDJ7-F1-model_v4_TED01	2-53	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZDJ7_TED01
+GA   27.00 27.00;
+TC   27.60 141.70;
+NC   21.90 18.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

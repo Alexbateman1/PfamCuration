@@ -1,0 +1,160 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YGEF_ECOLI              Reviewed;         148 AA.
+AC   Q46786; Q2M9Y7;
+DE   RecName: Full=Putative uncharacterized protein YgeF;
+GN   Name=ygeF; OrderedLocusNames=b2850, JW2818;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- CAUTION: Could be the product of a pseudogene. {ECO:0000305}.
+DR   EMBL; U28375; AAA83032.1; -; Genomic_DNA.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; BAE76919.1; -; Genomic_DNA.
+DR   PIR; C65068; C65068.
+DR   AlphaFoldDB; Q46786; -.
+DR   SMR; Q46786; -.
+DR   BioGRID; 4262052; 10.
+DR   FunCoup; Q46786; 22.
+DR   KEGG; ecj:JW2818; -.
+DR   PATRIC; fig|1411691.4.peg.3882; -.
+DR   EchoBASE; EB2851; -.
+DR   HOGENOM; CLU_137853_0_0_6; -.
+DR   InParanoid; Q46786; -.
+DR   OMA; KYLTHGL; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..148
+FT                   /note="Putative uncharacterized protein YgeF"
+FT                   /id="PRO_0000169339"
+FT   REGION          1..31
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1..11
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        19..30
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   148 AA;  16878 MW;  59D6F53C973614DF CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+1	6	Shigella.
+4	5	Enterobacteriaceae
+4	4	Enterobacterales
+4	3	Gammaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A419VU24	PUTATIVE SECRETED PROTEIN     31.5    0.00071   8   8.9   7.7
+	Iterate                   	  1207	  1255	     3.6
+	Iterate                   	   777	   808	     3.0
+	Iterate                   	   863	   894	     3.0
+	Iterate                   	   949	   980	     3.0
+	Iterate                   	  1035	  1066	     3.0
+	Iterate                   	   605	   635	     2.9
+	Iterate                   	   691	   721	     2.9
+	Iterate                   	  1121	  1151	     2.9
+	PF18962	Por_Secre_tail  	  1491	  1571	    25.2
+
+B7LF24	YGEF PROTEIN {ECO:0000313|EMB    166.9    4.1e-46   1   1.4   3.5
+	Iterate                   	    63	   137	   166.1
+
+Q3YY09	UNCHARACTERIZED PROTEIN {ECO:    162.5    9.3e-45   1   1.4   3.7
+	Iterate                   	    63	   137	   161.7
+
+Q46786	PUTATIVE UNCHARACTERIZED PROTEI    185.2    7.9e-52   1   1.3   4.1
+	Iterate                   	    63	   140	   184.5
+
+Q8X6H8	UNCHARACTERIZED PROTEIN {ECO:    154.6    2.7e-42   1   1.4   3.7
+	Iterate                   	    63	   137	   153.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q46786 (E-value: 7.1e-54, Score: 185.2)
+Mentioned as: Q46786
+Description: Putative uncharacterized protein YgeF
+Organism: Escherichia coli (strain K12)
+PMID: 35023908
+Source: EuropePMC
+Title: Functional Prediction of Biological Profile During Eutrophication in Marine Environment
+Journal: Bioinformatics and biology insights (2022)
+Snippet: putative methyltransferase YfiF P0AGJ5 Putative methyltransferase YfjR P52133 CP4-57 prophage; putative DNA-binding transcriptional regulator YgeF Q46786 Conserved hypothetical protein YgeP Q46796 Unknown CDS YhbH P0AFX0 Putative sigma N (sigma 54) modulator YhbP P67762 Putative FMN binding protein YhcE P45421 Putative uncharacterized protein YheO P64624 DNA-binding transcriptional
+
+================================================================================
+Protein: VIMSS95176 (E-value: 2.4e-44, Score: 154.6)
+Mentioned as: ECs3707
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 24641581
+Source: EuropePMC
+Title: Escherichia coli type III secretion system 2: a new kind of T3SS?
+Journal: Veterinary research (2014)
+Snippet: function ECs3703 693 yqeH ECs3704 810 yqeI Sensory transducer ECs3705 480 yqeJ ECs3706 438 yqeK ECs3707 492 ygeF ECs3708 492 ygeG , sicA Chaperone ECs3709 1377 ygeH Transcriptional regulator ECs3710 219 B2853 ECs3711 402 B2854, iagB ECs3712 633 ygeK /B2856, ssrB Regulator ECs3713 432 B2857 ECs3714
+
+================================================================================
+Protein: VIMSS95176 (E-value: 2.4e-44, Score: 154.6)
+Mentioned as: ECs3707
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 15150243
+Source: EuropePMC
+Title: The ETT2 gene cluster, encoding a second type III secretion system from Escherichia coli, is present in the majority of strains but has undergone widespread mutational attrition
+Journal: Journal of bacteriology (2004)
+Snippet: University of California, Berkeley ECs3703 ECs3704 ECs3705 ECs3706 ECs3707 ECs3708 Other homologies 3554 REN ET AL. J. BACTERIOL. plained either by a single
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q46786.1	AF-Q46786-F1-model_v4_TED01:63-140	1	AF-Q46786-F1-model_v4_TED01	63-140	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q46786_TED01/Iterate
+GA   27.00 27.00;
+TC   31.50 153.70;
+NC   22.90 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

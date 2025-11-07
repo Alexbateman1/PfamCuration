@@ -1,0 +1,111 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	9	Fistulifera
+1	9	Ophiocordyceps.
+2	8	Naviculaceae
+1	8	Ophiocordycipitaceae
+2	7	Naviculales
+1	7	Hypocreales
+3	6	Magnetospirillum.
+2	6	Paramagnetospirillum.
+2	6	Bacillariophycidae
+1	6	Hypocreomycetidae
+3	5	Rhodospirillaceae
+2	5	Magnetospirillaceae
+2	5	Bacillariophyceae
+1	5	Sordariomycetes
+5	4	Rhodospirillales
+2	4	Bacillariophyta
+1	4	Pezizomycotina
+5	3	Alphaproteobacteria
+2	3	Ochrophyta
+1	3	Ascomycota
+5	2	Pseudomonadota
+2	2	Stramenopiles
+1	2	Dikarya
+5	1	Pseudomonadati
+2	1	Sar
+1	1	Fungi
+5	0	Bacteria
+3	0	Eukaryota
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A178MEF4	FRAH PROTEIN {ECO:0000313    692.2     6e-205   1   1.1  43.0
+	Iterate                   	     1	   322	   692.0
+
+A0A178MFZ2	PHASIN DOMAIN-CONTAINING      67.3    9.2e-15   1   2.3  34.8
+	Iterate                   	    23	   301	    59.1
+
+A0A178MW39	FRAH PROTEIN {ECO:0008006    129.7    8.9e-34   1   1.3  28.9
+	Iterate                   	     1	   299	   129.0
+
+A0A1W6CI43	FRAH PROTEIN {ECO:0000313    711.2     1e-210   1   1.0  41.4
+	Iterate                   	     1	   318	   711.0
+
+A0A6J4FYC5	FRAH PROTEIN {ECO:0000313    247.4    1.4e-69   1   1.1  11.0
+	Iterate                   	     1	   188	   247.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q2W8L8 (E-value: 8.7e-213, Score: 711.2)
+Mentioned as: Q2W8L8
+Description: MamJ paralog LimJ
+Organism: Paramagnetospirillum magneticum (strain ATCC 700264 / AMB-1)
+  SwissProt:  - MamJ paralog LimJ
+PMID: 20161777
+Source: EuropePMC
+Title: A second actin-like MamK protein in Magnetospirillum magneticum AMB-1 encoded outside the genomic magnetosome island.
+Journal: PloS one (2010)
+Snippet: with an additional hit using solely the C-terminus pattern with the amb1003 gene product (TrEMBL Q2W8L8) located in the MAI of M. magneticum AMB-1. Interestingly this predicted protein is situated between previously recognized MamE (TrEMBL Q2W8L9) and MamO (TrEMBL Q2W8L7) homologues within the MAI [13] .
+
+================================================================================
+Protein: Q2W8L8 (E-value: 8.7e-213, Score: 711.2)
+Mentioned as: LIMJ_PARM1
+Description: MamJ paralog LimJ
+Organism: Paramagnetospirillum magneticum (strain ATCC 700264 / AMB-1)
+  SwissProt:  - MamJ paralog LimJ
+PMID: 16303747
+Source: SwissProt
+Snippet: FUNCTION: Regulates the dynamic behavior of MamK filaments; paralog MamJ also promotes MamK turnover. At least one other protein besides MamJ and LimJ is required for MamK turnover (PubMed:21883528). Might connect magnetosomes to MamK filaments (Probable). {ECO:0000269|PubMed:21883528, ECO:0000305|PubMed:21883528}._:::_SUBCELLULAR LOCATION: Magnetosome {ECO:0000269|PubMed:16303747, ECO:0000305|PubMed:21883528}. Note=Tagged protein extends in a line from one pole to the other. {ECO:0000250|UniPro...
+
+================================================================================
+Protein: Q2W8L8 (E-value: 8.7e-213, Score: 711.2)
+Mentioned as: LIMJ_PARM1
+Description: MamJ paralog LimJ
+Organism: Paramagnetospirillum magneticum (strain ATCC 700264 / AMB-1)
+  SwissProt:  - MamJ paralog LimJ
+PMID: 21883528
+Source: SwissProt
+Snippet: FUNCTION: Regulates the dynamic behavior of MamK filaments; paralog MamJ also promotes MamK turnover. At least one other protein besides MamJ and LimJ is required for MamK turnover (PubMed:21883528). Might connect magnetosomes to MamK filaments (Probable). {ECO:0000269|PubMed:21883528, ECO:0000305|PubMed:21883528}._:::_SUBCELLULAR LOCATION: Magnetosome {ECO:0000269|PubMed:16303747, ECO:0000305|PubMed:21883528}. Note=Tagged protein extends in a line from one pole to the other. {ECO:0000250|UniPro...
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q2W8L8/Iterate
+GA   27.00 27.00;
+TC   27.40 28.20;
+NC   26.90 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

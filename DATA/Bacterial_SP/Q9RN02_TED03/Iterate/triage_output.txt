@@ -1,0 +1,149 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y6528_BACAN             Reviewed;         922 AA.
+AC   Q9RN02; Q8KYF8; Q9RN03;
+DE   RecName: Full=Uncharacterized protein pXO2-29/pXO2-30/BXB0028/GBAA_pXO2_0028;
+GN   OrderedLocusNames=pXO2-29/pXO2-30, BXB0028, GBAA_pXO2_0028;
+OS   Bacillus anthracis.
+OG   Plasmid pXO2.
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae; Bacillus;
+OC   Bacillus cereus group.
+OX   NCBI_TaxID=1392;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Pasteur;
+RX   PubMed=10475962; DOI=10.1046/j.1365-2672.1999.00883.x;
+RA   Okinaka R.T., Cloud K., Hampton O., Hoffmaster A., Hill K.K., Keim P.,
+RA   Koehler T., Lamke G., Kumano S., Manter D., Martinez Y., Ricke D.,
+RA   Svensson R., Jackson P.J.;
+RT   "Sequence, assembly and analysis of pXO1 and pXO2.";
+RL   J. Appl. Microbiol. 87:261-262(1999).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Ames / isolate Florida / A2012;
+RX   PubMed=12004073; DOI=10.1126/science.1071837;
+RA   Read T.D., Salzberg S.L., Pop M., Shumway M.F., Umayam L., Jiang L.,
+RA   Holtzapple E., Busch J.D., Smith K.L., Schupp J.M., Solomon D., Keim P.,
+RA   Fraser C.M.;
+RT   "Comparative genome sequencing for discovery of novel polymorphisms in
+RT   Bacillus anthracis.";
+RL   Science 296:2028-2033(2002).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Ames ancestor;
+RX   PubMed=18952800; DOI=10.1128/jb.01347-08;
+RA   Ravel J., Jiang L., Stanley S.T., Wilson M.R., Decker R.S., Read T.D.,
+RA   Worsham P., Keim P.S., Salzberg S.L., Fraser-Liggett C.M., Rasko D.A.;
+RT   "The complete genome sequence of Bacillus anthracis Ames 'Ancestor'.";
+RL   J. Bacteriol. 191:445-446(2009).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAF13635.1; Type=Frameshift; Evidence={ECO:0000305};
+DR   EMBL; AF188935; AAF13634.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; AF188935; AAF13635.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; AE011191; AAM26188.1; -; Genomic_DNA.
+DR   EMBL; AE017335; AAT28958.2; -; Genomic_DNA.
+DR   RefSeq; NP_053184.1; NC_002146.1.
+DR   RefSeq; NP_053185.1; NC_002146.1.
+DR   RefSeq; WP_009879813.1; NZ_VTZL01000009.1.
+DR   AlphaFoldDB; Q9RN02; -.
+DR   KEGG; banh:HYU01_29140; -.
+DR   KEGG; bar:GBAA_pXO2_0028; -.
+DR   PATRIC; fig|1392.230.peg.5873; -.
+DR   HOGENOM; CLU_319503_0_0_9; -.
+DR   Proteomes; UP000000594; Plasmid pXO2.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Plasmid; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..922
+FT                   /note="Uncharacterized protein pXO2-29/pXO2-
+FT                   30/BXB0028/GBAA_pXO2_0028"
+FT                   /id="PRO_0000216845"
+FT   TRANSMEM        9..31
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   922 AA;  103298 MW;  9ADA606E700B5A86 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Bacilluscereus group.
+1	6	Enterococcus
+1	6	Bacillus
+1	5	Enterococcaceae
+1	5	Bacillaceae
+1	4	Lactobacillales
+1	4	Bacillales
+2	3	Bacilli
+2	2	Bacillota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A348AJ19	UNCHARACTERIZED PROTEIN {     23.4       0.17   2   3.3   1.1
+	Iterate                   	   354	   469	     8.0
+	Iterate                   	    32	   192	     7.9
+
+A0A397H0W1	UNCHARACTERIZED PROTEIN {     22.3       0.36   2   2.6   2.9
+	Iterate                   	   284	   400	    11.0
+	Iterate                   	   176	   256	    10.8
+	PF05691	Raffinose_syn   	   143	   244	    21.7
+	PF05691	Raffinose_syn   	   283	   479	    49.5
+
+A0A429ZIM2	DUF11 DOMAIN-CONTAINING P     23.9       0.11   1   2.4   0.0
+	Iterate                   	   595	   708	    21.1
+	PF01345	DUF11           	  1259	  1387	    26.7
+	PF01345	DUF11           	  1394	  1514	    48.1
+
+Q9RN02	UNCHARACTERIZED PROTEIN PXO2-2    549.4   3.1e-162   1   1.3   8.5
+	Iterate                   	   514	   748	   548.8
+
+R2QDF7	SD-REPEAT CONTAINING PROTEIN      56.7    1.1e-11   1   1.8   0.7
+	Iterate                   	   614	   868	    55.2
+	PF17210	SdrD_B          	  1186	  1298	    40.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS632282 (E-value: 5.8e-121, Score: 408.3)
+Mentioned as: GBAA_pXO2_0028
+Description: hypothetical protein, (pXO2-29/30)
+Organism: Bacillus anthracis str. 'Ames Ancestor'
+PMID: 16042811
+Source: EuropePMC
+Title: Conjugative plasmid pAW63 brings new insights into the genesis of the Bacillus anthracis virulence plasmid pXO2 and of the Bacillus thuringiensis plasmid pBT9727
+Journal: BMC genomics (2005)
+Snippet: % B.t. konkukian CDS Putative gene functions GBAA_pXO2_0011 65% pBT9727_0011 - GBAA_pXO2_0012 60% pBT9727_0012 - GBAA_pXO2_0028 67% pBT9727_0024 - GBAA_pXO2_0035 64% pBT9727_0038 - GBAA_pXO2_0040 91% pBT9727_0047 replication-associated protein GBAA_pXO2_0041 79% pBT9727_0048 replication-associated protein GBAA_pXO2_0052 89% pBT9727_0039 - GBAA_pXO2_0053 72% pBT9727_0040 CAAX N-terminal protease GBAA_pXO2_0054 92% pBT9727_0041
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9RN02.2	AF-Q9RN02-F1-model_v4_TED01:65-236	1	AF-Q9RN02-F1-model_v4_TED01	65-236	0
+Q9RN02.2	AF-Q9RN02-F1-model_v4_TED02:239-508	1	AF-Q9RN02-F1-model_v4_TED02	239-508	0
+Q9RN02.2	AF-Q9RN02-F1-model_v4_TED04:751-892	1	AF-Q9RN02-F1-model_v4_TED04	751-892	0
+Q9RN02.2	AF-Q9RN02-F1-model_v4_TED03:514-748	1	AF-Q9RN02-F1-model_v4_TED03	514-748	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9RN02_TED03/Iterate
+GA   27.00 27.00;
+TC   31.00 408.30;
+NC   23.70 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

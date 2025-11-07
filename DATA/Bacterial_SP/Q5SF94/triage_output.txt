@@ -1,0 +1,375 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   AAAP_ANAMF              Reviewed;         324 AA.
+AC   Q5SF95; B9KJ36;
+DE   RecName: Full=Appendage-associated protein;
+DE   Flags: Precursor;
+GN   Name=aaaP1; OrderedLocusNames=AMF_659;
+GN   and
+GN   Name=aaaP2; OrderedLocusNames=AMF_663;
+OS   Anaplasma marginale (strain Florida).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Anaplasmataceae; Anaplasma.
+OX   NCBI_TaxID=320483;
+RN   [1] {ECO:0000305, ECO:0000312|EMBL:AAS83465.1}
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], FUNCTION, AND SUBCELLULAR LOCATION.
+RX   PubMed=15557651; DOI=10.1128/iai.72.12.7257-7264.2004;
+RA   Stich R.W., Olah G.A., Brayton K.A., Brown W.C., Fecheimer M.,
+RA   Green-Church K., Jittapalapong S., Kocan K.M., McGuire T.C.,
+RA   Rurangirwa F.R., Palmer G.H.;
+RT   "Identification of a novel Anaplasma marginale appendage-associated protein
+RT   that localizes with actin filaments during intraerythrocytic infection.";
+RL   Infect. Immun. 72:7257-7264(2004).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Florida;
+RX   PubMed=19134224; DOI=10.1186/1471-2164-10-16;
+RA   Dark M.J., Herndon D.R., Kappmeyer L.S., Gonzales M.P., Nordeen E.,
+RA   Palmer G.H., Knowles D.P. Jr., Brayton K.A.;
+RT   "Conservation in the face of diversity: multistrain analysis of an
+RT   intracellular bacterium.";
+RL   BMC Genomics 10:16-16(2009).
+CC   -!- FUNCTION: Associates with actin filament appendages that are formed in
+CC       the inclusion appendages of the parasitophorous vacuole during
+CC       infection of the host erythrocyte. {ECO:0000269|PubMed:15557651}.
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000269|PubMed:15557651}.
+DR   EMBL; AY514451; AAS83465.1; -; Genomic_DNA.
+DR   EMBL; CP001079; ACM49498.1; -; Genomic_DNA.
+DR   EMBL; CP001079; ACM49501.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q5SF95; -.
+DR   SMR; Q5SF95; -.
+DR   STRING; 320483.AMF_659; -.
+DR   KEGG; amf:AMF_659; -.
+DR   KEGG; amf:AMF_663; -.
+DR   PATRIC; fig|320483.3.peg.758; -.
+DR   HOGENOM; CLU_856975_0_0_5; -.
+DR   Proteomes; UP000007307; Chromosome.
+DR   GO; GO:0020003; C:symbiont-containing vacuole; IDA:UniProtKB.
+DR   GO; GO:0051015; F:actin filament binding; IDA:UniProtKB.
+DR   GO; GO:0051701; P:biological process involved in interaction with host; IDA:UniProtKB.
+PE   3: Inferred from homology;
+KW   Coiled coil; Reference proteome; Secreted; Signal.
+FT   SIGNAL          1..32
+FT                   /evidence="ECO:0000250|UniProtKB:Q5SF96"
+FT   CHAIN           33..324
+FT                   /note="Appendage-associated protein"
+FT                   /evidence="ECO:0000250|UniProtKB:Q5SF96"
+FT                   /id="PRO_0000258015"
+FT   COILED          195..255
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   324 AA;  34908 MW;  48D24D13ECF20068 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	16	Hevea
+3	15	Micrandreae
+3	14	Crotonoideae
+3	13	Euphorbiaceae
+3	12	Malpighiales
+3	11	fabids
+3	10	rosids
+3	9	Pentapetalae
+3	8	Gunneridae
+3	7	eudicotyledons
+4	6	Anaplasma.
+3	6	Magnoliopsida
+4	5	Anaplasmataceae
+3	5	Spermatophyta
+4	4	Rickettsiales
+3	4	Tracheophyta
+4	3	Alphaproteobacteria
+3	3	Embryophyta
+4	2	Pseudomonadota
+3	2	Streptophyta
+4	1	Pseudomonadati
+3	1	Viridiplantae
+4	0	Bacteria
+3	0	Eukaryota
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0N8H817	RAS GTPASE-ACTIVATING-LIK     22.6       0.21   2   2.3   3.1
+	Q5SF94                    	   595	   767	    22.6
+	Q5SF94                    	   749	   974	     3.8
+	PF00307	CH              	   299	   405	    29.8
+	PF00612	IQ              	   533	   552	      13
+	PF00616	RasGAP          	  1146	  1354	   216.8
+	PF03836	IQGAP_helical   	  1486	  1644	   174.7
+	PF29130	IQGAP_C         	  1673	  1770	    45.4
+
+A0A101MFY3	SYNTAXIN N-TERMINAL DOMAI     20.3        1.1   1   1.1   0.6
+	Q5SF94                    	     4	   114	    20.2
+
+A0A125MF11	PUTATIVE BIOPOLYMER TRANS     20.4          1   2   2.0   0.3
+	Q5SF94                    	    72	   171	     9.9
+	Q5SF94                    	    24	    96	     9.3
+	PF01618	MotA_ExbB       	    72	   187	    37.8
+
+A0A2I0I5C6	UNCHARACTERIZED PROTEIN {     25.6      0.027   8   7.3  58.0
+	Q5SF94                    	    36	   180	     7.7
+	Q5SF94                    	   546	   682	     7.7
+	Q5SF94                    	   633	   773	     7.6
+	Q5SF94                    	   300	   431	     7.4
+	Q5SF94                    	   331	   463	     7.0
+	Q5SF94                    	   220	   380	     6.4
+	Q5SF94                    	   390	   544	     5.9
+	Q5SF94                    	   470	   642	     5.4
+
+A0A3P1Z976	MOTA/TOLQ/EXBB PROTON CHA     24.9      0.045   2   2.0   0.5
+	Q5SF94                    	    83	   170	    15.4
+	Q5SF94                    	    26	    76	     7.4
+	PF01618	MotA_ExbB       	    54	   186	    37.5
+
+A0A401QLP2	UNCHARACTERIZED PROTEIN {     24.2      0.071   1   2.0   1.8
+	Q5SF94                    	     3	   222	    22.2
+
+A0A4Q4UZY4	RAS-GAP DOMAIN-CONTAINING     21.4        0.5   1   2.4   4.3
+	Q5SF94                    	   586	   766	    21.4
+	PF00307	CH              	   320	   426	    30.9
+	PF00612	IQ              	   554	   573	    14.2
+	PF00612	IQ              	   620	   633	    14.1
+	PF00616	RasGAP          	  1137	  1345	   208.1
+	PF03836	IQGAP_helical   	  1477	  1635	   172.1
+	PF29130	IQGAP_C         	  1664	  1761	    44.1
+
+A0A5C3LB94	ADHESIN DOMAIN-CONTAINING     27.3     0.0079   2   2.4   0.6
+	Q5SF94                    	    69	   162	    13.4
+	Q5SF94                    	   155	   238	    12.1
+
+A0A6A5Y0C9	RAS GTPASE ACTIVATING PRO     20.7       0.84   1   1.5   2.3
+	Q5SF94                    	   592	   807	    19.6
+	PF00307	CH              	   265	   370	    35.4
+	PF00612	IQ              	   497	   517	    11.4
+	PF00616	RasGAP          	  1050	  1258	   199.6
+	PF03836	IQGAP_helical   	  1390	  1560	   169.8
+
+A0A6A6JZF8	UNCHARACTERIZED PROTEIN {    150.5    2.9e-40   4   6.7  86.2
+	Q5SF94                    	   127	   374	    55.4
+	Q5SF94                    	     3	   264	    55.0
+	Q5SF94                    	   392	   609	    47.3
+	Q5SF94                    	   608	   795	    30.6
+
+A0A6A6JZJ4	REMORIN C-TERMINAL DOMAIN     48.7    2.5e-09   2   2.0  13.0
+	Q5SF94                    	    25	    93	    33.5
+	Q5SF94                    	    89	   156	    21.0
+
+A0A6A6K0Y7	UNCHARACTERIZED PROTEIN {    115.0    1.8e-29   4   6.2  36.3
+	Q5SF94                    	   171	   304	    42.9
+	Q5SF94                    	    11	   113	    35.7
+	Q5SF94                    	   110	   169	    28.8
+	Q5SF94                    	   146	   189	    21.8
+
+A0A8H4X9E8	RAS GTPASE ACTIVATING PRO     21.5       0.48   2   2.3   3.3
+	Q5SF94                    	   626	   787	    21.5
+	Q5SF94                    	   775	   974	     3.3
+	PF00307	CH              	   330	   436	      39
+	PF00612	IQ              	   564	   584	    15.3
+	PF00616	RasGAP          	  1147	  1355	   205.1
+	PF03836	IQGAP_helical   	  1487	  1645	   179.2
+	PF29130	IQGAP_C         	  1674	  1771	      36
+
+A0A9Q0MY85	DUF4806 DOMAIN-CONTAINING     22.3       0.27   2   2.3   0.2
+	Q5SF94                    	   369	   480	    10.2
+	Q5SF94                    	    95	   173	     9.8
+
+A0AA88XNV9	UNCHARACTERIZED PROTEIN {     27.3     0.0081   4   3.5   0.8
+	Q5SF94                    	    78	   133	     9.0
+	Q5SF94                    	    38	    92	     8.0
+	Q5SF94                    	     1	    50	     6.6
+	Q5SF94                    	   134	   187	     3.8
+
+A0AAE0MX93	IQGAP PROTEIN {ECO:000031     22.9       0.17   2   2.4  15.1
+	Q5SF94                    	   830	  1004	    15.3
+	Q5SF94                    	   704	   860	    11.6
+	PF00307	CH              	   396	   502	    35.8
+	PF00612	IQ              	   628	   648	    12.9
+	PF00612	IQ              	   654	   674	    13.9
+	PF00612	IQ              	   676	   694	    13.2
+	PF00612	IQ              	   742	   755	    13.1
+	PF00616	RasGAP          	  1229	  1437	   226.9
+	PF03836	IQGAP_helical   	  1569	  1727	   182.8
+	PF29130	IQGAP_C         	  1756	  1853	    42.3
+
+A0AAE0VSN4	CARD DOMAIN-CONTAINING PR     27.1     0.0095   4   3.6   1.7
+	Q5SF94                    	   305	   566	    11.1
+	Q5SF94                    	   452	   645	    10.9
+	Q5SF94                    	   538	   753	     8.5
+	Q5SF94                    	   646	   833	     8.1
+
+A0AAE0XTJ7	UNCHARACTERIZED PROTEIN {     26.4      0.015   2   3.8  25.8
+	Q5SF94                    	   142	   220	    11.2
+	Q5SF94                    	     1	   180	     7.8
+
+B9KJ37	APPENDAGE-ASSOCIATED PROTEIN-    464.0   1.6e-135  10  10.8  87.0
+	Q5SF94                    	   299	   392	    97.9
+	Q5SF94                    	    55	   135	    96.3
+	Q5SF94                    	   165	   218	    65.5
+	Q5SF94                    	   129	   168	    53.3
+	Q5SF94                    	   264	   302	    52.4
+	Q5SF94                    	   212	   247	    44.9
+	Q5SF94                    	   239	   271	    43.8
+	Q5SF94                    	   450	   528	    33.6
+	Q5SF94                    	    17	    48	    31.8
+	Q5SF94                    	   385	   439	    25.7
+
+B9KJ38	APPENDAGE-ASSOCIATED PROTEIN-    640.9   2.7e-189   3   3.0  46.5
+	Q5SF94                    	     1	   208	   460.0
+	Q5SF94                    	   223	   311	   159.6
+	Q5SF94                    	   200	   232	    46.8
+
+B9KJ40	APPENDAGE-ASSOCIATED PROTEIN-    100.5    4.5e-25   2   2.1  14.6
+	Q5SF94                    	     8	    96	    73.2
+	Q5SF94                    	    98	   173	    33.4
+
+K8PA62	UNCHARACTERIZED PROTEIN {ECO:     21.4       0.52   1   1.1   1.1
+	Q5SF94                    	    41	   149	    20.9
+
+M7SEZ7	PUTATIVE RAS GTPASE ACTIVATIN     24.7      0.049   2   2.8  13.1
+	Q5SF94                    	   382	   543	    21.6
+	Q5SF94                    	   572	   728	     5.6
+	PF00307	CH              	   120	   226	    36.1
+	PF00612	IQ              	   417	   434	      17
+	PF00612	IQ              	   447	   464	    16.3
+	PF00612	IQ              	   625	   644	      12
+	PF00612	IQ              	   684	   704	    11.4
+	PF00616	RasGAP          	   907	  1115	   210.6
+	PF03836	IQGAP_helical   	  1247	  1405	   172.7
+	PF29130	IQGAP_C         	  1434	  1531	    42.9
+
+Q16U94	UNCHARACTERIZED PROTEIN {ECO:     20.3        1.1   1   1.4   1.8
+	Q5SF94                    	   105	   288	    19.6
+
+Q5SF95	APPENDAGE-ASSOCIATED PROTEIN       413.4   3.7e-120   5   5.2  58.5
+	Q5SF94                    	   117	   210	   159.4
+	Q5SF94                    	    23	   123	   120.1
+	Q5SF94                    	   201	   301	   103.0
+	Q5SF94                    	     1	    28	    33.9
+	Q5SF94                    	   296	   324	    25.7
+
+V5IQZ3	RAS GTPASE ACTIVATING PROTEIN     24.2      0.069   2   2.5  12.1
+	Q5SF94                    	   797	   953	    16.3
+	Q5SF94                    	   675	   801	    12.7
+	PF00307	CH              	   368	   474	      36
+	PF00612	IQ              	   600	   619	    11.4
+	PF00612	IQ              	   648	   667	    13.1
+	PF00612	IQ              	   714	   727	    13.1
+	PF00616	RasGAP          	  1171	  1379	     226
+	PF03836	IQGAP_helical   	  1511	  1669	   183.3
+	PF29130	IQGAP_C         	  1698	  1795	    42.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS821054 (E-value: 1.5e-102, Score: 348.7)
+Mentioned as: AM880
+Description: hypothetical protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 38727242
+Source: EuropePMC
+Title: Identification of <i>Anaplasma marginale</i> adhesins for entry into <i>Dermacentor andersoni</i> tick cells using phage display
+Journal: Infection and immunity (2024)
+
+================================================================================
+Protein: VIMSS821054 (E-value: 1.5e-102, Score: 348.7)
+Mentioned as: AM880
+Description: hypothetical protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 21189322
+Source: EuropePMC
+Title: Identification of Anaplasma marginale outer membrane protein antigens conserved between A. marginale sensu stricto strains and the live A. marginale subsp. centrale vaccine
+Journal: Infection and immunity (2011)
+Snippet: appendage-associated protein family (AM878, AM879, and AM880), AM1010 (a conserved lipoprotein family protein), chaperone protein DnaK, malonyl coenzyme
+
+================================================================================
+Protein: VIMSS821054 (E-value: 1.5e-102, Score: 348.7)
+Mentioned as: AM880
+Description: hypothetical protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 20439479
+Source: EuropePMC
+Title: Identification of Anaplasma marginale proteins specifically upregulated during colonization of the tick vector
+Journal: Infection and immunity (2010)
+Snippet: AM944 (groEL), AM254 (tuf), AM666 (atpD), AM956 (pepA), AM880 (alp2), AM564 (mdh), FIG. 2. Identification of Anaplasma marginale proteins uniquely expressed or
+
+================================================================================
+Protein: VIMSS821053 (E-value: 5.3e-100, Score: 340.3)
+Mentioned as: AM879
+Description: hypothetical protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 19134224
+Source: EuropePMC
+Title: Conservation in the face of diversity: multistrain analysis of an intracellular bacterium
+Journal: BMC genomics (2009)
+Snippet: deduced AAAP amino acid sequences from the St. Maries and Florida strains St. Maries aaap AM879 AM880 Florida aaap 45.0% 49.4% 49.6% alp1 46.1% 73.8% 24.1% alp2 33.4% 40.3% 58.2% alp3 11.7% 30.7% 24.6% High density sequence coverage of additional strains An additional two transmissible strains
+
+================================================================================
+Protein: VIMSS821053 (E-value: 5.3e-100, Score: 340.3)
+Mentioned as: AM879
+Description: hypothetical protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 16299305
+Source: EuropePMC
+Title: Identification of novel antigenic proteins in a complex Anaplasma marginale outer membrane immunogen by mass spectrometry and genomic mapping
+Journal: Infection and immunity (2005)
+Snippet: 4 5 13 17 165 180 Membrane associated 34, 31 AM879 AM880 a Number of peptides identified from each protein. Percentage of coverage by the identified peptides. c
+
+================================================================================
+Protein: VIMSS821052 (E-value: 3.5e-88, Score: 301.4)
+Mentioned as: AM878
+Description: appendage-associated protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 28754151
+Source: EuropePMC
+Title: Identification of Anaplasma ovis appendage-associated protein (AAAP) for development of an indirect ELISA and its application
+Journal: Parasites & vectors (2017)
+Snippet: acid sequence of aaap showed 31% identity to the appendage-associated protein of A. marginale (AAAP; AM878; GenBank accession no. AAV86790) (Fig. 3 ). Fig. 2 Silver staining of SDS-PAGE gel for analysis of A. ovis lysates immune- precipitation. Lane 1: A. ovis lysates; Lanes 24: A.
+
+================================================================================
+Protein: VIMSS821052 (E-value: 3.5e-88, Score: 301.4)
+Mentioned as: AM878
+Description: appendage-associated protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 24751137
+Source: EuropePMC
+Title: Global transcriptional analysis reveals surface remodeling of Anaplasma marginale in the tick vector
+Journal: Parasites & vectors (2014)
+Snippet: -3.6 90.7 330.6 AM1140 OpAG3 -4.0 434.0 1727.4 AM573 Paralog of AM560 -4.2 13.5 56.5 AM878 AAAP -4.4 21.6 95.9 AM1315 VirB9-2 -4.7 898.2 4221.0 AM779 Outer membrane protein -4.8 317.5 1533.7 AM532 MLP2 -4.9 78.7 386.4 AM535 MLP3 -5.1 31.6 162.4 AM127 Undefined product -5.2
+
+================================================================================
+Protein: VIMSS821052 (E-value: 3.5e-88, Score: 301.4)
+Mentioned as: AM878
+Description: appendage-associated protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 22140462
+Source: EuropePMC
+Title: Identification of Anaplasma marginale type IV secretion system effector proteins
+Journal: PloS one (2011)
+Snippet: is not a T4SS effector; only the converse is true. The two proteins selected were AM878, encoding Anaplasma appendage associated protein (Aaap), chosen because it is known to be secreted and does not contain a signal peptide, and AM926 (AnkB), a third ANK domain containing protein
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q5SF94
+GA   27.00 27.00;
+TC   27.10 28.80;
+NC   26.40 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

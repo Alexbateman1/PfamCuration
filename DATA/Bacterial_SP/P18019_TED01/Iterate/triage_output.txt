@@ -1,0 +1,59 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Romboutsia.
+1	6	Paraclostridium.
+3	5	Peptostreptococcaceae
+3	4	Peptostreptococcales
+3	3	Clostridia
+3	2	Bacillota
+3	1	Bacillati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0D3IRG0	UNCHARACTERIZED PROTEIN {     30.4     0.0015   1   9.8   0.6
+	Iterate                   	   365	   434	     6.4
+
+A0A0M3DEC3	UNCHARACTERIZED PROTEIN {     36.4      2e-05   1   1.3   4.7
+	Iterate                   	     7	    90	    35.9
+
+A0A371IPG7	UNCHARACTERIZED PROTEIN {     43.2    1.6e-07   1   1.3   0.2
+	Iterate                   	     7	    87	    42.5
+
+A0A371IPH8	UNCHARACTERIZED PROTEIN {     42.6    2.5e-07   1   1.5   7.3
+	Iterate                   	    14	    97	    42.6
+
+A0A6H1WZG8	UNCHARACTERIZED PROTEIN {     39.2    2.7e-06   1   1.7   5.9
+	Iterate                   	     7	    93	    39.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0M3DEC3.1	AF-A0A0M3DEC3-F1-model_v4_TED01:4-86	1	AF-A0A0M3DEC3-F1-model_v4_TED01	4-86	100.0%
+A0A371IPG7.1	AF-A0A371IPG7-F1-model_v4_TED01:4-84	1	AF-A0A371IPG7-F1-model_v4_TED01	4-84	97.5%
+A0A371IPH8.1	AF-A0A371IPH8-F1-model_v4_TED01:11-99	1	AF-A0A371IPH8-F1-model_v4_TED01	11-99	100.0%
+A0A6H1WZG8.1	AF-A0A6H1WZG8-F1-model_v4_TED01:4-78	1	AF-A0A6H1WZG8-F1-model_v4_TED01	4-78	85.7%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P18019_TED01/Iterate
+GA   27.00 27.00;
+TC   33.90 139.10;
+NC   26.60 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

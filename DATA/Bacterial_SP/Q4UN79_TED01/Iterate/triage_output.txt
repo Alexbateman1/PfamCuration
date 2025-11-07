@@ -1,0 +1,144 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y051_RICPR              Reviewed;         127 AA.
+AC   Q9ZE94;
+DE   RecName: Full=Uncharacterized lipoprotein RP051;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=RP051;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+DR   EMBL; AJ235270; CAA14522.1; -; Genomic_DNA.
+DR   PIR; C71713; C71713.
+DR   RefSeq; NP_220445.1; NC_000963.1.
+DR   RefSeq; WP_004596623.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZE94; -.
+DR   SMR; Q9ZE94; -.
+DR   EnsemblBacteria; CAA14522; CAA14522; CAA14522.
+DR   KEGG; rpr:RP051; -.
+DR   PATRIC; fig|272947.5.peg.52; -.
+DR   HOGENOM; CLU_1968884_0_0_5; -.
+DR   OrthoDB; 7160930at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Coiled coil; Lipoprotein; Membrane; Palmitate;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..16
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           17..127
+FT                   /note="Uncharacterized lipoprotein RP051"
+FT                   /id="PRO_0000262728"
+FT   REGION          102..127
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COILED          56..101
+FT                   /evidence="ECO:0000255"
+FT   LIPID           17
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           17
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   127 AA;  14544 MW;  C6E738E600B8C377 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+3	7	Orientia.
+1	7	Rickettsia
+4	6	Rickettsieae
+1	6	Candidatus Phycorickettsia.
+5	5	Rickettsiaceae
+5	4	Rickettsiales
+5	3	Alphaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A261DB45	UNCHARACTERIZED PROTEIN {     46.7      1e-08   1   1.5   8.9
+	Iterate                   	    69	   117	    45.8
+
+A0A2P1P8L0	UNCHARACTERIZED PROTEIN {     39.1    2.5e-06   1   1.5   4.7
+	Iterate                   	   117	   165	    38.1
+
+A0A2U3QX88	UNCHARACTERIZED PROTEIN {     39.8    1.4e-06   1   1.8   5.8
+	Iterate                   	    64	   113	    39.8
+
+A5CDR9	CONJUGAL TRANSFER PROTEIN {EC     39.8    1.4e-06   1   1.8   5.8
+	Iterate                   	    64	   113	    39.8
+
+Q9ZE94	UNCHARACTERIZED LIPOPROTEIN RP0    108.3    5.9e-28   1   1.3   9.9
+	Iterate                   	    54	   102	   107.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS614185 (E-value: 3.2e-23, Score: 86.6)
+Mentioned as: RT0080
+Description: rickettsial conserved hypothetical protein
+Organism: Rickettsia typhi str. wilmington
+PMID: 18412961
+Source: EuropePMC
+Title: Genome-wide screen for temperature-regulated genes of the obligate intracellular bacterium, Rickettsia typhi
+Journal: BMC microbiology (2008)
+Snippet: (1.6, 1.3, 1.7) RT0861 hypothetical protein RT0861 [Rickettsia typhi str. Wilmington] 1.6 (1.2, 2.1, 1.4) RT0080 rickettsial conserved hypothetical protein [Rickettsia typhi str. Wilmington] 1.6 (2.2, 1.0, 1.3) RT0693 bicyclomycin resistance protein [Rickettsia typhi str. Wilmington] 1.6 (1.1, 1.8, 1.9) RT0156 rickettsial conserved hypothetical protein [Rickettsia
+
+================================================================================
+Protein: VIMSS614185 (E-value: 3.2e-23, Score: 86.6)
+Mentioned as: RT0080
+Description: rickettsial conserved hypothetical protein
+Organism: Rickettsia typhi str. wilmington
+PMID: 18641131
+Source: EuropePMC
+Title: Characterization of Sec-translocon-dependent extracytoplasmic proteins of Rickettsia typhi
+Journal: Journal of bacteriology (2008)
+Snippet: RT0029 RT0030 RT0043 RT0044 RT0052 RT0056 RT0057 RT0064 RT0080 RT0103 RT0136 RT0150 RT0174 RT0178 RT0187 RT0188 RT0216 RT0218 RT0222 RT0224 RT0247 RT0260 RT0263
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2P1P8L0.1	AF-A0A2P1P8L0-F1-model_v4_TED01:13-46	1	AF-A0A2P1P8L0-F1-model_v4_TED01	13-46	0
+A0A2P1P8L0.1	AF-A0A2P1P8L0-F1-model_v4_TED02:118-167	1	AF-A0A2P1P8L0-F1-model_v4_TED02	118-167	98.0%
+A5CDR9.1	AF-A5CDR9-F1-model_v4_TED01:39-128	1	AF-A5CDR9-F1-model_v4_TED01	39-128	100.0%
+Q9ZE94.1	AF-Q9ZE94-F1-model_v4_TED01:55-106	1	AF-Q9ZE94-F1-model_v4_TED01	55-106	98.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q4UN79_TED01/Iterate
+GA   27.00 27.00;
+TC   27.30 55.90;
+NC   24.30 23.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

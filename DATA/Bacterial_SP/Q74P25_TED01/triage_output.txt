@@ -1,0 +1,93 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Bacilluscereus group.
+2	6	Paenibacillus
+1	6	Terrihalobacillus
+1	6	Planococcus
+1	6	Niallia.
+1	6	Halalkalibacter
+1	6	Bacillus
+1	6	Anaerobacillus
+5	5	Bacillaceae
+2	5	Paenibacillaceae
+1	5	Caryophanaceae
+8	4	Bacillales
+8	3	Bacilli
+8	2	Bacillota
+8	1	Bacillati
+8	0	Bacteria
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1H0H939	UNCHARACTERIZED PROTEIN {     56.5    1.3e-11   1   1.1   0.0
+	Q74P25_TED01              	     8	   107	    56.1
+
+A0A1Q2L507	UNCHARACTERIZED PROTEIN {     56.2    1.6e-11   1   1.2   0.0
+	Q74P25_TED01              	     7	   108	    55.8
+
+A0A1S2LAE6	DNA-BINDING PROTEIN {ECO:     49.9    1.4e-09   1   1.1   0.0
+	Q74P25_TED01              	     7	   113	    49.6
+
+A0A210PQF6	BILE SALT-ACTIVATED LIPAS     69.4    1.2e-15   4  36.3  71.4
+	Q74P25_TED01              	   127	   180	     3.9
+	Q74P25_TED01              	   238	   279	     3.7
+	Q74P25_TED01              	  1402	  1464	     3.2
+	Q74P25_TED01              	   309	   351	     3.1
+
+A0A3S2UV66	TRANSCRIPTIONAL REGULATOR     49.4    2.1e-09   1   1.7   0.0
+	Q74P25_TED01              	     7	   102	    48.0
+
+A0A559K5D2	CELL DIVISION PROTEIN FTS     67.1    6.2e-15   1   1.5   0.4
+	Q74P25_TED01              	    44	   142	    66.1
+
+A0A916K6U9	UNCHARACTERIZED PROTEIN {     53.3    1.3e-10   1   1.4   0.0
+	Q74P25_TED01              	     4	   104	    52.5
+
+A0A9X3WVW0	UNCHARACTERIZED PROTEIN {     53.3    1.2e-10   1   1.1   0.0
+	Q74P25_TED01              	     4	   102	    53.1
+
+Q6EZU9	TUBULIN/FTSZ FAMILY, GTPASE D    218.4    5.4e-62   1   1.0   0.8
+	Q74P25_TED01              	     9	   114	   218.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS2208988 (E-value: 1.2e-70, Score: 239.7)
+Mentioned as: BCE_A0069
+Description: hypothetical protein
+Organism: Bacillus cereus ATCC 10987
+PMID: 29806555
+Source: EuropePMC
+Title: Engineered dextranase from Streptococcus mutans enhances the production of longer isomaltooligosaccharides
+Journal: Bioscience, biotechnology, and biochemistry (2018)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q74P25.1	AF-Q74P25-F1-model_v4_TED01:12-117	1	AF-Q74P25-F1-model_v4_TED01	12-117	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q74P25_TED01
+GA   27.00 27.00;
+TC   27.50 47.20;
+NC   26.20 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

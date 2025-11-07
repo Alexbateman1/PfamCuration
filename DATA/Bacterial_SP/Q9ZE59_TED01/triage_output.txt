@@ -1,0 +1,99 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y088_RICPR              Reviewed;          59 AA.
+AC   Q9ZE59;
+DE   RecName: Full=Uncharacterized protein RP088;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=RP088;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+DR   EMBL; AJ235270; CAA14558.1; -; Genomic_DNA.
+DR   PIR; G71717; G71717.
+DR   RefSeq; NP_220481.1; NC_000963.1.
+DR   RefSeq; WP_004596514.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZE59; -.
+DR   SMR; Q9ZE59; -.
+DR   EnsemblBacteria; CAA14558; CAA14558; CAA14558.
+DR   KEGG; rpr:RP088; -.
+DR   PATRIC; fig|272947.5.peg.88; -.
+DR   HOGENOM; CLU_2957758_0_0_5; -.
+DR   Proteomes; UP000002480; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..17
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           18..59
+FT                   /note="Uncharacterized protein RP088"
+FT                   /id="PRO_0000014222"
+SQ   SEQUENCE   59 AA;  6744 MW;  F5F286A3FC0D99B7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+1	7	Rickettsia
+1	6	Rickettsieae
+1	5	Rickettsiaceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9ZE59	UNCHARACTERIZED PROTEIN RP088      108.4    4.8e-28   1   1.1   7.2
+	Q9ZE59_TED01              	    19	    57	   108.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS35783 (E-value: 4.2e-30, Score: 108.4)
+Mentioned as: RP088
+Description: unknown
+Organism: Rickettsia prowazekii str. Madrid E
+PMID: 15317790
+Source: EuropePMC
+Title: Complete genome sequence of Rickettsia typhi and comparison with sequences of other rickettsiae
+Journal: Journal of bacteriology (2004)
+Snippet: no. RC no. tRNA/rRNA methyltransferase Acetylglutamate kinase RP088 RP052 RP050/RC0076 RC0049 Sco2 protein precursor Rickettsial conserved protein with coenzyme
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZE59.1	AF-Q9ZE59-F1-model_v4_TED01:19-57	1	AF-Q9ZE59-F1-model_v4_TED01	19-57	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZE59_TED01
+GA   27.00 27.00;
+TC   27.50 108.10;
+NC   25.90 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

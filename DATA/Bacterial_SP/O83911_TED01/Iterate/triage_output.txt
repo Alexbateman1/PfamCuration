@@ -1,0 +1,115 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y941_TREPA              Reviewed;         172 AA.
+AC   O83911;
+DE   RecName: Full=Uncharacterized protein TP_0941;
+GN   OrderedLocusNames=TP_0941;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65900.1; -; Genomic_DNA.
+DR   PIR; A71263; A71263.
+DR   RefSeq; WP_010882384.1; NC_021490.2.
+DR   AlphaFoldDB; O83911; -.
+DR   IntAct; O83911; 12.
+DR   STRING; 243276.TP_0941; -.
+DR   EnsemblBacteria; AAC65900; AAC65900; TP_0941.
+DR   KEGG; tpa:TP_0941; -.
+DR   KEGG; tpw:TPANIC_0941; -.
+DR   eggNOG; ENOG5031CDJ; Bacteria.
+DR   HOGENOM; CLU_1539354_0_0_12; -.
+DR   OrthoDB; 362040at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..172
+FT                   /note="Uncharacterized protein TP_0941"
+FT                   /id="PRO_0000202359"
+SQ   SEQUENCE   172 AA;  19647 MW;  DA4DEB8B1D209887 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Treponema.
+5	5	Treponemataceae
+5	4	Spirochaetales
+5	3	Spirochaetia
+5	2	Spirochaetota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GTC2	UNCHARACTERIZED PROTEIN {    199.8    1.1e-55   1   1.0   0.0
+	Iterate                   	     2	   169	   199.6
+
+O83911	UNCHARACTERIZED PROTEIN TP_0941    388.5   1.1e-113   1   1.0   0.6
+	Iterate                   	     2	   169	   388.3
+
+Q73MN0	UNCHARACTERIZED PROTEIN {ECO:    188.4    3.4e-52   1   1.0   0.0
+	Iterate                   	     2	   169	   188.3
+
+S3LB01	UNCHARACTERIZED PROTEIN {ECO:    205.0    2.9e-57   1   1.0   0.0
+	Iterate                   	     2	   169	   204.8
+
+S5ZX02	UNCHARACTERIZED PROTEIN {ECO:    200.7    5.8e-56   1   1.0   0.0
+	Iterate                   	     2	   169	   200.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS575776 (E-value: 9e-92, Score: 310.5)
+Mentioned as: TDE1478
+Description: conserved hypothetical protein
+Organism: Treponema denticola ATCC 35405
+PMID: 29935042
+Source: EuropePMC
+Title: A pleiotropic role of FlaG in regulating the cell morphogenesis and flagellar homeostasis at the cell poles of Treponema denticola
+Journal: Cellular microbiology (2019)
+Snippet: P 20 CATCGGGCTCTTTATGACCTG TDE1479; co-RT-PCR [R] P 21 GCAAGATAGCCGCATCATTTG TDE1479; co-RT-PCR [F] P 22 CTCCATTGTACGTTTGATATC TDE1478; co-RT-PCR [R] P 23 CTGAAAGGGAGCTTTCCCGTC TDE1478; co-RT-PCR [F] P 24 GAAGCCTGAACAGCGAGTTC TDE1477; co-RT-PCR [R] P 25 ATAGCCAGCTTGTAATGTCTC TDE1477; co-RT-PCR [F] P 26 GTGATTAATAATCATATGAC TDE1475; co-RT-PCR [R] P 27 CACAAGCCAATGCTCAGCCTC TDE1475;
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B7GTC2.1	AF-A0A0B7GTC2-F1-model_v4_TED01:4-167	1	AF-A0A0B7GTC2-F1-model_v4_TED01	4-167	97.6%
+O83911.1	AF-O83911-F1-model_v4_TED01:2-169	1	AF-O83911-F1-model_v4_TED01	2-169	100.0%
+Q73MN0.1	AF-Q73MN0-F1-model_v4_TED01:4-172	1	AF-Q73MN0-F1-model_v4_TED01	4-172	98.8%
+S3LB01.1	AF-S3LB01-F1-model_v4_TED01:4-171	1	AF-S3LB01-F1-model_v4_TED01	4-171	98.8%
+S5ZX02.1	AF-S5ZX02-F1-model_v4_TED01:4-174	1	AF-S5ZX02-F1-model_v4_TED01	4-174	98.8%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83911_TED01/Iterate
+GA   27.00 27.00;
+TC   33.60 293.60;
+NC   23.30 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

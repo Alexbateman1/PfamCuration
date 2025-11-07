@@ -1,0 +1,89 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1277_AQUAE             Reviewed;         190 AA.
+AC   O67313;
+DE   RecName: Full=Uncharacterized protein aq_1277;
+GN   OrderedLocusNames=aq_1277;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC07278.1; -; Genomic_DNA.
+DR   PIR; F70410; F70410.
+DR   RefSeq; NP_213877.1; NC_000918.1.
+DR   RefSeq; WP_010880815.1; NC_000918.1.
+DR   AlphaFoldDB; O67313; -.
+DR   EnsemblBacteria; AAC07278; AAC07278; aq_1277.
+DR   KEGG; aae:aq_1277; -.
+DR   HOGENOM; CLU_1425331_0_0_0; -.
+DR   InParanoid; O67313; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..190
+FT                   /note="Uncharacterized protein aq_1277"
+FT                   /id="PRO_0000186916"
+SQ   SEQUENCE   190 AA;  22041 MW;  EE6AD5884C088D7A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Hydrogenivirga
+1	6	Aquifex
+2	5	Aquificaceae
+2	4	Aquificales
+2	3	Aquificia
+2	2	Aquificota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A497XQ02	LIPOPROTEIN {ECO:0008006|     53.6    1.1e-10   2   2.0   0.1
+	O67313_TED01              	    88	   207	    33.0
+	O67313_TED01              	    23	    97	    19.1
+
+A8UWV5	LIPOPROTEIN {ECO:0008006|GOOG     32.4    0.00035   1   1.5   0.1
+	O67313_TED01              	    90	   249	    31.7
+
+A8UYI8	UNCHARACTERIZED PROTEIN {ECO:     44.7    5.8e-08   1   2.1   0.2
+	O67313_TED01              	    23	   207	    37.9
+
+O67313	UNCHARACTERIZED PROTEIN AQ_127    390.6   3.1e-114   1   1.0   7.0
+	O67313_TED01              	    20	   190	   390.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O67313.1	AF-O67313-F1-model_v4_TED01:20-190	1	AF-O67313-F1-model_v4_TED01	20-190	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67313_TED01
+GA   27.00 27.00;
+TC   32.40 31.70;
+NC   21.00 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

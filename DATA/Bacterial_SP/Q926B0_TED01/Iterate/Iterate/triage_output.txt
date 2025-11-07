@@ -1,0 +1,96 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Enterococcus
+2	6	Streptococcus
+2	6	Lactococcus
+2	6	Lacticaseibacillus
+2	6	Aquingentivirus
+4	5	Streptococcaceae
+4	5	Lactobacillaceae
+3	5	Enterococcaceae
+2	5	Bunyaviricetes
+2	4	Polyploviricotina
+2	4	Caudoviricetes
+11	4	Lactobacillales
+2	3	Uroviricota
+2	3	Negarnaviricota
+11	3	Bacilli
+2	2	Orthornavirae
+2	2	Heunggongvirae
+11	2	Bacillota
+2	1	Riboviria
+2	1	Duplodnaviria
+11	1	Bacillati
+4	0	Viruses
+11	0	Bacteria
+Total of 15 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A059T7N6	UNCHARACTERIZED PROTEIN {     71.8    1.8e-16   1   1.0   0.3
+	Iterate                   	     1	    61	    71.8
+
+A0A4D6BFV0	UNCHARACTERIZED PROTEIN {    124.2    8.6e-33   1   1.0   1.2
+	Iterate                   	     1	    62	   123.9
+
+A0AAE3XSB1	UNCHARACTERIZED PROTEIN {     60.8    5.1e-13  24  32.2  94.1
+	Iterate                   	   604	   659	     5.3
+	Iterate                   	  2087	  2144	     3.9
+	Iterate                   	   322	   379	     3.8
+	Iterate                   	   540	   595	     3.8
+	Iterate                   	   823	   878	     3.8
+	Iterate                   	   887	   942	     3.8
+	Iterate                   	  1490	  1547	     3.8
+	Iterate                   	  2023	  2078	     3.8
+	Iterate                   	  2243	  2299	     3.8
+	Iterate                   	  2525	  2580	     3.8
+	Iterate                   	   194	   248	     3.7
+	Iterate                   	   477	   531	     3.7
+	Iterate                   	   760	   814	     3.7
+	Iterate                   	  1363	  1417	     3.7
+	Iterate                   	  1960	  2014	     3.7
+	Iterate                   	  2462	  2516	     3.7
+	Iterate                   	  1015	  1070	     3.6
+	Iterate                   	  1426	  1480	     3.6
+	Iterate                   	  1079	  1134	     3.5
+	Iterate                   	   952	  1006	     3.4
+	Iterate                   	  1144	  1200	     3.4
+	Iterate                   	  1299	  1353	     3.4
+	Iterate                   	  1710	  1767	     3.4
+	Iterate                   	  1805	  1861	     3.4
+	PF26696	PTL_trimer      	    33	   119	    60.4
+
+A8ASQ3	GP64 {ECO:0000313|EMBL:AAY528     71.8    1.8e-16   1   1.0   0.3
+	Iterate                   	     1	    61	    71.8
+
+A8ATN8	GP80 {ECO:0000313|EMBL:AAY531    137.4    6.2e-37   1   1.0   2.3
+	Iterate                   	     1	    68	   137.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0R1QNB2.1	AF-A0A0R1QNB2-F1-model_v4_TED01:5-65	1	AF-A0A0R1QNB2-F1-model_v4_TED01	5-65	77.2%
+A0A6I3J034.1	AF-A0A6I3J034-F1-model_v4_TED01:23-62	1	AF-A0A6I3J034-F1-model_v4_TED01	23-62	56.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q926B0_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 38.70;
+NC   26.00 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

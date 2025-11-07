@@ -1,0 +1,189 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y785_RICPR              Reviewed;        1169 AA.
+AC   O05975;
+DE   RecName: Full=Uncharacterized protein RP785;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=RP785;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 159-1169.
+RC   STRAIN=Madrid E;
+RX   PubMed=9274032; DOI=10.1099/00221287-143-8-2783;
+RA   Andersson J.O., Andersson S.G.E.;
+RT   "Genomic rearrangements during evolution of the obligate intracellular
+RT   parasite Rickettsia prowazekii as inferred from an analysis of 52015 bp
+RT   nucleotide sequence.";
+RL   Microbiology 143:2783-2795(1997).
+DR   EMBL; AJ235273; CAA15211.1; -; Genomic_DNA.
+DR   EMBL; Y11779; CAA72464.1; -; Genomic_DNA.
+DR   PIR; C71639; C71639.
+DR   RefSeq; NP_221135.1; NC_000963.1.
+DR   RefSeq; WP_004599651.1; NC_000963.1.
+DR   AlphaFoldDB; O05975; -.
+DR   STRING; 272947.gene:17555854; -.
+DR   EnsemblBacteria; CAA15211; CAA15211; CAA15211.
+DR   KEGG; rpr:RP785; -.
+DR   PATRIC; fig|272947.5.peg.821; -.
+DR   eggNOG; ENOG5034CG5; Bacteria.
+DR   HOGENOM; CLU_275066_0_0_5; -.
+DR   OrthoDB; 7160164at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..20
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           21..1169
+FT                   /note="Uncharacterized protein RP785"
+FT                   /id="PRO_0000014228"
+SQ   SEQUENCE   1169 AA;  129919 MW;  E01ACCAE9103E716 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	13	Pseudolycoriella
+1	12	Sciaridae
+1	11	Sciaroidea
+1	10	Nematocera
+1	9	Diptera
+1	8	typhus group.
+1	8	Endopterygota
+1	7	Rickettsia
+1	7	Neoptera
+1	6	Rickettsieae
+1	6	Pterygota
+1	5	Rickettsiaceae
+1	5	Insecta
+1	4	Rickettsiales
+1	4	Hexapoda
+1	3	Arthropoda
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	2	Ecdysozoa
+1	1	Pseudomonadati
+1	1	Metazoa
+1	0	Eukaryota
+1	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A261DD30	UNCHARACTERIZED PROTEIN {    128.0    1.5e-33   1   2.3   2.2
+	Iterate                   	   587	   736	   128.0
+
+A0A7R9L3T6	N-ACETYLNEURAMINATE LYASE     21.5       0.92   2   2.5   0.2
+	Iterate                   	   396	   469	     9.9
+	Iterate                   	    81	   137	     8.9
+	PF00701	DHDPS           	    90	   392	   120.2
+	PF00701	DHDPS           	   421	   617	   102.8
+
+A0A8J7P393	O51F2 PROTEIN {ECO:000031     22.9       0.33   4   5.4   0.6
+	Iterate                   	  1252	  1326	     4.6
+	Iterate                   	   553	   636	     4.2
+	Iterate                   	   878	   965	     4.2
+	Iterate                   	  1614	  1703	     1.4
+	PF13853	7tm_4           	    39	   318	   201.6
+	PF00001	7tm_1           	    49	   300	    93.4
+	PF13853	7tm_4           	   356	   635	   185.8
+	PF00001	7tm_1           	   366	   617	    85.8
+	PF13853	7tm_4           	   681	   960	   193.9
+	PF00001	7tm_1           	   691	   942	    87.7
+	PF13853	7tm_4           	  1053	  1332	   182.9
+	PF00001	7tm_1           	  1063	  1314	    80.3
+	PF13853	7tm_4           	  1416	  1696	   187.2
+	PF00001	7tm_1           	  1427	  1678	    89.5
+	PF13853	7tm_4           	  1730	  2009	   172.5
+	PF00001	7tm_1           	  1740	  1991	    88.8
+
+A0A9Q0S4T9	METHIONINE--TRNA LIGASE,     130.1    3.3e-34   1   1.4   0.3
+	Iterate                   	  1212	  1367	   129.2
+	PF02403	Seryl_tRNA_N    	     1	   107	    57.6
+	PF00587	tRNA-synt_2b    	   218	   398	     128
+	PF03135	CagE_TrbE_VirB  	   429	   616	   116.7
+	PF00133	tRNA-synt_1     	  1484	  1691	      27
+	PF09334	tRNA-synt_1g    	  1493	  1625	   111.7
+	PF09334	tRNA-synt_1g    	  1618	  1829	   185.7
+	PF00133	tRNA-synt_1     	  1690	  1805	    53.4
+	PF01035	DNA_binding_1   	  1834	  1914	     102
+	PF00005	ABC_tran        	  2118	  2238	    71.9
+	PF00005	ABC_tran        	  2392	  2527	    81.3
+	PF16326	ABC_tran_CTD    	  2620	  2689	    60.5
+
+O05975	UNCHARACTERIZED PROTEIN RP785      364.6   2.3e-106   1   1.7   5.5
+	Iterate                   	   583	   738	   363.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS614878 (E-value: 4.1e-76, Score: 259.5)
+Mentioned as: RT0773
+Description: rickettsial conserved hypothetical protein
+Organism: Rickettsia typhi str. wilmington
+PMID: 18641131
+Source: EuropePMC
+Title: Characterization of Sec-translocon-dependent extracytoplasmic proteins of Rickettsia typhi
+Journal: Journal of bacteriology (2008)
+Snippet: hypothetical protein Rickettsial conserved hypothetical protein RT0773 RT0775 RT0797 RT0807 RT0341 RT0348 RT0355 RT0358 RT0377 RT0379 Hypothetical protein
+
+================================================================================
+Protein: VIMSS136146 (E-value: 2.7e-74, Score: 253.6)
+Mentioned as: RC1218
+Description: unknown
+Organism: Rickettsia conorii str. Malish 7
+PMID: 27834404
+Source: EuropePMC
+Title: Small Regulatory RNAs of Rickettsia conorii
+Journal: Scientific reports (2016)
+Snippet: 225 cis peg.1380 ( RC1205 ) </> Rc _sR38 1121923 1122042 120 cis peg.1397 ( RC1218 ) </> Rc _sR39 1132389 1132619 231 trans peg.1406 ( RC1227 ) peg.1407 ( RC1228 ) >/>/> Rc _sR40 1146031 1146254 224 cis peg.1419 ( RC1238 ) >/< Rc _sR41
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A261DD30.1	AF-A0A261DD30-F1-model_v4_TED01:60-153_163-219	1	AF-A0A261DD30-F1-model_v4_TED01	60-219	0
+A0A261DD30.1	AF-A0A261DD30-F1-model_v4_TED02:241-266_279-310	1	AF-A0A261DD30-F1-model_v4_TED02	241-310	0
+A0A261DD30.1	AF-A0A261DD30-F1-model_v4_TED03:344-584	1	AF-A0A261DD30-F1-model_v4_TED03	344-584	0
+A0A261DD30.1	AF-A0A261DD30-F1-model_v4_TED04:751-865	1	AF-A0A261DD30-F1-model_v4_TED04	751-865	0
+A0A261DD30.1	AF-A0A261DD30-F1-model_v4_TED05:891-957	1	AF-A0A261DD30-F1-model_v4_TED05	891-957	0
+A0A261DD30.1	AF-A0A261DD30-F1-model_v4_TED06:963-1127	1	AF-A0A261DD30-F1-model_v4_TED06	963-1127	0
+O05975.2	AF-O05975-F1-model_v4_TED01:66-227	1	AF-O05975-F1-model_v4_TED01	66-227	0
+O05975.2	AF-O05975-F1-model_v4_TED03:349-518	1	AF-O05975-F1-model_v4_TED03	349-518	0
+O05975.2	AF-O05975-F1-model_v4_TED04:583-738	1	AF-O05975-F1-model_v4_TED04	583-738	100.0%
+O05975.2	AF-O05975-F1-model_v4_TED05:781-900	1	AF-O05975-F1-model_v4_TED05	781-900	0
+O05975.2	AF-O05975-F1-model_v4_TED06:931-990	1	AF-O05975-F1-model_v4_TED06	931-990	0
+O05975.2	AF-O05975-F1-model_v4_TED07:996-1168	1	AF-O05975-F1-model_v4_TED07	996-1168	0
+O05975.2	AF-O05975-F1-model_v4_TED02:248-312	1	AF-O05975-F1-model_v4_TED02	248-312	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O05975_TED04/Iterate
+GA   27.00 27.00;
+TC   29.30 262.10;
+NC   26.20 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

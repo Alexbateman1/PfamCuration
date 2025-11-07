@@ -1,0 +1,58 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Brachyspira.
+1	5	Brachyspiraceae
+1	4	Brachyspirales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+D8IA14	DUF4836 DOMAIN-CONTAINING PRO    201.2    2.8e-56   1   2.8  10.2
+	Q06809_TED01              	   362	   499	   201.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: J9UGA5 (E-value: 1.1e-57, Score: 199.2)
+Mentioned as: J9UGA5
+Description: DUF4836 domain-containing protein
+Organism: Brachyspira pilosicoli B2904
+PMID: 27493641
+Source: EuropePMC
+Title: The Exposed Proteomes of Brachyspira hyodysenteriae and B. pilosicoli
+Journal: Frontiers in microbiology (2016)
+Snippet: K0JKH7 coxL BRAPL Variable surface protein VspD 144 D8ICU0 , J9UQJ0 vspD, B2904_orf389 BRAPL Unchar J9UGA5 122 J9UGA5 B2904_orf1414 BRAPL Unchar J9U2W9 116 J9U2W9 B2904_orf2565 BRAPL Flagellar filament protein FlaA 105 A0A0H0UUF0 SR30_02310 BRAHW Nitroreductase 96 D8IFL9 BP951000_1964 BRAPL Phosphate ABC transporter phosphate binding protein 94
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q06809.1	AF-Q06809-F1-model_v4_TED01:14-151	1	AF-Q06809-F1-model_v4_TED01	14-151	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q06809_TED01
+GA   27.00 27.00;
+TC   27.40 201.20;
+NC   26.90 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,71 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Streptococcus
+1	5	Streptococcaceae
+1	4	Lactobacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0AAE0SKZ2	UNCHARACTERIZED PROTEIN {     55.6    7.8e-12  15  15.7  39.3
+	P81621                    	   214	   227	     6.4
+	P81621                    	   230	   243	     6.4
+	P81621                    	   182	   195	     6.3
+	P81621                    	   134	   146	     6.2
+	P81621                    	   150	   162	     6.2
+	P81621                    	   166	   178	     6.2
+	P81621                    	    38	    51	     3.7
+	P81621                    	   118	   131	     3.7
+	P81621                    	   262	   275	     3.7
+	P81621                    	   246	   258	     3.6
+	P81621                    	    54	    66	     3.5
+	P81621                    	    86	    98	     3.5
+	P81621                    	   102	   114	     3.5
+	P81621                    	   198	   210	     3.5
+	P81621                    	    70	    81	     2.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS928907 (E-value: 1.2e-08, Score: 39.4)
+Mentioned as: stu0723
+Description: peroxide resistance protein,non-heme iron-containing ferritin
+Organism: Streptococcus thermophilus LMG 18311
+PMID: 22022447
+Source: EuropePMC
+Title: Transcriptome analysis of adaptive heat shock response of Streptococcus thermophilus
+Journal: PloS one (2011)
+Snippet: of two-component regulatory system. In particular, a Fur regulator (stu0724) and the iron chelator dpr (stu0723) were more than 3 folds and 2 folds down-regulated at 50C, respectively. This observation is in accordance with previous study that temperature change can influence the differential expression of genes
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P81621
+GA   27.00 27.00;
+TC   27.80 39.40;
+NC   26.40 17.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

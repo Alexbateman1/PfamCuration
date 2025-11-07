@@ -1,0 +1,108 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y4KA_SINFN              Reviewed;         322 AA.
+AC   P55521;
+DE   RecName: Full=Uncharacterized protein y4kA;
+GN   OrderedLocusNames=NGR_a02940; ORFNames=y4kA;
+OS   Sinorhizobium fredii (strain NBRC 101917 / NGR234).
+OG   Plasmid sym pNGR234a.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Rhizobiaceae; Sinorhizobium/Ensifer group; Sinorhizobium.
+OX   NCBI_TaxID=394;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=9163424; DOI=10.1038/387394a0;
+RA   Freiberg C.A., Fellay R., Bairoch A., Broughton W.J., Rosenthal A.,
+RA   Perret X.;
+RT   "Molecular basis of symbiosis between Rhizobium and legumes.";
+RL   Nature 387:394-401(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=19376903; DOI=10.1128/aem.00515-09;
+RA   Schmeisser C., Liesegang H., Krysciak D., Bakkou N., Le Quere A.,
+RA   Wollherr A., Heinemeyer I., Morgenstern B., Pommerening-Roeser A.,
+RA   Flores M., Palacios R., Brenner S., Gottschalk G., Schmitz R.A.,
+RA   Broughton W.J., Perret X., Strittmatter A.W., Streit W.R.;
+RT   "Rhizobium sp. strain NGR234 possesses a remarkable number of secretion
+RT   systems.";
+RL   Appl. Environ. Microbiol. 75:4035-4045(2009).
+DR   EMBL; U00090; AAB91733.1; -; Genomic_DNA.
+DR   RefSeq; NP_443931.1; NC_000914.2.
+DR   RefSeq; WP_010875317.1; NC_000914.2.
+DR   AlphaFoldDB; P55521; -.
+DR   KEGG; rhi:NGR_a02940; -.
+DR   eggNOG; ENOG5032WBI; Bacteria.
+DR   HOGENOM; CLU_067803_0_0_5; -.
+DR   OrthoDB; 8441909at2; -.
+DR   Proteomes; UP000001054; Plasmid pNGR234a.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..322
+FT                   /note="Uncharacterized protein y4kA"
+FT                   /id="PRO_0000200884"
+FT   REGION          269..289
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   322 AA;  36690 MW;  177B0AF61FA0C74B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Rhizobium/Agrobacterium group
+3	6	Methylobacterium.
+2	6	Bradyrhizobium.
+4	5	Rhizobiaceae
+4	5	Methylobacteriaceae
+3	5	Nitrobacteraceae
+14	4	Hyphomicrobiales
+14	3	Alphaproteobacteria
+14	2	Pseudomonadota
+14	1	Pseudomonadati
+14	0	Bacteria
+Total of 14 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A126NZ89	UNCHARACTERIZED PROTEIN {    105.3    1.9e-26   1   1.1   0.0
+	Iterate                   	    42	   313	   104.9
+
+A0A849I4I8	UNCHARACTERIZED PROTEIN {    115.4    1.5e-29   1   1.0   0.6
+	Iterate                   	    25	   292	   115.2
+
+A0A9W6GSS3	LIPOPROTEIN {ECO:0008006|    115.2    1.8e-29   1   1.1   0.0
+	Iterate                   	    22	   276	   114.8
+
+P55521	UNCHARACTERIZED PROTEIN Y4KA       722.8   1.6e-214   1   1.0   3.0
+	Iterate                   	    20	   322	   722.7
+
+Q89MY9	BLR4053 PROTEIN {ECO:0000313|    105.3    1.8e-26   1   1.1   0.0
+	Iterate                   	    23	   290	   105.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1H0E4Q9.1	AF-A0A1H0E4Q9-F1-model_v4_TED01:94-348	1	AF-A0A1H0E4Q9-F1-model_v4_TED01	94-348	81.0%
+A0A1H0E4Q9.1	AF-A0A1H0E4Q9-F1-model_v4_TED02:369-421	1	AF-A0A1H0E4Q9-F1-model_v4_TED02	369-421	11.4%
+P55521.1	AF-P55521-F1-model_v4_TED01:20-273_288-322	1	AF-P55521-F1-model_v4_TED01	20-322	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P55521_TED01/Iterate
+GA   27.00 27.00;
+TC   41.20 40.40;
+NC   26.70 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

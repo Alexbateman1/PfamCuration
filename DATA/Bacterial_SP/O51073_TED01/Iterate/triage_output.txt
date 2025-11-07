@@ -1,0 +1,125 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y044_BORBU              Reviewed;         133 AA.
+AC   O51073;
+DE   RecName: Full=Uncharacterized protein BB_0044;
+GN   OrderedLocusNames=BB_0044;
+OS   Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)
+OS   (Borrelia burgdorferi).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Borreliaceae; Borreliella.
+OX   NCBI_TaxID=224326;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RX   PubMed=9403685; DOI=10.1038/37551;
+RA   Fraser C.M., Casjens S., Huang W.M., Sutton G.G., Clayton R.A.,
+RA   Lathigra R., White O., Ketchum K.A., Dodson R.J., Hickey E.K., Gwinn M.L.,
+RA   Dougherty B.A., Tomb J.-F., Fleischmann R.D., Richardson D.L.,
+RA   Peterson J.D., Kerlavage A.R., Quackenbush J., Salzberg S.L., Hanson M.,
+RA   van Vugt R., Palmer N., Adams M.D., Gocayne J.D., Weidman J.F.,
+RA   Utterback T.R., Watthey L., McDonald L.A., Artiach P., Bowman C.,
+RA   Garland S.A., Fujii C., Cotton M.D., Horst K., Roberts K.M., Hatch B.,
+RA   Smith H.O., Venter J.C.;
+RT   "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.";
+RL   Nature 390:580-586(1997).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000783; AAC66442.1; -; Genomic_DNA.
+DR   PIR; D70105; D70105.
+DR   RefSeq; NP_212178.1; NC_001318.1.
+DR   RefSeq; WP_002556649.1; NC_001318.1.
+DR   AlphaFoldDB; O51073; -.
+DR   SMR; O51073; -.
+DR   STRING; 224326.BB_0044; -.
+DR   PaxDb; 224326-BB_0044; -.
+DR   EnsemblBacteria; AAC66442; AAC66442; BB_0044.
+DR   KEGG; bbu:BB_0044; -.
+DR   PATRIC; fig|224326.49.peg.442; -.
+DR   HOGENOM; CLU_1955372_0_0_12; -.
+DR   OrthoDB; 351011at2; -.
+DR   Proteomes; UP000001807; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..133
+FT                   /note="Uncharacterized protein BB_0044"
+FT                   /id="PRO_0000174374"
+FT   TRANSMEM        11..31
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   133 AA;  16053 MW;  A57686EA30F1959B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Borrelia.
+1	6	Borreliella.
+3	5	Borreliaceae
+3	4	Spirochaetales
+3	3	Spirochaetia
+3	2	Spirochaetota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A9D4CHF5	UNCHARACTERIZED PROTEIN {     37.3    1.1e-05   2   7.9  20.8
+	Iterate                   	    22	    39	    15.2
+	Iterate                   	    41	    57	    13.3
+
+A0ABF7PUM8	UNCHARACTERIZED PROTEIN {     49.6    1.6e-09   1   1.3   3.3
+	Iterate                   	     2	    52	    48.9
+
+K9RM26	PUTATIVE CARBOHYDRATE-BINDING     34.0    0.00011   3   4.0   0.3
+	Iterate                   	   155	   184	    11.9
+	Iterate                   	   208	   236	     8.3
+	Iterate                   	   108	   133	     8.0
+
+O51073	UNCHARACTERIZED PROTEIN BB_0044    133.1    1.3e-35   1   1.3   4.7
+	Iterate                   	     2	    52	   132.5
+
+W6TYA7	SENSOR HISTIDINE KINASE {ECO:     37.3    1.1e-05   1   1.0   5.5
+	Iterate                   	     2	    42	    37.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS43686 (E-value: 2.5e-30, Score: 109.3)
+Mentioned as: BB0044
+Description: B. burgdorferi predicted coding region BB0044
+Organism: Borrelia burgdorferi B31
+PMID: 12654782
+Source: EuropePMC
+Title: Profiling of temperature-induced changes in Borrelia burgdorferi gene expression by using whole genome arrays
+Journal: Infection and immunity (2003)
+Snippet: BBA16 BB0741 BB0480 BBQ42 BB0704 BBS37 BB0256 BB0631 BB0044 BB0423 BB0562 BB0803 BB0541 BBF20 BB0061 BB0229 BB0441 BBE21 BBL35 BB0691 BB0501 BB0538 BB0190
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O51073.1	AF-O51073-F1-model_v4_TED02:55-133	1	AF-O51073-F1-model_v4_TED02	55-133	0
+O51073.1	AF-O51073-F1-model_v4_TED01:2-52	1	AF-O51073-F1-model_v4_TED01	2-52	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O51073_TED01/Iterate
+GA   27.00 27.00;
+TC   39.10 75.40;
+NC   25.50 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

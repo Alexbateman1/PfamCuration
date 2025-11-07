@@ -1,0 +1,203 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   EMP_STAA8               Reviewed;         340 AA.
+AC   Q2G012;
+DE   RecName: Full=Extracellular matrix protein-binding protein emp;
+DE   Flags: Precursor;
+GN   Name=emp; OrderedLocusNames=SAOUHSC_00816;
+OS   Staphylococcus aureus (strain NCTC 8325 / PS 47).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Staphylococcaceae;
+OC   Staphylococcus.
+OX   NCBI_TaxID=93061;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=11698365; DOI=10.1128/jb.183.23.6778-6786.2001;
+RA   Hussain M.S., Becker K., von Eiff C., Schrenzel J., Peters G., Herrmann M.;
+RT   "Identification and characterization of a novel 38.5-kilodalton cell
+RT   surface protein of Staphylococcus aureus with extended-spectrum binding
+RT   activity for extracellular matrix and plasma proteins.";
+RL   J. Bacteriol. 183:6778-6786(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NCTC 8325 / PS 47;
+RA   Gillaspy A.F., Worrell V., Orvis J., Roe B.A., Dyer D.W., Iandolo J.J.;
+RT   "The Staphylococcus aureus NCTC 8325 genome.";
+RL   (In) Fischetti V., Novick R., Ferretti J., Portnoy D., Rood J. (eds.);
+RL   Gram positive pathogens, 2nd edition, pp.381-412, ASM Press, Washington
+RL   D.C. (2006).
+CC   -!- FUNCTION: Adhesin that binds to the host cell extracellular matrix
+CC       proteins fibronectin, fibrinogen, collagen, and vitronectin.
+CC       {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Cell surface {ECO:0000250}.
+DR   EMBL; AJ272083; CAB75984.1; -; Genomic_DNA.
+DR   EMBL; CP000253; ABD29943.1; -; Genomic_DNA.
+DR   RefSeq; WP_000728056.1; NZ_LS483365.1.
+DR   RefSeq; YP_499371.1; NC_007795.1.
+DR   AlphaFoldDB; Q2G012; -.
+DR   PaxDb; 1280-SAXN108_0858; -.
+DR   GeneID; 3919378; -.
+DR   KEGG; sao:SAOUHSC_00816; -.
+DR   PATRIC; fig|93061.5.peg.737; -.
+DR   HOGENOM; CLU_078520_0_0_9; -.
+DR   OrthoDB; 2413495at2; -.
+DR   PRO; PR:Q2G012; -.
+DR   Proteomes; UP000008816; Chromosome.
+DR   GO; GO:0009986; C:cell surface; IEA:UniProtKB-SubCell.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..26
+FT                   /evidence="ECO:0000250"
+FT   CHAIN           27..340
+FT                   /note="Extracellular matrix protein-binding protein emp"
+FT                   /id="PRO_0000271534"
+SQ   SEQUENCE   340 AA;  38485 MW;  BDC25A6F79C5E42A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Staphylococcus
+1	5	Staphylococcaceae
+1	4	Bacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q2G012	EXTRACELLULAR MATRIX PROTEIN-BIN    201.1    1.2e-56   4   4.9  40.3
+	A6QF98_TED01              	   200	   286	   200.8
+	A6QF98_TED01              	     8	    90	     9.0
+	A6QF98_TED01              	   123	   195	     1.9
+	A6QF98_TED01              	    78	   134	     1.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS103025 (E-value: 3.7e-59, Score: 202.5)
+Mentioned as: SA0744
+Description: extracellular ECM and plasma binding protein
+Organism: Staphylococcus aureus subsp. aureus N315
+PMID: 31795457
+Source: EuropePMC
+Title: What Happens in the Staphylococcal Nucleoid under Oxidative Stress?
+Journal: Microorganisms (2019)
+Snippet: amino acid ABC transporter permease/substrate-binding protein 1.02 nrdD SA2410 anaerobic ribonucleoside triphosphate reductase 1.02 ssp SA0744 secretory extracellular matrix and plasma binding protein 1.01 / SA0324 mepB family protein 1.00 clfB SA2423 clumping factor B blue: holin, anti-holin; red: virulence; yellow: transcription regulator; green: nucleic acid
+
+================================================================================
+Protein: VIMSS103025 (E-value: 3.7e-59, Score: 202.5)
+Mentioned as: SA0744
+Description: extracellular ECM and plasma binding protein
+Organism: Staphylococcus aureus subsp. aureus N315
+PMID: 28656172
+Source: EuropePMC
+Title: Sulfide Homeostasis and Nitroxyl Intersect via Formation of Reactive Sulfur Species in <i>Staphylococcus aureus</i>
+Journal: mSphere (2017)
+Snippet: NWMN_0577 SA0562 adh1 24.5 Alcohol dehydrogenase (eukaryote-like) NWMN_0756 SA0742 clfA 4.1 Clumping factor A NWMN_0758 SA0744 ssp 6.9 Extracellular matrix; plasma binding (cell wall) NWMN_1067 SA1001 4.8 Formyl peptide receptor-like 1 inhibitory factor b NWMN_1075 SA1009 8.1 Superantigen-like protein (toxin c) NWMN_1076 SA1010 10.6 Superantigen-like protein
+
+================================================================================
+Protein: VIMSS103025 (E-value: 3.7e-59, Score: 202.5)
+Mentioned as: SA0744
+Description: extracellular ECM and plasma binding protein
+Organism: Staphylococcus aureus subsp. aureus N315
+PMID: 26286693
+Source: EuropePMC
+Title: An Alternative Terminal Step of the General Secretory Pathway in Staphylococcus aureus
+Journal: mBio (2015)
+Snippet: AIGITTTTIASTADA SA0394 Hypothetical 0.66 0.05 MRENFKLRKMKVGLVSVAITMLYIMTNGQAEA SA2437 N -Acetylmuramoyl- l -alanine amidase 0.74 0.07 MPKNKILIYLLSTTLVLPTLVSPTAYA SA0744 Emp Extracellular matrix protein-binding protein 0.82 0.21 MKKKLLVLTMSTLFATQLINSNHAKA SA0393 Set15 Exotoxin 15 0.88 0.05 MKLKNIAKASLAL GILTTGMITTTAQPVK A SA0520 SdrD Serine-aspartate repeat-containing protein D 0.90 0.29 MLNRENKTAITRKGMVSNRLNKFSIRKYTVGTASILVGTTLIFGLGNQEAKA SA1751 Map Truncated map-w
+
+================================================================================
+Protein: VIMSS3706307 (E-value: 1.1e-58, Score: 201.1)
+Mentioned as: NWMN_0758
+Description: extracellular matrix and plasma binding protein
+Organism: Staphylococcus aureus subsp. aureus str. Newman
+PMID: 39203567
+Source: EuropePMC
+Title: Surface-Shaving of <i>Staphylococcus aureus</i> Strains and Quantitative Proteomic Analysis Reveal Differences in Protein Abundance of the Surfaceome
+Journal: Microorganisms (2024)
+Snippet: 2 WP_000728056.1 Extracellular matrix protein-binding adhesin Emp Extracellular matrix protein-binding protein Emp cell surface ssp NWMN_0758 2 2 2 3 2 WP_000792564.1 Immunoglobulin-binding protein Sbi Immunoglobulin-binding protein Sbi extracellular region; plasma membrane sbi NWMN_2317 2 1 1 2 2 WP_000610306.1 MSCRAMM family adhesion SdrE Serine-aspartate repeat-containing
+
+================================================================================
+Protein: VIMSS3706307 (E-value: 1.1e-58, Score: 201.1)
+Mentioned as: NWMN_0758
+Description: extracellular matrix and plasma binding protein
+Organism: Staphylococcus aureus subsp. aureus str. Newman
+PMID: 29459694
+Source: EuropePMC
+Title: Human antibody responses against non-covalently cell wall-bound Staphylococcus aureus proteins
+Journal: Scientific reports (2018)
+Snippet: NWMN_1877 chp 149 S Chemotaxis inhibitory protein precursor A0A0H3KA75 NWMN_0166 coa 636 S Coagulase A6QF98 NWMN_0758 emp d 340 S Extracellular matrix protein-binding protein emp precursor A0A0H3KF27 NWMN_2399 fnbA 741 S Fibronectin binding protein A A0A0H3K6R0 NWMN_0687 646 S Lipoteichoic acid synthase A6QK59 NWMN_2469 isaA 233
+
+================================================================================
+Protein: VIMSS3706307 (E-value: 1.1e-58, Score: 201.1)
+Mentioned as: NWMN_0758
+Description: extracellular matrix and plasma binding protein
+Organism: Staphylococcus aureus subsp. aureus str. Newman
+PMID: 27706107
+Source: EuropePMC
+Title: The SaeRS Two-Component System of Staphylococcus aureus
+Journal: Genes (2016)
+Snippet: TTTAA GTTAA GAATTA GTTAA EMSA, MA, NB, RA [ 15 , 19 , 48 ] NWMN_0758 ssr/emp extracellular matrix binding protein GTTAA GACAAC GTTTA GTTTA CTTCAA GTTAA 1D, MA, RA [ 48 , 68 , 69 ] NWMN_0760 nuc nuclease ATTAA ATTTTT ATTAA EMSA, 2D, MA,
+
+================================================================================
+Protein: VIMSS260981 (E-value: 1.3e-58, Score: 200.8)
+Mentioned as: MW0767
+Description: extracellular ECM and plasma binding protein
+Organism: Staphylococcus aureus subsp. aureus MW2
+PMID: 40689791
+Source: EuropePMC
+Title: Sub-inhibitory concentrations of fosfomycin enhance &lt;i&gt;Staphylococcus aureus&lt;/i&gt; biofilm formation by a &lt;i&gt;sarA&lt;/i&gt;-dependent mechanism
+Journal: Microbiology spectrum (2025)
+
+================================================================================
+Protein: VIMSS260981 (E-value: 1.3e-58, Score: 200.8)
+Mentioned as: MW0767
+Description: extracellular ECM and plasma binding protein
+Organism: Staphylococcus aureus subsp. aureus MW2
+PMID: 40656895
+Source: EuropePMC
+Title: Synovial advanced glycosylation end products aggravate periprosthetic infection in diabetes by upregulating &lt;i&gt;Staphylococcus aureus&lt;/i&gt; RNAIII
+Journal: Journal of orthopaedic translation (2025)
+
+================================================================================
+Protein: VIMSS260981 (E-value: 1.3e-58, Score: 200.8)
+Mentioned as: MW0767
+Description: extracellular ECM and plasma binding protein
+Organism: Staphylococcus aureus subsp. aureus MW2
+PMID: 40359050
+Source: EuropePMC
+Title: &lt;i&gt;Staphylococcus aureus&lt;/i&gt; SaeR/S-regulated factors overcome human complement-mediated inhibition of aggregation to evade neutrophil killing
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2025)
+
+================================================================================
+Protein: P0C6P1 (E-value: 1.7e-56, Score: 194.0)
+Mentioned as: P0C6P1
+Description: Extracellular matrix protein-binding protein emp
+
+... (truncated - showing first 100 of 107 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A6QF98.1	AF-A6QF98-F1-model_v4_TED01:200-241_277-286	1	AF-A6QF98-F1-model_v4_TED01	200-286	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A6QF98_TED01
+GA   27.00 27.00;
+TC   29.90 200.80;
+NC   26.20 18.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

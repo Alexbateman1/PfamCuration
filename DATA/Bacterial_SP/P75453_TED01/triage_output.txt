@@ -1,0 +1,94 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   T2RMN_MYCPN             Reviewed;         165 AA.
+AC   P75453;
+DE   RecName: Full=Putative type II restriction enzyme and methyltransferase RM.MpnORF109P N-terminus {ECO:0000303|PubMed:12654995};
+GN   OrderedLocusNames=MPN_109; ORFNames=C09_orf165, MP045;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+RN   [2]
+RP   IDENTIFICATION BY MASS SPECTROMETRY.
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=11271496;
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P75453	PUTATIVE TYPE II RESTRICTION E    360.3   3.9e-105   1   1.0  12.3
+	P75453_TED01              	     3	   159	   360.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS13565 (E-value: 3.5e-107, Score: 360.3)
+Mentioned as: MPN109
+Description: C09_orf165 Protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 35160167
+Source: EuropePMC
+Title: Association of Tandem Repeat Number Variabilities in Subunit S of the Type I Restriction-Modification System with Macrolide Resistance in <i>Mycoplasma pneumoniae</i>
+Journal: Journal of clinical medicine (2022)
+Snippet: were found to be in association (including putative) with HsdR and HsdM were: HsdR ( mpn109 , mpn110 , mpn345 , mpn346 , and mpn347 ) and HsdM ( mpn107 , mpn108 , mpn111 , and mpn342 ). Except for mpn109 , all other examined genes
+
+================================================================================
+Protein: VIMSS13565 (E-value: 3.5e-107, Score: 360.3)
+Mentioned as: MPN109
+Description: C09_orf165 Protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 26202118
+Source: EuropePMC
+Title: Development of a Multilocus Sequence Typing Scheme for Molecular Typing of Mycoplasma pneumoniae
+Journal: Journal of clinical microbiology (2015)
+Snippet: MPN014b MPN015b MPN016b MPN017b MPN020 MPN103 MPN105 MPN108 MPN109 MPN113 MPN116 MPN118 MPN120 MPN122 MPN136 MPN004 MPN104c MPN106c MPN110c MPN124 MPN131 MPN111
+
+================================================================================
+Protein: VIMSS13565 (E-value: 3.5e-107, Score: 360.3)
+Mentioned as: MPN109
+Description: C09_orf165 Protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 23300489
+Source: EuropePMC
+Title: Comprehensive methylome characterization of Mycoplasma genitalium and Mycoplasma pneumoniae at single-base resolution
+Journal: PLoS genetics (2013)
+Snippet: the methyltransferase protein (HsdM, mpn107 , mpn108 or mpn111 ) and the restriction enzyme (HsdR, mpn109 or mpn110 ). Additionally, a putative uncharacterized methyltransferase (mte1; mpn198 ), annotated as an Eco RI-like methylase in Uniprot and not associated with any R-M system, was identified. Eco RI
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75453.1	AF-P75453-F1-model_v4_TED01:3-159	1	AF-P75453-F1-model_v4_TED01	3-159	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75453_TED01
+GA   27.00 27.00;
+TC   29.10 360.10;
+NC   26.80 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

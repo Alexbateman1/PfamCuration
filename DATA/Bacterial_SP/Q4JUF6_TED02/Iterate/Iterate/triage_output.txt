@@ -1,0 +1,702 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TATB_MYCPA              Reviewed;         131 AA.
+AC   Q73WV6;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=MAP_2554c;
+OS   Mycolicibacterium paratuberculosis (strain ATCC BAA-968 / K-10)
+OS   (Mycobacterium paratuberculosis).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium avium complex (MAC).
+OX   NCBI_TaxID=262316;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-968 / K-10;
+RX   PubMed=16116077; DOI=10.1073/pnas.0505662102;
+RA   Li L., Bannantine J.P., Zhang Q., Amonsin A., May B.J., Alt D., Banerji N.,
+RA   Kanjilal S., Kapur V.;
+RT   "The complete genome sequence of Mycobacterium avium subspecies
+RT   paratuberculosis.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 102:12344-12349(2005).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|HAMAP-Rule:MF_00237};
+CC       Single-pass membrane protein {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; AE016958; AAS04871.1; -; Genomic_DNA.
+DR   RefSeq; WP_003875525.1; NZ_CP106873.1.
+DR   AlphaFoldDB; Q73WV6; -.
+DR   SMR; Q73WV6; -.
+DR   STRING; 262316.MAP_2554c; -.
+DR   KEGG; mpa:MAP_2554c; -.
+DR   PATRIC; fig|262316.17.peg.2711; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_2_0_11; -.
+DR   Proteomes; UP000000580; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR003369; TatA/B/E.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   Pfam; PF02416; TatA_B_E; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell membrane; Membrane; Protein transport; Reference proteome;
+KW   Translocation; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..131
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000301187"
+FT   TRANSMEM        2..22
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          96..131
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        107..116
+FT                   /note="Pro residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   131 AA;  14142 MW;  989BE3A81CEA489C CRC64;
+//
+ID   TATB_COREF              Reviewed;         165 AA.
+AC   Q8FQD9;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237}; OrderedLocusNames=CE1180;
+OS   Corynebacterium efficiens (strain DSM 44549 / YS-314 / AJ 12310 / JCM 11189
+OS   / NBRC 100395).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Corynebacteriaceae; Corynebacterium.
+OX   NCBI_TaxID=196164;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DSM 44549 / YS-314 / AJ 12310 / JCM 11189 / NBRC 100395;
+RX   PubMed=12840036; DOI=10.1101/gr.1285603;
+RA   Nishio Y., Nakamura Y., Kawarabayasi Y., Usuda Y., Kimura E., Sugimoto S.,
+RA   Matsui K., Yamagishi A., Kikuchi H., Ikeo K., Gojobori T.;
+RT   "Comparative complete genome sequence analysis of the amino acid
+RT   replacements responsible for the thermostability of Corynebacterium
+RT   efficiens.";
+RL   Genome Res. 13:1572-1579(2003).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|HAMAP-Rule:MF_00237};
+CC       Single-pass membrane protein {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; BA000035; BAC17990.1; -; Genomic_DNA.
+DR   RefSeq; WP_006769861.1; NC_004369.1.
+DR   AlphaFoldDB; Q8FQD9; -.
+DR   SMR; Q8FQD9; -.
+DR   STRING; 196164.gene:10741588; -.
+DR   KEGG; cef:CE1180; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_2_0_11; -.
+DR   OrthoDB; 3267321at2; -.
+DR   Proteomes; UP000001409; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR003369; TatA/B/E.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; NF001212; PRK00182.1; 1.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   Pfam; PF02416; TatA_B_E; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell membrane; Membrane; Protein transport; Reference proteome;
+KW   Translocation; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..165
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000192651"
+FT   TRANSMEM        2..22
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          103..165
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        111..121
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        123..136
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        137..146
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   165 AA;  17975 MW;  F1DAB0C691702087 CRC64;
+//
+ID   TATB_CORJK              Reviewed;         195 AA.
+AC   Q4JUF6;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237}; OrderedLocusNames=jk1378;
+OS   Corynebacterium jeikeium (strain K411).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Corynebacteriaceae; Corynebacterium.
+OX   NCBI_TaxID=306537;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K411;
+RX   PubMed=15968079; DOI=10.1128/jb.187.13.4671-4682.2005;
+RA   Tauch A., Kaiser O., Hain T., Goesmann A., Weisshaar B., Albersmeier A.,
+RA   Bekel T., Bischoff N., Brune I., Chakraborty T., Kalinowski J., Meyer F.,
+RA   Rupp O., Schneiker S., Viehoever P., Puehler A.;
+RT   "Complete genome sequence and analysis of the multiresistant nosocomial
+RT   pathogen Corynebacterium jeikeium K411, a lipid-requiring bacterium of the
+RT   human skin flora.";
+RL   J. Bacteriol. 187:4671-4682(2005).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|HAMAP-Rule:MF_00237};
+CC       Single-pass membrane protein {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; CR931997; CAI37551.1; -; Genomic_DNA.
+DR   RefSeq; WP_005293079.1; NC_007164.1.
+DR   AlphaFoldDB; Q4JUF6; -.
+DR   SMR; Q4JUF6; -.
+DR   STRING; 306537.jk1378; -.
+DR   GeneID; 92738958; -.
+DR   KEGG; cjk:jk1378; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_2_0_11; -.
+DR   OrthoDB; 3267321at2; -.
+DR   Proteomes; UP000000545; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; NF001212; PRK00182.1; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell membrane; Membrane; Protein transport; Reference proteome;
+KW   Translocation; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..195
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000301164"
+FT   TRANSMEM        2..22
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          103..195
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        103..125
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        127..139
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        146..155
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   195 AA;  20931 MW;  B7918A67C300015D CRC64;
+//
+ID   TATB_MYCS2              Reviewed;         132 AA.
+AC   A0R2D1; I7GDG7;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=MSMEG_5069, MSMEI_4942;
+OS   Mycolicibacterium smegmatis (strain ATCC 700084 / mc(2)155) (Mycobacterium
+OS   smegmatis).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycolicibacterium.
+OX   NCBI_TaxID=246196;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700084 / mc(2)155;
+RA   Fleischmann R.D., Dodson R.J., Haft D.H., Merkel J.S., Nelson W.C.,
+RA   Fraser C.M.;
+RL   Submitted (OCT-2006) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700084 / mc(2)155;
+RX   PubMed=17295914; DOI=10.1186/gb-2007-8-2-r20;
+RA   Deshayes C., Perrodou E., Gallien S., Euphrasie D., Schaeffer C.,
+RA   Van-Dorsselaer A., Poch O., Lecompte O., Reyrat J.-M.;
+RT   "Interrupted coding sequences in Mycobacterium smegmatis: authentic
+RT   mutations or sequencing errors?";
+RL   Genome Biol. 8:R20.1-R20.9(2007).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700084 / mc(2)155;
+RX   PubMed=18955433; DOI=10.1101/gr.081901.108;
+RA   Gallien S., Perrodou E., Carapito C., Deshayes C., Reyrat J.-M.,
+RA   Van Dorsselaer A., Poch O., Schaeffer C., Lecompte O.;
+RT   "Ortho-proteogenomics: multiple proteomes investigation through orthology
+RT   and a new MS-based protocol.";
+RL   Genome Res. 19:128-135(2009).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|HAMAP-Rule:MF_00237};
+CC       Single-pass membrane protein {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; CP000480; ABK74185.1; -; Genomic_DNA.
+DR   EMBL; CP001663; AFP41386.1; -; Genomic_DNA.
+DR   RefSeq; WP_003896477.1; NZ_SIJM01000019.1.
+DR   RefSeq; YP_889319.1; NC_008596.1.
+DR   AlphaFoldDB; A0R2D1; -.
+DR   SMR; A0R2D1; -.
+DR   STRING; 246196.MSMEG_5069; -.
+DR   PaxDb; 246196-MSMEI_4942; -.
+DR   GeneID; 93459735; -.
+DR   KEGG; msb:LJ00_25070; -.
+DR   KEGG; msg:MSMEI_4942; -.
+DR   KEGG; msm:MSMEG_5069; -.
+DR   PATRIC; fig|246196.19.peg.4947; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   OrthoDB; 3267321at2; -.
+DR   Proteomes; UP000000757; Chromosome.
+DR   Proteomes; UP000006158; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell membrane; Membrane; Protein transport; Reference proteome;
+KW   Translocation; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..132
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000301188"
+FT   TRANSMEM        2..22
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          91..132
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   132 AA;  14534 MW;  A1A59BD5AC5797B2 CRC64;
+//
+ID   TATB_MYCA9              Reviewed;         136 AA.
+AC   B1MLM4;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=MAB_1365;
+OS   Mycobacteroides abscessus (strain ATCC 19977 / DSM 44196 / CCUG 20993 / CIP
+OS   104536 / JCM 13569 / NCTC 13031 / TMC 1543 / L948) (Mycobacterium
+OS   abscessus).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacteroides; Mycobacteroides abscessus.
+OX   NCBI_TaxID=561007;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 19977 / DSM 44196 / CCUG 20993 / CIP 104536 / JCM 13569 /
+RC   NCTC 13031 / TMC 1543 / L948;
+RX   PubMed=19543527; DOI=10.1371/journal.pone.0005660;
+RA   Ripoll F., Pasek S., Schenowitz C., Dossat C., Barbe V., Rottman M.,
+RA   Macheras E., Heym B., Herrmann J.L., Daffe M., Brosch R., Risler J.L.,
+RA   Gaillard J.L.;
+RT   "Non mycobacterial virulence genes in the genome of the emerging pathogen
+RT   Mycobacterium abscessus.";
+RL   PLoS ONE 4:E5660-E5660(2009).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|HAMAP-Rule:MF_00237};
+CC       Single-pass membrane protein {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; CU458896; CAM61451.1; -; Genomic_DNA.
+DR   RefSeq; WP_005059662.1; NZ_MLCG01000002.1.
+DR   AlphaFoldDB; B1MLM4; -.
+DR   SMR; B1MLM4; -.
+DR   GeneID; 93378309; -.
+DR   KEGG; mab:MAB_1365; -.
+DR   Proteomes; UP000007137; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR003369; TatA/B/E.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   Pfam; PF02416; TatA_B_E; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell membrane; Membrane; Protein transport; Reference proteome;
+KW   Translocation; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..136
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_1000100635"
+FT   TRANSMEM        2..22
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          107..136
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   136 AA;  14772 MW;  961E2DD0EEA6E919 CRC64;
+//
+ID   TATB_CORGL              Reviewed;         156 AA.
+AC   Q8NRD0;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=Cgl1122, cg1273;
+OS   Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM 1318 / BCRC
+OS   11384 / CCUG 27702 / LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 /
+OS   534).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Corynebacteriaceae; Corynebacterium.
+OX   NCBI_TaxID=196627;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 /
+RC   LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534;
+RX   PubMed=12743753; DOI=10.1007/s00253-003-1328-1;
+RA   Ikeda M., Nakagawa S.;
+RT   "The Corynebacterium glutamicum genome: features and impacts on
+RT   biotechnological processes.";
+RL   Appl. Microbiol. Biotechnol. 62:99-109(2003).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 /
+RC   LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534;
+RX   PubMed=12948626; DOI=10.1016/s0168-1656(03)00154-8;
+RA   Kalinowski J., Bathe B., Bartels D., Bischoff N., Bott M., Burkovski A.,
+RA   Dusch N., Eggeling L., Eikmanns B.J., Gaigalat L., Goesmann A.,
+RA   Hartmann M., Huthmacher K., Kraemer R., Linke B., McHardy A.C., Meyer F.,
+RA   Moeckel B., Pfefferle W., Puehler A., Rey D.A., Rueckert C., Rupp O.,
+RA   Sahm H., Wendisch V.F., Wiegraebe I., Tauch A.;
+RT   "The complete Corynebacterium glutamicum ATCC 13032 genome sequence and its
+RT   impact on the production of L-aspartate-derived amino acids and vitamins.";
+RL   J. Biotechnol. 104:5-25(2003).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|HAMAP-Rule:MF_00237};
+CC       Single-pass membrane protein {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; BA000036; BAB98515.1; -; Genomic_DNA.
+DR   EMBL; BX927151; CAF19828.1; -; Genomic_DNA.
+DR   RefSeq; NP_600350.1; NC_003450.3.
+DR   RefSeq; WP_003854998.1; NC_006958.1.
+DR   AlphaFoldDB; Q8NRD0; -.
+DR   SMR; Q8NRD0; -.
+DR   STRING; 196627.cg1273; -.
+DR   GeneID; 1019107; -.
+DR   KEGG; cgb:cg1273; -.
+DR   KEGG; cgl:Cgl1122; -.
+DR   PATRIC; fig|196627.13.peg.1101; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_2_0_11; -.
+DR   OrthoDB; 3267321at2; -.
+DR   BioCyc; CORYNE:G18NG-10694-MONOMER; -.
+DR   Proteomes; UP000000582; Chromosome.
+DR   Proteomes; UP000001009; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; NF001212; PRK00182.1; 1.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell membrane; Membrane; Protein transport; Reference proteome;
+KW   Translocation; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..156
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000192652"
+FT   TRANSMEM        2..22
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          100..156
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        113..122
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   156 AA;  16959 MW;  931E5A3167710ADD CRC64;
+//
+ID   TATB_NOCFA              Reviewed;         138 AA.
+AC   Q5YQF7;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=NFA_47320;
+OS   Nocardia farcinica (strain IFM 10152).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Nocardiaceae; Nocardia.
+OX   NCBI_TaxID=247156;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=IFM 10152;
+RX   PubMed=15466710; DOI=10.1073/pnas.0406410101;
+RA   Ishikawa J., Yamashita A., Mikami Y., Hoshino Y., Kurita H., Hotta K.,
+RA   Shiba T., Hattori M.;
+RT   "The complete genomic sequence of Nocardia farcinica IFM 10152.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 101:14925-14930(2004).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|HAMAP-Rule:MF_00237};
+CC       Single-pass membrane protein {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; AP006618; BAD59584.1; -; Genomic_DNA.
+DR   RefSeq; WP_011211268.1; NC_006361.1.
+DR   AlphaFoldDB; Q5YQF7; -.
+DR   SMR; Q5YQF7; -.
+DR   STRING; 247156.NFA_47320; -.
+DR   GeneID; 61135331; -.
+DR   KEGG; nfa:NFA_47320; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_2_0_11; -.
+DR   OrthoDB; 3267321at2; -.
+DR   Proteomes; UP000006820; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR003369; TatA/B/E.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   Pfam; PF02416; TatA_B_E; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell membrane; Membrane; Protein transport; Reference proteome;
+KW   Translocation; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..138
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000301202"
+FT   TRANSMEM        2..22
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          104..138
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        117..138
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   138 AA;  15294 MW;  9A9F15453BFE223C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+20	6	Corynebacterium.
+16	6	Mycolicibacterium.
+12	6	Nocardia.
+11	6	Mycobacterium.
+35	5	Mycobacteriaceae
+20	5	Corynebacteriaceae
+18	5	Nocardiaceae
+80	4	Mycobacteriales
+80	3	Actinomycetes
+80	2	Actinomycetota
+80	1	Bacillati
+80	0	Bacteria
+Total of 80 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0R2D1	SEC-INDEPENDENT PROTEIN TRANSLO     36.1      3e-05   1   1.7   0.1
+	Iterate                   	    77	   115	    34.8
+	PF02416	TatA_B_E        	     2	    50	    44.4
+
+B1MLM4	SEC-INDEPENDENT PROTEIN TRANSLO     41.8    4.8e-07   1   2.2   0.2
+	Iterate                   	    77	   117	    39.4
+	PF02416	TatA_B_E        	     2	    50	    48.9
+
+Q4JUF6	SEC-INDEPENDENT PROTEIN TRANSLO     90.4    3.3e-22   1   2.2   4.8
+	Iterate                   	    77	   122	    88.8
+	PF02416	TatA_B_E        	     2	    50	    43.7
+
+Q5YQF7	SEC-INDEPENDENT PROTEIN TRANSLO     31.7    0.00072   1   1.8   0.1
+	Iterate                   	    77	   106	    30.1
+	PF02416	TatA_B_E        	     2	    50	    48.8
+
+Q73WV6	SEC-INDEPENDENT PROTEIN TRANSLO     32.6    0.00036   1   1.7   0.0
+	Iterate                   	    77	   107	    31.2
+	PF02416	TatA_B_E        	     3	    50	    42.7
+
+Q8FQD9	SEC-INDEPENDENT PROTEIN TRANSLO     44.5      7e-08   1   1.8   1.0
+	Iterate                   	    77	   121	    43.3
+	PF02416	TatA_B_E        	     2	    50	    46.5
+
+Q8NRD0	SEC-INDEPENDENT PROTEIN TRANSLO     32.2    0.00051   1   2.1   2.1
+	Iterate                   	    77	   135	    31.3
+	PF02416	TatA_B_E        	     2	    50	    41.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q8NRD0 (E-value: 2e-13, Score: 55.8)
+Mentioned as: Q8NRD0
+Description: Sec-independent protein translocase protein TatB
+Organism: Corynebacterium glutamicum (strain ATCC 13032 / DSM 20300 / JCM 1318 / BCRC 11384 / CCUG 27702 / LMG 3730 / NBRC 12168 / NCIMB 10025 / NRRL B-2784 / 534)
+PMID: 29358647
+Source: EuropePMC
+Title: Unanticipated functional diversity among the TatA-type components of the Tat protein translocase
+Journal: Scientific reports (2018)
+Snippet: shown by the common ExxxxK motif. Sequence source: C. glutamicum TatA (Q8NQE4), TatE (Q2MGW8), TatB (Q8NRD0); B. subtilis TatAy (O05522), TatAc (O31804), TatAd (O31467). On the other hand, we found the ExxxxK motif characteristic for E. coli TatE also contained in TatAc, which is one of
+
+================================================================================
+Protein: VIMSS32997 (E-value: 1e-07, Score: 37.5)
+Mentioned as: Rv1224
+Description: sec-independent translocase
+Organism: Mycobacterium tuberculosis H37Rv
+PMID: 39513699
+Source: EuropePMC
+Title: Impact of the elderly lung mucosa on &lt;i&gt;Mycobacterium tuberculosis&lt;/i&gt; transcriptional adaptation during infection of alveolar epithelial cells
+Journal: Microbiology spectrum (2024)
+Snippet: secretion system Rv2094C tatA 1.4052 0.9527 Sec-independent protein translocase membrane-bound protein TatA/involved in protein export Rv1224 tatB 0.6343 0.6229 Probable protein TatB/twin-arginine translocation (Tat) system Rv2093C tatC 0.5748 0.0482 Sec-independent protein translocase transmembrane protein TatC/involved in protein export a Log 2 FC values in ALF-exposed M.tb
+
+================================================================================
+Protein: VIMSS32997 (E-value: 1e-07, Score: 37.5)
+Mentioned as: Rv1224
+Description: sec-independent translocase
+Organism: Mycobacterium tuberculosis H37Rv
+PMID: 35987561
+Source: EuropePMC
+Title: Genomic characteristics of two most widely used BCG vaccine strains: Danish 1331 and Pasteur 1173P2
+Journal: BMC genomics (2022)
+Snippet: - Hypothetical protein E270G + + 13 Rv1204c - Hypothetical protein L484I + + 14 Rv1224 tat B Sec-independent protein translocase protein TatB W8G + + 15 Rv1244 lpq Z Lipoprotein LpqZ Q242K + + 16 Rv1338 mur I Glutamate racemase R154L + + 17 Rv1371
+
+================================================================================
+Protein: VIMSS32997 (E-value: 1e-07, Score: 37.5)
+Mentioned as: Rv1224
+Description: sec-independent translocase
+Organism: Mycobacterium tuberculosis H37Rv
+PMID: 30687646
+Source: EuropePMC
+Title: Hypoxia Is Not a Main Stress When <i>Mycobacterium tuberculosis</i> Is in a Dormancy-Like Long-Chain Fatty Acid Environment
+Journal: Frontiers in cellular and infection microbiology (2018)
+Snippet: PepD Rv0991c 4.59E-79 6.40E-04 Serine-rich protein Rv1221 SigE 7.12E-76 5.00E-05 RNA polymerase sigma factor SigE Rv1224 tatB 6.27E-17 3.37E-45 Sec-independent translocase R1460 1.63E-05 8.00E-03 Transcriptional regulatory protein Rv1462 2.49E-30 6.42E-07 Hypothetical protein Rv1535 4.06E-05 4.17E-05 Hypothetical protein Rv1801 PPE29 8.55E-05 7.07E-08 PPE family protein Rv1806 PE20
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0F6TAA9.1	AF-A0A0F6TAA9-F1-model_v4_TED02:69-108	1	AF-A0A0F6TAA9-F1-model_v4_TED02	69-108	65.9%
+A0A0F6TAA9.1	AF-A0A0F6TAA9-F1-model_v4_TED01:2-54	1	AF-A0A0F6TAA9-F1-model_v4_TED01	2-54	0
+A0A0G3GTF9.1	AF-A0A0G3GTF9-F1-model_v4_TED02:59-114	1	AF-A0A0G3GTF9-F1-model_v4_TED02	59-114	84.4%
+A0A0G3GTF9.1	AF-A0A0G3GTF9-F1-model_v4_TED01:2-56	1	AF-A0A0G3GTF9-F1-model_v4_TED01	2-56	0
+A0A1I2S0F9.1	AF-A0A1I2S0F9-F1-model_v4_TED01:8-97	1	AF-A0A1I2S0F9-F1-model_v4_TED01	8-97	46.7%
+A0A1L7CFD7.1	AF-A0A1L7CFD7-F1-model_v4_TED01:2-56	1	AF-A0A1L7CFD7-F1-model_v4_TED01	2-56	0
+A0A2A9DQC3.1	AF-A0A2A9DQC3-F1-model_v4_TED01:2-54	1	AF-A0A2A9DQC3-F1-model_v4_TED01	2-54	0
+A0A2S9Z4Y5.1	AF-A0A2S9Z4Y5-F1-model_v4_TED01:2-72	1	AF-A0A2S9Z4Y5-F1-model_v4_TED01	2-72	0
+A0A2S9Z4Y5.1	AF-A0A2S9Z4Y5-F1-model_v4_TED02:73-112	1	AF-A0A2S9Z4Y5-F1-model_v4_TED02	73-112	88.9%
+A0A364V6A3.1	AF-A0A364V6A3-F1-model_v4_TED01:2-56	1	AF-A0A364V6A3-F1-model_v4_TED01	2-56	0
+A0A3G6J597.1	AF-A0A3G6J597-F1-model_v4_TED01:86-178	1	AF-A0A3G6J597-F1-model_v4_TED01	86-178	46.2%
+A0A418Q6I6.1	AF-A0A418Q6I6-F1-model_v4_TED01:2-77	1	AF-A0A418Q6I6-F1-model_v4_TED01	2-77	2.0%
+A0A418Q6I6.1	AF-A0A418Q6I6-F1-model_v4_TED02:90-123	1	AF-A0A418Q6I6-F1-model_v4_TED02	90-123	69.4%
+A0A5J6Z727.1	AF-A0A5J6Z727-F1-model_v4_TED01:22-110	1	AF-A0A5J6Z727-F1-model_v4_TED01	22-110	66.7%
+A0A6B8VDY4.1	AF-A0A6B8VDY4-F1-model_v4_TED02:61-118	1	AF-A0A6B8VDY4-F1-model_v4_TED02	61-118	95.5%
+A0A6B8VDY4.1	AF-A0A6B8VDY4-F1-model_v4_TED01:2-55	1	AF-A0A6B8VDY4-F1-model_v4_TED01	2-55	0
+A0A7K3LU56.1	AF-A0A7K3LU56-F1-model_v4_TED01:76-109	1	AF-A0A7K3LU56-F1-model_v4_TED01	76-109	63.5%
+B1VFU4.1	AF-B1VFU4-F1-model_v4_TED01:25-110	1	AF-B1VFU4-F1-model_v4_TED01	25-110	89.5%
+Q4JUF6.1	AF-Q4JUF6-F1-model_v4_TED01:8-75	1	AF-Q4JUF6-F1-model_v4_TED01	8-75	0
+Q4JUF6.1	AF-Q4JUF6-F1-model_v4_TED02:77-122	1	AF-Q4JUF6-F1-model_v4_TED02	77-122	100.0%
+S2Z3F9.1	AF-S2Z3F9-F1-model_v4_TED01:2-54	1	AF-S2Z3F9-F1-model_v4_TED01	2-54	0
+S4XDC9.1	AF-S4XDC9-F1-model_v4_TED02:53-111	1	AF-S4XDC9-F1-model_v4_TED02	53-111	87.5%
+S4XDC9.1	AF-S4XDC9-F1-model_v4_TED01:2-51	1	AF-S4XDC9-F1-model_v4_TED01	2-51	0
+S5STS2.1	AF-S5STS2-F1-model_v4_TED02:61-104	1	AF-S5STS2-F1-model_v4_TED02	61-104	47.5%
+S5STS2.1	AF-S5STS2-F1-model_v4_TED01:2-55	1	AF-S5STS2-F1-model_v4_TED01	2-55	0
+X5EAU7.1	AF-X5EAU7-F1-model_v4_TED01:2-56	1	AF-X5EAU7-F1-model_v4_TED01	2-56	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q4JUF6_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.50 27.30;
+NC   26.80 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

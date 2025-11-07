@@ -1,0 +1,190 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y629_TREPA              Reviewed;         274 AA.
+AC   O83637;
+DE   RecName: Full=Uncharacterized protein TP_0629;
+GN   OrderedLocusNames=TP_0629;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65612.1; -; Genomic_DNA.
+DR   PIR; C71300; C71300.
+DR   AlphaFoldDB; O83637; -.
+DR   IntAct; O83637; 6.
+DR   STRING; 243276.TP_0629; -.
+DR   EnsemblBacteria; AAC65612; AAC65612; TP_0629.
+DR   KEGG; tpa:TP_0629; -.
+DR   KEGG; tpw:TPANIC_0629; -.
+DR   eggNOG; ENOG5031C7C; Bacteria.
+DR   HOGENOM; CLU_1030316_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..274
+FT                   /note="Uncharacterized protein TP_0629"
+FT                   /id="PRO_0000202292"
+SQ   SEQUENCE   274 AA;  31272 MW;  89ACAAA4D859546D CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Brachyspira.
+12	6	Treponema.
+3	5	Brachyspiraceae
+12	5	Treponemataceae
+3	4	Brachyspirales
+12	4	Spirochaetales
+15	3	Spirochaetia
+15	2	Spirochaetota
+15	1	Pseudomonadati
+15	0	Bacteria
+Total of 15 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O83637	UNCHARACTERIZED PROTEIN TP_0629    480.9   1.3e-141   1   1.1   3.5
+	Iterate                   	    45	   243	   480.7
+
+Q73K00	UNCHARACTERIZED PROTEIN {ECO:     57.4    7.5e-12   1   1.2   0.0
+	Iterate                   	    99	   250	    56.8
+
+S3JXU0	LIPOPROTEIN {ECO:0008006|GOOG     52.5    2.3e-10   1   1.3   0.0
+	Iterate                   	   211	   317	    51.7
+
+S3LPF5	UNCHARACTERIZED PROTEIN {ECO:    128.2    1.4e-33   2   2.1   0.6
+	Iterate                   	    87	   238	   116.0
+	Iterate                   	    66	    93	    11.2
+
+S6A7R2	LIPOPROTEIN {ECO:0008006|GOOG     50.3    1.1e-09   1   1.5   0.1
+	Iterate                   	   133	   269	    49.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS576855 (E-value: 1.8e-59, Score: 206.1)
+Mentioned as: TDE2565
+Description: hypothetical protein
+Organism: Treponema denticola ATCC 35405
+PMID: 21488980
+Source: EuropePMC
+Title: TP0326, a Treponema pallidum β-barrel assembly machinery A (BamA) orthologue and rare outer membrane protein
+Journal: Molecular microbiology (2011)
+Snippet: 2006 ). Not surprisingly, these possible T. pallidum ancillary factors have orthologs in T. denticola. TDE2565 is predicted to have at least 1 -propeller motif and, unlike TP0629, an N-terminal signal sequence. TDE1053 and TDE0993, homologs of TP0622 and TP0954, respectively, are both putative lipoproteins and
+
+================================================================================
+Protein: VIMSS576856 (E-value: 2.8e-58, Score: 202.2)
+Mentioned as: TDE2566
+Description: conserved domain protein
+Organism: Treponema denticola ATCC 35405
+PMID: 29038532
+Source: EuropePMC
+Title: The major outer sheath protein forms distinct conformers and multimeric complexes in the outer membrane and periplasm of Treponema denticola
+Journal: Scientific reports (2017)
+Snippet: 7.30E-46 70.1 0.00E+00 NP_972553.1 TDE1950 membrane lipoprotein TmpC N SpII 19.9 2.30E-32 66.1 1.60E-84 NP_973164.1 TDE2566 hypothetical protein Y SpI 13.2 1.00E-52 NP_972968.1 TDE2369 hypothetical protein Y SpI 20.3 1.20E-40 NP_971000.1 TDE0386 ABC transporter periplasmic substrate-binding protein Y SpI 29.9 2.70E-36 NP_973106.1 TDE2508 hypothetical protein Y
+
+================================================================================
+Protein: VIMSS26448 (E-value: 5.2e-53, Score: 185.0)
+Mentioned as: TP0629
+Description: T. pallidum predicted coding region TP0629
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 25287511
+Source: EuropePMC
+Title: Insights into the potential function and membrane organization of the TP0435 (Tp17) lipoprotein from Treponema pallidum derived from structural and biophysical analyses
+Journal: Protein science : a publication of the Protein Society (2015)
+Snippet: were TP0467 (an 82-amino acid hypothetical protein), TP0629 (another hypothetical protein), and TP0726 (a 65-amino acid putative flagellar protein). The former
+
+================================================================================
+Protein: VIMSS26448 (E-value: 5.2e-53, Score: 185.0)
+Mentioned as: TP0629
+Description: T. pallidum predicted coding region TP0629
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 21209953
+Source: EuropePMC
+Title: Genome analysis of Treponema pallidum subsp. pallidum and subsp. pertenue strains: most of the genetic differences are localized in six regions
+Journal: PloS one (2010)
+Snippet: TPI42A TP0548 (591799591846) Fribourg-Blanc deletion (48 bp) gene coding for hypothetical protein HM585227 Fribourg-Blanc TPI49 TP0629 (686998687299) Gauthier deletion (302 bp) resulting in frameshift mutation gene coding for hypothetical protein (151 aa) bacterial cytoplasm, signal sequence present in Nichols HM151367 Gauthier TPI55 IGR TP0696TP0697 (764890765321) Fribourg-Blanc
+
+================================================================================
+Protein: VIMSS26448 (E-value: 5.2e-53, Score: 185.0)
+Mentioned as: TP0629
+Description: T. pallidum predicted coding region TP0629
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 16936039
+Source: EuropePMC
+Title: Novel conserved assembly factor of the bacterial flagellum
+Journal: Journal of bacteriology (2006)
+Snippet: TP0160 TP0174 (TP0258) (TP0288) TP0396 (TP0455) (TP0563) TP0629 TP0658 TP0658 TP0658 (TP0661) (TP0661) TP0702 (TP0764) (TP0764) (TP0788) (TP0832) (TP0832)
+
+================================================================================
+Protein: D8IB10 (E-value: 1.6e-44, Score: 157.4)
+Mentioned as: D8IB10
+Description: Lipoprotein
+Organism: Brachyspira pilosicoli (strain ATCC BAA-1826 / 95/1000)
+PMID: 27493641
+Source: EuropePMC
+Title: The Exposed Proteomes of Brachyspira hyodysenteriae and B. pilosicoli
+Journal: Frontiers in microbiology (2016)
+Snippet: C0QW83 , D8ICG2 SR30_05435, sodA C Endoribonuclease 363 D8IFH7 , C0R0L6 BP951000_1922, BHWA1_01174 C Unchar D8IB10 248 D8IB10 BP951000_0328 BRAPL Unchar D8I9Q8 195 D8I9Q8 BP951000_0016 BRAPL CoxL protein 146 J9U0I3 , K0JKH7 coxL BRAPL Variable surface protein VspD 144 D8ICU0 , J9UQJ0 vspD, B2904_orf389 BRAPL Unchar
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B7GZ68.1	AF-A0A0B7GZ68-F1-model_v4_TED01:43-150	1	AF-A0A0B7GZ68-F1-model_v4_TED01	43-150	0
+A0A0B7GZ68.1	AF-A0A0B7GZ68-F1-model_v4_TED02:206-424	1	AF-A0A0B7GZ68-F1-model_v4_TED02	206-424	100.0%
+A0A0B7GZ68.1	AF-A0A0B7GZ68-F1-model_v4_TED03:443-543	1	AF-A0A0B7GZ68-F1-model_v4_TED03	443-543	0
+A0A0B7GZ68.1	AF-A0A0B7GZ68-F1-model_v4_TED04:558-646	1	AF-A0A0B7GZ68-F1-model_v4_TED04	558-646	0
+A0A0B7GZ68.1	AF-A0A0B7GZ68-F1-model_v4_TED05:648-729	1	AF-A0A0B7GZ68-F1-model_v4_TED05	648-729	0
+A0A0B7GZ68.1	AF-A0A0B7GZ68-F1-model_v4_TED06:734-930	1	AF-A0A0B7GZ68-F1-model_v4_TED06	734-930	0
+D8IB10.1	AF-D8IB10-F1-model_v4_TED01:68-292	1	AF-D8IB10-F1-model_v4_TED01	68-292	100.0%
+D8IB10.1	AF-D8IB10-F1-model_v4_TED02:298-424	1	AF-D8IB10-F1-model_v4_TED02	298-424	0
+D8IB10.1	AF-D8IB10-F1-model_v4_TED03:436-585	1	AF-D8IB10-F1-model_v4_TED03	436-585	0
+D8IB72.1	AF-D8IB72-F1-model_v4_TED01:30-207	1	AF-D8IB72-F1-model_v4_TED01	30-207	98.3%
+O83637.1	AF-O83637-F1-model_v4_TED01:45-67_97-243	1	AF-O83637-F1-model_v4_TED01	45-243	100.0%
+Q73JZ9.1	AF-Q73JZ9-F1-model_v4_TED01:47-169	1	AF-Q73JZ9-F1-model_v4_TED01	47-169	0
+Q73JZ9.1	AF-Q73JZ9-F1-model_v4_TED02:194-400	1	AF-Q73JZ9-F1-model_v4_TED02	194-400	100.0%
+Q73JZ9.1	AF-Q73JZ9-F1-model_v4_TED03:424-520	1	AF-Q73JZ9-F1-model_v4_TED03	424-520	0
+Q73JZ9.1	AF-Q73JZ9-F1-model_v4_TED04:532-549_562-632	1	AF-Q73JZ9-F1-model_v4_TED04	532-632	0
+Q73JZ9.1	AF-Q73JZ9-F1-model_v4_TED05:634-719	1	AF-Q73JZ9-F1-model_v4_TED05	634-719	0
+Q73JZ9.1	AF-Q73JZ9-F1-model_v4_TED06:722-951	1	AF-Q73JZ9-F1-model_v4_TED06	722-951	0
+Q73K00.1	AF-Q73K00-F1-model_v4_TED01:38-264	1	AF-Q73K00-F1-model_v4_TED01	38-264	100.0%
+S3LPF5.1	AF-S3LPF5-F1-model_v4_TED01:57-237	1	AF-S3LPF5-F1-model_v4_TED01	57-237	99.4%
+S3LQZ5.1	AF-S3LQZ5-F1-model_v4_TED01:41-177_219-239	1	AF-S3LQZ5-F1-model_v4_TED01	41-239	95.1%
+S6A308.1	AF-S6A308-F1-model_v4_TED01:50-268	1	AF-S6A308-F1-model_v4_TED01	50-268	100.0%
+S6A7R2.1	AF-S6A7R2-F1-model_v4_TED01:66-310	1	AF-S6A7R2-F1-model_v4_TED01	66-310	100.0%
+S6A7R2.1	AF-S6A7R2-F1-model_v4_TED02:322-537	1	AF-S6A7R2-F1-model_v4_TED02	322-537	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83637_TED01/Iterate
+GA   27.00 27.00;
+TC   27.70 122.30;
+NC   24.70 19.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

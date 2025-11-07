@@ -1,0 +1,83 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Staphylococcus
+1	6	Rothia.
+1	6	Pseudonocardia.
+1	6	Nosocomiicoccus
+1	6	Macrococcus
+1	6	Flavimobilis.
+4	5	Staphylococcaceae
+1	5	Pseudonocardiaceae
+1	5	Micrococcaceae
+1	5	Jonesiaceae
+1	5	Abyssicoccaceae.
+5	4	Bacillales
+2	4	Micrococcales
+1	4	Pseudonocardiales
+5	3	Bacilli
+3	3	Actinomycetes
+5	2	Bacillota
+3	2	Actinomycetota
+8	1	Bacillati
+8	0	Bacteria
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2Z5QWI6	PROTEIN OF UNCHARACTERIZE     31.4    0.00071   1   1.1   1.9
+	Iterate                   	     1	    26	    31.2
+
+A0A380GZU5	PROTEIN OF UNCHARACTERIZE     62.2    1.4e-13   1   1.0   7.0
+	Iterate                   	     1	    25	    62.1
+
+A0A4R6BS29	DUF2648 DOMAIN-CONTAINING     64.8    2.2e-14   1   1.0   2.1
+	Iterate                   	     1	    25	    64.7
+
+A0AAE0S2X0	UNCHARACTERIZED PROTEIN {     32.6     0.0003   0  10.3   0.1
+
+Q5HKX6	DUF2648 DOMAIN-CONTAINING PRO     62.8    9.3e-14   1   1.0   4.8
+	Iterate                   	     1	    25	    62.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS314992 (E-value: 3.7e-15, Score: 61.0)
+Mentioned as: SE2200
+Description: conserved hypothetical protein
+Organism: Staphylococcus epidermidis ATCC 12228
+PMID: 17890333
+Source: EuropePMC
+Title: Genomic diversity in Staphylococcus xylosus
+Journal: Applied and environmental microbiology (2007)
+Snippet: Similar to unknown protein SH2317 Hypothetical protein SE2200 E108 E123 7.00E-09 3.00E-09 60 89 Hypothetical protein SH0055 COG1284, uncharacterized conserved
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A4R6BS29.1	AF-A0A4R6BS29-F1-model_v4_TED01:1-26	1	AF-A0A4R6BS29-F1-model_v4_TED01	1-26	100.0%
+S2XC48.1	AF-S2XC48-F1-model_v4_TED01:2-29	1	AF-S2XC48-F1-model_v4_TED01	2-29	96.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P60875_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   26.30 25.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

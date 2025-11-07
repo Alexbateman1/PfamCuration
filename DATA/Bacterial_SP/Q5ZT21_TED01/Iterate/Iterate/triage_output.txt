@@ -1,0 +1,252 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MAVE_LEGPH              Reviewed;         208 AA.
+AC   Q5ZT21;
+DE   RecName: Full=Effector protein MavE {ECO:0000305};
+GN   Name=mavE {ECO:0000303|PubMed:33563829};
+GN   OrderedLocusNames=lpg2344 {ECO:0000312|EMBL:AAU28406.1};
+OS   Legionella pneumophila subsp. pneumophila (strain Philadelphia 1 / ATCC
+OS   33152 / DSM 7513).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Legionellales; Legionellaceae; Legionella.
+OX   NCBI_TaxID=272624;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Philadelphia 1 / ATCC 33152 / DSM 7513;
+RX   PubMed=15448271; DOI=10.1126/science.1099776;
+RA   Chien M., Morozova I., Shi S., Sheng H., Chen J., Gomez S.M., Asamani G.,
+RA   Hill K., Nuara J., Feder M., Rineer J., Greenberg J.J., Steshenko V.,
+RA   Park S.H., Zhao B., Teplitskaya E., Edwards J.R., Pampou S., Georghiou A.,
+RA   Chou I.-C., Iannuccilli W., Ulz M.E., Kim D.H., Geringer-Sameth A.,
+RA   Goldsberry C., Morozov P., Fischer S.G., Segal G., Qu X., Rzhetsky A.,
+RA   Zhang P., Cayanis E., De Jong P.J., Ju J., Kalachikov S., Shuman H.A.,
+RA   Russo J.J.;
+RT   "The genomic sequence of the accidental pathogen Legionella pneumophila.";
+RL   Science 305:1966-1968(2004).
+RN   [2] {ECO:0007744|PDB:6PIR}
+RP   X-RAY CRYSTALLOGRAPHY (1.65 ANGSTROMS) OF 39-172, FUNCTION, SUBUNIT,
+RP   SUBCELLULAR LOCATION, DOMAIN, DISRUPTION PHENOTYPE, AND MUTAGENESIS OF
+RP   ASP-64; HIS-68; ASN-77; PRO-78; TYR-80 AND SER-102.
+RC   STRAIN=AA100 / Serogroup 1, and Philadelphia 1 / ATCC 33152 / DSM
+RC   7513;
+RX   PubMed=33563829; DOI=10.1128/mbio.03458-20;
+RA   Vaughn B., Voth K., Price C.T., Jones S., Ozanic M., Santic M., Cygler M.,
+RA   Abu Kwaik Y.;
+RT   "An indispensable role for the MavE effector of Legionella pneumophila in
+RT   lysosomal evasion.";
+RL   MBio 12:e03458-e03458(2021).
+CC   -!- FUNCTION: Virulence effector that is indispensable for endoplasmic
+CC       reticulum (ER)-mediated remodeling of the Legionella pneumophila-
+CC       containing vacuole (LCV) and lysosomal evasion (PubMed:33563829).
+CC       Essential for intracellular replication in human monocyte-derived
+CC       macrophages (hMDMs) and amoebae, as well as for intrapulmonary
+CC       proliferation in mice (PubMed:33563829). {ECO:0000269|PubMed:33563829}.
+CC   -!- SUBUNIT: Homotrimer. {ECO:0000269|PubMed:33563829}.
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000269|PubMed:33563829}. Host
+CC       vacuole, host pathogen-containing vacuole, host pathogen-containing
+CC       vacuole membrane {ECO:0000269|PubMed:33563829}; Single-pass membrane
+CC       protein {ECO:0000255}. Note=Translocated into the host cell via the
+CC       type IV secretion system (T4SS) (Probable). During infection, localizes
+CC       to the poles of the LCV membrane (PubMed:33563829).
+CC       {ECO:0000269|PubMed:33563829, ECO:0000305|PubMed:33563829}.
+CC   -!- DOMAIN: Contains a C-terminal transmembrane helix, three copies of
+CC       tyrosine-based sorting motifs, and an NPxY eukaryotic motif, which
+CC       binds phosphotyrosine-binding domains present on signaling and adapter
+CC       eukaryotic proteins (PubMed:33563829). The NPxY eukaryotic motif is
+CC       essential for ER-mediated remodeling and lysosomal evasion by the LCV
+CC       (PubMed:33563829). {ECO:0000269|PubMed:33563829}.
+CC   -!- DISRUPTION PHENOTYPE: The null mutant fails to remodel the LCV with
+CC       endoplasmic reticulum (ER)-derived vesicles and is trafficked to the
+CC       lysosomes where it is degraded (PubMed:33563829). Mutant is defective
+CC       for intracellular growth in hMDMs, amoeba and for intrapulmonary
+CC       proliferation in mice (PubMed:33563829). {ECO:0000269|PubMed:33563829}.
+DR   EMBL; AE017354; AAU28406.1; -; Genomic_DNA.
+DR   RefSeq; YP_096353.1; NC_002942.5.
+DR   PDB; 6PIR; X-ray; 1.65 A; A/B/C=39-172.
+DR   PDBsum; 6PIR; -.
+DR   AlphaFoldDB; Q5ZT21; -.
+DR   SMR; Q5ZT21; -.
+DR   PaxDb; 272624-lpg2344; -.
+DR   KEGG; lpn:lpg2344; -.
+DR   PATRIC; fig|272624.6.peg.2462; -.
+DR   eggNOG; ENOG5030QDH; Bacteria.
+DR   HOGENOM; CLU_1561027_0_0_6; -.
+DR   OrthoDB; 5653982at2; -.
+DR   PHI-base; PHI:11242; -.
+DR   Proteomes; UP000000609; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0033644; C:host cell membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0140221; C:pathogen-containing vacuole membrane; IEA:UniProtKB-SubCell.
+DR   CDD; cd21821; MavE; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Host membrane; Membrane; Reference proteome; Secreted;
+KW   Transmembrane; Transmembrane helix; Virulence.
+FT   CHAIN           1..208
+FT                   /note="Effector protein MavE"
+FT                   /id="PRO_0000456174"
+FT   TRANSMEM        184..204
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   MOTIF           77..80
+FT                   /note="NPxY eukaryotic motif"
+FT                   /evidence="ECO:0000305|PubMed:33563829"
+FT   MUTAGEN         64
+FT                   /note="D->A: Results in attenuation of L.pneumophila in
+FT                   both hMDMs and amoeba. Vacuoles cannot be remodeled by the
+FT                   ER and are fused to the lysosomes, leading to bacterial
+FT                   degradation."
+FT                   /evidence="ECO:0000269|PubMed:33563829"
+FT   MUTAGEN         68
+FT                   /note="H->A: Results in attenuation of L.pneumophila in
+FT                   amoeba."
+FT                   /evidence="ECO:0000269|PubMed:33563829"
+FT   MUTAGEN         77
+FT                   /note="N->A: Does not significantly impede L.pneumophila
+FT                   replication within hMDMs."
+FT                   /evidence="ECO:0000269|PubMed:33563829"
+FT   MUTAGEN         78
+FT                   /note="P->A: Results in attenuation of L.pneumophila in
+FT                   both hMDMs and amoeba. Vacuoles cannot be remodeled by the
+FT                   ER and are fused to the lysosomes, leading to bacterial
+FT                   degradation."
+FT                   /evidence="ECO:0000269|PubMed:33563829"
+FT   MUTAGEN         80
+FT                   /note="Y->A: Does not significantly impede L.pneumophila
+FT                   replication within hMDMs."
+FT                   /evidence="ECO:0000269|PubMed:33563829"
+FT   MUTAGEN         102
+FT                   /note="S->A: Does not show attenuation."
+FT                   /evidence="ECO:0000269|PubMed:33563829"
+FT   HELIX           40..56
+FT                   /evidence="ECO:0007829|PDB:6PIR"
+FT   HELIX           61..71
+FT                   /evidence="ECO:0007829|PDB:6PIR"
+FT   STRAND          74..76
+FT                   /evidence="ECO:0007829|PDB:6PIR"
+FT   HELIX           83..85
+FT                   /evidence="ECO:0007829|PDB:6PIR"
+FT   HELIX           89..91
+FT                   /evidence="ECO:0007829|PDB:6PIR"
+FT   HELIX           94..112
+FT                   /evidence="ECO:0007829|PDB:6PIR"
+FT   HELIX           120..141
+FT                   /evidence="ECO:0007829|PDB:6PIR"
+FT   TURN            142..144
+FT                   /evidence="ECO:0007829|PDB:6PIR"
+FT   HELIX           150..169
+FT                   /evidence="ECO:0007829|PDB:6PIR"
+SQ   SEQUENCE   208 AA;  23928 MW;  CF8C3895A42D7952 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+14	6	Legionella.
+14	5	Legionellaceae
+14	4	Legionellales
+14	3	Gammaproteobacteria
+14	2	Pseudomonadota
+14	1	Pseudomonadati
+14	0	Bacteria
+Total of 14 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A098GAR9	UNCHARACTERIZED PROTEIN {    196.0    1.2e-54   1   1.0   3.8
+	Iterate                   	     4	   137	   195.7
+
+A0A0W1AGL9	UNCHARACTERIZED PROTEIN {    197.6    3.9e-55   1   1.1   3.0
+	Iterate                   	     5	   140	   197.3
+
+A0A0W1AHC2	UNCHARACTERIZED PROTEIN {    197.0    6.1e-55   1   1.1   1.3
+	Iterate                   	     4	   138	   196.7
+
+A0A6F8T366	UNCHARACTERIZED PROTEIN {    198.7    1.8e-55   1   1.1   8.0
+	Iterate                   	     4	   138	   198.4
+
+Q5ZT21	EFFECTOR PROTEIN MAVE {ECO:0000    196.5    8.4e-55   1   1.1   2.8
+	Iterate                   	    41	   176	   196.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS758805 (E-value: 5.3e-57, Score: 197.0)
+Mentioned as: lpg2344
+Description: Hypothetical protein
+Organism: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+PMID: 40700448
+Source: EuropePMC
+Title: Legionella effector LpPIP recruits protein phosphatase 1 to the mitochondria to induce dephosphorylation of outer membrane proteins
+Journal: PLoS biology (2025)
+
+================================================================================
+Protein: VIMSS758805 (E-value: 5.3e-57, Score: 197.0)
+Mentioned as: lpg2344
+Description: Hypothetical protein
+Organism: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+PMID: 33499048
+Source: EuropePMC
+Title: Affecting the Effectors: Regulation of <i>Legionella pneumophila</i> Effector Function by Metaeffectors
+Journal: Pathogens (Basel, Switzerland) (2021)
+Snippet: Lpg1148 Deubiquitinase 503 LegC3 Lpg1701 Glutamine (Q)-SNARE-like protein 506 [ 23 , 25 ] MavE Lpg2344 Unknown 208 YlfA/LegC7 Lpg2298 SNARE-like Protein 425 [ 23 ] MesI Lpg2505 Unknown 295 SidI/Ceg32 Lpg2504 Putative mannosyltransferase 942 [ 19 , 21 , 22 ] SdbC Lpg2391 Putative Lipase
+
+================================================================================
+Protein: VIMSS758805 (E-value: 5.3e-57, Score: 197.0)
+Mentioned as: lpg2344
+Description: Hypothetical protein
+Organism: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+PMID: 33563829
+Source: EuropePMC
+Title: An Indispensable Role for the MavE Effector of Legionella pneumophila in Lysosomal Evasion
+Journal: mBio (2021)
+Snippet: effects on human macrophages ( 7 , 11 , 37 39 ). The MavE ( lpg2344 ) effector was first identified in a screen aimed at identification of new translocated substrates based on the presence of a glutamate-rich motif found in more than half of L.
+
+================================================================================
+Protein: VIMSS755670 (E-value: 5.3e-57, Score: 197.0)
+Mentioned as: lpp2292
+Description: hypothetical protein
+Organism: Legionella pneumophila str. Paris
+PMID: 22059087
+Source: EuropePMC
+Title: Comparative and functional genomics of legionella identified eukaryotic like proteins as key players in host-pathogen interactions
+Journal: Frontiers in microbiology (2011)
+Snippet: lpp2275 lpl2247 lpc1794 lpa3335 lpw25181 Unknown lpg2328 lpp2276 lpl2248 lpc1795 lpa3336 lpw25191 lem22 Unknown lpg2344 lpp2292 lpl2265 lpc1812 lpa3355 lpw25371 mavE Unknown lpg2351 lpp2300 lpl2273 lpc1820 lpa3367 lpw25461 llo2850 llb2466 + + + mavF Unknown lpg2359 lpp2308 lpl2281 lpc1828 lpa3376 lpw25561 llo2856 llb2460 + + +
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A098GAR9.1	AF-A0A098GAR9-F1-model_v4_TED01:4-130	1	AF-A0A098GAR9-F1-model_v4_TED01	4-130	97.7%
+A0A0W0YK82.1	AF-A0A0W0YK82-F1-model_v4_TED01:4-129	1	AF-A0A0W0YK82-F1-model_v4_TED01	4-129	94.0%
+A0A0W1AGL9.1	AF-A0A0W1AGL9-F1-model_v4_TED01:5-138	1	AF-A0A0W1AGL9-F1-model_v4_TED01	5-138	98.5%
+A0A0W1AHC2.1	AF-A0A0W1AHC2-F1-model_v4_TED01:4-130	1	AF-A0A0W1AHC2-F1-model_v4_TED01	4-130	96.9%
+A0A6F8T366.1	AF-A0A6F8T366-F1-model_v4_TED01:4-140	1	AF-A0A6F8T366-F1-model_v4_TED01	4-140	100.0%
+Q5ZT21.1	AF-Q5ZT21-F1-model_v4_TED01:41-172	1	AF-Q5ZT21-F1-model_v4_TED01	41-172	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q5ZT21_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   29.70 29.40;
+NC   26.00 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RC   Function description for Q5ZT21
+RN   [1]
+RM   33563829
+RT   "An indispensable role for the MavE effector of Legionella pneumophila in
+RT   lysosomal evasion.";
+RA   Vaughn B., Voth K., Price C.T., Jones S., Ozanic M., Santic M., Cygler M.,
+RA   Abu Kwaik Y.;
+RL   MBio 12:e03458-e03458(2021).
+
+--- End of Current DESC file ---

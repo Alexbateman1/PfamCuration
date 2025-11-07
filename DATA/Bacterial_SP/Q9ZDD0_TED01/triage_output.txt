@@ -1,0 +1,120 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y401_RICPR              Reviewed;         247 AA.
+AC   Q9ZDD0;
+DE   RecName: Full=Uncharacterized protein RP401;
+GN   OrderedLocusNames=RP401;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+DR   EMBL; AJ235271; CAA14858.1; -; Genomic_DNA.
+DR   PIR; H71697; H71697.
+DR   RefSeq; NP_220782.1; NC_000963.1.
+DR   RefSeq; WP_010886284.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZDD0; -.
+DR   STRING; 272947.gene:17555481; -.
+DR   EnsemblBacteria; CAA14858; CAA14858; CAA14858.
+DR   KEGG; rpr:RP401; -.
+DR   PATRIC; fig|272947.5.peg.414; -.
+DR   HOGENOM; CLU_075555_0_0_5; -.
+DR   OrthoDB; 7161234at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..247
+FT                   /note="Uncharacterized protein RP401"
+FT                   /id="PRO_0000101363"
+SQ   SEQUENCE   247 AA;  28125 MW;  A30702F1912543D5 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+1	7	Rickettsia
+1	6	Rickettsieae
+1	5	Rickettsiaceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9ZDD0	UNCHARACTERIZED PROTEIN RP401      253.7    7.4e-73   1   1.4   7.4
+	Q9ZDD0_TED01              	     2	   112	   252.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS36084 (E-value: 6.5e-75, Score: 253.7)
+Mentioned as: RP401
+Description: unknown
+Organism: Rickettsia prowazekii str. Madrid E
+PMID: 17720821
+Source: EuropePMC
+Title: Mariner-based transposon mutagenesis of Rickettsia prowazekii
+Journal: Applied and environmental microbiology (2007)
+Snippet: (Fig. 1). PCR detection of R. prowazekii gene RP401 and the insertion within this gene were accomplished using RP401-specific primers DW1151 (5-ATGCAACAAA
+
+================================================================================
+Protein: VIMSS36084 (E-value: 6.5e-75, Score: 253.7)
+Mentioned as: RP401
+Description: unknown
+Organism: Rickettsia prowazekii str. Madrid E
+PMID: 14702324
+Source: EuropePMC
+Title: Comparative genomics of Rickettsia prowazekii Madrid E and Breinl strains
+Journal: Journal of bacteriology (2004)
+Snippet: RP103 virB4 RP668 ampG2 RP084, RP105, RP107, RP158, RP401, RP725, RP870 Ribosomal protein L32 Ribosomal protein L36 Ribosomal protein S10 RNA polymerase beta
+
+================================================================================
+Protein: VIMSS897061 (E-value: 1.8e-46, Score: 162.1)
+Mentioned as: RF_0622
+Description: hypothetical protein
+Organism: Rickettsia felis URRWXCal2
+PMID: 36542675
+Source: EuropePMC
+Title: Transposon mutagenesis of Rickettsia felis sca1 confers a distinct phenotype during flea infection
+Journal: PLoS pathogens (2022)
+Snippet: end) B2 SAMN31560793 30,129 n/a Intergenic region of pRF plasmid n/a C1 SAMN31560791 664,857 sense RF_0622 Unknown protein C4 N/A 1,211,812 sense Rf_1144 Unknown protein D6 N/A 857,160 anti-sense RF_0808 5-Formyltetrahydrofolate cyclo-ligase Himar1 transposon interrupts normal gene transcription of sca1 To assess the effect of the
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZDD0.1	AF-Q9ZDD0-F1-model_v4_TED01:2-112	1	AF-Q9ZDD0-F1-model_v4_TED01	2-112	100.0%
+Q9ZDD0.1	AF-Q9ZDD0-F1-model_v4_TED02:121-222	1	AF-Q9ZDD0-F1-model_v4_TED02	121-222	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZDD0_TED01
+GA   27.00 27.00;
+TC   32.30 252.90;
+NC   22.80 18.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

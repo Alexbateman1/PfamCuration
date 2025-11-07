@@ -1,0 +1,110 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y787_TREPA              Reviewed;         139 AA.
+AC   O83766;
+DE   RecName: Full=Uncharacterized protein TP_0787;
+GN   OrderedLocusNames=TP_0787;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000520; AAC65762.1; -; Genomic_DNA.
+DR   PIR; B71280; B71280.
+DR   AlphaFoldDB; O83766; -.
+DR   SMR; O83766; -.
+DR   IntAct; O83766; 4.
+DR   EnsemblBacteria; AAC65762; AAC65762; TP_0787.
+DR   KEGG; tpa:TP_0787; -.
+DR   KEGG; tpw:TPANIC_0787; -.
+DR   HOGENOM; CLU_2037037_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..139
+FT                   /note="Uncharacterized protein TP_0787"
+FT                   /id="PRO_0000202325"
+FT   TRANSMEM        38..60
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        72..94
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        114..136
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   139 AA;  15068 MW;  C31A243C6D2F0C22 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Treponema.
+1	6	Salinispira.
+3	5	Treponemataceae
+1	5	Spirochaetaceae
+4	4	Spirochaetales
+4	3	Spirochaetia
+4	2	Spirochaetota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A975F3H2	UNCHARACTERIZED PROTEIN {     28.0      0.013   1   1.1   9.0
+	Iterate                   	     9	   112	    27.7
+
+A0A9X3J777	UNCHARACTERIZED PROTEIN {     22.0       0.94   3   4.7   0.3
+	Iterate                   	   545	   598	     4.7
+	Iterate                   	   440	   496	     4.6
+	Iterate                   	   494	   548	     4.6
+
+O83766	UNCHARACTERIZED PROTEIN TP_0787    225.1    6.4e-64   1   1.1  16.3
+	Iterate                   	    33	   137	   224.8
+
+S3L8N7	UNCHARACTERIZED PROTEIN {ECO:     43.9    1.4e-07   1   1.0  13.9
+	Iterate                   	     7	   112	    43.7
+
+V5WH70	UNCHARACTERIZED PROTEIN {ECO:     32.3    0.00059   1   1.1   4.2
+	Iterate                   	     2	    92	    32.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83766.1	AF-O83766-F1-model_v4_TED01:33-137	1	AF-O83766-F1-model_v4_TED01	33-137	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83766_TED01/Iterate
+GA   27.00 27.00;
+TC   28.00 27.70;
+NC   22.00 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

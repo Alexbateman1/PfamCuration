@@ -1,0 +1,110 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y6587_BACAN             Reviewed;         111 AA.
+AC   Q9RMW9;
+DE   RecName: Full=Uncharacterized protein pXO2-65/BXB0087/GBAA_pXO2_0087;
+GN   OrderedLocusNames=pXO2-65, BXB0087, GBAA_pXO2_0087;
+OS   Bacillus anthracis.
+OG   Plasmid pXO2.
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae; Bacillus;
+OC   Bacillus cereus group.
+OX   NCBI_TaxID=1392;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Pasteur;
+RX   PubMed=10475962; DOI=10.1046/j.1365-2672.1999.00883.x;
+RA   Okinaka R.T., Cloud K., Hampton O., Hoffmaster A., Hill K.K., Keim P.,
+RA   Koehler T., Lamke G., Kumano S., Manter D., Martinez Y., Ricke D.,
+RA   Svensson R., Jackson P.J.;
+RT   "Sequence, assembly and analysis of pXO1 and pXO2.";
+RL   J. Appl. Microbiol. 87:261-262(1999).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Ames / isolate Florida / A2012;
+RX   PubMed=12004073; DOI=10.1126/science.1071837;
+RA   Read T.D., Salzberg S.L., Pop M., Shumway M.F., Umayam L., Jiang L.,
+RA   Holtzapple E., Busch J.D., Smith K.L., Schupp J.M., Solomon D., Keim P.,
+RA   Fraser C.M.;
+RT   "Comparative genome sequencing for discovery of novel polymorphisms in
+RT   Bacillus anthracis.";
+RL   Science 296:2028-2033(2002).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Ames ancestor;
+RX   PubMed=18952800; DOI=10.1128/jb.01347-08;
+RA   Ravel J., Jiang L., Stanley S.T., Wilson M.R., Decker R.S., Read T.D.,
+RA   Worsham P., Keim P.S., Salzberg S.L., Fraser-Liggett C.M., Rasko D.A.;
+RT   "The complete genome sequence of Bacillus anthracis Ames 'Ancestor'.";
+RL   J. Bacteriol. 191:445-446(2009).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AF188935; AAF13670.1; -; Genomic_DNA.
+DR   EMBL; AE011191; AAM26238.1; -; Genomic_DNA.
+DR   EMBL; AE017335; AAT29017.2; -; Genomic_DNA.
+DR   RefSeq; NP_053220.1; NC_002146.1.
+DR   RefSeq; WP_000708166.1; NZ_VTZL01000009.1.
+DR   AlphaFoldDB; Q9RMW9; -.
+DR   SMR; Q9RMW9; -.
+DR   GeneID; 45025378; -.
+DR   KEGG; banh:HYU01_29395; -.
+DR   KEGG; bar:GBAA_pXO2_0087; -.
+DR   HOGENOM; CLU_2153133_0_0_9; -.
+DR   Proteomes; UP000000594; Plasmid pXO2.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Plasmid; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..111
+FT                   /note="Uncharacterized protein pXO2-
+FT                   65/BXB0087/GBAA_pXO2_0087"
+FT                   /id="PRO_0000216858"
+FT   TRANSMEM        7..27
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        53..73
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   111 AA;  12601 MW;  E6D778702CF4EB48 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Bacilluscereus group.
+1	6	Bacillus
+1	5	Bacillaceae
+1	4	Bacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9RMW9	UNCHARACTERIZED PROTEIN PXO2-6    237.2    1.2e-67   1   1.0   8.8
+	Q9RMW9_TED01              	     2	   111	   237.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9RMW9.1	AF-Q9RMW9-F1-model_v4_TED01:2-111	1	AF-Q9RMW9-F1-model_v4_TED01	2-111	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9RMW9_TED01
+GA   27.00 27.00;
+TC   237.20 237.10;
+NC   24.90 24.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

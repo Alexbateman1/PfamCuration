@@ -1,0 +1,177 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   POPB_RALN1              Reviewed;         174 AA.
+AC   Q9RBS1;
+DE   RecName: Full=Protein PopB;
+GN   Name=popB; OrderedLocusNames=RSp0876; ORFNames=RS01647;
+OS   Ralstonia nicotianae (strain ATCC BAA-1114 / GMI1000) (Ralstonia
+OS   solanacearum).
+OG   Plasmid megaplasmid Rsp.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria;
+OC   Burkholderiales; Burkholderiaceae; Ralstonia;
+OC   Ralstonia solanacearum species complex.
+OX   NCBI_TaxID=267608;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC BAA-1114 / GMI1000;
+RX   PubMed=10792715; DOI=10.1046/j.1365-2958.2000.01870.x;
+RA   Gueneron M., Timmers A.C.J., Boucher C., Arlat M.;
+RT   "Two novel proteins, PopB, which has functional nuclear localization
+RT   signals, and PopC, which has a large leucine-rich repeat domain, are
+RT   secreted through the Hrp-secretion apparatus of Ralstonia solanacearum.";
+RL   Mol. Microbiol. 36:261-277(2000).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-1114 / GMI1000;
+RX   PubMed=11823852; DOI=10.1038/415497a;
+RA   Salanoubat M., Genin S., Artiguenave F., Gouzy J., Mangenot S., Arlat M.,
+RA   Billault A., Brottier P., Camus J.-C., Cattolico L., Chandler M.,
+RA   Choisne N., Claudel-Renard C., Cunnac S., Demange N., Gaspin C., Lavie M.,
+RA   Moisan A., Robert C., Saurin W., Schiex T., Siguier P., Thebault P.,
+RA   Whalen M., Wincker P., Levy M., Weissenbach J., Boucher C.A.;
+RT   "Genome sequence of the plant pathogen Ralstonia solanacearum.";
+RL   Nature 415:497-502(2002).
+CC   -!- FUNCTION: Probably involved in host-pathogen interactions.
+CC   -!- SUBCELLULAR LOCATION: Secreted.
+DR   EMBL; AJ245811; CAB57880.1; -; Genomic_DNA.
+DR   EMBL; AL646053; CAD18027.1; -; Genomic_DNA.
+DR   RefSeq; WP_011004173.1; NC_003296.1.
+DR   AlphaFoldDB; Q9RBS1; -.
+DR   SMR; Q9RBS1; -.
+DR   STRING; 267608.RSp0876; -.
+DR   EnsemblBacteria; CAD18027; CAD18027; RSp0876.
+DR   KEGG; rso:RSp0876; -.
+DR   PATRIC; fig|267608.8.peg.4346; -.
+DR   HOGENOM; CLU_1538812_0_0_4; -.
+DR   Proteomes; UP000001436; Plasmid megaplasmid Rsp.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome; Secreted.
+FT   CHAIN           1..174
+FT                   /note="Protein PopB"
+FT                   /id="PRO_0000058522"
+FT   REGION          1..174
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        50..65
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        66..78
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        79..89
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        147..161
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        162..174
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   174 AA;  18125 MW;  B8C1126C99CDDD49 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	7	Ralstoniasolanacearum species complex.
+2	6	Ralstonia
+2	5	Burkholderiaceae
+2	4	Burkholderiales
+2	3	Betaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A484NJP0	NO APICAL MERISTEM-ASSOCI     44.2    8.9e-08   6   6.2  19.4
+	Iterate                   	   223	   307	    11.9
+	Iterate                   	   385	   456	    10.5
+	Iterate                   	   312	   381	     9.9
+	Iterate                   	    84	   155	     8.2
+	Iterate                   	   452	   531	     7.4
+	Iterate                   	   161	   231	     7.3
+	PF14303	NAM-associated  	    33	   171	    39.9
+
+A0A7U7JE37	TYPE III EFFECTOR PROTEIN    256.8    4.5e-73   1   1.0  17.3
+	Iterate                   	     1	   174	   256.6
+
+A0A914Q0V0	UNCHARACTERIZED PROTEIN {     24.1       0.13   1   1.1  10.9
+	Iterate                   	     2	   159	    23.7
+
+I2H0J0	UNCHARACTERIZED PROTEIN {ECO:     45.2    4.4e-08   9   9.7  28.6
+	Iterate                   	   555	   631	    10.0
+	Iterate                   	   398	   459	     8.9
+	Iterate                   	   706	   779	     8.3
+	Iterate                   	   348	   404	     7.3
+	Iterate                   	   457	   560	     6.8
+	Iterate                   	   304	   361	     5.7
+	Iterate                   	   623	   683	     5.1
+	Iterate                   	   662	   721	     4.7
+	Iterate                   	   257	   310	     3.0
+	PF14610	Psg1            	   139	   248	    95.7
+	PF14610	Psg1            	   764	   920	      56
+
+Q9RBS1	PROTEIN POPB                       389.5   7.4e-114   1   1.0  21.5
+	Iterate                   	     1	   174	   389.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS172593 (E-value: 6e-105, Score: 354.0)
+Mentioned as: RSp0876
+Description: POPB PROTEIN
+Organism: Ralstonia solanacearum GMI1000
+PMID: 32089660
+Source: EuropePMC
+Title: <i>Ralstonia solanacearum</i> Type III Effectors with Predicted Nuclear Localization Signal Localize to Various Cell Compartments and Modulate Immune Responses in <i>Nicotiana</i> spp
+Journal: The plant pathology journal (2020)
+Snippet: Mapper (score) d RipAI RSp0838 170 61 - KRRRKPETRQRLHRLRK - 77 - - - RipAB RSp0876 174 112 - GKKKKKR - 118 93 - SGGKRKRDDE -112 (8); 112 - GKKKKKRDDE - 121 (5) NLS harboring protein Guneron et al. (2000) , Zheng et al. (2019) RipAD
+
+================================================================================
+Protein: VIMSS172593 (E-value: 6e-105, Score: 354.0)
+Mentioned as: RSp0876
+Description: POPB PROTEIN
+Organism: Ralstonia solanacearum GMI1000
+PMID: 28116815
+Source: EuropePMC
+Title: Involvement of ralfuranones in the quorum sensing signalling pathway and virulence of Ralstonia solanacearum strain OE1-1
+Journal: Molecular plant pathology (2018)
+
+================================================================================
+Protein: VIMSS172593 (E-value: 6e-105, Score: 354.0)
+Mentioned as: RSp0876
+Description: POPB PROTEIN
+Organism: Ralstonia solanacearum GMI1000
+PMID: 28620361
+Source: EuropePMC
+Title: Genome Sequencing of <i>Ralstonia solanacearum</i> CQPS-1, a Phylotype I Strain Collected from a Highland Area with Continuous Cropping of Tobacco
+Journal: Frontiers in microbiology (2017)
+Snippet: 20 Rip57 RipZ RSp1031 2_1177 100/99 21 AvrA RipAA RSc0608 1_756 75/75 22 PopB RipAB Rsp0876 2_1317 100/99 23 PopC RipAC RSp0875 2_1318 100/99 24 Rip72 RipAD RSp1601 2_433 100/99 25 Rip41 RipAI RSp0838 2_1356 100/99 26 Rip21 RipAJ RSc2101 1_2771 100/99 27 Brg40 RipAM RSc3272
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9RBS1/Iterate
+GA   27.00 27.00;
+TC   354.00 353.80;
+NC   26.10 22.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

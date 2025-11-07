@@ -1,0 +1,135 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MAZE1_MYCTU             Reviewed;          57 AA.
+AC   P0CL57; L0T5F4;
+DE   RecName: Full=Probable antitoxin MazE1 {ECO:0000305};
+GN   Name=mazE1; OrderedLocusNames=Rv0456B;
+OS   Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex.
+OX   NCBI_TaxID=83332;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=9634230; DOI=10.1038/31159;
+RA   Cole S.T., Brosch R., Parkhill J., Garnier T., Churcher C.M., Harris D.E.,
+RA   Gordon S.V., Eiglmeier K., Gas S., Barry C.E. III, Tekaia F., Badcock K.,
+RA   Basham D., Brown D., Chillingworth T., Connor R., Davies R.M., Devlin K.,
+RA   Feltwell T., Gentles S., Hamlin N., Holroyd S., Hornsby T., Jagels K.,
+RA   Krogh A., McLean J., Moule S., Murphy L.D., Oliver S., Osborne J.,
+RA   Quail M.A., Rajandream M.A., Rogers J., Rutter S., Seeger K., Skelton S.,
+RA   Squares S., Squares R., Sulston J.E., Taylor K., Whitehead S.,
+RA   Barrell B.G.;
+RT   "Deciphering the biology of Mycobacterium tuberculosis from the complete
+RT   genome sequence.";
+RL   Nature 393:537-544(1998).
+RN   [2]
+RP   IDENTIFICATION, AND POSSIBLE FUNCTION.
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=15718296; DOI=10.1093/nar/gki201;
+RA   Pandey D.P., Gerdes K.;
+RT   "Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.";
+RL   Nucleic Acids Res. 33:966-976(2005).
+CC   -!- FUNCTION: Antitoxin component of a type II toxin-antitoxin (TA) system.
+CC       {ECO:0000305}.
+CC   -!- SUBUNIT: Forms a complex with cognate toxin MazF1.
+CC       {ECO:0000250|UniProtKB:O53451}.
+DR   EMBL; AL123456; CCP43189.1; -; Genomic_DNA.
+DR   RefSeq; WP_003903009.1; NZ_NVQJ01000002.1.
+DR   RefSeq; YP_007409102.1; NC_000962.3.
+DR   AlphaFoldDB; P0CL57; -.
+DR   SMR; P0CL57; -.
+DR   STRING; 83332.Rv0456B; -.
+DR   PaxDb; 83332-Rv0456B; -.
+DR   GeneID; 14515889; -.
+DR   KEGG; mtu:Rv0456B; -.
+DR   KEGG; mtv:RVBD_0456B; -.
+DR   TubercuList; Rv0456B; -.
+DR   InParanoid; P0CL57; -.
+DR   Proteomes; UP000001584; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Toxin-antitoxin system.
+FT   CHAIN           1..57
+FT                   /note="Probable antitoxin MazE1"
+FT                   /id="PRO_0000406295"
+SQ   SEQUENCE   57 AA;  6791 MW;  050EA75E1CF19B69 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	7	Mycobacterium tuberculosis complex.
+2	6	Mycobacterium
+2	5	Mycobacteriaceae
+2	4	Mycobacteriales
+2	3	Actinomycetes
+2	2	Actinomycetota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A679LB18	POSSIBLE ANTITOXIN MAZE1      98.0      1e-24   1   1.0   9.1
+	Iterate                   	     1	    41	    97.9
+
+A0A6J8CLL6	UNCHARACTERIZED PROTEIN {     29.8      0.002   7   7.4   6.9
+	Iterate                   	    87	   108	     5.8
+	Iterate                   	   141	   162	     5.7
+	Iterate                   	   103	   126	     3.4
+	Iterate                   	    64	    89	     3.0
+	Iterate                   	     7	    31	     2.9
+	Iterate                   	   122	   146	     2.8
+	Iterate                   	    28	    51	     2.7
+
+A0A6J8CPK9	UNCHARACTERIZED PROTEIN {     26.9      0.016   5   8.9  10.7
+	Iterate                   	    86	   110	     5.6
+	Iterate                   	    10	    44	     5.0
+	Iterate                   	   125	   150	     4.7
+	Iterate                   	   181	   208	     3.4
+	Iterate                   	   105	   129	     2.3
+
+A0AAJ4XPL2	UNCHARACTERIZED PROTEIN {     25.3       0.05   8   9.3  26.5
+	Iterate                   	   205	   232	     5.1
+	Iterate                   	   109	   134	     5.0
+	Iterate                   	    52	    76	     4.9
+	Iterate                   	   166	   191	     4.9
+	Iterate                   	    72	    95	     4.8
+	Iterate                   	   130	   153	     4.8
+	Iterate                   	   149	   172	     4.8
+	Iterate                   	   187	   210	     4.8
+
+P0CL57	PROBABLE ANTITOXIN MAZE1 {ECO:    148.7    1.4e-40   1   1.0   7.3
+	Iterate                   	     1	    57	   148.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P0CL57.1	AF-P0CL57-F1-model_v4_TED01:1-57	1	AF-P0CL57-F1-model_v4_TED01	1-57	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0CL57_TED01/Iterate
+GA   27.00 27.00;
+TC   29.80 97.90;
+NC   26.90 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for P0CL57
+RN   [1]
+RM   15718296
+RT   "Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.";
+RA   Pandey D.P., Gerdes K.;
+RL   Nucleic Acids Res. 33:966-976(2005).
+
+--- End of Current DESC file ---

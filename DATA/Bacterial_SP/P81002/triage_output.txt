@@ -1,0 +1,95 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Aerosakkonema.
+1	6	Aerosakkonemataceae
+1	5	Aerosakkonematales
+1	4	Oscillatoriophycideae
+1	3	Cyanophyceae
+1	2	Cyanobacteriota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A8C9XU21	UNCHARACTERIZED PROTEIN {     28.5     0.0061   5   5.6  25.7
+	P81002                    	    40	   116	    11.1
+	P81002                    	   245	   343	    10.0
+	P81002                    	   141	   203	     9.7
+	P81002                    	    87	   145	     9.3
+	P81002                    	   165	   257	     8.4
+	PF01442	Apolipoprotein  	    38	   171	    49.5
+	PF01442	Apolipoprotein  	   140	   283	      53
+	PF01442	Apolipoprotein  	   267	   344	      29
+
+A0A926ZH99	GAS VESICLE PROTEIN {ECO:     33.1    0.00023   1   1.9   6.9
+	P81002                    	     1	   111	    33.1
+
+K9Y7E7	GAS VESICLE PROTEIN GVPC {ECO     98.1    1.7e-24   4   5.3  54.6
+	P81002                    	   189	   269	    52.9
+	P81002                    	   136	   198	    28.5
+	P81002                    	    96	   145	    20.1
+	P81002                    	     1	    81	    12.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P08041 (E-value: 0.00077, Score: 24.8)
+Mentioned as: P08041
+Description: Gas vesicle protein C
+Organism: Microchaete diplosiphon
+  SwissProt:  - Gas vesicle protein C; GvpC
+PMID: 27573699
+Source: EuropePMC
+Title: Protein signatures as potential surrogate biomarkers for stratification and prediction of treatment response in chronic myeloid leukemia patients.
+Journal: International journal of oncology (2016)
+Snippet: CML-PBP-TKI-N Fibrinogen gamma chain precursor P11276 11 0.000201 2.27101 CML-PBP-No-MMR CML-PBP-TKI-N Fibronectin precursor (FN) (Fragments) P08041 1 4.74E-05 4.36822 CML-PBP-MMR CML-PBP-TKI-Y Gas vesicle protein C P47805 2 0.005106 6.89488 CML-PBP-TKI-Y CML-PBP-MMR Gastrulation specific protein G12 P13020 3 2.96E-06 2.44545 CML-PBP-TKI-Y CML-PBP-MMR Gelsolin (Actin-depolymerizing factor) P06396 3
+
+================================================================================
+Protein: P08041 (E-value: 0.00077, Score: 24.8)
+Mentioned as: GVPC_MICDP
+Description: Gas vesicle protein C
+Organism: Microchaete diplosiphon
+  SwissProt:  - Gas vesicle protein C; GvpC
+PMID: 3111941
+Source: SwissProt
+Snippet: FUNCTION: Confers stability, involved in shaping gas vesicles, hollow, gas filled proteinaceous nanostructures. During planktonic growth they allow positioning of the organism at a favorable depth for light or nutrient acquisition. {ECO:0000250|UniProtKB:P09413}._:::_SUBCELLULAR LOCATION: Gas vesicle {ECO:0000305|PubMed:12324595}. Note=Binds to the external surface of the gas vesicle. {ECO:0000250|UniProtKB:P09413}._:::_INDUCTION: Gas vesicle formation in this filamentous organism is restricted ...
+
+================================================================================
+Protein: P08041 (E-value: 0.00077, Score: 24.8)
+Mentioned as: GVPC_MICDP
+Description: Gas vesicle protein C
+Organism: Microchaete diplosiphon
+  SwissProt:  - Gas vesicle protein C; GvpC
+PMID: 12324595
+Source: SwissProt
+Snippet: FUNCTION: Confers stability, involved in shaping gas vesicles, hollow, gas filled proteinaceous nanostructures. During planktonic growth they allow positioning of the organism at a favorable depth for light or nutrient acquisition. {ECO:0000250|UniProtKB:P09413}._:::_SUBCELLULAR LOCATION: Gas vesicle {ECO:0000305|PubMed:12324595}. Note=Binds to the external surface of the gas vesicle. {ECO:0000250|UniProtKB:P09413}._:::_INDUCTION: Gas vesicle formation in this filamentous organism is restricted ...
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P81002
+GA   27.00 27.00;
+TC   28.50 28.50;
+NC   25.80 24.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

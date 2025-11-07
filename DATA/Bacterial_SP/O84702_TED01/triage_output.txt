@@ -1,0 +1,122 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y696_CHLTR              Reviewed;         392 AA.
+AC   O84702;
+DE   RecName: Full=Uncharacterized protein CT_696;
+GN   OrderedLocusNames=CT_696;
+OS   Chlamydia trachomatis serovar D (strain ATCC VR-885 / DSM 19411 / UW-3/Cx).
+OC   Bacteria; Pseudomonadati; Chlamydiota; Chlamydiia; Chlamydiales;
+OC   Chlamydiaceae; Chlamydia/Chlamydophila group; Chlamydia.
+OX   NCBI_TaxID=272561;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC VR-885 / DSM 19411 / UW-3/Cx;
+RX   PubMed=9784136; DOI=10.1126/science.282.5389.754;
+RA   Stephens R.S., Kalman S., Lammel C.J., Fan J., Marathe R., Aravind L.,
+RA   Mitchell W.P., Olinger L., Tatusov R.L., Zhao Q., Koonin E.V., Davis R.W.;
+RT   "Genome sequence of an obligate intracellular pathogen of humans: Chlamydia
+RT   trachomatis.";
+RL   Science 282:754-759(1998).
+CC   -!- SIMILARITY: Belongs to the chlamydial CPn_0675/CT_696/TC_0068 family.
+CC       {ECO:0000305}.
+DR   EMBL; AE001273; AAC68291.2; -; Genomic_DNA.
+DR   PIR; B71482; B71482.
+DR   RefSeq; NP_220215.1; NC_000117.1.
+DR   RefSeq; WP_009872071.1; NC_000117.1.
+DR   AlphaFoldDB; O84702; -.
+DR   SMR; O84702; -.
+DR   STRING; 272561.CT_696; -.
+DR   EnsemblBacteria; AAC68291; AAC68291; CT_696.
+DR   GeneID; 884485; -.
+DR   KEGG; ctr:CT_696; -.
+DR   PATRIC; fig|272561.5.peg.766; -.
+DR   HOGENOM; CLU_743345_0_0_0; -.
+DR   InParanoid; O84702; -.
+DR   OrthoDB; 18966at2; -.
+DR   Proteomes; UP000000431; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome.
+FT   CHAIN           1..392
+FT                   /note="Uncharacterized protein CT_696"
+FT                   /id="PRO_0000218411"
+SQ   SEQUENCE   392 AA;  45712 MW;  4EC06DEE24CF8E69 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Chlamydia.
+1	6	Chlamydia/Chlamydophila group
+1	5	Chlamydiaceae
+1	4	Chlamydiales
+1	3	Chlamydiia
+1	2	Chlamydiota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O84702	UNCHARACTERIZED PROTEIN CT_696     293.8    9.3e-85   1   1.4   3.8
+	O84702_TED01              	    10	   141	   293.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3793967 (E-value: 8.3e-87, Score: 293.8)
+Mentioned as: CTL0065
+Description: hypothetical protein
+Organism: Chlamydia trachomatis 434/Bu
+PMID: 37347192
+Source: EuropePMC
+Title: Identification and Preliminary Characterization of Novel Type III Secreted Effector Proteins in Chlamydia trachomatis
+Journal: Infection and immunity (2023)
+
+================================================================================
+Protein: VIMSS3793967 (E-value: 8.3e-87, Score: 293.8)
+Mentioned as: CTL0065
+Description: hypothetical protein
+Organism: Chlamydia trachomatis 434/Bu
+PMID: 31387908
+Source: EuropePMC
+Title: Transposon Mutagenesis in Chlamydia trachomatis Identifies CT339 as a ComEC Homolog Important for DNA Uptake and Lateral Gene Transfer
+Journal: mBio (2019)
+Snippet: [Y182X; 182/335] ctl0063 ( ct694 ) Hypothetical 76200 17/969 SIRPT N R LDDKSPVX [G8R; 16/322] ctl0065 ( ct696 ) e Hypothetical 79522 1,039/1,179 MRVLL X [M347X; 346/392] ctl0101 ( ct732 ) e ribH ( ribE ) 6,7-Dimethyl-8-ribityllumazine synthase 124470 44/474 KDVRV T GWMISPRSDAQWNENSRX [A16T; 34/157) ctl0105
+
+================================================================================
+Protein: VIMSS3793967 (E-value: 8.3e-87, Score: 293.8)
+Mentioned as: CTL0065
+Description: hypothetical protein
+Organism: Chlamydia trachomatis 434/Bu
+PMID: 31649655
+Source: EuropePMC
+Title: Chlamydial Infection From Outside to Inside
+Journal: Frontiers in microbiology (2019)
+Snippet: FRAEM was studied by repeating this technique for chlamydial genes ctl0063 , ctl0064 , and ctl0065 . Subsequent WGS on the resulting mutants proved the efficacy and specificity of FREAM on Chlamydia ( Mueller et al., 2016 ). Floxed-Cassette Allelic Exchange Mutagenesis FRAEM enables chromosomal gene
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O84702.2	AF-O84702-F1-model_v4_TED01:10-141	1	AF-O84702-F1-model_v4_TED01	10-141	100.0%
+O84702.2	AF-O84702-F1-model_v4_TED02:198-373	1	AF-O84702-F1-model_v4_TED02	198-373	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O84702_TED01
+GA   27.00 27.00;
+TC   293.80 293.00;
+NC   22.60 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

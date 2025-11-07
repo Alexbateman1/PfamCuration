@@ -1,0 +1,115 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1466_AQUAE             Reviewed;         126 AA.
+AC   O67446;
+DE   RecName: Full=Uncharacterized protein aq_1466;
+GN   OrderedLocusNames=aq_1466;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000657; AAC07405.1; -; Genomic_DNA.
+DR   PIR; D70427; D70427.
+DR   RefSeq; NP_214011.1; NC_000918.1.
+DR   AlphaFoldDB; O67446; -.
+DR   SMR; O67446; -.
+DR   STRING; 224324.aq_1466; -.
+DR   EnsemblBacteria; AAC07405; AAC07405; aq_1466.
+DR   KEGG; aae:aq_1466; -.
+DR   HOGENOM; CLU_152617_0_0_0; -.
+DR   InParanoid; O67446; -.
+DR   OrthoDB; 15086at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   Gene3D; 2.170.120.30; -; 1.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..126
+FT                   /note="Uncharacterized protein aq_1466"
+FT                   /id="PRO_0000186929"
+FT   TRANSMEM        12..31
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   126 AA;  14726 MW;  EF40210AAA25E9E0 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thermocrinis
+1	6	Hydrogenobacter
+1	6	Hydrogenivirga
+1	6	Aquifex
+4	5	Aquificaceae
+4	4	Aquificales
+4	3	Aquificia
+4	2	Aquificota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A497XSM6	YBBR-LIKE PROTEIN {ECO:00     44.0    1.1e-07   1   1.1   4.1
+	O67446_TED02              	    34	   126	    43.7
+
+A0AAE1AV43	UNCHARACTERIZED PROTEIN {     48.4    4.6e-09   8   8.9   0.0
+	O67446_TED02              	   234	   274	     6.2
+	O67446_TED02              	   183	   216	     6.0
+	O67446_TED02              	   297	   329	     6.0
+	O67446_TED02              	   271	   302	     5.6
+	O67446_TED02              	   346	   378	     5.3
+	O67446_TED02              	   375	   407	     5.0
+	O67446_TED02              	   401	   433	     3.9
+	O67446_TED02              	   210	   242	     2.2
+
+A8UYF2	YBBR-LIKE DOMAIN-CONTAINING P     51.7    4.4e-10   1   1.1   3.6
+	O67446_TED02              	    34	   126	    51.4
+
+D3DJV9	UNCHARACTERIZED PROTEIN {ECO:     44.2    9.8e-08   1   1.1   1.3
+	O67446_TED02              	    32	   123	    43.9
+
+D3SP83	YBBR FAMILY PROTEIN {ECO:0008     40.1    1.9e-06   1   1.1   0.7
+	O67446_TED02              	    43	   134	    39.8
+
+M1RS79	YBBR FAMILY PROTEIN {ECO:0008     48.1    5.9e-09   1   1.1   3.8
+	O67446_TED02              	    41	   132	    47.7
+
+O67446	UNCHARACTERIZED PROTEIN AQ_146    203.6    1.8e-57   1   1.1   6.5
+	O67446_TED02              	    33	   124	   203.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O67446.1	AF-O67446-F1-model_v4_TED02:33-124	1	AF-O67446-F1-model_v4_TED02	33-124	100.0%
+O67446.1	AF-O67446-F1-model_v4_TED01:2-32	1	AF-O67446-F1-model_v4_TED01	2-32	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67446_TED02
+GA   27.00 27.00;
+TC   27.20 39.10;
+NC   25.90 23.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

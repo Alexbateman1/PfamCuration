@@ -1,0 +1,80 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y421_HAEIN              Reviewed;          54 AA.
+AC   P43996;
+DE   RecName: Full=Uncharacterized protein HI_0421;
+GN   OrderedLocusNames=HI_0421;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+DR   EMBL; L42023; AAC22083.1; -; Genomic_DNA.
+DR   PIR; E64007; E64007.
+DR   AlphaFoldDB; P43996; -.
+DR   EnsemblBacteria; AAC22083; AAC22083; HI_0421.
+DR   KEGG; hin:HI_0421; -.
+DR   HOGENOM; CLU_3043976_0_0_6; -.
+DR   Proteomes; UP000000579; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..54
+FT                   /note="Uncharacterized protein HI_0421"
+FT                   /id="PRO_0000077922"
+SQ   SEQUENCE   54 AA;  5919 MW;  10D253EE4ED2AA63 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Haemophilus.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P43996	UNCHARACTERIZED PROTEIN HI_0421    126.9      7e-34   1   1.1   0.8
+	P43996_TED01              	    10	    54	   126.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P43996.1	AF-P43996-F1-model_v4_TED01:10-54	1	AF-P43996-F1-model_v4_TED01	10-54	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P43996_TED01
+GA   27.00 27.00;
+TC   27.30 126.70;
+NC   23.20 22.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

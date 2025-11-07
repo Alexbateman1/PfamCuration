@@ -1,0 +1,589 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TUBAT_MYCTO             Reviewed;         296 AA.
+AC   P9WJ60; F2GEC4; L0TCL2; O50407; Q7D5L5;
+DE   RecName: Full=Tuberculosinyl adenosine transferase {ECO:0000250|UniProtKB:P9WJ61};
+DE            EC=2.5.1.153 {ECO:0000250|UniProtKB:P9WJ61};
+DE   AltName: Full=Diterpene synthase {ECO:0000250|UniProtKB:P9WJ61};
+DE   AltName: Full=Isotuberculosinol synthase {ECO:0000250|UniProtKB:P9WJ61};
+DE   AltName: Full=Nosyberkol synthase {ECO:0000250|UniProtKB:P9WJ61};
+DE   AltName: Full=Tuberculosinol synthase {ECO:0000250|UniProtKB:P9WJ61};
+GN   OrderedLocusNames=MT3488;
+OS   Mycobacterium tuberculosis (strain CDC 1551 / Oshkosh).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex.
+OX   NCBI_TaxID=83331;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CDC 1551 / Oshkosh;
+RX   PubMed=12218036; DOI=10.1128/jb.184.19.5479-5490.2002;
+RA   Fleischmann R.D., Alland D., Eisen J.A., Carpenter L., White O.,
+RA   Peterson J.D., DeBoy R.T., Dodson R.J., Gwinn M.L., Haft D.H., Hickey E.K.,
+RA   Kolonay J.F., Nelson W.C., Umayam L.A., Ermolaeva M.D., Salzberg S.L.,
+RA   Delcher A., Utterback T.R., Weidman J.F., Khouri H.M., Gill J., Mikula A.,
+RA   Bishai W., Jacobs W.R. Jr., Venter J.C., Fraser C.M.;
+RT   "Whole-genome comparison of Mycobacterium tuberculosis clinical and
+RT   laboratory strains.";
+RL   J. Bacteriol. 184:5479-5490(2002).
+CC   -!- FUNCTION: Tuberculosinyl transferase that catalyzes the condensation of
+CC       adenosine and tuberculosinyl diphosphate (TbPP) to generate 1-
+CC       tuberculosinyladenosine (1-TbAd), which acts as an antiacid that
+CC       directly protects M.tuberculosis from acid pH and physically remodels
+CC       M.tuberculosis phagolysosomes. In addition, acts as a phosphatase that
+CC       catalyzes the diphosphate-removal from TbPP to produce both
+CC       tuberculosinol (TOH) and isotuberculosinol (iso-TOH).
+CC       {ECO:0000250|UniProtKB:P9WJ61}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=tuberculosinyl diphosphate + adenosine + H(+) = 1-
+CC         tuberculosinyladenosine + diphosphate; Xref=Rhea:RHEA:46000,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:16335, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:58822, ChEBI:CHEBI:85603; EC=2.5.1.153;
+CC         Evidence={ECO:0000250|UniProtKB:P9WJ61};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=tuberculosinyl diphosphate + H2O = tuberculosinol +
+CC         diphosphate; Xref=Rhea:RHEA:31783, ChEBI:CHEBI:15377,
+CC         ChEBI:CHEBI:33019, ChEBI:CHEBI:50387, ChEBI:CHEBI:58822;
+CC         Evidence={ECO:0000250|UniProtKB:P9WJ61};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=tuberculosinyl diphosphate + H2O = (13R)-edaxadiene +
+CC         diphosphate; Xref=Rhea:RHEA:31787, ChEBI:CHEBI:15377,
+CC         ChEBI:CHEBI:33019, ChEBI:CHEBI:58822, ChEBI:CHEBI:63178;
+CC         Evidence={ECO:0000250|UniProtKB:P9WJ61};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=tuberculosinyl diphosphate + H2O = (13S)-edaxadiene +
+CC         diphosphate; Xref=Rhea:RHEA:31791, ChEBI:CHEBI:15377,
+CC         ChEBI:CHEBI:33019, ChEBI:CHEBI:58822, ChEBI:CHEBI:63180;
+CC         Evidence={ECO:0000250|UniProtKB:P9WJ61};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000250|UniProtKB:P9WJ61};
+CC   -!- SUBUNIT: Homodimer. {ECO:0000250|UniProtKB:P9WJ61}.
+CC   -!- SIMILARITY: Belongs to the diterpene synthase family. {ECO:0000305}.
+DR   EMBL; AE000516; AAK47824.1; -; Genomic_DNA.
+DR   PIR; A70973; A70973.
+DR   RefSeq; WP_003417908.1; NZ_KK341227.1.
+DR   AlphaFoldDB; P9WJ60; -.
+DR   SMR; P9WJ60; -.
+DR   BindingDB; P9WJ60; -.
+DR   KEGG; mtc:MT3488; -.
+DR   HOGENOM; CLU_1100473_0_0_11; -.
+DR   Proteomes; UP000001020; Chromosome.
+DR   GO; GO:0016765; F:transferase activity, transferring alkyl or aryl (other than methyl) groups; IEA:InterPro.
+DR   FunFam; 3.40.1180.10:FF:000015; Diterpene synthase; 1.
+DR   Gene3D; 3.40.1180.10; Decaprenyl diphosphate synthase-like; 1.
+DR   InterPro; IPR036424; UPP_synth-like_sf.
+PE   3: Inferred from homology;
+KW   Reference proteome; Transferase.
+FT   CHAIN           1..296
+FT                   /note="Tuberculosinyl adenosine transferase"
+FT                   /id="PRO_0000427886"
+SQ   SEQUENCE   296 AA;  34031 MW;  D79E55CFDE338E07 CRC64;
+//
+ID   TUBAT_MYCTU             Reviewed;         296 AA.
+AC   P9WJ61; F2GEC4; L0TCL2; O50407; Q7D5L5;
+DE   RecName: Full=Tuberculosinyl adenosine transferase {ECO:0000303|PubMed:24516143};
+DE            EC=2.5.1.153 {ECO:0000269|PubMed:24516143};
+DE   AltName: Full=Diterpene synthase {ECO:0000303|PubMed:21228491};
+DE   AltName: Full=Isotuberculosinol synthase;
+DE   AltName: Full=Nosyberkol synthase;
+DE   AltName: Full=Tuberculosinol synthase;
+GN   OrderedLocusNames=Rv3378c;
+OS   Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex.
+OX   NCBI_TaxID=83332;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=9634230; DOI=10.1038/31159;
+RA   Cole S.T., Brosch R., Parkhill J., Garnier T., Churcher C.M., Harris D.E.,
+RA   Gordon S.V., Eiglmeier K., Gas S., Barry C.E. III, Tekaia F., Badcock K.,
+RA   Basham D., Brown D., Chillingworth T., Connor R., Davies R.M., Devlin K.,
+RA   Feltwell T., Gentles S., Hamlin N., Holroyd S., Hornsby T., Jagels K.,
+RA   Krogh A., McLean J., Moule S., Murphy L.D., Oliver S., Osborne J.,
+RA   Quail M.A., Rajandream M.A., Rogers J., Rutter S., Seeger K., Skelton S.,
+RA   Squares S., Squares R., Sulston J.E., Taylor K., Whitehead S.,
+RA   Barrell B.G.;
+RT   "Deciphering the biology of Mycobacterium tuberculosis from the complete
+RT   genome sequence.";
+RL   Nature 393:537-544(1998).
+RN   [2]
+RP   FUNCTION AS A DITERPENE SYNTHASE AND IN TUBERCULOSINOL BIOSYNTHESIS,
+RP   MUTAGENESIS OF ASP-81; ASP-82 AND ASP-85, CATALYTIC ACTIVITY, REACTION
+RP   MECHANISM, BIOPHYSICOCHEMICAL PROPERTIES, COFACTOR, AND SUBUNIT.
+RX   PubMed=21228491; DOI=10.1271/bbb.100570;
+RA   Nakano C., Ootsuka T., Takayama K., Mitsui T., Sato T., Hoshino T.;
+RT   "Characterization of the Rv3378c gene product, a new diterpene synthase for
+RT   producing tuberculosinol and (13R, S)-isotuberculosinol (nosyberkol), from
+RT   the Mycobacterium tuberculosis H37Rv genome.";
+RL   Biosci. Biotechnol. Biochem. 75:75-81(2011).
+RN   [3]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=21969609; DOI=10.1074/mcp.m111.011445;
+RA   Kelkar D.S., Kumar D., Kumar P., Balakrishnan L., Muthusamy B., Yadav A.K.,
+RA   Shrivastava P., Marimuthu A., Anand S., Sundaram H., Kingsbury R.,
+RA   Harsha H.C., Nair B., Prasad T.S., Chauhan D.S., Katoch K., Katoch V.M.,
+RA   Kumar P., Chaerkady R., Ramachandran S., Dash D., Pandey A.;
+RT   "Proteogenomic analysis of Mycobacterium tuberculosis by high resolution
+RT   mass spectrometry.";
+RL   Mol. Cell. Proteomics 10:M111.011627-M111.011627(2011).
+RN   [4]
+RP   FUNCTION, CATALYTIC ACTIVITY, AND SUBSTRATE SPECIFICITY.
+RX   PubMed=21290071; DOI=10.1039/c0ob00884b;
+RA   Hoshino T., Nakano C., Ootsuka T., Shinohara Y., Hara T.;
+RT   "Substrate specificity of Rv3378c, an enzyme from Mycobacterium
+RT   tuberculosis, and the inhibitory activity of the bicyclic diterpenoids
+RT   against macrophage phagocytosis.";
+RL   Org. Biomol. Chem. 9:2156-2165(2011).
+RN   [5]
+RP   FUNCTION IN VIRULENCE, DISRUPTION PHENOTYPE, AND CATALYTIC ACTIVITY.
+RX   PubMed=31427817; DOI=10.1038/s41589-019-0336-0;
+RA   Buter J., Cheng T.Y., Ghanem M., Grootemaat A.E., Raman S., Feng X.,
+RA   Plantijn A.R., Ennis T., Wang J., Cotton R.N., Layre E., Ramnarine A.K.,
+RA   Mayfield J.A., Young D.C., Jezek Martinot A., Siddiqi N., Wakabayashi S.,
+RA   Botella H., Calderon R., Murray M., Ehrt S., Snider B.B., Reed M.B.,
+RA   Oldfield E., Tan S., Rubin E.J., Behr M.A., van der Wel N.N.,
+RA   Minnaard A.J., Moody D.B.;
+RT   "Mycobacterium tuberculosis releases an antacid that remodels phagosomes.";
+RL   Nat. Chem. Biol. 15:889-899(2019).
+RN   [6] {ECO:0007744|PDB:3WQK, ECO:0007744|PDB:3WQL, ECO:0007744|PDB:3WQM, ECO:0007744|PDB:3WQN, ECO:0007744|PDB:4KT8}
+RP   X-RAY CRYSTALLOGRAPHY (2.10 ANGSTROMS) OF APOENZYME; IN COMPLEX WITH
+RP   BPH-629 INHIBITOR AND OF INACTIVE MUTANTS IN COMPLEXES WITH TUBERCULOSINOL,
+RP   FUNCTION, CATALYTIC ACTIVITY, ACTIVITY REGULATION, SUBUNIT, AND MUTAGENESIS
+RP   OF ASP-34; ARG-38; TYR-51 AND TYR-90.
+RX   PubMed=24475925; DOI=10.1021/ja413127v;
+RA   Chan H.C., Feng X., Ko T.P., Huang C.H., Hu Y., Zheng Y., Bogue S.,
+RA   Nakano C., Hoshino T., Zhang L., Lv P., Liu W., Crick D.C., Liang P.H.,
+RA   Wang A.H., Oldfield E., Guo R.T.;
+RT   "Structure and inhibition of tuberculosinol synthase and decaprenyl
+RT   diphosphate synthase from Mycobacterium tuberculosis.";
+RL   J. Am. Chem. Soc. 136:2892-2896(2014).
+RN   [7] {ECO:0007744|PDB:4CMW, ECO:0007744|PDB:4CMX}
+RP   X-RAY CRYSTALLOGRAPHY (2.21 ANGSTROMS), FUNCTION, CATALYTIC ACTIVITY,
+RP   SUBUNIT, AND MUTAGENESIS OF ASP-34.
+RX   PubMed=24516143; DOI=10.1073/pnas.1315883111;
+RA   Layre E., Lee H.J., Young D.C., Martinot A.J., Buter J., Minnaard A.J.,
+RA   Annand J.W., Fortune S.M., Snider B.B., Matsunaga I., Rubin E.J., Alber T.,
+RA   Moody D.B.;
+RT   "Molecular profiling of Mycobacterium tuberculosis identifies
+RT   tuberculosinyl nucleoside products of the virulence-associated enzyme
+RT   Rv3378c.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 111:2978-2983(2014).
+CC   -!- FUNCTION: Tuberculosinyl transferase that catalyzes the condensation of
+CC       adenosine and tuberculosinyl diphosphate (TbPP) to generate 1-
+CC       tuberculosinyladenosine (1-TbAd), which acts as an antiacid that
+CC       directly protects M.tuberculosis from acid pH and physically remodels
+CC       M.tuberculosis phagolysosomes (PubMed:24516143, PubMed:31427817). In
+CC       addition, acts as a phosphatase that catalyzes the diphosphate-removal
+CC       from TbPP to produce both tuberculosinol (TOH) and isotuberculosinol
+CC       (iso-TOH) (PubMed:21228491, PubMed:24475925). Has broad substrate
+CC       specificity, and can also use the 3 labdadienyl diphosphates, copalyl
+CC       diphosphate (CDP), ent-CDP and syn-CDP in vitro (PubMed:21290071).
+CC       {ECO:0000269|PubMed:21228491, ECO:0000269|PubMed:21290071,
+CC       ECO:0000269|PubMed:24475925, ECO:0000269|PubMed:24516143,
+CC       ECO:0000269|PubMed:31427817}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=tuberculosinyl diphosphate + adenosine + H(+) = 1-
+CC         tuberculosinyladenosine + diphosphate; Xref=Rhea:RHEA:46000,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:16335, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:58822, ChEBI:CHEBI:85603; EC=2.5.1.153;
+CC         Evidence={ECO:0000269|PubMed:24516143};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=tuberculosinyl diphosphate + H2O = tuberculosinol +
+CC         diphosphate; Xref=Rhea:RHEA:31783, ChEBI:CHEBI:15377,
+CC         ChEBI:CHEBI:33019, ChEBI:CHEBI:50387, ChEBI:CHEBI:58822;
+CC         Evidence={ECO:0000269|PubMed:21228491, ECO:0000269|PubMed:24475925};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=tuberculosinyl diphosphate + H2O = (13R)-edaxadiene +
+CC         diphosphate; Xref=Rhea:RHEA:31787, ChEBI:CHEBI:15377,
+CC         ChEBI:CHEBI:33019, ChEBI:CHEBI:58822, ChEBI:CHEBI:63178;
+CC         Evidence={ECO:0000269|PubMed:21228491, ECO:0000269|PubMed:24475925};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=tuberculosinyl diphosphate + H2O = (13S)-edaxadiene +
+CC         diphosphate; Xref=Rhea:RHEA:31791, ChEBI:CHEBI:15377,
+CC         ChEBI:CHEBI:33019, ChEBI:CHEBI:58822, ChEBI:CHEBI:63180;
+CC         Evidence={ECO:0000269|PubMed:21228491, ECO:0000269|PubMed:24475925};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(+)-copalyl diphosphate + H2O = (+)-copalol + diphosphate;
+CC         Xref=Rhea:RHEA:40007, ChEBI:CHEBI:15377, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:58635, ChEBI:CHEBI:76943;
+CC         Evidence={ECO:0000269|PubMed:21290071};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(+)-copalyl diphosphate + H2O = manool + diphosphate;
+CC         Xref=Rhea:RHEA:40011, ChEBI:CHEBI:15377, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:58635, ChEBI:CHEBI:76945;
+CC         Evidence={ECO:0000269|PubMed:21290071};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(+)-copalyl diphosphate + H2O = 13-epi-manool + diphosphate;
+CC         Xref=Rhea:RHEA:40015, ChEBI:CHEBI:15377, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:58635, ChEBI:CHEBI:76944;
+CC         Evidence={ECO:0000269|PubMed:21290071};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ent-copalyl diphosphate + H2O = (-)-ent-copalol + diphosphate;
+CC         Xref=Rhea:RHEA:40019, ChEBI:CHEBI:15377, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:58553, ChEBI:CHEBI:76950;
+CC         Evidence={ECO:0000269|PubMed:21290071};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ent-copalyl diphosphate + H2O = ent-manool + diphosphate;
+CC         Xref=Rhea:RHEA:40031, ChEBI:CHEBI:15377, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:58553, ChEBI:CHEBI:76948;
+CC         Evidence={ECO:0000269|PubMed:21290071};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=9alpha-copalyl diphosphate + H2O = syn-copalol + diphosphate;
+CC         Xref=Rhea:RHEA:40023, ChEBI:CHEBI:15377, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:58622, ChEBI:CHEBI:76952;
+CC         Evidence={ECO:0000269|PubMed:21290071};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=9alpha-copalyl diphosphate + H2O = (13S)-vitexifolin A +
+CC         diphosphate; Xref=Rhea:RHEA:40027, ChEBI:CHEBI:15377,
+CC         ChEBI:CHEBI:33019, ChEBI:CHEBI:58622, ChEBI:CHEBI:76954;
+CC         Evidence={ECO:0000269|PubMed:21290071};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000269|PubMed:21228491};
+CC       Note=Can also use Fe(2+), Cu(2+), Mn(2+), Zn(2+) and Ni(2+).
+CC       {ECO:0000269|PubMed:21228491};
+CC   -!- ACTIVITY REGULATION: Inhibited by the bisphosphonate inhibitor BPH-629.
+CC       {ECO:0000269|PubMed:24475925}.
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=27.1 uM for tuberculosinyl diphosphate (at 45 degrees Celsius and
+CC         pH 7) {ECO:0000269|PubMed:21228491};
+CC         Note=kcat is 0.031 min(-1) with tuberculosinyl diphosphate as
+CC         substrate. {ECO:0000269|PubMed:21228491};
+CC       pH dependence:
+CC         Optimum pH is 7. It is active in a pH range of 5.5-9.0.
+CC         {ECO:0000269|PubMed:21228491};
+CC       Temperature dependence:
+CC         Optimum temperature is 45 degrees Celsius. No activity is detected
+CC         above 50 degrees Celsius. {ECO:0000269|PubMed:21228491};
+CC   -!- SUBUNIT: Homodimer. {ECO:0000269|PubMed:21228491,
+CC       ECO:0000269|PubMed:24475925, ECO:0000269|PubMed:24516143}.
+CC   -!- DISRUPTION PHENOTYPE: Deletion of the gene abolishes 1-TbAd
+CC       biosynthesis and decreases the formation of swollen phagosomes.
+CC       {ECO:0000269|PubMed:31427817}.
+CC   -!- MISCELLANEOUS: 1-TbAd is highly prevalent among patient-derived
+CC       M.tuberculosis strains, where it is among the most abundant lipids
+CC       produced. {ECO:0000305|PubMed:31427817}.
+CC   -!- SIMILARITY: Belongs to the diterpene synthase family. {ECO:0000305}.
+DR   EMBL; AL123456; CCP46199.1; -; Genomic_DNA.
+DR   PIR; A70973; A70973.
+DR   RefSeq; NP_217895.1; NC_000962.3.
+DR   RefSeq; WP_003417908.1; NZ_NVQJ01000052.1.
+DR   PDB; 3WQK; X-ray; 2.30 A; A=1-296.
+DR   PDB; 3WQL; X-ray; 2.10 A; A/B/C/D=1-296.
+DR   PDB; 3WQM; X-ray; 2.10 A; A=1-296.
+DR   PDB; 3WQN; X-ray; 2.70 A; A=1-296.
+DR   PDB; 4CMV; X-ray; 2.31 A; A/B=1-296.
+DR   PDB; 4CMW; X-ray; 2.21 A; A/B=1-296.
+DR   PDB; 4CMX; X-ray; 2.36 A; A/B=1-296.
+DR   PDB; 4KT8; X-ray; 2.40 A; A=1-296.
+DR   PDBsum; 3WQK; -.
+DR   PDBsum; 3WQL; -.
+DR   PDBsum; 3WQM; -.
+DR   PDBsum; 3WQN; -.
+DR   PDBsum; 4CMV; -.
+DR   PDBsum; 4CMW; -.
+DR   PDBsum; 4CMX; -.
+DR   PDBsum; 4KT8; -.
+DR   AlphaFoldDB; P9WJ61; -.
+DR   SMR; P9WJ61; -.
+DR   STRING; 83332.Rv3378c; -.
+DR   SwissLipids; SLP:000001168; -.
+DR   PaxDb; 83332-Rv3378c; -.
+DR   DNASU; 888075; -.
+DR   GeneID; 888075; -.
+DR   KEGG; mtu:Rv3378c; -.
+DR   KEGG; mtv:RVBD_3378c; -.
+DR   TubercuList; Rv3378c; -.
+DR   eggNOG; ENOG502ZJEY; Bacteria.
+DR   InParanoid; P9WJ61; -.
+DR   OrthoDB; 4700302at2; -.
+DR   BioCyc; MetaCyc:G185E-7654-MONOMER; -.
+DR   BRENDA; 2.5.1.153; 3445.
+DR   BRENDA; 4.2.3.B30; 3445.
+DR   BRENDA; 4.2.3.B31; 3445.
+DR   BRENDA; 4.2.3.B32; 3445.
+DR   BRENDA; 4.2.3.B33; 3445.
+DR   BRENDA; 4.2.3.B34; 3445.
+DR   BRENDA; 4.2.3.B35; 3445.
+DR   BRENDA; 4.2.3.B36; 3445.
+DR   EvolutionaryTrace; P9WJ61; -.
+DR   Proteomes; UP000001584; Chromosome.
+DR   GO; GO:0062204; F:(13S)-vitexifolin A synthase activity; IEA:RHEA.
+DR   GO; GO:0016791; F:phosphatase activity; IDA:MTBBASE.
+DR   GO; GO:0016765; F:transferase activity, transferring alkyl or aryl (other than methyl) groups; IEA:InterPro.
+DR   GO; GO:0016102; P:diterpenoid biosynthetic process; IDA:MTBBASE.
+DR   GO; GO:0035440; P:tuberculosinol biosynthetic process; IDA:UniProtKB.
+DR   FunFam; 3.40.1180.10:FF:000015; Diterpene synthase; 1.
+DR   Gene3D; 3.40.1180.10; Decaprenyl diphosphate synthase-like; 1.
+DR   InterPro; IPR036424; UPP_synth-like_sf.
+PE   1: Evidence at protein level;
+KW   3D-structure; Reference proteome; Transferase; Virulence.
+FT   CHAIN           1..296
+FT                   /note="Tuberculosinyl adenosine transferase"
+FT                   /id="PRO_0000416456"
+FT   MUTAGEN         34
+FT                   /note="D->A: Abolishes transferase activity. Decrease in
+FT                   TOH production. Almost loss of iso-TOH production."
+FT                   /evidence="ECO:0000269|PubMed:24475925,
+FT                   ECO:0000269|PubMed:24516143"
+FT   MUTAGEN         34
+FT                   /note="D->N: Abolishes transferase activity."
+FT                   /evidence="ECO:0000269|PubMed:24516143"
+FT   MUTAGEN         38
+FT                   /note="R->A: Does not affect TOH production. Strong
+FT                   decrease in iso-TOH production."
+FT                   /evidence="ECO:0000269|PubMed:24475925"
+FT   MUTAGEN         51
+FT                   /note="Y->F: Strong decrease in TOH and iso-TOH production.
+FT                   Almost loss of TOH and TOH production; when associated with
+FT                   F-90."
+FT                   /evidence="ECO:0000269|PubMed:24475925"
+FT   MUTAGEN         81
+FT                   /note="D->N: Significant decrease in phosphatase activity.
+FT                   Loss of phosphatase activity; when associated with N-82 or
+FT                   N-85."
+FT                   /evidence="ECO:0000269|PubMed:21228491"
+FT   MUTAGEN         82
+FT                   /note="D->N: Significant decrease in phosphatase activity.
+FT                   Loss of phosphatase activity; when associated with N-81 or
+FT                   N-85."
+FT                   /evidence="ECO:0000269|PubMed:21228491"
+FT   MUTAGEN         85
+FT                   /note="D->N: Significant decrease in phosphatase activity.
+FT                   Loss of phosphatase activity; when associated with N-81 or
+FT                   N-82."
+FT                   /evidence="ECO:0000269|PubMed:21228491"
+FT   MUTAGEN         90
+FT                   /note="Y->F: Decrease in TOH production and almost loss of
+FT                   iso-TOH production. Almost loss of TOH and TOH production;
+FT                   when associated with F-51."
+FT                   /evidence="ECO:0000269|PubMed:24475925"
+FT   HELIX           6..11
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           14..24
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   STRAND          27..30
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           36..43
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   TURN            46..48
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           51..68
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   STRAND          73..79
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           81..85
+FT                   /evidence="ECO:0007829|PDB:3WQM"
+FT   HELIX           92..101
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           105..113
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   STRAND          116..123
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           124..127
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           132..147
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   TURN            148..150
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   STRAND          153..161
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           166..180
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           186..194
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   STRAND          202..210
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   STRAND          224..230
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           232..234
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           237..249
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   TURN            250..252
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           259..261
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   HELIX           264..276
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   STRAND          286..288
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+FT   STRAND          291..293
+FT                   /evidence="ECO:0007829|PDB:3WQL"
+SQ   SEQUENCE   296 AA;  34031 MW;  D79E55CFDE338E07 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	7	Dictyostelium.
+4	7	Mycobacterium tuberculosis complex.
+7	6	Dictyosteliaceae
+4	6	Mycobacterium
+3	6	Mycobacterium.
+8	5	Dictyosteliales
+7	5	Mycobacteriaceae
+3	5	Acytosteliales
+7	4	Mycobacteriales
+11	4	Dictyostelia
+7	3	Actinomycetes
+11	3	Eumycetozoa
+9	2	Actinomycetota
+11	2	Evosea
+11	1	Bacillati
+11	1	Amoebozoa
+12	0	Bacteria
+11	0	Eukaryota
+Total of 23 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0P6YHY7	UNCHARACTERIZED PROTEIN {     51.2      6e-10   2   2.0   0.0
+	P9WJ61_TED01              	   159	   249	    31.5
+	P9WJ61_TED01              	     8	   142	    17.9
+
+A0A0S7BBB9	DITERPENE SYNTHASE {ECO:0    218.4    5.8e-61   1   1.0   0.3
+	P9WJ61_TED01              	     4	   260	   218.1
+
+A0A152A5Y5	UNCHARACTERIZED PROTEIN {    130.2    4.8e-34   1   1.6   0.6
+	P9WJ61_TED01              	     4	   277	   129.0
+
+A0A1L9B9D7	UNCHARACTERIZED PROTEIN {     48.5      4e-09   2   2.1   0.0
+	P9WJ61_TED01              	   152	   248	    32.5
+	P9WJ61_TED01              	    11	    97	    13.9
+
+A0A1R3Y403	TUBERCULOSINYL ADENOSINE     611.0   9.2e-181   1   1.0   0.2
+	P9WJ61_TED01              	     5	   258	   610.8
+
+A0A1X1YRA0	DITERPENE SYNTHASE {ECO:0    418.4   5.2e-122   1   1.0   0.3
+	P9WJ61_TED01              	     5	   258	   418.2
+
+A0A6G8PWS6	DITERPENE SYNTHASE {ECO:0    135.2    1.4e-35   1   1.1   0.0
+	P9WJ61_TED01              	    11	   262	   134.8
+
+A0A6G8QB98	UNCHARACTERIZED PROTEIN {    129.6    7.3e-34   1   1.0   0.0
+	P9WJ61_TED01              	     8	   257	   129.2
+
+A0A7I7MN25	DITERPENE SYNTHASE {ECO:0     97.2    5.6e-24   1   1.1   0.1
+	P9WJ61_TED01              	     4	   244	    96.8
+
+A0A7V7ZND8	UNCHARACTERIZED PROTEIN {     57.3    8.1e-12   1   1.9   0.0
+	P9WJ61_TED01              	     4	   240	    54.1
+
+A0A7Y2SSD4	UNCHARACTERIZED PROTEIN {     45.1    4.3e-08   2   2.0   0.0
+	P9WJ61_TED01              	   163	   250	    31.1
+	P9WJ61_TED01              	     9	   128	    12.1
+
+A0A7Z7IPG2	DITERPENE SYNTHASE {ECO:0    118.8    1.5e-30   1   1.1   0.0
+	P9WJ61_TED01              	    71	   313	   118.2
+
+A0A8J4UQG5	UNCHARACTERIZED PROTEIN {    134.1    3.1e-35   1   1.4   0.1
+	P9WJ61_TED01              	    10	   280	   133.2
+
+A0A8J4UXA0	UNCHARACTERIZED PROTEIN {    111.6    2.3e-28   1   1.5   0.4
+	P9WJ61_TED01              	    29	   302	   110.4
+
+A0A916C679	DITERPENE SYNTHASE {ECO:0    193.6    2.1e-53   1   1.1   0.4
+	P9WJ61_TED01              	     3	   258	   193.2
+
+A0A916N3F3	DITERPENE SYNTHASE {ECO:0    264.5    4.8e-75   1   1.0   0.4
+	P9WJ61_TED01              	     6	   262	   264.2
+
+A0A972GIN5	UNCHARACTERIZED PROTEIN {     48.2    5.1e-09   1   1.1   0.0
+	P9WJ61_TED01              	     4	   260	    47.8
+
+A5U852	TUBERCULOSINYL ADENOSINE TRAN    611.0   9.2e-181   1   1.0   0.2
+	P9WJ61_TED01              	     5	   258	   610.8
+
+D3B3F7	UNCHARACTERIZED PROTEIN {ECO:    130.0    5.3e-34   1   1.3   0.3
+	P9WJ61_TED01              	     1	   268	   129.4
+
+D3BHI7	F-BOX DOMAIN-CONTAINING PROTE    104.3    3.7e-26   1   1.5   0.1
+	P9WJ61_TED01              	    15	   236	   103.2
+	PF00646	F-box           	   352	   385	      20
+	PF05725	FNIP            	   701	   739	    22.2
+
+F0ZNG1	UNCHARACTERIZED PROTEIN {ECO:    114.1    3.9e-29   1   2.0   0.2
+	P9WJ61_TED01              	    75	   301	   110.1
+
+F0ZNG2	UNCHARACTERIZED PROTEIN {ECO:    141.6    1.6e-37   1   1.5   0.8
+	P9WJ61_TED01              	    15	   286	   140.4
+
+F4Q160	UNCHARACTERIZED PROTEIN {ECO:     98.9    1.6e-24   1   1.4   0.1
+	P9WJ61_TED01              	     3	   268	    98.1
+
+P9WJ60	TUBERCULOSINYL ADENOSINE TRANS    611.0   9.2e-181   1   1.0   0.2
+	P9WJ61_TED01              	     5	   258	   610.8
+
+P9WJ61	TUBERCULOSINYL ADENOSINE TRANS    611.0   9.2e-181   1   1.0   0.2
+	P9WJ61_TED01              	     5	   258	   610.8
+
+Q54QH8	UNCHARACTERIZED PROTEIN {ECO:    110.9    3.6e-28   1   2.0   1.0
+	P9WJ61_TED01              	    92	   323	   108.8
+
+Q54QH9	UNCHARACTERIZED PROTEIN {ECO:    124.6    2.4e-32   2   2.1   0.4
+	P9WJ61_TED01              	    69	   291	   119.8
+	P9WJ61_TED01              	     9	    58	     2.0
+
+Q86I36	UNCHARACTERIZED PROTEIN {ECO:    106.9    6.2e-27   1   1.1   0.2
+	P9WJ61_TED01              	     4	   272	   106.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3430854 (E-value: 7.8e-13, Score: 53.9)
+Mentioned as: Haur_2146
+Description: hypothetical protein
+Organism: Herpetosiphon aurantiacus ATCC 23779
+PMID: 25694050
+Source: EuropePMC
+Title: Identification of a new diterpene biosynthetic gene cluster that produces O-methylkolavelool in Herpetosiphon aurantiacus
+Journal: Chembiochem : a European journal of chemical biology (2015)
+Snippet: Oshima, Nodoka Kurashima, and Tsutomu Hoshino*[a] phate. Haur_2146, homologous to Rv3378c, synthesized (+ +)-kolavelool through the nucleophilic addition of a
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P9WJ61.1	AF-P9WJ61-F1-model_v4_TED01:5-258	1	AF-P9WJ61-F1-model_v4_TED01	5-258	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P9WJ61_TED01
+GA   27.00 27.00;
+TC   28.60 31.10;
+NC   25.60 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 3wqk
+RN   [1]
+RM   24475925
+RT   Structure and inhibition of tuberculosinol synthase and decaprenyl
+RT   diphosphate  synthase from Mycobacterium tuberculosis.
+RA   Chan HC, Feng X, Ko TP, Huang CH, Hu Y, Zheng Y, Bogue S, Nakano C,
+RA   Hoshino T, Zhang L, Lv P, Liu W, Crick DC, Liang PH, Wang AH,
+RA   Oldfield E, Guo RT;
+RL   J Am Chem Soc. 2014;136:2892-2896.
+RC   Paper describing PDB structure 4cmv
+RN   [2]
+RM   24516143
+RT   Molecular profiling of Mycobacterium tuberculosis identifies
+RT   tuberculosinyl  nucleoside products of the virulence-associated
+RT   enzyme Rv3378c.
+RA   Layre E, Lee HJ, Young DC, Martinot AJ, Buter J, Minnaard AJ, Annand
+RA   JW, Fortune SM, Snider BB, Matsunaga I, Rubin EJ, Alber T, Moody DB;
+RL   Proc Natl Acad Sci U S A. 2014;111:2978-2983.
+
+--- End of Current DESC file ---

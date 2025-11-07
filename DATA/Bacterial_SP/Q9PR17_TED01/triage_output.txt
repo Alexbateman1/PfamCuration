@@ -1,0 +1,87 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y127_UREPA              Reviewed;         101 AA.
+AC   Q9PR17;
+DE   RecName: Full=Uncharacterized protein UU127;
+GN   OrderedLocusNames=UU127;
+OS   Ureaplasma parvum serovar 3 (strain ATCC 700970).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Ureaplasma.
+OX   NCBI_TaxID=273119;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700970;
+RX   PubMed=11048724; DOI=10.1038/35037619;
+RA   Glass J.I., Lefkowitz E.J., Glass J.S., Heiner C.R., Chen E.Y.,
+RA   Cassell G.H.;
+RT   "The complete sequence of the mucosal pathogen Ureaplasma urealyticum.";
+RL   Nature 407:757-762(2000).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AF222894; AAF30533.1; -; Genomic_DNA.
+DR   RefSeq; WP_006688845.1; NC_002162.1.
+DR   AlphaFoldDB; Q9PR17; -.
+DR   SMR; Q9PR17; -.
+DR   STRING; 273119.UU127; -.
+DR   EnsemblBacteria; AAF30533; AAF30533; UU127.
+DR   GeneID; 29672754; -.
+DR   KEGG; uur:UU127; -.
+DR   HOGENOM; CLU_2290465_0_0_14; -.
+DR   OrthoDB; 9917966at2; -.
+DR   Proteomes; UP000000423; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..101
+FT                   /note="Uncharacterized protein UU127"
+FT                   /id="PRO_0000220801"
+FT   TRANSMEM        3..23
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        68..88
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   101 AA;  11720 MW;  00A9C79C559E7FF6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Ureaplasma
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9PR17	UNCHARACTERIZED PROTEIN UU127      140.6    6.3e-38   1   2.0   8.7
+	Q9PR17_TED01              	     1	    56	   140.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9PR17.1	AF-Q9PR17-F1-model_v4_TED01:1-56	1	AF-Q9PR17-F1-model_v4_TED01	1-56	100.0%
+Q9PR17.1	AF-Q9PR17-F1-model_v4_TED02:61-101	1	AF-Q9PR17-F1-model_v4_TED02	61-101	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9PR17_TED01
+GA   27.00 27.00;
+TC   27.20 140.60;
+NC   26.80 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

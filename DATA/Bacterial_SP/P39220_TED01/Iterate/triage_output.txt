@@ -1,0 +1,181 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YABP_ECOLI              Reviewed;         216 AA.
+AC   P39220; A0A385XMP4; P75632; Q8KJP8;
+DE   RecName: Full=Protein YabP;
+GN   Name=yabP; OrderedLocusNames=b0056, JW0055; ORFNames=b4659;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12;
+RX   PubMed=1630901; DOI=10.1093/nar/20.13.3305;
+RA   Yura T., Mori H., Nagai H., Nagata T., Ishihama A., Fujita N., Isono K.,
+RA   Mizobuchi K., Nakata A.;
+RT   "Systematic sequencing of the Escherichia coli genome: analysis of the
+RT   0-2.4 min region.";
+RL   Nucleic Acids Res. 20:3305-3308(1992).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   IDENTIFICATION.
+RA   Rudd K.E.;
+RL   Unpublished observations (NOV-1994).
+CC   -!- MISCELLANEOUS: May be missing up to 80 C-terminal residues compared to
+CC       orthologs. {ECO:0000305}.
+DR   EMBL; U00096; AYC08162.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAB96624.2; -; Genomic_DNA.
+DR   PIR; H64726; H64726.
+DR   AlphaFoldDB; P39220; -.
+DR   BioGRID; 4261615; 6.
+DR   FunCoup; P39220; 66.
+DR   IntAct; P39220; 4.
+DR   EnsemblBacteria; AYC08162; AYC08162; b0056.
+DR   KEGG; ecj:JW0055; -.
+DR   EchoBASE; EB2494; -.
+DR   eggNOG; COG1357; Bacteria.
+DR   HOGENOM; CLU_091636_0_0_6; -.
+DR   InParanoid; P39220; -.
+DR   BioCyc; EcoCyc:EG12610-MONOMER; -.
+DR   PRO; PR:P39220; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..216
+FT                   /note="Protein YabP"
+FT                   /id="PRO_0000168523"
+SQ   SEQUENCE   216 AA;  24791 MW;  A15D252E84B50621 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+2	6	Shigella.
+5	5	Enterobacteriaceae
+5	4	Enterobacterales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+E2XCY7	UDP PYROPHOSPHATE PHOSPHATASE    348.8   2.3e-101   1   1.1   3.5
+	Iterate                   	    18	   185	   348.5
+
+P39220	PROTEIN YABP                       397.7   2.1e-116   1   1.0   4.0
+	Iterate                   	    18	   185	   397.5
+
+Q32K38	UDP PYROPHOSPHATE PHOSPHATASE    348.8   2.3e-101   1   1.1   3.5
+	Iterate                   	    18	   185	   348.5
+
+Q8XA03	T3SS EFFECTOR-LIKE PROTEIN ES     81.1    4.4e-19   1   1.2   0.5
+	Iterate                   	    25	   184	    80.6
+
+Q8XA11	T3SS EFFECTOR-LIKE PROTEIN ES    348.6   2.6e-101   1   1.1   2.5
+	Iterate                   	    18	   185	   348.2
+	PF00805	Pentapeptide    	   188	   211	    15.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS91530 (E-value: 2.4e-103, Score: 348.6)
+Mentioned as: ECs0061
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 29718957
+Source: EuropePMC
+Title: Sulfamethoxazole - Trimethoprim represses csgD but maintains virulence genes at 30°C in a clinical Escherichia coli O157:H7 isolate
+Journal: PloS one (2018)
+Snippet: 27vs0 12h ECs0025 hypothetical protein EspX1 No $ 0.23 0.67 0.91 1.05 0.30 1.35 * ECs0061 hypothetical protein EspY1 No # 0.03 -0.55 -0.52 0.06 1.12 * 1.18 * ECs0073 hypothetical protein EspY2 No $ 0.14 -2.16 * -2.02 * -0.07 -0.09 -0.16 ECs0472 hypothetical protein
+
+================================================================================
+Protein: VIMSS91530 (E-value: 2.4e-103, Score: 348.6)
+Mentioned as: ECs0061
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 25519916
+Source: EuropePMC
+Title: The EHEC-host interactome reveals novel targets for the translocated intimin receptor
+Journal: Scientific reports (2014)
+Snippet: 1 EspJ ECs2714 RIC8A 60626 Synembryn-A EspO1-1 ECs1567 FEM1B 10116 Protein fem-1 homolog B EspY1 ECs0061 CAPN3 825 Calpain-3 EspY1 ECs0061 CDKN2AIPNL 91368 CDKN2AIP N-terminal-like protein EspY1 ECs0061 CLK1 1195 Dual specificity protein kinase CLK1 EspY1 ECs0061 DNAJC14 85406 DnaJ homolog subfamily C member 14 EspY1
+
+================================================================================
+Protein: VIMSS91530 (E-value: 2.4e-103, Score: 348.6)
+Mentioned as: ECs0061
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 19703108
+Source: EuropePMC
+Title: Hfq negatively regulates type III secretion in EHEC and several other pathogens
+Journal: Molecular microbiology (2009)
+Snippet: EDL933 hfq EDL933 Gene ID Gene Name hfq /wt ratio SAKAI Gene ID Z0065 0.8 ECs0061 Z0986 nleC 1.1 ECs0847 Z0989 1.2 ECs0848 Z0990 nleD 0.9 ECs0850 Z1019 0.8 ECs0876 Z1822 3.2 ECs1560 Z1823/1824 b 5.1/3.8 ECs1561 Z1828 c 2.2 ECs1567 Z1829 espK 1.6 ECs1568 Z2077
+
+================================================================================
+Protein: VIMSS91542 (E-value: 3.9e-21, Score: 81.1)
+Mentioned as: ECs0073
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 17967175
+Source: EuropePMC
+Title: Global transcriptional response of Escherichia coli O157:H7 to growth transitions in glucose minimal medium
+Journal: BMC microbiology (2007)
+Snippet: name Log 2 change in expression from 4.6 h to 5.5 h ECs0061 espY1 3.03 ECs0073 espY2 1.24 ECs1825 espM1 1.47 ECs1994 nleG2-2 1.41 ECs2156 nleG2-3 1.63 ECs2229 nleG2-4 -1.15 ECs2714 espJ -2.18 ECs2715 tccP -1.39 ECs3488 nleG6-3 1.11 ECSs4554 espB -2.41 ECs4561 tir -1.72 ECs4571
+
+================================================================================
+Protein: VIMSS91542 (E-value: 3.9e-21, Score: 81.1)
+Mentioned as: ECs0073
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 16990433
+Source: EuropePMC
+Title: An extensive repertoire of type III secretion effectors in Escherichia coli O157 and the role of lambdoid phages in their dissemination
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2006)
+Snippet: NleG2-4 EspL1 EspR3 EspR4 EspJ ECs0025 ECs0061 ECs0073 ECs0472 ECs0846 ECs0847 ECs0848 ECs0850 ECs0876 ECs1126 ECs1127 ECs1560 ECs1561 ECs1566 ECs1567 ECs1568
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P39220.2	AF-P39220-F1-model_v4_TED01:18-185	1	AF-P39220-F1-model_v4_TED01	18-185	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P39220_TED01/Iterate
+GA   27.00 27.00;
+TC   30.00 80.60;
+NC   26.60 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

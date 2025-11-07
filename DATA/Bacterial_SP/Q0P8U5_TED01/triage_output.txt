@@ -1,0 +1,793 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PSEG_CAMJE              Reviewed;         274 AA.
+AC   Q0P8U5;
+DE   RecName: Full=UDP-2,4-diacetamido-2,4,6-trideoxy-beta-L-altropyranose hydrolase;
+DE            EC=3.6.1.57;
+DE   AltName: Full=Pseudaminic acid biosynthesis protein G;
+GN   Name=pseG; OrderedLocusNames=Cj1312;
+OS   Campylobacter jejuni subsp. jejuni serotype O:2 (strain ATCC 700819 /
+OS   NCTC 11168).
+OC   Bacteria; Pseudomonadati; Campylobacterota; Epsilonproteobacteria;
+OC   Campylobacterales; Campylobacteraceae; Campylobacter.
+OX   NCBI_TaxID=192222;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700819 / NCTC 11168;
+RX   PubMed=10688204; DOI=10.1038/35001088;
+RA   Parkhill J., Wren B.W., Mungall K.L., Ketley J.M., Churcher C.M.,
+RA   Basham D., Chillingworth T., Davies R.M., Feltwell T., Holroyd S.,
+RA   Jagels K., Karlyshev A.V., Moule S., Pallen M.J., Penn C.W., Quail M.A.,
+RA   Rajandream M.A., Rutherford K.M., van Vliet A.H.M., Whitehead S.,
+RA   Barrell B.G.;
+RT   "The genome sequence of the food-borne pathogen Campylobacter jejuni
+RT   reveals hypervariable sequences.";
+RL   Nature 403:665-668(2000).
+RN   [2]
+RP   FUNCTION, CATALYTIC ACTIVITY, AND BIOPHYSICOCHEMICAL PROPERTIES.
+RC   STRAIN=ATCC 700819 / NCTC 11168;
+RX   PubMed=16728396; DOI=10.1074/jbc.m602972200;
+RA   Liu F., Tanner M.E.;
+RT   "PseG of pseudaminic acid biosynthesis: a UDP-sugar hydrolase as a masked
+RT   glycosyltransferase.";
+RL   J. Biol. Chem. 281:20902-20909(2006).
+RN   [3]
+RP   X-RAY CRYSTALLOGRAPHY (1.80 ANGSTROMS) IN COMPLEX WITH
+RP   URIDINE-5'-DIPHOSPHATE, ACTIVE SITE, SUBUNIT, BIOPHYSICOCHEMICAL
+RP   PROPERTIES, AND MUTAGENESIS OF HIS-17; TYR-78 AND ASN-255.
+RC   STRAIN=ATCC 700819 / NCTC 11168;
+RX   PubMed=19483088; DOI=10.1074/jbc.m109.012351;
+RA   Rangarajan E.S., Proteau A., Cui Q., Logan S.M., Potetinova Z.,
+RA   Whitfield D., Purisima E.O., Cygler M., Matte A., Sulea T.,
+RA   Schoenhofen I.C.;
+RT   "Structural and functional analysis of Campylobacter jejuni PseG: a udp-
+RT   sugar hydrolase from the pseudaminic acid biosynthetic pathway.";
+RL   J. Biol. Chem. 284:20989-21000(2009).
+CC   -!- FUNCTION: Nucleotide sugar hydrolase that catalyzes the fourth step in
+CC       the biosynthesis of pseudaminic acid, a sialic-acid-like sugar that is
+CC       used to modify flagellin. Mediates the removal of UDP from C-1 of UDP-
+CC       2,4-diacetamido-2,4,6-trideoxy-beta-L-altropyranose forming 2,4-
+CC       diacetamido-2,4,6-trideoxy-beta-L-altropyranose.
+CC       {ECO:0000269|PubMed:16728396}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=UDP-2,4-diacetamido-2,4,6-trideoxy-beta-L-altrose + H2O = 2,4-
+CC         diacetamido-2,4,6-trideoxy-beta-L-altrose + UDP + H(+);
+CC         Xref=Rhea:RHEA:31803, ChEBI:CHEBI:15377, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:58223, ChEBI:CHEBI:63283, ChEBI:CHEBI:63417; EC=3.6.1.57;
+CC         Evidence={ECO:0000269|PubMed:16728396};
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=174 uM for UDP-2,4-diacetamido-2,4,6-trideoxy-beta-L-altropyranose
+CC         {ECO:0000269|PubMed:16728396};
+CC         KM=250 uM for UDP-2,4-diacetamido-2,4,6-trideoxy-beta-L-altropyranose
+CC         {ECO:0000269|PubMed:19483088};
+CC         Note=kcat is 27 sec(-1) (PubMed:16728396). kcat is 25 sec(-1)
+CC         (PubMed:19483088). {ECO:0000269|PubMed:16728396,
+CC         ECO:0000269|PubMed:19483088};
+CC   -!- SUBUNIT: Monomer. {ECO:0000269|PubMed:19483088}.
+CC   -!- SIMILARITY: Belongs to the PseG family. {ECO:0000305}.
+DR   EMBL; AL111168; CAL35426.1; -; Genomic_DNA.
+DR   PIR; E81274; E81274.
+DR   RefSeq; WP_002830499.1; NZ_SZUC01000001.1.
+DR   RefSeq; YP_002344702.1; NC_002163.1.
+DR   PDB; 3HBM; X-ray; 1.80 A; A=1-274.
+DR   PDB; 3HBN; X-ray; 1.85 A; A=1-274.
+DR   PDBsum; 3HBM; -.
+DR   PDBsum; 3HBN; -.
+DR   AlphaFoldDB; Q0P8U5; -.
+DR   SMR; Q0P8U5; -.
+DR   IntAct; Q0P8U5; 6.
+DR   STRING; 192222.Cj1312; -.
+DR   PaxDb; 192222-Cj1312; -.
+DR   EnsemblBacteria; CAL35426; CAL35426; Cj1312.
+DR   GeneID; 905604; -.
+DR   KEGG; cje:Cj1312; -.
+DR   PATRIC; fig|192222.6.peg.1294; -.
+DR   eggNOG; COG3980; Bacteria.
+DR   HOGENOM; CLU_023406_0_0_7; -.
+DR   OrthoDB; 9788924at2; -.
+DR   BRENDA; 3.6.1.57; 1087.
+DR   EvolutionaryTrace; Q0P8U5; -.
+DR   Proteomes; UP000000799; Chromosome.
+DR   GO; GO:0016787; F:hydrolase activity; IEA:UniProtKB-KW.
+DR   Gene3D; 3.40.50.11190; -; 1.
+DR   Gene3D; 3.40.50.2000; Glycogen Phosphorylase B; 1.
+DR   InterPro; IPR020023; PseG.
+DR   NCBIfam; TIGR03590; PseG; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Hydrolase; Reference proteome.
+FT   CHAIN           1..274
+FT                   /note="UDP-2,4-diacetamido-2,4,6-trideoxy-beta-L-
+FT                   altropyranose hydrolase"
+FT                   /id="PRO_0000418931"
+FT   ACT_SITE        17
+FT                   /note="Proton acceptor"
+FT                   /evidence="ECO:0000269|PubMed:19483088"
+FT   BINDING         15..16
+FT                   /ligand="substrate"
+FT   BINDING         143
+FT                   /ligand="substrate"
+FT   BINDING         234..235
+FT                   /ligand="substrate"
+FT   BINDING         239
+FT                   /ligand="substrate"
+FT   MUTAGEN         17
+FT                   /note="H->F,L: Abolishes catalytic activity."
+FT                   /evidence="ECO:0000269|PubMed:19483088"
+FT   MUTAGEN         17
+FT                   /note="H->N: Strongly impaired catalytic activity."
+FT                   /evidence="ECO:0000269|PubMed:19483088"
+FT   MUTAGEN         78
+FT                   /note="Y->F: Impaired catalytic activity."
+FT                   /evidence="ECO:0000269|PubMed:19483088"
+FT   MUTAGEN         255
+FT                   /note="N->A: Impaired catalytic activity."
+FT                   /evidence="ECO:0000269|PubMed:19483088"
+FT   STRAND          3..6
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   TURN            11..13
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           16..25
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          29..35
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           43..45
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          50..52
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          54..56
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           58..68
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          71..75
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           82..92
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          95..99
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          109..113
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           120..123
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   TURN            124..126
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          132..136
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           137..139
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           144..149
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          158..163
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          165..167
+FT                   /evidence="ECO:0007829|PDB:3HBN"
+FT   HELIX           172..179
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          186..190
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           197..205
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          208..215
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           219..224
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          226..234
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           235..242
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          247..250
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           254..256
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   HELIX           257..265
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+FT   STRAND          269..271
+FT                   /evidence="ECO:0007829|PDB:3HBM"
+SQ   SEQUENCE   274 AA;  31319 MW;  A65BF88D58502257 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	5	Paenibacillaceae
+12	5	Bacillaceae
+22	4	Bacillales
+9	3	Alphaproteobacteria
+22	3	Bacilli
+15	3	Gammaproteobacteria
+11	3	Clostridia
+35	2	Bacillota
+29	2	Pseudomonadota
+38	1	Bacillati
+37	1	Pseudomonadati
+75	0	Bacteria
+Total of 75 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A063Y9Y9	PSEUDAMINIC ACID CYTIDYLY     50.2    1.5e-09   2   2.3   0.0
+	Q0P8U5_TED01              	    62	   170	    33.7
+	Q0P8U5_TED01              	    11	    66	    14.5
+	PF04101	Glyco_tran_28_C 	   195	   345	    30.1
+
+A0A089LY67	GLYCOSYL TRANSFERASE FAMI     57.5    8.2e-12   1   2.3   0.1
+	Q0P8U5_TED01              	     4	   162	    53.6
+	PF04101	Glyco_tran_28_C 	   185	   347	    39.5
+
+A0A098M951	GLYCOSYL TRANSFERASE FAMI     55.0    4.9e-11   1   2.5   0.7
+	Q0P8U5_TED01              	     4	   163	    49.9
+	PF04101	Glyco_tran_28_C 	   186	   348	    24.4
+
+A0A0A3INQ6	PSEUDAMINIC ACID BIOSYNTH     50.3    1.4e-09   1   1.9   0.1
+	Q0P8U5_TED01              	     5	   136	    48.7
+
+A0A0A6VGT7	GLYCOSYL TRANSFERASE FAMI     57.7    7.3e-12   1   2.4   0.1
+	Q0P8U5_TED01              	     4	   165	    51.9
+	PF04101	Glyco_tran_28_C 	   188	   344	    32.1
+
+A0A0A8WS75	UDP-2,4-DIACETAMIDO-2,4,      48.2    6.2e-09   1   1.7   0.0
+	Q0P8U5_TED01              	     4	   155	    46.7
+	PF04101	Glyco_tran_28_C 	   178	   332	    39.4
+
+A0A0B0IGB8	GLYCOSYL TRANSFERASE FAMI     56.6    1.6e-11   2   2.4   0.1
+	Q0P8U5_TED01              	    83	   173	    36.0
+	Q0P8U5_TED01              	     4	    83	    18.3
+	PF04101	Glyco_tran_28_C 	   196	   352	    45.8
+
+A0A0B2JYL3	POLYSACCHARIDE BIOSYNTHES     55.4    3.7e-11   2   2.2   0.1
+	Q0P8U5_TED01              	    76	   168	    29.5
+	Q0P8U5_TED01              	     4	    66	    23.9
+	PF04101	Glyco_tran_28_C 	   190	   346	    29.4
+
+A0A0D1W1V3	UDP-2,4-DIACETAMIDO-2,4,6     47.6    9.3e-09   1   1.7   0.0
+	Q0P8U5_TED01              	     4	   159	    46.4
+	PF04101	Glyco_tran_28_C 	   182	   359	    23.9
+
+A0A0F6RCV4	POLYSACCHARIDE BIOSYNTHES     56.0    2.4e-11   2   2.3   0.0
+	Q0P8U5_TED01              	    87	   175	    40.4
+	Q0P8U5_TED01              	     4	    63	    13.4
+	PF04101	Glyco_tran_28_C 	   206	   364	    35.8
+
+A0A0M2UD16	GLYCOSYL TRANSFERASE FAMI     49.0    3.6e-09   2   2.6   0.4
+	Q0P8U5_TED01              	    84	   173	    29.6
+	Q0P8U5_TED01              	     4	    60	    16.9
+	PF04101	Glyco_tran_28_C 	   196	   355	    43.8
+
+A0A0T6UY56	UDP-2,4-DIACETAMIDO-2,4,      45.6    3.9e-08   2   2.2   0.0
+	Q0P8U5_TED01              	    87	   175	    26.9
+	Q0P8U5_TED01              	     5	    70	    16.5
+	PF04101	Glyco_tran_28_C 	   199	   353	    31.1
+
+A0A0W0VWC6	PUTATIVE POLYSACCHARIDE B     45.7    3.6e-08   2   2.6   0.0
+	Q0P8U5_TED01              	    54	   169	    28.5
+	Q0P8U5_TED01              	     4	    65	    14.9
+	PF04101	Glyco_tran_28_C 	   192	   348	      27
+	PF13302	Acetyltransf_3  	   364	   499	    42.1
+	PF00583	Acetyltransf_1  	   378	   498	    28.6
+
+A0A0X8CRM3	GLYCOSYL TRANSFERASE FAMI     46.0    2.9e-08   1   2.3   3.6
+	Q0P8U5_TED01              	     5	   159	    41.9
+	PF04101	Glyco_tran_28_C 	   180	   342	    36.9
+
+A0A157S929	UDP-N-ACETYLGLUCOSAMINE--     47.6    9.6e-09   2   2.2   0.0
+	Q0P8U5_TED01              	    87	   168	    29.0
+	Q0P8U5_TED01              	     6	    59	    16.4
+	PF13302	Acetyltransf_3  	   370	   501	    54.2
+	PF13420	Acetyltransf_4  	   371	   520	    25.6
+	PF13523	Acetyltransf_8  	   374	   507	    33.2
+	PF00583	Acetyltransf_1  	   382	   500	    31.6
+
+A0A161S9S6	UDP-2,4-DIACETAMIDO-2,4,      50.2    1.5e-09   2   2.2   0.0
+	Q0P8U5_TED01              	    70	   177	    32.9
+	Q0P8U5_TED01              	     9	    68	    15.2
+
+A0A162ETV2	GLYCOSYL TRANSFERASE FAMI     55.5    3.4e-11   1   1.5   0.9
+	Q0P8U5_TED01              	     4	   154	    54.6
+	PF04101	Glyco_tran_28_C 	   174	   336	    25.6
+
+A0A165WQS6	GLYCOSYL TRANSFERASE FAMI     56.0    2.4e-11   1   2.7   0.5
+	Q0P8U5_TED01              	     4	   170	    45.6
+	PF04101	Glyco_tran_28_C 	   192	   351	    42.8
+
+A0A1D2YT74	UDP-2,4-DIACETAMIDO-2,4,      61.2    5.9e-13   1   2.1   1.4
+	Q0P8U5_TED01              	     4	   162	    60.0
+	PF04101	Glyco_tran_28_C 	   185	   344	    46.6
+
+A0A1E5D0Q5	UDP-2,4-DIACETAMIDO-2,4,      47.4    1.1e-08   2   2.4   0.0
+	Q0P8U5_TED01              	     4	    65	    23.4
+	Q0P8U5_TED01              	    74	   159	    21.5
+	PF04101	Glyco_tran_28_C 	   199	   324	      22
+	PF13302	Acetyltransf_3  	   356	   487	    42.4
+	PF00583	Acetyltransf_1  	   367	   486	      31
+
+A0A1E7DSL1	UDP-2,4-DIACETAMIDO-2,4,      50.9    9.2e-10   1   2.3   0.4
+	Q0P8U5_TED01              	     4	   165	    44.6
+	PF04101	Glyco_tran_28_C 	   188	   338	    27.9
+
+A0A1G8DXH2	UDP-2,4-DIACETAMIDO-2,4,6     46.0    2.9e-08   2   2.5   0.0
+	Q0P8U5_TED01              	    82	   170	    30.8
+	Q0P8U5_TED01              	     4	    54	    12.7
+	PF04101	Glyco_tran_28_C 	   194	   351	    32.6
+
+A0A1G9YNE0	UDP-2,4-DIACETAMIDO-2,4,6     48.9    3.7e-09   1   1.9   1.0
+	Q0P8U5_TED01              	     5	   156	    47.9
+	PF04101	Glyco_tran_28_C 	   179	   340	      22
+
+A0A1H2EJT2	UDP-2,4-DIACETAMIDO-2,4,6     45.7    3.6e-08   2   2.4   0.0
+	Q0P8U5_TED01              	    83	   170	    25.5
+	Q0P8U5_TED01              	     4	    60	    17.7
+	PF04101	Glyco_tran_28_C 	   195	   360	    38.9
+
+A0A1H7CLH7	UDP-2,4-DIACETAMIDO-2,4,6     47.9    7.7e-09   2   2.3   0.2
+	Q0P8U5_TED01              	    81	   169	    30.3
+	Q0P8U5_TED01              	     4	    81	    15.4
+	PF04101	Glyco_tran_28_C 	   191	   344	    26.1
+
+A0A1H9RUH9	UDP-2,4-DIACETAMIDO-2,4,6     51.3      7e-10   1   1.3   0.0
+	Q0P8U5_TED01              	     2	   148	    50.7
+
+A0A1I5LLW9	UDP-2,4-DIACETAMIDO-2,4,6    113.0    5.9e-29   1   1.4   0.6
+	Q0P8U5_TED01              	     5	   146	   112.3
+
+A0A1I6GJ71	UDP-2,4-DIACETAMIDO-2,4,6     49.3    2.8e-09   2   2.2   0.0
+	Q0P8U5_TED01              	    90	   179	    38.4
+	Q0P8U5_TED01              	    18	    79	     8.9
+	PF04101	Glyco_tran_28_C 	   203	   364	    42.9
+
+A0A1K1NT35	UDP-2,4-DIACETAMIDO-2,4,6     48.8    3.9e-09   2   2.2   0.0
+	Q0P8U5_TED01              	    74	   168	    32.6
+	Q0P8U5_TED01              	     4	    64	    14.2
+	PF04101	Glyco_tran_28_C 	   190	   344	    30.1
+
+A0A1Q8Z5U6	UDP-2,4-DIACETAMIDO-2,4,      47.1    1.3e-08   2   2.2   0.0
+	Q0P8U5_TED01              	    89	   168	    31.6
+	Q0P8U5_TED01              	     4	    64	    13.3
+
+A0A1S6U679	UDP-2,4-DIACETAMIDO-2,4,     182.7    1.8e-50   1   1.4   4.7
+	Q0P8U5_TED01              	    12	   148	   182.0
+
+A0A1V2A4L0	UDP-2,4-DIACETAMIDO-2,4,      50.1    1.6e-09   2   2.7   1.2
+	Q0P8U5_TED01              	    82	   165	    34.7
+	Q0P8U5_TED01              	     4	    75	    13.4
+	PF04101	Glyco_tran_28_C 	   188	   343	    30.2
+
+A0A1W6CID0	UDP-2,4-DIACETAMIDO-2,4,      47.0    1.5e-08   1   2.2   0.0
+	Q0P8U5_TED01              	     7	   137	    41.8
+
+A0A222MYN8	UDP-2,4-DIACETAMIDO-2,4,     231.9    1.1e-65   1   1.5   5.1
+	Q0P8U5_TED01              	     4	   142	   230.9
+
+A0A238TCQ3	UDP-2,4-DIACETAMIDO-2,4,6     45.7    3.6e-08   2   3.3   0.1
+	Q0P8U5_TED01              	    83	   172	    28.8
+	Q0P8U5_TED01              	     4	    58	    11.4
+	PF04101	Glyco_tran_28_C 	   201	   365	    29.3
+	PF13302	Acetyltransf_3  	   374	   505	    61.5
+	PF00583	Acetyltransf_1  	   385	   504	    35.4
+
+A0A239DJB3	UDP-2,4-DIACETAMIDO-2,4,6     50.4    1.3e-09   1   1.2   0.0
+	Q0P8U5_TED01              	     4	   151	    49.9
+	PF04101	Glyco_tran_28_C 	   183	   325	    31.8
+
+A0A2I2A688	UDP-2,4-DIACETAMIDO-2,4,      47.1    1.3e-08   2   2.3   0.1
+	Q0P8U5_TED01              	     4	    80	    22.8
+	Q0P8U5_TED01              	   109	   197	    22.2
+	PF04101	Glyco_tran_28_C 	   222	   358	    28.6
+
+A0A2K9LNM5	UDP-2,4-DIACETAMIDO-2,4,      58.2    4.9e-12   2   2.3   0.0
+	Q0P8U5_TED01              	    88	   175	    39.5
+	Q0P8U5_TED01              	     5	    61	    16.5
+	PF04101	Glyco_tran_28_C 	   200	   361	    54.1
+
+A0A317KYT5	UDP-2,4-DIACETAMIDO-2,4,      45.7    3.7e-08   1   2.3   0.1
+	Q0P8U5_TED01              	     7	   167	    40.8
+	PF04101	Glyco_tran_28_C 	   189	   348	      23
+
+A0A366WEG8	UDP-2,4-DIACETAMIDO-2,4,      47.2    1.2e-08   2   2.5   0.0
+	Q0P8U5_TED01              	    92	   172	    28.1
+	Q0P8U5_TED01              	     4	    64	    16.5
+	PF04101	Glyco_tran_28_C 	   189	   354	    25.8
+
+A0A378QCQ3	UNDECAPRENYLDIPHOSPHO-MUR     51.2    7.4e-10   2   2.5   0.0
+	Q0P8U5_TED01              	    80	   170	    35.2
+	Q0P8U5_TED01              	     4	    76	    13.5
+	PF04101	Glyco_tran_28_C 	   197	   359	    42.3
+	PF13302	Acetyltransf_3  	   369	   534	    41.4
+	PF13523	Acetyltransf_8  	   374	   540	    33.3
+	PF00583	Acetyltransf_1  	   380	   533	      22
+
+A0A3D9ITI7	UDP-2,4-DIACETAMIDO-2,4,      54.1    9.3e-11   1   1.9   0.0
+	Q0P8U5_TED01              	     4	   161	    51.9
+	PF04101	Glyco_tran_28_C 	   184	   339	    32.9
+
+A0A3G9GVF3	UDP-6-DEOXY-ALTDINAC HYDR    114.1    2.8e-29   1   1.4   0.1
+	Q0P8U5_TED01              	     5	   147	   113.2
+	PF13302	Acetyltransf_3  	   312	   444	    52.8
+	PF13420	Acetyltransf_4  	   317	   452	    28.9
+	PF00583	Acetyltransf_1  	   323	   443	    46.5
+
+A0A3M3E9K4	GLYCOSYL TRANSFERASE FAMI     49.1    3.3e-09   2   2.5   0.0
+	Q0P8U5_TED01              	    85	   172	    34.4
+	Q0P8U5_TED01              	     4	    57	    12.1
+	PF04101	Glyco_tran_28_C 	   196	   353	    41.5
+
+A0A3S0TXA4	UDP-2,4-DIACETAMIDO-2,4,      50.1    1.6e-09   2   2.7   0.8
+	Q0P8U5_TED01              	    75	   165	    31.1
+	Q0P8U5_TED01              	     4	    69	    16.5
+	PF04101	Glyco_tran_28_C 	   188	   349	    31.9
+
+A0A3S9B1Q5	UDP-2,4-DIACETAMIDO-2,4,      55.0    5.1e-11   2   2.2   0.0
+	Q0P8U5_TED01              	    82	   175	    37.2
+	Q0P8U5_TED01              	    11	    63	    15.6
+
+A0A4P6VSL8	UDP-2,4-DIACETAMIDO-2,4,      47.3    1.2e-08   1   1.3   0.0
+	Q0P8U5_TED01              	     4	   152	    46.7
+
+A0A4R3XZA8	UDP-2,4-DIACETAMIDO-2,4,      47.3    1.2e-08   2   2.3   0.0
+	Q0P8U5_TED01              	    81	   169	    32.0
+	Q0P8U5_TED01              	     4	    61	    12.9
+	PF04101	Glyco_tran_28_C 	   192	   349	    28.4
+	PF13302	Acetyltransf_3  	   363	   494	    48.8
+	PF00583	Acetyltransf_1  	   373	   493	    24.3
+
+A0A4S4ATD4	UDP-2,4-DIACETAMIDO-2,4,      46.3    2.4e-08   2   2.2   0.0
+	Q0P8U5_TED01              	   101	   180	    31.3
+	Q0P8U5_TED01              	     7	    59	    12.8
+
+A0A4U7BJH8	UDP-2,4-DIACETAMIDO-2,4,     194.4    4.4e-54   1   1.3   2.2
+	Q0P8U5_TED01              	     4	   143	   193.8
+
+A0A4V2V2U6	UDP-2,4-DIACETAMIDO-2,4,      56.4    1.8e-11   2   2.3   0.0
+	Q0P8U5_TED01              	    85	   172	    33.7
+	Q0P8U5_TED01              	     7	    70	    20.5
+	PF04101	Glyco_tran_28_C 	   192	   354	    43.9
+
+A0A511VBA0	UDP-2,4-DIACETAMIDO-2,4,6     56.5    1.6e-11   1   1.6   0.0
+	Q0P8U5_TED01              	     4	   159	    55.3
+	PF04101	Glyco_tran_28_C 	   182	   362	    28.4
+
+A0A511W383	UDP-2,4-DIACETAMIDO-2,4,6     47.2    1.2e-08   1   1.6   0.0
+	Q0P8U5_TED01              	     4	   151	    46.0
+	PF04101	Glyco_tran_28_C 	   179	   337	    24.1
+	PF04007	DUF354          	   185	   277	    22.2
+
+A0A5B8Z8C5	UDP-2,4-DIACETAMIDO-2,4,      51.7    5.2e-10   2   2.3   1.1
+	Q0P8U5_TED01              	    84	   174	    31.7
+	Q0P8U5_TED01              	     4	    77	    18.6
+	PF04101	Glyco_tran_28_C 	   196	   354	    33.8
+
+A0A5R8Y6D0	UDP-2,4-DIACETAMIDO-2,4,      48.1    6.7e-09   2   2.3   0.0
+	Q0P8U5_TED01              	    76	   182	    29.6
+	Q0P8U5_TED01              	    12	    80	    16.4
+
+A0A6B3TKC8	UDP-2,4-DIACETAMIDO-2,4,      55.3    4.1e-11   2   2.5   0.1
+	Q0P8U5_TED01              	    82	   168	    41.7
+	Q0P8U5_TED01              	     4	    68	    10.9
+	PF04101	Glyco_tran_28_C 	   191	   351	    41.9
+
+A0A6B8RD37	UDP-2,4-DIACETAMIDO-2,4,      49.6    2.3e-09   2   2.2   0.1
+	Q0P8U5_TED01              	    67	   178	    33.7
+	Q0P8U5_TED01              	     4	    70	    13.8
+	PF04101	Glyco_tran_28_C 	   209	   359	    30.4
+
+A0A6C1B449	UDP-2,4-DIACETAMIDO-2,4,      49.4    2.7e-09   1   1.6   0.0
+	Q0P8U5_TED01              	     4	   155	    48.2
+	PF04101	Glyco_tran_28_C 	   179	   338	    33.2
+
+A0A6G5R1K9	UDP-2,4-DIACETAMIDO-2,4,     183.5      1e-50   1   1.4   1.1
+	Q0P8U5_TED01              	    21	   157	   182.6
+
+A0A6L8V641	UDP-2,4-DIACETAMIDO-2,4,      48.4    5.3e-09   2   2.4   0.0
+	Q0P8U5_TED01              	    53	   169	    26.7
+	Q0P8U5_TED01              	     4	    64	    19.6
+	PF04101	Glyco_tran_28_C 	   192	   357	    32.2
+
+A0A6M1Y9K1	UDP-2,4-DIACETAMIDO-2,4,      54.9    5.3e-11   1   1.6   0.0
+	Q0P8U5_TED01              	    10	   147	    53.7
+
+A0A7L8V7Z6	UDP-2,4-DIACETAMIDO-2,4,     149.7    2.9e-40   1   1.6   3.2
+	Q0P8U5_TED01              	     8	   147	   149.7
+
+A0A7R6W623	GLYCOSYL TRANSFERASE FAMI     48.2    6.3e-09   2   2.2   0.0
+	Q0P8U5_TED01              	    83	   170	    25.3
+	Q0P8U5_TED01              	     4	    79	    20.7
+	PF04101	Glyco_tran_28_C 	   196	   345	    31.5
+
+A0A7W4WG64	UDP-2,4-DIACETAMIDO-2,4,      47.4    1.1e-08   2   2.2   0.0
+	Q0P8U5_TED01              	    62	   177	    29.0
+	Q0P8U5_TED01              	     4	    75	    16.6
+	PF04101	Glyco_tran_28_C 	   201	   354	    22.6
+
+A0A7Z2VQR2	UDP-2,4-DIACETAMIDO-2,4,      47.6    9.2e-09   1   1.4   0.0
+	Q0P8U5_TED01              	     4	   155	    46.9
+	PF04101	Glyco_tran_28_C 	   177	   335	    41.4
+
+A0A839VA76	UDP-2,4-DIACETAMIDO-2,4,      50.9    8.8e-10   2   2.2   0.0
+	Q0P8U5_TED01              	   107	   184	    33.8
+	Q0P8U5_TED01              	    12	    72	    15.1
+	PF04101	Glyco_tran_28_C 	   208	   375	    31.9
+
+A0A841TWE5	UDP-2,4-DIACETAMIDO-2,4,      46.2    2.6e-08   1   1.7   0.0
+	Q0P8U5_TED01              	     4	   161	    44.6
+	PF04101	Glyco_tran_28_C 	   184	   343	    38.3
+
+A0A842J4T6	UDP-2,4-DIACETAMIDO-2,4,     179.5    1.8e-49   1   1.4   0.5
+	Q0P8U5_TED01              	    12	   145	   178.6
+
+A0A846RQE9	UDP-2,4-DIACETAMIDO-2,4,      47.3    1.2e-08   2   2.2   0.0
+	Q0P8U5_TED01              	   163	   248	    33.2
+	Q0P8U5_TED01              	    79	   138	    12.0
+
+A0A8J2TSJ7	UDP-2,4-DIACETAMIDO-2,4,      48.0    6.9e-09   2   2.6   0.0
+	Q0P8U5_TED01              	    79	   169	    26.3
+	Q0P8U5_TED01              	     4	    77	    19.1
+	PF04101	Glyco_tran_28_C 	   189	   351	      30
+	PF00551	Formyl_trans_N  	   379	   495	    37.6
+
+A0A916CSZ7	UDP-2,4-DIACETAMIDO-2,4,      46.0      3e-08   2   2.3   0.0
+	Q0P8U5_TED01              	    78	   169	    31.2
+	Q0P8U5_TED01              	     4	    68	    12.4
+	PF13302	Acetyltransf_3  	   363	   494	    31.4
+	PF00551	Formyl_trans_N  	   539	   647	    30.7
+
+A0A917FNE4	UDP-2,4-DIACETAMIDO-2,4,      46.5    2.1e-08   1   1.6   0.0
+	Q0P8U5_TED01              	     4	   160	    45.4
+
+A0A917JR45	N-ACETYLTRANSFERASE DOMAI     57.8    6.6e-12   2   2.9   0.1
+	Q0P8U5_TED01              	     4	    69	    28.0
+	Q0P8U5_TED01              	    73	   169	    26.2
+	PF04101	Glyco_tran_28_C 	   191	   305	    27.7
+	PF13302	Acetyltransf_3  	   363	   498	    35.6
+
+A0A917S4A8	UDP-2,4-DIACETAMIDO-2,4,      45.8    3.5e-08   1   2.4   0.2
+	Q0P8U5_TED01              	     5	   169	    38.1
+	PF04101	Glyco_tran_28_C 	   190	   349	    34.6
+
+A0A919WYN1	UDP-2,4-DIACETAMIDO-2,4,      56.1    2.3e-11   1   2.4   0.4
+	Q0P8U5_TED01              	     4	   167	    48.8
+	PF04101	Glyco_tran_28_C 	   190	   349	    40.6
+
+A0A926NIY0	UDP-2,4-DIACETAMIDO-2,4,      45.9    3.1e-08   2   2.4   0.2
+	Q0P8U5_TED01              	    74	   165	    22.8
+	Q0P8U5_TED01              	     4	    70	    20.9
+
+A0A927CXR3	UDP-2,4-DIACETAMIDO-2,4,      47.0    1.4e-08   1   2.2   0.0
+	Q0P8U5_TED01              	     4	   154	    44.7
+	PF04101	Glyco_tran_28_C 	   177	   341	    40.3
+
+A0A927MI10	UDP-2,4-DIACETAMIDO-2,4,      56.7    1.4e-11   1   2.4   0.6
+	Q0P8U5_TED01              	     4	   166	    50.0
+	PF04101	Glyco_tran_28_C 	   189	   348	    50.1
+
+A0A942PF16	UDP-2,4-DIACETAMIDO-2,4,      50.5    1.2e-09   1   1.4   0.0
+	Q0P8U5_TED01              	    13	   166	    49.7
+	PF04101	Glyco_tran_28_C 	   189	   348	    26.5
+
+A0A974NPW1	UDP-2,4-DIACETAMIDO-2,4,      48.0    6.9e-09   2   2.3   0.1
+	Q0P8U5_TED01              	    82	   170	    33.7
+	Q0P8U5_TED01              	     4	    64	    12.2
+	PF04101	Glyco_tran_28_C 	   192	   352	      24
+
+A0A974XR56	UDP-2,4-DIACETAMIDO-2,4,      55.4    3.8e-11   2   2.5   0.1
+	Q0P8U5_TED01              	    87	   166	    28.5
+	Q0P8U5_TED01              	     4	    60	    24.4
+	PF04101	Glyco_tran_28_C 	   196	   339	    26.7
+	PF13302	Acetyltransf_3  	   362	   493	    38.5
+
+A0A9J6R9Y2	UDP-2,4-DIACETAMIDO-2,4,      46.9    1.5e-08   1   2.8   0.2
+	Q0P8U5_TED01              	     4	   156	    46.9
+
+A0A9Q6PRP6	UDP-2,4-DIACETAMIDO-2,4,      46.5      2e-08   2   2.8   2.0
+	Q0P8U5_TED01              	    71	   174	    31.5
+	Q0P8U5_TED01              	     4	    82	    13.4
+	PF13302	Acetyltransf_3  	   354	   486	    40.8
+	PF13420	Acetyltransf_4  	   357	   492	    28.6
+	PF00583	Acetyltransf_1  	   364	   485	    22.1
+
+A0A9Y2AJ43	UDP-2,4-DIACETAMIDO-2,4,      51.3      7e-10   2   2.5   0.9
+	Q0P8U5_TED01              	    76	   168	    32.9
+	Q0P8U5_TED01              	     5	    60	    16.1
+	PF04101	Glyco_tran_28_C 	   190	   341	      42
+
+A4F0Q8	PROBABLE POLYSACCHARIDE BIOSY     47.8    8.2e-09   2   2.3   0.0
+	Q0P8U5_TED01              	    95	   170	    36.8
+	Q0P8U5_TED01              	     4	    60	     8.7
+	PF04101	Glyco_tran_28_C 	   193	   350	    36.6
+
+A7H0H4	UDP-2,4-DIACETAMIDO-2,4, 6-TR    174.6    5.7e-48   1   1.7   1.1
+	Q0P8U5_TED01              	    12	   148	   174.0
+
+B9KDJ7	UDP-2,4-DIACETAMIDO-2,4, 6-TR    262.2    5.1e-75   1   1.3   3.2
+	Q0P8U5_TED01              	     4	   140	   261.5
+
+D0IC30	N-ACETYLNEURAMINATE CYTIDYLYL     45.8    3.3e-08   2   2.5   0.1
+	Q0P8U5_TED01              	     4	    67	    24.6
+	Q0P8U5_TED01              	    80	   161	    18.6
+	PF04101	Glyco_tran_28_C 	   188	   335	    37.1
+	PF13302	Acetyltransf_3  	   357	   488	      47
+	PF00583	Acetyltransf_1  	   370	   487	    34.7
+	PF13673	Acetyltransf_10 	   390	   502	    25.9
+
+D1B553	PSEUDAMINIC ACID BIOSYNTHESIS    155.1      6e-42   1   1.3   1.0
+	Q0P8U5_TED01              	     4	   140	   154.4
+
+E0UT86	PSEUDAMINIC ACID BIOSYNTHESIS    110.2    4.5e-28   1   2.0   3.3
+	Q0P8U5_TED01              	     9	   151	   109.3
+
+E6TS78	PSEUDAMINIC ACID BIOSYNTHESIS     45.5    4.3e-08   1   1.5   1.0
+	Q0P8U5_TED01              	     7	   156	    44.6
+
+F6DNQ0	PSEUDAMINIC ACID BIOSYNTHESIS     48.0      7e-09   1   2.3   0.5
+	Q0P8U5_TED01              	     4	   173	    36.4
+	PF04101	Glyco_tran_28_C 	   196	   354	    44.4
+
+I0JI42	POLYSACCHARIDE BIOSYNTHESIS P     62.0    3.5e-13   1   1.3   0.0
+	Q0P8U5_TED01              	     4	   155	    61.3
+
+J0UYT4	PSEUDAMINIC ACID BIOSYNTHESIS    130.1    3.2e-34   1   1.4   3.0
+	Q0P8U5_TED01              	     4	   145	   129.3
+
+K6D5W0	PSEUDAMINIC ACID BIOSYNTHESIS     45.8    3.5e-08   2   2.9   0.0
+	Q0P8U5_TED01              	    89	   170	    27.3
+	Q0P8U5_TED01              	     4	    69	    14.9
+	PF04101	Glyco_tran_28_C 	   192	   351	    27.2
+	PF04007	DUF354          	   196	   295	    25.1
+
+Q0P8U5	UDP-2,4-DIACETAMIDO-2,4,6-TRIDE    310.0    8.6e-90   1   1.5   2.8
+	Q0P8U5_TED01              	     4	   140	   310.0
+
+Q6LNP0	HYPOTHETICAL FLMD {ECO:000031     48.6    4.8e-09   2   2.6   0.3
+	Q0P8U5_TED01              	    72	   167	    34.2
+	Q0P8U5_TED01              	     4	    63	    11.7
+	PF13302	Acetyltransf_3  	   368	   502	    35.6
+	PF00583	Acetyltransf_1  	   381	   501	    32.6
+	PF13673	Acetyltransf_10 	   402	   512	    25.5
+
+T0KQG0	UDP-2,4-DIACETAMIDO-2,4, 6-TR    110.3    4.3e-28   1   1.4   4.1
+	Q0P8U5_TED01              	     4	   145	   109.5
+
+V7IFZ8	PSEUDAMINIC ACID BIOSYNTHESIS     48.3    5.9e-09   2   2.3   0.0
+	Q0P8U5_TED01              	   116	   195	    30.1
+	Q0P8U5_TED01              	    10	    65	    15.8
+	PF04101	Glyco_tran_28_C 	   233	   384	    24.6
+	PF13302	Acetyltransf_3  	   390	   523	    63.7
+	PF00583	Acetyltransf_1  	   401	   522	    35.1
+
+W5YJL7	POLYSACCHARIDE BIOSYNTHESIS P     46.4    2.2e-08   2   2.3   0.0
+	Q0P8U5_TED01              	   102	   178	    32.9
+	Q0P8U5_TED01              	     4	    64	    11.3
+	PF04101	Glyco_tran_28_C 	   218	   363	    33.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS47187 (E-value: 7.6e-92, Score: 310.0)
+Mentioned as: Cj1312
+Description: possible flagellar protein
+Organism: Campylobacter jejuni subsp. jejuni NCTC 11168
+PMID: 27986835
+Source: EuropePMC
+Title: Tannerella forsythia strains display different cell-surface nonulosonic acids: biosynthetic pathway characterization and first insight into biological implications
+Journal: Glycobiology (2017)
+Snippet: pseH (Cj1313) 34 60 N -acetyltransferase Schoenhofen et al. (2006b) Tanf_01235 a C. jejuni pseG (Cj1312) 27 70 UDP-sugar hydrolase Contains PseG consensus sequence ( Rangarajan et al. 2009 , Schoenhofen et al. 2006b) Tanf_01240 H. pylori pseI (HP0178) 49 332 Pseudaminic acid synthase Chou et
+
+================================================================================
+Protein: VIMSS47187 (E-value: 7.6e-92, Score: 310.0)
+Mentioned as: Cj1312
+Description: possible flagellar protein
+Organism: Campylobacter jejuni subsp. jejuni NCTC 11168
+PMID: 26694450
+Source: EuropePMC
+Title: A Flagellar Glycan-Specific Protein Encoded by Campylobacter Phages Inhibits Host Cell Growth
+Journal: Viruses (2015)
+Snippet: Acapsular, kpsM mutant in C. jejuni 11168 [ 25 ] 11168 pseG Aflagellate, pseG ( cj1312 ) mutant in C. jejuni NCTC 11168 This study 81-176 pseA pseA ( cj1316c ) mutant in C. jejuni 81-176 (flagellate, no acetamidino modification) [ 26 ] 11168 pseA pseA
+
+================================================================================
+Protein: VIMSS47187 (E-value: 7.6e-92, Score: 310.0)
+Mentioned as: Cj1312
+Description: possible flagellar protein
+Organism: Campylobacter jejuni subsp. jejuni NCTC 11168
+PMID: 25574122
+Source: EuropePMC
+Title: In silico detection of virulence gene homologues in the human pathogen sphingomonas spp
+Journal: Evolutionary bioinformatics online (2014)
+Snippet: waaC; waaD; waaE; waaF; waaV; porA; peb1 A. Invasion ciaB, ciaC (invasion antigens) Motility Cj0371; Cj1312; Cj1313; flaA; flaB; flaC; flaD; flaG; flgB; flgC; flgD; flgE; flgE2; flgG; flgG2; flgH; flgI; flgK; flhA; flhB; flhF; fliA; fliD; fliE; fliF; fliG; fliH; fliI; fliL; fliM; fliN; fliP;
+
+================================================================================
+Protein: VIMSS1957193 (E-value: 4.3e-91, Score: 307.6)
+Mentioned as: CJJ81176_1329
+Description: flagellar protein, putative
+Organism: Campylobacter jejuni subsp. jejuni 81-176
+PMID: 40625622
+Source: EuropePMC
+Title: Genomic analysis and antimicrobial resistance in human- and poultry-derived &lt;i&gt;Campylobacter jejuni&lt;/i&gt; isolates from Hangzhou, China
+Journal: Frontiers in microbiology (2025)
+
+================================================================================
+Protein: VIMSS3661501 (E-value: 5.1e-90, Score: 304.1)
+Mentioned as: C8J_1245
+Description: possible flagellar protein
+Organism: Campylobacter jejuni subsp. jejuni 81116
+PMID: 37768138
+Source: EuropePMC
+Title: <i>Campylobacter jejuni</i> benefits from the bile salt deoxycholate under low-oxygen condition in a PldA dependent manner
+Journal: Gut microbes (2023)
+Snippet: involved in electron transport (C8J_0040, NapA, NrfA, NrfH), chemotaxis (CheA), non-heme iron metabolism (C8J_1167), motility (C8J_1245), selenocysteine biosynthesis pathway (SelAB) and arsenic resistance (ArsC and ArsR). These results suggest that the exposure of C. jejuni to DOC at low O 2 levels induces major alterations in
+
+================================================================================
+Protein: VIMSS5211639 (E-value: 5.4e-07, Score: 35.3)
+Mentioned as: ACICU_00078
+Description: spore coat polysaccharide biosynthesis protein, glycosyltransferase
+Organism: Acinetobacter baumannii ACICU
+PMID: 38524570
+Source: EuropePMC
+Title: Genotypic and phenotypic mechanisms underlying antimicrobial resistance and synergistic efficacy of rifampicin-based combinations against carbapenem-resistant <i>Acinetobacter baumannii</i>
+Journal: Heliyon (2024)
+Snippet: 60% of the isolates harbored ACICU_00071 73, ACICU_0007577, ACICU_00080 , and ACICU_00088 89. The genes ACICU_00078 and ACICU_00079 were present in only SK024 ( Fig. 7 ). In addition, a total of 16 biofilm-associated genes - were also revealed. The AdeFGH RND (resistant nodulation division) which
+
+================================================================================
+Protein: VIMSS5211639 (E-value: 5.4e-07, Score: 35.3)
+Mentioned as: ACICU_00078
+Description: spore coat polysaccharide biosynthesis protein, glycosyltransferase
+Organism: Acinetobacter baumannii ACICU
+PMID: 32084241
+Source: EuropePMC
+Title: Using comparative genomics to understand molecular features of carbapenem-resistant Acinetobacter baumannii from South Korea causing invasive infections and their clinical implications
+Journal: PloS one (2020)
+Snippet: 0(0.0) 1 4(7.4) 12(27.3) <0.01 ACICU_00077 0(0.0) 0(0.0) 1 0(0.0) 0(0.0) 1 4(7.4) 12(27.3) <0.01 ACICU_00078 0(0.0) 0(0.0) 1 0(0.0) 0(0.0) 1 4(7.4) 12(27.3) <0.01 ACICU_00079 0(0.0) 0(0.0) 1 0(0.0) 0(0.0) 1 4(7.4) 12(27.3) <0.01 ACICU_00080 0(0.0) 0(0.0) 1 0(0.0) 0(0.0) 1 4(7.4) 12(27.3) <0.01 ACICU_00081
+
+================================================================================
+Protein: VIMSS3439335 (E-value: 1.7e-06, Score: 33.7)
+Mentioned as: Sputcn32_2626
+Description: FlaR protein (FlaR)
+Organism: Shewanella putrefaciens CN-32
+PMID: 30560868
+Source: EuropePMC
+Title: Spatial arrangement of several flagellins within bacterial flagella improves motility in different environments
+Journal: Nature communications (2018)
+Snippet: flagellins of S. putrefaciens are glycosylated, we introduced in-frame deletions into the genes encoding PseG (Sputcn32_2626) and Maf-1 (Sputcn32_2630), as the deletion of the orthologs in S. oneidensis results in completely non-glycosylated flagellins 26 , 27 . Immunoblotting analysis of PAGE-separated crude extracts (Supplementary Fig. 2a
+
+================================================================================
+Protein: VIMSS5635834 (E-value: 5e-06, Score: 32.1)
+Mentioned as: PHZ_c2595
+Description: flagellin modification protein FlmD
+Organism: Phenylobacterium zucineum HLK1
+PMID: 18700039
+Source: EuropePMC
+Title: Complete genome of Phenylobacterium zucineum--a novel facultative intracellular bacterium isolated from human erythroleukemia cell line K562
+Journal: BMC genomics (2008)
+Snippet: protein FglI fglI flagellar structure PHZ_c1937 2,169,942 2,170,382 flagellar basal-body protein FlbY flbY flagellar structure PHZ_c2595 2,982,550 2,983,593 flagellin modification protein FlmD flmD regulator PHZ_c2597 2,984,874 2,986,508 flagellin modification protein FlmG flmG regulator PHZ_c2599 2,989,315 2,989,974 flmC; flagellin modification protein FlmC flmC regulator PHZ_c2600 2,990,549 2,989,977
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q0P8U5.1	AF-Q0P8U5-F1-model_v4_TED01:4-140	1	AF-Q0P8U5-F1-model_v4_TED01	4-140	100.0%
+Q0P8U5.1	AF-Q0P8U5-F1-model_v4_TED02:145-273	1	AF-Q0P8U5-F1-model_v4_TED02	145-273	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q0P8U5_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 3hbm
+RN   [1]
+RM   19483088
+RT   Structural and functional analysis of Campylobacter jejuni PseG: a
+RT   udp-sugar	hydrolase from the pseudaminic acid biosynthetic pathway.
+RA   Rangarajan ES, Proteau A, Cui Q, Logan SM, Potetinova Z, Whitfield D,
+RA   Purisima EO, Cygler M, Matte A, Sulea T, Schoenhofen IC;
+RL   J Biol Chem. 2009;284:20989-21000.
+
+--- End of Current DESC file ---

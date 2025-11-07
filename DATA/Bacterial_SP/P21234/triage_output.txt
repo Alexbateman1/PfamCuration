@@ -1,0 +1,78 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   LPL_THET8               Reviewed;          15 AA.
+AC   P21234;
+DE   RecName: Full=leu operon leader peptide;
+DE   AltName: Full=leu operon attenuator peptide;
+GN   OrderedLocusNames=TTHA1227.1;
+OS   Thermus thermophilus (strain ATCC 27634 / DSM 579 / HB8).
+OC   Bacteria; Thermotogati; Deinococcota; Deinococci; Thermales; Thermaceae;
+OC   Thermus.
+OX   NCBI_TaxID=300852;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=3323845; DOI=10.1007/bf00327202;
+RA   Croft J.E., Love D.R., Bergquist P.L.;
+RT   "Expression of leucine genes from an extremely thermophilic bacterium in
+RT   Escherichia coli.";
+RL   Mol. Gen. Genet. 210:490-497(1987).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 27634 / DSM 579 / HB8;
+RA   Masui R., Kurokawa K., Nakagawa N., Tokunaga F., Koyama Y., Shibata T.,
+RA   Oshima T., Yokoyama S., Yasunaga T., Kuramitsu S.;
+RT   "Complete genome sequence of Thermus thermophilus HB8.";
+RL   Submitted (NOV-2004) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Involved in control of the biosynthesis of leucine.
+DR   EMBL; X06604; CAA29823.1; -; Genomic_DNA.
+DR   EMBL; AP008226; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   Proteomes; UP000000532; Chromosome.
+DR   GO; GO:0009098; P:L-leucine biosynthetic process; IEA:UniProtKB-KW.
+PE   4: Predicted;
+KW   Amino-acid biosynthesis; Branched-chain amino acid biosynthesis;
+KW   Leader peptide; Leucine biosynthesis; Reference proteome.
+FT   PEPTIDE         1..15
+FT                   /note="leu operon leader peptide"
+FT                   /id="PRO_0000044001"
+SQ   SEQUENCE   15 AA;  1666 MW;  C2F107A386D7620B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thermus
+1	5	Thermaceae
+1	4	Thermales
+1	3	Deinococci
+1	2	Deinococcota
+1	1	Thermotogati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P21234	LEU OPERON LEADER PEPTIDE            37.2      4e-06   1   1.0   2.0
+	P21234                    	     1	    15	    37.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P21234
+GA   27.00 27.00;
+TC   27.70 37.20;
+NC   26.90 15.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

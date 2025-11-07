@@ -1,0 +1,148 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y028_BORBU              Reviewed;         349 AA.
+AC   O51059;
+DE   RecName: Full=Uncharacterized protein BB_0028;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=BB_0028;
+OS   Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)
+OS   (Borrelia burgdorferi).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Borreliaceae; Borreliella.
+OX   NCBI_TaxID=224326;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RX   PubMed=9403685; DOI=10.1038/37551;
+RA   Fraser C.M., Casjens S., Huang W.M., Sutton G.G., Clayton R.A.,
+RA   Lathigra R., White O., Ketchum K.A., Dodson R.J., Hickey E.K., Gwinn M.L.,
+RA   Dougherty B.A., Tomb J.-F., Fleischmann R.D., Richardson D.L.,
+RA   Peterson J.D., Kerlavage A.R., Quackenbush J., Salzberg S.L., Hanson M.,
+RA   van Vugt R., Palmer N., Adams M.D., Gocayne J.D., Weidman J.F.,
+RA   Utterback T.R., Watthey L., McDonald L.A., Artiach P., Bowman C.,
+RA   Garland S.A., Fujii C., Cotton M.D., Horst K., Roberts K.M., Hatch B.,
+RA   Smith H.O., Venter J.C.;
+RT   "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.";
+RL   Nature 390:580-586(1997).
+DR   EMBL; AE000783; AAC66428.1; -; Genomic_DNA.
+DR   PIR; D70103; D70103.
+DR   RefSeq; NP_212162.1; NC_001318.1.
+DR   AlphaFoldDB; O51059; -.
+DR   STRING; 224326.BB_0028; -.
+DR   PaxDb; 224326-BB_0028; -.
+DR   EnsemblBacteria; AAC66428; AAC66428; BB_0028.
+DR   KEGG; bbu:BB_0028; -.
+DR   PATRIC; fig|224326.49.peg.427; -.
+DR   HOGENOM; CLU_069545_0_0_12; -.
+DR   OrthoDB; 350340at2; -.
+DR   Proteomes; UP000001807; Chromosome.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..29
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           30..349
+FT                   /note="Uncharacterized protein BB_0028"
+FT                   /id="PRO_0000013749"
+SQ   SEQUENCE   349 AA;  39705 MW;  915B1D34A3214226 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Borrelia.
+1	6	Borreliella.
+3	5	Borreliaceae
+3	4	Spirochaetales
+3	3	Spirochaetia
+3	2	Spirochaetota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A075B4X3	ANKYRIN {ECO:0008006|GOOG     30.8     0.0013   2   9.9   0.3
+	Iterate                   	    33	   110	     7.2
+	Iterate                   	   120	   147	     2.3
+	PF12796	Ank_2           	     1	    57	    28.6
+	PF12796	Ank_2           	    54	   128	    29.6
+	PF00023	Ank             	    67	    98	    14.7
+	PF12796	Ank_2           	   101	   188	    46.3
+	PF13637	Ank_4           	   132	   179	    27.7
+	PF00023	Ank             	   158	   188	    19.3
+	PF00023	Ank             	   191	   222	      17
+	PF12796	Ank_2           	   194	   283	      49
+	PF00023	Ank             	   251	   284	    15.1
+	PF13637	Ank_4           	   255	   303	    25.3
+	PF12796	Ank_2           	   275	   343	    30.2
+	PF00023	Ank             	   282	   315	    16.3
+	PF13637	Ank_4           	   317	   365	    24.4
+	PF12796	Ank_2           	   318	   405	      45
+	PF00023	Ank             	   408	   439	    14.8
+	PF12796	Ank_2           	   411	   498	    40.5
+	PF12796	Ank_2           	   503	   593	    51.3
+	PF00023	Ank             	   530	   564	    19.1
+	PF00023	Ank             	   561	   594	    15.1
+	PF13637	Ank_4           	   566	   613	    25.3
+	PF12796	Ank_2           	   585	   653	    30.2
+	PF00023	Ank             	   592	   625	    16.3
+	PF13637	Ank_4           	   627	   675	    24.4
+	PF12796	Ank_2           	   628	   719	    44.6
+
+A0A9W9YD75	UNCHARACTERIZED PROTEIN {     33.9    0.00015   7   8.2  21.9
+	Iterate                   	  1043	  1124	     8.6
+	Iterate                   	   845	   926	     7.1
+	Iterate                   	   647	   728	     7.0
+	Iterate                   	   746	   827	     7.0
+	Iterate                   	   944	  1025	     5.5
+	Iterate                   	   548	   629	     2.6
+	Iterate                   	  1142	  1224	     2.4
+	PF00147	Fibrinogen_C    	    55	   260	   139.8
+	PF00088	Trefoil         	   265	   307	    36.4
+	PF00041	fn3             	   416	   508	    31.9
+	PF00041	fn3             	   515	   606	      32
+	PF00041	fn3             	   614	   705	    33.7
+	PF00041	fn3             	   713	   804	    33.7
+	PF00041	fn3             	   812	   903	      31
+	PF00041	fn3             	   911	  1002	    33.7
+	PF00041	fn3             	  1010	  1101	    29.7
+	PF00041	fn3             	  1109	  1200	    32.8
+	PF00041	fn3             	  1208	  1299	      43
+	PF00041	fn3             	  1307	  1396	    37.9
+
+A0ABF7PUM3	UNCHARACTERIZED PROTEIN {    156.4    2.3e-42   1   1.6   1.2
+	Iterate                   	   173	   310	   155.2
+
+O51059	UNCHARACTERIZED PROTEIN BB_0028    320.3    5.9e-93   1   1.6   7.0
+	Iterate                   	   177	   316	   319.2
+
+W6THP1	LIPOPROTEIN {ECO:0008006|GOOG    143.7      2e-38   1   2.1   4.6
+	Iterate                   	   173	   310	   143.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O51059.1	AF-O51059-F1-model_v4_TED01:30-168	1	AF-O51059-F1-model_v4_TED01	30-168	0
+O51059.1	AF-O51059-F1-model_v4_TED02:177-316	1	AF-O51059-F1-model_v4_TED02	177-316	100.0%
+W6THP1.1	AF-W6THP1-F1-model_v4_TED01:43-164	1	AF-W6THP1-F1-model_v4_TED01	43-164	0
+W6THP1.1	AF-W6THP1-F1-model_v4_TED02:171-310	1	AF-W6THP1-F1-model_v4_TED02	171-310	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O51059_TED02/Iterate
+GA   27.00 27.00;
+TC   28.20 247.60;
+NC   26.00 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

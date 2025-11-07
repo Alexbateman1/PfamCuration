@@ -1,0 +1,131 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1327_HAEIN             Reviewed;          45 AA.
+AC   P44163;
+DE   RecName: Full=Uncharacterized protein HI_1327;
+GN   OrderedLocusNames=HI_1327;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; L42023; AAC22981.1; -; Genomic_DNA.
+DR   PIR; A64026; A64026.
+DR   RefSeq; NP_439478.1; NC_000907.1.
+DR   AlphaFoldDB; P44163; -.
+DR   STRING; 71421.HI_1327; -.
+DR   EnsemblBacteria; AAC22981; AAC22981; HI_1327.
+DR   KEGG; hin:HI_1327; -.
+DR   PATRIC; fig|71421.8.peg.1379; -.
+DR   HOGENOM; CLU_210711_1_0_6; -.
+DR   BioCyc; HINF71421:G1GJ1-1352-MONOMER; -.
+DR   Proteomes; UP000000579; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..45
+FT                   /note="Uncharacterized protein HI_1327"
+FT                   /id="PRO_0000078026"
+FT   TRANSMEM        5..25
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   45 AA;  4276 MW;  C2D668F0C6D26586 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Haemophilus.
+1	6	Glaesserella.
+1	6	Cricetibacter.
+1	6	Caviibacterium.
+5	5	Pasteurellaceae
+5	4	Pasteurellales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2M8RWM9	LIPOPROTEIN {ECO:0008006|     40.8    7.6e-07   1   1.6  11.8
+	Iterate                   	     1	    35	    40.8
+
+A0A4R2STJ6	LIPOPROTEIN {ECO:0008006|     39.2    2.4e-06   1   1.4  10.5
+	Iterate                   	     1	    45	    38.6
+
+A0A6A4W268	UNCHARACTERIZED PROTEIN {     30.7     0.0011  11  11.8  56.9
+	Iterate                   	    30	    49	     6.1
+	Iterate                   	    52	    70	     6.1
+	Iterate                   	    73	    91	     6.1
+	Iterate                   	    94	   112	     6.1
+	Iterate                   	   136	   154	     6.1
+	Iterate                   	   178	   196	     6.1
+	Iterate                   	   199	   217	     6.1
+	Iterate                   	   115	   133	     5.8
+	Iterate                   	   157	   175	     5.8
+	Iterate                   	   220	   238	     5.8
+	Iterate                   	   241	   259	     5.8
+
+B8F3N6	LIPOPROTEIN {ECO:0008006|GOOG     37.5    8.3e-06   1   1.5  14.6
+	Iterate                   	     1	    41	    36.8
+
+P44163	UNCHARACTERIZED PROTEIN HI_132     92.0      7e-23   1   1.3  14.1
+	Iterate                   	     1	    37	    91.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS7667 (E-value: 6.3e-25, Score: 92.0)
+Mentioned as: HI1327
+Description: H. influenzae predicted coding region HI1327
+Organism: Haemophilus influenzae Rd KW20
+PMID: 24391926
+Source: EuropePMC
+Title: Functional annotation of conserved hypothetical proteins from Haemophilus influenzae Rd KW20
+Journal: PloS one (2013)
+Snippet: HI1317 950209 P44160 Aldose 1-epimerase 206. HP HI1323 950258 P44161 MacrodomainTer protein, MatP 207. HP HI1327 950255 P44163 Prokaryotic membrane lipoprotein lipid attachment site profile 208. HP HI1333 949671 P71376 RNA-binding, CRM domain 209. HP HI1338 950260 P44164 phosphohistidine phosphatase SixA 210. HP HI1339 950818 P71378
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P44163.1	AF-P44163-F1-model_v4_TED01:1-37	1	AF-P44163-F1-model_v4_TED01	1-37	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44163_TED01/Iterate
+GA   27.00 27.00;
+TC   29.80 29.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

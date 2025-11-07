@@ -1,0 +1,119 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y762_TREPA              Reviewed;         393 AA.
+AC   O83743;
+DE   RecName: Full=Uncharacterized protein TP_0762;
+GN   OrderedLocusNames=TP_0762;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65733.1; -; Genomic_DNA.
+DR   PIR; E71285; E71285.
+DR   RefSeq; WP_010882207.1; NC_000919.1.
+DR   AlphaFoldDB; O83743; -.
+DR   SMR; O83743; -.
+DR   STRING; 243276.TP_0762; -.
+DR   EnsemblBacteria; AAC65733; AAC65733; TP_0762.
+DR   KEGG; tpa:TP_0762; -.
+DR   eggNOG; COG2604; Bacteria.
+DR   HOGENOM; CLU_756350_0_0_12; -.
+DR   OrthoDB; 5458680at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   PANTHER; PTHR41786:SF1; 6-HYDROXYMETHYLPTERIN DIPHOSPHOKINASE MPTE-LIKE DOMAIN-CONTAINING PROTEIN; 1.
+DR   PANTHER; PTHR41786; MOTILITY ACCESSORY FACTOR MAF; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..393
+FT                   /note="Uncharacterized protein TP_0762"
+FT                   /id="PRO_0000202317"
+FT   REGION          164..183
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        173..183
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   393 AA;  43864 MW;  8C2E7D17B5D42CC5 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Treponema.
+1	5	Treponemataceae
+1	4	Spirochaetales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O83743	UNCHARACTERIZED PROTEIN TP_0762    216.8    1.6e-61   1   1.8   9.8
+	O83743_TED03              	   296	   393	   215.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26580 (E-value: 1.4e-63, Score: 216.8)
+Mentioned as: TP0762
+Description: T. pallidum predicted coding region TP0762
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 32236138
+Source: EuropePMC
+Title: Whole genome sequence of the Treponema pallidum subsp. endemicum strain Iraq B: A subpopulation of bejel treponemes contains full-length tprF and tprG genes similar to those present in T. p. subsp. pertenue strains
+Journal: PloS one (2020)
+Snippet: G A D/N 2222 12.2 cheY (TP0366) response regulator 824846 G A A/A 3614 12.7 (TP0762) hypothetical protein 883419 G T G/W, P/H 2479 9.2 (TP0814a, TP0814b) hypothetical proteins G/V (TP0815) GNAT family acetyltransferase 1091347 G C A/P 1005 9.3 (TP1003) hypothetical protein Minor alleles with
+
+================================================================================
+Protein: VIMSS26580 (E-value: 1.4e-63, Score: 216.8)
+Mentioned as: TP0762
+Description: T. pallidum predicted coding region TP0762
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 22720110
+Source: EuropePMC
+Title: Footprint of positive selection in Treponema pallidum subsp. pallidum genome sequences suggests adaptive microevolution of the syphilis pathogen
+Journal: PLoS neglected tropical diseases (2012)
+Snippet: 803 855 Yes TPChic0731 TP0731 Hypothetical protein F G insertion 797978:798598 206 236 Yes TPChic0762 TP0762 Conserved hypothetical protein F C insertion 826405:827505 366 393 Yes TPChic0830 TP0830 Hypothetical protein F C insertion 897880:898665 261 280 No TPChic0856 TP0856 Hypothetical protein F C insertion 934375:935559 394
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83743.1	AF-O83743-F1-model_v4_TED01:2-92_241-271	1	AF-O83743-F1-model_v4_TED01	2-271	0
+O83743.1	AF-O83743-F1-model_v4_TED02:106-170_183-239	1	AF-O83743-F1-model_v4_TED02	106-239	0
+O83743.1	AF-O83743-F1-model_v4_TED03:296-393	1	AF-O83743-F1-model_v4_TED03	296-393	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83743_TED03
+GA   27.00 27.00;
+TC   29.40 215.40;
+NC   24.30 18.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

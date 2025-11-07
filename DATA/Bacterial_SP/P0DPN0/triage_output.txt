@@ -1,0 +1,92 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YAHV_ECOLI              Reviewed;          24 AA.
+AC   P0DPN0; A0A385XJA5;
+DE   RecName: Full=Protein YahV {ECO:0000303|PubMed:29645342};
+GN   Name=yahV {ECO:0000303|PubMed:29645342}; OrderedLocusNames=b4730;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION, AND INDUCTION.
+RX   PubMed=29645342; DOI=10.1002/pmic.201700064;
+RA   VanOrsdel C.E., Kelly J.P., Burke B.N., Lein C.D., Oufiero C.E.,
+RA   Sanchez J.F., Wimmers L.E., Hearn D.J., Abuikhdair F.J., Barnhart K.R.,
+RA   Duley M.L., Ernst S.E.G., Kenerson B.A., Serafin A.J., Hemm M.R.;
+RT   "Identifying new small proteins in Escherichia coli.";
+RL   Proteomics 18:E1700064-E1700064(2018).
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Single-pass
+CC       membrane protein {ECO:0000255}.
+CC   -!- INDUCTION: Expressed in both exponential and stationary phase;
+CC       expression is slightly higher in exponential phase (at protein level).
+CC       {ECO:0000269|PubMed:29645342}.
+DR   EMBL; U00096; AYC08175.1; -; Genomic_DNA.
+DR   AlphaFoldDB; P0DPN0; -.
+DR   EnsemblBacteria; AYC08175; AYC08175; b4730.
+DR   InParanoid; P0DPN0; -.
+DR   BioCyc; EcoCyc:MONOMER0-4407; -.
+DR   PRO; PR:P0DPN0; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   1: Evidence at protein level;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN           1..24
+FT                   /note="Protein YahV"
+FT                   /id="PRO_0000445158"
+FT   TRANSMEM        4..24
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   24 AA;  2629 MW;  D3DB128C081914FA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P0DPN0	PROTEIN YAHV {ECO:0000303|PUBME     52.0    1.6e-10   1   1.0  16.0
+	P0DPN0                    	     1	    24	    51.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DPN0
+GA   27.00 27.00;
+TC   52.00 51.90;
+NC   20.00 20.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

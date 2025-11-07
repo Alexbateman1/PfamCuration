@@ -1,0 +1,155 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YBBV_ECOLI              Reviewed;          92 AA.
+AC   P75711; Q2MBR8;
+DE   RecName: Full=Uncharacterized protein YbbV;
+GN   Name=ybbV; OrderedLocusNames=b0510, JW0498;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; BAE76288.1; -; Genomic_DNA.
+DR   PIR; E64782; E64782.
+DR   AlphaFoldDB; P75711; -.
+DR   BioGRID; 4259864; 5.
+DR   FunCoup; P75711; 31.
+DR   IntAct; P75711; 1.
+DR   KEGG; ecj:JW0498; -.
+DR   HOGENOM; CLU_2408590_0_0_6; -.
+DR   InParanoid; P75711; -.
+DR   PRO; PR:P75711; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..92
+FT                   /note="Uncharacterized protein YbbV"
+FT                   /id="PRO_0000168643"
+SQ   SEQUENCE   92 AA;  10844 MW;  53A29F5EA22493D1 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Salmonella.
+1	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0C9MDT0	SODIUM BILE ACID SYMPORTE     23.7       0.21   1   2.6   0.3
+	Iterate                   	   350	   432	    18.5
+	PF13593	SBF_like        	   135	   465	   228.2
+	PF01758	SBF             	   158	   349	    29.4
+
+A0A6J8EZC6	DDE TNP4 DOMAIN-CONTAININ     37.3    1.2e-05   3   3.5   7.2
+	Iterate                   	    69	   133	    19.1
+	Iterate                   	   141	   195	    11.2
+	Iterate                   	   197	   263	     9.8
+
+A0A8S3YA70	(APOLLO) HYPOTHETICAL PRO     32.8     0.0003   2   8.7   0.0
+	Iterate                   	   286	   322	     3.2
+	Iterate                   	   120	   162	     2.8
+
+P75711	UNCHARACTERIZED PROTEIN YBBV       200.5    1.5e-56   1   1.0   4.1
+	Iterate                   	     2	    87	   200.3
+
+Q8ZR81	CYTOPLASMIC PROTEIN {ECO:0000     52.0    3.1e-10   1   1.2   0.1
+	Iterate                   	     1	    48	    51.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS92040 (E-value: 5.4e-58, Score: 198.5)
+Mentioned as: ECs0571
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 17967175
+Source: EuropePMC
+Title: Global transcriptional response of Escherichia coli O157:H7 to growth transitions in glucose minimal medium
+Journal: BMC microbiology (2007)
+Snippet: gip 3.56 2 ECs0514 ybaJ 2.16 2 ECs0570 ybbQ 4.89 2 ECs0732 ybgA 2.27 2 ECs0571 ybbV 3.27 2 ECs0733 phrB 2.15 2 ECs2095 yddV 4.27 2 ECs0769 cydB -2.03 4 ECs2122 ydeZ 4.88 2 ECs0957 poxB 2.47 2 ECs2123 yneA 5.14 2 ECs0973 trxB -2.25
+
+================================================================================
+Protein: VIMSS147897 (E-value: 2.7e-12, Score: 52.0)
+Mentioned as: STM0521
+Description: putative cytoplasmic protein
+Organism: Salmonella typhimurium LT2
+PMID: 28499033
+Source: EuropePMC
+Title: Large-scale recoding of a bacterial genome by iterative recombineering of synthetic DNA
+Journal: Nucleic acids research (2017)
+Snippet: overlapping genes were split due to the presence of four target codons within the overlap (STM0521 and STM0522, see Supplementary File SI 1 Section S2.3 ). In addition to codon changes, 400 kb of pseudogenes, mobile elements and pathogenicity islands were removed to reduce genetic instability,
+
+================================================================================
+Protein: VIMSS147897 (E-value: 2.7e-12, Score: 52.0)
+Mentioned as: STM0521
+Description: putative cytoplasmic protein
+Organism: Salmonella typhimurium LT2
+PMID: 22632036
+Source: EuropePMC
+Title: Effects of indole on drug resistance and virulence of Salmonella enterica serovar Typhimurium revealed by genome-wide analyses
+Journal: Gut pathogens (2012)
+Snippet: Function Effect of indole on gene expression (fold change) Concentration of indole (mM) 1 4 STM0521 ybbV Putative cytoplasmic protein 8.6 7.0 STM0581 ramA Transcriptional regulator (activator) of acrAB and tolC (AraC/XylS family) 7.0 39 STM0584 entD Enterochelin synthetase, component D (phoshpantetheinyltransferase) 6.1 7.5 STM0707 kdpF
+
+================================================================================
+Protein: VIMSS147897 (E-value: 2.7e-12, Score: 52.0)
+Mentioned as: STM0521
+Description: putative cytoplasmic protein
+Organism: Salmonella typhimurium LT2
+PMID: 18524964
+Source: EuropePMC
+Title: Salmonella serovar identification using PCR-based detection of gene presence and absence
+Journal: Journal of clinical microbiology (2008)
+Snippet: STM0269, STM0279, STM0284, STM0295, STM0330, STM0335, STM0521, STM0895, STM0897, STM0904, STM0908, STM0917, STM0921, STM0929, STM1007, STM1024, STM1416,
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75711.1	AF-P75711-F1-model_v4_TED01:2-87	1	AF-P75711-F1-model_v4_TED01	2-87	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75711_TED01/Iterate
+GA   27.00 27.00;
+TC   32.80 51.60;
+NC   23.70 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

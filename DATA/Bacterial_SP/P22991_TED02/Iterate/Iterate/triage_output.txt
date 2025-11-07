@@ -1,0 +1,71 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Lactobacillus
+7	5	Lactobacillaceae
+7	4	Lactobacillales
+7	3	Bacilli
+7	2	Bacillota
+7	1	Bacillati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0R1UEC0	UNCHARACTERIZED PROTEIN {     92.6      7e-23   1   2.4   5.7
+	Iterate                   	   153	   212	    92.6
+
+A0A556UAD1	SURFACE LAYER PROTEIN A D     94.5    1.8e-23   1   2.3  10.5
+	Iterate                   	   138	   204	    94.5
+
+A0A556UE06	SURFACE LAYER PROTEIN A D     96.3    4.8e-24   1   2.2  11.8
+	Iterate                   	   139	   197	    96.3
+
+D4YSV1	UNCHARACTERIZED PROTEIN {ECO:     96.8    3.5e-24   1   2.3  13.1
+	Iterate                   	   141	   199	    96.8
+
+U6F5I5	UNCHARACTERIZED PROTEIN {ECO:     90.2      4e-22   1   1.6   5.3
+	Iterate                   	    38	   110	    89.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0D6A3N3.1	AF-A0A0D6A3N3-F1-model_v4_TED01:50-138	1	AF-A0A0D6A3N3-F1-model_v4_TED01	50-138	0
+A0A0D6A3N3.1	AF-A0A0D6A3N3-F1-model_v4_TED02:144-219	1	AF-A0A0D6A3N3-F1-model_v4_TED02	144-219	98.4%
+A0A0R1UEC0.1	AF-A0A0R1UEC0-F1-model_v4_TED01:42-148	1	AF-A0A0R1UEC0-F1-model_v4_TED01	42-148	0
+A0A0R1UEC0.1	AF-A0A0R1UEC0-F1-model_v4_TED02:154-224	1	AF-A0A0R1UEC0-F1-model_v4_TED02	154-224	98.3%
+A0A0R1UEM3.1	AF-A0A0R1UEM3-F1-model_v4_TED01:39-138	1	AF-A0A0R1UEM3-F1-model_v4_TED01	39-138	0
+A0A0R1UEM3.1	AF-A0A0R1UEM3-F1-model_v4_TED02:142-212	1	AF-A0A0R1UEM3-F1-model_v4_TED02	142-212	100.0%
+A0A437SXC7.1	AF-A0A437SXC7-F1-model_v4_TED01:48-142	1	AF-A0A437SXC7-F1-model_v4_TED01	48-142	0
+A0A437SXC7.1	AF-A0A437SXC7-F1-model_v4_TED02:148-205	1	AF-A0A437SXC7-F1-model_v4_TED02	148-205	98.3%
+A0A556UA59.1	AF-A0A556UA59-F1-model_v4_TED01:40-135	1	AF-A0A556UA59-F1-model_v4_TED01	40-135	0
+A0A556UA59.1	AF-A0A556UA59-F1-model_v4_TED02:141-197	1	AF-A0A556UA59-F1-model_v4_TED02	141-197	98.3%
+A0A556UAD1.1	AF-A0A556UAD1-F1-model_v4_TED01:37-133	1	AF-A0A556UAD1-F1-model_v4_TED01	37-133	0
+A0A556UAD1.1	AF-A0A556UAD1-F1-model_v4_TED02:139-216	1	AF-A0A556UAD1-F1-model_v4_TED02	139-216	98.5%
+A0A556UE06.1	AF-A0A556UE06-F1-model_v4_TED01:40-134	1	AF-A0A556UE06-F1-model_v4_TED01	40-134	0
+A0A556UE06.1	AF-A0A556UE06-F1-model_v4_TED02:140-209	1	AF-A0A556UE06-F1-model_v4_TED02	140-209	98.3%
+D4YSV1.1	AF-D4YSV1-F1-model_v4_TED01:38-135	1	AF-D4YSV1-F1-model_v4_TED01	38-135	0
+D4YSV1.1	AF-D4YSV1-F1-model_v4_TED02:142-211	1	AF-D4YSV1-F1-model_v4_TED02	142-211	98.3%
+U6F5I5.1	AF-U6F5I5-F1-model_v4_TED01:39-61_69-115	1	AF-U6F5I5-F1-model_v4_TED01	39-115	98.6%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P22991_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   29.30 28.40;
+NC   26.80 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

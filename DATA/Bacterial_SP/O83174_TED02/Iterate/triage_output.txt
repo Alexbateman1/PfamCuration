@@ -1,0 +1,157 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y138_TREPA              Reviewed;         245 AA.
+AC   O83174;
+DE   RecName: Full=Uncharacterized protein TP_0138;
+GN   OrderedLocusNames=TP_0138;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000520; AAC65139.1; -; Genomic_DNA.
+DR   PIR; D71360; D71360.
+DR   RefSeq; WP_010881586.1; NC_021490.2.
+DR   AlphaFoldDB; O83174; -.
+DR   SMR; O83174; -.
+DR   STRING; 243276.TP_0138; -.
+DR   EnsemblBacteria; AAC65139; AAC65139; TP_0138.
+DR   KEGG; tpa:TP_0138; -.
+DR   KEGG; tpw:TPANIC_0138; -.
+DR   eggNOG; ENOG5031CP2; Bacteria.
+DR   HOGENOM; CLU_1093904_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..245
+FT                   /note="Uncharacterized protein TP_0138"
+FT                   /id="PRO_0000202199"
+FT   TRANSMEM        29..51
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        61..83
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   245 AA;  26965 MW;  7F19EE7704E17774 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Treponema.
+2	5	Treponemataceae
+2	4	Spirochaetales
+2	3	Spirochaetia
+2	2	Spirochaetota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GYT5	UNCHARACTERIZED PROTEIN {     62.3    2.1e-13   1   2.2   2.3
+	Iterate                   	    89	   131	    60.7
+
+A0A9F5J2Y3	PROLIFERATION MARKER PROT     33.0    0.00028  13  10.9  15.0
+	Iterate                   	  1218	  1246	     3.8
+	Iterate                   	  1137	  1166	     3.7
+	Iterate                   	  1179	  1205	     3.7
+	Iterate                   	  1198	  1226	     3.7
+	Iterate                   	  1259	  1285	     3.7
+	Iterate                   	  1278	  1306	     3.7
+	Iterate                   	  1295	  1325	     3.7
+	Iterate                   	  1339	  1365	     3.7
+	Iterate                   	  1159	  1186	     3.6
+	Iterate                   	  1239	  1265	     3.6
+	Iterate                   	  1319	  1346	     3.6
+	Iterate                   	  1358	  1385	     3.6
+	Iterate                   	  1379	  1406	     3.6
+	PF16697	Yop-YscD_cpl    	    13	   100	    33.9
+	PF00498	FHA             	    27	    92	    54.9
+	PF15276	PP1_bind        	   595	   654	    55.2
+	PF08065	KI67R           	  1086	  1186	    43.8
+	PF08065	KI67R           	  1344	  1406	    33.4
+
+A0A9F5J7J8	PROLIFERATION MARKER PROT     33.3    0.00023  13  11.0  15.4
+	Iterate                   	  1190	  1218	     3.9
+	Iterate                   	  1028	  1058	     3.8
+	Iterate                   	  1069	  1097	     3.8
+	Iterate                   	  1090	  1118	     3.8
+	Iterate                   	  1109	  1137	     3.8
+	Iterate                   	  1130	  1158	     3.8
+	Iterate                   	  1170	  1198	     3.8
+	Iterate                   	  1051	  1078	     3.7
+	Iterate                   	  1151	  1177	     3.7
+	Iterate                   	  1231	  1257	     3.7
+	Iterate                   	  1250	  1278	     3.7
+	Iterate                   	  1211	  1237	     3.6
+	Iterate                   	  1271	  1297	     3.6
+	PF16697	Yop-YscD_cpl    	    13	   100	      34
+	PF00498	FHA             	    27	    92	      55
+	PF15276	PP1_bind        	   595	   654	    55.3
+	PF08065	KI67R           	   977	  1078	    43.8
+	PF08065	KI67R           	  1239	  1298	    32.6
+
+A0AAE1A0E5	UNCHARACTERIZED PROTEIN {     34.3    0.00011   0  16.7   5.2
+
+O83174	UNCHARACTERIZED PROTEIN TP_0138    104.9    9.9e-27   1   1.7   7.8
+	Iterate                   	   108	   150	   103.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS25959 (E-value: 1.4e-25, Score: 94.6)
+Mentioned as: TP0138
+Description: T. pallidum predicted coding region TP0138
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 34791386
+Source: EuropePMC
+Title: Evolutionary Processes in the Emergence and Recent Spread of the Syphilis Agent, Treponema pallidum
+Journal: Molecular biology and evolution (2022)
+Snippet: in the variable regions of tprK correspond to coding and intergenic regions between tp0126a and tp0138 . However, none of these putative donors for the variable regions in tprK was detected by PIM ( table 1 ). Table 2. Summary of BlastN Searches of Variable Sequences
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B7GYT5.1	AF-A0A0B7GYT5-F1-model_v4_TED01:73-132	1	AF-A0A0B7GYT5-F1-model_v4_TED01	73-132	100.0%
+A0A0B7GYT5.1	AF-A0A0B7GYT5-F1-model_v4_TED02:134-217	1	AF-A0A0B7GYT5-F1-model_v4_TED02	134-217	0
+O83174.1	AF-O83174-F1-model_v4_TED03:152-230	1	AF-O83174-F1-model_v4_TED03	152-230	0
+O83174.1	AF-O83174-F1-model_v4_TED01:22-99	1	AF-O83174-F1-model_v4_TED01	22-99	0
+O83174.1	AF-O83174-F1-model_v4_TED02:108-150	1	AF-O83174-F1-model_v4_TED02	108-150	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83174_TED02/Iterate
+GA   27.00 27.00;
+TC   27.20 94.60;
+NC   25.20 25.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

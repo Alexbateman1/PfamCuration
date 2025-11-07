@@ -1,0 +1,50 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Leptotrichia.
+1	5	Leptotrichiaceae
+1	4	Fusobacteriales
+1	3	Fusobacteriia
+1	2	Fusobacteriota
+1	1	Fusobacteriati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A510JNC0	CRISPR-ASSOCIATED ENDORIB    473.8   3.3e-139   1   6.4  15.2
+	P0DOC6_TED07              	  1173	  1381	   473.8
+	PF28192	Cas13a_endoribonuclease	     8	  1170	   556.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P0DOC6.1	AF-P0DOC6-F1-model_v4_TED01:110-178	1	AF-P0DOC6-F1-model_v4_TED01	110-178	0
+P0DOC6.1	AF-P0DOC6-F1-model_v4_TED02:339-494	1	AF-P0DOC6-F1-model_v4_TED02	339-494	0
+P0DOC6.1	AF-P0DOC6-F1-model_v4_TED03:507-626	1	AF-P0DOC6-F1-model_v4_TED03	507-626	0
+P0DOC6.1	AF-P0DOC6-F1-model_v4_TED04:634-849_858-871	1	AF-P0DOC6-F1-model_v4_TED04	634-871	0
+P0DOC6.1	AF-P0DOC6-F1-model_v4_TED05:902-1031	1	AF-P0DOC6-F1-model_v4_TED05	902-1031	0
+P0DOC6.1	AF-P0DOC6-F1-model_v4_TED06:1054-1171	1	AF-P0DOC6-F1-model_v4_TED06	1054-1171	0
+P0DOC6.1	AF-P0DOC6-F1-model_v4_TED07:1173-1381	1	AF-P0DOC6-F1-model_v4_TED07	1173-1381	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DOC6_TED07
+GA   27.00 27.00;
+TC   473.80 473.80;
+NC   26.20 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

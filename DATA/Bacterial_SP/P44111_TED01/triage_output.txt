@@ -1,0 +1,96 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1098_HAEIN             Reviewed;          44 AA.
+AC   P44111;
+DE   RecName: Full=Uncharacterized protein HI_1098;
+GN   OrderedLocusNames=HI_1098;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+DR   EMBL; L42023; AAC22754.1; -; Genomic_DNA.
+DR   PIR; C64020; C64020.
+DR   AlphaFoldDB; P44111; -.
+DR   SMR; P44111; -.
+DR   EnsemblBacteria; AAC22754; AAC22754; HI_1098.
+DR   KEGG; hin:HI_1098; -.
+DR   HOGENOM; CLU_209065_0_0_6; -.
+DR   Proteomes; UP000000579; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..44
+FT                   /note="Uncharacterized protein HI_1098"
+FT                   /id="PRO_0000078002"
+SQ   SEQUENCE   44 AA;  5028 MW;  2FCA574BCAFB7176 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Haemophilus.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P44111	UNCHARACTERIZED PROTEIN HI_109     74.4    1.1e-17   1   1.2   1.6
+	P44111_TED01              	    17	    44	    74.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS859301 (E-value: 3.6e-15, Score: 60.1)
+Mentioned as: NTHI1262
+Description: hypothetical protein
+Organism: Haemophilus influenzae 86-028NP
+PMID: 26390432
+Source: EuropePMC
+Title: Antisera Against Certain Conserved Surface-Exposed Peptides of Nontypeable Haemophilus influenzae Are Protective
+Journal: PloS one (2015)
+Snippet: olpA HI1174m Probable surface adhesion OlpA -barrel NTHI1332 ompP5 HI1164 Outer membrane protein OmpP5 -barrel NTHI1262 HI1098m Conserved hypothetical protein Amorphous NTHI1171 ompU HI0997m Putative OM protein OmpU -barrel NTHI1169 tbp2 HI0995 Transferrin binding protein 2 Amorphous NTHI1168 tbp1 HI0994 Transferrin binding protein 1 -barrel NTHI1164
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P44111.1	AF-P44111-F1-model_v4_TED01:17-44	1	AF-P44111-F1-model_v4_TED01	17-44	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44111_TED01
+GA   27.00 27.00;
+TC   29.40 74.00;
+NC   26.90 17.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

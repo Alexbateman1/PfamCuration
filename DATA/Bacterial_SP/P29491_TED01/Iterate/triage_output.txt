@@ -1,0 +1,317 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TCPD_VIBCH              Reviewed;         278 AA.
+AC   P29491; Q9KTR2;
+DE   RecName: Full=Toxin coregulated pilus biosynthesis protein D;
+DE   AltName: Full=TCP pilus biosynthesis protein TcpD;
+GN   Name=tcpD; OrderedLocusNames=VC_0833;
+OS   Vibrio cholerae serotype O1 (strain ATCC 39315 / El Tor Inaba N16961).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales;
+OC   Vibrionaceae; Vibrio.
+OX   NCBI_TaxID=243277;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Classical Inaba Z17561 / Serotype O1;
+RX   PubMed=8097178; DOI=10.1016/0378-1119(93)90589-u;
+RA   Ogierman M.A., Zabihi S., Mourtzios L., Manning P.A.;
+RT   "Genetic organization and sequence of the promoter-distal region of the tcp
+RT   gene cluster of Vibrio cholerae.";
+RL   Gene 126:51-60(1993).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 39315 / El Tor Inaba N16961;
+RX   PubMed=10952301; DOI=10.1038/35020000;
+RA   Heidelberg J.F., Eisen J.A., Nelson W.C., Clayton R.A., Gwinn M.L.,
+RA   Dodson R.J., Haft D.H., Hickey E.K., Peterson J.D., Umayam L.A., Gill S.R.,
+RA   Nelson K.E., Read T.D., Tettelin H., Richardson D.L., Ermolaeva M.D.,
+RA   Vamathevan J.J., Bass S., Qin H., Dragoi I., Sellers P., McDonald L.A.,
+RA   Utterback T.R., Fleischmann R.D., Nierman W.C., White O., Salzberg S.L.,
+RA   Smith H.O., Colwell R.R., Mekalanos J.J., Venter J.C., Fraser C.M.;
+RT   "DNA sequence of both chromosomes of the cholera pathogen Vibrio
+RT   cholerae.";
+RL   Nature 406:477-483(2000).
+CC   -!- FUNCTION: Involved in TCP pilus biogenesis.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=CAA45460.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+DR   EMBL; X64098; CAA45460.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; AE003852; AAF93996.1; -; Genomic_DNA.
+DR   PIR; D82275; D82275.
+DR   RefSeq; NP_230481.1; NC_002505.1.
+DR   RefSeq; WP_001880631.1; NZ_LT906614.1.
+DR   AlphaFoldDB; P29491; -.
+DR   STRING; 243277.VC_0833; -.
+DR   DNASU; 2614500; -.
+DR   EnsemblBacteria; AAF93996; AAF93996; VC_0833.
+DR   KEGG; vch:VC_0833; -.
+DR   PATRIC; fig|243277.26.peg.794; -.
+DR   eggNOG; ENOG5031NZT; Bacteria.
+DR   HOGENOM; CLU_1000937_0_0_6; -.
+DR   Proteomes; UP000000584; Chromosome 1.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..278
+FT                   /note="Toxin coregulated pilus biosynthesis protein D"
+FT                   /id="PRO_0000072465"
+FT   TRANSMEM        30..50
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   CONFLICT        79
+FT                   /note="D -> A (in Ref. 1; CAA45460)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   278 AA;  32276 MW;  B789FA7EB21357AE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Vibrio.
+1	6	Enterovibrio.
+1	6	Aliivibrio.
+3	5	Vibrionaceae
+3	4	Vibrionales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A6J8AR48	SULT1 {ECO:0000313|EMBL:C     34.4    7.4e-05   3  10.3   0.0
+	Iterate                   	   129	   159	     4.5
+	Iterate                   	   195	   222	     3.6
+	Iterate                   	    93	   131	     2.7
+	PF00685	Sulfotransfer_1 	   517	   595	    43.2
+
+A0A7M7PE51	UNCHARACTERIZED PROTEIN {     35.5    3.3e-05   2  12.7   0.2
+	Iterate                   	  1087	  1128	     7.4
+	Iterate                   	   109	   149	     2.5
+	PF12796	Ank_2           	     3	   101	    56.9
+	PF00023	Ank             	    37	    69	    22.4
+	PF13637	Ank_4           	    42	    91	    33.9
+	PF12796	Ank_2           	    60	   134	    54.2
+	PF00023	Ank             	    70	   102	    27.6
+	PF12796	Ank_2           	    90	   167	    47.8
+	PF00023	Ank             	   103	   134	    25.5
+	PF13637	Ank_4           	   107	   157	    25.9
+	PF12796	Ank_2           	   108	   187	    42.2
+	PF00023	Ank             	   136	   168	      22
+	PF12796	Ank_2           	   165	   254	    48.7
+	PF00023	Ank             	   190	   222	    23.9
+	PF13637	Ank_4           	   195	   244	    33.3
+	PF00023	Ank             	   223	   255	    21.3
+	PF13637	Ank_4           	   237	   277	    26.7
+	PF12796	Ank_2           	   246	   320	    54.7
+	PF00023	Ank             	   256	   288	    36.7
+	PF13606	Ank_3           	   256	   285	      23
+	PF13637	Ank_4           	   261	   310	    41.3
+	PF12796	Ank_2           	   294	   386	    71.1
+	PF13637	Ank_4           	   297	   343	    28.9
+	PF00023	Ank             	   322	   354	    34.2
+	PF13606	Ank_3           	   322	   351	    21.3
+	PF13637	Ank_4           	   327	   376	    41.9
+	PF00023	Ank             	   355	   385	    21.5
+	PF12796	Ank_2           	   379	   452	    51.4
+	PF00023	Ank             	   388	   420	    26.1
+	PF13606	Ank_3           	   388	   417	    18.5
+	PF13637	Ank_4           	   393	   442	    40.3
+	PF00023	Ank             	   421	   453	    25.3
+	PF13637	Ank_4           	   429	   475	    31.2
+	PF12796	Ank_2           	   447	   518	    57.7
+	PF00023	Ank             	   454	   486	    35.6
+	PF13606	Ank_3           	   454	   483	    20.1
+	PF13637	Ank_4           	   459	   508	    38.3
+	PF00023	Ank             	   487	   519	    18.9
+	PF12796	Ank_2           	   512	   583	    45.9
+	PF00023	Ank             	   520	   552	    25.5
+	PF13637	Ank_4           	   525	   574	    43.8
+	PF00023	Ank             	   553	   584	    22.3
+	PF12796	Ank_2           	   576	   650	    59.6
+	PF00023	Ank             	   586	   618	    36.4
+	PF13606	Ank_3           	   586	   615	    20.6
+	PF13637	Ank_4           	   591	   640	      41
+	PF00023	Ank             	   619	   651	    18.8
+	PF13637	Ank_4           	   624	   673	    32.6
+	PF12796	Ank_2           	   646	   716	    38.6
+	PF00023	Ank             	   652	   684	    17.9
+	PF13637	Ank_4           	   657	   706	    30.3
+	PF00023	Ank             	   685	   717	    19.9
+	PF12796	Ank_2           	   690	   782	    69.5
+	PF00023	Ank             	   718	   750	    36.7
+	PF13606	Ank_3           	   718	   747	      23
+	PF13637	Ank_4           	   723	   772	    41.3
+	PF12796	Ank_2           	   756	   848	    71.1
+	PF13637	Ank_4           	   762	   805	    27.2
+	PF00023	Ank             	   784	   816	    34.2
+	PF13606	Ank_3           	   784	   813	    21.3
+	PF13637	Ank_4           	   789	   838	    41.9
+	PF00023	Ank             	   817	   847	    21.5
+	PF12796	Ank_2           	   843	   914	    50.7
+	PF00023	Ank             	   850	   882	    26.1
+	PF13606	Ank_3           	   850	   879	    18.5
+	PF13637	Ank_4           	   855	   904	    40.3
+	PF00023	Ank             	   883	   915	    25.3
+	PF13637	Ank_4           	   890	   937	    32.5
+	PF12796	Ank_2           	   908	   980	    57.9
+	PF00023	Ank             	   916	   948	    36.4
+	PF13606	Ank_3           	   916	   945	    20.6
+	PF13637	Ank_4           	   921	   970	    38.3
+	PF00023	Ank             	   949	   981	    16.8
+	PF13637	Ank_4           	   957	  1003	    28.4
+	PF12796	Ank_2           	   972	  1046	    47.5
+	PF00023	Ank             	   982	  1014	    25.5
+	PF13606	Ank_3           	   982	  1011	    17.9
+	PF13637	Ank_4           	   987	  1036	    35.2
+	PF00023	Ank             	  1015	  1047	    20.2
+	PF12796	Ank_2           	  1038	  1112	    50.2
+	PF00023	Ank             	  1048	  1080	    33.2
+	PF13606	Ank_3           	  1048	  1077	    19.3
+	PF13637	Ank_4           	  1053	  1102	    33.9
+	PF00023	Ank             	  1081	  1111	    15.5
+	PF00023	Ank             	  1116	  1146	    18.4
+	PF12796	Ank_2           	  1119	  1211	    69.4
+	PF13637	Ank_4           	  1119	  1168	    25.6
+	PF00023	Ank             	  1147	  1179	    24.8
+	PF13637	Ank_4           	  1152	  1201	    33.9
+	PF00023	Ank             	  1180	  1212	    26.7
+	PF13606	Ank_3           	  1180	  1209	    20.6
+	PF13637	Ank_4           	  1185	  1234	    30.4
+	PF12796	Ank_2           	  1208	  1277	    45.7
+	PF00023	Ank             	  1213	  1245	    23.1
+	PF00023	Ank             	  1246	  1278	    25.5
+	PF13637	Ank_4           	  1251	  1300	    43.8
+	PF00023	Ank             	  1279	  1309	    20.1
+	PF12796	Ank_2           	  1284	  1376	    66.2
+	PF00023	Ank             	  1312	  1344	    36.6
+	PF13606	Ank_3           	  1312	  1341	    20.9
+	PF13637	Ank_4           	  1317	  1366	    45.3
+	PF12796	Ank_2           	  1324	  1409	    62.6
+	PF00023	Ank             	  1345	  1376	    17.8
+	PF12796	Ank_2           	  1350	  1444	    66.9
+	PF00023	Ank             	  1378	  1410	    29.3
+	PF13637	Ank_4           	  1383	  1432	    39.3
+	PF12796	Ank_2           	  1396	  1464	    33.4
+	PF00023	Ank             	  1411	  1443	    22.7
+	PF12796	Ank_2           	  1439	  1529	    51.1
+	PF00023	Ank             	  1465	  1497	    26.5
+	PF13637	Ank_4           	  1470	  1519	    32.6
+	PF00023	Ank             	  1498	  1530	    21.3
+	PF13637	Ank_4           	  1509	  1552	    27.2
+	PF12796	Ank_2           	  1518	  1595	    57.8
+	PF00023	Ank             	  1531	  1563	    34.2
+	PF13606	Ank_3           	  1531	  1560	    21.3
+	PF13637	Ank_4           	  1536	  1585	    41.9
+	PF00023	Ank             	  1564	  1594	    21.5
+	PF12796	Ank_2           	  1588	  1661	    52.6
+	PF00023	Ank             	  1597	  1629	    26.1
+	PF13606	Ank_3           	  1597	  1626	    18.5
+	PF13637	Ank_4           	  1602	  1651	    41.1
+	PF00023	Ank             	  1630	  1662	    26.7
+	PF13637	Ank_4           	  1637	  1684	    29.6
+	PF12796	Ank_2           	  1652	  1727	    53.5
+	PF00023	Ank             	  1663	  1695	      31
+	PF13637	Ank_4           	  1668	  1717	    31.1
+	PF00023	Ank             	  1696	  1728	    23.7
+	PF12796	Ank_2           	  1712	  1793	    48.9
+	PF13857	Ank_5           	  1716	  1767	    28.5
+	PF00023	Ank             	  1729	  1761	    21.5
+	PF13637	Ank_4           	  1734	  1783	      37
+	PF00023	Ank             	  1762	  1793	    22.8
+	PF12796	Ank_2           	  1785	  1859	    49.1
+	PF00023	Ank             	  1795	  1827	    27.8
+	PF13637	Ank_4           	  1800	  1849	    26.5
+	PF00023	Ank             	  1828	  1859	    23.9
+	PF12796	Ank_2           	  1833	  1924	    56.5
+	PF00023	Ank             	  1861	  1893	    24.7
+	PF13637	Ank_4           	  1866	  1915	    41.7
+	PF00023	Ank             	  1946	  1978	    14.8
+
+A0A8R2JUP1	ANKYRIN REPEAT DOMAIN-CON     34.9    5.1e-05   9  17.7  53.4
+	Iterate                   	   394	   419	     5.8
+	Iterate                   	   630	   655	     5.8
+	Iterate                   	   792	   817	     5.8
+	Iterate                   	   819	   844	     5.8
+	Iterate                   	   340	   364	     5.7
+	Iterate                   	   576	   600	     5.7
+	Iterate                   	   657	   681	     5.7
+	Iterate                   	   846	   870	     5.7
+	Iterate                   	   421	   445	     2.1
+
+A0AAD8FGV6	UNCHARACTERIZED PROTEIN {     29.0     0.0036   6   5.3   0.4
+	Iterate                   	     3	    40	     9.3
+	Iterate                   	    75	   104	     4.6
+	Iterate                   	    84	   126	     4.1
+	Iterate                   	   120	   151	     3.2
+	Iterate                   	    51	    82	     2.2
+	Iterate                   	    32	    60	     2.1
+
+P29491	TOXIN COREGULATED PILUS BIOSYNT    165.6    7.9e-46   1   1.6   7.5
+	Iterate                   	    95	   161	   164.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS53437 (E-value: 1.6e-38, Score: 135.7)
+Mentioned as: VC0833
+Description: toxin co-regulated pilus biosynthesis protein D
+Organism: Vibrio cholerae O1 biovar eltor str. N16961
+PMID: 33123494
+Source: EuropePMC
+Title: Vibrio Pathogenicity Island-1: The Master Determinant of Cholera Pathogenesis
+Journal: Frontiers in cellular and infection microbiology (2020)
+Snippet: Helps in high osmolality tolerance in intestinal lumen and promotes colonization Tripathi and Taylor, 2007 VC0833 tcpD 837 31.7 TCP pilus biogenesis Parsot et al., 1991 VC0834 tcpS 459 17.3 Essential for colonization Davies et al., 2012 VC0835 tcpT 1,512 57.2 A cognate putative ATPase located
+
+================================================================================
+Protein: VIMSS53437 (E-value: 1.6e-38, Score: 135.7)
+Mentioned as: VC0833
+Description: toxin co-regulated pilus biosynthesis protein D
+Organism: Vibrio cholerae O1 biovar eltor str. N16961
+PMID: 29991587
+Source: EuropePMC
+Title: cAMP Receptor Protein Controls Vibrio cholerae Gene Expression in Response to Host Colonization
+Journal: mBio (2018)
+Snippet: TATGAGAAAGATAAAA (VC0821) No 888697 888746.5 2.1E03 TGCAATTAAGTTCTCA tcpI <> tcpP Yes 894874 894817.5 7.9E03 TATTATTGGATTCATT (VC0833) No 904634 NA NA NA (VC0842) Yes 906219 NA NA NA acfA <> acfD No 911066 911128.5 3.1E03 TATGATGAAAAACATT VC0845><VC0846 No 936058 936026.5 1.5E03 AAAGAGCTAAATCGTT (VC0870) No 999018 999093.5 9.6E03
+
+================================================================================
+Protein: VIMSS53437 (E-value: 1.6e-38, Score: 135.7)
+Mentioned as: VC0833
+Description: toxin co-regulated pilus biosynthesis protein D
+Organism: Vibrio cholerae O1 biovar eltor str. N16961
+PMID: 26755629
+Source: EuropePMC
+Title: The LonA Protease Regulates Biofilm Formation, Motility, Virulence, and the Type VI Secretion System in Vibrio cholerae
+Journal: Journal of bacteriology (2016)
+Snippet: (lon mutant/WT) Pathogenesis VC0828 VC0830 VC0831 VC0832 VC0833 VC0834 VC0837 VC0838 VC1456 VC1457 VCA0219 Toxin-coregulated pilin, tcpA Toxin-coregulated pilus
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A135I5X9.1	AF-A0A135I5X9-F1-model_v4_TED02:81-148	1	AF-A0A135I5X9-F1-model_v4_TED02	81-148	100.0%
+A0A135I5X9.1	AF-A0A135I5X9-F1-model_v4_TED03:158-257	1	AF-A0A135I5X9-F1-model_v4_TED03	158-257	0
+A0A135I5X9.1	AF-A0A135I5X9-F1-model_v4_TED01:14-71	1	AF-A0A135I5X9-F1-model_v4_TED01	14-71	0
+P29491.2	AF-P29491-F1-model_v4_TED01:95-131_138-161	1	AF-P29491-F1-model_v4_TED01	95-161	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P29491_TED01/Iterate
+GA   27.00 27.00;
+TC   28.50 32.70;
+NC   25.20 19.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

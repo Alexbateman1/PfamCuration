@@ -1,0 +1,73 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	7	Orientia.
+3	6	Rickettsieae
+3	5	Rickettsiaceae
+3	4	Rickettsiales
+3	3	Alphaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0F3MNB1	COMPETENCE FAMILY PROTEIN     86.2    4.3e-21   1   1.8   2.6
+	Iterate                   	   181	   227	    84.9
+	PF03772	Competence      	     1	   157	    72.1
+
+A0A2U3RCH1	COMPETENCE PROTEIN COMEC     116.0    2.1e-30   1   1.6   3.9
+	Iterate                   	   549	   595	   114.9
+	PF03772	Competence      	   241	   527	   192.1
+
+A0A3M7R536	VACUOLAR SORTING-ASSOCIAT     30.9    0.00084   5   4.9  11.7
+	Iterate                   	   119	   137	    11.5
+	Iterate                   	   131	   147	    11.3
+	Iterate                   	   144	   159	    11.1
+	Iterate                   	   112	   126	    10.8
+	Iterate                   	    96	   115	     8.4
+
+A0AAD7Y9F3	BACTERIAL SURFACE ANTIGEN     31.2    0.00064   3   3.5   1.4
+	Iterate                   	   344	   376	    10.3
+	Iterate                   	   313	   341	    10.1
+	Iterate                   	   283	   310	     7.8
+	PF01103	Omp85           	   152	   345	    60.1
+	PF01103	Omp85           	   345	   528	   106.6
+
+A5CE78	COMEC/REC2 FAMILY PROTEIN {EC    124.1    6.6e-33   1   1.6   3.6
+	Iterate                   	   549	   595	   123.0
+	PF03772	Competence      	   241	   527	   187.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0F3MNB1.1	AF-A0A0F3MNB1-F1-model_v4_TED01:2-147	1	AF-A0A0F3MNB1-F1-model_v4_TED01	2-147	0
+A0A0F3MNB1.1	AF-A0A0F3MNB1-F1-model_v4_TED02:183-306	1	AF-A0A0F3MNB1-F1-model_v4_TED02	183-306	95.7%
+A5CE78.1	AF-A5CE78-F1-model_v4_TED02:98-204	1	AF-A5CE78-F1-model_v4_TED02	98-204	0
+A5CE78.1	AF-A5CE78-F1-model_v4_TED03:225-502	1	AF-A5CE78-F1-model_v4_TED03	225-502	0
+A5CE78.1	AF-A5CE78-F1-model_v4_TED04:508-545	1	AF-A5CE78-F1-model_v4_TED04	508-545	0
+A5CE78.1	AF-A5CE78-F1-model_v4_TED05:551-674	1	AF-A5CE78-F1-model_v4_TED05	551-674	95.7%
+A5CE78.1	AF-A5CE78-F1-model_v4_TED01:2-88	1	AF-A5CE78-F1-model_v4_TED01	2-88	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q92JQ1_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.30 107.50;
+NC   25.30 23.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

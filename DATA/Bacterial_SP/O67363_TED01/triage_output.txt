@@ -1,0 +1,77 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1348_AQUAE             Reviewed;         189 AA.
+AC   O67363;
+DE   RecName: Full=Uncharacterized protein aq_1348;
+GN   OrderedLocusNames=aq_1348;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC07334.1; -; Genomic_DNA.
+DR   PIR; H70416; H70416.
+DR   RefSeq; NP_213927.1; NC_000918.1.
+DR   AlphaFoldDB; O67363; -.
+DR   STRING; 224324.aq_1348; -.
+DR   EnsemblBacteria; AAC07334; AAC07334; aq_1348.
+DR   KEGG; aae:aq_1348; -.
+DR   HOGENOM; CLU_1431860_0_0_0; -.
+DR   InParanoid; O67363; -.
+DR   Proteomes; UP000000798; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..189
+FT                   /note="Uncharacterized protein aq_1348"
+FT                   /id="PRO_0000186921"
+SQ   SEQUENCE   189 AA;  21788 MW;  A70F714263221FFE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Aquifex
+1	5	Aquificaceae
+1	4	Aquificales
+1	3	Aquificia
+1	2	Aquificota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O67363	UNCHARACTERIZED PROTEIN AQ_134    251.4    3.8e-72   1   1.2   3.9
+	O67363_TED01              	    40	   151	   251.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O67363.1	AF-O67363-F1-model_v4_TED01:40-151	1	AF-O67363-F1-model_v4_TED01	40-151	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67363_TED01
+GA   27.00 27.00;
+TC   31.00 251.00;
+NC   26.40 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

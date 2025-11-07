@@ -1,0 +1,292 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   C1332_XYLFT             Reviewed;         399 AA.
+AC   Q87AV9;
+DE   RecName: Full=Putative cytochrome P450 133B2;
+DE            EC=1.14.-.-;
+GN   Name=cyp133B2; OrderedLocusNames=PD_1704;
+OS   Xylella fastidiosa (strain Temecula1 / ATCC 700964).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Lysobacterales; Lysobacteraceae; Xylella.
+OX   NCBI_TaxID=183190;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Temecula1 / ATCC 700964;
+RX   PubMed=12533478; DOI=10.1128/jb.185.3.1018-1026.2003;
+RA   Van Sluys M.A., de Oliveira M.C., Monteiro-Vitorello C.B., Miyaki C.Y.,
+RA   Furlan L.R., Camargo L.E.A., da Silva A.C.R., Moon D.H., Takita M.A.,
+RA   Lemos E.G.M., Machado M.A., Ferro M.I.T., da Silva F.R., Goldman M.H.S.,
+RA   Goldman G.H., Lemos M.V.F., El-Dorry H., Tsai S.M., Carrer H.,
+RA   Carraro D.M., de Oliveira R.C., Nunes L.R., Siqueira W.J., Coutinho L.L.,
+RA   Kimura E.T., Ferro E.S., Harakava R., Kuramae E.E., Marino C.L.,
+RA   Giglioti E., Abreu I.L., Alves L.M.C., do Amaral A.M., Baia G.S.,
+RA   Blanco S.R., Brito M.S., Cannavan F.S., Celestino A.V., da Cunha A.F.,
+RA   Fenille R.C., Ferro J.A., Formighieri E.F., Kishi L.T., Leoni S.G.,
+RA   Oliveira A.R., Rosa V.E. Jr., Sassaki F.T., Sena J.A.D., de Souza A.A.,
+RA   Truffi D., Tsukumo F., Yanai G.M., Zaros L.G., Civerolo E.L.,
+RA   Simpson A.J.G., Almeida N.F. Jr., Setubal J.C., Kitajima J.P.;
+RT   "Comparative analyses of the complete genome sequences of Pierce's disease
+RT   and citrus variegated chlorosis strains of Xylella fastidiosa.";
+RL   J. Bacteriol. 185:1018-1026(2003).
+CC   -!- COFACTOR:
+CC       Name=heme; Xref=ChEBI:CHEBI:30413; Evidence={ECO:0000250};
+CC   -!- SIMILARITY: Belongs to the cytochrome P450 family. {ECO:0000305}.
+DR   EMBL; AE009442; AAO29542.1; -; Genomic_DNA.
+DR   RefSeq; WP_011098220.1; NC_004556.1.
+DR   AlphaFoldDB; Q87AV9; -.
+DR   SMR; Q87AV9; -.
+DR   KEGG; xft:PD_1704; -.
+DR   HOGENOM; CLU_033716_0_2_6; -.
+DR   Proteomes; UP000002516; Chromosome.
+DR   GO; GO:0020037; F:heme binding; IEA:InterPro.
+DR   GO; GO:0005506; F:iron ion binding; IEA:InterPro.
+DR   GO; GO:0004497; F:monooxygenase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0016705; F:oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen; IEA:InterPro.
+DR   CDD; cd20625; CYP164-like; 1.
+DR   FunFam; 1.10.630.10:FF:000018; Cytochrome P450 monooxygenase; 1.
+DR   Gene3D; 1.10.630.10; Cytochrome P450; 1.
+DR   InterPro; IPR001128; Cyt_P450.
+DR   InterPro; IPR002397; Cyt_P450_B.
+DR   InterPro; IPR017972; Cyt_P450_CS.
+DR   InterPro; IPR036396; Cyt_P450_sf.
+DR   PANTHER; PTHR46696:SF1; CYTOCHROME P450 YJIB-RELATED; 1.
+DR   PANTHER; PTHR46696; P450, PUTATIVE (EUROFUNG)-RELATED; 1.
+DR   Pfam; PF00067; p450; 1.
+DR   PRINTS; PR00359; BP450.
+DR   SUPFAM; SSF48264; Cytochrome P450; 1.
+DR   PROSITE; PS00086; CYTOCHROME_P450; 1.
+PE   3: Inferred from homology;
+KW   Heme; Iron; Metal-binding; Monooxygenase; Oxidoreductase;
+KW   Reference proteome.
+FT   CHAIN           1..399
+FT                   /note="Putative cytochrome P450 133B2"
+FT                   /id="PRO_0000052291"
+FT   BINDING         348
+FT                   /ligand="heme"
+FT                   /ligand_id="ChEBI:CHEBI:30413"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250"
+SQ   SEQUENCE   399 AA;  44684 MW;  34F298EE726A378E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+8	6	Paraburkholderia.
+13	5	Burkholderiaceae
+4	4	Enterobacterales
+13	4	Burkholderiales
+6	3	Gammaproteobacteria
+3	3	Actinomycetes
+13	3	Betaproteobacteria
+3	2	Actinomycetota
+19	2	Pseudomonadota
+3	1	Bacillati
+19	1	Pseudomonadati
+22	0	Bacteria
+Total of 22 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A014NK08	CYTOCHROME P450 {ECO:0000    100.5    1.9e-25   1   2.9   1.0
+	P42518_TED01              	     4	    50	    96.2
+	PF00067	p450            	   163	   369	    95.8
+
+A0A069PFU5	CYTOCHROME P450 {ECO:0000     32.1    0.00042   1   1.5   0.1
+	P42518_TED01              	     4	    50	    31.2
+	PF00067	p450            	   168	   370	    87.7
+
+A0A085G808	PUTATIVE CYTOCHROME P450      30.4     0.0015   1   1.5   0.0
+	P42518_TED01              	     4	    50	    29.4
+	PF00067	p450            	   161	   380	      97
+
+A0A1C6UL87	CYTOCHROME P450 {ECO:0000     29.4     0.0031   1   2.2   0.3
+	P42518_TED01              	    14	    60	    26.5
+	PF00067	p450            	   153	   405	    72.2
+
+A0A1H7E5G3	CYTOCHROME P450 {ECO:0008     32.1    0.00045   1   1.4   0.1
+	P42518_TED01              	    26	    72	    31.3
+	PF00067	p450            	   182	   393	    88.2
+
+A0A1Q8IL72	CYTOCHROME {ECO:0000313|E     35.2    4.8e-05   1   1.5   0.1
+	P42518_TED01              	     5	    50	    34.2
+	PF00067	p450            	   156	   267	    33.9
+	PF00067	p450            	   269	   378	    60.2
+
+A0A239SEK8	CYTOCHROME P450 107B1 {EC     33.0    0.00023   1   1.7   0.1
+	P42518_TED01              	     4	    50	    31.6
+	PF00067	p450            	   159	   381	   102.4
+
+A0A379LSE6	CYTOCHROME P450 107B1 {EC    127.5    6.9e-34   1   2.1   1.0
+	P42518_TED01              	     4	    50	   124.3
+	PF00067	p450            	    65	   369	    94.4
+
+A0A3D8JQG1	CYTOCHROME P450 {ECO:0000     30.3     0.0016   1   1.5   0.0
+	P42518_TED01              	     4	    50	    29.4
+	PF00067	p450            	    57	   380	   108.4
+
+A0A4Q7RZV2	CYTOCHROME P450 {ECO:0008     46.3    1.6e-08   1   1.4   0.0
+	P42518_TED01              	     5	    50	    45.5
+	PF00067	p450            	   172	   374	      98
+
+A0A640V265	CYTOCHROME P450 HYDROXYLA     30.2     0.0018   2   2.5   0.0
+	P42518_TED01              	     8	    55	    17.6
+	P42518_TED01              	   303	   328	    10.0
+	PF00067	p450            	   195	   405	    70.5
+
+A0A6J5DFE0	CYTOCHROME P450 MONOOXYGE     32.4    0.00035   1   1.4   0.0
+	P42518_TED01              	     4	    50	    31.6
+	PF00067	p450            	   161	   268	    35.1
+	PF00067	p450            	   269	   379	      57
+
+A0A6J5EFA1	BIOTIN BIOSYNTHESIS CYTOC     29.8     0.0022   1   1.5   0.1
+	P42518_TED01              	     7	    50	    28.8
+	PF00067	p450            	   161	   370	    79.8
+
+A0A6J5EGF8	CYTOCHROME P450 MONOOXYGE     42.6    2.3e-07   1   1.5   0.1
+	P42518_TED01              	     4	    50	    41.6
+	PF00067	p450            	    31	   370	   112.4
+
+A0A7Z2GCZ5	CYTOCHROME P450 {ECO:0000     40.0    1.5e-06   1   1.5   0.0
+	P42518_TED01              	     5	    50	    39.0
+	PF00067	p450            	    50	   376	   104.1
+
+A0A848MJJ0	CYTOCHROME P450 {ECO:0000     75.9    8.8e-18   1   2.2   1.2
+	P42518_TED01              	     4	    50	    74.9
+	PF00067	p450            	    64	   369	    87.2
+
+A0A8C5CI49	UNCHARACTERIZED PROTEIN {     36.2    2.3e-05   7   8.0  15.5
+	P42518_TED01              	    26	    37	     5.3
+	P42518_TED01              	    43	    54	     5.3
+	P42518_TED01              	    60	    71	     5.3
+	P42518_TED01              	    77	    88	     5.3
+	P42518_TED01              	    94	   105	     5.3
+	P42518_TED01              	   111	   122	     5.3
+	P42518_TED01              	   128	   139	     5.3
+
+A0A918ELL8	CYTOCHROME P450 HYDROXYLA     29.8     0.0022   2   2.9   0.1
+	P42518_TED01              	     7	    58	    18.6
+	P42518_TED01              	   321	   342	     8.1
+	PF00067	p450            	   191	   395	    85.1
+
+A0A940N8M0	CYTOCHROME P450 {ECO:0000     31.2    0.00085   1   1.3   0.1
+	P42518_TED01              	     4	    50	    30.5
+	PF00067	p450            	   157	   371	    95.5
+
+B2JNX1	CYTOCHROME P450 {ECO:0000313|     34.5    7.7e-05   1   1.5   0.3
+	P42518_TED01              	     4	    50	    33.7
+	PF00067	p450            	   158	   370	      92
+
+G7CFL5	STEROID C26-MONOOXYGENASE {EC     29.4     0.0031   1   1.6   0.0
+	P42518_TED01              	    12	    58	    28.2
+	PF00067	p450            	    82	   390	   103.6
+
+Q87AV9	PUTATIVE CYTOCHROME P450 133B2     31.1    0.00093   1   1.8   0.4
+	P42518_TED01              	     4	    50	    30.0
+	PF00067	p450            	    53	   375	   107.5
+
+Q8P6C3	CYTOCHROME P450 HYDROXYLASE {     31.3    0.00076   1   1.5   0.0
+	P42518_TED01              	     4	    50	    30.4
+	PF00067	p450            	    63	   266	      44
+	PF00067	p450            	   263	   368	    51.3
+
+Q8XRX2	CYTOCHROME P-450-LIKE MONOOXY     33.3    0.00019   1   1.6   0.0
+	P42518_TED01              	     4	    50	    32.2
+	PF00067	p450            	    68	   371	     105
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS259024 (E-value: 5.5e-06, Score: 31.6)
+Mentioned as: XAC3170
+Description: cytochrome P-450 hydroxylase
+Organism: Xanthomonas axonopodis pv. citri str. 306
+PMID: 39266555
+Source: EuropePMC
+Title: Resolving the metabolism of monolignols and other lignin-related aromatic compounds in Xanthomonas citri
+Journal: Nature communications (2024)
+Snippet: putative reductases ( XAC0310 and XAC0362 ), as well as a predicted P450 gene ( XAC3170 , <24% sequence identity with GcoA) 39 . In the vanillin condition, only XAC0362-63 were upregulated (Fig. 8e ). The deletion of this gene pair (but not of XAC0310-11 )
+
+================================================================================
+Protein: VIMSS259024 (E-value: 5.5e-06, Score: 31.6)
+Mentioned as: XAC3170
+Description: cytochrome P-450 hydroxylase
+Organism: Xanthomonas axonopodis pv. citri str. 306
+PMID: 24675748
+Source: EuropePMC
+Title: Identification of 17 HrpX-regulated proteins including two novel type III effectors, XOC_3956 and XOC_1550, in Xanthomonas oryzae pv. oryzicola
+Journal: PloS one (2014)
+Snippet: (96%) XAC0795 (79%) XCV0845 (80%) N Xrp14 cytochrome P450 BJ-1 XOC_0084 (100%) N N N XAC3170 (29%) N N Xrp15 NDP-hexose isomerase XOC_2829 (100%) PXO_00207 (98%) XOO2849 (96%) XOO2998 (98%) XAC1687 (92%) XCV1723 (93%) XCC1670 (86%) Xrp16 transferase hexapeptide repeat XOC_2828 (100%) PXO_00206 (94%) XOO2848 (94%)
+
+================================================================================
+Protein: VIMSS1184201 (E-value: 5.9e-06, Score: 31.5)
+Mentioned as: XCV3302
+Description: cytochrome P-450
+Organism: Xanthomonas campestris pv. vesicatoria str. 85-10
+PMID: 17573477
+Source: EuropePMC
+Title: Identification of genes in Xanthomonas campestris pv. vesicatoria induced during its interaction with tomato
+Journal: Journal of bacteriology (2007)
+Snippet: Xcv4482d Xcv3051c Xcv0181c,f,g Xcv3809c Xcv3586 Xcv0713 Xcv3302 bga2; degradation of polysaccharides (pfam02836, pfam02837) rluD; ribosomal large subunit
+
+================================================================================
+Protein: VIMSS948832 (E-value: 6.8e-06, Score: 31.3)
+Mentioned as: XC_1111
+Description: cytochrome P450 hydroxylase
+Organism: Xanthomonas campestris pv. campestris str. 8004
+PMID: 30123197
+Source: EuropePMC
+Title: Systematic Functional Analysis of Sigma (σ) Factors in the Phytopathogen <i>Xanthomonas campestris</i> Reveals Novel Roles in the Regulation of Virulence and Viability
+Journal: Frontiers in microbiology (2018)
+Snippet: 1.741 Hypothetical protein XC_0932 1.082 Hypothetical protein XC_0933 1.170 Hypothetical protein XC_1084 5.523 Hypothetical protein XC_1111 1.801 Cytochrome P450 hydroxylase XC_1146 1.754 Hypothetical protein XC_1147 2.794 Hypothetical protein XC_1210 1.268 Conserved hypothetical protein XC_1422 1.336 Cysteine protease XC_1441 1.594 Hypothetical protein XC_1442 2.238 Serine protease XC_1445
+
+================================================================================
+Protein: VIMSS326451 (E-value: 8.3e-06, Score: 31.1)
+Mentioned as: PD1704
+Description: cytochrome P-450 hydroxylase
+Organism: Xylella fastidiosa Temecula1
+PMID: 26218423
+Source: EuropePMC
+Title: Three New Pierce's Disease Pathogenicity Effectors Identified Using Xylella fastidiosa Biocontrol Strain EB92-1
+Journal: PloS one (2015)
+Snippet: 1,985,701) from X . fastidiosa Temecula1, which is annotated to contain the 3 end of PD1704, was predicted using GeneMark to more likely belong to PD1703. This predicted LipA protein [labeled as Temecula1 (new LipA), Fig 1A ] is encoded by a putative ORF located in
+
+================================================================================
+Protein: VIMSS326435 (E-value: 0.00015, Score: 27.0)
+Mentioned as: PD1688
+Description: cytochrome P450-like enzyme
+Organism: Xylella fastidiosa Temecula1
+PMID: 19218414
+Source: EuropePMC
+Title: Characterization of regulatory pathways in Xylella fastidiosa: genes and phenotypes controlled by gacA
+Journal: Applied and environmental microbiology (2009)
+Snippet: groups, and carrier biosynthesis/biotin; bioI PD1688 PD1703 Cytochrome P450-like enzyme Hypothetical protein-conserved domains: lysophospholipase Hypothetical
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P42518.1	AF-P42518-F1-model_v4_TED01:4-50	1	AF-P42518-F1-model_v4_TED01	4-50	100.0%
+P42518.1	AF-P42518-F1-model_v4_TED02:58-92	1	AF-P42518-F1-model_v4_TED02	58-92	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P42518_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.60 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

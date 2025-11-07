@@ -1,0 +1,63 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A484WTP4	REPLICATION INITIATION PR     30.2     0.0014   1   2.4   0.1
+	Iterate                   	     6	    37	    26.6
+	PF02387	IncFII_repA     	    48	   334	   160.9
+
+A0A9D4DYV9	UNCHARACTERIZED PROTEIN {     35.0    4.2e-05   5   8.9   3.4
+	Iterate                   	   399	   419	     3.4
+	Iterate                   	   523	   543	     3.4
+	Iterate                   	    27	    48	     3.1
+	Iterate                   	    89	   110	     3.1
+	Iterate                   	   151	   171	     3.0
+
+A7ZGZ1	REPLICATION INITIATION PROTEI     81.3    1.4e-19   1   1.9   1.2
+	Iterate                   	     9	    41	    81.3
+	PF02387	IncFII_repA     	    52	   338	   153.7
+
+B7LWY2	REPLICATION INITIATION PROTEI     69.3    7.6e-16   1   1.9   1.5
+	Iterate                   	    10	    40	    69.3
+	PF02387	IncFII_repA     	    51	   337	   152.9
+
+G3I0D2	UNCHARACTERIZED PROTEIN {ECO:     28.4      0.005   0  20.8  26.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A7ZGZ1.1	AF-A7ZGZ1-F1-model_v4_TED01:12-40	1	AF-A7ZGZ1-F1-model_v4_TED01	12-40	87.9%
+A7ZGZ1.1	AF-A7ZGZ1-F1-model_v4_TED02:76-222	1	AF-A7ZGZ1-F1-model_v4_TED02	76-222	0
+A7ZGZ1.1	AF-A7ZGZ1-F1-model_v4_TED03:293-343	1	AF-A7ZGZ1-F1-model_v4_TED03	293-343	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P18023_TED01/Iterate
+GA   27.00 27.00;
+TC   27.70 64.90;
+NC   24.90 25.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

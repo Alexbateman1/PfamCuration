@@ -1,0 +1,104 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y2049_HALH5             Reviewed;         222 AA.
+AC   Q9KB79;
+DE   RecName: Full=TPR repeat-containing protein BH2049;
+GN   OrderedLocusNames=BH2049;
+OS   Halalkalibacterium halodurans (strain ATCC BAA-125 / DSM 18197 / FERM 7344
+OS   / JCM 9153 / C-125) (Bacillus halodurans).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae;
+OC   Halalkalibacterium (ex Joshi et al. 2022).
+OX   NCBI_TaxID=272558;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-125 / DSM 18197 / FERM 7344 / JCM 9153 / C-125;
+RX   PubMed=11058132; DOI=10.1093/nar/28.21.4317;
+RA   Takami H., Nakasone K., Takaki Y., Maeno G., Sasaki R., Masui N., Fuji F.,
+RA   Hirama C., Nakamura Y., Ogasawara N., Kuhara S., Horikoshi K.;
+RT   "Complete genome sequence of the alkaliphilic bacterium Bacillus halodurans
+RT   and genomic sequence comparison with Bacillus subtilis.";
+RL   Nucleic Acids Res. 28:4317-4331(2000).
+DR   EMBL; BA000004; BAB05768.1; -; Genomic_DNA.
+DR   PIR; A83906; A83906.
+DR   RefSeq; WP_010898207.1; NC_002570.2.
+DR   AlphaFoldDB; Q9KB79; -.
+DR   SMR; Q9KB79; -.
+DR   STRING; 272558.gene:10727947; -.
+DR   KEGG; bha:BH2049; -.
+DR   eggNOG; COG0457; Bacteria.
+DR   HOGENOM; CLU_1243273_0_0_9; -.
+DR   OrthoDB; 9807628at2; -.
+DR   Proteomes; UP000001258; Chromosome.
+DR   Gene3D; 1.25.40.10; Tetratricopeptide repeat domain; 1.
+DR   InterPro; IPR011990; TPR-like_helical_dom_sf.
+DR   InterPro; IPR019734; TPR_rpt.
+DR   SMART; SM00028; TPR; 2.
+DR   SUPFAM; SSF48452; TPR-like; 1.
+DR   PROSITE; PS50293; TPR_REGION; 1.
+PE   4: Predicted;
+KW   Reference proteome; Repeat; TPR repeat.
+FT   CHAIN           1..222
+FT                   /note="TPR repeat-containing protein BH2049"
+FT                   /id="PRO_0000106449"
+FT   REPEAT          34..67
+FT                   /note="TPR 1"
+FT   REPEAT          169..202
+FT                   /note="TPR 2"
+SQ   SEQUENCE   222 AA;  26281 MW;  A747C8E0AC59C533 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Halalkalibacterium(ex Joshi et al. 2022).
+1	5	Bacillaceae
+1	4	Bacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9KB79	TPR REPEAT-CONTAINING PROTEIN     231.7    3.6e-66   1   1.6   0.4
+	Q9KB79_TED01              	   120	   222	   230.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1090543 (E-value: 0.00059, Score: 25.3)
+Mentioned as: Gmet_2032
+Description: TPR repeat protein
+Organism: Geobacter metallireducens GS-15
+PMID: 16930487
+Source: EuropePMC
+Title: Exopolysaccharide-associated protein sorting in environmental organisms: the PEP-CTERM/EpsH system. Application of a novel phylogenetic profiling heuristic
+Journal: BMC biology (2006)
+Snippet: RB2461 - - - - Geobacter metallireduscens GS-15 10 Gmet_1503 Gmet_2003 Gmet_1503 Gmet_2002 Gmet_1993 Gmet_1992 Gmet_2032 Nitrosomonas europaea ATCC 19718 a 8 NE1797 NE1797 NE0377 NE1124 NE1444 Nitrosococcus oceani ATCC 19707 a 6 Noc_1778 Noc_1778 Noc_1998 Noc_1997 Noc_1987 Geobacter sulfurreducens PCA a 5 GSU1979 GSU1978 GSU1941
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9KB79.1	AF-Q9KB79-F1-model_v4_TED01:120-222	1	AF-Q9KB79-F1-model_v4_TED01	120-222	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9KB79_TED01
+GA   27.00 27.00;
+TC   27.00 230.60;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

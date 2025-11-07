@@ -1,0 +1,99 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YHCE_ECOLI              Reviewed;         181 AA.
+AC   P45421; P76674;
+DE   RecName: Full=Putative uncharacterized protein YhcE;
+GN   Name=yhcE; OrderedLocusNames=b4569; ORFNames=b3217;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   CONCEPTUAL TRANSLATION.
+RA   Rudd K.E.;
+RL   Unpublished observations (APR-1995).
+CC   -!- CAUTION: Could be the product of a pseudogene. The original sequence is
+CC       truncated by an IS5 element which is inserted between position 123 and
+CC       124. {ECO:0000305}.
+DR   EMBL; U18997; AAA58019.1; ALT_SEQ; Genomic_DNA.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   PIR; C65113; C65113.
+DR   RefSeq; WP_000821351.1; NZ_SSZK01000007.1.
+DR   AlphaFoldDB; P45421; -.
+DR   FunCoup; P45421; 2.
+DR   EchoBASE; EB2662; -.
+DR   InParanoid; P45421; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..181
+FT                   /note="Putative uncharacterized protein YhcE"
+FT                   /id="PRO_0000169483"
+SQ   SEQUENCE   181 AA;  19193 MW;  6CE38D142BD90B5A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P45421	PUTATIVE UNCHARACTERIZED PROTEI    301.8    1.9e-87   1   1.1   6.0
+	P45421_TED01              	    47	   179	   301.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P45421 (E-value: 1.7e-89, Score: 301.8)
+Mentioned as: P45421
+Description: Putative uncharacterized protein YhcE
+Organism: Escherichia coli (strain K12)
+PMID: 35023908
+Source: EuropePMC
+Title: Functional Prediction of Biological Profile During Eutrophication in Marine Environment
+Journal: Bioinformatics and biology insights (2022)
+Snippet: YhbH P0AFX0 Putative sigma N (sigma 54) modulator YhbP P67762 Putative FMN binding protein YhcE P45421 Putative uncharacterized protein YheO P64624 DNA-binding transcriptional regulator YhjB P37640 Putative response regulator in 2-component regulatory system YhjC P37641 Putative DNA-binding transcriptional regulator YiaK P37672 2,3-Diketo-L-gulonate reductase YidE P60872 Putative
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P45421.1	AF-P45421-F1-model_v4_TED01:47-160_172-179	1	AF-P45421-F1-model_v4_TED01	47-179	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P45421_TED01
+GA   27.00 27.00;
+TC   301.80 301.40;
+NC   22.90 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

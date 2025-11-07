@@ -1,0 +1,140 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y038_BORBU              Reviewed;         505 AA.
+AC   O51067;
+DE   RecName: Full=Uncharacterized protein BB_0038;
+GN   OrderedLocusNames=BB_0038;
+OS   Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)
+OS   (Borrelia burgdorferi).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Borreliaceae; Borreliella.
+OX   NCBI_TaxID=224326;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RX   PubMed=9403685; DOI=10.1038/37551;
+RA   Fraser C.M., Casjens S., Huang W.M., Sutton G.G., Clayton R.A.,
+RA   Lathigra R., White O., Ketchum K.A., Dodson R.J., Hickey E.K., Gwinn M.L.,
+RA   Dougherty B.A., Tomb J.-F., Fleischmann R.D., Richardson D.L.,
+RA   Peterson J.D., Kerlavage A.R., Quackenbush J., Salzberg S.L., Hanson M.,
+RA   van Vugt R., Palmer N., Adams M.D., Gocayne J.D., Weidman J.F.,
+RA   Utterback T.R., Watthey L., McDonald L.A., Artiach P., Bowman C.,
+RA   Garland S.A., Fujii C., Cotton M.D., Horst K., Roberts K.M., Hatch B.,
+RA   Smith H.O., Venter J.C.;
+RT   "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.";
+RL   Nature 390:580-586(1997).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000783; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   PIR; F70104; F70104.
+DR   RefSeq; WP_023003271.1; NC_001318.1.
+DR   RefSeq; YP_008686555.1; NC_001318.1.
+DR   AlphaFoldDB; O51067; -.
+DR   PATRIC; fig|224326.49.peg.437; -.
+DR   OrthoDB; 350892at2; -.
+DR   Proteomes; UP000001807; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   NCBIfam; NF033751; pallilysin_like; 1.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..505
+FT                   /note="Uncharacterized protein BB_0038"
+FT                   /id="PRO_0000174371"
+FT   TRANSMEM        18..38
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   505 AA;  59024 MW;  0A3782ECDE116BDE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Spirochaeta.
+2	6	Borrelia.
+1	6	Borreliella.
+3	5	Borreliaceae
+2	5	Spirochaetaceae
+5	4	Spirochaetales
+5	3	Spirochaetia
+5	2	Spirochaetota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A370AYB7	PALLILYSIN BETA BARREL DO     28.8     0.0046   1   1.4   0.1
+	O51067_TED01              	    45	   239	    27.9
+	PF18663	Pallilysin      	   242	   357	   112.1
+
+A0A841R594	PALLILYSIN BETA BARREL DO     28.5     0.0054   1   1.4   6.2
+	O51067_TED01              	    64	   254	    27.6
+	PF18663	Pallilysin      	   255	   373	    86.1
+
+A0ABF7PUM5	UNCHARACTERIZED PROTEIN {    316.0    3.8e-91   1   1.9  12.5
+	O51067_TED01              	    50	   238	   316.0
+	PF18663	Pallilysin      	   242	   363	    32.8
+
+G0GD04	PALLILYSIN BETA BARREL DOMAIN     28.4     0.0058   1   1.5   0.0
+	O51067_TED01              	    70	   254	    27.3
+	PF18663	Pallilysin      	   260	   373	   106.9
+
+O51067	UNCHARACTERIZED PROTEIN BB_0038    425.0   1.4e-124   1   2.4  13.0
+	O51067_TED01              	    71	   259	   425.0
+	PF18663	Pallilysin      	   262	   384	      29
+
+W6TGP3	LIPOPROTEIN {ECO:0008006|GOOG    308.5    7.8e-89   1   2.3  12.3
+	O51067_TED01              	    53	   241	   308.5
+	PF18663	Pallilysin      	   245	   365	    32.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS43680 (E-value: 1.3e-126, Score: 425.0)
+Mentioned as: BB0038
+Description: B. burgdorferi predicted coding region BB0038
+Organism: Borrelia burgdorferi B31
+PMID: 22544270
+Source: EuropePMC
+Title: EbfC (YbaB) is a new type of bacterial nucleoid-associated protein and a global regulator of gene expression in the Lyme disease spirochete
+Journal: Journal of bacteriology (2012)
+Snippet: C NC C/NC NC C NC/C priA (BB0014) BB0038 BB0096 BB0096-BB0097 rpsB (BB0123) acrB (BB0140) murE (BB0201) cheW oppAI/II/III (BB0327-329) proS (BB0402) nucA
+
+================================================================================
+Protein: VIMSS43680 (E-value: 1.3e-126, Score: 425.0)
+Mentioned as: BB0038
+Description: B. burgdorferi predicted coding region BB0038
+Organism: Borrelia burgdorferi B31
+PMID: 12011030
+Source: EuropePMC
+Title: DNA microarray assessment of putative Borrelia burgdorferi lipoprotein genes
+Journal: Infection and immunity (2002)
+Snippet: These genes were generally more conserved bb0003 bb0028 bb0038 bb0070 bb0071 bb0142 bb0155 bb0185 bb0213 bb0224 bb0227 bb0298 bb0309 bb0321 bb0324 bb0352 bb0365
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O51067.1	AF-O51067-F1-model_v4_TED01:71-203_211-259	1	AF-O51067-F1-model_v4_TED01	71-259	100.0%
+O51067.1	AF-O51067-F1-model_v4_TED02:263-393	1	AF-O51067-F1-model_v4_TED02	263-393	0
+O51067.1	AF-O51067-F1-model_v4_TED03:406-505	1	AF-O51067-F1-model_v4_TED03	406-505	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O51067_TED01
+GA   27.00 27.00;
+TC   27.20 27.30;
+NC   25.70 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

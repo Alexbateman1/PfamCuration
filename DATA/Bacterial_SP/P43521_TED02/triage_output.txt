@@ -1,0 +1,58 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thermus
+1	5	Thermaceae
+1	4	Thermales
+1	3	Deinococci
+1	2	Deinococcota
+1	1	Thermotogati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q5SLH1	YBBR FAMILY PROTEIN {ECO:0008    129.5    2.4e-34   1   4.0   5.9
+	P43521_TED02              	   193	   267	   129.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS500552 (E-value: 3.7e-38, Score: 135.1)
+Mentioned as: TTC1661
+Organism: Thermus thermophilus HB27
+PMID: 24948436
+Source: EuropePMC
+Title: Transposon mutagenesis of the extremely thermophilic bacterium Thermus thermophilus HB27
+Journal: Extremophiles : life under extreme conditions (2015)
+Snippet: TTC1547 3-isopropylmalate dehydratase large subunit 1 JC1044 TTC1604 parB ; chromosome partitioning protein 1 JC1041 TTC1661 hypothetical protein 1 JC1067 intergenic TTC1674-1675 between permease and uracil permease 1 JC1102 TTC1675 uracil permease 1 JC1080 TTC1682 hypothetical protein 1 JC1096 TTC1707 formate-tetrahydrofolate ligase 1 JC1070 TTC1711 6-carboxyhexanoate-CoA
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P43521.1	AF-P43521-F1-model_v4_TED01:4-72	1	AF-P43521-F1-model_v4_TED01	4-72	0
+P43521.1	AF-P43521-F1-model_v4_TED02:75-149	1	AF-P43521-F1-model_v4_TED02	75-149	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P43521_TED02
+GA   27.00 27.00;
+TC   28.10 129.50;
+NC   25.70 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

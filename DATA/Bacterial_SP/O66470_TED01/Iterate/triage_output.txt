@@ -1,0 +1,99 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y058_AQUAE              Reviewed;         116 AA.
+AC   O66470;
+DE   RecName: Full=Uncharacterized protein aq_058;
+GN   OrderedLocusNames=aq_058;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC06432.1; -; Genomic_DNA.
+DR   PIR; C70305; C70305.
+DR   RefSeq; NP_213030.1; NC_000918.1.
+DR   RefSeq; WP_010879968.1; NC_000918.1.
+DR   AlphaFoldDB; O66470; -.
+DR   SMR; O66470; -.
+DR   EnsemblBacteria; AAC06432; AAC06432; aq_058.
+DR   KEGG; aae:aq_058; -.
+DR   HOGENOM; CLU_2105634_0_0_0; -.
+DR   InParanoid; O66470; -.
+DR   OrthoDB; 14335at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..116
+FT                   /note="Uncharacterized protein aq_058"
+FT                   /id="PRO_0000186837"
+SQ   SEQUENCE   116 AA;  13773 MW;  BEEEBEBD74CC84E1 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Thermocrinis
+1	6	Hydrogenobacter
+1	6	Hydrogenivirga
+1	6	Aquifex
+5	5	Aquificaceae
+5	4	Aquificales
+5	3	Aquificia
+5	2	Aquificota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A497XRS0	UNCHARACTERIZED PROTEIN {    150.2    1.4e-40   1   1.0   3.6
+	Iterate                   	     3	   116	   150.0
+
+A0A6C1BYH5	UNCHARACTERIZED PROTEIN {    128.8    5.9e-34   1   1.0   3.9
+	Iterate                   	     3	   116	   128.7
+
+A8US25	UNCHARACTERIZED PROTEIN {ECO:    146.3    2.3e-39   1   1.0   4.0
+	Iterate                   	     3	   116	   146.1
+
+D3SMB4	UNCHARACTERIZED PROTEIN {ECO:    117.2    2.5e-30   1   1.0   4.2
+	Iterate                   	     3	   116	   117.1
+
+O66470	UNCHARACTERIZED PROTEIN AQ_058     250.6      1e-71   1   1.0   9.3
+	Iterate                   	     2	   115	   250.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1M6S874.1	AF-A0A1M6S874-F1-model_v4_TED01:2-117	1	AF-A0A1M6S874-F1-model_v4_TED01	2-117	100.0%
+A0A497XRS0.1	AF-A0A497XRS0-F1-model_v4_TED01:2-115	1	AF-A0A497XRS0-F1-model_v4_TED01	2-115	99.1%
+A0A6C1BYH5.1	AF-A0A6C1BYH5-F1-model_v4_TED01:2-116	1	AF-A0A6C1BYH5-F1-model_v4_TED01	2-116	100.0%
+D3DJ33.1	AF-D3DJ33-F1-model_v4_TED01:4-114	1	AF-D3DJ33-F1-model_v4_TED01	4-114	98.2%
+D3SMB4.1	AF-D3SMB4-F1-model_v4_TED01:2-116	1	AF-D3SMB4-F1-model_v4_TED01	2-116	100.0%
+O66470.1	AF-O66470-F1-model_v4_TED01:2-115	1	AF-O66470-F1-model_v4_TED01	2-115	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66470_TED01/Iterate
+GA   27.00 27.00;
+TC   27.30 184.80;
+NC   26.90 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

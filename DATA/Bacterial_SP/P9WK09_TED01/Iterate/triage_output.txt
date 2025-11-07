@@ -1,0 +1,422 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MYMT_MYCTO              Reviewed;          53 AA.
+AC   P9WK08; P0CI28; Q8VKQ2;
+DE   RecName: Full=Metallothionein;
+DE            Short=MT;
+DE   AltName: Full=Copper-binding metallothionein;
+DE            Short=Cu(I)-binding metallothionein;
+DE   AltName: Full=Mycobacterial metallothionein;
+DE   Flags: Precursor;
+GN   Name=mymT; OrderedLocusNames=MT0196;
+OS   Mycobacterium tuberculosis (strain CDC 1551 / Oshkosh).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex.
+OX   NCBI_TaxID=83331;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CDC 1551 / Oshkosh;
+RX   PubMed=12218036; DOI=10.1128/jb.184.19.5479-5490.2002;
+RA   Fleischmann R.D., Alland D., Eisen J.A., Carpenter L., White O.,
+RA   Peterson J.D., DeBoy R.T., Dodson R.J., Gwinn M.L., Haft D.H., Hickey E.K.,
+RA   Kolonay J.F., Nelson W.C., Umayam L.A., Ermolaeva M.D., Salzberg S.L.,
+RA   Delcher A., Utterback T.R., Weidman J.F., Khouri H.M., Gill J., Mikula A.,
+RA   Bishai W., Jacobs W.R. Jr., Venter J.C., Fraser C.M.;
+RT   "Whole-genome comparison of Mycobacterium tuberculosis clinical and
+RT   laboratory strains.";
+RL   J. Bacteriol. 184:5479-5490(2002).
+CC   -!- FUNCTION: Metallothioneins are small proteins that have a high content
+CC       of cysteine residues which allow them to bind heavy metal ions through
+CC       clusters of thiolate bonds. MymT binds up to seven ions of Cu(+), with
+CC       a preference for four to six Cu(+) ions, in a solvent-shielded core.
+CC       MymT protects M.tuberculosis from copper toxicity (By similarity).
+CC       {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the metallothionein superfamily. {ECO:0000305}.
+DR   EMBL; AE000516; AAK44416.1; -; Genomic_DNA.
+DR   RefSeq; WP_010886068.1; NZ_KK341227.1.
+DR   AlphaFoldDB; P9WK08; -.
+DR   GeneID; 45424157; -.
+DR   KEGG; mtc:MT0196; -.
+DR   PATRIC; fig|83331.31.peg.213; -.
+DR   HOGENOM; CLU_3137876_0_0_11; -.
+DR   Proteomes; UP000001020; Chromosome.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+PE   3: Inferred from homology;
+KW   Copper; Metal-binding; Metal-thiolate cluster; Reference proteome.
+FT   PROPEP          1..6
+FT                   /evidence="ECO:0000250"
+FT                   /id="PRO_0000427736"
+FT   CHAIN           7..53
+FT                   /note="Metallothionein"
+FT                   /id="PRO_0000427737"
+FT   BINDING         17
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         17
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         19
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         22
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         24
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         24
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="4"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         32
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         32
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="4"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         33
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="4"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         34
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         43
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         45
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         45
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   53 AA;  5719 MW;  B64C8B485F1668D7 CRC64;
+//
+ID   MYMT_MYCTU              Reviewed;          53 AA.
+AC   P9WK09; P0CI28; Q8VKQ2;
+DE   RecName: Full=Metallothionein;
+DE            Short=MT;
+DE   AltName: Full=Copper-binding metallothionein;
+DE            Short=Cu(I)-binding metallothionein;
+DE   AltName: Full=Mycobacterial metallothionein;
+DE   Flags: Precursor;
+GN   Name=mymT; OrderedLocusNames=Rv0186A;
+OS   Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex.
+OX   NCBI_TaxID=83332;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=9634230; DOI=10.1038/31159;
+RA   Cole S.T., Brosch R., Parkhill J., Garnier T., Churcher C.M., Harris D.E.,
+RA   Gordon S.V., Eiglmeier K., Gas S., Barry C.E. III, Tekaia F., Badcock K.,
+RA   Basham D., Brown D., Chillingworth T., Connor R., Davies R.M., Devlin K.,
+RA   Feltwell T., Gentles S., Hamlin N., Holroyd S., Hornsby T., Jagels K.,
+RA   Krogh A., McLean J., Moule S., Murphy L.D., Oliver S., Osborne J.,
+RA   Quail M.A., Rajandream M.A., Rogers J., Rutter S., Seeger K., Skelton S.,
+RA   Squares S., Squares R., Sulston J.E., Taylor K., Whitehead S.,
+RA   Barrell B.G.;
+RT   "Deciphering the biology of Mycobacterium tuberculosis from the complete
+RT   genome sequence.";
+RL   Nature 393:537-544(1998).
+RN   [2]
+RP   IDENTIFICATION, FUNCTION AS A COPPER-BINDING PROTEIN, CHARACTERIZATION,
+RP   MASS SPECTROMETRY, INDUCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=18724363; DOI=10.1038/nchembio.109;
+RA   Gold B., Deng H., Bryk R., Vargas D., Eliezer D., Roberts J., Jiang X.,
+RA   Nathan C.;
+RT   "Identification of a copper-binding metallothionein in pathogenic
+RT   mycobacteria.";
+RL   Nat. Chem. Biol. 4:609-616(2008).
+RN   [3]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=21969609; DOI=10.1074/mcp.m111.011445;
+RA   Kelkar D.S., Kumar D., Kumar P., Balakrishnan L., Muthusamy B., Yadav A.K.,
+RA   Shrivastava P., Marimuthu A., Anand S., Sundaram H., Kingsbury R.,
+RA   Harsha H.C., Nair B., Prasad T.S., Chauhan D.S., Katoch K., Katoch V.M.,
+RA   Kumar P., Chaerkady R., Ramachandran S., Dash D., Pandey A.;
+RT   "Proteogenomic analysis of Mycobacterium tuberculosis by high resolution
+RT   mass spectrometry.";
+RL   Mol. Cell. Proteomics 10:M111.011627-M111.011627(2011).
+RN   [4]
+RP   INDUCTION.
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=21166899; DOI=10.1111/j.1365-2958.2010.07431.x;
+RA   Festa R.A., Jones M.B., Butler-Wu S., Sinsimer D., Gerads R., Bishai W.R.,
+RA   Peterson S.N., Darwin K.H.;
+RT   "A novel copper-responsive regulon in Mycobacterium tuberculosis.";
+RL   Mol. Microbiol. 79:133-148(2011).
+RN   [5]
+RP   DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=24549843; DOI=10.1128/mbio.00876-13;
+RA   Shi X., Festa R.A., Ioerger T.R., Butler-Wu S., Sacchettini J.C.,
+RA   Darwin K.H., Samanovic M.I.;
+RT   "The copper-responsive RicR regulon contributes to Mycobacterium
+RT   tuberculosis virulence.";
+RL   MBio 5:E00876-E00876(2014).
+CC   -!- FUNCTION: Metallothioneins are small proteins that have a high content
+CC       of cysteine residues which allow them to bind heavy metal ions through
+CC       clusters of thiolate bonds. MymT binds up to seven ions of Cu(+), with
+CC       a preference for four to six Cu(+) ions, in a solvent-shielded core.
+CC       MymT protects M.tuberculosis from copper toxicity.
+CC       {ECO:0000269|PubMed:18724363}.
+CC   -!- INDUCTION: Up-regulated by copper, cadmium, cobalt, nickel and zinc,
+CC       but not manganese. Copper and cadmium salts afford the strongest metal-
+CC       dependent induction at about 1,000-fold. Also highly up-regulated under
+CC       conditions that are believed to be attained in phagosomes of
+CC       interferon-gamma-activated macrophages, including production of nitric
+CC       oxide and reactive oxygen intermediates, mild acid (pH 5.5), and cell
+CC       wall perturbation (PubMed:18724363). Repressed by RicR
+CC       (PubMed:21166899). {ECO:0000269|PubMed:18724363,
+CC       ECO:0000269|PubMed:21166899}.
+CC   -!- MASS SPECTROMETRY: Mass=4933.4; Method=MALDI;
+CC       Evidence={ECO:0000269|PubMed:18724363};
+CC   -!- DISRUPTION PHENOTYPE: Cells lacking this gene show hypersensitivity to
+CC       Cu(+) toxicity but not to divalent heavy metals such as Zn(2+).
+CC       Deficiency of MymT does not impair M.tuberculosis virulence in mice.
+CC       {ECO:0000269|PubMed:18724363, ECO:0000269|PubMed:24549843}.
+CC   -!- MISCELLANEOUS: NO and reactive nitrogen intermediates (RNI) can
+CC       displace Cu(+) from MymT.
+CC   -!- SIMILARITY: Belongs to the metallothionein superfamily. {ECO:0000305}.
+CC   -!- CAUTION: It is uncertain whether Met-1 or Met-6 is the initiator. If
+CC       Met-1 is the initiator, MymT would undergo a first cleavage after Arg-5
+CC       followed by processing of the N-terminal methionine. {ECO:0000305}.
+DR   EMBL; AL123456; CCP42913.1; -; Genomic_DNA.
+DR   RefSeq; WP_010886068.1; NZ_NVQJ01000001.1.
+DR   RefSeq; YP_004837046.2; NC_000962.3.
+DR   AlphaFoldDB; P9WK09; -.
+DR   STRING; 83332.Rv0186A; -.
+DR   PaxDb; 83332-Rv0186A; -.
+DR   GeneID; 14515880; -.
+DR   GeneID; 45424157; -.
+DR   KEGG; mtu:Rv0186A; -.
+DR   KEGG; mtv:RVBD_0186Ac; -.
+DR   PATRIC; fig|83332.111.peg.214; -.
+DR   TubercuList; Rv0186A; -.
+DR   eggNOG; ENOG5031TF4; Bacteria.
+DR   InParanoid; P9WK09; -.
+DR   OrthoDB; 4630104at2; -.
+DR   Proteomes; UP000001584; Chromosome.
+DR   GO; GO:0005507; F:copper ion binding; IDA:MTBBASE.
+DR   GO; GO:0008270; F:zinc ion binding; IDA:MTBBASE.
+DR   GO; GO:0046686; P:response to cadmium ion; IEP:MTBBASE.
+DR   GO; GO:0032025; P:response to cobalt ion; IEP:MTBBASE.
+DR   GO; GO:0046688; P:response to copper ion; IDA:MTBBASE.
+DR   GO; GO:0010045; P:response to nickel cation; IEP:MTBBASE.
+DR   GO; GO:0010043; P:response to zinc ion; IEP:MTBBASE.
+PE   1: Evidence at protein level;
+KW   Copper; Metal-binding; Metal-thiolate cluster; Reference proteome.
+FT   PROPEP          1..6
+FT                   /evidence="ECO:0000305"
+FT                   /id="PRO_0000401202"
+FT   CHAIN           7..53
+FT                   /note="Metallothionein"
+FT                   /id="PRO_0000401203"
+FT   BINDING         17
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         17
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         19
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         22
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         24
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         24
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="4"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         32
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         32
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="4"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         33
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="4"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         34
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         43
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         45
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         45
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   53 AA;  5719 MW;  B64C8B485F1668D7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	7	Mycobacterium tuberculosis complex.
+3	7	Mycobacterium simiae complex.
+7	6	Mycobacterium
+6	6	Mycobacterium.
+3	6	Mycolicibacterium.
+17	5	Mycobacteriaceae
+17	4	Mycobacteriales
+17	3	Actinomycetes
+18	2	Actinomycetota
+18	1	Bacillati
+18	0	Bacteria
+Total of 18 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A679LAQ3	METALLOTHIONEIN, MYMT {EC    142.5    1.4e-38   1   1.0  10.4
+	Iterate                   	     1	    53	   142.4
+
+A0A975JVL4	METALLOTHIONEIN MYMT {ECO    120.4    1.1e-31   1   1.0  10.3
+	Iterate                   	     1	    53	   120.3
+
+D5PAQ3	METALLOTHIONEIN {ECO:0008006|    107.1    1.6e-27   1   1.0  11.0
+	Iterate                   	     1	    48	   106.9
+
+P9WK08	METALLOTHIONEIN                    142.5    1.4e-38   1   1.0  10.4
+	Iterate                   	     1	    53	   142.4
+
+P9WK09	METALLOTHIONEIN                    142.5    1.4e-38   1   1.0  10.4
+	Iterate                   	     1	    53	   142.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS108028 (E-value: 1.2e-40, Score: 142.5)
+Mentioned as: MT0196
+Description: hypothetical protein
+Organism: Mycobacterium tuberculosis CDC1551
+PMID: 34721344
+Source: EuropePMC
+Title: Transcriptional Response of <i>Mycobacterium tuberculosis</i> to Cigarette Smoke Condensate
+Journal: Frontiers in microbiology (2021)
+Snippet: al., 2017 4.23 9.31E-45 MT0148 Rv0140 Mtb reactivation-associated proteins Wayne and Hayes, 1996 2.43 1.12E-02 MT0196 MT0196 MymT Copper-binding metallothionein Gold et al., 2008 2.38 4.49E-30 MT0365 * Rv0350 dnaK Important for stress-responsive regulator heat shock protein R (HspR) function Bandyopadhyay et al., 2012 1.13 5.80E-06
+
+================================================================================
+Protein: VIMSS108028 (E-value: 1.2e-40, Score: 142.5)
+Mentioned as: MT0196
+Description: hypothetical protein
+Organism: Mycobacterium tuberculosis CDC1551
+PMID: 32962054
+Source: EuropePMC
+Title: Cu Homeostasis in Bacteria: The Ins and Outs
+Journal: Membranes (2020)
+Snippet: screening of a genomic library from Mycobacterium tuberculosis identified a small, non-annotated open reading frame (MT0196) that encodes a 4.9-kDa cysteine-rich protein that was later termed MymT. Up-regulation of MymT is required for Cu resistance in M. tuberculosis and the protein is predicted to bind up
+
+================================================================================
+Protein: VIMSS108028 (E-value: 1.2e-40, Score: 142.5)
+Mentioned as: MT0196
+Description: hypothetical protein
+Organism: Mycobacterium tuberculosis CDC1551
+PMID: 23479444
+Source: EuropePMC
+Title: The pup-proteasome system of Mycobacterium tuberculosis
+Journal: Sub-cellular biochemistry (2013)
+Snippet: 2.17 MT2428 Rv2359 zur Zinc uptake regulator (formally furB ) 0.54 0.94 RicR regulon e MT0196 Rv0186a mymT Metallothionein 0.71 0.47 MT0200 Rv0190 ricR Regulated in copper repressor n.i. n.i. MT0870 Rv0847 lpqS Probable lipoprotein. Unknown function 0.52 0.33 socA small ORF. Unknown function n.i. n.i.
+
+================================================================================
+Protein: VIMSS537562 (E-value: 1.4e-28, Score: 103.8)
+Mentioned as: MAP3626c
+Description: hypothetical protein
+Organism: Mycobacterium avium subsp. paratuberculosis str. k10
+PMID: 25481572
+Source: EuropePMC
+Title: Identification of a lineage specific zinc responsive genomic island in Mycobacterium avium ssp. paratuberculosis
+Journal: BMC genomics (2014)
+Snippet: binding component P - MAP3632 Rv0190 (89.6) MAV_4988 (100) <0.0001 5.23 unknown function S - MAP3626c - MAV_4993 (100) <0.0001 29.25 metallothionein - - MAP3492 Rv3401 (86.0) MAV_4352 (99.7) <0.0001 10.27 putative glycosyl hydrolase G - MAP3491 Rv3400 (77.3) MAV_4350 (98.9) <0.0001 22.04 hypothetical protein, beta-phosphoglucomutase
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P9WK09.1	AF-P9WK09-F1-model_v4_TED01:1-53	1	AF-P9WK09-F1-model_v4_TED01	1-53	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P9WK09_TED01/Iterate
+GA   27.00 27.00;
+TC   27.50 39.30;
+NC   26.30 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for P9WK09
+RN   [1]
+RM   18724363
+RT   "Identification of a copper-binding metallothionein in pathogenic
+RT   mycobacteria.";
+RA   Gold B., Deng H., Bryk R., Vargas D., Eliezer D., Roberts J., Jiang X.,
+RA   Nathan C.;
+RL   Nat. Chem. Biol. 4:609-616(2008).
+
+--- End of Current DESC file ---

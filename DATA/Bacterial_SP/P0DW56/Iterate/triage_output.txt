@@ -1,0 +1,166 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   SPFP_ECOLI              Reviewed;          15 AA.
+AC   P0DW56;
+DE   RecName: Full=Small protein SpfP {ECO:0000303|PubMed:35239441};
+GN   Name=spfP {ECO:0000303|PubMed:35239441}; OrderedLocusNames=b4837;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION, FUNCTION, INTERACTION WITH CRP, INDUCTION, DISRUPTION
+RP   PHENOTYPE, AND MUTAGENESIS OF PHE-2; TYR-3; SER-5; LEU-8; HIS-10 AND
+RP   PHE-14.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=35239441; DOI=10.1073/pnas.2119866119;
+RA   Aoyama J.J., Raina M., Zhong A., Storz G.;
+RT   "Dual-function Spot 42 RNA encodes a 15-amino acid protein that regulates
+RT   the CRP transcription factor.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 119:e2119866119-e2119866119(2022).
+CC   -!- FUNCTION: Plays a role in carbon catabolite repression (CCR), which
+CC       prevents expression of genes involved in catabolism of nonpreferred
+CC       carbon sources when glucose is present. Encoded in dual-function Spot
+CC       42 sRNA (spf gene), it inhibits CRP-mediated gene activation when cells
+CC       are grown in glucose, especially at higher than 30 degrees Celsius
+CC       (when Spot 42 sRNA base pairing may be less efficient). Overexpression
+CC       of this protein leads to decreased cell growth on non-glucose carbon
+CC       sources, with particularly poor growth on galactose. Its overexpression
+CC       blocks expression of some but not all CRP-dependent operons when grown
+CC       on the appropriate sugar (blocks galactose- and maltose- but not
+CC       sorbitol-specific operons), decreases the ability of CRP to activate
+CC       transcription from the galE P1 promoter. Overexpression has no effect
+CC       on CRP levels. The base-pairing activity of Spot 42 and the protein-
+CC       coding activity of SpfP can be genetically separated.
+CC       {ECO:0000269|PubMed:35239441}.
+CC   -!- SUBUNIT: Interacts with DNA-binding transcriptional dual regulator CRP.
+CC       {ECO:0000269|PubMed:35239441}.
+CC   -!- INDUCTION: Higher expression after 5 minutes at 42 and 45 compared to
+CC       30 degrees Celsius; at 10 minutes the protein levels are similar at all
+CC       temperatures (at protein level). {ECO:0000269|PubMed:35239441}.
+CC   -!- DISRUPTION PHENOTYPE: Cells no longer have growth defect on galactose
+CC       (upon overexpression). {ECO:0000269|PubMed:35239441}.
+CC   -!- MISCELLANEOUS: Encoded within the Spot 42 sRNA (gene spf, a dual-
+CC       function sRNA) which acts both as an sRNA and mRNA.
+CC       {ECO:0000269|PubMed:35239441}.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0061980; F:regulatory RNA binding; IDA:EcoCyc.
+DR   GO; GO:0043610; P:regulation of carbohydrate utilization; IMP:EcoCyc.
+PE   1: Evidence at protein level;
+KW   Reference proteome; Transcription; Transcription regulation.
+FT   CHAIN           1..15
+FT                   /note="Small protein SpfP"
+FT                   /id="PRO_0000457622"
+FT   MUTAGEN         2
+FT                   /note="F->A: Increases severity of growth defect on
+FT                   galactose upon overexpression."
+FT                   /evidence="ECO:0000269|PubMed:35239441"
+FT   MUTAGEN         3
+FT                   /note="Y->A: Partly relieves growth defect on galactose
+FT                   upon overexpression."
+FT                   /evidence="ECO:0000269|PubMed:35239441"
+FT   MUTAGEN         5
+FT                   /note="S->A: Increases severity of growth defect on
+FT                   galactose upon overexpression."
+FT                   /evidence="ECO:0000269|PubMed:35239441"
+FT   MUTAGEN         8
+FT                   /note="L->A: Partly relieves growth defect on galactose
+FT                   upon overexpression."
+FT                   /evidence="ECO:0000269|PubMed:35239441"
+FT   MUTAGEN         10
+FT                   /note="H->A: No growth defect on galactose upon
+FT                   overexpression, no effect on galactose- or maltose-specific
+FT                   operon expression."
+FT                   /evidence="ECO:0000269|PubMed:35239441"
+FT   MUTAGEN         14
+FT                   /note="F->A: Partly relieves growth defect on galactose
+FT                   upon overexpression."
+FT                   /evidence="ECO:0000269|PubMed:35239441"
+SQ   SEQUENCE   15 AA;  1725 MW;  5A51DAF170EA661E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Salmonella.
+1	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A3S0ZVT2	UNCHARACTERIZED PROTEIN {     33.1    0.00012   6   6.9  35.0
+	Iterate                   	     7	    21	     9.6
+	Iterate                   	    52	    66	     9.6
+	Iterate                   	    82	    96	     9.6
+	Iterate                   	    22	    36	     9.2
+	Iterate                   	    37	    51	     9.2
+	Iterate                   	    67	    81	     9.2
+
+A0A8C5MHZ5	SYNAPSIN ATP-BINDING DOMA     40.2    5.5e-07   9  11.2   6.9
+	Iterate                   	    97	   110	     4.0
+	Iterate                   	   146	   159	     4.0
+	Iterate                   	   195	   208	     4.0
+	Iterate                   	   244	   257	     4.0
+	Iterate                   	   293	   306	     4.0
+	Iterate                   	   390	   403	     4.0
+	Iterate                   	   342	   355	     1.5
+	Iterate                   	   439	   452	     1.5
+	Iterate                   	   568	   581	     1.5
+	PF02750	Synapsin_C      	     1	    59	      74
+
+A0A8X6KIU6	UNCHARACTERIZED PROTEIN {     22.6       0.35   2   3.0   5.6
+	Iterate                   	    37	    51	    17.5
+	Iterate                   	    85	   100	     6.5
+
+P0DW56	SMALL PROTEIN SPFP {ECO:0000303     38.2    2.5e-06   1   1.0   3.3
+	Iterate                   	     1	    15	    38.2
+
+Q7CPD2	SPOT 42 RNA, INHIBITION OF DN     38.2    2.5e-06   1   1.0   3.3
+	Iterate                   	     1	    15	    38.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DW56/Iterate
+GA   27.00 27.00;
+TC   33.10 38.20;
+NC   22.60 17.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RC   Function description for P0DW56
+RN   [1]
+RM   35239441
+RT   "Dual-function Spot 42 RNA encodes a 15-amino acid protein that regulates
+RT   the CRP transcription factor.";
+RA   Aoyama J.J., Raina M., Zhong A., Storz G.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 119:e2119866119-e2119866119(2022).
+
+--- End of Current DESC file ---

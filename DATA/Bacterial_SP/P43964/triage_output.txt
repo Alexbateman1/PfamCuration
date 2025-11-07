@@ -1,0 +1,80 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y210_HAEIN              Reviewed;          35 AA.
+AC   P43964;
+DE   RecName: Full=Uncharacterized protein HI_0210;
+GN   OrderedLocusNames=HI_0210;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+DR   EMBL; L42023; AAC21885.1; -; Genomic_DNA.
+DR   PIR; I64003; I64003.
+DR   AlphaFoldDB; P43964; -.
+DR   SMR; P43964; -.
+DR   EnsemblBacteria; AAC21885; AAC21885; HI_0210.
+DR   KEGG; hin:HI_0210; -.
+DR   HOGENOM; CLU_3365245_0_0_6; -.
+DR   Proteomes; UP000000579; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..35
+FT                   /note="Uncharacterized protein HI_0210"
+FT                   /id="PRO_0000077896"
+SQ   SEQUENCE   35 AA;  4448 MW;  3D4B3E86D9462393 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Haemophilus.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P43964	UNCHARACTERIZED PROTEIN HI_0210    101.5    6.6e-26   1   1.0   7.4
+	P43964                    	     1	    35	   101.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P43964
+GA   27.00 27.00;
+TC   29.20 101.40;
+NC   26.50 18.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

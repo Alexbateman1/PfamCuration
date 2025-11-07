@@ -1,0 +1,207 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YJGL_ECOLI              Reviewed;         604 AA.
+AC   P39336; Q2M656;
+DE   RecName: Full=Uncharacterized protein YjgL;
+GN   Name=yjgL; OrderedLocusNames=b4253, JW5757;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=7610040; DOI=10.1093/nar/23.12.2105;
+RA   Burland V.D., Plunkett G. III, Sofia H.J., Daniels D.L., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome VI: DNA sequence of the region
+RT   from 92.8 through 100 minutes.";
+RL   Nucleic Acids Res. 23:2105-2119(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- INTERACTION:
+CC       P39336; P00956: ileS; NbExp=3; IntAct=EBI-549937, EBI-552928;
+CC       P39336; P0ADZ0: rplW; NbExp=2; IntAct=EBI-549937, EBI-542264;
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA97149.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U14003; AAA97149.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; U00096; AAC77210.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE78250.1; -; Genomic_DNA.
+DR   PIR; S56478; S56478.
+DR   RefSeq; NP_418674.2; NC_000913.3.
+DR   RefSeq; WP_000036434.1; NZ_JACEFS010000014.1.
+DR   AlphaFoldDB; P39336; -.
+DR   BioGRID; 4261802; 40.
+DR   BioGRID; 853063; 5.
+DR   DIP; DIP-12607N; -.
+DR   FunCoup; P39336; 33.
+DR   IntAct; P39336; 8.
+DR   STRING; 511145.b4253; -.
+DR   jPOST; P39336; -.
+DR   PaxDb; 511145-b4253; -.
+DR   EnsemblBacteria; AAC77210; AAC77210; b4253.
+DR   GeneID; 948776; -.
+DR   KEGG; ecj:JW5757; -.
+DR   KEGG; eco:b4253; -.
+DR   KEGG; ecoc:C3026_22945; -.
+DR   PATRIC; fig|511145.12.peg.4383; -.
+DR   EchoBASE; EB2421; -.
+DR   eggNOG; ENOG5031KKI; Bacteria.
+DR   HOGENOM; CLU_027787_1_0_6; -.
+DR   InParanoid; P39336; -.
+DR   OMA; IMNFVMN; -.
+DR   OrthoDB; 9987340at2; -.
+DR   BioCyc; EcoCyc:G7884-MONOMER; -.
+DR   PRO; PR:P39336; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   Gene3D; 1.25.40.300; Putative secreted effector protein; 1.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..604
+FT                   /note="Uncharacterized protein YjgL"
+FT                   /id="PRO_0000169767"
+FT   REGION          239..259
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   604 AA;  69578 MW;  7D4BD8F656E03250 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+3	5	Enterobacteriaceae
+3	4	Enterobacterales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3JIU0	SOPA-CENTRAL-DOMAIN-LIKE     280.2    1.8e-80   1   1.6   0.2
+	Iterate                   	    24	   186	   279.1
+
+A0A508TLM3	SERINE-ASPARTATE REPEAT-C     46.5    1.4e-08   6   6.5   3.8
+	Iterate                   	   361	   412	     7.7
+	Iterate                   	   241	   289	     7.4
+	Iterate                   	   489	   536	     7.0
+	Iterate                   	   608	   655	     7.0
+	Iterate                   	     3	    45	     6.9
+	Iterate                   	   120	   167	     4.3
+	PF17210	SdrD_B          	    40	   155	    32.3
+	PF17802	SpaA            	    54	   152	      30
+	PF17210	SdrD_B          	   160	   275	    32.3
+	PF17802	SpaA            	   176	   272	    29.8
+	PF17210	SdrD_B          	   282	   400	      30
+	PF17802	SpaA            	   298	   394	    28.5
+	PF17210	SdrD_B          	   404	   521	    30.4
+	PF17802	SpaA            	   420	   516	    28.6
+	PF17210	SdrD_B          	   526	   642	    32.7
+	PF17802	SpaA            	   541	   638	    29.6
+	PF17802	SpaA            	   663	   763	    28.2
+	PF17210	SdrD_B          	   678	   767	    31.1
+	PF17802	SpaA            	   793	   873	    24.4
+
+A0A8S3S6I9	UNCHARACTERIZED PROTEIN {     36.5    1.7e-05   5   4.7   1.0
+	Iterate                   	    11	    78	     9.8
+	Iterate                   	    87	   127	     7.5
+	Iterate                   	    49	    92	     7.4
+	Iterate                   	   121	   159	     7.2
+	Iterate                   	     2	    38	     6.6
+
+B7MLQ8	DNA-BINDING PROTEIN {ECO:0008    294.9    5.6e-85   1   1.7   1.2
+	Iterate                   	    24	   186	   294.4
+
+P39336	UNCHARACTERIZED PROTEIN YJGL       306.6    1.4e-88   1   1.7   0.2
+	Iterate                   	    24	   186	   305.3
+	PF13981	SopA            	   341	   399	      31
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS18278 (E-value: 1.4e-113, Score: 381.3)
+Mentioned as: b4253
+Description: orf, hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 18799480
+Source: EuropePMC
+Title: Detecting horizontally transferred and essential genes based on dinucleotide relative abundance
+Journal: DNA research : an international journal for rapid publication of reports on genes and genomes (2008)
+Snippet: from sequence start, which overlaps (by >300 bp each) two genes, yjgK (b4252) and yjgL (b4253), which encode hypothetical proteins. Classified as a conserved protein in EcoCyc, yjgK has homologs in S . enterica ( E < 10 65 ) and proteobacteria outside the gamma subdivision
+
+================================================================================
+Protein: VIMSS18278 (E-value: 1.4e-113, Score: 381.3)
+Mentioned as: b4253
+Description: orf, hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 16352847
+Source: EuropePMC
+Title: Autoinducer 2 controls biofilm formation in Escherichia coli through a novel motility quorum-sensing regulator (MqsR, B3022)
+Journal: Journal of bacteriology (2006)
+Snippet: b1453 b4105 yeeR b2001 yeeL_2 creD yjgL flhC b1979 b4400 b4253 b1891 yieJ ydeV ais yraI ytfK ycgW yciE yidS ybbY yciF yahO yjcH ydcV b3717 b1511 b2252 b3143
+
+================================================================================
+Protein: VIMSS18278 (E-value: 1.4e-113, Score: 381.3)
+Mentioned as: b4253
+Description: orf, hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 11133948
+Source: EuropePMC
+Title: High-density microarray-mediated gene expression profiling of Escherichia coli
+Journal: Journal of bacteriology (2001)
+Snippet: b2266 rplM (TA) rpsS (TA) nlpD acpP rpmI (TA) rpoS (SS) rpoA hns b4253 rplB (TA) b1452 b0817 b1003 160 99 83 65 63 59 59 53 49 49 44 44 40 39 37 36 36 35 33
+
+================================================================================
+Protein: VIMSS76678 (E-value: 2.9e-97, Score: 328.2)
+Mentioned as: Z5865
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 20350374
+Source: EuropePMC
+Title: Phylogenetic analysis of enterohemorrhagic Escherichia coli O157, Germany, 1987-2008
+Journal: Emerging infectious diseases (2010)
+Snippet: 6 + (Z0268) 3 23 22 + 2.0 0.86 98.0 34 Vhec2, TR6 18 + (Z5865) 4 12 8 0.66 100.0 9 Vhec4, TR1 6 + (Z3935/Z3936) 6 23 15 + 31.7 0.90 68.3 25 TR4 6 2 15 6 0.74 100.0 17 TR3 6 +
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P39336.2	AF-P39336-F1-model_v4_TED02:164-201_271-358	1	AF-P39336-F1-model_v4_TED02	164-358	14.1%
+P39336.2	AF-P39336-F1-model_v4_TED01:39-161	1	AF-P39336-F1-model_v4_TED01	39-161	75.5%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A4P7TQN2_TED01/Iterate
+GA   27.00 27.00;
+TC   32.60 316.60;
+NC   25.90 19.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

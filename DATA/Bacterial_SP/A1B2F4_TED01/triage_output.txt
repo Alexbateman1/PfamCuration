@@ -1,0 +1,885 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   AZTD_PARDP              Reviewed;         408 AA.
+AC   A1B2F4;
+DE   RecName: Full=Zinc chaperone AztD {ECO:0000303|PubMed:26468286};
+DE   Flags: Precursor;
+GN   Name=aztD {ECO:0000303|PubMed:26468286};
+GN   OrderedLocusNames=Pden_1598 {ECO:0000312|EMBL:ABL69698.1};
+OS   Paracoccus denitrificans (strain Pd 1222).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rhodobacterales; Paracoccaceae; Paracoccus.
+OX   NCBI_TaxID=318586 {ECO:0000312|Proteomes:UP000000361};
+RN   [1] {ECO:0000312|Proteomes:UP000000361}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pd 1222 {ECO:0000312|Proteomes:UP000000361};
+RA   Copeland A., Lucas S., Lapidus A., Barry K., Detter J.C.,
+RA   Glavina del Rio T., Hammon N., Israni S., Dalin E., Tice H., Pitluck S.,
+RA   Munk A.C., Brettin T., Bruce D., Han C., Tapia R., Gilna P., Schmutz J.,
+RA   Larimer F., Land M., Hauser L., Kyrpides N., Lykidis A., Spiro S.,
+RA   Richardson D.J., Moir J.W.B., Ferguson S.J., van Spanning R.J.M.,
+RA   Richardson P.;
+RT   "Complete sequence of chromosome 1 of Paracoccus denitrificans PD1222.";
+RL   Submitted (DEC-2006) to the EMBL/GenBank/DDBJ databases.
+RN   [2] {ECO:0000305}
+RP   FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, AND INDUCTION.
+RX   PubMed=26468286; DOI=10.1074/jbc.m115.684506;
+RA   Handali M., Roychowdhury H., Neupane D.P., Yukl E.T.;
+RT   "AztD, a Periplasmic Zinc Metallochaperone to an ATP-binding Cassette (ABC)
+RT   Transporter System in Paracoccus denitrificans.";
+RL   J. Biol. Chem. 290:29984-29992(2015).
+RN   [3] {ECO:0000305}
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RX   PubMed=30353723; DOI=10.1021/acs.biochem.8b00854;
+RA   Neupane D.P., Kumar S., Yukl E.T.;
+RT   "Two ABC Transporters and a Periplasmic Metallochaperone Participate in
+RT   Zinc Acquisition in Paracoccus denitrificans.";
+RL   Biochemistry 58:126-136(2019).
+RN   [4] {ECO:0000305}
+RP   FUNCTION, AND MUTAGENESIS OF 23-ASP--GLU-29.
+RX   PubMed=32781785; DOI=10.3390/biom10081156;
+RA   Meni A., Yukl E.T.;
+RT   "Structural Features Mediating Zinc Binding and Transfer in the AztABCD
+RT   Zinc Transporter System.";
+RL   Biomolecules 10:E1156-E1156(2020).
+RN   [5] {ECO:0007744|PDB:6CK1}
+RP   X-RAY CRYSTALLOGRAPHY (2.15 ANGSTROMS) IN COMPLEX WITH ZINC, FUNCTION,
+RP   SUBUNIT, SUBCELLULAR LOCATION, DISULFIDE BOND, AND MUTAGENESIS OF HIS-99;
+RP   HIS-102; ASP-104; HIS-124; HIS-167; HIS-218 AND HIS-408.
+RX   PubMed=31428696; DOI=10.1038/s42003-019-0542-z;
+RA   Neupane D.P., Fullam S.H., Chacon K.N., Yukl E.T.;
+RT   "Crystal structures of AztD provide mechanistic insights into direct zinc
+RT   transfer between proteins.";
+RL   Commun. Biol. 2:308-308(2019).
+CC   -!- FUNCTION: Acts as a zinc chaperone in the AztABCD zinc transport system
+CC       (PubMed:26468286, PubMed:30353723, PubMed:31428696, PubMed:32781785).
+CC       Directly transfers one zinc cation to the solute binding protein AztC;
+CC       the transfer occurs without the formation of a stable interaction
+CC       (PubMed:26468286, PubMed:31428696, PubMed:32781785). Binds 3 Zn(2+),
+CC       two with high affinity and one with low affinity, and transfers only
+CC       Zn(2+) bound to site 2 to AztC (PubMed:26468286, PubMed:31428696).
+CC       Likely functions to store zinc in the periplasm and may be important
+CC       for zinc accumulation in zinc-limited environments (PubMed:32781785).
+CC       {ECO:0000269|PubMed:26468286, ECO:0000269|PubMed:30353723,
+CC       ECO:0000269|PubMed:31428696, ECO:0000269|PubMed:32781785}.
+CC   -!- SUBUNIT: Monomer. {ECO:0000269|PubMed:26468286,
+CC       ECO:0000269|PubMed:31428696}.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000269|PubMed:26468286,
+CC       ECO:0000269|PubMed:31428696}.
+CC   -!- INDUCTION: Up-regulated upon zinc starvation.
+CC       {ECO:0000269|PubMed:26468286}.
+CC   -!- DISRUPTION PHENOTYPE: No effect on growth and no effect on zinc
+CC       cellular level in zinc repleted media (PubMed:30353723). In zinc
+CC       limited media, growth is reduced in a znuA mutant background and also
+CC       in an aztC mutant background (PubMed:30353723). In zinc depleted media,
+CC       zinc cellular levels are reduced and levels are further reduced in a
+CC       znuA mutant background, an aztC mutant background or a znuA and aztC
+CC       mutant background (PubMed:30353723). {ECO:0000269|PubMed:30353723}.
+DR   EMBL; CP000489; ABL69698.1; -; Genomic_DNA.
+DR   RefSeq; WP_011747897.1; NC_008686.1.
+DR   PDB; 6CK1; X-ray; 2.15 A; A/B/C/D=1-408.
+DR   PDBsum; 6CK1; -.
+DR   AlphaFoldDB; A1B2F4; -.
+DR   SMR; A1B2F4; -.
+DR   STRING; 318586.Pden_1598; -.
+DR   TCDB; 3.A.1.15.19; the atp-binding cassette (abc) superfamily.
+DR   EnsemblBacteria; ABL69698; ABL69698; Pden_1598.
+DR   GeneID; 93449991; -.
+DR   KEGG; pde:Pden_1598; -.
+DR   eggNOG; COG3391; Bacteria.
+DR   HOGENOM; CLU_046994_1_0_5; -.
+DR   OrthoDB; 9810636at2; -.
+DR   Proteomes; UP000000361; Chromosome 1.
+DR   GO; GO:0042597; C:periplasmic space; IDA:UniProtKB.
+DR   GO; GO:0140827; F:zinc chaperone activity; IDA:UniProtKB.
+DR   GO; GO:0008270; F:zinc ion binding; IDA:UniProtKB.
+DR   InterPro; IPR047697; AztD-like.
+DR   InterPro; IPR011044; Quino_amine_DH_bsu.
+DR   NCBIfam; NF038015; AztD; 1.
+DR   SUPFAM; SSF50969; YVTN repeat-like/Quinoprotein amine dehydrogenase; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Chaperone; Disulfide bond; Metal-binding; Periplasm;
+KW   Reference proteome; Signal; Transport; Zinc.
+FT   SIGNAL          1..21
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           22..408
+FT                   /note="Zinc chaperone AztD"
+FT                   /evidence="ECO:0000255"
+FT                   /id="PRO_5002632552"
+FT   MOTIF           23..29
+FT                   /note="N-terminal Zn(2+)-binding motif; binds a third
+FT                   Zn(2+) with low affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0000269|PubMed:32781785"
+FT   BINDING         99
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CK1"
+FT   BINDING         102
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CK1"
+FT   BINDING         104
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CK1"
+FT   BINDING         124
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CK1"
+FT   BINDING         167
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CK1"
+FT   BINDING         218
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CK1"
+FT   BINDING         408
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CK1"
+FT   DISULFID        214..231
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CK1"
+FT   MUTAGEN         23..29
+FT                   /note="Missing: No effect on zinc transfer to AztC. Zinc
+FT                   binding affinity is slightly reduced with a loss of the
+FT                   third binding site and an apparent loss of negative
+FT                   cooperativity."
+FT                   /evidence="ECO:0000269|PubMed:32781785"
+FT   MUTAGEN         99
+FT                   /note="H->A: Loss of zinc binding to site 2 and loss of
+FT                   zinc transfer to AztC; when associated with A-102, A-104
+FT                   and A-408."
+FT                   /evidence="ECO:0000269|PubMed:31428696"
+FT   MUTAGEN         102
+FT                   /note="H->A: Loss of zinc binding to site 2 and loss of
+FT                   zinc transfer to AztC; when associated with A-99, A-104 and
+FT                   A-408."
+FT                   /evidence="ECO:0000269|PubMed:31428696"
+FT   MUTAGEN         104
+FT                   /note="D->A: Loss of zinc binding to site 2 and loss of
+FT                   zinc transfer to AztC; when associated with A-99, A-102 and
+FT                   A-408."
+FT                   /evidence="ECO:0000269|PubMed:31428696"
+FT   MUTAGEN         124
+FT                   /note="H->A: Loss of zinc binding to site 1 and no effect
+FT                   on zinc transfer to AztC; when associated with A-167 and
+FT                   A-218."
+FT                   /evidence="ECO:0000269|PubMed:31428696"
+FT   MUTAGEN         167
+FT                   /note="H->A: Loss of zinc binding to site 1 and no effect
+FT                   on zinc transfer to AztC; when associated with A-124 and
+FT                   A-218."
+FT                   /evidence="ECO:0000269|PubMed:31428696"
+FT   MUTAGEN         218
+FT                   /note="H->A: Loss of zinc binding to site 1 and no effect
+FT                   on zinc transfer to AztC; when associated with A-124 and
+FT                   A-167."
+FT                   /evidence="ECO:0000269|PubMed:31428696"
+FT   MUTAGEN         408
+FT                   /note="H->A: Loss of zinc binding to site 2 and loss of
+FT                   zinc transfer to AztC; when associated with A-99, A-102 and
+FT                   A-104."
+FT                   /evidence="ECO:0000269|PubMed:31428696"
+FT   STRAND          32..52
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          56..61
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          67..71
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   HELIX           72..74
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          76..81
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   TURN            82..85
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          86..91
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          94..97
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          104..107
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          122..128
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          131..136
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   TURN            137..139
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          140..146
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   HELIX           147..151
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          158..161
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          170..173
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          176..182
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          195..201
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          218..223
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          226..230
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          232..241
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          244..251
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          265..267
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          269..272
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          274..277
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          282..286
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          288..291
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          294..298
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          303..308
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          315..320
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          323..329
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   TURN            330..333
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          334..340
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          358..361
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          364..369
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   TURN            370..373
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          374..379
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   TURN            380..382
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          385..390
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+FT   STRAND          395..404
+FT                   /evidence="ECO:0007829|PDB:6CK1"
+SQ   SEQUENCE   408 AA;  43173 MW;  A9241E5088841AE0 CRC64;
+//
+ID   AZTD_CITK8              Reviewed;         421 AA.
+AC   A8AF35;
+DE   RecName: Full=Zinc chaperone AztD {ECO:0000250|UniProtKB:A1B2F4};
+DE   Flags: Precursor;
+GN   Name=aztD {ECO:0000303|PubMed:31428696};
+GN   OrderedLocusNames=CKO_00948 {ECO:0000312|EMBL:ABV12098.1};
+OS   Citrobacter koseri (strain ATCC BAA-895 / CDC 4225-83 / SGSC4696).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Citrobacter.
+OX   NCBI_TaxID=290338 {ECO:0000312|Proteomes:UP000008148};
+RN   [1] {ECO:0000312|Proteomes:UP000008148}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-895 / CDC 4225-83 / SGSC4696
+RC   {ECO:0000312|Proteomes:UP000008148};
+RG   The Citrobacter koseri Genome Sequencing Project;
+RA   McClelland M., Sanderson E.K., Porwollik S., Spieth J., Clifton W.S.,
+RA   Latreille P., Courtney L., Wang C., Pepin K., Bhonagiri V., Nash W.,
+RA   Johnson M., Thiruvilangam P., Wilson R.;
+RL   Submitted (AUG-2007) to the EMBL/GenBank/DDBJ databases.
+RN   [2] {ECO:0007744|PDB:6CMK, ECO:0007744|PDB:6N01}
+RP   X-RAY CRYSTALLOGRAPHY (1.98 ANGSTROMS) IN COMPLEX WITH ZINC, FUNCTION,
+RP   SUBUNIT, SUBCELLULAR LOCATION, AND DISULFIDE BOND.
+RX   PubMed=31428696; DOI=10.1038/s42003-019-0542-z;
+RA   Neupane D.P., Fullam S.H., Chacon K.N., Yukl E.T.;
+RT   "Crystal structures of AztD provide mechanistic insights into direct zinc
+RT   transfer between proteins.";
+RL   Commun. Biol. 2:308-308(2019).
+CC   -!- FUNCTION: Acts as a zinc chaperone in the AztABCD zinc transport system
+CC       (By similarity). Directly transfers one zinc cation to the solute
+CC       binding protein AztC; the transfer occurs without the formation of a
+CC       stable interaction (By similarity). Binds 3 Zn(2+), two with high
+CC       affinity and one with low affinity, and transfers only Zn(2+) bound to
+CC       site 2 to AztC (PubMed:31428696). {ECO:0000250|UniProtKB:A1B2F4,
+CC       ECO:0000269|PubMed:31428696}.
+CC   -!- SUBUNIT: Monomer. {ECO:0000269|PubMed:31428696}.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000269|PubMed:31428696}.
+DR   EMBL; CP000822; ABV12098.1; -; Genomic_DNA.
+DR   PDB; 6CMK; X-ray; 1.73 A; A/B=1-421.
+DR   PDB; 6N01; X-ray; 1.98 A; A/B/C/D=1-421.
+DR   PDBsum; 6CMK; -.
+DR   PDBsum; 6N01; -.
+DR   AlphaFoldDB; A8AF35; -.
+DR   SMR; A8AF35; -.
+DR   STRING; 290338.CKO_00948; -.
+DR   KEGG; cko:CKO_00948; -.
+DR   HOGENOM; CLU_046994_1_0_6; -.
+DR   Proteomes; UP000008148; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   Gene3D; 2.130.10.10; YVTN repeat-like/Quinoprotein amine dehydrogenase; 1.
+DR   InterPro; IPR047697; AztD-like.
+DR   InterPro; IPR011045; N2O_reductase_N.
+DR   InterPro; IPR015943; WD40/YVTN_repeat-like_dom_sf.
+DR   NCBIfam; NF038015; AztD; 1.
+DR   SUPFAM; SSF50974; Nitrous oxide reductase, N-terminal domain; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Chaperone; Disulfide bond; Metal-binding; Periplasm;
+KW   Reference proteome; Signal; Transport; Zinc.
+FT   SIGNAL          1..29
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           30..421
+FT                   /note="Zinc chaperone AztD"
+FT                   /evidence="ECO:0000255"
+FT                   /id="PRO_5002718986"
+FT   REGION          399..421
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   MOTIF           408..419
+FT                   /note="N-terminal Zn(2+)-binding motif; binds a third
+FT                   Zn(2+) with low affinity"
+FT                   /evidence="ECO:0000305|PubMed:31428696"
+FT   COMPBIAS        404..421
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   BINDING         101
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CMK"
+FT   BINDING         104
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CMK"
+FT   BINDING         106
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CMK"
+FT   BINDING         126
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CMK"
+FT   BINDING         169
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CMK"
+FT   BINDING         216
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CMK"
+FT   BINDING         405
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /ligand_note="high affinity"
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CMK"
+FT   DISULFID        212..229
+FT                   /evidence="ECO:0000269|PubMed:31428696,
+FT                   ECO:0007744|PDB:6CMK, ECO:0007744|PDB:6N01"
+FT   STRAND          34..52
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   TURN            53..55
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          58..63
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          69..72
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          74..83
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   TURN            84..87
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          88..93
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          95..103
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          105..109
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          113..120
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          122..130
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          133..138
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          141..148
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   HELIX           149..153
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          160..163
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          172..174
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          176..183
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          189..191
+FT                   /evidence="ECO:0007829|PDB:6N01"
+FT   STRAND          195..200
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          205..211
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          218..221
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          224..228
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          230..237
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          239..242
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          244..249
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          262..264
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          266..268
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          271..276
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          279..283
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          287..289
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          291..295
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          300..305
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          307..309
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          312..317
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          320..326
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   TURN            327..330
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          331..337
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          355..358
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          361..366
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   HELIX           367..369
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          371..376
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   TURN            377..379
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          382..387
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+FT   STRAND          392..401
+FT                   /evidence="ECO:0007829|PDB:6CMK"
+SQ   SEQUENCE   421 AA;  45405 MW;  EA1DEE98D942CD8D CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	5	Paracoccaceae
+12	5	Phyllobacteriaceae
+32	4	Hyphomicrobiales
+14	4	Rhodobacterales
+12	4	Micrococcales
+49	3	Alphaproteobacteria
+28	3	Actinomycetes
+52	2	Pseudomonadota
+29	2	Actinomycetota
+52	1	Pseudomonadati
+29	1	Bacillati
+81	0	Bacteria
+Total of 81 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A068SZ62	PROBABLE SECRETED PROTEIN    113.7    1.6e-29   1   1.9   0.2
+	A1B2F4_TED01              	   308	   399	   112.1
+
+A0A095VM98	UNCHARACTERIZED PROTEIN {    117.6      1e-30   1   2.1   0.3
+	A1B2F4_TED01              	   304	   395	   115.7
+
+A0A0B1PXR0	ZINT DOMAIN-CONTAINING PR    145.8    1.6e-39   1   2.5   0.2
+	A1B2F4_TED01              	   303	   394	   142.4
+	PF09223	ZinT            	   432	   610	     265
+
+A0A0B4XAC0	QUINOPROTEIN AMINE DEHYDR    116.2    2.7e-30   1   2.2   0.2
+	A1B2F4_TED01              	   300	   391	   112.8
+
+A0A0D5LLL5	ZINT DOMAIN-CONTAINING PR    152.4    1.4e-41   1   2.9   0.7
+	A1B2F4_TED01              	   298	   389	   146.7
+	PF09223	ZinT            	   425	   603	   281.6
+
+A0A0F5FN13	ZINT DOMAIN-CONTAINING PR    106.4      3e-27   1   2.0   0.2
+	A1B2F4_TED01              	   228	   319	   104.5
+	PF09223	ZinT            	   345	   523	   278.1
+
+A0A0F5FVS2	ZINT DOMAIN-CONTAINING PR    102.3    6.1e-26   1   3.1   2.2
+	A1B2F4_TED01              	   296	   387	    98.7
+	PF09223	ZinT            	   425	   603	   276.7
+
+A0A0M3BNR3	UNCHARACTERIZED PROTEIN {    116.0    3.1e-30   1   1.9   0.1
+	A1B2F4_TED01              	   306	   397	   114.5
+
+A0A0N0E827	UNCHARACTERIZED PROTEIN {    100.0    3.1e-25   1   2.0   0.0
+	A1B2F4_TED01              	   308	   399	    98.1
+
+A0A0Q5CKZ0	ZINT DOMAIN-CONTAINING PR    152.8    1.1e-41   1   2.2   0.2
+	A1B2F4_TED01              	   304	   395	   150.8
+	PF09223	ZinT            	   428	   606	   270.5
+
+A0A0Q6H203	UNCHARACTERIZED PROTEIN {    124.8    5.6e-33   1   2.3   0.5
+	A1B2F4_TED01              	   303	   394	   122.8
+
+A0A0T1X589	UNCHARACTERIZED PROTEIN {    113.9    1.4e-29   1   1.8   0.1
+	A1B2F4_TED01              	   309	   400	   112.5
+
+A0A0U3PEF2	ZINC TRANSPORT SYSTEM SUB    135.1    3.4e-36   1   1.6   0.0
+	A1B2F4_TED01              	   300	   391	   134.0
+
+A0A127CNM7	ZINT DOMAIN-CONTAINING PR    150.3    6.3e-41   1   2.6   0.3
+	A1B2F4_TED01              	   298	   389	   145.3
+	PF09223	ZinT            	   427	   605	   281.3
+
+A0A135HPR6	ZINT DOMAIN-CONTAINING PR    105.1      8e-27   1   2.3   0.2
+	A1B2F4_TED01              	   308	   399	   102.5
+	PF09223	ZinT            	   422	   600	   279.3
+
+A0A135NXY4	ZINT DOMAIN-CONTAINING PR    148.2    2.9e-40   1   2.4   0.4
+	A1B2F4_TED01              	   304	   395	   145.7
+	PF09223	ZinT            	   428	   606	   265.7
+
+A0A1B1PUE7	ZINC TRANSPORT SYSTEM SUB    122.7    2.5e-32   2   2.4   0.0
+	A1B2F4_TED01              	   300	   391	   114.0
+	A1B2F4_TED01              	    62	   147	     6.3
+
+A0A1B1PXX6	ZINC TRANSPORT SYSTEM SUB    135.8    2.1e-36   2   2.5   0.1
+	A1B2F4_TED01              	   300	   391	   123.7
+	A1B2F4_TED01              	    63	   156	     9.6
+
+A0A1B9YJQ4	UNCHARACTERIZED PROTEIN {    112.9    2.9e-29   1   2.0   0.4
+	A1B2F4_TED01              	   295	   386	   111.4
+
+A0A1C2EAW1	UNCHARACTERIZED PROTEIN {    107.7    1.2e-27   1   1.5   0.1
+	A1B2F4_TED01              	   295	   386	   106.8
+
+A0A1C7P452	UNCHARACTERIZED PROTEIN {    110.9    1.3e-28   1   2.1   0.2
+	A1B2F4_TED01              	   305	   396	   109.0
+
+A0A1G5HNI7	ZINC TRANSPORT SYSTEM SUB    165.3    1.3e-45   1   2.3   0.2
+	A1B2F4_TED01              	   308	   399	   162.4
+
+A0A1G8KGM2	ZINC TRANSPORT SYSTEM SUB    145.4    2.1e-39   1   1.9   0.0
+	A1B2F4_TED01              	   292	   383	   143.8
+
+A0A1H0HBU2	ZINC TRANSPORT SYSTEM SUB    146.3    1.1e-39   1   1.7   0.1
+	A1B2F4_TED01              	   304	   395	   145.0
+	PF09223	ZinT            	   423	   601	   259.3
+
+A0A1H4GH48	YNCE FAMILY PROTEIN {ECO:    119.9    1.9e-31   1   1.8   0.1
+	A1B2F4_TED01              	   290	   381	   118.5
+
+A0A1H8JDA2	40-RESIDUE YVTN FAMILY BE    138.8    2.3e-37   2   3.5   0.8
+	A1B2F4_TED01              	   310	   401	   129.6
+	A1B2F4_TED01              	     5	    77	     4.5
+
+A0A1H8LVC6	ZINC TRANSPORT SYSTEM SUB    169.2    7.9e-47   1   1.7   0.1
+	A1B2F4_TED01              	   298	   389	   168.0
+
+A0A1I0JJN0	ZINC TRANSPORT SYSTEM SUB    120.9    9.6e-32   1   2.5   0.0
+	A1B2F4_TED01              	   300	   391	   116.2
+
+A0A1I1CKT5	40-RESIDUE YVTN FAMILY BE    114.1    1.2e-29   1   1.8   0.2
+	A1B2F4_TED01              	   307	   398	   112.6
+
+A0A1I4B047	ZINC TRANSPORT SYSTEM SUB    108.0      1e-27   1   1.8   0.1
+	A1B2F4_TED01              	   296	   387	   106.6
+
+A0A1I6AFX6	ZINC TRANSPORT SYSTEM SUB    118.0    7.5e-31   1   2.1   0.1
+	A1B2F4_TED01              	   299	   390	   115.8
+
+A0A1I7NV55	ZINC TRANSPORT SYSTEM SUB    151.9    1.9e-41   1   2.6   0.5
+	A1B2F4_TED01              	   306	   397	   148.2
+	PF09223	ZinT            	   460	   638	   274.9
+
+A0A1M6B668	ZINC TRANSPORT SYSTEM SUB    116.6      2e-30   1   2.4   0.1
+	A1B2F4_TED01              	   298	   389	   112.4
+
+A0A1N7N0Q5	ZINC TRANSPORT SYSTEM SUB    161.8    1.6e-44   2   2.6   0.4
+	A1B2F4_TED01              	   300	   391	   155.2
+	A1B2F4_TED01              	    87	   155	     4.1
+
+A0A1U9YVS7	CADMIUM-INDUCED PROTEIN Z    155.7    1.3e-42   1   2.8   0.9
+	A1B2F4_TED01              	   298	   389	   151.2
+	PF09223	ZinT            	   427	   605	   281.2
+
+A0A1W2F7C7	40-RESIDUE YVTN FAMILY BE    116.2    2.7e-30   1   2.1   0.6
+	A1B2F4_TED01              	   307	   398	   114.7
+
+A0A1X7IZD2	ZINC TRANSPORT SYSTEM SUB    171.4    1.6e-47   2   2.4   0.2
+	A1B2F4_TED01              	   300	   391	   162.5
+	A1B2F4_TED01              	    95	   154	     6.6
+
+A0A256FSV2	UNCHARACTERIZED PROTEIN {    110.7    1.4e-28   1   1.9   0.0
+	A1B2F4_TED01              	   298	   389	   109.1
+
+A0A271KN96	ZINC TRANSPORT SYSTEM SUB    109.0    4.9e-28   1   2.4   0.3
+	A1B2F4_TED01              	   286	   377	   105.7
+
+A0A285T8M3	ZINC TRANSPORT SYSTEM SUB    146.3    1.1e-39   1   2.2   0.7
+	A1B2F4_TED01              	   304	   395	   144.6
+	PF09223	ZinT            	   426	   604	   278.9
+
+A0A2M8IY40	ZINC TRANSPORT SYSTEM SUB    127.3    9.7e-34   2   2.5   0.2
+	A1B2F4_TED01              	   289	   380	   117.2
+	A1B2F4_TED01              	    47	   142	     7.7
+
+A0A2M8N1Y0	UNCHARACTERIZED PROTEIN {    110.7    1.4e-28   1   1.9   0.1
+	A1B2F4_TED01              	   296	   387	   109.2
+
+A0A2N9VZ01	ZINT DOMAIN-CONTAINING PR    109.7      3e-28   1   2.1   0.1
+	A1B2F4_TED01              	   224	   315	   107.7
+	PF09223	ZinT            	   343	   521	     280
+
+A0A2P7SF69	UNCHARACTERIZED PROTEIN {    104.4    1.3e-26   1   1.9   0.2
+	A1B2F4_TED01              	   296	   387	   103.0
+
+A0A2S2CPW3	UNCHARACTERIZED PROTEIN {    110.2      2e-28   1   2.3   0.4
+	A1B2F4_TED01              	   308	   399	   107.5
+
+A0A2T4JSZ4	ZINT DOMAIN-CONTAINING PR    156.3    8.5e-43   2   2.8   0.3
+	A1B2F4_TED01              	   304	   395	   147.2
+	A1B2F4_TED01              	    75	   155	     6.1
+	PF09223	ZinT            	   428	   606	   274.7
+
+A0A2T7HA45	ZINT DOMAIN-CONTAINING PR    123.1    1.8e-32   2   3.0   0.5
+	A1B2F4_TED01              	   294	   385	   115.1
+	A1B2F4_TED01              	    68	   149	     4.8
+	PF09223	ZinT            	   421	   599	   272.1
+
+A0A2T7UQ54	ZINC TRANSPORT SYSTEM SUB    132.2    2.8e-35   1   2.2   0.1
+	A1B2F4_TED01              	   302	   393	   129.7
+
+A0A2W7MUS9	ZINC TRANSPORT SYSTEM SUB    123.6    1.4e-32   1   2.3   0.0
+	A1B2F4_TED01              	   299	   390	   120.2
+
+A0A317PDK2	YVTN FAMILY BETA-PROPELLE    111.2    9.6e-29   1   1.7   0.2
+	A1B2F4_TED01              	   308	   399	   109.9
+
+A0A318T3Q5	YVTN FAMILY BETA-PROPELLE    106.2    3.6e-27   1   1.8   0.1
+	A1B2F4_TED01              	   308	   399	   104.9
+	PF09223	ZinT            	   424	   602	   273.4
+
+A0A327XJD5	ZINC TRANSPORT SYSTEM SUB    114.2    1.1e-29   1   2.6   0.1
+	A1B2F4_TED01              	   306	   397	   110.8
+
+A0A364JSS4	ZINC TRANSPORT SYSTEM SUB    112.5      4e-29   1   2.5   0.3
+	A1B2F4_TED01              	   298	   389	   110.0
+	PF09223	ZinT            	   427	   605	   273.5
+
+A0A371WYG8	ZINT DOMAIN-CONTAINING PR    143.9    6.1e-39   1   2.4   0.7
+	A1B2F4_TED01              	   305	   396	   141.7
+	PF09223	ZinT            	   429	   607	   278.5
+
+A0A421BUJ7	YNCE FAMILY PROTEIN {ECO:    111.8    6.3e-29   1   1.8   0.1
+	A1B2F4_TED01              	   294	   385	   110.5
+
+A0A438AFR0	ZINC TRANSPORT SYSTEM SUB    113.5    1.9e-29   1   2.3   0.2
+	A1B2F4_TED01              	   298	   389	   110.3
+
+A0A545B3A4	ZINC TRANSPORT SYSTEM SUB    118.0    7.7e-31   1   2.1   0.1
+	A1B2F4_TED01              	   288	   379	   115.7
+
+A0A5B0DVX5	ZINC TRANSPORT SYSTEM SUB    100.7    1.8e-25   1   1.9   0.0
+	A1B2F4_TED01              	   294	   385	    99.1
+
+A0A5B8ICU2	ZINC TRANSPORT SYSTEM SUB    148.7      2e-40   1   2.4   0.2
+	A1B2F4_TED01              	   314	   405	   145.7
+
+A0A5C5GF79	ZINC TRANSPORT SYSTEM SUB    133.5    1.1e-35   1   2.1   0.2
+	A1B2F4_TED01              	   297	   388	   131.6
+
+A0A5D4GXP7	YNCE FAMILY PROTEIN {ECO:    113.0    2.7e-29   1   2.7   0.5
+	A1B2F4_TED01              	   287	   378	   109.3
+
+A0A657LLU0	UNCHARACTERIZED PROTEIN {    110.8    1.3e-28   1   2.2   1.0
+	A1B2F4_TED01              	   308	   399	   108.9
+
+A0A6A8AHP1	UNCHARACTERIZED PROTEIN {    118.8    4.1e-31   1   1.8   0.3
+	A1B2F4_TED01              	   307	   398	   117.5
+
+A0A6G7VPL0	ZINC TRANSPORT SYSTEM SUB    114.1    1.2e-29   1   2.6   0.0
+	A1B2F4_TED01              	   282	   373	   110.9
+
+A0A6L9MGB0	UNCHARACTERIZED PROTEIN {    128.2    4.9e-34   1   3.6   2.3
+	A1B2F4_TED01              	   305	   396	   121.4
+
+A0A7R7CNG0	SECRETED PROTEIN {ECO:000    101.4    1.1e-25   1   2.1   0.1
+	A1B2F4_TED01              	   293	   384	    99.3
+
+A0A7W5PSX9	DNA-BINDING BETA-PROPELLE    114.6    8.8e-30   1   1.9   0.0
+	A1B2F4_TED01              	   306	   397	   113.0
+
+A0A7W6GLW6	UNCHARACTERIZED PROTEIN {    107.2    1.7e-27   1   1.4   0.0
+	A1B2F4_TED01              	   181	   272	   106.4
+
+A0A7W6H927	UNCHARACTERIZED PROTEIN {    134.5    5.4e-36   1   3.1   0.7
+	A1B2F4_TED01              	   299	   390	   130.1
+
+A0A7W6P447	40-RESIDUE YVTN FAMILY BE    110.2      2e-28   1   3.5   1.8
+	A1B2F4_TED01              	   308	   399	   105.8
+
+A0A7W6UY51	UNCHARACTERIZED PROTEIN {    115.3    5.3e-30   1   2.3   0.5
+	A1B2F4_TED01              	   307	   398	   113.0
+
+A0A7W8AI83	UNCHARACTERIZED PROTEIN {    117.9    8.1e-31   1   2.3   0.1
+	A1B2F4_TED01              	   305	   396	   114.9
+
+A0A7X5JAB8	ZINC TRANSPORT SYSTEM SUB    122.9    2.2e-32   1   2.1   0.1
+	A1B2F4_TED01              	   299	   390	   120.7
+
+A0A840SJT9	ZINC TRANSPORT SYSTEM SUB     99.9    3.3e-25   1   2.4   0.9
+	A1B2F4_TED01              	   292	   383	    98.1
+	PF09223	ZinT            	   409	   587	   259.9
+
+A0A8J3E0S2	UNCHARACTERIZED PROTEIN {    108.4    7.3e-28   1   1.9   0.1
+	A1B2F4_TED01              	   297	   388	   106.9
+
+A0A8J3GIQ1	YVTN FAMILY BETA-PROPELLE    120.7    1.1e-31   1   2.6   0.9
+	A1B2F4_TED01              	   300	   391	   118.2
+
+A0A8J6PP49	METALLOCHAPERONE AZTD {EC    104.6    1.1e-26   1   2.3   0.8
+	A1B2F4_TED01              	   298	   389	   103.1
+	PF09223	ZinT            	   421	   599	   281.4
+
+A0A8J6YXX8	METALLOCHAPERONE AZTD {EC    119.8      2e-31   1   2.6   0.5
+	A1B2F4_TED01              	   300	   391	   116.7
+
+A0A8J7RAC4	METALLOCHAPERONE AZTD {EC    146.0    1.4e-39   1   2.1   0.5
+	A1B2F4_TED01              	   290	   381	   144.4
+	PF09223	ZinT            	   416	   594	   260.7
+
+A0A8K0VAR2	METALLOCHAPERONE AZTD {EC    145.9    1.5e-39   1   2.2   0.2
+	A1B2F4_TED01              	   314	   405	   143.2
+
+A0A8X8H2A2	METALLOCHAPERONE AZTD {EC    113.8    1.5e-29   1   3.0   0.3
+	A1B2F4_TED01              	   299	   390	   109.7
+
+A0A916SLN8	ZINT DOMAIN-CONTAINING PR    106.4      3e-27   1   1.8   0.2
+	A1B2F4_TED01              	   308	   399	   105.1
+	PF09223	ZinT            	   418	   596	   277.9
+
+A0A916XW31	ZINT DOMAIN-CONTAINING PR    139.2    1.8e-37   1   2.0   0.3
+	A1B2F4_TED01              	   302	   393	   137.7
+	PF09223	ZinT            	   421	   599	   263.9
+
+A0A918S124	ZINC TRANSPORT SYSTEM SUB    117.6      1e-30   1   2.4   0.1
+	A1B2F4_TED01              	   298	   389	   112.4
+
+A0A922NYY6	UNCHARACTERIZED PROTEIN {    106.5      3e-27   1   2.0   0.6
+	A1B2F4_TED01              	   308	   399	   105.0
+
+A0A934ITS2	METALLOCHAPERONE AZTD {EC    124.8    5.7e-33   1   2.2   0.7
+	A1B2F4_TED01              	   299	   390	   122.9
+
+A0A974YS99	UNCHARACTERIZED PROTEIN {    111.9    5.8e-29   1   1.6   0.1
+	A1B2F4_TED01              	   306	   397	   110.8
+
+A0A975S3D6	METALLOCHAPERONE AZTD {EC    149.7    9.4e-41   1   2.2   0.2
+	A1B2F4_TED01              	   298	   389	   147.5
+
+A0AAE3SWM2	ZINC METALLOCHAPERONE AZT    108.2    8.4e-28   1   1.7   0.2
+	A1B2F4_TED01              	   307	   398	   107.0
+
+A1B2F4	ZINC CHAPERONE AZTD {ECO:000030    209.6      2e-59   1   2.2   0.4
+	A1B2F4_TED01              	   304	   395	   207.0
+
+A8AF35	ZINC CHAPERONE AZTD {ECO:000025     94.3    1.9e-23   1   1.7   0.0
+	A1B2F4_TED01              	   301	   392	    93.0
+
+E2CSH5	UNCHARACTERIZED PROTEIN {ECO:    102.2    6.2e-26   1   1.8   0.0
+	A1B2F4_TED01              	   295	   386	   100.9
+
+F9Y8Z9	ZINC TRANSPORT SYSTEM SUBSTRA    148.9    1.7e-40   1   2.3   0.3
+	A1B2F4_TED01              	   301	   392	   145.5
+
+G4REH7	SECRETED PROTEIN {ECO:0008006    114.5    9.4e-30   1   2.4   0.1
+	A1B2F4_TED01              	   292	   383	   111.8
+
+H0HSD1	UNCHARACTERIZED PROTEIN {ECO:    114.9    6.8e-30   1   2.4   0.3
+	A1B2F4_TED01              	   281	   372	   112.7
+
+K2PGF6	UNCHARACTERIZED PROTEIN {ECO:    113.1    2.6e-29   1   2.5   0.1
+	A1B2F4_TED01              	   307	   398	   109.8
+
+K2PL78	ZINC TRANSPORT SYSTEM SUBSTRA    159.2      1e-43   1   2.0   0.2
+	A1B2F4_TED01              	   304	   395	   157.3
+
+W9GZ30	UNCHARACTERIZED PROTEIN {ECO:    109.6      3e-28   1   2.4   0.4
+	A1B2F4_TED01              	   298	   389	   106.1
+
+X7EA42	UNCHARACTERIZED PROTEIN {ECO:    125.1    4.5e-33   1   1.4   0.2
+	A1B2F4_TED01              	    35	   126	   124.5
+
+X7EM85	UNCHARACTERIZED PROTEIN {ECO:    120.7    1.1e-31   1   1.4   0.0
+	A1B2F4_TED01              	    75	   166	   119.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A1B2F4.1	AF-A1B2F4-F1-model_v4_TED01:304-395	1	AF-A1B2F4-F1-model_v4_TED01	304-395	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A1B2F4_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 6ck1
+RN   [1]
+RM   31428696
+RT   Crystal structures of AztD provide mechanistic insights into direct
+RT   zinc transfer  between proteins.
+RA   Neupane DP, Fullam SH, Chacon KN, Yukl ET;
+RL   Commun Biol. 2019;2:308.
+
+--- End of Current DESC file ---

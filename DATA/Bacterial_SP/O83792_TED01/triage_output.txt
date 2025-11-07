@@ -1,0 +1,113 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y816_TREPA              Reviewed;         221 AA.
+AC   O83792;
+DE   RecName: Full=Uncharacterized protein TP_0816;
+GN   OrderedLocusNames=TP_0816;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65787.1; -; Genomic_DNA.
+DR   PIR; E71278; E71278.
+DR   RefSeq; WP_010882260.1; NC_021490.2.
+DR   AlphaFoldDB; O83792; -.
+DR   SMR; O83792; -.
+DR   IntAct; O83792; 5.
+DR   STRING; 243276.TP_0816; -.
+DR   EnsemblBacteria; AAC65787; AAC65787; TP_0816.
+DR   KEGG; tpa:TP_0816; -.
+DR   KEGG; tpw:TPANIC_0816; -.
+DR   eggNOG; ENOG5031CJJ; Bacteria.
+DR   HOGENOM; CLU_1299268_0_0_12; -.
+DR   OrthoDB; 358257at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..221
+FT                   /note="Uncharacterized protein TP_0816"
+FT                   /id="PRO_0000202333"
+SQ   SEQUENCE   221 AA;  24379 MW;  EA88D4E73E15A690 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+8	6	Treponema.
+1	6	Teretinema.
+9	5	Treponemataceae
+9	4	Spirochaetales
+9	3	Spirochaetia
+9	2	Spirochaetota
+9	1	Pseudomonadati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GQJ2	UNCHARACTERIZED PROTEIN {    225.2    3.7e-63   1   1.0   0.0
+	O83792_TED01              	     3	   202	   225.0
+
+A0A7G9FI15	SDR FAMILY NAD(P)-DEPENDE     34.7    8.2e-05   1   1.8   1.6
+	O83792_TED01              	     5	   221	    32.7
+
+A0A840SJH9	UNCHARACTERIZED PROTEIN {     28.8      0.005   1   2.1   0.1
+	O83792_TED01              	    50	   245	    24.3
+
+A0A975F5E1	UNCHARACTERIZED PROTEIN {     33.5    0.00018   1   1.1   0.0
+	O83792_TED01              	    21	   187	    33.2
+
+A0AAE3JJS9	UNCHARACTERIZED PROTEIN {     78.3    3.4e-18   1   1.4   0.1
+	O83792_TED01              	     3	   203	    77.5
+
+F4LMJ8	UNCHARACTERIZED PROTEIN {ECO:     31.8    0.00062   1   2.0   0.3
+	O83792_TED01              	    17	   224	    28.2
+
+O83792	UNCHARACTERIZED PROTEIN TP_0816    472.3   7.3e-139   1   1.0   2.8
+	O83792_TED01              	    10	   211	   472.1
+
+Q73JZ4	UNCHARACTERIZED PROTEIN {ECO:    190.2    1.9e-52   1   1.0   0.0
+	O83792_TED01              	     3	   204	   190.0
+
+S3ME30	UNCHARACTERIZED PROTEIN {ECO:    171.2    1.2e-46   1   1.0   0.0
+	O83792_TED01              	     3	   207	   171.1
+
+S5ZYW6	UNCHARACTERIZED PROTEIN {ECO:    190.6    1.4e-52   1   1.0   0.0
+	O83792_TED01              	     3	   203	   190.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83792.1	AF-O83792-F1-model_v4_TED01:10-44_51-211	1	AF-O83792-F1-model_v4_TED01	10-211	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83792_TED01
+GA   27.00 27.00;
+TC   27.50 27.00;
+NC   25.70 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

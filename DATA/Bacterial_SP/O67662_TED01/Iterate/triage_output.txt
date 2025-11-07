@@ -1,0 +1,115 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1793_AQUAE             Reviewed;         269 AA.
+AC   O67662;
+DE   RecName: Full=Uncharacterized protein aq_1793;
+GN   OrderedLocusNames=aq_1793;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000657; AAC07625.1; -; Genomic_DNA.
+DR   PIR; D70454; D70454.
+DR   RefSeq; NP_214228.1; NC_000918.1.
+DR   AlphaFoldDB; O67662; -.
+DR   SMR; O67662; -.
+DR   STRING; 224324.aq_1793; -.
+DR   EnsemblBacteria; AAC07625; AAC07625; aq_1793.
+DR   KEGG; aae:aq_1793; -.
+DR   PATRIC; fig|224324.8.peg.1386; -.
+DR   HOGENOM; CLU_1033061_0_0_0; -.
+DR   InParanoid; O67662; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..269
+FT                   /note="Uncharacterized protein aq_1793"
+FT                   /id="PRO_0000186945"
+FT   TRANSMEM        21..43
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        48..70
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        121..143
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        147..166
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        205..227
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        242..264
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   269 AA;  31646 MW;  35A23C9E1CC7E24F CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Hydrogenivirga
+1	6	Aquifex
+2	5	Aquificaceae
+2	4	Aquificales
+2	3	Aquificia
+2	2	Aquificota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A199XTL4	UNCHARACTERIZED PROTEIN {     22.0       0.55   1   1.1   2.3
+	Iterate                   	     1	    66	    22.0
+
+A0A3P7JCP0	G-PROTEIN COUPLED RECEPTO     20.8        1.3   1   1.0   2.0
+	Iterate                   	     2	   113	    20.6
+	PF10324	7TM_GPCR_Srw    	    15	   114	    26.8
+
+A0A497XNT5	MEMBRANE PROTEIN YESL {EC     62.3    2.8e-13   1   1.0  31.3
+	Iterate                   	     1	   245	    62.0
+
+A8UTT2	DUF4013 DOMAIN-CONTAINING PRO     45.8      3e-08   1   1.0  23.5
+	Iterate                   	     1	   208	    45.7
+
+O67662	UNCHARACTERIZED PROTEIN AQ_179    569.3   5.9e-168   1   1.0  51.8
+	Iterate                   	     5	   268	   569.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O67662.1	AF-O67662-F1-model_v4_TED01:5-268	1	AF-O67662-F1-model_v4_TED01	5-268	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67662_TED01/Iterate
+GA   27.00 27.00;
+TC   45.80 45.70;
+NC   22.00 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

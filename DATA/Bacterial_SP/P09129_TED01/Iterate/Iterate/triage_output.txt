@@ -1,0 +1,84 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	Klebsiella pneumoniae complex.
+1	7	Raoultella
+1	7	Klebsiella
+1	7	CandidatusRegiella.
+2	6	Klebsiella/Raoultella group
+2	6	Escherichia.
+1	6	Serratia.
+1	6	Pantoea.
+1	6	aphid secondary symbionts
+5	5	Enterobacteriaceae
+1	5	Yersiniaceae
+1	5	Erwiniaceae
+7	4	Enterobacterales
+7	3	Gammaproteobacteria
+7	2	Pseudomonadota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2XJ38	TRAS {ECO:0000313|EMBL:AB    180.7      1e-49   1   1.1  11.1
+	Iterate                   	    24	   157	   180.4
+
+A0A0H3GW53	CONJUGAL TRANSFER ENTRY E    186.4    1.8e-51   1   1.1  15.9
+	Iterate                   	    25	   163	   186.1
+
+A0A7Z8Z503	CONJUGAL TRANSFER ENTRY E    185.8    2.7e-51   1   1.0   7.7
+	Iterate                   	    24	   169	   185.6
+
+B7UTJ3	MEMBRANE PROTEIN {ECO:0000313    177.9    7.4e-49   1   1.1  10.1
+	Iterate                   	    24	   157	   177.6
+
+D4EA30	CONJUGAL TRANSFER ENTRY EXCLU    188.3    4.6e-52   1   1.0   9.8
+	Iterate                   	    24	   162	   188.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS5676715 (E-value: 0.00016, Score: 27.6)
+Mentioned as: SPC_p047
+Description: hypothetical protein
+Organism: Salmonella enterica subsp. enterica serovar Paratyphi C strain RKS4594
+PMID: 39516510
+Source: EuropePMC
+Title: Comparative genomic analysis provides new insights into non-typhoidal Salmonella population structure in Peru
+Journal: Scientific reports (2024)
+Snippet: SPC_p012, and variations in a region of about 1 kbp, flanked by locus tag prefixes SPC_p047 and SPC_p049. Furthermore, S. Enteritidis lacks an 11 kbp region flanked by the conjugative transfer genes traX and traT , while S. Newport ST-31 lacks a 9 kbp region that
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0H2XJ38.1	AF-A0A0H2XJ38-F1-model_v4_TED01:5-16_29-168	1	AF-A0A0H2XJ38-F1-model_v4_TED01	5-168	100.0%
+A0A0H3GW53.1	AF-A0A0H3GW53-F1-model_v4_TED01:30-176	1	AF-A0A0H3GW53-F1-model_v4_TED01	30-176	96.4%
+A0A2A2GQ96.1	AF-A0A2A2GQ96-F1-model_v4_TED01:28-156	1	AF-A0A2A2GQ96-F1-model_v4_TED01	28-156	92.8%
+A0A7Z8Z503.1	AF-A0A7Z8Z503-F1-model_v4_TED01:26-173	1	AF-A0A7Z8Z503-F1-model_v4_TED01	26-173	98.6%
+D4EA30.1	AF-D4EA30-F1-model_v4_TED01:3-172	1	AF-D4EA30-F1-model_v4_TED01	3-172	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P09129_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.30 29.70;
+NC   25.90 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

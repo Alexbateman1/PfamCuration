@@ -1,0 +1,111 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1001_TREPA             Reviewed;         393 AA.
+AC   O83966;
+DE   RecName: Full=Uncharacterized protein TP_1001;
+GN   OrderedLocusNames=TP_1001;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65958.1; -; Genomic_DNA.
+DR   PIR; C71254; C71254.
+DR   RefSeq; WP_010882445.1; NC_021490.2.
+DR   AlphaFoldDB; O83966; -.
+DR   STRING; 243276.TP_1001; -.
+DR   EnsemblBacteria; AAC65958; AAC65958; TP_1001.
+DR   KEGG; tpa:TP_1001; -.
+DR   KEGG; tpw:TPANIC_1001; -.
+DR   eggNOG; ENOG5033P4X; Bacteria.
+DR   HOGENOM; CLU_787409_0_0_12; -.
+DR   OrthoDB; 369743at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..393
+FT                   /note="Uncharacterized protein TP_1001"
+FT                   /id="PRO_0000202371"
+SQ   SEQUENCE   393 AA;  43440 MW;  5C87488460F77679 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Treponema.
+1	5	Treponemataceae
+1	4	Spirochaetales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O83966	UNCHARACTERIZED PROTEIN TP_100    278.0    3.3e-80   1   1.5   2.7
+	O83966_TED01              	    55	   177	   278.0
+	PF26342	TP_1001_2nd     	   184	   382	   171.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26818 (E-value: 2.9e-82, Score: 278.0)
+Mentioned as: TP1001
+Description: T. pallidum predicted coding region TP1001
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 32236138
+Source: EuropePMC
+Title: Whole genome sequence of the Treponema pallidum subsp. endemicum strain Iraq B: A subpopulation of bejel treponemes contains full-length tprF and tprG genes similar to those present in T. p. subsp. pertenue strains
+Journal: PloS one (2020)
+Snippet: TP0952 620 putative lipase/esterase G/E 1085945 T C TP0999 261 FtsK A/A 1089703 C T TP1001 552 hypothetical protein A/A 1130225 A G TP1035 731 ValS L/P Listed are 37 single nucleotide variants. Differences in the number of repetitive sequences and differences in homopolymeric regions are
+
+================================================================================
+Protein: VIMSS26818 (E-value: 2.9e-82, Score: 278.0)
+Mentioned as: TP1001
+Description: T. pallidum predicted coding region TP1001
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 15972547
+Source: EuropePMC
+Title: Genome scale identification of Treponema pallidum antigens
+Journal: Infection and immunity (2005)
+Snippet: TP0277; TP0633; TP0789; TP0434; TP0469; TP0821; TP0136; TP1001; TP0468; TP0862; TP0895; TP0444; TP0307; TP0088; TP0453; TP0303; TP0769; TP0433; TP0660; TP0823;
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83966.1	AF-O83966-F1-model_v4_TED01:55-177	1	AF-O83966-F1-model_v4_TED01	55-177	100.0%
+O83966.1	AF-O83966-F1-model_v4_TED02:184-382	1	AF-O83966-F1-model_v4_TED02	184-382	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83966_TED01
+GA   27.00 27.00;
+TC   278.00 278.00;
+NC   23.20 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

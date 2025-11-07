@@ -1,0 +1,306 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y001_BORBU              Reviewed;         190 AA.
+AC   O51035; O51894;
+DE   RecName: Full=Uncharacterized protein BB_0001;
+GN   OrderedLocusNames=BB_0001;
+OS   Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)
+OS   (Borrelia burgdorferi).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Borreliaceae; Borreliella.
+OX   NCBI_TaxID=224326;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RX   PubMed=9403685; DOI=10.1038/37551;
+RA   Fraser C.M., Casjens S., Huang W.M., Sutton G.G., Clayton R.A.,
+RA   Lathigra R., White O., Ketchum K.A., Dodson R.J., Hickey E.K., Gwinn M.L.,
+RA   Dougherty B.A., Tomb J.-F., Fleischmann R.D., Richardson D.L.,
+RA   Peterson J.D., Kerlavage A.R., Quackenbush J., Salzberg S.L., Hanson M.,
+RA   van Vugt R., Palmer N., Adams M.D., Gocayne J.D., Weidman J.F.,
+RA   Utterback T.R., Watthey L., McDonald L.A., Artiach P., Bowman C.,
+RA   Garland S.A., Fujii C., Cotton M.D., Horst K., Roberts K.M., Hatch B.,
+RA   Smith H.O., Venter J.C.;
+RT   "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.";
+RL   Nature 390:580-586(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Sh-2-82;
+RX   PubMed=9402027; DOI=10.1046/j.1365-2958.1997.6051963.x;
+RA   Casjens S., Murphy M., DeLange M., Sampson L., van Vugt R., Huang W.M.;
+RT   "Telomeres of the linear chromosomes of Lyme disease spirochaetes:
+RT   nucleotide sequence and possible exchange with linear plasmid telomeres.";
+RL   Mol. Microbiol. 26:581-596(1997).
+DR   EMBL; AE000783; AAC66406.1; -; Genomic_DNA.
+DR   EMBL; AF008218; AAB93996.1; -; Genomic_DNA.
+DR   PIR; A70100; A70100.
+DR   RefSeq; NP_212135.1; NC_001318.1.
+DR   RefSeq; WP_002658391.1; NC_001318.1.
+DR   AlphaFoldDB; O51035; -.
+DR   STRING; 224326.BB_0001; -.
+DR   PaxDb; 224326-BB_0001; -.
+DR   EnsemblBacteria; AAC66406; AAC66406; BB_0001.
+DR   KEGG; bbu:BB_0001; -.
+DR   PATRIC; fig|224326.49.peg.398; -.
+DR   HOGENOM; CLU_121798_0_0_12; -.
+DR   OrthoDB; 352063at2; -.
+DR   Proteomes; UP000001807; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..190
+FT                   /note="Uncharacterized protein BB_0001"
+FT                   /id="PRO_0000174361"
+FT   CONFLICT        12
+FT                   /note="I -> M (in Ref. 2; AAB93996)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        34..36
+FT                   /note="EDL -> GDI (in Ref. 2; AAB93996)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        40..41
+FT                   /note="KI -> NL (in Ref. 2; AAB93996)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        53
+FT                   /note="S -> P (in Ref. 2; AAB93996)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        81
+FT                   /note="S -> I (in Ref. 2; AAB93996)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   190 AA;  22491 MW;  FBFCE799CD827B45 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Borrelia.
+1	6	Borreliella.
+3	5	Borreliaceae
+3	4	Spirochaetales
+3	3	Spirochaetia
+3	2	Spirochaetota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0AAE1AAS4	UNCHARACTERIZED PROTEIN {     23.2       0.39   5   6.6  22.5
+	Iterate                   	   323	   422	     9.0
+	Iterate                   	   250	   350	     8.5
+	Iterate                   	    92	   187	     7.6
+	Iterate                   	   411	   468	     4.3
+	Iterate                   	   159	   245	     2.4
+
+A0ABF7PUJ9	UNCHARACTERIZED PROTEIN {    112.0    1.7e-28   1   1.3  21.8
+	Iterate                   	    37	   185	   112.0
+
+O51035	UNCHARACTERIZED PROTEIN BB_0001    326.4    1.6e-94   1   1.2  31.0
+	Iterate                   	    39	   190	   325.9
+
+Q24CU7	TETRATRICOPEPTIDE REPEAT PROT     31.9    0.00077   9  11.4  21.3
+	Iterate                   	   661	   702	     6.3
+	Iterate                   	   314	   396	     5.5
+	Iterate                   	   595	   634	     5.4
+	Iterate                   	   931	   974	     4.7
+	Iterate                   	   557	   600	     4.0
+	Iterate                   	   832	   872	     3.4
+	Iterate                   	   796	   838	     2.4
+	Iterate                   	   969	  1007	     2.4
+	Iterate                   	   867	   906	     1.8
+	PF07714	PK_Tyr_Ser-Thr  	    33	   291	    71.7
+	PF00069	Pkinase         	    35	   291	    85.3
+	PF07719	TPR_2           	   338	   371	    23.1
+	PF13181	TPR_8           	   339	   371	    18.7
+	PF13414	TPR_11          	   345	   386	    32.3
+	PF13431	TPR_17          	   360	   393	    25.3
+	PF07719	TPR_2           	   373	   405	    24.5
+	PF00515	TPR_1           	   373	   405	      33
+	PF13181	TPR_8           	   374	   405	    29.1
+	PF13174	TPR_6           	   374	   405	    12.7
+	PF13432	TPR_16          	   376	   440	    23.2
+	PF13414	TPR_11          	   387	   420	    29.7
+	PF13181	TPR_8           	   406	   439	    26.4
+	PF13424	TPR_12          	   406	   472	    31.5
+	PF00515	TPR_1           	   407	   439	    31.2
+	PF13176	TPR_7           	   409	   443	    14.1
+	PF13414	TPR_11          	   413	   454	    36.6
+	PF13431	TPR_17          	   428	   461	    26.5
+	PF13181	TPR_8           	   441	   473	    32.6
+	PF07719	TPR_2           	   441	   473	    28.2
+	PF00515	TPR_1           	   441	   473	    38.3
+	PF13174	TPR_6           	   441	   473	      14
+	PF13176	TPR_7           	   441	   475	    18.9
+	PF13414	TPR_11          	   447	   488	      37
+	PF13431	TPR_17          	   462	   495	    27.8
+	PF07719	TPR_2           	   475	   507	    23.7
+	PF00515	TPR_1           	   475	   507	    34.5
+	PF13181	TPR_8           	   476	   507	    28.4
+	PF13432	TPR_16          	   478	   542	    22.2
+	PF13414	TPR_11          	   485	   522	    36.3
+	PF13431	TPR_17          	   496	   529	    23.5
+	PF13181	TPR_8           	   508	   541	    30.7
+	PF07719	TPR_2           	   508	   541	    24.8
+	PF00515	TPR_1           	   509	   541	    32.2
+	PF13176	TPR_7           	   511	   542	    15.9
+	PF13432	TPR_16          	   512	   576	    26.2
+	PF13174	TPR_6           	   513	   541	    12.3
+	PF13414	TPR_11          	   515	   556	    34.1
+	PF13431	TPR_17          	   530	   563	    22.5
+	PF13424	TPR_12          	   541	   608	    32.8
+	PF07719	TPR_2           	   543	   575	    26.7
+	PF13181	TPR_8           	   544	   575	    29.8
+	PF00515	TPR_1           	   544	   575	    34.2
+	PF13176	TPR_7           	   546	   579	    14.7
+	PF13432	TPR_16          	   546	   610	    22.8
+	PF13414	TPR_11          	   554	   590	    38.2
+	PF13431	TPR_17          	   564	   597	    29.6
+	PF13181	TPR_8           	   576	   609	    31.5
+	PF13424	TPR_12          	   576	   642	    35.6
+	PF07719	TPR_2           	   577	   609	    29.2
+	PF00515	TPR_1           	   577	   609	    38.7
+	PF13174	TPR_6           	   577	   609	    15.5
+	PF13176	TPR_7           	   577	   613	    16.4
+	PF13414	TPR_11          	   586	   624	    36.7
+	PF14559	TPR_19          	   586	   653	    30.9
+	PF13431	TPR_17          	   598	   631	    30.6
+	PF13424	TPR_12          	   609	   676	      31
+	PF13181	TPR_8           	   610	   643	    31.3
+	PF13176	TPR_7           	   611	   645	      15
+	PF07719	TPR_2           	   611	   643	    29.1
+	PF00515	TPR_1           	   611	   643	    38.7
+	PF13174	TPR_6           	   611	   643	    15.7
+	PF13432	TPR_16          	   614	   678	    20.8
+	PF13414	TPR_11          	   619	   658	    36.5
+	PF13431	TPR_17          	   632	   665	    22.8
+	PF07719	TPR_2           	   644	   677	    26.7
+	PF13181	TPR_8           	   645	   677	    26.6
+	PF00515	TPR_1           	   645	   677	    35.3
+	PF13176	TPR_7           	   647	   678	    15.5
+	PF13174	TPR_6           	   649	   677	    12.5
+	PF13414	TPR_11          	   651	   692	    41.8
+	PF13431	TPR_17          	   666	   699	    28.6
+	PF00515	TPR_1           	   679	   711	    31.3
+	PF13181	TPR_8           	   680	   711	    24.8
+	PF13432	TPR_16          	   682	   746	    18.6
+	PF13414	TPR_11          	   688	   726	      28
+	PF13431	TPR_17          	   700	   733	    24.6
+	PF13181	TPR_8           	   712	   745	    34.1
+	PF07719	TPR_2           	   712	   745	    25.8
+	PF00515	TPR_1           	   713	   745	    33.7
+	PF13176	TPR_7           	   715	   747	    16.4
+	PF13414	TPR_11          	   719	   760	    37.9
+	PF13431	TPR_17          	   734	   767	    26.4
+	PF07719	TPR_2           	   747	   779	    25.5
+	PF00515	TPR_1           	   747	   779	    35.1
+	PF13176	TPR_7           	   748	   783	    15.1
+	PF13181	TPR_8           	   748	   779	    31.4
+	PF13174	TPR_6           	   748	   779	      13
+	PF13432	TPR_16          	   750	   813	    18.4
+	PF13414	TPR_11          	   753	   794	    38.1
+	PF13431	TPR_17          	   768	   801	    26.1
+	PF13181	TPR_8           	   780	   812	    25.2
+	PF00515	TPR_1           	   781	   813	    28.7
+	PF13176	TPR_7           	   782	   814	    14.7
+	PF13414	TPR_11          	   790	   828	    34.1
+	PF13424	TPR_12          	   813	   880	    33.4
+	PF13181	TPR_8           	   814	   847	      30
+	PF13374	TPR_10          	   815	   844	    15.6
+	PF07719	TPR_2           	   815	   847	    27.3
+	PF00515	TPR_1           	   815	   847	    35.7
+	PF13176	TPR_7           	   815	   851	    16.2
+	PF13432	TPR_16          	   818	   882	    22.3
+	PF13414	TPR_11          	   821	   862	    38.4
+	PF13431	TPR_17          	   836	   869	    23.9
+	PF13181	TPR_8           	   848	   881	      25
+	PF13176	TPR_7           	   849	   885	    14.3
+	PF00515	TPR_1           	   849	   881	    33.8
+	PF13414	TPR_11          	   857	   896	    34.6
+	PF14559	TPR_19          	   859	   925	    25.9
+	PF13431	TPR_17          	   870	   903	    25.9
+	PF13181	TPR_8           	   882	   915	    27.1
+	PF13176	TPR_7           	   883	   915	    14.3
+	PF00515	TPR_1           	   883	   915	    30.3
+	PF13174	TPR_6           	   883	   914	    12.7
+	PF13432	TPR_16          	   886	   950	      16
+	PF13414	TPR_11          	   890	   930	    27.3
+	PF13181	TPR_8           	   916	   949	    22.2
+	PF07719	TPR_2           	   916	   949	    23.6
+	PF00515	TPR_1           	   917	   949	    30.8
+	PF13414	TPR_11          	   923	   964	    35.6
+	PF13181	TPR_8           	   951	   983	    30.3
+	PF07719	TPR_2           	   951	   983	    25.3
+	PF00515	TPR_1           	   951	   983	    31.5
+	PF13174	TPR_6           	   951	   983	    17.2
+	PF13432	TPR_16          	   954	  1018	    23.4
+	PF13414	TPR_11          	   957	   998	    39.8
+	PF13431	TPR_17          	   972	  1005	    26.9
+	PF13181	TPR_8           	   984	  1017	    36.4
+	PF07719	TPR_2           	   985	  1017	    30.6
+	PF00515	TPR_1           	   985	  1017	    39.9
+	PF13174	TPR_6           	   985	  1017	    17.2
+	PF13176	TPR_7           	   985	  1021	    18.6
+
+W6TG57	UNCHARACTERIZED PROTEIN {ECO:    104.4    3.6e-26   1   1.5  18.7
+	Iterate                   	    50	   198	   104.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS43643 (E-value: 1.1e-71, Score: 245.4)
+Mentioned as: BB0001
+Description: B. burgdorferi predicted coding region BB0001
+Organism: Borrelia burgdorferi B31
+PMID: 24112474
+Source: EuropePMC
+Title: Inter- and intra-specific pan-genomes of Borrelia burgdorferi sensu lato: genome stability and adaptive radiation
+Journal: BMC genomics (2013)
+Snippet: B31 chromosomal genes have been named bb0xxx (lower case and italicized) in ascending order from bb0001 upward across the chromosome. The B31 plasmid locus tag names are similar but have the form bb $ xx in which $ is a letter code denoting which plasmid type
+
+================================================================================
+Protein: VIMSS43643 (E-value: 1.1e-71, Score: 245.4)
+Mentioned as: BB0001
+Description: B. burgdorferi predicted coding region BB0001
+Organism: Borrelia burgdorferi B31
+PMID: 22432010
+Source: EuropePMC
+Title: Genome stability of Lyme disease spirochetes: comparative genomics of Borrelia burgdorferi plasmids
+Journal: PloS one (2012)
+Snippet: chromosomal genes have often been named bb0xxx (lower case and italicized) in ascending order from bb0001 upward across the chromosome. The B31 plasmid locus tag names are similar but have the form bb$xx in which $ is a letter code denoting which plasmid type carries the
+
+================================================================================
+Protein: VIMSS43643 (E-value: 1.1e-71, Score: 245.4)
+Mentioned as: BB0001
+Description: B. burgdorferi predicted coding region BB0001
+Organism: Borrelia burgdorferi B31
+PMID: 10075995
+Source: EuropePMC
+Title: Proteome composition and codon usage in spirochaetes: species-specific and DNA strand-specific mutational biases
+Journal: Nucleic acids research (1999)
+Snippet: both species. `outliers' are short genes. Only four of them (BB0001, BB0844, BB0437 and BB0438) are more than 150 codons long, and for each of these a possible
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O51035.1	AF-O51035-F1-model_v4_TED01:39-190	1	AF-O51035-F1-model_v4_TED01	39-190	100.0%
+W6TG57.1	AF-W6TG57-F1-model_v4_TED02:51-198	1	AF-W6TG57-F1-model_v4_TED02	51-198	99.3%
+W6TG57.1	AF-W6TG57-F1-model_v4_TED01:2-49	1	AF-W6TG57-F1-model_v4_TED01	2-49	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O51035_TED01/Iterate
+GA   27.00 27.00;
+TC   245.40 244.70;
+NC   23.50 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

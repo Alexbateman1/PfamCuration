@@ -1,0 +1,446 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   FAPE_PSEAE              Reviewed;         250 AA.
+AC   Q9I2F2;
+DE   RecName: Full=Functional amyloid sbunit FapE {ECO:0000305};
+DE   AltName: Full=Fibril amyloid subunit FapE {ECO:0000305};
+DE   Flags: Precursor;
+GN   Name=fapE {ECO:0000303|PubMed:23504942};
+GN   OrderedLocusNames=PA1952 {ECO:0000303|PubMed:10984043};
+OS   Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+OS   14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pseudomonadales; Pseudomonadaceae; Pseudomonas.
+OX   NCBI_TaxID=208964;
+RN   [1] {ECO:0000312|EMBL:AAG05340.1}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=10984043; DOI=10.1038/35023079;
+RA   Stover C.K., Pham X.-Q.T., Erwin A.L., Mizoguchi S.D., Warrener P.,
+RA   Hickey M.J., Brinkman F.S.L., Hufnagle W.O., Kowalik D.J., Lagrou M.,
+RA   Garber R.L., Goltry L., Tolentino E., Westbrock-Wadman S., Yuan Y.,
+RA   Brody L.L., Coulter S.N., Folger K.R., Kas A., Larbig K., Lim R.M.,
+RA   Smith K.A., Spencer D.H., Wong G.K.-S., Wu Z., Paulsen I.T., Reizer J.,
+RA   Saier M.H. Jr., Hancock R.E.W., Lory S., Olson M.V.;
+RT   "Complete genome sequence of Pseudomonas aeruginosa PAO1, an opportunistic
+RT   pathogen.";
+RL   Nature 406:959-964(2000).
+RN   [2]
+RP   FUNCTION, SUBUNIT, SUBCELLULAR LOCATION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=23504942; DOI=10.1002/mbo3.81;
+RA   Dueholm M.S., Soendergaard M.T., Nilsson M., Christiansen G.,
+RA   Stensballe A., Overgaard M.T., Givskov M., Tolker-Nielsen T., Otzen D.E.,
+RA   Nielsen P.H.;
+RT   "Expression of Fap amyloids in Pseudomonas aeruginosa, P. fluorescens, and
+RT   P. putida results in aggregation and increased biofilm formation.";
+RL   MicrobiologyOpen 2:365-382(2013).
+CC   -!- FUNCTION: A minor component of the functional amyloid in this bacterium
+CC       (PubMed:23504942). Upon overexpression of the endogenous six-gene locus
+CC       (fapA-fapF), cells form large clumps during liquid growth, make large
+CC       amounts of biofilm and produce amyloid fibrils.
+CC       {ECO:0000269|PubMed:23504942}.
+CC   -!- SUBUNIT: A minor component of purified amyloid fibrils. Fibrils are
+CC       resistant to boiling in 2% (weight/vol) SDS and require >90% (vol/vol)
+CC       formic acid to dissolve. {ECO:0000269|PubMed:23504942}.
+CC   -!- SUBCELLULAR LOCATION: Fimbrium {ECO:0000269|PubMed:23504942}. Secreted
+CC       {ECO:0000269|PubMed:23504942}. Note=Part of an extracellular amyloid
+CC       fibril. {ECO:0000269|PubMed:23504942}.
+CC   -!- DISRUPTION PHENOTYPE: Deletion of the entire fapA-fapF six-gene locus
+CC       shows no visible growth phenotype. {ECO:0000269|PubMed:23504942}.
+CC   -!- SIMILARITY: Belongs to the FapE family. {ECO:0000305}.
+DR   EMBL; AE004091; AAG05340.1; -; Genomic_DNA.
+DR   PIR; G83400; G83400.
+DR   RefSeq; NP_250642.1; NC_002516.2.
+DR   RefSeq; WP_010895591.1; NZ_QZGE01000030.1.
+DR   AlphaFoldDB; Q9I2F2; -.
+DR   STRING; 208964.PA1952; -.
+DR   PaxDb; 208964-PA1952; -.
+DR   GeneID; 880731; -.
+DR   KEGG; pae:PA1952; -.
+DR   PATRIC; fig|208964.12.peg.2034; -.
+DR   PseudoCAP; PA1952; -.
+DR   HOGENOM; CLU_096100_0_0_6; -.
+DR   InParanoid; Q9I2F2; -.
+DR   OrthoDB; 5585636at2; -.
+DR   BioCyc; PAER208964:G1FZ6-1990-MONOMER; -.
+DR   Proteomes; UP000002438; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0009289; C:pilus; IEA:UniProtKB-SubCell.
+DR   GO; GO:1990000; P:amyloid fibril formation; IMP:PseudoCAP.
+DR   GO; GO:0007155; P:cell adhesion; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   Amyloid; Cell adhesion; Fimbrium; Reference proteome; Secreted; Signal.
+FT   SIGNAL          1..27
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           28..250
+FT                   /note="Functional amyloid sbunit FapE"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT                   /id="PRO_5004327426"
+SQ   SEQUENCE   250 AA;  25619 MW;  B997F6BE28D792C2 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+14	6	Pseudomonas.
+18	5	Pseudomonadaceae
+12	5	Lysobacteraceae
+8	4	Oceanospirillales
+18	4	Pseudomonadales
+17	4	Lysobacterales
+49	3	Gammaproteobacteria
+59	2	Pseudomonadota
+59	1	Pseudomonadati
+59	0	Bacteria
+Total of 60 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A024HIF7	FAP SYSTEM OUTER MEMBRANE    264.8    3.1e-75   1   1.0  19.5
+	P0DXF7                    	     1	   244	   264.7
+
+A0A089WUV1	FAP SYSTEM OUTER MEMBRANE    266.6    8.7e-76   1   1.0  16.4
+	P0DXF7                    	     1	   248	   266.5
+
+A0A0A0M6A5	UNCHARACTERIZED PROTEIN {     50.2    1.1e-09   1   1.1  10.8
+	P0DXF7                    	    10	   256	    49.7
+
+A0A0B3BNH3	FAP SYSTEM OUTER MEMBRANE    137.2    2.8e-36   1   1.0   8.5
+	P0DXF7                    	     2	   240	   136.9
+
+A0A0C5EUI1	FAP SYSTEM OUTER MEMBRANE    322.1    9.8e-93   1   1.0  19.8
+	P0DXF7                    	     1	   248	   322.0
+
+A0A0D0S5K4	FAP SYSTEM PUTATIVE OUTER     42.3    2.7e-07   1   1.2  14.5
+	P0DXF7                    	    30	   280	    42.0
+
+A0A0E3Z398	UNCHARACTERIZED PROTEIN {     40.0    1.3e-06   1   2.1  11.6
+	P0DXF7                    	     3	   266	    35.2
+
+A0A0R0A7X1	LIPOPROTEIN {ECO:0008006|     42.2    2.8e-07   1   2.0  23.9
+	P0DXF7                    	    18	   283	    29.1
+
+A0A0R0AK86	UNCHARACTERIZED PROTEIN {     44.6    5.3e-08   2   2.1  13.7
+	P0DXF7                    	     7	   183	    43.0
+	P0DXF7                    	   174	   254	     3.9
+
+A0A0R0BRT4	UNCHARACTERIZED PROTEIN {     52.6    1.8e-10   1   1.2   7.8
+	P0DXF7                    	     3	   250	    52.1
+
+A0A0R0DFV7	UNCHARACTERIZED PROTEIN {     51.3    4.7e-10   1   1.5   7.0
+	P0DXF7                    	     5	   246	    50.5
+
+A0A0W1RVT0	UNCHARACTERIZED PROTEIN {     48.7    2.9e-09   1   1.2  12.6
+	P0DXF7                    	    23	   260	    48.3
+
+A0A119A2M2	FAP SYSTEM OUTER MEMBRANE    249.7    1.3e-70   1   1.0  23.7
+	P0DXF7                    	     1	   248	   249.6
+
+A0A1A6C0L9	UNCHARACTERIZED PROTEIN {     46.0      2e-08   1   1.1  21.9
+	P0DXF7                    	    33	   254	    45.6
+
+A0A1A6C1G0	UNCHARACTERIZED PROTEIN {     42.8    1.9e-07   1   1.1  17.8
+	P0DXF7                    	    33	   290	    42.3
+
+A0A1B3W6R0	UNCHARACTERIZED PROTEIN {     46.3    1.6e-08   1   1.1   3.5
+	P0DXF7                    	     8	   254	    45.8
+
+A0A1G8L118	FAP SYSTEM OUTER MEMBRANE    251.1    4.9e-71   1   1.0  18.6
+	P0DXF7                    	     1	   244	   250.9
+
+A0A1G8PGV8	UNCHARACTERIZED PROTEIN {     49.6    1.5e-09   1   1.3   6.2
+	P0DXF7                    	    20	   270	    49.0
+
+A0A1G9Z1U2	FAP SYSTEM OUTER MEMBRANE    217.4    8.9e-61   1   1.0   8.0
+	P0DXF7                    	     1	   243	   217.3
+
+A0A1H0D117	FAP SYSTEM OUTER MEMBRANE    169.5      4e-46   1   1.0  10.2
+	P0DXF7                    	     1	   235	   169.2
+
+A0A1H2F0V6	FAP SYSTEM OUTER MEMBRANE    144.8    1.4e-38   1   1.0  11.2
+	P0DXF7                    	     4	   245	   144.5
+
+A0A1H2HYB2	FAP SYSTEM OUTER MEMBRANE    142.0    9.9e-38   1   1.0  12.9
+	P0DXF7                    	     1	   251	   141.8
+
+A0A1H2XN17	UNCHARACTERIZED PROTEIN {     61.5    3.6e-13   1   1.1  10.2
+	P0DXF7                    	    44	   278	    61.2
+
+A0A1H6WJA7	UNCHARACTERIZED PROTEIN {     50.2      1e-09   1   1.0  11.1
+	P0DXF7                    	     4	   253	    49.9
+
+A0A1H7KD77	UNCHARACTERIZED PROTEIN {     51.8    3.3e-10   1   1.2  14.4
+	P0DXF7                    	     8	   268	    51.3
+
+A0A1I3Q606	UNCHARACTERIZED PROTEIN {    140.8    2.2e-37   1   1.0  19.2
+	P0DXF7                    	     1	   242	   140.7
+
+A0A1I3YTE2	UNCHARACTERIZED PROTEIN {     39.5    1.9e-06   1   1.1  11.0
+	P0DXF7                    	     1	   250	    39.3
+
+A0A1N6X7Y6	UNCHARACTERIZED PROTEIN {     76.4    1.1e-17   1   1.0   4.6
+	P0DXF7                    	     1	   238	    76.2
+
+A0A1T4Q1A9	UNCHARACTERIZED PROTEIN {     54.8    4.2e-11   1   1.1  16.2
+	P0DXF7                    	     9	   256	    54.5
+
+A0A1V0B761	FAP SYSTEM OUTER MEMBRANE    176.1    3.8e-48   1   1.0  10.9
+	P0DXF7                    	     4	   244	   175.8
+
+A0A1Y0KYM3	FAP SYSTEM OUTER MEMBRANE    168.4    8.2e-46   1   1.2  19.5
+	P0DXF7                    	     1	   253	   168.0
+
+A0A1Y3KT05	FAP SYSTEM OUTER MEMBRANE    287.0      5e-82   1   1.0  18.5
+	P0DXF7                    	     1	   246	   286.9
+
+A0A202BGI6	UNCHARACTERIZED PROTEIN {     33.9     0.0001   1   2.1  19.6
+	P0DXF7                    	     3	   207	    32.0
+
+A0A239BMN8	FAP SYSTEM OUTER MEMBRANE    281.3      3e-80   1   1.0  20.4
+	P0DXF7                    	     1	   246	   281.1
+
+A0A2D2M7J7	FAP SYSTEM OUTER MEMBRANE    266.0    1.4e-75   1   1.0  23.6
+	P0DXF7                    	     1	   247	   265.8
+
+A0A2I1DKD2	FAP SYSTEM OUTER MEMBRANE     37.5    7.6e-06   1   1.1  19.4
+	P0DXF7                    	    17	   253	    37.1
+
+A0A2S0P948	FAP SYSTEM OUTER MEMBRANE     85.8    1.3e-20   1   1.0  22.7
+	P0DXF7                    	     2	   234	    85.5
+
+A0A2U2J1G7	UNCHARACTERIZED PROTEIN {     35.5    3.2e-05   2   3.1  13.6
+	P0DXF7                    	    17	   246	    21.2
+	P0DXF7                    	   235	   293	    10.6
+
+A0A2Z3R440	PEPTIDASE C39 {ECO:000800     41.0    6.6e-07   1   1.4  25.7
+	P0DXF7                    	    14	   261	    40.4
+
+A0A315WYN6	FAP SYSTEM OUTER MEMBRANE    277.8    3.3e-79   1   1.0  17.7
+	P0DXF7                    	     1	   247	   277.7
+
+A0A316I1V5	UNCHARACTERIZED PROTEIN {     44.1    7.6e-08   1   1.9  26.3
+	P0DXF7                    	     2	   264	    40.8
+
+A0A369UL88	UNCHARACTERIZED PROTEIN {     53.3    1.2e-10   1   1.1   7.0
+	P0DXF7                    	     1	   270	    53.0
+
+A0A3M3EQ75	FAP SYSTEM OUTER MEMBRANE    309.4    7.3e-89   1   1.0  17.5
+	P0DXF7                    	     7	   254	   309.3
+
+A0A3M4B2C9	FAP SYSTEM OUTER MEMBRANE    443.4   9.4e-130   1   1.0  28.1
+	P0DXF7                    	     1	   248	   443.2
+
+A0A3N7FM08	UNCHARACTERIZED PROTEIN {     39.0    2.6e-06   1   1.7  14.0
+	P0DXF7                    	     2	   203	    37.6
+
+A0A3N9U8Z2	UNCHARACTERIZED PROTEIN {     60.0    1.1e-12   1   1.2  12.6
+	P0DXF7                    	    12	   261	    59.4
+
+A0A3P1SHC7	UNCHARACTERIZED PROTEIN {     74.2    4.9e-17   1   1.1   2.4
+	P0DXF7                    	    13	   272	    73.9
+
+A0A427C566	UNCHARACTERIZED PROTEIN {     44.4    6.2e-08   1   1.1  14.6
+	P0DXF7                    	     2	   257	    44.1
+
+A0A4S3KN34	UNCHARACTERIZED PROTEIN {     35.7    2.8e-05   1   1.1  12.2
+	P0DXF7                    	     5	   236	    35.2
+
+A0A4S4A448	GLIDING MOTILITY-ASSOCIAT     36.5    1.6e-05  15  16.1 103.4
+	P0DXF7                    	   993	  1061	     8.1
+	P0DXF7                    	  1076	  1143	     7.8
+	P0DXF7                    	  1643	  1692	     7.4
+	P0DXF7                    	  1147	  1223	     7.3
+	P0DXF7                    	  1488	  1573	     7.1
+	P0DXF7                    	   916	   980	     7.0
+	P0DXF7                    	  1569	  1652	     7.0
+	P0DXF7                    	  1718	  1811	     7.0
+	P0DXF7                    	  1887	  1973	     6.9
+	P0DXF7                    	  2039	  2101	     6.6
+	P0DXF7                    	  1238	  1301	     6.0
+	P0DXF7                    	  1968	  2025	     6.0
+	P0DXF7                    	  1408	  1492	     5.8
+	P0DXF7                    	  1305	  1411	     5.2
+	P0DXF7                    	  1794	  1892	     5.0
+	PF23237	HYR_4C          	   887	   960	    43.1
+	PF23237	HYR_4C          	   967	  1040	    43.6
+	PF23237	HYR_4C          	  1047	  1120	    42.7
+	PF23237	HYR_4C          	  1127	  1200	    44.7
+	PF23237	HYR_4C          	  1207	  1280	    44.9
+	PF23237	HYR_4C          	  1287	  1360	    45.4
+	PF23237	HYR_4C          	  1367	  1440	    46.1
+	PF23237	HYR_4C          	  1447	  1520	    46.1
+	PF23237	HYR_4C          	  1527	  1600	    45.1
+	PF23237	HYR_4C          	  1607	  1680	    41.7
+	PF23237	HYR_4C          	  1687	  1760	    42.5
+	PF23237	HYR_4C          	  1767	  1840	    41.7
+	PF23237	HYR_4C          	  1847	  1920	    45.2
+	PF23237	HYR_4C          	  1927	  2000	    46.9
+	PF23237	HYR_4C          	  2007	  2080	      44
+	PF23237	HYR_4C          	  2087	  2160	    39.5
+	PF23237	HYR_4C          	  2168	  2239	      27
+	PF13585	CHU_C           	  2332	  2428	    85.9
+
+A0A4Z1R9U9	UNCHARACTERIZED PROTEIN {     52.6    1.9e-10   1   1.1   8.4
+	P0DXF7                    	     3	   232	    52.3
+
+A0A510X6V7	UNCHARACTERIZED PROTEIN {     53.7    8.7e-11   1   1.3   0.9
+	P0DXF7                    	    26	   258	    53.5
+
+A0A547PBT1	UNCHARACTERIZED PROTEIN {     37.8    6.1e-06   1   1.7   8.8
+	P0DXF7                    	    19	   249	    35.9
+
+A0A5P9IUB2	UNCHARACTERIZED PROTEIN {     58.3    3.4e-12   1   1.3   5.4
+	P0DXF7                    	    20	   267	    57.6
+
+A0A6I4V7J9	UNCHARACTERIZED PROTEIN {     46.3    1.6e-08   1   1.5  15.1
+	P0DXF7                    	    30	   283	    45.6
+
+A0A7I8EDS7	UNCHARACTERIZED PROTEIN {     36.5    1.5e-05   1   2.5  15.0
+	P0DXF7                    	     1	   228	    30.8
+
+A0A7R6PJY6	UNCHARACTERIZED PROTEIN {     52.4    2.2e-10   1   1.4   5.4
+	P0DXF7                    	    29	   270	    51.9
+
+A0A7U7ESJ0	FAP SYSTEM OUTER MEMBRANE    190.0    2.1e-52   1   1.0  10.0
+	P0DXF7                    	     1	   247	   189.9
+
+A0A7V7GWZ1	FAP SYSTEM OUTER MEMBRANE    168.0    1.1e-45   1   1.0  10.3
+	P0DXF7                    	     1	   243	   167.8
+
+A0A839V7Y1	UNCHARACTERIZED PROTEIN {     69.5    1.3e-15   1   1.1   2.9
+	P0DXF7                    	    14	   264	    69.1
+
+A0A844GEF1	UNCHARACTERIZED PROTEIN {     47.5    6.9e-09   1   1.3   3.7
+	P0DXF7                    	     1	   153	    46.9
+
+A0A845AVP1	UNCHARACTERIZED PROTEIN {     33.6    0.00012   2   2.2  16.2
+	P0DXF7                    	     4	    99	    24.8
+	P0DXF7                    	   123	   279	     9.1
+
+A0A845BPD8	UNCHARACTERIZED PROTEIN {     42.1    3.1e-07   1   2.4  16.7
+	P0DXF7                    	     2	   224	    38.0
+
+A0A845UNU9	UNCHARACTERIZED PROTEIN {     42.8    1.8e-07   1   1.1  15.8
+	P0DXF7                    	    11	   251	    42.5
+
+A0A853J7F9	UNCHARACTERIZED PROTEIN {     44.5    5.6e-08   1   1.1  10.8
+	P0DXF7                    	     6	   236	    44.3
+
+A0A8H9YYN0	FAP SYSTEM OUTER MEMBRANE    418.1     5e-122   1   1.0  24.7
+	P0DXF7                    	     1	   247	   417.9
+
+A0A8S0H000	ADHESIN {ECO:0008006|GOOG    165.1    8.8e-45   1   1.0  26.6
+	P0DXF7                    	     1	   143	   164.9
+
+A0A8S0H6A3	UNCHARACTERIZED PROTEIN {     62.0    2.5e-13   1   1.0   1.2
+	P0DXF7                    	     1	    61	    62.0
+
+A0A921P0L8	UNCHARACTERIZED PROTEIN {     45.6    2.6e-08   2   1.6   8.8
+	P0DXF7                    	    13	   238	    44.9
+	P0DXF7                    	   196	   254	     2.6
+
+A0A940RS55	UNCHARACTERIZED PROTEIN {     50.7    7.4e-10   1   1.8  15.8
+	P0DXF7                    	    20	   267	    48.2
+
+A0AA38XS13	UNCHARACTERIZED PROTEIN {     38.9      3e-06   1   1.5  14.4
+	P0DXF7                    	     1	   247	    38.0
+
+A0AAE2YPY5	UNCHARACTERIZED PROTEIN {     40.3    1.1e-06   1   1.1  22.9
+	P0DXF7                    	     1	   197	    40.1
+
+A0AAE3HM35	UNCHARACTERIZED PROTEIN {     66.4    1.2e-14   1   1.0  12.7
+	P0DXF7                    	    14	   265	    66.2
+
+B1KH70	CURLIN ASSOCIATED REPEAT-CONT     34.5    6.5e-05   1   1.2   4.1
+	P0DXF7                    	     2	   232	    33.9
+
+B2FSZ2	FAP SYSTEM OUTER MEMBRANE PRO     42.6    2.2e-07   1   1.2  12.0
+	P0DXF7                    	     4	   247	    42.0
+
+C0N2D9	UNCHARACTERIZED PROTEIN {ECO:     62.7    1.5e-13   1   1.0  19.7
+	P0DXF7                    	     5	   247	    62.4
+
+D8TCW7	UNCHARACTERIZED PROTEIN {ECO:     36.5    1.6e-05   5   6.4   0.0
+	P0DXF7                    	   140	   203	     5.6
+	P0DXF7                    	   278	   347	     5.2
+	P0DXF7                    	   353	   415	     5.2
+	P0DXF7                    	   209	   272	     4.9
+	P0DXF7                    	    68	   134	     4.5
+
+I4N396	FAP SYSTEM OUTER MEMBRANE PRO    271.6    2.7e-77   1   1.0  25.8
+	P0DXF7                    	     1	   251	   271.4
+
+Q88IZ5	FAP SYSTEM OUTER MEMBRANE PRO    252.4      2e-71   1   1.0  18.6
+	P0DXF7                    	     1	   250	   252.2
+
+Q9I2F2	FUNCTIONAL AMYLOID SBUNIT FAPE     168.3    9.3e-46   1   1.0   2.4
+	P0DXF7                    	     7	   250	   168.1
+
+W1N3H7	UNCHARACTERIZED PROTEIN {ECO:     58.9    2.3e-12   1   1.1   5.0
+	P0DXF7                    	    12	   261	    58.5
+
+W7Q2U5	UNCHARACTERIZED PROTEIN {ECO:     58.8    2.4e-12   1   1.1   9.9
+	P0DXF7                    	    24	   269	    58.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS2197704 (E-value: 6.5e-48, Score: 168.6)
+Mentioned as: PA14_39260
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa UCBPP-PA14
+PMID: 31934344
+Source: EuropePMC
+Title: Parallel evolutionary paths to produce more than one <i>Pseudomonas aeruginosa</i> biofilm phenotype
+Journal: NPJ biofilms and microbiomes (2020)
+Snippet: PA14_10270 PA4149 acoX 3.5 PA14_39050 PA1971 braZ 2.5 PA14_06730 PA0517 nirC 3.9 PA14_10280 PA4148 3.6 PA14_39260 PA1952 2.7 PA14_06740 PA0518 nirM 4.8 PA14_10400 3.2 PA14_39590 PA1927 metE 4.3 PA14_06750 PA0519 nirS 4.9 PA14_10410 2.9 PA14_39720 PA1918 2.6 PA14_06770 PA0520 nirQ 3.3 PA14_11070 PA4085 cupB2 2.7 PA14_39750
+
+================================================================================
+Protein: VIMSS58402 (E-value: 8.2e-48, Score: 168.3)
+Mentioned as: PA1952
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 38845372
+Source: EuropePMC
+Title: Global transcriptome analysis of Pseudomonas aeruginosa NT06 response to potassium chloride, sodium lactate, sodium citrate, and microaerophilic conditions in a fish ecosystem
+Journal: FEMS microbiology letters (2024)
+Snippet: by NaCl alternative compounds. Simultaneously, the expression of DEGs responsible for biofilm formation and stabilization (PA1952 ( fapE ), PA1181) was repressed. The upregulation of tonB1 , which is involved in iron import into cells, and oprC , the outer membrane porin involved in siderophore transport
+
+================================================================================
+Protein: VIMSS58402 (E-value: 8.2e-48, Score: 168.3)
+Mentioned as: PA1952
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 33757883
+Source: EuropePMC
+Title: A wide-ranging Pseudomonas aeruginosa PeptideAtlas build: A useful proteomic resource for a versatile pathogen
+Journal: Journal of proteomics (2021)
+Snippet: found. In sample 15, in which functional amyloid was induced, 4 of the amyloids, FapE (PA1952), FapD (PA1953), FapC (PA1954), and FapB (PA1955) were uniquely identified [ 43 ]. It is also noteworthy, but not surprising, that the genes involved in alginate biosynthesis (PA3540 to PA
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DXF7
+GA   27.00 27.00;
+TC   27.50 29.10;
+NC   26.40 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

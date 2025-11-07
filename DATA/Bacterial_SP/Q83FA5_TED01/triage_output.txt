@@ -1,0 +1,106 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y041_COXBU              Reviewed;         710 AA.
+AC   Q83FA5;
+DE   RecName: Full=Uncharacterized protein CBU_0041;
+GN   OrderedLocusNames=CBU_0041;
+OS   Coxiella burnetii (strain RSA 493 / Nine Mile phase I).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Legionellales; Coxiellaceae; Coxiella.
+OX   NCBI_TaxID=227377;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=RSA 493 / Nine Mile phase I;
+RX   PubMed=12704232; DOI=10.1073/pnas.0931379100;
+RA   Seshadri R., Paulsen I.T., Eisen J.A., Read T.D., Nelson K.E., Nelson W.C.,
+RA   Ward N.L., Tettelin H., Davidsen T.M., Beanan M.J., DeBoy R.T.,
+RA   Daugherty S.C., Brinkac L.M., Madupu R., Dodson R.J., Khouri H.M.,
+RA   Lee K.H., Carty H.A., Scanlan D., Heinzen R.A., Thompson H.A., Samuel J.E.,
+RA   Fraser C.M., Heidelberg J.F.;
+RT   "Complete genome sequence of the Q-fever pathogen, Coxiella burnetii.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:5455-5460(2003).
+DR   EMBL; AE016828; AAO89610.1; -; Genomic_DNA.
+DR   RefSeq; NP_819096.1; NC_002971.4.
+DR   RefSeq; WP_010957340.1; NC_002971.4.
+DR   AlphaFoldDB; Q83FA5; -.
+DR   SMR; Q83FA5; -.
+DR   IntAct; Q83FA5; 9.
+DR   MINT; Q83FA5; -.
+DR   STRING; 227377.CBU_0041; -.
+DR   EnsemblBacteria; AAO89610; AAO89610; CBU_0041.
+DR   GeneID; 1207903; -.
+DR   KEGG; cbu:CBU_0041; -.
+DR   PATRIC; fig|227377.7.peg.42; -.
+DR   HOGENOM; CLU_388683_0_0_6; -.
+DR   PHI-base; PHI:7060; -.
+DR   Proteomes; UP000002671; Chromosome.
+DR   GO; GO:0141030; P:symbiont-mediated perturbation of host actin cytoskeleton via filamentous actin depolymerization; EXP:SigSci.
+PE   4: Predicted;
+KW   Coiled coil; Reference proteome.
+FT   CHAIN           1..710
+FT                   /note="Uncharacterized protein CBU_0041"
+FT                   /id="PRO_0000309267"
+FT   COILED          273..298
+FT                   /evidence="ECO:0000255"
+FT   COILED          477..528
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   710 AA;  82662 MW;  3866D6051CA7190F CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Coxiella.
+1	5	Coxiellaceae
+1	4	Legionellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q83FA5	UNCHARACTERIZED PROTEIN CBU_004    304.5    3.2e-88   1   1.8   4.6
+	Q83FA5_TED01              	    41	   174	   303.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS221096 (E-value: 2.9e-90, Score: 304.5)
+Mentioned as: CBU_0041
+Description: hypothetical protein
+Organism: Coxiella burnetii RSA 493
+PMID: 34078271
+Source: EuropePMC
+Title: Proteome-wide analysis of Coxiella burnetii for conserved T-cell epitopes with presentation across multiple host species
+Journal: BMC bioinformatics (2021)
+Snippet: during MHCI epitope analysis GenBank ID Epitope Count Gene Name Locus Tag Location AAO89610.1 4 CBU_0041 CYTOPLASM(non-PSE) AAO89757.1 6 CBU_0197 PSE-Membrane AAO89774.2 6 CBU_0215 PSE-Cellwall AAO89918.2 5 CBU_0364 MEMBRANE(non-PSE) AAO89941.1 6 CBU_0388 CYTOPLASM(non-PSE) AAO89977.1 4 CBU_0425 CYTOPLASM(non-PSE) AAO90093.1 4 CBU_0547 CYTOPLASM(non-PSE) AAO90229.1 4 CBU_0685 CYTOPLASM(non-PSE) AAO90293.1
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q83FA5.1	AF-Q83FA5-F1-model_v4_TED01:41-174	1	AF-Q83FA5-F1-model_v4_TED01	41-174	100.0%
+Q83FA5.1	AF-Q83FA5-F1-model_v4_TED02:175-213	1	AF-Q83FA5-F1-model_v4_TED02	175-213	0
+Q83FA5.1	AF-Q83FA5-F1-model_v4_TED03:359-592	1	AF-Q83FA5-F1-model_v4_TED03	359-592	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q83FA5_TED01
+GA   27.00 27.00;
+TC   31.20 303.10;
+NC   26.10 23.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

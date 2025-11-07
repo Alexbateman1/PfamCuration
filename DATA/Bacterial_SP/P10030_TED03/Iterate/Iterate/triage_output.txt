@@ -1,0 +1,92 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Pantoea.
+1	6	Escherichia.
+1	6	Buttiauxella.
+2	5	Erwiniaceae
+2	5	Enterobacteriaceae
+4	4	Enterobacterales
+4	3	Gammaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A085FYZ7	PIFC FAMILY TRANSCRIPTION    261.9    4.3e-75   1   1.3   0.0
+	Iterate                   	   221	   358	   261.2
+
+A0A0H3EUA9	REPLICATION PROTEIN REPC     258.9    3.6e-74   1   1.3   0.1
+	Iterate                   	   222	   359	   258.2
+
+A0A1W6BBG2	UNCHARACTERIZED PROTEIN {     81.3    2.5e-19   1   1.0   0.1
+	Iterate                   	     1	    55	    81.1
+
+A0A1W6BBH1	TRANSCRIPTIONAL REGULATOR    245.8      4e-70   1   1.5   0.1
+	Iterate                   	   223	   361	   244.8
+
+A0A914BC20	SUSHI, NIDOGEN AND EGF-LI     47.1    8.8e-09   5   5.5   0.0
+	Iterate                   	  1657	  1724	     9.2
+	Iterate                   	  3142	  3209	     9.2
+	Iterate                   	   169	   233	     8.3
+	Iterate                   	   915	   976	     8.1
+	Iterate                   	  2400	  2461	     4.2
+	PF06119	NIDO            	     1	   157	   127.1
+	PF06119	NIDO            	   254	   452	     172
+	PF06119	NIDO            	   714	   900	   154.9
+	PF06119	NIDO            	   997	  1195	   167.1
+	PF06119	NIDO            	  1457	  1642	     153
+	PF06119	NIDO            	  1739	  1937	   174.5
+	PF06119	NIDO            	  2199	  2385	   153.6
+	PF06119	NIDO            	  2482	  2680	   166.9
+	PF06119	NIDO            	  2942	  3127	   153.9
+	PF06119	NIDO            	  3224	  3422	   174.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P10030 (E-value: 3.2e-76, Score: 258.9)
+Mentioned as: P10030
+Description: Transcriptional repressor PifC
+Organism: Escherichia coli (strain K12)
+PMID: 37713396
+Source: EuropePMC
+Title: Toward Single Bacterium Proteomics
+Journal: Journal of the American Society for Mass Spectrometry (2023)
+Snippet: hrpA P43329 [988993] [R].SLQDLK.[D] 1162.71 581.86 +2 59.70 2 221.69 12.50% Transcriptional repressor PifC pifC P10030 [28] [M].LSQLNLR.[F] 1072.67 536.84 +2 54.13 1 195.86 6.25% histidinol-phphate aminotransferase hisC P06986 [170178] [R].TLLELTRGK.[A] 1488.95 744.97 +2 82.06 1 181.64 31.25% 945 Probable fructelysine utilization operon transcriptional repressor frlR
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A085FYZ7.1	AF-A0A085FYZ7-F1-model_v4_TED01:49-209	1	AF-A0A085FYZ7-F1-model_v4_TED01	49-209	0
+A0A085FYZ7.1	AF-A0A085FYZ7-F1-model_v4_TED02:221-248_256-360	1	AF-A0A085FYZ7-F1-model_v4_TED02	221-360	100.0%
+A0A0H3EUA9.1	AF-A0A0H3EUA9-F1-model_v4_TED01:48-209	1	AF-A0A0H3EUA9-F1-model_v4_TED01	48-209	0
+A0A0H3EUA9.1	AF-A0A0H3EUA9-F1-model_v4_TED02:223-359	1	AF-A0A0H3EUA9-F1-model_v4_TED02	223-359	99.3%
+A0A1W6BBH1.1	AF-A0A1W6BBH1-F1-model_v4_TED01:47-210	1	AF-A0A1W6BBH1-F1-model_v4_TED01	47-210	0
+A0A1W6BBH1.1	AF-A0A1W6BBH1-F1-model_v4_TED02:226-363	1	AF-A0A1W6BBH1-F1-model_v4_TED02	226-363	97.8%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P10030_TED03/Iterate/Iterate
+GA   27.00 27.00;
+TC   30.60 30.40;
+NC   22.00 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

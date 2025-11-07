@@ -1,0 +1,97 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Streptomyces.
+1	6	Polymorphobacter.
+1	5	Streptomycetaceae
+1	5	Sphingosinicellaceae
+1	4	Sphingomonadales
+1	4	Kitasatosporales
+1	3	Alphaproteobacteria
+1	3	Actinomycetes
+1	2	Pseudomonadota
+1	2	Actinomycetota
+1	1	Pseudomonadati
+1	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1Q5JYJ1	DUF2892 DOMAIN-CONTAINING     40.5    1.1e-06   1   1.5   3.0
+	Iterate                   	     1	    34	    39.6
+
+A0A1Y5KHI2	UNCHARACTERIZED PROTEIN {     55.8    1.7e-11  13  13.1  23.5
+	Iterate                   	    42	    60	     5.4
+	Iterate                   	    76	    94	     5.4
+	Iterate                   	   110	   128	     5.4
+	Iterate                   	   144	   162	     5.4
+	Iterate                   	   178	   196	     5.4
+	Iterate                   	   212	   230	     5.4
+	Iterate                   	     6	    26	     5.0
+	Iterate                   	    27	    43	     4.2
+	Iterate                   	    61	    77	     4.2
+	Iterate                   	    95	   111	     4.2
+	Iterate                   	   129	   145	     4.2
+	Iterate                   	   163	   179	     4.2
+	Iterate                   	   197	   213	     4.2
+
+A0A3P8T3U3	UNCHARACTERIZED PROTEIN {     48.0    4.9e-09  21  28.9  80.2
+	Iterate                   	    41	    66	     3.9
+	Iterate                   	   259	   283	     3.9
+	Iterate                   	   337	   361	     3.9
+	Iterate                   	   397	   421	     3.9
+	Iterate                   	   558	   581	     3.9
+	Iterate                   	   658	   681	     3.9
+	Iterate                   	   498	   521	     3.8
+	Iterate                   	   698	   721	     3.8
+	Iterate                   	   221	   243	     3.7
+	Iterate                   	   420	   441	     3.7
+	Iterate                   	    85	   106	     3.6
+	Iterate                   	   460	   481	     3.6
+	Iterate                   	    66	    86	     3.5
+	Iterate                   	   106	   126	     3.5
+	Iterate                   	   126	   146	     3.5
+	Iterate                   	   361	   381	     3.5
+	Iterate                   	   441	   461	     3.5
+	Iterate                   	   481	   501	     3.5
+	Iterate                   	   521	   541	     3.5
+	Iterate                   	   681	   701	     3.5
+	Iterate                   	   721	   741	     3.5
+
+A0A6B3GIR3	UNCHARACTERIZED PROTEIN {     80.0    4.7e-19   1   1.5   9.0
+	Iterate                   	    10	    43	    79.1
+
+A0A7C9GR37	UNCHARACTERIZED PROTEIN {     67.9    2.9e-15   1   1.8   4.2
+	Iterate                   	    18	    49	    67.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Q4WHE4.1	AF-A0A1Q4WHE4-F1-model_v4_TED01:2-36	1	AF-A0A1Q4WHE4-F1-model_v4_TED01	2-36	96.6%
+A0A1Q4WHE4.1	AF-A0A1Q4WHE4-F1-model_v4_TED02:37-70	1	AF-A0A1Q4WHE4-F1-model_v4_TED02	37-70	3.4%
+A0A2I0SMZ5.1	AF-A0A2I0SMZ5-F1-model_v4_TED01:2-35	1	AF-A0A2I0SMZ5-F1-model_v4_TED01	2-35	96.4%
+A0A2I0SMZ5.1	AF-A0A2I0SMZ5-F1-model_v4_TED02:37-76	1	AF-A0A2I0SMZ5-F1-model_v4_TED02	37-76	0
+A0A6B3GIR3.1	AF-A0A6B3GIR3-F1-model_v4_TED01:15-81	1	AF-A0A6B3GIR3-F1-model_v4_TED01	15-81	85.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P22402_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.00 29.90;
+NC   26.20 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

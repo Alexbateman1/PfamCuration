@@ -1,0 +1,311 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   LEM3_LEGPH              Reviewed;         570 AA.
+AC   Q5ZXN5;
+DE   RecName: Full=Phosphocholine hydrolase Lem3;
+DE            EC=3.1.3.-;
+DE   AltName: Full=Dephosphocholinase Lem3;
+GN   Name=lem3; OrderedLocusNames=lpg0696;
+OS   Legionella pneumophila subsp. pneumophila (strain Philadelphia 1 / ATCC
+OS   33152 / DSM 7513).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Legionellales; Legionellaceae; Legionella.
+OX   NCBI_TaxID=272624;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Philadelphia 1 / ATCC 33152 / DSM 7513;
+RX   PubMed=15448271; DOI=10.1126/science.1099776;
+RA   Chien M., Morozova I., Shi S., Sheng H., Chen J., Gomez S.M., Asamani G.,
+RA   Hill K., Nuara J., Feder M., Rineer J., Greenberg J.J., Steshenko V.,
+RA   Park S.H., Zhao B., Teplitskaya E., Edwards J.R., Pampou S., Georghiou A.,
+RA   Chou I.-C., Iannuccilli W., Ulz M.E., Kim D.H., Geringer-Sameth A.,
+RA   Goldsberry C., Morozov P., Fischer S.G., Segal G., Qu X., Rzhetsky A.,
+RA   Zhang P., Cayanis E., De Jong P.J., Ju J., Kalachikov S., Shuman H.A.,
+RA   Russo J.J.;
+RT   "The genomic sequence of the accidental pathogen Legionella pneumophila.";
+RL   Science 305:1966-1968(2004).
+RN   [2]
+RP   FUNCTION, CATALYTIC ACTIVITY, AND SUBCELLULAR LOCATION.
+RX   PubMed=22158903; DOI=10.1073/pnas.1114023109;
+RA   Tan Y., Arnold R.J., Luo Z.Q.;
+RT   "Legionella pneumophila regulates the small GTPase Rab1 activity by
+RT   reversible phosphorylcholination.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 108:21212-21217(2011).
+RN   [3]
+RP   FUNCTION, AND BIOPHYSICOCHEMICAL PROPERTIES.
+RX   PubMed=22307087; DOI=10.1038/emboj.2012.16;
+RA   Goody P.R., Heller K., Oesterlin L.K., Muller M.P., Itzen A., Goody R.S.;
+RT   "Reversible phosphocholination of Rab proteins by Legionella pneumophila
+RT   effector proteins.";
+RL   EMBO J. 31:1774-1784(2012).
+RN   [4]
+RP   FUNCTION.
+RX   PubMed=22411835; DOI=10.1073/pnas.1121161109;
+RA   Oesterlin L.K., Goody R.S., Itzen A.;
+RT   "Posttranslational modifications of Rab proteins cause effective
+RT   displacement of GDP dissociation inhibitor.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:5621-5626(2012).
+CC   -!- FUNCTION: Virulence effector that plays a role in hijacking the host
+CC       vesicular trafficking by recruiting the small guanosine triphosphatase
+CC       (GTPase) Rab1 to the cytosolic face of the Legionella-containing
+CC       vacuole (LCVs). Acts as a phosphocholine hydrolase by mediating the
+CC       hydrolysis of phosphocholine to Ser residues of host RAB1 (RAB1A, RAB1B
+CC       or RAB1C). Dephosphocholination of target proteins restores
+CC       accessibility to GTPase effector LepB. Can act on both GDP-bound and
+CC       GTP-bound Rab proteins. {ECO:0000269|PubMed:22158903,
+CC       ECO:0000269|PubMed:22307087, ECO:0000269|PubMed:22411835}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=[Rab1 protein]-O-phosphocholine-L-serine + H2O = [Rab1
+CC         protein]-L-serine + phosphocholine + H(+); Xref=Rhea:RHEA:56084,
+CC         Rhea:RHEA-COMP:14085, Rhea:RHEA-COMP:14376, ChEBI:CHEBI:15377,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:138595,
+CC         ChEBI:CHEBI:295975; Evidence={ECO:0000269|PubMed:22158903};
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=65.5 uM for GDP-bound RAB1B {ECO:0000269|PubMed:22307087};
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000269|PubMed:22158903}. Host
+CC       cytoplasm {ECO:0000269|PubMed:22158903}. Note=Translocated into the
+CC       host cell via the type IV secretion system (T4SS).
+DR   EMBL; AE017354; AAU26785.1; -; Genomic_DNA.
+DR   RefSeq; WP_010946433.1; NC_002942.5.
+DR   RefSeq; YP_094732.1; NC_002942.5.
+DR   PDB; 8AGG; X-ray; 3.60 A; A=1-570.
+DR   PDB; 8ALK; X-ray; 2.15 A; A=21-486.
+DR   PDB; 8ANP; X-ray; 2.20 A; A/B/C/D=21-486.
+DR   PDBsum; 8AGG; -.
+DR   PDBsum; 8ALK; -.
+DR   PDBsum; 8ANP; -.
+DR   AlphaFoldDB; Q5ZXN5; -.
+DR   SASBDB; Q5ZXN5; -.
+DR   SMR; Q5ZXN5; -.
+DR   PaxDb; 272624-lpg0696; -.
+DR   GeneID; 57034689; -.
+DR   KEGG; lpn:lpg0696; -.
+DR   PATRIC; fig|272624.6.peg.718; -.
+DR   eggNOG; COG1391; Bacteria.
+DR   HOGENOM; CLU_514617_0_0_6; -.
+DR   OrthoDB; 5651943at2; -.
+DR   SABIO-RK; Q5ZXN5; -.
+DR   Proteomes; UP000000609; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0030430; C:host cell cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0044606; F:phosphocholine hydrolase activity; IDA:UniProtKB.
+DR   GO; GO:0043087; P:regulation of GTPase activity; IDA:UniProtKB.
+DR   InterPro; IPR036457; PPM-type-like_dom_sf.
+DR   SUPFAM; SSF81606; PP2C-like; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Host cytoplasm; Hydrolase; Reference proteome; Secreted;
+KW   Virulence.
+FT   CHAIN           1..570
+FT                   /note="Phosphocholine hydrolase Lem3"
+FT                   /id="PRO_0000417546"
+FT   STRAND          22..24
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          29..32
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           35..38
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           43..50
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          51..57
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          60..66
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          71..73
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          75..79
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          82..90
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          96..106
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           114..133
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           138..146
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          166..176
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   TURN            177..179
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          180..190
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          192..196
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          202..206
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          208..212
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          217..219
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   TURN            223..227
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   TURN            233..235
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          237..243
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          248..252
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           254..257
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          262..267
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          269..276
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           278..282
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           283..288
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           296..327
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           330..332
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           338..347
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           351..362
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          374..376
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           380..389
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          395..402
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           406..416
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           418..420
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           421..424
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           425..430
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           435..447
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          454..457
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           458..460
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          464..467
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           469..482
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+SQ   SEQUENCE   570 AA;  64738 MW;  9EB1F5D37335E8A7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Legionella.
+4	5	Legionellaceae
+4	4	Legionellales
+4	3	Gammaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A078L2I4	PHOSPHOCHOLINE HYDROLASE     246.0    2.4e-69   1   1.1   0.0
+	Q5ZXN5_TED01              	    16	   384	   245.7
+
+A0A0W0VTI8	PHOSPHOCHOLINE HYDROLASE      80.0    6.9e-19   2   2.1   0.9
+	Q5ZXN5_TED01              	    23	   286	    72.7
+	Q5ZXN5_TED01              	   356	   405	     5.1
+
+A0A0W0XXC2	PHOSPHOCHOLINE HYDROLASE     250.0    1.5e-70   1   1.1   0.0
+	Q5ZXN5_TED01              	    19	   384	   249.6
+
+Q5ZXN5	PHOSPHOCHOLINE HYDROLASE LEM3 E    884.1   2.9e-263   1   1.1   5.1
+	Q5ZXN5_TED01              	    34	   404	   883.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS757159 (E-value: 2.6e-265, Score: 884.1)
+Mentioned as: lpg0696
+Description: Hypothetical protein
+Organism: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+PMID: 37156500
+Source: EuropePMC
+Title: Legionella pneumophila-mediated host posttranslational modifications
+Journal: Journal of molecular cell biology (2023)
+Snippet: is first identified as an Icm/Dot effector that functions to antagonize the activity of AnkX (Lpg0696) ( Table 2 and Figure 1H ; Tan etal., 2011 ). Lem3 removes the phosphocholination moiety from phosphocholinated RAB1, restoring its accessibility to be inactivated by LepB. DeADP-ribosylation Along with
+
+================================================================================
+Protein: VIMSS757159 (E-value: 2.6e-265, Score: 884.1)
+Mentioned as: lpg0696
+Description: Hypothetical protein
+Organism: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+PMID: 34695417
+Source: EuropePMC
+Title: The unity of opposites: Strategic interplay between bacterial effectors to regulate cellular homeostasis
+Journal: The Journal of biological chemistry (2021)
+Snippet: the enzymes catalytic site 4RXI , 4RXV , 4WRP - 4XA9 8 AnkX (lpg0695) Lem3 (lpg0696) LegA8 (AnkX) catalyzes the transfer of phosphorylcholine to Ser76 of Rab1 A dephosphorylcholinase that reverses AnkX-mediated modification on Rab1 4BEP - 4BER , 4BES , 4BET , 6SKU The table
+
+================================================================================
+Protein: VIMSS757159 (E-value: 2.6e-265, Score: 884.1)
+Mentioned as: lpg0696
+Description: Hypothetical protein
+Organism: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+PMID: 33718265
+Source: EuropePMC
+Title: Interesting Biochemistries in the Structure and Function of Bacterial Effectors
+Journal: Frontiers in cellular and infection microbiology (2021)
+Snippet: protein-protein interactions, mediate intramolecular interactions within AnkX. Of note, a second effector from Legionella , Lpg0696 (Lem3) has the ability to remove the phosphocholine group from Rab1, restoring the GTPase to its unmodified state ( Tan etal., 2011 ; Goody etal., 2012 ; Heller etal., 2015
+
+================================================================================
+Protein: VIMSS750941 (E-value: 2.4e-257, Score: 857.9)
+Mentioned as: lpl0733
+Description: hypothetical protein
+Organism: Legionella pneumophila str. Lens
+PMID: 22059087
+Source: EuropePMC
+Title: Comparative and functional genomics of legionella identified eukaryotic like proteins as key players in host-pathogen interactions
+Journal: Frontiers in microbiology (2011)
+Snippet: lpa1005 lpw07161 wipB Unknown lpg0695 lpp0750 lpl0732 lpc2599 lpa1082 lpw07721 ankN/ankX legA8 Ankyrin lpg0696 lpp0751 lpl0733 lpc2598 lpa1084 lpw07731 lem3 Unknown lpg0716 lpp0782 lpl0753 lpc2577 lpa1108 lpw07931 + + Unknown lpg0733 lpp0799 lpl0770 lpc2559 lpa1135 lpw08111 llo0831 llb0892 + + + ravH Unknown lpg0796 lpp0859 Unknown
+
+================================================================================
+Protein: VIMSS750941 (E-value: 2.4e-257, Score: 857.9)
+Mentioned as: lpl0733
+Description: hypothetical protein
+Organism: Legionella pneumophila str. Lens
+PMID: 20833813
+Source: EuropePMC
+Title: Legionella pneumophila strain 130b possesses a unique combination of type IV secretion systems and novel Dot/Icm secretion system effector proteins
+Journal: Journal of bacteriology (2010)
+Snippet: lpw_07731 lpw_09801 lpw_10251 lpw_10311 lpw_10491 lpl0658 lpl0671 lpl0679 lpl0732 lpl0733 lpl0929 lpl0971 41 42 43 44 45 46 47 48 49 50 Lem4 Lem5 Lem6 Ceg19
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q5ZXN5.1	AF-Q5ZXN5-F1-model_v4_TED01:34-151_161-312_394-404	1	AF-Q5ZXN5-F1-model_v4_TED01	34-404	100.0%
+Q5ZXN5.1	AF-Q5ZXN5-F1-model_v4_TED02:315-390	1	AF-Q5ZXN5-F1-model_v4_TED02	315-390	20.5%
+Q5ZXN5.1	AF-Q5ZXN5-F1-model_v4_TED03:407-412_425-457_467-570	1	AF-Q5ZXN5-F1-model_v4_TED03	407-570	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q5ZXN5_TED01
+GA   27.00 27.00;
+TC   80.00 72.70;
+NC   24.80 22.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 8agg
+RN   [1]
+RM   37076474
+RT   Dephosphocholination by Legionella effector Lem3 functions through
+RT   remodelling of  the switch II region of Rab1b.
+RA   Kaspers MS, Pogenberg V, Pett C, Ernst S, Ecker F, Ochtrop P, Groll
+RA   M, Hedberg C, Itzen A;
+RL   Nat Commun. 2023;14:2245.
+
+--- End of Current DESC file ---

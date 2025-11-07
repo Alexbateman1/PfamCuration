@@ -1,0 +1,171 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y255_RICPR              Reviewed;         381 AA.
+AC   Q9ZDS0;
+DE   RecName: Full=Uncharacterized protein RP255;
+GN   OrderedLocusNames=RP255;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AJ235271; CAA14717.1; -; Genomic_DNA.
+DR   PIR; C71680; C71680.
+DR   RefSeq; NP_220640.1; NC_000963.1.
+DR   RefSeq; WP_010886247.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZDS0; -.
+DR   SMR; Q9ZDS0; -.
+DR   TCDB; 2.A.1.64.2; the major facilitator superfamily (mfs).
+DR   EnsemblBacteria; CAA14717; CAA14717; CAA14717.
+DR   KEGG; rpr:RP255; -.
+DR   PATRIC; fig|272947.5.peg.262; -.
+DR   HOGENOM; CLU_723366_0_0_5; -.
+DR   OrthoDB; 7161193at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   Gene3D; 1.20.1250.20; MFS general substrate transporter like domains; 1.
+DR   InterPro; IPR036259; MFS_trans_sf.
+DR   SUPFAM; SSF103473; MFS general substrate transporter; 1.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..381
+FT                   /note="Uncharacterized protein RP255"
+FT                   /id="PRO_0000101343"
+FT   TRANSMEM        10..29
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        75..93
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        98..117
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        130..147
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        157..179
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        199..221
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        236..255
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        262..284
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        289..311
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        323..340
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        355..374
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   381 AA;  43843 MW;  E66F1B43FD1D6967 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+1	7	Rickettsia
+1	6	Rickettsieae
+1	5	Rickettsiaceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A069DGI9	AMINO ACID ABC TRANSPORTE     25.7      0.047   1   1.3   4.1
+	Iterate                   	     2	   167	    25.7
+	PF00528	BPD_transp_1    	    15	   217	    70.6
+
+A0A261DB75	MFS TRANSPORTER {ECO:0008    199.4    2.6e-55   1   2.8  24.5
+	Iterate                   	   195	   383	   199.4
+
+A0A7R7XJ88	MAJOR FACILITATOR SUPERFA     26.9       0.02   1   1.6   1.9
+	Iterate                   	    43	   214	    25.7
+	PF07690	MFS_1           	    57	   437	   122.1
+	PF07690	MFS_1           	   291	   490	    37.5
+
+A0A8J6CTY7	DUF295 DOMAIN-CONTAINING      24.7      0.097   2   2.3   0.5
+	Iterate                   	   244	   336	    11.8
+	Iterate                   	   686	   769	    10.8
+	PF03478	Beta-prop_KIB1-4	    15	   291	   144.6
+	PF12937	F-box-like      	   387	   428	      26
+	PF03478	Beta-prop_KIB1-4	   449	   731	     162
+
+Q9ZDS0	UNCHARACTERIZED PROTEIN RP255      409.0   1.4e-119   1   2.9  32.0
+	Iterate                   	   193	   381	   409.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS614352 (E-value: 2.7e-100, Score: 339.3)
+Mentioned as: RT0247
+Description: rickettsial conserved hypothetical protein
+Organism: Rickettsia typhi str. wilmington
+PMID: 18641131
+Source: EuropePMC
+Title: Characterization of Sec-translocon-dependent extracytoplasmic proteins of Rickettsia typhi
+Journal: Journal of bacteriology (2008)
+Snippet: RT0178 RT0187 RT0188 RT0216 RT0218 RT0222 RT0224 RT0247 RT0260 RT0263 RT0276 VirB6-like protein VirB6-like protein Hypothetical proteinb VacJ lipoprotein
+
+================================================================================
+Protein: VIMSS3597351 (E-value: 4.8e-97, Score: 328.7)
+Mentioned as: A1G_01945
+Description: hypothetical protein
+Organism: Rickettsia rickettsii str. 'Sheila Smith'
+PMID: 19440298
+Source: EuropePMC
+Title: Limited transcriptional responses of Rickettsia rickettsii exposed to environmental stimuli
+Journal: PloS one (2009)
+Snippet: A1G_02820 (RrIowa0592) 7.04 A1G_01610 (RrIowa0341) 6.52 A1G_03075 (RrIowa0648) 6.21 A1G_00065 (RrIowa0015) 6.03 A1G_05945 (RrIowa1276) 6.00 A1G_01945 (RrIowa0410) 5.92 RrIowa0897 c 5.75 A1G_06420 (RrIowa1375) 5.75 RrIowa1169 c 5.64 A1G_05940 (RrIowa1275) 5.46 A1G_00285 (RrIowa0063) 4.73 A1G_05960 (RrIowa1280) 4.33 A1G_07355 (RrIowa1570) 4.26 A1G_06080 (RrIowa1305) 4.02 RrIowa0127 c 3.86 A1G_06415
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A261DB75.1	AF-A0A261DB75-F1-model_v4_TED01:2-129	1	AF-A0A261DB75-F1-model_v4_TED01	2-129	0
+A0A261DB75.1	AF-A0A261DB75-F1-model_v4_TED02:160-385	1	AF-A0A261DB75-F1-model_v4_TED02	160-385	100.0%
+Q9ZDS0.1	AF-Q9ZDS0-F1-model_v4_TED01:4-178	1	AF-Q9ZDS0-F1-model_v4_TED01	4-178	0
+Q9ZDS0.1	AF-Q9ZDS0-F1-model_v4_TED02:193-381	1	AF-Q9ZDS0-F1-model_v4_TED02	193-381	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZDS0_TED02/Iterate
+GA   27.00 27.00;
+TC   35.70 358.40;
+NC   26.10 25.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

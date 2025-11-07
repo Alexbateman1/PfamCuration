@@ -1,0 +1,151 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   STEA_SALTY              Reviewed;         210 AA.
+AC   Q8ZPD7;
+DE   RecName: Full=Secreted effector protein SteA;
+DE   AltName: Full=Salmonella translocated effector A;
+GN   Name=steA; OrderedLocusNames=STM1583;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+CC   -!- FUNCTION: Effector proteins function to alter host cell physiology and
+CC       promote bacterial survival in host tissues. {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000250}. Host cytoplasm
+CC       {ECO:0000250}. Note=Secreted via type III secretion systems 1 and 2
+CC       (SPI-1 and SPI-2 T3SS), and delivered into the host cytoplasm.
+CC       {ECO:0000250}.
+DR   EMBL; AE006468; AAL20501.1; -; Genomic_DNA.
+DR   RefSeq; NP_460542.1; NC_003197.2.
+DR   RefSeq; WP_001147134.1; NC_003197.2.
+DR   AlphaFoldDB; Q8ZPD7; -.
+DR   STRING; 99287.STM1583; -.
+DR   PaxDb; 99287-STM1583; -.
+DR   GeneID; 1253101; -.
+DR   KEGG; stm:STM1583; -.
+DR   PATRIC; fig|99287.12.peg.1674; -.
+DR   HOGENOM; CLU_088946_0_0_6; -.
+DR   OMA; SFEEICM; -.
+DR   BioCyc; SENT99287:STM1583-MONOMER; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0030430; C:host cell cytoplasm; IEA:UniProtKB-SubCell.
+PE   3: Inferred from homology;
+KW   Host cytoplasm; Reference proteome; Secreted; Virulence.
+FT   CHAIN           1..210
+FT                   /note="Secreted effector protein SteA"
+FT                   /id="PRO_0000391635"
+SQ   SEQUENCE   210 AA;  23618 MW;  413279D039731780 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Salmonella.
+3	6	Chitinimonas.
+4	5	Enterobacteriaceae
+3	5	Chitinibacteraceae
+4	4	Enterobacterales
+3	4	Neisseriales
+4	3	Gammaproteobacteria
+3	3	Betaproteobacteria
+7	2	Pseudomonadota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2X4TMS4	CYTOPLASMIC PROTEIN {ECO:    290.5    1.3e-83   2   2.1   6.1
+	Iterate                   	     5	   162	   260.6
+	Iterate                   	   166	   282	    32.2
+
+A0A4Z0LSQ1	EFFECTOR PROTEIN STEA {EC    269.5    3.8e-77   1   1.1   0.0
+	Iterate                   	     5	   169	   269.1
+
+A0A516SFN0	UNCHARACTERIZED PROTEIN {    268.1      1e-76   2   2.2   0.6
+	Iterate                   	    19	   167	   218.8
+	Iterate                   	   164	   275	    47.8
+
+A9MNG6	CYTOPLASMIC PROTEIN {ECO:0008    299.1    2.9e-86   2   2.1   6.4
+	Iterate                   	     5	   162	   270.7
+	Iterate                   	   167	   283	    30.3
+
+Q8ZPD7	SECRETED EFFECTOR PROTEIN STEA     279.6    2.8e-80   1   1.1   0.0
+	Iterate                   	     5	   169	   279.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS899863 (E-value: 7.3e-59, Score: 204.0)
+Mentioned as: SC1581
+Description: hypothetical protein
+Organism: Salmonella enterica subsp. enterica serovar Choleraesuis str. SC-B67
+PMID: 3792824
+Source: EuropePMC
+Title: General nonchemotactic mutants of Caulobacter crescentus
+Journal: Genetics (1986)
+Snippet: 1 sc545 SC714 SC1078 SC1091 SC1140 SC1238 SC1383 SCl388 SC 1556 SC1581 Genotype Wild type gltA 10 1 ilvBl01 aux metD 104 purB104 procl04 lysA103 gltA 101 n i l
+
+================================================================================
+Protein: Q8ZPD7 (E-value: 1.6e-58, Score: 203.0)
+Mentioned as: Q8ZPD7
+Description: Secreted effector protein SteA
+Organism: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+PMID: 27835998
+Source: EuropePMC
+Title: A proteomic approach to the development of DIVA ELISA distinguishing pigs infected with Salmonella Typhimurium and pigs vaccinated with a Salmonella Typhimurium-based inactivated vaccine
+Journal: BMC veterinary research (2016)
+Snippet: 16 5 SPI-1 SopB O30916 38 0 SPI-1 SopE2 Q7CQD4 5 0 SPI-1 and-2 SteA Q8ZPD7 0 0 SPI-1 and-2 SopD P40722 5 0 SPI-2 SopD2 Q8ZQC8 3 0 SPI-2 SseB Q7BVH7 0 3 SPI-2 PipB Q8ZQ59 0 1 SPI-2 PipB2 Q8ZMM8 4 0 flagellar proteins
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A516SEG7.1	AF-A0A516SEG7-F1-model_v4_TED01:7-136	1	AF-A0A516SEG7-F1-model_v4_TED01	7-136	67.4%
+A0A516SEG7.1	AF-A0A516SEG7-F1-model_v4_TED02:144-256	1	AF-A0A516SEG7-F1-model_v4_TED02	144-256	28.0%
+A0A516SEG7.1	AF-A0A516SEG7-F1-model_v4_TED03:378-516	1	AF-A0A516SEG7-F1-model_v4_TED03	378-516	0
+A0A516SFA3.1	AF-A0A516SFA3-F1-model_v4_TED01:30-151	1	AF-A0A516SFA3-F1-model_v4_TED01	30-151	64.9%
+A0A516SFA3.1	AF-A0A516SFA3-F1-model_v4_TED02:157-259	1	AF-A0A516SFA3-F1-model_v4_TED02	157-259	20.7%
+A0A516SFA3.1	AF-A0A516SFA3-F1-model_v4_TED03:263-385	1	AF-A0A516SFA3-F1-model_v4_TED03	263-385	0
+A0A516SFA3.1	AF-A0A516SFA3-F1-model_v4_TED04:387-428	1	AF-A0A516SFA3-F1-model_v4_TED04	387-428	0
+A0A516SFA3.1	AF-A0A516SFA3-F1-model_v4_TED05:508-588	1	AF-A0A516SFA3-F1-model_v4_TED05	508-588	0
+A0A516SFN0.1	AF-A0A516SFN0-F1-model_v4_TED01:37-145	1	AF-A0A516SFN0-F1-model_v4_TED01	37-145	56.8%
+A0A516SFN0.1	AF-A0A516SFN0-F1-model_v4_TED02:160-269	1	AF-A0A516SFN0-F1-model_v4_TED02	160-269	26.6%
+A0A516SFN0.1	AF-A0A516SFN0-F1-model_v4_TED03:289-346_368-491	1	AF-A0A516SFN0-F1-model_v4_TED03	289-491	0
+A9MNG6.1	AF-A9MNG6-F1-model_v4_TED01:5-157	1	AF-A9MNG6-F1-model_v4_TED01	5-157	79.7%
+A9MNG6.1	AF-A9MNG6-F1-model_v4_TED02:162-277	1	AF-A9MNG6-F1-model_v4_TED02	162-277	18.2%
+A9MNG6.1	AF-A9MNG6-F1-model_v4_TED03:283-332	1	AF-A9MNG6-F1-model_v4_TED03	283-332	0
+Q8ZPD7.1	AF-Q8ZPD7-F1-model_v4_TED01:5-98_129-166	1	AF-Q8ZPD7-F1-model_v4_TED01	5-166	98.2%
+Q8ZPD7.1	AF-Q8ZPD7-F1-model_v4_TED02:177-207	1	AF-Q8ZPD7-F1-model_v4_TED02	177-207	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:D0ZXR5_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.40 28.80;
+NC   23.00 24.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

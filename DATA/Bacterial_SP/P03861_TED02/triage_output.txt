@@ -1,0 +1,46 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Staphylococcus
+1	5	Staphylococcaceae
+1	4	Bacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A7SWM5	UNCHARACTERIZED PROTEIN {ECO:     67.8    3.3e-15   3  24.1  13.1
+	P03861_TED02              	   115	   146	     2.6
+	P03861_TED02              	   219	   249	     2.2
+	P03861_TED02              	   141	   160	     2.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P03861.1	AF-P03861-F1-model_v4_TED01:2-37	1	AF-P03861-F1-model_v4_TED01	2-37	0
+P03861.1	AF-P03861-F1-model_v4_TED02:39-77	1	AF-P03861-F1-model_v4_TED02	39-77	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P03861_TED02
+GA   27.00 27.00;
+TC   29.80 58.50;
+NC   25.30 17.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,92 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YZ17_AQUAE              Reviewed;         348 AA.
+AC   O66408;
+DE   RecName: Full=Uncharacterized protein aq_aa17;
+GN   OrderedLocusNames=aq_aa17;
+OS   Aquifex aeolicus (strain VF5).
+OG   Plasmid ece1.
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000667; AAC07960.1; -; Genomic_DNA.
+DR   RefSeq; NP_046408.1; NC_001880.1.
+DR   RefSeq; WP_010890554.1; NC_001880.1.
+DR   AlphaFoldDB; O66408; -.
+DR   EnsemblBacteria; AAC07960; AAC07960; aq_aa17.
+DR   KEGG; aae:aq_aa17; -.
+DR   HOGENOM; CLU_796069_0_0_0; -.
+DR   InParanoid; O66408; -.
+DR   Proteomes; UP000000798; Plasmid ece1.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..348
+FT                   /note="Uncharacterized protein aq_aa17"
+FT                   /id="PRO_0000186988"
+SQ   SEQUENCE   348 AA;  37574 MW;  F83A8DE157536883 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Cellvibrio.
+1	6	Aquifex
+1	5	Cellvibrionaceae
+1	5	Aquificaceae
+1	4	Cellvibrionales
+1	4	Aquificales
+1	3	Gammaproteobacteria
+1	3	Aquificia
+1	2	Pseudomonadota
+1	2	Aquificota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A835Y9Z7	CALCINEURIN-LIKE PHOSPHOE     45.5    3.7e-08   4   4.4   0.8
+	O66408_TED01              	   388	   448	    10.2
+	O66408_TED01              	   708	   768	    10.2
+	O66408_TED01              	    69	   149	     9.9
+	O66408_TED01              	  1038	  1098	     9.9
+	PF00149	Metallophos     	   280	   483	    38.9
+	PF00149	Metallophos     	   600	   803	    41.7
+	PF00149	Metallophos     	   930	  1133	    40.3
+
+O66408	UNCHARACTERIZED PROTEIN AQ_AA17    676.8   1.7e-200   1   1.1  20.4
+	O66408_TED01              	     2	   290	   676.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O66408.1	AF-O66408-F1-model_v4_TED01:2-26_98-290	1	AF-O66408-F1-model_v4_TED01	2-290	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66408_TED01
+GA   27.00 27.00;
+TC   27.00 27.70;
+NC   25.80 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

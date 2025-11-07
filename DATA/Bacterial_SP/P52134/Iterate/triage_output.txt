@@ -1,0 +1,168 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YPJK_ECOLI              Reviewed;          78 AA.
+AC   P52134; Q2MAD6;
+DE   RecName: Full=Uncharacterized protein YpjK;
+DE   Flags: Precursor;
+GN   Name=ypjK; OrderedLocusNames=b2635, JW5888;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- SIMILARITY: To E.coli YkfL. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA79804.1; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=AAA79804.1; Type=Frameshift; Evidence={ECO:0000305};
+DR   EMBL; U36840; AAA79804.1; ALT_SEQ; Genomic_DNA.
+DR   EMBL; U00096; AAC75683.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76770.1; -; Genomic_DNA.
+DR   PIR; E65042; E65042.
+DR   RefSeq; WP_001144029.1; NZ_LN832404.1.
+DR   RefSeq; YP_026174.2; NC_000913.3.
+DR   AlphaFoldDB; P52134; -.
+DR   BioGRID; 4260627; 11.
+DR   FunCoup; P52134; 287.
+DR   STRING; 511145.b2635; -.
+DR   PaxDb; 511145-b2635; -.
+DR   EnsemblBacteria; AAC75683; AAC75683; b2635.
+DR   GeneID; 2847710; -.
+DR   KEGG; ecj:JW5888; -.
+DR   KEGG; eco:b2635; -.
+DR   KEGG; ecoc:C3026_14575; -.
+DR   PATRIC; fig|511145.12.peg.2729; -.
+DR   EchoBASE; EB4122; -.
+DR   eggNOG; ENOG5032V17; Bacteria.
+DR   HOGENOM; CLU_2567675_0_0_6; -.
+DR   InParanoid; P52134; -.
+DR   BioCyc; EcoCyc:G7370-MONOMER; -.
+DR   PRO; PR:P52134; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..45
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           46..78
+FT                   /note="Uncharacterized protein YpjK"
+FT                   /id="PRO_0000013895"
+SQ   SEQUENCE   78 AA;  7703 MW;  9DE01A5E14D22E6A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	6	Buttiauxella.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A085GK99	PUTATIVE INNER MEMBRANE P    157.9    2.5e-43   1   1.0  16.7
+	Iterate                   	     1	    78	   157.7
+
+A0A816A5M5	NHL REPEAT CONTAINING PRO     23.6       0.19   2   5.5   2.2
+	Iterate                   	   141	   215	    10.1
+	Iterate                   	   789	   836	     5.0
+	PF01436	NHL             	   185	   212	    22.2
+	PF01436	NHL             	   277	   304	    27.1
+	PF01436	NHL             	   515	   542	    23.7
+	PF01436	NHL             	   908	   935	    23.2
+	PF01436	NHL             	  1107	  1132	    25.4
+
+A0AAE1PCL2	UNCHARACTERIZED PROTEIN {     35.1      5e-05  12  12.9  56.8
+	Iterate                   	   421	   470	     8.6
+	Iterate                   	   240	   296	     5.6
+	Iterate                   	    73	   123	     5.5
+	Iterate                   	    16	    64	     5.4
+	Iterate                   	   131	   180	     5.4
+	Iterate                   	   305	   354	     5.4
+	Iterate                   	   363	   412	     5.4
+	Iterate                   	   479	   528	     5.4
+	Iterate                   	   537	   586	     5.4
+	Iterate                   	   644	   693	     5.4
+	Iterate                   	   189	   239	     4.7
+	Iterate                   	   595	   640	     4.7
+
+A0AAE1U127	UNCHARACTERIZED PROTEIN {     32.3    0.00038   6   6.0  18.1
+	Iterate                   	   252	   306	     8.7
+	Iterate                   	     8	    59	     7.2
+	Iterate                   	    65	   114	     6.7
+	Iterate                   	   193	   242	     6.7
+	Iterate                   	   309	   356	     6.6
+	Iterate                   	   123	   170	     4.8
+
+P52134	UNCHARACTERIZED PROTEIN YPJK       164.6    1.9e-45   1   1.0  16.3
+	Iterate                   	     1	    78	   164.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1936815 (E-value: 1.7e-47, Score: 164.6)
+Mentioned as: b2635
+Description: CP4-57 prophage; predicted inner membrane protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 15242519
+Source: EuropePMC
+Title: Rapid identification and mapping of insertion sequences in Escherichia coli genomes using vectorette PCR
+Journal: BMC microbiology (2004)
+Snippet: ( IS1 -a in b0240 , IS1 -c in b1786 , and IS1 -f in b2635 ) were also found in CGSC6300. IS2 Primers IS2 -A and IS2 -B produced 4 bands and 6 bands, respectively (Fig. 2 ). Three ( IS2 -1, IS2 -4, and
+
+================================================================================
+Protein: VIMSS1936815 (E-value: 1.7e-47, Score: 164.6)
+Mentioned as: b2635
+Description: CP4-57 prophage; predicted inner membrane protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 14526028
+Source: EuropePMC
+Title: Interfering with different steps of protein synthesis explored by transcriptional profiling of Escherichia coli K-12
+Journal: Journal of bacteriology (2003)
+Snippet: and gene b no. Expression ratio AZL b2880 b2879 yhaM b2635 b1445 b2274 b2450 farR b1310 hmpA yehT kdpD ypfH caiC yiaB yjfK yjfL b2460 nuoK yhaB yibG b2666
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P52134/Iterate
+GA   27.00 27.00;
+TC   32.30 157.70;
+NC   23.60 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

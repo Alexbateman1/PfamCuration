@@ -1,0 +1,112 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y233_HAEIN              Reviewed;          50 AA.
+AC   P43967;
+DE   RecName: Full=Uncharacterized protein HI_0233;
+GN   OrderedLocusNames=HI_0233;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+DR   EMBL; L42023; AAC21903.1; -; Genomic_DNA.
+DR   PIR; C64004; C64004.
+DR   AlphaFoldDB; P43967; -.
+DR   SMR; P43967; -.
+DR   STRING; 71421.HI_0233; -.
+DR   EnsemblBacteria; AAC21903; AAC21903; HI_0233.
+DR   KEGG; hin:HI_0233; -.
+DR   HOGENOM; CLU_214414_0_0_6; -.
+DR   Proteomes; UP000000579; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..50
+FT                   /note="Uncharacterized protein HI_0233"
+FT                   /id="PRO_0000077900"
+SQ   SEQUENCE   50 AA;  6140 MW;  38255FC9AE4BEA7C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Haemophilus.
+11	5	Pasteurellaceae
+12	4	Pasteurellales
+12	3	Gammaproteobacteria
+12	2	Pseudomonadota
+12	1	Pseudomonadati
+12	0	Bacteria
+Total of 12 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A377IY83	UNCHARACTERIZED PROTEIN {     91.8    1.2e-22   1   1.0  13.1
+	Iterate                   	     1	    49	    91.7
+
+A0A379B2M5	UNCHARACTERIZED PROTEIN {     93.5    3.6e-23   1   1.0   8.5
+	Iterate                   	     1	    51	    93.3
+
+A0A447STD9	UNCHARACTERIZED PROTEIN {     92.0      1e-22   1   1.0  12.2
+	Iterate                   	     1	    52	    91.9
+
+A0A6G7QPZ6	UNCHARACTERIZED PROTEIN {     88.2    1.5e-21   1   1.0  11.9
+	Iterate                   	     1	    50	    88.1
+
+P43967	UNCHARACTERIZED PROTEIN HI_0233     96.6    3.6e-24   1   1.0  12.5
+	Iterate                   	     1	    50	    96.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS858435 (E-value: 6.7e-24, Score: 89.1)
+Mentioned as: NTHI0339
+Description: hypothetical protein
+Organism: Haemophilus influenzae 86-028NP
+PMID: 22919649
+Source: EuropePMC
+Title: Dps promotes survival of nontypeable Haemophilus influenzae in biofilm communities in vitro and resistance to clearance in vivo
+Journal: Frontiers in cellular and infection microbiology (2012)
+Snippet: Downregulated genes of biofilm vs. stationary phase . Gene no. Name Biofilm/stationary NTHI0831 Tryptophanase 0.5 NTHI0339 Hypothetical protein 0.4
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A377IY83.1	AF-A0A377IY83-F1-model_v4_TED01:16-49	1	AF-A0A377IY83-F1-model_v4_TED01	16-49	69.4%
+A0A4R2N238.1	AF-A0A4R2N238-F1-model_v4_TED01:23-51	1	AF-A0A4R2N238-F1-model_v4_TED01	23-51	56.9%
+A0A4R6VGD3.1	AF-A0A4R6VGD3-F1-model_v4_TED01:2-54	1	AF-A0A4R6VGD3-F1-model_v4_TED01	2-54	98.1%
+A0A6G7QPZ6.1	AF-A0A6G7QPZ6-F1-model_v4_TED01:13-50	1	AF-A0A6G7QPZ6-F1-model_v4_TED01	13-50	76.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P43967/Iterate/Iterate
+GA   27.00 27.00;
+TC   31.60 31.40;
+NC   22.20 19.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

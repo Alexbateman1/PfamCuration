@@ -1,0 +1,87 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y355_TREPA              Reviewed;         127 AA.
+AC   O83374;
+DE   RecName: Full=Uncharacterized protein TP_0355;
+GN   OrderedLocusNames=TP_0355;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65353.1; -; Genomic_DNA.
+DR   PIR; A71334; A71334.
+DR   RefSeq; WP_010881803.1; NC_021490.2.
+DR   AlphaFoldDB; O83374; -.
+DR   SMR; O83374; -.
+DR   EnsemblBacteria; AAC65353; AAC65353; TP_0355.
+DR   KEGG; tpa:TP_0355; -.
+DR   KEGG; tpw:TPANIC_0355; -.
+DR   HOGENOM; CLU_1969551_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..127
+FT                   /note="Uncharacterized protein TP_0355"
+FT                   /id="PRO_0000202240"
+FT   REGION          1..36
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1..17
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   127 AA;  14527 MW;  1B848EF0DAC4ADC4 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Treponema.
+1	5	Treponemataceae
+1	4	Spirochaetales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O83374	UNCHARACTERIZED PROTEIN TP_0355    216.7    1.7e-61   1   1.1   5.0
+	O83374_TED01              	    33	   124	   216.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83374.1	AF-O83374-F1-model_v4_TED01:33-124	1	AF-O83374-F1-model_v4_TED01	33-124	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83374_TED01
+GA   27.00 27.00;
+TC   27.50 216.40;
+NC   26.00 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

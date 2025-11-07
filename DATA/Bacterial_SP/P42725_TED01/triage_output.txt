@@ -1,0 +1,44 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Streptomyces.
+1	5	Streptomycetaceae
+1	4	Kitasatosporales
+1	3	Actinomycetes
+1	2	Actinomycetota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1B1MMM7	UNCHARACTERIZED PROTEIN {     27.7      0.012   1   1.4   0.3
+	P42725_TED01              	    13	   115	    27.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P42725.1	AF-P42725-F1-model_v4_TED02:140-356	1	AF-P42725-F1-model_v4_TED02	140-356	0
+P42725.1	AF-P42725-F1-model_v4_TED01:3-113	1	AF-P42725-F1-model_v4_TED01	3-113	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P42725_TED01
+GA   27.00 27.00;
+TC   27.70 27.20;
+NC   23.80 23.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

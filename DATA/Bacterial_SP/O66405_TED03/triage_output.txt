@@ -1,0 +1,81 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YZ11_AQUAE              Reviewed;         318 AA.
+AC   O66405;
+DE   RecName: Full=Uncharacterized protein aq_aa11;
+GN   OrderedLocusNames=aq_aa11;
+OS   Aquifex aeolicus (strain VF5).
+OG   Plasmid ece1.
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+CC   -!- SIMILARITY: To A.aeolicus AA07 and AA34. {ECO:0000305}.
+DR   EMBL; AE000667; AAC07957.1; -; Genomic_DNA.
+DR   RefSeq; NP_046405.1; NC_001880.1.
+DR   RefSeq; WP_010890551.1; NC_001880.1.
+DR   AlphaFoldDB; O66405; -.
+DR   SMR; O66405; -.
+DR   EnsemblBacteria; AAC07957; AAC07957; aq_aa11.
+DR   KEGG; aae:aq_aa11; -.
+DR   HOGENOM; CLU_876169_0_0_0; -.
+DR   InParanoid; O66405; -.
+DR   Proteomes; UP000000798; Plasmid ece1.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..318
+FT                   /note="Uncharacterized protein aq_aa11"
+FT                   /id="PRO_0000186985"
+SQ   SEQUENCE   318 AA;  38424 MW;  4C2E5B005C0CAC7C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Aquifex
+1	5	Aquificaceae
+1	4	Aquificales
+1	3	Aquificia
+1	2	Aquificota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O66405	UNCHARACTERIZED PROTEIN AQ_AA11    148.0    2.6e-40   1   2.7   9.0
+	O66405_TED03              	   255	   318	   148.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O66405.1	AF-O66405-F1-model_v4_TED01:2-87	1	AF-O66405-F1-model_v4_TED01	2-87	0
+O66405.1	AF-O66405-F1-model_v4_TED02:133-237	1	AF-O66405-F1-model_v4_TED02	133-237	0
+O66405.1	AF-O66405-F1-model_v4_TED03:255-318	1	AF-O66405-F1-model_v4_TED03	255-318	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66405_TED03
+GA   27.00 27.00;
+TC   27.20 148.00;
+NC   25.50 20.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

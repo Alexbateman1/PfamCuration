@@ -1,0 +1,113 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YFFS_ECOLI              Reviewed;         269 AA.
+AC   P76550;
+DE   RecName: Full=Uncharacterized protein YffS;
+GN   Name=yffS; OrderedLocusNames=b2450;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+DR   EMBL; U00096; AAC75503.2; -; Genomic_DNA.
+DR   PIR; A65020; A65020.
+DR   RefSeq; NP_416945.2; NC_000913.3.
+DR   RefSeq; WP_010723125.1; NZ_JACEFS010000004.1.
+DR   AlphaFoldDB; P76550; -.
+DR   DIP; DIP-12033N; -.
+DR   FunCoup; P76550; 30.
+DR   IntAct; P76550; 6.
+DR   STRING; 511145.b2450; -.
+DR   jPOST; P76550; -.
+DR   PaxDb; 511145-b2450; -.
+DR   EnsemblBacteria; AAC75503; AAC75503; b2450.
+DR   GeneID; 946932; -.
+DR   KEGG; eco:b2450; -.
+DR   KEGG; ecoc:C3026_13600; -.
+DR   PATRIC; fig|511145.12.peg.2543; -.
+DR   EchoBASE; EB3932; -.
+DR   InParanoid; P76550; -.
+DR   OMA; AKKWINP; -.
+DR   OrthoDB; 9791537at2; -.
+DR   BioCyc; EcoCyc:G7280-MONOMER; -.
+DR   PRO; PR:P76550; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005829; C:cytosol; IDA:EcoCyc.
+DR   GO; GO:0003677; F:DNA binding; IEA:InterPro.
+DR   CDD; cd00093; HTH_XRE; 1.
+DR   Gene3D; 1.10.260.40; lambda repressor-like DNA-binding domains; 1.
+DR   InterPro; IPR001387; Cro/C1-type_HTH.
+DR   InterPro; IPR010982; Lambda_DNA-bd_dom_sf.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..269
+FT                   /note="Uncharacterized protein YffS"
+FT                   /id="PRO_0000169238"
+SQ   SEQUENCE   269 AA;  29751 MW;  D1A562F9B42FC965 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P76550	UNCHARACTERIZED PROTEIN YFFS       216.6    1.6e-61   1   2.3   5.5
+	P76550_TED02              	   162	   257	   215.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P76550 (E-value: 1.5e-63, Score: 216.6)
+Mentioned as: P76550
+Description: Uncharacterized protein YffS
+Organism: Escherichia coli (strain K12)
+PMID: 23305560
+Source: EuropePMC
+Title: A coordinated proteomic approach for identifying proteins that interact with the E. coli ribosomal protein S12
+Journal: Journal of proteome research (2013)
+Snippet: 5 12 15.5 23S rRNA (uracil-5-)-methyltransferase P0AGJ5 yfiF * 14 174 46.4 Unchar. tRNA/rRNA methyltransferas P76550 yffS 16 143 56.5 Uncharacterized protein P0A8A8 RimP * 5 58 28.6 Ribosome maturation factor P0A7X6 RimM * 9 37 58.2 Ribosome maturation factor P43329 HrpA 43 312 41.4 ATP-dependent
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76550.2	AF-P76550-F1-model_v4_TED02:162-257	1	AF-P76550-F1-model_v4_TED02	162-257	100.0%
+P76550.2	AF-P76550-F1-model_v4_TED01:6-91	1	AF-P76550-F1-model_v4_TED01	6-91	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76550_TED02
+GA   27.00 27.00;
+TC   29.90 215.10;
+NC   26.60 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

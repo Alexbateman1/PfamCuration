@@ -1,0 +1,93 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y377_MYCPN              Reviewed;          74 AA.
+AC   Q9EXD3;
+DE   RecName: Full=Uncharacterized protein MPN_377;
+GN   OrderedLocusNames=MPN_377; ORFNames=A19_orf74, MP459.1;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+RN   [2]
+RP   IDENTIFICATION.
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=10954595; DOI=10.1093/nar/28.17.3278;
+RA   Dandekar T., Huynen M., Regula J.T., Ueberle B., Zimmermann C.U.,
+RA   Andrade M.A., Doerks T., Sanchez-Pulido L., Snel B., Suyama M., Yuan Y.P.,
+RA   Herrmann R., Bork P.;
+RT   "Re-annotating the Mycoplasma pneumoniae genome sequence: adding value,
+RT   function and reading frames.";
+RL   Nucleic Acids Res. 28:3278-3288(2000).
+RN   [3]
+RP   IDENTIFICATION BY MASS SPECTROMETRY.
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=11271496;
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9EXD3	UNCHARACTERIZED PROTEIN MPN_377    119.7    1.8e-31   1   1.3  16.6
+	Q9EXD3_TED01              	    21	    72	   119.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS13833 (E-value: 1.6e-33, Score: 119.7)
+Mentioned as: MPN377
+Description: hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 14576319
+Source: EuropePMC
+Title: Transcription profiles of the bacterium Mycoplasma pneumoniae grown at different temperatures
+Journal: Nucleic acids research (2003)
+Snippet: genes (MPN069, MPN242, MPN254, MPN270, MPN272, MPN296, MPN377, MPN388, MPN418, MPN482, MPN495, MPN605) (20), which were identi(R)ed after the original
+
+================================================================================
+Protein: VIMSS13833 (E-value: 1.6e-33, Score: 119.7)
+Mentioned as: MPN377
+Description: hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 10954595
+Source: EuropePMC
+Title: Re-annotating the Mycoplasma pneumoniae genome sequence: adding value, function and reading frames
+Journal: Nucleic acids research (2000)
+Snippet: A19_orf74 MP PID MPN007 147.0 PID:g1673807 D12_orf253 MPN377 460.1 E3366 MPN032 122.0 PID:g1673781 B01_orf108 MPN386 452.0 PID:g1674139 F11_orf229 MPN033 121.0
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9EXD3.1	AF-Q9EXD3-F1-model_v4_TED01:21-72	1	AF-Q9EXD3-F1-model_v4_TED01	21-72	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9EXD3_TED01
+GA   27.00 27.00;
+TC   28.10 119.10;
+NC   25.20 23.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

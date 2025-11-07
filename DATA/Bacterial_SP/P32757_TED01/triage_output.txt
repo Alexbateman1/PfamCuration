@@ -1,0 +1,102 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y7004_CUPNH             Reviewed;         101 AA.
+AC   P32757; Q7WXU4;
+DE   RecName: Full=Uncharacterized protein PHG004;
+DE   AltName: Full=ORF4;
+GN   OrderedLocusNames=PHG004;
+OS   Cupriavidus necator (strain ATCC 17699 / DSM 428 / KCTC 22496 / NCIMB 10442
+OS   / H16 / Stanier 337) (Ralstonia eutropha).
+OG   Plasmid megaplasmid pHG1.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria;
+OC   Burkholderiales; Burkholderiaceae; Cupriavidus.
+OX   NCBI_TaxID=381666;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=1383192; DOI=10.1128/jb.174.19.6277-6289.1992;
+RA   Kortlueke C., Horstmann K., Schwartz E., Rohde M., Binsack R.,
+RA   Friedrich B.;
+RT   "A gene complex coding for the membrane-bound hydrogenase of Alcaligenes
+RT   eutrophus H16.";
+RL   J. Bacteriol. 174:6277-6289(1992).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 17699 / DSM 428 / KCTC 22496 / NCIMB 10442 / H16 / Stanier
+RC   337;
+RX   PubMed=12948488; DOI=10.1016/s0022-2836(03)00894-5;
+RA   Schwartz E., Henne A., Cramm R., Eitinger T., Friedrich B., Gottschalk G.;
+RT   "Complete nucleotide sequence of pHG1: a Ralstonia eutropha H16 megaplasmid
+RT   encoding key enzymes of H(2)-based lithoautotrophy and anaerobiosis.";
+RL   J. Mol. Biol. 332:369-383(2003).
+DR   EMBL; M96433; AAA16464.1; -; Unassigned_DNA.
+DR   EMBL; AY305378; AAP85760.1; -; Genomic_DNA.
+DR   PIR; D43255; D43255.
+DR   AlphaFoldDB; P32757; -.
+DR   KEGG; reh:PHG004; -.
+DR   HOGENOM; CLU_2286817_0_0_4; -.
+DR   Proteomes; UP000008210; Plasmid megaplasmid pHG1.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..101
+FT                   /note="Uncharacterized protein PHG004"
+FT                   /id="PRO_0000066254"
+FT   CONFLICT        69
+FT                   /note="E -> D (in Ref. 1; AAA16464)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   101 AA;  11637 MW;  B12B858E0A4DD6C2 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Cupriavidus.
+1	5	Burkholderiaceae
+1	4	Burkholderiales
+1	3	Betaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P32757	UNCHARACTERIZED PROTEIN PHG004    123.3    1.4e-32   1   1.7   6.7
+	P32757_TED01              	    54	    99	   123.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS2035937 (E-value: 1.2e-34, Score: 123.3)
+Mentioned as: PHG004
+Description: hypothetical protein
+Organism: Ralstonia eutropha H16
+PMID: 40711478
+Source: EuropePMC
+Title: Comparative Genomic Assessment of the Cupriavidus necator Species for One-Carbon Based Biomanufacturing
+Journal: Microbial biotechnology (2025)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P32757.2	AF-P32757-F1-model_v4_TED01:54-99	1	AF-P32757-F1-model_v4_TED01	54-99	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P32757_TED01
+GA   27.00 27.00;
+TC   34.90 123.30;
+NC   25.30 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

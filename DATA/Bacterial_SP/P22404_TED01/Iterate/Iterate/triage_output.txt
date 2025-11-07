@@ -1,0 +1,81 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Streptomyces.
+1	6	Polymorphobacter.
+1	6	Frankia.
+2	5	Streptomycetaceae
+1	5	Sphingosinicellaceae
+1	5	Frankiaceae
+2	4	Kitasatosporales
+1	4	Sphingomonadales
+1	4	Frankiales
+3	3	Actinomycetes
+1	3	Alphaproteobacteria
+3	2	Actinomycetota
+1	2	Pseudomonadota
+3	1	Bacillati
+1	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2T7TDA8	UNCHARACTERIZED PROTEIN {     89.4    4.8e-22   1   1.3   2.3
+	Iterate                   	    37	    75	    88.7
+
+A0A4S5B6E5	TRANSPOSASE {ECO:0008006|     33.9     0.0001   1   1.5   0.1
+	Iterate                   	    37	    73	    33.9
+
+A0A6N7KYA2	UNCHARACTERIZED PROTEIN {     85.2    9.8e-21   1   1.4   4.9
+	Iterate                   	    37	    73	    84.4
+
+A0A7C9GRY0	UNCHARACTERIZED PROTEIN {     91.7    9.5e-23   1   1.4   2.2
+	Iterate                   	    37	    73	    90.9
+
+A0A9P9D4Q0	UNCHARACTERIZED PROTEIN {     29.2     0.0032   0   7.5   0.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P22404 (E-value: 3.9e-18, Score: 70.3)
+Mentioned as: P22404
+Description: Protein KorB
+Organism: Streptomyces lividans
+PMID: 39528236
+Source: EuropePMC
+Title: Identification of plasmids from thermophilic Streptomyces strains and development of a gene cloning system for thermophilic Streptomyces species
+Journal: Journal of industrial microbiology & biotechnology (2024)
+Snippet: 95 10854 AAA91010 (SpdA of pJV1) 56/62 plasmid spread 2 1170 1397 korB 75 8542 P22404 (KorB of pIJ101) 79/85 korA repressor 3 1623 3563 traB 646 69529 P22409 (Tra of pIJ101) 74/82 transfer function 4 3560 3880 106 10599 WSB52267 80/87 hypothetical protein 5 3883
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2T7TDA8.1	AF-A0A2T7TDA8-F1-model_v4_TED01:7-75	1	AF-A0A2T7TDA8-F1-model_v4_TED01	7-75	100.0%
+A0A4S5B6E5.1	AF-A0A4S5B6E5-F1-model_v4_TED01:7-73	1	AF-A0A4S5B6E5-F1-model_v4_TED01	7-73	100.0%
+A0A6N7KYA2.1	AF-A0A6N7KYA2-F1-model_v4_TED01:7-71	1	AF-A0A6N7KYA2-F1-model_v4_TED01	7-71	94.6%
+A0A7C9GRY0.1	AF-A0A7C9GRY0-F1-model_v4_TED01:7-71	1	AF-A0A7C9GRY0-F1-model_v4_TED01	7-71	94.6%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P22404_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.00 75.30;
+NC   26.70 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

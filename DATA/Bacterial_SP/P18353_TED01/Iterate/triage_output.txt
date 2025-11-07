@@ -1,0 +1,108 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	Klebsiella pneumoniae complex.
+1	7	Klebsiella
+3	6	Escherichia.
+1	6	Klebsiella/Raoultella group
+4	5	Enterobacteriaceae
+4	4	Enterobacterales
+4	3	Gammaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2XKW1	TRBJ {ECO:0000313|EMBL:AB    188.0    1.4e-52   1   1.1   4.6
+	Iterate                   	    16	   109	   187.7
+
+A0A2G5T677	UNCHARACTERIZED PROTEIN {     41.1    9.2e-07  36  39.7 242.9
+	Iterate                   	   473	   512	     7.4
+	Iterate                   	   743	   783	     7.4
+	Iterate                   	   799	   836	     7.1
+	Iterate                   	   122	   163	     7.0
+	Iterate                   	   286	   324	     7.0
+	Iterate                   	  1096	  1134	     7.0
+	Iterate                   	  1042	  1080	     6.9
+	Iterate                   	   232	   268	     6.8
+	Iterate                   	   716	   754	     6.8
+	Iterate                   	   338	   378	     6.7
+	Iterate                   	   583	   620	     6.7
+	Iterate                   	   663	   701	     6.7
+	Iterate                   	   934	   972	     6.7
+	Iterate                   	   986	  1025	     6.6
+	Iterate                   	   417	   458	     6.5
+	Iterate                   	   206	   241	     6.4
+	Iterate                   	   636	   673	     6.1
+	Iterate                   	    39	    81	     6.0
+	Iterate                   	    68	   106	     5.9
+	Iterate                   	   448	   485	     5.9
+	Iterate                   	   690	   727	     5.9
+	Iterate                   	   610	   646	     5.8
+	Iterate                   	   555	   593	     5.6
+	Iterate                   	   152	   187	     5.5
+	Iterate                   	   825	   871	     5.5
+	Iterate                   	   502	   547	     5.4
+	Iterate                   	   259	   295	     5.3
+	Iterate                   	   779	   809	     5.3
+	Iterate                   	   177	   214	     5.2
+	Iterate                   	  1069	  1106	     5.1
+	Iterate                   	   318	   349	     4.9
+	Iterate                   	   906	   944	     4.8
+	Iterate                   	  1015	  1052	     4.7
+	Iterate                   	    96	   133	     4.6
+	Iterate                   	   879	   916	     4.2
+	Iterate                   	   962	   998	     3.7
+
+A0A377YWI0	CONJUGAL TRANSFER PROTEIN    181.7    1.2e-50   1   1.0   6.1
+	Iterate                   	     1	    89	   181.6
+
+B7LI85	CONJUGAL TRANSFER PROTEIN TRB    162.2    1.5e-44   1   1.1   3.4
+	Iterate                   	    16	   109	   162.0
+
+B7UTJ7	CONJUGAL TRANSFER PROTEIN TRB    201.7    7.2e-57   1   1.1   6.6
+	Iterate                   	    16	   109	   201.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1726518 (E-value: 6.8e-48, Score: 166.3)
+Mentioned as: O2ColV116
+Description: TrbJ
+Organism: Escherichia coli
+PMID: 19307211
+Source: EuropePMC
+Title: The plasmid of Escherichia coli strain S88 (O45:K1:H7) that causes neonatal meningitis is closely related to avian pathogenic E. coli plasmids and is associated with high-level bacteremia in a neonatal rat meningitis model
+Journal: Infection and immunity (2009)
+Snippet: O2ColV124 O2ColV123 O2ColV122 O2ColV121 O2ColV120 O2ColV118 O2ColV117 O2ColV116 O2ColV115 O2ColV114 O2ColV113 O2ColV112 100 100 99.6 99.2 100 99.8 100 100
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+B7UTJ7.1	AF-B7UTJ7-F1-model_v4_TED01:23-110	1	AF-B7UTJ7-F1-model_v4_TED01	23-110	92.6%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P18353_TED01/Iterate
+GA   27.00 27.00;
+TC   34.70 161.90;
+NC   25.60 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

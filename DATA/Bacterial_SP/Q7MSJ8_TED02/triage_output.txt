@@ -1,0 +1,1409 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MCCA_SHEON              Reviewed;         708 AA.
+AC   Q8EJI6;
+DE   RecName: Full=Dissimilatory sulfite reductase SirA {ECO:0000305};
+DE            EC=1.8.99.- {ECO:0000269|PubMed:21199252};
+DE   Flags: Precursor;
+GN   Name=sirA {ECO:0000303|PubMed:21199252, ECO:0000312|EMBL:AAN53560.2};
+GN   Synonyms=mccA {ECO:0000303|PubMed:21199252};
+GN   OrderedLocusNames=SO_0479 {ECO:0000312|EMBL:AAN53560.2};
+OS   Shewanella oneidensis (strain ATCC 700550 / JCM 31522 / CIP 106686 / LMG
+OS   19005 / NCIMB 14063 / MR-1).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Alteromonadales; Shewanellaceae; Shewanella.
+OX   NCBI_TaxID=211586 {ECO:0000312|EMBL:AAN53560.2};
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700550 / JCM 31522 / CIP 106686 / LMG 19005 / NCIMB 14063
+RC   / MR-1 {ECO:0000312|EMBL:AAN53560.2};
+RX   PubMed=12368813; DOI=10.1038/nbt749;
+RA   Heidelberg J.F., Paulsen I.T., Nelson K.E., Gaidos E.J., Nelson W.C.,
+RA   Read T.D., Eisen J.A., Seshadri R., Ward N.L., Methe B.A., Clayton R.A.,
+RA   Meyer T., Tsapin A., Scott J., Beanan M.J., Brinkac L.M., Daugherty S.C.,
+RA   DeBoy R.T., Dodson R.J., Durkin A.S., Haft D.H., Kolonay J.F., Madupu R.,
+RA   Peterson J.D., Umayam L.A., White O., Wolf A.M., Vamathevan J.J.,
+RA   Weidman J.F., Impraim M., Lee K., Berry K.J., Lee C., Mueller J.,
+RA   Khouri H.M., Gill J., Utterback T.R., McDonald L.A., Feldblyum T.V.,
+RA   Smith H.O., Venter J.C., Nealson K.H., Fraser C.M.;
+RT   "Genome sequence of the dissimilatory metal ion-reducing bacterium
+RT   Shewanella oneidensis.";
+RL   Nat. Biotechnol. 20:1118-1123(2002).
+RN   [2]
+RP   FUNCTION, CATALYTIC ACTIVITY, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC 700550 / JCM 31522 / CIP 106686 / LMG 19005 / NCIMB 14063
+RC   / MR-1 {ECO:0000303|PubMed:21199252};
+RX   PubMed=21199252; DOI=10.1111/j.1462-2920.2010.02313.x;
+RA   Shirodkar S., Reed S., Romine M., Saffarini D.;
+RT   "The octahaem SirA catalyses dissimilatory sulfite reduction in Shewanella
+RT   oneidensis MR-1.";
+RL   Environ. Microbiol. 13:108-115(2011).
+CC   -!- FUNCTION: Respiratory sulfite reductase that catalyzes the reduction of
+CC       sulfite to sulfide in a single step, consuming six electrons in the
+CC       process. Required for sulfite respiration under anaerobic growth
+CC       conditions. Does not contribute to nitrite reduction.
+CC       {ECO:0000269|PubMed:21199252}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=[protein]-disulfide + hydrogen sulfide + 2 A + 3 H2O =
+CC         [protein]-dithiol + sulfite + 2 AH2 + H(+); Xref=Rhea:RHEA:51676,
+CC         Rhea:RHEA-COMP:10593, Rhea:RHEA-COMP:10594, ChEBI:CHEBI:13193,
+CC         ChEBI:CHEBI:15377, ChEBI:CHEBI:15378, ChEBI:CHEBI:17359,
+CC         ChEBI:CHEBI:17499, ChEBI:CHEBI:29919, ChEBI:CHEBI:29950,
+CC         ChEBI:CHEBI:50058; Evidence={ECO:0000269|PubMed:21199252};
+CC   -!- COFACTOR:
+CC       Name=Cu(+); Xref=ChEBI:CHEBI:49552;
+CC         Evidence={ECO:0000250|UniProtKB:Q7MSJ8};
+CC       Note=Exposure to oxygen reduces copper binding and leads to the
+CC       formation of a disulfide bond between the two Cys residues that bind
+CC       the copper ion. {ECO:0000250|UniProtKB:Q7MSJ8};
+CC   -!- COFACTOR:
+CC       Name=heme c; Xref=ChEBI:CHEBI:61717;
+CC         Evidence={ECO:0000250|UniProtKB:Q7MSJ8};
+CC       Note=Binds 8 heme c groups covalently per monomer.
+CC       {ECO:0000250|UniProtKB:Q7MSJ8};
+CC   -!- PATHWAY: Sulfur metabolism; sulfite reduction. {ECO:0000305}.
+CC   -!- SUBUNIT: Homotrimer. {ECO:0000250|UniProtKB:Q7MSJ8}.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000250|UniProtKB:Q7MSJ8}.
+CC   -!- DISRUPTION PHENOTYPE: Loss of growth based on sulfite respiration.
+CC       {ECO:0000269|PubMed:21199252}.
+CC   -!- MISCELLANEOUS: The eighth heme binding site has an unusual CXXXXXCH
+CC       motif. {ECO:0000250|UniProtKB:Q7MSJ8}.
+CC   -!- SIMILARITY: Belongs to the multiheme cytochrome c family.
+CC       {ECO:0000305}.
+DR   EMBL; AE014299; AAN53560.2; -; Genomic_DNA.
+DR   RefSeq; NP_716115.2; NC_004347.2.
+DR   RefSeq; WP_011070829.1; NC_004347.2.
+DR   AlphaFoldDB; Q8EJI6; -.
+DR   SMR; Q8EJI6; -.
+DR   STRING; 211586.SO_0479; -.
+DR   PaxDb; 211586-SO_0479; -.
+DR   KEGG; son:SO_0479; -.
+DR   PATRIC; fig|211586.12.peg.464; -.
+DR   eggNOG; COG0484; Bacteria.
+DR   HOGENOM; CLU_406457_0_0_6; -.
+DR   OrthoDB; 9814800at2; -.
+DR   BioCyc; MetaCyc:MONOMER-20180; -.
+DR   BioCyc; SONE211586:G1GMP-455-MONOMER; -.
+DR   UniPathway; UPA00370; -.
+DR   Proteomes; UP000008186; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:1903136; F:cuprous ion binding; ISS:UniProtKB.
+DR   GO; GO:0020037; F:heme binding; ISS:UniProtKB.
+DR   GO; GO:0005506; F:iron ion binding; IEA:UniProtKB-UniRule.
+DR   GO; GO:0016491; F:oxidoreductase activity; IBA:GO_Central.
+DR   GO; GO:0016667; F:oxidoreductase activity, acting on a sulfur group of donors; IMP:UniProtKB.
+DR   GO; GO:0016002; F:sulfite reductase activity; IMP:UniProtKB.
+DR   GO; GO:0009061; P:anaerobic respiration; IEA:UniProtKB-KW.
+DR   GO; GO:0070814; P:hydrogen sulfide biosynthetic process; IMP:UniProtKB.
+DR   Gene3D; 1.20.140.10; Butyryl-CoA Dehydrogenase, subunit A, domain 3; 1.
+DR   Gene3D; 1.10.1130.10; Flavocytochrome C3, Chain A; 2.
+DR   HAMAP; MF_02023; Sulfite_red; 1.
+DR   InterPro; IPR036280; Multihaem_cyt_sf.
+DR   InterPro; IPR051829; Multiheme_Cytochr_ET.
+DR   InterPro; IPR032897; Sulfite_reductase.
+DR   PANTHER; PTHR35038:SF8; C-TYPE POLYHEME CYTOCHROME OMCC; 1.
+DR   PANTHER; PTHR35038; DISSIMILATORY SULFITE REDUCTASE SIRA; 1.
+DR   SUPFAM; SSF48695; Multiheme cytochromes; 1.
+DR   PROSITE; PS51008; MULTIHEME_CYTC; 2.
+PE   1: Evidence at protein level;
+KW   Copper; Electron transport; Heme; Iron; Metal-binding; Oxidoreductase;
+KW   Periplasm; Reference proteome; Signal; Sulfate respiration; Transport.
+FT   SIGNAL          1..22
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           23..708
+FT                   /note="Dissimilatory sulfite reductase SirA"
+FT                   /id="PRO_0000432941"
+FT   BINDING         173
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         176
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         177
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         189
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         238
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         315
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         332
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         335
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         336
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         369
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         372
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         373
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         378
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         391
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         394
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         395
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         397
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         429
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         441
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         448
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         451
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         452
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         455
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         475
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         478
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         479
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         492
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         497
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         500
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         501
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         508
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         529
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         575
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         591
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         592
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+FT   BINDING         676
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000250|UniProtKB:Q7MSJ8"
+SQ   SEQUENCE   708 AA;  79125 MW;  73A059BA4FDCBF69 CRC64;
+//
+ID   MCCA_WOLSU              Reviewed;         702 AA.
+AC   Q7MSJ8;
+DE   RecName: Full=Dissimilatory sulfite reductase MccA {ECO:0000305};
+DE            EC=1.8.99.- {ECO:0000269|PubMed:22040142, ECO:0000269|PubMed:25642962};
+DE   Flags: Precursor;
+GN   Name=mccA {ECO:0000303|PubMed:22040142, ECO:0000303|PubMed:25642962};
+GN   OrderedLocusNames=WS0379 {ECO:0000312|EMBL:CAE09526.1};
+OS   Wolinella succinogenes (strain ATCC 29543 / DSM 1740 / CCUG 13145 / JCM
+OS   31913 / LMG 7466 / NCTC 11488 / FDC 602W) (Vibrio succinogenes).
+OC   Bacteria; Pseudomonadati; Campylobacterota; Epsilonproteobacteria;
+OC   Campylobacterales; Helicobacteraceae; Wolinella.
+OX   NCBI_TaxID=273121 {ECO:0000312|Proteomes:UP000000422};
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29543 / DSM 1740 / CCUG 13145 / JCM 31913 / LMG 7466 /
+RC   NCTC 11488 / FDC 602W {ECO:0000312|Proteomes:UP000000422};
+RX   PubMed=14500908; DOI=10.1073/pnas.1932838100;
+RA   Baar C., Eppinger M., Raddatz G., Simon J., Lanz C., Klimmek O.,
+RA   Nandakumar R., Gross R., Rosinus A., Keller H., Jagtap P., Linke B.,
+RA   Meyer F., Lederer H., Schuster S.C.;
+RT   "Complete genome sequence and analysis of Wolinella succinogenes.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:11690-11695(2003).
+RN   [2]
+RP   IDENTIFICATION BY MASS SPECTROMETRY, COFACTOR, SUBUNIT, SIGNAL PEPTIDE, AND
+RP   SUBCELLULAR LOCATION.
+RX   PubMed=17501927; DOI=10.1111/j.1365-2958.2007.05712.x;
+RA   Hartshorne R.S., Kern M., Meyer B., Clarke T.A., Karas M., Richardson D.J.,
+RA   Simon J.;
+RT   "A dedicated haem lyase is required for the maturation of a novel bacterial
+RT   cytochrome c with unconventional covalent haem binding.";
+RL   Mol. Microbiol. 64:1049-1060(2007).
+RN   [3]
+RP   FUNCTION, CATALYTIC ACTIVITY, COFACTOR, INDUCTION BY SULFITE, DISRUPTION
+RP   PHENOTYPE, AND MUTAGENESIS OF CYS-574; ALA-587; CYS-590 AND HIS-591.
+RX   PubMed=22040142; DOI=10.1111/j.1365-2958.2011.07906.x;
+RA   Kern M., Klotz M.G., Simon J.;
+RT   "The Wolinella succinogenes mcc gene cluster encodes an unconventional
+RT   respiratory sulphite reduction system.";
+RL   Mol. Microbiol. 82:1515-1530(2011).
+RN   [4] {ECO:0007744|PDB:4RKM, ECO:0007744|PDB:4RKN}
+RP   X-RAY CRYSTALLOGRAPHY (2.10 ANGSTROMS) IN COMPLEX WITH HEME; HYDROGEN
+RP   SULFITE AND COPPER IONS, CATALYTIC ACTIVITY, BIOPHYSICOCHEMICAL PROPERTIES,
+RP   COFACTOR, AND SUBUNIT.
+RX   PubMed=25642962; DOI=10.1038/nature14109;
+RA   Hermann B., Kern M., La Pietra L., Simon J., Einsle O.;
+RT   "The octahaem MccA is a haem c-copper sulfite reductase.";
+RL   Nature 520:706-709(2015).
+CC   -!- FUNCTION: Respiratory sulfite reductase that catalyzes the reduction of
+CC       sulfite to sulfide in a single step, consuming six electrons in the
+CC       process (PubMed:22040142, PubMed:25642962). Required for sulfite
+CC       respiration under anaerobic growth conditions (PubMed:22040142). Has
+CC       only marginal activity with nitrite. {ECO:0000269|PubMed:22040142,
+CC       ECO:0000269|PubMed:25642962}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=[protein]-disulfide + hydrogen sulfide + 2 A + 3 H2O =
+CC         [protein]-dithiol + sulfite + 2 AH2 + H(+); Xref=Rhea:RHEA:51676,
+CC         Rhea:RHEA-COMP:10593, Rhea:RHEA-COMP:10594, ChEBI:CHEBI:13193,
+CC         ChEBI:CHEBI:15377, ChEBI:CHEBI:15378, ChEBI:CHEBI:17359,
+CC         ChEBI:CHEBI:17499, ChEBI:CHEBI:29919, ChEBI:CHEBI:29950,
+CC         ChEBI:CHEBI:50058; Evidence={ECO:0000269|PubMed:22040142,
+CC         ECO:0000269|PubMed:25642962};
+CC   -!- COFACTOR:
+CC       Name=Cu(+); Xref=ChEBI:CHEBI:49552;
+CC         Evidence={ECO:0000269|PubMed:25642962};
+CC       Note=Exposure to oxygen reduces copper binding and leads to the
+CC       formation of a disulfide bond between the two Cys residues that bind
+CC       the copper ion. {ECO:0000269|PubMed:25642962};
+CC   -!- COFACTOR:
+CC       Name=heme c; Xref=ChEBI:CHEBI:61717;
+CC         Evidence={ECO:0000269|PubMed:17501927, ECO:0000269|PubMed:22040142,
+CC         ECO:0000269|PubMed:25642962};
+CC       Note=Binds 8 heme c groups covalently per monomer.
+CC       {ECO:0000269|PubMed:17501927, ECO:0000269|PubMed:25642962};
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=44 uM for sulfite {ECO:0000269|PubMed:25642962};
+CC         Vmax=151 umol/min/mg enzyme with sulfite as substrate
+CC         {ECO:0000269|PubMed:25642962};
+CC   -!- PATHWAY: Sulfur metabolism; sulfite reduction. {ECO:0000305}.
+CC   -!- SUBUNIT: Homotrimer. {ECO:0000269|PubMed:17501927,
+CC       ECO:0000269|PubMed:25642962}.
+CC   -!- INTERACTION:
+CC       Q7MSJ8; Q7MSJ8: mccA; NbExp=2; IntAct=EBI-16140995, EBI-16140995;
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000305|PubMed:17501927}.
+CC   -!- INDUCTION: Repressed by fumarate and nitrate. Up-regulated by sulfite,
+CC       but only in the absence of fumarate and nitrate (at protein level).
+CC       {ECO:0000269|PubMed:22040142}.
+CC   -!- DISRUPTION PHENOTYPE: Loss of growth based on sulfite respiration.
+CC       {ECO:0000269|PubMed:22040142}.
+CC   -!- MISCELLANEOUS: The eighth heme binding site has an unusual CXXXXXCH
+CC       motif. {ECO:0000269|PubMed:25642962}.
+CC   -!- SIMILARITY: Belongs to the multiheme cytochrome c family.
+CC       {ECO:0000305}.
+DR   EMBL; BX571658; CAE09526.1; -; Genomic_DNA.
+DR   PDB; 4RKM; X-ray; 2.20 A; A/B/C/D/E/F/G/H/I/J/K/L=1-702.
+DR   PDB; 4RKN; X-ray; 2.10 A; A/B/C/D=1-702.
+DR   PDBsum; 4RKM; -.
+DR   PDBsum; 4RKN; -.
+DR   AlphaFoldDB; Q7MSJ8; -.
+DR   SMR; Q7MSJ8; -.
+DR   DIP; DIP-61512N; -.
+DR   STRING; 273121.WS0379; -.
+DR   KEGG; wsu:WS0379; -.
+DR   eggNOG; COG0484; Bacteria.
+DR   HOGENOM; CLU_406457_0_0_7; -.
+DR   BioCyc; MetaCyc:MONOMER-20223; -.
+DR   BRENDA; 1.8.99.5; 6642.
+DR   SABIO-RK; Q7MSJ8; -.
+DR   UniPathway; UPA00370; -.
+DR   EvolutionaryTrace; Q7MSJ8; -.
+DR   Proteomes; UP000000422; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:1903136; F:cuprous ion binding; IDA:UniProtKB.
+DR   GO; GO:0020037; F:heme binding; IDA:UniProtKB.
+DR   GO; GO:0042802; F:identical protein binding; IPI:IntAct.
+DR   GO; GO:0016667; F:oxidoreductase activity, acting on a sulfur group of donors; IDA:UniProtKB.
+DR   GO; GO:0016002; F:sulfite reductase activity; IDA:UniProtKB.
+DR   GO; GO:0009061; P:anaerobic respiration; IEA:UniProtKB-KW.
+DR   GO; GO:0070814; P:hydrogen sulfide biosynthetic process; IDA:UniProtKB.
+DR   GO; GO:0070207; P:protein homotrimerization; IDA:UniProtKB.
+DR   Gene3D; 1.20.140.10; Butyryl-CoA Dehydrogenase, subunit A, domain 3; 1.
+DR   Gene3D; 3.90.10.10; Cytochrome C3; 2.
+DR   Gene3D; 1.10.1130.10; Flavocytochrome C3, Chain A; 1.
+DR   HAMAP; MF_02023; Sulfite_red; 1.
+DR   InterPro; IPR036280; Multihaem_cyt_sf.
+DR   InterPro; IPR051829; Multiheme_Cytochr_ET.
+DR   InterPro; IPR032897; Sulfite_reductase.
+DR   PANTHER; PTHR35038:SF8; C-TYPE POLYHEME CYTOCHROME OMCC; 1.
+DR   PANTHER; PTHR35038; DISSIMILATORY SULFITE REDUCTASE SIRA; 1.
+DR   SUPFAM; SSF48695; Multiheme cytochromes; 1.
+DR   PROSITE; PS51008; MULTIHEME_CYTC; 2.
+PE   1: Evidence at protein level;
+KW   3D-structure; Copper; Electron transport; Heme; Iron; Metal-binding;
+KW   Oxidoreductase; Periplasm; Reference proteome; Signal; Sulfate respiration;
+KW   Transport.
+FT   SIGNAL          1..39
+FT                   /evidence="ECO:0000269|PubMed:17501927"
+FT   CHAIN           40..702
+FT                   /note="Dissimilatory sulfite reductase MccA"
+FT                   /id="PRO_0000432940"
+FT   BINDING         155
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         158
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         159
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         171
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         220
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         297
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         314
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000305"
+FT   BINDING         317
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         318
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         351
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         354
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         355
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         360
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         372
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         375
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         376
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         378
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         411
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /evidence="ECO:0000269|PubMed:25642962,
+FT                   ECO:0007744|PDB:4RKM"
+FT   BINDING         423
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         430
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         433
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         434
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         437
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         474
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         477
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         478
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         491
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         496
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         499
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         500
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         507
+FT                   /ligand="Cu(+)"
+FT                   /ligand_id="ChEBI:CHEBI:49552"
+FT                   /evidence="ECO:0000269|PubMed:25642962,
+FT                   ECO:0007744|PDB:4RKM"
+FT   BINDING         528
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         574
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         590
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         591
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   BINDING         675
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0007744|PDB:4RKN"
+FT   MUTAGEN         574
+FT                   /note="C->A: Impairs protein stability and abolishes
+FT                   sulfite reductase activity; when associated with C-587."
+FT                   /evidence="ECO:0000269|PubMed:22040142"
+FT   MUTAGEN         587
+FT                   /note="A->C: Impairs protein stability and abolishes
+FT                   sulfite reductase activity; when associated with A-574."
+FT                   /evidence="ECO:0000269|PubMed:22040142"
+FT   MUTAGEN         587
+FT                   /note="A->S: No effect on protein stability and sulfite
+FT                   reductase activity."
+FT                   /evidence="ECO:0000269|PubMed:22040142"
+FT   MUTAGEN         590
+FT                   /note="C->A,S: Impairs protein stability."
+FT                   /evidence="ECO:0000269|PubMed:22040142"
+FT   MUTAGEN         591
+FT                   /note="H->A: Impairs protein stability."
+FT                   /evidence="ECO:0000269|PubMed:22040142"
+FT   HELIX           47..54
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           60..63
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           68..74
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           76..85
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           87..90
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   TURN            91..94
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          96..102
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           105..108
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   TURN            109..111
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           112..114
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           115..121
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           124..127
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          144..146
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           152..158
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           160..167
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           170..173
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          174..176
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           182..184
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          188..190
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          192..194
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           207..209
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          210..215
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          219..225
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          233..238
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           240..242
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          245..250
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          253..255
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           256..260
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           264..273
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           281..287
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          297..300
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   TURN            301..303
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          304..307
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           310..312
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           314..317
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          320..322
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           327..333
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           337..342
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          344..349
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           351..355
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   TURN            357..360
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           373..376
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          379..381
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           383..387
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           390..392
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           396..399
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          400..402
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          408..410
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           414..419
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           422..425
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           430..433
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           459..462
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           474..477
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           479..485
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          487..489
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   TURN            490..493
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           496..500
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          505..508
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           511..513
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           516..518
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          540..542
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           570..575
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           582..586
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   TURN            587..591
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   TURN            593..595
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           600..602
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           607..638
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   STRAND          642..644
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           646..669
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   TURN            672..675
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+FT   HELIX           677..700
+FT                   /evidence="ECO:0007829|PDB:4RKN"
+SQ   SEQUENCE   702 AA;  78939 MW;  7F03B02298162E28 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Sutterella.
+7	6	Ferrimonas.
+13	6	Campylobacter.
+10	6	Shewanella.
+8	5	Ferrimonadaceae
+13	5	Campylobacteraceae
+11	5	Sutterellaceae
+10	5	Shewanellaceae
+18	4	Alteromonadales
+15	4	Campylobacterales
+11	4	Burkholderiales
+22	3	Gammaproteobacteria
+15	3	Epsilonproteobacteria
+11	3	Betaproteobacteria
+33	2	Pseudomonadota
+15	2	Campylobacterota
+50	1	Pseudomonadati
+50	0	Bacteria
+Total of 50 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A076F9G4	PUTATIVE CYTOCHROME C {EC    159.3    1.1e-43   1   1.5   0.4
+	Q7MSJ8_TED02              	   602	   685	   158.4
+
+A0A0H3DU76	DISSIMILATORY SULFITE RED     54.9    3.9e-11   1   1.4   0.0
+	Q7MSJ8_TED02              	   555	   640	    54.0
+	PF13435	Cytochrome_C554 	   115	   145	      21
+	PF09699	Paired_CXXCH_1  	   379	   422	    21.8
+
+A0A0Q0HX26	DISSIMILATORY SULFITE RED     94.6    1.7e-23   1   1.6   0.7
+	Q7MSJ8_TED02              	   587	   672	    93.4
+	PF13435	Cytochrome_C554 	   139	   186	    20.9
+
+A0A0Q0JHL1	DISSIMILATORY SULFITE RED     85.8    9.4e-21   1   1.5   0.4
+	Q7MSJ8_TED02              	   588	   673	    84.8
+
+A0A128EDI8	CYTOCHROME C, PUTATIVE {E     44.3    8.2e-08   1   1.6   0.1
+	Q7MSJ8_TED02              	   601	   687	    43.3
+	PF14522	Cytochrome_C7   	   413	   482	    26.4
+
+A0A1M5X7E5	CYTOCHROME C7 {ECO:000031     62.8    1.4e-13   1   1.4   0.2
+	Q7MSJ8_TED02              	   574	   657	    62.0
+	PF13435	Cytochrome_C554 	   125	   162	    19.5
+	PF09699	Paired_CXXCH_1  	   397	   440	    20.8
+
+A0A1S6U8F6	CYTOCHROME C FAMILY PROTE     67.1    6.2e-15   1   1.7   0.7
+	Q7MSJ8_TED02              	   571	   657	    65.8
+	PF14522	Cytochrome_C7   	   274	   353	    25.9
+
+A0A2C6DPS4	DISSIMILATORY SULFITE RED     54.1    7.1e-11   1   1.4   0.3
+	Q7MSJ8_TED02              	   574	   658	    53.2
+	PF13435	Cytochrome_C554 	   134	   177	    21.3
+
+A0A2P8R060	CYTOCHROME C {ECO:0000313     40.7      1e-06   1   1.4   0.5
+	Q7MSJ8_TED02              	   590	   674	    39.8
+	PF13435	Cytochrome_C554 	   146	   181	    21.8
+	PF14522	Cytochrome_C7   	   402	   471	    25.2
+
+A0A2X4UP91	DISSIMILATORY SULFITE RED     49.4    2.1e-09   1   1.4   0.1
+	Q7MSJ8_TED02              	   576	   660	    48.5
+	PF13435	Cytochrome_C554 	   136	   178	    21.6
+	PF14522	Cytochrome_C7   	   393	   461	    26.1
+
+A0A2Z6I8Q1	DISSIMILATORY SULFITE RED     45.2    4.4e-08   1   1.4   0.3
+	Q7MSJ8_TED02              	   557	   642	    44.4
+
+A0A2Z6IBK5	DISSIMILATORY SULFITE RED     43.6    1.3e-07   1   1.4   0.1
+	Q7MSJ8_TED02              	   565	   648	    42.7
+
+A0A379Z6M1	DISSIMILATORY SULFITE RED     66.6      9e-15   1   1.9   2.2
+	Q7MSJ8_TED02              	   587	   671	    66.5
+	PF13435	Cytochrome_C554 	   142	   185	    20.8
+
+A0A381DKI5	CYTOCHROME C, PUTATIVE {E     55.5    2.6e-11   1   1.5   0.9
+	Q7MSJ8_TED02              	   583	   668	    54.6
+
+A0A415CH59	CYTOCHROME C {ECO:0000313     68.9    1.7e-15   1   1.5   0.1
+	Q7MSJ8_TED02              	   252	   336	    68.0
+
+A0A415CIU7	DISSIMILATORY SULFITE RED     70.7    4.8e-16   1   1.6   0.3
+	Q7MSJ8_TED02              	   589	   673	    69.6
+	PF09699	Paired_CXXCH_1  	   412	   455	    22.1
+
+A0A4R2F3M3	DISSIMILATORY SULFITE RED     82.8    8.1e-20   1   1.6   0.1
+	Q7MSJ8_TED02              	   590	   675	    81.7
+	PF13435	Cytochrome_C554 	   145	   189	    21.8
+
+A0A4U1BCN3	DISSIMILATORY SULFITE RED     57.0      9e-12   1   1.6   0.3
+	Q7MSJ8_TED02              	   584	   668	    55.9
+	PF09699	Paired_CXXCH_1  	   407	   450	    26.7
+
+A0A4U1BHC3	DISSIMILATORY SULFITE RED     59.7    1.3e-12   1   1.4   0.4
+	Q7MSJ8_TED02              	   585	   669	    58.8
+	PF09699	Paired_CXXCH_1  	   408	   451	    25.7
+
+A0A4Y6IFG3	DISSIMILATORY SULFITE RED     86.9    4.3e-21   1   1.9   0.6
+	Q7MSJ8_TED02              	   591	   676	    85.5
+
+A0A6G5QE16	CYTOCHROME C FAMILY PROTE     54.2    6.7e-11   1   1.6   0.6
+	Q7MSJ8_TED02              	   576	   663	    53.0
+	PF13435	Cytochrome_C554 	   134	   176	    22.1
+	PF14522	Cytochrome_C7   	   278	   357	    24.9
+
+A0A6G5R223	CYTOCHROME C FAMILY PROTE     58.4    3.3e-12   1   2.1   0.2
+	Q7MSJ8_TED02              	   577	   662	    56.2
+	PF13435	Cytochrome_C554 	   132	   168	    19.3
+
+A0A6H1UKB4	DISSIMILATORY SULFITE RED     53.0    1.6e-10   1   1.5   0.1
+	Q7MSJ8_TED02              	   595	   679	    52.0
+	PF09699	Paired_CXXCH_1  	   417	   461	    21.4
+
+A0A6H1ULU0	DISSIMILATORY SULFITE RED     53.0    1.6e-10   1   1.5   0.1
+	Q7MSJ8_TED02              	   595	   679	    52.0
+	PF09699	Paired_CXXCH_1  	   417	   461	    21.4
+
+A0A6L5NYJ0	DISSIMILATORY SULFITE RED     93.4    3.8e-23   1   1.6   0.4
+	Q7MSJ8_TED02              	   588	   672	    92.4
+	PF13435	Cytochrome_C554 	   140	   188	      24
+
+A0A6L5WHT5	CYTOCHROME C {ECO:0000313     48.7    3.5e-09   1   1.5   0.4
+	Q7MSJ8_TED02              	   581	   667	    47.8
+	PF14522	Cytochrome_C7   	   392	   462	    26.4
+
+A0A6L6YIG2	DISSIMILATORY SULFITE RED     70.0    7.7e-16   1   1.5   0.4
+	Q7MSJ8_TED02              	   589	   673	    69.1
+	PF13435	Cytochrome_C554 	   145	   188	    20.2
+
+A0A7M1LKX9	CYTOCHROME C {ECO:0000313     47.8    6.4e-09   1   1.5   0.1
+	Q7MSJ8_TED02              	   509	   595	    46.9
+	PF14522	Cytochrome_C7   	   321	   390	    25.2
+
+A0A842JB07	CYTOCHROME C {ECO:0000313    159.8    7.3e-44   1   1.5   0.3
+	Q7MSJ8_TED02              	   603	   688	   158.9
+	PF14522	Cytochrome_C7   	   285	   363	    25.5
+
+A0A8H6ZDQ2	P-LOOP CONTAINING NUCLEOS     52.7      2e-10   6  20.1  30.7
+	Q7MSJ8_TED02              	   584	   623	     3.9
+	Q7MSJ8_TED02              	  1537	  1580	     3.7
+	Q7MSJ8_TED02              	   998	  1044	     3.5
+	Q7MSJ8_TED02              	  1051	  1119	     3.3
+	Q7MSJ8_TED02              	  1172	  1218	     3.3
+	Q7MSJ8_TED02              	  1442	  1480	     3.3
+	PF24883	NPHP3_N         	    85	   246	   117.8
+	PF05729	NACHT           	   105	   263	    31.1
+	PF12796	Ank_2           	   577	   670	    70.9
+	PF13637	Ank_4           	   578	   627	    23.6
+	PF13857	Ank_5           	   592	   647	    39.2
+	PF13606	Ank_3           	   606	   635	    24.1
+	PF00023	Ank             	   606	   638	    30.2
+	PF13637	Ank_4           	   615	   660	    42.6
+	PF13857	Ank_5           	   626	   677	      37
+	PF13606	Ank_3           	   639	   668	    18.6
+	PF00023	Ank             	   639	   671	    32.4
+	PF13637	Ank_4           	   651	   693	    32.2
+	PF13857	Ank_5           	   659	   713	    43.4
+	PF12796	Ank_2           	   664	   722	    53.8
+	PF13606	Ank_3           	   672	   701	    25.4
+	PF00023	Ank             	   672	   704	    32.5
+	PF13637	Ank_4           	   677	   721	    43.3
+	PF00023	Ank             	   705	   722	    16.8
+	PF13857	Ank_5           	   715	   764	    34.3
+	PF12796	Ank_2           	   720	   787	      63
+	PF13606	Ank_3           	   723	   752	    22.5
+	PF00023	Ank             	   723	   755	    31.5
+	PF13637	Ank_4           	   728	   777	    40.5
+	PF13857	Ank_5           	   745	   795	    32.5
+	PF13606	Ank_3           	   756	   785	    22.5
+	PF00023	Ank             	   756	   788	    32.5
+	PF13637	Ank_4           	   761	   810	    43.2
+	PF13857	Ank_5           	   776	   827	    34.5
+	PF12796	Ank_2           	   782	   853	    62.9
+	PF13606	Ank_3           	   789	   818	    20.5
+	PF00023	Ank             	   789	   821	      31
+	PF13637	Ank_4           	   794	   843	    43.7
+	PF13857	Ank_5           	   809	   863	    43.8
+	PF13606	Ank_3           	   822	   851	    19.1
+	PF00023	Ank             	   822	   854	    35.1
+	PF13637	Ank_4           	   834	   876	    41.6
+	PF13857	Ank_5           	   842	   896	    46.5
+	PF12796	Ank_2           	   846	   919	    63.3
+	PF13606	Ank_3           	   855	   884	    19.2
+	PF00023	Ank             	   855	   887	    33.5
+	PF13637	Ank_4           	   866	   909	    40.6
+	PF13857	Ank_5           	   875	   929	    42.4
+	PF12796	Ank_2           	   878	   952	    65.7
+	PF13606	Ank_3           	   888	   917	    23.7
+	PF00023	Ank             	   888	   920	    34.2
+	PF13637	Ank_4           	   896	   942	    40.2
+	PF13857	Ank_5           	   908	   962	    43.8
+	PF12796	Ank_2           	   912	   985	    65.9
+	PF13606	Ank_3           	   921	   950	    19.1
+	PF00023	Ank             	   921	   953	    35.1
+	PF13637	Ank_4           	   933	   975	    41.6
+	PF13857	Ank_5           	   941	   995	    46.3
+	PF12796	Ank_2           	   947	  1018	    63.4
+	PF13606	Ank_3           	   954	   983	    19.2
+	PF00023	Ank             	   954	   986	    34.3
+	PF13637	Ank_4           	   965	  1008	    42.3
+	PF13857	Ank_5           	   974	  1028	    44.6
+	PF13606	Ank_3           	   987	  1016	    19.2
+	PF00023	Ank             	   987	  1019	    33.7
+	PF13637	Ank_4           	   999	  1041	    42.6
+	PF13857	Ank_5           	  1007	  1061	    45.3
+	PF12796	Ank_2           	  1010	  1081	    61.4
+	PF13606	Ank_3           	  1020	  1049	      19
+	PF00023	Ank             	  1020	  1052	    34.7
+	PF13637	Ank_4           	  1031	  1074	    37.8
+	PF13606	Ank_3           	  1053	  1082	    20.1
+	PF00023	Ank             	  1053	  1084	    27.9
+	PF12796	Ank_2           	  1076	  1166	    79.5
+	PF13637	Ank_4           	  1077	  1123	    30.6
+	PF13857	Ank_5           	  1089	  1139	    30.5
+	PF13606	Ank_3           	  1102	  1131	    24.3
+	PF00023	Ank             	  1102	  1134	    34.9
+	PF13637	Ank_4           	  1111	  1156	    42.5
+	PF13857	Ank_5           	  1122	  1175	    43.8
+	PF13606	Ank_3           	  1135	  1164	    27.1
+	PF00023	Ank             	  1135	  1167	    36.1
+	PF13637	Ank_4           	  1147	  1189	    30.9
+	PF13857	Ank_5           	  1155	  1209	    40.2
+	PF12796	Ank_2           	  1158	  1232	    64.1
+	PF13606	Ank_3           	  1168	  1197	      19
+	PF00023	Ank             	  1168	  1200	    27.7
+	PF13637	Ank_4           	  1177	  1222	    41.8
+	PF13857	Ank_5           	  1188	  1242	    44.6
+	PF13606	Ank_3           	  1201	  1230	    26.7
+	PF00023	Ank             	  1201	  1233	    36.9
+	PF13637	Ank_4           	  1212	  1255	    43.7
+	PF13857	Ank_5           	  1223	  1272	    35.7
+	PF12796	Ank_2           	  1224	  1298	    70.3
+	PF13606	Ank_3           	  1234	  1263	    27.3
+	PF00023	Ank             	  1234	  1266	    37.1
+	PF13637	Ank_4           	  1245	  1288	    40.6
+	PF13857	Ank_5           	  1254	  1308	      40
+	PF13606	Ank_3           	  1267	  1296	    23.7
+	PF00023	Ank             	  1267	  1299	    34.2
+	PF13637	Ank_4           	  1275	  1321	    31.4
+	PF13857	Ank_5           	  1287	  1341	      33
+	PF12796	Ank_2           	  1290	  1364	    60.2
+	PF00023	Ank             	  1300	  1332	    24.5
+	PF13637	Ank_4           	  1309	  1354	    27.5
+	PF13857	Ank_5           	  1320	  1374	    39.9
+	PF13606	Ank_3           	  1333	  1362	    23.7
+	PF00023	Ank             	  1333	  1365	    33.7
+	PF13637	Ank_4           	  1338	  1387	    47.4
+	PF13857	Ank_5           	  1353	  1407	    46.9
+	PF12796	Ank_2           	  1357	  1430	    69.3
+	PF13606	Ank_3           	  1366	  1395	    26.7
+	PF00023	Ank             	  1366	  1398	    36.7
+	PF13637	Ank_4           	  1377	  1420	      37
+	PF13857	Ank_5           	  1386	  1439	      39
+	PF13606	Ank_3           	  1399	  1428	      24
+	PF00023	Ank             	  1399	  1431	    30.8
+	PF13637	Ank_4           	  1404	  1453	    43.1
+	PF13857	Ank_5           	  1419	  1473	    40.7
+	PF12796	Ank_2           	  1423	  1496	    67.3
+	PF13606	Ank_3           	  1432	  1461	    22.6
+	PF00023	Ank             	  1432	  1464	    32.6
+	PF13637	Ank_4           	  1442	  1486	    40.6
+	PF13857	Ank_5           	  1452	  1506	    43.3
+	PF13606	Ank_3           	  1465	  1494	    25.6
+	PF00023	Ank             	  1465	  1497	      33
+	PF13637	Ank_4           	  1473	  1519	    44.1
+	PF13857	Ank_5           	  1485	  1539	    43.3
+	PF12796	Ank_2           	  1491	  1562	      70
+	PF13606	Ank_3           	  1498	  1527	    27.3
+	PF00023	Ank             	  1498	  1530	    37.3
+	PF13637	Ank_4           	  1509	  1552	      43
+	PF13857	Ank_5           	  1518	  1569	    35.3
+	PF13606	Ank_3           	  1531	  1560	    19.1
+	PF00023	Ank             	  1531	  1563	    33.9
+	PF13637	Ank_4           	  1546	  1585	    36.2
+	PF13857	Ank_5           	  1551	  1605	      42
+	PF12796	Ank_2           	  1554	  1615	      42
+	PF13606	Ank_3           	  1564	  1593	    18.6
+	PF00023	Ank             	  1564	  1595	    33.9
+	PF13637	Ank_4           	  1576	  1615	    31.9
+
+A0AA37TJC6	DISSIMILATORY SULFITE RED     49.4    2.2e-09   1   1.7   0.1
+	Q7MSJ8_TED02              	   593	   675	    48.1
+	PF13435	Cytochrome_C554 	   143	   187	    18.6
+	PF14522	Cytochrome_C7   	   290	   368	    25.8
+
+A0AA97LPS8	DISSIMILATORY SULFITE RED     57.9    4.7e-12   1   1.3   0.2
+	Q7MSJ8_TED02              	   183	   268	    57.3
+	PF14522	Cytochrome_C7   	     1	    65	    26.6
+
+A0AAU8P617	DISSIMILATORY SULFITE RED     54.9    3.9e-11   1   1.4   0.0
+	Q7MSJ8_TED02              	   555	   640	    54.0
+	PF13435	Cytochrome_C554 	   115	   145	      21
+	PF09699	Paired_CXXCH_1  	   379	   422	    21.8
+
+A3Q9S2	DISSIMILATORY SULFITE REDUCTA     96.7    3.8e-24   1   2.1   0.7
+	Q7MSJ8_TED02              	   588	   673	    94.8
+	PF13435	Cytochrome_C554 	   140	   186	    22.9
+	PF14522	Cytochrome_C7   	   285	   363	    24.8
+
+A7H0S6	CYTOCHROME C FAMILY PROTEIN {     61.2    4.3e-13   1   1.7   0.6
+	Q7MSJ8_TED02              	   577	   663	    59.9
+	PF13435	Cytochrome_C554 	   135	   177	    20.7
+
+A8FQH2	DISSIMILATORY SULFITE REDUCTA     97.0      3e-24   1   2.0   0.6
+	Q7MSJ8_TED02              	   587	   671	    94.8
+	PF09699	Paired_CXXCH_1  	   409	   453	    20.7
+
+A8FQI3	DISSIMILATORY SULFITE REDUCTA     90.8    2.5e-22   1   1.6   0.5
+	Q7MSJ8_TED02              	   587	   671	    89.7
+	PF13435	Cytochrome_C554 	   139	   187	    23.9
+
+A8GZS0	DISSIMILATORY SULFITE REDUCTA     95.8    6.9e-24   1   1.8   0.4
+	Q7MSJ8_TED02              	   587	   671	    95.8
+	PF13435	Cytochrome_C554 	   140	   181	    19.2
+
+A8GZU4	DISSIMILATORY SULFITE REDUCTA     98.4    1.1e-24   1   1.7   0.4
+	Q7MSJ8_TED02              	   587	   671	    97.0
+	PF13435	Cytochrome_C554 	   139	   186	    23.8
+
+B1KK77	DISSIMILATORY SULFITE REDUCTA     95.9    6.3e-24   1   1.6   0.4
+	Q7MSJ8_TED02              	   587	   671	    94.8
+	PF13435	Cytochrome_C554 	   139	   186	    23.8
+
+B1KK97	DISSIMILATORY SULFITE REDUCTA     89.6    5.8e-22   1   1.8   0.3
+	Q7MSJ8_TED02              	   587	   671	    89.6
+	PF13435	Cytochrome_C554 	   140	   177	    21.9
+
+B9KGE8	CYTOCHROME C FAMILY PROTEIN {     58.1      4e-12   1   1.5   0.2
+	Q7MSJ8_TED02              	   560	   645	    57.2
+	PF13435	Cytochrome_C554 	   116	   161	    20.6
+
+C8PH43	UNCHARACTERIZED PROTEIN {ECO:    160.8    3.6e-44   1   1.6   0.4
+	Q7MSJ8_TED02              	   606	   691	   159.8
+
+D1B0W8	UNCHARACTERIZED PROTEIN {ECO:    188.4      9e-53   1   1.4   0.6
+	Q7MSJ8_TED02              	   605	   690	   187.6
+
+E1SQS3	DISSIMILATORY SULFITE REDUCTA     67.5    4.8e-15   1   1.6   0.3
+	Q7MSJ8_TED02              	   583	   667	    66.3
+	PF14522	Cytochrome_C7   	   286	   363	      25
+	PF09699	Paired_CXXCH_1  	   406	   449	    23.3
+
+E1SQT0	DISSIMILATORY SULFITE REDUCTA     70.8    4.5e-16   1   2.4   0.4
+	Q7MSJ8_TED02              	   583	   667	    66.4
+	PF13435	Cytochrome_C554 	   140	   173	    20.2
+	PF09699	Paired_CXXCH_1  	   406	   449	    23.1
+
+F3QJZ5	CONSERVED DOMAIN PROTEIN {ECO     63.2    1.1e-13   1   2.1   1.1
+	Q7MSJ8_TED02              	   263	   348	    62.0
+
+F3QLR6	DISSIMILATORY SULFITE REDUCTA     61.6    3.2e-13   1   1.5   0.2
+	Q7MSJ8_TED02              	   588	   672	    60.6
+	PF13435	Cytochrome_C554 	   144	   188	    20.6
+
+F3QLU4	CONSERVED DOMAIN PROTEIN {ECO     65.0    2.8e-14   1   1.4   0.2
+	Q7MSJ8_TED02              	   256	   341	    64.3
+
+H3KEB4	DISSIMILATORY SULFITE REDUCTA     47.3    9.1e-09   1   1.4   0.4
+	Q7MSJ8_TED02              	   565	   649	    46.5
+
+H3KGB9	DISSIMILATORY SULFITE REDUCTA     56.3    1.5e-11   1   1.5   0.2
+	Q7MSJ8_TED02              	   588	   672	    55.4
+	PF09699	Paired_CXXCH_1  	   411	   454	    24.9
+
+K1JUL3	DISSIMILATORY SULFITE REDUCTA     68.0    3.2e-15   1   1.8   0.8
+	Q7MSJ8_TED02              	   589	   674	    68.0
+	PF09699	Paired_CXXCH_1  	   412	   455	    23.1
+
+Q7MSJ8	DISSIMILATORY SULFITE REDUCTASE    199.0    4.4e-56   1   1.5   0.8
+	Q7MSJ8_TED02              	   617	   702	   198.1
+
+Q8EJI6	DISSIMILATORY SULFITE REDUCTASE     85.6    1.1e-20   1   1.8   1.4
+	Q7MSJ8_TED02              	   618	   702	    85.1
+
+S3BHA9	DISSIMILATORY SULFITE REDUCTA     51.1    6.4e-10   1   1.4   0.1
+	Q7MSJ8_TED02              	   568	   653	    50.2
+	PF09699	Paired_CXXCH_1  	   390	   434	    20.6
+
+S3CG06	CYTOCHROME C7-LIKE DOMAIN-CON     64.9    3.1e-14   1   1.4   0.1
+	Q7MSJ8_TED02              	   260	   344	    64.1
+	PF14522	Cytochrome_C7   	    71	   145	    27.3
+
+S3XQ74	CYTOCHROME C-552/4 DOMAIN-CON     47.4      9e-09   1   1.4   0.4
+	Q7MSJ8_TED02              	   606	   692	    46.5
+	PF13435	Cytochrome_C554 	   160	   199	    20.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS578663 (E-value: 3.9e-58, Score: 199.0)
+Mentioned as: WS0379
+Description: hypothetical protein
+Organism: Wolinella succinogenes DSM 1740
+PMID: 19919672
+Source: EuropePMC
+Title: Substrate specificity of three cytochrome c haem lyase isoenzymes from Wolinella succinogenes: unconventional haem c binding motifs are not sufficient for haem c attachment by NrfI and CcsA1
+Journal: Molecular microbiology (2010)
+Snippet: c nitrous oxide reductase (periplasm) N, N 2 O Simon et al ., 2004 MccA (Ws0379) 690 (E, 27) 79684 7 and CX 15 CH Octahaem cytochrome c (periplasm) OE Hartshorne et al ., 2007 NrfA (Ws0969) 507 (E, 22) 58331 4 and CX 2 CK
+
+================================================================================
+Protein: VIMSS5437205 (E-value: 1.4e-25, Score: 94.7)
+Mentioned as: swp_4657
+Description: Cytochrome c, putative
+Organism: Shewanella piezotolerans WP3
+PMID: 34456634
+Source: EuropePMC
+Title: Condition-Specific Molecular Network Analysis Revealed That Flagellar Proteins Are Involved in Electron Transfer Processes of <i>Shewanella piezotolerans</i> WP3
+Journal: Genetics research (2021)
+Snippet: E 02 swp_0059, swp_0060, swp_0056, swp_1586 6 5 0.50 1.42 E 02 swp_4653, swp_4654, swp_4652, swp_4657, swp_4655 7 7 0.52 2.19 E 02 swp_2623, swp_2495, swp_4933, swp_4301, swp_4936, swp_4935, swp_4940 8 4 0.50 2.89 E 02 Purine metabolism swp_1361, swp_4724, swp_2972, swp_2621 9 5 0.50 4.13
+
+================================================================================
+Protein: VIMSS199670 (E-value: 9.4e-23, Score: 85.6)
+Mentioned as: SO0479
+Description: cytochrome c, putative
+Organism: Shewanella oneidensis MR-1
+PMID: 29768440
+Source: EuropePMC
+Title: Transcriptome analysis reveals a stress response of Shewanella oneidensis deprived of background levels of ionizing radiation
+Journal: PloS one (2018)
+Snippet: c maturation system 1.10 1.21 SO0478 sirE Cytochrome c maturation system haem lyase subunit 1.36 SO0479 sirA Sulfite reductase SirA 1.10 SO0480 sirB Sulfurtransferase SirB 1.20 SO0481 sirI Peptidyl-prolyl cis-trans isomerase 1.03 SO0483 sirC 4Fe-4S ferredoxin SirC 1.09 SO0484 sirD Menaquinol oxidase 1.15 SO0485 nosL Copper
+
+================================================================================
+Protein: VIMSS199670 (E-value: 9.4e-23, Score: 85.6)
+Mentioned as: SO0479
+Description: cytochrome c, putative
+Organism: Shewanella oneidensis MR-1
+PMID: 21378180
+Source: EuropePMC
+Title: Partial functional replacement of CymA by SirCD in Shewanella oneidensis MR-1
+Journal: Journal of bacteriology (2011)
+Snippet: protein (8, 45). Recently, Shirodkar et al. identified SO0479 as encoding the octaheme c-type cytochrome SirA, the terminal reductase for sulfite reduction in
+
+================================================================================
+Protein: VIMSS199670 (E-value: 9.4e-23, Score: 85.6)
+Mentioned as: SO0479
+Description: cytochrome c, putative
+Organism: Shewanella oneidensis MR-1
+PMID: 21255343
+Source: EuropePMC
+Title: Impacts of Shewanella oneidensis c-type cytochromes on aerobic and anaerobic respiration
+Journal: Microbial biotechnology (2010)
+Snippet: strain for conjugation; dapA Lab stock S. oneidensis strains MR1 Wildtype Lab stock JZ0479 ( so0479 ) so0479 deletion mutant derived from MR1; so0479 :: loxP This study JZ0610 ( petC ) petC deletion mutant derived from MR1; petC :: loxP This study MR0714 ( so0714
+
+================================================================================
+Protein: VIMSS3646227 (E-value: 1.9e-20, Score: 78.2)
+Mentioned as: Shew185_3877
+Description: cytochrome c, putative
+Organism: Shewanella baltica OS185
+PMID: 31615877
+Source: EuropePMC
+Title: Genomic Variations Underlying Speciation and Niche Specialization of <i>Shewanella baltica</i>
+Journal: mSystems (2019)
+Snippet: 12 Shew185_3331 Shew185_3384 Iron complex transportation, galactose metabolism 0.441 0.059 14/2, 41 39 13 Shew185_3866 Shew185_3877 Sulfite reductase sirABIGCDJKLM 0.473 0.033 0/0, 0 11 14 Shew185_4260 Shew185_4279 0.405 0.031 6/2, 57 14 15 Shew185_4383 Shew185_4457 Type F conjugative transfer system 0.437 0.051 24/23, 73 64 a
+
+================================================================================
+Protein: VIMSS3660252 (E-value: 1.5e-12, Score: 52.9)
+Mentioned as: C8J_0029
+Description: hypothetical protein
+Organism: Campylobacter jejuni subsp. jejuni 81116
+PMID: 37768138
+Source: EuropePMC
+Title: <i>Campylobacter jejuni</i> benefits from the bile salt deoxycholate under low-oxygen condition in a PldA dependent manner
+Journal: Gut microbes (2023)
+Snippet: remaining 18 transcripts were downregulated in the pldA mutant. These genes encode the hypothetical proteins C8J_0029, C8J_0030, C8J_0241 and C8J_0703; a putative cytochrome C-type heme-binding periplasmic protein C8J_0242; an aconitase AcnB; 34 , 35 two disulfide bridge introduction proteins DsbAB; 36 arylsulfate sulfotransferase C8J_0813; a sodium/proline
+
+================================================================================
+Protein: VIMSS1955924 (E-value: 1.5e-12, Score: 52.9)
+Mentioned as: CJJ81176_0063
+Description: hypothetical protein
+Organism: Campylobacter jejuni subsp. jejuni 81-176
+PMID: 25691530
+Source: EuropePMC
+Title: Analysis of the activity and regulon of the two-component regulatory system composed by Cjj81176_1484 and Cjj81176_1483 of Campylobacter jejuni
+Journal: Journal of bacteriology (2015)
+Snippet: as an adhesin or transport protein) (46-48), and Cjj81176_0063 (encoding a protein of unknown function). Compared to the expression in the WT strain, mutation
+
+================================================================================
+Protein: VIMSS1955924 (E-value: 1.5e-12, Score: 52.9)
+Mentioned as: CJJ81176_0063
+Description: hypothetical protein
+Organism: Campylobacter jejuni subsp. jejuni 81-176
+PMID: 23991199
+Source: EuropePMC
+Title: The complete Campylobacter jejuni transcriptome during colonization of a natural host determined by RNAseq
+Journal: PloS one (2013)
+Snippet: exbD 8.59 49.24 Other CJJ81176_1388 Ankyrin repeat protein 87.98 18.96 Hypothetical CJJ81176_0045 Hypothetical 4.72 15.76 CJJ81176_0063 Hypothetical 27.27 20.74 CJJ81176_0065 Hypothetical 6.53 31.66 CJJ81176_0522 Hypothetical 19.65 5.19 CJJ81176_0751 Hypothetical 6.42 16.33 CJJ81176_0752 Hypothetical 7.05 21.44 CJJ81176_0954 Hypothetical 24.06 9.70 CJJ81176_1062 Hypothetical 11.11 11.19 CJJ81176_1386 Hypothetical 23.72
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q7MSJ8.1	AF-Q7MSJ8-F1-model_v4_TED01:375-434_473-606	1	AF-Q7MSJ8-F1-model_v4_TED01	375-606	0
+Q7MSJ8.1	AF-Q7MSJ8-F1-model_v4_TED02:617-702	1	AF-Q7MSJ8-F1-model_v4_TED02	617-702	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q7MSJ8_TED02
+GA   27.00 27.00;
+TC   28.10 37.60;
+NC   25.30 22.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 4rkm
+RN   [1]
+RM   25642962
+RT   The octahaem MccA is a haem c-copper sulfite reductase.
+RA   Hermann B, Kern M, La Pietra L, Simon J, Einsle O;
+RL   Nature. 2015;520:706-709.
+
+--- End of Current DESC file ---

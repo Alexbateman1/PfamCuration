@@ -1,0 +1,106 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   XTPA_ECOLI              Reviewed;          60 AA.
+AC   P0DXX6;
+DE   RecName: Full=Putative transcriptional regulator XtpA {ECO:0000303|PubMed:35081614};
+GN   Name=xtpA {ECO:0000303|PubMed:35081614}; OrderedLocusNames=b4845;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION, FUNCTION, DISRUPTION PHENOTYPE, MUTAGENESIS OF
+RP   50-PRO--PHE-60, AND MUTAGENESIS OF 4-TRP--PHE-60.
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=35081614; DOI=10.1093/jb/mvac007;
+RA   Muto A., Goto S., Kurita D., Ushida C., Soma A., Himeno H.;
+RT   "A leaderless mRNA including tRNA-like sequence encodes a small peptide
+RT   that regulates the expression of GcvB small RNA in Escherichia coli.";
+RL   J. Biochem. 171:459-465(2022).
+CC   -!- FUNCTION: Controls the expression of small non-coding RNA GcvB, which
+CC       represses the expression of many amino acid transporter proteins and
+CC       uptake of aminoglycoside antibiotics in cells (PubMed:35081614). Might
+CC       be a transcriptional activator (Probable) (PubMed:35081614). An RNA
+CC       (xtr) with a tRNA-like fold possibly derived from tRNA-Arg(UCG) is
+CC       encoded entirely within the protein; xtr does not have the sequence
+CC       corresponding to tRNA anticodon or variable arms (PubMed:35081614). 10
+CC       synonymous codon changes in the xtr region of xtpA have the same
+CC       phenotype as a deletion mutation, suggesting the mRNA secondary
+CC       structure is important for function (PubMed:35081614).
+CC       {ECO:0000269|PubMed:35081614, ECO:0000305|PubMed:35081614}.
+CC   -!- DISRUPTION PHENOTYPE: Increased susceptibility to sub-lethal
+CC       concentrations of aminoglycoside antibiotics neomycin, kanamycin,
+CC       streptomycin, spectinomycin and kasugamycin, but not non-
+CC       aminoglycosides tetracycline, chloramphenicol or erythromycin. 10-fold
+CC       increased transcription of gvcB. {ECO:0000269|PubMed:35081614}.
+CC   -!- MISCELLANEOUS: This is a leaderless mRNA.
+CC       {ECO:0000269|PubMed:35081614}.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0046677; P:response to antibiotic; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   Antibiotic resistance; Reference proteome; Transcription;
+KW   Transcription regulation.
+FT   CHAIN           1..60
+FT                   /note="Putative transcriptional regulator XtpA"
+FT                   /id="PRO_0000461890"
+FT   MUTAGEN         4..60
+FT                   /note="Missing: Increased sensitivity to aminoglycoside
+FT                   neomycin."
+FT                   /evidence="ECO:0000269|PubMed:35081614"
+FT   MUTAGEN         50..60
+FT                   /note="Missing: Increased sensitivity to aminoglycoside
+FT                   neomycin."
+FT                   /evidence="ECO:0000269|PubMed:35081614"
+SQ   SEQUENCE   60 AA;  6969 MW;  B4816BF7ADACFDB9 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P0DXX6	PUTATIVE TRANSCRIPTIONAL REGULA    159.9    5.8e-44   1   1.0   2.8
+	P0DXX6                    	     1	    60	   159.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DXX6
+GA   27.00 27.00;
+TC   28.70 159.80;
+NC   25.60 17.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

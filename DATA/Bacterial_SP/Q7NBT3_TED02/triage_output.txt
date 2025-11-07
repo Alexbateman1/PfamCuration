@@ -1,0 +1,161 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   HMW3_MYCGA              Reviewed;        1076 AA.
+AC   Q7NBT3;
+DE   RecName: Full=Cytadherence high molecular weight protein 3;
+DE   AltName: Full=Accessory adhesin protein 3;
+DE   AltName: Full=Cytadherence accessory protein 3;
+GN   Name=hlp3; Synonyms=hmw3; OrderedLocusNames=MYCGA1770;
+GN   ORFNames=MGA_0928;
+OS   Mycoplasmoides gallisepticum (strain R(low / passage 15 / clone 2))
+OS   (Mycoplasma gallisepticum).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=710127;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=R(low / passage 15 / clone 2);
+RX   PubMed=12949158; DOI=10.1099/mic.0.26427-0;
+RA   Papazisi L., Gorton T.S., Kutish G., Markham P.F., Browning G.F.,
+RA   Nguyen D.K., Swartzell S., Madan A., Mahairas G., Geary S.J.;
+RT   "The complete genome sequence of the avian pathogen Mycoplasma
+RT   gallisepticum strain R(low).";
+RL   Microbiology 149:2307-2316(2003).
+RN   [2]
+RP   PROTEIN SEQUENCE OF 621-627, AND FIBRONECTIN-BINDING.
+RC   STRAIN=R(high / passage 164), and R(low / passage 14);
+RX   PubMed=16495551; DOI=10.1128/iai.74.3.1777-1785.2006;
+RA   May M., Papazisi L., Gorton T.S., Geary S.J.;
+RT   "Identification of fibronectin-binding proteins in Mycoplasma gallisepticum
+RT   strain R.";
+RL   Infect. Immun. 74:1777-1785(2006).
+CC   -!- FUNCTION: Binds immobilized fibronectin.
+CC   -!- FUNCTION: Component of the cytoskeleton-like structure which stabilizes
+CC       the shape of the wall-less mycoplasma. This cytoskeleton-like network
+CC       of accessory proteins containing HMW proteins 1 to 5 allows the proper
+CC       anchoring of cytadhesin proteins in the mycoplasmal membrane at the
+CC       attachment organelle. Essential for successful surface parasitism (By
+CC       similarity). {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Cell projection, attachment organelle membrane
+CC       {ECO:0000250}. Note=Localizes specifically to the attachment membrane.
+CC       {ECO:0000250}.
+CC   -!- POLYMORPHISM: Runs as a smaller protein in high passage extracts
+CC       (passage 164) versus low passage (passage 14) that shares the same N-
+CC       terminus. Sequencing has shown this smaller version to be due to an
+CC       internal 54 bp deletion.
+DR   EMBL; AE015450; AAP56527.2; -; Genomic_DNA.
+DR   RefSeq; WP_011113409.1; NC_004829.2.
+DR   AlphaFoldDB; Q7NBT3; -.
+DR   SMR; Q7NBT3; -.
+DR   GeneID; 93510006; -.
+DR   KEGG; mga:MGA_0928; -.
+DR   PATRIC; fig|233150.7.peg.194; -.
+DR   HOGENOM; CLU_289644_0_0_14; -.
+DR   OrthoDB; 9996153at2; -.
+DR   Proteomes; UP000001418; Chromosome.
+DR   GO; GO:0033111; C:attachment organelle membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0042995; C:cell projection; IEA:UniProtKB-KW.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0020035; P:adhesion of symbiont to microvasculature; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   Cell membrane; Cell projection; Coiled coil; Cytadherence;
+KW   Direct protein sequencing; Membrane; Reference proteome; Virulence.
+FT   CHAIN           1..1076
+FT                   /note="Cytadherence high molecular weight protein 3"
+FT                   /id="PRO_0000380121"
+FT   REGION          264..284
+FT                   /note="Fibronectin-binding"
+FT   REGION          326..351
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          789..808
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          850..873
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COILED          562..616
+FT                   /evidence="ECO:0000255"
+FT   COMPBIAS        326..335
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        336..345
+FT                   /note="Pro residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        797..806
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        862..873
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   VARIANT         265..282
+FT                   /note="Missing (in high passage 164 isolate)"
+SQ   SEQUENCE   1076 AA;  126432 MW;  45CA5C7C52D00263 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Mycoplasmoides
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q7NBT3	CYTADHERENCE HIGH MOLECULAR WEI    172.1      1e-47   1   2.6  16.0
+	Q7NBT3_TED02              	   578	   659	   169.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q7NBT3 (E-value: 9e-50, Score: 172.1)
+Mentioned as: Q7NBT3
+Description: Cytadherence high molecular weight protein 3
+Organism: Mycoplasmoides gallisepticum (strain R(low / passage 15 / clone 2))
+PMID: 34765664
+Source: EuropePMC
+Title: A Computational Reverse Vaccinology Approach for the Design and Development of Multi-Epitopic Vaccine Against Avian Pathogen Mycoplasma gallisepticum.
+Journal: Frontiers in veterinary science (2021)
+Snippet: Antigenicity score Allergen 1. GapA Q9REM8 0.961828 Non-allergen 2. PlpA Q7NBF9 0.875417 Non-allergen 3. Hlp3 Q7NBT3 0.777268 Non-allergen 4. CrmA F8WJY4 0.935993 Non-allergen 5. vlhA.1.07 Q7NB51 0.949858 Non-allergen 6. vlhA.4.01 Q7NBR8 0.940062 Non-allergen 7. vlhA.2.02 Q7NB24 0.940421 Non-allergen 8. vlhA.3.03 Q7NAP4 0.960592 Non-allergen 9. vlhA.5.13 Q7NBD0
+
+================================================================================
+Protein: Q7NBT3 (E-value: 9e-50, Score: 172.1)
+Mentioned as: Q7NBT3
+Description: Cytadherence high molecular weight protein 3
+Organism: Mycoplasmoides gallisepticum (strain R(low / passage 15 / clone 2))
+PMID: 34095666
+Source: EuropePMC
+Title: Multi-epitope-Based Vaccine Designed by Targeting Cytoadherence Proteins of Mycoplasma gallisepticum.
+Journal: ACS omega (2021)
+Snippet: FASTA format. The proteins GapA (accession no: Q9REM8), PlpA (accession no: Q7NBF9), Hlp3 (accession no: Q7NBT3), and CrmA (accession no: F8WJY4) were retrieved and used for further analysis. Evaluation of Protein Antigenicity and Allergenicity The selected protein sequences were submitted to the VaXiJen v 2.0 server
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q7NBT3.2	AF-Q7NBT3-F1-model_v4_TED01:6-141	1	AF-Q7NBT3-F1-model_v4_TED01	6-141	0
+Q7NBT3.2	AF-Q7NBT3-F1-model_v4_TED02:578-659	1	AF-Q7NBT3-F1-model_v4_TED02	578-659	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q7NBT3_TED02
+GA   27.00 27.00;
+TC   29.70 169.40;
+NC   26.40 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

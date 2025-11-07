@@ -1,0 +1,104 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YGDT_ECOLI              Reviewed;          48 AA.
+AC   A0A385XJL2;
+DE   RecName: Full=Protein YgdT;
+GN   Name=ygdT; OrderedLocusNames=b4610;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+DR   EMBL; U00096; AYC08238.1; -; Genomic_DNA.
+DR   AlphaFoldDB; A0A385XJL2; -.
+DR   EnsemblBacteria; AYC08238; AYC08238; b4610.
+DR   InParanoid; A0A385XJL2; -.
+DR   PRO; PR:A0A385XJL2; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..48
+FT                   /note="Protein YgdT"
+FT                   /id="PRO_0000446259"
+SQ   SEQUENCE   48 AA;  5231 MW;  1C9B208FB593CC29 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+1	6	Pluralibacter.
+1	6	Kluyvera.
+1	6	Citrobacter.
+6	5	Enterobacteriaceae
+6	4	Enterobacterales
+6	3	Gammaproteobacteria
+6	2	Pseudomonadota
+6	1	Pseudomonadati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2Z6FLK6	UNCHARACTERIZED PROTEIN {    135.4      2e-36   1   1.0   0.5
+	Iterate                   	     1	    48	   135.3
+
+A0A385XJL2	PROTEIN YGDT                       135.4      2e-36   1   1.0   0.5
+	Iterate                   	     1	    48	   135.3
+
+B7UHP8	UNCHARACTERIZED PROTEIN {ECO:    135.4      2e-36   1   1.0   0.5
+	Iterate                   	     1	    48	   135.3
+
+D2TIQ1	UNCHARACTERIZED PROTEIN {ECO:     93.4    2.6e-23   1   1.1   0.0
+	Iterate                   	     1	    48	    93.2
+
+E3G521	UNCHARACTERIZED PROTEIN {ECO:     89.4    4.7e-22   1   1.2   0.1
+	Iterate                   	     1	    48	    89.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS75175 (E-value: 8.3e-33, Score: 117.2)
+Mentioned as: Z4148
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 29518040
+Source: EuropePMC
+Title: Construction and Analysis of Gene Co-Expression Networks in Escherichia coli
+Journal: Cells (2018)
+Snippet: Darkorange SepD hub gene may play roles in E. coli pathogenesis [ 19 ]; Black Z4148 is annotated as a hypothetical gene that might participate in carbohydrate metabolism, inferred from module function. Our results provide information for gene function and experimental validation. Lastly, the module-based analysis
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+D2TIQ1.1	AF-D2TIQ1-F1-model_v4_TED01:14-64	1	AF-D2TIQ1-F1-model_v4_TED01	14-64	72.9%
+L0M2J9.1	AF-L0M2J9-F1-model_v4_TED01:12-39	1	AF-L0M2J9-F1-model_v4_TED01	12-39	58.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A385XJL2/Iterate
+GA   27.00 27.00;
+TC   27.40 111.90;
+NC   25.50 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

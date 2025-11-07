@@ -1,0 +1,117 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Shigella.
+1	6	Salmonella.
+1	6	Escherichia.
+6	5	Enterobacteriaceae
+6	4	Enterobacterales
+6	3	Gammaproteobacteria
+6	2	Pseudomonadota
+6	1	Pseudomonadati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2XJL4	TRBH {ECO:0000313|EMBL:AB     99.0    4.7e-25   1   1.5  11.7
+	Iterate                   	   200	   239	    98.0
+
+B2TT66	TRBH {ECO:0000313|EMBL:ACD061    100.3    1.8e-25   1   1.5  13.0
+	Iterate                   	   200	   239	    99.3
+
+O06661	TRBH HOMOLOG {ECO:0000313|EMB     95.1    7.6e-24   1   1.8  12.9
+	Iterate                   	   200	   239	    95.1
+
+Q326X6	TRBH {ECO:0000313|EMBL:ABB646    100.2    1.9e-25   1   1.5  13.0
+	Iterate                   	   200	   239	    99.3
+
+Q3YTF1	TRBH {ECO:0008006|GOOGLE:PROT     97.7    1.2e-24   1   1.8  13.0
+	Iterate                   	   200	   239	    97.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS168272 (E-value: 6.9e-27, Score: 98.3)
+Mentioned as: PSLT105
+Description: conjugative transfer
+Organism: Salmonella typhimurium LT2
+PMID: 30973933
+Source: EuropePMC
+Title: Genetic characterisation of variants of the virulence plasmid, pSLT, in Salmonella enterica serovar Typhimurium provides evidence of a variety of evolutionary directions consistent with vertical rather than horizontal transmission
+Journal: PloS one (2019)
+Snippet: STTR10pl by failing to show PCR product for selected genes somewhere after PSLT052 and before PSLT105 indicating deletion of a large number of genes from the pSLT. We conducted WGS on three DT141 isolates, one with STTR10pl and no antibiotic resistance, a rare one with STTR10pl
+
+================================================================================
+Protein: VIMSS168272 (E-value: 6.9e-27, Score: 98.3)
+Mentioned as: PSLT105
+Description: conjugative transfer
+Organism: Salmonella typhimurium LT2
+PMID: 22941081
+Source: EuropePMC
+Title: Global transcriptional analysis of dehydrated Salmonella enterica serovar Typhimurium
+Journal: Applied and environmental microbiology (2012)
+Snippet: 0.54 Virulence parA (PSLT052) traN (PSLT095) trbH (PSLT105) PSLT068 Plasmid partition protein A Mating pair stabilization protein Conjugative transfer protein
+
+================================================================================
+Protein: P19381 (E-value: 7.3e-26, Score: 95.0)
+Mentioned as: P19381
+Description: Protein TrbH
+Organism: Escherichia coli (strain K12)
+PMID: 22242129
+Source: EuropePMC
+Title: Inflammatory-induced hibernation in the fetus: priming of fetal sheep metabolism correlates with developmental brain injury
+Journal: PloS one (2011)
+Snippet: stiftelsen (CM); Frimurare barnhusfonden (CM, HH); Lundgrenska Stiftelserna (CM); Medical Research Council (UK) strategic award (P19381, HH); Wellcome Trust (WT094823MA, HH); Governmental Grants to University Hospitals in Sweden (ALFGBG2863, HH and ALFGBG142881, CM) and Action Medical Research and The Henry Smith Charity (SP4506, HH). The funders
+
+================================================================================
+Protein: P19381 (E-value: 7.3e-26, Score: 95.0)
+Mentioned as: P19381
+Description: Protein TrbH
+Organism: Escherichia coli (strain K12)
+PMID: 21573120
+Source: EuropePMC
+Title: Systemic stimulation of TLR2 impairs neonatal mouse brain development
+Journal: PloS one (2011)
+Snippet: in the public health service (ALFGBG2863 to HH) and Medical Research Council in United Kingdom (P19381 to HH). hln stiftelse (CM), National Institutes of Health, USA (RO1 NIAID-AI067353-01A1 to OL). EU FP6, Neobrain (036534 to HH and CM) and the European Union (HEALTH-F2-2009-241778 to CM). The
+
+================================================================================
+Protein: P19381 (E-value: 7.3e-26, Score: 95.0)
+Mentioned as: P19381
+Description: Protein TrbH
+Organism: Escherichia coli (strain K12)
+PMID: 11254626
+Source: EuropePMC
+Title: Complete DNA sequence and comparative analysis of the 50-kilobase virulence plasmid of Salmonella enterica serovar Choleraesuis
+Journal: Infection and immunity (2001)
+Snippet: 99/100 99/99 100/100 100/100 P08315 P27710 BAA7885 BAA7885 P19381 AAC44181 P32885 P33790 P23831 P23832 M97752 M97752 P37415 15.2-kDa protein TlpA 100/100 99/100
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q326X6.1	AF-Q326X6-F1-model_v4_TED01:205-239	1	AF-Q326X6-F1-model_v4_TED01	205-239	87.5%
+Q93GL7.1	AF-Q93GL7-F1-model_v4_TED01:197-234	1	AF-Q93GL7-F1-model_v4_TED01	197-234	87.5%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P19381_TED01/Iterate
+GA   27.00 27.00;
+TC   28.80 89.60;
+NC   25.80 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

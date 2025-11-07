@@ -1,0 +1,172 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y349_MYCGE              Reviewed;         404 AA.
+AC   P47591;
+DE   RecName: Full=Uncharacterized protein MG349;
+GN   OrderedLocusNames=MG349;
+OS   Mycoplasma genitalium (strain ATCC 33530 / DSM 19775 / NCTC 10195 / G37)
+OS   (Mycoplasmoides genitalium).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=243273;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 33530 / DSM 19775 / NCTC 10195 / G37;
+RX   PubMed=7569993; DOI=10.1126/science.270.5235.397;
+RA   Fraser C.M., Gocayne J.D., White O., Adams M.D., Clayton R.A.,
+RA   Fleischmann R.D., Bult C.J., Kerlavage A.R., Sutton G.G., Kelley J.M.,
+RA   Fritchman J.L., Weidman J.F., Small K.V., Sandusky M., Fuhrmann J.L.,
+RA   Nguyen D.T., Utterback T.R., Saudek D.M., Phillips C.A., Merrick J.M.,
+RA   Tomb J.-F., Dougherty B.A., Bott K.F., Hu P.-C., Lucier T.S.,
+RA   Peterson S.N., Smith H.O., Hutchison C.A. III, Venter J.C.;
+RT   "The minimal gene complement of Mycoplasma genitalium.";
+RL   Science 270:397-403(1995).
+DR   EMBL; L43967; AAC71574.1; -; Genomic_DNA.
+DR   PIR; F64238; F64238.
+DR   AlphaFoldDB; P47591; -.
+DR   SMR; P47591; -.
+DR   STRING; 243273.MG_349; -.
+DR   KEGG; mge:MG_349; -.
+DR   eggNOG; COG3611; Bacteria.
+DR   HOGENOM; CLU_681179_0_0_14; -.
+DR   InParanoid; P47591; -.
+DR   Proteomes; UP000000807; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..404
+FT                   /note="Uncharacterized protein MG349"
+FT                   /id="PRO_0000210553"
+SQ   SEQUENCE   404 AA;  47775 MW;  37023D6A8F92CAE4 CRC64;
+//
+ID   Y525_MYCPN              Reviewed;         413 AA.
+AC   P75253;
+DE   RecName: Full=Uncharacterized protein MG349 homolog;
+GN   OrderedLocusNames=MPN_525; ORFNames=G12_orf413, MP317;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+DR   EMBL; U00089; AAB95965.1; -; Genomic_DNA.
+DR   PIR; S73643; S73643.
+DR   RefSeq; NP_110213.1; NC_000912.1.
+DR   RefSeq; WP_010874881.1; NZ_OU342337.1.
+DR   AlphaFoldDB; P75253; -.
+DR   SMR; P75253; -.
+DR   STRING; 272634.MPN_525; -.
+DR   EnsemblBacteria; AAB95965; AAB95965; MPN_525.
+DR   KEGG; mpn:MPN_525; -.
+DR   PATRIC; fig|272634.6.peg.584; -.
+DR   HOGENOM; CLU_681179_0_0_14; -.
+DR   OrthoDB; 395744at2; -.
+DR   BioCyc; MPNE272634:G1GJ3-866-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..413
+FT                   /note="Uncharacterized protein MG349 homolog"
+FT                   /id="PRO_0000210554"
+SQ   SEQUENCE   413 AA;  48246 MW;  A4CF2C9802316F23 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	5	Mycoplasmoides
+2	4	Mycoplasmoidaceae
+2	3	Mycoplasmoidales
+2	2	Mycoplasmatota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0L0BRQ0	TIGGRIN {ECO:0000313|EMBL     32.4    0.00039   4   9.5  28.6
+	Iterate                   	   793	   861	    12.8
+	Iterate                   	   722	   783	     9.2
+	Iterate                   	  1449	  1519	     8.8
+	Iterate                   	   940	  1001	     6.1
+
+A0A8J6HI56	DUF4817 DOMAIN-CONTAINING     40.2    1.5e-06   6   6.8  14.2
+	Iterate                   	   185	   273	    16.1
+	Iterate                   	  1177	  1259	     7.5
+	Iterate                   	   362	   434	     7.1
+	Iterate                   	   761	   874	     5.6
+	Iterate                   	   950	  1009	     3.9
+	Iterate                   	  1517	  1589	     3.2
+	PF16087	DUF4817         	     1	    49	    28.2
+
+B4JBN6	GH10985 {ECO:0000313|EMBL:EDW     28.8     0.0051   5   6.7   8.3
+	Iterate                   	  1376	  1462	     7.0
+	Iterate                   	   736	   797	     6.1
+	Iterate                   	   644	   724	     4.9
+	Iterate                   	  1459	  1538	     4.5
+	Iterate                   	   877	   940	     3.5
+
+P47591	UNCHARACTERIZED PROTEIN MG349      284.3      4e-82   1   2.0   1.7
+	Iterate                   	     2	   124	   284.3
+
+P75253	UNCHARACTERIZED PROTEIN MG349 H    201.1    2.4e-56   1   1.6   0.1
+	Iterate                   	     1	   110	   199.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS13981 (E-value: 2.1e-58, Score: 201.1)
+Mentioned as: MPN525
+Description: conserved hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 33320415
+Source: EuropePMC
+Title: Protein quality control and regulated proteolysis in the genome-reduced organism Mycoplasma pneumoniae
+Journal: Molecular systems biology (2020)
+Snippet: doubled in the case of MraW. A similar situation was found with the essential gene mpn525 , which is cotranscribed with mpn526 and putatively encodes the replication initiation protein DnaB (Fig 4A ). To confirm these observations, we expressed FLAGtagged derivatives of these proteins in the
+
+================================================================================
+Protein: VIMSS13981 (E-value: 2.1e-58, Score: 201.1)
+Mentioned as: MPN525
+Description: conserved hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 31445891
+Source: EuropePMC
+Title: Determination of the Gene Regulatory Network of a Genome-Reduced Bacterium Highlights Alternative Regulation Independent of Transcription Factors
+Journal: Cell systems (2019)
+Snippet: chromosome. At the oriC , we also found a clear peak for the DnaB1 protein (MPN525) and for the paralog (MPN554; SsbB) of the single-stranded binding protein SsbA (MPN229), suggesting a role for these proteins in chromosome replication. We found specific peaks for the histone-like protein
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P47591.1	AF-P47591-F1-model_v4_TED01:2-124	1	AF-P47591-F1-model_v4_TED01	2-124	100.0%
+P47591.1	AF-P47591-F1-model_v4_TED02:129-161	1	AF-P47591-F1-model_v4_TED02	129-161	0
+P47591.1	AF-P47591-F1-model_v4_TED03:191-259	1	AF-P47591-F1-model_v4_TED03	191-259	0
+P47591.1	AF-P47591-F1-model_v4_TED04:271-386	1	AF-P47591-F1-model_v4_TED04	271-386	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P47591_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 199.90;
+NC   26.90 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

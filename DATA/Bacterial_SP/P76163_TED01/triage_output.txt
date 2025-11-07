@@ -1,0 +1,127 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YDFV_ECOLI              Reviewed;         101 AA.
+AC   P76163; Q2MB85;
+DE   RecName: Full=Uncharacterized protein YdfV;
+GN   Name=ydfV; OrderedLocusNames=b1565, JW1557;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+DR   EMBL; U00096; AAC74638.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76471.1; -; Genomic_DNA.
+DR   PIR; H64911; H64911.
+DR   RefSeq; NP_416083.1; NC_000913.3.
+DR   RefSeq; WP_001326990.1; NZ_SSUV01000001.1.
+DR   AlphaFoldDB; P76163; -.
+DR   BioGRID; 4260916; 7.
+DR   FunCoup; P76163; 9.
+DR   IntAct; P76163; 1.
+DR   STRING; 511145.b1565; -.
+DR   PaxDb; 511145-b1565; -.
+DR   EnsemblBacteria; AAC74638; AAC74638; b1565.
+DR   GeneID; 948801; -.
+DR   KEGG; ecj:JW1557; -.
+DR   KEGG; eco:b1565; -.
+DR   PATRIC; fig|83333.113.peg.1607; -.
+DR   EchoBASE; EB3595; -.
+DR   HOGENOM; CLU_2408583_0_0_6; -.
+DR   InParanoid; P76163; -.
+DR   OMA; YCAGQLF; -.
+DR   OrthoDB; 6629871at2; -.
+DR   BioCyc; EcoCyc:G6832-MONOMER; -.
+DR   PRO; PR:P76163; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..101
+FT                   /note="Uncharacterized protein YdfV"
+FT                   /id="PRO_0000168960"
+SQ   SEQUENCE   101 AA;  11308 MW;  2A98E9F320F34C15 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P76163	UNCHARACTERIZED PROTEIN YDFV       206.1    2.3e-58   1   1.0   4.8
+	P76163_TED01              	     3	    89	   205.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS15687 (E-value: 2e-60, Score: 206.1)
+Mentioned as: b1565
+Description: Qin prophage; predicted protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 14973046
+Source: EuropePMC
+Title: Transcriptional organization and regulation of the L-idonic acid pathway (GntII system) in Escherichia coli
+Journal: Journal of bacteriology (2004)
+Snippet: ycjV queA idnR idnT yafV yi21-2 cynT yhgG b1565 yi21-6 yihN b2931 ychM b1141 trpD yrdB yhfY entA yjgH L-Idonate dehydrogenase 5-Ketogluconate:gluconate
+
+================================================================================
+Protein: VIMSS15687 (E-value: 2e-60, Score: 206.1)
+Mentioned as: b1565
+Description: Qin prophage; predicted protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 14526028
+Source: EuropePMC
+Title: Interfering with different steps of protein synthesis explored by transcriptional profiling of Escherichia coli K-12
+Journal: Journal of bacteriology (2003)
+Snippet: 0.26 0.27 0.28 KAS ybeK ynfM b0263 ycjW b1644 gapA ilvC b1565 lysC b2653 b1513 yagY yagU ymfM b0165 b1153 ycgX aceA gloB b1462 glnA yrfD serA gltA malS trpB
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76163.1	AF-P76163-F1-model_v4_TED01:3-89	1	AF-P76163-F1-model_v4_TED01	3-89	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76163_TED01
+GA   27.00 27.00;
+TC   28.40 205.90;
+NC   25.00 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

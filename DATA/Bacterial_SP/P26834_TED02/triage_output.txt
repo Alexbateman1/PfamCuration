@@ -1,0 +1,114 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y190_CLOPE              Reviewed;         129 AA.
+AC   P26834;
+DE   RecName: Full=Uncharacterized protein CPE0190;
+DE   AltName: Full=ORFC;
+GN   OrderedLocusNames=CPE0190;
+OS   Clostridium perfringens (strain 13 / Type A).
+OC   Bacteria; Bacillati; Bacillota; Clostridia; Eubacteriales; Clostridiaceae;
+OC   Clostridium.
+OX   NCBI_TaxID=195102;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=CPN50;
+RX   PubMed=8177218; DOI=10.1007/bf00280319;
+RA   Canard B., Garnier T., Saint-Joanis B., Cole S.T.;
+RT   "Molecular genetic analysis of the nagH gene encoding a hyaluronidase of
+RT   Clostridium perfringens.";
+RL   Mol. Gen. Genet. 243:215-224(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=13 / Type A;
+RX   PubMed=11792842; DOI=10.1073/pnas.022493799;
+RA   Shimizu T., Ohtani K., Hirakawa H., Ohshima K., Yamashita A., Shiba T.,
+RA   Ogasawara N., Hattori M., Kuhara S., Hayashi H.;
+RT   "Complete genome sequence of Clostridium perfringens, an anaerobic flesh-
+RT   eater.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:996-1001(2002).
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA23258.1; Type=Frameshift; Evidence={ECO:0000305};
+DR   EMBL; M81878; AAA23258.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; BA000016; BAB79896.1; -; Genomic_DNA.
+DR   PIR; S43903; S43903.
+DR   RefSeq; WP_003479965.1; NC_003366.1.
+DR   AlphaFoldDB; P26834; -.
+DR   STRING; 195102.gene:10489434; -.
+DR   KEGG; cpe:CPE0190; -.
+DR   HOGENOM; CLU_151754_0_0_9; -.
+DR   Proteomes; UP000000818; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..129
+FT                   /note="Uncharacterized protein CPE0190"
+FT                   /id="PRO_0000208252"
+SQ   SEQUENCE   129 AA;  14741 MW;  5B5B81F46F164AF6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Clostridium
+2	5	Clostridiaceae
+2	4	Eubacteriales
+2	3	Clostridia
+2	2	Bacillota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+B2HR25	PE-PGRS FAMILY PROTEIN {ECO:0    136.1    1.2e-36  23  25.5  35.7
+	P26834_TED02              	  1311	  1357	     9.1
+	P26834_TED02              	  1382	  1428	     9.0
+	P26834_TED02              	  1672	  1716	     7.9
+	P26834_TED02              	  1095	  1140	     7.8
+	P26834_TED02              	  1599	  1644	     7.8
+	P26834_TED02              	  1165	  1210	     7.4
+	P26834_TED02              	  1237	  1282	     7.4
+	P26834_TED02              	  2103	  2145	     5.8
+	P26834_TED02              	   735	   780	     5.1
+	P26834_TED02              	  1815	  1860	     5.1
+	P26834_TED02              	   520	   564	     4.9
+	P26834_TED02              	  1456	  1500	     4.9
+	P26834_TED02              	   664	   708	     3.9
+	P26834_TED02              	   808	   852	     3.9
+	P26834_TED02              	   592	   636	     3.8
+	P26834_TED02              	   880	   924	     3.8
+	P26834_TED02              	  1024	  1068	     3.8
+	P26834_TED02              	  1528	  1572	     3.8
+	P26834_TED02              	  1744	  1788	     3.8
+	P26834_TED02              	  1888	  1932	     3.8
+	P26834_TED02              	  2032	  2076	     3.8
+	P26834_TED02              	   952	   996	     3.7
+	P26834_TED02              	   397	   447	     3.3
+	PF00934	PE              	     4	    94	   101.1
+
+P26834	UNCHARACTERIZED PROTEIN CPE0190    153.4    4.8e-42   1   1.6   6.8
+	P26834_TED02              	    66	   129	   153.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P26834.2	AF-P26834-F1-model_v4_TED02:66-129	1	AF-P26834-F1-model_v4_TED02	66-129	100.0%
+P26834.2	AF-P26834-F1-model_v4_TED01:1-64	1	AF-P26834-F1-model_v4_TED01	1-64	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P26834_TED02
+GA   27.00 27.00;
+TC   28.50 28.50;
+NC   26.00 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,429 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   HOLA_MYCPN              Reviewed;         314 AA.
+AC   Q50362;
+DE   RecName: Full=Probable DNA polymerase III subunit delta {ECO:0000305};
+DE            EC=2.7.7.7;
+GN   Name=holA {ECO:0000305}; OrderedLocusNames=MPN_450;
+GN   ORFNames=H08_orf314, MP391;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8675025; DOI=10.1016/0378-1119(96)00050-9;
+RA   Dirksen L.B., Proft T., Hilbert H., Plagens H., Herrmann R., Krause D.C.;
+RT   "Sequence analysis and characterization of the hmw gene cluster of
+RT   Mycoplasma pneumoniae.";
+RL   Gene 171:19-25(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+CC   -!- FUNCTION: Part of the beta sliding clamp loading complex, which
+CC       hydrolyzes ATP to load the beta clamp onto primed DNA to form the DNA
+CC       replication pre-initiation complex. DNA polymerase III is a complex,
+CC       multichain enzyme responsible for most of the replicative synthesis in
+CC       bacteria. This DNA polymerase also exhibits 3'-5' exonuclease activity.
+CC       The delta subunit is the wrench that will open the beta subunit dimer.
+CC       The DNA clamp loading complex (tau(3),delta,delta') is thought to load
+CC       beta dimers onto DNA by binding ATP which alters the complex's
+CC       conformation so it can bind beta sliding clamp dimers and open them at
+CC       one interface. Primed DNA is recognized, ATP is hydrolyzed releasing
+CC       the clamp loading complex and closing the beta sliding clamp ring
+CC       around the primed DNA. {ECO:0000250|UniProtKB:P28630}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=DNA(n) + a 2'-deoxyribonucleoside 5'-triphosphate = DNA(n+1) +
+CC         diphosphate; Xref=Rhea:RHEA:22508, Rhea:RHEA-COMP:17339, Rhea:RHEA-
+CC         COMP:17340, ChEBI:CHEBI:33019, ChEBI:CHEBI:61560, ChEBI:CHEBI:173112;
+CC         EC=2.7.7.7;
+CC   -!- SUBUNIT: Component of the DNA clamp loading complex consisting of
+CC       tau(3):delta(1):delta'(1) (By similarity). The DNA polymerase III
+CC       holoenzyme complex contains at least 10 different subunits organized
+CC       into 3 functionally essential subassemblies: the Pol III core, the beta
+CC       sliding clamp processivity factor and the clamp-loading complex. The
+CC       Pol III core (subunits alpha, epsilon and theta) contains the
+CC       polymerase and the 3'-5' exonuclease proofreading activities. The
+CC       polymerase is tethered to the template via the dimeric beta sliding
+CC       clamp processivity factor. The DNA clamp-loading complex assembles the
+CC       beta sliding clamp onto the primed template and plays a central role in
+CC       the organization and communication at the replication fork (By
+CC       similarity). {ECO:0000250|UniProtKB:P28630,
+CC       ECO:0000250|UniProtKB:P54459}.
+CC   -!- SIMILARITY: Belongs to the DNA polymerase HolA subunit family.
+CC       {ECO:0000305}.
+DR   EMBL; L38997; AAA61694.1; -; Genomic_DNA.
+DR   EMBL; U00089; AAB96039.1; -; Genomic_DNA.
+DR   PIR; S73717; S73717.
+DR   RefSeq; NP_110138.1; NC_000912.1.
+DR   AlphaFoldDB; Q50362; -.
+DR   SMR; Q50362; -.
+DR   IntAct; Q50362; 1.
+DR   STRING; 272634.MPN_450; -.
+DR   EnsemblBacteria; AAB96039; AAB96039; MPN_450.
+DR   KEGG; mpn:MPN_450; -.
+DR   PATRIC; fig|272634.6.peg.486; -.
+DR   HOGENOM; CLU_1014966_0_0_14; -.
+DR   OrthoDB; 397852at2; -.
+DR   BioCyc; MPNE272634:G1GJ3-728-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+DR   GO; GO:0009360; C:DNA polymerase III complex; IEA:TreeGrafter.
+DR   GO; GO:0003677; F:DNA binding; IEA:InterPro.
+DR   GO; GO:0003887; F:DNA-directed DNA polymerase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0006261; P:DNA-templated DNA replication; IEA:TreeGrafter.
+DR   Gene3D; 1.20.272.10; -; 1.
+DR   InterPro; IPR008921; DNA_pol3_clamp-load_cplx_C.
+DR   InterPro; IPR048466; DNA_pol3_delta-like_C.
+DR   InterPro; IPR005790; DNA_polIII_delta.
+DR   InterPro; IPR030934; Intein_C.
+DR   NCBIfam; TIGR01128; holA; 1.
+DR   PANTHER; PTHR34388; DNA POLYMERASE III SUBUNIT DELTA; 1.
+DR   PANTHER; PTHR34388:SF1; DNA POLYMERASE III SUBUNIT DELTA; 1.
+DR   Pfam; PF21694; DNA_pol3_delta_C; 1.
+DR   SUPFAM; SSF48019; post-AAA+ oligomerization domain-like; 1.
+DR   PROSITE; PS50818; INTEIN_C_TER; 1.
+PE   3: Inferred from homology;
+KW   DNA replication; DNA-directed DNA polymerase; Nucleotidyltransferase;
+KW   Reference proteome; Transferase.
+FT   CHAIN           1..314
+FT                   /note="Probable DNA polymerase III subunit delta"
+FT                   /id="PRO_0000210531"
+SQ   SEQUENCE   314 AA;  35704 MW;  39B00E9553BA5655 CRC64;
+//
+ID   HOLA_MYCGE              Reviewed;         297 AA.
+AC   Q49416;
+DE   RecName: Full=Probable DNA polymerase III subunit delta {ECO:0000305};
+DE            EC=2.7.7.7;
+GN   Name=holA {ECO:0000305}; OrderedLocusNames=MG315;
+OS   Mycoplasma genitalium (strain ATCC 33530 / DSM 19775 / NCTC 10195 / G37)
+OS   (Mycoplasmoides genitalium).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=243273;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 33530 / DSM 19775 / NCTC 10195 / G37;
+RX   PubMed=7569993; DOI=10.1126/science.270.5235.397;
+RA   Fraser C.M., Gocayne J.D., White O., Adams M.D., Clayton R.A.,
+RA   Fleischmann R.D., Bult C.J., Kerlavage A.R., Sutton G.G., Kelley J.M.,
+RA   Fritchman J.L., Weidman J.F., Small K.V., Sandusky M., Fuhrmann J.L.,
+RA   Nguyen D.T., Utterback T.R., Saudek D.M., Phillips C.A., Merrick J.M.,
+RA   Tomb J.-F., Dougherty B.A., Bott K.F., Hu P.-C., Lucier T.S.,
+RA   Peterson S.N., Smith H.O., Hutchison C.A. III, Venter J.C.;
+RT   "The minimal gene complement of Mycoplasma genitalium.";
+RL   Science 270:397-403(1995).
+CC   -!- FUNCTION: Part of the beta sliding clamp loading complex, which
+CC       hydrolyzes ATP to load the beta clamp onto primed DNA to form the DNA
+CC       replication pre-initiation complex. DNA polymerase III is a complex,
+CC       multichain enzyme responsible for most of the replicative synthesis in
+CC       bacteria. This DNA polymerase also exhibits 3'-5' exonuclease activity.
+CC       The delta subunit is the wrench that will open the beta subunit dimer.
+CC       The DNA clamp loading complex (tau(3),delta,delta') is thought to load
+CC       beta dimers onto DNA by binding ATP which alters the complex's
+CC       conformation so it can bind beta sliding clamp dimers and open them at
+CC       one interface. Primed DNA is recognized, ATP is hydrolyzed releasing
+CC       the clamp loading complex and closing the beta sliding clamp ring
+CC       around the primed DNA. {ECO:0000250|UniProtKB:P28630}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=DNA(n) + a 2'-deoxyribonucleoside 5'-triphosphate = DNA(n+1) +
+CC         diphosphate; Xref=Rhea:RHEA:22508, Rhea:RHEA-COMP:17339, Rhea:RHEA-
+CC         COMP:17340, ChEBI:CHEBI:33019, ChEBI:CHEBI:61560, ChEBI:CHEBI:173112;
+CC         EC=2.7.7.7;
+CC   -!- SUBUNIT: Component of the DNA clamp loading complex consisting of
+CC       tau(3):delta(1):delta'(1) (By similarity). The DNA polymerase III
+CC       holoenzyme complex contains at least 10 different subunits organized
+CC       into 3 functionally essential subassemblies: the Pol III core, the beta
+CC       sliding clamp processivity factor and the clamp-loading complex. The
+CC       Pol III core (subunits alpha, epsilon and theta) contains the
+CC       polymerase and the 3'-5' exonuclease proofreading activities. The
+CC       polymerase is tethered to the template via the dimeric beta sliding
+CC       clamp processivity factor. The DNA clamp-loading complex assembles the
+CC       beta sliding clamp onto the primed template and plays a central role in
+CC       the organization and communication at the replication fork (By
+CC       similarity). {ECO:0000250|UniProtKB:P28630,
+CC       ECO:0000250|UniProtKB:P54459}.
+CC   -!- SIMILARITY: Belongs to the DNA polymerase HolA subunit family.
+CC       {ECO:0000305}.
+DR   EMBL; L43967; AAC71537.1; -; Genomic_DNA.
+DR   PIR; H64234; H64234.
+DR   RefSeq; WP_009885989.1; NC_000908.2.
+DR   AlphaFoldDB; Q49416; -.
+DR   SMR; Q49416; -.
+DR   STRING; 243273.MG_315; -.
+DR   GeneID; 88282478; -.
+DR   KEGG; mge:MG_315; -.
+DR   eggNOG; COG1466; Bacteria.
+DR   HOGENOM; CLU_1014966_0_0_14; -.
+DR   InParanoid; Q49416; -.
+DR   OrthoDB; 397852at2; -.
+DR   BioCyc; MGEN243273:G1GJ2-384-MONOMER; -.
+DR   Proteomes; UP000000807; Chromosome.
+DR   GO; GO:0009360; C:DNA polymerase III complex; IBA:GO_Central.
+DR   GO; GO:0003677; F:DNA binding; IEA:InterPro.
+DR   GO; GO:0003887; F:DNA-directed DNA polymerase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0006261; P:DNA-templated DNA replication; IBA:GO_Central.
+DR   Gene3D; 1.20.272.10; -; 1.
+DR   InterPro; IPR008921; DNA_pol3_clamp-load_cplx_C.
+DR   InterPro; IPR005790; DNA_polIII_delta.
+DR   NCBIfam; TIGR01128; holA; 1.
+DR   PANTHER; PTHR34388; DNA POLYMERASE III SUBUNIT DELTA; 1.
+DR   PANTHER; PTHR34388:SF1; DNA POLYMERASE III SUBUNIT DELTA; 1.
+DR   SUPFAM; SSF48019; post-AAA+ oligomerization domain-like; 1.
+PE   3: Inferred from homology;
+KW   DNA replication; DNA-directed DNA polymerase; Nucleotidyltransferase;
+KW   Reference proteome; Transferase.
+FT   CHAIN           1..297
+FT                   /note="Probable DNA polymerase III subunit delta"
+FT                   /id="PRO_0000210530"
+SQ   SEQUENCE   297 AA;  34062 MW;  82BCE69827881C74 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	5	Mycoplasmoides
+2	4	Mycoplasmoidaceae
+2	3	Mycoplasmoidales
+2	2	Mycoplasmatota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A9W7B557	HISTIDINE KINASE {ECO:000     58.3    3.5e-12   6   7.4   0.0
+	Iterate                   	   398	   490	     8.6
+	Iterate                   	   652	   746	     8.1
+	Iterate                   	   143	   235	     8.0
+	Iterate                   	   525	   605	     7.3
+	Iterate                   	   271	   346	     6.9
+	Iterate                   	   779	   857	     6.9
+	PF00989	PAS             	    44	   156	    79.4
+	PF08448	PAS_4           	    50	   161	    44.1
+	PF13426	PAS_9           	    54	   158	    38.9
+	PF08447	PAS_3           	    66	   153	    26.7
+	PF00989	PAS             	   171	   283	    76.5
+	PF08448	PAS_4           	   177	   288	    45.1
+	PF13426	PAS_9           	   181	   285	      39
+	PF08447	PAS_3           	   193	   280	    25.8
+	PF00989	PAS             	   298	   410	    80.8
+	PF08448	PAS_4           	   304	   415	      49
+	PF13426	PAS_9           	   308	   412	    37.4
+	PF08447	PAS_3           	   320	   407	    27.4
+	PF00989	PAS             	   425	   537	    74.1
+	PF08448	PAS_4           	   431	   542	    45.8
+	PF13426	PAS_9           	   435	   539	      42
+	PF08447	PAS_3           	   447	   534	    28.9
+	PF00989	PAS             	   552	   664	    69.6
+	PF08448	PAS_4           	   558	   669	    42.9
+	PF13426	PAS_9           	   562	   666	    39.2
+	PF00989	PAS             	   679	   791	    73.5
+	PF08448	PAS_4           	   685	   796	    47.8
+	PF13426	PAS_9           	   689	   793	    38.3
+
+A0A9W7FTU0	HISTIDINE KINASE {ECO:000     68.0    3.2e-15   8   9.3   0.0
+	Iterate                   	   398	   489	     7.5
+	Iterate                   	  1042	  1119	     7.4
+	Iterate                   	   915	   991	     7.1
+	Iterate                   	   652	   735	     7.0
+	Iterate                   	   143	   233	     6.9
+	Iterate                   	   525	   605	     6.9
+	Iterate                   	   271	   346	     5.9
+	Iterate                   	   779	   830	     3.8
+	PF00989	PAS             	    44	   156	    78.3
+	PF08448	PAS_4           	    50	   161	      43
+	PF13426	PAS_9           	    54	   158	    37.8
+	PF08447	PAS_3           	    66	   153	    25.6
+	PF00989	PAS             	   171	   283	    75.3
+	PF08448	PAS_4           	   177	   288	    43.9
+	PF13426	PAS_9           	   181	   285	    37.9
+	PF00989	PAS             	   298	   410	      81
+	PF08448	PAS_4           	   304	   415	    48.8
+	PF13426	PAS_9           	   308	   412	    40.3
+	PF08447	PAS_3           	   320	   407	    28.6
+	PF00989	PAS             	   425	   537	      73
+	PF08448	PAS_4           	   431	   542	    44.7
+	PF13426	PAS_9           	   435	   539	    40.9
+	PF08447	PAS_3           	   447	   534	    27.8
+	PF00989	PAS             	   552	   664	    72.5
+	PF08448	PAS_4           	   558	   669	    45.5
+	PF13426	PAS_9           	   562	   666	    41.7
+	PF00989	PAS             	   679	   791	    73.7
+	PF08448	PAS_4           	   685	   796	    45.4
+	PF13426	PAS_9           	   689	   793	    41.5
+	PF08448	PAS_4           	   842	   932	    33.6
+	PF13426	PAS_9           	   845	   929	    32.1
+	PF00989	PAS             	   845	   927	    39.6
+	PF00989	PAS             	   942	  1054	    70.3
+	PF08448	PAS_4           	   948	  1059	    37.5
+	PF13426	PAS_9           	   952	  1056	    36.9
+	PF08447	PAS_3           	   964	  1051	    26.8
+	PF00989	PAS             	  1069	  1181	    71.1
+	PF08448	PAS_4           	  1075	  1186	    39.4
+	PF13426	PAS_9           	  1079	  1183	    31.5
+	PF00512	HisKA           	  1207	  1271	    37.8
+	PF02518	HATPase_c       	  1317	  1426	      76
+	PF00072	Response_reg    	  1448	  1567	    30.7
+
+Q49416	PROBABLE DNA POLYMERASE III SUB    232.6      2e-66   1   1.9   3.4
+	Iterate                   	     3	   105	   232.6
+
+Q50362	PROBABLE DNA POLYMERASE III SUB     93.9    2.8e-23   1   2.1   2.1
+	Iterate                   	    18	   121	    93.0
+	PF21694	DNA_pol3_delta_C	   193	   310	    37.4
+
+T1K1V6	UNCHARACTERIZED PROTEIN {ECO:     29.2     0.0039   2   7.0   0.1
+	Iterate                   	  1099	  1148	     9.2
+	Iterate                   	   869	   918	     3.6
+	PF13927	Ig_3            	    23	    97	    36.7
+	PF07679	I-set           	    27	   110	    43.6
+	PF00047	ig              	    29	   104	      25
+	PF13927	Ig_3            	   113	   191	    34.5
+	PF07679	I-set           	   114	   198	    25.5
+	PF07679	I-set           	   246	   337	    47.1
+	PF13927	Ig_3            	   250	   324	      48
+	PF13895	Ig_2            	   251	   337	    31.5
+	PF00047	ig              	   257	   333	    34.8
+	PF07679	I-set           	   434	   524	    51.6
+	PF13927	Ig_3            	   434	   511	    43.5
+	PF13895	Ig_2            	   436	   524	    33.3
+	PF00047	ig              	   446	   520	    28.1
+	PF13927	Ig_3            	   527	   609	    35.7
+	PF07679	I-set           	   528	   617	    24.7
+	PF13895	Ig_2            	   626	   716	    31.8
+	PF07679	I-set           	   626	   716	      53
+	PF13927	Ig_3            	   626	   703	    45.2
+	PF00047	ig              	   638	   711	    27.5
+	PF13927	Ig_3            	   719	   800	    46.9
+	PF07679	I-set           	   720	   806	    37.1
+	PF00047	ig              	   728	   809	    25.7
+	PF13895	Ig_2            	   857	   948	    31.4
+	PF07679	I-set           	   857	   947	    54.4
+	PF13927	Ig_3            	   857	   934	    46.2
+	PF00047	ig              	   870	   943	    34.1
+	PF13927	Ig_3            	   950	  1024	    41.7
+	PF07679	I-set           	   951	  1031	    36.6
+	PF00047	ig              	   958	  1033	    22.8
+	PF13927	Ig_3            	  1086	  1163	    43.7
+	PF13895	Ig_2            	  1089	  1176	    32.5
+	PF07679	I-set           	  1090	  1176	    49.4
+	PF00047	ig              	  1098	  1172	    28.1
+	PF13927	Ig_3            	  1179	  1251	    43.4
+	PF07679	I-set           	  1180	  1258	    29.7
+	PF13927	Ig_3            	  1307	  1377	    39.1
+	PF07679	I-set           	  1309	  1390	    42.8
+	PF13927	Ig_3            	  1393	  1468	    37.8
+	PF07679	I-set           	  1394	  1475	    35.8
+	PF07679	I-set           	  1485	  1576	    43.3
+	PF13927	Ig_3            	  1489	  1563	    43.4
+	PF13895	Ig_2            	  1490	  1576	    28.2
+	PF00047	ig              	  1496	  1572	    31.7
+	PF13927	Ig_3            	  1696	  1773	    40.6
+	PF13895	Ig_2            	  1697	  1786	    35.6
+	PF07679	I-set           	  1699	  1786	    53.8
+	PF00047	ig              	  1707	  1782	    32.8
+	PF13927	Ig_3            	  1789	  1866	    41.3
+	PF07679	I-set           	  1790	  1873	    42.1
+	PF07679	I-set           	  1883	  1973	    54.1
+	PF13927	Ig_3            	  1883	  1960	    43.2
+	PF13895	Ig_2            	  1885	  1974	    32.4
+	PF00047	ig              	  1895	  1969	    34.5
+	PF13927	Ig_3            	  1976	  2054	    40.7
+	PF07679	I-set           	  1977	  2062	    38.3
+	PF00047	ig              	  1986	  2063	    22.5
+	PF07679	I-set           	  2093	  2183	    54.2
+	PF13927	Ig_3            	  2093	  2170	    47.3
+	PF13895	Ig_2            	  2095	  2184	    29.5
+	PF00047	ig              	  2105	  2179	    34.5
+	PF13927	Ig_3            	  2186	  2260	    40.1
+	PF07679	I-set           	  2187	  2267	    33.4
+	PF00047	ig              	  2194	  2269	    24.3
+	PF07679	I-set           	  2281	  2371	    50.4
+	PF13927	Ig_3            	  2281	  2358	    40.8
+	PF13895	Ig_2            	  2283	  2371	    28.2
+	PF00047	ig              	  2289	  2367	    29.6
+	PF13927	Ig_3            	  2374	  2446	    42.2
+	PF07679	I-set           	  2375	  2452	    32.4
+	PF13927	Ig_3            	  2477	  2555	      42
+	PF07679	I-set           	  2478	  2568	    52.3
+	PF00047	ig              	  2486	  2564	      26
+	PF13927	Ig_3            	  2571	  2650	    39.2
+	PF07679	I-set           	  2572	  2656	    35.6
+	PF13927	Ig_3            	  2665	  2742	    42.9
+	PF07679	I-set           	  2670	  2755	    55.5
+	PF00047	ig              	  2678	  2751	    33.5
+	PF13927	Ig_3            	  2758	  2832	    45.4
+	PF07679	I-set           	  2759	  2839	    37.6
+	PF13927	Ig_3            	  2849	  2928	    41.4
+	PF07679	I-set           	  2858	  2941	    36.3
+	PF00047	ig              	  2861	  2937	    25.9
+	PF13895	Ig_2            	  2944	  3028	    27.4
+	PF13927	Ig_3            	  2944	  3014	    37.4
+	PF07679	I-set           	  2945	  3024	      27
+	PF07679	I-set           	  3055	  3150	    49.7
+	PF13927	Ig_3            	  3055	  3137	    36.9
+	PF00047	ig              	  3062	  3146	    25.6
+	PF00041	fn3             	  3155	  3248	    48.6
+	PF00041	fn3             	  3256	  3353	    46.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS13906 (E-value: 6.1e-58, Score: 198.8)
+Mentioned as: MPN450
+Description: conserved hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 22114320
+Source: EuropePMC
+Title: Characterization of NrnA homologs from Mycobacterium tuberculosis and Mycoplasma pneumoniae
+Journal: RNA (New York, N.Y.) (2012)
+Snippet: Mpn140 as part of a complex containing proteins Mpn148, Mpn450, Mpn311, Mpn246, Mpn011, and Mpn466 in the core complex and Mpn204, Mpn245, Mpn419, and Mpn095 as
+
+================================================================================
+Protein: VIMSS8400 (E-value: 2e-56, Score: 194.0)
+Mentioned as: MG_315
+Description: DNA polymerase III, delta subunit, putative
+Organism: Mycoplasma genitalium G37
+PMID: 28348033
+Source: EuropePMC
+Title: Minimal Cells-Real and Imagined
+Journal: Cold Spring Harbor perspectives in biology (2017)
+Snippet: and JCVISYN3_0328), DNA polymerase III, delta subunit (MG_315 and JCVISYN3_0826), and an ATP-binding cassette (ABC) transporter, ATP-binding protein (MG_290 and
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q49416.1	AF-Q49416-F1-model_v4_TED01:3-105	1	AF-Q49416-F1-model_v4_TED01	3-105	100.0%
+Q49416.1	AF-Q49416-F1-model_v4_TED02:111-174	1	AF-Q49416-F1-model_v4_TED02	111-174	0
+Q49416.1	AF-Q49416-F1-model_v4_TED03:177-296	1	AF-Q49416-F1-model_v4_TED03	177-296	0
+Q50362.1	AF-Q50362-F1-model_v4_TED01:18-121	1	AF-Q50362-F1-model_v4_TED01	18-121	100.0%
+Q50362.1	AF-Q50362-F1-model_v4_TED03:194-313	1	AF-Q50362-F1-model_v4_TED03	194-313	0
+Q50362.1	AF-Q50362-F1-model_v4_TED02:129-190	1	AF-Q50362-F1-model_v4_TED02	129-190	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q49416_TED01/Iterate
+GA   27.00 27.00;
+TC   27.40 193.80;
+NC   24.30 23.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

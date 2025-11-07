@@ -1,0 +1,68 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Streptomyces aurantiacus group.
+6	6	Streptomyces.
+2	6	Actinacidiphila.
+1	6	Streptomyces
+9	5	Streptomycetaceae
+9	4	Kitasatosporales
+9	3	Actinomycetes
+9	2	Actinomycetota
+9	1	Bacillati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1G8WIE6	UNCHARACTERIZED PROTEIN {     62.6    1.5e-13   1   1.5   3.1
+	Iterate                   	     6	    69	    61.8
+
+A0A1V4DCG6	SPDD PROTEIN {ECO:0008006     59.2    1.7e-12   1   1.3   1.6
+	Iterate                   	     6	    65	    58.6
+
+A0A542QPP3	UNCHARACTERIZED PROTEIN {     65.6    1.8e-14   1   1.5   4.7
+	Iterate                   	     6	    69	    65.6
+
+A0A944DU80	HOLIN {ECO:0008006|GOOGLE     62.4    1.8e-13   1   1.4   3.2
+	Iterate                   	     6	    71	    61.7
+
+A0A944EDY5	UNCHARACTERIZED PROTEIN {     66.0    1.4e-14   1   1.7   3.3
+	Iterate                   	     6	    66	    66.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0F5W593.1	AF-A0A0F5W593-F1-model_v4_TED01:44-80	1	AF-A0A0F5W593-F1-model_v4_TED01	44-80	32.1%
+A0A1C4JL09.1	AF-A0A1C4JL09-F1-model_v4_TED01:2-35	1	AF-A0A1C4JL09-F1-model_v4_TED01	2-35	53.6%
+A0A1C4JL09.1	AF-A0A1C4JL09-F1-model_v4_TED02:38-96	1	AF-A0A1C4JL09-F1-model_v4_TED02	38-96	42.9%
+A0A1G8WIE6.1	AF-A0A1G8WIE6-F1-model_v4_TED01:8-86	1	AF-A0A1G8WIE6-F1-model_v4_TED01	8-86	96.7%
+A0A1V4DCG6.1	AF-A0A1V4DCG6-F1-model_v4_TED01:38-66	1	AF-A0A1V4DCG6-F1-model_v4_TED01	38-66	39.6%
+A0A2S4XJH6.1	AF-A0A2S4XJH6-F1-model_v4_TED01:2-33	1	AF-A0A2S4XJH6-F1-model_v4_TED01	2-33	52.8%
+A0A2S4XJH6.1	AF-A0A2S4XJH6-F1-model_v4_TED02:36-74	1	AF-A0A2S4XJH6-F1-model_v4_TED02	36-74	43.4%
+A0A498DQ19.1	AF-A0A498DQ19-F1-model_v4_TED01:3-86	1	AF-A0A498DQ19-F1-model_v4_TED01	3-86	100.0%
+A0A7G1P8H4.1	AF-A0A7G1P8H4-F1-model_v4_TED01:40-104	1	AF-A0A7G1P8H4-F1-model_v4_TED01	40-104	39.3%
+A0A7G7BL90.1	AF-A0A7G7BL90-F1-model_v4_TED01:2-35	1	AF-A0A7G7BL90-F1-model_v4_TED01	2-35	53.6%
+A0A7G7BL90.1	AF-A0A7G7BL90-F1-model_v4_TED02:38-74	1	AF-A0A7G7BL90-F1-model_v4_TED02	38-74	42.9%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P22407_TED01/Iterate
+GA   27.00 27.00;
+TC   27.50 86.20;
+NC   26.70 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

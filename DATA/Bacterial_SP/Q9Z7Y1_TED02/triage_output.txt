@@ -1,0 +1,255 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TARP_CHLTR              Reviewed;        1005 AA.
+AC   O84462;
+DE   RecName: Full=Translocated actin-recruiting phosphoprotein;
+DE            Short=Tarp protein;
+GN   Name=tarP; OrderedLocusNames=CT_456;
+OS   Chlamydia trachomatis serovar D (strain ATCC VR-885 / DSM 19411 / UW-3/Cx).
+OC   Bacteria; Pseudomonadati; Chlamydiota; Chlamydiia; Chlamydiales;
+OC   Chlamydiaceae; Chlamydia/Chlamydophila group; Chlamydia.
+OX   NCBI_TaxID=272561;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC VR-885 / DSM 19411 / UW-3/Cx;
+RX   PubMed=9784136; DOI=10.1126/science.282.5389.754;
+RA   Stephens R.S., Kalman S., Lammel C.J., Fan J., Marathe R., Aravind L.,
+RA   Mitchell W.P., Olinger L., Tatusov R.L., Zhao Q., Koonin E.V., Davis R.W.;
+RT   "Genome sequence of an obligate intracellular pathogen of humans: Chlamydia
+RT   trachomatis.";
+RL   Science 282:754-759(1998).
+CC   -!- FUNCTION: Appears to initiate or participate in signaling events that
+CC       regulate the actin recruitment, which ultimately leads to
+CC       internalization. {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Secreted. Note=Secreted via type III secretion
+CC       system and translocated into host cell. {ECO:0000250}.
+CC   -!- PTM: Phosphorylated on a tyrosine on attachment to the host cell.
+CC       Tyrosine phosphorylation is temporally and spatially associated with
+CC       recruitment of actin to the site of chlamydial entry. Phosphorylated
+CC       Tarp seems to remain cytoplasmically exposed on the inclusion membrane
+CC       at one side of internalized elementary bodies for several hours after
+CC       entry (By similarity). {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the chlamydial CPn_0572/CT_456/TC_0741 family.
+CC       {ECO:0000305}.
+DR   EMBL; AE001273; AAC68056.1; -; Genomic_DNA.
+DR   PIR; C71513; C71513.
+DR   RefSeq; NP_219969.1; NC_000117.1.
+DR   RefSeq; WP_010725202.1; NC_000117.1.
+DR   AlphaFoldDB; O84462; -.
+DR   STRING; 272561.CT_456; -.
+DR   EnsemblBacteria; AAC68056; AAC68056; CT_456.
+DR   GeneID; 884231; -.
+DR   KEGG; ctr:CT_456; -.
+DR   PATRIC; fig|272561.5.peg.493; -.
+DR   HOGENOM; CLU_011849_0_0_0; -.
+DR   InParanoid; O84462; -.
+DR   OrthoDB; 16908at2; -.
+DR   Proteomes; UP000000431; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0042169; F:SH2 domain binding; IPI:CAFA.
+DR   InterPro; IPR053108; Chlamydial_TARP.
+DR   InterPro; IPR011443; DUF1547.
+DR   NCBIfam; NF033567; act_recrut_TARP; 1.
+DR   PANTHER; PTHR36975; -; 1.
+DR   PANTHER; PTHR36975:SF5; TRANSLOCATED ACTIN-RECRUITING PHOSPHOPROTEIN; 1.
+DR   Pfam; PF07577; DUF1547; 3.
+PE   3: Inferred from homology;
+KW   Phosphoprotein; Reference proteome; Secreted; Virulence.
+FT   CHAIN           1..1005
+FT                   /note="Translocated actin-recruiting phosphoprotein"
+FT                   /id="PRO_0000072435"
+FT   REGION          1..36
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          73..155
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          487..521
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          542..626
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          671..749
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          792..847
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1..10
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        11..36
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        73..121
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        130..154
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        542..578
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        593..612
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        720..736
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        831..846
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   1005 AA;  102132 MW;  EC47EC389851CD1E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Chlamydia.
+1	6	Chlamydia/Chlamydophila group
+1	5	Chlamydiaceae
+1	4	Chlamydiales
+1	3	Chlamydiia
+1	2	Chlamydiota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O84462	TRANSLOCATED ACTIN-RECRUITING P    156.2    3.2e-42   1   2.4   0.4
+	Q9Z7Y1_TED02              	   331	   490	   156.2
+	PF07577	DUF1547         	   629	   685	   105.2
+	PF07577	DUF1547         	   751	   810	   120.7
+	PF07577	DUF1547         	   873	   930	    73.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS28904 (E-value: 1e-111, Score: 375.4)
+Mentioned as: CPn0572
+Description: CT456 hypothetical protein
+Organism: Chlamydophila pneumoniae CWL029
+PMID: 39099397
+Source: EuropePMC
+Title: Direct targeting of host microtubule and actin cytoskeletons by a chlamydial pathogenic effector protein
+Journal: Journal of cell science (2024)
+Snippet: host actin cytoskeleton. We now describe a new function for the Chlamydia pneumoniae TarP member CPn0572, namely the ability to bind and alter the microtubule cytoskeleton. Thus, CPn0572 is unique in being the only prokaryotic protein that directly modulates both dynamic cytoskeletons of a eukaryotic cell.
+
+================================================================================
+Protein: VIMSS28904 (E-value: 1e-111, Score: 375.4)
+Mentioned as: CPn0572
+Description: CT456 hypothetical protein
+Organism: Chlamydophila pneumoniae CWL029
+PMID: 39181890
+Source: EuropePMC
+Title: The Chlamydia pneumoniae effector SemD exploits its host's endocytic machinery by structural and functional mimicry
+Journal: Nature communications (2024)
+Snippet: into the host cell via its type-III-secretion system (T3SS). These include soluble factors, such as Cpn0572 (the homologue of Chlamydia trachomatis (Ctr) TarP), and proteins that bind to the hosts PM, such as SemC and SemD 11 13 . By hijacking components of the hosts endocytic
+
+================================================================================
+Protein: VIMSS28904 (E-value: 1e-111, Score: 375.4)
+Mentioned as: CPn0572
+Description: CT456 hypothetical protein
+Organism: Chlamydophila pneumoniae CWL029
+PMID: 37108781
+Source: EuropePMC
+Title: A Functional Yeast-Based Screen Identifies the Host Microtubule Cytoskeleton as a Target of Numerous <i>Chlamydia pneumoniae</i> Proteins
+Journal: International journal of molecular sciences (2023)
+Snippet: The actin cytoskeleton is targeted via the secreted Ctr effectors TarP (and its Cpn homolog CPn0572) and TmeA during EB entry [ 26 , 27 , 28 , 29 ]. Transport of the early Ctr inclusion to the MTOC is mediated by binding of the inclusion
+
+================================================================================
+Protein: VIMSS3795574 (E-value: 2.4e-46, Score: 162.9)
+Mentioned as: CTLon_0712
+Description: Translocated actin-recruiting protein
+Organism: Chlamydia trachomatis L2b/UCH-1/proctitis
+PMID: 18032721
+Source: EuropePMC
+Title: Chlamydia trachomatis: genome sequence analysis of lymphogranuloma venereum isolates
+Journal: Genome research (2008)
+Snippet: frameshift mutation carried by CTL0578, following codon 58. CTLon_0712). C. trachomatis entry into the c Originally annotated as separate CDS. host cell is a
+
+================================================================================
+Protein: Q6GX35 (E-value: 2.5e-46, Score: 162.9)
+Mentioned as: Q6GX35
+Description: Translocated actin-recruiting phosphoprotein
+Organism: Chlamydia trachomatis serovar L2 (strain ATCC VR-902B / DSM 19102 / 434/Bu)
+  SwissProt:  - Translocated actin-recruiting phosphoprotein; Tarp protein
+PMID: 22383880
+Source: EuropePMC
+Title: The Legionella pneumophila effector VipA is an actin nucleator that alters host cell organelle trafficking
+Journal: PLoS pathogens (2012)
+Snippet: [22] . Accession numbers Swissprot IDs of proteins: Legionella pneumophila VipA, Q5C8M7; Chlamydia trachomatis TARP, Q6GX35; Salmonella enterica serovar typhimurium SipC, Q56020, and SipA, P0CL52; Vibrio parahaemolyticus VopL, B9A807, and Vibrio cholerae VopF, B5AN40; Rickettsia conorii Sca2, Q92JF7; Saccharomyces cerevisiae Bro1, P48582; Homo sapiens Alix, Q8WUM4.
+
+================================================================================
+Protein: Q6GX35 (E-value: 2.5e-46, Score: 162.9)
+Mentioned as: TARP_CHLT2
+Description: Translocated actin-recruiting phosphoprotein
+Organism: Chlamydia trachomatis serovar L2 (strain ATCC VR-902B / DSM 19102 / 434/Bu)
+  SwissProt:  - Translocated actin-recruiting phosphoprotein; Tarp protein
+PMID: 15199184
+Source: SwissProt
+Snippet: FUNCTION: Appears to initiate or participate in signaling events that regulate the actin recruitment, which ultimately leads to internalization. {ECO:0000269|PubMed:15199184}._:::_INTERACTION: Q6GX35; P68135: ACTA1; Xeno; NbExp=4; IntAct=EBI-15605056, EBI-367540;_:::_SUBCELLULAR LOCATION: Secreted. Note=Secreted via type III secretion system and translocated into host cell._:::_PTM: Phosphorylated on a tyrosine on attachment to the host cell. Tyrosine phosphorylation is temporally and spatially ...
+
+================================================================================
+Protein: VIMSS468 (E-value: 2.8e-44, Score: 156.2)
+Mentioned as: CT456
+Description: hypothetical protein
+Organism: Chlamydia trachomatis D/UW-3/CX
+PMID: 39250505
+Source: EuropePMC
+Title: Low-Frequency, Sustained CD4 T-Cell Responses Chlamydia trachomatis in Women: Predominant Targeting of Chlamydial Proteaselike Activity Factor (CPAF)
+Journal: The Journal of infectious diseases (2025)
+Snippet: 7.33 1/28 (3.6) CT622 Putative T3SS effector, TaiP + + + + 1.29 2/30 (6.7) CT456 Translocated actin-recruiting phosphoprotein + + + 36.21 3/30 (10) CT795 d Protein with unknown function + + + 51.29 0/28 (0) PGP3 d Plasmid-encoded virulence effector; Pgp3 + + +
+
+================================================================================
+Protein: VIMSS468 (E-value: 2.8e-44, Score: 156.2)
+Mentioned as: CT456
+Description: hypothetical protein
+Organism: Chlamydia trachomatis D/UW-3/CX
+PMID: 40353442
+Source: EuropePMC
+Title: Pathogenicity and virulence of &lt;i&gt;Chlamydia trachomatis&lt;/i&gt;: Insights into host interactions, immune evasion, and intracellular survival
+Journal: Virulence (2025)
+
+================================================================================
+Protein: VIMSS468 (E-value: 2.8e-44, Score: 156.2)
+Mentioned as: CT456
+Description: hypothetical protein
+Organism: Chlamydia trachomatis D/UW-3/CX
+PMID: 39819645
+Source: EuropePMC
+Title: Altering the redox status of &lt;i&gt;Chlamydia trachomatis&lt;/i&gt; directly impacts its developmental cycle progression
+Journal: eLife (2025)
+Snippet: Swoboda et al., 2023 CT444 CTL0703 omcA Small cysteine-rich outer membrane protein 3.63 Hatch, 1996 CT456 CTL0716 tarP Translocated actin-recruiting phosphoprotein 3.22 Clifton et al., 2004 CT443 CTL0702 omcB Large cysteine-rich periplasmic protein 2.94 Newhall, 1987 CT798 CTL0167 glgA Glycogen synthase 2.26 Belland et al., 2003
+
+================================================================================
+Protein: VIMSS1083456 (E-value: 3.4e-43, Score: 152.7)
+
+... (truncated - showing first 100 of 153 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9Z7Y1.1	AF-Q9Z7Y1-F1-model_v4_TED02:178-335	1	AF-Q9Z7Y1-F1-model_v4_TED02	178-335	100.0%
+Q9Z7Y1.1	AF-Q9Z7Y1-F1-model_v4_TED01:8-63	1	AF-Q9Z7Y1-F1-model_v4_TED01	8-63	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9Z7Y1_TED02
+GA   27.00 27.00;
+TC   32.00 156.20;
+NC   26.80 19.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

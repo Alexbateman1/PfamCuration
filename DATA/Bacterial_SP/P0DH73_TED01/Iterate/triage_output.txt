@@ -1,0 +1,131 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y4053_ENTFA             Reviewed;         101 AA.
+AC   P0DH72; Q01894;
+DE   RecName: Full=Putative regulatory protein PrgT;
+GN   Name=prgT; OrderedLocusNames=EF_A0053;
+OS   Enterococcus faecalis (strain ATCC 700802 / V583).
+OG   Plasmid pTEF1, and Plasmid pAD1.
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Enterococcaceae;
+OC   Enterococcus.
+OX   NCBI_TaxID=226185;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DS16; PLASMID=pAD1;
+RX   PubMed=1603060; DOI=10.1007/bf00587575;
+RA   Weidlich G., Wirth R., Galli D.;
+RT   "Sex pheromone plasmid pAD1-encoded surface exclusion protein of
+RT   Enterococcus faecalis.";
+RL   Mol. Gen. Genet. 233:161-168(1992).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700802 / V583; PLASMID=pTEF1;
+RX   PubMed=12663927; DOI=10.1126/science.1080613;
+RA   Paulsen I.T., Banerjei L., Myers G.S.A., Nelson K.E., Seshadri R.,
+RA   Read T.D., Fouts D.E., Eisen J.A., Gill S.R., Heidelberg J.F., Tettelin H.,
+RA   Dodson R.J., Umayam L.A., Brinkac L.M., Beanan M.J., Daugherty S.C.,
+RA   DeBoy R.T., Durkin S.A., Kolonay J.F., Madupu R., Nelson W.C.,
+RA   Vamathevan J.J., Tran B., Upton J., Hansen T., Shetty J., Khouri H.M.,
+RA   Utterback T.R., Radune D., Ketchum K.A., Dougherty B.A., Fraser C.M.;
+RT   "Role of mobile DNA in the evolution of vancomycin-resistant Enterococcus
+RT   faecalis.";
+RL   Science 299:2071-2074(2003).
+CC   -!- FUNCTION: Might be involved in the expression of prgA, but is not
+CC       required for activation of the expression of prgB. {ECO:0000250}.
+DR   EMBL; X62658; CAA44525.1; -; Genomic_DNA.
+DR   EMBL; AE016833; AAO83048.1; -; Genomic_DNA.
+DR   PIR; S22451; D56272.
+DR   RefSeq; NP_816977.1; NC_004669.1.
+DR   RefSeq; WP_002365956.1; NZ_KE136530.1.
+DR   AlphaFoldDB; P0DH72; -.
+DR   SMR; P0DH72; -.
+DR   STRING; 226185.EF_0145; -.
+DR   EnsemblBacteria; AAO83048; AAO83048; EF_A0053.
+DR   KEGG; efa:EFA0053; -.
+DR   PATRIC; fig|226185.45.peg.2774; -.
+DR   HOGENOM; CLU_179885_0_0_9; -.
+DR   Proteomes; UP000001415; Plasmid pTEF1.
+PE   3: Inferred from homology;
+KW   Plasmid; Reference proteome; Transcription; Transcription regulation.
+FT   CHAIN           1..101
+FT                   /note="Putative regulatory protein PrgT"
+FT                   /id="PRO_0000066090"
+SQ   SEQUENCE   101 AA;  12381 MW;  CD6AECF0C1E8E1B4 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Enterococcus
+3	5	Enterococcaceae
+3	4	Lactobacillales
+3	3	Bacilli
+3	2	Bacillota
+3	1	Bacillati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A165WXM3	TPR-LIKE PROTEIN {ECO:000     28.7     0.0045   6   7.6  16.8
+	Iterate                   	   766	   811	     9.4
+	Iterate                   	   721	   765	     6.5
+	Iterate                   	   628	   670	     5.1
+	Iterate                   	   812	   854	     5.1
+	Iterate                   	   905	   945	     3.6
+	Iterate                   	   996	  1037	     3.6
+	PF24883	NPHP3_N         	    27	   189	    96.6
+	PF05729	NACHT           	    45	   230	    40.7
+	PF12862	ANAPC5          	   550	   605	       8
+	PF13374	TPR_10          	   567	   604	    18.5
+	PF13374	TPR_10          	   613	   648	    23.1
+	PF13374	TPR_10          	   659	   694	    18.3
+	PF13374	TPR_10          	   705	   740	    17.7
+	PF13374	TPR_10          	   751	   786	    20.9
+	PF13374	TPR_10          	   797	   832	    23.1
+	PF13374	TPR_10          	   843	   878	    17.1
+	PF13374	TPR_10          	   889	   924	    19.2
+	PF13374	TPR_10          	   935	   973	    17.4
+	PF13374	TPR_10          	   981	  1016	    14.8
+	PF13374	TPR_10          	  1027	  1063	    21.7
+
+A0A7M5WS63	TUDOR DOMAIN-CONTAINING P     27.5       0.01   2   4.0   1.4
+	Iterate                   	   721	   756	    13.6
+	Iterate                   	    69	    90	     8.2
+	PF00567	TUDOR           	     9	   135	    92.2
+	PF00567	TUDOR           	   250	   369	    92.5
+	PF00567	TUDOR           	   467	   589	    96.4
+	PF00567	TUDOR           	   677	   797	    94.5
+
+P0DH72	PUTATIVE REGULATORY PROTEIN PR    137.3    5.3e-37   1   1.8   5.7
+	Iterate                   	     2	    53	   137.3
+
+Q82YN3	UNCHARACTERIZED PROTEIN {ECO:    139.7    9.8e-38   1   1.1   5.7
+	Iterate                   	     2	    53	   139.4
+
+Q839L9	REGULATORY PROTEIN {ECO:00080    120.4    9.8e-32   1   1.8   4.7
+	Iterate                   	     2	    53	   120.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q82YN3.1	AF-Q82YN3-F1-model_v4_TED01:2-38	1	AF-Q82YN3-F1-model_v4_TED01	2-38	71.2%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DH73_TED01/Iterate
+GA   27.00 27.00;
+TC   27.50 120.40;
+NC   26.90 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,104 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1613_SYNY3             Reviewed;         145 AA.
+AC   P73841;
+DE   RecName: Full=Uncharacterized protein sll1613;
+GN   OrderedLocusNames=sll1613;
+OS   Synechocystis sp. (strain ATCC 27184 / PCC 6803 / Kazusa).
+OC   Bacteria; Bacillati; Cyanobacteriota; Cyanophyceae; Synechococcales;
+OC   Merismopediaceae; Synechocystis.
+OX   NCBI_TaxID=1111708;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 27184 / PCC 6803 / Kazusa;
+RX   PubMed=8905231; DOI=10.1093/dnares/3.3.109;
+RA   Kaneko T., Sato S., Kotani H., Tanaka A., Asamizu E., Nakamura Y.,
+RA   Miyajima N., Hirosawa M., Sugiura M., Sasamoto S., Kimura T., Hosouchi T.,
+RA   Matsuno A., Muraki A., Nakazaki N., Naruo K., Okumura S., Shimpo S.,
+RA   Takeuchi C., Wada T., Watanabe A., Yamada M., Yasuda M., Tabata S.;
+RT   "Sequence analysis of the genome of the unicellular cyanobacterium
+RT   Synechocystis sp. strain PCC6803. II. Sequence determination of the entire
+RT   genome and assignment of potential protein-coding regions.";
+RL   DNA Res. 3:109-136(1996).
+DR   EMBL; BA000022; BAA17898.1; -; Genomic_DNA.
+DR   PIR; S75036; S75036.
+DR   AlphaFoldDB; P73841; -.
+DR   IntAct; P73841; 3.
+DR   STRING; 1148.gene:10498767; -.
+DR   PaxDb; 1148-1652981; -.
+DR   EnsemblBacteria; BAA17898; BAA17898; BAA17898.
+DR   KEGG; syn:sll1613; -.
+DR   eggNOG; ENOG5033KWH; Bacteria.
+DR   InParanoid; P73841; -.
+DR   Proteomes; UP000001425; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..145
+FT                   /note="Uncharacterized protein sll1613"
+FT                   /id="PRO_0000157892"
+SQ   SEQUENCE   145 AA;  15817 MW;  005610A7F1C39A89 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Waterburya agarophytonicola.
+1	6	Waterburya
+1	6	Synechocystis.
+1	6	Stanieria.
+1	6	Hyella.
+2	5	Hyellaceae
+1	5	Merismopediaceae
+1	5	Dermocarpellaceae
+3	4	Pleurocapsales
+1	4	Synechococcales
+4	3	Cyanophyceae
+4	2	Cyanobacteriota
+4	1	Bacillati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1Z4RW93	UNCHARACTERIZED PROTEIN {    188.9    2.1e-52   1   1.1   0.4
+	Iterate                   	    36	   162	   188.6
+
+A0A563VJR8	UNCHARACTERIZED PROTEIN {    182.2    2.4e-50   1   1.1   0.5
+	Iterate                   	    38	   164	   181.9
+
+A0A929FSV7	UNCHARACTERIZED PROTEIN {    203.8    4.9e-57   1   1.0   0.7
+	Iterate                   	    16	   142	   203.6
+
+K9XVC9	UNCHARACTERIZED PROTEIN {ECO:    200.1    6.7e-56   1   1.0   0.4
+	Iterate                   	    33	   159	   199.9
+
+P73841	UNCHARACTERIZED PROTEIN SLL161    296.8    8.2e-86   1   1.0   2.1
+	Iterate                   	    16	   142	   296.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Z4RW93.1	AF-A0A1Z4RW93-F1-model_v4_TED01:29-153	1	AF-A0A1Z4RW93-F1-model_v4_TED01	29-153	92.9%
+A0A563VJR8.1	AF-A0A563VJR8-F1-model_v4_TED01:32-164	1	AF-A0A563VJR8-F1-model_v4_TED01	32-164	100.0%
+K9XVC9.1	AF-K9XVC9-F1-model_v4_TED01:23-143	1	AF-K9XVC9-F1-model_v4_TED01	23-143	87.4%
+L8M296.1	AF-L8M296-F1-model_v4_TED01:27-165	1	AF-L8M296-F1-model_v4_TED01	27-165	100.0%
+P73841.1	AF-P73841-F1-model_v4_TED01:16-142	1	AF-P73841-F1-model_v4_TED01	16-142	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P73841_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 232.20;
+NC   26.90 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

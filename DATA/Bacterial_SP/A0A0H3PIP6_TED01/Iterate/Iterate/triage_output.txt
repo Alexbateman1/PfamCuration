@@ -1,0 +1,74 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Vibrio.
+1	6	Serratia.
+1	6	Photorhabdus.
+1	5	Yersiniaceae
+1	5	Vibrionaceae
+1	5	Morganellaceae
+2	4	Enterobacterales
+1	4	Vibrionales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A542D0N3	IMMUNITY PROTEIN 50 OF PO    141.9    2.5e-38   1   1.5   5.0
+	Iterate                   	   108	   178	   140.9
+
+A0AAE0VYZ3	UNCHARACTERIZED PROTEIN {     29.4     0.0033   7   8.8  28.2
+	Iterate                   	    29	    72	     8.9
+	Iterate                   	     3	    33	     7.0
+	Iterate                   	    60	    89	     6.7
+	Iterate                   	   105	   130	     6.5
+	Iterate                   	    87	   111	     6.0
+	Iterate                   	   168	   191	     5.9
+	Iterate                   	   146	   169	     2.5
+
+B5VZC8	TACHYKININ DOMAIN-CONTAINING      49.9    1.3e-09   8   8.7   0.0
+	Iterate                   	   171	   214	     6.5
+	Iterate                   	   248	   289	     6.4
+	Iterate                   	    20	    59	     6.3
+	Iterate                   	    57	   100	     5.6
+	Iterate                   	    37	    77	     5.4
+	Iterate                   	   210	   251	     5.4
+	Iterate                   	   194	   230	     5.1
+	Iterate                   	   130	   175	     2.2
+
+Q7N2L3	PHOTORHABDUS LUMINESCENS SUBS    144.8    3.2e-39   1   1.6   6.8
+	Iterate                   	   107	   178	   143.6
+
+U3C705	UNCHARACTERIZED PROTEIN {ECO:     29.5     0.0031   1   1.7   0.5
+	Iterate                   	   106	   175	    29.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A542D0N3.1	AF-A0A542D0N3-F1-model_v4_TED01:6-178	1	AF-A0A542D0N3-F1-model_v4_TED01	6-178	100.0%
+Q7N2L3.1	AF-Q7N2L3-F1-model_v4_TED01:4-175	1	AF-Q7N2L3-F1-model_v4_TED01	4-175	95.8%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A0H3PIP6_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   30.30 33.30;
+NC   24.50 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

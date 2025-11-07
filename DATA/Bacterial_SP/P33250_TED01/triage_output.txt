@@ -1,0 +1,113 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   ATPZ_MYCGA              Reviewed;         169 AA.
+AC   P33250;
+DE   RecName: Full=ATP synthase protein I;
+GN   Name=atpI; OrderedLocusNames=MYCGA2990; ORFNames=MGA_1163;
+OS   Mycoplasmoides gallisepticum (strain R(low / passage 15 / clone 2))
+OS   (Mycoplasma gallisepticum).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=710127;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=A5969Var.B;
+RX   PubMed=1386735; DOI=10.1042/bj2850881;
+RA   Rasmussen O.F., Shirvan M.H., Margalit H., Christiansen C., Rottem S.;
+RT   "Nucleotide sequence, organization and characterization of the atp genes
+RT   and the encoded subunits of Mycoplasma gallisepticum ATPase.";
+RL   Biochem. J. 285:881-888(1992).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=R(low / passage 15 / clone 2);
+RX   PubMed=12949158; DOI=10.1099/mic.0.26427-0;
+RA   Papazisi L., Gorton T.S., Kutish G., Markham P.F., Browning G.F.,
+RA   Nguyen D.K., Swartzell S., Madan A., Mahairas G., Geary S.J.;
+RT   "The complete genome sequence of the avian pathogen Mycoplasma
+RT   gallisepticum strain R(low).";
+RL   Microbiology 149:2307-2316(2003).
+CC   -!- FUNCTION: A possible function for this protein is to guide the assembly
+CC       of the membrane sector of the ATPase enzyme complex.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the bacterial AtpI family. {ECO:0000305}.
+DR   EMBL; X64256; CAA45544.1; -; Genomic_DNA.
+DR   EMBL; AE015450; AAP56649.1; -; Genomic_DNA.
+DR   PIR; S24332; S24332.
+DR   RefSeq; WP_011113540.1; NC_004829.2.
+DR   AlphaFoldDB; P33250; -.
+DR   TCDB; 1.A.77.3.13; the mg(2+)/ca(2+) uniporter (mcu) family.
+DR   KEGG; mga:MGA_1163; -.
+DR   HOGENOM; CLU_1576767_0_0_14; -.
+DR   OrthoDB; 9935786at2; -.
+DR   Proteomes; UP000001418; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0045259; C:proton-transporting ATP synthase complex; IEA:UniProtKB-KW.
+DR   GO; GO:1902600; P:proton transmembrane transport; IEA:UniProtKB-KW.
+DR   NCBIfam; NF033688; MG406_fam; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; CF(0); Hydrogen ion transport; Ion transport; Membrane;
+KW   Reference proteome; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..169
+FT                   /note="ATP synthase protein I"
+FT                   /id="PRO_0000071708"
+FT   TRANSMEM        12..32
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        44..64
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        85..105
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        117..137
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   CONFLICT        43
+FT                   /note="S -> G (in Ref. 1; CAA45544)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        89
+FT                   /note="I -> M (in Ref. 1; CAA45544)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   169 AA;  19152 MW;  C3542A4C6750473D CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Mycoplasmoides
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P33250	ATP SYNTHASE PROTEIN I             338.3    2.6e-98   1   1.0  18.9
+	P33250_TED01              	     4	   158	   338.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P33250.2	AF-P33250-F1-model_v4_TED01:4-158	1	AF-P33250-F1-model_v4_TED01	4-158	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P33250_TED01
+GA   27.00 27.00;
+TC   338.30 338.20;
+NC   26.50 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

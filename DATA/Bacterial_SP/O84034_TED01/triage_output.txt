@@ -1,0 +1,117 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y031_CHLTR              Reviewed;         100 AA.
+AC   O84034;
+DE   RecName: Full=Uncharacterized protein CT_031;
+GN   OrderedLocusNames=CT_031;
+OS   Chlamydia trachomatis serovar D (strain ATCC VR-885 / DSM 19411 / UW-3/Cx).
+OC   Bacteria; Pseudomonadati; Chlamydiota; Chlamydiia; Chlamydiales;
+OC   Chlamydiaceae; Chlamydia/Chlamydophila group; Chlamydia.
+OX   NCBI_TaxID=272561;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC VR-885 / DSM 19411 / UW-3/Cx;
+RX   PubMed=9784136; DOI=10.1126/science.282.5389.754;
+RA   Stephens R.S., Kalman S., Lammel C.J., Fan J., Marathe R., Aravind L.,
+RA   Mitchell W.P., Olinger L., Tatusov R.L., Zhao Q., Koonin E.V., Davis R.W.;
+RT   "Genome sequence of an obligate intracellular pathogen of humans: Chlamydia
+RT   trachomatis.";
+RL   Science 282:754-759(1998).
+CC   -!- SIMILARITY: Belongs to the chlamydial CPn_0121/CT_031/TC_0300 family.
+CC       {ECO:0000305}.
+DR   EMBL; AE001273; AAC67621.1; -; Genomic_DNA.
+DR   PIR; B71567; B71567.
+DR   RefSeq; NP_219533.1; NC_000117.1.
+DR   RefSeq; WP_009871378.1; NC_000117.1.
+DR   AlphaFoldDB; O84034; -.
+DR   SMR; O84034; -.
+DR   STRING; 272561.CT_031; -.
+DR   EnsemblBacteria; AAC67621; AAC67621; CT_031.
+DR   GeneID; 884149; -.
+DR   KEGG; ctr:CT_031; -.
+DR   PATRIC; fig|272561.5.peg.36; -.
+DR   HOGENOM; CLU_180607_0_0_0; -.
+DR   InParanoid; O84034; -.
+DR   OrthoDB; 18977at2; -.
+DR   Proteomes; UP000000431; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome.
+FT   CHAIN           1..100
+FT                   /note="Uncharacterized protein CT_031"
+FT                   /id="PRO_0000218359"
+FT   REGION          65..100
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        65..91
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   100 AA;  11680 MW;  2A12B8A53EAA4F3C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Chlamydia.
+1	6	Chlamydia/Chlamydophila group
+1	5	Chlamydiaceae
+1	4	Chlamydiales
+1	3	Chlamydiia
+1	2	Chlamydiota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O84034	UNCHARACTERIZED PROTEIN CT_031     132.1    2.1e-35   1   1.2   0.8
+	O84034_TED01              	    10	    59	   131.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3794196 (E-value: 1.9e-37, Score: 132.1)
+Mentioned as: CTL0286
+Description: hypothetical protein
+Organism: Chlamydia trachomatis 434/Bu
+PMID: 36719197
+Source: EuropePMC
+Title: Identification and Structural Modeling of the RNA Polymerase Omega Subunits in Chlamydiae and Other Obligate Intracellular Bacteria
+Journal: mBio (2023)
+Snippet: Chlamydia has not previously been determined. Here, we report the identification of the hypothetical protein CTL0286 as the probable chlamydial subunit based on sequence, synteny, and AlphaFold and AlphaFold-Multimer three-dimensional-structure predictions. Our findings indicate that CTL0286 functions as the missing subunit of chlamydial RNAP. Our extended
+
+================================================================================
+Protein: VIMSS370619 (E-value: 2.9e-35, Score: 125.1)
+Mentioned as: TC0300
+Description: conserved hypothetical protein
+Organism: Chlamydia muridarum Nigg
+PMID: 20956570
+Source: EuropePMC
+Title: Identification of immunodominant antigens by probing a whole Chlamydia trachomatis open reading frame proteome microarray using sera from immunized mice
+Journal: Infection and immunity (2011)
+Snippet: TC0258 TC0265 TC0268 TC0269 TC0279 TC0285 TC0290 TC0300 TC0309 TC0311 TC0319 TC0323 TC0328 - - Description Size (aa)a Delta-aminolevulinic acid dehydratase
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O84034.1	AF-O84034-F1-model_v4_TED01:10-59	1	AF-O84034-F1-model_v4_TED01	10-59	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O84034_TED01
+GA   27.00 27.00;
+TC   27.40 131.80;
+NC   24.40 20.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

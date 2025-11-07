@@ -1,0 +1,76 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Plesiomonas.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A200H0A3	SECRETED PROTEIN {ECO:000    119.3    3.1e-31   1   1.1   4.1
+	Iterate                   	     1	    64	   119.2
+
+A0A2I0I6E4	UNCHARACTERIZED PROTEIN {     45.9    2.5e-08   8   8.9   0.7
+	Iterate                   	    60	    99	     3.8
+	Iterate                   	   103	   142	     3.8
+	Iterate                   	   146	   185	     3.8
+	Iterate                   	   189	   228	     3.8
+	Iterate                   	   232	   271	     3.8
+	Iterate                   	   275	   314	     3.8
+	Iterate                   	   318	   357	     3.8
+	Iterate                   	   361	   400	     3.8
+
+A0A834X0X2	UNCHARACTERIZED PROTEIN {     49.8    1.5e-09   6   8.3   5.9
+	Iterate                   	   214	   282	     9.8
+	Iterate                   	   762	   830	     9.8
+	Iterate                   	   576	   655	     6.3
+	Iterate                   	   396	   473	     5.2
+	Iterate                   	   487	   564	     5.2
+	Iterate                   	    41	   122	     4.6
+
+A0A835CDA3	PAS DOMAIN-CONTAINING PRO     71.1    3.4e-16  10  19.7  18.4
+	Iterate                   	  2605	  2692	     6.2
+	Iterate                   	  2172	  2255	     5.4
+	Iterate                   	  1421	  1505	     4.8
+	Iterate                   	  1776	  1860	     4.8
+	Iterate                   	  1908	  1991	     4.4
+	Iterate                   	  2473	  2557	     4.3
+	Iterate                   	   693	   777	     3.4
+	Iterate                   	  1289	  1373	     3.4
+	Iterate                   	  1644	  1728	     3.3
+	Iterate                   	  2040	  2123	     3.3
+
+R8AQY2	SECRETED PROTEIN {ECO:0008006    119.1    3.7e-31   1   1.0   4.5
+	Iterate                   	     1	    63	   119.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A200H0A3.1	AF-A0A200H0A3-F1-model_v4_TED01:17-47	1	AF-A0A200H0A3-F1-model_v4_TED01	17-47	48.4%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P08868/Iterate
+GA   27.00 27.00;
+TC   27.30 166.40;
+NC   26.90 18.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

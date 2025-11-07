@@ -1,0 +1,462 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PLH10_FORAG             Reviewed;         816 AA.
+AC   T2KNA3;
+DE   RecName: Full=Endo-acting ulvan lyase {ECO:0000303|PubMed:31285597};
+DE            EC=4.2.2.- {ECO:0000269|PubMed:31285597};
+DE   AltName: Full=Endolytic ulvan lyase;
+DE   AltName: Full=P10_PLnc {ECO:0000303|PubMed:31285597};
+DE   AltName: Full=Polysaccharide utilization locus H protein P10 {ECO:0000303|PubMed:31285597};
+DE            Short=PUL H protein P10;
+DE   Flags: Precursor;
+GN   ORFNames=BN863_21990;
+OS   Formosa agariphila (strain DSM 15362 / KCTC 12365 / LMG 23005 / KMM 3901 /
+OS   M-2Alg 35-1).
+OC   Bacteria; Pseudomonadati; Bacteroidota; Flavobacteriia; Flavobacteriales;
+OC   Flavobacteriaceae; Formosa.
+OX   NCBI_TaxID=1347342;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DSM 15362 / KCTC 12365 / LMG 23005 / KMM 3901 / M-2Alg 35-1;
+RX   PubMed=23995932; DOI=10.1128/aem.01937-13;
+RA   Mann A.J., Hahnke R.L., Huang S., Werner J., Xing P., Barbeyron T.,
+RA   Huettel B., Stueber K., Reinhardt R., Harder J., Gloeckner F.O.,
+RA   Amann R.I., Teeling H.;
+RT   "The genome of the alga-associated marine flavobacterium Formosa agariphila
+RT   KMM 3901T reveals a broad potential for degradation of algal
+RT   polysaccharides.";
+RL   Appl. Environ. Microbiol. 79:6813-6822(2013).
+RN   [2]
+RP   FUNCTION, CATALYTIC ACTIVITY, INDUCTION, AND SUBCELLULAR LOCATION.
+RX   PubMed=31285597; DOI=10.1038/s41589-019-0311-9;
+RA   Reisky L., Prechoux A., Zuehlke M.K., Baeumgen M., Robb C.S., Gerlach N.,
+RA   Roret T., Stanetty C., Larocque R., Michel G., Song T., Markert S.,
+RA   Unfried F., Mihovilovic M.D., Trautwein-Schult A., Becher D., Schweder T.,
+RA   Bornscheuer U.T., Hehemann J.H.;
+RT   "A marine bacterial enzymatic cascade degrades the algal polysaccharide
+RT   ulvan.";
+RL   Nat. Chem. Biol. 15:803-812(2019).
+CC   -!- FUNCTION: Ulvan lyase involved in ulvan degradation (PubMed:31285597).
+CC       Ulvan is the main polysaccharide component of the Ulvales (green
+CC       seaweed) cell wall. It is composed of disaccharide building blocks
+CC       comprising 3-sulfated rhamnose (Rha3S) linked to D-glucuronic acid
+CC       (GlcA), L-iduronic acid (IduA), or D-xylose (Xyl) (Probable). Ulvan
+CC       lyase catalyzes the endolytic cleavage of the glycosidic bond between
+CC       Rha3S and the uronic acids GlcA or IduA, producing oligosaccharides
+CC       that have unsaturated 4-deoxy-L-threo-hex-4-enopyranosiduronic acid
+CC       (deltaUA) at the non-reducing end. This results eventually in the
+CC       degradation of the ulvan polysaccharide into deltaUA-Rha3S
+CC       disaccharides and deltaUA-Rha3S-Xyl-Rha3S tetrasaccharides
+CC       (PubMed:31285597). {ECO:0000269|PubMed:31285597,
+CC       ECO:0000305|PubMed:31285597}.
+CC   -!- SUBCELLULAR LOCATION: Cell surface {ECO:0000269|PubMed:31285597}.
+CC       Periplasm {ECO:0000269|PubMed:31285597}.
+CC   -!- INDUCTION: By ulvan and rhamnose. {ECO:0000269|PubMed:31285597}.
+CC   -!- SIMILARITY: Belongs to the polysaccharide lyase family. {ECO:0000305}.
+DR   EMBL; HG315671; CDF79911.1; -; Genomic_DNA.
+DR   RefSeq; WP_038530499.1; NZ_HG315671.1.
+DR   AlphaFoldDB; T2KNA3; -.
+DR   SMR; T2KNA3; -.
+DR   STRING; 1347342.BN863_21990; -.
+DR   PATRIC; fig|1347342.6.peg.2206; -.
+DR   eggNOG; ENOG502Z862; Bacteria.
+DR   HOGENOM; CLU_014479_0_0_10; -.
+DR   OrthoDB; 8732671at2; -.
+DR   Proteomes; UP000016160; Chromosome.
+DR   GO; GO:0009986; C:cell surface; IEA:UniProtKB-SubCell.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016829; F:lyase activity; IEA:UniProtKB-KW.
+DR   Gene3D; 2.70.98.70; -; 1.
+DR   Gene3D; 1.50.10.100; Chondroitin AC/alginate lyase; 1.
+DR   InterPro; IPR008929; Chondroitin_lyas.
+DR   SUPFAM; SSF48230; Chondroitin AC/alginate lyase; 1.
+PE   1: Evidence at protein level;
+KW   Lyase; Periplasm; Reference proteome; Signal.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           24..816
+FT                   /note="Endo-acting ulvan lyase"
+FT                   /id="PRO_5004590961"
+SQ   SEQUENCE   816 AA;  92871 MW;  DA8E9A102D00DE27 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+30	5	Flavobacteriaceae
+5	4	Alteromonadales
+30	4	Flavobacteriales
+5	3	Gammaproteobacteria
+30	3	Flavobacteriia
+5	2	Pseudomonadota
+38	2	Bacteroidota
+43	1	Pseudomonadati
+44	0	Bacteria
+Total of 44 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A090Q4Y0	HEPARINASE II/III-LIKE C-     44.2    8.3e-08   2   2.3   1.3
+	T2KNA3_TED01              	   109	   282	    35.6
+	T2KNA3_TED01              	    20	   108	     7.3
+	PF26377	Ulvan_lyase_2nd 	   285	   417	   132.5
+	PF07940	Hepar_II_III_C  	   444	   548	    35.4
+	PF26374	Ulvan_lyaseC    	   727	   820	   103.7
+
+A0A0C5WFJ8	HEPARINASE {ECO:0008006|G    297.0      5e-85   1   1.5   0.1
+	T2KNA3_TED01              	    39	   283	   296.0
+	PF26377	Ulvan_lyase_2nd 	   285	   425	   185.6
+	PF26374	Ulvan_lyaseC    	   734	   830	    92.3
+
+A0A0C5WFM0	UNCHARACTERIZED PROTEIN {    106.6      7e-27   1   1.6   0.3
+	T2KNA3_TED01              	     8	   229	   105.4
+	PF26377	Ulvan_lyase_2nd 	   233	   376	   154.4
+	PF26374	Ulvan_lyaseC    	   691	   783	    76.1
+	PF17957	Big_7           	   791	   858	      56
+	PF24208	Beta-tre_PLH30  	   890	  1021	   181.2
+	PF18962	Por_Secre_tail  	  1043	  1117	    49.3
+
+A0A0C5WH40	HEPARINASE II/III-LIKE C-     64.0    7.2e-14   2   2.3   1.7
+	T2KNA3_TED01              	    98	   269	    48.9
+	T2KNA3_TED01              	     9	    92	    14.2
+	PF26377	Ulvan_lyase_2nd 	   274	   399	   117.9
+	PF07940	Hepar_II_III_C  	   431	   517	    32.6
+	PF26374	Ulvan_lyaseC    	   714	   807	    96.1
+
+A0A0D8J4B4	CBM6 DOMAIN-CONTAINING PR    259.3    1.7e-73   1   1.4   0.9
+	T2KNA3_TED01              	    28	   272	   258.5
+	PF26377	Ulvan_lyase_2nd 	   274	   415	   171.6
+	PF26374	Ulvan_lyaseC    	   724	   820	    88.5
+	PF18962	Por_Secre_tail  	  1091	  1165	    44.9
+
+A0A0J8GW96	UNCHARACTERIZED PROTEIN {    251.9      3e-71   1   1.4   0.2
+	T2KNA3_TED01              	   227	   469	   251.2
+	PF26377	Ulvan_lyase_2nd 	   471	   611	   173.3
+	PF26374	Ulvan_lyaseC    	   919	  1006	    74.8
+
+A0A0P7ADV0	HEPARINASE II/III FAMILY     271.3    3.6e-77   1   1.3   0.0
+	T2KNA3_TED01              	     9	   253	   270.6
+	PF26377	Ulvan_lyase_2nd 	   255	   396	   165.8
+	PF07940	Hepar_II_III_C  	   398	   529	    24.3
+	PF26374	Ulvan_lyaseC    	   705	   801	    73.3
+
+A0A0P7AF63	HEPARINASE II/III-LIKE C-     57.2    8.5e-12   1   2.4   1.1
+	T2KNA3_TED01              	    27	   287	    50.1
+	PF26377	Ulvan_lyase_2nd 	   292	   415	   109.4
+	PF07940	Hepar_II_III_C  	   427	   547	    33.8
+	PF26374	Ulvan_lyaseC    	   735	   830	    82.3
+
+A0A1B1Y529	UNCHARACTERIZED PROTEIN {    459.7     1e-134   1   1.3   1.6
+	T2KNA3_TED01              	    29	   271	   459.1
+	PF26377	Ulvan_lyase_2nd 	   273	   413	   183.4
+	PF26374	Ulvan_lyaseC    	   722	   818	    89.6
+
+A0A1H9D7R3	HEPARINASE II/III-LIKE PR     40.9    8.2e-07   1   1.4   0.0
+	T2KNA3_TED01              	    35	   283	    40.0
+	PF26377	Ulvan_lyase_2nd 	   289	   436	   120.8
+	PF26374	Ulvan_lyaseC    	   747	   841	    74.4
+
+A0A1H9IY48	HEPARINASE II/III-LIKE PR     63.6    9.8e-14   2   2.4   0.9
+	T2KNA3_TED01              	   125	   292	    40.5
+	T2KNA3_TED01              	    31	   107	    21.3
+	PF26377	Ulvan_lyase_2nd 	   296	   419	   114.5
+	PF07940	Hepar_II_III_C  	   454	   531	    32.5
+	PF26374	Ulvan_lyaseC    	   738	   831	    87.4
+
+A0A1I1R116	HEPARINASE II/III-LIKE PR     42.4    2.9e-07   2   2.6   2.8
+	T2KNA3_TED01              	   121	   286	    36.6
+	T2KNA3_TED01              	    26	   104	     5.1
+	PF26377	Ulvan_lyase_2nd 	   291	   414	   115.8
+	PF07940	Hepar_II_III_C  	   444	   550	    34.1
+	PF26374	Ulvan_lyaseC    	   732	   825	    95.4
+
+A0A1I3H8G9	HEPARINASE II/III-LIKE PR     45.6    3.1e-08   2   2.5   4.5
+	T2KNA3_TED01              	   163	   266	    31.8
+	T2KNA3_TED01              	    25	    81	    14.7
+	PF07940	Hepar_II_III_C  	   482	   599	    28.8
+	PF26374	Ulvan_lyaseC    	   754	   846	    59.4
+
+A0A1M6A2X0	HEPARINASE II/III-LIKE PR     45.4    3.5e-08   2   2.3   1.9
+	T2KNA3_TED01              	   121	   287	    38.7
+	T2KNA3_TED01              	    26	    97	     5.7
+	PF26377	Ulvan_lyase_2nd 	   291	   419	   120.5
+	PF07940	Hepar_II_III_C  	   448	   543	    32.8
+	PF26374	Ulvan_lyaseC    	   733	   826	    86.4
+
+A0A1R3T767	HEPARINASE II/III-LIKE C-     38.9    3.4e-06   2   2.7   0.3
+	T2KNA3_TED01              	   165	   262	    24.2
+	T2KNA3_TED01              	    27	   123	    11.9
+	PF07940	Hepar_II_III_C  	   484	   588	    24.4
+	PF26374	Ulvan_lyaseC    	   756	   847	    58.5
+
+A0A1S1YTZ2	ALGINATE LYASE DOMAIN-CON    287.9    2.9e-82   1   1.5   0.3
+	T2KNA3_TED01              	    37	   279	   287.0
+	PF26377	Ulvan_lyase_2nd 	   281	   422	   179.9
+	PF26374	Ulvan_lyaseC    	   731	   828	    86.5
+
+A0A1S1YU11	CBM6 DOMAIN-CONTAINING PR    278.6    2.1e-79   1   1.5   2.3
+	T2KNA3_TED01              	    18	   262	   277.6
+	PF26377	Ulvan_lyase_2nd 	   264	   405	   175.8
+	PF26374	Ulvan_lyaseC    	   714	   810	    83.8
+	PF18998	Flg_new_2       	  1132	  1202	    44.8
+	PF18962	Por_Secre_tail  	  1214	  1283	    47.1
+
+A0A1U7DT93	CBM6 DOMAIN-CONTAINING PR    281.6    2.5e-80   1   1.3   1.1
+	T2KNA3_TED01              	    25	   268	   281.0
+	PF26377	Ulvan_lyase_2nd 	   270	   411	   185.7
+	PF26374	Ulvan_lyaseC    	   720	   816	    81.8
+	PF03422	CBM_6           	   950	  1068	      36
+	PF18099	CBM_35_2        	   958	  1066	    25.6
+	PF18962	Por_Secre_tail  	  1085	  1160	    51.7
+	PF13585	CHU_C           	  1085	  1160	    30.1
+
+A0A1U7DTK3	SECRETION SYSTEM C-TERMIN    124.9    1.9e-32   1   1.6   0.1
+	T2KNA3_TED01              	   245	   472	   123.7
+	PF26377	Ulvan_lyase_2nd 	   476	   618	   158.2
+	PF26374	Ulvan_lyaseC    	   925	  1021	    79.7
+	PF18962	Por_Secre_tail  	  1040	  1114	    39.9
+
+A0A1W2C527	HEPARINASE II/III-LIKE PR    301.8    1.8e-86   1   1.4   0.4
+	T2KNA3_TED01              	    30	   274	   301.0
+	PF26377	Ulvan_lyase_2nd 	   276	   416	     184
+	PF26374	Ulvan_lyaseC    	   725	   821	    85.7
+
+A0A1W2C5K1	HEPARINASE II/III-LIKE PR     48.2      5e-09   2   3.0   3.0
+	T2KNA3_TED01              	   129	   295	    38.2
+	T2KNA3_TED01              	    34	   111	     8.0
+	PF26377	Ulvan_lyase_2nd 	   299	   421	   117.1
+	PF07940	Hepar_II_III_C  	   456	   558	      34
+	PF26374	Ulvan_lyaseC    	   740	   833	    83.5
+
+A0A238YIJ2	POR SECRETION SYSTEM C-TE    103.8    5.2e-26   1   1.4   3.6
+	T2KNA3_TED01              	   283	   517	   102.9
+	PF26377	Ulvan_lyase_2nd 	   519	   659	   156.3
+	PF26374	Ulvan_lyaseC    	   958	  1054	    81.1
+	PF18962	Por_Secre_tail  	  1218	  1292	    42.5
+
+A0A238YJD1	HEPARINASE II/III-LIKE PR     60.1    1.2e-12   1   1.8   2.3
+	T2KNA3_TED01              	    28	   276	    58.5
+	PF26377	Ulvan_lyase_2nd 	   282	   427	   154.5
+	PF07940	Hepar_II_III_C  	   425	   535	    27.1
+	PF26374	Ulvan_lyaseC    	   737	   832	    95.1
+
+A0A238YKK9	POR SECRETION SYSTEM C-TE    282.9    9.9e-81   1   1.3   0.7
+	T2KNA3_TED01              	    26	   270	   282.2
+	PF26377	Ulvan_lyase_2nd 	   272	   413	   180.3
+	PF26374	Ulvan_lyaseC    	   722	   818	    81.8
+	PF03422	CBM_6           	   953	  1069	      33
+	PF18099	CBM_35_2        	   958	  1068	    30.5
+	PF18962	Por_Secre_tail  	  1086	  1161	      46
+
+A0A238YMB5	HEPARINASE II/III-LIKE PR    293.6    5.6e-84   1   1.5   0.6
+	T2KNA3_TED01              	    30	   274	   292.7
+	PF26377	Ulvan_lyase_2nd 	   276	   416	   187.5
+	PF26374	Ulvan_lyaseC    	   725	   821	    94.4
+
+A0A286IHB3	POR SECRETION SYSTEM C-TE    276.2    1.1e-78   1   1.3   0.1
+	T2KNA3_TED01              	    28	   271	   275.6
+	PF26377	Ulvan_lyase_2nd 	   273	   413	   175.5
+	PF26374	Ulvan_lyaseC    	   721	   817	    76.1
+	PF18962	Por_Secre_tail  	   833	   908	      41
+
+A0A2S0VPL9	HEPARINASE II/III-LIKE C-     41.9      4e-07   1   1.5   0.2
+	T2KNA3_TED01              	    50	   303	    41.0
+	PF26377	Ulvan_lyase_2nd 	   307	   453	     124
+	PF07940	Hepar_II_III_C  	   452	   711	    31.2
+	PF26374	Ulvan_lyaseC    	   773	   868	    79.7
+
+A0A395JSJ9	T9SS C-TERMINAL TARGET DO    114.4      3e-29   1   1.8   0.6
+	T2KNA3_TED01              	   259	   484	   113.1
+	PF26377	Ulvan_lyase_2nd 	   490	   632	   167.4
+	PF07940	Hepar_II_III_C  	   640	   802	    27.2
+	PF26374	Ulvan_lyaseC    	   935	  1031	    81.9
+	PF18962	Por_Secre_tail  	  1050	  1122	    30.7
+
+A0A395JVJ9	HEPARINASE II/III-LIKE C-    288.8    1.6e-82   1   1.4   0.9
+	T2KNA3_TED01              	    24	   268	   288.0
+	PF26377	Ulvan_lyase_2nd 	   270	   410	   193.8
+	PF07940	Hepar_II_III_C  	   417	   570	    25.1
+	PF26374	Ulvan_lyaseC    	   719	   815	    82.9
+
+A0A3D8M3F3	HEPARINASE II/III-LIKE C-     56.0    2.1e-11   1   1.5   0.0
+	T2KNA3_TED01              	    46	   296	    55.0
+	PF26377	Ulvan_lyase_2nd 	   300	   444	   143.2
+	PF07940	Hepar_II_III_C  	   455	   697	    25.7
+	PF26374	Ulvan_lyaseC    	   760	   855	    88.6
+
+A0A3D9HF49	HEPARINASE II/III-LIKE PR     58.7    3.1e-12   1   2.5   4.2
+	T2KNA3_TED01              	    45	   306	    50.6
+	PF26377	Ulvan_lyase_2nd 	   310	   433	     122
+	PF07940	Hepar_II_III_C  	   466	   575	    33.6
+	PF26374	Ulvan_lyaseC    	   752	   845	      98
+
+A0A4Q1IED6	ALGINATE LYASE DOMAIN-CON    295.6    1.3e-84   1   1.5   0.4
+	T2KNA3_TED01              	    30	   273	   294.7
+	PF26377	Ulvan_lyase_2nd 	   275	   415	   180.1
+	PF26374	Ulvan_lyaseC    	   723	   819	    80.9
+
+A0A4Q1INT8	T9SS C-TERMINAL TARGET DO    279.6      1e-79   1   1.3   1.1
+	T2KNA3_TED01              	    26	   270	   278.9
+	PF26377	Ulvan_lyase_2nd 	   272	   412	   175.9
+	PF26374	Ulvan_lyaseC    	   721	   817	    81.3
+	PF03422	CBM_6           	   953	  1067	    32.6
+	PF18099	CBM_35_2        	   956	  1066	    30.3
+	PF18962	Por_Secre_tail  	  1084	  1159	    48.3
+
+A0A4Q1INT9	HEPARINASE {ECO:0008006|G    299.8      7e-86   1   1.9   0.9
+	T2KNA3_TED01              	    12	   256	   298.9
+	PF26377	Ulvan_lyase_2nd 	   258	   398	   184.2
+	PF26374	Ulvan_lyaseC    	   707	   803	    91.2
+
+A0A4Q1IPX8	HEPARINASE {ECO:0008006|G    106.2    9.5e-27   1   1.4   4.0
+	T2KNA3_TED01              	    84	   317	   105.4
+	PF26377	Ulvan_lyase_2nd 	   320	   461	   152.3
+	PF26374	Ulvan_lyaseC    	   759	   855	    80.8
+
+A0A4Q1ISU0	HEPARINASE II/III-LIKE C-     66.9    9.3e-15   1   1.6   0.5
+	T2KNA3_TED01              	    28	   277	    66.9
+	PF26377	Ulvan_lyase_2nd 	   282	   427	   156.9
+	PF07940	Hepar_II_III_C  	   426	   534	    26.5
+	PF26374	Ulvan_lyaseC    	   737	   832	    97.7
+
+A0A4Q9FWP5	HEPARINASE II/III-LIKE C-     49.6    1.8e-09   2   2.4   2.6
+	T2KNA3_TED01              	   125	   294	    34.9
+	T2KNA3_TED01              	    34	   108	    14.3
+	PF26377	Ulvan_lyase_2nd 	   299	   425	   117.7
+	PF07940	Hepar_II_III_C  	   457	   540	    33.7
+	PF26374	Ulvan_lyaseC    	   741	   832	    92.7
+
+A0A512B9N1	HEPARINASE II/III-LIKE C-     45.1    4.3e-08   2   3.6   3.0
+	T2KNA3_TED01              	    41	   109	    21.5
+	T2KNA3_TED01              	   184	   334	    19.6
+	PF07940	Hepar_II_III_C  	   500	   610	    28.5
+	PF26374	Ulvan_lyaseC    	   774	   865	    61.8
+
+A0A5B7SSB9	HEPARINASE II/III-LIKE PR     53.0    1.7e-10   1   1.8   0.0
+	T2KNA3_TED01              	    38	   286	    51.4
+	PF26377	Ulvan_lyase_2nd 	   292	   437	   105.1
+	PF26374	Ulvan_lyaseC    	   748	   842	    77.5
+
+A0A5C4SLS3	HEPARINASE II/III-LIKE C-     54.8    4.6e-11   2   2.3   2.5
+	T2KNA3_TED01              	   128	   295	    38.8
+	T2KNA3_TED01              	    34	   104	    15.4
+	PF26377	Ulvan_lyase_2nd 	   299	   424	   119.7
+	PF07940	Hepar_II_III_C  	   458	   551	    28.8
+	PF26374	Ulvan_lyaseC    	   741	   834	    99.2
+
+A0A5C4SNT0	T9SS TYPE A SORTING DOMAI    261.0    5.1e-74   1   1.4   0.7
+	T2KNA3_TED01              	    24	   268	   260.2
+	PF26377	Ulvan_lyase_2nd 	   270	   410	   168.6
+	PF26374	Ulvan_lyaseC    	   718	   811	    73.7
+	PF18962	Por_Secre_tail  	   976	  1051	    46.2
+
+A0A6I2MPM2	UNCHARACTERIZED PROTEIN {    308.4    1.6e-88   1   1.3   0.5
+	T2KNA3_TED01              	    42	   286	   307.8
+	PF26377	Ulvan_lyase_2nd 	   288	   429	   186.8
+	PF26374	Ulvan_lyaseC    	   738	   834	    79.2
+
+A0A6I2MQR7	HEPARINASE {ECO:0008006|G     60.4    9.2e-13   1   1.4   0.1
+	T2KNA3_TED01              	    21	   271	    59.5
+	PF26377	Ulvan_lyase_2nd 	   275	   421	   116.4
+	PF26374	Ulvan_lyaseC    	   732	   826	    85.8
+
+A0A6M0CJ00	HEPARINASE II/III-LIKE C-     52.4    2.6e-10   1   1.9   1.0
+	T2KNA3_TED01              	    28	   278	    50.6
+	PF26377	Ulvan_lyase_2nd 	   282	   427	   147.5
+	PF07940	Hepar_II_III_C  	   428	   583	    29.5
+	PF26374	Ulvan_lyaseC    	   738	   833	      90
+
+A0A7W9SQ63	HEPARINASE II/III-LIKE C-     64.4    5.6e-14   1   2.0   0.0
+	T2KNA3_TED01              	     3	   255	    61.9
+	PF26377	Ulvan_lyase_2nd 	   258	   403	    91.5
+	PF07940	Hepar_II_III_C  	   426	   514	      27
+
+A0A842ISB4	HEPARINASE II/III FAMILY      59.3    2.1e-12   2   2.3   2.5
+	T2KNA3_TED01              	   111	   291	    39.9
+	T2KNA3_TED01              	    31	   103	    18.9
+	PF26377	Ulvan_lyase_2nd 	   296	   426	   121.1
+	PF07940	Hepar_II_III_C  	   455	   543	    35.9
+	PF26374	Ulvan_lyaseC    	   738	   831	    95.3
+
+A0A8C7L7N7	UNCHARACTERIZED PROTEIN {     48.7    3.5e-09  11  12.1  11.3
+	T2KNA3_TED01              	   280	   434	     5.9
+	T2KNA3_TED01              	   107	   216	     5.1
+	T2KNA3_TED01              	   429	   523	     4.0
+	T2KNA3_TED01              	    57	   116	     3.6
+	T2KNA3_TED01              	   518	   579	     3.6
+	T2KNA3_TED01              	   185	   250	     3.5
+	T2KNA3_TED01              	   242	   304	     3.5
+	T2KNA3_TED01              	     6	    70	     3.4
+	T2KNA3_TED01              	   494	   546	     2.8
+	T2KNA3_TED01              	   220	   270	     2.7
+	T2KNA3_TED01              	    86	   130	     1.9
+
+A0A8J3DA60	HEPARINASE II/III-LIKE C-     59.5    1.8e-12   1   1.3   0.0
+	T2KNA3_TED01              	    35	   284	    58.7
+	PF26377	Ulvan_lyase_2nd 	   289	   435	   133.3
+	PF07940	Hepar_II_III_C  	   462	   567	    27.9
+	PF26374	Ulvan_lyaseC    	   747	   843	    83.2
+
+A0A8J6QE04	HEPARINASE II/III FAMILY      44.1    8.6e-08   1   2.3   1.6
+	T2KNA3_TED01              	    28	   277	    40.8
+	PF26377	Ulvan_lyase_2nd 	   282	   427	   126.1
+	PF07940	Hepar_II_III_C  	   425	   540	    28.8
+	PF26374	Ulvan_lyaseC    	   738	   833	    82.2
+
+A0A8J6QIK6	HEPARINASE II/III FAMILY      69.9    1.2e-15   2   2.6   2.5
+	T2KNA3_TED01              	   140	   311	    47.2
+	T2KNA3_TED01              	    46	   107	    21.9
+	PF26377	Ulvan_lyase_2nd 	   314	   456	   125.1
+	PF07940	Hepar_II_III_C  	   459	   708	    28.5
+	PF26374	Ulvan_lyaseC    	   776	   871	    80.9
+
+A0A918UPW0	HEPARINASE II/III-LIKE C-     65.9    1.9e-14   1   1.4   0.0
+	T2KNA3_TED01              	    28	   277	    65.0
+	PF26377	Ulvan_lyase_2nd 	   282	   427	   141.7
+	PF07940	Hepar_II_III_C  	   425	   538	    33.9
+	PF26374	Ulvan_lyaseC    	   738	   833	    87.8
+
+A0A923HBF2	HEPARINASE II/III FAMILY      46.4    1.7e-08   2   2.4   2.4
+	T2KNA3_TED01              	   118	   289	    35.5
+	T2KNA3_TED01              	    27	    92	    10.2
+	PF26377	Ulvan_lyase_2nd 	   292	   416	   121.7
+	PF07940	Hepar_II_III_C  	   449	   544	    28.9
+	PF26374	Ulvan_lyaseC    	   734	   827	      93
+
+A0AA41W858	HEPARINASE II/III-LIKE PR     60.8    6.9e-13   2   2.3   0.2
+	T2KNA3_TED01              	   136	   310	    52.5
+	T2KNA3_TED01              	    46	   105	     6.0
+	PF26377	Ulvan_lyase_2nd 	   314	   457	   121.8
+	PF26374	Ulvan_lyaseC    	   776	   871	    71.5
+
+T2KNA3	ENDO-ACTING ULVAN LYASE {ECO:0    580.4   1.4e-171   1   1.3   2.5
+	T2KNA3_TED01              	    29	   271	   579.8
+	PF26377	Ulvan_lyase_2nd 	   273	   413	   188.8
+	PF26374	Ulvan_lyaseC    	   722	   816	    95.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+T2KNA3.1	AF-T2KNA3-F1-model_v4_TED01:29-271	1	AF-T2KNA3-F1-model_v4_TED01	29-271	100.0%
+T2KNA3.1	AF-T2KNA3-F1-model_v4_TED03:422-720	1	AF-T2KNA3-F1-model_v4_TED03	422-720	0
+T2KNA3.1	AF-T2KNA3-F1-model_v4_TED04:722-816	1	AF-T2KNA3-F1-model_v4_TED04	722-816	0
+T2KNA3.1	AF-T2KNA3-F1-model_v4_TED02:273-413	1	AF-T2KNA3-F1-model_v4_TED02	273-413	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:T2KNA3_TED01
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.90 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,82 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y331_BORBU              Reviewed;          51 AA.
+AC   O51309;
+DE   RecName: Full=Uncharacterized protein BB_0331;
+GN   OrderedLocusNames=BB_0331;
+OS   Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)
+OS   (Borrelia burgdorferi).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Borreliaceae; Borreliella.
+OX   NCBI_TaxID=224326;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RX   PubMed=9403685; DOI=10.1038/37551;
+RA   Fraser C.M., Casjens S., Huang W.M., Sutton G.G., Clayton R.A.,
+RA   Lathigra R., White O., Ketchum K.A., Dodson R.J., Hickey E.K., Gwinn M.L.,
+RA   Dougherty B.A., Tomb J.-F., Fleischmann R.D., Richardson D.L.,
+RA   Peterson J.D., Kerlavage A.R., Quackenbush J., Salzberg S.L., Hanson M.,
+RA   van Vugt R., Palmer N., Adams M.D., Gocayne J.D., Weidman J.F.,
+RA   Utterback T.R., Watthey L., McDonald L.A., Artiach P., Bowman C.,
+RA   Garland S.A., Fujii C., Cotton M.D., Horst K., Roberts K.M., Hatch B.,
+RA   Smith H.O., Venter J.C.;
+RT   "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.";
+RL   Nature 390:580-586(1997).
+DR   EMBL; AE000783; AAC66728.1; -; Genomic_DNA.
+DR   PIR; B70141; B70141.
+DR   RefSeq; NP_212465.1; NC_001318.1.
+DR   AlphaFoldDB; O51309; -.
+DR   STRING; 224326.BB_0331; -.
+DR   PaxDb; 224326-BB_0331; -.
+DR   EnsemblBacteria; AAC66728; AAC66728; BB_0331.
+DR   KEGG; bbu:BB_0331; -.
+DR   HOGENOM; CLU_3096225_0_0_12; -.
+DR   Proteomes; UP000001807; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..51
+FT                   /note="Uncharacterized protein BB_0331"
+FT                   /id="PRO_0000174392"
+SQ   SEQUENCE   51 AA;  6444 MW;  ACEC7E55B5A8E0DA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Borreliella.
+1	5	Borreliaceae
+1	4	Spirochaetales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O51309	UNCHARACTERIZED PROTEIN BB_0331    121.1    8.7e-32   1   1.0  22.6
+	O51309                    	     1	    51	   121.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O51309
+GA   27.00 27.00;
+TC   27.60 121.00;
+NC   25.60 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

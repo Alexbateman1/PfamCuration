@@ -1,0 +1,112 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YFFN_ECOLI              Reviewed;         122 AA.
+AC   P76545;
+DE   RecName: Full=Uncharacterized protein YffN;
+GN   Name=yffN; OrderedLocusNames=b2445;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+DR   EMBL; U00096; AAC75498.2; -; Genomic_DNA.
+DR   PIR; D65019; D65019.
+DR   RefSeq; NP_416940.2; NC_000913.3.
+DR   RefSeq; WP_000683389.1; NZ_JACEFS010000004.1.
+DR   AlphaFoldDB; P76545; -.
+DR   SMR; P76545; -.
+DR   FunCoup; P76545; 252.
+DR   STRING; 511145.b2445; -.
+DR   PaxDb; 511145-b2445; -.
+DR   EnsemblBacteria; AAC75498; AAC75498; b2445.
+DR   GeneID; 946930; -.
+DR   KEGG; eco:b2445; -.
+DR   KEGG; ecoc:C3026_13575; -.
+DR   PATRIC; fig|83333.110.peg.3371; -.
+DR   EchoBASE; EB3927; -.
+DR   InParanoid; P76545; -.
+DR   BioCyc; EcoCyc:G7275-MONOMER; -.
+DR   PRO; PR:P76545; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..122
+FT                   /note="Uncharacterized protein YffN"
+FT                   /id="PRO_0000169234"
+SQ   SEQUENCE   122 AA;  13778 MW;  6B5CDFE4D3A8B3CC CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P76545	UNCHARACTERIZED PROTEIN YFFN       198.2    7.7e-56   1   1.2   1.0
+	P76545_TED01              	    27	   110	   197.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS16544 (E-value: 6.8e-58, Score: 198.2)
+Mentioned as: b2445
+Description: CPZ-55 prophage; predicted protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 36541797
+Source: EuropePMC
+Title: Medium-Chain-Length Fatty Acid Catabolism in Cupriavidus necator H16: Transcriptome Sequencing Reveals Differences from Long-Chain-Length Fatty Acid β-Oxidation and Involvement of Several Homologous Genes
+Journal: Applied and environmental microbiology (2023)
+
+================================================================================
+Protein: VIMSS16544 (E-value: 6.8e-58, Score: 198.2)
+Mentioned as: b2445
+Description: CPZ-55 prophage; predicted protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 12538876
+Source: EuropePMC
+Title: Parallel changes in gene expression after 20,000 generations of evolution in Escherichiacoli
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2003)
+Snippet: flhA b1009 ccmC cdsA ybaC yaeT yafU ybcU b0762 b1044 b1490 b2445 b2462 b2772 b2809 syd yaeJ ydfC ydfE yjgF yjiD yjjY ykfB yohH nrdA yliJ b1168 ynbD yqhC yhcJ
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76545.2	AF-P76545-F1-model_v4_TED01:27-110	1	AF-P76545-F1-model_v4_TED01	27-110	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76545_TED01
+GA   27.00 27.00;
+TC   27.00 197.80;
+NC   25.10 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,222 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   FAD3_RICPR              Reviewed;         720 AA.
+AC   Q9ZCZ1;
+DE   RecName: Full=Putative fatty acid oxidation complex trifunctional enzyme;
+DE   Includes:
+DE     RecName: Full=3-hydroxyacyl-CoA dehydrogenase;
+DE              EC=1.1.1.35;
+DE   Includes:
+DE     RecName: Full=Enoyl-CoA hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA isomerase;
+DE              EC=4.2.1.17;
+DE              EC=5.3.3.8;
+GN   OrderedLocusNames=RP560;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a (3S)-3-hydroxyacyl-CoA + NAD(+) = a 3-oxoacyl-CoA + NADH +
+CC         H(+); Xref=Rhea:RHEA:22432, ChEBI:CHEBI:15378, ChEBI:CHEBI:57318,
+CC         ChEBI:CHEBI:57540, ChEBI:CHEBI:57945, ChEBI:CHEBI:90726; EC=1.1.1.35;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a (3S)-3-hydroxyacyl-CoA = a (2E)-enoyl-CoA + H2O;
+CC         Xref=Rhea:RHEA:16105, ChEBI:CHEBI:15377, ChEBI:CHEBI:57318,
+CC         ChEBI:CHEBI:58856; EC=4.2.1.17;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a 4-saturated-(3S)-3-hydroxyacyl-CoA = a (3E)-enoyl-CoA + H2O;
+CC         Xref=Rhea:RHEA:20724, ChEBI:CHEBI:15377, ChEBI:CHEBI:58521,
+CC         ChEBI:CHEBI:137480; EC=4.2.1.17;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a (3Z)-enoyl-CoA = a 4-saturated (2E)-enoyl-CoA;
+CC         Xref=Rhea:RHEA:45900, ChEBI:CHEBI:85097, ChEBI:CHEBI:85489;
+CC         EC=5.3.3.8;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a (3E)-enoyl-CoA = a 4-saturated (2E)-enoyl-CoA;
+CC         Xref=Rhea:RHEA:45228, ChEBI:CHEBI:58521, ChEBI:CHEBI:85097;
+CC         EC=5.3.3.8;
+CC   -!- SIMILARITY: In the N-terminal section; belongs to the 3-hydroxyacyl-CoA
+CC       dehydrogenase family. {ECO:0000305}.
+CC   -!- SIMILARITY: In the C-terminal section; belongs to the enoyl-CoA
+CC       hydratase/isomerase family. {ECO:0000305}.
+DR   EMBL; AJ235272; CAA15008.1; -; Genomic_DNA.
+DR   PIR; F71660; F71660.
+DR   RefSeq; NP_220931.1; NC_000963.1.
+DR   RefSeq; WP_004599039.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZCZ1; -.
+DR   SMR; Q9ZCZ1; -.
+DR   STRING; 272947.gene:17555640; -.
+DR   EnsemblBacteria; CAA15008; CAA15008; CAA15008.
+DR   KEGG; rpr:RP560; -.
+DR   PATRIC; fig|272947.5.peg.573; -.
+DR   eggNOG; COG1024; Bacteria.
+DR   eggNOG; COG1250; Bacteria.
+DR   HOGENOM; CLU_010448_0_0_5; -.
+DR   OrthoDB; 5389341at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   GO; GO:0003857; F:3-hydroxyacyl-CoA dehydrogenase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0004165; F:delta(3)-delta(2)-enoyl-CoA isomerase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0004300; F:enoyl-CoA hydratase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0070403; F:NAD+ binding; IEA:InterPro.
+DR   GO; GO:0009056; P:catabolic process; IEA:UniProtKB-ARBA.
+DR   GO; GO:0006631; P:fatty acid metabolic process; IEA:UniProtKB-KW.
+DR   CDD; cd06558; crotonase-like; 1.
+DR   Gene3D; 1.10.1040.50; -; 1.
+DR   Gene3D; 3.90.226.10; 2-enoyl-CoA Hydratase, Chain A, domain 1; 1.
+DR   Gene3D; 3.40.50.720; NAD(P)-binding Rossmann-like Domain; 1.
+DR   InterPro; IPR006176; 3-OHacyl-CoA_DH_NAD-bd.
+DR   InterPro; IPR006108; 3HC_DH_C.
+DR   InterPro; IPR008927; 6-PGluconate_DH-like_C_sf.
+DR   InterPro; IPR029045; ClpP/crotonase-like_dom_sf.
+DR   InterPro; IPR045004; ECH_dom.
+DR   InterPro; IPR036291; NAD(P)-bd_dom_sf.
+DR   PANTHER; PTHR48075; 3-HYDROXYACYL-COA DEHYDROGENASE FAMILY PROTEIN; 1.
+DR   PANTHER; PTHR48075:SF7; 3-HYDROXYACYL-COA DEHYDROGENASE-RELATED; 1.
+DR   Pfam; PF00725; 3HCDH; 1.
+DR   Pfam; PF02737; 3HCDH_N; 1.
+DR   Pfam; PF16113; ECH_2; 1.
+DR   SUPFAM; SSF48179; 6-phosphogluconate dehydrogenase C-terminal domain-like; 2.
+DR   SUPFAM; SSF52096; ClpP/crotonase; 1.
+DR   SUPFAM; SSF51735; NAD(P)-binding Rossmann-fold domains; 1.
+PE   3: Inferred from homology;
+KW   Fatty acid metabolism; Isomerase; Lipid metabolism; Lyase;
+KW   Multifunctional enzyme; NAD; Oxidoreductase; Reference proteome.
+FT   CHAIN           1..720
+FT                   /note="Putative fatty acid oxidation complex trifunctional
+FT                   enzyme"
+FT                   /id="PRO_0000285698"
+FT   REGION          1..384
+FT                   /note="3-hydroxyacyl-CoA dehydrogenase"
+FT   REGION          453..720
+FT                   /note="Enoyl-CoA hydratase/isomerase"
+SQ   SEQUENCE   720 AA;  81403 MW;  BAEC37A40044234E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	9	Didymodactylos.
+1	8	typhus group.
+1	8	Philodinidae
+1	7	Rickettsia
+1	7	Philodinida
+3	6	Roseivirga.
+1	6	Rickettsieae
+1	6	Candidatus Phycorickettsia.
+1	6	Bdelloidea
+3	5	Roseivirgaceae
+2	5	Rickettsiaceae
+1	5	Eurotatoria
+3	4	Cytophagales
+2	4	Rickettsiales
+1	4	Rotifera
+3	3	Cytophagia
+2	3	Alphaproteobacteria
+1	3	Gnathifera
+3	2	Bacteroidota
+2	2	Pseudomonadota
+1	2	Spiralia
+5	1	Pseudomonadati
+1	1	Metazoa
+5	0	Bacteria
+1	0	Eukaryota
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0L7LPN7	UNCHARACTERIZED PROTEIN {     36.7    1.5e-05   3   4.0  11.9
+	Iterate                   	   540	   575	    14.7
+	Iterate                   	  1565	  1600	    14.7
+	Iterate                   	  2344	  2379	    12.6
+	PF20700	Mutator         	    85	   428	   363.7
+	PF20700	Mutator         	   692	  1035	     354
+	PF20700	Mutator         	  1216	  1453	   258.1
+	PF01771	Viral_alk_exo   	  1454	  1703	    35.8
+	PF09588	YqaJ            	  1603	  1755	    48.6
+	PF20700	Mutator         	  1889	  2232	   363.7
+	PF01771	Viral_alk_exo   	  2234	  2468	    34.1
+	PF09588	YqaJ            	  2382	  2468	    29.4
+
+A0A1S3QVM4	APOLIPOPROTEIN B-100-LIKE     41.7    4.2e-07  15  16.0  70.4
+	Iterate                   	   307	   360	     9.1
+	Iterate                   	   113	   168	     8.2
+	Iterate                   	   483	   541	     7.4
+	Iterate                   	   168	   219	     6.7
+	Iterate                   	   451	   492	     6.6
+	Iterate                   	   183	   232	     5.9
+	Iterate                   	   417	   451	     5.9
+	Iterate                   	    18	    70	     5.6
+	Iterate                   	   365	   418	     5.5
+	Iterate                   	    93	   126	     5.0
+	Iterate                   	   228	   275	     5.0
+	Iterate                   	   529	   593	     4.9
+	Iterate                   	   340	   375	     4.5
+	Iterate                   	   272	   309	     4.3
+	Iterate                   	   148	   191	     4.2
+	PF01442	Apolipoprotein  	     8	   157	    63.7
+	PF01442	Apolipoprotein  	    71	   226	    54.7
+	PF01442	Apolipoprotein  	   225	   344	    42.4
+	PF01442	Apolipoprotein  	   329	   482	    54.5
+	PF01442	Apolipoprotein  	   457	   603	    57.5
+
+A0A2U1PSY4	CALEOSIN-RELATED, EF-HAND     32.1    0.00042   3   3.8   0.3
+	Iterate                   	   148	   209	     9.8
+	Iterate                   	   316	   377	     9.8
+	Iterate                   	   463	   522	     8.1
+	PF05042	Caleosin        	    14	    76	    74.2
+	PF05042	Caleosin        	    80	   250	   237.2
+	PF05042	Caleosin        	   270	   401	   115.6
+	PF05042	Caleosin        	   403	   563	   201.2
+
+A0A814KUC6	3-HYDROXYACYL-COA DEHYDRO     41.6    4.7e-07   1   2.5   4.1
+	Iterate                   	   637	   695	    41.4
+	PF02737	3HCDH_N         	     1	   176	   118.1
+	PF00725	3HCDH           	   178	   280	    49.1
+	PF16113	ECH_2           	   434	   609	    35.2
+	PF00378	ECH_1           	   435	   597	    41.5
+
+Q9ZCZ1	PUTATIVE FATTY ACID OXIDATION C    107.9    9.1e-28   1   2.2   2.7
+	Iterate                   	   653	   720	   107.9
+	PF02737	3HCDH_N         	     7	   191	   146.5
+	PF00725	3HCDH           	   193	   295	    59.6
+	PF00378	ECH_1           	   451	   597	    36.1
+	PF16113	ECH_2           	   451	   595	      38
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A814KUC6.1	AF-A0A814KUC6-F1-model_v4_TED01:2-174	1	AF-A0A814KUC6-F1-model_v4_TED01	2-174	0
+A0A814KUC6.1	AF-A0A814KUC6-F1-model_v4_TED02:181-407	1	AF-A0A814KUC6-F1-model_v4_TED02	181-407	0
+A0A814KUC6.1	AF-A0A814KUC6-F1-model_v4_TED03:474-691	1	AF-A0A814KUC6-F1-model_v4_TED03	474-691	88.7%
+Q9ZCZ1.1	AF-Q9ZCZ1-F1-model_v4_TED01:8-189	1	AF-Q9ZCZ1-F1-model_v4_TED01	8-189	0
+Q9ZCZ1.1	AF-Q9ZCZ1-F1-model_v4_TED02:196-418	1	AF-Q9ZCZ1-F1-model_v4_TED02	196-418	0
+Q9ZCZ1.1	AF-Q9ZCZ1-F1-model_v4_TED03:430-716	1	AF-Q9ZCZ1-F1-model_v4_TED03	430-716	94.1%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q92HD5_TED02/Iterate
+GA   27.00 27.00;
+TC   27.90 27.50;
+NC   26.80 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

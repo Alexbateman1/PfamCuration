@@ -1,0 +1,173 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y012_RICPR              Reviewed;         357 AA.
+AC   Q9ZED1;
+DE   RecName: Full=Uncharacterized protein RP012;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=RP012;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+DR   EMBL; AJ235270; CAA14484.1; -; Genomic_DNA.
+DR   PIR; E71708; E71708.
+DR   RefSeq; NP_220407.1; NC_000963.1.
+DR   RefSeq; WP_010886190.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZED1; -.
+DR   SMR; Q9ZED1; -.
+DR   STRING; 272947.gene:17555095; -.
+DR   EnsemblBacteria; CAA14484; CAA14484; CAA14484.
+DR   KEGG; rpr:RP012; -.
+DR   PATRIC; fig|272947.5.peg.12; -.
+DR   eggNOG; COG0726; Bacteria.
+DR   HOGENOM; CLU_078784_0_0_5; -.
+DR   OrthoDB; 1331280at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   GO; GO:0005975; P:carbohydrate metabolic process; IEA:InterPro.
+DR   CDD; cd10963; CE4_RC0012_like; 1.
+DR   Gene3D; 3.20.20.370; Glycoside hydrolase/deacetylase; 1.
+DR   InterPro; IPR011330; Glyco_hydro/deAcase_b/a-brl.
+DR   InterPro; IPR022437; RPE3.
+DR   NCBIfam; TIGR03775; RPE3; 1.
+DR   SUPFAM; SSF88713; Glycoside hydrolase/deacetylase; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..19
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           20..357
+FT                   /note="Uncharacterized protein RP012"
+FT                   /id="PRO_0000014220"
+SQ   SEQUENCE   357 AA;  41036 MW;  419215037AE8B1F1 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Pedobacter.
+21	6	Mucilaginibacter.
+29	5	Sphingobacteriaceae
+29	4	Sphingobacteriales
+5	3	Alphaproteobacteria
+29	3	Sphingobacteriia
+7	2	Pseudomonadota
+32	2	Bacteroidota
+42	1	Pseudomonadati
+42	0	Bacteria
+Total of 42 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1S3PIU0	DNA POLYMERASE EPSILON CA     52.9    1.8e-10   5   5.1   0.4
+	Iterate                   	   162	   219	    11.1
+	Iterate                   	    45	   102	    11.0
+	Iterate                   	    94	   142	    10.7
+	Iterate                   	   131	   180	    10.6
+	Iterate                   	   201	   242	     6.8
+
+A0A1S3PJ07	DNA POLYMERASE EPSILON CA     54.9    4.3e-11   5   5.0   0.3
+	Iterate                   	     2	    52	    11.4
+	Iterate                   	   119	   169	    11.4
+	Iterate                   	    42	    91	    11.3
+	Iterate                   	    83	   129	    10.9
+	Iterate                   	   158	   191	     6.8
+
+A0A1S3PJL3	DNA POLYMERASE EPSILON CA     43.0    2.3e-07   4   4.1   0.2
+	Iterate                   	    45	   103	    11.7
+	Iterate                   	   131	   181	    11.3
+	Iterate                   	    94	   142	    11.1
+	Iterate                   	   162	   203	     7.2
+
+L0EUF7	POLYSACCHARIDE DEACETYLASE {E    138.3    4.2e-37   1   2.3   6.5
+	Iterate                   	    28	   102	   137.6
+
+Q9ZED1	UNCHARACTERIZED PROTEIN RP012      130.7      1e-34   1   2.3   5.4
+	Iterate                   	    27	   107	   130.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS35709 (E-value: 5.5e-29, Score: 105.6)
+Mentioned as: RP012
+Description: unknown
+Organism: Rickettsia prowazekii str. Madrid E
+PMID: 11997347
+Source: EuropePMC
+Title: Protein coding palindromes are a unique but recurrent feature in Rickettsia
+Journal: Genome research (2002)
+Snippet: of R. conorii. e Three copies are within the ORFs (RP037, RP012, RP707) of R. prowazekii. f One of the repeats is within the tmRNA gene of R. prowazekii. b c
+
+================================================================================
+Protein: VIMSS614116 (E-value: 3.7e-27, Score: 99.7)
+Mentioned as: RT0011
+Description: conserved hypothetical protein
+Organism: Rickettsia typhi str. wilmington
+PMID: 18641131
+Source: EuropePMC
+Title: Characterization of Sec-translocon-dependent extracytoplasmic proteins of Rickettsia typhi
+Journal: Journal of bacteriology (2008)
+Snippet: protein RT0286 RT0287 RT0291 PhoA-negative samples RT0011 Hypothetical protein RT0039 Rickettsial conserved hypothetical protein RT0047 Hypothetical protein
+
+================================================================================
+Protein: VIMSS3597003 (E-value: 6.1e-25, Score: 92.6)
+Mentioned as: A1G_00085
+Description: hypothetical protein
+Organism: Rickettsia rickettsii str. 'Sheila Smith'
+PMID: 22188208
+Source: EuropePMC
+Title: Rickettsia parkeri invasion of diverse host cells involves an Arp2/3 complex, WAVE complex and Rho-family GTPase-dependent pathway
+Journal: Cellular microbiology (2012)
+Snippet: Smith strain ( Ellison et al. , 2008 ) in the gene encoding hypothetical protein A1G_00085. For all other procedures, R. parkeri was propagated in Vero cells grown at 33C with 5% CO 2 , purified by Renografin density gradient centrifugation as described previously ( Hackstadt
+
+================================================================================
+Protein: VIMSS3597003 (E-value: 6.1e-25, Score: 92.6)
+Mentioned as: A1G_00085
+Description: hypothetical protein
+Organism: Rickettsia rickettsii str. 'Sheila Smith'
+PMID: 20027221
+Source: EuropePMC
+Title: Genome sequence of the endosymbiont Rickettsia peacockii and comparison with virulent Rickettsia rickettsii: identification of virulence factors
+Journal: PloS one (2009)
+Snippet: R. rickettsii SS Size of deletion Genes or gene products contained in deletion 14498..15082 583 A1G_00085 truncated, antitoxin A1G_00090 lost and A1G_00095 truncated 19653..25701 6047 A1G_00130, Cell surface antigen Sca1-like 36902..37126 223 A1G_00215, Part of dihydrofolate reductase gene 48049..52257 4207 Region of gene fragments resulting from
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0W0YYR2.1	AF-A0A0W0YYR2-F1-model_v4_TED02:112-314	1	AF-A0A0W0YYR2-F1-model_v4_TED02	112-314	0
+A0A0W0YYR2.1	AF-A0A0W0YYR2-F1-model_v4_TED01:26-82	1	AF-A0A0W0YYR2-F1-model_v4_TED01	26-82	76.0%
+A0A4R5MPV2.1	AF-A0A4R5MPV2-F1-model_v4_TED02:91-319	1	AF-A0A4R5MPV2-F1-model_v4_TED02	91-319	2.9%
+A0A4R5MPV2.1	AF-A0A4R5MPV2-F1-model_v4_TED01:24-87	1	AF-A0A4R5MPV2-F1-model_v4_TED01	24-87	92.8%
+L0EUF7.1	AF-L0EUF7-F1-model_v4_TED02:110-314	1	AF-L0EUF7-F1-model_v4_TED02	110-314	0
+L0EUF7.1	AF-L0EUF7-F1-model_v4_TED01:28-83	1	AF-L0EUF7-F1-model_v4_TED01	28-83	74.7%
+Q9ZED1.1	AF-Q9ZED1-F1-model_v4_TED01:27-94	1	AF-Q9ZED1-F1-model_v4_TED01	27-94	94.4%
+Q9ZED1.1	AF-Q9ZED1-F1-model_v4_TED02:151-353	1	AF-Q9ZED1-F1-model_v4_TED02	151-353	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q92JQ5_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.50 28.00;
+NC   26.80 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

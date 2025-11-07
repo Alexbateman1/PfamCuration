@@ -1,0 +1,130 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y129_MYCPN              Reviewed;         149 AA.
+AC   P75346;
+DE   RecName: Full=Uncharacterized protein MPN_129;
+GN   OrderedLocusNames=MPN_129; ORFNames=C09_orf149b, MP025;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SIMILARITY: To M.pneumoniae MPN_090. {ECO:0000305}.
+DR   EMBL; U00089; AAB95673.1; -; Genomic_DNA.
+DR   PIR; S73351; S73351.
+DR   RefSeq; NP_109817.1; NC_000912.1.
+DR   RefSeq; WP_010874486.1; NZ_OU342337.1.
+DR   AlphaFoldDB; P75346; -.
+DR   STRING; 272634.MPN_129; -.
+DR   EnsemblBacteria; AAB95673; AAB95673; MPN_129.
+DR   KEGG; mpn:MPN_129; -.
+DR   PATRIC; fig|272634.6.peg.139; -.
+DR   HOGENOM; CLU_1957166_0_0_14; -.
+DR   BioCyc; MPNE272634:G1GJ3-215-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..149
+FT                   /note="Uncharacterized protein MPN_129"
+FT                   /id="PRO_0000210652"
+FT   TRANSMEM        39..61
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        82..104
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        119..141
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   149 AA;  16669 MW;  BE82494CCCE2CAED CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Mycoplasmoides
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P75346	UNCHARACTERIZED PROTEIN MPN_129    225.4    5.2e-64   1   1.1  13.5
+	P75346_TED02              	    39	   146	   225.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS13585 (E-value: 4.6e-66, Score: 225.4)
+Mentioned as: MPN129
+Description: adhesin P1 (group 2) homolog
+Organism: Mycoplasma pneumoniae M129
+PMID: 28272414
+Source: EuropePMC
+Title: Defined chromosome structure in the genome-reduced bacterium Mycoplasma pneumoniae
+Journal: Nature communications (2017)
+Snippet: analyse the Hi-C data sets, the paired-end library reads were first uniquely mapped to the MPN129 reference genome (NC_000912, NCBI) covering 816,394bp. This was done using Bowtie2, and further filtered and normalized as previously described following the ICE iterative mapping strategy from the hiclib Python 45
+
+================================================================================
+Protein: VIMSS13585 (E-value: 4.6e-66, Score: 225.4)
+Mentioned as: MPN129
+Description: adhesin P1 (group 2) homolog
+Organism: Mycoplasma pneumoniae M129
+PMID: 26202118
+Source: EuropePMC
+Title: Development of a Multilocus Sequence Typing Scheme for Molecular Typing of Mycoplasma pneumoniae
+Journal: Journal of clinical microbiology (2015)
+Snippet: MPN106c MPN110c MPN124 MPN131 MPN111 MPN011 MPN112 MPN127 MPN129 MPN130 MPN008 MPN018 MPN010 MPN003 MPN012 MPN019 1969 1986 1944 1978 1983 2010 1983 1978
+
+================================================================================
+Protein: VIMSS13585 (E-value: 4.6e-66, Score: 225.4)
+Mentioned as: MPN129
+Description: adhesin P1 (group 2) homolog
+Organism: Mycoplasma pneumoniae M129
+PMID: 26335586
+Source: EuropePMC
+Title: Comparative "-omics" in Mycoplasma pneumoniae Clinical Isolates Reveals Key Virulence Factors
+Journal: PloS one (2015)
+Snippet: genome sequences ( Fig 2B and 2C ; S4 Table ). For this study, NC_000912.1 (MPN129) and CP002077.1 (FH) were used as references for determining the SNPs, indels and non-sysnonymous mutations in type 1 and type 2 strains, respectively. Four subtypes were observed in the type
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75346.1	AF-P75346-F1-model_v4_TED01:1-36	1	AF-P75346-F1-model_v4_TED01	1-36	0
+P75346.1	AF-P75346-F1-model_v4_TED02:39-146	1	AF-P75346-F1-model_v4_TED02	39-146	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75346_TED02
+GA   27.00 27.00;
+TC   30.70 225.00;
+NC   23.20 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

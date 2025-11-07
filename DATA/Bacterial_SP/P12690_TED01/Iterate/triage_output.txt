@@ -1,0 +1,178 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   SAPA_STRCO              Reviewed;         154 AA.
+AC   P12690; Q9RJS7;
+DE   RecName: Full=Spore-associated protein A {ECO:0000303|PubMed:2450872};
+DE   Flags: Precursor;
+GN   Name=sapA {ECO:0000303|PubMed:2450872}; OrderedLocusNames=SCO0409;
+GN   ORFNames=SCF51.08c;
+OS   Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales;
+OC   Streptomycetaceae; Streptomyces; Streptomyces albidoflavus group.
+OX   NCBI_TaxID=100226;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-471 / A3(2) / M145;
+RX   PubMed=12000953; DOI=10.1038/417141a;
+RA   Bentley S.D., Chater K.F., Cerdeno-Tarraga A.-M., Challis G.L.,
+RA   Thomson N.R., James K.D., Harris D.E., Quail M.A., Kieser H., Harper D.,
+RA   Bateman A., Brown S., Chandra G., Chen C.W., Collins M., Cronin A.,
+RA   Fraser A., Goble A., Hidalgo J., Hornsby T., Howarth S., Huang C.-H.,
+RA   Kieser T., Larke L., Murphy L.D., Oliver K., O'Neil S., Rabbinowitsch E.,
+RA   Rajandream M.A., Rutherford K.M., Rutter S., Seeger K., Saunders D.,
+RA   Sharp S., Squares R., Squares S., Taylor K., Warren T., Wietzorrek A.,
+RA   Woodward J.R., Barrell B.G., Parkhill J., Hopwood D.A.;
+RT   "Complete genome sequence of the model actinomycete Streptomyces coelicolor
+RT   A3(2).";
+RL   Nature 417:141-147(2002).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-116, PROTEIN SEQUENCE OF 34-53,
+RP   SUBCELLULAR LOCATION, AND DEVELOPMENTAL STAGE.
+RC   STRAIN=A3(2);
+RX   PubMed=2450872; DOI=10.1128/jb.170.4.1895-1901.1988;
+RA   Guijarro J., Santamaria R., Schauer A., Losick R.;
+RT   "Promoter determining the timing and spatial localization of transcription
+RT   of a cloned Streptomyces coelicolor gene encoding a spore-associated
+RT   polypeptide.";
+RL   J. Bacteriol. 170:1895-1901(1988).
+CC   -!- SUBCELLULAR LOCATION: Spore wall. Note=Spore surface.
+CC       {ECO:0000269|PubMed:2450872}.
+CC   -!- DEVELOPMENTAL STAGE: Transcription of this protein is induced at the
+CC       time of appearance of aerial mycelium before the beginning of spore
+CC       formation. {ECO:0000269|PubMed:2450872}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA26812.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=AAA26812.1; Type=Frameshift; Evidence={ECO:0000305};
+DR   EMBL; AL939105; CAB59706.1; -; Genomic_DNA.
+DR   EMBL; M20145; AAA26812.1; ALT_SEQ; Genomic_DNA.
+DR   PIR; T42054; T42054.
+DR   RefSeq; NP_624730.1; NC_003888.3.
+DR   RefSeq; WP_003978456.1; NZ_VNID01000015.1.
+DR   AlphaFoldDB; P12690; -.
+DR   STRING; 100226.gene:17757992; -.
+DR   PaxDb; 100226-SCO0409; -.
+DR   KEGG; sco:SCO0409; -.
+DR   PATRIC; fig|100226.15.peg.385; -.
+DR   eggNOG; COG0739; Bacteria.
+DR   HOGENOM; CLU_144851_0_0_11; -.
+DR   InParanoid; P12690; -.
+DR   OrthoDB; 1099523at2; -.
+DR   Proteomes; UP000001973; Chromosome.
+DR   GO; GO:0031160; C:spore wall; IEA:UniProtKB-SubCell.
+DR   GO; GO:0030435; P:sporulation resulting in formation of a cellular spore; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   Direct protein sequencing; Reference proteome; Signal; Sporulation.
+FT   SIGNAL          1..33
+FT                   /evidence="ECO:0000269|PubMed:2450872"
+FT   CHAIN           34..154
+FT                   /note="Spore-associated protein A"
+FT                   /id="PRO_0000022270"
+FT   CONFLICT        108
+FT                   /note="G -> R (in Ref. 2; AAA26812)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        116
+FT                   /note="G -> R (in Ref. 2; AAA26812)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   154 AA;  15641 MW;  B0B72EAF54361547 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+20	6	Nonomuraea.
+19	6	Streptomyces.
+27	5	Streptosporangiaceae
+23	5	Streptomycetaceae
+37	4	Streptosporangiales
+23	4	Kitasatosporales
+71	3	Actinomycetes
+71	2	Actinomycetota
+71	1	Bacillati
+71	0	Bacteria
+Total of 71 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A399HB68	SPORE-ASSOCIATED PROTEIN     192.5    7.8e-54   1   1.5   3.3
+	Iterate                   	    48	   156	   192.5
+
+A0A7K3GJY1	SPORE-ASSOCIATED PROTEIN     213.4    2.4e-60   1   1.5   5.9
+	Iterate                   	    46	   154	   213.4
+
+A0A918ND23	SPORE-ASSOCIATED PROTEIN     200.7    2.3e-56   1   1.4   5.9
+	Iterate                   	    50	   158	   199.8
+
+D7CH93	SPORE-ASSOCIATED PROTEIN {ECO    132.6    3.3e-35   1   1.3   6.2
+	Iterate                   	    39	   141	   132.0
+
+P12690	SPORE-ASSOCIATED PROTEIN A {ECO    250.9    5.7e-72   1   1.4   7.2
+	Iterate                   	    46	   154	   250.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS240822 (E-value: 2.6e-34, Score: 122.6)
+Mentioned as: SCO0409
+Description: spore-associated protein precursor
+Organism: Streptomyces coelicolor A3(2)
+PMID: 39402545
+Source: EuropePMC
+Title: The role of two major nucleoid-associated proteins in Streptomyces, HupA and HupS, in stress survival and gene expression regulation
+Journal: Microbial cell factories (2024)
+Snippet: which were repressed in the hupA hupS strain during early stationary phase, e.g., sapA ( sco0409 ) and rdlB ( sco2719 ), were encoding spore coat proteins important for spore hydrophobicity [ 64 66 ] (Fig. 3 A, C). These changes could account for increased spore
+
+================================================================================
+Protein: VIMSS240822 (E-value: 2.6e-34, Score: 122.6)
+Mentioned as: SCO0409
+Description: spore-associated protein precursor
+Organism: Streptomyces coelicolor A3(2)
+PMID: 32140146
+Source: EuropePMC
+Title: The <i>Streptomyces coelicolor</i> Small ORF <i>trpM</i> Stimulates Growth and Morphological Development and Exerts Opposite Effects on Actinorhodin and Calcium-Dependent Antibiotic Production
+Journal: Frontiers in microbiology (2020)
+Snippet: protein FolD 4.61 5.59 10 8 SCO4041 Uracil phosphoribosyltransferase 2.05 2.12 10 4 Nucleotide metabolism SCO0409 Spore-associated protein A 1.45 1.19 10 2 Other SCO0409 Spore-associated protein A 2.42 4.11 10 4 SCO4636 UPF0336 protein SCO4636 1.34 3.56 10 2 SCO2633 Superoxide dismutase [Fe-Zn] 1 2.08
+
+================================================================================
+Protein: VIMSS240822 (E-value: 2.6e-34, Score: 122.6)
+Mentioned as: SCO0409
+Description: spore-associated protein precursor
+Organism: Streptomyces coelicolor A3(2)
+PMID: 29784711
+Source: EuropePMC
+Title: Quantitative Proteome and Phosphoproteome Analyses of &lt;i&gt;Streptomyces coelicolor&lt;/i&gt; Reveal Proteins and Phosphoproteins Modulating Differentiation and Secondary Metabolism
+Journal: Molecular & cellular proteomics : MCP (2018)
+Snippet: 7 SCO0400 n.s. - 2.6 - 6.7 SCO0401 n.s. - 2 - 4 Bald/whi Sap SCO0409 5 SapA - 1.7 - 3.2 SCO1489 n.s. BldD - -1.5 - 0.3 SCO3323 n.s. BldN 1.5 1.9 2.8 3.7 SCO3424 1 BldB homologue -1.8 -1.8 0.3 0.3 SCO3579 n.s.
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1I0KCN9.1	AF-A0A1I0KCN9-F1-model_v4_TED01:39-149	1	AF-A0A1I0KCN9-F1-model_v4_TED01	39-149	92.7%
+A0A1I2A512.1	AF-A0A1I2A512-F1-model_v4_TED01:7-90	1	AF-A0A1I2A512-F1-model_v4_TED01	7-90	0
+A0A1I2A512.1	AF-A0A1I2A512-F1-model_v4_TED02:95-270	1	AF-A0A1I2A512-F1-model_v4_TED02	95-270	0
+A0A1I2A512.1	AF-A0A1I2A512-F1-model_v4_TED03:640-740	1	AF-A0A1I2A512-F1-model_v4_TED03	640-740	94.8%
+A0A7W4W8T5.1	AF-A0A7W4W8T5-F1-model_v4_TED01:29-167	1	AF-A0A7W4W8T5-F1-model_v4_TED01	29-167	0
+A0A7W4W8T5.1	AF-A0A7W4W8T5-F1-model_v4_TED02:190-284	1	AF-A0A7W4W8T5-F1-model_v4_TED02	190-284	94.5%
+A0A7W4W8T5.1	AF-A0A7W4W8T5-F1-model_v4_TED03:307-461	1	AF-A0A7W4W8T5-F1-model_v4_TED03	307-461	0
+A0A7W4W8T5.1	AF-A0A7W4W8T5-F1-model_v4_TED04:481-808	1	AF-A0A7W4W8T5-F1-model_v4_TED04	481-808	0
+P12690.2	AF-P12690-F1-model_v4_TED01:46-154	1	AF-P12690-F1-model_v4_TED01	46-154	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P12690_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,118 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y870_HAEIN              Reviewed;          34 AA.
+AC   P44065;
+DE   RecName: Full=Uncharacterized protein HI_0870;
+GN   OrderedLocusNames=HI_0870;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+DR   EMBL; L42023; AAC22529.1; -; Genomic_DNA.
+DR   PIR; B64015; B64015.
+DR   AlphaFoldDB; P44065; -.
+DR   SMR; P44065; -.
+DR   STRING; 71421.HI_0870; -.
+DR   EnsemblBacteria; AAC22529; AAC22529; HI_0870.
+DR   KEGG; hin:HI_0870; -.
+DR   HOGENOM; CLU_3374032_0_0_6; -.
+DR   Proteomes; UP000000579; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..34
+FT                   /note="Uncharacterized protein HI_0870"
+FT                   /id="PRO_0000077964"
+SQ   SEQUENCE   34 AA;  4290 MW;  09E7D0C116875822 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Mannheimia.
+1	6	Haemophilus.
+1	6	Cricetibacter.
+3	5	Pasteurellaceae
+3	4	Pasteurellales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1S3SI47	UNCHARACTERIZED PROTEIN L     70.2    3.5e-16  14  14.1  24.5
+	P44065                    	    10	    24	     5.5
+	P44065                    	    27	    41	     5.5
+	P44065                    	    44	    58	     5.3
+	P44065                    	    61	    75	     5.3
+	P44065                    	    78	    92	     5.3
+	P44065                    	    95	   109	     5.3
+	P44065                    	   112	   126	     5.3
+	P44065                    	   163	   177	     5.3
+	P44065                    	   180	   194	     5.3
+	P44065                    	   197	   211	     5.3
+	P44065                    	   214	   228	     5.3
+	P44065                    	   130	   143	     5.1
+	P44065                    	   147	   160	     5.1
+	P44065                    	   231	   245	     4.7
+
+A0A4R2TKX8	GT2 FAMILY GLYCOSYLTRANSF     64.3    2.3e-14   1   1.7   0.6
+	P44065                    	   208	   241	    63.2
+	PF00535	Glycos_transf_2 	     7	   174	    65.2
+
+P44065	UNCHARACTERIZED PROTEIN HI_0870    102.8    2.1e-26   1   1.0   3.4
+	P44065                    	     1	    34	   102.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS7219 (E-value: 1.8e-28, Score: 102.8)
+Mentioned as: HI0870
+Description: H. influenzae predicted coding region HI0870
+Organism: Haemophilus influenzae Rd KW20
+PMID: 15489455
+Source: EuropePMC
+Title: Biosynthesis of cryptic lipopolysaccharide glycoforms in Haemophilus influenzae involves a mechanism similar to that required for O-antigen synthesis
+Journal: Journal of bacteriology (2004)
+Snippet: gene sequence in other strains includes the region designated HI0870 in the strain Rd genome sequence (Fig. 5). There are two putative small ORFs between HI0869
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44065
+GA   27.00 27.00;
+TC   28.00 58.40;
+NC   25.40 19.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

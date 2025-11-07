@@ -1,0 +1,37 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+Total of 0 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0D6AJW7	UNCHARACTERIZED PROTEIN {     33.0    0.00019   1   1.4   0.4
+	B0BCM2_TED01              	    18	   227	    32.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+B0BCM2.1	AF-B0BCM2-F1-model_v4_TED01:1-227	1	AF-B0BCM2-F1-model_v4_TED01	1-227	100.0%
+B0BCM2.1	AF-B0BCM2-F1-model_v4_TED02:231-354	1	AF-B0BCM2-F1-model_v4_TED02	231-354	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:B0BCM2_TED01
+GA   27.00 27.00;
+TC   33.00 32.10;
+NC   26.00 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

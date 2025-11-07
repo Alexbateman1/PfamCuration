@@ -1,0 +1,175 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   COMB_HAEIN              Reviewed;         168 AA.
+AC   P31769;
+DE   RecName: Full=Competence protein B;
+DE   AltName: Full=DNA transformation protein ComB;
+GN   Name=comB; OrderedLocusNames=HI_0438;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=1916268; DOI=10.1016/0378-1119(91)90457-m;
+RA   Tomb J.-F., El-Hajj H., Smith H.O.;
+RT   "Nucleotide sequence of a cluster of genes involved in the transformation
+RT   of Haemophilus influenzae Rd.";
+RL   Gene 104:1-10(1991).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+CC   -!- FUNCTION: Involved in transformation (genetic competence for DNA
+CC       uptake).
+DR   EMBL; M62809; AAA25009.1; -; Genomic_DNA.
+DR   EMBL; L42023; AAC22097.1; -; Genomic_DNA.
+DR   PIR; B64068; JH0431.
+DR   RefSeq; NP_438599.1; NC_000907.1.
+DR   AlphaFoldDB; P31769; -.
+DR   STRING; 71421.HI_0438; -.
+DR   DNASU; 949525; -.
+DR   EnsemblBacteria; AAC22097; AAC22097; HI_0438.
+DR   KEGG; hin:HI_0438; -.
+DR   PATRIC; fig|71421.8.peg.458; -.
+DR   eggNOG; COG3166; Bacteria.
+DR   HOGENOM; CLU_132471_0_0_6; -.
+DR   OrthoDB; 5679138at2; -.
+DR   BioCyc; HINF71421:G1GJ1-453-MONOMER; -.
+DR   Proteomes; UP000000579; Chromosome.
+DR   GO; GO:0030420; P:establishment of competence for transformation; IEA:UniProtKB-KW.
+DR   InterPro; IPR016778; Competence_ComB.
+DR   PIRSF; PIRSF020785; Competence_ComB; 1.
+PE   4: Predicted;
+KW   Competence; Reference proteome.
+FT   CHAIN           1..168
+FT                   /note="Competence protein B"
+FT                   /id="PRO_0000090005"
+SQ   SEQUENCE   168 AA;  19751 MW;  2B62CBE837D2EC74 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Tychonema.
+2	6	Haemophilus.
+1	6	Reinekea.
+1	6	Oceanisphaera.
+1	6	Microcoleaceae
+1	6	Conservatibacter.
+1	6	Caviibacterium.
+1	6	Avibacterium.
+5	5	Pasteurellaceae
+1	5	Saccharospirillaceae
+1	5	Pasteurellaceae.
+1	5	Oscillatoriales
+1	5	Aeromonadaceae
+6	4	Pasteurellales
+1	4	Oscillatoriophycideae
+1	4	Oceanospirillales
+1	4	Aeromonadales
+8	3	Gammaproteobacteria
+1	3	Cyanophyceae
+8	2	Pseudomonadota
+1	2	Cyanobacteriota
+8	1	Pseudomonadati
+1	1	Bacillati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1Y0D1I1	FIMBRIAL ASSEMBLY PROTEIN     28.9     0.0052   1   1.5   6.5
+	P31769_TED01              	     1	    86	    28.0
+	PF05137	PilN            	   100	   174	    37.6
+
+A0A2G4F1W2	UNCHARACTERIZED PROTEIN {     29.7      0.003   1   2.6   3.5
+	P31769_TED01              	    23	   102	    29.7
+
+A0A2M8RVQ4	COMPETENCE PROTEIN COMB {     33.5     0.0002   1   1.8   4.6
+	P31769_TED01              	     3	    80	    33.5
+
+A0A2M8S0P9	UNCHARACTERIZED PROTEIN {     31.4    0.00085   1   2.0   9.3
+	P31769_TED01              	     5	    81	    31.4
+
+A0A377IXM0	COMPETENCE PROTEIN B {ECO     29.6     0.0032   1   1.7   9.7
+	P31769_TED01              	     2	    79	    29.6
+
+A0A379B3D7	PROTEIN COMB {ECO:0000313     30.7     0.0014   1   1.7  13.5
+	P31769_TED01              	     1	    80	    30.7
+
+A0A5C8Z4M5	PILN DOMAIN-CONTAINING PR     29.1     0.0046   1   2.4  11.0
+	P31769_TED01              	     2	    80	    29.1
+
+A0A8J1UJG8	UTP--GLUCOSE-1-PHOSPHATE      29.4     0.0037   4   4.3   4.7
+	P31769_TED01              	    89	   127	     7.7
+	P31769_TED01              	     4	    39	     7.3
+	P31769_TED01              	    61	    96	     7.3
+	P31769_TED01              	    33	    66	     7.2
+	PF01704	UDPGP           	   105	   169	    71.9
+
+P31769	COMPETENCE PROTEIN B               188.1    1.1e-52   1   2.2  10.2
+	P31769_TED01              	     1	    82	   188.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS6788 (E-value: 1e-54, Score: 188.1)
+Mentioned as: HI0438
+Description: competence protein B (comB)
+Organism: Haemophilus influenzae Rd KW20
+PMID: 29473023
+Source: EuropePMC
+Title: Basic Characterization of Natural Transformation in a Highly Transformable <i>Haemophilus parasuis</i> Strain SC1401
+Journal: Frontiers in cellular and infection microbiology (2018)
+Snippet: proteins DNA UPTAKE comA (HI0439) APL_RS01005 A4U84_RS02030 HAPS_RS11095 98 99 Cytoplasmic Competence protein ComA comB (HI0438) APL_RS01010 A4U84_RS02025 HAPS_RS11100 97 97 Unknown Hypothetical protein comC (HI0437) APL_RS01015 A4U84_RS02020 HAPS_RS11105 93 91 Unknown Chromosome segregation ATPase comD / pilP (HI0436) APL_RS01020 A4U84_RS02015 HAPS_RS11110 95 93 Unknown Pilus
+
+================================================================================
+Protein: VIMSS6788 (E-value: 1e-54, Score: 188.1)
+Mentioned as: HI0438
+Description: competence protein B (comB)
+Organism: Haemophilus influenzae Rd KW20
+PMID: 22821979
+Source: EuropePMC
+Title: Seventeen Sxy-dependent cyclic AMP receptor protein site-regulated genes are needed for natural transformation in Haemophilus influenzae
+Journal: Journal of bacteriology (2012)
+Snippet: HI0296 None available comA HI0439 Uptake, TF (101) comB HI0438 None available comC HI0437 Uptake , TF (101) comD HI0436 None available comE HI0435 Uptake, TF
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P31769.1	AF-P31769-F1-model_v4_TED02:87-162	1	AF-P31769-F1-model_v4_TED02	87-162	0
+P31769.1	AF-P31769-F1-model_v4_TED01:1-82	1	AF-P31769-F1-model_v4_TED01	1-82	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P31769_TED01
+GA   27.00 27.00;
+TC   27.60 27.60;
+NC   26.20 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

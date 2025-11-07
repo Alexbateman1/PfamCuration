@@ -1,0 +1,87 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y081_BUCBP              Reviewed;         717 AA.
+AC   Q89AY7;
+DE   RecName: Full=Uncharacterized protein bbp_081;
+GN   OrderedLocusNames=bbp_081;
+OS   Buchnera aphidicola subsp. Baizongia pistaciae (strain Bp).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Erwiniaceae; Buchnera.
+OX   NCBI_TaxID=224915;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Bp;
+RX   PubMed=12522265; DOI=10.1073/pnas.0235981100;
+RA   van Ham R.C.H.J., Kamerbeek J., Palacios C., Rausell C., Abascal F.,
+RA   Bastolla U., Fernandez J.M., Jimenez L., Postigo M., Silva F.J.,
+RA   Tamames J., Viguera E., Latorre A., Valencia A., Moran F., Moya A.;
+RT   "Reductive genome evolution in Buchnera aphidicola.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:581-586(2003).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SIMILARITY: To E.coli YtfN. {ECO:0000305}.
+DR   EMBL; AE016826; AAO26817.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q89AY7; -.
+DR   SMR; Q89AY7; -.
+DR   STRING; 224915.bbp_081; -.
+DR   KEGG; bab:bbp_081; -.
+DR   eggNOG; COG2911; Bacteria.
+DR   HOGENOM; CLU_385295_0_0_6; -.
+DR   Proteomes; UP000000601; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..717
+FT                   /note="Uncharacterized protein bbp_081"
+FT                   /id="PRO_0000216248"
+FT   TRANSMEM        19..38
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   717 AA;  86111 MW;  CF171ECE2C626778 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Buchnera.
+1	5	Erwiniaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q89AY7	UNCHARACTERIZED PROTEIN BBP_081    414.1     5e-121   1   6.1  47.9
+	Q89AY7_TED04              	   469	   665	   414.1
+	PF27051	TamB_N          	    30	   443	    62.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q89AY7.1	AF-Q89AY7-F1-model_v4_TED01:59-187	1	AF-Q89AY7-F1-model_v4_TED01	59-187	0
+Q89AY7.1	AF-Q89AY7-F1-model_v4_TED02:198-339	1	AF-Q89AY7-F1-model_v4_TED02	198-339	0
+Q89AY7.1	AF-Q89AY7-F1-model_v4_TED03:346-443	1	AF-Q89AY7-F1-model_v4_TED03	346-443	0
+Q89AY7.1	AF-Q89AY7-F1-model_v4_TED05:673-717	1	AF-Q89AY7-F1-model_v4_TED05	673-717	0
+Q89AY7.1	AF-Q89AY7-F1-model_v4_TED04:469-665	1	AF-Q89AY7-F1-model_v4_TED04	469-665	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q89AY7_TED04
+GA   27.00 27.00;
+TC   27.50 414.10;
+NC   23.60 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

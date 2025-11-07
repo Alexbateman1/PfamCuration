@@ -1,0 +1,117 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y534_MYCPN              Reviewed;         140 AA.
+AC   P75244;
+DE   RecName: Full=Uncharacterized protein MPN_534;
+GN   OrderedLocusNames=MPN_534; ORFNames=G12_orf140b, MP308;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+DR   EMBL; U00089; AAB95956.1; -; Genomic_DNA.
+DR   PIR; S73634; S73634.
+DR   RefSeq; NP_110223.1; NC_000912.1.
+DR   AlphaFoldDB; P75244; -.
+DR   STRING; 272634.MPN_534; -.
+DR   EnsemblBacteria; AAB95956; AAB95956; MPN_534.
+DR   KEGG; mpn:MPN_534; -.
+DR   PATRIC; fig|272634.6.peg.596; -.
+DR   HOGENOM; CLU_1832956_0_0_14; -.
+DR   OrthoDB; 9927563at2; -.
+DR   BioCyc; MPNE272634:G1GJ3-881-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..140
+FT                   /note="Uncharacterized protein MPN_534"
+FT                   /id="PRO_0000210693"
+SQ   SEQUENCE   140 AA;  16381 MW;  4A601D739B3FEF81 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Mycoplasmoides
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P75244	UNCHARACTERIZED PROTEIN MPN_534    176.6    3.4e-49   2   2.3   4.7
+	P75244_TED02              	    74	   140	   171.6
+	P75244_TED02              	    13	    64	     6.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS13991 (E-value: 3.1e-51, Score: 176.6)
+Mentioned as: MPN534
+Description: conserved hypothetical, RNA-expressed
+Organism: Mycoplasma pneumoniae M129
+PMID: 25925568
+Source: EuropePMC
+Title: A novel sigma factor reveals a unique regulon controlling cell-specific recombination in Mycoplasma genitalium
+Journal: Nucleic acids research (2015)
+Snippet: 19 -ATTTAG MPN490 456270 + TTGTCA-N 18 -ATTAAT MG_RS02200 26 Hypothetical protein TTGGCG-N 19 -ATTCAT MPN534 456490 + TTGTCT-N 19 -ATTAAT MG_358 233 Holliday junction DNA helicase TTGGCA-N 19 -AATTTT MPN535 489580 TAGTCA-N 18 -ATTAAT MG_386 2 Gliding motility protein - MPN567 493564 TTGTCA-N 19 -ATTAAT
+
+================================================================================
+Protein: VIMSS13991 (E-value: 3.1e-51, Score: 176.6)
+Mentioned as: MPN534
+Description: conserved hypothetical, RNA-expressed
+Organism: Mycoplasma pneumoniae M129
+PMID: 24532771
+Source: EuropePMC
+Title: Characterization of the operon encoding the Holliday junction helicase RuvAB from Mycoplasma genitalium and its role in mgpB and mgpC gene variation
+Journal: Journal of bacteriology (2014)
+Snippet: was identified in M. pneumoniae (type strain M129) as MPN534. As with M. genitalium G37, the ortholog of ORF1 is not recognized in the current annotation of
+
+================================================================================
+Protein: VIMSS13991 (E-value: 3.1e-51, Score: 176.6)
+Mentioned as: MPN534
+Description: conserved hypothetical, RNA-expressed
+Organism: Mycoplasma pneumoniae M129
+PMID: 18779336
+Source: EuropePMC
+Title: Characterization of a unique ClpB protein of Mycoplasma pneumoniae and its impact on growth
+Journal: Infection and immunity (2008)
+Snippet: 533RTPCRP 533RTPCRM GATTCGGTGATCGTAGATGCA AGCGAAAACATCACGCATATCC 558 mpn534 534RTPCRP 534RTPCRM GAATACTTTTAAAGAAACCCTCTTTTCA ACCTTTCTAATTTGCTGTTTGG 408 a 544 P,
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75244.1	AF-P75244-F1-model_v4_TED02:74-140	1	AF-P75244-F1-model_v4_TED02	74-140	100.0%
+P75244.1	AF-P75244-F1-model_v4_TED01:1-73	1	AF-P75244-F1-model_v4_TED01	1-73	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75244_TED02
+GA   27.00 27.00;
+TC   29.20 171.60;
+NC   24.30 22.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

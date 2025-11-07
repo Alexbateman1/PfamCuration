@@ -1,0 +1,60 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Streptomyces.
+1	5	Streptomycetaceae
+1	4	Kitasatosporales
+1	3	Actinomycetes
+1	2	Actinomycetota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1Q4VYZ0	UNCHARACTERIZED PROTEIN {     43.3    1.1e-07   1   1.3  10.4
+	Iterate                   	    39	    59	    42.8
+
+A0A250VGV4	TRICYCLIC PEPTIDE MS-271      50.9    4.4e-10   1   1.2  12.2
+	Iterate                   	    22	    42	    50.5
+
+A0A401M3B6	ABORYCIN FAMILY TRICYCLIC     50.2    7.7e-10   1   1.2  11.0
+	Iterate                   	    22	    42	    49.7
+
+A0A944FET8	ABORYCIN FAMILY TRICYCLIC     48.4    2.8e-09   1   1.3  10.8
+	Iterate                   	    22	    42	    47.9
+
+A0AAD8K7X9	UNCHARACTERIZED PROTEIN {     22.8       0.37   6   7.8  14.5
+	Iterate                   	   313	   331	     5.5
+	Iterate                   	   211	   229	     4.7
+	Iterate                   	   255	   273	     4.7
+	Iterate                   	   489	   500	     4.1
+	Iterate                   	   402	   419	     3.8
+	Iterate                   	   358	   375	     1.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Q4VYZ0.1	AF-A0A1Q4VYZ0-F1-model_v4_TED01:32-59	1	AF-A0A1Q4VYZ0-F1-model_v4_TED01	32-59	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P37046/Iterate
+GA   27.00 27.00;
+TC   52.70 52.20;
+NC   23.30 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

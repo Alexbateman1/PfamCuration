@@ -1,0 +1,479 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   SIDJ_LEGPH              Reviewed;         873 AA.
+AC   Q5ZTK6;
+DE   RecName: Full=Calmodulin-dependent glutamylase SidJ {ECO:0000303|PubMed:31330532};
+DE            EC=6.-.-.- {ECO:0000269|PubMed:31123136, ECO:0000269|PubMed:31330531, ECO:0000269|PubMed:31330532};
+GN   Name=sidJ {ECO:0000303|PubMed:31330532}; OrderedLocusNames=lpg2155;
+OS   Legionella pneumophila subsp. pneumophila (strain Philadelphia 1 / ATCC
+OS   33152 / DSM 7513).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Legionellales; Legionellaceae; Legionella.
+OX   NCBI_TaxID=272624;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Philadelphia 1 / ATCC 33152 / DSM 7513;
+RX   PubMed=15448271; DOI=10.1126/science.1099776;
+RA   Chien M., Morozova I., Shi S., Sheng H., Chen J., Gomez S.M., Asamani G.,
+RA   Hill K., Nuara J., Feder M., Rineer J., Greenberg J.J., Steshenko V.,
+RA   Park S.H., Zhao B., Teplitskaya E., Edwards J.R., Pampou S., Georghiou A.,
+RA   Chou I.-C., Iannuccilli W., Ulz M.E., Kim D.H., Geringer-Sameth A.,
+RA   Goldsberry C., Morozov P., Fischer S.G., Segal G., Qu X., Rzhetsky A.,
+RA   Zhang P., Cayanis E., De Jong P.J., Ju J., Kalachikov S., Shuman H.A.,
+RA   Russo J.J.;
+RT   "The genomic sequence of the accidental pathogen Legionella pneumophila.";
+RL   Science 305:1966-1968(2004).
+RN   [2]
+RP   FUNCTION.
+RX   PubMed=28497808; DOI=10.1038/cr.2017.66;
+RA   Qiu J., Yu K., Fei X., Liu Y., Nakayasu E.S., Piehowski P.D., Shaw J.B.,
+RA   Puvar K., Das C., Liu X., Luo Z.Q.;
+RT   "A unique deubiquitinase that deconjugates phosphoribosyl-linked protein
+RT   ubiquitination.";
+RL   Cell Res. 27:865-881(2017).
+RN   [3]
+RP   FUNCTION, COFACTOR, CATALYTIC ACTIVITY, INTERACTION WITH HOST
+RP   CALMODULIN/CMD1, AND MUTAGENESIS OF ILE-841 AND GLN-842.
+RX   PubMed=31330532; DOI=10.1038/s41586-019-1440-8;
+RA   Bhogaraju S., Bonn F., Mukherjee R., Adams M., Pfleiderer M.M., Galej W.P.,
+RA   Matkovic V., Lopez-Mosqueda J., Kalayil S., Shin D., Dikic I.;
+RT   "Inhibition of bacterial ubiquitin ligases by SidJ-calmodulin catalysed
+RT   glutamylation.";
+RL   Nature 572:382-386(2019).
+RN   [4]
+RP   FUNCTION, CATALYTIC ACTIVITY, INTERACTION WITH HOST CALMODULIN, AND
+RP   COFACTOR.
+RX   PubMed=31330531; DOI=10.1038/s41586-019-1439-1;
+RA   Gan N., Zhen X., Liu Y., Xu X., He C., Qiu J., Liu Y., Fujimoto G.M.,
+RA   Nakayasu E.S., Zhou B., Zhao L., Puvar K., Das C., Ouyang S., Luo Z.Q.;
+RT   "Regulation of phosphoribosyl ubiquitination by a calmodulin-dependent
+RT   glutamylase.";
+RL   Nature 572:387-391(2019).
+RN   [5] {ECO:0007744|PDB:6OQQ}
+RP   X-RAY CRYSTALLOGRAPHY (2.10 ANGSTROMS) IN COMPLEX WITH CALMODULIN/CMD1,
+RP   CATALYTIC ACTIVITY, AND FUNCTION.
+RX   PubMed=31123136; DOI=10.1126/science.aaw7446;
+RA   Black M.H., Osinski A., Gradowski M., Servage K.A., Pawlowski K.,
+RA   Tomchick D.R., Tagliabracci V.S.;
+RT   "Bacterial pseudokinase catalyzes protein polyglutamylation to inhibit the
+RT   SidE-family ubiquitin ligases.";
+RL   Science 364:787-792(2019).
+CC   -!- FUNCTION: Glutamylase that mediates the covalent attachment of
+CC       glutamate moieties to SdeA on one of the catalytic residues that is
+CC       required for its mono-ADP-ribosyltransferase activity (PubMed:31330531,
+CC       PubMed:31330532). In turn, inhibits SdeA ubiquitinating activity. Also
+CC       glutamylates related SdeB, SdeC and SidE (PubMed:31123136,
+CC       PubMed:31330531). Glutamylase activity only occurs in the host since it
+CC       requires host calmodulin (PubMed:28497808, PubMed:31123136,
+CC       PubMed:31330531, PubMed:31330532). May also reverse the SdeA-mediated
+CC       substrate ubiquitination by cleaving the phosphodiester bond that links
+CC       phosphoribosylated ubiquitin to protein substrates via its
+CC       deubiquitinase activity (PubMed:28497808).
+CC       {ECO:0000269|PubMed:28497808, ECO:0000269|PubMed:31123136,
+CC       ECO:0000269|PubMed:31330531, ECO:0000269|PubMed:31330532}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=L-glutamyl-[protein] + L-glutamate + ATP = gamma-L-glutamyl-L-
+CC         glutamyl-[protein] + ADP + phosphate + H(+); Xref=Rhea:RHEA:60144,
+CC         Rhea:RHEA-COMP:10208, Rhea:RHEA-COMP:15517, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:29973, ChEBI:CHEBI:29985, ChEBI:CHEBI:30616,
+CC         ChEBI:CHEBI:43474, ChEBI:CHEBI:143622, ChEBI:CHEBI:456216;
+CC         Evidence={ECO:0000269|PubMed:31123136, ECO:0000269|PubMed:31330531,
+CC         ECO:0000269|PubMed:31330532};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(L-glutamyl)(n)-gamma-L-glutamyl-L-glutamyl-[protein] + L-
+CC         glutamate + ATP = (L-glutamyl)(n+1)-gamma-L-glutamyl-L-glutamyl-
+CC         [protein] + ADP + phosphate + H(+); Xref=Rhea:RHEA:60148, Rhea:RHEA-
+CC         COMP:15519, Rhea:RHEA-COMP:15675, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:29985, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:143623, ChEBI:CHEBI:456216;
+CC         Evidence={ECO:0000269|PubMed:31123136, ECO:0000269|PubMed:31330531,
+CC         ECO:0000269|PubMed:31330532};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000269|PubMed:31123136};
+CC   -!- ACTIVITY REGULATION: Glytamylation catalyzed by SidJ requires host
+CC       calmodulin and can be regulated by intracellular changes in Ca2+
+CC       concentrations. Also requires ATP. {ECO:0000269|PubMed:31123136,
+CC       ECO:0000269|PubMed:31330531}.
+CC   -!- SUBUNIT: Interacts with host calmodulin/CALM1; this interaction is
+CC       required for glutamylase activity. {ECO:0000269|PubMed:31123136,
+CC       ECO:0000269|PubMed:31330531, ECO:0000269|PubMed:31330532}.
+DR   EMBL; AE017354; AAU28221.1; -; Genomic_DNA.
+DR   RefSeq; WP_010947866.1; NC_002942.5.
+DR   RefSeq; YP_096168.1; NC_002942.5.
+DR   PDB; 6K4K; X-ray; 2.71 A; A/B=1-873.
+DR   PDB; 6K4L; X-ray; 2.95 A; A/B=1-873.
+DR   PDB; 6K4R; X-ray; 3.11 A; A/B=1-873.
+DR   PDB; 6OQQ; X-ray; 2.10 A; A/C=1-873.
+DR   PDB; 6PLM; X-ray; 2.59 A; A/B=97-853.
+DR   PDB; 6S5T; EM; 4.15 A; A=1-873.
+DR   PDB; 7MIR; EM; 2.50 A; A=97-851.
+DR   PDB; 7MIS; EM; 2.80 A; A=97-851.
+DR   PDB; 7PPO; EM; 2.91 A; C=99-873.
+DR   PDB; 7PQE; EM; 3.70 A; C=99-873.
+DR   PDBsum; 6K4K; -.
+DR   PDBsum; 6K4L; -.
+DR   PDBsum; 6K4R; -.
+DR   PDBsum; 6OQQ; -.
+DR   PDBsum; 6PLM; -.
+DR   PDBsum; 6S5T; -.
+DR   PDBsum; 7MIR; -.
+DR   PDBsum; 7MIS; -.
+DR   PDBsum; 7PPO; -.
+DR   PDBsum; 7PQE; -.
+DR   AlphaFoldDB; Q5ZTK6; -.
+DR   EMDB; EMD-10100; -.
+DR   EMDB; EMD-13583; -.
+DR   EMDB; EMD-13591; -.
+DR   EMDB; EMD-23862; -.
+DR   EMDB; EMD-23863; -.
+DR   SMR; Q5ZTK6; -.
+DR   STRING; 272624.lpg2155; -.
+DR   PaxDb; 272624-lpg2155; -.
+DR   GeneID; 57036150; -.
+DR   KEGG; lpn:lpg2155; -.
+DR   PATRIC; fig|272624.6.peg.2262; -.
+DR   eggNOG; COG1413; Bacteria.
+DR   HOGENOM; CLU_349104_0_0_6; -.
+DR   OrthoDB; 5649901at2; -.
+DR   Proteomes; UP000000609; Chromosome.
+DR   GO; GO:0008234; F:cysteine-type peptidase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0000166; F:nucleotide binding; IEA:UniProtKB-KW.
+DR   GO; GO:0106438; F:protein-glutamic acid ligase activity, elongating; IEA:RHEA.
+DR   GO; GO:0106437; F:protein-glutamic acid ligase activity, initiating; IEA:RHEA.
+DR   GO; GO:0016740; F:transferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0006508; P:proteolysis; IEA:UniProtKB-KW.
+DR   NCBIfam; NF033873; SidJ_poly_Glu; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Hydrolase; Ligase; Magnesium; Metal-binding;
+KW   Multifunctional enzyme; NAD; Nucleotide-binding; Protease;
+KW   Reference proteome; Thiol protease; Transferase; Virulence.
+FT   CHAIN           1..873
+FT                   /note="Calmodulin-dependent glutamylase SidJ"
+FT                   /id="PRO_0000448404"
+FT   REGION          16..90
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          851..873
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        22..58
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   BINDING         542
+FT                   /ligand="Mg(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:18420"
+FT                   /evidence="ECO:0000269|PubMed:31123136,
+FT                   ECO:0007744|PDB:6OQQ"
+FT   BINDING         545
+FT                   /ligand="Mg(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:18420"
+FT                   /evidence="ECO:0000269|PubMed:31123136,
+FT                   ECO:0007744|PDB:6OQQ"
+FT   MUTAGEN         841
+FT                   /note="I->A: Complete loss of interaction with host
+FT                   calmodulin; in association with A-842."
+FT                   /evidence="ECO:0000269|PubMed:31330532"
+FT   MUTAGEN         842
+FT                   /note="Q->A: Complete loss of interaction with host
+FT                   calmodulin; in association with A-841."
+FT                   /evidence="ECO:0000269|PubMed:31330532"
+FT   STRAND          104..109
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          120..124
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          127..133
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           136..157
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           159..162
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           165..181
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           185..205
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           207..217
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           223..227
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          228..230
+FT                   /evidence="ECO:0007829|PDB:7PPO"
+FT   HELIX           231..234
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           237..245
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           252..260
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   TURN            261..263
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           265..268
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           271..280
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          283..285
+FT                   /evidence="ECO:0007829|PDB:6K4L"
+FT   STRAND          290..294
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          297..300
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           302..310
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          316..320
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   TURN            325..327
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   TURN            343..345
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          346..350
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          353..357
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          361..368
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          370..372
+FT                   /evidence="ECO:0007829|PDB:7MIR"
+FT   HELIX           375..390
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           392..395
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          403..411
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           412..419
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          420..422
+FT                   /evidence="ECO:0007829|PDB:6K4K"
+FT   HELIX           425..431
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          434..445
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           447..450
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          456..458
+FT                   /evidence="ECO:0007829|PDB:6K4L"
+FT   HELIX           460..479
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          491..494
+FT                   /evidence="ECO:0007829|PDB:6PLM"
+FT   HELIX           497..499
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   TURN            501..504
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           510..513
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          514..516
+FT                   /evidence="ECO:0007829|PDB:7MIR"
+FT   STRAND          523..525
+FT                   /evidence="ECO:0007829|PDB:6PLM"
+FT   HELIX           526..529
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   TURN            530..532
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          534..536
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           549..552
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   TURN            553..555
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           557..562
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           564..568
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           573..575
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   TURN            578..581
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          582..586
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           587..592
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           594..623
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           628..654
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           658..668
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           671..681
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          682..684
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           685..688
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           691..702
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          703..705
+FT                   /evidence="ECO:0007829|PDB:6K4K"
+FT   TURN            716..718
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          722..726
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           739..774
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   STRAND          775..777
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           781..793
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           800..816
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   TURN            823..825
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+FT   HELIX           826..845
+FT                   /evidence="ECO:0007829|PDB:6OQQ"
+SQ   SEQUENCE   873 AA;  100201 MW;  8D9CDEEA5ADA679C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Legionella.
+4	5	Legionellaceae
+4	4	Legionellales
+4	3	Gammaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2B4RTX9	RNA-DIRECTED DNA POLYMERA     29.2     0.0028   2   3.8   0.0
+	Iterate                   	   751	   874	    11.0
+	Iterate                   	  1256	  1379	    11.0
+	PF00188	CAP             	    29	   147	    70.1
+	PF00754	F5_F8_type_C    	   358	   472	    59.8
+	PF00078	RVT_1           	   779	  1029	    91.5
+	PF00078	RVT_1           	  1284	  1534	    91.5
+
+D3HM58	SUBSTRATE OF THE DOT/ICM SECR    492.4     2e-144   1   1.3   0.6
+	Iterate                   	   452	   742	   491.8
+	PF26375	SidJ_CaM_N      	   128	   309	   321.9
+
+D3HQH6	SUBSTRATE OF THE DOT/ICM SECR    449.5   2.5e-131   1   1.2   0.2
+	Iterate                   	   349	   639	   449.0
+	PF26375	SidJ_CaM_N      	    26	   206	   297.7
+
+Q5ZSK9	SIDJ {ECO:0008006|GOOGLE:PROT    456.9   1.4e-133   1   1.2   0.5
+	Iterate                   	   399	   690	   456.4
+	PF26375	SidJ_CaM_N      	    74	   255	   316.4
+
+Q5ZTK6	CALMODULIN-DEPENDENT GLUTAMYLAS    689.0   2.6e-204   1   1.3   0.6
+	Iterate                   	   461	   751	   688.4
+	PF26375	SidJ_CaM_N      	   137	   318	   312.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS755467 (E-value: 3.2e-175, Score: 586.8)
+Mentioned as: lpp2094
+Description: hypothetical protein
+Organism: Legionella pneumophila str. Paris
+PMID: 25370836
+Source: EuropePMC
+Title: Comparative analyses of Legionella species identifies genetic features of strains causing Legionnaires' disease
+Journal: Genome biology (2014)
+Snippet: substrates of the Dot/Icm secretion system, including RalF ( lpp1932 / lpg1950 ), SidJ ( lpp2094 / lpg2155 ), SidI ( lpp2572 / lpg2504 ), SdeC ( lpp2092 / lpg2153 ), SidE ( lpp2572 / lpg2504 ), SdcA ( lpp2578 / lpg2510 ) and CegC7 (
+
+================================================================================
+Protein: VIMSS755467 (E-value: 3.2e-175, Score: 586.8)
+Mentioned as: lpp2094
+Description: hypothetical protein
+Organism: Legionella pneumophila str. Paris
+PMID: 22059087
+Source: EuropePMC
+Title: Comparative and functional genomics of legionella identified eukaryotic like proteins as key players in host-pathogen interactions
+Journal: Frontiers in microbiology (2011)
+Snippet: Unknown lpg2154 lpp2093 lpl2082 lpc1603 lpa3086 lpw23281 llo3097 llb2278 + + + sdeC Unknown lpg2155 lpp2094 lpl2083 lpc1604 lpa3087 lpw23291 llo3096 llb2279 + + + sidJ Unknown lpg2156 lpp2095 lpl2084 lpc1605 lpa3088 lpw23301 llo3095 llb2280 + + +? sdeB Unknown lpg2157 lpp2096 lpl2085 lpc1618 lpa3037 lpw23331
+
+================================================================================
+Protein: VIMSS755467 (E-value: 3.2e-175, Score: 586.8)
+Mentioned as: lpp2094
+Description: hypothetical protein
+Organism: Legionella pneumophila str. Paris
+PMID: 20833813
+Source: EuropePMC
+Title: Legionella pneumophila strain 130b possesses a unique combination of type IV secretion systems and novel Dot/Icm secretion system effector proteins
+Journal: Journal of bacteriology (2010)
+Snippet: lpp1955 lpp1959 lpp1961 lpp2076 lpp2082 lpp2092 lpp2093 lpp2094 lpp2096 lpp2099 lpg2166 lpg2176 lpg2200 lpg2215 lpg2216 lpg2222 lpg2224 lpg2248 lpg2298 lpg2300
+
+================================================================================
+Protein: VIMSS752319 (E-value: 1.5e-174, Score: 584.6)
+Mentioned as: lpl2083
+Description: hypothetical protein
+Organism: Legionella pneumophila str. Lens
+PMID: 20174605
+Source: EuropePMC
+Title: Analysis of the Legionella longbeachae genome and transcriptome uncovers unique strategies to cause Legionnaires' disease
+Journal: PLoS genetics (2010)
+Snippet: lpg2137 lpp2076 lpl2066 lpc1586 legK2 STPK lpg2144 lpp2082 lpl2072 lpc1593 ankB/legAU13ceg27 Ankyrin, F-box lpg2155 lpp2094 lpl2083 lpc1604 llo3096 + + + sidJ Unknown lpg2157 lpp2096 lpl2085 lpc1618 sdeC Unknown lpg2176 lpp2128 lpl2102 lpc1635 legS2 Sphingosine-1-phosphate lyase 1 lpg2222 lpp2174 lpl2147 lpc1689 lpnE Sel-1 repeats lpg2298 lpp2246
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+D3HM58.1	AF-D3HM58-F1-model_v4_TED01:128-292	1	AF-D3HM58-F1-model_v4_TED01	128-292	0
+D3HM58.1	AF-D3HM58-F1-model_v4_TED02:335-442	1	AF-D3HM58-F1-model_v4_TED02	335-442	0
+D3HM58.1	AF-D3HM58-F1-model_v4_TED03:743-831	1	AF-D3HM58-F1-model_v4_TED03	743-831	0
+D3HQH6.1	AF-D3HQH6-F1-model_v4_TED01:23-189	1	AF-D3HQH6-F1-model_v4_TED01	23-189	0
+D3HQH6.1	AF-D3HQH6-F1-model_v4_TED02:232-339	1	AF-D3HQH6-F1-model_v4_TED02	232-339	0
+D3HQH6.1	AF-D3HQH6-F1-model_v4_TED03:349-460_472-638	1	AF-D3HQH6-F1-model_v4_TED03	349-638	99.7%
+D3HQH6.1	AF-D3HQH6-F1-model_v4_TED04:665-721	1	AF-D3HQH6-F1-model_v4_TED04	665-721	0
+Q5ZSK9.1	AF-Q5ZSK9-F1-model_v4_TED01:69-226	1	AF-Q5ZSK9-F1-model_v4_TED01	69-226	0
+Q5ZSK9.1	AF-Q5ZSK9-F1-model_v4_TED02:279-389	1	AF-Q5ZSK9-F1-model_v4_TED02	279-389	0
+Q5ZSK9.1	AF-Q5ZSK9-F1-model_v4_TED03:399-691	1	AF-Q5ZSK9-F1-model_v4_TED03	399-691	100.0%
+Q5ZSK9.1	AF-Q5ZSK9-F1-model_v4_TED04:708-788	1	AF-Q5ZSK9-F1-model_v4_TED04	708-788	0
+Q5ZTK6.1	AF-Q5ZTK6-F1-model_v4_TED01:137-318	1	AF-Q5ZTK6-F1-model_v4_TED01	137-318	0
+Q5ZTK6.1	AF-Q5ZTK6-F1-model_v4_TED02:344-450	1	AF-Q5ZTK6-F1-model_v4_TED02	344-450	0
+Q5ZTK6.1	AF-Q5ZTK6-F1-model_v4_TED03:461-751	1	AF-Q5ZTK6-F1-model_v4_TED03	461-751	100.0%
+Q5ZTK6.1	AF-Q5ZTK6-F1-model_v4_TED04:779-851	1	AF-Q5ZTK6-F1-model_v4_TED04	779-851	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q5ZTK6_TED03/Iterate
+GA   27.00 27.00;
+TC   27.90 571.50;
+NC   26.10 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for Q5ZTK6
+RN   [6]
+RM   28497808
+RT   "A unique deubiquitinase that deconjugates phosphoribosyl-linked protein
+RT   ubiquitination.";
+RA   Qiu J., Yu K., Fei X., Liu Y., Nakayasu E.S., Piehowski P.D., Shaw J.B.,
+RA   Puvar K., Das C., Liu X., Luo Z.Q.;
+RL   Cell Res. 27:865-881(2017).
+RC   Function description for Q5ZTK6
+RN   [7]
+RM   31330532
+RT   "Inhibition of bacterial ubiquitin ligases by SidJ-calmodulin catalysed
+RT   glutamylation.";
+RA   Bhogaraju S., Bonn F., Mukherjee R., Adams M., Pfleiderer M.M., Galej W.P.,
+RA   Matkovic V., Lopez-Mosqueda J., Kalayil S., Shin D., Dikic I.;
+RL   Nature 572:382-386(2019).
+RC   Function description for Q5ZTK6
+RN   [8]
+RM   31330531
+RT   "Regulation of phosphoribosyl ubiquitination by a calmodulin-dependent
+RT   glutamylase.";
+RA   Gan N., Zhen X., Liu Y., Xu X., He C., Qiu J., Liu Y., Fujimoto G.M.,
+RA   Nakayasu E.S., Zhou B., Zhao L., Puvar K., Das C., Ouyang S., Luo Z.Q.;
+RL   Nature 572:387-391(2019).
+RC   Function description for Q5ZTK6
+RN   [9]
+RM   31123136
+RT   "Bacterial pseudokinase catalyzes protein polyglutamylation to inhibit the
+RT   SidE-family ubiquitin ligases.";
+RA   Black M.H., Osinski A., Gradowski M., Servage K.A., Pawlowski K.,
+RA   Tomchick D.R., Tagliabracci V.S.;
+RL   Science 364:787-792(2019).
+
+--- End of Current DESC file ---

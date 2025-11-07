@@ -1,0 +1,209 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   GFCA_ECOLI              Reviewed;         101 AA.
+AC   P75885;
+DE   RecName: Full=Threonine-rich inner membrane protein GfcA;
+DE   AltName: Full=Group 4 capsule protein A homolog;
+DE   Flags: Precursor;
+GN   Name=gfcA; Synonyms=ymcD; OrderedLocusNames=b0987, JW5133;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=8905232; DOI=10.1093/dnares/3.3.137;
+RA   Oshima T., Aiba H., Baba T., Fujita K., Hayashi K., Honjo A., Ikemoto K.,
+RA   Inada T., Itoh T., Kajihara M., Kanai K., Kashimoto K., Kimura S.,
+RA   Kitagawa M., Makino K., Masuda S., Miki T., Mizobuchi K., Mori H.,
+RA   Motomura K., Nakamura Y., Nashimoto H., Nishio Y., Saito N., Sampei G.,
+RA   Seki Y., Tagami H., Takemoto K., Wada C., Yamamoto Y., Yano M.,
+RA   Horiuchi T.;
+RT   "A 718-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 12.7-28.0 min region on the linkage map.";
+RL   DNA Res. 3:137-155(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   TOPOLOGY [LARGE SCALE ANALYSIS].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=15919996; DOI=10.1126/science.1109730;
+RA   Daley D.O., Rapp M., Granseth E., Melen K., Drew D., von Heijne G.;
+RT   "Global topology analysis of the Escherichia coli inner membrane
+RT   proteome.";
+RL   Science 308:1321-1323(2005).
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane; Single-pass membrane
+CC       protein. Note=When the protein is overexpressed.
+CC   -!- CAUTION: In E.coli K12 / MG1655 and K12 / W3110 this operon is silenced
+CC       by an IS1D insertion in the promoter region. {ECO:0000305}.
+DR   EMBL; U00096; AAC74072.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA35752.2; -; Genomic_DNA.
+DR   PIR; A64840; A64840.
+DR   RefSeq; NP_415507.2; NC_000913.3.
+DR   RefSeq; WP_001295358.1; NZ_SSZK01000002.1.
+DR   AlphaFoldDB; P75885; -.
+DR   BioGRID; 4262044; 9.
+DR   DIP; DIP-12710N; -.
+DR   FunCoup; P75885; 17.
+DR   IntAct; P75885; 2.
+DR   STRING; 511145.b0987; -.
+DR   PaxDb; 511145-b0987; -.
+DR   EnsemblBacteria; AAC74072; AAC74072; b0987.
+DR   GeneID; 945029; -.
+DR   KEGG; ecj:JW5133; -.
+DR   KEGG; eco:b0987; -.
+DR   KEGG; ecoc:C3026_06015; -.
+DR   PATRIC; fig|511145.12.peg.1022; -.
+DR   EchoBASE; EB3496; -.
+DR   eggNOG; ENOG5033YAD; Bacteria.
+DR   InParanoid; P75885; -.
+DR   OMA; NIHIGIL; -.
+DR   BioCyc; EcoCyc:G6508-MONOMER; -.
+DR   PRO; PR:P75885; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IDA:EcoCyc.
+PE   1: Evidence at protein level;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome; Signal;
+KW   Transmembrane; Transmembrane helix.
+FT   SIGNAL          1..21
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           22..101
+FT                   /note="Threonine-rich inner membrane protein GfcA"
+FT                   /id="PRO_0000168799"
+FT   TOPO_DOM        22..59
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        60..80
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        81..101
+FT                   /note="Periplasmic"
+FT                   /evidence="ECO:0000255"
+FT   REGION          24..45
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          82..101
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   101 AA;  9508 MW;  AE3E86C5E6166C83 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Shigella.
+5	6	Escherichia.
+10	5	Enterobacteriaceae
+10	4	Enterobacterales
+10	3	Gammaproteobacteria
+10	2	Pseudomonadota
+10	1	Pseudomonadati
+10	0	Bacteria
+Total of 10 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A7ZK90	PUTATIVE INNER MEMBRANE PROTE    188.4    8.7e-53   1   1.0  41.9
+	Iterate                   	     7	   107	   188.3
+
+B2TTQ8	INNER MEMBRANE PROTEIN {ECO:0    188.4    8.7e-53   1   1.0  41.9
+	Iterate                   	     7	   107	   188.3
+
+B7LF95	YMCD PROTEIN {ECO:0000313|EMB    188.7      7e-53   1   1.0  41.9
+	Iterate                   	     1	   101	   188.6
+
+P75885	THREONINE-RICH INNER MEMBRANE P    188.7      7e-53   1   1.0  41.9
+	Iterate                   	     1	   101	   188.6
+
+Q8XC19	O-ANTIGEN CAPSULE PRODUCTION     185.2    8.8e-52   1   1.0  40.9
+	Iterate                   	     1	   101	   185.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P75885 (E-value: 6.2e-55, Score: 188.7)
+Mentioned as: P75885
+Description: Threonine-rich inner membrane protein GfcA
+Organism: Escherichia coli (strain K12)
+PMID: 37342372
+Source: EuropePMC
+Title: Optimized Signal Peptide for Secretory Expression of Human Recombinant Somatropin in <i>E. coli</i>
+Journal: Advanced pharmaceutical bulletin (2023)
+Snippet: (strain K12) P37652 MKRKLFWICAVAMGMSAFPSFMTQA Threonine-rich inner membrane protein GfcA gfcA 21 Escherichia coli (strain K12) P75885 MKHKLSAILMAFMLTTPAAFA Salivary acidic proline -rich phosphoprotein PRH1 22 Homo sapiens P81277 MKVLRAWLLCLLMLGLALRGAA Liver -expressed antimicrobial peptide2 LEAP2 22 Homo sapiens Q969E1 MWHLKLCAVLMIFLLLLGQIDG Secreted protein C10orf99 C10orf99 24 Homo sapiens Q6UWK7
+
+================================================================================
+Protein: P75885 (E-value: 6.2e-55, Score: 188.7)
+Mentioned as: P75885
+Description: Threonine-rich inner membrane protein GfcA
+Organism: Escherichia coli (strain K12)
+PMID: 33449963
+Source: EuropePMC
+Title: Functional screening of a Caatinga goat (Capra hircus) rumen metagenomic library reveals a novel GH3 β-xylosidase.
+Journal: PloS one (2021)
+Snippet: 16 and 43% identical to GFCA_ECOLI, from threonine-rich inner membrane protein gfcA (UniProt acession number P75885). The Software SignalP 5.0 predicts a signal peptide with a cleavage site between positions 15 and 16: LAG-CQ (probability: 0.9957). The signal peptide type was the Sec/SPII: lipoprotein signal peptide
+
+================================================================================
+Protein: VIMSS72716 (E-value: 9.8e-54, Score: 184.9)
+Mentioned as: Z1404
+Description: orf, hypothetical protein
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 28274217
+Source: EuropePMC
+Title: Disruption of rcsB by a duplicated sequence in a curli-producing Escherichia coli O157:H7 results in differential gene expression in relation to biofilm formation, stress responses and metabolism
+Journal: BMC microbiology (2017)
+Snippet: 0.04 ybjO Z1085 Predicted inner membrane protein 2.35 4.3E-04 ybjX Z1112 Unknown 1.51 0.01 ymcD Z1404 Unknown +1.48 3.7E-03 Z1528 Unknown +2.11 0.03 yceI Z1692 Unknown 2.24 5.0E-03 yceB Z1700 Unknown 1.89 5.0E-04 ycfJ Z1749 Unknown 24.98 1.5E-14 Z2283 Unknown 4.39 3.0#-06 ydeH Z2292 Unknown +2.69
+
+================================================================================
+Protein: VIMSS72716 (E-value: 9.8e-54, Score: 184.9)
+Mentioned as: Z1404
+Description: orf, hypothetical protein
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 27965650
+Source: EuropePMC
+Title: An Integrative Genomic Island Affects the Adaptations of the Piezophilic Hyperthermophilic Archaeon <i>Pyrococcus yayanosii</i> to High Temperature and High Hydrostatic Pressure
+Journal: Frontiers in microbiology (2016)
+Snippet: This study pLMOZ1402 Z1402 was inserted in pLMO12102 at Kpn I site. This study pLMOZ1404 Z1404 was inserted in pLMO12102 at Kpn I site. This study pLMOZ1405 Z1405 was inserted in pLMO12102 at Kpn I site. This study Artificial GIs DNA segments Z1402 Cloning and fusion
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+B7LF95.1	AF-B7LF95-F1-model_v4_TED01:2-83	1	AF-B7LF95-F1-model_v4_TED01	2-83	81.2%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75885/Iterate
+GA   27.00 27.00;
+TC   180.30 180.20;
+NC   26.60 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

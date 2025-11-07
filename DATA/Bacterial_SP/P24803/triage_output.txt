@@ -1,0 +1,99 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   IAD1_ENTFA              Reviewed;          22 AA.
+AC   P24803;
+DE   RecName: Full=Sex pheromone inhibitor determinant;
+DE   AltName: Full=iAD1;
+DE   Flags: Precursor;
+GN   Name=iad; OrderedLocusNames=EF_A0005.1;
+OS   Enterococcus faecalis (strain ATCC 700802 / V583).
+OG   Plasmid pTEF1, and Plasmid pAD1.
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Enterococcaceae;
+OC   Enterococcus.
+OX   NCBI_TaxID=226185;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   PLASMID=pAD1;
+RX   PubMed=2128961; DOI=10.1016/0147-619x(90)90019-9;
+RA   Clewell D.B., Pontius L.T., An F.Y., Ike Y., Suzuki A., Nakayama J.;
+RT   "Nucleotide sequence of the sex pheromone inhibitor (iAD1) determinant of
+RT   Enterococcus faecalis conjugative plasmid pAD1.";
+RL   Plasmid 24:156-161(1990).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700802 / V583; PLASMID=pTEF1;
+RX   PubMed=12663927; DOI=10.1126/science.1080613;
+RA   Paulsen I.T., Banerjei L., Myers G.S.A., Nelson K.E., Seshadri R.,
+RA   Read T.D., Fouts D.E., Eisen J.A., Gill S.R., Heidelberg J.F., Tettelin H.,
+RA   Dodson R.J., Umayam L.A., Brinkac L.M., Beanan M.J., Daugherty S.C.,
+RA   DeBoy R.T., Durkin S.A., Kolonay J.F., Madupu R., Nelson W.C.,
+RA   Vamathevan J.J., Tran B., Upton J., Hansen T., Shetty J., Khouri H.M.,
+RA   Utterback T.R., Radune D., Ketchum K.A., Dougherty B.A., Fraser C.M.;
+RT   "Role of mobile DNA in the evolution of vancomycin-resistant Enterococcus
+RT   faecalis.";
+RL   Science 299:2071-2074(2003).
+CC   -!- FUNCTION: Acts as a competitive inhibitor of the CAD1 pheromone.
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000305}.
+CC   -!- MISCELLANEOUS: IAD1 appears to be a component of its own signal
+CC       sequence.
+DR   EMBL; M62888; AAA98039.1; -; Genomic_DNA.
+DR   EMBL; AE016833; AAO83007.1; -; Genomic_DNA.
+DR   PIR; A37391; A37391.
+DR   RefSeq; NP_816936.1; NC_004669.1.
+DR   RefSeq; WP_011109599.1; NZ_KE136530.1.
+DR   AlphaFoldDB; P24803; -.
+DR   EnsemblBacteria; AAO83007; AAO83007; EF_A00051.
+DR   KEGG; efa:EFA00051; -.
+DR   HOGENOM; CLU_3424700_0_0_9; -.
+DR   Proteomes; UP000001415; Plasmid pTEF1.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome; Secreted.
+FT   PROPEP          1..14
+FT                   /evidence="ECO:0000255"
+FT                   /id="PRO_0000021476"
+FT   PEPTIDE         15..22
+FT                   /note="Sex pheromone inhibitor determinant"
+FT                   /id="PRO_0000021477"
+SQ   SEQUENCE   22 AA;  2459 MW;  D0EAEBDF1BCD9D08 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Enterococcus
+1	5	Enterococcaceae
+1	4	Lactobacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P24803	SEX PHEROMONE INHIBITOR DETERMI     56.9    3.1e-12   1   1.0   2.6
+	P24803                    	     1	    22	    56.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P24803
+GA   27.00 27.00;
+TC   35.40 56.80;
+NC   26.60 18.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

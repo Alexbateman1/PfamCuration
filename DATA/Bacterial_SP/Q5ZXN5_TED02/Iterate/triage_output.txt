@@ -1,0 +1,558 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   LEM3_LEGPH              Reviewed;         570 AA.
+AC   Q5ZXN5;
+DE   RecName: Full=Phosphocholine hydrolase Lem3;
+DE            EC=3.1.3.-;
+DE   AltName: Full=Dephosphocholinase Lem3;
+GN   Name=lem3; OrderedLocusNames=lpg0696;
+OS   Legionella pneumophila subsp. pneumophila (strain Philadelphia 1 / ATCC
+OS   33152 / DSM 7513).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Legionellales; Legionellaceae; Legionella.
+OX   NCBI_TaxID=272624;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Philadelphia 1 / ATCC 33152 / DSM 7513;
+RX   PubMed=15448271; DOI=10.1126/science.1099776;
+RA   Chien M., Morozova I., Shi S., Sheng H., Chen J., Gomez S.M., Asamani G.,
+RA   Hill K., Nuara J., Feder M., Rineer J., Greenberg J.J., Steshenko V.,
+RA   Park S.H., Zhao B., Teplitskaya E., Edwards J.R., Pampou S., Georghiou A.,
+RA   Chou I.-C., Iannuccilli W., Ulz M.E., Kim D.H., Geringer-Sameth A.,
+RA   Goldsberry C., Morozov P., Fischer S.G., Segal G., Qu X., Rzhetsky A.,
+RA   Zhang P., Cayanis E., De Jong P.J., Ju J., Kalachikov S., Shuman H.A.,
+RA   Russo J.J.;
+RT   "The genomic sequence of the accidental pathogen Legionella pneumophila.";
+RL   Science 305:1966-1968(2004).
+RN   [2]
+RP   FUNCTION, CATALYTIC ACTIVITY, AND SUBCELLULAR LOCATION.
+RX   PubMed=22158903; DOI=10.1073/pnas.1114023109;
+RA   Tan Y., Arnold R.J., Luo Z.Q.;
+RT   "Legionella pneumophila regulates the small GTPase Rab1 activity by
+RT   reversible phosphorylcholination.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 108:21212-21217(2011).
+RN   [3]
+RP   FUNCTION, AND BIOPHYSICOCHEMICAL PROPERTIES.
+RX   PubMed=22307087; DOI=10.1038/emboj.2012.16;
+RA   Goody P.R., Heller K., Oesterlin L.K., Muller M.P., Itzen A., Goody R.S.;
+RT   "Reversible phosphocholination of Rab proteins by Legionella pneumophila
+RT   effector proteins.";
+RL   EMBO J. 31:1774-1784(2012).
+RN   [4]
+RP   FUNCTION.
+RX   PubMed=22411835; DOI=10.1073/pnas.1121161109;
+RA   Oesterlin L.K., Goody R.S., Itzen A.;
+RT   "Posttranslational modifications of Rab proteins cause effective
+RT   displacement of GDP dissociation inhibitor.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:5621-5626(2012).
+CC   -!- FUNCTION: Virulence effector that plays a role in hijacking the host
+CC       vesicular trafficking by recruiting the small guanosine triphosphatase
+CC       (GTPase) Rab1 to the cytosolic face of the Legionella-containing
+CC       vacuole (LCVs). Acts as a phosphocholine hydrolase by mediating the
+CC       hydrolysis of phosphocholine to Ser residues of host RAB1 (RAB1A, RAB1B
+CC       or RAB1C). Dephosphocholination of target proteins restores
+CC       accessibility to GTPase effector LepB. Can act on both GDP-bound and
+CC       GTP-bound Rab proteins. {ECO:0000269|PubMed:22158903,
+CC       ECO:0000269|PubMed:22307087, ECO:0000269|PubMed:22411835}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=[Rab1 protein]-O-phosphocholine-L-serine + H2O = [Rab1
+CC         protein]-L-serine + phosphocholine + H(+); Xref=Rhea:RHEA:56084,
+CC         Rhea:RHEA-COMP:14085, Rhea:RHEA-COMP:14376, ChEBI:CHEBI:15377,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:29999, ChEBI:CHEBI:138595,
+CC         ChEBI:CHEBI:295975; Evidence={ECO:0000269|PubMed:22158903};
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=65.5 uM for GDP-bound RAB1B {ECO:0000269|PubMed:22307087};
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000269|PubMed:22158903}. Host
+CC       cytoplasm {ECO:0000269|PubMed:22158903}. Note=Translocated into the
+CC       host cell via the type IV secretion system (T4SS).
+DR   EMBL; AE017354; AAU26785.1; -; Genomic_DNA.
+DR   RefSeq; WP_010946433.1; NC_002942.5.
+DR   RefSeq; YP_094732.1; NC_002942.5.
+DR   PDB; 8AGG; X-ray; 3.60 A; A=1-570.
+DR   PDB; 8ALK; X-ray; 2.15 A; A=21-486.
+DR   PDB; 8ANP; X-ray; 2.20 A; A/B/C/D=21-486.
+DR   PDBsum; 8AGG; -.
+DR   PDBsum; 8ALK; -.
+DR   PDBsum; 8ANP; -.
+DR   AlphaFoldDB; Q5ZXN5; -.
+DR   SASBDB; Q5ZXN5; -.
+DR   SMR; Q5ZXN5; -.
+DR   PaxDb; 272624-lpg0696; -.
+DR   GeneID; 57034689; -.
+DR   KEGG; lpn:lpg0696; -.
+DR   PATRIC; fig|272624.6.peg.718; -.
+DR   eggNOG; COG1391; Bacteria.
+DR   HOGENOM; CLU_514617_0_0_6; -.
+DR   OrthoDB; 5651943at2; -.
+DR   SABIO-RK; Q5ZXN5; -.
+DR   Proteomes; UP000000609; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0030430; C:host cell cytoplasm; IDA:UniProtKB.
+DR   GO; GO:0044606; F:phosphocholine hydrolase activity; IDA:UniProtKB.
+DR   GO; GO:0043087; P:regulation of GTPase activity; IDA:UniProtKB.
+DR   InterPro; IPR036457; PPM-type-like_dom_sf.
+DR   SUPFAM; SSF81606; PP2C-like; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Host cytoplasm; Hydrolase; Reference proteome; Secreted;
+KW   Virulence.
+FT   CHAIN           1..570
+FT                   /note="Phosphocholine hydrolase Lem3"
+FT                   /id="PRO_0000417546"
+FT   STRAND          22..24
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          29..32
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           35..38
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           43..50
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          51..57
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          60..66
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          71..73
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          75..79
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          82..90
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          96..106
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           114..133
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           138..146
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          166..176
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   TURN            177..179
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          180..190
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          192..196
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          202..206
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          208..212
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          217..219
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   TURN            223..227
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   TURN            233..235
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          237..243
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          248..252
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           254..257
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          262..267
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          269..276
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           278..282
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           283..288
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           296..327
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           330..332
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           338..347
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           351..362
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          374..376
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           380..389
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          395..402
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           406..416
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           418..420
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           421..424
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           425..430
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           435..447
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          454..457
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           458..460
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   STRAND          464..467
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+FT   HELIX           469..482
+FT                   /evidence="ECO:0007829|PDB:8ALK"
+SQ   SEQUENCE   570 AA;  64738 MW;  9EB1F5D37335E8A7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Legionella.
+3	5	Legionellaceae
+3	4	Legionellales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A078L2I4	PHOSPHOCHOLINE HYDROLASE      38.3      5e-06   1   1.6   0.0
+	Iterate                   	   296	   370	    37.2
+
+A0A2P6QCW8	PUTATIVE TETRATRICOPEPTID     35.3    4.5e-05   3   4.6   0.0
+	Iterate                   	   478	   530	    14.2
+	Iterate                   	   333	   395	     9.6
+	Iterate                   	   524	   583	     5.2
+	PF13812	PPR_3           	   197	   256	    30.6
+	PF12854	PPR_1           	   205	   238	    37.8
+	PF13041	PPR_2           	   209	   258	    55.2
+	PF01535	PPR             	   212	   242	      25
+	PF23276	TPR_24          	   230	   343	    23.3
+	PF13812	PPR_3           	   232	   295	    33.3
+	PF12854	PPR_1           	   240	   273	      43
+	PF13041	PPR_2           	   244	   294	    45.3
+	PF01535	PPR             	   247	   275	    19.5
+	PF17177	PPR_long        	   257	   403	    38.9
+	PF23276	TPR_24          	   259	   366	    23.4
+	PF12854	PPR_1           	   277	   309	    41.7
+	PF13041	PPR_2           	   280	   329	    64.2
+	PF01535	PPR             	   283	   313	    30.2
+	PF13812	PPR_3           	   303	   365	    45.7
+	PF12854	PPR_1           	   311	   344	    50.2
+	PF13041	PPR_2           	   315	   364	    69.4
+	PF01535	PPR             	   318	   348	    27.3
+	PF12854	PPR_1           	   346	   379	    35.8
+	PF13041	PPR_2           	   350	   398	    51.1
+	PF01535	PPR             	   353	   383	    24.2
+	PF13812	PPR_3           	   373	   417	    18.8
+	PF12854	PPR_1           	   381	   414	    43.7
+	PF13041	PPR_2           	   385	   434	      60
+	PF01535	PPR             	   388	   418	    36.7
+	PF23276	TPR_24          	   400	   523	      27
+	PF13812	PPR_3           	   413	   470	    21.3
+	PF12854	PPR_1           	   416	   449	    39.1
+	PF13041	PPR_2           	   420	   469	    68.6
+	PF01535	PPR             	   423	   453	    33.5
+	PF13812	PPR_3           	   443	   510	    37.4
+	PF12854	PPR_1           	   451	   489	    41.1
+	PF01535	PPR             	   458	   493	    19.4
+	PF13041	PPR_2           	   495	   544	    57.1
+	PF01535	PPR             	   498	   528	      17
+	PF13812	PPR_3           	   519	   579	    38.6
+	PF12854	PPR_1           	   526	   559	    48.8
+	PF13041	PPR_2           	   530	   578	    60.1
+	PF01535	PPR             	   533	   563	    38.8
+	PF01535	PPR             	   568	   598	    20.4
+
+A0A813F3U8	PENTACOTRIPEPTIDE-REPEAT      38.4    4.9e-06   5   7.9   0.1
+	Iterate                   	   184	   233	     6.2
+	Iterate                   	   359	   409	     6.2
+	Iterate                   	   253	   302	     5.2
+	Iterate                   	   143	   195	     4.9
+	Iterate                   	   324	   368	     4.5
+	PF13812	PPR_3           	     2	    59	    17.4
+	PF23276	TPR_24          	     4	   107	    35.1
+	PF01535	PPR             	    12	    42	    20.4
+	PF17177	PPR_long        	    51	   215	    32.8
+	PF13812	PPR_3           	    67	   129	    24.1
+	PF13041	PPR_2           	    79	   128	      32
+	PF13812	PPR_3           	   102	   163	    38.7
+	PF01535	PPR             	   117	   147	    19.1
+	PF13812	PPR_3           	   139	   199	    39.6
+	PF13041	PPR_2           	   149	   198	    43.9
+	PF01535	PPR             	   152	   182	    21.2
+	PF17177	PPR_long        	   153	   320	    45.7
+	PF12854	PPR_1           	   180	   211	    26.7
+	PF13041	PPR_2           	   184	   233	    47.6
+	PF01535	PPR             	   187	   217	    22.4
+	PF13812	PPR_3           	   208	   268	    40.4
+	PF23276	TPR_24          	   213	   317	    25.2
+	PF13041	PPR_2           	   219	   268	    44.9
+	PF01535	PPR             	   222	   252	    22.3
+	PF13812	PPR_3           	   244	   304	    44.6
+	PF12854	PPR_1           	   250	   281	    26.1
+	PF13041	PPR_2           	   254	   303	    44.7
+	PF01535	PPR             	   257	   287	    22.9
+	PF01535	PPR             	   292	   322	    20.8
+	PF13812	PPR_3           	   312	   374	    39.7
+	PF12854	PPR_1           	   320	   351	    24.2
+	PF17177	PPR_long        	   324	   465	    38.5
+	PF13041	PPR_2           	   324	   373	    45.7
+	PF23276	TPR_24          	   325	   457	    27.9
+	PF01535	PPR             	   327	   357	    22.3
+	PF12854	PPR_1           	   355	   386	    26.7
+	PF13041	PPR_2           	   359	   408	    47.6
+	PF01535	PPR             	   362	   392	    22.4
+	PF13812	PPR_3           	   383	   444	    42.8
+	PF13041	PPR_2           	   394	   443	    41.9
+	PF01535	PPR             	   397	   427	      17
+	PF17177	PPR_long        	   398	   548	      37
+	PF12854	PPR_1           	   425	   454	    24.9
+	PF01535	PPR             	   432	   458	    18.9
+	PF13812	PPR_3           	   454	   514	    43.3
+	PF13041	PPR_2           	   464	   513	    49.4
+	PF01535	PPR             	   467	   497	    20.6
+	PF13812	PPR_3           	   488	   549	    32.4
+	PF01535	PPR             	   502	   530	    11.6
+
+A0AA38F9L6	PENTATRICOPEPTIDE REPEAT-     40.0    1.5e-06   2  11.3   2.5
+	Iterate                   	   733	   779	     5.9
+	Iterate                   	   273	   328	     4.8
+	PF23276	TPR_24          	    79	   200	    26.9
+	PF13041	PPR_2           	   107	   155	    35.1
+	PF01535	PPR             	   109	   139	    18.7
+	PF23276	TPR_24          	   230	   341	    31.4
+	PF13812	PPR_3           	   231	   293	    36.4
+	PF12854	PPR_1           	   239	   272	    39.2
+	PF13041	PPR_2           	   243	   292	      62
+	PF01535	PPR             	   246	   276	    32.3
+	PF12854	PPR_1           	   274	   307	    42.1
+	PF01535	PPR             	   281	   311	    24.6
+	PF13041	PPR_2           	   285	   327	    44.5
+	PF13812	PPR_3           	   301	   362	    34.6
+	PF12854	PPR_1           	   309	   342	    41.3
+	PF13041	PPR_2           	   313	   362	    66.1
+	PF17177	PPR_long        	   316	   472	    33.8
+	PF01535	PPR             	   316	   346	    33.3
+	PF12854	PPR_1           	   344	   377	    41.3
+	PF13041	PPR_2           	   348	   397	      60
+	PF01535	PPR             	   351	   381	    24.9
+	PF13812	PPR_3           	   371	   432	    37.5
+	PF12854	PPR_1           	   379	   412	    42.3
+	PF13041	PPR_2           	   384	   432	    63.7
+	PF01535	PPR             	   386	   416	    29.3
+	PF12854	PPR_1           	   414	   447	    49.8
+	PF13812	PPR_3           	   419	   467	    25.3
+	PF13041	PPR_2           	   421	   467	    57.8
+	PF01535	PPR             	   421	   451	    32.3
+	PF13812	PPR_3           	   441	   503	    30.7
+	PF12854	PPR_1           	   449	   482	    32.9
+	PF01535	PPR             	   456	   485	    17.8
+	PF13812	PPR_3           	   476	   538	    27.1
+	PF12854	PPR_1           	   485	   517	    28.5
+	PF13041	PPR_2           	   488	   537	    57.2
+	PF01535	PPR             	   491	   521	    20.3
+	PF12854	PPR_1           	   519	   552	    44.6
+	PF13041	PPR_2           	   523	   572	    65.3
+	PF01535	PPR             	   526	   556	    31.1
+	PF17177	PPR_long        	   528	   706	    37.2
+	PF13812	PPR_3           	   546	   608	    31.6
+	PF12854	PPR_1           	   554	   587	    43.6
+	PF13041	PPR_2           	   558	   607	    65.1
+	PF01535	PPR             	   561	   591	    30.4
+	PF12854	PPR_1           	   589	   622	    50.2
+	PF13041	PPR_2           	   594	   642	    62.9
+	PF01535	PPR             	   596	   626	      32
+	PF13812	PPR_3           	   616	   677	    37.3
+	PF12854	PPR_1           	   624	   657	    52.5
+	PF23276	TPR_24          	   629	   726	      28
+	PF01535	PPR             	   631	   661	    35.4
+	PF13041	PPR_2           	   632	   677	    57.5
+	PF13812	PPR_3           	   651	   713	    38.8
+	PF12854	PPR_1           	   659	   692	    36.4
+	PF01535	PPR             	   666	   695	    23.8
+	PF13041	PPR_2           	   670	   712	    39.4
+	PF17177	PPR_long        	   680	   785	    27.9
+	PF13812	PPR_3           	   686	   748	      30
+	PF12854	PPR_1           	   695	   727	    38.2
+	PF13041	PPR_2           	   698	   747	    62.2
+	PF01535	PPR             	   701	   731	    28.1
+	PF13812	PPR_3           	   721	   778	    33.7
+	PF23276	TPR_24          	   721	   831	    22.8
+	PF12854	PPR_1           	   729	   762	    53.3
+	PF13041	PPR_2           	   733	   782	    64.7
+	PF01535	PPR             	   736	   766	    36.4
+	PF13812	PPR_3           	   756	   818	    29.9
+	PF01535	PPR             	   771	   801	    14.3
+	PF13041	PPR_2           	   775	   817	    33.7
+	PF12854	PPR_1           	   799	   830	    39.7
+	PF01535	PPR             	   806	   836	    20.8
+	PF12854	PPR_1           	   834	   867	    26.2
+	PF13041	PPR_2           	   838	   887	    47.2
+	PF01535	PPR             	   841	   871	      25
+	PF13812	PPR_3           	   861	   923	    30.5
+	PF12854	PPR_1           	   869	   902	    34.1
+	PF13041	PPR_2           	   873	   922	      50
+	PF01535	PPR             	   876	   906	    17.9
+	PF12854	PPR_1           	   904	   937	    50.2
+	PF13041	PPR_2           	   908	   957	    69.2
+	PF01535	PPR             	   911	   941	    35.1
+	PF13812	PPR_3           	   931	   993	    34.9
+	PF12854	PPR_1           	   939	   972	    42.3
+	PF13041	PPR_2           	   943	   992	    59.1
+	PF01535	PPR             	   946	   976	    28.5
+	PF12854	PPR_1           	   974	  1006	    35.6
+	PF13812	PPR_3           	   978	  1028	    31.6
+	PF01535	PPR             	   981	  1011	    16.7
+	PF13041	PPR_2           	   994	  1062	    47.9
+	PF12854	PPR_1           	  1009	  1042	    44.8
+	PF01535	PPR             	  1016	  1046	    27.9
+
+Q5ZXN5	PHOSPHOCHOLINE HYDROLASE LEM3 E    179.6    3.9e-50   1   1.8   2.6
+	Iterate                   	   315	   390	   178.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS757159 (E-value: 1.2e-37, Score: 133.2)
+Mentioned as: lpg0696
+Description: Hypothetical protein
+Organism: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+PMID: 37156500
+Source: EuropePMC
+Title: Legionella pneumophila-mediated host posttranslational modifications
+Journal: Journal of molecular cell biology (2023)
+Snippet: is first identified as an Icm/Dot effector that functions to antagonize the activity of AnkX (Lpg0696) ( Table 2 and Figure 1H ; Tan etal., 2011 ). Lem3 removes the phosphocholination moiety from phosphocholinated RAB1, restoring its accessibility to be inactivated by LepB. DeADP-ribosylation Along with
+
+================================================================================
+Protein: VIMSS757159 (E-value: 1.2e-37, Score: 133.2)
+Mentioned as: lpg0696
+Description: Hypothetical protein
+Organism: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+PMID: 34695417
+Source: EuropePMC
+Title: The unity of opposites: Strategic interplay between bacterial effectors to regulate cellular homeostasis
+Journal: The Journal of biological chemistry (2021)
+Snippet: the enzymes catalytic site 4RXI , 4RXV , 4WRP - 4XA9 8 AnkX (lpg0695) Lem3 (lpg0696) LegA8 (AnkX) catalyzes the transfer of phosphorylcholine to Ser76 of Rab1 A dephosphorylcholinase that reverses AnkX-mediated modification on Rab1 4BEP - 4BER , 4BES , 4BET , 6SKU The table
+
+================================================================================
+Protein: VIMSS757159 (E-value: 1.2e-37, Score: 133.2)
+Mentioned as: lpg0696
+Description: Hypothetical protein
+Organism: Legionella pneumophila subsp. pneumophila str. Philadelphia 1
+PMID: 33718265
+Source: EuropePMC
+Title: Interesting Biochemistries in the Structure and Function of Bacterial Effectors
+Journal: Frontiers in cellular and infection microbiology (2021)
+Snippet: protein-protein interactions, mediate intramolecular interactions within AnkX. Of note, a second effector from Legionella , Lpg0696 (Lem3) has the ability to remove the phosphocholine group from Rab1, restoring the GTPase to its unmodified state ( Tan etal., 2011 ; Goody etal., 2012 ; Heller etal., 2015
+
+================================================================================
+Protein: VIMSS754098 (E-value: 3.5e-37, Score: 131.8)
+Mentioned as: lpp0751
+Description: hypothetical protein
+Organism: Legionella pneumophila str. Paris
+PMID: 22059087
+Source: EuropePMC
+Title: Comparative and functional genomics of legionella identified eukaryotic like proteins as key players in host-pathogen interactions
+Journal: Frontiers in microbiology (2011)
+Snippet: lpc2651 lpa1005 lpw07161 wipB Unknown lpg0695 lpp0750 lpl0732 lpc2599 lpa1082 lpw07721 ankN/ankX legA8 Ankyrin lpg0696 lpp0751 lpl0733 lpc2598 lpa1084 lpw07731 lem3 Unknown lpg0716 lpp0782 lpl0753 lpc2577 lpa1108 lpw07931 + + Unknown lpg0733 lpp0799 lpl0770 lpc2559 lpa1135 lpw08111 llo0831 llb0892 + + + ravH Unknown lpg0796 lpp0859
+
+================================================================================
+Protein: VIMSS754098 (E-value: 3.5e-37, Score: 131.8)
+Mentioned as: lpp0751
+Description: hypothetical protein
+Organism: Legionella pneumophila str. Paris
+PMID: 20833813
+Source: EuropePMC
+Title: Legionella pneumophila strain 130b possesses a unique combination of type IV secretion systems and novel Dot/Icm secretion system effector proteins
+Journal: Journal of bacteriology (2010)
+Snippet: lpc2344 lpc2324 lpp0675 lpp0688 lpp0696/7 (p) lpp0750 lpp0751 lpp0959 lpp1002 lpp1007 lpp1025 lpc2154 (p) lpc2142 lpp1101 lpp1111 lpc0578 lpc0607 lpc0608
+
+================================================================================
+Protein: Q3EDF8 (E-value: 1.5e-06, Score: 33.6)
+Mentioned as: Q3EDF8
+Description: Pentatricopeptide repeat-containing protein At1g09900
+Organism: Arabidopsis thaliana
+PMID: 27856706
+Source: EuropePMC
+Title: Osmotic stress is accompanied by protein glycation in Arabidopsis thaliana
+Journal: Journal of experimental botany (2016)
+Snippet: OF SNC1 1 2 5 [CEL]MDRAIEYLERMVS[CMA] 1022 2 2.3 22.68 K 394 , R 408 Q3EDF8 Pentatricopeptide repeat-containing protein At1g09900 2 6 CNPSVLWCYKDKLDISSH[CML]QK 1307.61 2 2.3 28.65 K 68 Q9M2Q4 RNA cytidine acetyltransferase 2 2 7 FGKVGADWAY[GLAP]GMREK 1038.5 2 2.5 32.5 K 564 Q9LER0 Pentatricopeptide repeat-containing
+
+================================================================================
+Protein: VIMSS10097717 (E-value: 3e-06, Score: 32.7)
+Mentioned as: AT3G53700
+Description: MEE40 (maternal effect embryo arrest 40)
+Organism: Arabidopsis thaliana
+PMID: 38337989
+Source: EuropePMC
+Title: Genome-Wide Association Study (GWAS) for Identifying SNPs and Genes Related to Phosphate-Induced Phenotypic Traits in Tomato (<i>Solanum lycopersicum</i> L.)
+Journal: Plants (Basel, Switzerland) (2024)
+Snippet: CELL DENSITY 1, Protein of unknown function (DUF3411) LP Solyc09g010450 Pentatricopeptide repeat Tetratricopeptide-like helical domain At3g53700 : maternal effect embryo arrest 40/Pentatricopeptide repeat (PPR) superfamily protein Solyc09g010460 translation initiation factor 3 subunit A (EIF3A) At3g53700 : maternal effect embryo arrest 40/Pentatricopeptide repeat (PPR) superfamily protein Solyc09g010690
+
+================================================================================
+Protein: VIMSS10097717 (E-value: 3e-06, Score: 32.7)
+Mentioned as: AT3G53700
+Description: MEE40 (maternal effect embryo arrest 40)
+Organism: Arabidopsis thaliana
+PMID: 35222543
+Source: EuropePMC
+Title: Genetic Insight Into the Insect Resistance in Bread Wheat Exploiting the Untapped Natural Diversity
+Journal: Frontiers in genetics (2022)
+Snippet: ( Triticum aestivum ), hypothetical protein CFC21_026517, partial ( Triticum aestivum ), pentatricopeptide repeatcontaining protein At3g53700, chloroplastic-like ( Triticum dicoccoides ), PREDICTED: HBS1-like protein ( Brassica oleracea var. oleracea), probable leucine-rich repeat receptor-like serine/threonine-protein kinase At3g14840 isoform X3 ( Triticum dicoccoides ), sacsin-like isoform X1 (
+
+================================================================================
+Protein: VIMSS10097717 (E-value: 3e-06, Score: 32.7)
+Mentioned as: AT3G53700
+Description: MEE40 (maternal effect embryo arrest 40)
+Organism: Arabidopsis thaliana
+PMID: 33868334
+Source: EuropePMC
+Title: General Control Non-derepressible 1 (AtGCN1) Is Important for Flowering Time, Plant Growth, Seed Development, and the Transcription/Translation of Specific Genes in <i>Arabidopsis</i>
+Journal: Frontiers in plant science (2021)
+Snippet: (TPR1) AT3G48110 29.99 24.44 29.26 32.77 12.10 5.46 2.22 11.16 8.13 1.15 EMBRYO-DEFECTIVE-DEVELOPMENT 1 (EDD1) AT3G53700 12.95 16.86 11.82 15.47 9.80 5.30 1.85 7.72 5.37 0.89 MATERNAL EFFECT EMBRYO ARREST 40 (MEE40) AT3G62680 52.87 78.90 58.28 55.45 11.04 5.90 1.87 10.61 8.04 0.90 PROLINE-RICH PROTEIN 3
+
+================================================================================
+
+... (truncated - showing first 100 of 231 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A078L2I4.1	AF-A0A078L2I4-F1-model_v4_TED01:6-293_375-384	1	AF-A0A078L2I4-F1-model_v4_TED01	6-384	100.0%
+A0A078L2I4.1	AF-A0A078L2I4-F1-model_v4_TED02:298-369	1	AF-A0A078L2I4-F1-model_v4_TED02	298-369	96.0%
+A0A078L2I4.1	AF-A0A078L2I4-F1-model_v4_TED03:448-530	1	AF-A0A078L2I4-F1-model_v4_TED03	448-530	0
+A0A0W0XXC2.1	AF-A0A0W0XXC2-F1-model_v4_TED02:306-370	1	AF-A0A0W0XXC2-F1-model_v4_TED02	306-370	87.8%
+A0A0W0XXC2.1	AF-A0A0W0XXC2-F1-model_v4_TED01:8-21_30-296_373-384	1	AF-A0A0W0XXC2-F1-model_v4_TED01	8-384	100.0%
+A0A0W0XXC2.1	AF-A0A0W0XXC2-F1-model_v4_TED03:449-553	1	AF-A0A0W0XXC2-F1-model_v4_TED03	449-553	0
+Q5ZXN5.1	AF-Q5ZXN5-F1-model_v4_TED01:34-151_161-312_394-404	1	AF-Q5ZXN5-F1-model_v4_TED01	34-404	100.0%
+Q5ZXN5.1	AF-Q5ZXN5-F1-model_v4_TED02:315-390	1	AF-Q5ZXN5-F1-model_v4_TED02	315-390	100.0%
+Q5ZXN5.1	AF-Q5ZXN5-F1-model_v4_TED03:407-412_425-457_467-570	1	AF-Q5ZXN5-F1-model_v4_TED03	407-570	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q5ZXN5_TED02/Iterate
+GA   27.00 27.00;
+TC   27.00 126.40;
+NC   26.90 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for Q5ZXN5
+RN   [2]
+RM   22158903
+RT   "Legionella pneumophila regulates the small GTPase Rab1 activity by
+RT   reversible phosphorylcholination.";
+RA   Tan Y., Arnold R.J., Luo Z.Q.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 108:21212-21217(2011).
+RC   Function description for Q5ZXN5
+RN   [3]
+RM   22307087
+RT   "Reversible phosphocholination of Rab proteins by Legionella pneumophila
+RT   effector proteins.";
+RA   Goody P.R., Heller K., Oesterlin L.K., Muller M.P., Itzen A., Goody R.S.;
+RL   EMBO J. 31:1774-1784(2012).
+RC   Function description for Q5ZXN5
+RN   [4]
+RM   22411835
+RT   "Posttranslational modifications of Rab proteins cause effective
+RT   displacement of GDP dissociation inhibitor.";
+RA   Oesterlin L.K., Goody R.S., Itzen A.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:5621-5626(2012).
+
+--- End of Current DESC file ---

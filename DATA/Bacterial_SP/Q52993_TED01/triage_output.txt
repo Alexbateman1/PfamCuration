@@ -1,0 +1,38 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+Total of 0 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A5J5GM49	WIAG-TAIL DOMAIN {ECO:000     44.6    5.4e-08   3  10.2   0.1
+	Q52993_TED01              	  1066	  1096	     7.6
+	Q52993_TED01              	  1369	  1396	     5.8
+	Q52993_TED01              	   801	   826	     5.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q52993.1	AF-Q52993-F1-model_v4_TED01:43-89	1	AF-Q52993-F1-model_v4_TED01	43-89	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q52993_TED01
+GA   27.00 27.00;
+TC   31.30 31.50;
+NC   26.80 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

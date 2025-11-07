@@ -1,0 +1,79 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y950_TREPA              Reviewed;          94 AA.
+AC   O83916;
+DE   RecName: Full=Uncharacterized protein TP_0950;
+GN   OrderedLocusNames=TP_0950;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65912.1; -; Genomic_DNA.
+DR   PIR; D71261; D71261.
+DR   AlphaFoldDB; O83916; -.
+DR   STRING; 243276.TP_0950; -.
+DR   EnsemblBacteria; AAC65912; AAC65912; TP_0950.
+DR   KEGG; tpa:TP_0950; -.
+DR   HOGENOM; CLU_2385249_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..94
+FT                   /note="Uncharacterized protein TP_0950"
+FT                   /id="PRO_0000202361"
+SQ   SEQUENCE   94 AA;  10152 MW;  786DA9A9BCC2088F CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Treponema.
+1	5	Treponemataceae
+1	4	Spirochaetales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O83916	UNCHARACTERIZED PROTEIN TP_0950     82.4    5.8e-20   1   1.4  10.2
+	O83916_TED01              	    25	    55	    81.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83916.1	AF-O83916-F1-model_v4_TED01:25-55	1	AF-O83916-F1-model_v4_TED01	25-55	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83916_TED01
+GA   27.00 27.00;
+TC   29.50 81.60;
+NC   26.20 18.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

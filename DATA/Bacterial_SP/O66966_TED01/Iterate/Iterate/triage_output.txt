@@ -1,0 +1,111 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y766_AQUAE              Reviewed;         284 AA.
+AC   O66966;
+DE   RecName: Full=Uncharacterized protein aq_766;
+GN   OrderedLocusNames=aq_766;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000657; AAC06927.1; -; Genomic_DNA.
+DR   PIR; C70367; C70367.
+DR   RefSeq; NP_213527.1; NC_000918.1.
+DR   RefSeq; WP_010880465.1; NC_000918.1.
+DR   AlphaFoldDB; O66966; -.
+DR   STRING; 224324.aq_766; -.
+DR   EnsemblBacteria; AAC06927; AAC06927; aq_766.
+DR   KEGG; aae:aq_766; -.
+DR   HOGENOM; CLU_978774_0_0_0; -.
+DR   InParanoid; O66966; -.
+DR   OrthoDB; 13903at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..284
+FT                   /note="Uncharacterized protein aq_766"
+FT                   /id="PRO_0000186880"
+FT   TRANSMEM        9..28
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   284 AA;  33853 MW;  FC24ABACEBFC28EA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Thermocrinis
+1	6	Venenivibrio.
+1	6	Sulfurihydrogenibium.
+1	6	Hydrogenothermus.
+1	6	Hydrogenobacter
+1	6	Hydrogenivirga
+1	6	Aquifex
+5	5	Aquificaceae
+3	5	Hydrogenothermaceae
+8	4	Aquificales
+8	3	Aquificia
+8	2	Aquificota
+8	1	Pseudomonadati
+8	0	Bacteria
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A497XN81	UNCHARACTERIZED PROTEIN {    432.1   3.9e-126   1   1.0   2.9
+	Iterate                   	    29	   299	   431.9
+
+A0A6C1BTC9	UNCHARACTERIZED PROTEIN {    373.2   3.7e-108   1   1.0   0.5
+	Iterate                   	    19	   263	   373.0
+
+A8UTL8	UNCHARACTERIZED PROTEIN {ECO:    431.6   5.4e-126   1   1.0   2.4
+	Iterate                   	    29	   299	   431.4
+
+D3DIW2	UNCHARACTERIZED PROTEIN {ECO:    203.3    2.6e-56   1   1.4   2.0
+	Iterate                   	    11	   257	   202.4
+
+O66966	UNCHARACTERIZED PROTEIN AQ_766     363.6   3.1e-105   1   1.0  10.9
+	Iterate                   	    33	   283	   363.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A497XN81.1	AF-A0A497XN81-F1-model_v4_TED01:2-299	1	AF-A0A497XN81-F1-model_v4_TED01	2-299	100.0%
+A0A6C1BTC9.1	AF-A0A6C1BTC9-F1-model_v4_TED01:2-31_173-263	1	AF-A0A6C1BTC9-F1-model_v4_TED01	2-263	100.0%
+A0A6C1BTC9.1	AF-A0A6C1BTC9-F1-model_v4_TED02:35-169	1	AF-A0A6C1BTC9-F1-model_v4_TED02	35-169	55.1%
+A8UTL8.1	AF-A8UTL8-F1-model_v4_TED01:2-299	1	AF-A8UTL8-F1-model_v4_TED01	2-299	100.0%
+D3DIW2.1	AF-D3DIW2-F1-model_v4_TED01:26-162	1	AF-D3DIW2-F1-model_v4_TED01	26-162	55.2%
+D3DIW2.1	AF-D3DIW2-F1-model_v4_TED02:166-258	1	AF-D3DIW2-F1-model_v4_TED02	166-258	37.5%
+O66966.1	AF-O66966-F1-model_v4_TED01:33-47_180-283	1	AF-O66966-F1-model_v4_TED01	33-283	100.0%
+O66966.1	AF-O66966-F1-model_v4_TED02:51-176	1	AF-O66966-F1-model_v4_TED02	51-176	50.2%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66966_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   30.00 32.30;
+NC   23.40 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

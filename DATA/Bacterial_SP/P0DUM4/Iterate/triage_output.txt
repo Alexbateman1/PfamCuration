@@ -1,0 +1,365 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   AAPA1_HELPY             Reviewed;          30 AA.
+AC   P0DUM4;
+DE   RecName: Full=Toxic protein AapA1;
+GN   Name=aapA1 {ECO:0000303|PubMed:28077560};
+GN   OrderedLocusNames=HP_1177.1 {ECO:0000305};
+OS   Helicobacter pylori (strain ATCC 700392 / 26695) (Campylobacter pylori).
+OC   Bacteria; Pseudomonadati; Campylobacterota; Epsilonproteobacteria;
+OC   Campylobacterales; Helicobacteraceae; Helicobacter.
+OX   NCBI_TaxID=85962;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700392 / 26695;
+RX   PubMed=9252185; DOI=10.1038/41483;
+RA   Tomb J.-F., White O., Kerlavage A.R., Clayton R.A., Sutton G.G.,
+RA   Fleischmann R.D., Ketchum K.A., Klenk H.-P., Gill S.R., Dougherty B.A.,
+RA   Nelson K.E., Quackenbush J., Zhou L., Kirkness E.F., Peterson S.N.,
+RA   Loftus B.J., Richardson D.L., Dodson R.J., Khalak H.G., Glodek A.,
+RA   McKenney K., FitzGerald L.M., Lee N., Adams M.D., Hickey E.K., Berg D.E.,
+RA   Gocayne J.D., Utterback T.R., Peterson J.D., Kelley J.M., Cotton M.D.,
+RA   Weidman J.F., Fujii C., Bowman C., Watthey L., Wallin E., Hayes W.S.,
+RA   Borodovsky M., Karp P.D., Smith H.O., Fraser C.M., Venter J.C.;
+RT   "The complete genome sequence of the gastric pathogen Helicobacter
+RT   pylori.";
+RL   Nature 388:539-547(1997).
+RN   [2]
+RP   FUNCTION AS A TOXIN, AND ACTIVITY REGULATION.
+RC   STRAIN=ATCC 700392 / 26695;
+RX   PubMed=28077560; DOI=10.1093/nar/gkw1343;
+RA   Arnion H., Korkut D.N., Masachis Gelo S., Chabas S., Reignier J., Iost I.,
+RA   Darfeuille F.;
+RT   "Mechanistic insights into type I toxin antitoxin systems in Helicobacter
+RT   pylori: the importance of mRNA folding in controlling toxin expression.";
+RL   Nucleic Acids Res. 45:4782-4795(2017).
+RN   [3]
+RP   FUNCTION AS A TOXIN, SUBCELLULAR LOCATION, AND INDUCTION.
+RC   STRAIN=ATCC 700392 / 26695;
+RX   PubMed=33229580; DOI=10.1073/pnas.2016195117;
+RA   El Mortaji L., Tejada-Arranz A., Rifflet A., Boneca I.G.,
+RA   Pehau-Arnaudet G., Radicella J.P., Marsin S., De Reuse H.;
+RT   "A peptide of a type I toxin-antitoxin system induces Helicobacter pylori
+RT   morphological transformation from spiral shape to coccoids.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 117:31398-31409(2020).
+RN   [4] {ECO:0007829|PDB:6GIF, ECO:0007829|PDB:6GIG}
+RP   STRUCTURE BY NMR, FUNCTION AS A TOXIN, FUNCTION IN STRESS RESPONSE,
+RP   SUBCELLULAR LOCATION, DOMAIN, LIPID-BINDING, AND MUTAGENESIS OF
+RP   1-MET--ASN-8; TRP-10; TYR-14; LEU-15; LYS-16; PHE-19; GLY-21; LYS-23;
+RP   VAL-26; 29-LYS-ARG-30 AND ARG-30.
+RC   STRAIN=ATCC 700392 / 26695;
+RX   PubMed=31476357; DOI=10.1016/j.bbagen.2019.129423;
+RA   Korkut D.N., Alves I.D., Vogel A., Chabas S., Sharma C.M., Martinez D.,
+RA   Loquet A., Salgado G.F., Darfeuille F.;
+RT   "Structural insights into the AapA1 toxin of Helicobacter pylori.";
+RL   Biochim. Biophys. Acta 1864:129423-129423(2020).
+CC   -!- FUNCTION: May be involved in response to oxidative stress (Probable).
+CC       Toxic component of a type I toxin-antitoxin (TA) system. When
+CC       overexpression is induced in situ in the absence of its cognate
+CC       antisense RNA antitoxin IsoA1 it leads to cell growth arrest and cell
+CC       death without lysis. Neutralized by IsoA1 RNA which forms an extensive
+CC       duplex with the mRNA (PubMed:28077560, PubMed:31476357,
+CC       PubMed:33229580). Binds artificial prokaryotic and eukaryotic lipid
+CC       membranes, with 30-fold higher affinity for prokaryotic membranes.
+CC       Molecular dynamics suggests the peptide penetrates the membrane leading
+CC       to lipid reorganization and thinning of the bilayer (PubMed:31476357).
+CC       Induction of toxin in the absence of antitoxin RNA causes a fast
+CC       conversion of cells from spiral-shaped to coccoid forms; cells have no
+CC       visible membrane defects and resemble wild-type 'aging coccoids'. Toxin
+CC       causes a moderate decrease in membrane potential and ATP content and
+CC       alterations in peptidoglycan muropeptide abundance; GlcNAc-MurNAc
+CC       dipeptides increase while GlcNAc-MurNAc tripeptides decrease (i.e. a
+CC       faster phenocopy of cell aging). Deletion of all 6 AapA/IsoA TA loci in
+CC       strain B128 leads to slower than wild-type conversion of H2O2-treated
+CC       cells to the coccoid form. This suggests oxidative stress triggers
+CC       coccoid transformation via these type I TA systems, although other
+CC       factors eventually drive the morphology change (PubMed:33229580).
+CC       {ECO:0000269|PubMed:28077560, ECO:0000269|PubMed:31476357,
+CC       ECO:0000269|PubMed:33229580, ECO:0000305|PubMed:33229580}.
+CC   -!- ACTIVITY REGULATION: Transcription of the aapA1 gene generates a full-
+CC       length transcript whose folding impedes translation. Processing of the
+CC       3' end of the aapA1 message generates a shorter transcript that becomes
+CC       translatable after a structural rearrangement. The processing also
+CC       makes it more susceptible to forming dsRNA with IsoA1 which leads to
+CC       duplex RNA degradation by RNase 3 (rnc). {ECO:0000269|PubMed:28077560}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305|PubMed:31476357,
+CC       ECO:0000305|PubMed:33229580}.
+CC   -!- INDUCTION: Constitutively expressed, increases slightly as cells get
+CC       older. Does not respond to acid, rifampicin, tetracycline or Ni(2+)
+CC       stress. Antisense RNA expression decreases strongly under oxidative
+CC       stress (H2O2 or paraquat), while aapA1 expression decreases only
+CC       marginally in H2O2 but decreases strongly in response to paraquat. A
+CC       decrease in antisense RNA leads to an increase in toxin production.
+CC       {ECO:0000269|PubMed:33229580}.
+CC   -!- DOMAIN: Has 3 regions; the N-terminal 8 residues are disordered and not
+CC       required for toxicity, the central helical segment (residues 9-28)
+CC       probably crosses the membrane, and the charged C-terminal 2 residues
+CC       which are required for toxicity. {ECO:0000269|PubMed:31476357}.
+CC   -!- MISCELLANEOUS: Addition of an SPA-tag or GFP to the C-terminus of the
+CC       protein renders it non-toxic, but detectable by antibodies.
+CC       {ECO:0000269|PubMed:31476357, ECO:0000269|PubMed:33229580}.
+CC   -!- MISCELLANEOUS: As Helicobacter ages cells change from a helicoidal
+CC       shape with multiple flagella at one pole to coccoid forms by 70 hours
+CC       in culture. As they age peptidoglycan muropeptide abundance alters;
+CC       GlcNAc-MurNAc dipeptides increase while GlcNAc-MurNAc tripeptides
+CC       decrease. {ECO:0000269|PubMed:33229580}.
+CC   -!- SIMILARITY: Belongs to the AapA toxin family. {ECO:0000305}.
+DR   EMBL; AE000511; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   PDB; 6GIF; NMR; -; A=1-30.
+DR   PDB; 6GIG; NMR; -; A=1-30.
+DR   PDBsum; 6GIF; -.
+DR   PDBsum; 6GIG; -.
+DR   AlphaFoldDB; P0DUM4; -.
+DR   SMR; P0DUM4; -.
+DR   InParanoid; P0DUM4; -.
+DR   Proteomes; UP000000429; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0008289; F:lipid binding; IEA:UniProtKB-KW.
+DR   GO; GO:0008360; P:regulation of cell shape; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   3D-structure; Cell inner membrane; Cell membrane; Cell shape;
+KW   Lipid-binding; Membrane; Reference proteome; Stress response;
+KW   Toxin-antitoxin system.
+FT   CHAIN           1..30
+FT                   /note="Toxic protein AapA1"
+FT                   /id="PRO_0000453284"
+FT   MUTAGEN         1..8
+FT                   /note="Missing: Toxic."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   MUTAGEN         10
+FT                   /note="W->A: Reduced toxicity."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   MUTAGEN         14
+FT                   /note="Y->A: Reduced toxicity."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   MUTAGEN         15
+FT                   /note="L->A: Reduced toxicity."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   MUTAGEN         16
+FT                   /note="K->A: Reduced toxicity."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   MUTAGEN         19
+FT                   /note="F->A: Reduced toxicity."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   MUTAGEN         21
+FT                   /note="G->A: No longer toxic."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   MUTAGEN         23
+FT                   /note="K->A: Reduced toxicity."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   MUTAGEN         26
+FT                   /note="V->A: Reduced toxicity."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   MUTAGEN         29..30
+FT                   /note="Missing: No longer toxic."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   MUTAGEN         30
+FT                   /note="Missing: Reduced toxicity."
+FT                   /evidence="ECO:0000269|PubMed:31476357"
+FT   STRAND          4..8
+FT                   /evidence="ECO:0007829|PDB:6GIG"
+FT   HELIX           9..28
+FT                   /evidence="ECO:0007829|PDB:6GIF"
+SQ   SEQUENCE   30 AA;  3463 MW;  864CF81C950C0891 CRC64;
+//
+ID   AAPA3_HELPY             Reviewed;          30 AA.
+AC   P0DUM5;
+DE   RecName: Full=Toxic protein AapA3 {ECO:0000303|PubMed:31411564};
+GN   Name=aapA3 {ECO:0000303|PubMed:31411564}; OrderedLocusNames=HP_1432.1;
+OS   Helicobacter pylori (strain ATCC 700392 / 26695) (Campylobacter pylori).
+OC   Bacteria; Pseudomonadati; Campylobacterota; Epsilonproteobacteria;
+OC   Campylobacterales; Helicobacteraceae; Helicobacter.
+OX   NCBI_TaxID=85962;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700392 / 26695;
+RX   PubMed=9252185; DOI=10.1038/41483;
+RA   Tomb J.-F., White O., Kerlavage A.R., Clayton R.A., Sutton G.G.,
+RA   Fleischmann R.D., Ketchum K.A., Klenk H.-P., Gill S.R., Dougherty B.A.,
+RA   Nelson K.E., Quackenbush J., Zhou L., Kirkness E.F., Peterson S.N.,
+RA   Loftus B.J., Richardson D.L., Dodson R.J., Khalak H.G., Glodek A.,
+RA   McKenney K., FitzGerald L.M., Lee N., Adams M.D., Hickey E.K., Berg D.E.,
+RA   Gocayne J.D., Utterback T.R., Peterson J.D., Kelley J.M., Cotton M.D.,
+RA   Weidman J.F., Fujii C., Bowman C., Watthey L., Wallin E., Hayes W.S.,
+RA   Borodovsky M., Karp P.D., Smith H.O., Fraser C.M., Venter J.C.;
+RT   "The complete genome sequence of the gastric pathogen Helicobacter
+RT   pylori.";
+RL   Nature 388:539-547(1997).
+RN   [2]
+RP   FUNCTION AS A TOXIN, ACTIVITY REGULATION, INDUCTION, AND MUTAGENESIS OF
+RP   SER-9 AND 20-LEU--ARG-30.
+RC   STRAIN=ATCC 700392 / 26695;
+RX   PubMed=31411564; DOI=10.7554/elife.47549;
+RA   Masachis S., Tourasse N.J., Lays C., Faucher M., Chabas S., Iost I.,
+RA   Darfeuille F.;
+RT   "A genetic selection reveals functional metastable structures embedded in a
+RT   toxin-encoding mRNA.";
+RL   Elife 8:0-0(2019).
+CC   -!- FUNCTION: May be involved in response to oxidative stress (By
+CC       similarity). Toxic component of a type I toxin-antitoxin (TA) system.
+CC       Neutralized by cognate antisense RNA antitoxin IsoA3 RNA which forms an
+CC       extensive duplex with the mRNA. The antitoxin gene cannot be deleted,
+CC       indicating expression of AapA3 is toxic. Non-cognate antitoxin RNAs
+CC       IsoA1, IsoA2, IsoA4, IsoA5 or IsoA6 are unable to neutralize aapA3
+CC       (PubMed:31411564). Oxidative stress may trigger transformation of the
+CC       bacteria to a coccoid form via the AapA type I TA systems. The peptide
+CC       may penetrate the membrane leading to lipid reorganization and thinning
+CC       of the bilayer (By similarity). {ECO:0000250|UniProtKB:P0DUM4,
+CC       ECO:0000269|PubMed:31411564}.
+CC   -!- ACTIVITY REGULATION: Transcription of the aapA3 gene generates a full-
+CC       length transcript whose folding impedes translation. Processing of the
+CC       3' end of the aapA3 message generates a shorter transcript that becomes
+CC       translatable after a structural rearrangement.
+CC       {ECO:0000269|PubMed:31411564}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane
+CC       {ECO:0000250|UniProtKB:P0DUM4}.
+CC   -!- INDUCTION: Expressed during exponential and stationary growth.
+CC       {ECO:0000269|PubMed:31411564}.
+CC   -!- SIMILARITY: Belongs to the AapA toxin family. {ECO:0000305}.
+DR   EMBL; AE000511; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   AlphaFoldDB; P0DUM5; -.
+DR   KEGG; heo:C694_07415; -.
+DR   InParanoid; P0DUM5; -.
+DR   Proteomes; UP000000429; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   1: Evidence at protein level;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Stress response; Toxin-antitoxin system.
+FT   CHAIN           1..30
+FT                   /note="Toxic protein AapA3"
+FT                   /id="PRO_0000453285"
+FT   MUTAGEN         9
+FT                   /note="S->P: No longer toxic."
+FT                   /evidence="ECO:0000269|PubMed:31411564"
+FT   MUTAGEN         20..30
+FT                   /note="Missing: No longer toxic."
+FT                   /evidence="ECO:0000269|PubMed:31411564"
+SQ   SEQUENCE   30 AA;  3585 MW;  0BC55C58D8B4D82E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Helicobacter.
+5	5	Helicobacteraceae
+5	4	Campylobacterales
+5	3	Epsilonproteobacteria
+5	2	Campylobacterota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A6J8DFQ3	UNCHARACTERIZED PROTEIN {     58.0    3.9e-12  10  10.3  16.2
+	Iterate                   	   107	   125	     8.7
+	Iterate                   	    23	    38	     6.0
+	Iterate                   	    40	    54	     5.9
+	Iterate                   	    56	    70	     5.9
+	Iterate                   	    72	    86	     5.9
+	Iterate                   	    88	   102	     5.9
+	Iterate                   	   143	   157	     5.9
+	Iterate                   	   174	   187	     5.1
+	Iterate                   	   159	   171	     5.0
+	Iterate                   	   128	   141	     4.4
+
+A0A6S7JB74	A DISINTEGRIN AND METALLO     41.1    8.5e-07  13  17.3  32.8
+	Iterate                   	   160	   178	     3.6
+	Iterate                   	   349	   367	     3.6
+	Iterate                   	   202	   219	     3.5
+	Iterate                   	   223	   240	     3.5
+	Iterate                   	   244	   261	     3.5
+	Iterate                   	   265	   282	     3.5
+	Iterate                   	   328	   345	     3.5
+	Iterate                   	   370	   388	     2.1
+	Iterate                   	    76	    93	     2.0
+	Iterate                   	   118	   135	     2.0
+	Iterate                   	   139	   156	     2.0
+	Iterate                   	   286	   303	     2.0
+	Iterate                   	   307	   324	     2.0
+	PF19030	TSP1_ADAMTS     	   378	   429	    35.6
+	PF19030	TSP1_ADAMTS     	   438	   491	    55.4
+	PF00090	TSP_1           	   440	   491	    21.1
+	PF19030	TSP1_ADAMTS     	   495	   546	    44.4
+	PF00090	TSP_1           	   495	   546	    23.8
+	PF19030	TSP1_ADAMTS     	   552	   607	      35
+	PF00090	TSP_1           	   553	   612	    14.9
+	PF08685	GON             	   609	   807	   232.8
+
+A0AAE1CX32	UNCHARACTERIZED PROTEIN {     85.9    6.1e-21  15  28.5  12.3
+	Iterate                   	   256	   274	     3.0
+	Iterate                   	   507	   527	     2.5
+	Iterate                   	   525	   545	     2.5
+	Iterate                   	   561	   581	     2.5
+	Iterate                   	    58	    77	     2.4
+	Iterate                   	    76	    95	     2.4
+	Iterate                   	    94	   112	     2.4
+	Iterate                   	   148	   167	     2.4
+	Iterate                   	   184	   203	     2.4
+	Iterate                   	   202	   221	     2.4
+	Iterate                   	   454	   473	     2.4
+	Iterate                   	   490	   509	     2.4
+	Iterate                   	   544	   563	     2.4
+	Iterate                   	   580	   598	     2.4
+	Iterate                   	   598	   616	     2.4
+
+P0DUM4	TOXIC PROTEIN AAPA1                84.4    1.9e-20   1   1.0   3.8
+	Iterate                   	     1	    30	    84.3
+
+P0DUM5	TOXIC PROTEIN AAPA3 {ECO:00003     41.0    9.3e-07   1   1.0   1.1
+	Iterate                   	     1	    30	    40.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+F8KPP0.1	AF-F8KPP0-F1-model_v4_TED01:12-40	1	AF-F8KPP0-F1-model_v4_TED01	12-40	68.6%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DUM4/Iterate
+GA   27.00 27.00;
+TC   31.70 59.50;
+NC   25.00 19.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P0DUM5
+RN   [2]
+RM   31411564
+RT   "A genetic selection reveals functional metastable structures embedded in a
+RT   toxin-encoding mRNA.";
+RA   Masachis S., Tourasse N.J., Lays C., Faucher M., Chabas S., Iost I.,
+RA   Darfeuille F.;
+RL   Elife 8:0-0(2019).
+RC   Function description for P0DUM4
+RN   [3]
+RM   28077560
+RT   "Mechanistic insights into type I toxin antitoxin systems in Helicobacter
+RT   pylori: the importance of mRNA folding in controlling toxin expression.";
+RA   Arnion H., Korkut D.N., Masachis Gelo S., Chabas S., Reignier J., Iost I.,
+RA   Darfeuille F.;
+RL   Nucleic Acids Res. 45:4782-4795(2017).
+RC   Function description for P0DUM4
+RN   [4]
+RM   33229580
+RT   "A peptide of a type I toxin-antitoxin system induces Helicobacter pylori
+RT   morphological transformation from spiral shape to coccoids.";
+RA   El Mortaji L., Tejada-Arranz A., Rifflet A., Boneca I.G.,
+RA   Pehau-Arnaudet G., Radicella J.P., Marsin S., De Reuse H.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 117:31398-31409(2020).
+RC   Function description for P0DUM4
+RN   [5]
+RM   31476357
+RT   "Structural insights into the AapA1 toxin of Helicobacter pylori.";
+RA   Korkut D.N., Alves I.D., Vogel A., Chabas S., Sharma C.M., Martinez D.,
+RA   Loquet A., Salgado G.F., Darfeuille F.;
+RL   Biochim. Biophys. Acta 1864:129423-129423(2020).
+
+--- End of Current DESC file ---

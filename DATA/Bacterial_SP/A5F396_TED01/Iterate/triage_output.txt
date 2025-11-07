@@ -1,0 +1,279 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TCPR_VIBCH              Reviewed;         151 AA.
+AC   P0C6D5; P29483; Q9JQ07;
+DE   RecName: Full=Toxin coregulated pilus biosynthesis protein R;
+DE   AltName: Full=TCP pilus biosynthesis protein TcpR;
+GN   Name=tcpR; OrderedLocusNames=VC_0832;
+OS   Vibrio cholerae serotype O1 (strain ATCC 39315 / El Tor Inaba N16961).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales;
+OC   Vibrionaceae; Vibrio.
+OX   NCBI_TaxID=243277;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Classical Inaba Z17561 / Serotype O1;
+RX   PubMed=8097178; DOI=10.1016/0378-1119(93)90589-u;
+RA   Ogierman M.A., Zabihi S., Mourtzios L., Manning P.A.;
+RT   "Genetic organization and sequence of the promoter-distal region of the tcp
+RT   gene cluster of Vibrio cholerae.";
+RL   Gene 126:51-60(1993).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 39315 / El Tor Inaba N16961;
+RX   PubMed=10952301; DOI=10.1038/35020000;
+RA   Heidelberg J.F., Eisen J.A., Nelson W.C., Clayton R.A., Gwinn M.L.,
+RA   Dodson R.J., Haft D.H., Hickey E.K., Peterson J.D., Umayam L.A., Gill S.R.,
+RA   Nelson K.E., Read T.D., Tettelin H., Richardson D.L., Ermolaeva M.D.,
+RA   Vamathevan J.J., Bass S., Qin H., Dragoi I., Sellers P., McDonald L.A.,
+RA   Utterback T.R., Fleischmann R.D., Nierman W.C., White O., Salzberg S.L.,
+RA   Smith H.O., Colwell R.R., Mekalanos J.J., Venter J.C., Fraser C.M.;
+RT   "DNA sequence of both chromosomes of the cholera pathogen Vibrio
+RT   cholerae.";
+RL   Nature 406:477-483(2000).
+CC   -!- FUNCTION: Involved in TCP pilus biogenesis.
+CC   -!- INTERACTION:
+CC       P0C6D5; P29480: tcpT; NbExp=2; IntAct=EBI-6399872, EBI-6399865;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Single-pass membrane protein.
+DR   EMBL; X64098; CAA45459.1; -; Genomic_DNA.
+DR   EMBL; AE003852; AAF93995.1; -; Genomic_DNA.
+DR   PIR; JN0521; JN0521.
+DR   RefSeq; NP_230480.1; NC_002505.1.
+DR   RefSeq; WP_000200904.1; NZ_LT906614.1.
+DR   AlphaFoldDB; P0C6D5; -.
+DR   SMR; P0C6D5; -.
+DR   IntAct; P0C6D5; 1.
+DR   STRING; 243277.VC_0832; -.
+DR   DNASU; 2614499; -.
+DR   EnsemblBacteria; AAF93995; AAF93995; VC_0832.
+DR   KEGG; vch:VC_0832; -.
+DR   PATRIC; fig|243277.26.peg.793; -.
+DR   HOGENOM; CLU_1730654_0_0_6; -.
+DR   Proteomes; UP000000584; Chromosome 1.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   1: Evidence at protein level;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..151
+FT                   /note="Toxin coregulated pilus biosynthesis protein R"
+FT                   /id="PRO_0000072469"
+FT   TRANSMEM        132..151
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   151 AA;  17764 MW;  63C2B69A3F8DC1A7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Vibrio.
+1	6	Agricanvirus simmy50.
+1	5	Vibrionaceae
+1	5	Agricanvirus
+1	4	Vibrionales
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	2	Heunggongvirae
+1	1	Pseudomonadati
+1	1	Duplodnaviria
+1	0	Viruses
+1	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A173GDK5	VIRION STRUCTURAL PROTEIN     28.3     0.0075   1   1.2   0.0
+	Iterate                   	     5	   103	    28.0
+
+A0A8X7WTH6	PCDG8 PROTEIN {ECO:000031     35.7    3.8e-05   9  13.4  41.9
+	Iterate                   	  4849	  4932	    11.4
+	Iterate                   	  4057	  4142	     9.4
+	Iterate                   	  5640	  5732	     7.0
+	Iterate                   	  6336	  6420	     6.7
+	Iterate                   	  3329	  3411	     5.3
+	Iterate                   	  7823	  7909	     5.3
+	Iterate                   	   431	   524	     3.2
+	Iterate                   	  1124	  1212	     2.9
+	Iterate                   	  7034	  7117	     2.6
+	PF08266	Cadherin_2      	    20	   102	    90.8
+	PF00028	Cadherin        	   237	   330	    63.5
+	PF00028	Cadherin        	   342	   434	    41.4
+	PF00028	Cadherin        	   448	   544	    48.2
+	PF00028	Cadherin        	   567	   655	    38.7
+	PF16492	Cadherin_C_2    	   677	   764	    77.6
+	PF00028	Cadherin        	   826	   921	      32
+	PF00028	Cadherin        	   935	  1025	    58.4
+	PF00028	Cadherin        	  1039	  1130	    41.9
+	PF00028	Cadherin        	  1144	  1240	    51.1
+	PF00028	Cadherin        	  1262	  1351	    43.5
+	PF16492	Cadherin_C_2    	  1372	  1459	    77.7
+	PF08266	Cadherin_2      	  1508	  1590	    84.9
+	PF00028	Cadherin        	  1616	  1711	    36.4
+	PF00028	Cadherin        	  1725	  1816	    57.4
+	PF00028	Cadherin        	  1830	  1921	    32.3
+	PF00028	Cadherin        	  1935	  2031	      48
+	PF00028	Cadherin        	  2053	  2142	    33.9
+	PF16492	Cadherin_C_2    	  2164	  2251	    77.5
+	PF00028	Cadherin        	  2347	  2438	    55.8
+	PF00028	Cadherin        	  2452	  2543	    42.2
+	PF00028	Cadherin        	  2557	  2653	    51.6
+	PF00028	Cadherin        	  2675	  2764	    31.1
+	PF16492	Cadherin_C_2    	  2786	  2873	    80.1
+	PF08266	Cadherin_2      	  2922	  3004	    85.3
+	PF00028	Cadherin        	  3030	  3125	    29.2
+	PF00028	Cadherin        	  3139	  3230	    62.8
+	PF00028	Cadherin        	  3245	  3335	    43.7
+	PF00028	Cadherin        	  3349	  3445	    52.4
+	PF00028	Cadherin        	  3467	  3556	    30.9
+	PF16492	Cadherin_C_2    	  3578	  3665	    82.9
+	PF08266	Cadherin_2      	  3680	  3733	    39.6
+	PF00028	Cadherin        	  3868	  3959	    60.3
+	PF00028	Cadherin        	  3974	  4064	    46.1
+	PF00028	Cadherin        	  4078	  4174	    48.4
+	PF00028	Cadherin        	  4196	  4285	    35.4
+	PF16492	Cadherin_C_2    	  4307	  4394	    80.7
+	PF08266	Cadherin_2      	  4443	  4525	    88.4
+	PF00028	Cadherin        	  4552	  4646	    31.9
+	PF00028	Cadherin        	  4660	  4751	    64.3
+	PF00028	Cadherin        	  4766	  4856	    43.2
+	PF00028	Cadherin        	  4870	  4966	    52.6
+	PF00028	Cadherin        	  4988	  5077	    37.8
+	PF16492	Cadherin_C_2    	  5099	  5184	      81
+	PF08266	Cadherin_2      	  5233	  5315	    88.5
+	PF00028	Cadherin        	  5341	  5436	    38.4
+	PF00028	Cadherin        	  5450	  5541	    60.2
+	PF00028	Cadherin        	  5555	  5646	    37.3
+	PF00028	Cadherin        	  5660	  5756	    49.4
+	PF00028	Cadherin        	  5779	  5867	    35.4
+	PF16492	Cadherin_C_2    	  5889	  5976	    72.3
+	PF00028	Cadherin        	  6038	  6132	    33.3
+	PF00028	Cadherin        	  6146	  6237	    55.4
+	PF00028	Cadherin        	  6251	  6342	    39.9
+	PF00028	Cadherin        	  6356	  6452	    55.1
+	PF00028	Cadherin        	  6473	  6561	    36.6
+	PF16492	Cadherin_C_2    	  6583	  6670	    77.7
+	PF00028	Cadherin        	  6733	  6828	    33.1
+	PF00028	Cadherin        	  6842	  6933	    57.9
+	PF00028	Cadherin        	  6947	  7038	    39.5
+	PF00028	Cadherin        	  7052	  7148	    57.4
+	PF00028	Cadherin        	  7171	  7259	    36.6
+	PF16492	Cadherin_C_2    	  7281	  7368	      76
+	PF08266	Cadherin_2      	  7417	  7499	    86.5
+	PF00028	Cadherin        	  7526	  7620	    35.9
+	PF00028	Cadherin        	  7634	  7725	    55.3
+	PF00028	Cadherin        	  7740	  7830	    37.1
+	PF00028	Cadherin        	  7844	  7940	    54.8
+	PF00028	Cadherin        	  7963	  8051	    35.7
+	PF16492	Cadherin_C_2    	  8073	  8160	    76.4
+
+A0A8X8BHB1	PCDG8 PROTEIN {ECO:000031     25.1      0.071   3   5.8   9.9
+	Iterate                   	  2554	  2651	     9.9
+	Iterate                   	  1886	  1983	     8.1
+	Iterate                   	  1218	  1313	     7.9
+	PF08266	Cadherin_2      	    26	   108	    90.1
+	PF00028	Cadherin        	   134	   229	      32
+	PF00028	Cadherin        	   243	   334	    62.5
+	PF00028	Cadherin        	   349	   439	    43.6
+	PF00028	Cadherin        	   453	   549	    59.2
+	PF00028	Cadherin        	   571	   660	    33.7
+	PF16492	Cadherin_C_2    	   682	   769	      84
+	PF00028	Cadherin        	   921	  1016	    29.9
+	PF00028	Cadherin        	  1030	  1121	    57.3
+	PF00028	Cadherin        	  1136	  1226	    42.9
+	PF00028	Cadherin        	  1240	  1336	    52.8
+	PF00028	Cadherin        	  1358	  1447	    34.6
+	PF16492	Cadherin_C_2    	  1468	  1555	    84.8
+	PF00028	Cadherin        	  1586	  1681	    42.5
+	PF00028	Cadherin        	  1695	  1786	    56.9
+	PF00028	Cadherin        	  1800	  1893	    48.6
+	PF00028	Cadherin        	  1907	  2003	    57.6
+	PF00028	Cadherin        	  2025	  2114	      41
+	PF16492	Cadherin_C_2    	  2136	  2223	    76.7
+	PF00028	Cadherin        	  2254	  2349	    38.5
+	PF00028	Cadherin        	  2363	  2454	    52.4
+	PF00028	Cadherin        	  2468	  2561	    51.2
+	PF00028	Cadherin        	  2575	  2671	    56.1
+	PF00028	Cadherin        	  2693	  2782	    39.7
+	PF16492	Cadherin_C_2    	  2804	  2891	    75.5
+	PF08266	Cadherin_2      	  2950	  3032	    95.8
+	PF00028	Cadherin        	  3058	  3153	    36.1
+	PF00028	Cadherin        	  3167	  3257	    54.4
+	PF00028	Cadherin        	  3272	  3362	    45.1
+	PF00028	Cadherin        	  3376	  3472	    51.6
+	PF00028	Cadherin        	  3495	  3583	    30.9
+	PF16492	Cadherin_C_2    	  3605	  3692	    84.1
+
+A0A9D3Z7M6	UNCHARACTERIZED PROTEIN {     27.7      0.011   8   8.1  15.3
+	Iterate                   	   110	   162	     5.2
+	Iterate                   	   262	   322	     4.5
+	Iterate                   	   315	   358	     4.4
+	Iterate                   	   154	   210	     3.8
+	Iterate                   	   224	   279	     3.6
+	Iterate                   	   169	   226	     3.2
+	Iterate                   	   209	   251	     3.1
+	Iterate                   	   353	   408	     2.6
+
+P0C6D5	TOXIN COREGULATED PILUS BIOSYNT    232.3    2.3e-66   1   1.2   6.6
+	Iterate                   	     1	   103	   231.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS53436 (E-value: 2e-68, Score: 232.3)
+Mentioned as: VC0832
+Description: toxin co-regulated pilus biosynthesis protein R
+Organism: Vibrio cholerae O1 biovar eltor str. N16961
+PMID: 40179128
+Source: EuropePMC
+Title: Non-O1/O139 environmental Vibrio cholerae from Northern Cameroon reveals potential intra-/inter-continental transmissions
+Journal: PLoS neglected tropical diseases (2025)
+
+================================================================================
+Protein: VIMSS53436 (E-value: 2e-68, Score: 232.3)
+Mentioned as: VC0832
+Description: toxin co-regulated pilus biosynthesis protein R
+Organism: Vibrio cholerae O1 biovar eltor str. N16961
+PMID: 33123494
+Source: EuropePMC
+Title: Vibrio Pathogenicity Island-1: The Master Determinant of Cholera Pathogenesis
+Journal: Frontiers in cellular and infection microbiology (2020)
+Snippet: Encode outer membrane lipoprotein required for pilus biogenesis and provide resistance from host complement system. VC0832 tcpR 456 17.7 Helps in high osmolality tolerance in intestinal lumen and promotes colonization Tripathi and Taylor, 2007 VC0833 tcpD 837 31.7 TCP pilus biogenesis Parsot et al., 1991 VC0834
+
+================================================================================
+Protein: VIMSS53436 (E-value: 2e-68, Score: 232.3)
+Mentioned as: VC0832
+Description: toxin co-regulated pilus biosynthesis protein R
+Organism: Vibrio cholerae O1 biovar eltor str. N16961
+PMID: 26755629
+Source: EuropePMC
+Title: The LonA Protease Regulates Biofilm Formation, Motility, Virulence, and the Type VI Secretion System in Vibrio cholerae
+Journal: Journal of bacteriology (2016)
+Snippet: (lon mutant/WT) Pathogenesis VC0828 VC0830 VC0831 VC0832 VC0833 VC0834 VC0837 VC0838 VC1456 VC1457 VCA0219 Toxin-coregulated pilin, tcpA Toxin-coregulated
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P0C6D5.1	AF-P0C6D5-F1-model_v4_TED01:19-104	1	AF-P0C6D5-F1-model_v4_TED01	19-104	82.5%
+P0C6D5.1	AF-P0C6D5-F1-model_v4_TED02:107-151	1	AF-P0C6D5-F1-model_v4_TED02	107-151	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A5F396_TED01/Iterate
+GA   27.00 27.00;
+TC   27.70 28.00;
+NC   25.10 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

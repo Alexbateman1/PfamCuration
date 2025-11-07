@@ -1,0 +1,44 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Tenebrionibacter.
+1	6	Tenebrionibacter/Tenebrionicolagroup
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A8K0V5L7	UNCHARACTERIZED PROTEIN {     52.2    3.3e-10   1   1.1  12.6
+	Q9ZHG0_TED01              	     4	    89	    51.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZHG0.1	AF-Q9ZHG0-F1-model_v4_TED01:4-91	1	AF-Q9ZHG0-F1-model_v4_TED01	4-91	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZHG0_TED01
+GA   27.00 27.00;
+TC   29.90 51.90;
+NC   23.90 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

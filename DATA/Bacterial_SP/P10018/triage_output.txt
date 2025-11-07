@@ -1,0 +1,57 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Neomicrococcus.
+1	5	Micrococcaceae
+1	4	Micrococcales
+1	3	Actinomycetes
+1	2	Actinomycetota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1L2ZPH1	UNCHARACTERIZED PROTEIN {    307.8    2.8e-89   1   1.0   3.1
+	P10018                    	     1	   131	   307.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P10018 (E-value: 2.5e-91, Score: 307.8)
+Mentioned as: P10018
+Description: Uncharacterized 14.7 kDa protein
+Organism: Escherichia coli
+PMID: 28845458
+Source: EuropePMC
+Title: PaperBLAST: Text Mining Papers for Information about Homologs
+Journal: mSystems (2017)
+Snippet: ST1234, or ACICU_01235), RefSeq protein identifiers such as WP_000822979, or UniProt accession numbers such as P10018 . We use full-text queries of the form identifier AND genus_name to try to ensure that the article is actually discussing the protein as opposed to something else that happens
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P10018
+GA   27.00 27.00;
+TC   27.40 307.60;
+NC   25.40 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

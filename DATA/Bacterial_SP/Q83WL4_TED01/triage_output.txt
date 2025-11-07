@@ -1,0 +1,83 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y2501_XYLFT             Reviewed;          45 AA.
+AC   Q83WL4;
+DE   RecName: Full=Uncharacterized protein PDa0001;
+GN   OrderedLocusNames=PDa0001;
+OS   Xylella fastidiosa (strain Temecula1 / ATCC 700964).
+OG   Plasmid pXFPD1.3.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Lysobacterales; Lysobacteraceae; Xylella.
+OX   NCBI_TaxID=183190;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Temecula1 / ATCC 700964;
+RX   PubMed=12533478; DOI=10.1128/jb.185.3.1018-1026.2003;
+RA   Van Sluys M.A., de Oliveira M.C., Monteiro-Vitorello C.B., Miyaki C.Y.,
+RA   Furlan L.R., Camargo L.E.A., da Silva A.C.R., Moon D.H., Takita M.A.,
+RA   Lemos E.G.M., Machado M.A., Ferro M.I.T., da Silva F.R., Goldman M.H.S.,
+RA   Goldman G.H., Lemos M.V.F., El-Dorry H., Tsai S.M., Carrer H.,
+RA   Carraro D.M., de Oliveira R.C., Nunes L.R., Siqueira W.J., Coutinho L.L.,
+RA   Kimura E.T., Ferro E.S., Harakava R., Kuramae E.E., Marino C.L.,
+RA   Giglioti E., Abreu I.L., Alves L.M.C., do Amaral A.M., Baia G.S.,
+RA   Blanco S.R., Brito M.S., Cannavan F.S., Celestino A.V., da Cunha A.F.,
+RA   Fenille R.C., Ferro J.A., Formighieri E.F., Kishi L.T., Leoni S.G.,
+RA   Oliveira A.R., Rosa V.E. Jr., Sassaki F.T., Sena J.A.D., de Souza A.A.,
+RA   Truffi D., Tsukumo F., Yanai G.M., Zaros L.G., Civerolo E.L.,
+RA   Simpson A.J.G., Almeida N.F. Jr., Setubal J.C., Kitajima J.P.;
+RT   "Comparative analyses of the complete genome sequences of Pierce's disease
+RT   and citrus variegated chlorosis strains of Xylella fastidiosa.";
+RL   J. Bacteriol. 185:1018-1026(2003).
+DR   EMBL; AE009443; AAO38513.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q83WL4; -.
+DR   KEGG; xft:PDa0001; -.
+DR   HOGENOM; CLU_3207185_0_0_6; -.
+DR   Proteomes; UP000002516; Plasmid pXFPD1.3.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..45
+FT                   /note="Uncharacterized protein PDa0001"
+FT                   /id="PRO_0000220281"
+SQ   SEQUENCE   45 AA;  4979 MW;  32767BD8C57650CF CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Xylella.
+1	5	Lysobacteraceae
+1	4	Lysobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q83WL4	UNCHARACTERIZED PROTEIN PDA000    107.2    1.1e-27   1   1.0   2.8
+	Q83WL4_TED01              	     3	    38	   107.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q83WL4.1	AF-Q83WL4-F1-model_v4_TED01:3-38	1	AF-Q83WL4-F1-model_v4_TED01	3-38	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q83WL4_TED01
+GA   27.00 27.00;
+TC   29.40 107.00;
+NC   25.00 20.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

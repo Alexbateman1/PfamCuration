@@ -1,0 +1,97 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YM1_STRCO               Reviewed;         117 AA.
+AC   P14705;
+DE   RecName: Full=Mini-circle uncharacterized 12.9 kDa protein;
+GN   OrderedLocusNames=SCO1605; ORFNames=SCI35.27;
+GN   and
+GN   OrderedLocusNames=SCO6402; ORFNames=SC3C8.20;
+OS   Streptomyces coelicolor (strain ATCC BAA-471 / A3(2) / M145).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales;
+OC   Streptomycetaceae; Streptomyces; Streptomyces albidoflavus group.
+OX   NCBI_TaxID=100226;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=A3(2) / NRRL B-16638;
+RX   PubMed=2575701; DOI=10.1111/j.1365-2958.1989.tb00112.x;
+RA   Henderson D.J., Lydiate D.J., Hopwood D.A.;
+RT   "Structural and functional analysis of the mini-circle, a transposable
+RT   element of Streptomyces coelicolor A3(2).";
+RL   Mol. Microbiol. 3:1307-1318(1989).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-471 / A3(2) / M145;
+RX   PubMed=12000953; DOI=10.1038/417141a;
+RA   Bentley S.D., Chater K.F., Cerdeno-Tarraga A.-M., Challis G.L.,
+RA   Thomson N.R., James K.D., Harris D.E., Quail M.A., Kieser H., Harper D.,
+RA   Bateman A., Brown S., Chandra G., Chen C.W., Collins M., Cronin A.,
+RA   Fraser A., Goble A., Hidalgo J., Hornsby T., Howarth S., Huang C.-H.,
+RA   Kieser T., Larke L., Murphy L.D., Oliver K., O'Neil S., Rabbinowitsch E.,
+RA   Rajandream M.A., Rutherford K.M., Rutter S., Seeger K., Saunders D.,
+RA   Sharp S., Squares R., Squares S., Taylor K., Warren T., Wietzorrek A.,
+RA   Woodward J.R., Barrell B.G., Parkhill J., Hopwood D.A.;
+RT   "Complete genome sequence of the model actinomycete Streptomyces coelicolor
+RT   A3(2).";
+RL   Nature 417:141-147(2002).
+DR   EMBL; X15942; CAA34068.1; -; Genomic_DNA.
+DR   EMBL; AL939109; CAA20816.1; -; Genomic_DNA.
+DR   EMBL; AL939127; CAA19613.1; -; Genomic_DNA.
+DR   PIR; S06728; S06728.
+DR   RefSeq; NP_625881.1; NC_003888.3.
+DR   RefSeq; NP_630489.1; NC_003888.3.
+DR   AlphaFoldDB; P14705; -.
+DR   PaxDb; 100226-SCO1605; -.
+DR   KEGG; sco:SCO1605; -.
+DR   KEGG; sco:SCO6402; -.
+DR   HOGENOM; CLU_2083469_0_0_11; -.
+DR   InParanoid; P14705; -.
+DR   Proteomes; UP000001973; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome; Transposable element.
+FT   CHAIN           1..117
+FT                   /note="Mini-circle uncharacterized 12.9 kDa protein"
+FT                   /id="PRO_0000075522"
+SQ   SEQUENCE   117 AA;  12986 MW;  3716D21664634FA8 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Streptomyces albidoflavus group.
+1	6	Streptomyces
+1	5	Streptomycetaceae
+1	4	Kitasatosporales
+1	3	Actinomycetes
+1	2	Actinomycetota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P14705	MINI-CIRCLE UNCHARACTERIZED 12.9    218.6    3.1e-62   1   1.3   1.0
+	P14705_TED01              	    20	   113	   218.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P14705.1	AF-P14705-F1-model_v4_TED01:20-46_69-113	1	AF-P14705-F1-model_v4_TED01	20-113	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P14705_TED01
+GA   27.00 27.00;
+TC   35.60 218.00;
+NC   26.50 19.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

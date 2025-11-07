@@ -1,0 +1,107 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YLIM_ECOLI              Reviewed;          21 AA.
+AC   P0DPN6; A0A385XJC7;
+DE   RecName: Full=Protein YliM {ECO:0000303|PubMed:29645342};
+GN   Name=yliM {ECO:0000303|PubMed:29645342}; OrderedLocusNames=b4736;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION, AND INDUCTION.
+RX   PubMed=29645342; DOI=10.1002/pmic.201700064;
+RA   VanOrsdel C.E., Kelly J.P., Burke B.N., Lein C.D., Oufiero C.E.,
+RA   Sanchez J.F., Wimmers L.E., Hearn D.J., Abuikhdair F.J., Barnhart K.R.,
+RA   Duley M.L., Ernst S.E.G., Kenerson B.A., Serafin A.J., Hemm M.R.;
+RT   "Identifying new small proteins in Escherichia coli.";
+RL   Proteomics 18:E1700064-E1700064(2018).
+CC   -!- INDUCTION: Expressed in both exponential and stationary phase;
+CC       expression is considerably higher in exponential phase (at protein
+CC       level). {ECO:0000269|PubMed:29645342}.
+DR   EMBL; U00096; AYC08188.1; -; Genomic_DNA.
+DR   AlphaFoldDB; P0DPN6; -.
+DR   EnsemblBacteria; AYC08188; AYC08188; b4736.
+DR   InParanoid; P0DPN6; -.
+DR   BioCyc; EcoCyc:MONOMER0-4413; -.
+DR   PRO; PR:P0DPN6; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..21
+FT                   /note="Protein YliM"
+FT                   /id="PRO_0000445164"
+SQ   SEQUENCE   21 AA;  2716 MW;  DDE9814993877B46 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Jejubacter.
+1	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A4V1G8C8	UNCHARACTERIZED PROTEIN {     43.5      1e-07   1   1.0   2.6
+	Iterate                   	     1	    20	    43.4
+
+A0A7K7FMF7	GALANIN RECEPTOR TYPE 1 {     21.3        1.2   3   3.8   5.9
+	Iterate                   	   165	   184	    15.8
+	Iterate                   	   146	   158	     3.0
+	Iterate                   	   197	   218	     2.4
+	PF10324	7TM_GPCR_Srw    	    20	   303	    24.8
+	PF00001	7tm_1           	    32	   285	   220.9
+	PF10323	7TM_GPCR_Srv    	    34	   302	    25.5
+
+A0A7L3DE51	GALANIN RECEPTOR TYPE 1 {     21.3        1.2   3   3.8   5.9
+	Iterate                   	   165	   184	    15.8
+	Iterate                   	   146	   158	     3.0
+	Iterate                   	   197	   218	     2.4
+	PF10324	7TM_GPCR_Srw    	    20	   303	    24.8
+	PF00001	7tm_1           	    32	   285	   220.9
+	PF10323	7TM_GPCR_Srv    	    34	   302	    25.5
+
+A0A918XLN5	UNCHARACTERIZED PROTEIN {     32.6    0.00029   0  10.7   0.7
+
+P0DPN6	PROTEIN YLIM {ECO:0000303|PUBME     61.9    1.3e-13   1   1.0   7.4
+	Iterate                   	     1	    21	    61.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DPN6/Iterate
+GA   27.00 27.00;
+TC   32.60 43.40;
+NC   21.30 18.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

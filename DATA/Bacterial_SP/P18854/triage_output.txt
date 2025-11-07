@@ -1,0 +1,103 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   LPW_RHIME               Reviewed;          14 AA.
+AC   P18854;
+DE   RecName: Full=trp operon leader peptide;
+GN   Name=trpL; OrderedLocusNames=R02387.1; ORFNames=SMc02725.1;
+OS   Rhizobium meliloti (strain 1021) (Ensifer meliloti) (Sinorhizobium
+OS   meliloti).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Rhizobiaceae; Sinorhizobium/Ensifer group; Sinorhizobium.
+OX   NCBI_TaxID=266834;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=2656657; DOI=10.1128/jb.171.6.3471-3478.1989;
+RA   Bae Y.M., Holmgren E., Crawford I.P.;
+RT   "Rhizobium meliloti anthranilate synthase gene: cloning, sequence, and
+RT   expression in Escherichia coli.";
+RL   J. Bacteriol. 171:3471-3478(1989).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=1021;
+RX   PubMed=11481430; DOI=10.1073/pnas.161294398;
+RA   Capela D., Barloy-Hubler F., Gouzy J., Bothe G., Ampe F., Batut J.,
+RA   Boistard P., Becker A., Boutry M., Cadieu E., Dreano S., Gloux S.,
+RA   Godrie T., Goffeau A., Kahn D., Kiss E., Lelaure V., Masuy D., Pohl T.,
+RA   Portetelle D., Puehler A., Purnelle B., Ramsperger U., Renard C.,
+RA   Thebault P., Vandenbol M., Weidner S., Galibert F.;
+RT   "Analysis of the chromosome sequence of the legume symbiont Sinorhizobium
+RT   meliloti strain 1021.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:9877-9882(2001).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=1021;
+RX   PubMed=11474104; DOI=10.1126/science.1060966;
+RA   Galibert F., Finan T.M., Long S.R., Puehler A., Abola P., Ampe F.,
+RA   Barloy-Hubler F., Barnett M.J., Becker A., Boistard P., Bothe G.,
+RA   Boutry M., Bowser L., Buhrmester J., Cadieu E., Capela D., Chain P.,
+RA   Cowie A., Davis R.W., Dreano S., Federspiel N.A., Fisher R.F., Gloux S.,
+RA   Godrie T., Goffeau A., Golding B., Gouzy J., Gurjal M., Hernandez-Lucas I.,
+RA   Hong A., Huizar L., Hyman R.W., Jones T., Kahn D., Kahn M.L., Kalman S.,
+RA   Keating D.H., Kiss E., Komp C., Lelaure V., Masuy D., Palm C., Peck M.C.,
+RA   Pohl T.M., Portetelle D., Purnelle B., Ramsperger U., Surzycki R.,
+RA   Thebault P., Vandenbol M., Vorhoelter F.J., Weidner S., Wells D.H.,
+RA   Wong K., Yeh K.-C., Batut J.;
+RT   "The composite genome of the legume symbiont Sinorhizobium meliloti.";
+RL   Science 293:668-672(2001).
+CC   -!- FUNCTION: This protein is involved in control of the biosynthesis of
+CC       tryptophan.
+DR   EMBL; M22983; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AL591688; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   PIR; A44515; A44515.
+DR   Proteomes; UP000001976; Chromosome.
+DR   GO; GO:0000162; P:L-tryptophan biosynthetic process; IEA:UniProtKB-KW.
+DR   NCBIfam; NF038137; leader_TrpLE_al; 1.
+PE   4: Predicted;
+KW   Amino-acid biosynthesis; Aromatic amino acid biosynthesis; Leader peptide;
+KW   Reference proteome; Tryptophan biosynthesis.
+FT   PEPTIDE         1..14
+FT                   /note="trp operon leader peptide"
+FT                   /id="PRO_0000044026"
+SQ   SEQUENCE   14 AA;  1777 MW;  05BFD63BC52A7CB0 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Sinorhizobium.
+1	6	Sinorhizobium/Ensifer group
+1	5	Rhizobiaceae
+1	4	Hyphomicrobiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P18854	TRP OPERON LEADER PEPTIDE            36.9    6.5e-06   1   1.0   8.7
+	P18854                    	     1	    14	    36.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P18854
+GA   27.00 27.00;
+TC   36.90 36.90;
+NC   24.70 14.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

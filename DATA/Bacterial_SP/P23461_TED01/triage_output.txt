@@ -1,0 +1,100 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Roseobacter.
+2	6	Rhodobacter.
+7	5	Roseobacteraceae
+2	5	Rhodobacter group
+2	5	Paracoccaceae
+11	4	Rhodobacterales
+11	3	Alphaproteobacteria
+11	2	Pseudomonadota
+11	1	Pseudomonadati
+11	0	Bacteria
+Total of 11 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1L9NU45	UNCHARACTERIZED PROTEIN {     49.2    2.5e-09   1   1.3   0.7
+	P23461_TED01              	     3	    91	    48.6
+
+A0A1N7IUR1	UNCHARACTERIZED PROTEIN {     94.3    2.1e-23   1   1.0   4.3
+	P23461_TED01              	     3	    94	    94.1
+
+A0A2R8BGN2	UNCHARACTERIZED PROTEIN {     57.5    6.2e-12   1   1.4   0.4
+	P23461_TED01              	     3	    92	    56.7
+
+A0A369QWS1	UNCHARACTERIZED PROTEIN {     45.1    4.5e-08   1   1.2   4.5
+	P23461_TED01              	     3	    96	    44.7
+
+A0A4P6MCJ7	PUCR FAMILY TRANSCRIPTION     36.8    1.8e-05   1   1.3   0.1
+	P23461_TED01              	     3	    91	    36.1
+
+A0A640VXG0	UNCHARACTERIZED PROTEIN {     31.4     0.0009   1   1.2   0.3
+	P23461_TED01              	     3	    96	    30.8
+
+A0A6I6IVJ2	UNCHARACTERIZED PROTEIN {     32.4    0.00043   1   1.2   0.7
+	P23461_TED01              	     3	    95	    31.8
+
+A0A7X6H3J5	UNCHARACTERIZED PROTEIN {     28.3     0.0083   1   1.3   0.6
+	P23461_TED01              	     3	    88	    27.6
+
+A0A8J7W843	UNCHARACTERIZED PROTEIN {     34.6    9.1e-05   1   1.4   3.9
+	P23461_TED01              	     3	    90	    33.8
+
+A0A9X1K2G9	UNCHARACTERIZED PROTEIN {     53.5    1.1e-10   1   1.3   1.6
+	P23461_TED01              	     3	    96	    52.8
+
+A8LJM7	UNCHARACTERIZED PROTEIN {ECO:     37.2    1.4e-05   1   1.3   1.1
+	P23461_TED01              	     3	    96	    36.5
+
+D5AMI7	LIGHT-HARVESTING PROTEIN B-80    181.9    9.6e-51   1   1.3   8.9
+	P23461_TED01              	     3	    95	   181.3
+
+Q162R6	UNCHARACTERIZED PROTEIN {ECO:     44.6    6.7e-08   1   1.3   0.9
+	P23461_TED01              	     3	    91	    44.0
+
+Q28S11	PUCD PROTEIN {ECO:0000313|EMB     32.6    0.00038   1   1.8   0.1
+	P23461_TED01              	     3	    91	    30.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3609513 (E-value: 1.2e-07, Score: 37.2)
+Mentioned as: Dshi_2897
+Description: hypothetical protein
+Organism: Dinoroseobacter shibae DFL 12
+PMID: 21654848
+Source: EuropePMC
+Title: Transcriptional response of the photoheterotrophic marine bacterium Dinoroseobacter shibae to changing light regimes
+Journal: The ISME journal (2011)
+Snippet: Dshi_3547; the puc operon consists of the genes Dshi_2897 to Dshi_2900. The conserved binding sequence for the transcriptional regulator PpsR is shown in Figure
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P23461.1	AF-P23461-F1-model_v4_TED01:3-94	1	AF-P23461-F1-model_v4_TED01	3-94	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P23461_TED01
+GA   27.00 27.00;
+TC   27.10 27.60;
+NC   25.80 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

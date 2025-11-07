@@ -1,0 +1,125 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YUBK_ECO57              Reviewed;         129 AA.
+AC   O82903;
+DE   RecName: Full=Uncharacterized serine-rich protein YubK;
+DE   Flags: Precursor;
+GN   Name=yubK; OrderedLocusNames=L7079.1, ECO57PM44;
+OS   Escherichia coli O157:H7.
+OG   Plasmid pO157.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=9722640; DOI=10.1093/nar/26.18.4196;
+RA   Burland V., Shao Y., Perna N.T., Plunkett G. III, Sofia H.J.,
+RA   Blattner F.R.;
+RT   "The complete DNA sequence and analysis of the large virulence plasmid of
+RT   Escherichia coli O157:H7.";
+RL   Nucleic Acids Res. 26:4196-4204(1998).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=9628576; DOI=10.1093/dnares/5.1.1;
+RA   Makino K., Ishii K., Yasunaga T., Hattori M., Yokoyama K., Yatsudo H.C.,
+RA   Kubota Y., Yamaichi Y., Iida T., Yamamoto K., Honda T., Han C.G.,
+RA   Ohtsubo A., Kasamatsu M., Hayashi T., Kuhara S., Shinagawa H.;
+RT   "Complete nucleotide sequences of 93-kb and 3.3-kb plasmids of an
+RT   enterohemorrhagic Escherichia coli O157:H7 derived from Sakai outbreak.";
+RL   DNA Res. 5:1-9(1998).
+DR   EMBL; AF074613; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AB011549; BAA31801.1; -; Genomic_DNA.
+DR   PIR; T00282; T00282.
+DR   RefSeq; NP_052651.1; NC_002128.1.
+DR   AlphaFoldDB; O82903; -.
+DR   KEGG; ecs:pO157p44; -.
+DR   HOGENOM; CLU_157847_0_0_6; -.
+DR   Proteomes; UP000000558; Plasmid pO157.
+DR   Proteomes; UP000002519; Plasmid pO157.
+PE   3: Inferred from homology;
+KW   Plasmid; Reference proteome; Signal.
+FT   SIGNAL          1..17
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           18..129
+FT                   /note="Uncharacterized serine-rich protein YubK"
+FT                   /id="PRO_0000269542"
+FT   REGION          26..76
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        26..36
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   129 AA;  13586 MW;  332FBEE65657D304 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	Klebsiella pneumoniae complex.
+1	7	Klebsiella
+4	6	Escherichia.
+1	6	Klebsiella/Raoultella group
+5	5	Enterobacteriaceae
+5	4	Enterobacterales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2XJG0	UNCHARACTERIZED PROTEIN {     97.2    4.2e-24   1   1.1   4.2
+	Iterate                   	     1	    65	    97.0
+
+A0A0H2XKS9	UNCHARACTERIZED PROTEIN {     92.9    8.6e-23   1   1.1   4.8
+	Iterate                   	     1	    65	    92.7
+
+A0A0H3ETM0	UNCHARACTERIZED PROTEIN {     38.9    4.4e-06   1   1.8   2.1
+	Iterate                   	     3	    83	    38.2
+
+A0A377YUW9	DUF1472 DOMAIN-CONTAINING     91.7    2.1e-22   1   2.3  17.5
+	Iterate                   	    36	   118	    91.7
+
+O82903	UNCHARACTERIZED SERINE-RICH PRO    289.9      1e-83   1   1.0  22.3
+	Iterate                   	     1	   129	   289.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q6SJ49 (E-value: 1.9e-18, Score: 72.6)
+Mentioned as: Q6SJ49
+Description: YdaA
+Organism: Escherichia coli
+PMID: 16760308
+Source: EuropePMC
+Title: The Escherichia coli proteome: past, present, and future prospects
+Journal: Microbiology and molecular biology reviews : MMBR (2006)
+Snippet: 5.19/10,602.04 5.97/23,211.76 5.99/27,602.61 YdaA YdbC YdbH Q6SJ49 P25906 P52645 Protein Protein Protein Putative HTH-type transcriptional regulator Protein
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O82903/Iterate
+GA   27.00 27.00;
+TC   56.80 56.40;
+NC   25.20 25.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

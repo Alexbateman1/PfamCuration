@@ -1,0 +1,47 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Stenotrophomonasmaltophilia group.
+1	6	Stenotrophomonas
+1	5	Lysobacteraceae
+1	4	Lysobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+B2FMQ4	HELICASE {ECO:0000313|EMBL:CA     46.7    1.3e-08   1   1.7   0.1
+	P37125_TED01              	     4	    42	    45.4
+	PF04851	ResIII          	   621	   780	    24.2
+	PF00176	SNF2-rel_dom    	   627	   907	     232
+	PF00271	Helicase_C      	   920	  1030	    75.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P37125.1	AF-P37125-F1-model_v4_TED01:2-22_87-113	1	AF-P37125-F1-model_v4_TED01	2-113	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P37125_TED01
+GA   27.00 27.00;
+TC   28.20 45.40;
+NC   25.70 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

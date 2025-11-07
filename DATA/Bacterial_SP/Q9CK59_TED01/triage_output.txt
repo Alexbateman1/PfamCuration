@@ -1,0 +1,91 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1775_PASMU             Reviewed;          92 AA.
+AC   Q9CK59;
+DE   RecName: Full=Uncharacterized protein PM1775;
+GN   OrderedLocusNames=PM1775;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK03859.1; -; Genomic_DNA.
+DR   RefSeq; WP_010907328.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CK59; -.
+DR   SMR; Q9CK59; -.
+DR   STRING; 272843.PM1775; -.
+DR   EnsemblBacteria; AAK03859; AAK03859; PM1775.
+DR   KEGG; pmu:PM1775; -.
+DR   PATRIC; fig|272843.6.peg.1798; -.
+DR   HOGENOM; CLU_2410609_0_0_6; -.
+DR   OrthoDB; 5681099at2; -.
+DR   Proteomes; UP000000809; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..92
+FT                   /note="Uncharacterized protein PM1775"
+FT                   /id="PRO_0000216332"
+SQ   SEQUENCE   92 AA;  10534 MW;  83683DD17D64DFD3 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pasteurella.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9CK59	UNCHARACTERIZED PROTEIN PM1775    183.4    3.2e-51   1   1.0   4.2
+	Q9CK59_TED01              	    17	    92	   183.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS80851 (E-value: 2.9e-53, Score: 183.4)
+Mentioned as: PM1775
+Description: unknown
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 35266868
+Source: EuropePMC
+Title: Phase variation in the glycosyltransferase genes of <i>Pasteurella multocida</i> associated with outbreaks of fowl cholera on free-range layer farms
+Journal: Microbial genomics (2022)
+Snippet: PM1533 and PM1542* 2 2 2 9 2 natC 7bp insertion PM979 at 12weeks 2013 PM1775 to PM1777 2 3 3 9 1 No missense mutation Commercial tetra-valent at 10weeks and PM979, PM1533 at 16weeks PM1778 1 2 natC 7bp insertion 2014 PM1947 to PM1949 2
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9CK59.1	AF-Q9CK59-F1-model_v4_TED01:17-92	1	AF-Q9CK59-F1-model_v4_TED01	17-92	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CK59_TED01
+GA   27.00 27.00;
+TC   29.90 183.20;
+NC   25.80 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

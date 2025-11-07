@@ -1,0 +1,125 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y064_TREPA              Reviewed;         191 AA.
+AC   O83103;
+DE   RecName: Full=Uncharacterized protein TP_0064;
+GN   OrderedLocusNames=TP_0064;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65064.1; -; Genomic_DNA.
+DR   PIR; H71370; H71370.
+DR   RefSeq; WP_010881513.1; NC_021490.2.
+DR   AlphaFoldDB; O83103; -.
+DR   SMR; O83103; -.
+DR   IntAct; O83103; 11.
+DR   STRING; 243276.TP_0064; -.
+DR   EnsemblBacteria; AAC65064; AAC65064; TP_0064.
+DR   KEGG; tpa:TP_0064; -.
+DR   KEGG; tpw:TPANIC_0064; -.
+DR   eggNOG; ENOG502ZM16; Bacteria.
+DR   HOGENOM; CLU_122425_0_0_12; -.
+DR   OrthoDB; 371174at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..191
+FT                   /note="Uncharacterized protein TP_0064"
+FT                   /id="PRO_0000202183"
+SQ   SEQUENCE   191 AA;  22079 MW;  2837931F910CD831 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Treponema.
+2	6	Spirochaeta.
+6	5	Treponemataceae
+4	5	Spirochaetaceae
+10	4	Spirochaetales
+10	3	Spirochaetia
+10	2	Spirochaetota
+10	1	Pseudomonadati
+10	0	Bacteria
+Total of 10 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GQN5	UNCHARACTERIZED PROTEIN {    142.1    4.8e-38   1   1.0   4.0
+	Iterate                   	     1	   131	   141.9
+
+A0AAE3EHN0	UNCHARACTERIZED PROTEIN {     85.1    2.1e-20   1   1.0   0.4
+	Iterate                   	     1	   132	    84.8
+
+O83103	UNCHARACTERIZED PROTEIN TP_0064    306.0    1.1e-88   1   1.1   4.0
+	Iterate                   	    46	   177	   305.6
+
+Q73LI3	UNCHARACTERIZED PROTEIN {ECO:     83.8    5.2e-20   1   1.1   0.3
+	Iterate                   	     1	   130	    83.6
+
+S6A124	UNCHARACTERIZED PROTEIN {ECO:     82.5    1.3e-19   1   1.1   1.7
+	Iterate                   	     1	   131	    82.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS25885 (E-value: 9.7e-91, Score: 306.0)
+Mentioned as: TP0064
+Description: T. pallidum predicted coding region TP0064
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 18509523
+Source: EuropePMC
+Title: The binary protein interactome of Treponema pallidum--the syphilis spirochete
+Journal: PloS one (2008)
+Snippet: (gyrase, gyrA); PI (gyrase, gyrB) TP0050 DNA replication, nucleotide metabolism PI (dnaB), DOM (phophoribosyl transferase) TP0064, TP0066, TP0067, TP0068 Operon involved in DNA metabolism (+ cell division) PI (DNA metabolism + cell division); GBAA (TP0066, cell division/chromosome partitioning); DOM (TP0065, DNA methylase); HOM (TP0067, putative cell
+
+================================================================================
+Protein: VIMSS25885 (E-value: 9.7e-91, Score: 306.0)
+Mentioned as: TP0064
+Description: T. pallidum predicted coding region TP0064
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 16936039
+Source: EuropePMC
+Title: Novel conserved assembly factor of the bacterial flagellum
+Journal: Journal of bacteriology (2006)
+Snippet: (sorted by prey) Bait a TP0005 TP0046 TP0050 TP0064 TP0066 TP0160 TP0174 (TP0258) (TP0288) TP0396 (TP0455) (TP0563) TP0629 TP0658 TP0658 TP0658 (TP0661)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83103.1	AF-O83103-F1-model_v4_TED01:46-177	1	AF-O83103-F1-model_v4_TED01	46-177	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83103_TED01/Iterate
+GA   27.00 27.00;
+TC   27.20 29.00;
+NC   25.70 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

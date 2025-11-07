@@ -1,0 +1,109 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Geobacillus thermoleovorans group.
+2	6	Paenibacillus
+1	6	Syntrophothermus.
+1	6	Syntrophomonas.
+1	6	Paenactinomyces.
+1	6	Heyndrickxia
+1	6	Halalkalibacter
+1	6	Geobacillus
+1	6	Clostridium
+2	5	Syntrophomonadaceae
+2	5	Paenibacillaceae
+2	5	Bacillaceae
+1	5	Thermoactinomycetaceae
+1	5	Clostridiaceae
+1	5	Anoxybacillaceae
+6	4	Bacillales
+3	4	Eubacteriales
+6	3	Bacilli
+3	3	Clostridia
+9	2	Bacillota
+9	1	Bacillati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0Q3TG79	UNCHARACTERIZED PROTEIN {     35.4    5.1e-05   1   1.3   1.4
+	P10773_TED01              	    29	   139	    35.0
+
+A0A1B8UQ77	3D DOMAIN-CONTAINING PROT     44.1      1e-07   1   1.2   2.9
+	P10773_TED01              	    27	   148	    43.8
+
+A0A329MMG3	UNCHARACTERIZED PROTEIN {    125.6      5e-33   1   1.0   2.0
+	P10773_TED01              	     1	   104	   125.4
+
+A0A6D2I0M4	UNCHARACTERIZED PROTEIN {     30.5     0.0017   4   4.1   0.1
+	P10773_TED01              	    67	   163	     8.3
+	P10773_TED01              	     1	    73	     7.1
+	P10773_TED01              	   157	   228	     5.7
+	P10773_TED01              	   224	   297	     4.7
+
+A0A7W1WTA0	3D DOMAIN-CONTAINING PROT     36.4    2.5e-05   1   1.6   2.1
+	P10773_TED01              	    29	   151	    35.0
+
+A0A937FCS3	RICIN DOMAIN-CONTAINING P     47.9    6.7e-09   1   2.6   1.5
+	P10773_TED01              	   184	   299	    47.9
+	PF14200	RicinB_lectin_2 	    31	   114	    65.1
+	PF00652	Ricin_B_lectin  	    38	   171	    51.6
+	PF14200	RicinB_lectin_2 	   120	   189	    41.8
+
+D7CNJ4	UNCHARACTERIZED PROTEIN {ECO:     33.1    0.00026   1   1.1   0.1
+	P10773_TED01              	    54	   171	    32.8
+
+H3SIU3	3D DOMAIN-CONTAINING PROTEIN      36.6    2.2e-05   1   1.1   2.7
+	P10773_TED01              	    27	   147	    36.1
+
+Q5L181	HYPOTHETICAL CONSERVED PROTEI     31.4    0.00087   1   1.1   1.4
+	P10773_TED01              	    33	   148	    31.1
+
+U2EL65	UNCHARACTERIZED PROTEIN {ECO:     41.7    5.5e-07   1   1.4   2.2
+	P10773_TED01              	    32	   153	    41.0
+
+W4QTU5	UNCHARACTERIZED PROTEIN {ECO:     35.4    5.2e-05   1   1.3   3.2
+	P10773_TED01              	    28	   135	    34.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P10773 (E-value: 1.6e-74, Score: 252.6)
+Mentioned as: P10773
+Description: B-enzyme
+Organism: Bacillus subtilis
+PMID: 38399817
+Source: EuropePMC
+Title: Targeted Isolation of Antibiofilm Compounds from Halophytic Endophyte <i>Bacillus velezensis</i> 7NPB-3B Using LC-HR-MS-Based Metabolomics
+Journal: Microorganisms (2024)
+Snippet: -butenoyl) macrolactin A No hits No hits 0.19 Marine-derived Bacillus subtilis B5 5.39 10 9 P10773 20.10 154.990 153.982 C 6 H 3 O 3 P No hits 274,191.89 P34624 20.77 358.331 357.324 C 21 H 43 NO 3 2-amino-heneicosene-1,3,4-triol 0.58 Helichrysum cameroonense Parinari hypochrysea Acnistus
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P10773.1	AF-P10773-F1-model_v4_TED01:8-117	1	AF-P10773-F1-model_v4_TED01	8-117	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P10773_TED01
+GA   27.00 27.00;
+TC   29.20 28.80;
+NC   26.30 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

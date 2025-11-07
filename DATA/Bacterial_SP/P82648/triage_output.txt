@@ -1,0 +1,53 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Fructilactobacillus
+1	5	Lactobacillaceae
+1	4	Lactobacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0AAE0ZFM3	MAM DOMAIN-CONTAINING PRO     31.5    0.00036  11  11.9  43.4
+	P82648                    	   623	   637	     6.0
+	P82648                    	   865	   879	     6.0
+	P82648                    	  1153	  1167	     6.0
+	P82648                    	  1395	  1409	     6.0
+	P82648                    	  1683	  1697	     6.0
+	P82648                    	   381	   394	     4.5
+	P82648                    	    92	   105	     4.4
+	P82648                    	  1953	  1966	     4.4
+	P82648                    	  2223	  2236	     4.4
+	P82648                    	  2493	  2506	     4.4
+	P82648                    	  2725	  2738	     4.1
+	PF00629	MAM             	  2724	  2885	    33.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P82648
+GA   27.00 27.00;
+TC   29.30 28.50;
+NC   25.40 18.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

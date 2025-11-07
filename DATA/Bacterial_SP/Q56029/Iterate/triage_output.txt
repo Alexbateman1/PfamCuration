@@ -1,0 +1,171 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PAGD_SALTY              Reviewed;          87 AA.
+AC   Q56029;
+DE   RecName: Full=Virulence protein PagD;
+DE   Flags: Precursor;
+GN   Name=pagD; OrderedLocusNames=STM1244;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 14028 / SGSG 2980 / CDC 6516-60 / NCTC 12023;
+RX   PubMed=7665482; DOI=10.1128/jb.177.17.5040-5047.1995;
+RA   Gunn J.S., Alpuche-Aranda C.M., Loomis W.P., Belden W.J., Miller S.I.;
+RT   "Characterization of the Salmonella typhimurium pagC/pagD chromosomal
+RT   region.";
+RL   J. Bacteriol. 177:5040-5047(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+CC   -!- FUNCTION: Putative function in virulence. Could be involved in
+CC       promoting S.typhimurium survival within macrophages.
+DR   EMBL; U31849; AAA82994.1; -; Genomic_DNA.
+DR   EMBL; AE006468; AAL20173.1; -; Genomic_DNA.
+DR   RefSeq; NP_460214.1; NC_003197.2.
+DR   RefSeq; WP_001535993.1; NC_003197.2.
+DR   AlphaFoldDB; Q56029; -.
+DR   STRING; 99287.STM1244; -.
+DR   PaxDb; 99287-STM1244; -.
+DR   GeneID; 1252762; -.
+DR   KEGG; stm:STM1244; -.
+DR   PATRIC; fig|99287.12.peg.1317; -.
+DR   HOGENOM; CLU_174055_0_0_6; -.
+DR   OMA; NAYCARS; -.
+DR   BioCyc; SENT99287:STM1244-MONOMER; -.
+DR   Proteomes; UP000001014; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal; Virulence.
+FT   SIGNAL          1..20
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           21..87
+FT                   /note="Virulence protein PagD"
+FT                   /id="PRO_0000021995"
+FT   REGION          46..87
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        57..66
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   87 AA;  9701 MW;  A3E6FAAB0925D925 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Salmonella.
+4	5	Enterobacteriaceae
+4	4	Enterobacterales
+4	3	Gammaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2X4TFY4	VIRULENCE PROTEIN PAGD {E    154.2      4e-42   1   1.0   0.6
+	Iterate                   	     1	    87	   154.1
+
+A0A4Z0MWT0	VIRULENCE FACTOR {ECO:000    197.2    1.6e-55   1   1.0   1.5
+	Iterate                   	     1	    87	   197.1
+
+A0A9X0CPQ1	ALPHA-2B ADRENERGIC RECEP     54.4    5.6e-11  10  16.2  39.7
+	Iterate                   	   801	   843	     6.7
+	Iterate                   	   337	   378	     6.6
+	Iterate                   	   635	   677	     6.6
+	Iterate                   	   406	   446	     6.5
+	Iterate                   	   473	   511	     6.4
+	Iterate                   	   699	   741	     6.4
+	Iterate                   	   537	   578	     6.3
+	Iterate                   	   374	   411	     6.1
+	Iterate                   	   440	   477	     6.1
+	Iterate                   	   270	   313	     3.4
+	PF00001	7tm_1           	    55	   196	    73.3
+
+A9MG63	VIRULENCE FACTOR {ECO:0008006    150.6    5.5e-41   1   1.1   0.4
+	Iterate                   	    23	   109	   150.3
+
+Q56029	VIRULENCE PROTEIN PAGD             214.8    5.1e-61   1   1.0   1.8
+	Iterate                   	     1	    87	   214.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS148595 (E-value: 1.6e-58, Score: 200.1)
+Mentioned as: STM1244
+Description: PhoP regulated
+Organism: Salmonella typhimurium LT2
+PMID: 34191587
+Source: EuropePMC
+Title: How the PhoP/PhoQ System Controls Virulence and Mg<sup>2+</sup> Homeostasis: Lessons in Signal Transduction, Pathogenesis, Physiology, and Evolution
+Journal: Microbiology and molecular biology reviews : MMBR (2021)
+
+================================================================================
+Protein: VIMSS148595 (E-value: 1.6e-58, Score: 200.1)
+Mentioned as: STM1244
+Description: PhoP regulated
+Organism: Salmonella typhimurium LT2
+PMID: 23505508
+Source: EuropePMC
+Title: Virulence gene profiling and pathogenicity characterization of non-typhoidal Salmonella accounted for invasive disease in humans
+Journal: PloS one (2013)
+Snippet: + + SPI-11 envF STM1240 + + + + + + + + + pagD STM1244 + + + ND ND + + + ND + + + + pagC STM1246 + + + + + + + + ND + + + + pltA STY1890
+
+================================================================================
+Protein: VIMSS148595 (E-value: 1.6e-58, Score: 200.1)
+Mentioned as: STM1244
+Description: PhoP regulated
+Organism: Salmonella typhimurium LT2
+PMID: 21711513
+Source: EuropePMC
+Title: Systems analysis of multiple regulator perturbations allows discovery of virulence factors in Salmonella
+Journal: BMC systems biology (2011)
+Snippet: a subset of novel genes/proteins within this cluster was selected including STM0082 ( srfN /SrfN), STM1244 ( pagD /PagD), STM1246 ( pagC /PagC), STM1548, STM1599 ( pdgL /PdgL), STM1633, STM2585A and STM3595, and their role in virulence was investigated as described below. Analysis of these proteins
+
+================================================================================
+Protein: VIMSS153498 (E-value: 3.2e-57, Score: 195.9)
+Mentioned as: STY1880a
+Description: putative outer membrane virulence protein
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 30500817
+Source: EuropePMC
+Title: Virulotyping of Salmonella enterica serovar Typhi isolates from Pakistan: Absence of complete SPI-10 in Vi negative isolates
+Journal: PLoS neglected tropical diseases (2018)
+Snippet: 63 ] 34 SPI-11 msgA GCCAGGCGCACGCGAAATCATCC GCGACCAGCCACATATCAGCCTCTTCAAAC 62 189 [ 64 ] 35 SPI-11 pagD (STY1880a) TGGTAGTAAAACCCCGCAACCACC TGGGTTTTGCCGTCGGGCAG 60 89 This study (17825391782802) 36 SPI-11 cdtB ACAACTGTCGCATCTCGCCCCGTCATT CAATTTGCGTGGGTTCTGTAGGTGCGAGT 58 268 [ 11 ] 37 SPI-12 sspH2 (STY2467) GGGCTGCACCCGCAGAAGAG AGACCTCCAGCGTCCGCAGT 60 216 This study (c2300203-2297837) 38 SPI-16
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A9MG63.1	AF-A9MG63-F1-model_v4_TED01:2-63	1	AF-A9MG63-F1-model_v4_TED01	2-63	47.1%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q56029/Iterate
+GA   27.00 27.00;
+TC   28.30 187.60;
+NC   24.70 19.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

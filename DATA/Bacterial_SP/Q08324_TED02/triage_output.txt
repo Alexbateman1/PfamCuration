@@ -1,0 +1,64 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Micromonospora.
+1	6	Frankia.
+1	6	Dactylosporangium.
+1	6	Actinoalloteichus.
+2	5	Micromonosporaceae
+1	5	Pseudonocardiaceae
+1	5	Frankiaceae
+2	4	Micromonosporales
+1	4	Pseudonocardiales
+1	4	Frankiales
+4	3	Actinomycetes
+4	2	Actinomycetota
+4	1	Bacillati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A221VZ26	ANTILISTERIAL BACTERIOCIN     93.7    2.9e-23   1   1.7   2.1
+	Q08324_TED02              	   211	   265	    92.5
+	PF04055	Radical_SAM     	    23	   182	    45.2
+
+A0A562I8R0	RADICAL SAM FAMILY PROTEI    142.3      2e-38   1   1.7   3.2
+	Q08324_TED02              	   208	   262	   141.1
+	PF04055	Radical_SAM     	    20	   161	    52.4
+
+A0A9W6NKG9	RADICAL SAM CORE DOMAIN-C    128.1    5.5e-34   1   1.6   2.2
+	Q08324_TED02              	   208	   262	   127.0
+	PF04055	Radical_SAM     	    20	   164	    49.1
+
+Q2J7N0	RADICAL SAM {ECO:0000313|EMBL     99.3    5.3e-25   1   1.6   0.7
+	Q08324_TED02              	   267	   321	    98.3
+	PF04055	Radical_SAM     	    79	   219	    45.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q08324.1	AF-Q08324-F1-model_v4_TED01:2-62	1	AF-Q08324-F1-model_v4_TED01	2-62	0
+Q08324.1	AF-Q08324-F1-model_v4_TED02:72-126	1	AF-Q08324-F1-model_v4_TED02	72-126	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q08324_TED02
+GA   27.00 27.00;
+TC   50.80 92.50;
+NC   26.90 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

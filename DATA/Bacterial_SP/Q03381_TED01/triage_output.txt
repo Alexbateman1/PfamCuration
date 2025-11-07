@@ -1,0 +1,110 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   REGB_PSEAE              Reviewed;          75 AA.
+AC   Q03381;
+DE   RecName: Full=Protein RegB;
+GN   Name=regB; OrderedLocusNames=PA0706.1;
+OS   Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+OS   14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pseudomonadales; Pseudomonadaceae; Pseudomonas.
+OX   NCBI_TaxID=208964;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=2113155; DOI=10.1111/j.1365-2958.1990.tb00615.x;
+RA   Wick M.J., Frank D.W., Storey D.G., Iglewski B.H.;
+RT   "Identification of regB, a gene required for optimal exotoxin A yields in
+RT   Pseudomonas aeruginosa.";
+RL   Mol. Microbiol. 4:489-497(1990).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=10984043; DOI=10.1038/35023079;
+RA   Stover C.K., Pham X.-Q.T., Erwin A.L., Mizoguchi S.D., Warrener P.,
+RA   Hickey M.J., Brinkman F.S.L., Hufnagle W.O., Kowalik D.J., Lagrou M.,
+RA   Garber R.L., Goltry L., Tolentino E., Westbrock-Wadman S., Yuan Y.,
+RA   Brody L.L., Coulter S.N., Folger K.R., Kas A., Larbig K., Lim R.M.,
+RA   Smith K.A., Spencer D.H., Wong G.K.-S., Wu Z., Paulsen I.T., Reizer J.,
+RA   Saier M.H. Jr., Hancock R.E.W., Lory S., Olson M.V.;
+RT   "Complete genome sequence of Pseudomonas aeruginosa PAO1, an opportunistic
+RT   pathogen.";
+RL   Nature 406:959-964(2000).
+CC   -!- FUNCTION: Required for optimal exotoxin A production.
+DR   EMBL; X52463; CAA36701.1; -; Genomic_DNA.
+DR   EMBL; AE004091; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   PIR; S11797; S11797.
+DR   AlphaFoldDB; Q03381; -.
+DR   InParanoid; Q03381; -.
+DR   Proteomes; UP000002438; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..75
+FT                   /note="Protein RegB"
+FT                   /id="PRO_0000097242"
+FT   CONFLICT        1
+FT                   /note="M -> T (in Ref. 2)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        50..52
+FT                   /note="RTY -> QTF (in Ref. 1; CAA36701)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   75 AA;  7571 MW;  F26975F6D9EAEFC0 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pseudomonas.
+1	5	Pseudomonadaceae
+1	4	Pseudomonadales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q03381	PROTEIN REGB                       158.2      3e-43   1   1.1  17.0
+	Q03381_TED01              	     2	    69	   157.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q03381 (E-value: 2.6e-45, Score: 158.2)
+Mentioned as: Q03381
+Description: Protein RegB
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+PMID: 40066032
+Source: EuropePMC
+Title: Proteome-wide identification of druggable targets and inhibitors for multidrug-resistant &lt;i&gt;Pseudomonas aeruginosa&lt;/i&gt; using an integrative subtractive proteomics and virtual screening approach
+Journal: Heliyon (2025)
+Snippet: 156 Q9ZN70 1238 Q9HTM1 2320 Q03268 3402 Q9HYK4 4484 Q9I376 157 G3XCV2 1239 Q9HTN0 2321 Q03381 3403 Q9HYK5 4485 Q9I377 158 G3XCX7 1240 Q9HTN1 2322 Q04628 3404 Q9HYK6 4486 Q9I378 159 G3XCY8 1241 Q9HTN5 2323 Q51384 3405 Q9HYK8 4487 Q9I379 160 G3XCZ8 1242 Q9HTN8 2324 Q51483
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q03381.2	AF-Q03381-F1-model_v4_TED01:2-69	1	AF-Q03381-F1-model_v4_TED01	2-69	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q03381_TED01
+GA   27.00 27.00;
+TC   27.50 157.90;
+NC   26.20 19.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

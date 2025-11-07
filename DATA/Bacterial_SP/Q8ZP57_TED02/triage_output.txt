@@ -1,0 +1,188 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   STEC_SALTY              Reviewed;         457 AA.
+AC   Q8ZP57;
+DE   RecName: Full=Secreted effector kinase SteC;
+DE            EC=2.7.-.-;
+DE   AltName: Full=Salmonella translocated effector C;
+GN   Name=steC; OrderedLocusNames=STM1698;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+RN   [2]
+RP   FUNCTION AS A KINASE, SUBCELLULAR LOCATION, SECRETION VIA TYPE III
+RP   SECRETION SYSTEM, INDUCTION, AUTOPHOSPHORYLATION, AND MUTAGENESIS OF
+RP   LYS-256.
+RC   STRAIN=ATCC 14028 / SGSC 2980 / CDC 6516-60 / NCTC 12023;
+RX   PubMed=17645553; DOI=10.1111/j.1462-5822.2007.01010.x;
+RA   Poh J., Odendall C., Spanos A., Boyle C., Liu M., Freemont P., Holden D.W.;
+RT   "SteC is a Salmonella kinase required for SPI-2-dependent F-actin
+RT   remodelling.";
+RL   Cell. Microbiol. 10:20-30(2008).
+RN   [3]
+RP   INDUCTION.
+RC   STRAIN=ATCC 14028 / SGSC 2980 / CDC 6516-60 / NCTC 12023
+RC   {ECO:0000303|PubMed:19858298};
+RX   PubMed=19858298; DOI=10.1128/iai.00931-09;
+RA   Xu X., Hensel M.;
+RT   "Systematic analysis of the SsrAB virulon of Salmonella enterica.";
+RL   Infect. Immun. 78:49-58(2010).
+CC   -!- FUNCTION: Effector proteins function to alter host cell physiology and
+CC       promote bacterial survival in host tissues. This protein is a kinase,
+CC       which is required for SPI-2 T3SS-dependent F-actin meshwork formation
+CC       in infected host cells. {ECO:0000269|PubMed:17645553}.
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000269|PubMed:17645553}. Host
+CC       cytoplasm {ECO:0000269|PubMed:17645553}. Note=Secreted via type III
+CC       secretion system 2 (SPI-2 T3SS), and delivered into the host cytoplasm.
+CC       Localizes on or close to the Salmonella-containing vacuole (SCV)
+CC       membrane, and to SPI-2-induced F-actin structures.
+CC   -!- INDUCTION: Expression is regulated by the two-component regulatory
+CC       system SsrA/SsrB (PubMed:17645553). Highly expressed in host
+CC       macrophages and when grown in an acidic environment (PubMed:19858298).
+CC       {ECO:0000269|PubMed:17645553, ECO:0000269|PubMed:19858298}.
+CC   -!- PTM: Autophosphorylated.
+CC   -!- SIMILARITY: Belongs to the protein kinase superfamily. {ECO:0000305}.
+DR   EMBL; AE006468; AAL20615.1; -; Genomic_DNA.
+DR   RefSeq; NP_460656.1; NC_003197.2.
+DR   RefSeq; WP_001116926.1; NC_003197.2.
+DR   AlphaFoldDB; Q8ZP57; -.
+DR   SMR; Q8ZP57; -.
+DR   STRING; 99287.STM1698; -.
+DR   PaxDb; 99287-STM1698; -.
+DR   GeneID; 1253216; -.
+DR   KEGG; stm:STM1698; -.
+DR   PATRIC; fig|99287.12.peg.1793; -.
+DR   HOGENOM; CLU_041541_0_0_6; -.
+DR   OMA; FHIGNHS; -.
+DR   BioCyc; SENT99287:STM1698-MONOMER; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0043657; C:host cell; IDA:UniProtKB.
+DR   GO; GO:0030430; C:host cell cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0016301; F:kinase activity; IDA:UniProtKB.
+DR   GO; GO:0046777; P:protein autophosphorylation; IDA:UniProtKB.
+DR   GO; GO:0030254; P:protein secretion by the type III secretion system; IDA:UniProtKB.
+PE   1: Evidence at protein level;
+KW   ATP-binding; Host cytoplasm; Kinase; Nucleotide-binding;
+KW   Reference proteome; Secreted; Transferase; Virulence.
+FT   CHAIN           1..457
+FT                   /note="Secreted effector kinase SteC"
+FT                   /id="PRO_0000391639"
+FT   BINDING         256
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255"
+FT   MUTAGEN         256
+FT                   /note="K->H: Loss of kinase activity. No effect on
+FT                   translocation of the protein."
+FT                   /evidence="ECO:0000269|PubMed:17645553"
+SQ   SEQUENCE   457 AA;  52302 MW;  287CD1B6C02B5ECB CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Salmonella.
+1	6	Sodalis.
+1	6	Providencia.
+1	6	Erwinia.
+4	5	Enterobacteriaceae
+1	5	Morganellaceae
+1	5	Erwiniaceae
+1	5	Bruguierivoracaceae
+7	4	Enterobacterales
+7	3	Gammaproteobacteria
+7	2	Pseudomonadota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A014PVE0	HYDROGENASE {ECO:0000313|    140.7    1.5e-37   1   1.2   0.8
+	Q8ZP57_TED02              	    18	   161	   140.1
+
+A0A1B7JUE8	PUTATIVE INNER MEMBRANE P     33.8    0.00013   1   1.5   2.1
+	Q8ZP57_TED02              	   160	   289	    32.7
+
+A0A1J7CPP5	PROTEIN KINASE DOMAIN-CON     91.1    2.9e-22   1   1.4   0.1
+	Q8ZP57_TED02              	   202	   356	    90.3
+
+A0A2X4TCB3	SECRETED EFFECTOR KINASE     179.7    1.5e-49   1   1.2   0.6
+	Q8ZP57_TED02              	     1	   100	   179.3
+
+A0A4Z0PBU1	SECRETED EFFECTOR KINASE     305.3    2.8e-88   1   1.3   3.8
+	Q8ZP57_TED02              	   213	   359	   304.8
+
+A9MQ22	SECRETED EFFECTOR KINASE STEC    253.6    2.5e-72   1   1.3   2.1
+	Q8ZP57_TED02              	   262	   412	   252.9
+
+Q8ZP57	SECRETED EFFECTOR KINASE STEC E    347.5   2.9e-101   1   1.2   4.3
+	Q8ZP57_TED02              	   213	   363	   347.0
+
+W0HSI3	PUTATIVE INNER MEMBRANE PROTE     90.9    3.4e-22   1   1.4   0.0
+	Q8ZP57_TED02              	   234	   388	    90.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: D0ZIB5 (E-value: 2.6e-103, Score: 347.5)
+Mentioned as: STEC_SALT1
+Description: Secreted effector kinase SteC
+Organism: Salmonella typhimurium (strain 14028s / SGSC 2262)
+  SwissProt:  - Secreted effector kinase SteC; Salmonella translocated effector C; EC 2.7.-.-
+PMID: 16177297
+Source: SwissProt
+Snippet: FUNCTION: Effector proteins function to alter host cell physiology and promote bacterial survival in host tissues. This protein is a kinase, which is required for SPI-2 T3SS-dependent F-actin meshwork formation in infected host cells (By similarity). {ECO:0000250}._:::_INTERACTION: D0ZIB5; O95466: FMNL1; Xeno; NbExp=6; IntAct=EBI-27033646, EBI-720020; D0ZIB5; Q9JL26: Fmnl1; Xeno; NbExp=6; IntAct=EBI-27033646, EBI-772250;_:::_SUBCELLULAR LOCATION: Secreted {ECO:0000269|PubMed:16177297}. Host cyto...
+
+================================================================================
+Protein: VIMSS899984 (E-value: 1.2e-100, Score: 338.8)
+Mentioned as: SC1691
+Description: putative inner membrane protein
+Organism: Salmonella enterica subsp. enterica serovar Choleraesuis str. SC-B67
+PMID: 27886215
+Source: EuropePMC
+Title: Hyperinvasiveness of Salmonella enterica serovar Choleraesuis linked to hyperexpression of type III secretion systems in vitro
+Journal: Scientific reports (2016)
+Snippet: SC2713 mig 3.05 SC4040 sseK1 6.76 SC3130 tolC 1.10 SC2708 iroN 0.41 SC2290 sseL 6.38 SC1691 steC 18.15 a SC-B67/LT2.
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q8ZP57.1	AF-Q8ZP57-F1-model_v4_TED01:2-190	1	AF-Q8ZP57-F1-model_v4_TED01	2-190	0
+Q8ZP57.1	AF-Q8ZP57-F1-model_v4_TED02:213-363	1	AF-Q8ZP57-F1-model_v4_TED02	213-363	100.0%
+Q8ZP57.1	AF-Q8ZP57-F1-model_v4_TED03:377-422	1	AF-Q8ZP57-F1-model_v4_TED03	377-422	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q8ZP57_TED02
+GA   27.00 27.00;
+TC   29.40 32.70;
+NC   26.90 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,113 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y3790_METH1             Reviewed;         268 AA.
+AC   P43056; D1J8G7;
+DE   RecName: Full=Uncharacterized protein MHO_3790;
+DE   AltName: Full=ORF268;
+GN   OrderedLocusNames=MHO_3790;
+OS   Metamycoplasma hominis (strain ATCC 23114 / DSM 25592 / NBRC 14850 /
+OS   NCTC 10111 / PG21) (Mycoplasma hominis).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales;
+OC   Metamycoplasmataceae; Metamycoplasma.
+OX   NCBI_TaxID=347256;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=7521872; DOI=10.1128/jb.176.18.5835-5842.1994;
+RA   Ladefoged S.A., Christiansen G.;
+RT   "Sequencing analysis reveals a unique gene organization in the gyrB region
+RT   of Mycoplasma hominis.";
+RL   J. Bacteriol. 176:5835-5842(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 23114 / DSM 25592 / NBRC 14850 / NCTC 10111 / PG21;
+RX   PubMed=19816563; DOI=10.1371/journal.pgen.1000677;
+RA   Pereyre S., Sirand-Pugnet P., Beven L., Charron A., Renaudin H., Barre A.,
+RA   Avenaud P., Jacob D., Couloux A., Barbe V., de Daruvar A., Blanchard A.,
+RA   Bebear C.;
+RT   "Life on arginine for Mycoplasma hominis: clues from its minimal genome and
+RT   comparison with other human urogenital mycoplasmas.";
+RL   PLoS Genet. 5:E1000677-E1000677(2009).
+DR   EMBL; X77529; CAA54668.1; -; Genomic_DNA.
+DR   EMBL; FP236530; CAX37514.1; -; Genomic_DNA.
+DR   RefSeq; WP_012855653.1; NC_013511.1.
+DR   AlphaFoldDB; P43056; -.
+DR   STRING; 347256.MHO_3790; -.
+DR   PaxDb; 347256-MHO_3790; -.
+DR   KEGG; mho:MHO_3790; -.
+DR   HOGENOM; CLU_1037534_0_0_14; -.
+DR   Proteomes; UP000002631; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..268
+FT                   /note="Uncharacterized protein MHO_3790"
+FT                   /id="PRO_0000066294"
+FT   CONFLICT        9
+FT                   /note="T -> K (in Ref. 1; CAA54668)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   268 AA;  31217 MW;  D37B977156AB3CF9 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+10	5	Metamycoplasma.
+10	4	Metamycoplasmataceae
+10	3	Mycoplasmoidales
+11	2	Mycoplasmatota
+11	1	Bacillati
+11	0	Bacteria
+Total of 11 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2Z5IQZ8	UNCHARACTERIZED PROTEIN {    300.8    2.7e-86   1   1.4  26.4
+	Iterate                   	    63	   265	   300.8
+
+A0A3G8LIF4	UNCHARACTERIZED PROTEIN {    301.6    1.6e-86   1   1.2  24.8
+	Iterate                   	    52	   267	   301.1
+
+A0A501XBH8	UNCHARACTERIZED PROTEIN {     72.5      2e-16   1   1.2  30.0
+	Iterate                   	    65	   285	    72.0
+
+N9TZZ5	TRANSMEMBRANE PROTEIN {ECO:00     48.2    5.7e-09   1   1.8  34.9
+	Iterate                   	    58	   263	    48.2
+
+P43056	UNCHARACTERIZED PROTEIN MHO_37    297.2    3.5e-85   1   1.1  39.8
+	Iterate                   	    59	   266	   296.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2Z5IQZ8.1	AF-A0A2Z5IQZ8-F1-model_v4_TED02:66-266	1	AF-A0A2Z5IQZ8-F1-model_v4_TED02	66-266	98.5%
+A0A2Z5IQZ8.1	AF-A0A2Z5IQZ8-F1-model_v4_TED01:15-58	1	AF-A0A2Z5IQZ8-F1-model_v4_TED01	15-58	0
+A0A3G8LIF4.1	AF-A0A3G8LIF4-F1-model_v4_TED02:54-270	1	AF-A0A3G8LIF4-F1-model_v4_TED02	54-270	99.1%
+A0A3G8LIF4.1	AF-A0A3G8LIF4-F1-model_v4_TED01:17-47	1	AF-A0A3G8LIF4-F1-model_v4_TED01	17-47	0
+A0A3Q9V898.1	AF-A0A3Q9V898-F1-model_v4_TED02:67-271	1	AF-A0A3Q9V898-F1-model_v4_TED02	67-271	98.5%
+A0A3Q9V898.1	AF-A0A3Q9V898-F1-model_v4_TED01:31-61	1	AF-A0A3Q9V898-F1-model_v4_TED01	31-61	0
+A0A4P1QFY2.1	AF-A0A4P1QFY2-F1-model_v4_TED02:70-313	1	AF-A0A4P1QFY2-F1-model_v4_TED02	70-313	99.2%
+A0A4P1QFY2.1	AF-A0A4P1QFY2-F1-model_v4_TED01:10-62	1	AF-A0A4P1QFY2-F1-model_v4_TED01	10-62	0
+A0A501XBH8.1	AF-A0A501XBH8-F1-model_v4_TED02:59-287	1	AF-A0A501XBH8-F1-model_v4_TED02	59-287	100.0%
+A0A501XBH8.1	AF-A0A501XBH8-F1-model_v4_TED01:22-56	1	AF-A0A501XBH8-F1-model_v4_TED01	22-56	0
+N9TZZ5.1	AF-N9TZZ5-F1-model_v4_TED02:60-265	1	AF-N9TZZ5-F1-model_v4_TED02	60-265	99.0%
+N9TZZ5.1	AF-N9TZZ5-F1-model_v4_TED01:2-55	1	AF-N9TZZ5-F1-model_v4_TED01	2-55	0
+P43056.2	AF-P43056-F1-model_v4_TED02:59-266	1	AF-P43056-F1-model_v4_TED02	59-266	100.0%
+P43056.2	AF-P43056-F1-model_v4_TED01:15-55	1	AF-P43056-F1-model_v4_TED01	15-55	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P43056_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   29.40 40.80;
+NC   26.90 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

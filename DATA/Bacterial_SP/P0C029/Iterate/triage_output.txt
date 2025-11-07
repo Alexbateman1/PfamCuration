@@ -1,0 +1,127 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PSAZ_GLOVI              Reviewed;          35 AA.
+AC   P0C029;
+DE   RecName: Full=Photosystem I reaction center subunit Z;
+DE            Short=PSI-Z;
+GN   Name=psaZ; OrderedLocusNames=gsr5001;
+OS   Gloeobacter violaceus (strain ATCC 29082 / PCC 7421).
+OC   Bacteria; Bacillati; Cyanobacteriota; Cyanophyceae; Gloeobacterales;
+OC   Gloeobacteraceae; Gloeobacter.
+OX   NCBI_TaxID=251221;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29082 / PCC 7421;
+RX   PubMed=14621292; DOI=10.1093/dnares/10.4.137;
+RA   Nakamura Y., Kaneko T., Sato S., Mimuro M., Miyashita H., Tsuchiya T.,
+RA   Sasamoto S., Watanabe A., Kawashima K., Kishida Y., Kiyokawa C., Kohara M.,
+RA   Matsumoto M., Matsuno A., Nakazaki N., Shimpo S., Takeuchi C., Yamada M.,
+RA   Tabata S.;
+RT   "Complete genome structure of Gloeobacter violaceus PCC 7421, a
+RT   cyanobacterium that lacks thylakoids.";
+RL   DNA Res. 10:137-145(2003).
+RN   [2]
+RP   PROTEIN SEQUENCE OF 1-14, IDENTIFICATION BY MASS SPECTROMETRY, AND
+RP   CHARACTERIZATION OF PHOTOSYSTEM I.
+RC   STRAIN=ATCC 29082 / PCC 7421;
+RX   PubMed=15589832; DOI=10.1016/j.febslet.2004.11.013;
+RA   Inoue H., Tsuchiya T., Satoh S., Miyashita H., Kaneko T., Tabata S.,
+RA   Tanaka A., Mimuro M.;
+RT   "Unique constitution of photosystem I with a novel subunit in the
+RT   cyanobacterium Gloeobacter violaceus PCC 7421.";
+RL   FEBS Lett. 578:275-279(2004).
+CC   -!- SUBUNIT: The G.violaceus PSI reaction center is composed of one copy
+CC       each of PsaA,B,C,D,E,F,L,M and Z, and forms trimeric complexes.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane; Single-pass membrane
+CC       protein.
+DR   EMBL; BA000045; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   PDB; 7F4V; EM; 2.04 A; aI/bI/cI=1-35.
+DR   PDBsum; 7F4V; -.
+DR   AlphaFoldDB; P0C029; -.
+DR   EMDB; EMD-31455; -.
+DR   SMR; P0C029; -.
+DR   InParanoid; P0C029; -.
+DR   Proteomes; UP000000557; Chromosome.
+DR   GO; GO:0009522; C:photosystem I; IEA:UniProtKB-KW.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0015979; P:photosynthesis; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   3D-structure; Cell inner membrane; Cell membrane;
+KW   Direct protein sequencing; Membrane; Photosynthesis; Photosystem I;
+KW   Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..35
+FT                   /note="Photosystem I reaction center subunit Z"
+FT                   /id="PRO_0000207777"
+FT   TRANSMEM        10..30
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   35 AA;  3853 MW;  37468A97D7F8BCDD CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Gloeobacter.
+2	5	Gloeobacteraceae
+2	4	Gloeobacterales
+2	3	Cyanophyceae
+2	2	Cyanobacteriota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A444UV06	PROTEIN SHISA-4 {ECO:0000     22.8       0.32   2   2.4   0.4
+	Iterate                   	    26	    50	    10.3
+	Iterate                   	   230	   254	    10.3
+	PF27717	Shisa5_N        	    19	    56	    45.8
+	PF13908	Shisa_N         	   129	   161	    37.2
+	PF13908	Shisa_N         	   164	   216	    54.1
+	PF27717	Shisa5_N        	   223	   260	    45.8
+
+A0A515KSY4	TRAP TRANSPORTER SMALL PE     20.4        1.9   1   2.7   0.1
+	Iterate                   	   112	   145	    20.4
+	PF04290	DctQ            	     4	   145	    73.2
+
+A0A915ELH3	MAJOR FACILITATOR SUPERFA     20.4        1.8   1   1.7   1.6
+	Iterate                   	   278	   304	    19.1
+	PF07690	MFS_1           	    29	   174	    75.4
+	PF07690	MFS_1           	   181	   379	    44.8
+
+P0C029	PHOTOSYSTEM I REACTION CENTER S     96.2    2.8e-24   1   1.0   3.5
+	Iterate                   	     1	    35	    96.2
+
+U5QK99	PHOTOSYSTEM I REACTION CENTER     64.2    3.2e-14   1   1.0   3.7
+	Iterate                   	     1	    34	    64.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0C029/Iterate
+GA   27.00 27.00;
+TC   64.20 64.20;
+NC   22.80 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for P0C029
+RN   [1]
+RM   15589832
+RT   "Unique constitution of photosystem I with a novel subunit in the
+RT   cyanobacterium Gloeobacter violaceus PCC 7421.";
+RA   Inoue H., Tsuchiya T., Satoh S., Miyashita H., Kaneko T., Tabata S.,
+RA   Tanaka A., Mimuro M.;
+RL   FEBS Lett. 578:275-279(2004).
+
+--- End of Current DESC file ---

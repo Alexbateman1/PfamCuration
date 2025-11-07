@@ -1,0 +1,141 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y674_PASMU              Reviewed;         230 AA.
+AC   Q9CMX6;
+DE   RecName: Full=Uncharacterized protein PM0674;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=PM0674;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK02758.1; -; Genomic_DNA.
+DR   RefSeq; WP_005726559.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CMX6; -.
+DR   STRING; 272843.PM0674; -.
+DR   EnsemblBacteria; AAK02758; AAK02758; PM0674.
+DR   KEGG; pmu:PM0674; -.
+DR   HOGENOM; CLU_1318668_0_0_6; -.
+DR   OrthoDB; 5674571at2; -.
+DR   Proteomes; UP000000809; Chromosome.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..18
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           19..230
+FT                   /note="Uncharacterized protein PM0674"
+FT                   /id="PRO_0000014178"
+SQ   SEQUENCE   230 AA;  25287 MW;  258CA22164678F62 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Volucribacter.
+1	6	Pasteurella.
+1	6	Mergibacter.
+1	6	Gallibacterium.
+1	6	Chelonobacter.
+1	6	Aggregatibacter.
+6	5	Pasteurellaceae
+1	5	Pasteurellaceae.
+7	4	Pasteurellales
+7	3	Gammaproteobacteria
+7	2	Pseudomonadota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0A3ARX1	LIPOPROTEIN {ECO:0008006|    154.4    5.1e-42   1   1.8   3.4
+	Iterate                   	    32	   149	   154.4
+
+A0A1T0BA95	LIPOPROTEIN {ECO:0008006|    121.0    1.2e-31   1   1.8   9.1
+	Iterate                   	    33	   128	   120.1
+
+A0A4R1G536	LIPOPROTEIN {ECO:0008006|    161.5    3.2e-44   1   1.8   4.8
+	Iterate                   	    38	   152	   161.5
+
+E6KX08	LIPOPROTEIN {ECO:0008006|GOOG    124.0    1.4e-32   1   2.3   5.0
+	Iterate                   	    36	   139	   123.7
+
+Q9CMX6	UNCHARACTERIZED PROTEIN PM0674     171.8    2.1e-47   1   1.5   4.5
+	Iterate                   	    35	   147	   171.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS79749 (E-value: 3.2e-35, Score: 125.5)
+Mentioned as: PM0674
+Description: unknown
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 35323048
+Source: EuropePMC
+Title: The Role and Targets of the RNA-Binding Protein ProQ in the Gram-Negative Bacterial Pathogen Pasteurella multocida
+Journal: Journal of bacteriology (2022)
+
+================================================================================
+Protein: VIMSS79749 (E-value: 3.2e-35, Score: 125.5)
+Mentioned as: PM0674
+Description: unknown
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 20140235
+Source: EuropePMC
+Title: Fis is essential for capsule production in Pasteurella multocida and regulates expression of other important virulence factors
+Journal: PLoS pathogens (2010)
+Snippet: 1244564 PM1217 Unknown - 1.48 0.044 1244194 tadC Hypothetical protein N/U 1.09 c 0.034 1244021 PM0674 Unknown - 1.85 c 0.008 1244889 pckA Predicted phosphoenolpyruvate carboxykinase C 2.13 c 0.044 1243866 PM0519 Unknown S 2.18 0.044 1245193 ptsB Sucrose-specific PTSII G 2.19 0.047 1244890 PM1543 Unknown
+
+================================================================================
+Protein: VIMSS79749 (E-value: 3.2e-35, Score: 125.5)
+Mentioned as: PM0674
+Description: unknown
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 12057970
+Source: EuropePMC
+Title: Transcriptional response of Pasteurella multocida to nutrient limitation
+Journal: Journal of bacteriology (2002)
+Snippet: in rich medium. Additionally, the hypothetical proteins PM0674, PM1886, and PM1936 showed increased expression and have functional domains similar to
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0A3ARX1.1	AF-A0A0A3ARX1-F1-model_v4_TED01:40-151	1	AF-A0A0A3ARX1-F1-model_v4_TED01	40-151	96.5%
+A0A0A3ARX1.1	AF-A0A0A3ARX1-F1-model_v4_TED02:155-232	1	AF-A0A0A3ARX1-F1-model_v4_TED02	155-232	0
+A0A1T0BA95.1	AF-A0A1T0BA95-F1-model_v4_TED01:42-130	1	AF-A0A1T0BA95-F1-model_v4_TED01	42-130	94.6%
+A0A1T0BA95.1	AF-A0A1T0BA95-F1-model_v4_TED02:145-211	1	AF-A0A1T0BA95-F1-model_v4_TED02	145-211	0
+A0A4R1G536.1	AF-A0A4R1G536-F1-model_v4_TED01:35-154	1	AF-A0A4R1G536-F1-model_v4_TED01	35-154	100.0%
+A0A4R1G536.1	AF-A0A4R1G536-F1-model_v4_TED02:158-233	1	AF-A0A4R1G536-F1-model_v4_TED02	158-233	0
+E6KX08.1	AF-E6KX08-F1-model_v4_TED01:49-133	1	AF-E6KX08-F1-model_v4_TED01	49-133	88.3%
+E6KX08.1	AF-E6KX08-F1-model_v4_TED02:137-214	1	AF-E6KX08-F1-model_v4_TED02	137-214	0
+Q9CMX6.1	AF-Q9CMX6-F1-model_v4_TED01:35-147	1	AF-Q9CMX6-F1-model_v4_TED01	35-147	100.0%
+Q9CMX6.1	AF-Q9CMX6-F1-model_v4_TED02:151-228	1	AF-Q9CMX6-F1-model_v4_TED02	151-228	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CMX6_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.90 33.80;
+NC   26.80 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

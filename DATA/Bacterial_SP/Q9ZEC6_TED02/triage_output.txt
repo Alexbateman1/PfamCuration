@@ -1,0 +1,110 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y017_RICPR              Reviewed;         627 AA.
+AC   Q9ZEC6;
+DE   RecName: Full=Uncharacterized protein RP017;
+GN   OrderedLocusNames=RP017;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+DR   EMBL; AJ235270; CAA14489.1; -; Genomic_DNA.
+DR   PIR; B71709; B71709.
+DR   RefSeq; NP_220412.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZEC6; -.
+DR   SMR; Q9ZEC6; -.
+DR   STRING; 272947.gene:17555100; -.
+DR   EnsemblBacteria; CAA14489; CAA14489; CAA14489.
+DR   KEGG; rpr:RP017; -.
+DR   PATRIC; fig|272947.5.peg.17; -.
+DR   eggNOG; COG1196; Bacteria.
+DR   HOGENOM; CLU_436060_0_0_5; -.
+DR   Proteomes; UP000002480; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..627
+FT                   /note="Uncharacterized protein RP017"
+FT                   /id="PRO_0000101298"
+FT   REGION          1..22
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          578..606
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1..20
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        582..592
+FT                   /note="Acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   627 AA;  70589 MW;  4095902C0D6B57EB CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+1	7	Rickettsia
+1	6	Rickettsieae
+1	5	Rickettsiaceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9ZEC6	UNCHARACTERIZED PROTEIN RP017      232.3    2.6e-66   1   3.0  10.0
+	Q9ZEC6_TED02              	   332	   438	   232.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS35714 (E-value: 2.3e-68, Score: 232.3)
+Mentioned as: RP017
+Description: unknown
+Organism: Rickettsia prowazekii str. Madrid E
+PMID: 15317790
+Source: EuropePMC
+Title: Complete genome sequence of Rickettsia typhi and comparison with sequences of other rickettsiae
+Journal: Journal of bacteriology (2004)
+Snippet: to three different ORFs in R. prowazekii (RP016, RP017, and RP018), whereas the Sca2-like sequence is found in four different ORFs (RP081, RP082, RP083,
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZEC6.1	AF-Q9ZEC6-F1-model_v4_TED02:332-438	1	AF-Q9ZEC6-F1-model_v4_TED02	332-438	100.0%
+Q9ZEC6.1	AF-Q9ZEC6-F1-model_v4_TED01:28-91	1	AF-Q9ZEC6-F1-model_v4_TED01	28-91	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZEC6_TED02
+GA   27.00 27.00;
+TC   232.30 232.30;
+NC   23.50 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

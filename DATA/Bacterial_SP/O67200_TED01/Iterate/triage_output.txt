@@ -1,0 +1,98 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1120_AQUAE             Reviewed;         167 AA.
+AC   O67200;
+DE   RecName: Full=Uncharacterized protein aq_1120;
+GN   OrderedLocusNames=aq_1120;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC07164.1; -; Genomic_DNA.
+DR   PIR; E70396; E70396.
+DR   RefSeq; NP_213764.1; NC_000918.1.
+DR   RefSeq; WP_010880702.1; NC_000918.1.
+DR   AlphaFoldDB; O67200; -.
+DR   STRING; 224324.aq_1120; -.
+DR   EnsemblBacteria; AAC07164; AAC07164; aq_1120.
+DR   KEGG; aae:aq_1120; -.
+DR   HOGENOM; CLU_1591203_0_0_0; -.
+DR   InParanoid; O67200; -.
+DR   Proteomes; UP000000798; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..167
+FT                   /note="Uncharacterized protein aq_1120"
+FT                   /id="PRO_0000186902"
+SQ   SEQUENCE   167 AA;  18880 MW;  23C9DD85A47A7EAC CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thermocrinis
+1	6	Hydrogenobacter
+1	6	Hydrogenivirga
+1	6	Aquifex
+4	5	Aquificaceae
+4	4	Aquificales
+4	3	Aquificia
+4	2	Aquificota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A497XM65	SHORT CHAIN AMIDE PORIN {    210.8    3.8e-59   1   1.5   0.5
+	Iterate                   	   131	   262	   209.8
+
+A8UUR4	PHOSPHATE-SELECTIVE PORIN O A    212.3    1.3e-59   1   1.5   0.3
+	Iterate                   	   131	   263	   211.5
+
+D3DK76	PHOSPHATE-SELECTIVE PORIN O A    129.5    5.4e-34   1   1.5   0.0
+	Iterate                   	   127	   258	   128.6
+
+D3SPP9	PHOSPHATE-SELECTIVE PORIN O A    136.3    4.3e-36   1   1.6   0.4
+	Iterate                   	   125	   256	   135.2
+
+O67200	UNCHARACTERIZED PROTEIN AQ_112    295.2    2.9e-85   1   1.2   1.7
+	Iterate                   	    42	   166	   294.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A497XM65.1	AF-A0A497XM65-F1-model_v4_TED01:2-17_29-240_251-330_339-519	1	AF-A0A497XM65-F1-model_v4_TED01	2-519	100.0%
+A0A6C1BSZ3.1	AF-A0A6C1BSZ3-F1-model_v4_TED01:34-525	1	AF-A0A6C1BSZ3-F1-model_v4_TED01	34-525	100.0%
+A8UUR4.1	AF-A8UUR4-F1-model_v4_TED01:138-528	1	AF-A8UUR4-F1-model_v4_TED01	138-528	94.7%
+D3DK76.1	AF-D3DK76-F1-model_v4_TED01:22-233_248-529	1	AF-D3DK76-F1-model_v4_TED01	22-529	100.0%
+D3SPP9.1	AF-D3SPP9-F1-model_v4_TED01:19-527	1	AF-D3SPP9-F1-model_v4_TED01	19-527	100.0%
+O67200.1	AF-O67200-F1-model_v4_TED01:42-166	1	AF-O67200-F1-model_v4_TED01	42-166	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67200_TED01/Iterate
+GA   27.00 27.00;
+TC   29.50 230.20;
+NC   26.60 18.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

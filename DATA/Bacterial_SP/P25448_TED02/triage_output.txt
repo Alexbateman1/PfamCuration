@@ -1,0 +1,71 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Citrobacter.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0AAD8JVQ6	UNCHARACTERIZED PROTEIN {    403.9   4.8e-119  28 139.3 103.2
+	P25448_TED02              	   539	   590	     3.5
+	P25448_TED02              	  1055	  1106	     3.5
+	P25448_TED02              	  1799	  1849	     3.5
+	P25448_TED02              	  2318	  2369	     3.5
+	P25448_TED02              	  2512	  2563	     3.5
+	P25448_TED02              	  3092	  3143	     3.5
+	P25448_TED02              	  3961	  4012	     3.5
+	P25448_TED02              	  6331	  6379	     3.5
+	P25448_TED02              	  7670	  7721	     3.5
+	P25448_TED02              	  7832	  7883	     3.5
+	P25448_TED02              	  8212	  8263	     3.5
+	P25448_TED02              	  8374	  8425	     3.5
+	P25448_TED02              	   441	   488	     3.4
+	P25448_TED02              	  2220	  2267	     3.4
+	P25448_TED02              	  2866	  2913	     3.4
+	P25448_TED02              	  3446	  3493	     3.4
+	P25448_TED02              	  3671	  3718	     3.4
+	P25448_TED02              	  7069	  7116	     3.4
+	P25448_TED02              	  7230	  7277	     3.4
+	P25448_TED02              	  7450	  7497	     3.4
+	P25448_TED02              	  7992	  8039	     3.4
+	P25448_TED02              	   220	   268	     2.7
+	P25448_TED02              	    29	    77	     2.6
+	P25448_TED02              	    91	   138	     2.6
+	P25448_TED02              	   284	   327	     2.5
+	P25448_TED02              	  6169	  6245	     2.4
+	P25448_TED02              	  6941	  7000	     2.4
+	P25448_TED02              	   639	   682	     2.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P25448.1	AF-P25448-F1-model_v4_TED02:199-333	1	AF-P25448-F1-model_v4_TED02	199-333	100.0%
+P25448.1	AF-P25448-F1-model_v4_TED01:25-195	1	AF-P25448-F1-model_v4_TED01	25-195	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P25448_TED02
+GA   27.00 27.00;
+TC   27.20 29.90;
+NC   26.70 19.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

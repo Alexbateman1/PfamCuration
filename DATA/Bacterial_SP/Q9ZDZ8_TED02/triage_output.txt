@@ -1,0 +1,89 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y165_RICPR              Reviewed;         368 AA.
+AC   Q9ZDZ8;
+DE   RecName: Full=Uncharacterized protein RP165;
+GN   OrderedLocusNames=RP165;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+DR   EMBL; AJ235270; CAA14632.1; -; Genomic_DNA.
+DR   PIR; A71727; A71727.
+DR   RefSeq; NP_220555.1; NC_000963.1.
+DR   RefSeq; WP_004598629.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZDZ8; -.
+DR   SMR; Q9ZDZ8; -.
+DR   STRING; 272947.gene:17555248; -.
+DR   ESTHER; ricpr-y165; Mbeg1-like.
+DR   EnsemblBacteria; CAA14632; CAA14632; CAA14632.
+DR   KEGG; rpr:RP165; -.
+DR   PATRIC; fig|272947.5.peg.170; -.
+DR   eggNOG; ENOG502Z8H8; Bacteria.
+DR   HOGENOM; CLU_064079_0_0_5; -.
+DR   OrthoDB; 7160732at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   Gene3D; 3.40.50.1820; alpha/beta hydrolase; 1.
+DR   InterPro; IPR029058; AB_hydrolase_fold.
+DR   SUPFAM; SSF53474; alpha/beta-Hydrolases; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..368
+FT                   /note="Uncharacterized protein RP165"
+FT                   /id="PRO_0000101324"
+SQ   SEQUENCE   368 AA;  41009 MW;  0410168F891F489C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+1	7	Rickettsia
+1	6	Rickettsieae
+1	5	Rickettsiaceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9ZDZ8	UNCHARACTERIZED PROTEIN RP165      153.2    5.7e-42   1   2.2   1.8
+	Q9ZDZ8_TED02              	   305	   362	   151.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZDZ8.1	AF-Q9ZDZ8-F1-model_v4_TED01:20-223_241-277	1	AF-Q9ZDZ8-F1-model_v4_TED01	20-277	0
+Q9ZDZ8.1	AF-Q9ZDZ8-F1-model_v4_TED02:305-362	1	AF-Q9ZDZ8-F1-model_v4_TED02	305-362	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZDZ8_TED02
+GA   27.00 27.00;
+TC   32.60 151.30;
+NC   23.50 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

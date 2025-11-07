@@ -1,0 +1,123 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YRFJ_ECOLI              Reviewed;          17 AA.
+AC   P0DV19;
+DE   RecName: Full=Protein YrfJ {ECO:0000303|PubMed:34662240};
+GN   Name=yrfJ {ECO:0000303|PubMed:34662240};
+GN   OrderedLocusNames=b4820 {ECO:0000312|EMBL:UMR55117.1};
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=34662240; DOI=10.1128/jb.00352-21;
+RA   Stringer A., Smith C., Mangano K., Wade J.T.;
+RT   "Identification of novel translated small ORFs in Escherichia coli using
+RT   complementary ribosome profiling approaches.";
+RL   J. Bacteriol. 204:JB0035221-JB0035221(2022).
+CC   -!- INDUCTION: Identified when cells are grown in rich medium (at protein
+CC       level). {ECO:0000269|PubMed:34662240}.
+CC   -!- MISCELLANEOUS: Overlaps downstream argD. {ECO:0000269|PubMed:34662240}.
+DR   EMBL; U00096; UMR55117.1; -; Genomic_DNA.
+DR   InParanoid; P0DV19; -.
+DR   BioCyc; EcoCyc:MONOMER0-4548; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..17
+FT                   /note="Protein YrfJ"
+FT                   /id="PRO_0000454740"
+SQ   SEQUENCE   17 AA;  2169 MW;  F876B84C9C35C76B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	6	Citrobacter.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A498NZN3	DNA-DIRECTED RNA POLYMERA     44.2    3.2e-08  16  17.7  58.1
+	Iterate                   	    66	    75	     4.4
+	Iterate                   	    83	    92	     4.4
+	Iterate                   	   100	   109	     4.4
+	Iterate                   	   117	   126	     4.4
+	Iterate                   	   134	   143	     4.4
+	Iterate                   	   151	   160	     4.4
+	Iterate                   	   168	   177	     4.4
+	Iterate                   	   185	   194	     4.4
+	Iterate                   	   202	   211	     4.4
+	Iterate                   	   219	   228	     4.4
+	Iterate                   	   236	   245	     4.4
+	Iterate                   	   253	   262	     4.4
+	Iterate                   	   270	   279	     4.4
+	Iterate                   	   287	   296	     4.4
+	Iterate                   	   304	   313	     4.4
+	Iterate                   	   321	   330	     4.3
+
+A0A8S9X723	UNCHARACTERIZED PROTEIN {     33.6    9.3e-05   6   6.4  12.1
+	Iterate                   	    18	    30	     7.0
+	Iterate                   	    55	    66	     7.0
+	Iterate                   	    77	    88	     6.9
+	Iterate                   	   141	   152	     6.9
+	Iterate                   	   177	   188	     4.9
+	Iterate                   	    99	   110	     3.5
+
+A0AA88XYM2	UNCHARACTERIZED PROTEIN {     33.5    9.6e-05   8   7.8  19.1
+	Iterate                   	    23	    39	    10.2
+	Iterate                   	    78	    94	    10.2
+	Iterate                   	     1	    20	     7.0
+	Iterate                   	    45	    61	     6.3
+	Iterate                   	    56	    72	     6.3
+	Iterate                   	    67	    83	     6.3
+	Iterate                   	    38	    50	     4.8
+	Iterate                   	    16	    28	     2.8
+
+A8AQR3	UNCHARACTERIZED PROTEIN {ECO:     31.3    0.00051   1   1.5   3.0
+	Iterate                   	    18	    34	    30.3
+
+P0DV19	PROTEIN YRFJ {ECO:0000303|PUBME     44.6    2.3e-08   1   1.0   6.1
+	Iterate                   	     1	    17	    44.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DV19/Iterate
+GA   27.00 27.00;
+TC   28.40 30.30;
+NC   25.00 15.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

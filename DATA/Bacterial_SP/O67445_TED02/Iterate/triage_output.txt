@@ -1,0 +1,123 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1465_AQUAE             Reviewed;         130 AA.
+AC   O67445;
+DE   RecName: Full=Uncharacterized protein aq_1465;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=aq_1465;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC07404.1; -; Genomic_DNA.
+DR   PIR; C70427; C70427.
+DR   RefSeq; NP_214010.1; NC_000918.1.
+DR   RefSeq; WP_010880948.1; NC_000918.1.
+DR   AlphaFoldDB; O67445; -.
+DR   SMR; O67445; -.
+DR   STRING; 224324.aq_1465; -.
+DR   EnsemblBacteria; AAC07404; AAC07404; aq_1465.
+DR   KEGG; aae:aq_1465; -.
+DR   HOGENOM; CLU_158029_0_0_0; -.
+DR   InParanoid; O67445; -.
+DR   OrthoDB; 15453at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           24..130
+FT                   /note="Uncharacterized protein aq_1465"
+FT                   /id="PRO_0000013625"
+SQ   SEQUENCE   130 AA;  15289 MW;  DFC74F43191E7C73 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thermocrinis
+1	6	Hydrogenobacter
+1	6	Aquifex
+3	5	Aquificaceae
+3	4	Aquificales
+3	3	Aquificia
+3	2	Aquificota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A7C8MQR5	UNCHARACTERIZED PROTEIN {     38.1    5.3e-06   5   4.9   0.0
+	Iterate                   	   109	   151	     9.4
+	Iterate                   	    43	    86	     9.0
+	Iterate                   	   153	   196	     6.4
+	Iterate                   	    87	   122	     5.8
+	Iterate                   	   197	   241	     4.6
+
+A0AAE1DVQ0	UNCHARACTERIZED PROTEIN {     49.5    1.4e-09   8  12.9   0.0
+	Iterate                   	   490	   547	     3.4
+	Iterate                   	   516	   573	     3.3
+	Iterate                   	   217	   281	     3.2
+	Iterate                   	   406	   471	     3.0
+	Iterate                   	   138	   195	     2.9
+	Iterate                   	   244	   300	     2.9
+	Iterate                   	   266	   325	     2.9
+	Iterate                   	   306	   365	     2.9
+
+A0AB34JJQ2	RECEPTOR LIGAND BINDING R     33.5    0.00014   5   5.3   0.0
+	Iterate                   	   599	   638	     6.1
+	Iterate                   	  1545	  1584	     6.1
+	Iterate                   	  2019	  2058	     6.1
+	Iterate                   	  1073	  1111	     3.7
+	Iterate                   	   128	   165	     3.6
+	PF13458	Peripla_BP_6    	     3	   282	    55.1
+	PF01094	ANF_receptor    	    17	   396	   152.4
+	PF13458	Peripla_BP_6    	   466	   750	    60.7
+	PF01094	ANF_receptor    	   490	   869	   158.6
+	PF13458	Peripla_BP_6    	   939	  1235	    61.7
+	PF01094	ANF_receptor    	   963	  1342	   157.9
+	PF13458	Peripla_BP_6    	  1412	  1696	    55.6
+	PF01094	ANF_receptor    	  1436	  1815	     156
+	PF13458	Peripla_BP_6    	  1885	  2185	    58.8
+	PF01094	ANF_receptor    	  1910	  2289	   161.6
+
+D3DKB7	UNCHARACTERIZED PROTEIN {ECO:     36.9    1.2e-05   1   1.3   0.0
+	Iterate                   	    64	   134	    36.4
+
+O67445	UNCHARACTERIZED PROTEIN AQ_146    164.5    1.8e-45   1   1.3   3.6
+	Iterate                   	    61	   130	   163.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O67445.1	AF-O67445-F1-model_v4_TED02:61-130	1	AF-O67445-F1-model_v4_TED02	61-130	100.0%
+O67445.1	AF-O67445-F1-model_v4_TED01:2-51	1	AF-O67445-F1-model_v4_TED01	2-51	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67445_TED02/Iterate
+GA   27.00 27.00;
+TC   28.10 32.50;
+NC   26.50 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

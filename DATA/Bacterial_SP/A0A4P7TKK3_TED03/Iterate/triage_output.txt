@@ -1,0 +1,180 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YFDF_ECOLI              Reviewed;         352 AA.
+AC   P76505; Q2MAL3;
+DE   RecName: Full=Uncharacterized protein YfdF;
+GN   Name=yfdF; OrderedLocusNames=b2345, JW2342;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- SIMILARITY: Belongs to the IcaT/YfdF family. {ECO:0000305}.
+DR   EMBL; U00096; AAC75405.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76693.1; -; Genomic_DNA.
+DR   PIR; G65007; G65007.
+DR   RefSeq; NP_416847.1; NC_000913.3.
+DR   RefSeq; WP_000937788.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P76505; -.
+DR   SMR; P76505; -.
+DR   BioGRID; 4260537; 49.
+DR   BioGRID; 851160; 1.
+DR   FunCoup; P76505; 116.
+DR   IntAct; P76505; 1.
+DR   STRING; 511145.b2345; -.
+DR   PaxDb; 511145-b2345; -.
+DR   EnsemblBacteria; AAC75405; AAC75405; b2345.
+DR   GeneID; 946819; -.
+DR   KEGG; ecj:JW2342; -.
+DR   KEGG; eco:b2345; -.
+DR   KEGG; ecoc:C3026_13050; -.
+DR   PATRIC; fig|511145.12.peg.2441; -.
+DR   EchoBASE; EB3882; -.
+DR   HOGENOM; CLU_643626_0_0_6; -.
+DR   InParanoid; P76505; -.
+DR   OMA; NDNPDRF; -.
+DR   BioCyc; EcoCyc:G7215-MONOMER; -.
+DR   PRO; PR:P76505; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome.
+FT   CHAIN           1..352
+FT                   /note="Uncharacterized protein YfdF"
+FT                   /id="PRO_0000169201"
+SQ   SEQUENCE   352 AA;  40249 MW;  632F3D318C139491 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+2	6	Shigella.
+5	5	Enterobacteriaceae
+5	4	Enterobacterales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2V0V6	TRANSPOSASE {ECO:0008006|     69.9    4.3e-16   1   2.3  10.4
+	Iterate                   	   316	   345	    69.9
+
+A0A7J6KG36	TRANSMEMBRANE PROTEIN {EC    144.8    8.5e-40   0  43.5  47.6
+
+A7ZPG2	TRANSPOSASE {ECO:0008006|GOOG     65.9    8.2e-15   1   2.0   8.9
+	Iterate                   	   313	   342	    64.2
+
+B2TWW0	TRANSPOSASE {ECO:0000313|EMBL     66.8    4.1e-15   1   1.4   8.9
+	Iterate                   	    98	   127	    66.1
+
+P76505	UNCHARACTERIZED PROTEIN YFDF        48.4    2.7e-09   1   2.3   1.9
+	Iterate                   	   313	   342	    48.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS16451 (E-value: 5.6e-20, Score: 75.9)
+Mentioned as: b2345
+Description: hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 34690987
+Source: EuropePMC
+Title: Transcriptomic Response Analysis of <i>Escherichia coli</i> to Palladium Stress
+Journal: Frontiers in microbiology (2021)
+Snippet: 119 13 b4665 ibsC Toxic component of a type I toxin-antitoxin (TA) system 117 28 b2345 yfdF Function unknown 117 19 b4128 ghoS Antitoxin component of a type V toxin-antitoxin (TA) system 110 12 b1520 yneE Predicted inner membrane protein, bestrophin family; possible chloride channel 109
+
+================================================================================
+Protein: VIMSS16451 (E-value: 5.6e-20, Score: 75.9)
+Mentioned as: b2345
+Description: hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 20024656
+Source: EuropePMC
+Title: A transcriptional "Scream" early response of E. coli prey to predatory invasion by Bdellovibrio
+Journal: Current microbiology (2010)
+Snippet: yhfV Phosphotriesterase Cytoplasmic 1.26 0.014469 yejH Type III restriction endonuclease and helicase Cytoplasm 1.21 0.046185 b2345 Unknown function Unknown 1.18 0.039688 yahG Conserved protein of unknown function Inner membrane 1.18 0.033265 yoaF Unknown function Unknown 1.18 0.037459 ybiU Conserved protein of unknown function Cytoplasm 1.17 0.024414
+
+================================================================================
+Protein: VIMSS16451 (E-value: 5.6e-20, Score: 75.9)
+Mentioned as: b2345
+Description: hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 15933014
+Source: EuropePMC
+Title: Amplified intergenic locus polymorphism as a basis for bacterial typing of Listeria spp. and Escherichia coli
+Journal: Applied and environmental microbiology (2005)
+Snippet: a subset of five AILP markers (yaiN, ycgW, serW, b2345, and ykgE), yielding 15 polymorphic points (total number of alleles across the five loci). The genetic
+
+================================================================================
+Protein: VIMSS364876 (E-value: 1.7e-18, Score: 71.2)
+Mentioned as: S2558
+Description: hypothetical protein
+Organism: Shigella flexneri 2a str. 2457T
+PMID: 28348056
+Source: EuropePMC
+Title: Analysis of Shigella flexneri Resistance, Biofilm Formation, and Transcriptional Profile in Response to Bile Salts
+Journal: Infection and immunity (2017)
+Snippet: conditions (Fig. 7). We chose two highly induced genes, S2558 and ospE1-ospE2, two induced genes, acrB and yhcN, a repressed gene, dsdA, and an independently
+
+================================================================================
+Protein: VIMSS364876 (E-value: 1.7e-18, Score: 71.2)
+Mentioned as: S2558
+Description: hypothetical protein
+Organism: Shigella flexneri 2a str. 2457T
+PMID: 23753632
+Source: EuropePMC
+Title: Characterization of intracellular growth regulator icgR by utilizing transcriptomics to identify mediators of pathogenesis in Shigella flexneri
+Journal: Infection and immunity (2013)
+Snippet: invasion Affymetrix identifier Fold change (log2) S2558 S2219 S4048 S2215 S4837 S2221 A0384_s_at S2219_s_at SB5_2279_s_at S2215_s_at S4837_s_at SFV_2093_s_at
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0H2V0V6.1	AF-A0A0H2V0V6-F1-model_v4_TED01:28-64_77-123	1	AF-A0A0H2V0V6-F1-model_v4_TED01	28-123	0
+A0A0H2V0V6.1	AF-A0A0H2V0V6-F1-model_v4_TED02:175-270	1	AF-A0A0H2V0V6-F1-model_v4_TED02	175-270	0
+A0A0H2V0V6.1	AF-A0A0H2V0V6-F1-model_v4_TED03:273-349	1	AF-A0A0H2V0V6-F1-model_v4_TED03	273-349	100.0%
+P76505.1	AF-P76505-F1-model_v4_TED01:21-118	1	AF-P76505-F1-model_v4_TED01	21-118	0
+P76505.1	AF-P76505-F1-model_v4_TED02:120-247	1	AF-P76505-F1-model_v4_TED02	120-247	0
+P76505.1	AF-P76505-F1-model_v4_TED03:275-339	1	AF-P76505-F1-model_v4_TED03	275-339	90.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A4P7TKK3_TED03/Iterate
+GA   27.00 27.00;
+TC   27.70 67.30;
+NC   23.10 19.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

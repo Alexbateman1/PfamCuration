@@ -1,0 +1,81 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Staphylococcus
+1	5	Staphylococcaceae
+1	4	Bacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A4Q1B0E6	UNCHARACTERIZED PROTEIN {     74.2    4.9e-17   1   1.0   0.5
+	A0A0H2XDF9                	     1	   102	    74.0
+
+Q2G180	UNCHARACTERIZED PROTEIN {ECO:    239.4    1.8e-68   1   1.0   2.5
+	A0A0H2XDF9                	     1	   105	   239.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1291802 (E-value: 1.6e-70, Score: 239.4)
+Mentioned as: SAUSA300_0287
+Description: hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus USA300_FPR3757
+PMID: 40396723
+Source: EuropePMC
+Title: Antimicrobial resistance and molecular characteristics of bovine mastitis-associated methicillin-resistant &lt;i&gt;Staphylococcus aureus&lt;/i&gt;: potential for cross-species transmission of ST59-MRSA
+Journal: Microbiology spectrum (2025)
+
+================================================================================
+Protein: VIMSS1291802 (E-value: 1.6e-70, Score: 239.4)
+Mentioned as: SAUSA300_0287
+Description: hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus USA300_FPR3757
+PMID: 24033479
+Source: EuropePMC
+Title: Secretion of atypical protein substrates by the ESAT-6 secretion system of Staphylococcus aureus
+Journal: Molecular microbiology (2013)
+Snippet: we selected strain USA300 for subsequent studies on the Ess pathway. EsxB interacts with EsxD (SAUSA300_0287) In S. aureus , EsxA and EsxB are the only two proteins with an obvious WXG100 domain. Genetic disruption of either gene disrupted the production of both gene products in
+
+================================================================================
+Protein: VIMSS260481 (E-value: 5.9e-70, Score: 237.6)
+Mentioned as: MW0267
+Description: hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus MW2
+PMID: 21804010
+Source: EuropePMC
+Title: Rsp inhibits attachment and biofilm formation by repressing fnbA in Staphylococcus aureus MW2
+Journal: Journal of bacteriology (2011)
+Snippet: of California, Berkeley MW0261 MW0262 MW0264 MW0265 MW0266 MW0267 COL-SA1165 MW1410 MW1405 MW1406 MW1408 MW1427 MW1969 MW2260 MW2263 MW2560 MW2573 MW2600 Fold
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A0H2XDF9
+GA   27.00 27.00;
+TC   27.50 74.00;
+NC   26.00 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

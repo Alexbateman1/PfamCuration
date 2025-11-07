@@ -1,0 +1,74 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y314_PASMU              Reviewed;         196 AA.
+AC   Q9CNV9;
+DE   RecName: Full=Uncharacterized protein PM0314;
+GN   OrderedLocusNames=PM0314;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK02398.1; -; Genomic_DNA.
+DR   RefSeq; WP_005725867.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CNV9; -.
+DR   EnsemblBacteria; AAK02398; AAK02398; PM0314.
+DR   KEGG; pmu:PM0314; -.
+DR   HOGENOM; CLU_1389066_0_0_6; -.
+DR   OrthoDB; 5686260at2; -.
+DR   Proteomes; UP000000809; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..196
+FT                   /note="Uncharacterized protein PM0314"
+FT                   /id="PRO_0000216292"
+SQ   SEQUENCE   196 AA;  22955 MW;  39204C50D34C6377 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pasteurella.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9CNV9	UNCHARACTERIZED PROTEIN PM0314     173.1    4.8e-48   1   1.5   1.4
+	Q9CNV9_TED02              	    95	   166	   172.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9CNV9.1	AF-Q9CNV9-F1-model_v4_TED01:18-91	1	AF-Q9CNV9-F1-model_v4_TED01	18-91	0
+Q9CNV9.1	AF-Q9CNV9-F1-model_v4_TED02:95-166	1	AF-Q9CNV9-F1-model_v4_TED02	95-166	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CNV9_TED02
+GA   27.00 27.00;
+TC   27.30 172.80;
+NC   22.80 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,77 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y2302_STRP2             Reviewed;         109 AA.
+AC   O54552;
+DE   RecName: Full=Uncharacterized protein SPD_2302;
+GN   Name=orf2; OrderedLocusNames=SPD_2302;
+OS   Streptococcus pneumoniae serotype 2 (strain D39 / NCTC 7466).
+OG   Plasmid pDP1.
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae;
+OC   Streptococcus.
+OX   NCBI_TaxID=373153;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=D39 / NCTC 7466;
+RX   PubMed=9887308; DOI=10.1006/plas.1998.1364;
+RA   Oggioni M.R., Iannelli F., Pozzi G.;
+RT   "Characterization of cryptic plasmids pDP1 and pSMB1 of Streptococcus
+RT   pneumoniae.";
+RL   Plasmid 41:70-72(1999).
+DR   EMBL; AF047696; AAD12156.1; -; Genomic_DNA.
+DR   RefSeq; NP_863587.1; NC_005022.1.
+DR   RefSeq; WP_004215606.1; NC_005022.1.
+DR   AlphaFoldDB; O54552; -.
+DR   SMR; O54552; -.
+DR   PRO; PR:O54552; -.
+DR   Proteomes; UP000001452; Plasmid pDP1.
+PE   4: Predicted;
+KW   Coiled coil; Plasmid; Reference proteome.
+FT   CHAIN           1..109
+FT                   /note="Uncharacterized protein SPD_2302"
+FT                   /id="PRO_0000275931"
+FT   COILED          27..89
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   109 AA;  12930 MW;  D7F23C15B9479A94 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Streptococcus
+1	5	Streptococcaceae
+1	4	Lactobacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O54552	UNCHARACTERIZED PROTEIN SPD_23     83.1    3.2e-20   1   2.3   8.6
+	O54552_TED01              	    21	    54	    83.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O54552.1	AF-O54552-F1-model_v4_TED01:21-54	1	AF-O54552-F1-model_v4_TED01	21-54	100.0%
+O54552.1	AF-O54552-F1-model_v4_TED02:58-109	1	AF-O54552-F1-model_v4_TED02	58-109	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O54552_TED01
+GA   27.00 27.00;
+TC   83.10 83.10;
+NC   25.30 24.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

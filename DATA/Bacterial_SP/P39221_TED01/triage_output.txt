@@ -1,0 +1,115 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YABQ_ECOLI              Reviewed;          52 AA.
+AC   P39221; A0A385XJ52;
+DE   RecName: Full=Protein YabQ;
+GN   Name=yabQ; OrderedLocusNames=b0057, b4659, JW0056;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12;
+RX   PubMed=1630901; DOI=10.1093/nar/20.13.3305;
+RA   Yura T., Mori H., Nagai H., Nagata T., Ishihama A., Fujita N., Isono K.,
+RA   Mizobuchi K., Nakata A.;
+RT   "Systematic sequencing of the Escherichia coli genome: analysis of the
+RT   0-2.4 min region.";
+RL   Nucleic Acids Res. 20:3305-3308(1992).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   IDENTIFICATION.
+RA   Rudd K.E.;
+RL   Unpublished observations (NOV-1994).
+RN   [5]
+RP   PARTIALLY SUPPRESSES AN RSGA MUTANT.
+RC   STRAIN=K12;
+RX   PubMed=18223068; DOI=10.1128/jb.01744-07;
+RA   Campbell T.L., Brown E.D.;
+RT   "Genetic interaction screens with ordered overexpression and deletion clone
+RT   sets implicate the Escherichia coli GTPase YjeQ in late ribosome
+RT   biogenesis.";
+RL   J. Bacteriol. 190:2537-2545(2008).
+CC   -!- FUNCTION: Identified as a multicopy suppressor of the slow growth
+CC       phenotype of an rsgA (yjeQ) deletion mutant.
+CC       {ECO:0000269|PubMed:18223068}.
+DR   EMBL; U00096; AYC08163.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAB96625.1; -; Genomic_DNA.
+DR   PIR; A64727; A64727.
+DR   AlphaFoldDB; P39221; -.
+DR   FunCoup; P39221; 2.
+DR   EnsemblBacteria; AYC08163; AYC08163; b0057.
+DR   KEGG; ecj:JW0056; -.
+DR   EchoBASE; EB2495; -.
+DR   HOGENOM; CLU_3216097_0_0_6; -.
+DR   InParanoid; P39221; -.
+DR   BioCyc; EcoCyc:EG12611-MONOMER; -.
+DR   PRO; PR:P39221; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..52
+FT                   /note="Protein YabQ"
+FT                   /id="PRO_0000168524"
+SQ   SEQUENCE   52 AA;  5737 MW;  8079697D5AC6E4A5 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P39221	PROTEIN YABQ                        76.5    3.5e-18   1   1.4   4.5
+	P39221_TED01              	    22	    52	    75.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P39221.1	AF-P39221-F1-model_v4_TED01:22-52	1	AF-P39221-F1-model_v4_TED01	22-52	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P39221_TED01
+GA   27.00 27.00;
+TC   27.80 75.70;
+NC   26.60 18.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,136 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y634_MYCPN              Reviewed;         181 AA.
+AC   P75163;
+DE   RecName: Full=Uncharacterized protein MPN_634;
+GN   OrderedLocusNames=MPN_634; ORFNames=C12_orf181o, MP208;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+CC   -!- SIMILARITY: To M.pneumoniae MPN_635 C-terminal region. {ECO:0000305}.
+DR   EMBL; U00089; AAB95856.1; -; Genomic_DNA.
+DR   PIR; S73534; S73534.
+DR   RefSeq; WP_010874991.1; NC_000912.1.
+DR   AlphaFoldDB; P75163; -.
+DR   STRING; 272634.MPN_634; -.
+DR   EnsemblBacteria; AAB95856; AAB95856; MPN_634.
+DR   KEGG; mpn:MPN_634; -.
+DR   HOGENOM; CLU_1516286_0_0_14; -.
+DR   Proteomes; UP000000808; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..181
+FT                   /note="Uncharacterized protein MPN_634"
+FT                   /id="PRO_0000210701"
+SQ   SEQUENCE   181 AA;  21358 MW;  6E22B4BDC60A65D3 CRC64;
+//
+ID   Y635_MYCPN              Reviewed;         352 AA.
+AC   P75162;
+DE   RecName: Full=Uncharacterized protein MPN_635;
+GN   OrderedLocusNames=MPN_635; ORFNames=E30_orf352, MP207;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+CC   -!- SIMILARITY: To M.pneumoniae MPN_633 (in the N-terminal section), and
+CC       M.pneumoniae MPN_634 (in the C-terminal section). {ECO:0000305}.
+DR   EMBL; U00089; AAB95855.1; -; Genomic_DNA.
+DR   PIR; S73533; S73533.
+DR   RefSeq; NP_110324.1; NC_000912.1.
+DR   AlphaFoldDB; P75162; -.
+DR   IntAct; P75162; 1.
+DR   STRING; 272634.MPN_635; -.
+DR   EnsemblBacteria; AAB95855; AAB95855; MPN_635.
+DR   KEGG; mpn:MPN_635; -.
+DR   PATRIC; fig|272634.6.peg.698; -.
+DR   HOGENOM; CLU_787137_0_0_14; -.
+DR   OrthoDB; 5241077at2; -.
+DR   BioCyc; MPNE272634:G1GJ3-1018-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..352
+FT                   /note="Uncharacterized protein MPN_635"
+FT                   /id="PRO_0000210702"
+SQ   SEQUENCE   352 AA;  41243 MW;  F92D6BFFFC4DC9ED CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	5	Mycoplasmoides
+2	4	Mycoplasmoidaceae
+2	3	Mycoplasmoidales
+2	2	Mycoplasmatota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P75162	UNCHARACTERIZED PROTEIN MPN_635    258.4    2.4e-74   1   1.8   1.2
+	P75162_TED03              	   240	   350	   257.8
+	PF25856	MPN635_N        	    24	   118	    93.9
+
+P75163	UNCHARACTERIZED PROTEIN MPN_634     82.8    8.5e-20   1   1.2   0.1
+	P75162_TED03              	    72	   180	    82.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS14092 (E-value: 2.2e-76, Score: 258.4)
+Mentioned as: MPN635
+Description: conserved hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 36215032
+Source: EuropePMC
+Title: SURE editing: combining oligo-recombineering and programmable insertion/deletion of selection markers to efficiently edit the Mycoplasma pneumoniae genome
+Journal: Nucleic acids research (2022)
+Snippet: chromosome region close to the ori that contains non-essential genes ( mpn633 , mpn634 , mpn635 and mpn638 ) and flanks an E operon composed of two essential genes ( mpn636 and mpn637 ) ( 54 ) (Figure 6A ). For this, we designed i) an
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75162.1	AF-P75162-F1-model_v4_TED01:24-118	1	AF-P75162-F1-model_v4_TED01	24-118	0
+P75162.1	AF-P75162-F1-model_v4_TED03:240-350	1	AF-P75162-F1-model_v4_TED03	240-350	100.0%
+P75162.1	AF-P75162-F1-model_v4_TED02:139-212	1	AF-P75162-F1-model_v4_TED02	139-212	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75162_TED03
+GA   27.00 27.00;
+TC   27.00 82.30;
+NC   26.90 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

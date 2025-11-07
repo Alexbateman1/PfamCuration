@@ -1,0 +1,76 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Escherichia.
+1	6	Streptomyces.
+4	5	Enterobacteriaceae
+1	5	Streptomycetaceae
+4	4	Enterobacterales
+1	4	Kitasatosporales
+4	3	Gammaproteobacteria
+1	3	Actinomycetes
+4	2	Pseudomonadota
+1	2	Actinomycetota
+4	1	Pseudomonadati
+1	1	Bacillati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2XL35	STABILITY (STB) LOCUS OF     185.7    6.6e-52   1   1.0   4.2
+	Iterate                   	     2	    84	   185.5
+
+A0A0H3EQ11	STABILITY (STB) LOCUS OF     185.7    6.6e-52   1   1.0   4.2
+	Iterate                   	     2	    84	   185.5
+
+A0A0H3JC28	PLASMID PO157 DNA, COMPLE    142.7    1.7e-38   1   1.0   2.3
+	Iterate                   	     2	    68	   142.6
+
+A0A7Y7BBF3	UNCHARACTERIZED PROTEIN {    201.1      1e-56   1   1.0   3.8
+	Iterate                   	     2	    84	   201.0
+
+B7LWX8	STABILITY (STB) LOCUS OF INCF    185.5    7.5e-52   1   1.0   4.2
+	Iterate                   	     2	    84	   185.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P11907 (E-value: 9e-59, Score: 201.1)
+Mentioned as: P11907
+Description: Uncharacterized 11.1 kDa protein
+Organism: Escherichia coli
+PMID: 10496929
+Source: EuropePMC
+Title: Complete DNA sequence and structural analysis of the enteropathogenic Escherichia coli adherence factor plasmid
+Journal: Infection and immunity (1999)
+Snippet: U27184 U27184 U27184 U27184 U27184 U27184 U27184 P11907 Q58416 S71181 AB010764 U73857 U73857 L42638 L42638 L42638 L42638 L42638 AF071034 AF071034 AF071034
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A7Y7BBF3.1	AF-A0A7Y7BBF3-F1-model_v4_TED01:2-83	1	AF-A0A7Y7BBF3-F1-model_v4_TED01	2-83	98.8%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P11907_TED01/Iterate
+GA   27.00 27.00;
+TC   27.80 142.60;
+NC   26.30 24.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

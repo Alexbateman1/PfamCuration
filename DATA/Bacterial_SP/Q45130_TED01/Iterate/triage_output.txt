@@ -1,0 +1,137 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y4208_ALKPO             Reviewed;         108 AA.
+AC   Q45130; D3G1H8;
+DE   RecName: Full=Uncharacterized protein BpOF4_21044;
+DE   AltName: Full=ORFB;
+GN   OrderedLocusNames=BpOF4_21044;
+OS   Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
+OS   (Bacillus pseudofirmus).
+OG   Plasmid pBpOF4-01.
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae;
+OC   Alkalihalophilus.
+OX   NCBI_TaxID=398511;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=8626304; DOI=10.1128/jb.178.6.1742-1749.1996;
+RA   Sturr M.G., Krulwich T.A., Hicks D.B.;
+RT   "Purification of a cytochrome bd terminal oxidase encoded by the
+RT   Escherichia coli app locus from a delta cyo delta cyd strain complemented
+RT   by genes from Bacillus firmus OF4.";
+RL   J. Bacteriol. 178:1742-1749(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-2126 / JCM 17055 / OF4; PLASMID=pBpOF4-01;
+RX   PubMed=21951522; DOI=10.1111/j.1462-2920.2011.02591.x;
+RA   Janto B., Ahmed A., Ito M., Liu J., Hicks D.B., Pagni S., Fackelmayer O.J.,
+RA   Smith T.A., Earl J., Elbourne L.D., Hassan K., Paulsen I.T., Kolsto A.B.,
+RA   Tourasse N.J., Ehrlich G.D., Boissy R., Ivey D.M., Li G., Xue Y., Ma Y.,
+RA   Hu F.Z., Krulwich T.A.;
+RT   "Genome of alkaliphilic Bacillus pseudofirmus OF4 reveals adaptations that
+RT   support the ability to grow in an external pH range from 7.5 to 11.4.";
+RL   Environ. Microbiol. 13:3289-3309(2011).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=ADC52204.1; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U39410; AAB05370.1; -; Genomic_DNA.
+DR   EMBL; CP001879; ADC52204.1; ALT_INIT; Genomic_DNA.
+DR   RefSeq; WP_041823163.1; NC_013792.1.
+DR   AlphaFoldDB; Q45130; -.
+DR   SMR; Q45130; -.
+DR   KEGG; bpf:BpOF4_21044; -.
+DR   HOGENOM; CLU_2354024_0_0_9; -.
+DR   Proteomes; UP000001544; Plasmid pBpOF4-01.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Plasmid; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..108
+FT                   /note="Uncharacterized protein BpOF4_21044"
+FT                   /id="PRO_0000066241"
+FT   TRANSMEM        36..56
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        58..78
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        88..108
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   108 AA;  12555 MW;  12DC1461867CE513 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Lentibacillus
+1	6	Alteribacillus
+1	6	Alkalihalophilus
+3	5	Bacillaceae
+3	4	Bacillales
+3	3	Bacilli
+3	2	Bacillota
+3	1	Bacillati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0U4EZ50	UNCHARACTERIZED PROTEIN {     57.0    1.1e-11   1   1.1  16.1
+	Iterate                   	    16	    95	    56.8
+
+A0A1I2BSF1	UNCHARACTERIZED PROTEIN {     66.3    1.4e-14   1   1.1   7.6
+	Iterate                   	    16	    96	    66.0
+
+A0A1Y1UX96	PROTEINASE INHIBITOR I42      45.5    4.2e-08   8  10.0  12.1
+	Iterate                   	   674	   736	     6.8
+	Iterate                   	    79	   138	     5.3
+	Iterate                   	   198	   257	     5.1
+	Iterate                   	   555	   613	     5.1
+	Iterate                   	   438	   494	     4.8
+	Iterate                   	  1038	  1084	     4.3
+	Iterate                   	  1155	  1194	     4.1
+	Iterate                   	   327	   376	     3.0
+	PF09394	Inhibitor_I42   	    35	   129	    68.4
+	PF09394	Inhibitor_I42   	   154	   248	    61.6
+	PF09394	Inhibitor_I42   	   273	   367	    55.4
+	PF09394	Inhibitor_I42   	   392	   486	    57.1
+	PF09394	Inhibitor_I42   	   511	   605	    56.2
+	PF09394	Inhibitor_I42   	   630	   725	    63.8
+	PF09394	Inhibitor_I42   	   747	   846	    48.4
+	PF09394	Inhibitor_I42   	   869	   963	    53.4
+	PF09394	Inhibitor_I42   	   988	  1079	    50.2
+	PF09394	Inhibitor_I42   	  1105	  1195	    51.2
+
+A0A852UHY0	GLUCOSE UPTAKE PROTEIN GL     69.5    1.3e-15   1   1.1  15.0
+	Iterate                   	    19	    99	    69.2
+
+Q45130	UNCHARACTERIZED PROTEIN BPOF4_    178.5    1.3e-49   1   1.1  19.1
+	Iterate                   	    27	   108	   178.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0U4EZ50.1	AF-A0A0U4EZ50-F1-model_v4_TED01:9-95	1	AF-A0A0U4EZ50-F1-model_v4_TED01	9-95	100.0%
+A0A1I2BSF1.1	AF-A0A1I2BSF1-F1-model_v4_TED01:30-96	1	AF-A0A1I2BSF1-F1-model_v4_TED01	30-96	82.7%
+A0A852UHY0.1	AF-A0A852UHY0-F1-model_v4_TED01:12-99	1	AF-A0A852UHY0-F1-model_v4_TED01	12-99	100.0%
+Q45130.1	AF-Q45130-F1-model_v4_TED01:27-108	1	AF-Q45130-F1-model_v4_TED01	27-108	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q45130_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 119.20;
+NC   26.20 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,87 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1873_AQUAE             Reviewed;         407 AA.
+AC   O67720;
+DE   RecName: Full=Uncharacterized protein aq_1873;
+GN   OrderedLocusNames=aq_1873;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC07694.1; -; Genomic_DNA.
+DR   PIR; F70461; F70461.
+DR   RefSeq; NP_214288.1; NC_000918.1.
+DR   RefSeq; WP_010881224.1; NC_000918.1.
+DR   AlphaFoldDB; O67720; -.
+DR   SMR; O67720; -.
+DR   STRING; 224324.aq_1873; -.
+DR   EnsemblBacteria; AAC07694; AAC07694; aq_1873.
+DR   KEGG; aae:aq_1873; -.
+DR   eggNOG; COG0745; Bacteria.
+DR   HOGENOM; CLU_711582_0_0_0; -.
+DR   InParanoid; O67720; -.
+DR   OrthoDB; 13416at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+PE   4: Predicted;
+KW   Coiled coil; Reference proteome.
+FT   CHAIN           1..407
+FT                   /note="Uncharacterized protein aq_1873"
+FT                   /id="PRO_0000186954"
+FT   COILED          102..151
+FT                   /evidence="ECO:0000255"
+FT   COILED          251..314
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   407 AA;  46491 MW;  A8DE5F688F77EF91 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Aquifex
+1	5	Aquificaceae
+1	4	Aquificales
+1	3	Aquificia
+1	2	Aquificota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O67720	UNCHARACTERIZED PROTEIN AQ_187    119.4    2.2e-31   1   4.4   8.8
+	O67720_TED03              	   335	   385	   119.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O67720.1	AF-O67720-F1-model_v4_TED01:3-110	1	AF-O67720-F1-model_v4_TED01	3-110	0
+O67720.1	AF-O67720-F1-model_v4_TED02:152-276	1	AF-O67720-F1-model_v4_TED02	152-276	0
+O67720.1	AF-O67720-F1-model_v4_TED03:335-385	1	AF-O67720-F1-model_v4_TED03	335-385	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67720_TED03
+GA   27.00 27.00;
+TC   27.60 119.40;
+NC   26.90 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

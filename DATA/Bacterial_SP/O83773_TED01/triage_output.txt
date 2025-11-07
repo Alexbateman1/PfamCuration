@@ -1,0 +1,96 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y795_TREPA              Reviewed;          52 AA.
+AC   O83773;
+DE   RecName: Full=Uncharacterized protein TP_0795;
+GN   OrderedLocusNames=TP_0795;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65767.1; -; Genomic_DNA.
+DR   PIR; B71281; B71281.
+DR   AlphaFoldDB; O83773; -.
+DR   SMR; O83773; -.
+DR   IntAct; O83773; 18.
+DR   EnsemblBacteria; AAC65767; AAC65767; TP_0795.
+DR   KEGG; tpa:TP_0795; -.
+DR   KEGG; tpw:TPANIC_0795; -.
+DR   HOGENOM; CLU_3085909_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..52
+FT                   /note="Uncharacterized protein TP_0795"
+FT                   /id="PRO_0000202328"
+SQ   SEQUENCE   52 AA;  5770 MW;  5654464CADB69233 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Treponema.
+1	5	Treponemataceae
+1	4	Spirochaetales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O83773	UNCHARACTERIZED PROTEIN TP_0795    122.2    3.3e-32   1   1.0  13.0
+	O83773_TED01              	     5	    51	   122.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26613 (E-value: 2.9e-34, Score: 122.2)
+Mentioned as: TP0795
+Description: T. pallidum predicted coding region TP0795
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 17893135
+Source: EuropePMC
+Title: Genome differences between Treponema pallidum subsp. pallidum strain Nichols and T. paraluiscuniculi strain Cuniculi A
+Journal: Infection and immunity (2007)
+Snippet: ORFs (TP0161, TP0224, TP0490, TP0573, TP0645, TP0753, TP0777, TP0795, TP0818, TP0932, and TP1032), and therefore analysis of these ORFs was not performed. All
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83773.1	AF-O83773-F1-model_v4_TED01:5-51	1	AF-O83773-F1-model_v4_TED01	5-51	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83773_TED01
+GA   27.00 27.00;
+TC   31.10 122.10;
+NC   26.20 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

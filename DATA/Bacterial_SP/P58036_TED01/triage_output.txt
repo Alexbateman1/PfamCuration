@@ -1,0 +1,97 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YJBS_ECOLI              Reviewed;          67 AA.
+AC   P58036; A5A629;
+DE   RecName: Full=Uncharacterized protein YjbS;
+GN   Name=yjbS; OrderedLocusNames=b4621; ORFNames=b4054.1;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+DR   EMBL; U00096; ABP93458.1; -; Genomic_DNA.
+DR   RefSeq; WP_001321562.1; NZ_SSZK01000016.1.
+DR   RefSeq; YP_001165333.1; NC_000913.3.
+DR   AlphaFoldDB; P58036; -.
+DR   STRING; 511145.b4621; -.
+DR   PaxDb; 511145-b4621; -.
+DR   EnsemblBacteria; ABP93458; ABP93458; b4621.
+DR   GeneID; 5061529; -.
+DR   KEGG; eco:b4621; -.
+DR   PATRIC; fig|511145.12.peg.4174; -.
+DR   InParanoid; P58036; -.
+DR   BioCyc; EcoCyc:MONOMER0-2829; -.
+DR   PRO; PR:P58036; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..67
+FT                   /note="Uncharacterized protein YjbS"
+FT                   /id="PRO_0000169717"
+SQ   SEQUENCE   67 AA;  7888 MW;  7CD04F5F4167B3A2 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P58036	UNCHARACTERIZED PROTEIN YJBS        63.2    6.3e-14   1   2.0   8.0
+	P58036_TED01              	    42	    67	    62.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3446237 (E-value: 5.6e-16, Score: 63.2)
+Mentioned as: b4621
+Description: hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 18799480
+Source: EuropePMC
+Title: Detecting horizontally transferred and essential genes based on dinucleotide relative abundance
+Journal: DNA research : an international journal for rapid publication of reports on genes and genomes (2008)
+Snippet: are false positives. Segment 4267 overlaps tyrB (b4054), a false positive and an RNA gene (b4621) which is not counted. Segment 3803 produces a contradiction, overlapping rfaB (false positive) and rfaS (true positive). (This is only the second such contradiction in all cases examined.) Segment 3798
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P58036.1	AF-P58036-F1-model_v4_TED01:42-67	1	AF-P58036-F1-model_v4_TED01	42-67	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P58036_TED01
+GA   27.00 27.00;
+TC   57.30 62.70;
+NC   24.90 18.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

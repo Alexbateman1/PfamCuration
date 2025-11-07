@@ -1,0 +1,576 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TATB_NITHX              Reviewed;         178 AA.
+AC   Q1QME4;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=Nham_1789;
+OS   Nitrobacter hamburgensis (strain DSM 10229 / NCIMB 13809 / X14).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Nitrobacteraceae; Nitrobacter.
+OX   NCBI_TaxID=323097;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DSM 10229 / NCIMB 13809 / X14;
+RG   US DOE Joint Genome Institute;
+RA   Copeland A., Lucas S., Lapidus A., Barry K., Detter J.C.,
+RA   Glavina del Rio T., Hammon N., Israni S., Dalin E., Tice H., Pitluck S.,
+RA   Chain P., Malfatti S., Shin M., Vergez L., Schmutz J., Larimer F., Land M.,
+RA   Hauser L., Kyrpides N., Ivanova N., Ward B., Arp D., Klotz M., Stein L.,
+RA   O'Mullan G., Starkenburg S., Sayavedra L., Poret-Peterson A.T.,
+RA   Gentry M.E., Bruce D., Richardson P.;
+RT   "Complete sequence of chromosome of Nitrobacter hamburgensis X14.";
+RL   Submitted (MAR-2006) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}; Single-pass membrane protein {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; CP000319; ABE62603.1; -; Genomic_DNA.
+DR   RefSeq; WP_011510285.1; NC_007964.1.
+DR   AlphaFoldDB; Q1QME4; -.
+DR   SMR; Q1QME4; -.
+DR   STRING; 323097.Nham_1789; -.
+DR   KEGG; nha:Nham_1789; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_1_3_5; -.
+DR   OrthoDB; 7206969at2; -.
+DR   Proteomes; UP000001953; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR003369; TatA/B/E.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   PANTHER; PTHR33162; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   PANTHER; PTHR33162:SF1; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   Pfam; PF02416; TatA_B_E; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Membrane; Protein transport;
+KW   Reference proteome; Translocation; Transmembrane; Transmembrane helix;
+KW   Transport.
+FT   CHAIN           1..178
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000301197"
+FT   TRANSMEM        1..21
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          77..178
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        77..86
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        93..102
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        155..165
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        166..178
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   178 AA;  18718 MW;  4A0CC828B6EF5DB8 CRC64;
+//
+ID   TATB_BRASO              Reviewed;         178 AA.
+AC   A4YV72;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=BRADO4046;
+OS   Bradyrhizobium sp. (strain ORS 278).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Nitrobacteraceae; Bradyrhizobium.
+OX   NCBI_TaxID=114615;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ORS 278;
+RX   PubMed=17540897; DOI=10.1126/science.1139548;
+RA   Giraud E., Moulin L., Vallenet D., Barbe V., Cytryn E., Avarre J.-C.,
+RA   Jaubert M., Simon D., Cartieaux F., Prin Y., Bena G., Hannibal L.,
+RA   Fardoux J., Kojadinovic M., Vuillet L., Lajus A., Cruveiller S., Rouy Z.,
+RA   Mangenot S., Segurens B., Dossat C., Franck W.L., Chang W.-S., Saunders E.,
+RA   Bruce D., Richardson P., Normand P., Dreyfus B., Pignol D., Stacey G.,
+RA   Emerich D., Vermeglio A., Medigue C., Sadowsky M.;
+RT   "Legumes symbioses: absence of nod genes in photosynthetic bradyrhizobia.";
+RL   Science 316:1307-1312(2007).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}; Single-pass membrane protein {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; CU234118; CAL77798.1; -; Genomic_DNA.
+DR   RefSeq; WP_011926932.1; NC_009445.1.
+DR   AlphaFoldDB; A4YV72; -.
+DR   SMR; A4YV72; -.
+DR   STRING; 114615.BRADO4046; -.
+DR   KEGG; bra:BRADO4046; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_1_3_5; -.
+DR   OrthoDB; 7206969at2; -.
+DR   Proteomes; UP000001994; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   PANTHER; PTHR33162; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   PANTHER; PTHR33162:SF1; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Membrane; Protein transport;
+KW   Reference proteome; Translocation; Transmembrane; Transmembrane helix;
+KW   Transport.
+FT   CHAIN           1..178
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000301148"
+FT   TRANSMEM        1..21
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          146..178
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        168..178
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   178 AA;  19053 MW;  ACA186E90375F1E1 CRC64;
+//
+ID   TATB_RHOP2              Reviewed;         188 AA.
+AC   Q2IWG4;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=RPB_2744;
+OS   Rhodopseudomonas palustris (strain HaA2).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Nitrobacteraceae; Rhodopseudomonas.
+OX   NCBI_TaxID=316058;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=HaA2;
+RG   US DOE Joint Genome Institute;
+RA   Copeland A., Lucas S., Lapidus A., Barry K., Detter J.C., Glavina T.,
+RA   Hammon N., Israni S., Pitluck S., Chain P., Malfatti S., Shin M.,
+RA   Vergez L., Schmutz J., Larimer F., Land M., Hauser L., Pelletier D.A.,
+RA   Kyrpides N., Anderson I., Oda Y., Harwood C.S., Richardson P.;
+RT   "Complete sequence of Rhodopseudomonas palustris HaA2.";
+RL   Submitted (JAN-2006) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}; Single-pass membrane protein {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; CP000250; ABD07446.1; -; Genomic_DNA.
+DR   RefSeq; WP_011441631.1; NC_007778.1.
+DR   AlphaFoldDB; Q2IWG4; -.
+DR   SMR; Q2IWG4; -.
+DR   STRING; 316058.RPB_2744; -.
+DR   KEGG; rpb:RPB_2744; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_1_3_5; -.
+DR   OrthoDB; 7206969at2; -.
+DR   Proteomes; UP000008809; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   PANTHER; PTHR33162; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   PANTHER; PTHR33162:SF1; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Membrane; Protein transport;
+KW   Reference proteome; Translocation; Transmembrane; Transmembrane helix;
+KW   Transport.
+FT   CHAIN           1..188
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000301226"
+FT   TRANSMEM        1..21
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          147..188
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        160..170
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   188 AA;  19636 MW;  8A6F67F850D15479 CRC64;
+//
+ID   TATB_BRASB              Reviewed;         180 AA.
+AC   A5EJW1;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=BBta_4416;
+OS   Bradyrhizobium sp. (strain BTAi1 / ATCC BAA-1182).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Nitrobacteraceae; Bradyrhizobium.
+OX   NCBI_TaxID=288000;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=BTAi1 / ATCC BAA-1182;
+RX   PubMed=17540897; DOI=10.1126/science.1139548;
+RA   Giraud E., Moulin L., Vallenet D., Barbe V., Cytryn E., Avarre J.-C.,
+RA   Jaubert M., Simon D., Cartieaux F., Prin Y., Bena G., Hannibal L.,
+RA   Fardoux J., Kojadinovic M., Vuillet L., Lajus A., Cruveiller S., Rouy Z.,
+RA   Mangenot S., Segurens B., Dossat C., Franck W.L., Chang W.-S., Saunders E.,
+RA   Bruce D., Richardson P., Normand P., Dreyfus B., Pignol D., Stacey G.,
+RA   Emerich D., Vermeglio A., Medigue C., Sadowsky M.;
+RT   "Legumes symbioses: absence of nod genes in photosynthetic bradyrhizobia.";
+RL   Science 316:1307-1312(2007).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}; Single-pass membrane protein {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; CP000494; ABQ36455.1; -; Genomic_DNA.
+DR   RefSeq; WP_012044452.1; NC_009485.1.
+DR   AlphaFoldDB; A5EJW1; -.
+DR   SMR; A5EJW1; -.
+DR   STRING; 288000.BBta_4416; -.
+DR   KEGG; bbt:BBta_4416; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_1_3_5; -.
+DR   OrthoDB; 7206969at2; -.
+DR   Proteomes; UP000000246; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR003369; TatA/B/E.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   PANTHER; PTHR33162; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   PANTHER; PTHR33162:SF1; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   Pfam; PF02416; TatA_B_E; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Membrane; Protein transport;
+KW   Reference proteome; Translocation; Transmembrane; Transmembrane helix;
+KW   Transport.
+FT   CHAIN           1..180
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000301147"
+FT   TRANSMEM        1..21
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          95..180
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        103..123
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        170..180
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   180 AA;  19199 MW;  D2C40D2AB1F20F0F CRC64;
+//
+ID   TATB_BRADU              Reviewed;         175 AA.
+AC   Q89KZ8;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=bll4750;
+OS   Bradyrhizobium diazoefficiens (strain JCM 10833 / BCRC 13528 / IAM 13628 /
+OS   NBRC 14792 / USDA 110).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Nitrobacteraceae; Bradyrhizobium.
+OX   NCBI_TaxID=224911;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=JCM 10833 / BCRC 13528 / IAM 13628 / NBRC 14792 / USDA 110;
+RX   PubMed=12597275; DOI=10.1093/dnares/9.6.189;
+RA   Kaneko T., Nakamura Y., Sato S., Minamisawa K., Uchiumi T., Sasamoto S.,
+RA   Watanabe A., Idesawa K., Iriguchi M., Kawashima K., Kohara M.,
+RA   Matsumoto M., Shimpo S., Tsuruoka H., Wada T., Yamada M., Tabata S.;
+RT   "Complete genomic sequence of nitrogen-fixing symbiotic bacterium
+RT   Bradyrhizobium japonicum USDA110.";
+RL   DNA Res. 9:189-197(2002).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}; Single-pass membrane protein {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; BA000040; BAC50015.1; -; Genomic_DNA.
+DR   RefSeq; NP_771390.1; NC_004463.1.
+DR   RefSeq; WP_011087518.1; NC_004463.1.
+DR   AlphaFoldDB; Q89KZ8; -.
+DR   SMR; Q89KZ8; -.
+DR   FunCoup; Q89KZ8; 242.
+DR   STRING; 224911.AAV28_21040; -.
+DR   EnsemblBacteria; BAC50015; BAC50015; BAC50015.
+DR   GeneID; 46491757; -.
+DR   KEGG; bja:bll4750; -.
+DR   PATRIC; fig|224911.44.peg.4583; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_1_3_5; -.
+DR   InParanoid; Q89KZ8; -.
+DR   OrthoDB; 7206969at2; -.
+DR   PhylomeDB; Q89KZ8; -.
+DR   Proteomes; UP000002526; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   PANTHER; PTHR33162; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   PANTHER; PTHR33162:SF1; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Membrane; Protein transport;
+KW   Reference proteome; Translocation; Transmembrane; Transmembrane helix;
+KW   Transport.
+FT   CHAIN           1..175
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000301146"
+FT   TRANSMEM        1..21
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          100..132
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          155..175
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        111..132
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   175 AA;  18545 MW;  9D50DCAC41A420CF CRC64;
+//
+ID   TATB_NITWN              Reviewed;         180 AA.
+AC   Q3SRQ2;
+DE   RecName: Full=Sec-independent protein translocase protein TatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   Name=tatB {ECO:0000255|HAMAP-Rule:MF_00237};
+GN   OrderedLocusNames=Nwi_1778;
+OS   Nitrobacter winogradskyi (strain ATCC 25391 / DSM 10237 / CIP 104748 /
+OS   NCIMB 11846 / Nb-255).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Nitrobacteraceae; Nitrobacter.
+OX   NCBI_TaxID=323098;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 25391 / DSM 10237 / CIP 104748 / NCIMB 11846 / Nb-255;
+RX   PubMed=16517654; DOI=10.1128/aem.72.3.2050-2063.2006;
+RA   Starkenburg S.R., Chain P.S.G., Sayavedra-Soto L.A., Hauser L., Land M.L.,
+RA   Larimer F.W., Malfatti S.A., Klotz M.G., Bottomley P.J., Arp D.J.,
+RA   Hickey W.J.;
+RT   "Genome sequence of the chemolithoautotrophic nitrite-oxidizing bacterium
+RT   Nitrobacter winogradskyi Nb-255.";
+RL   Appl. Environ. Microbiol. 72:2050-2063(2006).
+CC   -!- FUNCTION: Part of the twin-arginine translocation (Tat) system that
+CC       transports large folded proteins containing a characteristic twin-
+CC       arginine motif in their signal peptide across membranes. Together with
+CC       TatC, TatB is part of a receptor directly interacting with Tat signal
+CC       peptides. TatB may form an oligomeric binding site that transiently
+CC       accommodates folded Tat precursor proteins before their translocation.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBUNIT: The Tat system comprises two distinct complexes: a TatABC
+CC       complex, containing multiple copies of TatA, TatB and TatC subunits,
+CC       and a separate TatA complex, containing only TatA subunits. Substrates
+CC       initially bind to the TatABC complex, which probably triggers
+CC       association of the separate TatA complex to form the active translocon.
+CC       {ECO:0000255|HAMAP-Rule:MF_00237}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}; Single-pass membrane protein {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+CC   -!- SIMILARITY: Belongs to the TatB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00237}.
+DR   EMBL; CP000115; ABA05039.1; -; Genomic_DNA.
+DR   RefSeq; WP_011315035.1; NC_007406.1.
+DR   AlphaFoldDB; Q3SRQ2; -.
+DR   SMR; Q3SRQ2; -.
+DR   STRING; 323098.Nwi_1778; -.
+DR   KEGG; nwi:Nwi_1778; -.
+DR   eggNOG; COG1826; Bacteria.
+DR   HOGENOM; CLU_086034_1_3_5; -.
+DR   OrthoDB; 7206969at2; -.
+DR   Proteomes; UP000002531; Chromosome.
+DR   GO; GO:0033281; C:TAT protein transport complex; IEA:UniProtKB-UniRule.
+DR   GO; GO:0008320; F:protein transmembrane transporter activity; IEA:UniProtKB-UniRule.
+DR   GO; GO:0043953; P:protein transport by the Tat complex; IEA:UniProtKB-UniRule.
+DR   Gene3D; 1.20.5.3310; -; 1.
+DR   HAMAP; MF_00237; TatB; 1.
+DR   InterPro; IPR003369; TatA/B/E.
+DR   InterPro; IPR018448; TatB.
+DR   NCBIfam; TIGR01410; tatB; 1.
+DR   PANTHER; PTHR33162; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   PANTHER; PTHR33162:SF1; SEC-INDEPENDENT PROTEIN TRANSLOCASE PROTEIN TATA, CHLOROPLASTIC; 1.
+DR   Pfam; PF02416; TatA_B_E; 1.
+DR   PRINTS; PR01506; TATBPROTEIN.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Membrane; Protein transport;
+KW   Reference proteome; Translocation; Transmembrane; Transmembrane helix;
+KW   Transport.
+FT   CHAIN           1..180
+FT                   /note="Sec-independent protein translocase protein TatB"
+FT                   /id="PRO_0000301198"
+FT   TRANSMEM        1..21
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00237"
+FT   REGION          77..180
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        105..129
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   180 AA;  18709 MW;  22D494B4B68E106B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+6	6	Bradyrhizobium.
+4	6	Rhodopseudomonas.
+2	6	Nitrobacter.
+2	6	Afipia.
+15	5	Nitrobacteraceae
+15	4	Hyphomicrobiales
+15	3	Alphaproteobacteria
+15	2	Pseudomonadota
+15	1	Pseudomonadati
+15	0	Bacteria
+Total of 15 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A4YV72	SEC-INDEPENDENT PROTEIN TRANSLO     58.7    2.3e-12   1   1.3   0.6
+	Iterate                   	    60	   100	    58.0
+	PF02416	TatA_B_E        	     2	    49	      66
+
+A5EJW1	SEC-INDEPENDENT PROTEIN TRANSLO     58.9    1.9e-12   1   1.3   0.5
+	Iterate                   	    60	   100	    58.3
+	PF02416	TatA_B_E        	     2	    49	      66
+
+Q1QME4	SEC-INDEPENDENT PROTEIN TRANSLO     46.7    1.3e-08   1   1.5   0.1
+	Iterate                   	    60	    92	    45.6
+	PF02416	TatA_B_E        	     2	    49	    65.1
+
+Q2IWG4	SEC-INDEPENDENT PROTEIN TRANSLO     75.1    1.6e-17   1   1.4   2.6
+	Iterate                   	    60	    99	    74.3
+	PF02416	TatA_B_E        	     2	    49	    61.8
+
+Q3SRQ2	SEC-INDEPENDENT PROTEIN TRANSLO     44.5      6e-08   1   1.5   0.1
+	Iterate                   	    60	   100	    43.7
+	PF02416	TatA_B_E        	     2	    49	    67.3
+
+Q89KZ8	SEC-INDEPENDENT PROTEIN TRANSLO     75.4    1.3e-17   1   1.5   2.5
+	Iterate                   	    60	   100	    74.5
+	PF02416	TatA_B_E        	     2	    49	    64.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1B9YQ68.1	AF-A0A1B9YQ68-F1-model_v4_TED01:2-58	1	AF-A0A1B9YQ68-F1-model_v4_TED01	2-58	0
+A0A1B9YQ68.1	AF-A0A1B9YQ68-F1-model_v4_TED02:60-95	1	AF-A0A1B9YQ68-F1-model_v4_TED02	60-95	90.0%
+A0A1G9X491.1	AF-A0A1G9X491-F1-model_v4_TED01:2-58	1	AF-A0A1G9X491-F1-model_v4_TED01	2-58	0
+A0A1G9X491.1	AF-A0A1G9X491-F1-model_v4_TED02:60-94	1	AF-A0A1G9X491-F1-model_v4_TED02	60-94	87.5%
+A0A318TM24.1	AF-A0A318TM24-F1-model_v4_TED02:60-95	1	AF-A0A318TM24-F1-model_v4_TED02	60-95	90.0%
+A0A318TM24.1	AF-A0A318TM24-F1-model_v4_TED01:2-58	1	AF-A0A318TM24-F1-model_v4_TED01	2-58	0
+A0A4Q5PEJ4.1	AF-A0A4Q5PEJ4-F1-model_v4_TED01:2-58	1	AF-A0A4Q5PEJ4-F1-model_v4_TED01	2-58	0
+A0A4Q5PEJ4.1	AF-A0A4Q5PEJ4-F1-model_v4_TED02:60-95	1	AF-A0A4Q5PEJ4-F1-model_v4_TED02	60-95	90.0%
+A0A4Q8QXA1.1	AF-A0A4Q8QXA1-F1-model_v4_TED01:2-58	1	AF-A0A4Q8QXA1-F1-model_v4_TED01	2-58	0
+A0A4Q8QXA1.1	AF-A0A4Q8QXA1-F1-model_v4_TED02:59-96	1	AF-A0A4Q8QXA1-F1-model_v4_TED02	59-96	92.5%
+A0A515KNB5.1	AF-A0A515KNB5-F1-model_v4_TED01:2-58	1	AF-A0A515KNB5-F1-model_v4_TED01	2-58	0
+A0A515KNB5.1	AF-A0A515KNB5-F1-model_v4_TED02:59-95	1	AF-A0A515KNB5-F1-model_v4_TED02	59-95	90.0%
+A0A7W7Z4P0.1	AF-A0A7W7Z4P0-F1-model_v4_TED01:2-58	1	AF-A0A7W7Z4P0-F1-model_v4_TED01	2-58	0
+A0A7W7Z4P0.1	AF-A0A7W7Z4P0-F1-model_v4_TED02:60-99	1	AF-A0A7W7Z4P0-F1-model_v4_TED02	60-99	100.0%
+A5EJW1.1	AF-A5EJW1-F1-model_v4_TED01:1-57	1	AF-A5EJW1-F1-model_v4_TED01	1-57	0
+A5EJW1.1	AF-A5EJW1-F1-model_v4_TED02:59-95	1	AF-A5EJW1-F1-model_v4_TED02	59-95	90.0%
+Q1QME4.1	AF-Q1QME4-F1-model_v4_TED01:2-58	1	AF-Q1QME4-F1-model_v4_TED01	2-58	0
+Q1QME4.1	AF-Q1QME4-F1-model_v4_TED02:60-90	1	AF-Q1QME4-F1-model_v4_TED02	60-90	77.5%
+Q2IWG4.1	AF-Q2IWG4-F1-model_v4_TED01:2-58	1	AF-Q2IWG4-F1-model_v4_TED01	2-58	0
+Q2IWG4.1	AF-Q2IWG4-F1-model_v4_TED02:59-102	1	AF-Q2IWG4-F1-model_v4_TED02	59-102	100.0%
+Q89KZ8.1	AF-Q89KZ8-F1-model_v4_TED01:2-58	1	AF-Q89KZ8-F1-model_v4_TED01	2-58	0
+Q89KZ8.1	AF-Q89KZ8-F1-model_v4_TED02:60-95	1	AF-Q89KZ8-F1-model_v4_TED02	60-95	90.0%
+W3RDQ5.1	AF-W3RDQ5-F1-model_v4_TED01:2-58	1	AF-W3RDQ5-F1-model_v4_TED01	2-58	0
+W3RDQ5.1	AF-W3RDQ5-F1-model_v4_TED02:60-94	1	AF-W3RDQ5-F1-model_v4_TED02	60-94	87.5%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q07N50_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.60 42.40;
+NC   26.30 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

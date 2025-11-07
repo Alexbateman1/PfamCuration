@@ -1,0 +1,155 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YTHA_ECOLI              Reviewed;          41 AA.
+AC   A8DYQ1;
+DE   RecName: Full=Uncharacterized protein YthA;
+GN   Name=ythA; OrderedLocusNames=b4655, JW5769.1;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [3]
+RP   INDUCTION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=19121005; DOI=10.1111/j.1365-2958.2008.06495.x;
+RA   Hemm M.R., Paul B.J., Schneider T.D., Storz G., Rudd K.E.;
+RT   "Small membrane proteins found by comparative genomics and ribosome binding
+RT   site models.";
+RL   Mol. Microbiol. 70:1487-1501(2008).
+RN   [4]
+RP   INDUCTION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=19734316; DOI=10.1128/jb.00872-09;
+RA   Hemm M.R., Paul B.J., Miranda-Rios J., Zhang A., Soltanzad N., Storz G.;
+RT   "Small stress response proteins in Escherichia coli: proteins missed by
+RT   classical proteomic studies.";
+RL   J. Bacteriol. 192:46-58(2010).
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Single-pass
+CC       membrane protein {ECO:0000305}.
+CC   -!- INDUCTION: Constitutively expressed, induced at 45 degrees Celsius (at
+CC       protein level). {ECO:0000269|PubMed:19121005,
+CC       ECO:0000269|PubMed:19734316}.
+DR   EMBL; U00096; ABV59575.1; -; Genomic_DNA.
+DR   EMBL; AP009048; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   RefSeq; WP_000594405.1; NZ_SSUV01000014.1.
+DR   RefSeq; YP_001491548.1; NC_000913.3.
+DR   AlphaFoldDB; A8DYQ1; -.
+DR   FunCoup; A8DYQ1; 2.
+DR   STRING; 511145.b4655; -.
+DR   PaxDb; 511145-b4655; -.
+DR   EnsemblBacteria; ABV59575; ABV59575; b4655.
+DR   GeneID; 5625581; -.
+DR   KEGG; eco:b4655; -.
+DR   PATRIC; fig|83333.113.peg.4407; -.
+DR   InParanoid; A8DYQ1; -.
+DR   BioCyc; EcoCyc:MONOMER0-2840; -.
+DR   PRO; PR:A8DYQ1; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   1: Evidence at protein level;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Stress response; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..41
+FT                   /note="Uncharacterized protein YthA"
+FT                   /id="PRO_0000315218"
+FT   TRANSMEM        10..32
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   41 AA;  4779 MW;  5107FB6F565FFEC6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A8DYQ1	UNCHARACTERIZED PROTEIN YTHA       109.2    2.6e-28   1   1.0  12.4
+	A8DYQ1_TED01              	     1	    41	   109.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: A8DYQ1 (E-value: 2.3e-30, Score: 109.2)
+Mentioned as: A8DYQ1
+Description: Uncharacterized protein YthA
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Uncharacterized protein YthA
+PMID: 30158663
+Source: EuropePMC
+Title: Stress response of Escherichia coli to essential oil components - insights on low-molecular-weight proteins from MALDI-TOF
+Journal: Scientific reports (2018)
+Snippet: these changes were shared among different groups of treatments: the uncharacterised protein YthA (m/z 4777,60, A8DYQ1) is typical of the stress response and was expressed more highly (intensity greater than 50%) in the treated samples than in the control (intensity 30%). The expression of this protein
+
+================================================================================
+Protein: A8DYQ1 (E-value: 2.3e-30, Score: 109.2)
+Mentioned as: YTHA_ECOLI
+Description: Uncharacterized protein YthA
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Uncharacterized protein YthA
+PMID: 19121005
+Source: SwissProt
+Snippet: SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Single-pass membrane protein {ECO:0000305}._:::_INDUCTION: Constitutively expressed, induced at 45 degrees Celsius (at protein level). {ECO:0000269|PubMed:19121005, ECO:0000269|PubMed:19734316}.
+
+================================================================================
+Protein: A8DYQ1 (E-value: 2.3e-30, Score: 109.2)
+Mentioned as: YTHA_ECOLI
+Description: Uncharacterized protein YthA
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Uncharacterized protein YthA
+PMID: 19734316
+Source: SwissProt
+Snippet: SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Single-pass membrane protein {ECO:0000305}._:::_INDUCTION: Constitutively expressed, induced at 45 degrees Celsius (at protein level). {ECO:0000269|PubMed:19121005, ECO:0000269|PubMed:19734316}.
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A8DYQ1.1	AF-A8DYQ1-F1-model_v4_TED01:1-41	1	AF-A8DYQ1-F1-model_v4_TED01	1-41	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A8DYQ1_TED01
+GA   27.00 27.00;
+TC   109.20 109.10;
+NC   20.50 17.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,1082 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   ERFK_SALTY              Reviewed;         309 AA.
+AC   P40680;
+DE   RecName: Full=Probable L,D-transpeptidase ErfK/SrfK;
+DE            EC=2.-.-.-;
+DE   Flags: Precursor;
+GN   Name=erfK; Synonyms=srfK; OrderedLocusNames=STM2015;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=LT2;
+RX   PubMed=7883701; DOI=10.1128/jb.177.6.1461-1469.1995;
+RA   Chen P., Ailion M., Weyand N., Roth J.R.;
+RT   "The end of the cob operon: evidence that the last gene (cobT) catalyzes
+RT   synthesis of the lower ligand of vitamin B12, dimethylbenzimidazole.";
+RL   J. Bacteriol. 177:1461-1469(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+CC   -!- PATHWAY: Cell wall biogenesis; peptidoglycan biosynthesis.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the YkuD family. {ECO:0000305}.
+DR   EMBL; L35477; AAA69298.1; -; Genomic_DNA.
+DR   EMBL; AE006468; AAL20919.1; -; Genomic_DNA.
+DR   RefSeq; NP_460960.1; NC_003197.2.
+DR   AlphaFoldDB; P40680; -.
+DR   SMR; P40680; -.
+DR   STRING; 99287.STM2015; -.
+DR   PaxDb; 99287-STM2015; -.
+DR   GeneID; 1253536; -.
+DR   KEGG; stm:STM2015; -.
+DR   PATRIC; fig|99287.12.peg.2137; -.
+DR   HOGENOM; CLU_046834_0_1_6; -.
+DR   PhylomeDB; P40680; -.
+DR   BioCyc; SENT99287:STM2015-MONOMER; -.
+DR   UniPathway; UPA00219; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0071972; F:peptidoglycan L,D-transpeptidase activity; IBA:GO_Central.
+DR   GO; GO:0071555; P:cell wall organization; IEA:UniProtKB-KW.
+DR   GO; GO:0018104; P:peptidoglycan-protein cross-linking; IBA:GO_Central.
+DR   GO; GO:0008360; P:regulation of cell shape; IEA:UniProtKB-KW.
+DR   CDD; cd16913; YkuD_like; 1.
+DR   FunFam; 2.40.440.10:FF:000001; L,D-transpeptidase YbiS; 1.
+DR   Gene3D; 2.40.440.10; L,D-transpeptidase catalytic domain-like; 1.
+DR   InterPro; IPR050979; LD-transpeptidase.
+DR   InterPro; IPR005490; LD_TPept_cat_dom.
+DR   InterPro; IPR041597; Ldt_C.
+DR   InterPro; IPR038063; Transpep_catalytic_dom.
+DR   NCBIfam; NF007563; PRK10190.1; 1.
+DR   PANTHER; PTHR30582; L,D-TRANSPEPTIDASE; 1.
+DR   PANTHER; PTHR30582:SF24; L,D-TRANSPEPTIDASE ERFK_SRFK-RELATED; 1.
+DR   Pfam; PF17969; Ldt_C; 1.
+DR   Pfam; PF03734; YkuD; 1.
+DR   SUPFAM; SSF141523; L,D-transpeptidase catalytic domain-like; 1.
+DR   PROSITE; PS52029; LD_TPASE; 1.
+PE   3: Inferred from homology;
+KW   Cell shape; Cell wall biogenesis/degradation; Glycosyltransferase;
+KW   Hydrolase; Peptidoglycan synthesis; Periplasm; Reference proteome; Signal;
+KW   Transferase.
+FT   SIGNAL          1..21
+FT                   /evidence="ECO:0000250"
+FT   CHAIN           22..309
+FT                   /note="Probable L,D-transpeptidase ErfK/SrfK"
+FT                   /id="PRO_0000021196"
+FT   DOMAIN          96..231
+FT                   /note="L,D-TPase catalytic"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        191
+FT                   /note="Proton donor/acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        207
+FT                   /note="Nucleophile"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+SQ   SEQUENCE   309 AA;  34180 MW;  55CCBEE5FEBDC259 CRC64;
+//
+ID   YBIS_ECOLI              Reviewed;         306 AA.
+AC   P0AAX8; P75789;
+DE   RecName: Full=Probable L,D-transpeptidase YbiS;
+DE            EC=2.-.-.-;
+DE   Flags: Precursor;
+GN   Name=ybiS; OrderedLocusNames=b0819, JW0803;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=8905232; DOI=10.1093/dnares/3.3.137;
+RA   Oshima T., Aiba H., Baba T., Fujita K., Hayashi K., Honjo A., Ikemoto K.,
+RA   Inada T., Itoh T., Kajihara M., Kanai K., Kashimoto K., Kimura S.,
+RA   Kitagawa M., Makino K., Masuda S., Miki T., Mizobuchi K., Mori H.,
+RA   Motomura K., Nakamura Y., Nashimoto H., Nishio Y., Saito N., Sampei G.,
+RA   Seki Y., Tagami H., Takemoto K., Wada C., Yamamoto Y., Yano M.,
+RA   Horiuchi T.;
+RT   "A 718-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 12.7-28.0 min region on the linkage map.";
+RL   DNA Res. 3:137-155(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   PROTEIN SEQUENCE OF 25-36.
+RC   STRAIN=K12 / EMG2;
+RX   PubMed=9298646; DOI=10.1002/elps.1150180807;
+RA   Link A.J., Robison K., Church G.M.;
+RT   "Comparing the predicted and observed properties of proteins encoded in the
+RT   genome of Escherichia coli K-12.";
+RL   Electrophoresis 18:1259-1313(1997).
+RN   [5]
+RP   IDENTIFICATION BY MASS SPECTROMETRY.
+RC   STRAIN=B / BL21;
+RX   PubMed=10493123;
+ID   ERFK_ECOLI              Reviewed;         310 AA.
+AC   P39176;
+DE   RecName: Full=Probable L,D-transpeptidase ErfK/SrfK;
+DE            EC=2.-.-.-;
+DE   Flags: Precursor;
+GN   Name=erfK; Synonyms=yeeG, yzzT; OrderedLocusNames=b1990, JW1968;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=7592411; DOI=10.1128/jb.177.22.6371-6380.1995;
+RA   Lawrence J.G., Roth J.R.;
+RT   "The cobalamin (coenzyme B12) biosynthetic genes of Escherichia coli.";
+RL   J. Bacteriol. 177:6371-6380(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9097040; DOI=10.1093/dnares/3.6.379;
+RA   Itoh T., Aiba H., Baba T., Fujita K., Hayashi K., Inada T., Isono K.,
+RA   Kasai H., Kimura S., Kitakawa M., Kitagawa M., Makino K., Miki T.,
+RA   Mizobuchi K., Mori H., Mori T., Motomura K., Nakade S., Nakamura Y.,
+RA   Nashimoto H., Nishio Y., Oshima T., Saito N., Sampei G., Seki Y.,
+RA   Sivasundaram S., Tagami H., Takeda J., Takemoto K., Wada C., Yamamoto Y.,
+RA   Horiuchi T.;
+RT   "A 460-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 40.1-50.0 min region on the linkage map.";
+RL   DNA Res. 3:379-392(1996).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [5]
+RP   PROTEIN SEQUENCE OF 22-33.
+RC   STRAIN=K12 / EMG2;
+RX   PubMed=9298646; DOI=10.1002/elps.1150180807;
+RA   Link A.J., Robison K., Church G.M.;
+RT   "Comparing the predicted and observed properties of proteins encoded in the
+RT   genome of Escherichia coli K-12.";
+RL   Electrophoresis 18:1259-1313(1997).
+RN   [6]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / BW25113;
+RX   PubMed=18456808; DOI=10.1128/jb.00025-08;
+RA   Magnet S., Dubost L., Marie A., Arthur M., Gutmann L.;
+RT   "Identification of the L,D-transpeptidases for peptidoglycan cross-linking
+RT   in Escherichia coli.";
+RL   J. Bacteriol. 190:4782-4785(2008).
+RN   [7]
+RP   IDENTIFICATION BY MASS SPECTROMETRY, AND INTERACTION WITH DSBG.
+RC   STRAIN=K12 / MC1000 / ATCC 39531;
+RX   PubMed=19965429; DOI=10.1126/science.1179557;
+RA   Depuydt M., Leonard S.E., Vertommen D., Denoncin K., Morsomme P., Wahni K.,
+RA   Messens J., Carroll K.S., Collet J.F.;
+RT   "A periplasmic reducing system protects single cysteine residues from
+RT   oxidation.";
+RL   Science 326:1109-1111(2009).
+CC   -!- FUNCTION: Responsible, at least in part, for anchoring of the major
+CC       outer membrane lipoprotein (Lpp, also known as the Braun lipoprotein)
+CC       to the peptidoglycan via a meso-diaminopimelyl-L-Lys- bond on the
+CC       terminal residue of Lpp. {ECO:0000269|PubMed:18456808}.
+CC   -!- PATHWAY: Cell wall biogenesis; peptidoglycan biosynthesis.
+CC   -!- SUBUNIT: Interacts with DsbG. {ECO:0000269|PubMed:19965429}.
+CC   -!- INTERACTION:
+CC       P39176; P08312: pheS; NbExp=4; IntAct=EBI-555707, EBI-555676;
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000305}.
+CC   -!- DISRUPTION PHENOTYPE: Simultaneous disruption of erfK, ybiS, ycfS and
+CC       ynhG leads to loss of covalent anchoring of the major outer membrane
+CC       lipoprotein (Lpp, also known as the Braun lipoprotein) to the
+CC       peptidoglycan. Complementation with erfK restores some of this
+CC       anchoring. {ECO:0000269|PubMed:18456808}.
+CC   -!- SIMILARITY: Belongs to the YkuD family. {ECO:0000305}.
+DR   EMBL; U33333; AAA78909.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC75051.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA15807.1; -; Genomic_DNA.
+DR   PIR; E64963; E64963.
+DR   RefSeq; NP_416494.1; NC_000913.3.
+DR   AlphaFoldDB; P39176; -.
+DR   SMR; P39176; -.
+DR   BioGRID; 4259382; 20.
+DR   BioGRID; 849652; 1.
+DR   DIP; DIP-9522N; -.
+DR   FunCoup; P39176; 41.
+DR   IntAct; P39176; 3.
+DR   STRING; 511145.b1990; -.
+DR   MEROPS; C82.A02; -.
+DR   jPOST; P39176; -.
+DR   PaxDb; 511145-b1990; -.
+DR   EnsemblBacteria; AAC75051; AAC75051; b1990.
+DR   GeneID; 945273; -.
+DR   KEGG; ecj:JW1968; -.
+DR   KEGG; eco:b1990; -.
+DR   KEGG; ecoc:C3026_11230; -.
+DR   PATRIC; fig|511145.12.peg.2065; -.
+DR   EchoBASE; EB2546; -.
+DR   eggNOG; COG1376; Bacteria.
+DR   HOGENOM; CLU_046834_0_1_6; -.
+DR   InParanoid; P39176; -.
+DR   OMA; QEGPTWV; -.
+DR   PhylomeDB; P39176; -.
+DR   BioCyc; EcoCyc:G7073-MONOMER; -.
+DR   BioCyc; MetaCyc:G7073-MONOMER; -.
+DR   UniPathway; UPA00219; -.
+DR   PRO; PR:P39176; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0071972; F:peptidoglycan L,D-transpeptidase activity; IDA:EcoCyc.
+DR   GO; GO:0071555; P:cell wall organization; IEA:UniProtKB-KW.
+DR   GO; GO:0018104; P:peptidoglycan-protein cross-linking; IDA:EcoCyc.
+DR   GO; GO:0008360; P:regulation of cell shape; IEA:UniProtKB-KW.
+DR   CDD; cd16913; YkuD_like; 1.
+DR   FunFam; 2.40.440.10:FF:000001; L,D-transpeptidase YbiS; 1.
+DR   Gene3D; 2.40.440.10; L,D-transpeptidase catalytic domain-like; 1.
+DR   InterPro; IPR050979; LD-transpeptidase.
+DR   InterPro; IPR005490; LD_TPept_cat_dom.
+DR   InterPro; IPR041597; Ldt_C.
+DR   InterPro; IPR038063; Transpep_catalytic_dom.
+DR   NCBIfam; NF007563; PRK10190.1; 1.
+DR   PANTHER; PTHR30582; L,D-TRANSPEPTIDASE; 1.
+DR   PANTHER; PTHR30582:SF24; L,D-TRANSPEPTIDASE ERFK_SRFK-RELATED; 1.
+DR   Pfam; PF17969; Ldt_C; 1.
+DR   Pfam; PF03734; YkuD; 1.
+DR   SUPFAM; SSF141523; L,D-transpeptidase catalytic domain-like; 1.
+DR   PROSITE; PS52029; LD_TPASE; 1.
+PE   1: Evidence at protein level;
+KW   Cell shape; Cell wall biogenesis/degradation; Direct protein sequencing;
+KW   Glycosyltransferase; Hydrolase; Peptidoglycan synthesis; Periplasm;
+KW   Reference proteome; Signal; Transferase.
+FT   SIGNAL          1..21
+FT                   /evidence="ECO:0000269|PubMed:9298646"
+FT   CHAIN           22..310
+FT                   /note="Probable L,D-transpeptidase ErfK/SrfK"
+FT                   /id="PRO_0000021194"
+FT   DOMAIN          96..231
+FT                   /note="L,D-TPase catalytic"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        191
+FT                   /note="Proton donor/acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        207
+FT                   /note="Nucleophile"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   CONFLICT        28..29
+FT                   /note="PE -> TD (in Ref. 5; AA sequence)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   310 AA;  34411 MW;  ABF26AC3E6F550AB CRC64;
+//
+ID   YBIS_ECO57              Reviewed;         306 AA.
+AC   P0AAY0; P75789;
+DE   RecName: Full=Probable L,D-transpeptidase YbiS;
+DE            EC=2.-.-.-;
+DE   Flags: Precursor;
+GN   Name=ybiS; OrderedLocusNames=Z1041, ECs0896;
+OS   Escherichia coli O157:H7.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=11206551; DOI=10.1038/35054089;
+RA   Perna N.T., Plunkett G. III, Burland V., Mau B., Glasner J.D., Rose D.J.,
+RA   Mayhew G.F., Evans P.S., Gregor J., Kirkpatrick H.A., Posfai G.,
+RA   Hackett J., Klink S., Boutin A., Shao Y., Miller L., Grotbeck E.J.,
+RA   Davis N.W., Lim A., Dimalanta E.T., Potamousis K., Apodaca J.,
+RA   Anantharaman T.S., Lin J., Yen G., Schwartz D.C., Welch R.A.,
+RA   Blattner F.R.;
+RT   "Genome sequence of enterohaemorrhagic Escherichia coli O157:H7.";
+RL   Nature 409:529-533(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=11258796; DOI=10.1093/dnares/8.1.11;
+RA   Hayashi T., Makino K., Ohnishi M., Kurokawa K., Ishii K., Yokoyama K.,
+RA   Han C.-G., Ohtsubo E., Nakayama K., Murata T., Tanaka M., Tobe T., Iida T.,
+RA   Takami H., Honda T., Sasakawa C., Ogasawara N., Yasunaga T., Kuhara S.,
+RA   Shiba T., Hattori M., Shinagawa H.;
+RT   "Complete genome sequence of enterohemorrhagic Escherichia coli O157:H7 and
+RT   genomic comparison with a laboratory strain K-12.";
+RL   DNA Res. 8:11-22(2001).
+CC   -!- FUNCTION: Responsible, at least in part, for anchoring of the major
+CC       outer membrane lipoprotein (Lpp) to the peptidoglycan via a meso-
+CC       diaminopimelyl-L-Lys- bond on the terminal residue of Lpp.
+CC       {ECO:0000250}.
+CC   -!- PATHWAY: Cell wall biogenesis; peptidoglycan biosynthesis.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the YkuD family. {ECO:0000305}.
+DR   EMBL; AE005174; AAG55191.1; -; Genomic_DNA.
+DR   EMBL; BA000007; BAB34319.1; -; Genomic_DNA.
+DR   PIR; C85591; C85591.
+DR   PIR; H90740; H90740.
+DR   AlphaFoldDB; P0AAY0; -.
+DR   SMR; P0AAY0; -.
+DR   STRING; 155864.Z1041; -.
+DR   MEROPS; C82.A04; -.
+DR   KEGG; ece:Z1041; -.
+DR   KEGG; ecs:ECs_0896; -.
+DR   PATRIC; fig|386585.9.peg.1011; -.
+DR   eggNOG; COG1376; Bacteria.
+DR   HOGENOM; CLU_046834_0_1_6; -.
+DR   OMA; FAAQFQM; -.
+DR   UniPathway; UPA00219; -.
+DR   Proteomes; UP000000558; Chromosome.
+DR   Proteomes; UP000002519; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:TreeGrafter.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0071972; F:peptidoglycan L,D-transpeptidase activity; IEA:TreeGrafter.
+DR   GO; GO:0071555; P:cell wall organization; IEA:UniProtKB-KW.
+DR   GO; GO:0018104; P:peptidoglycan-protein cross-linking; IEA:TreeGrafter.
+DR   GO; GO:0008360; P:regulation of cell shape; IEA:UniProtKB-KW.
+DR   CDD; cd16913; YkuD_like; 1.
+DR   FunFam; 2.40.440.10:FF:000001; L,D-transpeptidase YbiS; 1.
+DR   Gene3D; 2.40.440.10; L,D-transpeptidase catalytic domain-like; 1.
+DR   InterPro; IPR050979; LD-transpeptidase.
+DR   InterPro; IPR005490; LD_TPept_cat_dom.
+DR   InterPro; IPR041597; Ldt_C.
+DR   InterPro; IPR038063; Transpep_catalytic_dom.
+DR   NCBIfam; NF007612; PRK10260.1; 1.
+DR   PANTHER; PTHR30582; L,D-TRANSPEPTIDASE; 1.
+DR   PANTHER; PTHR30582:SF31; L,D-TRANSPEPTIDASE YBIS-RELATED; 1.
+DR   Pfam; PF17969; Ldt_C; 1.
+DR   Pfam; PF03734; YkuD; 1.
+DR   SUPFAM; SSF141523; L,D-transpeptidase catalytic domain-like; 1.
+DR   PROSITE; PS52029; LD_TPASE; 1.
+PE   3: Inferred from homology;
+KW   Cell shape; Cell wall biogenesis/degradation; Glycosyltransferase;
+KW   Hydrolase; Peptidoglycan synthesis; Periplasm; Reference proteome; Signal;
+KW   Transferase.
+FT   SIGNAL          1..24
+FT   CHAIN           25..306
+FT                   /note="Probable L,D-transpeptidase YbiS"
+FT                   /id="PRO_0000042566"
+FT   DOMAIN          99..234
+FT                   /note="L,D-TPase catalytic"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        194
+FT                   /note="Proton donor/acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        210
+FT                   /note="Nucleophile"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+SQ   SEQUENCE   306 AA;  33325 MW;  4D9DDED8B0ACD69F CRC64;
+//
+ID   YNHG_ECOLI              Reviewed;         334 AA.
+AC   P76193; P76899; P76900;
+DE   RecName: Full=Probable L,D-transpeptidase YnhG;
+DE            EC=2.-.-.-;
+DE   Flags: Precursor;
+GN   Name=ynhG; OrderedLocusNames=b1678, JW1668;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA] OF 1-233.
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9097039; DOI=10.1093/dnares/3.6.363;
+RA   Aiba H., Baba T., Fujita K., Hayashi K., Inada T., Isono K., Itoh T.,
+RA   Kasai H., Kashimoto K., Kimura S., Kitakawa M., Kitagawa M., Makino K.,
+RA   Miki T., Mizobuchi K., Mori H., Mori T., Motomura K., Nakade S.,
+RA   Nakamura Y., Nashimoto H., Nishio Y., Oshima T., Saito N., Sampei G.,
+RA   Seki Y., Sivasundaram S., Tagami H., Takeda J., Takemoto K., Takeuchi Y.,
+RA   Wada C., Yamamoto Y., Horiuchi T.;
+RT   "A 570-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 28.0-40.1 min region on the linkage map.";
+RL   DNA Res. 3:363-377(1996).
+RN   [4]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / BW25113;
+RX   PubMed=18456808; DOI=10.1128/jb.00025-08;
+RA   Magnet S., Dubost L., Marie A., Arthur M., Gutmann L.;
+RT   "Identification of the L,D-transpeptidases for peptidoglycan cross-linking
+RT   in Escherichia coli.";
+RL   J. Bacteriol. 190:4782-4785(2008).
+RN   [5]
+RP   IDENTIFICATION BY MASS SPECTROMETRY, AND INTERACTION WITH DSBG.
+RC   STRAIN=K12 / MC1000 / ATCC 39531;
+RX   PubMed=19965429; DOI=10.1126/science.1179557;
+RA   Depuydt M., Leonard S.E., Vertommen D., Denoncin K., Morsomme P., Wahni K.,
+RA   Messens J., Carroll K.S., Collet J.F.;
+RT   "A periplasmic reducing system protects single cysteine residues from
+RT   oxidation.";
+RL   Science 326:1109-1111(2009).
+CC   -!- FUNCTION: Responsible, at least in part, for generating a meso-
+CC       diaminopimelyl-3-a meso-diaminopimelyl-3 cross-link.
+CC       {ECO:0000269|PubMed:18456808}.
+CC   -!- PATHWAY: Cell wall biogenesis; peptidoglycan biosynthesis.
+CC   -!- SUBUNIT: Interacts with DsbG. {ECO:0000269|PubMed:19965429}.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000305}.
+CC   -!- DISRUPTION PHENOTYPE: Simultaneous disruption of erfK, ybiS, ycfS and
+CC       ynhG leads to loss of covalent anchoring of the major outer membrane
+CC       lipoprotein (Lpp) to the peptidoglycan. Overexpression of ynhG in this
+CC       background increases meso-diaminopimelyl-3-a meso-diaminopimelyl-3
+CC       cross-links but does not restore Lpp anchoring.
+CC       {ECO:0000269|PubMed:18456808}.
+CC   -!- SIMILARITY: Belongs to the YkuD family. {ECO:0000305}.
+DR   EMBL; U00096; AAC74748.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA15458.2; -; Genomic_DNA.
+DR   PIR; F64925; F64925.
+DR   RefSeq; NP_416193.1; NC_000913.3.
+DR   AlphaFoldDB; P76193; -.
+DR   SMR; P76193; -.
+DR   BioGRID; 4260277; 19.
+DR   DIP; DIP-12774N; -.
+DR   FunCoup; P76193; 69.
+DR   IntAct; P76193; 1.
+DR   STRING; 511145.b1678; -.
+DR   MEROPS; C82.A03; -.
+DR   jPOST; P76193; -.
+DR   PaxDb; 511145-b1678; -.
+DR   EnsemblBacteria; AAC74748; AAC74748; b1678.
+DR   GeneID; 946174; -.
+DR   KEGG; ecj:JW1668; -.
+DR   KEGG; eco:b1678; -.
+DR   KEGG; ecoc:C3026_09615; -.
+DR   PATRIC; fig|511145.12.peg.1749; -.
+DR   EchoBASE; EB3771; -.
+DR   eggNOG; COG1376; Bacteria.
+DR   HOGENOM; CLU_046834_0_0_6; -.
+DR   InParanoid; P76193; -.
+DR   OMA; EYRMYYF; -.
+DR   OrthoDB; 9787225at2; -.
+DR   PhylomeDB; P76193; -.
+DR   BioCyc; EcoCyc:G6904-MONOMER; -.
+DR   BioCyc; MetaCyc:G6904-MONOMER; -.
+DR   UniPathway; UPA00219; -.
+DR   PRO; PR:P76193; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0071972; F:peptidoglycan L,D-transpeptidase activity; IDA:EcoCyc.
+DR   GO; GO:0071555; P:cell wall organization; IEA:UniProtKB-KW.
+DR   GO; GO:0009252; P:peptidoglycan biosynthetic process; IDA:EcoCyc.
+DR   GO; GO:0018104; P:peptidoglycan-protein cross-linking; IBA:GO_Central.
+DR   GO; GO:0008360; P:regulation of cell shape; IEA:UniProtKB-KW.
+DR   CDD; cd00118; LysM; 1.
+DR   CDD; cd16913; YkuD_like; 1.
+DR   FunFam; 2.40.440.10:FF:000001; L,D-transpeptidase YbiS; 1.
+DR   FunFam; 3.10.350.10:FF:000005; L,D-transpeptidase YnhG; 1.
+DR   Gene3D; 2.40.440.10; L,D-transpeptidase catalytic domain-like; 1.
+DR   Gene3D; 3.10.350.10; LysM domain; 1.
+DR   InterPro; IPR050979; LD-transpeptidase.
+DR   InterPro; IPR005490; LD_TPept_cat_dom.
+DR   InterPro; IPR041597; Ldt_C.
+DR   InterPro; IPR018392; LysM_dom.
+DR   InterPro; IPR036779; LysM_dom_sf.
+DR   InterPro; IPR038063; Transpep_catalytic_dom.
+DR   PANTHER; PTHR30582; L,D-TRANSPEPTIDASE; 1.
+DR   PANTHER; PTHR30582:SF29; L,D-TRANSPEPTIDASE YNHG-RELATED; 1.
+DR   Pfam; PF17969; Ldt_C; 1.
+DR   Pfam; PF01476; LysM; 1.
+DR   Pfam; PF03734; YkuD; 1.
+DR   SMART; SM00257; LysM; 1.
+DR   SUPFAM; SSF141523; L,D-transpeptidase catalytic domain-like; 1.
+DR   PROSITE; PS52029; LD_TPASE; 1.
+DR   PROSITE; PS51782; LYSM; 1.
+PE   1: Evidence at protein level;
+KW   Cell shape; Cell wall biogenesis/degradation; Glycosyltransferase;
+KW   Hydrolase; Peptidoglycan synthesis; Periplasm; Reference proteome; Signal;
+KW   Transferase.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           24..334
+FT                   /note="Probable L,D-transpeptidase YnhG"
+FT                   /id="PRO_0000013855"
+FT   DOMAIN          40..84
+FT                   /note="LysM"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01118"
+FT   DOMAIN          96..233
+FT                   /note="L,D-TPase catalytic"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   REGION          303..334
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        303..323
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   ACT_SITE        193
+FT                   /note="Proton donor/acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        209
+FT                   /note="Nucleophile"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+SQ   SEQUENCE   334 AA;  36082 MW;  25078BB429389D5F CRC64;
+//
+ID   YBIS_ECOL6              Reviewed;         306 AA.
+AC   P0AAX9; P75789;
+DE   RecName: Full=Probable L,D-transpeptidase YbiS;
+DE            EC=2.-.-.-;
+DE   Flags: Precursor;
+GN   Name=ybiS; OrderedLocusNames=c0905;
+OS   Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=199310;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CFT073 / ATCC 700928 / UPEC;
+RX   PubMed=12471157; DOI=10.1073/pnas.252529799;
+RA   Welch R.A., Burland V., Plunkett G. III, Redford P., Roesch P., Rasko D.,
+RA   Buckles E.L., Liou S.-R., Boutin A., Hackett J., Stroud D., Mayhew G.F.,
+RA   Rose D.J., Zhou S., Schwartz D.C., Perna N.T., Mobley H.L.T.,
+RA   Donnenberg M.S., Blattner F.R.;
+RT   "Extensive mosaic structure revealed by the complete genome sequence of
+RT   uropathogenic Escherichia coli.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:17020-17024(2002).
+CC   -!- FUNCTION: Responsible, at least in part, for anchoring of the major
+CC       outer membrane lipoprotein (Lpp) to the peptidoglycan via a meso-
+CC       diaminopimelyl-L-Lys- bond on the terminal residue of Lpp.
+CC       {ECO:0000250}.
+CC   -!- PATHWAY: Cell wall biogenesis; peptidoglycan biosynthesis.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the YkuD family. {ECO:0000305}.
+DR   EMBL; AE014075; AAN79378.1; -; Genomic_DNA.
+DR   AlphaFoldDB; P0AAX9; -.
+DR   SMR; P0AAX9; -.
+DR   STRING; 199310.c0905; -.
+DR   KEGG; ecc:c0905; -.
+DR   eggNOG; COG1376; Bacteria.
+DR   HOGENOM; CLU_046834_0_1_6; -.
+DR   BioCyc; ECOL199310:C0905-MONOMER; -.
+DR   UniPathway; UPA00219; -.
+DR   Proteomes; UP000001410; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:TreeGrafter.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0071972; F:peptidoglycan L,D-transpeptidase activity; IEA:TreeGrafter.
+DR   GO; GO:0071555; P:cell wall organization; IEA:UniProtKB-KW.
+DR   GO; GO:0018104; P:peptidoglycan-protein cross-linking; IEA:TreeGrafter.
+DR   GO; GO:0008360; P:regulation of cell shape; IEA:UniProtKB-KW.
+DR   CDD; cd16913; YkuD_like; 1.
+DR   FunFam; 2.40.440.10:FF:000001; L,D-transpeptidase YbiS; 1.
+DR   Gene3D; 2.40.440.10; L,D-transpeptidase catalytic domain-like; 1.
+DR   InterPro; IPR050979; LD-transpeptidase.
+DR   InterPro; IPR005490; LD_TPept_cat_dom.
+DR   InterPro; IPR041597; Ldt_C.
+DR   InterPro; IPR038063; Transpep_catalytic_dom.
+DR   NCBIfam; NF007612; PRK10260.1; 1.
+DR   PANTHER; PTHR30582; L,D-TRANSPEPTIDASE; 1.
+DR   PANTHER; PTHR30582:SF31; L,D-TRANSPEPTIDASE YBIS-RELATED; 1.
+DR   Pfam; PF17969; Ldt_C; 1.
+DR   Pfam; PF03734; YkuD; 1.
+DR   SUPFAM; SSF141523; L,D-transpeptidase catalytic domain-like; 1.
+DR   PROSITE; PS52029; LD_TPASE; 1.
+PE   3: Inferred from homology;
+KW   Cell shape; Cell wall biogenesis/degradation; Glycosyltransferase;
+KW   Hydrolase; Peptidoglycan synthesis; Periplasm; Reference proteome; Signal;
+KW   Transferase.
+FT   SIGNAL          1..24
+FT   CHAIN           25..306
+FT                   /note="Probable L,D-transpeptidase YbiS"
+FT                   /id="PRO_0000042567"
+FT   DOMAIN          99..234
+FT                   /note="L,D-TPase catalytic"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        194
+FT                   /note="Proton donor/acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        210
+FT                   /note="Nucleophile"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+SQ   SEQUENCE   306 AA;  33325 MW;  4D9DDED8B0ACD69F CRC64;
+//
+ID   YCFS_ECOLI              Reviewed;         320 AA.
+AC   P75954;
+DE   RecName: Full=Probable L,D-transpeptidase YcfS;
+DE            EC=2.-.-.-;
+DE   Flags: Precursor;
+GN   Name=ycfS; OrderedLocusNames=b1113, JW5820;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=8905232; DOI=10.1093/dnares/3.3.137;
+RA   Oshima T., Aiba H., Baba T., Fujita K., Hayashi K., Honjo A., Ikemoto K.,
+RA   Inada T., Itoh T., Kajihara M., Kanai K., Kashimoto K., Kimura S.,
+RA   Kitagawa M., Makino K., Masuda S., Miki T., Mizobuchi K., Mori H.,
+RA   Motomura K., Nakamura Y., Nashimoto H., Nishio Y., Saito N., Sampei G.,
+RA   Seki Y., Tagami H., Takemoto K., Wada C., Yamamoto Y., Yano M.,
+RA   Horiuchi T.;
+RT   "A 718-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 12.7-28.0 min region on the linkage map.";
+RL   DNA Res. 3:137-155(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / BW25113;
+RX   PubMed=18456808; DOI=10.1128/jb.00025-08;
+RA   Magnet S., Dubost L., Marie A., Arthur M., Gutmann L.;
+RT   "Identification of the L,D-transpeptidases for peptidoglycan cross-linking
+RT   in Escherichia coli.";
+RL   J. Bacteriol. 190:4782-4785(2008).
+RN   [5]
+RP   IDENTIFICATION BY MASS SPECTROMETRY, AND INTERACTION WITH DSBG.
+RC   STRAIN=K12 / MC1000 / ATCC 39531;
+RX   PubMed=19965429; DOI=10.1126/science.1179557;
+RA   Depuydt M., Leonard S.E., Vertommen D., Denoncin K., Morsomme P., Wahni K.,
+RA   Messens J., Carroll K.S., Collet J.F.;
+RT   "A periplasmic reducing system protects single cysteine residues from
+RT   oxidation.";
+RL   Science 326:1109-1111(2009).
+CC   -!- FUNCTION: Responsible, at least in part, for anchoring of the major
+CC       outer membrane lipoprotein (Lpp, also known as the Braun lipoprotein)
+CC       to the peptidoglycan via a meso-diaminopimelyl-L-Lys- bond on the
+CC       terminal residue of Lpp. {ECO:0000269|PubMed:18456808}.
+CC   -!- PATHWAY: Cell wall biogenesis; peptidoglycan biosynthesis.
+CC   -!- SUBUNIT: Interacts with DsbG. {ECO:0000269|PubMed:19965429}.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000305}.
+CC   -!- DISRUPTION PHENOTYPE: Simultaneous disruption of erfK, ybiS, ycfS and
+CC       ynhG leads to loss of covalent anchoring of the major outer membrane
+CC       lipoprotein (Lpp) to the peptidoglycan. Complementation with ycfS
+CC       restores some of this anchoring. {ECO:0000269|PubMed:18456808}.
+CC   -!- SIMILARITY: Belongs to the YkuD family. {ECO:0000305}.
+DR   EMBL; U00096; AAC74197.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA35928.1; -; Genomic_DNA.
+DR   PIR; F64855; F64855.
+DR   RefSeq; NP_415631.1; NC_000913.3.
+DR   RefSeq; WP_001350500.1; NZ_CP064677.1.
+DR   AlphaFoldDB; P75954; -.
+DR   SMR; P75954; -.
+DR   BioGRID; 4260085; 12.
+DR   DIP; DIP-11546N; -.
+DR   FunCoup; P75954; 110.
+DR   IntAct; P75954; 2.
+DR   STRING; 511145.b1113; -.
+DR   MEROPS; C82.A05; -.
+DR   PaxDb; 511145-b1113; -.
+DR   EnsemblBacteria; AAC74197; AAC74197; b1113.
+DR   GeneID; 945666; -.
+DR   KEGG; ecj:JW5820; -.
+DR   KEGG; eco:b1113; -.
+DR   PATRIC; fig|511145.12.peg.1157; -.
+DR   EchoBASE; EB3211; -.
+DR   eggNOG; COG1376; Bacteria.
+DR   eggNOG; COG1388; Bacteria.
+DR   HOGENOM; CLU_046834_0_0_6; -.
+DR   InParanoid; P75954; -.
+DR   PhylomeDB; P75954; -.
+DR   BioCyc; EcoCyc:G6571-MONOMER; -.
+DR   BioCyc; MetaCyc:G6571-MONOMER; -.
+DR   UniPathway; UPA00219; -.
+DR   PRO; PR:P75954; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0071972; F:peptidoglycan L,D-transpeptidase activity; IDA:EcoCyc.
+DR   GO; GO:0071555; P:cell wall organization; IEA:UniProtKB-KW.
+DR   GO; GO:0018104; P:peptidoglycan-protein cross-linking; IMP:EcoCyc.
+DR   GO; GO:0008360; P:regulation of cell shape; IEA:UniProtKB-KW.
+DR   CDD; cd00118; LysM; 1.
+DR   CDD; cd16913; YkuD_like; 1.
+DR   FunFam; 2.40.440.10:FF:000001; L,D-transpeptidase YbiS; 1.
+DR   FunFam; 3.10.350.10:FF:000007; Probable L,D-transpeptidase YcfS; 1.
+DR   Gene3D; 2.40.440.10; L,D-transpeptidase catalytic domain-like; 1.
+DR   Gene3D; 3.10.350.10; LysM domain; 1.
+DR   InterPro; IPR050979; LD-transpeptidase.
+DR   InterPro; IPR005490; LD_TPept_cat_dom.
+DR   InterPro; IPR041597; Ldt_C.
+DR   InterPro; IPR018392; LysM_dom.
+DR   InterPro; IPR036779; LysM_dom_sf.
+DR   InterPro; IPR038063; Transpep_catalytic_dom.
+DR   PANTHER; PTHR30582; L,D-TRANSPEPTIDASE; 1.
+DR   PANTHER; PTHR30582:SF27; L,D-TRANSPEPTIDASE YCFS-RELATED; 1.
+DR   Pfam; PF17969; Ldt_C; 1.
+DR   Pfam; PF01476; LysM; 1.
+DR   Pfam; PF03734; YkuD; 1.
+DR   SMART; SM00257; LysM; 1.
+DR   SUPFAM; SSF141523; L,D-transpeptidase catalytic domain-like; 1.
+DR   PROSITE; PS52029; LD_TPASE; 1.
+DR   PROSITE; PS51782; LYSM; 1.
+PE   1: Evidence at protein level;
+KW   Cell shape; Cell wall biogenesis/degradation; Glycosyltransferase;
+KW   Hydrolase; Peptidoglycan synthesis; Periplasm; Reference proteome; Signal;
+KW   Transferase.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           24..320
+FT                   /note="Probable L,D-transpeptidase YcfS"
+FT                   /id="PRO_0000013826"
+FT   DOMAIN          45..90
+FT                   /note="LysM"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01118"
+FT   DOMAIN          102..241
+FT                   /note="L,D-TPase catalytic"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        201
+FT                   /note="Proton donor/acceptor"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+FT   ACT_SITE        217
+FT                   /note="Nucleophile"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01373"
+SQ   SEQUENCE   320 AA;  34636 MW;  89378A8DFD60359B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+12	6	Escherichia.
+48	5	Enterobacteriaceae
+11	5	Erwiniaceae
+78	4	Enterobacterales
+85	3	Gammaproteobacteria
+85	2	Pseudomonadota
+85	1	Pseudomonadati
+85	0	Bacteria
+Total of 87 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P0AAX8	PROBABLE L,D-TRANSPEPTIDASE YBI     46.2    2.1e-08   1   1.8   0.4
+	Iterate                   	     3	    38	    44.9
+	PF03734	YkuD            	    98	   233	    74.2
+	PF17969	Ldt_C           	   237	   305	    84.1
+
+P0AAX9	PROBABLE L,D-TRANSPEPTIDASE YBI     46.2    2.1e-08   1   1.8   0.4
+	Iterate                   	     3	    38	    44.9
+	PF03734	YkuD            	    98	   233	    74.2
+	PF17969	Ldt_C           	   237	   305	    84.1
+
+P0AAY0	PROBABLE L,D-TRANSPEPTIDASE YBI     46.2    2.1e-08   1   1.8   0.4
+	Iterate                   	     3	    38	    44.9
+	PF03734	YkuD            	    98	   233	    74.2
+	PF17969	Ldt_C           	   237	   305	    84.1
+
+P39176	PROBABLE L,D-TRANSPEPTIDASE ERF     65.7    1.7e-14   1   1.5   0.7
+	Iterate                   	     1	    35	    64.8
+	PF03734	YkuD            	    95	   230	    85.9
+	PF17969	Ldt_C           	   234	   302	    84.2
+
+P40680	PROBABLE L,D-TRANSPEPTIDASE ERF     55.6    2.4e-11   1   1.8   1.1
+	Iterate                   	     1	    35	    55.6
+	PF03734	YkuD            	    95	   230	    75.7
+	PF17969	Ldt_C           	   234	   302	    88.4
+
+P75954	PROBABLE L,D-TRANSPEPTIDASE YCF     37.8    8.9e-06   1   2.0   2.3
+	Iterate                   	     8	    42	    37.4
+	PF01476	LysM            	    46	    91	    24.8
+	PF03734	YkuD            	   101	   240	    80.4
+	PF17969	Ldt_C           	   244	   310	    86.4
+
+P76193	PROBABLE L,D-TRANSPEPTIDASE YNH     59.8    1.2e-12   1   1.5   0.4
+	Iterate                   	     1	    37	    58.9
+	PF01476	LysM            	    42	    85	      34
+	PF03734	YkuD            	    95	   232	      85
+	PF17969	Ldt_C           	   236	   302	    89.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS148721 (E-value: 7.1e-14, Score: 57.2)
+Mentioned as: STM1375
+Description: putative LysM domain
+Organism: Salmonella typhimurium LT2
+PMID: 21176126
+Source: EuropePMC
+Title: Comparative proteomic analysis of Salmonella enterica serovar Typhimurium ppGpp-deficient mutant to identify a novel virulence protein required for intracellular survival in macrophages
+Journal: BMC microbiology (2010)
+Snippet: STM2638 rseB 0.3 0.011 0.88 0.35 040-2 STM1478 ydgH 0.3 0.011 0.17 0.06 c 041 STM1375 ynhG 0.3 0.011 EC 056 STM1746 oppA 0.6 0.001 0.15 0.05 c 058 STM1746 oppA 0.5 0.006 0.15 0.05 c 059 STM1849 yliB 0.4 0.027 EC 060 STM3557 ugpB 0.3
+
+================================================================================
+Protein: VIMSS5721749 (E-value: 7.6e-14, Score: 57.1)
+Mentioned as: YPK_1853
+Description: ErfK/YbiS/YcfS/YnhG family protein
+Organism: Yersinia pseudotuberculosis YPIII
+PMID: 33172972
+Source: EuropePMC
+Title: Genome-Scale Mapping Reveals Complex Regulatory Activities of RpoN in Yersinia pseudotuberculosis
+Journal: mSystems (2020)
+Snippet: TTGGCGGGAATATTGCTT 10.7 54,28 YPK_1742 NA 86 IrGS16 2058280 6.7 4.8 3.7 TTGGTATGTTATTTGCAA + 10.7 24,28,54,38,70 YPK_1853 NA 44, 44, 22, 135 IrGS16 2058280 6.7 4.8 3.7 TAAGCATGAAACGTGCAT + 9.04 32,70,54,38,28 YPK_1853 NA 44, 44, 22, 135 IrGS17 2211354 7.4 3.4 4.5 TTGGTACATTTATTGCGC 10.4 24,54,38 YPK_1988 NA
+
+================================================================================
+Protein: VIMSS73904 (E-value: 7.7e-14, Score: 57.1)
+Mentioned as: Z2706
+Description: orf, hypothetical protein
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 19329643
+Source: EuropePMC
+Title: Genomic instability in regions adjacent to a highly conserved pch prophage in Escherichia coli O157:H7 generates diversity in expression patterns of the LEE pathogenicity island
+Journal: Journal of bacteriology (2009)
+Snippet: to Z22186 (hypothetical protein) Z2207 (hypothetical oxidoreductase) Z2706 to Z2707 (ynhG-ynhA) ECs4889 to ECs4903 (phage tail region) Pch-containing RDs are in
+
+================================================================================
+Protein: VIMSS93854 (E-value: 7.7e-14, Score: 57.1)
+Mentioned as: ECs2385
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 29867840
+Source: EuropePMC
+Title: The Novel Anaerobiosis-Responsive Overlapping Gene <i>ano</i> Is Overlapping Antisense to the Annotated Gene ECs2385 of <i>Escherichia coli</i> O157:H7 Sakai
+Journal: Frontiers in microbiology (2018)
+Snippet: Original Research The Novel Anaerobiosis-Responsive Overlapping Gene ano Is Overlapping Antisense to the Annotated Gene ECs2385 of Escherichia coli O157:H7 Sakai Hcker Sarah M. 1 Vanderhaeghen Sonja 1 Abellan-Schneyder Isabel 1 Scherer Siegfried 1 2 Neuhaus Klaus 1 3 * 1 Chair for Microbial Ecology, Technical
+
+================================================================================
+Protein: VIMSS93854 (E-value: 7.7e-14, Score: 57.1)
+Mentioned as: ECs2385
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 17967175
+Source: EuropePMC
+Title: Global transcriptional response of Escherichia coli O157:H7 to growth transitions in glucose minimal medium
+Journal: BMC microbiology (2007)
+Snippet: manA -2.47 1 ECs1663 ompT -2.72 1 ECs2346 tyrS -2.97 1 ECs1683 ycgB 5.36 2 ECs2385 ynhG 3.80 2 ECs1692 ymgE 2.35 2 ECs2387 sufS 2.88 2 ECs1705 - 2.55 2 ECs2389 sufC 3.58 2 ECs1722 chaB 2.85 2 ECs2390 sufB 2.93 2 ECs1729 narG -2.70
+
+================================================================================
+Protein: VIMSS92960 (E-value: 1.8e-13, Score: 55.8)
+Mentioned as: ECs1491
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 33213384
+Source: EuropePMC
+Title: The attachment process and physiological properties of Escherichia coli O157:H7 on quartz
+Journal: BMC microbiology (2020)
+Snippet: attached cells are more resistant to extreme temperatures than planktonic cells. In addition, the genes Ecs1491 (2.4), Ecs0165 (1.8) and Ecs4783 (1.3) related to alkaline pH adaptability were upregulated in attached cells, indicating that the attached cells have increased adaptability to alkaline pH. RT-qPCR results confirmed
+
+================================================================================
+Protein: VIMSS15235 (E-value: 1.8e-13, Score: 55.8)
+Mentioned as: b1113
+Description: hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 11244066
+Source: EuropePMC
+Title: Global impact of sdiA amplification revealed by comprehensive gene expression profiling of Escherichia coli
+Journal: Journal of bacteriology (2001)
+Snippet: 3.8 b1113 ........................................................................................... 3.8 b1498
+
+================================================================================
+Protein: VIMSS1235625 (E-value: 2e-12, Score: 52.5)
+Mentioned as: UTI89_C1870
+Description: hypothetical protein YnhG precursor
+Organism: Escherichia coli UTI89
+PMID: 31506312
+Source: EuropePMC
+Title: Cathelicidin Peptides Restrict Bacterial Growth via Membrane Perturbation and Induction of Reactive Oxygen Species
+Journal: mBio (2019)
+Snippet: ( yfbJ ) UTI89_C1152 1.40 9.36E10 Hypothetical protein orf UTI89_C0130 1.39 2.93E05 Hypothetical protein yacH UTI89_C1870 1.34 5.84E05 Peptidoglycan d -transpeptidase ynhG UTI89_C0026 1.32 4.08E09 Hypothetical protein yaaY UTI89_C3182 1.31 4.40E09 Hypothetical protein ygdI UTI89_C0880 1.31 5.86E07 ATP-dependent endonuclease ybjD UTI89_C3181 1.30 1.36E04 Hypothetical protein ygdI
+
+================================================================================
+Protein: VIMSS152934 (E-value: 3.6e-12, Score: 51.7)
+Mentioned as: STY1255
+Description: putative exported protein
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 38774627
+Source: EuropePMC
+Title: The footprint of gut microbiota in gallbladder cancer: a mechanistic review
+Journal: Frontiers in cellular and infection microbiology (2024)
+Snippet: the expression of 35 genes related to the membrane matrix and antibiotic resistance ( STY1254, STY1255, yheA , etc.), downregulated 29 genes related to metabolic processes and biofilm regulation ( STY1856, yiiU, cspB , etc.), and enter a state of energy conservation in response to the
+
+================================================================================
+
+... (truncated - showing first 100 of 198 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A077PDV4.1	AF-A0A077PDV4-F1-model_v4_TED01:44-92	1	AF-A0A077PDV4-F1-model_v4_TED01	44-92	0
+A0A077PDV4.1	AF-A0A077PDV4-F1-model_v4_TED02:95-239	1	AF-A0A077PDV4-F1-model_v4_TED02	95-239	0
+A0A077PDV4.1	AF-A0A077PDV4-F1-model_v4_TED03:243-314	1	AF-A0A077PDV4-F1-model_v4_TED03	243-314	0
+A0A078LHY8.1	AF-A0A078LHY8-F1-model_v4_TED01:99-241	1	AF-A0A078LHY8-F1-model_v4_TED01	99-241	0
+A0A078LHY8.1	AF-A0A078LHY8-F1-model_v4_TED02:245-309	1	AF-A0A078LHY8-F1-model_v4_TED02	245-309	0
+A0A083ZZN8.1	AF-A0A083ZZN8-F1-model_v4_TED01:42-88	1	AF-A0A083ZZN8-F1-model_v4_TED01	42-88	0
+A0A083ZZN8.1	AF-A0A083ZZN8-F1-model_v4_TED02:96-237	1	AF-A0A083ZZN8-F1-model_v4_TED02	96-237	0
+A0A083ZZN8.1	AF-A0A083ZZN8-F1-model_v4_TED03:240-304	1	AF-A0A083ZZN8-F1-model_v4_TED03	240-304	0
+A0A085GAH8.1	AF-A0A085GAH8-F1-model_v4_TED01:25-39_90-235	1	AF-A0A085GAH8-F1-model_v4_TED01	25-235	38.5%
+A0A085GAH8.1	AF-A0A085GAH8-F1-model_v4_TED02:239-303	1	AF-A0A085GAH8-F1-model_v4_TED02	239-303	0
+A0A085GBW2.1	AF-A0A085GBW2-F1-model_v4_TED01:22-35_87-231	1	AF-A0A085GBW2-F1-model_v4_TED01	22-231	38.2%
+A0A085GBW2.1	AF-A0A085GBW2-F1-model_v4_TED02:235-301	1	AF-A0A085GBW2-F1-model_v4_TED02	235-301	0
+A0A085GF07.1	AF-A0A085GF07-F1-model_v4_TED01:48-96	1	AF-A0A085GF07-F1-model_v4_TED01	48-96	0
+A0A085GF07.1	AF-A0A085GF07-F1-model_v4_TED02:100-245	1	AF-A0A085GF07-F1-model_v4_TED02	100-245	0
+A0A085GF07.1	AF-A0A085GF07-F1-model_v4_TED03:249-313	1	AF-A0A085GF07-F1-model_v4_TED03	249-313	0
+A0A085GFE2.1	AF-A0A085GFE2-F1-model_v4_TED01:94-236	1	AF-A0A085GFE2-F1-model_v4_TED01	94-236	0
+A0A085GFE2.1	AF-A0A085GFE2-F1-model_v4_TED02:240-304	1	AF-A0A085GFE2-F1-model_v4_TED02	240-304	0
+A0A085GHH9.1	AF-A0A085GHH9-F1-model_v4_TED01:39-89	1	AF-A0A085GHH9-F1-model_v4_TED01	39-89	0
+A0A085GHH9.1	AF-A0A085GHH9-F1-model_v4_TED02:126-229	1	AF-A0A085GHH9-F1-model_v4_TED02	126-229	0
+A0A085GHH9.1	AF-A0A085GHH9-F1-model_v4_TED03:237-303	1	AF-A0A085GHH9-F1-model_v4_TED03	237-303	0
+A0A085JC66.1	AF-A0A085JC66-F1-model_v4_TED01:99-236	1	AF-A0A085JC66-F1-model_v4_TED01	99-236	0
+A0A085JC66.1	AF-A0A085JC66-F1-model_v4_TED02:239-318	1	AF-A0A085JC66-F1-model_v4_TED02	239-318	0
+A0A085U7W3.1	AF-A0A085U7W3-F1-model_v4_TED01:95-238	1	AF-A0A085U7W3-F1-model_v4_TED01	95-238	0
+A0A085U7W3.1	AF-A0A085U7W3-F1-model_v4_TED02:241-305	1	AF-A0A085U7W3-F1-model_v4_TED02	241-305	0
+A0A089PQM3.1	AF-A0A089PQM3-F1-model_v4_TED01:25-38_88-234	1	AF-A0A089PQM3-F1-model_v4_TED01	25-234	35.1%
+A0A089PQM3.1	AF-A0A089PQM3-F1-model_v4_TED02:238-304	1	AF-A0A089PQM3-F1-model_v4_TED02	238-304	0
+A0A089RAS5.1	AF-A0A089RAS5-F1-model_v4_TED01:25-139_195-234	1	AF-A0A089RAS5-F1-model_v4_TED01	25-234	35.1%
+A0A089RAS5.1	AF-A0A089RAS5-F1-model_v4_TED02:238-302	1	AF-A0A089RAS5-F1-model_v4_TED02	238-302	0
+A0A090V326.1	AF-A0A090V326-F1-model_v4_TED01:99-241	1	AF-A0A090V326-F1-model_v4_TED01	99-241	0
+A0A090V326.1	AF-A0A090V326-F1-model_v4_TED02:245-309	1	AF-A0A090V326-F1-model_v4_TED02	245-309	0
+A0A090V562.1	AF-A0A090V562-F1-model_v4_TED01:101-108_122-234	1	AF-A0A090V562-F1-model_v4_TED01	101-234	0
+A0A090V562.1	AF-A0A090V562-F1-model_v4_TED02:238-303	1	AF-A0A090V562-F1-model_v4_TED02	238-303	0
+A0A097R1Z4.1	AF-A0A097R1Z4-F1-model_v4_TED01:94-236	1	AF-A0A097R1Z4-F1-model_v4_TED01	94-236	0
+A0A097R1Z4.1	AF-A0A097R1Z4-F1-model_v4_TED02:240-304	1	AF-A0A097R1Z4-F1-model_v4_TED02	240-304	0
+A0A097R6J5.1	AF-A0A097R6J5-F1-model_v4_TED01:98-235	1	AF-A0A097R6J5-F1-model_v4_TED01	98-235	0
+A0A097R6J5.1	AF-A0A097R6J5-F1-model_v4_TED02:239-305	1	AF-A0A097R6J5-F1-model_v4_TED02	239-305	0
+A0A0A2VZA4.1	AF-A0A0A2VZA4-F1-model_v4_TED01:30-39_98-242	1	AF-A0A0A2VZA4-F1-model_v4_TED01	30-242	34.1%
+A0A0A2VZA4.1	AF-A0A0A2VZA4-F1-model_v4_TED02:45-94	1	AF-A0A0A2VZA4-F1-model_v4_TED02	45-94	0
+A0A0A2VZA4.1	AF-A0A0A2VZA4-F1-model_v4_TED03:246-310	1	AF-A0A0A2VZA4-F1-model_v4_TED03	246-310	0
+A0A0A2W5G5.1	AF-A0A0A2W5G5-F1-model_v4_TED01:23-36_88-231	1	AF-A0A0A2W5G5-F1-model_v4_TED01	23-231	38.9%
+A0A0A2W5G5.1	AF-A0A0A2W5G5-F1-model_v4_TED02:236-301	1	AF-A0A0A2W5G5-F1-model_v4_TED02	236-301	0
+A0A0A2WLP1.1	AF-A0A0A2WLP1-F1-model_v4_TED01:22-35_87-231	1	AF-A0A0A2WLP1-F1-model_v4_TED01	22-231	38.2%
+A0A0A2WLP1.1	AF-A0A0A2WLP1-F1-model_v4_TED02:235-301	1	AF-A0A0A2WLP1-F1-model_v4_TED02	235-301	0
+A0A0A2WLP1.1	AF-A0A0A2WLP1-F1-model_v4_TED03:333-481	1	AF-A0A0A2WLP1-F1-model_v4_TED03	333-481	0
+A0A0B7G3W7.1	AF-A0A0B7G3W7-F1-model_v4_TED01:237-313	1	AF-A0A0B7G3W7-F1-model_v4_TED01	237-313	0
+A0A0F0VXU7.1	AF-A0A0F0VXU7-F1-model_v4_TED01:92-234	1	AF-A0A0F0VXU7-F1-model_v4_TED01	92-234	0
+A0A0F0VXU7.1	AF-A0A0F0VXU7-F1-model_v4_TED02:236-298	1	AF-A0A0F0VXU7-F1-model_v4_TED02	236-298	0
+A0A0F0VYC9.1	AF-A0A0F0VYC9-F1-model_v4_TED01:103-109_126-241	1	AF-A0A0F0VYC9-F1-model_v4_TED01	103-241	0
+A0A0F0VYC9.1	AF-A0A0F0VYC9-F1-model_v4_TED02:245-309	1	AF-A0A0F0VYC9-F1-model_v4_TED02	245-309	0
+A0A0G4JQU9.1	AF-A0A0G4JQU9-F1-model_v4_TED01:99-235	1	AF-A0A0G4JQU9-F1-model_v4_TED01	99-235	0
+A0A0G4JQU9.1	AF-A0A0G4JQU9-F1-model_v4_TED02:239-305	1	AF-A0A0G4JQU9-F1-model_v4_TED02	239-305	0
+A0A0H3CMM4.1	AF-A0A0H3CMM4-F1-model_v4_TED01:38-87	1	AF-A0A0H3CMM4-F1-model_v4_TED01	38-87	0
+A0A0H3CMM4.1	AF-A0A0H3CMM4-F1-model_v4_TED02:91-232	1	AF-A0A0H3CMM4-F1-model_v4_TED02	91-232	0
+A0A0H3CMM4.1	AF-A0A0H3CMM4-F1-model_v4_TED03:236-298	1	AF-A0A0H3CMM4-F1-model_v4_TED03	236-298	0
+A0A0H3FUS6.1	AF-A0A0H3FUS6-F1-model_v4_TED01:25-38_90-234	1	AF-A0A0H3FUS6-F1-model_v4_TED01	25-234	37.1%
+A0A0H3FUS6.1	AF-A0A0H3FUS6-F1-model_v4_TED02:238-304	1	AF-A0A0H3FUS6-F1-model_v4_TED02	238-304	0
+A0A0H3FVM2.1	AF-A0A0H3FVM2-F1-model_v4_TED01:96-235	1	AF-A0A0H3FVM2-F1-model_v4_TED01	96-235	0
+A0A0H3FVM2.1	AF-A0A0H3FVM2-F1-model_v4_TED02:239-305	1	AF-A0A0H3FVM2-F1-model_v4_TED02	239-305	0
+A0A0H3FZ99.1	AF-A0A0H3FZ99-F1-model_v4_TED01:43-91	1	AF-A0A0H3FZ99-F1-model_v4_TED01	43-91	0
+A0A0H3FZ99.1	AF-A0A0H3FZ99-F1-model_v4_TED02:96-240	1	AF-A0A0H3FZ99-F1-model_v4_TED02	96-240	0
+A0A0H3FZ99.1	AF-A0A0H3FZ99-F1-model_v4_TED03:244-308	1	AF-A0A0H3FZ99-F1-model_v4_TED03	244-308	0
+A0A0L0ANX5.1	AF-A0A0L0ANX5-F1-model_v4_TED01:94-113_123-235	1	AF-A0A0L0ANX5-F1-model_v4_TED01	94-235	0
+A0A0L0ANX5.1	AF-A0A0L0ANX5-F1-model_v4_TED02:239-303	1	AF-A0A0L0ANX5-F1-model_v4_TED02	239-303	0
+A0A0L0GWX7.1	AF-A0A0L0GWX7-F1-model_v4_TED01:44-93	1	AF-A0A0L0GWX7-F1-model_v4_TED01	44-93	0
+A0A0L0GWX7.1	AF-A0A0L0GWX7-F1-model_v4_TED02:96-242	1	AF-A0A0L0GWX7-F1-model_v4_TED02	96-242	0
+A0A0L0GWX7.1	AF-A0A0L0GWX7-F1-model_v4_TED03:246-310	1	AF-A0A0L0GWX7-F1-model_v4_TED03	246-310	0
+A0A0L0H2R0.1	AF-A0A0L0H2R0-F1-model_v4_TED01:94-101_122-234	1	AF-A0A0L0H2R0-F1-model_v4_TED01	94-234	0
+A0A0L0H2R0.1	AF-A0A0L0H2R0-F1-model_v4_TED02:238-302	1	AF-A0A0L0H2R0-F1-model_v4_TED02	238-302	0
+A0A0L7TF50.1	AF-A0A0L7TF50-F1-model_v4_TED01:26-39_90-236	1	AF-A0A0L7TF50-F1-model_v4_TED01	26-236	34.2%
+A0A0L7TF50.1	AF-A0A0L7TF50-F1-model_v4_TED02:240-304	1	AF-A0A0L7TF50-F1-model_v4_TED02	240-304	0
+A0A0Q4MX87.1	AF-A0A0Q4MX87-F1-model_v4_TED01:95-235	1	AF-A0A0Q4MX87-F1-model_v4_TED01	95-235	0
+A0A0Q4MX87.1	AF-A0A0Q4MX87-F1-model_v4_TED02:238-304	1	AF-A0A0Q4MX87-F1-model_v4_TED02	238-304	0
+A0A0Q4N494.1	AF-A0A0Q4N494-F1-model_v4_TED01:26-35_98-236	1	AF-A0A0Q4N494-F1-model_v4_TED01	26-236	34.2%
+A0A0Q4N494.1	AF-A0A0Q4N494-F1-model_v4_TED02:239-318	1	AF-A0A0Q4N494-F1-model_v4_TED02	239-318	0
+A0A0U5GLB6.1	AF-A0A0U5GLB6-F1-model_v4_TED01:101-242	1	AF-A0A0U5GLB6-F1-model_v4_TED01	101-242	0
+A0A0U5GLB6.1	AF-A0A0U5GLB6-F1-model_v4_TED02:245-309	1	AF-A0A0U5GLB6-F1-model_v4_TED02	245-309	0
+A0A0U5L207.1	AF-A0A0U5L207-F1-model_v4_TED01:26-38_93-235	1	AF-A0A0U5L207-F1-model_v4_TED01	26-235	34.2%
+A0A0U5L207.1	AF-A0A0U5L207-F1-model_v4_TED02:239-319	1	AF-A0A0U5L207-F1-model_v4_TED02	239-319	0
+A0A1C3YT76.1	AF-A0A1C3YT76-F1-model_v4_TED01:24-37_89-233	1	AF-A0A1C3YT76-F1-model_v4_TED01	24-233	37.1%
+A0A1C3YT76.1	AF-A0A1C3YT76-F1-model_v4_TED02:237-303	1	AF-A0A1C3YT76-F1-model_v4_TED02	237-303	0
+A0A1C4D2K4.1	AF-A0A1C4D2K4-F1-model_v4_TED01:108-242	1	AF-A0A1C4D2K4-F1-model_v4_TED01	108-242	0
+A0A1C4D2K4.1	AF-A0A1C4D2K4-F1-model_v4_TED02:246-310	1	AF-A0A1C4D2K4-F1-model_v4_TED02	246-310	0
+A0A1C4DA70.1	AF-A0A1C4DA70-F1-model_v4_TED01:25-234	1	AF-A0A1C4DA70-F1-model_v4_TED01	25-234	35.1%
+A0A1C4DA70.1	AF-A0A1C4DA70-F1-model_v4_TED02:237-338	1	AF-A0A1C4DA70-F1-model_v4_TED02	237-338	0
+A0A1H3YGN2.1	AF-A0A1H3YGN2-F1-model_v4_TED01:28-37_93-237	1	AF-A0A1H3YGN2-F1-model_v4_TED01	28-237	31.6%
+A0A1H3YGN2.1	AF-A0A1H3YGN2-F1-model_v4_TED02:41-90	1	AF-A0A1H3YGN2-F1-model_v4_TED02	41-90	0
+A0A1H3YGN2.1	AF-A0A1H3YGN2-F1-model_v4_TED03:241-314	1	AF-A0A1H3YGN2-F1-model_v4_TED03	241-314	0
+A0A1H7J2C4.1	AF-A0A1H7J2C4-F1-model_v4_TED01:51-64_114-170_204-259	1	AF-A0A1H7J2C4-F1-model_v4_TED01	51-259	26.0%
+A0A1H7J2C4.1	AF-A0A1H7J2C4-F1-model_v4_TED02:263-324	1	AF-A0A1H7J2C4-F1-model_v4_TED02	263-324	0
+A0A1I0DWR6.1	AF-A0A1I0DWR6-F1-model_v4_TED01:40-90	1	AF-A0A1I0DWR6-F1-model_v4_TED01	40-90	0
+A0A1I0DWR6.1	AF-A0A1I0DWR6-F1-model_v4_TED02:100-105_124-237	1	AF-A0A1I0DWR6-F1-model_v4_TED02	100-237	0
+A0A1I0DWR6.1	AF-A0A1I0DWR6-F1-model_v4_TED03:241-305	1	AF-A0A1I0DWR6-F1-model_v4_TED03	241-305	0
+A0A1I4UH12.1	AF-A0A1I4UH12-F1-model_v4_TED01:26-96_237-328	1	AF-A0A1I4UH12-F1-model_v4_TED01	26-328	34.2%
+A0A1I4UH12.1	AF-A0A1I4UH12-F1-model_v4_TED02:123-233	1	AF-A0A1I4UH12-F1-model_v4_TED02	123-233	0
+A0A1R4LR26.1	AF-A0A1R4LR26-F1-model_v4_TED01:22-37_84-231	1	AF-A0A1R4LR26-F1-model_v4_TED01	22-231	38.2%
+A0A1R4LR26.1	AF-A0A1R4LR26-F1-model_v4_TED02:235-298	1	AF-A0A1R4LR26-F1-model_v4_TED02	235-298	0
+A0A1S8CRP5.1	AF-A0A1S8CRP5-F1-model_v4_TED01:41-89	1	AF-A0A1S8CRP5-F1-model_v4_TED01	41-89	0
+A0A1S8CRP5.1	AF-A0A1S8CRP5-F1-model_v4_TED02:92-236	1	AF-A0A1S8CRP5-F1-model_v4_TED02	92-236	0
+A0A1S8CRP5.1	AF-A0A1S8CRP5-F1-model_v4_TED03:240-304	1	AF-A0A1S8CRP5-F1-model_v4_TED03	240-304	0
+
+... (truncated - showing first 100 of 298 lines)
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q08599/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P75954
+RN   [1]
+RM   18456808
+RT   "Identification of the L,D-transpeptidases for peptidoglycan cross-linking
+RT   in Escherichia coli.";
+RA   Magnet S., Dubost L., Marie A., Arthur M., Gutmann L.;
+RL   J. Bacteriol. 190:4782-4785(2008).
+
+--- End of Current DESC file ---

@@ -1,0 +1,160 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   VPS_HAEIN               Reviewed;         623 AA.
+AC   P44242;
+DE   RecName: Full=Mu-like prophage FluMu defective tail fiber protein;
+GN   OrderedLocusNames=HI_1522;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+CC   -!- SIMILARITY: To phage Mu protein S. {ECO:0000305}.
+DR   EMBL; L42023; AAC23178.1; -; Genomic_DNA.
+DR   PIR; I64034; I64034.
+DR   RefSeq; NP_439671.1; NC_000907.1.
+DR   AlphaFoldDB; P44242; -.
+DR   SMR; P44242; -.
+DR   STRING; 71421.HI_1522; -.
+DR   EnsemblBacteria; AAC23178; AAC23178; HI_1522.
+DR   KEGG; hin:HI_1522; -.
+DR   PATRIC; fig|71421.8.peg.1593; -.
+DR   eggNOG; COG5301; Bacteria.
+DR   HOGENOM; CLU_438546_0_0_6; -.
+DR   OrthoDB; 5691093at2; -.
+DR   BioCyc; HINF71421:G1GJ1-1544-MONOMER; -.
+DR   Proteomes; UP000000579; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..623
+FT                   /note="Mu-like prophage FluMu defective tail fiber protein"
+FT                   /id="PRO_0000077694"
+SQ   SEQUENCE   623 AA;  67678 MW;  5EE5A8E2818C0060 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Haemophilus.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A7S5REB8	TAIL FIBER PROTEIN {ECO:0    109.8    7.3e-28   1   1.2   1.9
+	Iterate                   	   256	   507	   109.1
+	PF12708	Pect-lyase_RHGA_epim	   175	   236	    30.6
+
+A0A914JIY4	VWFA DOMAIN-CONTAINING PR     20.8        1.1   1   1.1   0.2
+	Iterate                   	    45	   137	    20.3
+	PF00092	VWA             	    73	   146	      30
+
+A0A9Q0EAQ7	UNCHARACTERIZED PROTEIN {     20.0        1.9   4   4.2   6.9
+	Iterate                   	    94	   148	     7.6
+	Iterate                   	   146	   200	     6.5
+	Iterate                   	   197	   229	     4.1
+	Iterate                   	    42	   107	     3.6
+
+A0AAD9KU53	ALPHA-L-ARABINOFURANOSIDA     28.8     0.0041   7   8.0   4.6
+	Iterate                   	   907	  1001	     3.8
+	Iterate                   	   178	   266	     3.6
+	Iterate                   	   572	   660	     3.6
+	Iterate                   	    48	   136	     3.1
+	Iterate                   	   442	   521	     2.5
+	Iterate                   	   313	   398	     1.2
+	Iterate                   	   676	   746	     1.1
+	PF05270	AbfB            	     7	   129	    64.1
+	PF05270	AbfB            	   140	   261	    64.8
+	PF05270	AbfB            	   271	   393	      64
+	PF05270	AbfB            	   404	   525	    59.9
+	PF05270	AbfB            	   525	   655	    64.9
+	PF05270	AbfB            	   731	   827	    48.4
+	PF05270	AbfB            	   821	   894	    26.8
+	PF05270	AbfB            	   891	   990	    57.5
+
+P44242	MU-LIKE PROPHAGE FLUMU DEFECTIVE    595.3   4.7e-176   1   1.2   7.1
+	Iterate                   	   245	   497	   594.9
+	PF27114	Phage_tail_beta 	    99	   165	    85.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P44242 (E-value: 4.2e-178, Score: 595.3)
+Mentioned as: P44242
+Description: Mu-like prophage FluMu defective tail fiber protein
+Organism: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd)
+PMID: 24391926
+Source: EuropePMC
+Title: Functional annotation of conserved hypothetical proteins from Haemophilus influenzae Rd KW20
+Journal: PloS one (2013)
+Snippet: protein gp47 253. HP HI1521 950386 P44241 Mu-like prophageFluMu protein gp48 254. HP HI1522 950387 P44242 Mu-like prophageFluMu defective tail fiber protein 255. HP HI1522.1 950388 P71390 Mu-like prophage protein Com 256. HP HI1523 949672 P44243 D12 class N6 adenine-specific DNA methyltransferase 257. HP HI1534 950396
+
+================================================================================
+Protein: P44242 (E-value: 4.2e-178, Score: 595.3)
+Mentioned as: P44242
+Description: Mu-like prophage FluMu defective tail fiber protein
+Organism: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd)
+PMID: 22823751
+Source: EuropePMC
+Title: Genomic and proteomic characterization of SuMu, a Mu-like bacteriophage infecting Haemophilus parasuis
+Journal: BMC genomics (2012)
+Snippet: host cells lipopolysaccharide include the tail fiber protein, and gp36, respectively (homologs 6 (YP_249019), 7 (P44242), and 20 (P03743), respectively). The bacteriophage tail sheath protein (gpL), homologs 4 (YP_0010604090) and 5 (YP_004324195), may form the outer contractile sheath of the capsid tail. The baseplate wedge protein
+
+================================================================================
+Protein: P44242 (E-value: 4.2e-178, Score: 595.3)
+Mentioned as: P44242
+Description: Mu-like prophage FluMu defective tail fiber protein
+Organism: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd)
+PMID: 10722605
+Source: EuropePMC
+Title: Molecular and biological analysis of eight genetic islands that distinguish Neisseria meningitidis from the closely related pathogen Neisseria gonorrhoeae
+Journal: Infection and immunity (2000)
+Snippet: 623 296 177 3e-14 3e-71 0.0 36/50 47/65 100 P44242 P44243 P52036 394 Microcin immunity E. coli 344 1e-16 27/42 X57583 330 Phenylalanine-tRNA synthetase alpha
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P44242.1	AF-P44242-F1-model_v4_TED01:2-98	1	AF-P44242-F1-model_v4_TED01	2-98	0
+P44242.1	AF-P44242-F1-model_v4_TED02:99-163	1	AF-P44242-F1-model_v4_TED02	99-163	0
+P44242.1	AF-P44242-F1-model_v4_TED03:245-497	1	AF-P44242-F1-model_v4_TED03	245-497	100.0%
+P44242.1	AF-P44242-F1-model_v4_TED04:505-623	1	AF-P44242-F1-model_v4_TED04	505-623	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44242_TED03/Iterate
+GA   27.00 27.00;
+TC   28.80 109.10;
+NC   20.80 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

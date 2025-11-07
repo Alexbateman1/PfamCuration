@@ -1,0 +1,108 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y711_AQUAE              Reviewed;         171 AA.
+AC   O66927;
+DE   RecName: Full=Uncharacterized protein aq_711;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=aq_711;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC06889.1; -; Genomic_DNA.
+DR   PIR; C70362; C70362.
+DR   RefSeq; NP_213487.1; NC_000918.1.
+DR   RefSeq; WP_010880425.1; NC_000918.1.
+DR   AlphaFoldDB; O66927; -.
+DR   SMR; O66927; -.
+DR   STRING; 224324.aq_711; -.
+DR   EnsemblBacteria; AAC06889; AAC06889; aq_711.
+DR   KEGG; aae:aq_711; -.
+DR   eggNOG; COG2976; Bacteria.
+DR   HOGENOM; CLU_1559784_0_0_0; -.
+DR   InParanoid; O66927; -.
+DR   OrthoDB; 15006at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   Gene3D; 1.25.40.10; Tetratricopeptide repeat domain; 1.
+DR   InterPro; IPR011990; TPR-like_helical_dom_sf.
+DR   SUPFAM; SSF48452; TPR-like; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..20
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           21..171
+FT                   /note="Uncharacterized protein aq_711"
+FT                   /id="PRO_0000013618"
+SQ   SEQUENCE   171 AA;  20428 MW;  55A383D966C72A08 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Hydrogenivirga
+1	6	Aquifex
+2	5	Aquificaceae
+2	4	Aquificales
+2	3	Aquificia
+2	2	Aquificota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A415PCY9	DUF4430 DOMAIN-CONTAINING     20.2        2.2   1   1.3   0.0
+	Iterate                   	     3	    63	    19.7
+
+A0A497XNN5	PUTATIVE NEGATIVE REGULAT     42.8      2e-07   1   1.7   0.8
+	Iterate                   	     5	    72	    42.8
+	PF13174	TPR_6           	   125	   157	    25.7
+
+A0A6A4HAZ8	HIG1 DOMAIN-CONTAINING PR     24.6      0.096   4   4.1   0.1
+	Iterate                   	    91	   124	     5.1
+	Iterate                   	   132	   166	     5.1
+	Iterate                   	   179	   212	     5.1
+	Iterate                   	    45	    76	     4.0
+
+A8UY75	TETRATRICOPEPTIDE REPEAT-LIKE     39.7    1.8e-06   1   1.8   1.4
+	Iterate                   	     5	    72	    39.7
+	PF13174	TPR_6           	   125	   157	    24.1
+
+O66927	UNCHARACTERIZED PROTEIN AQ_711     160.3    4.2e-44   1   2.2   8.2
+	Iterate                   	     2	    69	   160.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A8UY75.1	AF-A8UY75-F1-model_v4_TED01:25-85	1	AF-A8UY75-F1-model_v4_TED01	25-85	71.0%
+A8UY75.1	AF-A8UY75-F1-model_v4_TED02:87-173	1	AF-A8UY75-F1-model_v4_TED02	87-173	0
+O66927.1	AF-O66927-F1-model_v4_TED02:71-171	1	AF-O66927-F1-model_v4_TED02	71-171	0
+O66927.1	AF-O66927-F1-model_v4_TED01:2-69	1	AF-O66927-F1-model_v4_TED01	2-69	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66927_TED01/Iterate
+GA   27.00 27.00;
+TC   27.20 121.60;
+NC   25.20 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

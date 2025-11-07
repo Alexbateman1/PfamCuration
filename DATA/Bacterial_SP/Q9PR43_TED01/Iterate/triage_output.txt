@@ -1,0 +1,101 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y101_UREPA              Reviewed;         188 AA.
+AC   Q9PR43;
+DE   RecName: Full=Uncharacterized protein UU101;
+GN   OrderedLocusNames=UU101;
+OS   Ureaplasma parvum serovar 3 (strain ATCC 700970).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Ureaplasma.
+OX   NCBI_TaxID=273119;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700970;
+RX   PubMed=11048724; DOI=10.1038/35037619;
+RA   Glass J.I., Lefkowitz E.J., Glass J.S., Heiner C.R., Chen E.Y.,
+RA   Cassell G.H.;
+RT   "The complete sequence of the mucosal pathogen Ureaplasma urealyticum.";
+RL   Nature 407:757-762(2000).
+DR   EMBL; AF222894; AAF30507.1; -; Genomic_DNA.
+DR   RefSeq; WP_006689154.1; NC_002162.1.
+DR   AlphaFoldDB; Q9PR43; -.
+DR   STRING; 273119.UU101; -.
+DR   EnsemblBacteria; AAF30507; AAF30507; UU101.
+DR   GeneID; 29672311; -.
+DR   KEGG; uur:UU101; -.
+DR   HOGENOM; CLU_1447068_0_0_14; -.
+DR   OrthoDB; 404093at2; -.
+DR   Proteomes; UP000000423; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..188
+FT                   /note="Uncharacterized protein UU101"
+FT                   /id="PRO_0000220798"
+SQ   SEQUENCE   188 AA;  21165 MW;  C42591BAFE360A04 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	5	Ureaplasma
+2	4	Mycoplasmoidaceae
+2	3	Mycoplasmoidales
+2	2	Mycoplasmatota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A084EYA9	UNCHARACTERIZED PROTEIN {    151.9    2.3e-41   1   1.2   3.2
+	Iterate                   	     5	    96	   151.5
+
+A0A2G5U7U3	UNCHARACTERIZED PROTEIN {     39.5    2.8e-06   6   7.8   0.1
+	Iterate                   	   390	   439	     5.1
+	Iterate                   	   337	   372	     4.4
+	Iterate                   	   253	   287	     4.3
+	Iterate                   	   185	   219	     4.0
+	Iterate                   	   151	   185	     3.8
+	Iterate                   	   287	   320	     2.9
+
+A0A2G5U8B0	UNCHARACTERIZED PROTEIN {     39.2    3.3e-06   6   7.8   0.1
+	Iterate                   	   398	   448	     5.2
+	Iterate                   	   260	   296	     4.4
+	Iterate                   	   346	   381	     4.3
+	Iterate                   	   194	   228	     4.0
+	Iterate                   	   160	   194	     3.8
+	Iterate                   	   295	   326	     2.8
+
+A4HLU0	UNCHARACTERIZED PROTEIN {ECO:     45.9    2.8e-08   4  12.1   0.0
+	Iterate                   	   307	   373	     3.4
+	Iterate                   	   238	   296	     3.3
+	Iterate                   	   723	   778	     2.9
+	Iterate                   	   651	   694	     2.7
+
+Q9PR43	UNCHARACTERIZED PROTEIN UU101      202.4    4.1e-57   1   1.2   4.5
+	Iterate                   	     5	    96	   202.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A084EYA9.1	AF-A0A084EYA9-F1-model_v4_TED01:5-96	1	AF-A0A084EYA9-F1-model_v4_TED01	5-96	100.0%
+Q9PR43.1	AF-Q9PR43-F1-model_v4_TED01:5-96	1	AF-Q9PR43-F1-model_v4_TED01	5-96	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9PR43_TED01/Iterate
+GA   27.00 27.00;
+TC   27.00 186.50;
+NC   24.50 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

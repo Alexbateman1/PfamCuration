@@ -1,0 +1,78 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Wohlfahrtiimonas.
+1	6	Oceanospirillum.
+1	6	Erwinia.
+1	5	Oceanospirillaceae
+1	5	Ignatzschineriaceae
+1	5	Erwiniaceae
+1	4	Oceanospirillales
+1	4	Enterobacterales
+1	4	Cardiobacteriales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0L7KRH7	PUTATIVE MITOGEN-ACTIVATE     27.0      0.011   5   8.1  16.5
+	Iterate                   	   199	   211	     8.1
+	Iterate                   	    37	    49	     5.0
+	Iterate                   	    68	    80	     5.0
+	Iterate                   	   101	   113	     5.0
+	Iterate                   	   166	   178	     5.0
+
+A0A839ITV2	UNCHARACTERIZED PROTEIN {     38.0    4.2e-06   1   1.8   0.1
+	Iterate                   	   147	   180	    36.2
+
+A0A9D4M0S1	UNCHARACTERIZED PROTEIN {     29.4     0.0021  12  12.0  45.2
+	Iterate                   	    11	    29	     7.9
+	Iterate                   	   113	   128	     7.7
+	Iterate                   	   123	   138	     7.7
+	Iterate                   	   181	   201	     7.4
+	Iterate                   	   103	   119	     7.2
+	Iterate                   	    79	   100	     6.7
+	Iterate                   	    57	    75	     5.0
+	Iterate                   	   157	   176	     4.6
+	Iterate                   	   133	   150	     4.3
+	Iterate                   	    93	   109	     4.2
+	Iterate                   	    49	    62	     3.5
+	Iterate                   	    32	    54	     3.3
+
+B2VAQ0	22 KDA RELAXATION PROTEIN {EC     74.8    1.2e-17   1   2.1  11.8
+	Iterate                   	   162	   197	    72.5
+
+L8XWN4	UNCHARACTERIZED PROTEIN {ECO:     27.4     0.0088   1   1.3   1.0
+	Iterate                   	    91	   117	    26.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A839ITV2.1	AF-A0A839ITV2-F1-model_v4_TED02:125-181	1	AF-A0A839ITV2-F1-model_v4_TED02	125-181	100.0%
+A0A839ITV2.1	AF-A0A839ITV2-F1-model_v4_TED01:2-122	1	AF-A0A839ITV2-F1-model_v4_TED01	2-122	0
+B2VAQ0.1	AF-B2VAQ0-F1-model_v4_TED01:163-181_188-195	1	AF-B2VAQ0-F1-model_v4_TED01	163-195	91.7%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P14493_TED03/Iterate
+GA   27.00 27.00;
+TC   28.00 27.40;
+NC   25.40 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

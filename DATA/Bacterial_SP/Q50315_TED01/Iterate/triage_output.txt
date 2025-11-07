@@ -1,0 +1,105 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y687_MYCPN              Reviewed;         250 AA.
+AC   Q50315;
+DE   RecName: Full=Uncharacterized protein MPN_687;
+GN   OrderedLocusNames=MPN_687; ORFNames=K05_orf250, MP155;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8604303; DOI=10.1093/nar/24.4.628;
+RA   Hilbert H., Himmelreich R., Plagens H., Herrmann R.;
+RT   "Sequence analysis of 56 kb from the genome of the bacterium Mycoplasma
+RT   pneumoniae comprising the dnaA region, the atp operon and a cluster of
+RT   ribosomal protein genes.";
+RL   Nucleic Acids Res. 24:628-639(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+RN   [3]
+RP   IDENTIFICATION BY MASS SPECTROMETRY.
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=11271496;
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Mycoplasmoides
+1	5	Mycoplasma
+1	4	Mycoplasmoidaceae
+1	4	Mycoplasmataceae
+1	3	Mycoplasmoidales
+1	3	Mollicutes
+2	2	Mycoplasmatota
+2	1	Bacillati
+2	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A292IHE8	RHO TERMINATION FACTOR N-     42.9    1.5e-07   1   1.4   0.2
+	Iterate                   	   102	   138	    42.2
+
+A0AAE1E7H9	UNCHARACTERIZED PROTEIN {     30.7    0.00097  11  15.7  36.3
+	Iterate                   	   112	   133	     3.9
+	Iterate                   	     7	    23	     3.7
+	Iterate                   	    38	    54	     3.7
+	Iterate                   	    57	    73	     3.7
+	Iterate                   	   140	   173	     3.5
+	Iterate                   	    80	    93	     3.4
+	Iterate                   	   171	   183	     3.3
+	Iterate                   	    22	    36	     3.2
+	Iterate                   	   182	   194	     3.2
+	Iterate                   	    92	   103	     3.1
+	Iterate                   	   102	   113	     3.1
+
+M2Y1S7	UNCHARACTERIZED PROTEIN {ECO:     38.3    3.9e-06   7   8.7   0.2
+	Iterate                   	   281	   314	     3.6
+	Iterate                   	   315	   348	     3.6
+	Iterate                   	   349	   382	     3.6
+	Iterate                   	   213	   246	     3.5
+	Iterate                   	   247	   280	     3.5
+	Iterate                   	   383	   416	     3.5
+	Iterate                   	   417	   450	     3.5
+
+Q50315	UNCHARACTERIZED PROTEIN MPN_687    103.7    1.4e-26   1   1.4   0.9
+	Iterate                   	   214	   250	   102.9
+
+Q7NC76	RIBBON-HELIX-HELIX PROTEIN CO     37.1    9.4e-06   1   1.7   0.3
+	Iterate                   	   121	   157	    35.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A292IHE8.1	AF-A0A292IHE8-F1-model_v4_TED01:108-137	1	AF-A0A292IHE8-F1-model_v4_TED01	108-137	81.1%
+Q50315.1	AF-Q50315-F1-model_v4_TED01:214-250	1	AF-Q50315-F1-model_v4_TED01	214-250	100.0%
+Q7NC76.2	AF-Q7NC76-F1-model_v4_TED01:122-158	1	AF-Q7NC76-F1-model_v4_TED01	122-158	97.4%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q50315_TED01/Iterate
+GA   27.00 27.00;
+TC   27.20 84.60;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

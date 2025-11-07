@@ -1,0 +1,176 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YPDI_ECOLI              Reviewed;          91 AA.
+AC   O32528; Q2MAK0;
+DE   RecName: Full=Uncharacterized lipoprotein YpdI;
+DE   Flags: Precursor;
+GN   Name=ypdI; OrderedLocusNames=b2376, JW2373;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Lipid-anchor
+CC       {ECO:0000305}.
+DR   EMBL; U00096; AAC75435.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76706.1; -; Genomic_DNA.
+DR   PIR; E65011; E65011.
+DR   RefSeq; NP_416877.1; NC_000913.3.
+DR   RefSeq; WP_000867631.1; NZ_LN832404.1.
+DR   AlphaFoldDB; O32528; -.
+DR   BioGRID; 4260896; 258.
+DR   DIP; DIP-12820N; -.
+DR   FunCoup; O32528; 94.
+DR   IntAct; O32528; 1.
+DR   STRING; 511145.b2376; -.
+DR   PaxDb; 511145-b2376; -.
+DR   EnsemblBacteria; AAC75435; AAC75435; b2376.
+DR   GeneID; 949107; -.
+DR   KEGG; ecj:JW2373; -.
+DR   KEGG; eco:b2376; -.
+DR   KEGG; ecoc:C3026_13210; -.
+DR   PATRIC; fig|1411691.4.peg.4353; -.
+DR   EchoBASE; EB4119; -.
+DR   HOGENOM; CLU_2422485_0_0_6; -.
+DR   InParanoid; O32528; -.
+DR   OMA; TEKTSMM; -.
+DR   BioCyc; EcoCyc:G7239-MONOMER; -.
+DR   PRO; PR:O32528; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0009242; P:colanic acid biosynthetic process; IMP:EcoCyc.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal.
+FT   SIGNAL          1..18
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           19..91
+FT                   /note="Uncharacterized lipoprotein YpdI"
+FT                   /id="PRO_0000018059"
+FT   LIPID           19
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           19
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   91 AA;  10162 MW;  49D63F669C31309D CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Escherichia.
+2	6	Shigella.
+9	5	Enterobacteriaceae
+9	4	Enterobacterales
+9	3	Gammaproteobacteria
+9	2	Pseudomonadota
+9	1	Pseudomonadati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2Z170	LIPOPROTEIN INVOLVED IN C    203.8    1.2e-57   1   1.0   0.5
+	Iterate                   	     1	    91	   203.6
+
+B7LCC7	YPDI PROTEIN {ECO:0000313|EMB    200.8    1.1e-56   1   1.0   0.6
+	Iterate                   	     1	    91	   200.6
+
+O32528	UNCHARACTERIZED LIPOPROTEIN YPD    215.5    2.8e-61   1   1.0   0.5
+	Iterate                   	     1	    91	   215.3
+
+Q3YZF4	LIPOPROTEIN {ECO:0008006|GOOG    200.8    1.1e-56   1   1.0   0.6
+	Iterate                   	     1	    91	   200.6
+
+Q8XBR6	LIPOPROTEIN INVOLVED IN COLAN    196.1    3.1e-55   1   1.0   0.6
+	Iterate                   	     1	    91	   196.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS16481 (E-value: 2.5e-63, Score: 215.5)
+Mentioned as: b2376
+Description: predicted lipoprotein involved in colanic acid biosynthesis
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 26425847
+Source: EuropePMC
+Title: Genome-Scale Mapping of Escherichia coli σ54 Reveals Widespread, Conserved Intragenic Binding
+Journal: PLoS genetics (2015)
+Snippet: 253 10.155 IS29 2484404 11 C TGGC ATACATTA TGC A 2484401 + b2370 evgS + b2376 ypdI 8316 12.682 IS30 2526524 6 T TGGC ATTGTCG TTGC A 2526536 - b2411 ligA - b4546 ypeB 343 10.476 IS31 2846034 1 G TGGC GCGTTTG TTGC C 2846045 -
+
+================================================================================
+Protein: VIMSS16481 (E-value: 2.5e-63, Score: 215.5)
+Mentioned as: b2376
+Description: predicted lipoprotein involved in colanic acid biosynthesis
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 15126489
+Source: EuropePMC
+Title: Genome-wide analysis of lipoprotein expression in Escherichia coli MG1655
+Journal: Journal of bacteriology (2004)
+Snippet: b0193 b0227 b0378 b0689 b0984 b1023 b1310 b2062 b2123 b2138 b2270 b2376 b2505 b2636 b2971 b3014 b3265 b3552 b3896 b4029 b4080 2.85 A 13.9 A 39.75 A 4.35 A 2.25
+
+================================================================================
+Protein: VIMSS16481 (E-value: 2.5e-63, Score: 215.5)
+Mentioned as: b2376
+Description: predicted lipoprotein involved in colanic acid biosynthesis
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 15175305
+Source: EuropePMC
+Title: Extensive genomic diversity in pathogenic Escherichia coli and Shigella Strains revealed by comparative genomic hybridization microarray
+Journal: Journal of bacteriology (2004)
+Snippet: These ORFs were JW0690 (not annotated in MG1655), JW2373 (b2376), and JW3560 (not annotated in MG1655). These three genes were relatively short (420, 276, and
+
+================================================================================
+Protein: VIMSS304676 (E-value: 6.1e-56, Score: 191.8)
+Mentioned as: c2912
+Description: Hypothetical lipoprotein ypdI precursor
+Organism: Escherichia coli CFT073
+PMID: 34985325
+Source: EuropePMC
+Title: A Comprehensive Review on the Role of the Gut Microbiome in Human Neurological Disorders
+Journal: Clinical microbiology reviews (2022)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O32528/Iterate
+GA   27.00 27.00;
+TC   44.40 186.60;
+NC   25.80 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

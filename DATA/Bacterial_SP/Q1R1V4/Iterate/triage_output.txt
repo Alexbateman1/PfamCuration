@@ -1,0 +1,147 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YUBK_ECO57              Reviewed;         129 AA.
+AC   O82903;
+DE   RecName: Full=Uncharacterized serine-rich protein YubK;
+DE   Flags: Precursor;
+GN   Name=yubK; OrderedLocusNames=L7079.1, ECO57PM44;
+OS   Escherichia coli O157:H7.
+OG   Plasmid pO157.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=9722640; DOI=10.1093/nar/26.18.4196;
+RA   Burland V., Shao Y., Perna N.T., Plunkett G. III, Sofia H.J.,
+RA   Blattner F.R.;
+RT   "The complete DNA sequence and analysis of the large virulence plasmid of
+RT   Escherichia coli O157:H7.";
+RL   Nucleic Acids Res. 26:4196-4204(1998).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=9628576; DOI=10.1093/dnares/5.1.1;
+RA   Makino K., Ishii K., Yasunaga T., Hattori M., Yokoyama K., Yatsudo H.C.,
+RA   Kubota Y., Yamaichi Y., Iida T., Yamamoto K., Honda T., Han C.G.,
+RA   Ohtsubo A., Kasamatsu M., Hayashi T., Kuhara S., Shinagawa H.;
+RT   "Complete nucleotide sequences of 93-kb and 3.3-kb plasmids of an
+RT   enterohemorrhagic Escherichia coli O157:H7 derived from Sakai outbreak.";
+RL   DNA Res. 5:1-9(1998).
+DR   EMBL; AF074613; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AB011549; BAA31801.1; -; Genomic_DNA.
+DR   PIR; T00282; T00282.
+DR   RefSeq; NP_052651.1; NC_002128.1.
+DR   AlphaFoldDB; O82903; -.
+DR   KEGG; ecs:pO157p44; -.
+DR   HOGENOM; CLU_157847_0_0_6; -.
+DR   Proteomes; UP000000558; Plasmid pO157.
+DR   Proteomes; UP000002519; Plasmid pO157.
+PE   3: Inferred from homology;
+KW   Plasmid; Reference proteome; Signal.
+FT   SIGNAL          1..17
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           18..129
+FT                   /note="Uncharacterized serine-rich protein YubK"
+FT                   /id="PRO_0000269542"
+FT   REGION          26..76
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        26..36
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   129 AA;  13586 MW;  332FBEE65657D304 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	Klebsiella pneumoniae complex.
+1	7	Klebsiella
+2	6	Escherichia.
+1	6	Klebsiella/Raoultella group
+3	5	Enterobacteriaceae
+3	4	Enterobacterales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3ETM0	UNCHARACTERIZED PROTEIN {     54.0    1.1e-10   1   1.3   2.1
+	Iterate                   	     4	    81	    53.6
+
+A0A377YUW9	DUF1472 DOMAIN-CONTAINING    204.9    1.9e-57   1   1.2  17.8
+	Iterate                   	    36	   157	   204.4
+
+A0A8C5WMS2	UNCHARACTERIZED PROTEIN {     29.5     0.0044  11   9.4  40.8
+	Iterate                   	   146	   206	     8.7
+	Iterate                   	   275	   335	     8.5
+	Iterate                   	   306	   352	     8.3
+	Iterate                   	   336	   413	     8.3
+	Iterate                   	   111	   161	     8.2
+	Iterate                   	   242	   288	     8.1
+	Iterate                   	    51	    97	     7.7
+	Iterate                   	   210	   256	     6.6
+	Iterate                   	    85	   129	     5.1
+	Iterate                   	   178	   225	     4.8
+	Iterate                   	    18	    64	     4.4
+
+I1YF67	IRON AQUISITION YERSINIABACTI     26.9      0.028   3   3.8   0.9
+	Iterate                   	   568	   650	     7.7
+	Iterate                   	  1625	  1708	     7.7
+	Iterate                   	  2679	  2762	     7.7
+	PF00550	PP-binding      	    16	    78	    26.2
+	PF00668	Condensation    	   133	   538	   114.3
+	PF00501	AMP-binding     	   570	   924	   241.6
+	PF00550	PP-binding      	  1080	  1145	    33.2
+	PF00668	Condensation    	  1163	  1598	   122.1
+	PF00501	AMP-binding     	  1628	  1982	   241.6
+	PF00550	PP-binding      	  2138	  2203	    33.2
+	PF00668	Condensation    	  2221	  2662	   127.6
+	PF00501	AMP-binding     	  2682	  3036	   241.6
+	PF00550	PP-binding      	  3191	  3257	    37.6
+
+O82903	UNCHARACTERIZED SERINE-RICH PRO    124.6    1.4e-32   1   2.0  32.4
+	Iterate                   	     1	   129	   121.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q6SJ49 (E-value: 1.7e-17, Score: 69.3)
+Mentioned as: Q6SJ49
+Description: YdaA
+Organism: Escherichia coli
+PMID: 16760308
+Source: EuropePMC
+Title: The Escherichia coli proteome: past, present, and future prospects
+Journal: Microbiology and molecular biology reviews : MMBR (2006)
+Snippet: 5.19/10,602.04 5.97/23,211.76 5.99/27,602.61 YdaA YdbC YdbH Q6SJ49 P25906 P52645 Protein Protein Protein Putative HTH-type transcriptional regulator Protein
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q1R1V4/Iterate
+GA   27.00 27.00;
+TC   27.10 40.40;
+NC   25.50 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

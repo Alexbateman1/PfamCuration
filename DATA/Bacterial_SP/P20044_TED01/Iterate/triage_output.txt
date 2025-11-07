@@ -1,0 +1,65 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Lentilactobacillus buchneri subsp. silagei.
+1	6	Loigolactobacillus
+1	6	Leuconostoc
+1	6	Lentilactobacillus
+1	6	Cuspidothrix.
+1	6	Amylolactobacillus
+4	5	Lactobacillaceae
+1	5	Aphanizomenonaceae
+4	4	Lactobacillales
+1	4	Nostocales
+4	3	Bacilli
+1	3	Cyanophyceae
+4	2	Bacillota
+1	2	Cyanobacteriota
+5	1	Bacillati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0R1YR93	PROTEIN REPA {ECO:0000313     57.5    3.7e-12   1   1.1   0.1
+	Iterate                   	    20	    51	    57.2
+
+A0A192H5Y0	PROTEIN REPA {ECO:0000313     90.9    1.1e-22   1   1.1   0.6
+	Iterate                   	    20	    52	    90.7
+
+A0A4R5NC39	PROTEIN REPA {ECO:0008006     90.9    1.1e-22   1   1.1   0.6
+	Iterate                   	    20	    52	    90.7
+
+A0A8C7KYT4	UNCHARACTERIZED PROTEIN {     74.1    2.2e-17   2  17.8   6.3
+	Iterate                   	   388	   416	     4.7
+	Iterate                   	   183	   221	     3.3
+
+G3K0V4	REPA {ECO:0000313|EMBL:AEO790     88.0    9.3e-22   1   1.1   0.9
+	Iterate                   	    20	    52	    87.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A4R5NC39.1	AF-A0A4R5NC39-F1-model_v4_TED01:16-47	1	AF-A0A4R5NC39-F1-model_v4_TED01	16-47	84.8%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P20044_TED01/Iterate
+GA   27.00 27.00;
+TC   27.60 38.60;
+NC   26.20 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,105 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YTID_ECOLI              Reviewed;          47 AA.
+AC   P0DPC5; A0A385XJP8;
+DE   RecName: Full=Protein YtiD;
+GN   Name=ytiD; OrderedLocusNames=b4721;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION, INDUCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / CF7789;
+RX   PubMed=28851853; DOI=10.1128/mbio.01355-17;
+RA   Park H., McGibbon L.C., Potts A.H., Yakhnin H., Romeo T., Babitzke P.;
+RT   "Translational repression of the RpoS antiadapter IraD by CsrA is mediated
+RT   via translational coupling to a short upstream open reading frame.";
+RL   MBio 8:0-0(2017).
+CC   -!- INDUCTION: Expressed at low levels during late logarithmic and
+CC       stationary growth (at protein level) (PubMed:28851853).
+CC       {ECO:0000269|PubMed:28851853}.
+CC   -!- DISRUPTION PHENOTYPE: No effect on iraD expression (PubMed:28851853).
+CC       {ECO:0000269|PubMed:28851853}.
+DR   EMBL; U00096; AYC08259.1; -; Genomic_DNA.
+DR   AlphaFoldDB; P0DPC5; -.
+DR   EnsemblBacteria; AYC08259; AYC08259; b4721.
+DR   InParanoid; P0DPC5; -.
+DR   BioCyc; EcoCyc:MONOMER0-4392; -.
+DR   PRO; PR:P0DPC5; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..47
+FT                   /note="Protein YtiD"
+FT                   /id="PRO_0000442643"
+SQ   SEQUENCE   47 AA;  5511 MW;  E57FFA0EA7B04065 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Shigella.
+1	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A4Y9Z656	F-BOX DOMAIN-CONTAINING P     22.7        0.3   2   2.9   0.3
+	Iterate                   	   526	   547	    10.7
+	Iterate                   	   123	   152	     8.9
+
+A0A8T2IDL1	UNCHARACTERIZED PROTEIN {     30.6    0.00099   4  12.7  29.2
+	Iterate                   	   251	   279	    10.5
+	Iterate                   	   296	   317	     5.7
+	Iterate                   	   117	   139	     5.1
+	Iterate                   	   316	   341	     3.6
+
+A0AAD8Z240	UNCHARACTERIZED PROTEIN {     48.4    2.9e-09   2  11.8   2.2
+	Iterate                   	    74	    91	     3.4
+	Iterate                   	   426	   443	     3.4
+
+B2TYV6	UNCHARACTERIZED PROTEIN {ECO:    126.5    1.1e-33   1   1.0   4.9
+	Iterate                   	     1	    47	   126.4
+
+P0DPC5	PROTEIN YTID                       128.8    2.1e-34   1   1.0   5.8
+	Iterate                   	     1	    47	   128.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DPC5/Iterate
+GA   27.00 27.00;
+TC   30.60 126.40;
+NC   22.70 18.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

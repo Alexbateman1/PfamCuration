@@ -1,0 +1,69 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Pseudomonas syringae.
+1	6	Pseudomonas.
+1	6	Pseudomonas
+2	5	Pseudomonadaceae
+2	4	Pseudomonadales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A4V2G777	UNCHARACTERIZED PROTEIN {     25.8      0.072   6   7.4  14.0
+	Iterate                   	   100	   144	     6.0
+	Iterate                   	   149	   192	     6.0
+	Iterate                   	   197	   236	     3.8
+	Iterate                   	   240	   284	     3.8
+	Iterate                   	    57	    96	     3.5
+	Iterate                   	   337	   398	     3.4
+
+A0A9B0WLH6	REPETITIVE PROLINE-RICH C     22.4       0.83   6   6.3   9.0
+	Iterate                   	    67	    95	     5.8
+	Iterate                   	     6	    38	     5.2
+	Iterate                   	   137	   166	     4.3
+	Iterate                   	    37	    84	     4.1
+	Iterate                   	    83	   106	     3.6
+	Iterate                   	    93	   117	     3.5
+
+A0A9L0TMH2	UNCHARACTERIZED PROTEIN {     22.6       0.69   2   4.7   0.4
+	Iterate                   	   105	   142	     9.5
+	Iterate                   	    51	    89	     4.7
+
+A4V7Q7	REGULATORY PROTEIN {ECO:00080     52.0    4.5e-10   1   1.2   1.8
+	Iterate                   	     7	    78	    51.6
+
+F3GHG5	PUTATIVE REGULATORY PROTEIN {     68.6      3e-15   1   1.4   0.5
+	Iterate                   	    60	   135	    67.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A4V7Q7.1	AF-A4V7Q7-F1-model_v4_TED01:7-80	1	AF-A4V7Q7-F1-model_v4_TED01	7-80	97.3%
+F3GHG5.1	AF-F3GHG5-F1-model_v4_TED01:34-153	1	AF-F3GHG5-F1-model_v4_TED01	34-153	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q8VMM5_TED01/Iterate
+GA   27.00 27.00;
+TC   29.60 146.40;
+NC   25.20 18.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

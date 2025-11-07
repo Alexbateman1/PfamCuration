@@ -1,0 +1,96 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+Total of 0 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A3S1AB10	UNCHARACTERIZED PROTEIN {     43.0    1.9e-07  10   9.3   6.6
+	Q05044_TED03              	    83	   114	     4.8
+	Q05044_TED03              	   167	   189	     4.2
+	Q05044_TED03              	    99	   120	     4.1
+	Q05044_TED03              	   150	   171	     4.1
+	Q05044_TED03              	    48	    68	     4.0
+	Q05044_TED03              	    65	    85	     4.0
+	Q05044_TED03              	   134	   154	     3.9
+	Q05044_TED03              	   117	   136	     3.8
+	Q05044_TED03              	   185	   206	     3.6
+	Q05044_TED03              	    19	    52	     2.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q05044 (E-value: 3.8e-49, Score: 170.0)
+Mentioned as: Q05044
+Description: S-layer protein
+Organism: Levilactobacillus brevis
+  SwissProt:  - S-layer protein; Surface layer protein
+PMID: 36752119
+Source: EuropePMC
+Title: Surface layer proteins in species of the family Lactobacillaceae
+Journal: Microbial biotechnology (2023)
+Snippet: aa Cterminal 380501 Teichoic acids Sun et al.( 2013 ) Levilactobacillus brevis ATCC 8287 SlpA Q05044 48.2kDa pI: 9.45 435 aa Nterminal 6090 and 165192 Probable neutral polysaccharides vallJskelinen et al.( 2008 ) Lentilactobacillus buchneri CD034 SlpB AFS00631 58.3kDa pI: 9.87 558 aa Nterminal Lipoteichoic acids
+
+================================================================================
+Protein: Q05044 (E-value: 3.8e-49, Score: 170.0)
+Mentioned as: Q05044
+Description: S-layer protein
+Organism: Levilactobacillus brevis
+  SwissProt:  - S-layer protein; Surface layer protein
+PMID: 12029053
+Source: EuropePMC
+Title: Identification by flagellum display of an epithelial cell- and fibronectin-binding function in the SlpA surface protein of Lactobacillus brevis.
+Journal: Journal of bacteriology (2002)
+
+================================================================================
+Protein: Q05044 (E-value: 3.8e-49, Score: 170.0)
+Mentioned as: SLAP_LEVBR
+Description: S-layer protein
+Organism: Levilactobacillus brevis
+  SwissProt:  - S-layer protein; Surface layer protein
+PMID: 1429463
+Source: SwissProt
+Snippet: FUNCTION: S-layer protein. The S-layer is a paracrystalline mono- layered assembly of proteins which coats the surface of bacteria. {ECO:0000269|PubMed:1429463}._:::_SUBCELLULAR LOCATION: Secreted, cell wall, S-layer {ECO:0000269|PubMed:1429463}. Note=This bacterium is covered by a S- layer with tetragonal symmetry. {ECO:0000305|PubMed:1429463}._:::_PTM: Glycosylated. {ECO:0000250|UniProtKB:A0A1C3S3X5}.
+
+================================================================================
+Protein: G1UE81 (E-value: 8.7e-11, Score: 47.1)
+Mentioned as: G1UE81
+Description: Surface layer protein A
+Organism: Levilactobacillus brevis
+PMID: 36145058
+Source: EuropePMC
+Title: Surface Layer Protein Pattern of <i>Levilactobacillus brevis</i> Strains Investigated by Proteomics
+Journal: Nutrients (2022)
+Snippet: [kDa] pI A4 1 PA6 1 A7 1 M4 1 TS 1 n. of Strains G1UE81 Surface layer protein A SlpA 66.1 48.17 9.54 x x x x x 5 Q8GFE5 Surface layer protein B slpB 92.1 50.92 9.54 x x x x x 5 Q8GFE4
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q05044.1	AF-Q05044-F1-model_v4_TED01:37-135	1	AF-Q05044-F1-model_v4_TED01	37-135	0
+Q05044.1	AF-Q05044-F1-model_v4_TED02:140-236	1	AF-Q05044-F1-model_v4_TED02	140-236	0
+Q05044.1	AF-Q05044-F1-model_v4_TED03:248-323	1	AF-Q05044-F1-model_v4_TED03	248-323	100.0%
+Q05044.1	AF-Q05044-F1-model_v4_TED04:328-452	1	AF-Q05044-F1-model_v4_TED04	328-452	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q05044_TED03
+GA   27.00 27.00;
+TC   31.10 36.70;
+NC   25.20 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

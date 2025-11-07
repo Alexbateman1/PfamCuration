@@ -1,0 +1,409 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   BXWO_WEIOS              Reviewed;        1336 AA.
+AC   A0A069CUU9;
+DE   RecName: Full=Putative botulinum-like toxin Wo {ECO:0000303|PubMed:27443638};
+DE            Short=BoNT/Wo {ECO:0000303|PubMed:27443638};
+DE            EC=3.4.24.69 {ECO:0000269|PubMed:27443638};
+GN   ORFNames=WOSG25_110680;
+OS   Weissella oryzae (strain DSM 25784 / JCM 18191 / LMG 30913 / SG25).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Lactobacillaceae;
+OC   Weissella.
+OX   NCBI_TaxID=1329250;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DSM 25784 / JCM 18191 / LMG 30913 / SG25;
+RX   PubMed=25013139; DOI=10.1128/genomea.00667-14;
+RA   Tanizawa Y., Fujisawa T., Mochizuki T., Kaminuma E., Suzuki Y.,
+RA   Nakamura Y., Tohno M.;
+RT   "Draft genome sequence of Weissella oryzae SG25T, isolated from fermented
+RT   rice grains.";
+RL   Genome Announc. 2:0-0(2014).
+RN   [2]
+RP   DISCUSSION OF SEQUENCE.
+RX   PubMed=25541486; DOI=10.1016/j.febslet.2014.12.018;
+RA   Mansfield M.J., Adams J.B., Doxey A.C.;
+RT   "Botulinum neurotoxin homologs in non-Clostridium species.";
+RL   FEBS Lett. 589:342-348(2015).
+RN   [3]
+RP   FUNCTION, CATALYTIC ACTIVITY, AND ACTIVITY REGULATION.
+RX   PubMed=27443638; DOI=10.1038/srep30257;
+RA   Zornetta I., Azarnia Tehran D., Arrigoni G., Anniballi F., Bano L.,
+RA   Leka O., Zanotti G., Binz T., Montecucco C.;
+RT   "The first non Clostridial botulinum-like toxin cleaves VAMP within the
+RT   juxtamembrane domain.";
+RL   Sci. Rep. 6:30257-30257(2016).
+CC   -!- FUNCTION: When overexpressed the N-terminus (residues 1-476) cleaves
+CC       rat synaptobrevin-2/VAMP2 between '89-Trp-|-Trp-90' in vitro. This
+CC       releases the cytoplasmic domain of VAMP2 from the synaptic vesicle
+CC       membrane, which would prevent the assembly of the trans-SNARE complex
+CC       on the membrane and thus prevent vesicle-target membrane fusion and
+CC       neurotransmitter release (PubMed:27443638).
+CC       {ECO:0000269|PubMed:27443638}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=Limited hydrolysis of proteins of the neuroexocytosis
+CC         apparatus, synaptobrevins, SNAP25 or syntaxin. No detected action on
+CC         small molecule substrates.; EC=3.4.24.69;
+CC         Evidence={ECO:0000269|PubMed:27443638};
+CC   -!- COFACTOR:
+CC       Name=Zn(2+); Xref=ChEBI:CHEBI:29105;
+CC         Evidence={ECO:0000250|UniProtKB:P0DPI0, ECO:0000305|PubMed:27443638};
+CC   -!- ACTIVITY REGULATION: Inhibited by EDTA and 1,10-phenanthroline
+CC       (PubMed:27443638). {ECO:0000269|PubMed:27443638}.
+CC   -!- MISCELLANEOUS: There are seven antigenically distinct forms of
+CC       botulinum neurotoxin: Types A, B, C, D, E, F, and G, but serologically
+CC       this does not belong to any of them. {ECO:0000269|PubMed:27443638}.
+CC   -!- SIMILARITY: Belongs to the peptidase M27 family. {ECO:0000305}.
+CC   -!- CAUTION: This bacteria is missing genes associated with the botulinum
+CC       neurotoxin cluster in Clostridia (botR, hemagglutinin genes and ORF-X
+CC       proteins), so it is not clear if it is actually a toxin. The in situ
+CC       target might not be animal as this bacteria was isolated from fermented
+CC       rice grains. {ECO:0000303|PubMed:25541486}.
+DR   EMBL; DF820494; GAK31590.1; -; Genomic_DNA.
+DR   RefSeq; WP_027699549.1; NZ_DF820494.1.
+DR   PDB; 6RIM; X-ray; 1.60 A; A/B/C/D/E/F/G/H=2-476.
+DR   PDB; 8C8G; EM; 2.98 A; A=1-1336.
+DR   PDBsum; 6RIM; -.
+DR   PDBsum; 8C8G; -.
+DR   AlphaFoldDB; A0A069CUU9; -.
+DR   EMDB; EMD-16475; -.
+DR   SMR; A0A069CUU9; -.
+DR   STRING; 1329250.WOSG25_110680; -.
+DR   Proteomes; UP000030643; Unassembled WGS sequence.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004222; F:metalloendopeptidase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0006508; P:proteolysis; IEA:UniProtKB-KW.
+DR   Gene3D; 2.60.120.200; -; 1.
+DR   Gene3D; 2.80.10.50; -; 1.
+DR   Gene3D; 3.90.1240.10; Metalloproteases ('zincins'), catalytic domain like; 1.
+DR   InterPro; IPR013320; ConA-like_dom_sf.
+DR   InterPro; IPR011065; Kunitz_inhibitor_STI-like_sf.
+DR   SUPFAM; SSF49899; Concanavalin A-like lectins/glucanases; 1.
+DR   SUPFAM; SSF55486; Metalloproteases ('zincins'), catalytic domain; 1.
+DR   SUPFAM; SSF50386; STI-like; 1.
+DR   PROSITE; PS00142; ZINC_PROTEASE; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Hydrolase; Metal-binding; Metalloprotease; Protease;
+KW   Reference proteome; Zinc.
+FT   CHAIN           1..1336
+FT                   /note="Putative botulinum-like toxin Wo"
+FT                   /id="PRO_0000444914"
+FT   REGION          1..476
+FT                   /note="Has protease activity"
+FT                   /evidence="ECO:0000269|PubMed:27443638"
+FT   ACT_SITE        251
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU10095"
+FT   BINDING         250
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_note="catalytic"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU10095"
+FT   BINDING         254
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_note="catalytic"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU10095"
+FT   BINDING         296
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_note="catalytic"
+FT                   /evidence="ECO:0000250|UniProtKB:P0DPI0"
+FT   STRAND          11..13
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   TURN            21..23
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           26..28
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          31..41
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          47..60
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          63..65
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          81..87
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   TURN            91..93
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          97..99
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           101..125
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           127..138
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   TURN            158..160
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          161..167
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   TURN            169..171
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          174..182
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          184..188
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          200..204
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          219..222
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          227..232
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          239..241
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           244..259
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           274..276
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          277..282
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          284..286
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          288..293
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           294..300
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           302..304
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           309..325
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           332..334
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           339..348
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   TURN            349..352
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           357..367
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          370..372
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   TURN            373..376
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          377..379
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           382..391
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           397..404
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           411..413
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          423..425
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          431..434
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   TURN            438..440
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          441..443
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   HELIX           447..449
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          450..452
+FT                   /evidence="ECO:0007829|PDB:6RIM"
+FT   STRAND          456..458
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          462..467
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          474..479
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           480..482
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          526..528
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          530..532
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          543..545
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          549..551
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          559..564
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           567..573
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          588..590
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           592..595
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          598..600
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   TURN            608..610
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           611..614
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           623..638
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   TURN            639..641
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          649..651
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           660..665
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           672..675
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   TURN            676..679
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          692..695
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           717..749
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           751..780
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   TURN            787..789
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           790..800
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           801..803
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           804..829
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           831..860
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           865..878
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          879..881
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           884..904
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          916..919
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          928..930
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          934..939
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          941..944
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   TURN            946..948
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          955..962
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          966..968
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          972..977
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          987..989
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          992..999
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1010..1017
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1019..1021
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1023..1031
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1033..1045
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1057..1067
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1072..1076
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1079..1084
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1089..1091
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1097..1102
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1104..1106
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1108..1118
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           1122..1132
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1140..1144
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1151..1154
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1156..1158
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1166..1171
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1198..1202
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1219..1226
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1229..1235
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1237..1241
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1243..1249
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1251..1253
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1259..1261
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1273..1275
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1277..1279
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   HELIX           1286..1289
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1295..1297
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   TURN            1301..1304
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1305..1308
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   TURN            1313..1316
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+FT   STRAND          1325..1329
+FT                   /evidence="ECO:0007829|PDB:8C8G"
+SQ   SEQUENCE   1336 AA;  153025 MW;  173CAE78C0DD2205 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Weissella
+1	5	Lactobacillaceae
+1	4	Lactobacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A069CUU9	PUTATIVE BOTULINUM-LIKE TOXIN W    212.4    3.7e-60   1   3.1   5.7
+	A0A069CUU9_TED02          	   302	   396	   212.4
+	PF26320	Peptidase_M27_Wo	     2	   270	     639
+	PF26319	Toxin_trans_Wo  	   571	   887	   743.8
+	PF26321	ConA_like_dom_Wo	   914	  1112	   457.3
+	PF26322	Beta_trefoil_Wo 	  1150	  1330	   417.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A069CUU9.1	AF-A0A069CUU9-F1-model_v4_TED01:2-75_83-149_157-270_419-462	1	AF-A0A069CUU9-F1-model_v4_TED01	2-462	100.0%
+A0A069CUU9.1	AF-A0A069CUU9-F1-model_v4_TED02:302-396	1	AF-A0A069CUU9-F1-model_v4_TED02	302-396	100.0%
+A0A069CUU9.1	AF-A0A069CUU9-F1-model_v4_TED03:571-887	1	AF-A0A069CUU9-F1-model_v4_TED03	571-887	0
+A0A069CUU9.1	AF-A0A069CUU9-F1-model_v4_TED04:914-1112	1	AF-A0A069CUU9-F1-model_v4_TED04	914-1112	0
+A0A069CUU9.1	AF-A0A069CUU9-F1-model_v4_TED05:1150-1330	1	AF-A0A069CUU9-F1-model_v4_TED05	1150-1330	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A069CUU9_TED02
+GA   27.00 27.00;
+TC   29.80 212.40;
+NC   23.60 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 6rim
+RN   [1]
+RM   31111466
+RT   Crystal structure of the catalytic domain of the Weissella oryzae
+RT   botulinum-like  toxin.
+RA   Kosenina S, Masuyer G, Zhang S, Dong M, Stenmark P;
+RL   FEBS Lett. 2019;593:1403-1410.
+RC   Paper describing PDB structure 8c8g
+RN   [2]
+RM   37746829
+RT   The cryo-EM structure of the BoNT/Wo-NTNH complex reveals two
+RT   immunoglobulin-like  domains.
+RA   Kosenina S, Skerlova J, Zhang S, Dong M, Stenmark P;
+RL   FEBS J. 2024;291:676-689.
+
+--- End of Current DESC file ---

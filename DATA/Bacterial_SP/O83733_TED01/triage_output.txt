@@ -1,0 +1,139 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y752_TREPA              Reviewed;         380 AA.
+AC   O83733;
+DE   RecName: Full=Uncharacterized protein TP_0752;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=TP_0752;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65729.1; -; Genomic_DNA.
+DR   PIR; C71284; C71284.
+DR   AlphaFoldDB; O83733; -.
+DR   SMR; O83733; -.
+DR   IntAct; O83733; 8.
+DR   STRING; 243276.TP_0752; -.
+DR   EnsemblBacteria; AAC65729; AAC65729; TP_0752.
+DR   KEGG; tpa:TP_0752; -.
+DR   KEGG; tpw:TPANIC_0752; -.
+DR   eggNOG; ENOG5032KME; Bacteria.
+DR   HOGENOM; CLU_747921_0_0_12; -.
+DR   OrthoDB; 359451at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0042834; F:peptidoglycan binding; IEA:InterPro.
+DR   InterPro; IPR007730; SPOR-like_dom.
+DR   PROSITE; PS51724; SPOR; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..28
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           29..380
+FT                   /note="Uncharacterized protein TP_0752"
+FT                   /id="PRO_0000014258"
+FT   DOMAIN          307..380
+FT                   /note="SPOR"
+SQ   SEQUENCE   380 AA;  43043 MW;  D585DF63F0AC6BB7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Treponema.
+4	5	Treponemataceae
+4	4	Spirochaetales
+4	3	Spirochaetia
+4	2	Spirochaetota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7H0G2	SPORULATION AND CELL DIVI     68.9    2.5e-15   1   1.4   0.1
+	O83733_TED01              	    15	   129	    67.9
+	PF27498	TP_0752_M       	   147	   235	   114.1
+	PF05036	SPOR            	   271	   339	    27.7
+
+A0A8S3XRE2	(APOLLO) HYPOTHETICAL PRO     44.5    9.1e-08   5   6.0   4.5
+	O83733_TED01              	    96	   173	     8.4
+	O83733_TED01              	   300	   372	     8.2
+	O83733_TED01              	    25	    94	     7.8
+	O83733_TED01              	   162	   237	     7.4
+	O83733_TED01              	   243	   307	     7.4
+
+A0A8S3XUC7	(APOLLO) HYPOTHETICAL PRO     37.0      2e-05   4   4.5   0.5
+	O83733_TED01              	   153	   203	    10.3
+	O83733_TED01              	    75	   134	     9.3
+	O83733_TED01              	   291	   340	     6.0
+	O83733_TED01              	   222	   271	     5.7
+
+O83733	UNCHARACTERIZED PROTEIN TP_0752    255.9    2.6e-73   1   2.5  11.6
+	O83733_TED01              	    22	   138	   255.9
+	PF27498	TP_0752_M       	   156	   244	   101.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS5652261 (E-value: 2.3e-75, Score: 255.9)
+Mentioned as: TPASS_0752
+Description: hypothetical protein
+Organism: Treponema pallidum subsp. pallidum SS14
+PMID: 29758067
+Source: EuropePMC
+Title: Correction: Identification of Functional Candidates amongst Hypothetical Proteins of Treponema pallidum ssp. pallidum
+Journal: PloS one (2018)
+Snippet: adenylyltransferase 145. HP TPASS_0750 6333824 B2S3Y9 von Willebrand factor, type A(adhesive plasma glycoprotein) 146. HP TPASS_0752 6333218 B2S3Z1 Sporulation and Cell division repeat protein 147. HP TPASS_0764 6333596 B2S403 Metal dependent phosphohydrolases with conserved 'HD' motif 148. HP TPASS_0771 6333854 B2S410 Sodium-dependent phosphate transport protein 149.
+
+================================================================================
+Protein: VIMSS5652261 (E-value: 2.3e-75, Score: 255.9)
+Mentioned as: TPASS_0752
+Description: hypothetical protein
+Organism: Treponema pallidum subsp. pallidum SS14
+PMID: 25894582
+Source: EuropePMC
+Title: Identification of functional candidates amongst hypothetical proteins of Treponema pallidum ssp. pallidum
+Journal: PloS one (2015)
+Snippet: B2S3X9 Metal dependent phosphohydrolases with conserved 'HD' moti HP TPASS_0750 6333824 B2S3Y0 nicotinate-nucleotide adenylyltransferase HP TPASS_0752 6333218 B2S3Y9 von Willebrand factor, type A(adhesive plasma glycoprotein) HP TPASS_0764 6333596 B2S3Z1 Sporulation and Cell division repeat protein HP TPASS_0771 6333854 B2S403 Metal dependent phosphohydrolases with conserved 'HD' motif
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83733.1	AF-O83733-F1-model_v4_TED01:22-138	1	AF-O83733-F1-model_v4_TED01	22-138	100.0%
+O83733.1	AF-O83733-F1-model_v4_TED02:156-244	1	AF-O83733-F1-model_v4_TED02	156-244	0
+O83733.1	AF-O83733-F1-model_v4_TED03:313-378	1	AF-O83733-F1-model_v4_TED03	313-378	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83733_TED01
+GA   27.00 27.00;
+TC   27.40 27.40;
+NC   25.50 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

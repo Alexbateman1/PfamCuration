@@ -1,0 +1,234 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MCDB_GLOK1              Reviewed;         150 AA.
+AC   U5QDB5;
+DE   RecName: Full=Maintenance of carboxysome distribution protein B {ECO:0000303|PubMed:30520729};
+DE            Short=McdB {ECO:0000303|PubMed:30520729};
+GN   Name=mcdB {ECO:0000303|PubMed:30520729};
+GN   ORFNames=GKIL_0671 {ECO:0000312|EMBL:AGY56917.1};
+OS   Gloeobacter kilaueensis (strain ATCC BAA-2537 / CCAP 1431/1 / ULC 316 /
+OS   JS1).
+OC   Bacteria; Bacillati; Cyanobacteriota; Cyanophyceae; Gloeobacterales;
+OC   Gloeobacteraceae; Gloeobacter.
+OX   NCBI_TaxID=1183438;
+RN   [1] {ECO:0000312|EMBL:AGY56917.1}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-2537 / CCAP 1431/1 / ULC 316 / JS1;
+RX   PubMed=24194836; DOI=10.1371/journal.pone.0076376;
+RA   Saw J.H., Schatz M., Brown M.V., Kunkel D.D., Foster J.S., Shick H.,
+RA   Christensen S., Hou S., Wan X., Donachie S.P.;
+RT   "Cultivation and Complete Genome Sequencing of Gloeobacter kilaueensis sp.
+RT   nov., from a Lava Cave in Kilauea Caldera, Hawai'i.";
+RL   PLoS ONE 8:E76376-E76376(2013).
+RN   [2]
+RP   FUNCTION, AND SUBCELLULAR LOCATION.
+RC   STRAIN=ATCC BAA-2537 / CCAP 1431/1 / ULC 316 / JS1;
+RX   PubMed=30520729; DOI=10.7554/elife.39723;
+RA   MacCready J.S., Hakim P., Young E.J., Hu L., Liu J., Osteryoung K.W.,
+RA   Vecchiarelli A.G., Ducat D.C.;
+RT   "Protein gradients on the nucleoid position the carbon-fixing organelles of
+RT   cyanobacteria.";
+RL   Elife 7:0-0(2018).
+RN   [3]
+RP   CLASSIFICATION, AND UNDERGOES LIQUID-LIQUID PHASE SEPARATION.
+RC   STRAIN=ATCC BAA-2537 / CCAP 1431/1 / ULC 316 / JS1;
+RX   PubMed=31899489; DOI=10.1093/molbev/msz308;
+RA   MacCready J.S., Basalla J.L., Vecchiarelli A.G.;
+RT   "Origin and Evolution of Carboxysome Positioning Systems in
+RT   Cyanobacteria.";
+RL   Mol. Biol. Evol. 37:1434-1451(2020).
+CC   -!- FUNCTION: McdA and McdB together mediate carboxysome (Cb) spacing,
+CC       size, ultrastructure and probably inheritance in the cell, together
+CC       they prevent Cb aggregation in the cell. McdA is an ATPase that forms
+CC       dynamic gradients on the nucleoid in response to adapter protein McdB,
+CC       which associates with carboxysomes. The interplay between McdA
+CC       gradients on the nucleoid and McdB-bound carboxysomes result in the
+CC       equal spacing of Cbs along the cell length. Stimulates the ATPase
+CC       activity of McdA, causing McdA to be released from DNA (By similarity).
+CC       Restores carboxysome position in S.elongatus PCC 7942 deleted for
+CC       endogenous mcdB (PubMed:30520729). Undergoes liquid-liquid phase
+CC       separation at pH 7.0 (PubMed:30520729, PubMed:31899489).
+CC       {ECO:0000250|UniProtKB:Q8GJM6, ECO:0000269|PubMed:30520729}.
+CC   -!- FUNCTION: Incorrect positioning (aggregation) of carboxysomes results
+CC       in reduced CO(2) fixation by encapsulated ribulose-1,5-bisphosphate
+CC       carboxylase (RuBisCO, cbbL/cbbS), which leads to slower growth.
+CC       {ECO:0000250|UniProtKB:Q8GJM6}.
+CC   -!- SUBUNIT: Homohexamerizes, interacts with McdA:DNA, interacts with shell
+CC       components of the carboxysome. {ECO:0000250|UniProtKB:Q8GJM6}.
+CC   -!- SUBCELLULAR LOCATION: Carboxysome {ECO:0000305|PubMed:30520729}.
+CC       Note=This cyanobacterium makes beta-type carboxysomes.
+CC       {ECO:0000305|PubMed:30520729}.
+CC   -!- MISCELLANEOUS: A type 2 McdB protein. {ECO:0000303|PubMed:31899489}.
+DR   EMBL; CP003587; AGY56917.1; -; Genomic_DNA.
+DR   RefSeq; WP_023171958.1; NC_022600.1.
+DR   AlphaFoldDB; U5QDB5; -.
+DR   SMR; U5QDB5; -.
+DR   KEGG; glj:GKIL_0671; -.
+DR   HOGENOM; CLU_1737956_0_0_3; -.
+DR   Proteomes; UP000017396; Chromosome.
+DR   GO; GO:0031470; C:carboxysome; IEA:UniProtKB-SubCell.
+DR   GO; GO:0015977; P:carbon fixation; IEA:UniProtKB-KW.
+PE   3: Inferred from homology;
+KW   Bacterial microcompartment; Carbon dioxide fixation; Carboxysome;
+KW   Reference proteome.
+FT   CHAIN           1..150
+FT                   /note="Maintenance of carboxysome distribution protein B"
+FT                   /id="PRO_0000459779"
+FT   REGION          1..38
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          101..150
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1..14
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        115..124
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        140..150
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   150 AA;  16613 MW;  2556B3BB5829CA11 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	7	Planktothrix.
+4	6	Nostoc.
+3	6	Microcoleaceae
+2	6	Gloeobacter.
+5	5	Nostocaceae
+3	5	Oscillatoriales
+2	5	Gloeobacteraceae
+7	4	Nostocales
+3	4	Oscillatoriophycideae
+2	4	Gloeobacterales
+12	3	Cyanophyceae
+12	2	Cyanobacteriota
+12	1	Bacillati
+12	0	Bacteria
+Total of 12 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1J1LGP6	UNCHARACTERIZED PROTEIN {     39.2      3e-06   1   2.2   9.0
+	U5QDB5                    	     2	   182	    34.6
+
+A0A1Z4QMR4	CHROMOSOME PARTITION PROT     35.3    4.8e-05   1   2.9  11.1
+	U5QDB5                    	     1	   177	    29.8
+
+A0A2K8STG4	LATENT NUCLEAR ANTIGEN {E     30.9     0.0011   1   2.4  11.2
+	U5QDB5                    	     1	   170	    28.2
+
+A0A2R5FV76	UNCHARACTERIZED PROTEIN {     30.7     0.0013   1   2.4   9.6
+	U5QDB5                    	    32	   191	    30.7
+
+A0A5P8W567	UNCHARACTERIZED PROTEIN {     31.1    0.00093   1   2.1   8.3
+	U5QDB5                    	    35	   192	    31.1
+
+A0A8J7AD07	UNCHARACTERIZED PROTEIN {     32.2    0.00042   1   2.5  15.9
+	U5QDB5                    	     1	   174	    28.6
+
+A0A8J7JYQ4	UNCHARACTERIZED PROTEIN {     29.3     0.0032   1   2.5   8.5
+	U5QDB5                    	    95	   210	    29.3
+
+A0A926P8X6	UNCHARACTERIZED PROTEIN {     30.1     0.0019   1   3.0  15.6
+	U5QDB5                    	    85	   217	    29.8
+
+A0A926ST12	UNCHARACTERIZED PROTEIN {     29.8     0.0023   1   2.7  14.1
+	U5QDB5                    	    28	   165	    26.1
+
+A0A926XH01	CHROMOSOME PARTITION PROT     30.2     0.0017   1   3.4  20.9
+	U5QDB5                    	   113	   200	    27.9
+
+A0A929AQ09	CHROMOSOME PARTITION PROT     31.3    0.00083   2   3.1  21.6
+	U5QDB5                    	    45	   204	    24.7
+	U5QDB5                    	     1	    83	     6.0
+
+A0AAE3GUL2	CHROMOSOME PARTITION PROT     33.5    0.00017   2   3.1  15.5
+	U5QDB5                    	    42	   198	    20.7
+	U5QDB5                    	     1	    28	     7.5
+
+B2IUH3	UNCHARACTERIZED PROTEIN {ECO:     30.6     0.0013   1   2.2  10.7
+	U5QDB5                    	     1	   186	    28.9
+
+K7WNM2	UNCHARACTERIZED PROTEIN {ECO:     34.1    0.00011   1   1.7   2.2
+	U5QDB5                    	    46	   168	    34.1
+
+K9PHR2	UNCHARACTERIZED PROTEIN {ECO:     32.2    0.00041   2   2.5  18.3
+	U5QDB5                    	     1	   151	    24.4
+	U5QDB5                    	   138	   224	    12.2
+
+K9QVR9	UNCHARACTERIZED PROTEIN {ECO:     30.7     0.0012   1   1.8  10.4
+	U5QDB5                    	     1	   175	    29.4
+
+K9WSI7	UNCHARACTERIZED PROTEIN {ECO:     37.8      8e-06   1   2.1  10.4
+	U5QDB5                    	    28	   182	    37.0
+
+Q7NHS1	GLR2464 PROTEIN {ECO:0000313|     41.6    5.4e-07   1   2.3  19.4
+	U5QDB5                    	     1	   182	    31.3
+
+U5QDB5	MAINTENANCE OF CARBOXYSOME DIST    335.2    1.8e-97   1   1.0  10.9
+	U5QDB5                    	     1	   150	   335.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS524564 (E-value: 4.8e-09, Score: 41.6)
+Mentioned as: glr2464
+Description: hypothetical protein
+Organism: Gloeobacter violaceus PCC 7421
+PMID: 31899489
+Source: EuropePMC
+Title: Origin and Evolution of Carboxysome Positioning Systems in Cyanobacteria
+Journal: Molecular biology and evolution (2020)
+Snippet: PCC 7942 (Synpcc7942_1834), Synechococcus elongatus UTEX 3055 (Unannotated), Gloeobacter kilaueensis JS1 (GKIL_0671), Gloeobacter violaceus 7421 (glr2464), Synechocystis sp. PCC 6803 (MYO_127130), Pleurocapsa sp. PCC 7327 (Ple7327_2493), Leptolyngbya sp. KIOST-1 (WP_035984653), and Calothrix sp. 336/3 (Unannotated). Two Distinct McdAB Systems Exist in -Cyanobacteria While conducting this bioinformatic
+
+================================================================================
+Protein: VIMSS98667 (E-value: 0.00051, Score: 25.3)
+Mentioned as: CC1850
+Description: GGDEF family protein
+Organism: Caulobacter crescentus CB15
+PMID: 24039597
+Source: EuropePMC
+Title: Bi-modal distribution of the second messenger c-di-GMP controls cell fate and asymmetry during the caulobacter cell cycle
+Journal: PLoS genetics (2013)
+Snippet: PleD activates some nearby downstream effectors involved in pole remodeling [14] , [19] . DgcB (CC1850) is an additional DGC involved in C. crescentus holdfast biogenesis and surface attachment during the swarmer-to-stalked cell transition. In contrast to PleD, DgcB is not controlled by cell cycle-dependent phosphorylation,
+
+================================================================================
+Protein: VIMSS98667 (E-value: 0.00051, Score: 25.3)
+Mentioned as: CC1850
+Description: GGDEF family protein
+Organism: Caulobacter crescentus CB15
+PMID: 21855795
+Source: EuropePMC
+Title: Regulatory cohesion of cell cycle and cell differentiation through interlinked phosphorylation and second messenger networks
+Journal: Molecular cell (2011)
+Snippet: PdeA, we isolated motile suppressors of the pdeA mutant. One suppressor allele mapped to gene CC1850 , which codes for a protein with an N-terminal coiled coil and a C-terminal GGDEF domain. Biochemical studies demonstrated that CC1850 exhibits Mg 2+ -dependent and Ca 2+ -sensitive diguanylate
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:U5QDB5
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

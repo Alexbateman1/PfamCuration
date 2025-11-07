@@ -1,0 +1,102 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y780_AQUAE              Reviewed;         170 AA.
+AC   O66975;
+DE   RecName: Full=Uncharacterized protein aq_780;
+GN   OrderedLocusNames=aq_780;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC06938.1; -; Genomic_DNA.
+DR   PIR; D70368; D70368.
+DR   RefSeq; NP_213536.1; NC_000918.1.
+DR   RefSeq; WP_010880474.1; NC_000918.1.
+DR   AlphaFoldDB; O66975; -.
+DR   SMR; O66975; -.
+DR   STRING; 224324.aq_780; -.
+DR   EnsemblBacteria; AAC06938; AAC06938; aq_780.
+DR   KEGG; aae:aq_780; -.
+DR   HOGENOM; CLU_125404_0_0_0; -.
+DR   InParanoid; O66975; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..170
+FT                   /note="Uncharacterized protein aq_780"
+FT                   /id="PRO_0000186881"
+SQ   SEQUENCE   170 AA;  19539 MW;  90DFAA4777D054DA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Thermocrinis
+1	6	Hydrogenobacter
+1	6	Hydrogenivirga
+1	6	Aquifex
+5	5	Aquificaceae
+5	4	Aquificales
+5	3	Aquificia
+5	2	Aquificota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A497XLP7	LIPOPROTEIN {ECO:0008006|    194.0    5.7e-54   1   1.0   1.0
+	Iterate                   	    25	   187	   193.8
+
+A8UWW3	LIPOPROTEIN {ECO:0008006|GOOG    239.8    4.7e-68   1   1.0   0.5
+	Iterate                   	    24	   186	   239.6
+
+D3DG70	LIPOPROTEIN {ECO:0008006|GOOG    255.9    5.2e-73   1   1.0   0.1
+	Iterate                   	    21	   183	   255.7
+
+D3SMV0	LIPOPROTEIN {ECO:0008006|GOOG    253.1    3.9e-72   1   1.0   0.3
+	Iterate                   	    21	   183	   252.9
+
+O66975	UNCHARACTERIZED PROTEIN AQ_780     202.7    1.2e-56   1   1.0   2.5
+	Iterate                   	    20	   170	   202.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1M6SX21.1	AF-A0A1M6SX21-F1-model_v4_TED01:21-180	1	AF-A0A1M6SX21-F1-model_v4_TED01	21-180	98.2%
+A0A497XLP7.1	AF-A0A497XLP7-F1-model_v4_TED01:24-188	1	AF-A0A497XLP7-F1-model_v4_TED01	24-188	100.0%
+A0A6C1BXG2.1	AF-A0A6C1BXG2-F1-model_v4_TED01:21-177	1	AF-A0A6C1BXG2-F1-model_v4_TED01	21-177	96.9%
+A8UWW3.1	AF-A8UWW3-F1-model_v4_TED01:24-187	1	AF-A8UWW3-F1-model_v4_TED01	24-187	100.0%
+D3DG70.1	AF-D3DG70-F1-model_v4_TED01:23-177	1	AF-D3DG70-F1-model_v4_TED01	23-177	95.1%
+D3SMV0.1	AF-D3SMV0-F1-model_v4_TED01:21-184	1	AF-D3SMV0-F1-model_v4_TED01	21-184	100.0%
+M1R7G8.1	AF-M1R7G8-F1-model_v4_TED01:34-180	1	AF-M1R7G8-F1-model_v4_TED01	34-180	92.9%
+O66975.1	AF-O66975-F1-model_v4_TED01:20-101_143-170	1	AF-O66975-F1-model_v4_TED01	20-170	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66975_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   29.20 154.20;
+NC   22.60 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

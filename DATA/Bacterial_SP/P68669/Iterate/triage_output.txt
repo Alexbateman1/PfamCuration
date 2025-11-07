@@ -1,0 +1,192 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   G9P_BPPHL               Reviewed;          43 AA.
+AC   P68670; Q07482;
+DE   RecName: Full=Tail virion protein G9P;
+DE   AltName: Full=Coat protein C, polypeptide II;
+DE   AltName: Full=G9P;
+GN   Name=IX;
+OS   Xanthomonas phage phiLf (Bacteriophage phi-Lf).
+OC   Viruses; Monodnaviria; Loebvirae; Hofneiviricota; Faserviricetes;
+OC   Tubulavirales; Inoviridae.
+OX   NCBI_TaxID=28365;
+OH   NCBI_TaxID=340; Xanthomonas campestris pv. campestris.
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=8113723; DOI=10.1099/0022-1317-75-1-15;
+RA   Wen F.-S., Tseng Y.-H.;
+RT   "Nucleotide sequence determination, characterization and purification of
+RT   the single-stranded DNA-binding protein and major coat protein of
+RT   filamentous phage phi-Lf of Xanthomonas campestris pv. campestris.";
+RL   J. Gen. Virol. 75:15-22(1994).
+CC   -!- FUNCTION: May initiate with G7P the virion concomitant assembly-budding
+CC       process, by interacting with the packaging signal of the viral genome.
+CC       The assembly-budding takes place at the host inner membrane. In turn,
+CC       G7P and G9P are present at the end of the filamentous virion that
+CC       emerges first from the bacterial host (By similarity). {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Virion {ECO:0000305}. Host membrane
+CC       {ECO:0000305}; Single-pass membrane protein {ECO:0000305}. Note=Prior
+CC       to assembly, is found associated with the bacterial host inner
+CC       membrane. There are about five copies of this protein per mature phage
+CC       that are located on the tail side of the filamentous virion with G7P
+CC       (By similarity). {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the inovirus G9P protein family. {ECO:0000305}.
+DR   EMBL; X70331; CAA49797.1; -; Genomic_DNA.
+DR   PIR; S33483; S33483.
+DR   Proteomes; UP000007611; Genome.
+DR   GO; GO:0033644; C:host cell membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0044423; C:virion component; IEA:UniProtKB-KW.
+PE   3: Inferred from homology;
+KW   Host membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix; Virion.
+FT   CHAIN           1..43
+FT                   /note="Tail virion protein G9P"
+FT                   /id="PRO_0000098228"
+FT   TRANSMEM        12..28
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   43 AA;  4683 MW;  6993EF8AE4FBF6F3 CRC64;
+//
+ID   COAT2_XANCP             Reviewed;          43 AA.
+AC   P68669; Q07482;
+DE   RecName: Full=Phi-Lf prophage-derived putative minor coat protein;
+GN   Name=gVII-1; OrderedLocusNames=XCC2060;
+GN   and
+GN   Name=gVII-2; OrderedLocusNames=XCC2073;
+OS   Xanthomonas campestris pv. campestris (strain ATCC 33913 / DSM 3586 / NCPPB
+OS   528 / LMG 568 / P 25).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Lysobacterales; Lysobacteraceae; Xanthomonas.
+OX   NCBI_TaxID=190485;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 33913 / DSM 3586 / NCPPB 528 / LMG 568 / P 25;
+RX   PubMed=12024217; DOI=10.1038/417459a;
+RA   da Silva A.C.R., Ferro J.A., Reinach F.C., Farah C.S., Furlan L.R.,
+RA   Quaggio R.B., Monteiro-Vitorello C.B., Van Sluys M.A., Almeida N.F. Jr.,
+RA   Alves L.M.C., do Amaral A.M., Bertolini M.C., Camargo L.E.A., Camarotte G.,
+RA   Cannavan F., Cardozo J., Chambergo F., Ciapina L.P., Cicarelli R.M.B.,
+RA   Coutinho L.L., Cursino-Santos J.R., El-Dorry H., Faria J.B.,
+RA   Ferreira A.J.S., Ferreira R.C.C., Ferro M.I.T., Formighieri E.F.,
+RA   Franco M.C., Greggio C.C., Gruber A., Katsuyama A.M., Kishi L.T.,
+RA   Leite R.P., Lemos E.G.M., Lemos M.V.F., Locali E.C., Machado M.A.,
+RA   Madeira A.M.B.N., Martinez-Rossi N.M., Martins E.C., Meidanis J.,
+RA   Menck C.F.M., Miyaki C.Y., Moon D.H., Moreira L.M., Novo M.T.M.,
+RA   Okura V.K., Oliveira M.C., Oliveira V.R., Pereira H.A., Rossi A.,
+RA   Sena J.A.D., Silva C., de Souza R.F., Spinola L.A.F., Takita M.A.,
+RA   Tamura R.E., Teixeira E.C., Tezza R.I.D., Trindade dos Santos M.,
+RA   Truffi D., Tsai S.M., White F.F., Setubal J.C., Kitajima J.P.;
+RT   "Comparison of the genomes of two Xanthomonas pathogens with differing host
+RT   specificities.";
+RL   Nature 417:459-463(2002).
+DR   EMBL; AE008922; AAM41349.1; -; Genomic_DNA.
+DR   EMBL; AE008922; AAM41362.1; -; Genomic_DNA.
+DR   RefSeq; NP_637425.1; NC_003902.1.
+DR   RefSeq; NP_637438.1; NC_003902.1.
+DR   AlphaFoldDB; P68669; -.
+DR   STRING; 190485.XCC2060; -.
+DR   EnsemblBacteria; AAM41349; AAM41349; XCC2060.
+DR   EnsemblBacteria; AAM41362; AAM41362; XCC2073.
+DR   KEGG; xcc:XCC2060; -.
+DR   KEGG; xcc:XCC2073; -.
+DR   HOGENOM; CLU_3241455_0_0_6; -.
+DR   Proteomes; UP000001010; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..43
+FT                   /note="Phi-Lf prophage-derived putative minor coat protein"
+FT                   /id="PRO_0000098229"
+SQ   SEQUENCE   43 AA;  4683 MW;  6993EF8AE4FBF6F3 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	Lophivirus Xv2.
+1	8	Lophivirus Lf2.
+2	7	Lophivirus
+2	6	Inoviridae
+1	6	Xanthomonas.
+1	6	Inoviridae.
+3	5	Tubulavirales
+1	5	Lysobacteraceae
+3	4	Faserviricetes
+1	4	Lysobacterales
+3	3	Hofneiviricota
+1	3	Gammaproteobacteria
+3	2	Loebvirae
+1	2	Pseudomonadota
+3	1	Monodnaviria
+1	1	Pseudomonadati
+3	0	Viruses
+1	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2Z4QH72	MINOR COAT PROTEIN {ECO:0    105.9    4.3e-27   1   1.0  21.9
+	Iterate                   	     1	    43	   105.8
+
+A0A2Z4QI81	MINOR COAT PROTEIN {ECO:0     98.3      1e-24   1   1.0  21.6
+	Iterate                   	     1	    43	    98.2
+
+A0A3P9CCV2	IG-LIKE DOMAIN-CONTAINING     31.6    0.00068   4   6.2   5.9
+	Iterate                   	     5	    38	     6.8
+	Iterate                   	   268	   300	     6.8
+	Iterate                   	   486	   520	     6.2
+	Iterate                   	   175	   212	     5.5
+	PF00047	ig              	     1	    70	    34.7
+	PF07679	I-set           	     1	    73	    33.9
+	PF13895	Ig_2            	     1	    75	    51.9
+	PF13927	Ig_3            	     1	    61	    46.9
+	PF13895	Ig_2            	    81	   162	    56.3
+	PF13927	Ig_3            	    81	   148	    56.4
+	PF07679	I-set           	    82	   162	    33.7
+	PF00047	ig              	    88	   157	      39
+	PF07679	I-set           	   166	   246	    37.9
+	PF13927	Ig_3            	   166	   235	    56.7
+	PF13895	Ig_2            	   169	   249	    61.1
+	PF00047	ig              	   175	   244	    47.3
+	PF13895	Ig_2            	   255	   331	    54.7
+	PF13927	Ig_3            	   255	   321	    56.2
+	PF07679	I-set           	   256	   330	    33.2
+	PF00047	ig              	   262	   329	      36
+	PF13895	Ig_2            	   340	   420	    64.4
+	PF13927	Ig_3            	   341	   407	    61.8
+	PF07679	I-set           	   342	   420	    35.5
+	PF00047	ig              	   347	   416	    41.9
+	PF16681	Ig_5            	   349	   430	    30.8
+	PF13895	Ig_2            	   474	   558	    58.6
+	PF13927	Ig_3            	   475	   544	    52.4
+	PF07679	I-set           	   482	   555	    34.3
+	PF00047	ig              	   487	   553	    44.7
+
+P68669	PHI-LF PROPHAGE-DERIVED PUTATI    108.7    5.8e-28   1   1.0  23.5
+	Iterate                   	     1	    43	   108.6
+
+P68670	TAIL VIRION PROTEIN G9P             108.7    5.8e-28   1   1.0  23.5
+	Iterate                   	     1	    43	   108.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P68669/Iterate
+GA   27.00 27.00;
+TC   27.50 98.20;
+NC   25.90 18.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

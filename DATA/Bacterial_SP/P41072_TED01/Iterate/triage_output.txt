@@ -1,0 +1,62 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	Klebsiella pneumoniae complex.
+1	7	Klebsiella
+3	6	Escherichia.
+1	6	Klebsiella/Raoultella group
+4	5	Enterobacteriaceae
+4	4	Enterobacterales
+4	3	Gammaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2XKU3	TRBG {ECO:0000313|EMBL:AB    151.9    1.6e-41   1   1.1   1.3
+	Iterate                   	    14	    71	   151.7
+
+A0A377YWH3	CONJUGAL TRANSFER PROTEIN    151.9    1.6e-41   1   1.1   1.3
+	Iterate                   	    14	    71	   151.7
+
+A0A444UCD9	UNCHARACTERIZED PROTEIN {     28.9     0.0042   5   8.6  11.0
+	Iterate                   	   196	   234	     6.9
+	Iterate                   	   116	   135	     4.6
+	Iterate                   	   150	   169	     4.5
+	Iterate                   	   236	   255	     4.4
+	Iterate                   	   253	   268	     3.7
+
+B7LI72	CONJUGAL TRANSFER PROTEIN TRB    151.9    1.6e-41   1   1.1   1.3
+	Iterate                   	    14	    71	   151.7
+
+B7UTL2	CONJUGAL TRANSFER PROTEIN TRB    151.9    1.6e-41   1   1.1   1.3
+	Iterate                   	    14	    71	   151.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A377YWH3.1	AF-A0A377YWH3-F1-model_v4_TED01:44-73	1	AF-A0A377YWH3-F1-model_v4_TED01	44-73	48.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P41072_TED01/Iterate
+GA   27.00 27.00;
+TC   28.90 151.70;
+NC   24.30 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

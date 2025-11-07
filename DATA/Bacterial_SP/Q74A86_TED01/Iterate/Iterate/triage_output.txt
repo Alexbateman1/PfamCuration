@@ -1,0 +1,410 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   OMCS_GEOSL              Reviewed;         432 AA.
+AC   Q74A86;
+DE   RecName: Full=C-type cytochrome OmcS {ECO:0000303|PubMed:20400557};
+DE   AltName: Full=Outer membrane cytochrome S {ECO:0000303|PubMed:16332857};
+DE   Flags: Precursor;
+GN   Name=omcS {ECO:0000303|PubMed:16332857};
+GN   OrderedLocusNames=GSU2504 {ECO:0000312|EMBL:AAR35877.1};
+OS   Geobacter sulfurreducens (strain ATCC 51573 / DSM 12127 / PCA).
+OC   Bacteria; Pseudomonadati; Thermodesulfobacteriota; Desulfuromonadia;
+OC   Geobacterales; Geobacteraceae; Geobacter.
+OX   NCBI_TaxID=243231;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51573 / DSM 12127 / PCA;
+RX   PubMed=14671304; DOI=10.1126/science.1088727;
+RA   Methe B.A., Nelson K.E., Eisen J.A., Paulsen I.T., Nelson W.C.,
+RA   Heidelberg J.F., Wu D., Wu M., Ward N.L., Beanan M.J., Dodson R.J.,
+RA   Madupu R., Brinkac L.M., Daugherty S.C., DeBoy R.T., Durkin A.S.,
+RA   Gwinn M.L., Kolonay J.F., Sullivan S.A., Haft D.H., Selengut J.,
+RA   Davidsen T.M., Zafar N., White O., Tran B., Romero C., Forberger H.A.,
+RA   Weidman J.F., Khouri H.M., Feldblyum T.V., Utterback T.R., Van Aken S.E.,
+RA   Lovley D.R., Fraser C.M.;
+RT   "Genome of Geobacter sulfurreducens: metal reduction in subsurface
+RT   environments.";
+RL   Science 302:1967-1969(2003).
+RN   [2]
+RP   FUNCTION, SUBCELLULAR LOCATION, INDUCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=DL1;
+RX   PubMed=16332857; DOI=10.1128/aem.71.12.8634-8641.2005;
+RA   Mehta T., Coppi M.V., Childers S.E., Lovley D.R.;
+RT   "Outer membrane c-type cytochromes required for Fe(III) and Mn(IV) oxide
+RT   reduction in Geobacter sulfurreducens.";
+RL   Appl. Environ. Microbiol. 71:8634-8641(2005).
+RN   [3]
+RP   FUNCTION, AND SUBCELLULAR LOCATION.
+RX   PubMed=20400557; DOI=10.1128/aem.00023-10;
+RA   Leang C., Qian X., Mester T., Lovley D.R.;
+RT   "Alignment of the c-type cytochrome OmcS along pili of Geobacter
+RT   sulfurreducens.";
+RL   Appl. Environ. Microbiol. 76:4080-4084(2010).
+RN   [4]
+RP   FUNCTION, COFACTOR, SUBCELLULAR LOCATION, AND MASS SPECTROMETRY.
+RC   STRAIN=GSU2215;
+RX   PubMed=21236241; DOI=10.1016/j.bbabio.2011.01.003;
+RA   Qian X., Mester T., Morgado L., Arakawa T., Sharma M.L., Inoue K.,
+RA   Joseph C., Salgueiro C.A., Maroney M.J., Lovley D.R.;
+RT   "Biochemical characterization of purified OmcS, a c-type cytochrome
+RT   required for insoluble Fe(III) reduction in Geobacter sulfurreducens.";
+RL   Biochim. Biophys. Acta 1807:404-412(2011).
+RN   [5]
+RP   FUNCTION IN DIET, AND INDUCTION.
+RX   PubMed=23377933; DOI=10.1128/aem.03837-12;
+RA   Shrestha P.M., Rotaru A.E., Summers Z.M., Shrestha M., Liu F., Lovley D.R.;
+RT   "Transcriptomic and genetic analysis of direct interspecies electron
+RT   transfer.";
+RL   Appl. Environ. Microbiol. 79:2397-2404(2013).
+CC   -!- FUNCTION: Plays an important role in extracellular electron transfer.
+CC       Can transfer electrons to insoluble Fe(3+) oxides as well as other
+CC       extracellular electron acceptors, including Mn(4+) oxide and humic
+CC       substances (PubMed:16332857, PubMed:20400557, PubMed:21236241).
+CC       Essential for direct interspecies electron transfer (DIET) in
+CC       cocultures with G.metallireducens (PubMed:23377933).
+CC       {ECO:0000269|PubMed:16332857, ECO:0000269|PubMed:20400557,
+CC       ECO:0000269|PubMed:21236241, ECO:0000269|PubMed:23377933}.
+CC   -!- COFACTOR:
+CC       Name=heme; Xref=ChEBI:CHEBI:30413;
+CC         Evidence={ECO:0000269|PubMed:21236241};
+CC       Note=Binds 6 low-spin heme groups per subunit.
+CC       {ECO:0000269|PubMed:21236241};
+CC   -!- SUBCELLULAR LOCATION: Cell outer membrane {ECO:0000269|PubMed:16332857,
+CC       ECO:0000269|PubMed:20400557, ECO:0000269|PubMed:21236241}. Cell surface
+CC       {ECO:0000269|PubMed:16332857, ECO:0000269|PubMed:20400557,
+CC       ECO:0000269|PubMed:21236241}. Note=Loosely associated with the cell
+CC       surface (PubMed:16332857, PubMed:21236241). Localizes along the pili
+CC       (PubMed:20400557). {ECO:0000269|PubMed:16332857,
+CC       ECO:0000269|PubMed:20400557, ECO:0000269|PubMed:21236241}.
+CC   -!- INDUCTION: Expressed in the presence of insoluble Fe(3+) oxide and
+CC       during growth with fumarate as the sole electron acceptor, but not
+CC       during growth on soluble Fe(3+) citrate (PubMed:16332857). Induced in
+CC       the cocultures with G.metallireducens (PubMed:23377933).
+CC       {ECO:0000269|PubMed:16332857, ECO:0000269|PubMed:23377933}.
+CC   -!- MASS SPECTROMETRY: Mass=47015; Method=Electrospray; Note=With six heme
+CC       groups.; Evidence={ECO:0000269|PubMed:21236241};
+CC   -!- DISRUPTION PHENOTYPE: Deletion of the gene inhibits Fe(3+) oxide
+CC       reduction, but does not impact reduction of fumarate or Fe(3+) citrate.
+CC       Deletion negatively impacts the expression of omcT.
+CC       {ECO:0000269|PubMed:16332857}.
+DR   EMBL; AE017180; AAR35877.1; -; Genomic_DNA.
+DR   RefSeq; NP_953550.1; NC_002939.5.
+DR   RefSeq; WP_010943141.1; NC_002939.5.
+DR   PDB; 6EF8; EM; 3.70 A; A/B/C/D/E/F/G=26-432.
+DR   PDB; 6NEF; EM; 3.42 A; A=26-432.
+DR   PDBsum; 6EF8; -.
+DR   PDBsum; 6NEF; -.
+DR   AlphaFoldDB; Q74A86; -.
+DR   EMDB; EMD-9046; -.
+DR   EMDB; EMD-9357; -.
+DR   SMR; Q74A86; -.
+DR   STRING; 243231.GSU2504; -.
+DR   TCDB; 5.B.3.1.1; the geobacter nanowire electron transfer (g-net) family.
+DR   EnsemblBacteria; AAR35877; AAR35877; GSU2504.
+DR   KEGG; gsu:GSU2504; -.
+DR   PATRIC; fig|243231.5.peg.2531; -.
+DR   eggNOG; ENOG5033TG0; Bacteria.
+DR   HOGENOM; CLU_627971_0_0_7; -.
+DR   InParanoid; Q74A86; -.
+DR   OrthoDB; 9771829at2; -.
+DR   Proteomes; UP000000577; Chromosome.
+DR   GO; GO:0009279; C:cell outer membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0009986; C:cell surface; IEA:UniProtKB-SubCell.
+DR   GO; GO:0009055; F:electron transfer activity; IBA:GO_Central.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009061; P:anaerobic respiration; IBA:GO_Central.
+DR   CDD; cd21555; OmcS-like; 1.
+DR   Gene3D; 1.10.1130.10; Flavocytochrome C3, Chain A; 1.
+DR   InterPro; IPR051174; Cytochrome_c-type_ET.
+DR   InterPro; IPR036280; Multihaem_cyt_sf.
+DR   PANTHER; PTHR30333; CYTOCHROME C-TYPE PROTEIN; 1.
+DR   PANTHER; PTHR30333:SF1; CYTOCHROME C-TYPE PROTEIN NAPC; 1.
+DR   SUPFAM; SSF48695; Multiheme cytochromes; 2.
+PE   1: Evidence at protein level;
+KW   3D-structure; Cell outer membrane; Electron transport; Heme; Iron;
+KW   Membrane; Metal-binding; Reference proteome; Signal; Transport.
+FT   SIGNAL          1..25
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           26..432
+FT                   /note="C-type cytochrome OmcS"
+FT                   /id="PRO_5004284875"
+FT   STRAND          28..30
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           34..36
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          40..42
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          44..47
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          49..53
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          60..67
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   TURN            68..72
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           73..76
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   TURN            93..95
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           111..113
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          122..124
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          154..156
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           165..168
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          179..181
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          183..188
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          196..199
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          207..209
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          211..214
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          248..250
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           260..264
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   TURN            265..267
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          273..275
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   TURN            276..278
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          284..287
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           292..300
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          302..305
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           311..313
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          317..319
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           328..332
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          337..340
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           353..355
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   TURN            365..367
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          368..370
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          373..380
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   STRAND          382..388
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   TURN            395..397
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           402..408
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+FT   HELIX           425..427
+FT                   /evidence="ECO:0007829|PDB:6NEF"
+SQ   SEQUENCE   432 AA;  45389 MW;  7C94037250B9E5E8 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	7	Anaeromyxobacter.
+4	6	Geotalea.
+4	6	Geobacter.
+4	6	Citrifermentans.
+3	6	Anaeromyxobacteraceae
+2	6	Geomonas.
+3	5	Cystobacterineae
+14	5	Geobacteraceae
+3	4	Myxococcales
+14	4	Geobacterales
+3	3	Myxococcia
+14	3	Desulfuromonadia
+3	2	Myxococcota
+14	2	Thermodesulfobacteriota
+18	1	Pseudomonadati
+18	0	Bacteria
+Total of 18 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A212PJS0	DOUBLED CXXCH DOMAIN-CONT     83.1    6.2e-20   1   1.8   1.0
+	Iterate                   	   386	   433	    81.8
+
+A0A2U3QGJ1	CYTOCHROME C (OMCT) {ECO:     91.6    1.4e-22   1   1.7   0.7
+	Iterate                   	   402	   450	    90.4
+
+Q74A86	C-TYPE CYTOCHROME OMCS {ECO:000     86.3    6.5e-21   1   1.8   1.2
+	Iterate                   	   380	   427	    84.9
+
+Q74A87	CYTOCHROME C {ECO:0000313|EMB    101.8    8.8e-26   1   1.8   1.1
+	Iterate                   	   377	   425	   100.5
+
+Q74FA8	CYTOCHROME C {ECO:0000313|EMB     98.7    8.3e-25   1   1.6   0.3
+	Iterate                   	   374	   422	    97.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS382812 (E-value: 1e-17, Score: 69.7)
+Mentioned as: GSU2503
+Description: cytochrome c family protein
+Organism: Geobacter sulfurreducens PCA
+PMID: 38770058
+Source: EuropePMC
+Title: Nonelectroactive <i>clostridium</i> obtains extracellular electron transfer-capability after forming chimera with <i>Geobacter</i>
+Journal: ISME communications (2024)
+Snippet: - omcS (GSU2504 deletion), and G.s - omcBEST (quadruple genes of GSU2737, GSU0618, GSU2504, and GSU2503 deletion) [ 41 , 42 ]. C.i was routinely cultured in modified DSMZ medium 135 omitting sodium resazurin, and G.s strains were grown in bicarbonate-based medium containing 20mM acetate as
+
+================================================================================
+Protein: VIMSS382812 (E-value: 1e-17, Score: 69.7)
+Mentioned as: GSU2503
+Description: cytochrome c family protein
+Organism: Geobacter sulfurreducens PCA
+PMID: 37878651
+Source: EuropePMC
+Title: Global transcriptional analysis of Geobacter sulfurreducens gsu1771 mutant biofilm grown on two different support structures
+Journal: PloS one (2023)
+Snippet: family protein -3.11 1.88E-07 GSU1939 Sensor histidine kinase -2.24 2.23E-07 GSU2502 Spermidine synthase -1.96 1.02E-06 GSU2503 Cytochrome c , omcT -5.03 2.81E-28 GSU2815 Sensor histidine kinase -2.49 2.53E-11 GSU3085 Dimetal-binding protein, yqfO -1.53 0.000124 GSU2504 Cytochrome c , omcS -4.99 4.71E-23 GSU0545 Hypothetical protein -1.75 2.31E-05
+
+================================================================================
+Protein: VIMSS382812 (E-value: 1e-17, Score: 69.7)
+Mentioned as: GSU2503
+Description: cytochrome c family protein
+Organism: Geobacter sulfurreducens PCA
+PMID: 33737919
+Source: EuropePMC
+Title: Specialization of the Reiterated Copies of the Heterodimeric Integration Host Factor Genes in <i>Geobacter sulfurreducens</i>
+Journal: Frontiers in microbiology (2021)
+Snippet: cytochromes with transcriptional changes in the ihfA -1 strain compared to wild type were: omcT (GSU2503), omcS (GSU2504), GSU2937, GSU3228, GSU3232, GSU3233 (upregulated), and in the ihfB -2 strain were: ppcB (GSU0364), omcE (GSU0618) (upregulated) and GSU1785, GSU2725, GSU2883, GSU3274 (downregulated). Accordingly, the heme stain of
+
+================================================================================
+Protein: VIMSS7184395 (E-value: 1.2e-16, Score: 66.3)
+Mentioned as: Gbem_1131
+Description: cytochrome c family protein
+Organism: Geobacter bemidjiensis Bem
+PMID: 20828392
+Source: EuropePMC
+Title: The genome of Geobacter bemidjiensis, exemplar for the subsurface clade of Geobacter species that predominate in Fe(III)-reducing subsurface environments
+Journal: BMC genomics (2010)
+Snippet: Gbem_4043, and ppcG Gbem_3455) [ 62 ], five members of the omcS family (Gbem_1116, Gbem_1117, Gbem_1131, Gbem_2679, Gbem_2680) [ 63 ], one member of the omcB family (Gbem_3379) [ 64 ], and two omcF -related genes (Gbem_1585, Gbem_2183) [ 65 ]. There is no homolog of
+
+================================================================================
+Protein: Q74FA8 (E-value: 7.9e-16, Score: 63.7)
+Mentioned as: Q74FA8
+Description: Cytochrome c
+Organism: Geobacter sulfurreducens (strain ATCC 51573 / DSM 12127 / PCA)
+PMID: 31240257
+Source: EuropePMC
+Title: Cryo-EM reveals the structural basis of long-range electron transport in a cytochrome-based bacterial nanowire
+Journal: Communications biology (2019)
+Snippet: to a number of related six-heme c-type cytochromes, including OmcT and OmcJ (uniprot: Q74A87 and Q74FA8, respectively), we focused, among these, upon OmcS, which was known to be abundant in the fiber sample 17 . An atomic model with the OmcS sequence was then fitted to
+
+================================================================================
+Protein: VIMSS382814 (E-value: 4.5e-15, Score: 61.2)
+Mentioned as: GSU2504
+Description: cytochrome c family protein
+Organism: Geobacter sulfurreducens PCA
+PMID: 39818215
+Source: EuropePMC
+Title: A widespread and ancient bacterial machinery assembles cytochrome OmcS nanowires essential for extracellular electron transfer
+Journal: Cell chemical biology (2025)
+
+================================================================================
+Protein: VIMSS382814 (E-value: 4.5e-15, Score: 61.2)
+Mentioned as: GSU2504
+Description: cytochrome c family protein
+Organism: Geobacter sulfurreducens PCA
+PMID: 40464557
+Source: EuropePMC
+Title: Crucial roles of intracellular cyclic di-GMP in impacting the genes important for extracellular electron transfer by &lt;i&gt;Geobacter metallireducens&lt;/i&gt;
+Journal: Applied and environmental microbiology (2025)
+
+================================================================================
+Protein: VIMSS382814 (E-value: 4.5e-15, Score: 61.2)
+Mentioned as: GSU2504
+Description: cytochrome c family protein
+Organism: Geobacter sulfurreducens PCA
+PMID: 38758442
+Source: EuropePMC
+Title: Influence of support materials on the electroactive behavior, structure and gene expression of wild type and GSU1771-deficient mutant of Geobacter sulfurreducens biofilms
+Journal: Environmental science and pollution research international (2025)
+
+================================================================================
+Protein: VIMSS382810 (E-value: 2.9e-11, Score: 49.1)
+Mentioned as: GSU2501
+Description: cytochrome c family protein
+Organism: Geobacter sulfurreducens PCA
+PMID: 35798889
+Source: EuropePMC
+Title: Cryo-EM structure of an extracellular Geobacter OmcE cytochrome filament reveals tetrahaem packing
+Journal: Nature microbiology (2022)
+Snippet: that the bundles presumed to be OmcS might actually be composed of the hexaheme cytochrome GSU2501, which was also detected in the sample by mass spectrometry ( Supp. Fig. 5 ). This will be a question for future studies. Finding homologs or predicting if related organisms
+
+================================================================================
+Protein: VIMSS382810 (E-value: 2.9e-11, Score: 49.1)
+Mentioned as: GSU2501
+Description: cytochrome c family protein
+
+... (truncated - showing first 100 of 118 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A7I9VKZ8.1	AF-A0A7I9VKZ8-F1-model_v4_TED01:26-64	1	AF-A0A7I9VKZ8-F1-model_v4_TED01	26-64	0
+A5GFH4.1	AF-A5GFH4-F1-model_v4_TED01:361-416	1	AF-A5GFH4-F1-model_v4_TED01	361-416	100.0%
+A7HBD7.1	AF-A7HBD7-F1-model_v4_TED01:96-151_383-458	1	AF-A7HBD7-F1-model_v4_TED01	96-458	100.0%
+A7HBD7.1	AF-A7HBD7-F1-model_v4_TED02:193-232_256-379	1	AF-A7HBD7-F1-model_v4_TED02	193-379	0
+B9M454.1	AF-B9M454-F1-model_v4_TED01:25-66	1	AF-B9M454-F1-model_v4_TED01	25-66	0
+Q74A86.1	AF-Q74A86-F1-model_v4_TED01:380-427	1	AF-Q74A86-F1-model_v4_TED01	380-427	100.0%
+Q74FA8.1	AF-Q74FA8-F1-model_v4_TED01:25-66	1	AF-Q74FA8-F1-model_v4_TED01	25-66	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q74A86_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 30.60;
+NC   26.30 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for Q74A86
+RN   [3]
+RM   16332857
+RT   "Outer membrane c-type cytochromes required for Fe(III) and Mn(IV) oxide
+RT   reduction in Geobacter sulfurreducens.";
+RA   Mehta T., Coppi M.V., Childers S.E., Lovley D.R.;
+RL   Appl. Environ. Microbiol. 71:8634-8641(2005).
+RC   Function description for Q74A86
+RN   [4]
+RM   20400557
+RT   "Alignment of the c-type cytochrome OmcS along pili of Geobacter
+RT   sulfurreducens.";
+RA   Leang C., Qian X., Mester T., Lovley D.R.;
+RL   Appl. Environ. Microbiol. 76:4080-4084(2010).
+RC   Function description for Q74A86
+RN   [5]
+RM   21236241
+RT   "Biochemical characterization of purified OmcS, a c-type cytochrome
+RT   required for insoluble Fe(III) reduction in Geobacter sulfurreducens.";
+RA   Qian X., Mester T., Morgado L., Arakawa T., Sharma M.L., Inoue K.,
+RA   Joseph C., Salgueiro C.A., Maroney M.J., Lovley D.R.;
+RL   Biochim. Biophys. Acta 1807:404-412(2011).
+RC   Function description for Q74A86
+RN   [6]
+RM   23377933
+RT   "Transcriptomic and genetic analysis of direct interspecies electron
+RT   transfer.";
+RA   Shrestha P.M., Rotaru A.E., Summers Z.M., Shrestha M., Liu F., Lovley D.R.;
+RL   Appl. Environ. Microbiol. 79:2397-2404(2013).
+
+--- End of Current DESC file ---

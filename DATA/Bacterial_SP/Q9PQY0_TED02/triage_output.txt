@@ -1,0 +1,77 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y164_UREPA              Reviewed;         395 AA.
+AC   Q9PQY0;
+DE   RecName: Full=Uncharacterized protein UU164;
+GN   OrderedLocusNames=UU164;
+OS   Ureaplasma parvum serovar 3 (strain ATCC 700970).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Ureaplasma.
+OX   NCBI_TaxID=273119;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700970;
+RX   PubMed=11048724; DOI=10.1038/35037619;
+RA   Glass J.I., Lefkowitz E.J., Glass J.S., Heiner C.R., Chen E.Y.,
+RA   Cassell G.H.;
+RT   "The complete sequence of the mucosal pathogen Ureaplasma urealyticum.";
+RL   Nature 407:757-762(2000).
+DR   EMBL; AF222894; AAF30570.1; -; Genomic_DNA.
+DR   RefSeq; WP_004025528.1; NC_002162.1.
+DR   AlphaFoldDB; Q9PQY0; -.
+DR   STRING; 273119.UU164; -.
+DR   EnsemblBacteria; AAF30570; AAF30570; UU164.
+DR   KEGG; uur:UU164; -.
+DR   HOGENOM; CLU_698175_0_0_14; -.
+DR   OrthoDB; 9862708at2; -.
+DR   Proteomes; UP000000423; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..395
+FT                   /note="Uncharacterized protein UU164"
+FT                   /id="PRO_0000220821"
+SQ   SEQUENCE   395 AA;  45004 MW;  A3153D06914E4FFA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Ureaplasma
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9PQY0	UNCHARACTERIZED PROTEIN UU164      174.8    1.4e-48   1   1.6   1.4
+	Q9PQY0_TED02              	   120	   192	   173.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9PQY0.1	AF-Q9PQY0-F1-model_v4_TED01:20-82	1	AF-Q9PQY0-F1-model_v4_TED01	20-82	0
+Q9PQY0.1	AF-Q9PQY0-F1-model_v4_TED02:120-192	1	AF-Q9PQY0-F1-model_v4_TED02	120-192	100.0%
+Q9PQY0.1	AF-Q9PQY0-F1-model_v4_TED03:221-265_285-308	1	AF-Q9PQY0-F1-model_v4_TED03	221-308	0
+Q9PQY0.1	AF-Q9PQY0-F1-model_v4_TED04:329-391	1	AF-Q9PQY0-F1-model_v4_TED04	329-391	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9PQY0_TED02
+GA   27.00 27.00;
+TC   27.40 173.80;
+NC   26.80 24.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

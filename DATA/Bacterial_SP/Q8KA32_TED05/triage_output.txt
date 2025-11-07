@@ -1,0 +1,97 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y087_BUCAI              Reviewed;         970 AA.
+AC   P57189;
+DE   RecName: Full=Uncharacterized protein BU087;
+GN   OrderedLocusNames=BU087;
+OS   Buchnera aphidicola subsp. Acyrthosiphon pisum (strain APS) (Acyrthosiphon
+OS   pisum symbiotic bacterium).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Erwiniaceae; Buchnera.
+OX   NCBI_TaxID=107806;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=APS;
+RX   PubMed=10993077; DOI=10.1038/35024074;
+RA   Shigenobu S., Watanabe H., Hattori M., Sakaki Y., Ishikawa H.;
+RT   "Genome sequence of the endocellular bacterial symbiont of aphids Buchnera
+RT   sp. APS.";
+RL   Nature 407:81-86(2000).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SIMILARITY: To E.coli YtfN. {ECO:0000305}.
+DR   EMBL; BA000003; BAB12807.1; -; Genomic_DNA.
+DR   RefSeq; NP_239921.1; NC_002528.1.
+DR   RefSeq; WP_010895939.1; NC_002528.1.
+DR   AlphaFoldDB; P57189; -.
+DR   STRING; 563178.BUAP5A_086; -.
+DR   EnsemblBacteria; BAB12807; BAB12807; BAB12807.
+DR   KEGG; buc:BU087; -.
+DR   PATRIC; fig|107806.10.peg.95; -.
+DR   eggNOG; COG2911; Bacteria.
+DR   HOGENOM; CLU_306047_0_0_6; -.
+DR   BioCyc; BAPH107806:GBZJ-86-MONOMER; -.
+DR   Proteomes; UP000001806; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:TreeGrafter.
+DR   GO; GO:0097347; C:TAM protein secretion complex; IEA:TreeGrafter.
+DR   GO; GO:0009306; P:protein secretion; IEA:TreeGrafter.
+DR   PANTHER; PTHR36985; TRANSLOCATION AND ASSEMBLY MODULE SUBUNIT TAMB; 1.
+DR   PANTHER; PTHR36985:SF1; TRANSLOCATION AND ASSEMBLY MODULE SUBUNIT TAMB; 1.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..970
+FT                   /note="Uncharacterized protein BU087"
+FT                   /id="PRO_0000216246"
+FT   TRANSMEM        12..32
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   970 AA;  114478 MW;  16B7BADB129F422E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Buchnera.
+1	5	Erwiniaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P57189	UNCHARACTERIZED PROTEIN BU087      122.9    3.6e-32   1   8.4  19.8
+	Q8KA32_TED05              	   865	   970	   122.9
+	PF27051	TamB_N          	    17	   420	   172.2
+	PF27051	TamB_N          	   431	   681	   117.4
+	PF27051	TamB_N          	   688	   854	    44.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q8KA32.1	AF-Q8KA32-F1-model_v4_TED01:25-68	1	AF-Q8KA32-F1-model_v4_TED01	25-68	0
+Q8KA32.1	AF-Q8KA32-F1-model_v4_TED02:71-110_129-186_225-319	1	AF-Q8KA32-F1-model_v4_TED02	71-319	0
+Q8KA32.1	AF-Q8KA32-F1-model_v4_TED04:616-675	1	AF-Q8KA32-F1-model_v4_TED04	616-675	0
+Q8KA32.1	AF-Q8KA32-F1-model_v4_TED05:863-968	1	AF-Q8KA32-F1-model_v4_TED05	863-968	100.0%
+Q8KA32.1	AF-Q8KA32-F1-model_v4_TED03:504-609	1	AF-Q8KA32-F1-model_v4_TED03	504-609	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q8KA32_TED05
+GA   27.00 27.00;
+TC   43.20 122.90;
+NC   22.90 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

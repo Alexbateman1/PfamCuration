@@ -1,0 +1,236 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y503_TREPA              Reviewed;         187 AA.
+AC   O83516;
+DE   RecName: Full=Uncharacterized lipoprotein TP_0503;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=TP_0503;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+DR   EMBL; AE000520; AAC65492.1; -; Genomic_DNA.
+DR   PIR; C71317; C71317.
+DR   RefSeq; WP_010881952.1; NC_021490.2.
+DR   AlphaFoldDB; O83516; -.
+DR   IntAct; O83516; 23.
+DR   STRING; 243276.TP_0503; -.
+DR   EnsemblBacteria; AAC65492; AAC65492; TP_0503.
+DR   KEGG; tpa:TP_0503; -.
+DR   KEGG; tpw:TPANIC_0503; -.
+DR   eggNOG; ENOG503450S; Bacteria.
+DR   HOGENOM; CLU_118622_1_0_12; -.
+DR   OrthoDB; 359246at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal.
+FT   SIGNAL          1..17
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           18..187
+FT                   /note="Uncharacterized lipoprotein TP_0503"
+FT                   /id="PRO_0000014252"
+FT   LIPID           18
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           18
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   187 AA;  21410 MW;  C96F2AE1D1C80A64 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+18	6	Treponema.
+9	5	Spirochaetaceae
+19	5	Treponemataceae
+31	4	Spirochaetales
+31	3	Spirochaetia
+31	2	Spirochaetota
+31	1	Pseudomonadati
+31	0	Bacteria
+Total of 31 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GX95	LIPOPROTEIN {ECO:0008006|    163.9    6.8e-45   1   1.1   0.1
+	O83516_TED01              	    64	   191	   163.6
+
+A0A125YGG1	ORF1050 {ECO:0000313|EMBL     54.9    3.6e-11   7   9.1   1.4
+	O83516_TED01              	   163	   212	     6.7
+	O83516_TED01              	   219	   268	     6.4
+	O83516_TED01              	    58	    98	     6.1
+	O83516_TED01              	   265	   304	     6.1
+	O83516_TED01              	   129	   167	     6.0
+	O83516_TED01              	    95	   134	     4.3
+	O83516_TED01              	   299	   335	     3.8
+
+A0A1H9J683	DUF4878 DOMAIN-CONTAINING     51.6    3.8e-10   1   1.1   0.4
+	O83516_TED01              	    81	   205	    51.2
+
+A0A1N6QUP2	LUMAZINE-BINDING {ECO:000     68.5    2.2e-15   1   1.0   0.4
+	O83516_TED01              	     1	   109	    68.4
+
+A0A1T4KQB7	UNCHARACTERIZED PROTEIN {     59.8    1.1e-12   1   1.3   0.2
+	O83516_TED01              	    46	   187	    59.5
+
+A0A1T4M3F6	LIPOPROTEIN {ECO:0008006|     56.9    8.5e-12   1   1.1   0.2
+	O83516_TED01              	    46	   170	    56.6
+
+A0A1W9N6W9	UNCHARACTERIZED PROTEIN {     57.8    4.6e-12   1   1.0   0.1
+	O83516_TED01              	    19	   143	    57.5
+
+A0A1Y1RU73	DUF4878 DOMAIN-CONTAINING     56.0    1.7e-11   1   1.1   0.7
+	O83516_TED01              	    60	   181	    55.6
+
+A0A4R4BME4	DUF4878 DOMAIN-CONTAINING     87.3    3.3e-21   1   1.1   0.3
+	O83516_TED01              	    60	   187	    87.0
+
+A0A5C1QHZ4	DUF4878 DOMAIN-CONTAINING     57.2    6.9e-12   1   1.1   0.1
+	O83516_TED01              	    55	   179	    56.9
+
+A0A5C1QK29	DUF4878 DOMAIN-CONTAINING     61.5    3.4e-13   1   1.2   0.1
+	O83516_TED01              	    64	   189	    61.0
+
+A0A7G9FG29	LIPOPROTEIN {ECO:0008006|     70.0    7.9e-16   1   1.6   0.6
+	O83516_TED01              	    65	   189	    68.9
+
+A0A7T3RFS9	LIPOPROTEIN {ECO:0008006|     65.9    1.5e-14   1   1.1   0.7
+	O83516_TED01              	    58	   183	    65.5
+
+A0A7T7XKQ8	DUF4878 DOMAIN-CONTAINING     73.3    7.3e-17   1   1.1   0.1
+	O83516_TED01              	    63	   190	    73.0
+
+A0A7W8LL86	LIPOPROTEIN {ECO:0008006|     50.0    1.2e-09   1   1.3   0.2
+	O83516_TED01              	    85	   199	    49.4
+
+A0A840S6Z9	LIPOPROTEIN {ECO:0008006|     55.5    2.4e-11   1   1.1   0.1
+	O83516_TED01              	    52	   177	    55.2
+
+A0A841R271	LIPOPROTEIN {ECO:0008006|     53.6    9.4e-11   1   1.2   0.0
+	O83516_TED01              	    59	   186	    53.2
+
+A0A923NY03	LIPOPROTEIN {ECO:0008006|     58.1    3.7e-12   1   1.1   0.2
+	O83516_TED01              	    76	   199	    57.6
+
+A0AAE3EIU6	LIPOPROTEIN {ECO:0008006|    128.5    6.1e-34   1   1.1   0.0
+	O83516_TED01              	    63	   189	   128.2
+
+E1R6J3	LIPOPROTEIN {ECO:0000313|EMBL     92.0    1.2e-22   1   1.2   1.7
+	O83516_TED01              	    73	   197	    91.5
+
+F2NY98	LIPOPROTEIN {ECO:0000313|EMBL     59.7    1.2e-12   1   1.1   0.7
+	O83516_TED01              	    65	   190	    59.3
+
+F4LN76	LIPOPROTEIN {ECO:0000313|EMBL     55.3    2.7e-11   1   1.1   0.1
+	O83516_TED01              	    64	   187	    54.9
+
+F5Y8J8	PUTATIVE LIPOPROTEIN {ECO:000     53.7    8.3e-11   1   2.0   1.1
+	O83516_TED01              	    53	   193	    48.7
+
+F5YR44	PUTATIVE LIPOPROTEIN {ECO:000     77.1    4.8e-18   1   1.1   0.2
+	O83516_TED01              	    61	   191	    76.9
+
+F8F3H8	LIPOPROTEIN {ECO:0008006|GOOG     81.7    1.9e-19   1   1.1   0.1
+	O83516_TED01              	    59	   187	    81.4
+
+G0GEU3	LIPOPROTEIN {ECO:0008006|GOOG     67.6    4.4e-15   1   1.1   0.1
+	O83516_TED01              	    61	   188	    67.3
+
+H7EK45	UNCHARACTERIZED PROTEIN {ECO:     58.6    2.6e-12   1   1.2   0.3
+	O83516_TED01              	    93	   218	    58.2
+
+H7EPE1	LIPOPROTEIN {ECO:0008006|GOOG     58.4    2.9e-12   1   1.1   0.1
+	O83516_TED01              	   117	   242	    58.1
+
+H9UHD3	DUF4440 DOMAIN-CONTAINING PRO     59.6    1.3e-12   1   1.1   0.0
+	O83516_TED01              	    49	   176	    59.4
+
+I0X7D4	DUF4878 DOMAIN-CONTAINING PRO     60.0    9.9e-13   1   1.2   0.3
+	O83516_TED01              	    51	   177	    59.6
+
+O83516	UNCHARACTERIZED LIPOPROTEIN TP_    294.4      3e-85   1   1.2   1.6
+	O83516_TED01              	    59	   184	   293.9
+
+Q73K72	LIPOPROTEIN, PUTATIVE {ECO:00    112.6    5.2e-29   1   1.1   0.1
+	O83516_TED01              	    72	   199	   112.3
+
+S3K1M0	LIPOPROTEIN {ECO:0008006|GOOG     71.4    2.8e-16   1   1.1   0.1
+	O83516_TED01              	    69	   194	    71.1
+
+S3LUB8	LIPOPROTEIN {ECO:0008006|GOOG    152.4    2.6e-41   1   1.1   0.0
+	O83516_TED01              	   102	   227	   152.0
+
+S6A1H5	LIPOPROTEIN {ECO:0000313|EMBL    111.5    1.1e-28   1   1.1   0.1
+	O83516_TED01              	    75	   198	   111.2
+
+V5WGJ2	LIPOPROTEIN, PUTATIVE {ECO:00     78.0    2.7e-18   1   1.1   0.2
+	O83516_TED01              	    67	   190	    77.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS576641 (E-value: 4.6e-31, Score: 112.6)
+Mentioned as: TDE2350
+Description: lipoprotein, putative
+Organism: Treponema denticola ATCC 35405
+PMID: 29038532
+Source: EuropePMC
+Title: The major outer sheath protein forms distinct conformers and multimeric complexes in the outer membrane and periplasm of Treponema denticola
+Journal: Scientific reports (2017)
+Snippet: Y SpI 22.5 8.70E-11 NP_971372.1 TDE0761 Protease complex-associated polypeptide (PrcA) Y SpII 8.6 2.40E-31 NP_972949.1 TDE2350 Lipoprotein Y SpII 17.8 7.60E-19 NP_971139.1 TDE0525 Hypothetical N SpI 28.8 3.00E-103 NP_972332.1 TDE1728 Hypothetical N SpI 22.8 3.30E-77 NP_973297.1 TDE2699 Hypothetical N SpI 22.2 5.40E-65 NP_971277.1 TDE0664 OmpA family
+
+================================================================================
+Protein: VIMSS576641 (E-value: 4.6e-31, Score: 112.6)
+Mentioned as: TDE2350
+Description: lipoprotein, putative
+Organism: Treponema denticola ATCC 35405
+PMID: 21048920
+Source: EuropePMC
+Title: Transcriptional profiles of Treponema denticola in response to environmental conditions
+Journal: PloS one (2010)
+Snippet: TDE2223 hypothetical protein 1.8 3.4 2.6 TDE2226 ABC transporter, substrate-binding protein, putative 2.7 2.6 4.6 TDE2350 lipoprotein, putative 1.8 5.2 2.1 TDE2372 conserved hypothetical protein 3.0 3.7 4.6 2.6 TDE2373 precorrin-6Y C5,15-methyltransferase, putative 4.6 6.0 3.2 TDE2590 hypothetical protein 4.0 9.0 4.2 3.7 TDE2591 rhodanese-like domain
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83516.1	AF-O83516-F1-model_v4_TED01:59-184	1	AF-O83516-F1-model_v4_TED01	59-184	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83516_TED01
+GA   27.00 27.00;
+TC   27.60 47.30;
+NC   23.60 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

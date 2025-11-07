@@ -1,0 +1,191 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   ENVF_SALTY              Reviewed;         262 AA.
+AC   Q56032;
+DE   RecName: Full=Probable lipoprotein EnvF;
+DE   Flags: Precursor;
+GN   Name=envF; OrderedLocusNames=STM1240;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 14028 / SGSG 2980 / CDC 6516-60 / NCTC 12023;
+RX   PubMed=7665482; DOI=10.1128/jb.177.17.5040-5047.1995;
+RA   Gunn J.S., Alpuche-Aranda C.M., Loomis W.P., Belden W.J., Miller S.I.;
+RT   "Characterization of the Salmonella typhimurium pagC/pagD chromosomal
+RT   region.";
+RL   J. Bacteriol. 177:5040-5047(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Lipid-anchor
+CC       {ECO:0000305}.
+DR   EMBL; U31849; AAA82997.1; -; Genomic_DNA.
+DR   EMBL; AE006468; AAL20169.1; -; Genomic_DNA.
+DR   RefSeq; NP_460210.1; NC_003197.2.
+DR   RefSeq; WP_001033408.1; NC_003197.2.
+DR   AlphaFoldDB; Q56032; -.
+DR   STRING; 99287.STM1240; -.
+DR   PaxDb; 99287-STM1240; -.
+DR   GeneID; 1252758; -.
+DR   KEGG; stm:STM1240; -.
+DR   PATRIC; fig|99287.12.peg.1312; -.
+DR   HOGENOM; CLU_1030106_0_0_6; -.
+DR   BioCyc; SENT99287:STM1240-MONOMER; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal.
+FT   SIGNAL          1..25
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           26..262
+FT                   /note="Probable lipoprotein EnvF"
+FT                   /id="PRO_0000018172"
+FT   REGION          227..262
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        237..246
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   LIPID           26
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           26
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CONFLICT        223
+FT                   /note="D -> A (in Ref. 1; AAA82997)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        245..262
+FT                   /note="QRKKAAGKMNEIQQTFKK -> PA (in Ref. 1; AAA82997)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   262 AA;  29572 MW;  2BC6042085839143 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Salmonella.
+1	6	Cohnella
+1	5	Paenibacillaceae
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	4	Bacillales
+1	3	Gammaproteobacteria
+1	3	Bacilli
+1	2	Pseudomonadota
+1	2	Bacillota
+1	1	Pseudomonadati
+1	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A4R1F9K3	HEAT SHOCK PROTEIN HSLJ {     24.0       0.14   1   1.7   0.1
+	Iterate                   	     5	    46	    22.7
+	PF09619	YscW            	    67	   172	    62.9
+	PF03724	META            	   188	   295	    86.7
+
+A0A516KES8	METAL ABC TRANSPORTER SUB     24.5      0.094   2   2.4   1.1
+	Iterate                   	     3	    43	    19.0
+	Iterate                   	   169	   196	     3.8
+	PF01297	ZnuA            	    43	   314	   290.9
+
+A0A841SZA1	ZINC ABC TRANSPORTER SUBS     29.0     0.0037   1   1.5   0.0
+	Iterate                   	     5	    37	    27.9
+	PF01297	ZnuA            	    36	   314	   292.2
+
+A0A8S3S6A2	UNCHARACTERIZED PROTEIN {     33.7    0.00013  10  12.3  34.3
+	Iterate                   	   231	   251	     4.9
+	Iterate                   	   186	   205	     4.8
+	Iterate                   	   255	   274	     4.8
+	Iterate                   	   278	   297	     4.8
+	Iterate                   	   301	   320	     4.8
+	Iterate                   	   116	   136	     4.5
+	Iterate                   	   139	   159	     4.5
+	Iterate                   	    18	    37	     4.3
+	Iterate                   	   209	   228	     4.3
+	Iterate                   	   162	   182	     3.4
+	PF13306	LRR_5           	    42	   162	    18.1
+	PF13306	LRR_5           	    79	   208	    21.8
+	PF13306	LRR_5           	   148	   276	    26.4
+	PF13306	LRR_5           	   217	   346	    35.1
+
+Q56032	PROBABLE LIPOPROTEIN ENVF          128.4    3.4e-34   1   2.4   5.9
+	Iterate                   	     8	    56	   128.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS148591 (E-value: 3e-36, Score: 128.4)
+Mentioned as: STM1240
+Description: putative envelope lipoprotein
+Organism: Salmonella typhimurium LT2
+PMID: 23505508
+Source: EuropePMC
+Title: Virulence gene profiling and pathogenicity characterization of non-typhoidal Salmonella accounted for invasive disease in humans
+Journal: PloS one (2013)
+Snippet: STY4826 + sefA STY4836a ND ND + + sefD a STY4839 + + SPI-11 envF STM1240 + + + + + + + + + pagD STM1244 + + + ND ND + + + ND + + + + pagC STM1246 + + + +
+
+================================================================================
+Protein: VIMSS148591 (E-value: 3e-36, Score: 128.4)
+Mentioned as: STM1240
+Description: putative envelope lipoprotein
+Organism: Salmonella typhimurium LT2
+PMID: 19390620
+Source: EuropePMC
+Title: Accurate prediction of secreted substrates and identification of a conserved putative secretion signal for type III secretion systems
+Journal: PLoS pathogens (2009)
+Snippet: , 4 pagD PhoP regulated 2.08 50% [81] STM1867 pagK PhoPQ-activated gene 2.47 75% [81] STM1240 envF putative envelope lipoprotein 2.41 75% [81] STM2866 sprB transcriptional regulator 2.16 55% STM1087 pipA Pathogenicity island encoded protein: SPI3 2.30 70% STM1381 orf245 putative cytoplasmic protein 2.32 70% [80]
+
+================================================================================
+Protein: VIMSS148591 (E-value: 3e-36, Score: 128.4)
+Mentioned as: STM1240
+Description: putative envelope lipoprotein
+Organism: Salmonella typhimurium LT2
+PMID: 18524964
+Source: EuropePMC
+Title: Salmonella serovar identification using PCR-based detection of gene presence and absence
+Journal: Journal of clinical microbiology (2008)
+Snippet: STM1031, STM1055, STM1088, STM1096, STM1130, STM1188, STM1240, STM1284, STM1285, STM1352, STM1360, STM1380, STM1381, STM1525, STM1533, STM1537, STM1540,
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q56032.2	AF-Q56032-F1-model_v4_TED01:8-56	1	AF-Q56032-F1-model_v4_TED01	8-56	100.0%
+Q56032.2	AF-Q56032-F1-model_v4_TED02:60-218	1	AF-Q56032-F1-model_v4_TED02	60-218	0
+Q56032.2	AF-Q56032-F1-model_v4_TED03:226-250	1	AF-Q56032-F1-model_v4_TED03	226-250	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q56032_TED01/Iterate
+GA   27.00 27.00;
+TC   29.00 27.90;
+NC   24.50 22.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

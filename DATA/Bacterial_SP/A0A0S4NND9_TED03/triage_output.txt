@@ -1,0 +1,1365 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   GTFB_STRPN              Reviewed;         445 AA.
+AC   A0A0H2UR90;
+DE   RecName: Full=UDP-N-acetylglucosamine--peptide N-acetylglucosaminyltransferase stabilizing protein GtfB {ECO:0000255|HAMAP-Rule:MF_01473};
+DE   AltName: Full=Glycosyltransferase stabilizing protein GtfB {ECO:0000255|HAMAP-Rule:MF_01473, ECO:0000303|PubMed:24936067};
+GN   Name=gtfB {ECO:0000255|HAMAP-Rule:MF_01473,
+GN   ECO:0000303|PubMed:24936067}; OrderedLocusNames=SP_1757;
+OS   Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae;
+OC   Streptococcus.
+OX   NCBI_TaxID=170187;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=11463916; DOI=10.1126/science.1061217;
+RA   Tettelin H., Nelson K.E., Paulsen I.T., Eisen J.A., Read T.D.,
+RA   Peterson S.N., Heidelberg J.F., DeBoy R.T., Haft D.H., Dodson R.J.,
+RA   Durkin A.S., Gwinn M.L., Kolonay J.F., Nelson W.C., Peterson J.D.,
+RA   Umayam L.A., White O., Salzberg S.L., Lewis M.R., Radune D.,
+RA   Holtzapple E.K., Khouri H.M., Wolf A.M., Utterback T.R., Hansen C.L.,
+RA   McDonald L.A., Feldblyum T.V., Angiuoli S.V., Dickinson T., Hickey E.K.,
+RA   Holt I.E., Loftus B.J., Yang F., Smith H.O., Venter J.C., Dougherty B.A.,
+RA   Morrison D.A., Hollingshead S.K., Fraser C.M.;
+RT   "Complete genome sequence of a virulent isolate of Streptococcus
+RT   pneumoniae.";
+RL   Science 293:498-506(2001).
+RN   [2]
+RP   DISCUSSION OF SEQUENCE.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=16861665; DOI=10.1128/iai.00316-06;
+RA   Obert C., Sublett J., Kaushal D., Hinojosa E., Barton T., Tuomanen E.I.,
+RA   Orihuela C.J.;
+RT   "Identification of a candidate Streptococcus pneumoniae core genome and
+RT   regions of diversity correlated with invasive pneumococcal disease.";
+RL   Infect. Immun. 74:4766-4777(2006).
+RN   [3]
+RP   FUNCTION, PATHWAY, SUBUNIT, AND DOMAIN.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=24936067; DOI=10.1074/jbc.m114.581934;
+RA   Shi W.W., Jiang Y.L., Zhu F., Yang Y.H., Shao Q.Y., Yang H.B., Ren Y.M.,
+RA   Wu H., Chen Y., Zhou C.Z.;
+RT   "Structure of a novel O-linked N-acetyl-D-glucosamine (O-GlcNAc)
+RT   transferase, GtfA, reveals insights into the glycosylation of pneumococcal
+RT   serine-rich repeat adhesins.";
+RL   J. Biol. Chem. 289:20898-20907(2014).
+RN   [4]
+RP   FUNCTION, AND PATHWAY.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=28246170; DOI=10.1074/jbc.m116.770446;
+RA   Jiang Y.L., Jin H., Yang H.B., Zhao R.L., Wang S., Chen Y., Zhou C.Z.;
+RT   "Defining the enzymatic pathway for polymorphic O-glycosylation of the
+RT   pneumococcal serine-rich repeat protein PsrP.";
+RL   J. Biol. Chem. 292:6213-6224(2017).
+CC   -!- FUNCTION: Required for the polymorphic O-glycosylation of the serine-
+CC       rich repeat protein PsrP. A stabilizing protein that is part of the
+CC       accessory SecA2/SecY2 system specifically required to export serine-
+CC       rich repeat cell wall proteins encoded upstream in the same operon. The
+CC       GtfA-GtfB complex adds GlcNAc from UDP-GlcNAc to PsrP, attaching the
+CC       first sugar residue. Stabilizes the glycosylation activity of GtfA (By
+CC       similarity) (PubMed:24936067, PubMed:28246170). Has no N-
+CC       acetylglucosaminyl transferase activity on its own (PubMed:24936067).
+CC       {ECO:0000255|HAMAP-Rule:MF_01473, ECO:0000269|PubMed:24936067,
+CC       ECO:0000269|PubMed:28246170}.
+CC   -!- PATHWAY: Protein modification; protein glycosylation.
+CC       {ECO:0000255|HAMAP-Rule:MF_01473, ECO:0000269|PubMed:24936067,
+CC       ECO:0000269|PubMed:28246170}.
+CC   -!- SUBUNIT: Interacts with glycosyltransferase GtfA; probably forms a
+CC       heterotetramer with 2 subunits each of GtfA and GtfB. Part of the
+CC       accessory SecA2/SecY2 protein translocation apparatus.
+CC       {ECO:0000255|HAMAP-Rule:MF_01473, ECO:0000269|PubMed:24936067}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|HAMAP-Rule:MF_01473};
+CC       Peripheral membrane protein {ECO:0000255|HAMAP-Rule:MF_01473}.
+CC   -!- DOMAIN: The N-terminus of the protein, including the
+CC       glycosyltransferase 1 domain (residues 1-171), is required but not
+CC       sufficient for full formation of the stable GtfA-GtfB complex; the
+CC       complex of GtfA with truncated GtfB has intermediate N-
+CC       acetylglucosaminyl transferase activity. {ECO:0000269|PubMed:24936067}.
+CC   -!- MISCELLANEOUS: Encoded in RD10, a pathogenicity island with an atypical
+CC       GC content that is associated with invasive pneumococcal disease.
+CC       Pathogenicity islands account for greater than half the genomic
+CC       diversity observed between isolates (PubMed:11463916, PubMed:16861665).
+CC       The main function of this island seems to be correct synthesis and
+CC       export of pneumococcal serine-rich repeat protein PsrP (Probable).
+CC       {ECO:0000303|PubMed:11463916, ECO:0000303|PubMed:16861665,
+CC       ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the GtfB family. {ECO:0000255|HAMAP-
+CC       Rule:MF_01473}.
+DR   EMBL; AE005672; AAK75832.1; -; Genomic_DNA.
+DR   RefSeq; WP_000571767.1; NZ_CP155539.1.
+DR   AlphaFoldDB; A0A0H2UR90; -.
+DR   SMR; A0A0H2UR90; -.
+DR   PaxDb; 170187-SP_1757; -.
+DR   EnsemblBacteria; AAK75832; AAK75832; SP_1757.
+DR   KEGG; spn:SP_1757; -.
+DR   eggNOG; COG0438; Bacteria.
+DR   BioCyc; SPNE170187:G1FZB-1782-MONOMER; -.
+DR   UniPathway; UPA00378; -.
+DR   Proteomes; UP000000585; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0017122; C:protein N-acetylglucosaminyltransferase complex; IDA:UniProtKB.
+DR   GO; GO:0018242; P:protein O-linked glycosylation via serine; IEA:UniProtKB-UniRule.
+DR   GO; GO:0031647; P:regulation of protein stability; IEA:UniProtKB-UniRule.
+DR   HAMAP; MF_01473; GtfB; 1.
+DR   InterPro; IPR014268; GtfB.
+DR   NCBIfam; TIGR02919; accessory Sec system glycosylation chaperone GtfB; 1.
+PE   1: Evidence at protein level;
+KW   Cell membrane; Membrane; Reference proteome.
+FT   CHAIN           1..445
+FT                   /note="UDP-N-acetylglucosamine--peptide N-
+FT                   acetylglucosaminyltransferase stabilizing protein GtfB"
+FT                   /id="PRO_0000447203"
+FT   REGION          55..171
+FT                   /note="Glycosyltransferase 1"
+FT                   /evidence="ECO:0000269|PubMed:24936067"
+SQ   SEQUENCE   445 AA;  50673 MW;  8A2E2DD880CFD53C CRC64;
+//
+ID   GLYF_STRPN              Reviewed;         398 AA.
+AC   A0A0H2URH2;
+DE   RecName: Full=Glycosyltransferase GlyF {ECO:0000303|PubMed:28246170};
+DE   AltName: Full=Putative PsrP glycosyltransferase GlyF {ECO:0000305};
+GN   Name=glyF {ECO:0000303|PubMed:28246170}; OrderedLocusNames=SP_1765;
+OS   Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae;
+OC   Streptococcus.
+OX   NCBI_TaxID=170187;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=11463916; DOI=10.1126/science.1061217;
+RA   Tettelin H., Nelson K.E., Paulsen I.T., Eisen J.A., Read T.D.,
+RA   Peterson S.N., Heidelberg J.F., DeBoy R.T., Haft D.H., Dodson R.J.,
+RA   Durkin A.S., Gwinn M.L., Kolonay J.F., Nelson W.C., Peterson J.D.,
+RA   Umayam L.A., White O., Salzberg S.L., Lewis M.R., Radune D.,
+RA   Holtzapple E.K., Khouri H.M., Wolf A.M., Utterback T.R., Hansen C.L.,
+RA   McDonald L.A., Feldblyum T.V., Angiuoli S.V., Dickinson T., Hickey E.K.,
+RA   Holt I.E., Loftus B.J., Yang F., Smith H.O., Venter J.C., Dougherty B.A.,
+RA   Morrison D.A., Hollingshead S.K., Fraser C.M.;
+RT   "Complete genome sequence of a virulent isolate of Streptococcus
+RT   pneumoniae.";
+RL   Science 293:498-506(2001).
+RN   [2]
+RP   DISCUSSION OF SEQUENCE.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=16861665; DOI=10.1128/iai.00316-06;
+RA   Obert C., Sublett J., Kaushal D., Hinojosa E., Barton T., Tuomanen E.I.,
+RA   Orihuela C.J.;
+RT   "Identification of a candidate Streptococcus pneumoniae core genome and
+RT   regions of diversity correlated with invasive pneumococcal disease.";
+RL   Infect. Immun. 74:4766-4777(2006).
+RN   [3]
+RP   FUNCTION, AND DOMAIN.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=28246170; DOI=10.1074/jbc.m116.770446;
+RA   Jiang Y.L., Jin H., Yang H.B., Zhao R.L., Wang S., Chen Y., Zhou C.Z.;
+RT   "Defining the enzymatic pathway for polymorphic O-glycosylation of the
+RT   pneumococcal serine-rich repeat protein PsrP.";
+RL   J. Biol. Chem. 292:6213-6224(2017).
+CC   -!- FUNCTION: May be involved in the polymorphic O-glycosylation of the
+CC       serine-rich repeat protein PsrP. Has hydrolytic activity against UDP-
+CC       galactose and to a lesser extent against UDP-glucose; no
+CC       glycosyltransferase activity has been seen with tested substrates.
+CC       {ECO:0000269|PubMed:28246170}.
+CC   -!- MISCELLANEOUS: Encoded in RD10, a pathogenicity island with an atypical
+CC       GC content that is associated with invasive pneumococcal disease.
+CC       Pathogenicity islands account for greater than half the genomic
+CC       diversity observed between isolates (PubMed:11463916, PubMed:16861665).
+CC       The main function of this island seems to be correct synthesis and
+CC       export of pneumococcal serine-rich repeat protein PsrP (Probable).
+CC       {ECO:0000303|PubMed:11463916, ECO:0000303|PubMed:16861665,
+CC       ECO:0000305}.
+CC   -!- SIMILARITY: In the N-terminal section; belongs to the
+CC       glycosyltransferase 8 family. {ECO:0000305}.
+DR   EMBL; AE005672; AAK75840.1; -; Genomic_DNA.
+DR   RefSeq; WP_001232150.1; NZ_CP155539.1.
+DR   AlphaFoldDB; A0A0H2URH2; -.
+DR   SMR; A0A0H2URH2; -.
+DR   PaxDb; 170187-SP_1765; -.
+DR   EnsemblBacteria; AAK75840; AAK75840; SP_1765.
+DR   KEGG; spn:SP_1765; -.
+DR   eggNOG; COG1442; Bacteria.
+DR   PhylomeDB; A0A0H2URH2; -.
+DR   BioCyc; SPNE170187:G1FZB-1790-MONOMER; -.
+DR   Proteomes; UP000000585; Chromosome.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0000166; F:nucleotide binding; IEA:UniProtKB-KW.
+DR   CDD; cd04194; GT8_A4GalT_like; 1.
+DR   Gene3D; 3.90.550.10; Spore Coat Polysaccharide Biosynthesis Protein SpsA, Chain A; 1.
+DR   InterPro; IPR002495; Glyco_trans_8.
+DR   InterPro; IPR050748; Glycosyltrans_8_dom-fam.
+DR   InterPro; IPR029044; Nucleotide-diphossugar_trans.
+DR   PANTHER; PTHR13778; GLYCOSYLTRANSFERASE 8 DOMAIN-CONTAINING PROTEIN; 1.
+DR   PANTHER; PTHR13778:SF47; LIPOPOLYSACCHARIDE 1,3-GALACTOSYLTRANSFERASE; 1.
+DR   Pfam; PF01501; Glyco_transf_8; 1.
+DR   SUPFAM; SSF53448; Nucleotide-diphospho-sugar transferases; 1.
+PE   3: Inferred from homology;
+KW   Glycosyltransferase; Manganese; Metal-binding; Nucleotide-binding;
+KW   Reference proteome; Transferase.
+FT   CHAIN           1..398
+FT                   /note="Glycosyltransferase GlyF"
+FT                   /id="PRO_0000447029"
+FT   REGION          1..259
+FT                   /note="GT8 domain"
+FT                   /evidence="ECO:0000305|PubMed:28246170"
+FT   BINDING         8..13
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         101..102
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         101
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         103
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         221..227
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         221
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+SQ   SEQUENCE   398 AA;  46365 MW;  4404EF544488BB71 CRC64;
+//
+ID   GLYD_STRPN              Reviewed;         814 AA.
+AC   A0A0H2URB1;
+DE   RecName: Full=Glycosyltransferase GlyD {ECO:0000303|PubMed:28246170};
+DE   AltName: Full=PsrP glycosyltransferase GlyD {ECO:0000305};
+GN   Name=glyD {ECO:0000303|PubMed:28246170}; OrderedLocusNames=SP_1767;
+OS   Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae;
+OC   Streptococcus.
+OX   NCBI_TaxID=170187;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=11463916; DOI=10.1126/science.1061217;
+RA   Tettelin H., Nelson K.E., Paulsen I.T., Eisen J.A., Read T.D.,
+RA   Peterson S.N., Heidelberg J.F., DeBoy R.T., Haft D.H., Dodson R.J.,
+RA   Durkin A.S., Gwinn M.L., Kolonay J.F., Nelson W.C., Peterson J.D.,
+RA   Umayam L.A., White O., Salzberg S.L., Lewis M.R., Radune D.,
+RA   Holtzapple E.K., Khouri H.M., Wolf A.M., Utterback T.R., Hansen C.L.,
+RA   McDonald L.A., Feldblyum T.V., Angiuoli S.V., Dickinson T., Hickey E.K.,
+RA   Holt I.E., Loftus B.J., Yang F., Smith H.O., Venter J.C., Dougherty B.A.,
+RA   Morrison D.A., Hollingshead S.K., Fraser C.M.;
+RT   "Complete genome sequence of a virulent isolate of Streptococcus
+RT   pneumoniae.";
+RL   Science 293:498-506(2001).
+RN   [2]
+RP   DISCUSSION OF SEQUENCE.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=16861665; DOI=10.1128/iai.00316-06;
+RA   Obert C., Sublett J., Kaushal D., Hinojosa E., Barton T., Tuomanen E.I.,
+RA   Orihuela C.J.;
+RT   "Identification of a candidate Streptococcus pneumoniae core genome and
+RT   regions of diversity correlated with invasive pneumococcal disease.";
+RL   Infect. Immun. 74:4766-4777(2006).
+RN   [3]
+RP   FUNCTION, PATHWAY, DOMAIN, AND MUTAGENESIS OF ASP-572 AND GLU-789.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=28246170; DOI=10.1074/jbc.m116.770446;
+RA   Jiang Y.L., Jin H., Yang H.B., Zhao R.L., Wang S., Chen Y., Zhou C.Z.;
+RT   "Defining the enzymatic pathway for polymorphic O-glycosylation of the
+RT   pneumococcal serine-rich repeat protein PsrP.";
+RL   J. Biol. Chem. 292:6213-6224(2017).
+CC   -!- FUNCTION: Involved in the polymorphic O-glycosylation of the serine-
+CC       rich repeat protein PsrP. Catalyzes the third step in glycosylation
+CC       PsrP in this bacteria. Transfers glucose from UDP-glucose to the
+CC       terminal glucose moiety of already-glycosylated PsrP (using truncated
+CC       substrates with PsrP SSR1-GlcNAc-Glc); the C-terminal GT-D domain is
+CC       sufficient for this reaction in vitro. Also transfers galactose from
+CC       UDP-galactose to the terminal glucose moiety of already-glycosylated
+CC       PsrP; the C-terminal GT-D domain is also sufficient for this reaction
+CC       in vitro. Activity is much higher with UDP-glucose, and the enzyme has
+CC       a very marked preference for PsrP substrate that has already been
+CC       modified by GlcNAc and glucose. In vitro has hydrolytic activity
+CC       against UDP-galactose and to a lesser extent against UDP-glucose.
+CC       {ECO:0000269|PubMed:28246170}.
+CC   -!- FUNCTION: Also catalyzes the fourth step in glycosylation of PsrP in
+CC       this bacteria. Can transfer the sugar from both UDP-glucose and UDP-
+CC       galactose to the terminal sugar moiety of PsrP-GlcNAc-Glc-Glc and PsrP-
+CC       GlcNAc-Glc-Gal; the C-terminal GT-D domain is also sufficient for this
+CC       reaction in vitro (using truncated substrates with glycosylated PsrP
+CC       SSR1). The N-terminal GT-D domain can transfer galactose from UDP-
+CC       galactose to PsrP-GlcNAc-Glc-Gal or PsrP-GlcNAc-Glc-Glc in the fourth
+CC       step. {ECO:0000269|PubMed:28246170}.
+CC   -!- PATHWAY: Protein modification; protein glycosylation.
+CC       {ECO:0000269|PubMed:28246170}.
+CC   -!- DOMAIN: Has an N-terminal GT8 domain and a C-terminal GT-D domain. The
+CC       GT8 has very little glucose transferase activity in the third
+CC       glycosylation step, but is able to transfer galactose from UDP-
+CC       galactose to PsrP-GlcNAc-Glc-Gal or PsrP-GlcNAc-Glc-Glc in the fourth
+CC       step. The C-terminal GT-D domain catalyzes transfer of galactose and
+CC       glucose to the acceptor protein (PsrP-GlcNAc-Glc) in both the third and
+CC       fourth glycosylation steps. {ECO:0000269|PubMed:28246170}.
+CC   -!- MISCELLANEOUS: Encoded in RD10, a pathogenicity island with an atypical
+CC       GC content that is associated with invasive pneumococcal disease.
+CC       Pathogenicity islands account for greater than half the genomic
+CC       diversity observed between isolates (PubMed:11463916, PubMed:16861665).
+CC       The main function of this island seems to be correct synthesis and
+CC       export of pneumococcal serine-rich repeat protein PsrP (Probable).
+CC       {ECO:0000303|PubMed:11463916, ECO:0000303|PubMed:16861665,
+CC       ECO:0000305}.
+CC   -!- SIMILARITY: In the N-terminal section; belongs to the
+CC       glycosyltransferase 8 family. {ECO:0000305|PubMed:28246170}.
+CC   -!- SIMILARITY: In the C-terminal section; belongs to the GT-D family.
+CC       {ECO:0000305}.
+DR   EMBL; AE005672; AAK75842.1; -; Genomic_DNA.
+DR   RefSeq; WP_001044136.1; NC_003028.3.
+DR   AlphaFoldDB; A0A0H2URB1; -.
+DR   SMR; A0A0H2URB1; -.
+DR   PaxDb; 170187-SP_1767; -.
+DR   EnsemblBacteria; AAK75842; AAK75842; SP_1767.
+DR   KEGG; spn:SP_1767; -.
+DR   eggNOG; COG1442; Bacteria.
+DR   BioCyc; SPNE170187:G1FZB-1792-MONOMER; -.
+DR   UniPathway; UPA00378; -.
+DR   Proteomes; UP000000585; Chromosome.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0000166; F:nucleotide binding; IEA:UniProtKB-KW.
+DR   GO; GO:0006486; P:protein glycosylation; IEA:UniProtKB-UniPathway.
+DR   CDD; cd04194; GT8_A4GalT_like; 1.
+DR   Gene3D; 3.90.550.10; Spore Coat Polysaccharide Biosynthesis Protein SpsA, Chain A; 1.
+DR   InterPro; IPR002495; Glyco_trans_8.
+DR   InterPro; IPR050748; Glycosyltrans_8_dom-fam.
+DR   InterPro; IPR014869; GT-D.
+DR   InterPro; IPR029044; Nucleotide-diphossugar_trans.
+DR   NCBIfam; TIGR03728; glyco_access_1; 1.
+DR   PANTHER; PTHR13778; GLYCOSYLTRANSFERASE 8 DOMAIN-CONTAINING PROTEIN; 1.
+DR   PANTHER; PTHR13778:SF47; LIPOPOLYSACCHARIDE 1,3-GALACTOSYLTRANSFERASE; 1.
+DR   Pfam; PF01501; Glyco_transf_8; 1.
+DR   Pfam; PF08759; GT-D; 1.
+DR   SUPFAM; SSF53448; Nucleotide-diphospho-sugar transferases; 1.
+PE   1: Evidence at protein level;
+KW   Glycosyltransferase; Manganese; Metal-binding; Nucleotide-binding;
+KW   Reference proteome; Transferase.
+FT   CHAIN           1..814
+FT                   /note="Glycosyltransferase GlyD"
+FT                   /id="PRO_0000447027"
+FT   REGION          1..264
+FT                   /note="GT8 domain"
+FT                   /evidence="ECO:0000305|PubMed:28246170"
+FT   REGION          542..814
+FT                   /note="GT-D domain"
+FT                   /evidence="ECO:0000305|PubMed:28246170"
+FT   BINDING         8..13
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         102..103
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         102
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         104
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         226..232
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         226
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   MUTAGEN         572
+FT                   /note="D->A: Isolated GT-D domain no longer transfers
+FT                   glucose to an acceptor protein."
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   MUTAGEN         789
+FT                   /note="E->A: Isolated GT-D domain no longer transfers
+FT                   glucose to an acceptor protein."
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+SQ   SEQUENCE   814 AA;  94615 MW;  FCB283B8BD595954 CRC64;
+//
+ID   GLYAT_STRPN             Reviewed;         696 AA.
+AC   A0A0H2URH7;
+DE   RecName: Full=Glycosyltransferase GlyA {ECO:0000303|PubMed:28246170};
+DE   AltName: Full=PsrP glycosyltransferase GlyA {ECO:0000305};
+GN   Name=glyA {ECO:0000303|PubMed:28246170}; OrderedLocusNames=SP_1771;
+OS   Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae;
+OC   Streptococcus.
+OX   NCBI_TaxID=170187;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=11463916; DOI=10.1126/science.1061217;
+RA   Tettelin H., Nelson K.E., Paulsen I.T., Eisen J.A., Read T.D.,
+RA   Peterson S.N., Heidelberg J.F., DeBoy R.T., Haft D.H., Dodson R.J.,
+RA   Durkin A.S., Gwinn M.L., Kolonay J.F., Nelson W.C., Peterson J.D.,
+RA   Umayam L.A., White O., Salzberg S.L., Lewis M.R., Radune D.,
+RA   Holtzapple E.K., Khouri H.M., Wolf A.M., Utterback T.R., Hansen C.L.,
+RA   McDonald L.A., Feldblyum T.V., Angiuoli S.V., Dickinson T., Hickey E.K.,
+RA   Holt I.E., Loftus B.J., Yang F., Smith H.O., Venter J.C., Dougherty B.A.,
+RA   Morrison D.A., Hollingshead S.K., Fraser C.M.;
+RT   "Complete genome sequence of a virulent isolate of Streptococcus
+RT   pneumoniae.";
+RL   Science 293:498-506(2001).
+RN   [2]
+RP   DISCUSSION OF SEQUENCE.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=16861665; DOI=10.1128/iai.00316-06;
+RA   Obert C., Sublett J., Kaushal D., Hinojosa E., Barton T., Tuomanen E.I.,
+RA   Orihuela C.J.;
+RT   "Identification of a candidate Streptococcus pneumoniae core genome and
+RT   regions of diversity correlated with invasive pneumococcal disease.";
+RL   Infect. Immun. 74:4766-4777(2006).
+RN   [3]
+RP   FUNCTION, PATHWAY, AND DOMAIN.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=28246170; DOI=10.1074/jbc.m116.770446;
+RA   Jiang Y.L., Jin H., Yang H.B., Zhao R.L., Wang S., Chen Y., Zhou C.Z.;
+RT   "Defining the enzymatic pathway for polymorphic O-glycosylation of the
+RT   pneumococcal serine-rich repeat protein PsrP.";
+RL   J. Biol. Chem. 292:6213-6224(2017).
+CC   -!- FUNCTION: Involved in the polymorphic O-glycosylation of the serine-
+CC       rich repeat protein PsrP. Catalyzes the fourth step in glycosylation of
+CC       PsrP in this bacteria. Can transfer the sugar from UDP-galactose to the
+CC       terminal sugar moiety of PsrP-GlcNAc-Glc-Gal or of PsrP-GlcNAc-Glc-Glc
+CC       (using truncated substrates with the PsrP SSR1 domain)
+CC       (PubMed:28246170). Has hydrolytic activity against UDP-galactose and to
+CC       a lesser extent against UDP-glucose (PubMed:28246170).
+CC       {ECO:0000269|PubMed:28246170}.
+CC   -!- PATHWAY: Protein modification; protein glycosylation.
+CC       {ECO:0000269|PubMed:28246170}.
+CC   -!- MISCELLANEOUS: Encoded in RD10, a pathogenicity island with an atypical
+CC       GC content that is associated with invasive pneumococcal disease.
+CC       Pathogenicity islands account for greater than half the genomic
+CC       diversity observed between isolates (PubMed:11463916, PubMed:16861665).
+CC       The main function of this island seems to be correct synthesis and
+CC       export of pneumococcal serine-rich repeat protein PsrP (Probable).
+CC       {ECO:0000303|PubMed:11463916, ECO:0000303|PubMed:16861665,
+CC       ECO:0000305}.
+CC   -!- SIMILARITY: In the N-terminal section; belongs to the
+CC       glycosyltransferase 2 family. {ECO:0000305}.
+CC   -!- SIMILARITY: In the central section; belongs to the glycosyltransferase
+CC       8 family. {ECO:0000305}.
+CC   -!- CAUTION: This gene name has also been given to serine
+CC       hydroxymethyltransferase (AC Q97R16) in this organism. {ECO:0000305}.
+DR   EMBL; AE005672; AAK75845.1; -; Genomic_DNA.
+DR   AlphaFoldDB; A0A0H2URH7; -.
+DR   SMR; A0A0H2URH7; -.
+DR   PaxDb; 170187-SP_1771; -.
+DR   EnsemblBacteria; AAK75845; AAK75845; SP_1771.
+DR   KEGG; spn:SP_1771; -.
+DR   eggNOG; COG1216; Bacteria.
+DR   eggNOG; COG1442; Bacteria.
+DR   PhylomeDB; A0A0H2URH7; -.
+DR   UniPathway; UPA00378; -.
+DR   Proteomes; UP000000585; Chromosome.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0000166; F:nucleotide binding; IEA:UniProtKB-KW.
+DR   GO; GO:0006486; P:protein glycosylation; IEA:UniProtKB-UniPathway.
+DR   CDD; cd00761; Glyco_tranf_GTA_type; 1.
+DR   CDD; cd04194; GT8_A4GalT_like; 1.
+DR   Gene3D; 3.90.550.10; Spore Coat Polysaccharide Biosynthesis Protein SpsA, Chain A; 2.
+DR   InterPro; IPR001173; Glyco_trans_2-like.
+DR   InterPro; IPR002495; Glyco_trans_8.
+DR   InterPro; IPR029044; Nucleotide-diphossugar_trans.
+DR   PANTHER; PTHR22916; GLYCOSYLTRANSFERASE; 1.
+DR   PANTHER; PTHR22916:SF51; GLYCOSYLTRANSFERASE EPSH-RELATED; 1.
+DR   Pfam; PF01501; Glyco_transf_8; 1.
+DR   Pfam; PF00535; Glycos_transf_2; 1.
+DR   SUPFAM; SSF53448; Nucleotide-diphospho-sugar transferases; 2.
+PE   3: Inferred from homology;
+KW   Glycosyltransferase; Manganese; Metal-binding; Nucleotide-binding;
+KW   Reference proteome; Transferase.
+FT   CHAIN           1..696
+FT                   /note="Glycosyltransferase GlyA"
+FT                   /id="PRO_0000447025"
+FT   REGION          1..301
+FT                   /note="GT2 domain"
+FT                   /evidence="ECO:0000305|PubMed:28246170"
+FT   REGION          302..556
+FT                   /note="GT8 domain"
+FT                   /evidence="ECO:0000305|PubMed:28246170"
+FT   BINDING         308..313
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         399..400
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         399
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         401
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         518..524
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         518
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+SQ   SEQUENCE   696 AA;  81336 MW;  ADCA9C01AABB32C7 CRC64;
+//
+ID   GLYE_STRPN              Reviewed;         406 AA.
+AC   A0A0H2URJ6;
+DE   RecName: Full=Glycosyltransferase GlyE {ECO:0000303|PubMed:28246170};
+DE   AltName: Full=PsrP glycosyltransferase GlyE {ECO:0000305};
+GN   Name=glyE {ECO:0000303|PubMed:28246170}; OrderedLocusNames=SP_1766;
+OS   Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae;
+OC   Streptococcus.
+OX   NCBI_TaxID=170187;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=11463916; DOI=10.1126/science.1061217;
+RA   Tettelin H., Nelson K.E., Paulsen I.T., Eisen J.A., Read T.D.,
+RA   Peterson S.N., Heidelberg J.F., DeBoy R.T., Haft D.H., Dodson R.J.,
+RA   Durkin A.S., Gwinn M.L., Kolonay J.F., Nelson W.C., Peterson J.D.,
+RA   Umayam L.A., White O., Salzberg S.L., Lewis M.R., Radune D.,
+RA   Holtzapple E.K., Khouri H.M., Wolf A.M., Utterback T.R., Hansen C.L.,
+RA   McDonald L.A., Feldblyum T.V., Angiuoli S.V., Dickinson T., Hickey E.K.,
+RA   Holt I.E., Loftus B.J., Yang F., Smith H.O., Venter J.C., Dougherty B.A.,
+RA   Morrison D.A., Hollingshead S.K., Fraser C.M.;
+RT   "Complete genome sequence of a virulent isolate of Streptococcus
+RT   pneumoniae.";
+RL   Science 293:498-506(2001).
+RN   [2]
+RP   DISCUSSION OF SEQUENCE.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=16861665; DOI=10.1128/iai.00316-06;
+RA   Obert C., Sublett J., Kaushal D., Hinojosa E., Barton T., Tuomanen E.I.,
+RA   Orihuela C.J.;
+RT   "Identification of a candidate Streptococcus pneumoniae core genome and
+RT   regions of diversity correlated with invasive pneumococcal disease.";
+RL   Infect. Immun. 74:4766-4777(2006).
+RN   [3] {ECO:0007744|PDB:5GVV, ECO:0007744|PDB:5GVW}
+RP   X-RAY CRYSTALLOGRAPHY (1.95 ANGSTROMS) OF 3-406 IN COMPLEX WITH MANGANESE
+RP   WITH OR WITHOUT UDP, FUNCTION, COFACTOR, PATHWAY, DOMAIN, AND MUTAGENESIS
+RP   OF ARG-90; ASP-106; ASP-108; ASP-177; GLN-178; 285-ASN--TRP-287 AND
+RP   311-ASN--ALA-313.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=28246170; DOI=10.1074/jbc.m116.770446;
+RA   Jiang Y.L., Jin H., Yang H.B., Zhao R.L., Wang S., Chen Y., Zhou C.Z.;
+RT   "Defining the enzymatic pathway for polymorphic O-glycosylation of the
+RT   pneumococcal serine-rich repeat protein PsrP.";
+RL   J. Biol. Chem. 292:6213-6224(2017).
+CC   -!- FUNCTION: Involved in the polymorphic O-glycosylation of the serine-
+CC       rich repeat protein PsrP. Catalyzes the third step in glycosylation of
+CC       PsrP in this bacteria. Transfers galactose from UDP-galactose to the
+CC       terminal glucose moiety of already-glycosylated PsrP (using the short
+CC       substrate PsrP-GlcNAc-Glc). Has a very marked preference for PsrP
+CC       substrate that has already been modified by GlcNAc and glucose. Has
+CC       hydrolytic activity against UDP-galactose but none against UDP-glucose.
+CC       {ECO:0000269|PubMed:28246170}.
+CC   -!- FUNCTION: Also catalyzes the fourth step in glycosylation of PsrP in
+CC       this bacteria. Can transfer the sugar from UDP-galactose to the
+CC       terminal sugar moiety of PsrP-GlcNAc-Glc-Glc and of PsrP-GlcNAc-Glc-
+CC       Gal. {ECO:0000269|PubMed:28246170}.
+CC   -!- COFACTOR:
+CC       Name=Mn(2+); Xref=ChEBI:CHEBI:29035;
+CC         Evidence={ECO:0000269|PubMed:28246170};
+CC   -!- PATHWAY: Protein modification; protein glycosylation.
+CC       {ECO:0000269|PubMed:28246170}.
+CC   -!- DOMAIN: Has 2 domains, the N-terminal GT8 domain that binds UDP and
+CC       Mn(2+) and a C-terminal domain that assumes a Rossmann-like fold. The
+CC       GT8 domain has UDP-galactose hydrolysis activity but no galactose
+CC       transferase activity (PubMed:28246170). The C-terminal domain probably
+CC       binds the partially glycosylated protein acceptor in a continuous,
+CC       surface-exposed groove that can possibly bind proteins with varying
+CC       degrees of glycosylation (Probable). {ECO:0000269|PubMed:28246170,
+CC       ECO:0000305|PubMed:28246170}.
+CC   -!- MISCELLANEOUS: Encoded in RD10, a pathogenicity island with an atypical
+CC       GC content that is associated with invasive pneumococcal disease.
+CC       Pathogenicity islands account for greater than half the genomic
+CC       diversity observed between isolates (PubMed:11463916, PubMed:16861665).
+CC       The main function of this island seems to be correct synthesis and
+CC       export of pneumococcal serine-rich repeat protein PsrP (Probable).
+CC       {ECO:0000303|PubMed:11463916, ECO:0000303|PubMed:16861665,
+CC       ECO:0000305}.
+CC   -!- SIMILARITY: In the N-terminal section; belongs to the
+CC       glycosyltransferase 8 family. {ECO:0000305}.
+DR   EMBL; AE005672; AAK75841.1; -; Genomic_DNA.
+DR   RefSeq; WP_001808456.1; NC_003028.3.
+DR   PDB; 5GVV; X-ray; 1.95 A; A/F=3-406.
+DR   PDB; 5GVW; X-ray; 2.40 A; A/B/C/D=3-406.
+DR   PDBsum; 5GVV; -.
+DR   PDBsum; 5GVW; -.
+DR   AlphaFoldDB; A0A0H2URJ6; -.
+DR   SMR; A0A0H2URJ6; -.
+DR   PaxDb; 170187-SP_1766; -.
+DR   EnsemblBacteria; AAK75841; AAK75841; SP_1766.
+DR   KEGG; spn:SP_1766; -.
+DR   eggNOG; COG1442; Bacteria.
+DR   PhylomeDB; A0A0H2URJ6; -.
+DR   BioCyc; SPNE170187:G1FZB-1791-MONOMER; -.
+DR   UniPathway; UPA00378; -.
+DR   Proteomes; UP000000585; Chromosome.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0000166; F:nucleotide binding; IEA:UniProtKB-KW.
+DR   GO; GO:0006486; P:protein glycosylation; IEA:UniProtKB-UniPathway.
+DR   CDD; cd04194; GT8_A4GalT_like; 1.
+DR   Gene3D; 3.90.550.10; Spore Coat Polysaccharide Biosynthesis Protein SpsA, Chain A; 1.
+DR   InterPro; IPR002495; Glyco_trans_8.
+DR   InterPro; IPR050748; Glycosyltrans_8_dom-fam.
+DR   InterPro; IPR029044; Nucleotide-diphossugar_trans.
+DR   PANTHER; PTHR13778; GLYCOSYLTRANSFERASE 8 DOMAIN-CONTAINING PROTEIN; 1.
+DR   PANTHER; PTHR13778:SF47; LIPOPOLYSACCHARIDE 1,3-GALACTOSYLTRANSFERASE; 1.
+DR   Pfam; PF01501; Glyco_transf_8; 1.
+DR   SUPFAM; SSF53448; Nucleotide-diphospho-sugar transferases; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Glycosyltransferase; Manganese; Metal-binding;
+KW   Nucleotide-binding; Reference proteome; Transferase.
+FT   CHAIN           1..406
+FT                   /note="Glycosyltransferase GlyE"
+FT                   /id="PRO_0000447028"
+FT   REGION          3..265
+FT                   /note="GT8 domain"
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   BINDING         11..16
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   BINDING         106..107
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   BINDING         106
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   BINDING         108
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   BINDING         227..233
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   BINDING         227
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   MUTAGEN         90
+FT                   /note="R->A: Loss of UDP-galactose hydrolysis."
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   MUTAGEN         106
+FT                   /note="D->A: Loss of UDP-galactose hydrolysis."
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   MUTAGEN         108
+FT                   /note="D->A: Loss of UDP-galactose hydrolysis."
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   MUTAGEN         177
+FT                   /note="D->A: Loss of UDP-galactose hydrolysis."
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   MUTAGEN         178
+FT                   /note="Q->A: Loss of UDP-galactose hydrolysis."
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   MUTAGEN         285..287
+FT                   /note="NSW->ASA: Significantly decreased
+FT                   glycosyltransferase activity."
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+FT   MUTAGEN         311..313
+FT                   /note="NMA->AMR: Decreased glycosyltransferase activity."
+FT                   /evidence="ECO:0000269|PubMed:28246170"
+SQ   SEQUENCE   406 AA;  47412 MW;  D14D56036CFBC690 CRC64;
+//
+ID   GLYB_STRPN              Reviewed;         404 AA.
+AC   A0A0H2URA3;
+DE   RecName: Full=Glycosyltransferase GlyB {ECO:0000303|PubMed:28246170};
+DE   AltName: Full=Putative PsrP glycosyltransferase GlyB {ECO:0000305};
+GN   Name=glyB {ECO:0000303|PubMed:28246170}; OrderedLocusNames=SP_1770;
+OS   Streptococcus pneumoniae serotype 4 (strain ATCC BAA-334 / TIGR4).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Streptococcaceae;
+OC   Streptococcus.
+OX   NCBI_TaxID=170187;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=11463916; DOI=10.1126/science.1061217;
+RA   Tettelin H., Nelson K.E., Paulsen I.T., Eisen J.A., Read T.D.,
+RA   Peterson S.N., Heidelberg J.F., DeBoy R.T., Haft D.H., Dodson R.J.,
+RA   Durkin A.S., Gwinn M.L., Kolonay J.F., Nelson W.C., Peterson J.D.,
+RA   Umayam L.A., White O., Salzberg S.L., Lewis M.R., Radune D.,
+RA   Holtzapple E.K., Khouri H.M., Wolf A.M., Utterback T.R., Hansen C.L.,
+RA   McDonald L.A., Feldblyum T.V., Angiuoli S.V., Dickinson T., Hickey E.K.,
+RA   Holt I.E., Loftus B.J., Yang F., Smith H.O., Venter J.C., Dougherty B.A.,
+RA   Morrison D.A., Hollingshead S.K., Fraser C.M.;
+RT   "Complete genome sequence of a virulent isolate of Streptococcus
+RT   pneumoniae.";
+RL   Science 293:498-506(2001).
+RN   [2]
+RP   DISCUSSION OF SEQUENCE.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=16861665; DOI=10.1128/iai.00316-06;
+RA   Obert C., Sublett J., Kaushal D., Hinojosa E., Barton T., Tuomanen E.I.,
+RA   Orihuela C.J.;
+RT   "Identification of a candidate Streptococcus pneumoniae core genome and
+RT   regions of diversity correlated with invasive pneumococcal disease.";
+RL   Infect. Immun. 74:4766-4777(2006).
+RN   [3]
+RP   FUNCTION, AND DOMAIN.
+RC   STRAIN=ATCC BAA-334 / TIGR4;
+RX   PubMed=28246170; DOI=10.1074/jbc.m116.770446;
+RA   Jiang Y.L., Jin H., Yang H.B., Zhao R.L., Wang S., Chen Y., Zhou C.Z.;
+RT   "Defining the enzymatic pathway for polymorphic O-glycosylation of the
+RT   pneumococcal serine-rich repeat protein PsrP.";
+RL   J. Biol. Chem. 292:6213-6224(2017).
+CC   -!- FUNCTION: May be involved in the polymorphic O-glycosylation of the
+CC       serine-rich repeat protein PsrP. Has equal hydrolytic activity against
+CC       both UDP-galactose and UDP-glucose; no glycosyltransferase activity has
+CC       been seen with tested substrates. {ECO:0000269|PubMed:28246170}.
+CC   -!- MISCELLANEOUS: Encoded in RD10, a pathogenicity island with an atypical
+CC       GC content that is associated with invasive pneumococcal disease.
+CC       Pathogenicity islands account for greater than half the genomic
+CC       diversity observed between isolates (PubMed:11463916, PubMed:16861665).
+CC       The main function of this island seems to be correct synthesis and
+CC       export of pneumococcal serine-rich repeat protein PsrP (Probable).
+CC       {ECO:0000303|PubMed:11463916, ECO:0000303|PubMed:16861665,
+CC       ECO:0000305}.
+CC   -!- SIMILARITY: In the N-terminal section; belongs to the
+CC       glycosyltransferase 8 family. {ECO:0000305}.
+DR   EMBL; AE005672; AAK75844.1; -; Genomic_DNA.
+DR   RefSeq; WP_001093470.1; NZ_CP155539.1.
+DR   AlphaFoldDB; A0A0H2URA3; -.
+DR   SMR; A0A0H2URA3; -.
+DR   PaxDb; 170187-SP_1770; -.
+DR   EnsemblBacteria; AAK75844; AAK75844; SP_1770.
+DR   KEGG; spn:SP_1770; -.
+DR   eggNOG; COG1442; Bacteria.
+DR   PhylomeDB; A0A0H2URA3; -.
+DR   BioCyc; SPNE170187:G1FZB-1796-MONOMER; -.
+DR   Proteomes; UP000000585; Chromosome.
+DR   GO; GO:0016757; F:glycosyltransferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0000166; F:nucleotide binding; IEA:UniProtKB-KW.
+DR   CDD; cd04194; GT8_A4GalT_like; 1.
+DR   Gene3D; 3.90.550.10; Spore Coat Polysaccharide Biosynthesis Protein SpsA, Chain A; 1.
+DR   InterPro; IPR002495; Glyco_trans_8.
+DR   InterPro; IPR050748; Glycosyltrans_8_dom-fam.
+DR   InterPro; IPR029044; Nucleotide-diphossugar_trans.
+DR   PANTHER; PTHR13778; GLYCOSYLTRANSFERASE 8 DOMAIN-CONTAINING PROTEIN; 1.
+DR   PANTHER; PTHR13778:SF47; LIPOPOLYSACCHARIDE 1,3-GALACTOSYLTRANSFERASE; 1.
+DR   Pfam; PF01501; Glyco_transf_8; 1.
+DR   SUPFAM; SSF53448; Nucleotide-diphospho-sugar transferases; 1.
+PE   3: Inferred from homology;
+KW   Glycosyltransferase; Manganese; Metal-binding; Nucleotide-binding;
+KW   Reference proteome; Transferase.
+FT   CHAIN           1..404
+FT                   /note="Glycosyltransferase GlyB"
+FT                   /id="PRO_0000447026"
+FT   REGION          1..267
+FT                   /note="GT8 domain"
+FT                   /evidence="ECO:0000305|PubMed:28246170"
+FT   BINDING         9..14
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         103..104
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         103
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         105
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         228..233
+FT                   /ligand="UDP"
+FT                   /ligand_id="ChEBI:CHEBI:58223"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+FT   BINDING         228
+FT                   /ligand="Mn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29035"
+FT                   /evidence="ECO:0000250|UniProtKB:A0A0H2URJ6"
+SQ   SEQUENCE   404 AA;  47250 MW;  EEF8E206C278DC98 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+26	6	Streptococcus
+29	5	Streptococcaceae
+21	5	Lactobacillaceae
+12	5	Lachnospiraceae
+51	4	Lactobacillales
+12	4	Lachnospirales
+56	3	Bacilli
+13	3	Clostridia
+71	2	Bacillota
+75	1	Bacillati
+75	0	Bacteria
+Total of 75 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A069D1E9	UDP-N-ACETYLGLUCOSAMINE--     61.5    3.9e-13   1   1.4   0.4
+	A0A0S4NND9_TED03          	   283	   420	    60.7
+	PF27244	GtfB_M          	    71	   174	    80.8
+
+A0A0D4CIU0	UDP-N-ACETYLGLUCOSAMINE--    162.1    3.6e-44   1   1.3   3.2
+	A0A0S4NND9_TED03          	   281	   423	   161.5
+	PF27244	GtfB_M          	    69	   171	    97.4
+
+A0A0D4CK58	UDP-N-ACETYLGLUCOSAMINE--    161.9    4.1e-44   1   1.3   1.8
+	A0A0S4NND9_TED03          	   287	   429	   161.2
+	PF27244	GtfB_M          	    67	   169	   103.4
+
+A0A0H2UR90	UDP-N-ACETYLGLUCOSAMINE--PEPTID    118.9    7.7e-31   1   1.5   0.8
+	A0A0S4NND9_TED03          	   284	   426	   118.0
+	PF27244	GtfB_M          	    68	   172	   117.9
+
+A0A0H2URA3	GLYCOSYLTRANSFERASE GLYB {ECO:0     50.3    1.1e-09   1   1.5   0.4
+	A0A0S4NND9_TED03          	   277	   402	    49.1
+	PF01501	Glyco_transf_8  	     5	   239	   148.9
+
+A0A0H2URB1	GLYCOSYLTRANSFERASE GLYD {ECO:0     85.0    2.2e-20   2   2.5   0.2
+	A0A0S4NND9_TED03          	   275	   399	    44.8
+	A0A0S4NND9_TED03          	   412	   513	    37.6
+	PF01501	Glyco_transf_8  	     4	   238	     129
+	PF08759	GT-D            	   567	   790	   290.1
+
+A0A0H2URH2	GLYCOSYLTRANSFERASE GLYF {ECO:0     57.3    7.5e-12   1   1.4   0.0
+	A0A0S4NND9_TED03          	   270	   391	    56.6
+	PF01501	Glyco_transf_8  	     4	   233	   160.2
+
+A0A0H2URH7	GLYCOSYLTRANSFERASE GLYA {ECO:     32.2    0.00042   1   1.8   0.5
+	A0A0S4NND9_TED03          	   570	   691	    30.8
+	PF13641	Glyco_tranf_2_3 	     5	   230	    46.2
+	PF10111	Glyco_tranf_2_2 	     8	   145	    51.2
+	PF00535	Glycos_transf_2 	     8	   181	   141.1
+	PF01501	Glyco_transf_8  	   304	   530	     149
+
+A0A0H2URJ6	GLYCOSYLTRANSFERASE GLYE {ECO:0     53.8    9.4e-11   1   1.3   0.1
+	A0A0S4NND9_TED03          	   278	   401	    53.1
+	PF01501	Glyco_transf_8  	     7	   239	   129.9
+
+A0A0R1MAL0	UDP-N-ACETYLGLUCOSAMINE--    111.9    1.1e-28   1   1.3   3.9
+	A0A0S4NND9_TED03          	   273	   414	   111.0
+	PF27244	GtfB_M          	    59	   162	   125.5
+
+A0A0R1U1V7	UDP-N-ACETYLGLUCOSAMINE--    129.2      5e-34   1   1.4   1.2
+	A0A0S4NND9_TED03          	   281	   423	   128.4
+	PF27244	GtfB_M          	    69	   172	   125.3
+
+A0A0R1UA31	UDP-N-ACETYLGLUCOSAMINE--    161.1    7.2e-44   1   1.5   2.4
+	A0A0S4NND9_TED03          	   282	   424	   160.1
+	PF27244	GtfB_M          	    69	   171	   108.1
+
+A0A0R1UFZ4	UDP-N-ACETYLGLUCOSAMINE--     89.6    8.5e-22   1   1.6   2.8
+	A0A0S4NND9_TED03          	   285	   426	    88.4
+	PF27244	GtfB_M          	    72	   176	   100.4
+
+A0A0R1WNZ4	UDP-N-ACETYLGLUCOSAMINE--    145.8    3.9e-39   1   1.5   1.2
+	A0A0S4NND9_TED03          	   286	   428	   144.8
+	PF27244	GtfB_M          	    70	   173	   120.3
+
+A0A0R2AR40	UDP-N-ACETYLGLUCOSAMINE--    110.1    3.9e-28   1   1.4   0.6
+	A0A0S4NND9_TED03          	   286	   428	   109.4
+	PF27244	GtfB_M          	    72	   175	   122.9
+
+A0A0R2CCQ6	UDP-N-ACETYLGLUCOSAMINE--    125.0    9.7e-33   1   1.3   0.7
+	A0A0S4NND9_TED03          	   270	   412	   124.3
+	PF27244	GtfB_M          	    55	   159	   128.8
+
+A0A0R2GS61	UDP-N-ACETYLGLUCOSAMINE--    157.1    1.3e-42   1   1.5   0.2
+	A0A0S4NND9_TED03          	   290	   432	   156.1
+	PF27244	GtfB_M          	    72	   176	     110
+
+A0A0R2HDH9	UDP-N-ACETYLGLUCOSAMINE--    111.4    1.6e-28   1   1.4   0.8
+	A0A0S4NND9_TED03          	   292	   436	   110.5
+	PF27244	GtfB_M          	    78	   183	   107.5
+
+A0A139NF74	ACCESSORY SEC SYSTEM GLYC     69.1    1.8e-15   1   1.4   0.1
+	A0A0S4NND9_TED03          	   266	   385	    68.2
+	PF27244	GtfB_M          	    72	   176	    96.1
+
+A0A139NJS1	UDP-N-ACETYLGLUCOSAMINE--    112.0      1e-28   1   1.5   0.4
+	A0A0S4NND9_TED03          	   284	   425	   111.1
+	PF27244	GtfB_M          	    71	   174	     134
+
+A0A139NN02	UDP-N-ACETYLGLUCOSAMINE--     86.6      7e-21   1   1.4   0.6
+	A0A0S4NND9_TED03          	   286	   425	    85.7
+	PF27244	GtfB_M          	    70	   174	   127.3
+
+A0A139NNZ0	UDP-N-ACETYLGLUCOSAMINE--    109.0    8.5e-28   1   1.2   0.3
+	A0A0S4NND9_TED03          	   288	   430	   108.4
+	PF27244	GtfB_M          	    70	   174	   124.8
+
+A0A172Q5W8	UDP-N-ACETYLGLUCOSAMINE--    118.8    7.9e-31   1   1.3   0.1
+	A0A0S4NND9_TED03          	   283	   422	   118.2
+	PF27244	GtfB_M          	    70	   173	   117.9
+
+A0A1E9ACZ5	UDP-N-ACETYLGLUCOSAMINE--     91.6      2e-22   1   1.5   1.9
+	A0A0S4NND9_TED03          	   285	   426	    90.5
+	PF27244	GtfB_M          	    71	   174	   126.4
+
+A0A1F2EMN7	UDP-N-ACETYLGLUCOSAMINE--    109.5      6e-28   1   2.0   2.8
+	A0A0S4NND9_TED03          	   282	   423	   107.0
+	PF27244	GtfB_M          	    69	   172	   113.7
+
+A0A1G6DMD3	UDP-N-ACETYLGLUCOSAMINE--    146.7    2.1e-39   1   1.5   1.2
+	A0A0S4NND9_TED03          	   279	   421	   145.7
+	PF27244	GtfB_M          	    70	   173	   124.3
+
+A0A1H3YGF8	UDP-N-ACETYLGLUCOSAMINE--    104.9    1.6e-26   1   1.2   0.0
+	A0A0S4NND9_TED03          	   295	   430	   104.3
+	PF27244	GtfB_M          	    73	   180	   102.8
+
+A0A1H6UUD1	UDP-N-ACETYLGLUCOSAMINE--    109.7    5.1e-28   1   1.3   0.1
+	A0A0S4NND9_TED03          	   301	   440	   109.0
+	PF27244	GtfB_M          	    82	   187	   104.6
+
+A0A1H7FG96	UDP-N-ACETYLGLUCOSAMINE--    119.1    6.6e-31   1   1.6   0.3
+	A0A0S4NND9_TED03          	   297	   439	   118.0
+	PF27244	GtfB_M          	    82	   185	   138.1
+
+A0A1H8YUT5	UDP-N-ACETYLGLUCOSAMINE--    111.1    1.9e-28   1   1.5   1.1
+	A0A0S4NND9_TED03          	   292	   417	   110.0
+	PF27244	GtfB_M          	    79	   182	   126.8
+
+A0A1M6HHJ9	UDP-N-ACETYLGLUCOSAMINE--    104.3    2.4e-26   1   1.5   0.5
+	A0A0S4NND9_TED03          	   297	   437	   103.3
+	PF27244	GtfB_M          	    82	   185	   129.4
+
+A0A1W7AEC0	UDP-N-ACETYLGLUCOSAMINE--    100.2    4.4e-25   1   1.5   0.8
+	A0A0S4NND9_TED03          	   284	   409	    99.2
+	PF27244	GtfB_M          	    70	   173	   119.9
+
+A0A239Y7H3	UDP-N-ACETYLGLUCOSAMINE--     99.9    5.5e-25   1   1.7   1.7
+	A0A0S4NND9_TED03          	   285	   416	    98.5
+	PF27244	GtfB_M          	    71	   174	   119.3
+
+A0A2G3E3L7	UDP-N-ACETYLGLUCOSAMINE--    131.3    1.1e-34   1   1.6   2.5
+	A0A0S4NND9_TED03          	   298	   440	   130.4
+	PF27244	GtfB_M          	    83	   186	   118.8
+
+A0A2K4ZEN3	UDP-N-ACETYLGLUCOSAMINE--    117.3    2.3e-30   1   1.3   0.1
+	A0A0S4NND9_TED03          	   316	   458	   116.6
+	PF27244	GtfB_M          	   103	   206	     133
+
+A0A2K4ZEN9	GLYCOSYLTRANSFERASE-STABI    106.7    4.4e-27   1   1.3   0.3
+	A0A0S4NND9_TED03          	   258	   400	   105.9
+	PF27244	GtfB_M          	    73	   177	    97.5
+
+A0A2K4ZEP9	GLYCOSYLTRANSFERASE-STABI    107.1    3.2e-27   1   2.1   0.4
+	A0A0S4NND9_TED03          	   353	   495	   104.5
+	PF26334	Gtf3_N          	     2	   153	   134.7
+	PF26337	Gtf3_C          	   171	   323	   159.7
+
+A0A2K4ZEQ0	UDP-N-ACETYLGLUCOSAMINE--    104.3    2.4e-26   1   1.3   0.1
+	A0A0S4NND9_TED03          	   297	   439	   103.6
+	PF27244	GtfB_M          	    83	   187	   110.3
+
+A0A2L0D4W5	UDP-N-ACETYLGLUCOSAMINE--    116.8    3.3e-30   1   1.3   0.4
+	A0A0S4NND9_TED03          	   283	   424	   116.2
+	PF27244	GtfB_M          	    70	   172	   128.4
+
+A0A347WKU9	GLYCOSYLTRANSFERASE STABI     63.1    1.3e-13   1   1.3   0.0
+	A0A0S4NND9_TED03          	   259	   397	    62.5
+	PF27244	GtfB_M          	    68	   171	    87.6
+
+A0A380GX42	ACCESSORY SEC SYSTEM GLYC    105.6    9.5e-27   1   1.7   3.5
+	A0A0S4NND9_TED03          	   207	   349	   105.6
+	PF27244	GtfB_M          	     1	    96	   103.6
+
+A0A380GYH4	UDP-N-ACETYLGLUCOSAMINE--     88.5    1.8e-21   1   1.8   3.9
+	A0A0S4NND9_TED03          	   283	   425	    88.5
+	PF27244	GtfB_M          	    70	   173	   120.5
+
+A0A380JDI3	UDP-N-ACETYLGLUCOSAMINE--    115.7    7.7e-30   1   1.4   0.0
+	A0A0S4NND9_TED03          	   284	   421	   114.8
+	PF27244	GtfB_M          	    70	   173	     139
+
+A0A380KBA0	UDP-N-ACETYLGLUCOSAMINE--    103.3      5e-26   1   1.3   0.0
+	A0A0S4NND9_TED03          	   285	   411	   102.6
+	PF27244	GtfB_M          	    71	   174	   130.5
+
+A0A380KDV2	EXOPOLYSACCHARIDE BIOSYNT     62.3    2.2e-13   1   1.2   0.1
+	A0A0S4NND9_TED03          	   158	   286	    61.7
+	PF14602	Hexapep_2       	    98	   132	    40.6
+	PF00132	Hexapep         	    98	   133	    43.8
+
+A0A3A9A661	UDP-N-ACETYLGLUCOSAMINE--    108.2    1.5e-27   1   1.5   0.1
+	A0A0S4NND9_TED03          	   296	   437	   107.2
+	PF27244	GtfB_M          	    83	   186	     131
+	PF26334	Gtf3_N          	   465	   619	   148.7
+	PF26337	Gtf3_C          	   637	   790	   161.4
+
+A0A3G9J7U1	UDP-N-ACETYLGLUCOSAMINE--    107.8    2.1e-27   1   1.4   0.5
+	A0A0S4NND9_TED03          	   284	   420	   106.8
+	PF27244	GtfB_M          	    70	   173	   118.6
+
+A0A3N5BNP1	UDP-N-ACETYLGLUCOSAMINE--    104.8    1.8e-26   1   1.8   1.9
+	A0A0S4NND9_TED03          	   282	   412	   104.6
+	PF27244	GtfB_M          	    71	   174	   118.4
+
+A0A3R8JPX7	UDP-N-ACETYLGLUCOSAMINE--     98.3    1.7e-24   1   1.3   0.3
+	A0A0S4NND9_TED03          	   299	   441	    97.8
+	PF27244	GtfB_M          	    83	   189	   103.9
+
+A0A3R8LG95	UDP-N-ACETYLGLUCOSAMINE--    104.8    1.8e-26   1   1.2   0.1
+	A0A0S4NND9_TED03          	   296	   438	   104.2
+	PF27244	GtfB_M          	    83	   186	   136.1
+
+A0A3R8M3V3	UDP-N-ACETYLGLUCOSAMINE--    103.6      4e-26   1   1.2   0.1
+	A0A0S4NND9_TED03          	   281	   423	   103.1
+	PF27244	GtfB_M          	    74	   171	    86.2
+
+A0A3S6QXS1	UDP-N-ACETYLGLUCOSAMINE--    118.1    1.4e-30   1   1.3   0.8
+	A0A0S4NND9_TED03          	   281	   423	   117.4
+	PF27244	GtfB_M          	    69	   172	   128.8
+
+A0A412I5F7	UDP-N-ACETYLGLUCOSAMINE--    121.4    1.3e-31   1   1.4   2.0
+	A0A0S4NND9_TED03          	   286	   425	   120.5
+	PF27244	GtfB_M          	    73	   176	   128.3
+
+A0A426DIW3	ACCESSORY SEC SYSTEM GLYC    101.3      2e-25   1   1.3   0.1
+	A0A0S4NND9_TED03          	   259	   401	   100.7
+	PF27244	GtfB_M          	    73	   177	    98.1
+
+A0A4Q1AYD5	UDP-N-ACETYLGLUCOSAMINE--     92.9    8.2e-23   1   1.6   0.2
+	A0A0S4NND9_TED03          	   282	   420	    91.8
+	PF27244	GtfB_M          	    71	   174	   115.8
+
+A0A4R5N6G5	UDP-N-ACETYLGLUCOSAMINE--    109.0    8.4e-28   1   1.4   1.4
+	A0A0S4NND9_TED03          	   285	   428	   108.3
+	PF27244	GtfB_M          	    70	   174	   123.1
+
+A0A4V1M1V4	UDP-N-ACETYLGLUCOSAMINE--    104.8    1.7e-26   1   1.4   0.2
+	A0A0S4NND9_TED03          	   284	   405	   103.9
+	PF27244	GtfB_M          	    71	   174	     126
+
+A0A4Y9J4L6	UDP-N-ACETYLGLUCOSAMINE--    109.1    8.1e-28   1   1.6   2.5
+	A0A0S4NND9_TED03          	   294	   435	   108.0
+	PF27244	GtfB_M          	    80	   183	   120.2
+
+A0A6I3J2W1	UDP-N-ACETYLGLUCOSAMINE--    138.0    9.9e-37   1   1.2   0.3
+	A0A0S4NND9_TED03          	   283	   425	   137.3
+	PF27244	GtfB_M          	    70	   173	   132.4
+
+A0A6I3J9N7	GLYCOSYLTRANSFERASE FAMIL     60.9    6.2e-13   1   1.5   0.1
+	A0A0S4NND9_TED03          	   269	   390	    59.8
+	PF01501	Glyco_transf_8  	     5	   229	   138.5
+
+A0A6L5GPI5	UDP-N-ACETYLGLUCOSAMINE--    101.1    2.3e-25   1   1.3   0.0
+	A0A0S4NND9_TED03          	   315	   454	   100.6
+	PF27244	GtfB_M          	   103	   206	   116.6
+
+A0A6M0L432	GLYCOSYLTRANSFERASE FAMIL     78.3    2.6e-18   1   1.5   0.9
+	A0A0S4NND9_TED03          	   277	   400	    77.3
+	PF01501	Glyco_transf_8  	    10	   238	   152.9
+
+A0A6M0L5X9	UDP-N-ACETYLGLUCOSAMINE--    113.2    4.5e-29   1   1.5   0.7
+	A0A0S4NND9_TED03          	   282	   423	   112.3
+	PF27244	GtfB_M          	    70	   173	   133.2
+
+A0A6M0LAD8	GLYCOSYLTRANSFERASE FAMIL     63.6    8.6e-14   1   1.4   0.5
+	A0A0S4NND9_TED03          	   270	   391	    62.8
+	PF01501	Glyco_transf_8  	     5	   230	   120.4
+
+A0A6N7IY69	UDP-N-ACETYLGLUCOSAMINE--    121.8    9.5e-32   1   1.4   0.1
+	A0A0S4NND9_TED03          	   334	   464	   121.0
+	PF27244	GtfB_M          	   122	   225	   112.6
+
+A0A7G9T5H4	UDP-N-ACETYLGLUCOSAMINE--     92.0    1.5e-22   1   1.6   1.3
+	A0A0S4NND9_TED03          	   291	   431	    90.9
+	PF27244	GtfB_M          	    75	   179	    81.2
+
+A0A7X1Z7C0	GLYCOSYLTRANSFERASE STABI     69.0    1.9e-15   1   1.6   0.8
+	A0A0S4NND9_TED03          	   286	   389	    67.9
+	PF27244	GtfB_M          	    73	   177	    72.4
+
+A0A7Z0LCG3	UDP-N-ACETYLGLUCOSAMINE--    114.9    1.3e-29   1   1.4   0.0
+	A0A0S4NND9_TED03          	   284	   419	   114.1
+	PF27244	GtfB_M          	    70	   173	   121.8
+
+A0A7Z0LGG2	UDP-N-ACETYLGLUCOSAMINE--    121.9      9e-32   1   1.7   3.0
+	A0A0S4NND9_TED03          	   287	   429	   121.9
+	PF27244	GtfB_M          	    71	   175	   129.2
+
+A0A916QG00	UDP-N-ACETYLGLUCOSAMINE--    126.5    3.4e-33   1   1.3   2.1
+	A0A0S4NND9_TED03          	   285	   423	   125.8
+	PF27244	GtfB_M          	    72	   177	   120.5
+
+A0A917A7N8	UDP-N-ACETYLGLUCOSAMINE--    111.4    1.6e-28   1   1.2   0.1
+	A0A0S4NND9_TED03          	   283	   425	   110.8
+	PF27244	GtfB_M          	    70	   173	   130.3
+
+A0A917EFQ6	GLYCOSYLTRANSFERASE FAMIL     72.2      2e-16   1   1.2   0.2
+	A0A0S4NND9_TED03          	   162	   281	    71.6
+	PF01501	Glyco_transf_8  	     1	   123	    74.8
+
+A0A9X2FG37	UDP-N-ACETYLGLUCOSAMINE--    125.3    8.3e-33   1   1.4   0.7
+	A0A0S4NND9_TED03          	   288	   430	   124.5
+	PF27244	GtfB_M          	    72	   175	   130.9
+
+A3CLU0	EXOPOLYSACCHARIDE BIOSYNTHESI     66.0    1.6e-14   1   1.2   0.1
+	A0A0S4NND9_TED03          	   157	   286	    65.3
+	PF00132	Hexapep         	    98	   133	    49.1
+	PF14602	Hexapep_2       	    98	   133	    44.6
+
+A3CM53	GLYCOSYLTRANSFERASE, PUTATIVE     81.1    3.5e-19   2   2.5   0.1
+	A0A0S4NND9_TED03          	   275	   399	    54.1
+	A0A0S4NND9_TED03          	   672	   797	    24.4
+	PF01501	Glyco_transf_8  	     3	   237	     124
+	PF01501	Glyco_transf_8  	   408	   633	   135.3
+	PF08759	GT-D            	   825	  1049	   301.4
+
+A3CM61	UDP-N-ACETYLGLUCOSAMINE--PEPT    114.1    2.3e-29   1   1.3   0.1
+	A0A0S4NND9_TED03          	   286	   427	   113.5
+	PF27244	GtfB_M          	    70	   174	   124.6
+
+A8AWV5	UDP-N-ACETYLGLUCOSAMINE--PEPT    107.8      2e-27   1   1.3   0.2
+	A0A0S4NND9_TED03          	   286	   427	   107.2
+	PF27244	GtfB_M          	    70	   174	   126.8
+
+A8AY72	GLYCOSYL TRANSFERASE, FAMILY      63.0    1.3e-13   1   1.5   0.1
+	A0A0S4NND9_TED03          	   311	   431	    62.0
+	PF01501	Glyco_transf_8  	    37	   270	   125.4
+
+B9DJS3	UDP-N-ACETYLGLUCOSAMINE--PEPT    118.0    1.5e-30   1   1.3   0.1
+	A0A0S4NND9_TED03          	   291	   436	   117.4
+	PF27244	GtfB_M          	    71	   174	   122.9
+
+C7XX93	GLYCOSYLTRANSFERASE, FAMILY 8     62.1    2.5e-13   1   1.8   0.3
+	A0A0S4NND9_TED03          	   272	   397	    60.9
+	PF01501	Glyco_transf_8  	     6	   238	     104
+
+F2I915	UDP-N-ACETYLGLUCOSAMINE--PEPT    114.2    2.1e-29   1   1.5   0.2
+	A0A0S4NND9_TED03          	   288	   415	   113.3
+	PF27244	GtfB_M          	    70	   173	   121.7
+
+F2I917	GLYCOSYLTRANSFERASE, SP_1767     154.1    1.1e-41   2   2.6   0.2
+	A0A0S4NND9_TED03          	   344	   473	    84.6
+	A0A0S4NND9_TED03          	   478	   614	    66.8
+	PF26334	Gtf3_N          	     2	   153	   154.8
+	PF26337	Gtf3_C          	   171	   326	   170.8
+	PF08759	GT-D            	   637	   860	   340.2
+
+F9HGC2	UNCHARACTERIZED PROTEIN {ECO:     88.5    1.8e-21   1   1.1   1.0
+	A0A0S4NND9_TED03          	     1	   109	    88.2
+
+F9HIR8	GLYCOSYLTRANSFERASE FAMILY 8      62.8    1.6e-13   1   1.7   0.5
+	A0A0S4NND9_TED03          	   279	   402	    62.8
+	PF01501	Glyco_transf_8  	     6	   239	   129.5
+
+F9HIT0	UDP-N-ACETYLGLUCOSAMINE--PEPT    141.4    8.8e-38   1   1.6   0.6
+	A0A0S4NND9_TED03          	   287	   429	   140.3
+	PF27244	GtfB_M          	    71	   174	   126.5
+
+G5KI14	UDP-N-ACETYLGLUCOSAMINE--PEPT    121.0    1.7e-31   1   1.3   1.4
+	A0A0S4NND9_TED03          	   283	   424	   120.4
+	PF27244	GtfB_M          	    70	   173	   122.3
+
+G9WHE2	UDP-N-ACETYLGLUCOSAMINE--PEPT    120.4    2.7e-31   1   1.4   0.1
+	A0A0S4NND9_TED03          	   286	   427	   119.4
+	PF27244	GtfB_M          	    71	   175	     113
+
+K9AUZ2	UDP-N-ACETYLGLUCOSAMINE--PEPT     97.8    2.4e-24   1   1.4   2.4
+	A0A0S4NND9_TED03          	   285	   420	    96.9
+	PF27244	GtfB_M          	    71	   174	   126.3
+
+Q2FUW8	UDP-N-ACETYLGLUCOSAMINE--PEPT    113.7      3e-29   1   1.6   2.7
+	A0A0S4NND9_TED03          	   286	   422	   112.5
+	PF27244	GtfB_M          	    72	   175	   129.7
+
+Q4A0Y0	UDP-N-ACETYLGLUCOSAMINE--PEPT    119.4    5.4e-31   1   2.1   0.7
+	A0A0S4NND9_TED03          	   284	   425	   119.4
+	PF27244	GtfB_M          	    70	   174	   108.7
+
+Q5HKR8	UDP-N-ACETYLGLUCOSAMINE--PEPT    114.7    1.5e-29   1   1.6   1.8
+	A0A0S4NND9_TED03          	   285	   411	   113.5
+	PF27244	GtfB_M          	    71	   174	   120.8
+
+Q5M5P9	UDP-N-ACETYLGLUCOSAMINE--PEPT    133.1    3.2e-35   1   1.3   0.1
+	A0A0S4NND9_TED03          	   283	   425	   132.4
+	PF27244	GtfB_M          	    70	   173	   132.4
+
+Q8DYL9	GLYCOSYL TRANSFERASE, FAMILY      60.9    6.1e-13   1   1.6   0.8
+	A0A0S4NND9_TED03          	   276	   391	    59.6
+	PF01501	Glyco_transf_8  	     4	   240	     137
+
+Q8DYM9	UDP-N-ACETYLGLUCOSAMINE--PEPT    120.2    2.9e-31   1   1.4   0.9
+	A0A0S4NND9_TED03          	   285	   428	   119.6
+	PF27244	GtfB_M          	    71	   174	   128.9
+
+R9K096	UDP-N-ACETYLGLUCOSAMINE--PEPT    110.4    3.3e-28   1   1.3   0.2
+	A0A0S4NND9_TED03          	   308	   450	   109.7
+	PF27244	GtfB_M          	    95	   198	   136.6
+
+R9K0N2	ACCESSORY SEC SYSTEM GLYCOSYL     95.7    1.1e-23   1   1.3   1.2
+	A0A0S4NND9_TED03          	   269	   411	    95.0
+	PF27244	GtfB_M          	    73	   188	    61.7
+
+S2XB02	UDP-N-ACETYLGLUCOSAMINE--PEPT    103.7    3.6e-26   1   1.5   0.6
+	A0A0S4NND9_TED03          	   286	   428	   102.7
+	PF27244	GtfB_M          	    71	   174	   114.3
+
+V7HT79	UDP-N-ACETYLGLUCOSAMINE--PEPT    126.7      3e-33   1   1.5   4.4
+	A0A0S4NND9_TED03          	   297	   439	   125.8
+	PF27244	GtfB_M          	    84	   187	   119.2
+
+V8BDW6	ACCESSORY SEC SYSTEM GLYCOSYL     69.9      1e-15   1   1.3   0.0
+	A0A0S4NND9_TED03          	   266	   406	    69.1
+	PF27244	GtfB_M          	    72	   176	    74.8
+
+V8BEF2	UDP-N-ACETYLGLUCOSAMINE--PEPT    103.8    3.5e-26   1   1.5   1.8
+	A0A0S4NND9_TED03          	   287	   426	   102.8
+	PF27244	GtfB_M          	    70	   173	   106.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS914136 (E-value: 2.7e-31, Score: 113.7)
+Mentioned as: SACOL2669
+Description: hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus COL
+PMID: 28248218
+Source: EuropePMC
+Title: A <i>Staphylococcus aureus</i> Proteome Overview: Shared and Specific Proteins and Protein Complexes from Representative Strains of All Three Clades
+Journal: Proteomes (2016)
+Snippet: SAOUHSC_02012 NWMN_1766 SAUSA300_1855 4,4-diaponeurosporenoate glycosyltransferase SACOL2578 SA2350 SAOUHSC_02880 NWMN_2463 SAUSA300_2500 accessory Sec system glycosyltransferase GtfB SACOL2669 SA2440 SAOUHSC_02983 NWMN_2546 SAUSA300_2582 accessory Sec system glycosyltransferase GtfA SACOL2670 SA2441 SAOUHSC_02984 NWMN_2547 SAUSA300_2583 N -glycosyltransferase icaA SACOL2689 SA2459 SAOUHSC_03002 NWMN_2565 SAUSA300_2600 proteomes-04-00008-t002b_Table 2 (b) Annotation COL (A) Mu50 (B)
+
+================================================================================
+Protein: VIMSS668077 (E-value: 2.7e-31, Score: 113.7)
+Mentioned as: SAR2726
+Description: conserved hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus MRSA252
+PMID: 23658690
+Source: EuropePMC
+Title: Within-host evolution of Staphylococcus aureus during asymptomatic carriage
+Journal: PloS one (2013)
+Snippet: 0 SAR2472 Proton/sodium-glutamate symport protein 1 1 0 SAR2691 Betaine aldehyde dehydrogenase 0 1 1 SAR2726 Hypothetical protein 1 1 0 Fluctuating population dynamics characterize nasal carriage We sampled genomes from a single time point in each individual, representing a snapshot of the evolutionary process within
+
+================================================================================
+Protein: VIMSS668077 (E-value: 2.7e-31, Score: 113.7)
+Mentioned as: SAR2726
+Description: conserved hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus MRSA252
+PMID: 19183815
+Source: EuropePMC
+Title: The Staphylococcus aureus response to unsaturated long chain free fatty acids: survival mechanisms and virulence implications
+Journal: PloS one (2009)
+Snippet: SAR2667 hypothetical protein 2.19 1.37E-02 SAR2688 hypothetical protein 7.55 3.70E-04 SAR2689 hypothetical protein 2.53 1.84E-02 SAR2726 conserved hypothetical protein 5.07 1.80E-03 SAR2727 glycosyl transferase, group 1 family protein 4.11 6.70E-03 SAR2739 conserved hypothetical protein 4.21 2.06E-03 SAR2740 conserved hypothetical protein 2.05 3.09E-02 SAR2777 putative DNA-binding protein
+
+================================================================================
+Protein: VIMSS104792 (E-value: 1.7e-30, Score: 111.2)
+Mentioned as: SA2440
+Description: hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus N315
+PMID: 25997461
+Source: EuropePMC
+Title: The C-terminal region of the RNA helicase CshA is required for the interaction with the degradosome and turnover of bulk RNA in the opportunistic pathogen Staphylococcus aureus
+Journal: RNA biology (2015)
+Snippet: 3.5 2.5 3.0 3.1 SA2431 Immunodominant staphylococcal antigen B, extracellular isaB 2.2 2.4 1.8 2.3 SA2440 SA2440-SA2446 Glycosyltransferase stabilizing protein Gtf2, part of part of the accessory SecA2/SecY2 system gtf2 2.1 1.9 2.4 2.8 SA2441 SA2440-SA2446 Glycosyltransferase Gtf1 gtf1 2.0 1.9 2.9 2.9 SA2442 SA2440-SA2446 Protein
+
+================================================================================
+Protein: VIMSS104792 (E-value: 1.7e-30, Score: 111.2)
+Mentioned as: SA2440
+Description: hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus N315
+PMID: 25859258
+Source: EuropePMC
+Title: Cis-encoded non-coding antisense RNAs in streptococci and other low GC Gram (+) bacterial pathogens
+Journal: Frontiers in genetics (2015)
+Snippet: SA1830 63 Teg23as nrgA 36 Teg25as SA2200 117 Teg26as SA2218 63 Teg27as SA2224 90 Teg28as SA2440 36 Teg36as ssaA 448 Teg37as SA0970 108 Teg38as SA0351 50 Teg10aspl SAP031 36 Teg39as SA0031 210 Teg40as SA0751 299 Teg41as SAS024 141 Streptococcus agalactiae SQ18 gbs0031 (Surface exposed protein 123
+
+================================================================================
+Protein: VIMSS104792 (E-value: 1.7e-30, Score: 111.2)
+Mentioned as: SA2440
+Description: hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus N315
+PMID: 12511508
+Source: EuropePMC
+Title: Global regulation of Staphylococcus aureus genes by Rot
+Journal: Journal of bacteriology (2003)
+Snippet: SA0408 SA2303 SA0439 SA1059 SA0291 SA0292 SA0271 SA2131 SA2132 SA2440 SA2001 SA1320 SA0380 SA2442 SA0675 SA2436 HP HP Conserved HP Conserved HP HP, similar to
+
+================================================================================
+Protein: VIMSS3789289 (E-value: 1.8e-29, Score: 107.8)
+Mentioned as: SGO_0976
+Description: hypothetical protein
+Organism: Streptococcus gordonii str. Challis substr. CH1
+PMID: 27551046
+Source: EuropePMC
+Title: Composition and Activity of the Non-canonical Gram-positive SecY2 Complex
+Journal: The Journal of biological chemistry (2016)
+Snippet: CP000725.1 ). Surface protein, hsa (SGO_0966); glycosyltransferases, gly (SGO_0968), nss (SGO_0969), gtfA (SGO_0975), and gtfB (SGO_0976); accessory secretion proteins, asp1 (SGO_0971), asp2 (SGO_0972), asp3 (SGO_0973), asp4 (SGO_0977), and asp5 (SGO_0978); secY2 (SGO_0970), secA2 (SGO_0974). Transmembrane prediction for Asp4 and Asp5 indicates topologies with 1 and 2
+
+================================================================================
+Protein: VIMSS117201 (E-value: 2e-22, Score: 85.0)
+Mentioned as: SP_1767
+Description: glycosyl transferase family protein
+Organism: Streptococcus pneumoniae TIGR4
+PMID: 40232949
+Source: EuropePMC
+Title: Comparative pangenomics of &lt;i&gt;Streptococcus pneumoniae&lt;/i&gt; from Malawi: uncovering genetic variability and pathogenicity
+Journal: Microbial genomics (2025)
+
+================================================================================
+Protein: VIMSS117201 (E-value: 2e-22, Score: 85.0)
+Mentioned as: SP_1767
+Description: glycosyl transferase family protein
+Organism: Streptococcus pneumoniae TIGR4
+PMID: 39604369
+Source: EuropePMC
+Title: Mechanisms of S. agalactiae promoting G. vaginalis biofilm formation leading to recurrence of BV
+Journal: NPJ biofilms and microbiomes (2024)
+Snippet: family 2 protein WP_000867340 spsA None NS glycosyltransferase family 2 protein WP_001872148 NCTC8181_01869 NS NS SP_1767 family glycosyltransferase WP_000751415 gspA_3 NS NS CDP-glycerol WP_001196763 yfdH NS NS glycosyltransferase family 2 protein WP_001173122 NS NS glycosyltransferase family 2 protein WP_000159884 luxS NS Up S-ribosylhomocysteine lyase WP_000717641 neuC
+
+================================================================================
+Protein: VIMSS117201 (E-value: 2e-22, Score: 85.0)
+
+... (truncated - showing first 100 of 184 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0S4NND9.1	AF-A0A0S4NND9-F1-model_v4_TED01:11-22_198-269_428-441	1	AF-A0A0S4NND9-F1-model_v4_TED01	11-441	100.0%
+A0A0S4NND9.1	AF-A0A0S4NND9-F1-model_v4_TED02:58-105	1	AF-A0A0S4NND9-F1-model_v4_TED02	58-105	0
+A0A0S4NND9.1	AF-A0A0S4NND9-F1-model_v4_TED03:280-422	1	AF-A0A0S4NND9-F1-model_v4_TED03	280-422	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0A0S4NND9_TED03
+GA   27.00 27.00;
+TC   28.30 28.40;
+NC   25.10 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 5gvv
+RN   [1]
+RM   28246170
+RT   Defining the enzymatic pathway for polymorphic O-glycosylation of the
+RT    pneumococcal serine-rich repeat protein PsrP.
+RA   Jiang YL, Jin H, Yang HB, Zhao RL, Wang S, Chen Y, Zhou CZ;
+RL   J Biol Chem. 2017;292:6213-6224.
+
+--- End of Current DESC file ---

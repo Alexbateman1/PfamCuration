@@ -1,0 +1,80 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Pseudomonas syringae.
+1	6	Pseudomonas
+1	5	Pseudomonadaceae
+1	4	Pseudomonadales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+F3G238	TYPE III HELPER PROTEIN HRPA2    105.3    5.8e-27   1   1.6   9.7
+	Q52420_TED01              	     1	    42	   104.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS883531 (E-value: 5.2e-29, Score: 105.3)
+Mentioned as: Psyr_1192
+Description: hypothetical protein
+Organism: Pseudomonas syringae pv. syringae B728a
+PMID: 25182327
+Source: EuropePMC
+Title: Transcriptional analysis of the global regulatory networks active in Pseudomonas syringae during leaf colonization
+Journal: mBio (2014)
+Snippet: 1.9 1.1 Psyr_1217 hrpL T3SS regulation 1.6 1.8 1.0 2.4 2.0 1.2 2.9 4.2 3.7 Psyr_1192 hrpA2 T3SS pilus 1.6 1.9 1.1 4.2 2.9 2.6 12.7 4.5 2.0 Psyr_4919 avrPto1 T3SS effector protein 1.1 2.1 3.0 10.4 5.2 8.7 28.1 8.6 9.6 Psyr_2629 ppkA T6SS-associated kinase
+
+================================================================================
+Protein: VIMSS883531 (E-value: 5.2e-29, Score: 105.3)
+Mentioned as: Psyr_1192
+Description: hypothetical protein
+Organism: Pseudomonas syringae pv. syringae B728a
+PMID: 23555661
+Source: EuropePMC
+Title: Comparative genomics of multiple strains of Pseudomonas cannabina pv. alisalensis, a potential model pathogen of both monocots and dicots
+Journal: PloS one (2013)
+Snippet: 95% Psyr_1190 94% PSPTO_1379 95% PSPPH_1270 HrpS 93% Psyr_1191 93% PSPTO_1380 94% PSPPH_1271 HrpA 63% Psyr_1192 46% PSPTO_1381 64% PSPPH_1272 HrpZ 82% Psyr_1193 66% PSPTO_1382 80% PSPPH_1273 HrpB 92% Psyr_1194 65% PSPTO_1383 89% PSPPH_1274 HrcJ 96% Psyr_1195 95% PSPTO_1384 96% PSPPH_1275 HrpD 89% Psyr_1196 82% PSPTO_1385
+
+================================================================================
+Protein: VIMSS878139 (E-value: 4.5e-22, Score: 83.0)
+Mentioned as: PSPPH_1272
+Description: type III helper protein HrpA1
+Organism: Pseudomonas syringae pv. phaseolicola 1448A
+PMID: 23145783
+Source: EuropePMC
+Title: Virulence factor regulator (Vfr) controls virulence-associated phenotypes in Pseudomonas syringae pv. tabaci 6605 by a quorum sensing-independent mechanism
+Journal: Molecular plant pathology (2013)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q52420.1	AF-Q52420-F1-model_v4_TED01:1-42	1	AF-Q52420-F1-model_v4_TED01	1-42	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q52420_TED01
+GA   27.00 27.00;
+TC   27.40 104.20;
+NC   26.50 21.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

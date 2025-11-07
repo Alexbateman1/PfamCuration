@@ -1,0 +1,105 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YFFR_ECOLI              Reviewed;         130 AA.
+AC   P76549;
+DE   RecName: Full=Uncharacterized protein YffR;
+DE   Flags: Precursor;
+GN   Name=yffR; OrderedLocusNames=b2449;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+DR   EMBL; U00096; AAC75502.1; -; Genomic_DNA.
+DR   PIR; H65019; H65019.
+DR   RefSeq; NP_416944.1; NC_000913.3.
+DR   RefSeq; WP_000865921.1; NZ_JACEFS010000004.1.
+DR   AlphaFoldDB; P76549; -.
+DR   FunCoup; P76549; 33.
+DR   STRING; 511145.b2449; -.
+DR   jPOST; P76549; -.
+DR   PaxDb; 511145-b2449; -.
+DR   EnsemblBacteria; AAC75502; AAC75502; b2449.
+DR   GeneID; 946931; -.
+DR   KEGG; eco:b2449; -.
+DR   KEGG; ecoc:C3026_13595; -.
+DR   PATRIC; fig|511145.12.peg.2542; -.
+DR   EchoBASE; EB3931; -.
+DR   InParanoid; P76549; -.
+DR   BioCyc; EcoCyc:G7279-MONOMER; -.
+DR   PRO; PR:P76549; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..19
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           20..130
+FT                   /note="Uncharacterized protein YffR"
+FT                   /id="PRO_0000013889"
+SQ   SEQUENCE   130 AA;  14554 MW;  D51FED2AE12F86CC CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P76549	UNCHARACTERIZED PROTEIN YFFR       213.4    1.4e-60   1   1.1   0.6
+	P76549_TED01              	    37	   127	   213.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P76549 (E-value: 1.2e-62, Score: 213.4)
+Mentioned as: P76549
+Description: Uncharacterized protein YffR
+Organism: Escherichia coli (strain K12)
+PMID: 20803007
+Source: EuropePMC
+Title: Optimization of parameters for coverage of low molecular weight proteins
+Journal: Analytical and bioanalytical chemistry (2010)
+Snippet: EXPASY SwissProt database information ( http://expasy.org/sprot/ ). Furthermore, five of the identified proteins (SwissProt entries P76549, P21418, P0A703, A5A614, and P0AEG8; Electronic supplementary material TablesS 2 and S 3 ) have not yet been validated according to the latest large-scale studies by Iwasaki et al. [
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76549.1	AF-P76549-F1-model_v4_TED01:37-127	1	AF-P76549-F1-model_v4_TED01	37-127	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76549_TED01
+GA   27.00 27.00;
+TC   77.00 213.00;
+NC   26.90 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,219 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TCPC_VIBCH              Reviewed;         489 AA.
+AC   P29481; Q56667; Q9KTR3;
+DE   RecName: Full=Toxin coregulated pilus biosynthesis outer membrane protein C;
+DE   AltName: Full=TCP pilus biosynthesis protein TcpC;
+DE   Flags: Precursor;
+GN   Name=tcpC; OrderedLocusNames=VC_0831;
+OS   Vibrio cholerae serotype O1 (strain ATCC 39315 / El Tor Inaba N16961).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales;
+OC   Vibrionaceae; Vibrio.
+OX   NCBI_TaxID=243277;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Classical Inaba Z17561 / Serotype O1;
+RX   PubMed=1358749; DOI=10.1016/0378-1097(92)90383-y;
+RA   Ogierman M.A., Manning P.A.;
+RT   "TCP pilus biosynthesis in Vibrio cholerae O1: gene sequence of tcpC
+RT   encoding an outer membrane lipoprotein.";
+RL   FEMS Microbiol. Lett. 76:179-184(1992).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 39315 / El Tor Inaba N16961;
+RX   PubMed=10952301; DOI=10.1038/35020000;
+RA   Heidelberg J.F., Eisen J.A., Nelson W.C., Clayton R.A., Gwinn M.L.,
+RA   Dodson R.J., Haft D.H., Hickey E.K., Peterson J.D., Umayam L.A., Gill S.R.,
+RA   Nelson K.E., Read T.D., Tettelin H., Richardson D.L., Ermolaeva M.D.,
+RA   Vamathevan J.J., Bass S., Qin H., Dragoi I., Sellers P., McDonald L.A.,
+RA   Utterback T.R., Fleischmann R.D., Nierman W.C., White O., Salzberg S.L.,
+RA   Smith H.O., Colwell R.R., Mekalanos J.J., Venter J.C., Fraser C.M.;
+RT   "DNA sequence of both chromosomes of the cholera pathogen Vibrio
+RT   cholerae.";
+RL   Nature 406:477-483(2000).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-46.
+RC   STRAIN=El Tor H1 / Serotype O1;
+RX   PubMed=8621096; DOI=10.1016/0378-1119(95)00744-x;
+RA   Ogierman M.A., Voss E., Meaney C., Faast R., Attridge S.R., Manning P.A.;
+RT   "Comparison of the promoter proximal regions of the toxin-co-regulated tcp
+RT   gene cluster in classical and El Tor strains of Vibrio cholerae O1.";
+RL   Gene 170:9-16(1996).
+CC   -!- FUNCTION: Involved in TCP pilus biogenesis.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Lipid-anchor.
+DR   EMBL; X64098; CAA45458.1; -; Genomic_DNA.
+DR   EMBL; AE003852; AAF93994.1; -; Genomic_DNA.
+DR   EMBL; X74730; CAA52748.1; -; Genomic_DNA.
+DR   PIR; B82275; B82275.
+DR   PIR; PC4162; PC4162.
+DR   PIR; S23267; S23267.
+DR   RefSeq; NP_230479.1; NC_002505.1.
+DR   RefSeq; WP_000750979.1; NZ_LT906614.1.
+DR   AlphaFoldDB; P29481; -.
+DR   STRING; 243277.VC_0831; -.
+DR   DNASU; 2614498; -.
+DR   EnsemblBacteria; AAF93994; AAF93994; VC_0831.
+DR   KEGG; vch:VC_0831; -.
+DR   PATRIC; fig|243277.26.peg.792; -.
+DR   eggNOG; COG4796; Bacteria.
+DR   HOGENOM; CLU_563760_0_0_6; -.
+DR   Proteomes; UP000000584; Chromosome 1.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal; Transmembrane; Transmembrane helix.
+FT   SIGNAL          1..16
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           17..489
+FT                   /note="Toxin coregulated pilus biosynthesis outer membrane
+FT                   protein C"
+FT                   /id="PRO_0000018196"
+FT   TRANSMEM        174..190
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        294..308
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        402..417
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        442..457
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   LIPID           17
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000305"
+FT   LIPID           17
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        15
+FT                   /note="S -> A (in Ref. 1; CAA45458)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        32
+FT                   /note="S -> N (in Ref. 1; CAA45458)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        43
+FT                   /note="A -> R (in Ref. 1; CAA45458)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        108
+FT                   /note="N -> K (in Ref. 1; CAA45458)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        204
+FT                   /note="E -> K (in Ref. 1; CAA45458)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   489 AA;  53890 MW;  5849CEFAEA23717B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Vibrio.
+1	6	Pseudescherichia.
+1	6	Pluralibacter.
+1	6	Enterovibrio.
+1	6	Enterobacillus.
+1	6	Citrobacter.
+1	6	Aliivibrio.
+3	5	Vibrionaceae
+3	5	Enterobacteriaceae
+1	5	Hafniaceae
+4	4	Enterobacterales
+3	4	Vibrionales
+7	3	Gammaproteobacteria
+7	2	Pseudomonadota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A090V0L0	PUTATIVE TYPE IV PILUS BI     29.8     0.0027   1   2.3   0.7
+	P29481_TED02              	   165	   255	    29.8
+
+A0A0L0AZA2	TYPE II AND III SECRETION     33.1    0.00027   1   1.8   0.4
+	P29481_TED02              	   164	   254	    31.7
+
+A0A135I5R3	PILUS ASSEMBLY PROTEIN {E     70.2    6.8e-16   1   1.8   0.7
+	P29481_TED02              	   157	   247	    68.9
+
+A0A370QRK6	TOXIN CO-REGULATED PILUS      30.1     0.0023   1   2.0   0.9
+	P29481_TED02              	   166	   256	    28.3
+
+D2TPB1	TYPE IV PILUS BIOGENESIS PROT     33.3    0.00022   1   2.5   0.8
+	P29481_TED02              	   170	   260	    33.3
+
+E3G6F6	TYPE IV PILUS BIOGENESIS PROT     34.8    7.8e-05   1   2.4   1.7
+	P29481_TED02              	   159	   248	    32.6
+
+L0M1L5	TYPE II SECRETORY PATHWAY, CO     37.9    8.6e-06   1   2.1   0.2
+	P29481_TED02              	   162	   252	    35.6
+
+P29481	TOXIN COREGULATED PILUS BIOSYNT    208.9    3.6e-59   1   2.8   0.9
+	P29481_TED02              	   164	   254	   204.3
+
+Q5DZ54	TOXIN COREGULATED PILUS OUTER     64.6    3.9e-14   1   2.0   2.2
+	P29481_TED02              	   158	   247	    64.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS53435 (E-value: 3.2e-61, Score: 208.9)
+Mentioned as: VC0831
+Description: toxin co-regulated pilus biosynthesis outer membrane protein C
+Organism: Vibrio cholerae O1 biovar eltor str. N16961
+PMID: 36861972
+Source: EuropePMC
+Title: Chromosomal Position of Ribosomal Protein Genes Affects Long-Term Evolution of Vibrio cholerae
+Journal: mBio (2023)
+Snippet: status and biogenesis 1, 3, 4, 5, 6, 9, 10, 11 NS, S, FS tcpC (VC0831) Toxin coregulated pilus 1, 3, 6, 7, 9 FS gcvA (VC0896) Transcriptional activation of the glycine cleavage system. 4, 9 NS vpsA (VC0917) Biofilm formation 2, 6 NS luxO (VC1021)
+
+================================================================================
+Protein: VIMSS53435 (E-value: 3.2e-61, Score: 208.9)
+Mentioned as: VC0831
+Description: toxin co-regulated pilus biosynthesis outer membrane protein C
+Organism: Vibrio cholerae O1 biovar eltor str. N16961
+PMID: 33123494
+Source: EuropePMC
+Title: Vibrio Pathogenicity Island-1: The Master Determinant of Cholera Pathogenesis
+Journal: Frontiers in cellular and infection microbiology (2020)
+Snippet: the stability of TcpC and also help in outer membrane localization Bose and Taylor, 2005 VC0831 tcpC 1,470 53.8 Encode outer membrane lipoprotein required for pilus biogenesis and provide resistance from host complement system. VC0832 tcpR 456 17.7 Helps in high osmolality tolerance in intestinal lumen
+
+================================================================================
+Protein: VIMSS53435 (E-value: 3.2e-61, Score: 208.9)
+Mentioned as: VC0831
+Description: toxin co-regulated pilus biosynthesis outer membrane protein C
+Organism: Vibrio cholerae O1 biovar eltor str. N16961
+PMID: 26755629
+Source: EuropePMC
+Title: The LonA Protease Regulates Biofilm Formation, Motility, Virulence, and the Type VI Secretion System in Vibrio cholerae
+Journal: Journal of bacteriology (2016)
+Snippet: Fold change (lon mutant/WT) Pathogenesis VC0828 VC0830 VC0831 VC0832 VC0833 VC0834 VC0837 VC0838 VC1456 VC1457 VCA0219 Toxin-coregulated pilin, tcpA
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P29481.2	AF-P29481-F1-model_v4_TED01:73-105_120-158	1	AF-P29481-F1-model_v4_TED01	73-158	0
+P29481.2	AF-P29481-F1-model_v4_TED02:164-254	1	AF-P29481-F1-model_v4_TED02	164-254	100.0%
+P29481.2	AF-P29481-F1-model_v4_TED03:257-447_462-477	1	AF-P29481-F1-model_v4_TED03	257-477	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P29481_TED02
+GA   27.00 27.00;
+TC   27.30 28.30;
+NC   26.60 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

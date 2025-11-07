@@ -1,0 +1,167 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1266_HAEIN             Reviewed;         128 AA.
+AC   P44145;
+DE   RecName: Full=Uncharacterized protein HI_1266;
+GN   OrderedLocusNames=HI_1266;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; L42023; AAC22919.1; -; Genomic_DNA.
+DR   PIR; A64024; A64024.
+DR   RefSeq; NP_439421.1; NC_000907.1.
+DR   AlphaFoldDB; P44145; -.
+DR   STRING; 71421.HI_1266; -.
+DR   EnsemblBacteria; AAC22919; AAC22919; HI_1266.
+DR   KEGG; hin:HI_1266; -.
+DR   PATRIC; fig|71421.8.peg.1318; -.
+DR   eggNOG; ENOG502ZTF7; Bacteria.
+DR   HOGENOM; CLU_108349_0_0_6; -.
+DR   OrthoDB; 5687326at2; -.
+DR   BioCyc; HINF71421:G1GJ1-1294-MONOMER; -.
+DR   Proteomes; UP000000579; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..128
+FT                   /note="Uncharacterized protein HI_1266"
+FT                   /id="PRO_0000078018"
+FT   TRANSMEM        8..28
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   128 AA;  15107 MW;  C1D4AB277C88873C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Haemophilus.
+1	6	Campylobacter.
+1	6	Aggregatibacter.
+2	5	Pasteurellaceae
+1	5	Campylobacteraceae
+2	4	Pasteurellales
+1	4	Campylobacterales
+2	3	Gammaproteobacteria
+1	3	Epsilonproteobacteria
+2	2	Pseudomonadota
+1	2	Campylobacterota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A842J574	CHEMOTAXIS PROTEIN {ECO:0     30.0     0.0017   1   1.6   0.0
+	Iterate                   	    42	    85	    28.9
+
+E6KXQ9	CHEMOTAXIS PROTEIN {ECO:00080     57.3    5.2e-12   1   1.6   1.0
+	Iterate                   	    29	    84	    56.2
+
+K7F3E5	UNCHARACTERIZED PROTEIN {ECO:     32.6    0.00027   0   9.1   3.2
+	PF01352	KRAB            	    12	    53	    82.3
+	PF00096	zf-C2H2         	   170	   192	    29.6
+	PF00096	zf-C2H2         	   198	   220	    27.7
+	PF00096	zf-C2H2         	   226	   248	    18.2
+	PF00096	zf-C2H2         	   254	   276	    24.9
+	PF00096	zf-C2H2         	   282	   304	    27.5
+	PF00096	zf-C2H2         	   310	   332	    27.5
+	PF00096	zf-C2H2         	   338	   360	    27.5
+	PF00096	zf-C2H2         	   366	   388	    27.5
+	PF00096	zf-C2H2         	   394	   416	    27.5
+	PF00096	zf-C2H2         	   422	   444	    27.5
+	PF00096	zf-C2H2         	   450	   472	    27.5
+	PF00096	zf-C2H2         	   478	   500	    27.5
+	PF00096	zf-C2H2         	   506	   528	    27.5
+
+P44145	UNCHARACTERIZED PROTEIN HI_126    142.2    1.6e-38   1   1.4   3.4
+	Iterate                   	     2	    54	   141.5
+
+T1EI89	DUF4203 DOMAIN-CONTAINING PRO     32.7    0.00025   7   7.1  17.0
+	Iterate                   	    31	    54	     5.6
+	Iterate                   	    57	    80	     5.6
+	Iterate                   	    83	   106	     5.6
+	Iterate                   	   109	   132	     5.6
+	Iterate                   	   135	   158	     5.6
+	Iterate                   	   161	   184	     5.6
+	Iterate                   	     6	    28	     5.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS7610 (E-value: 1.5e-40, Score: 142.2)
+Mentioned as: HI1266
+Description: H. influenzae predicted coding region HI1266
+Organism: Haemophilus influenzae Rd KW20
+PMID: 22587738
+Source: EuropePMC
+Title: PerPlot & PerScan: tools for analysis of DNA curvature-related periodicity in genomic nucleotide sequences
+Journal: Microbial informatics and experimentation (2011)
+Snippet: HI1264 1341719 1344361 - DNA gyrase subunit A GyrA HI1265 1344944 1346707 - hypothetical protein HI1266 1346844 1347230 - hypothetical protein HI1268 1347455 1347634 + hypothetical protein HI1269 1347628 1347744 + hypothetical protein HI1272 1348468 1349259 + ABC transporter ATP-binding protein HI1273 1349256 1350062 + hypothetical
+
+================================================================================
+Protein: VIMSS7610 (E-value: 1.5e-40, Score: 142.2)
+Mentioned as: HI1266
+Description: H. influenzae predicted coding region HI1266
+Organism: Haemophilus influenzae Rd KW20
+PMID: 19128474
+Source: EuropePMC
+Title: The iron/heme regulated genes of Haemophilus influenzae: comparative transcriptional profiling as a tool to define the species core modulon
+Journal: BMC genomics (2009)
+Snippet: indicates that Rd KW20 lacks the region spanning the middle of the upstream, divergently transcribed, HI1266 ( hipE ) gene to the middle of the hipA sequence, including the intergenic region, effectively leaving both fragments of HI1266 and hipA without promotors. The downstream genes in Rd
+
+================================================================================
+Protein: VIMSS7610 (E-value: 1.5e-40, Score: 142.2)
+Mentioned as: HI1266
+Description: H. influenzae predicted coding region HI1266
+Organism: Haemophilus influenzae Rd KW20
+PMID: 12595420
+Source: EuropePMC
+Title: Position-based scanning for comparative genomics and identification of genetic islands in Haemophilus influenzae type b
+Journal: Infection and immunity (2003)
+Snippet: ORF in Eagan containing sequences similar to those of the HI1266, HI1267, and HI1268 genes of Rd. The genes HI1266 and HI1268 in the Rd KW20 genome are
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P44145.1	AF-P44145-F1-model_v4_TED01:2-54	1	AF-P44145-F1-model_v4_TED01	2-54	100.0%
+P44145.1	AF-P44145-F1-model_v4_TED02:57-128	1	AF-P44145-F1-model_v4_TED02	57-128	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44145_TED01/Iterate
+GA   27.00 27.00;
+TC   30.00 28.90;
+NC   21.30 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

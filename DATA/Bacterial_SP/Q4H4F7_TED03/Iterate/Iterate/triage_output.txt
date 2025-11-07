@@ -1,0 +1,86 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Trinickia.
+1	6	Xenorhabdus.
+1	6	Streptomyces.
+1	6	Sodalis.
+1	6	Saccharopolyspora.
+1	6	Roseateles.
+1	6	Paludibacterium.
+2	5	Burkholderiaceae
+1	5	Streptomycetaceae
+1	5	Sphaerotilaceae
+1	5	Pseudonocardiaceae
+1	5	Morganellaceae
+1	5	Chromobacteriaceae
+1	5	Bruguierivoracaceae
+3	4	Burkholderiales
+2	4	Enterobacterales
+1	4	Pseudonocardiales
+1	4	Neisseriales
+1	4	Kitasatosporales
+4	3	Betaproteobacteria
+2	3	Gammaproteobacteria
+2	3	Actinomycetes
+6	2	Pseudomonadota
+2	2	Actinomycetota
+6	1	Pseudomonadati
+2	1	Bacillati
+8	0	Bacteria
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A3D8JTT9	UNCHARACTERIZED PROTEIN {     90.9    5.2e-22   1   1.3   0.0
+	Iterate                   	   405	   601	    90.0
+
+A0A918P576	UNCHARACTERIZED PROTEIN {    118.7    1.7e-30   1   1.2   0.0
+	Iterate                   	   410	   620	   118.1
+
+F5LRC7	NEAMINE PHOSPHORIBOSYLTRANSFE    368.9   6.9e-107   1   1.2   0.0
+	Iterate                   	   392	   603	   368.5
+
+W0I4G2	PUTATIVE, ANTIBIOTIC SYNTHASE    159.0    8.6e-43   1   1.2   0.0
+	Iterate                   	   403	   620	   158.4
+
+W1J374	UNCHARACTERIZED PROTEIN {ECO:    430.7   9.5e-126   1   1.4   0.2
+	Iterate                   	   406	   634	   429.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2N7WBA9.1	AF-A0A2N7WBA9-F1-model_v4_TED01:15-125	1	AF-A0A2N7WBA9-F1-model_v4_TED01	15-125	0
+A0A2N7WBA9.1	AF-A0A2N7WBA9-F1-model_v4_TED02:129-260	1	AF-A0A2N7WBA9-F1-model_v4_TED02	129-260	0
+A0A2N7WBA9.1	AF-A0A2N7WBA9-F1-model_v4_TED03:280-399	1	AF-A0A2N7WBA9-F1-model_v4_TED03	280-399	0
+A0A2N7WBA9.1	AF-A0A2N7WBA9-F1-model_v4_TED04:404-605	1	AF-A0A2N7WBA9-F1-model_v4_TED04	404-605	96.7%
+W0I4G2.1	AF-W0I4G2-F1-model_v4_TED01:8-118	1	AF-W0I4G2-F1-model_v4_TED01	8-118	0
+W0I4G2.1	AF-W0I4G2-F1-model_v4_TED02:127-271	1	AF-W0I4G2-F1-model_v4_TED02	127-271	0
+W0I4G2.1	AF-W0I4G2-F1-model_v4_TED03:277-398	1	AF-W0I4G2-F1-model_v4_TED03	277-398	0
+W0I4G2.1	AF-W0I4G2-F1-model_v4_TED04:404-612	1	AF-W0I4G2-F1-model_v4_TED04	404-612	95.4%
+W1J374.1	AF-W1J374-F1-model_v4_TED01:2-114	1	AF-W1J374-F1-model_v4_TED01	2-114	0
+W1J374.1	AF-W1J374-F1-model_v4_TED02:116-268	1	AF-W1J374-F1-model_v4_TED02	116-268	0
+W1J374.1	AF-W1J374-F1-model_v4_TED03:274-401	1	AF-W1J374-F1-model_v4_TED03	274-401	0
+W1J374.1	AF-W1J374-F1-model_v4_TED04:409-625	1	AF-W1J374-F1-model_v4_TED04	409-625	94.8%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q4H4F7_TED03/Iterate/Iterate
+GA   27.00 27.00;
+TC   31.00 39.40;
+NC   26.80 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

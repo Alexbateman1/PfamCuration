@@ -1,0 +1,209 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y465_MYCPN              Reviewed;         199 AA.
+AC   P75318;
+DE   RecName: Full=Uncharacterized protein MPN_465;
+GN   OrderedLocusNames=MPN_465; ORFNames=MP376, P01_orf199;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SIMILARITY: To M.pneumoniae MPN_037. {ECO:0000305}.
+DR   EMBL; U00089; AAB96024.1; -; Genomic_DNA.
+DR   PIR; S73702; S73702.
+DR   AlphaFoldDB; P75318; -.
+DR   STRING; 272634.MPN_465; -.
+DR   EnsemblBacteria; AAB96024; AAB96024; MPN_465.
+DR   KEGG; mpn:MPN_465; -.
+DR   HOGENOM; CLU_1600898_0_0_14; -.
+DR   Proteomes; UP000000808; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..199
+FT                   /note="Uncharacterized protein MPN_465"
+FT                   /id="PRO_0000210683"
+FT   TRANSMEM        41..61
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        72..92
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        109..129
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        145..165
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   199 AA;  23170 MW;  7FCAC9DA043A490C CRC64;
+//
+ID   Y037_MYCPN              Reviewed;         147 AA.
+AC   P75077;
+DE   RecName: Full=Uncharacterized protein MPN_037;
+GN   OrderedLocusNames=MPN_037; ORFNames=B01_orf147, MP117;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+CC   -!- SIMILARITY: To M.pneumoniae MPN_465. {ECO:0000305}.
+DR   EMBL; U00089; AAB95765.1; -; Genomic_DNA.
+DR   PIR; S73443; S73443.
+DR   RefSeq; NP_109725.1; NC_000912.1.
+DR   AlphaFoldDB; P75077; -.
+DR   STRING; 272634.MPN_037; -.
+DR   EnsemblBacteria; AAB95765; AAB95765; MPN_037.
+DR   KEGG; mpn:MPN_037; -.
+DR   HOGENOM; CLU_1766006_0_0_14; -.
+DR   BioCyc; MPNE272634:G1GJ3-53-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..147
+FT                   /note="Uncharacterized protein MPN_037"
+FT                   /id="PRO_0000210634"
+SQ   SEQUENCE   147 AA;  17030 MW;  2080A27AD0DA625F CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	5	Mycoplasmoides
+2	4	Mycoplasmoidaceae
+2	3	Mycoplasmoidales
+2	2	Mycoplasmatota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A7J6HS39	POLYGALACTURONASE {ECO:00     34.8    8.3e-05   6   6.6  10.1
+	Iterate                   	  1163	  1198	     9.1
+	Iterate                   	   812	   848	     6.8
+	Iterate                   	  1913	  1944	     6.6
+	Iterate                   	   467	   498	     6.0
+	Iterate                   	  1544	  1574	     3.6
+	Iterate                   	   120	   153	     2.3
+	PF12708	Pect-lyase_RHGA_epim	    31	   283	    36.5
+	PF00295	Glyco_hydro_28  	   124	   363	   232.1
+	PF12708	Pect-lyase_RHGA_epim	   376	   618	      37
+	PF00295	Glyco_hydro_28  	   467	   708	   238.5
+	PF12708	Pect-lyase_RHGA_epim	   732	   968	      39
+	PF00295	Glyco_hydro_28  	   812	  1059	   238.9
+	PF12708	Pect-lyase_RHGA_epim	  1082	  1325	    40.1
+	PF00295	Glyco_hydro_28  	  1160	  1409	   236.2
+	PF12708	Pect-lyase_RHGA_epim	  1432	  1694	      38
+	PF00295	Glyco_hydro_28  	  1461	  1778	   266.6
+	PF12708	Pect-lyase_RHGA_epim	  1802	  2073	      40
+	PF00295	Glyco_hydro_28  	  1831	  2155	   282.6
+
+A0A7J7K573	UNCHARACTERIZED PROTEIN {     35.6    4.7e-05  11  13.0  29.9
+	Iterate                   	   214	   240	     4.3
+	Iterate                   	   298	   323	     4.2
+	Iterate                   	    18	    43	     4.1
+	Iterate                   	    74	    99	     4.1
+	Iterate                   	   102	   127	     4.1
+	Iterate                   	   130	   155	     4.1
+	Iterate                   	   186	   211	     4.1
+	Iterate                   	   326	   352	     3.5
+	Iterate                   	   158	   183	     3.0
+	Iterate                   	   354	   379	     2.8
+	Iterate                   	   242	   269	     2.7
+
+A0A9R1W9Z7	REVERSE TRANSCRIPTASE DOM     29.3     0.0044  16  19.4  64.2
+	Iterate                   	  9273	  9310	     4.4
+	Iterate                   	   127	   164	     3.3
+	Iterate                   	   766	   803	     3.3
+	Iterate                   	  1379	  1416	     3.3
+	Iterate                   	  3229	  3266	     3.3
+	Iterate                   	  3842	  3879	     3.3
+	Iterate                   	  4455	  4492	     3.3
+	Iterate                   	  5034	  5071	     3.3
+	Iterate                   	  5647	  5684	     3.3
+	Iterate                   	  6226	  6263	     3.3
+	Iterate                   	  6839	  6876	     3.3
+	Iterate                   	  7444	  7481	     3.3
+	Iterate                   	  8057	  8094	     3.3
+	Iterate                   	  8670	  8707	     3.3
+	Iterate                   	 11091	 11128	     3.3
+	Iterate                   	 11728	 11765	     2.7
+	PF00078	RVT_1           	 12618	 12878	   132.9
+	PF13966	zf-RVT          	 13129	 13213	    57.5
+
+P75077	UNCHARACTERIZED PROTEIN MPN_037    154.9    2.7e-42   1   2.2  15.0
+	Iterate                   	    43	   110	   154.9
+
+P75318	UNCHARACTERIZED PROTEIN MPN_465    104.2    1.8e-26   1   2.3   8.0
+	Iterate                   	   109	   180	   104.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS13921 (E-value: 4.6e-56, Score: 192.6)
+Mentioned as: MPN465
+Description: conserved hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 23091634
+Source: EuropePMC
+Title: Mycoplasma pneumoniae large DNA repetitive elements RepMP1 show type specific organization among strains
+Journal: PloS one (2012)
+Snippet: using CLUSTAL X. Groups of proteins with homologous conserved domains are highlighted. Proteins Mpn037 and Mpn465 were not included in alignment. (TIF) Click here for additional data file. Figure S3 Sequence of MPN127 region in M. pneumoniae strain B9-M129 maintained in the laboratory. (DOCX) Click here
+
+================================================================================
+Protein: VIMSS13921 (E-value: 4.6e-56, Score: 192.6)
+Mentioned as: MPN465
+Description: conserved hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 18212079
+Source: EuropePMC
+Title: Genomic analysis reveals Mycoplasma pneumoniae repetitive element 1-mediated recombination in a clinical isolate
+Journal: Infection and immunity (2008)
+Snippet: MPN130 MPN137a MPN138a MPN139 MPN204 MPN283 MPN368 MPN410 MPN465 MPN484 MPN501 MPN524 MPN655 a Position in M129 genome (nucleotides) DHH family phosphoesterases
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75077.1	AF-P75077-F1-model_v4_TED01:43-110	1	AF-P75077-F1-model_v4_TED01	43-110	100.0%
+P75318.1	AF-P75318-F1-model_v4_TED01:82-92_106-197	1	AF-P75318-F1-model_v4_TED01	82-197	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75077_TED01/Iterate
+GA   27.00 27.00;
+TC   35.10 122.10;
+NC   22.10 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

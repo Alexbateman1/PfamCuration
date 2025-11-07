@@ -1,0 +1,378 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y483_TREPA              Reviewed;         374 AA.
+AC   O83496;
+DE   RecName: Full=Uncharacterized protein TP_0483;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=TP_0483;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65472.1; -; Genomic_DNA.
+DR   PIR; A71320; A71320.
+DR   RefSeq; WP_010881932.1; NC_000919.1.
+DR   IntAct; O83496; 1.
+DR   STRING; 243276.TP_0483; -.
+DR   EnsemblBacteria; AAC65472; AAC65472; TP_0483.
+DR   KEGG; tpa:TP_0483; -.
+DR   HOGENOM; CLU_683226_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   CDD; cd00063; FN3; 1.
+DR   Gene3D; 2.60.40.10; Immunoglobulins; 1.
+DR   InterPro; IPR003961; FN3_dom.
+DR   InterPro; IPR036116; FN3_sf.
+DR   InterPro; IPR013783; Ig-like_fold.
+DR   SUPFAM; SSF49265; Fibronectin type III; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..21
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           22..374
+FT                   /note="Uncharacterized protein TP_0483"
+FT                   /id="PRO_0000014251"
+FT   DOMAIN          22..102
+FT                   /note="Fibronectin type-III"
+SQ   SEQUENCE   374 AA;  42129 MW;  D4DC031C6C31022E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Treponema.
+1	6	Teretinema.
+1	6	Leptospira.
+2	5	Treponemataceae
+1	5	Leptospiraceae
+2	4	Spirochaetales
+1	4	Leptospirales
+3	3	Spirochaetia
+3	2	Spirochaetota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A6P4ZV63	LOW QUALITY PROTEIN: TITI    123.6      5e-32  13  20.0   2.5
+	O83496                    	  4323	  4415	    14.8
+	O83496                    	  1210	  1288	    10.3
+	O83496                    	  5904	  6025	    10.3
+	O83496                    	  1564	  1691	    10.0
+	O83496                    	  3409	  3475	     9.5
+	O83496                    	  1737	  1865	     7.3
+	O83496                    	  5456	  5585	     4.3
+	O83496                    	  4232	  4336	     4.2
+	O83496                    	  3062	  3185	     4.0
+	O83496                    	  2625	  2668	     3.1
+	O83496                    	  2363	  2403	     2.9
+	O83496                    	  5283	  5371	     2.9
+	O83496                    	  5369	  5443	     2.9
+	PF07679	I-set           	     6	    95	    62.6
+	PF13927	Ig_3            	     6	    82	    31.7
+	PF13927	Ig_3            	    98	   175	    35.7
+	PF07679	I-set           	    99	   188	    64.2
+	PF00041	fn3             	   332	   416	    47.8
+	PF07679	I-set           	   533	   623	    81.4
+	PF13927	Ig_3            	   537	   610	    54.9
+	PF13895	Ig_2            	   539	   623	      42
+	PF00047	ig              	   541	   619	      52
+	PF07679	I-set           	   640	   730	      60
+	PF13927	Ig_3            	   640	   717	    32.8
+	PF00041	fn3             	   764	   848	    34.5
+	PF00041	fn3             	   853	   937	    32.7
+	PF00041	fn3             	   942	  1026	    33.3
+	PF00041	fn3             	  1031	  1112	    27.9
+	PF00041	fn3             	  1122	  1204	    41.2
+	PF00041	fn3             	  1210	  1294	    48.9
+	PF00041	fn3             	  1299	  1383	    29.3
+	PF00041	fn3             	  1388	  1472	      38
+	PF00041	fn3             	  1477	  1559	    33.7
+	PF00041	fn3             	  1565	  1649	    39.4
+	PF00041	fn3             	  1654	  1738	    31.9
+	PF00041	fn3             	  1743	  1827	    28.1
+	PF00041	fn3             	  1832	  1917	    32.7
+	PF00041	fn3             	  1922	  2006	    28.6
+	PF00041	fn3             	  2011	  2095	    39.9
+	PF00041	fn3             	  2100	  2184	      39
+	PF00041	fn3             	  2189	  2273	    32.7
+	PF00041	fn3             	  2278	  2361	      32
+	PF00041	fn3             	  2366	  2449	      33
+	PF00041	fn3             	  2454	  2538	    30.6
+	PF00041	fn3             	  2631	  2714	    35.1
+	PF00041	fn3             	  2719	  2801	    29.8
+	PF00041	fn3             	  2806	  2892	      31
+	PF00041	fn3             	  2897	  2980	      33
+	PF00041	fn3             	  2985	  3068	    27.1
+	PF00041	fn3             	  3073	  3157	    31.9
+	PF00041	fn3             	  3250	  3334	    27.5
+	PF00041	fn3             	  3339	  3421	    28.1
+	PF00041	fn3             	  3426	  3510	    36.2
+	PF00041	fn3             	  3515	  3599	    36.3
+	PF00041	fn3             	  4237	  4318	    29.2
+	PF00041	fn3             	  4325	  4409	    33.9
+	PF00041	fn3             	  5205	  5282	    27.4
+	PF00041	fn3             	  5288	  5371	    36.7
+	PF00041	fn3             	  5376	  5459	    31.4
+	PF00041	fn3             	  5464	  5548	    26.1
+	PF00041	fn3             	  5553	  5640	    28.6
+	PF00041	fn3             	  5645	  5729	    34.9
+	PF00041	fn3             	  5734	  5815	    36.5
+	PF00041	fn3             	  5823	  5907	    36.2
+	PF00041	fn3             	  5913	  5998	    35.7
+	PF07679	I-set           	  6409	  6497	    35.7
+	PF00041	fn3             	  6502	  6588	    46.5
+	PF00041	fn3             	  6615	  6707	    28.2
+	PF00041	fn3             	  6730	  6818	    38.2
+	PF00041	fn3             	  6834	  6919	    36.5
+	PF13927	Ig_3            	  7050	  7128	      34
+	PF07679	I-set           	  7051	  7141	    54.4
+
+A0A940N1K8	CARBOXYPEPTIDASE REGULATO    117.2    4.3e-30  25  28.0  63.4
+	O83496                    	  3331	  3423	     8.9
+	O83496                    	  1932	  1989	     8.5
+	O83496                    	  2976	  3071	     7.2
+	O83496                    	  1358	  1435	     7.0
+	O83496                    	  1006	  1108	     6.9
+	O83496                    	   443	   498	     6.3
+	O83496                    	  1474	  1589	     6.0
+	O83496                    	  1818	  1878	     5.8
+	O83496                    	  2160	  2220	     5.8
+	O83496                    	  3450	  3535	     5.6
+	O83496                    	   900	   980	     5.3
+	O83496                    	  2507	  2564	     5.3
+	O83496                    	  2385	  2443	     4.9
+	O83496                    	   787	   878	     4.8
+	O83496                    	  1125	  1213	     4.8
+	O83496                    	  2746	  2837	     4.7
+	O83496                    	  1707	  1794	     4.2
+	O83496                    	  2049	  2136	     4.2
+	O83496                    	  2854	  2917	     4.2
+	O83496                    	   671	   722	     4.0
+	O83496                    	  1589	  1668	     3.7
+	O83496                    	  1250	  1361	     3.6
+	O83496                    	   555	   619	     2.8
+	O83496                    	  2629	  2703	     2.0
+	O83496                    	  3218	  3283	     1.9
+	PF17210	SdrD_B          	   204	   308	    73.8
+	PF22904	NOMO1-like_2nd  	   205	   277	    27.7
+	PF17210	SdrD_B          	   313	   423	    88.3
+	PF17210	SdrD_B          	   427	   537	    87.9
+	PF13620	CarboxypepD_reg 	   428	   516	    32.9
+	PF22904	NOMO1-like_2nd  	   428	   523	    27.6
+	PF17210	SdrD_B          	   541	   651	    95.4
+	PF17210	SdrD_B          	   655	   765	      82
+	PF17210	SdrD_B          	   769	   880	   101.6
+	PF13620	CarboxypepD_reg 	   770	   858	    36.7
+	PF22904	NOMO1-like_2nd  	   773	   852	    24.8
+	PF17210	SdrD_B          	   885	   994	   100.6
+	PF22904	NOMO1-like_2nd  	   891	   973	    27.8
+	PF17210	SdrD_B          	   998	  1109	    94.9
+	PF22904	NOMO1-like_2nd  	  1009	  1084	    26.7
+	PF17210	SdrD_B          	  1113	  1224	   108.9
+	PF22904	NOMO1-like_2nd  	  1116	  1194	    30.9
+	PF17210	SdrD_B          	  1230	  1340	   102.7
+	PF22904	NOMO1-like_2nd  	  1241	  1317	    28.5
+	PF13620	CarboxypepD_reg 	  1244	  1318	    41.8
+	PF17802	SpaA            	  1244	  1310	    24.7
+	PF17210	SdrD_B          	  1344	  1455	   106.5
+	PF22904	NOMO1-like_2nd  	  1344	  1431	    28.5
+	PF17210	SdrD_B          	  1459	  1570	   102.9
+	PF22904	NOMO1-like_2nd  	  1468	  1534	    26.6
+	PF17210	SdrD_B          	  1574	  1685	   106.5
+	PF17210	SdrD_B          	  1690	  1799	    92.1
+	PF22904	NOMO1-like_2nd  	  1698	  1770	    34.8
+	PF17210	SdrD_B          	  1803	  1913	    90.2
+	PF22904	NOMO1-like_2nd  	  1807	  1879	    26.2
+	PF22904	NOMO1-like_2nd  	  1914	  1994	    29.3
+	PF17210	SdrD_B          	  1918	  2027	    96.6
+	PF17210	SdrD_B          	  2032	  2141	    92.1
+	PF22904	NOMO1-like_2nd  	  2040	  2112	    34.8
+	PF17210	SdrD_B          	  2145	  2255	    90.2
+	PF22904	NOMO1-like_2nd  	  2149	  2221	    26.2
+	PF17210	SdrD_B          	  2260	  2369	    89.7
+	PF17210	SdrD_B          	  2374	  2483	    85.5
+	PF17210	SdrD_B          	  2491	  2601	   108.9
+	PF13620	CarboxypepD_reg 	  2504	  2579	    37.2
+	PF17210	SdrD_B          	  2609	  2719	   108.3
+	PF22904	NOMO1-like_2nd  	  2621	  2680	    28.6
+	PF13620	CarboxypepD_reg 	  2622	  2697	    35.1
+	PF17210	SdrD_B          	  2726	  2837	   110.4
+	PF22904	NOMO1-like_2nd  	  2738	  2798	    27.3
+	PF13620	CarboxypepD_reg 	  2740	  2834	    33.4
+	PF17210	SdrD_B          	  2844	  2955	   106.9
+	PF22904	NOMO1-like_2nd  	  2857	  2931	    28.2
+	PF13620	CarboxypepD_reg 	  2859	  2933	    37.2
+	PF17802	SpaA            	  2859	  2930	    23.3
+	PF17210	SdrD_B          	  2962	  3073	   110.8
+	PF22904	NOMO1-like_2nd  	  2965	  3036	    29.6
+	PF13620	CarboxypepD_reg 	  2976	  3049	    34.9
+	PF17210	SdrD_B          	  3083	  3191	   110.6
+	PF13620	CarboxypepD_reg 	  3094	  3167	    38.6
+	PF22904	NOMO1-like_2nd  	  3094	  3153	    27.3
+	PF17210	SdrD_B          	  3198	  3309	   107.2
+	PF22904	NOMO1-like_2nd  	  3211	  3272	      28
+	PF13620	CarboxypepD_reg 	  3212	  3285	    34.9
+	PF22904	NOMO1-like_2nd  	  3315	  3387	      28
+	PF17210	SdrD_B          	  3316	  3427	   110.5
+	PF13620	CarboxypepD_reg 	  3330	  3402	    37.8
+	PF17210	SdrD_B          	  3434	  3545	   115.2
+	PF22904	NOMO1-like_2nd  	  3442	  3510	    28.8
+	PF13620	CarboxypepD_reg 	  3448	  3523	    33.6
+	PF17210	SdrD_B          	  3553	  3663	   109.7
+	PF13620	CarboxypepD_reg 	  3566	  3639	    36.4
+	PF22904	NOMO1-like_2nd  	  3566	  3623	    26.4
+	PF22904	NOMO1-like_2nd  	  3669	  3742	    27.5
+	PF17210	SdrD_B          	  3670	  3781	   106.4
+	PF13620	CarboxypepD_reg 	  3684	  3757	    32.8
+	PF17210	SdrD_B          	  3789	  3899	   105.3
+	PF17802	SpaA            	  3803	  3876	    23.4
+	PF17210	SdrD_B          	  3904	  4017	    88.1
+	PF00353	HemolysinCabind 	  4041	  4076	      28
+	PF00353	HemolysinCabind 	  4077	  4111	    24.6
+	PF00353	HemolysinCabind 	  4113	  4148	    32.4
+	PF00353	HemolysinCabind 	  4149	  4184	    27.8
+
+O83496	UNCHARACTERIZED PROTEIN TP_0483    903.0   6.9e-269   1   1.0   2.6
+	O83496                    	     1	   374	   902.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26305 (E-value: 6.1e-271, Score: 903.0)
+Mentioned as: TP0483
+Description: T. pallidum predicted coding region TP0483
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 39181152
+Source: EuropePMC
+Title: Clinical and genomic diversity of Treponema pallidum subspecies pallidum to inform vaccine research: an international, molecular epidemiology study
+Journal: The Lancet. Microbe (2024)
+Snippet: among African (populations 4and 5) than global Nichols-lineage samples, including multiple non-synonymous SNVs in the tp0483 and tp0136 genes encoding putative fibronectin-binding proteins. All non-synonymous SNVs in tp0483 worldwide were exclusive to population 5. TP0136 Ser66Gly occurred at high frequency in population 5, and Asp349Glu and
+
+================================================================================
+Protein: VIMSS26305 (E-value: 6.1e-271, Score: 903.0)
+Mentioned as: TP0483
+Description: T. pallidum predicted coding region TP0483
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 39226326
+Source: EuropePMC
+Title: Phosphorylated vimentin-triggered fibronectin matrix disaggregation enhances the dissemination of Treponema pallidum subsp. pallidum across the microvascular endothelial barrier
+Journal: PLoS pathogens (2024)
+Snippet: that Tp binds to fibronectin, aiding its colonization and dissemination. Previous studies identified Tp0155 and Tp0483 as FN adhesins contributing to further invasion [ 18 ], and an antibody targeting the FN-binding protein Tp0751 has shown potential in reducing Tp dissemination in rabbits [ 19 ].
+
+================================================================================
+Protein: VIMSS26305 (E-value: 6.1e-271, Score: 903.0)
+Mentioned as: TP0483
+Description: T. pallidum predicted coding region TP0483
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 37090699
+Source: EuropePMC
+Title: Syphilis vaccine: challenges, controversies and opportunities
+Journal: Frontiers in immunology (2023)
+Snippet: be needed to determine the location of Tp0435 and its potential as vaccine candidate. 5.2.4 Tp0483 Tp0483 can bind both extracellular matrix and soluble fibronectins ( 155 ). The C-terminal portion of Tp0483 (179-374 amino acids) also showed reactivity against laminin ( 163 ). Little is
+
+================================================================================
+Protein: F1SKM1 (E-value: 1.2e-06, Score: 33.4)
+Mentioned as: F1SKM1
+Description: Collagen alpha-1(VII) chain
+Organism: Sus scrofa
+PMID: 39384961
+Source: EuropePMC
+Title: Evaluating different methods for kidney recellularization
+Journal: Scientific reports (2024)
+Snippet: 3.23 A0A5G2R0Y2 Collagen type VI alpha 6 chain 5 3 1.15E+07 20 11 7.30E+07 6.32 F1SKM1 Collagen type VII alpha 1 chain 22 10 1.06E+08 22 10 1.10E+08 1 F1SKX7 Collagen type VIII alpha 1 chain 3 5 3.65E+07 3 5 3.60E+07 1 A0A5G2RKA4 Collagen type
+
+================================================================================
+Protein: F1SKM1 (E-value: 1.2e-06, Score: 33.4)
+Mentioned as: F1SKM1
+Description: Collagen alpha-1(VII) chain
+Organism: Sus scrofa
+PMID: 38468318
+Source: EuropePMC
+Title: In-depth proteome characterization of endometrium and extraembryonic membranes during implantation in pig.
+Journal: Journal of animal science and biotechnology (2024)
+Snippet: Q28939 Vascular cell adhesion molecule K7GND9 CD44 antigen CD44 K7GKU7 Integrin subunit alpha 3 ITGA3 F1SKM1 Uncharacterized protein COL7A1 K7GQN2 Fibroblast activation protein alpha FAP A0A287ACJ4 Integrin subunit alpha 4 ITGA4 Q0MSH8 Mucin 4 (Fragment) MUC4 I3LFP3 Uncharacterized protein VCAN I3L638 Vitronectin VTN I3LJC9 Hyaluronan and
+
+================================================================================
+Protein: F1SKM1 (E-value: 1.2e-06, Score: 33.4)
+Mentioned as: F1SKM1
+Description: Collagen alpha-1(VII) chain
+Organism: Sus scrofa
+PMID: 33212864
+Source: EuropePMC
+Title: Proteomic Analysis of Porcine-Derived Collagen Membrane and Matrix
+Journal: Materials (Basel, Switzerland) (2020)
+Snippet: Collagen type VI alpha 2 chain COL6A2 I3LUR7 Collagen type VI alpha 3 chain COL6A3 F1SKM1 Collagen type VII alpha 1 chain COL7A1 K7GME7 Collagen type XI alpha 2 chain COL11A2 A0A286ZHY0 Collagen type XVI alpha 1 chain COL16A1 F1RSI7 Collagen type XXII alpha 1 chain
+
+================================================================================
+Protein: Q02388 (E-value: 1.3e-05, Score: 30.0)
+Mentioned as: Q02388
+Description: Collagen alpha-1(VII) chain
+Organism: Homo sapiens
+  SwissProt:  - Collagen alpha-1(VII) chain; Long-chain collagen; LC collagen
+PMID: 40064660
+Source: EuropePMC
+Title: Computational pharmacology-based molecular mechanism investigation of cinnamaldehyde intervention in nephrotic syndrome
+Journal: Naunyn-Schmiedeberg's archives of pharmacology (2025)
+
+================================================================================
+Protein: Q02388 (E-value: 1.3e-05, Score: 30.0)
+Mentioned as: Q02388
+Description: Collagen alpha-1(VII) chain
+Organism: Homo sapiens
+  SwissProt:  - Collagen alpha-1(VII) chain; Long-chain collagen; LC collagen
+PMID: 40650119
+Source: EuropePMC
+Title: Nuclear Fraction Proteome Analyses During rAAV Production of AAV2-Plasmid-Transfected HEK-293 Cells
+Journal: International journal of molecular sciences (2025)
+
+================================================================================
+Protein: Q02388 (E-value: 1.3e-05, Score: 30.0)
+Mentioned as: Q02388
+Description: Collagen alpha-1(VII) chain
+Organism: Homo sapiens
+  SwissProt:  - Collagen alpha-1(VII) chain; Long-chain collagen; LC collagen
+PMID: 39580674
+Source: EuropePMC
+Title: Urinary Proteomics and Systems Biology Link Eight Proteins to the Higher Risk of Hypertension and Related Complications in Blacks Versus Whites.
+Journal: Proteomics (2025)
+
+================================================================================
+
+... (truncated - showing first 100 of 157 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83496
+GA   27.00 27.00;
+TC   27.00 30.50;
+NC   26.90 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

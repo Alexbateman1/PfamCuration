@@ -1,0 +1,111 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1201_PASMU             Reviewed;         220 AA.
+AC   Q9CLM2;
+DE   RecName: Full=Uncharacterized protein PM1201;
+GN   OrderedLocusNames=PM1201;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK03285.1; -; Genomic_DNA.
+DR   RefSeq; WP_010907068.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CLM2; -.
+DR   SMR; Q9CLM2; -.
+DR   STRING; 272843.PM1201; -.
+DR   EnsemblBacteria; AAK03285; AAK03285; PM1201.
+DR   KEGG; pmu:PM1201; -.
+DR   PATRIC; fig|272843.6.peg.1212; -.
+DR   HOGENOM; CLU_095345_0_0_6; -.
+DR   OrthoDB; 2964117at2; -.
+DR   Proteomes; UP000000809; Chromosome.
+PE   4: Predicted;
+KW   Coiled coil; Reference proteome.
+FT   CHAIN           1..220
+FT                   /note="Uncharacterized protein PM1201"
+FT                   /id="PRO_0000216319"
+FT   COILED          165..202
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   220 AA;  26197 MW;  EDC3269024066FCB CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Pasteurella.
+4	5	Pasteurellaceae
+2	5	Bacillaceae
+4	4	Pasteurellales
+4	4	Bacillales
+2	4	Eubacteriales
+5	3	Bacilli
+4	3	Gammaproteobacteria
+3	3	Clostridia
+8	2	Bacillota
+4	2	Pseudomonadota
+2	2	Bacteroidota
+8	1	Bacillati
+6	1	Pseudomonadati
+14	0	Bacteria
+Total of 14 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2M8RVF0	UNCHARACTERIZED PROTEIN {    258.7    1.4e-73   1   1.1   7.0
+	Iterate                   	    30	   212	   258.3
+
+A0A4R6VBF7	UNCHARACTERIZED PROTEIN {    261.9    1.5e-74   1   1.1   7.0
+	Iterate                   	    30	   213	   261.4
+
+A0A942G1S4	UNCHARACTERIZED PROTEIN {    252.9    8.3e-72   1   1.3   3.2
+	Iterate                   	    32	   216	   252.2
+
+I3D6J3	UNCHARACTERIZED PROTEIN {ECO:    258.2    1.9e-73   1   1.1   9.9
+	Iterate                   	    30	   214	   257.9
+
+Q9CLM2	UNCHARACTERIZED PROTEIN PM1201    247.6    3.4e-70   1   1.1   9.1
+	Iterate                   	    32	   215	   247.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS80276 (E-value: 2.8e-61, Score: 212.2)
+Mentioned as: PM1201
+Description: unknown
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 15155653
+Source: EuropePMC
+Title: Role of transferrin receptor from a Neisseria meningitidis tbpB isotype II strain in human transferrin binding and virulence
+Journal: Infection and immunity (2004)
+Snippet: pTG1265 pTG3720 pMGC10 pIM200 pIM201 pIM202 pIM203 pIM204 pIM205 pM1201 pM1206 Source or reference C. Frasch 12 12 12 C. Frasch This study This study This study
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CLM2_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   32.00 31.00;
+NC   25.20 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

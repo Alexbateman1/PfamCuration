@@ -1,0 +1,62 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Enterococcus
+2	5	Enterococcaceae
+2	4	Lactobacillales
+2	3	Bacilli
+2	2	Bacillota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1L8WQ25	UNCHARACTERIZED PROTEIN {    114.9    6.4e-30   1   1.5  25.8
+	Iterate                   	    38	   134	   114.9
+
+A0A1V8YC51	ATPASE V {ECO:0000313|EMB     92.2    7.7e-23   1   1.3  24.7
+	Iterate                   	    22	   118	    91.5
+
+A0A2U9CJJ7	UNCHARACTERIZED PROTEIN {     29.7     0.0024   1  11.3  11.0
+	Iterate                   	   904	   976	     3.6
+
+A0AA88IB05	PHOSPHOGLYCERATE MUTASE {     24.4        0.1   3   3.3   3.2
+	Iterate                   	    42	   100	     9.7
+	Iterate                   	   235	   306	     7.9
+	Iterate                   	   339	   402	     5.8
+	PF00300	His_Phos_1      	   202	   287	    52.7
+	PF00300	His_Phos_1      	   312	   403	    30.7
+
+B6FW52	GMRSD RESTRICTION ENDONUCLEAS     21.9       0.63   1   2.5   4.9
+	Iterate                   	   179	   281	    21.9
+	PF03235	GmrSD_N         	    30	   192	   100.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1L8WQ25.1	AF-A0A1L8WQ25-F1-model_v4_TED01:2-81	1	AF-A0A1L8WQ25-F1-model_v4_TED01	2-81	45.4%
+A0A1L8WQ25.1	AF-A0A1L8WQ25-F1-model_v4_TED02:83-136	1	AF-A0A1L8WQ25-F1-model_v4_TED02	83-136	53.6%
+A0A1V8YC51.1	AF-A0A1V8YC51-F1-model_v4_TED01:4-118	1	AF-A0A1V8YC51-F1-model_v4_TED01	4-118	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P43437_TED01/Iterate
+GA   27.00 27.00;
+TC   28.60 172.70;
+NC   25.00 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,79 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y768_PASMU              Reviewed;         203 AA.
+AC   Q9CMP7;
+DE   RecName: Full=Uncharacterized protein PM0768;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=PM0768;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK02852.1; -; Genomic_DNA.
+DR   RefSeq; WP_010906841.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CMP7; -.
+DR   SMR; Q9CMP7; -.
+DR   EnsemblBacteria; AAK02852; AAK02852; PM0768.
+DR   KEGG; pmu:PM0768; -.
+DR   PATRIC; fig|272843.6.peg.777; -.
+DR   HOGENOM; CLU_1446365_0_0_6; -.
+DR   Proteomes; UP000000809; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..?20
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           ?21..203
+FT                   /note="Uncharacterized protein PM0768"
+FT                   /id="PRO_0000014179"
+SQ   SEQUENCE   203 AA;  23641 MW;  9BEC6CC14F5BECEB CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pasteurella.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9CMP7	UNCHARACTERIZED PROTEIN PM0768     132.5    2.6e-35   1   1.7   6.0
+	Q9CMP7_TED01              	     2	    54	   131.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9CMP7.1	AF-Q9CMP7-F1-model_v4_TED02:67-114	1	AF-Q9CMP7-F1-model_v4_TED02	67-114	0
+Q9CMP7.1	AF-Q9CMP7-F1-model_v4_TED01:2-54	1	AF-Q9CMP7-F1-model_v4_TED01	2-54	100.0%
+Q9CMP7.1	AF-Q9CMP7-F1-model_v4_TED03:126-202	1	AF-Q9CMP7-F1-model_v4_TED03	126-202	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CMP7_TED01
+GA   27.00 27.00;
+TC   27.10 131.30;
+NC   26.70 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

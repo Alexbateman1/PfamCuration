@@ -1,0 +1,161 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   LPFUR_ECOLI             Reviewed;          28 AA.
+AC   A8DYP9;
+DE   RecName: Full=fur leader peptide;
+GN   Name=uof; OrderedLocusNames=b4637;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   FUNCTION IN TRANSLATION OF FUR, AND INDUCTION.
+RX   PubMed=17268550; DOI=10.1038/sj.emboj.7601553;
+RA   Vecerek B., Moll I., Blaesi U.;
+RT   "Control of Fur synthesis by the non-coding RNA RyhB and iron-responsive
+RT   decoding.";
+RL   EMBO J. 26:965-975(2007).
+CC   -!- FUNCTION: Cotranscribed with fur, it is essential for fur translation.
+CC       The fur ribosomal binding site (RBS) is occluded by the 5'-mRNA
+CC       secondary structure, which is opened by uof translation.
+CC       {ECO:0000269|PubMed:17268550}.
+CC   -!- INDUCTION: By iron depletion. Repressed by the ncRNA ryhB.
+CC       {ECO:0000269|PubMed:17268550}.
+DR   EMBL; U00096; ABV59574.1; -; Genomic_DNA.
+DR   RefSeq; WP_001406816.1; NZ_STEB01000044.1.
+DR   RefSeq; YP_001491546.1; NC_000913.3.
+DR   AlphaFoldDB; A8DYP9; -.
+DR   FunCoup; A8DYP9; 4.
+DR   STRING; 511145.b4637; -.
+DR   PaxDb; 511145-b4637; -.
+DR   EnsemblBacteria; ABV59574; ABV59574; b4637.
+DR   GeneID; 5625562; -.
+DR   GeneID; 93776801; -.
+DR   KEGG; eco:b4637; -.
+DR   KEGG; ecoc:C3026_03400; -.
+DR   PATRIC; fig|83333.103.peg.1454; -.
+DR   InParanoid; A8DYP9; -.
+DR   BioCyc; EcoCyc:MONOMER0-2801; -.
+DR   PRO; PR:A8DYP9; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0006417; P:regulation of translation; IDA:EcoCyc.
+DR   NCBIfam; NF011344; PRK14761.1; 1.
+PE   1: Evidence at protein level;
+KW   Leader peptide; Reference proteome.
+FT   PEPTIDE         1..28
+FT                   /note="fur leader peptide"
+FT                   /id="PRO_0000315217"
+SQ   SEQUENCE   28 AA;  3109 MW;  3A799921ABC715B4 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Escherichia.
+1	6	Pseudomonas.
+2	5	Enterobacteriaceae
+1	5	Pseudomonadaceae
+2	4	Enterobacterales
+1	4	Pseudomonadales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A172TQN7	IG-LIKE DOMAIN-CONTAINING     39.6    1.6e-06   0  12.4   6.3
+
+A0A1Y2BI92	TITIN-LIKE {ECO:0008006|G     33.7    0.00012   6   9.3  15.9
+	Iterate                   	   183	   204	     5.2
+	Iterate                   	   246	   267	     5.2
+	Iterate                   	    46	    67	     5.1
+	Iterate                   	   385	   406	     5.1
+	Iterate                   	   307	   328	     5.0
+	Iterate                   	   523	   541	     4.5
+
+A0A8H9Z1C2	RYHB-REGULATED FUR LEADER     51.4    2.9e-10   1   1.0   0.0
+	Iterate                   	     1	    28	    51.3
+
+A8DYP9	FUR LEADER PEPTIDE                 77.5    1.5e-18   1   1.0   2.0
+	Iterate                   	     1	    28	    77.4
+
+B7UKW5	RYHB-REGULTED FUR LEADER PEPT     77.5    1.5e-18   1   1.0   2.0
+	Iterate                   	     1	    28	    77.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3446164 (E-value: 7e-22, Score: 82.3)
+Mentioned as: b4637
+Description: ryhB-regulated fur leader peptide
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 23203192
+Source: EuropePMC
+Title: Modelling translation initiation under the influence of sRNA
+Journal: International journal of molecular sciences (2012)
+Snippet: 446 binding sites had a more stable hybridization energy than the least stable known interaction (b4637 with 13.1 kcal/mol ). In total 467 genes seemed to be potentially targeted by RyhB ( Figure 3 ). Here shiA (b1981), a well documented activation target of RyhB, is
+
+================================================================================
+Protein: VIMSS3446164 (E-value: 7e-22, Score: 82.3)
+Mentioned as: b4637
+Description: ryhB-regulated fur leader peptide
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 21948837
+Source: EuropePMC
+Title: Membrane stresses induced by overproduction of free fatty acids in Escherichia coli
+Journal: Applied and environmental microbiology (2011)
+Snippet: b3509 b3510 b3624 b3625 b3800 b3908 b3924 b4025 b4062 b4177 b4396 b4637 ybaO acrA nfsB fur fldA ybiS ybjC nfsA rimK ybjN poxB pqiA pqiB putA mdtG ptsG ribA marR
+
+================================================================================
+Protein: VIMSS3446164 (E-value: 7e-22, Score: 82.3)
+Mentioned as: b4637
+Description: ryhB-regulated fur leader peptide
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 17268550
+Source: EuropePMC
+Title: Control of Fur synthesis by the non-coding RNA RyhB and iron-responsive decoding
+Journal: The EMBO journal (2007)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A8DYP9/Iterate
+GA   27.00 27.00;
+TC   27.00 82.20;
+NC   25.80 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for A8DYP9
+RN   [1]
+RM   17268550
+RT   "Control of Fur synthesis by the non-coding RNA RyhB and iron-responsive
+RT   decoding.";
+RA   Vecerek B., Moll I., Blaesi U.;
+RL   EMBO J. 26:965-975(2007).
+
+--- End of Current DESC file ---

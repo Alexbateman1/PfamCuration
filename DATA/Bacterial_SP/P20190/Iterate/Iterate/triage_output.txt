@@ -1,0 +1,60 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Streptomyces.
+1	6	Nonomuraea.
+1	6	Kibdelosporangium.
+1	5	Streptosporangiaceae
+1	5	Streptomycetaceae
+1	5	Pseudonocardiaceae
+1	4	Streptosporangiales
+1	4	Pseudonocardiales
+1	4	Kitasatosporales
+3	3	Actinomycetes
+3	2	Actinomycetota
+3	1	Bacillati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0N9I2L5	UNCHARACTERIZED PROTEIN {     27.2      0.015   1   1.1   6.5
+	Iterate                   	     6	    80	    27.0
+
+A0A1K0FCR3	ARABINOFURANAN 3-O-ARABIN     24.2       0.12   1   1.4   2.4
+	Iterate                   	   675	   830	    23.2
+
+A0A2M9IA90	UNCHARACTERIZED PROTEIN {     34.7      7e-05   1   1.2   3.3
+	Iterate                   	    29	    98	    34.6
+
+A0A7W9LFP4	UNCHARACTERIZED PROTEIN {     85.0    2.9e-20   1   1.1   9.6
+	Iterate                   	    13	    98	    84.9
+
+K4QV16	SECRETED PROTEIN {ECO:0008006    504.8   1.2e-148   1   1.0  32.5
+	Iterate                   	    18	   240	   504.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P20190/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   24.20 23.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

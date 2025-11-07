@@ -1,0 +1,271 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y044_BORBU              Reviewed;         133 AA.
+AC   O51073;
+DE   RecName: Full=Uncharacterized protein BB_0044;
+GN   OrderedLocusNames=BB_0044;
+OS   Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)
+OS   (Borrelia burgdorferi).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Borreliaceae; Borreliella.
+OX   NCBI_TaxID=224326;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RX   PubMed=9403685; DOI=10.1038/37551;
+RA   Fraser C.M., Casjens S., Huang W.M., Sutton G.G., Clayton R.A.,
+RA   Lathigra R., White O., Ketchum K.A., Dodson R.J., Hickey E.K., Gwinn M.L.,
+RA   Dougherty B.A., Tomb J.-F., Fleischmann R.D., Richardson D.L.,
+RA   Peterson J.D., Kerlavage A.R., Quackenbush J., Salzberg S.L., Hanson M.,
+RA   van Vugt R., Palmer N., Adams M.D., Gocayne J.D., Weidman J.F.,
+RA   Utterback T.R., Watthey L., McDonald L.A., Artiach P., Bowman C.,
+RA   Garland S.A., Fujii C., Cotton M.D., Horst K., Roberts K.M., Hatch B.,
+RA   Smith H.O., Venter J.C.;
+RT   "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.";
+RL   Nature 390:580-586(1997).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000783; AAC66442.1; -; Genomic_DNA.
+DR   PIR; D70105; D70105.
+DR   RefSeq; NP_212178.1; NC_001318.1.
+DR   RefSeq; WP_002556649.1; NC_001318.1.
+DR   AlphaFoldDB; O51073; -.
+DR   SMR; O51073; -.
+DR   STRING; 224326.BB_0044; -.
+DR   PaxDb; 224326-BB_0044; -.
+DR   EnsemblBacteria; AAC66442; AAC66442; BB_0044.
+DR   KEGG; bbu:BB_0044; -.
+DR   PATRIC; fig|224326.49.peg.442; -.
+DR   HOGENOM; CLU_1955372_0_0_12; -.
+DR   OrthoDB; 351011at2; -.
+DR   Proteomes; UP000001807; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..133
+FT                   /note="Uncharacterized protein BB_0044"
+FT                   /id="PRO_0000174374"
+FT   TRANSMEM        11..31
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   133 AA;  16053 MW;  A57686EA30F1959B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Borrelia.
+1	6	Borreliella.
+4	5	Borreliaceae
+4	4	Spirochaetales
+4	3	Spirochaetia
+4	2	Spirochaetota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A5C6NG15	EPIPLAKIN {ECO:0000313|EM     60.9    5.4e-13  10  10.7   1.0
+	Iterate                   	   617	   666	     6.2
+	Iterate                   	  1328	  1377	     6.2
+	Iterate                   	  1953	  2006	     4.3
+	Iterate                   	  2581	  2634	     4.3
+	Iterate                   	   258	   311	     4.2
+	Iterate                   	  3199	  3252	     4.2
+	Iterate                   	   972	  1021	     3.8
+	Iterate                   	  1685	  1733	     3.7
+	Iterate                   	  2313	  2361	     3.7
+	Iterate                   	  2977	  3025	     3.7
+	PF00681	Plectin         	   145	   174	    40.1
+	PF00681	Plectin         	   308	   346	    32.5
+	PF00681	Plectin         	   346	   384	    50.4
+	PF00681	Plectin         	   422	   460	    63.6
+	PF00681	Plectin         	   663	   701	    32.5
+	PF00681	Plectin         	   701	   739	    50.4
+	PF00681	Plectin         	   777	   815	    63.6
+	PF00681	Plectin         	  1018	  1056	    32.5
+	PF00681	Plectin         	  1056	  1094	    51.6
+	PF00681	Plectin         	  1132	  1170	    63.6
+	PF00681	Plectin         	  1374	  1412	    32.5
+	PF00681	Plectin         	  1412	  1450	    51.6
+	PF00681	Plectin         	  1488	  1527	    50.4
+	PF00681	Plectin         	  1730	  1768	    32.5
+	PF00681	Plectin         	  1768	  1807	      40
+	PF00681	Plectin         	  1845	  1883	    63.6
+	PF00681	Plectin         	  2003	  2041	    32.5
+	PF00681	Plectin         	  2041	  2079	    50.4
+	PF00681	Plectin         	  2117	  2155	    63.6
+	PF00681	Plectin         	  2358	  2396	    32.5
+	PF00681	Plectin         	  2396	  2434	    50.4
+	PF00681	Plectin         	  2472	  2510	    63.6
+	PF00681	Plectin         	  2631	  2669	    32.5
+	PF00681	Plectin         	  2669	  2698	    42.8
+	PF00681	Plectin         	  2713	  2751	    63.6
+	PF00681	Plectin         	  3022	  3060	    32.5
+	PF00681	Plectin         	  3060	  3078	      21
+	PF00681	Plectin         	  3102	  3140	    63.6
+	PF00681	Plectin         	  3249	  3287	    32.5
+	PF00681	Plectin         	  3287	  3325	    50.4
+	PF00681	Plectin         	  3363	  3401	    63.6
+
+A0A674NX27	EPIPLAKIN 1 {ECO:0000313|     77.1    4.8e-18  12  13.1   4.1
+	Iterate                   	  1869	  1918	     5.3
+	Iterate                   	  2224	  2273	     5.3
+	Iterate                   	  2579	  2628	     5.3
+	Iterate                   	  2934	  2983	     5.3
+	Iterate                   	  3289	  3338	     5.3
+	Iterate                   	  3644	  3693	     5.3
+	Iterate                   	  3999	  4048	     5.3
+	Iterate                   	  4354	  4403	     5.3
+	Iterate                   	  4709	  4758	     5.3
+	Iterate                   	  5443	  5492	     5.3
+	Iterate                   	  5064	  5097	     3.5
+	Iterate                   	  5092	  5136	     2.8
+	PF00681	Plectin         	    24	    55	    23.4
+	PF00681	Plectin         	    55	    93	    38.5
+	PF00681	Plectin         	   256	   294	    24.8
+	PF00681	Plectin         	   294	   332	    51.5
+	PF00681	Plectin         	   370	   408	      59
+	PF00681	Plectin         	   620	   658	    50.3
+	PF00681	Plectin         	   696	   734	    62.5
+	PF00681	Plectin         	   906	   944	    24.2
+	PF00681	Plectin         	   944	   982	    53.3
+	PF00681	Plectin         	  1020	  1058	    48.5
+	PF00681	Plectin         	  1274	  1312	    44.8
+	PF00681	Plectin         	  1350	  1387	    47.8
+	PF00681	Plectin         	  1598	  1636	      53
+	PF00681	Plectin         	  1674	  1712	    62.9
+	PF00681	Plectin         	  1915	  1953	    31.7
+	PF00681	Plectin         	  1953	  1991	    49.6
+	PF00681	Plectin         	  2029	  2067	    62.9
+	PF00681	Plectin         	  2270	  2308	    31.7
+	PF00681	Plectin         	  2308	  2346	    49.6
+	PF00681	Plectin         	  2384	  2422	    62.9
+	PF00681	Plectin         	  2625	  2663	    31.7
+	PF00681	Plectin         	  2663	  2701	    49.6
+	PF00681	Plectin         	  2739	  2777	    62.9
+	PF00681	Plectin         	  2980	  3018	    31.7
+	PF00681	Plectin         	  3018	  3056	    49.6
+	PF00681	Plectin         	  3094	  3132	    62.9
+	PF00681	Plectin         	  3335	  3373	    31.7
+	PF00681	Plectin         	  3373	  3411	    49.6
+	PF00681	Plectin         	  3449	  3487	    62.9
+	PF00681	Plectin         	  3690	  3728	    31.7
+	PF00681	Plectin         	  3728	  3766	    49.6
+	PF00681	Plectin         	  3804	  3842	    62.9
+	PF00681	Plectin         	  4045	  4083	    31.7
+	PF00681	Plectin         	  4083	  4121	    49.6
+	PF00681	Plectin         	  4159	  4197	    62.9
+	PF00681	Plectin         	  4400	  4438	    31.7
+	PF00681	Plectin         	  4438	  4476	    49.6
+	PF00681	Plectin         	  4514	  4552	    62.9
+	PF00681	Plectin         	  4755	  4793	    31.7
+	PF00681	Plectin         	  4793	  4831	    49.6
+	PF00681	Plectin         	  4869	  4907	    62.9
+	PF00681	Plectin         	  5134	  5172	    31.7
+	PF00681	Plectin         	  5172	  5210	    49.6
+	PF00681	Plectin         	  5248	  5286	    62.9
+	PF00681	Plectin         	  5489	  5527	    31.7
+	PF00681	Plectin         	  5527	  5565	    49.6
+	PF00681	Plectin         	  5603	  5641	    62.9
+
+A0A6P7JL60	LOW QUALITY PROTEIN: EPIP     63.3    9.6e-14   9  11.1  17.4
+	Iterate                   	  1861	  1907	     7.0
+	Iterate                   	  2567	  2613	     7.0
+	Iterate                   	  2920	  2966	     7.0
+	Iterate                   	  3273	  3319	     7.0
+	Iterate                   	  3626	  3672	     7.0
+	Iterate                   	  3979	  4025	     7.0
+	Iterate                   	  4332	  4378	     7.0
+	Iterate                   	  4685	  4731	     7.0
+	Iterate                   	  2214	  2260	     6.2
+	PF00681	Plectin         	    49	    87	    55.2
+	PF00681	Plectin         	   125	   161	    21.9
+	PF00681	Plectin         	   250	   288	    21.3
+	PF00681	Plectin         	   288	   326	    53.6
+	PF00681	Plectin         	   364	   402	    56.5
+	PF00681	Plectin         	   614	   652	    51.3
+	PF00681	Plectin         	   690	   728	    60.3
+	PF00681	Plectin         	   902	   940	    23.2
+	PF00681	Plectin         	   940	   978	    55.7
+	PF00681	Plectin         	  1016	  1054	    46.2
+	PF00681	Plectin         	  1271	  1309	    43.9
+	PF00681	Plectin         	  1347	  1385	      56
+	PF00681	Plectin         	  1557	  1595	      22
+	PF00681	Plectin         	  1595	  1633	    54.2
+	PF00681	Plectin         	  1671	  1709	    62.8
+	PF00681	Plectin         	  1910	  1948	      23
+	PF00681	Plectin         	  1948	  1986	    47.6
+	PF00681	Plectin         	  2024	  2062	    63.9
+	PF00681	Plectin         	  2263	  2301	    23.1
+	PF00681	Plectin         	  2301	  2339	    47.6
+	PF00681	Plectin         	  2377	  2415	    63.9
+	PF00681	Plectin         	  2616	  2654	      23
+	PF00681	Plectin         	  2654	  2692	    47.6
+	PF00681	Plectin         	  2730	  2768	    63.9
+	PF00681	Plectin         	  2969	  3007	      23
+	PF00681	Plectin         	  3007	  3045	    47.6
+	PF00681	Plectin         	  3083	  3121	    63.9
+	PF00681	Plectin         	  3322	  3360	      23
+	PF00681	Plectin         	  3360	  3398	    47.6
+	PF00681	Plectin         	  3436	  3474	    63.9
+	PF00681	Plectin         	  3675	  3713	    23.1
+	PF00681	Plectin         	  3713	  3751	    47.6
+	PF00681	Plectin         	  3789	  3827	    62.8
+	PF00681	Plectin         	  4028	  4066	    21.9
+	PF00681	Plectin         	  4066	  4104	    47.6
+	PF00681	Plectin         	  4142	  4180	    63.9
+	PF00681	Plectin         	  4381	  4419	    23.1
+	PF00681	Plectin         	  4419	  4457	    47.6
+	PF00681	Plectin         	  4495	  4533	    62.8
+	PF00681	Plectin         	  4734	  4772	    21.9
+	PF00681	Plectin         	  4772	  4810	    47.6
+	PF00681	Plectin         	  4848	  4886	    63.9
+
+A0ABF7PUM8	UNCHARACTERIZED PROTEIN {     78.1    2.4e-18   1   1.4   5.0
+	Iterate                   	    55	   128	    77.2
+
+O51073	UNCHARACTERIZED PROTEIN BB_0044    171.6    1.5e-47   1   1.3  18.8
+	Iterate                   	    55	   133	   171.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS43686 (E-value: 1e-37, Score: 133.4)
+Mentioned as: BB0044
+Description: B. burgdorferi predicted coding region BB0044
+Organism: Borrelia burgdorferi B31
+PMID: 12654782
+Source: EuropePMC
+Title: Profiling of temperature-induced changes in Borrelia burgdorferi gene expression by using whole genome arrays
+Journal: Infection and immunity (2003)
+Snippet: BBA16 BB0741 BB0480 BBQ42 BB0704 BBS37 BB0256 BB0631 BB0044 BB0423 BB0562 BB0803 BB0541 BBF20 BB0061 BB0229 BB0441 BBE21 BBL35 BB0691 BB0501 BB0538 BB0190
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O51073.1	AF-O51073-F1-model_v4_TED02:55-133	1	AF-O51073-F1-model_v4_TED02	55-133	100.0%
+O51073.1	AF-O51073-F1-model_v4_TED01:2-52	1	AF-O51073-F1-model_v4_TED01	2-52	0
+W6THQ4.1	AF-W6THQ4-F1-model_v4_TED01:7-54	1	AF-W6THQ4-F1-model_v4_TED01	7-54	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O51073_TED02/Iterate
+GA   27.00 27.00;
+TC   27.00 55.70;
+NC   25.40 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

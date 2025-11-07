@@ -1,0 +1,116 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y376_AQUAE              Reviewed;         313 AA.
+AC   O66698;
+DE   RecName: Full=Uncharacterized protein aq_376;
+GN   OrderedLocusNames=aq_376;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000657; AAC06659.1; -; Genomic_DNA.
+DR   PIR; F70333; F70333.
+DR   RefSeq; NP_213258.1; NC_000918.1.
+DR   RefSeq; WP_010880196.1; NC_000918.1.
+DR   AlphaFoldDB; O66698; -.
+DR   STRING; 224324.aq_376; -.
+DR   EnsemblBacteria; AAC06659; AAC06659; aq_376.
+DR   KEGG; aae:aq_376; -.
+DR   eggNOG; ENOG5032YUE; Bacteria.
+DR   HOGENOM; CLU_887530_0_0_0; -.
+DR   InParanoid; O66698; -.
+DR   OrthoDB; 14917at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..313
+FT                   /note="Uncharacterized protein aq_376"
+FT                   /id="PRO_0000186856"
+FT   TRANSMEM        19..41
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        51..68
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        81..103
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   313 AA;  35705 MW;  3AFB57ADA036711A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Aquifex
+1	5	Aquificaceae
+1	4	Aquificales
+1	3	Aquificia
+1	2	Aquificota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1T1AU98	DIGUANYLATE CYCLASE {ECO:     24.7       0.11   1   2.4   0.6
+	Iterate                   	   128	   208	    20.5
+	PF00990	GGDEF           	   203	   363	   177.2
+	PF01814	Hemerythrin     	   391	   508	    31.1
+
+A0A6C1BSJ4	CRISPR-ASSOCIATED PROTEIN     30.6     0.0018   1   1.4   0.4
+	Iterate                   	     5	    85	    29.8
+
+L8HGD5	ADP/ATP TRANSLOCASE {ECO:0000     26.2       0.04   2   2.5   0.7
+	Iterate                   	   232	   289	    13.3
+	Iterate                   	   313	   368	    10.8
+	PF00153	Mito_carr       	     1	    99	    58.6
+	PF00153	Mito_carr       	   105	   204	      57
+	PF00153	Mito_carr       	   201	   293	    68.4
+	PF00153	Mito_carr       	   309	   372	    35.9
+
+M0LC32	UNCHARACTERIZED PROTEIN {ECO:     25.3      0.074   2   2.0   2.6
+	Iterate                   	     2	    41	    13.5
+	Iterate                   	    38	    69	    12.7
+
+O66698	UNCHARACTERIZED PROTEIN AQ_376     264.3    7.2e-76   1   1.4   8.4
+	Iterate                   	     2	   123	   263.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A6C1BSJ4.1	AF-A0A6C1BSJ4-F1-model_v4_TED01:2-82	1	AF-A0A6C1BSJ4-F1-model_v4_TED01	2-82	97.6%
+A0A6C1BSJ4.1	AF-A0A6C1BSJ4-F1-model_v4_TED02:88-246	1	AF-A0A6C1BSJ4-F1-model_v4_TED02	88-246	0
+O66698.1	AF-O66698-F1-model_v4_TED01:2-123	1	AF-O66698-F1-model_v4_TED01	2-123	100.0%
+O66698.1	AF-O66698-F1-model_v4_TED02:132-312	1	AF-O66698-F1-model_v4_TED02	132-312	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66698_TED01/Iterate
+GA   27.00 27.00;
+TC   132.00 131.30;
+NC   25.00 25.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

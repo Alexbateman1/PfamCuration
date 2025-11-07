@@ -1,0 +1,161 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y783_TREPA              Reviewed;         377 AA.
+AC   O83762;
+DE   RecName: Full=Uncharacterized protein TP_0783;
+GN   OrderedLocusNames=TP_0783;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000520; AAC65753.2; -; Genomic_DNA.
+DR   PIR; H71282; H71282.
+DR   RefSeq; WP_010882228.1; NC_000919.1.
+DR   STRING; 243276.TP_0783; -.
+DR   EnsemblBacteria; AAC65753; AAC65753; TP_0783.
+DR   KEGG; tpa:TP_0783; -.
+DR   eggNOG; ENOG502ZG03; Bacteria.
+DR   HOGENOM; CLU_056949_0_0_12; -.
+DR   OrthoDB; 358864at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   InterPro; IPR011044; Quino_amine_DH_bsu.
+DR   SUPFAM; SSF50969; YVTN repeat-like/Quinoprotein amine dehydrogenase; 1.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..377
+FT                   /note="Uncharacterized protein TP_0783"
+FT                   /id="PRO_0000202323"
+FT   TRANSMEM        21..43
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   377 AA;  41681 MW;  AE223E42F70D1BFE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+17	6	Treponema.
+18	5	Treponemataceae
+10	5	Spirochaetaceae
+32	4	Spirochaetales
+35	3	Spirochaetia
+35	2	Spirochaetota
+35	1	Pseudomonadati
+35	0	Bacteria
+Total of 35 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GUK1	PQQ-BINDING-LIKE BETA-PRO    378.6   1.4e-109   1   1.1   0.0
+	Iterate                   	     1	   378	   378.3
+
+O83762	UNCHARACTERIZED PROTEIN TP_0783    901.3   2.2e-268   1   1.0   5.8
+	Iterate                   	     1	   377	   901.1
+
+Q73LD5	LIPOPROTEIN {ECO:0008006|GOOG    264.7    5.9e-75   1   1.1   0.0
+	Iterate                   	     1	   374	   264.4
+
+S3L9C7	CYCLIC NUCLEOTIDE-BINDING DOM    347.1   5.1e-100   1   1.0   0.1
+	Iterate                   	     1	   372	   347.0
+
+S6A1I2	LIPOPROTEIN {ECO:0008006|GOOG    270.3    1.2e-76   1   1.0   0.0
+	Iterate                   	     1	   366	   270.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS43950 (E-value: 9.1e-08, Score: 36.6)
+Mentioned as: BB0308
+Description: B. burgdorferi predicted coding region BB0308
+Organism: Borrelia burgdorferi B31
+PMID: 27400788
+Source: EuropePMC
+Title: Consensus computational network analysis for identifying candidate outer membrane proteins from Borrelia spirochetes
+Journal: BMC microbiology (2016)
+
+================================================================================
+Protein: VIMSS43950 (E-value: 9.1e-08, Score: 36.6)
+Mentioned as: BB0308
+Description: B. burgdorferi predicted coding region BB0308
+Organism: Borrelia burgdorferi B31
+PMID: 23387366
+Source: EuropePMC
+Title: Borrelia host adaptation Regulator (BadR) regulates rpoS to modulate host adaptation and virulence factors in Borrelia burgdorferi
+Journal: Molecular microbiology (2013)
+Snippet: chromosome 2.03 2.73 1.52 8.88E-03 5.91E-02 BB0009 hypothetical protein chromosome 2.03 3.08 1.34 4.31E-02 1.56E-01 BB0308 hypothetical protein chromosome 2.02 2.89 1.42 2.29E-02 1.03E-01 BB0249 phosphatidyltransferase chromosome 2.02 2.56 1.60 2.47E-03 2.49E-02 BBS36 hypothetical protein cp32-3 2.02 2.62 1.56 4.61E-03 3.83E-02 BB0838 hypothetical protein chromosome 2.02
+
+================================================================================
+Protein: VIMSS43950 (E-value: 9.1e-08, Score: 36.6)
+Mentioned as: BB0308
+Description: B. burgdorferi predicted coding region BB0308
+Organism: Borrelia burgdorferi B31
+PMID: 12654782
+Source: EuropePMC
+Title: Profiling of temperature-induced changes in Borrelia burgdorferi gene expression by using whole genome arrays
+Journal: Infection and immunity (2003)
+Snippet: BBS24 BB0086 BB0771 BBH01 BB0405 BBK50 BBN24 BBS31 BB0308 BB0446 BB0812 BBH37 BBR17 BB0759 BB0832 BB0827 BBQ13 BBQ17 BB0216 BB0415 BB0431 BBO24 BB0819 BB0210
+
+================================================================================
+Protein: VIMSS42411 (E-value: 6.4e-06, Score: 30.6)
+Mentioned as: DR1769
+Description: serine/threonine protein kinase-related protein
+Organism: Deinococcus radiodurans R1
+PMID: 23794625
+Source: EuropePMC
+Title: DR1769, a protein with N-terminal beta propeller repeats and a low-complexity hydrophilic tail, plays a role in desiccation tolerance of Deinococcus radiodurans
+Journal: Journal of bacteriology (2013)
+Snippet: DR1769, a Protein with N-Terminal Beta Propeller Repeats and a Low-Complexity Hydrophilic Tail, Plays a Role in Desiccation Tolerance of Deinococcus radiodurans Yogendra S. Rajpurohit, Hari S. Misra The Deinococcus radiodurans genome encodes five putative
+
+================================================================================
+Protein: Q6M0H6 (E-value: 0.0004, Score: 24.6)
+Mentioned as: Q6M0H6
+Description: Bacterial quinoprotein
+Organism: Methanococcus maripaludis (strain DSM 14266 / JCM 13030 / NBRC 101832 / S2 / LL)
+PMID: 17269933
+Source: EuropePMC
+Title: Degradation of lambda-carrageenan by Pseudoalteromonas carrageenovora lambda-carrageenase: a new family of glycoside hydrolases unrelated to kappa- and iota-carrageenases.
+Journal: The Biochemical journal (2007)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B7GUK1.1	AF-A0A0B7GUK1-F1-model_v4_TED01:181-304	1	AF-A0A0B7GUK1-F1-model_v4_TED01	181-304	32.8%
+A0A4R4BMD5.1	AF-A0A4R4BMD5-F1-model_v4_TED01:156-284	1	AF-A0A4R4BMD5-F1-model_v4_TED01	156-284	35.5%
+S6A1I2.1	AF-S6A1I2-F1-model_v4_TED01:164-292	1	AF-S6A1I2-F1-model_v4_TED01	164-292	35.2%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83762/Iterate
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

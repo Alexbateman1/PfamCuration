@@ -1,0 +1,207 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YMFM_ECOLI              Reviewed;         112 AA.
+AC   P75977; Q2MBH6;
+DE   RecName: Full=Uncharacterized protein YmfM;
+GN   Name=ymfM; OrderedLocusNames=b1148, JW1134;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+DR   EMBL; U00096; AAC74232.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76380.1; -; Genomic_DNA.
+DR   PIR; A64860; A64860.
+DR   RefSeq; NP_415666.1; NC_000913.3.
+DR   AlphaFoldDB; P75977; -.
+DR   BioGRID; 4261660; 24.
+DR   BioGRID; 850085; 1.
+DR   FunCoup; P75977; 255.
+DR   IntAct; P75977; 13.
+DR   STRING; 511145.b1148; -.
+DR   PaxDb; 511145-b1148; -.
+DR   EnsemblBacteria; AAC74232; AAC74232; b1148.
+DR   GeneID; 945715; -.
+DR   KEGG; ecj:JW1134; -.
+DR   KEGG; eco:b1148; -.
+DR   EchoBASE; EB3999; -.
+DR   HOGENOM; CLU_2142103_0_0_6; -.
+DR   InParanoid; P75977; -.
+DR   OMA; THRFAEW; -.
+DR   BioCyc; EcoCyc:G6592-MONOMER; -.
+DR   PRO; PR:P75977; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:2000245; P:negative regulation of FtsZ-dependent cytokinesis; IMP:EcoCyc.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..112
+FT                   /note="Uncharacterized protein YmfM"
+FT                   /id="PRO_0000168846"
+SQ   SEQUENCE   112 AA;  12156 MW;  CA14788B9B317F94 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+1	6	Proteus.
+1	6	Erwinia.
+3	5	Enterobacteriaceae
+1	5	Morganellaceae
+1	5	Erwiniaceae
+5	4	Enterobacterales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2Z1T8	PHAGE PROTEIN {ECO:000800    125.3    4.6e-33   1   1.2   0.2
+	Iterate                   	    14	    67	   124.9
+
+A0A9E7J6D1	PHAGE PROTEIN {ECO:000800    125.3    4.6e-33   1   1.2   0.2
+	Iterate                   	    14	    67	   124.9
+
+B7MJQ4	PHAGE PROTEIN {ECO:0008006|GO    125.3    4.6e-33   1   1.2   0.2
+	Iterate                   	    14	    67	   124.9
+
+P75977	UNCHARACTERIZED PROTEIN YMFM       125.3    4.6e-33   1   1.2   0.2
+	Iterate                   	    14	    67	   124.9
+
+S5FNS9	PHAGE PROTEIN {ECO:0008006|GO    125.3    4.6e-33   1   1.1   0.2
+	Iterate                   	    14	    67	   124.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1236756 (E-value: 4.1e-35, Score: 125.3)
+Mentioned as: UTI89_C3001
+Description: hypothetical protein
+Organism: Escherichia coli UTI89
+PMID: 39287381
+Source: EuropePMC
+Title: Genetic requirements for uropathogenic <i>E. coli</i> proliferation in the bladder cell infection cycle
+Journal: mSystems (2024)
+Snippet: 2.74E-04 5.78E-02 ( 34 , 35 ) UTI89_C2859 Hypothetical protein 7.53 6.71E-03 2.10E-01 This study UTI89_C3001 ymfM Prophage cell division inhibitor 7.26 1.00E-02 2.66E-01 This study UTI89_C1022 ompA Outer membrane protein A (outer membrane stability and biofilm formation) 6.85 2.09E-07 2.32E-04 ( 36 ) UTI89_C4372 dapF
+
+================================================================================
+Protein: VIMSS1236756 (E-value: 4.1e-35, Score: 125.3)
+Mentioned as: UTI89_C3001
+Description: hypothetical protein
+Organism: Escherichia coli UTI89
+PMID: 30373517
+Source: EuropePMC
+Title: High-throughput sequencing of sorted expression libraries reveals inhibitors of bacterial cell division
+Journal: BMC genomics (2018)
+Snippet: 193.2 17,052.9 UTI89_C2991 S UTI89_C2992 S UTI89_C2993 S 2,933,2662,935,042 UTI89_C3000 ymfN K 1777 36.0 3042.5 UTI89_C3001 ymfM RD UTI89_C3002 ymfL S UTI89_C3003 ymfT S UTI89_C3004 ymfK KT 3,029,7763,031,529 UTI89_C3112 nlpD M 1754 92.6 23,091.7 UTI89_C3114 pcm O 3,162,6993,166,774 UTI89_C3238 tas C 4076 8.1 372.1 UTI89_C3239 lplT
+
+================================================================================
+Protein: VIMSS15270 (E-value: 4.1e-35, Score: 125.3)
+Mentioned as: b1148
+Description: e14 prophage; predicted protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 29338696
+Source: EuropePMC
+Title: Transcriptional responses of Escherichia coli during recovery from inorganic or organic mercury exposure
+Journal: BMC genomics (2018)
+Snippet: iscR Transcriptional repressor for isc operon; contains Fe-S cluster 62 48 9 12 18 n.s. b1148 ymfM* Function unknown, e14 prophage 49 21 n.s. n.s. n.s. n.s. b4599 yneM function unknown, membrane-associated; regulated by PhoPQ 38 36 n.s. 3 3 n.s. b2673 nrdH NrdH-redoxin reducing oxidized
+
+================================================================================
+Protein: VIMSS15270 (E-value: 4.1e-35, Score: 125.3)
+Mentioned as: b1148
+Description: e14 prophage; predicted protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 17506902
+Source: EuropePMC
+Title: Genome evolution in major Escherichia coli O157:H7 lineages
+Journal: BMC genomics (2007)
+Snippet: KI#71, KI#121, and E. coli genomic backbone Four ORFs in K-island (KI) #71 (b1142, b1147, b1148, and b1152) and four ORFs in KI#121 (b2360, b2361, b2362 and b2363) were identified as being present in all lineage II strains but not lineage I strains. Only the two
+
+================================================================================
+Protein: VIMSS15270 (E-value: 4.1e-35, Score: 125.3)
+Mentioned as: b1148
+Description: e14 prophage; predicted protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 14733619
+Source: EuropePMC
+Title: Analysis of the lambdoid prophage element e14 in the E. coli K-12 genome
+Journal: BMC microbiology (2004)
+Snippet: the CI repressor and Cro proteins as discussed in the previous section. The b1147 and b1148 genes have no known function, but both show convincing similarity to hypothetical proteins of lambdoid phage origin. For example, phages SfV and ST64B carry homologs of b1147 and b1148 in
+
+================================================================================
+Protein: VIMSS5608380 (E-value: 0.00014, Score: 27.5)
+Mentioned as: PGN_1733
+Description: hemagglutinin protein HagA
+Organism: Porphyromonas gingivalis ATCC 33277
+PMID: 40308968
+Source: EuropePMC
+Title: cAMP-independent Crp homolog adds to the multi-layer regulatory network in &lt;i&gt;Porphyromonas gingivalis&lt;/i&gt;
+Journal: Frontiers in cellular and infection microbiology (2025)
+
+================================================================================
+Protein: VIMSS5608380 (E-value: 0.00014, Score: 27.5)
+Mentioned as: PGN_1733
+Description: hemagglutinin protein HagA
+Organism: Porphyromonas gingivalis ATCC 33277
+PMID: 38289063
+Source: EuropePMC
+Title: Comparative analysis of <i>Porphyromonas gingivalis</i> A7436 and ATCC 33277 strains reveals differences in the expression of heme acquisition systems
+Journal: Microbiology spectrum (2024)
+Snippet: 1.03 3.53 0.71 PGN_1309 1.90 0.80 3.47 0.54 hagA PG1837 PGA7_RS08180 1.28 0.54 1.09 0.37 PGN_1733 1.27 0.45 1.51 0.63 kgp PG1844 PGA7_RS08195 1.69 1.32 3.90 0.95 PGN_1728 1.16 0.26 2.79 0.83 rgpA PG2024 PGA7_RS09040 1.26 0.71 4.24 1.72 PGN_1970 1.14 0.25 4.52 1.17 rgpB PG0506
+
+================================================================================
+Protein: VIMSS5608380 (E-value: 0.00014, Score: 27.5)
+Mentioned as: PGN_1733
+Description: hemagglutinin protein HagA
+Organism: Porphyromonas gingivalis ATCC 33277
+PMID: 34985300
+Source: EuropePMC
+Title: Characterization of the O-Glycoproteome of Porphyromonas gingivalis
+Journal: Microbiology spectrum (2022)
+Snippet: A-LPS. The locus numbers for the proteins are FimA (PGN_0180), FimB (PGN_0181), FtsI (PGN_0622), HagA (PGN_1733), HmuY (PGN_0558), IhtB (PGN_0705), Kgp (PGN_1728), LepB (PGN_1946), LptD (PGN_0884), LptF (PGN_0642), Omp40 (PGN_0728), PBP (PGN_0817), PorE (PGN_1296), PorM (PGN_1674), PorW (PGN_1877), RagA (PGN_0293), RagB (PGN_0294), RgpA (PGN_1970), SppA (PGN_0680),
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75977.1	AF-P75977-F1-model_v4_TED01:14-67	1	AF-P75977-F1-model_v4_TED01	14-67	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75977_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.00 28.80;
+NC   26.00 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

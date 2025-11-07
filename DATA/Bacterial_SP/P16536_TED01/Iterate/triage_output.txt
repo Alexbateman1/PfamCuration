@@ -1,0 +1,91 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Cereibacter.
+2	5	Paracoccaceae
+2	4	Rhodobacterales
+2	3	Alphaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A285CKU0	UNCHARACTERIZED PROTEIN {     97.5    1.4e-24   1   1.6   4.2
+	Iterate                   	     9	    61	    97.5
+
+A0A2T4JVQ5	MFS TRANSPORTER {ECO:0000     68.2    2.1e-15   1   1.2   2.4
+	Iterate                   	     9	    61	    67.8
+
+A0A2T7PID0	UNCHARACTERIZED PROTEIN {     33.3    0.00016   6   4.5   0.3
+	Iterate                   	    82	   137	     9.8
+	Iterate                   	    21	    62	     9.1
+	Iterate                   	    44	    84	     9.1
+	Iterate                   	    56	    95	     9.0
+	Iterate                   	    70	   106	     6.8
+	Iterate                   	     8	    43	     4.7
+
+A0A8S9WNK2	C2H2-TYPE DOMAIN-CONTAINI     33.4    0.00015   3   7.7   0.0
+	Iterate                   	   381	   420	     6.5
+	Iterate                   	   421	   457	     5.1
+	Iterate                   	   461	   496	     4.0
+
+Q3J2Z2	CYTOCHROME B-C1 SUBUNIT IV {E    137.6    4.4e-37   1   1.7   6.5
+	Iterate                   	     9	    61	   137.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1139748 (E-value: 1.4e-34, Score: 123.2)
+Mentioned as: RSP_2687
+Description: cytochrome b-c1 subunit IV
+Organism: Rhodobacter sphaeroides 2.4.1
+PMID: 36913593
+Source: EuropePMC
+Title: Cryo-EM structure of the four-subunit <i>Rhodobacter sphaeroides</i> cytochrome <i>bc</i><sub>1</sub> complex in styrene maleic acid nanodiscs
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2023)
+Snippet: (10% w/w), respectively, and were verified by PCR and automated Sanger sequencing (Eurofins). The fbcQ (rsp_2687) gene was deleted from the strain containing the truncated ZnuC modification by amplifying ~400-bp regions upstream and downstream of fbcQ and joining them by overlap extension PCR, yielding a genomic
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A285CKU0.1	AF-A0A285CKU0-F1-model_v4_TED01:9-62	1	AF-A0A285CKU0-F1-model_v4_TED01	9-62	100.0%
+A0A285CKU0.1	AF-A0A285CKU0-F1-model_v4_TED02:64-103	1	AF-A0A285CKU0-F1-model_v4_TED02	64-103	0
+A0A2T4JVQ5.1	AF-A0A2T4JVQ5-F1-model_v4_TED01:10-53	1	AF-A0A2T4JVQ5-F1-model_v4_TED01	10-53	83.0%
+A0A2T4JVQ5.1	AF-A0A2T4JVQ5-F1-model_v4_TED02:63-103	1	AF-A0A2T4JVQ5-F1-model_v4_TED02	63-103	0
+Q3J2Z2.1	AF-Q3J2Z2-F1-model_v4_TED01:10-61	1	AF-Q3J2Z2-F1-model_v4_TED01	10-61	98.1%
+Q3J2Z2.1	AF-Q3J2Z2-F1-model_v4_TED02:62-100	1	AF-Q3J2Z2-F1-model_v4_TED02	62-100	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P16536_TED01/Iterate
+GA   27.00 27.00;
+TC   34.00 118.20;
+NC   26.70 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 8asi
+RN   [1]
+RM   36913593
+RT   Cryo-EM structure of the four-subunit Rhodobacter sphaeroides
+RT   cytochrome bc(1)  complex in styrene maleic acid nanodiscs.
+RA   Swainsbury DJK, Hawkings FR, Martin EC, Musial S, Salisbury JH,
+RA   Jackson PJ, Farmer DA, Johnson MP, Siebert CA, Hitchcock A, Hunter
+RA   CN;
+RL   Proc Natl Acad Sci U S A. 2023;120:e2217922120.
+
+--- End of Current DESC file ---

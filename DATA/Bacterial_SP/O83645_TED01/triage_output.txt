@@ -1,0 +1,116 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y638_TREPA              Reviewed;         144 AA.
+AC   O83645;
+DE   RecName: Full=Uncharacterized protein TP_0638;
+GN   OrderedLocusNames=TP_0638;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000520; AAC65625.1; -; Genomic_DNA.
+DR   PIR; E71298; E71298.
+DR   RefSeq; WP_010882083.1; NC_021490.2.
+DR   AlphaFoldDB; O83645; -.
+DR   IntAct; O83645; 1.
+DR   EnsemblBacteria; AAC65625; AAC65625; TP_0638.
+DR   KEGG; tpa:TP_0638; -.
+DR   KEGG; tpw:TPANIC_0638; -.
+DR   HOGENOM; CLU_150098_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..144
+FT                   /note="Uncharacterized protein TP_0638"
+FT                   /id="PRO_0000202293"
+FT   TRANSMEM        7..29
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        51..73
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        85..107
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        122..139
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   144 AA;  15394 MW;  7D93DA9921FC7699 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+6	6	Treponema.
+1	6	Teretinema.
+7	5	Treponemataceae
+7	4	Spirochaetales
+7	3	Spirochaetia
+7	2	Spirochaetota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GXD7	DUF4386 DOMAIN-CONTAINING    119.4    5.7e-31   1   1.0  13.3
+	O83645_TED01              	     1	   140	   119.2
+
+A0AAE3EJ27	DUF4149 DOMAIN-CONTAINING     92.5    1.1e-22   1   1.0   9.9
+	O83645_TED01              	     2	   140	    92.2
+
+O83645	UNCHARACTERIZED PROTEIN TP_0638    303.6    8.3e-88   1   1.0  17.8
+	O83645_TED01              	     1	   142	   303.4
+
+Q73NY3	DUF4386 DOMAIN-CONTAINING PRO     71.1    4.6e-16   1   1.0  12.1
+	O83645_TED01              	     1	   139	    70.9
+
+S3K057	DOXX FAMILY PROTEIN {ECO:0008     42.2    3.6e-07   1   1.2  12.0
+	O83645_TED01              	     2	   151	    41.6
+
+S3MCB4	DOXX FAMILY PROTEIN {ECO:0008     77.8      4e-18   1   1.0  11.5
+	O83645_TED01              	     1	   138	    77.6
+
+S6A3D8	UNCHARACTERIZED PROTEIN {ECO:     74.6    3.8e-17   1   1.0   9.6
+	O83645_TED01              	     1	   139	    74.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83645.1	AF-O83645-F1-model_v4_TED01:1-142	1	AF-O83645-F1-model_v4_TED01	1-142	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83645_TED01
+GA   27.00 27.00;
+TC   27.80 41.60;
+NC   22.90 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

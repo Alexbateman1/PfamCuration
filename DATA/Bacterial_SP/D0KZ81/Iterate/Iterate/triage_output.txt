@@ -1,0 +1,159 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MCDB_HALNC              Reviewed;          96 AA.
+AC   D0KZ81;
+DE   RecName: Full=Maintenance of carboxysome distribution protein B {ECO:0000303|PubMed:33638215};
+DE            Short=alpha-McdB {ECO:0000303|PubMed:33638215};
+GN   Name=mcdB {ECO:0000303|PubMed:33638215};
+GN   OrderedLocusNames=Hneap_0911 {ECO:0000312|EMBL:ACX95754.1};
+OS   Halothiobacillus neapolitanus (strain ATCC 23641 / c2) (Thiobacillus
+OS   neapolitanus).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Chromatiales; Halothiobacillaceae; Halothiobacillus.
+OX   NCBI_TaxID=555778;
+RN   [1] {ECO:0000312|EMBL:ACX95754.1}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 23641 / c2;
+RG   US DOE Joint Genome Institute;
+RA   Lucas S., Copeland A., Lapidus A., Glavina del Rio T., Tice H., Bruce D.,
+RA   Goodwin L., Pitluck S., Davenport K., Brettin T., Detter J.C., Han C.,
+RA   Tapia R., Larimer F., Land M., Hauser L., Kyrpides N., Mikhailova N.,
+RA   Kerfeld C., Cannon G., Heinhort S.;
+RT   "Complete sequence of Halothiobacillus neapolitanus c2.";
+RL   Submitted (OCT-2009) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   FUNCTION, SUBUNIT, INTERACTION WITH MCDA, SUBCELLULAR LOCATION, AND
+RP   DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC 23641 / c2;
+RX   PubMed=33638215; DOI=10.1111/mmi.14708;
+RA   MacCready J.S., Tran L., Basalla J.L., Hakim P., Vecchiarelli A.G.;
+RT   "The McdAB system positions alpha-carboxysomes in proteobacteria.";
+RL   Mol. Microbiol. 116:277-297(2021).
+CC   -!- FUNCTION: McdA and McdB together mediate carboxysome positioning on the
+CC       nucleoid and to prevent their aggregation in the cell
+CC       (PubMed:33638215). Undergoes liquid-liquid phase separation at pH 7.0
+CC       in the presence of crowders polyethylene glycol or Ficoll
+CC       (PubMed:33638215). McdA is an ATPase that forms dynamic gradients on
+CC       the nucleoid in response to adapter protein McdB, which associates with
+CC       carboxysomes. The interplay between McdA gradients on the nucleoid and
+CC       McdB-bound carboxysomes result in the equal spacing of Cbs along the
+CC       cell length. Stimulates the ATPase activity of McdA, causing McdA to be
+CC       released from DNA (By similarity). {ECO:0000250|UniProtKB:Q8GJM6,
+CC       ECO:0000269|PubMed:33638215}.
+CC   -!- FUNCTION: Incorrect positioning (aggregation) of carboxysomes results
+CC       in reduced CO(2) fixation by encapsulated form 1 ribulose-1,5-
+CC       bisphosphate carboxylase (RuBisCO, cbbL/cbbS), which leads to slower
+CC       growth. {ECO:0000250|UniProtKB:Q8GJM6}.
+CC   -!- SUBUNIT: Monomer, associates with McdA:DNA (PubMed:33638215). Interacts
+CC       with shell components of the carboxysome (By similarity).
+CC       {ECO:0000250|UniProtKB:Q8GJM6, ECO:0000269|PubMed:33638215}.
+CC   -!- SUBCELLULAR LOCATION: Carboxysome {ECO:0000269|PubMed:33638215}.
+CC   -!- DISRUPTION PHENOTYPE: Carboxysomes (Cb) are no longer evenly
+CC       distributed over the nucleoid region on the whole cell length; 66%
+CC       localize to one cell pole, 5% have Cb at both poles while 29% lack Cbs
+CC       (PubMed:33638215). Cbs are nucleoid excluded.
+CC       {ECO:0000269|PubMed:33638215}.
+DR   EMBL; CP001801; ACX95754.1; -; Genomic_DNA.
+DR   RefSeq; WP_012823790.1; NC_013422.1.
+DR   AlphaFoldDB; D0KZ81; -.
+DR   STRING; 555778.Hneap_0911; -.
+DR   KEGG; hna:Hneap_0911; -.
+DR   HOGENOM; CLU_2355814_0_0_6; -.
+DR   Proteomes; UP000009102; Chromosome.
+DR   GO; GO:0031470; C:carboxysome; IEA:UniProtKB-SubCell.
+DR   GO; GO:0015977; P:carbon fixation; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   Bacterial microcompartment; Carbon dioxide fixation; Carboxysome;
+KW   Reference proteome.
+FT   CHAIN           1..96
+FT                   /note="Maintenance of carboxysome distribution protein B"
+FT                   /id="PRO_0000459780"
+FT   REGION          1..96
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1..18
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        59..74
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   96 AA;  9985 MW;  526B0CDAB8DB8E61 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Acidihalobacter.
+2	6	Halothiobacillus.
+4	5	Ectothiorhodospiraceae
+2	5	Thiomonas.
+2	5	Halothiobacillaceae
+6	4	Chromatiales
+2	4	Thiotrichales
+2	4	Burkholderiales
+8	3	Gammaproteobacteria
+3	3	Betaproteobacteria
+11	2	Pseudomonadota
+11	1	Pseudomonadati
+11	0	Bacteria
+Total of 11 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0W1RRW4	HISTONE {ECO:0008006|GOOG     41.7      1e-06   2   2.7  45.3
+	Iterate                   	     1	    75	    33.3
+	Iterate                   	    61	   112	    13.3
+
+A0A191ZGP0	UNCHARACTERIZED PROTEIN {    155.5    3.5e-42   1   1.0  33.7
+	Iterate                   	     1	    97	   155.4
+
+A0A6G0I2Y0	UNCHARACTERIZED PROTEIN {     37.3    2.3e-05   0  13.6 209.5
+
+A0AAE0GK93	UNCHARACTERIZED PROTEIN {     36.1    5.5e-05   0   7.2  51.0
+
+D0KZ81	MAINTENANCE OF CARBOXYSOME DIST    167.3    7.5e-46   1   1.0  23.7
+	Iterate                   	     1	    96	   167.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS10171129 (E-value: 0.00037, Score: 27.1)
+Mentioned as: TK90_0870
+Description: hypothetical protein
+Organism: Thioalkalivibrio sp. K90mix
+PMID: 22328671
+Source: EuropePMC
+Title: Transcriptional response of the sulfur chemolithoautotroph Thiomicrospira crunogena to dissolved inorganic carbon limitation
+Journal: Journal of bacteriology (2012)
+Snippet: crunogena N. winogradskyi Thioalkalivibrio sp. strain K90 Tcr_1019 Nwi_1977 TK90_0870 75 75 140 1-75 7-75 48-140 100 55 47 N/A 3e08 7e07 a Sequences were
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:D0KZ81/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.50 27.20;
+NC   26.70 25.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RC   Function description for D0KZ81
+RN   [1]
+RM   33638215
+RT   "The McdAB system positions alpha-carboxysomes in proteobacteria.";
+RA   MacCready J.S., Tran L., Basalla J.L., Hakim P., Vecchiarelli A.G.;
+RL   Mol. Microbiol. 116:277-297(2021).
+
+--- End of Current DESC file ---

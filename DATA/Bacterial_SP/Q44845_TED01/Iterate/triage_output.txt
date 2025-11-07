@@ -1,0 +1,184 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y2552_BORBU             Reviewed;         281 AA.
+AC   Q44845;
+DE   RecName: Full=Putative outer membrane protein BBA52;
+GN   OrderedLocusNames=BB_A52;
+OS   Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)
+OS   (Borrelia burgdorferi).
+OG   Plasmid lp54.
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Borreliaceae; Borreliella.
+OX   NCBI_TaxID=224326;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RX   PubMed=9403685; DOI=10.1038/37551;
+RA   Fraser C.M., Casjens S., Huang W.M., Sutton G.G., Clayton R.A.,
+RA   Lathigra R., White O., Ketchum K.A., Dodson R.J., Hickey E.K., Gwinn M.L.,
+RA   Dougherty B.A., Tomb J.-F., Fleischmann R.D., Richardson D.L.,
+RA   Peterson J.D., Kerlavage A.R., Quackenbush J., Salzberg S.L., Hanson M.,
+RA   van Vugt R., Palmer N., Adams M.D., Gocayne J.D., Weidman J.F.,
+RA   Utterback T.R., Watthey L., McDonald L.A., Artiach P., Bowman C.,
+RA   Garland S.A., Fujii C., Cotton M.D., Horst K., Roberts K.M., Hatch B.,
+RA   Smith H.O., Venter J.C.;
+RT   "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.";
+RL   Nature 390:580-586(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-46.
+RC   STRAIN=ATCC 53899 / 297;
+RA   Akins D.R., Popova T., Brusca J., Goldberg M.L., Li M., Baker S.C.,
+RA   Norgard M.V., Radolf J.D.;
+RL   Submitted (AUG-1994) to the EMBL/GenBank/DDBJ databases.
+CC   -!- SUBCELLULAR LOCATION: Cell outer membrane {ECO:0000305}; Peripheral
+CC       membrane protein {ECO:0000305}.
+DR   EMBL; AE000790; AAC66237.1; -; Genomic_DNA.
+DR   EMBL; L31427; AAA64896.1; -; Genomic_DNA.
+DR   PIR; D70213; D70213.
+DR   RefSeq; NP_045725.1; NC_001857.2.
+DR   RefSeq; WP_010890390.1; NC_001857.2.
+DR   AlphaFoldDB; Q44845; -.
+DR   EnsemblBacteria; AAC66237; AAC66237; BB_A52.
+DR   KEGG; bbu:BB_A52; -.
+DR   PATRIC; fig|224326.49.peg.1566; -.
+DR   HOGENOM; CLU_1040783_0_0_12; -.
+DR   OrthoDB; 352241at2; -.
+DR   Proteomes; UP000001807; Plasmid lp54.
+DR   GO; GO:0009279; C:cell outer membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell outer membrane; Membrane; Plasmid; Reference proteome.
+FT   CHAIN           1..281
+FT                   /note="Putative outer membrane protein BBA52"
+FT                   /id="PRO_0000174422"
+FT   REGION          162..281
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        179..196
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        219..249
+FT                   /note="Acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        250..262
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        263..281
+FT                   /note="Acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   281 AA;  33104 MW;  950E2C9EC4CD4FA6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Borreliella.
+1	6	Borrelia.
+2	5	Borreliaceae
+2	4	Spirochaetales
+2	3	Spirochaetia
+2	2	Spirochaetota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A815RML4	UNCHARACTERIZED PROTEIN {     24.8      0.097   1   1.8   1.8
+	Iterate                   	     2	    87	    24.1
+
+A0A8R1HYX9	WHEP-TRS DOMAIN-CONTAININ     24.9      0.091   4   6.7   1.3
+	Iterate                   	   440	   500	     4.5
+	Iterate                   	   371	   426	     2.6
+	Iterate                   	   514	   571	     2.6
+	Iterate                   	   589	   648	     2.3
+	PF03950	tRNA-synt_1c_C  	    15	    89	    28.1
+	PF20974	tRNA-synt_1c_C2 	   100	   177	    48.5
+	PF00458	WHEP-TRS        	   230	   282	    67.3
+	PF00458	WHEP-TRS        	   302	   354	      67
+	PF00458	WHEP-TRS        	   378	   430	    68.9
+	PF00458	WHEP-TRS        	   451	   503	    65.2
+	PF00458	WHEP-TRS        	   523	   575	      70
+	PF00458	WHEP-TRS        	   599	   651	    68.4
+	PF00458	WHEP-TRS        	   666	   718	    49.9
+
+A0A8R1I0N3	WHEP-TRS DOMAIN-CONTAININ     24.8      0.094   4   6.7   1.3
+	Iterate                   	   443	   503	     4.5
+	Iterate                   	   374	   429	     2.6
+	Iterate                   	   517	   574	     2.6
+	Iterate                   	   592	   651	     2.3
+	PF03950	tRNA-synt_1c_C  	    24	    92	    28.2
+	PF20974	tRNA-synt_1c_C2 	   103	   180	    48.5
+	PF00458	WHEP-TRS        	   233	   285	    67.2
+	PF00458	WHEP-TRS        	   305	   357	      67
+	PF00458	WHEP-TRS        	   381	   433	    68.9
+	PF00458	WHEP-TRS        	   454	   506	    65.2
+	PF00458	WHEP-TRS        	   526	   578	      70
+	PF00458	WHEP-TRS        	   602	   654	    68.4
+	PF00458	WHEP-TRS        	   669	   721	    49.8
+
+Q44845	PUTATIVE OUTER MEMBRANE PROTEI    288.1      4e-83   1   1.2  10.3
+	Iterate                   	    27	   156	   287.6
+
+W6TGC3	OUTER MEMBRANE PROTEIN {ECO:0     54.1    8.1e-11   2   2.2   1.7
+	Iterate                   	    34	   108	    29.3
+	Iterate                   	   118	   183	    23.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS44890 (E-value: 3.5e-85, Score: 288.1)
+Mentioned as: BBA52
+Description: outer membrane protein
+Organism: Borrelia burgdorferi B31
+PMID: 40353219
+Source: EuropePMC
+Title: Revolutionizing Lyme disease vaccination: a systematic review and meta-analysis of promising candidates
+Journal: Frontiers in cellular and infection microbiology (2025)
+
+================================================================================
+Protein: VIMSS44890 (E-value: 3.5e-85, Score: 288.1)
+Mentioned as: BBA52
+Description: outer membrane protein
+Organism: Borrelia burgdorferi B31
+PMID: 40011802
+Source: EuropePMC
+Title: Analysis of the BadR regulon in Borrelia burgdorferi
+Journal: BMC microbiology (2025)
+Snippet: were downregulated at the stationary phase only, including 8 genes on lp54 . Of these, bba52 , encoding an outer membrane protein essential for transmission from the tick vector to mammalian host [ 75 , 76 ], was downregulated 6.4-fold in the badR mutant. Furthermore, 37
+
+================================================================================
+Protein: VIMSS44890 (E-value: 3.5e-85, Score: 288.1)
+Mentioned as: BBA52
+Description: outer membrane protein
+Organism: Borrelia burgdorferi B31
+PMID: 37814488
+Source: EuropePMC
+Title: Pathogenicity and virulence of <i>Borrelia burgdorferi</i>
+Journal: Virulence (2023)
+Snippet: have never reached the market. These molecules include mostly the surface-exposed borrelial proteins such as BBA52, BB0405, BBI39, DbpA, BBK32, OspC, with data showing that combination vaccines composed of DbpA, BBK32, and OspC are more powerful than single formulation or double component cocktails [ 6773 ].
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q44845.2	AF-Q44845-F1-model_v4_TED01:27-156	1	AF-Q44845-F1-model_v4_TED01	27-156	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q44845_TED01/Iterate
+GA   27.00 27.00;
+TC   54.10 29.30;
+NC   24.90 24.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

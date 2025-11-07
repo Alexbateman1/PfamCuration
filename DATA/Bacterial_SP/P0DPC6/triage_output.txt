@@ -1,0 +1,95 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   IDLP_ECOLI              Reviewed;          27 AA.
+AC   P0DPC6; A0A385XJQ3;
+DE   RecName: Full=iraD leader peptide;
+GN   Name=idlP; Synonyms=orf27 {ECO:0000303|PubMed:28851853};
+GN   OrderedLocusNames=b4722;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION, FUNCTION, INDUCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / CF7789;
+RX   PubMed=28851853; DOI=10.1128/mbio.01355-17;
+RA   Park H., McGibbon L.C., Potts A.H., Yakhnin H., Romeo T., Babitzke P.;
+RT   "Translational repression of the RpoS antiadapter IraD by CsrA is mediated
+RT   via translational coupling to a short upstream open reading frame.";
+RL   MBio 8:0-0(2017).
+CC   -!- FUNCTION: A short protein whose stop codon overlaps with the start
+CC       codon of downstream iraD; its mRNA secondary structure is predicted to
+CC       fold and sequester the Shine-Dalgarno sequence of iraD. When this
+CC       protein is expressed the downstream iraD is also expressed due to
+CC       ribosomal coupling (PubMed:28851853). {ECO:0000269|PubMed:28851853}.
+CC   -!- INDUCTION: Expressed at high levels during late logarithmic and
+CC       stationary growth (at protein level) (PubMed:28851853). Translation is
+CC       repressed by CsrA (PubMed:28851853). {ECO:0000269|PubMed:28851853}.
+CC   -!- DISRUPTION PHENOTYPE: Decreased expression of downstream gene iraD
+CC       (PubMed:28851853). {ECO:0000269|PubMed:28851853}.
+DR   EMBL; U00096; AYC08260.1; -; Genomic_DNA.
+DR   AlphaFoldDB; P0DPC6; -.
+DR   FunCoup; P0DPC6; 1.
+DR   EnsemblBacteria; AYC08260; AYC08260; b4722.
+DR   InParanoid; P0DPC6; -.
+DR   BioCyc; EcoCyc:MONOMER0-4390; -.
+DR   PRO; PR:P0DPC6; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0006417; P:regulation of translation; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   Leader peptide; Reference proteome; Translation regulation.
+FT   CHAIN           1..27
+FT                   /note="iraD leader peptide"
+FT                   /id="PRO_0000442644"
+SQ   SEQUENCE   27 AA;  3016 MW;  AB77D4EAE857E6B7 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P0DPC6	IRAD LEADER PEPTIDE                 75.7    4.7e-18   1   1.0   6.6
+	P0DPC6                    	     1	    27	    75.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DPC6
+GA   27.00 27.00;
+TC   28.20 75.60;
+NC   26.80 17.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

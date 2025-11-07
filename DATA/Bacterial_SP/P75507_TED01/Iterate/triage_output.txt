@@ -1,0 +1,198 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y268_MYCPN              Reviewed;         117 AA.
+AC   P75507;
+DE   RecName: Full=Putative phosphotransferase enzyme IIB component MPN_268;
+DE            EC=2.7.1.-;
+DE   AltName: Full=Putative PTS system EIIB component;
+GN   OrderedLocusNames=MPN_268; ORFNames=A65_orf117, MP565;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+CC   -!- FUNCTION: The phosphoenolpyruvate-dependent sugar phosphotransferase
+CC       system (PTS), a major carbohydrate active -transport system, catalyzes
+CC       the phosphorylation of incoming sugar substrates concomitant with their
+CC       translocation across the cell membrane. {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- DOMAIN: The EIIB domain is phosphorylated by phospho-EIIA on a
+CC       cysteinyl or histidyl residue, depending on the transported sugar.
+CC       Then, it transfers the phosphoryl group to the sugar substrate
+CC       concomitantly with the sugar uptake processed by the EIIC domain.
+DR   EMBL; U00089; AAB96213.1; -; Genomic_DNA.
+DR   PIR; S73891; S73891.
+DR   RefSeq; NP_109956.1; NC_000912.1.
+DR   RefSeq; WP_010874625.1; NZ_OU342337.1.
+DR   AlphaFoldDB; P75507; -.
+DR   SMR; P75507; -.
+DR   IntAct; P75507; 2.
+DR   STRING; 272634.MPN_268; -.
+DR   EnsemblBacteria; AAB96213; AAB96213; MPN_268.
+DR   KEGG; mpn:MPN_268; -.
+DR   PATRIC; fig|272634.6.peg.287; -.
+DR   HOGENOM; CLU_2082212_0_0_14; -.
+DR   OrthoDB; 9769191at2; -.
+DR   BioCyc; MPNE272634:G1GJ3-419-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0008982; F:protein-N(PI)-phosphohistidine-sugar phosphotransferase activity; IEA:InterPro.
+DR   GO; GO:0009401; P:phosphoenolpyruvate-dependent sugar phosphotransferase system; IEA:UniProtKB-KW.
+DR   Gene3D; 3.30.1360.60; Glucose permease domain IIB; 1.
+DR   InterPro; IPR036878; Glu_permease_IIB.
+DR   InterPro; IPR001996; PTS_IIB_1.
+DR   SUPFAM; SSF55604; Glucose permease domain IIB; 1.
+DR   PROSITE; PS51098; PTS_EIIB_TYPE_1; 1.
+PE   3: Inferred from homology;
+KW   Membrane; Phosphoprotein; Phosphotransferase system; Reference proteome;
+KW   Transferase; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..117
+FT                   /note="Putative phosphotransferase enzyme IIB component
+FT                   MPN_268"
+FT                   /id="PRO_0000210430"
+FT   TRANSMEM        1..21
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          42..117
+FT                   /note="PTS EIIB type-1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00421"
+SQ   SEQUENCE   117 AA;  13281 MW;  1C4D912E2718E3DA CRC64;
+//
+ID   Y129_MYCGE              Reviewed;         117 AA.
+AC   Q49397;
+DE   RecName: Full=Putative phosphotransferase enzyme IIB component MG129;
+DE            EC=2.7.1.-;
+DE   AltName: Full=Putative PTS system EIIB component;
+GN   OrderedLocusNames=MG129;
+OS   Mycoplasma genitalium (strain ATCC 33530 / DSM 19775 / NCTC 10195 / G37)
+OS   (Mycoplasmoides genitalium).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=243273;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 33530 / DSM 19775 / NCTC 10195 / G37;
+RX   PubMed=7569993; DOI=10.1126/science.270.5235.397;
+RA   Fraser C.M., Gocayne J.D., White O., Adams M.D., Clayton R.A.,
+RA   Fleischmann R.D., Bult C.J., Kerlavage A.R., Sutton G.G., Kelley J.M.,
+RA   Fritchman J.L., Weidman J.F., Small K.V., Sandusky M., Fuhrmann J.L.,
+RA   Nguyen D.T., Utterback T.R., Saudek D.M., Phillips C.A., Merrick J.M.,
+RA   Tomb J.-F., Dougherty B.A., Bott K.F., Hu P.-C., Lucier T.S.,
+RA   Peterson S.N., Smith H.O., Hutchison C.A. III, Venter J.C.;
+RT   "The minimal gene complement of Mycoplasma genitalium.";
+RL   Science 270:397-403(1995).
+CC   -!- FUNCTION: The phosphoenolpyruvate-dependent sugar phosphotransferase
+CC       system (PTS), a major carbohydrate active -transport system, catalyzes
+CC       the phosphorylation of incoming sugar substrates concomitant with their
+CC       translocation across the cell membrane. {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- DOMAIN: The EIIB domain is phosphorylated by phospho-EIIA on a
+CC       cysteinyl or histidyl residue, depending on the transported sugar.
+CC       Then, it transfers the phosphoryl group to the sugar substrate
+CC       concomitantly with the sugar uptake processed by the EIIC domain.
+DR   EMBL; L43967; AAC71347.1; -; Genomic_DNA.
+DR   PIR; C64214; C64214.
+DR   RefSeq; WP_009885683.1; NC_000908.2.
+DR   AlphaFoldDB; Q49397; -.
+DR   SMR; Q49397; -.
+DR   STRING; 243273.MG_129; -.
+DR   GeneID; 88282253; -.
+DR   KEGG; mge:MG_129; -.
+DR   eggNOG; COG1264; Bacteria.
+DR   HOGENOM; CLU_2082212_0_0_14; -.
+DR   InParanoid; Q49397; -.
+DR   OrthoDB; 9769191at2; -.
+DR   BioCyc; MGEN243273:G1GJ2-142-MONOMER; -.
+DR   Proteomes; UP000000807; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0008982; F:protein-N(PI)-phosphohistidine-sugar phosphotransferase activity; IEA:InterPro.
+DR   GO; GO:0009401; P:phosphoenolpyruvate-dependent sugar phosphotransferase system; IEA:UniProtKB-KW.
+DR   Gene3D; 3.30.1360.60; Glucose permease domain IIB; 1.
+DR   InterPro; IPR036878; Glu_permease_IIB.
+DR   InterPro; IPR001996; PTS_IIB_1.
+DR   SUPFAM; SSF55604; Glucose permease domain IIB; 1.
+DR   PROSITE; PS51098; PTS_EIIB_TYPE_1; 1.
+PE   3: Inferred from homology;
+KW   Membrane; Phosphoprotein; Phosphotransferase system; Reference proteome;
+KW   Transferase; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..117
+FT                   /note="Putative phosphotransferase enzyme IIB component
+FT                   MG129"
+FT                   /id="PRO_0000210429"
+FT   TRANSMEM        1..21
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          42..117
+FT                   /note="PTS EIIB type-1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00421"
+SQ   SEQUENCE   117 AA;  13457 MW;  7C1874801EB31ABF CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	5	Mycoplasmoides
+2	4	Mycoplasmoidaceae
+2	3	Mycoplasmoidales
+2	2	Mycoplasmatota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A7TBA7	UNCHARACTERIZED PROTEIN {ECO:     27.7     0.0088   6   6.1  17.2
+	Iterate                   	    17	    32	     6.7
+	Iterate                   	    43	    56	     6.6
+	Iterate                   	    55	    69	     6.6
+	Iterate                   	     7	    19	     6.5
+	Iterate                   	    67	    77	     6.1
+	Iterate                   	    29	    44	     4.7
+
+A8DVV0	UNCHARACTERIZED PROTEIN {ECO:     29.3     0.0027   0   9.9   0.2
+
+C7DD27	UNCHARACTERIZED PROTEIN {ECO:     22.8       0.32   1   2.0   1.6
+	Iterate                   	     1	    34	    20.9
+
+P75507	PUTATIVE PHOSPHOTRANSFERASE ENZ     73.1      4e-17   1   1.4   7.3
+	Iterate                   	     1	    30	    72.3
+
+Q49397	PUTATIVE PHOSPHOTRANSFERASE ENZ     41.6    3.6e-07   1   1.3   4.5
+	Iterate                   	     1	    30	    41.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75507.1	AF-P75507-F1-model_v4_TED02:44-114	1	AF-P75507-F1-model_v4_TED02	44-114	0
+P75507.1	AF-P75507-F1-model_v4_TED01:1-30	1	AF-P75507-F1-model_v4_TED01	1-30	100.0%
+Q49397.1	AF-Q49397-F1-model_v4_TED02:46-117	1	AF-Q49397-F1-model_v4_TED02	46-117	0
+Q49397.1	AF-Q49397-F1-model_v4_TED01:2-31	1	AF-Q49397-F1-model_v4_TED01	2-31	96.7%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75507_TED01/Iterate
+GA   27.00 27.00;
+TC   71.00 70.30;
+NC   20.30 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

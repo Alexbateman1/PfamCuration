@@ -1,0 +1,83 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Streptomyces.
+3	5	Streptomycetaceae
+3	4	Kitasatosporales
+3	3	Actinomycetes
+3	2	Actinomycetota
+3	1	Bacillati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A545V7U6	UNCHARACTERIZED PROTEIN {     34.0    8.8e-05   7   6.8   0.8
+	Iterate                   	    62	    84	     4.4
+	Iterate                   	    45	    67	     4.3
+	Iterate                   	    80	   102	     4.1
+	Iterate                   	   113	   136	     4.1
+	Iterate                   	   131	   148	     3.5
+	Iterate                   	    97	   119	     3.4
+	Iterate                   	    21	    50	     2.9
+
+A0A8T0E9N9	UNCHARACTERIZED PROTEIN {     32.5    0.00026   9   9.5  13.0
+	Iterate                   	   183	   217	     4.6
+	Iterate                   	    71	   104	     4.5
+	Iterate                   	   123	   156	     4.5
+	Iterate                   	   149	   182	     4.5
+	Iterate                   	   211	   242	     4.3
+	Iterate                   	    99	   129	     4.2
+	Iterate                   	   236	   268	     3.6
+	Iterate                   	    27	    55	     3.5
+	Iterate                   	    52	    78	     1.8
+
+A0A918LX25	BOTA {ECO:0008006|GOOGLE:    103.2    2.1e-26   1   1.0   4.7
+	Iterate                   	     1	    45	   103.2
+
+C9Z184	UNCHARACTERIZED PROTEIN {ECO:    100.1    1.9e-25   1   1.0   4.6
+	Iterate                   	     1	    43	   100.0
+
+L1L782	UNCHARACTERIZED PROTEIN {ECO:     97.2    1.6e-24   1   1.0   5.6
+	Iterate                   	     1	    44	    97.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS10443370 (E-value: 2.2e-29, Score: 106.2)
+Mentioned as: SCAB_56681
+Description: hypothetical protein
+Organism: Streptomyces scabiei 87.22
+PMID: 22984777
+Source: EuropePMC
+Title: Structure and biosynthesis of the antibiotic bottromycin D
+Journal: Organic letters (2012)
+Snippet: 73.0 radical SAM dependent enzyme Radical SAM domain protein [ Bacillus sp. 1NLA3E] (33/ZP_09600822) bstA scab_56681 81.8 82.6 precursor peptide bstD scab_56671 63.5 70.0 YcaO protein hypothetical protein yber0001_29470 [ Yersinia bercovieri ATCC 43970] (21/ZP_04627890) bstE scab_56661 73.1 74.4 YcaO protein hypothetical protein [ Streptosporangium roseum
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:K4JY29/Iterate
+GA   27.00 27.00;
+TC   27.00 102.10;
+NC   25.50 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,68 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Blastochloris.
+7	5	Blastochloridaceae
+7	4	Hyphomicrobiales
+7	3	Alphaproteobacteria
+7	2	Pseudomonadota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H5BEB5	LIGHT-HARVESTING PROTEIN     100.4    1.5e-25   1   1.2   6.2
+	Iterate                   	    22	    57	    99.9
+
+A0A0H5BHC9	LIGHT-HARVESTING PROTEIN      96.4    2.6e-24   1   1.3   6.6
+	Iterate                   	    22	    57	    95.8
+
+A0A0H5BJC1	LIGHT-HARVESTING PROTEIN     100.6    1.3e-25   1   1.3   6.2
+	Iterate                   	    22	    57	    99.9
+
+A0A348G0X9	UNCHARACTERIZED PROTEIN {     71.1    2.1e-16   1   1.2   4.9
+	Iterate                   	    21	    56	    70.8
+
+A0A348G0Y0	LIGHT-HARVESTING PROTEIN      87.4    1.8e-21   1   1.2   4.1
+	Iterate                   	    22	    57	    86.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0H5BDW7.1	AF-A0A0H5BDW7-F1-model_v4_TED01:2-57	1	AF-A0A0H5BDW7-F1-model_v4_TED01	2-57	100.0%
+A0A0H5BJC1.1	AF-A0A0H5BJC1-F1-model_v4_TED01:4-57	1	AF-A0A0H5BJC1-F1-model_v4_TED01	4-57	100.0%
+A0A348G0X9.1	AF-A0A348G0X9-F1-model_v4_TED01:4-56	1	AF-A0A348G0X9-F1-model_v4_TED01	4-56	100.0%
+A0A348G561.1	AF-A0A348G561-F1-model_v4_TED01:2-57	1	AF-A0A348G561-F1-model_v4_TED01	2-57	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P04126/Iterate
+GA   27.00 27.00;
+TC   31.00 79.60;
+NC   22.50 20.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 9j2f
+RN   [1]
+RM   39680849
+RT   The Thermal-Stable LH1-RC Complex of a Hot Spring Purple Bacterium
+RT   Powers  Photosynthesis with Extremely Low-Energy Near-Infrared Light.
+RA   Kimura Y, Kanno R, Mori K, Matsuda Y, Seto R, Takenaka S, Mino H,
+RA   Ohkubo T, Honda M, Sasaki YC, Kishikawa JI, Mitsuoka K, Mio K, Hall
+RA   M, Purba ER, Mochizuki T, Mizoguchi A, Humbel BM, Madigan MT,
+RA   Wang-Otomo ZY, Tani K;
+RL   Biochemistry. 2025;64:170-179.
+
+--- End of Current DESC file ---

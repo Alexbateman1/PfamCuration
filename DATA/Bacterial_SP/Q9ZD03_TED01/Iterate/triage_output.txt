@@ -1,0 +1,101 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y547_RICPR              Reviewed;         106 AA.
+AC   Q9ZD03;
+DE   RecName: Full=Uncharacterized protein RP547;
+GN   OrderedLocusNames=RP547;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+DR   EMBL; AJ235272; CAA14996.1; -; Genomic_DNA.
+DR   PIR; B71659; B71659.
+DR   RefSeq; NP_220920.1; NC_000963.1.
+DR   RefSeq; WP_004597839.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZD03; -.
+DR   SMR; Q9ZD03; -.
+DR   STRING; 272947.gene:17555627; -.
+DR   EnsemblBacteria; CAA14996; CAA14996; CAA14996.
+DR   KEGG; rpr:RP547; -.
+DR   PATRIC; fig|272947.5.peg.558; -.
+DR   eggNOG; ENOG5030Z81; Bacteria.
+DR   HOGENOM; CLU_152576_0_0_5; -.
+DR   OrthoDB; 7161730at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..106
+FT                   /note="Uncharacterized protein RP547"
+FT                   /id="PRO_0000101391"
+SQ   SEQUENCE   106 AA;  12246 MW;  E157048D34022EB2 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+3	7	Orientia.
+1	7	Rickettsia
+1	7	Candidatus Sneabacter.
+5	6	Rickettsieae
+1	6	Candidatus Phycorickettsia.
+6	5	Rickettsiaceae
+1	5	Candidatus Arcanobacter.
+7	4	Rickettsiales
+7	3	Alphaproteobacteria
+7	2	Pseudomonadota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0F3M9S9	UNCHARACTERIZED PROTEIN {     69.0    1.3e-15   1   1.0   0.6
+	Iterate                   	     3	    97	    68.9
+
+A0A261DBE2	UNCHARACTERIZED PROTEIN {    113.8    1.4e-29   1   1.0   0.2
+	Iterate                   	     7	   100	   113.6
+
+A0A2I0HRY3	UNCHARACTERIZED PROTEIN {     81.1    2.1e-19   0  17.4   6.0
+
+A5CDP4	UNCHARACTERIZED PROTEIN {ECO:     69.3    1.1e-15   1   1.0   0.9
+	Iterate                   	     3	    97	    69.1
+
+Q9ZD03	UNCHARACTERIZED PROTEIN RP547      216.1    1.6e-61   1   1.0   1.3
+	Iterate                   	     5	   100	   216.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0F3MJC9.1	AF-A0A0F3MJC9-F1-model_v4_TED01:3-97	1	AF-A0A0F3MJC9-F1-model_v4_TED01	3-97	99.0%
+A0A261DBE2.1	AF-A0A261DBE2-F1-model_v4_TED01:6-97	1	AF-A0A261DBE2-F1-model_v4_TED01	6-97	95.8%
+Q9ZD03.1	AF-Q9ZD03-F1-model_v4_TED01:5-100	1	AF-Q9ZD03-F1-model_v4_TED01	5-100	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZD03_TED01/Iterate
+GA   27.00 27.00;
+TC   27.20 29.90;
+NC   26.10 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

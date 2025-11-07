@@ -1,0 +1,217 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   WZY_SALTY               Reviewed;         407 AA.
+AC   P0A235; P26479;
+DE   RecName: Full=O-antigen polymerase {ECO:0000303|PubMed:1707412};
+DE            EC=2.4.99.27 {ECO:0000250|UniProtKB:Q58YW1};
+GN   Name=rfc {ECO:0000303|PubMed:1707412}; OrderedLocusNames=STM1332;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND PATHWAY.
+RX   PubMed=1707412; DOI=10.1128/jb.173.8.2521-2529.1991;
+RA   Collins L.V., Hackett J.;
+RT   "Molecular cloning, characterization, and nucleotide sequence of the rfc
+RT   gene, which encodes an O-antigen polymerase of Salmonella typhimurium.";
+RL   J. Bacteriol. 173:2521-2529(1991).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+CC   -!- FUNCTION: Polymerase involved in the biosynthesis of the
+CC       lipopolysaccharide (LPS) (By similarity). Catalyzes the polymerization
+CC       of the O-antigen repeat units on the periplasmic face of the inner
+CC       membrane, leading to the formation of the lipid-linked O-antigen
+CC       molecule (By similarity). {ECO:0000250|UniProtKB:Q58YW1}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=n lipid-linked O-antigen repeat units = a lipid-linked O
+CC         antigen + (n-1) polyisoprenyl diphosphate.; EC=2.4.99.27;
+CC         Evidence={ECO:0000250|UniProtKB:Q58YW1};
+CC   -!- PATHWAY: Bacterial outer membrane biogenesis; LPS O-antigen
+CC       biosynthesis. {ECO:0000269|PubMed:1707412}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane
+CC       {ECO:0000250|UniProtKB:Q58YW1}; Multi-pass membrane protein
+CC       {ECO:0000255}.
+DR   EMBL; M60066; AAA27210.1; -; Genomic_DNA.
+DR   EMBL; AE006468; AAL20257.1; -; Genomic_DNA.
+DR   PIR; A43672; A43672.
+DR   RefSeq; NP_460298.1; NC_003197.2.
+DR   RefSeq; WP_000905563.1; NC_003197.2.
+DR   AlphaFoldDB; P0A235; -.
+DR   STRING; 99287.STM1332; -.
+DR   PaxDb; 99287-STM1332; -.
+DR   GeneID; 1252850; -.
+DR   KEGG; stm:STM1332; -.
+DR   PATRIC; fig|99287.12.peg.1415; -.
+DR   HOGENOM; CLU_057683_0_0_6; -.
+DR   OMA; AYIFISS; -.
+DR   BioCyc; MetaCyc:STM1332-MONOMER; -.
+DR   BioCyc; SENT99287:STM1332-MONOMER; -.
+DR   UniPathway; UPA00281; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016740; F:transferase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0009103; P:lipopolysaccharide biosynthetic process; IEA:UniProtKB-UniPathway.
+DR   NCBIfam; TIGR04370; glyco_rpt_poly; 1.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Lipopolysaccharide biosynthesis;
+KW   Membrane; Reference proteome; Transferase; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..407
+FT                   /note="O-antigen polymerase"
+FT                   /id="PRO_0000097301"
+FT   TRANSMEM        2..22
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        31..51
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        63..83
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        101..121
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        141..161
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        168..185
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        190..204
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        211..231
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        319..339
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        356..376
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        382..402
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   407 AA;  47461 MW;  AF187D8633D9CEDE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	5	Acidobacteriaceae
+2	5	Sphingobacteriaceae
+3	4	Terriglobales
+2	4	Sphingobacteriales
+2	4	Enterobacterales
+3	3	Terriglobia
+2	3	Sphingobacteriia
+2	3	Gammaproteobacteria
+2	3	Alphaproteobacteria
+4	2	Pseudomonadota
+3	2	Bacteroidota
+3	2	Acidobacteriota
+11	1	Pseudomonadati
+11	0	Bacteria
+Total of 11 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1H5ZBZ9	OLIGOSACCHARIDE REPEAT UN    199.0    7.4e-55   1   1.0  14.6
+	P0A235                    	     7	   409	   198.7
+
+A0A255YQK1	OLIGOSACCHARIDE REPEAT UN     41.0    7.4e-07   1   1.6  14.7
+	P0A235                    	   119	   430	    41.0
+
+A0A563UIQ2	OLIGOSACCHARIDE REPEAT UN     74.0      7e-17   1   1.1  41.1
+	P0A235                    	     1	   411	    73.8
+
+A0A5B9ECG0	O-ANTIGEN POLYSACCHARIDE     204.0    2.4e-56   1   1.0  18.1
+	P0A235                    	     6	   406	   203.6
+
+A0A5C6UIG9	OLIGOSACCHARIDE REPEAT UN    145.0    1.9e-38   1   1.0  22.0
+	P0A235                    	     1	   400	   144.8
+
+A0A5J5BEM9	NB-ARC DOMAIN-CONTAINING      33.3    0.00016   4   4.1   1.6
+	P0A235                    	  1356	  1437	     7.4
+	P0A235                    	   912	   998	     7.3
+	P0A235                    	  1133	  1215	     7.1
+	P0A235                    	  1577	  1658	     7.1
+	PF00931	NB-ARC          	   160	   331	   119.1
+	PF23247	LRR_RPS2        	   651	   780	    32.7
+	PF23247	LRR_RPS2        	   714	   815	    33.3
+	PF23247	LRR_RPS2        	   844	   994	   115.5
+	PF23247	LRR_RPS2        	  1065	  1216	     109
+	PF23247	LRR_RPS2        	  1287	  1438	     108
+	PF23247	LRR_RPS2        	  1509	  1660	   110.3
+
+A0A6F9WW66	O-ANTIGEN POLYMERASE {ECO    126.1      1e-32   1   1.1  28.8
+	P0A235                    	     1	   402	   125.8
+
+A0A7G8BXA8	OLIGOSACCHARIDE REPEAT UN    190.0    4.1e-52   1   1.0  18.0
+	P0A235                    	     1	   388	   189.8
+
+A0A934UKS4	OLIGOSACCHARIDE REPEAT UN     35.5    3.4e-05   1   1.4  58.6
+	P0A235                    	     4	   423	    34.7
+
+C1F802	O-ANTIGEN POLYMERASE {ECO:000    178.6    1.2e-48   1   1.0   7.5
+	P0A235                    	     1	   392	   178.3
+
+F0SI58	OLIGOSACCHARIDE REPEAT UNIT P     33.4    0.00015   1   1.2   3.3
+	P0A235                    	    10	   429	    32.8
+
+P0A235	O-ANTIGEN POLYMERASE {ECO:000030    931.7   2.4e-277   1   1.0  50.9
+	P0A235                    	     1	   407	   931.6
+
+Q6D790	O-ANTIGEN POLYMERASE {ECO:000    265.9    3.7e-75   1   1.0  57.0
+	P0A235                    	     1	   397	   265.6
+
+U2DC07	OLIGOSACCHARIDE REPEAT UNIT P     79.9    1.2e-18   1   1.1  51.1
+	P0A235                    	     1	   401	    79.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS148679 (E-value: 2.2e-279, Score: 931.7)
+Mentioned as: STM1332
+Description: O-antigen polymerase
+Organism: Salmonella typhimurium LT2
+PMID: 19390620
+Source: EuropePMC
+Title: Accurate prediction of secreted substrates and identification of a conserved putative secretion signal for type III secretion systems
+Journal: PLoS pathogens (2009)
+Snippet: [80] STM2088 rfbX LPS side chain defect: putative O-antigen transferase 2.38 70% [80] , [81] STM1332 rfc O-antigen polymerase 2.70 90% STM2112 wcaD putative colanic acid polymerase 2.21 60% STM1244 3 , 4 pagD PhoP regulated 2.08 50% [81] STM1867 pagK PhoPQ-activated gene 2.47 75% [81]
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0A235
+GA   27.00 27.00;
+TC   30.80 31.10;
+NC   24.40 23.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

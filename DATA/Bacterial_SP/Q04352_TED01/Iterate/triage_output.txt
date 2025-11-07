@@ -1,0 +1,133 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y3712_CLOAB             Reviewed;         180 AA.
+AC   Q04352;
+DE   RecName: Full=Uncharacterized protein CA_C3712;
+GN   OrderedLocusNames=CA_C3712;
+OS   Clostridium acetobutylicum (strain ATCC 824 / DSM 792 / JCM 1419 / IAM
+OS   19013 / LMG 5710 / NBRC 13948 / NRRL B-527 / VKM B-1787 / 2291 / W).
+OC   Bacteria; Bacillati; Bacillota; Clostridia; Eubacteriales; Clostridiaceae;
+OC   Clostridium.
+OX   NCBI_TaxID=272562;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 824 / DSM 792 / JCM 1419 / IAM 19013 / LMG 5710 / NBRC
+RC   13948 / NRRL B-527 / VKM B-1787 / 2291 / W;
+RX   PubMed=8501044; DOI=10.1128/jb.175.11.3394-3400.1993;
+RA   Sauer U., Duerre P.;
+RT   "Sequence and molecular characterization of a DNA region encoding a small
+RT   heat shock protein of Clostridium acetobutylicum.";
+RL   J. Bacteriol. 175:3394-3400(1993).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 824 / DSM 792 / JCM 1419 / IAM 19013 / LMG 5710 / NBRC
+RC   13948 / NRRL B-527 / VKM B-1787 / 2291 / W;
+RX   PubMed=11466286; DOI=10.1128/jb.183.16.4823-4838.2001;
+RA   Noelling J., Breton G., Omelchenko M.V., Makarova K.S., Zeng Q., Gibson R.,
+RA   Lee H.M., Dubois J., Qiu D., Hitti J., Wolf Y.I., Tatusov R.L., Sabathe F.,
+RA   Doucette-Stamm L.A., Soucaille P., Daly M.J., Bennett G.N., Koonin E.V.,
+RA   Smith D.R.;
+RT   "Genome sequence and comparative analysis of the solvent-producing
+RT   bacterium Clostridium acetobutylicum.";
+RL   J. Bacteriol. 183:4823-4838(2001).
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=CAA46376.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+DR   EMBL; X65276; CAA46376.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; AE001437; AAK81632.1; -; Genomic_DNA.
+DR   PIR; E97355; E97355.
+DR   RefSeq; NP_350292.1; NC_003030.1.
+DR   AlphaFoldDB; Q04352; -.
+DR   STRING; 272562.CA_C3712; -.
+DR   KEGG; cac:CA_C3712; -.
+DR   PATRIC; fig|272562.8.peg.3901; -.
+DR   eggNOG; ENOG5033N3P; Bacteria.
+DR   HOGENOM; CLU_1632455_0_0_9; -.
+DR   OrthoDB; 2243912at2; -.
+DR   Proteomes; UP000000814; Chromosome.
+DR   InterPro; IPR018920; EssA/YueC.
+DR   NCBIfam; TIGR03927; T7SS_EssA_Firm; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..180
+FT                   /note="Uncharacterized protein CA_C3712"
+FT                   /id="PRO_0000207116"
+SQ   SEQUENCE   180 AA;  20263 MW;  BDF825BC88A19C27 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Lactococcus
+1	6	Clostridium
+1	5	Streptococcaceae
+1	5	Clostridiaceae
+1	4	Lactobacillales
+1	4	Eubacteriales
+1	3	Clostridia
+1	3	Bacilli
+2	2	Bacillota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A210R1A2	MAP7 DOMAIN-CONTAINING PR     39.8    1.4e-06   0  29.9  48.2
+
+A0A8S3Y0B6	(APOLLO) HYPOTHETICAL PRO     40.0    1.2e-06   5   9.3   2.4
+	Iterate                   	   737	   753	     4.4
+	Iterate                   	   817	   833	     4.4
+	Iterate                   	   897	   913	     4.4
+	Iterate                   	  1137	  1153	     4.4
+	Iterate                   	  1297	  1313	     4.4
+	PF00640	PID             	    31	   155	    35.2
+
+A0A8S3Y109	(APOLLO) HYPOTHETICAL PRO     39.9    1.3e-06   5   9.3   2.4
+	Iterate                   	   744	   760	     4.4
+	Iterate                   	   824	   840	     4.4
+	Iterate                   	   904	   920	     4.4
+	Iterate                   	  1144	  1160	     4.4
+	Iterate                   	  1304	  1320	     4.4
+	PF00640	PID             	    38	   162	    35.2
+
+A0A8S3Y651	(APOLLO) HYPOTHETICAL PRO     45.4    2.3e-08  10  12.2  11.9
+	Iterate                   	   753	   769	     6.0
+	Iterate                   	   125	   141	     3.3
+	Iterate                   	   406	   422	     3.3
+	Iterate                   	   513	   529	     3.3
+	Iterate                   	   593	   609	     3.3
+	Iterate                   	   792	   808	     3.3
+	Iterate                   	   899	   915	     3.3
+	Iterate                   	   926	   941	     3.0
+	Iterate                   	   227	   243	     2.8
+	Iterate                   	   353	   369	     2.8
+	PF05225	HTH_psq         	  2024	  2067	    26.3
+	PF03184	DDE_1           	  2212	  2382	    81.6
+
+Q04352	UNCHARACTERIZED PROTEIN CA_C37     65.3    9.9e-15   1   1.6   0.4
+	Iterate                   	    72	    96	    64.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A387B9R8.1	AF-A0A387B9R8-F1-model_v4_TED01:2-156	1	AF-A0A387B9R8-F1-model_v4_TED01	2-156	100.0%
+Q04352.2	AF-Q04352-F1-model_v4_TED01:72-96	1	AF-Q04352-F1-model_v4_TED01	72-96	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q04352_TED01/Iterate
+GA   27.00 27.00;
+TC   27.00 61.90;
+NC   26.90 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

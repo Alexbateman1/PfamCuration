@@ -1,0 +1,89 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Neorhizobium
+1	6	Rhizobium/Agrobacterium group
+1	5	Rhizobiaceae
+1	4	Hyphomicrobiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0Q6FYU3	UNCHARACTERIZED PROTEIN {     64.3    5.7e-14   1   1.1   0.3
+	Iterate                   	     1	    34	    64.0
+
+A0A561PUM8	PUTATIVE ATP-BINDING CASS     52.9    1.7e-10   1   2.0   0.4
+	Iterate                   	     1	    32	    51.3
+	PF05992	SbmA_BacA       	    32	   332	    67.5
+	PF06472	ABC_membrane_2  	    34	   282	   119.7
+	PF00005	ABC_tran        	   374	   509	      78
+
+A0AAE1PE90	UNCHARACTERIZED PROTEIN {     53.4    1.2e-10  15  13.8  47.1
+	Iterate                   	   455	   543	     8.7
+	Iterate                   	   167	   254	     8.3
+	Iterate                   	   805	   892	     7.7
+	Iterate                   	   634	   717	     7.5
+	Iterate                   	   867	   947	     7.4
+	Iterate                   	   345	   431	     7.3
+	Iterate                   	   577	   656	     7.2
+	Iterate                   	   929	   998	     6.0
+	Iterate                   	   711	   772	     5.1
+	Iterate                   	    70	   138	     5.0
+	Iterate                   	   246	   313	     5.0
+	Iterate                   	   304	   369	     5.0
+	Iterate                   	   768	   833	     5.0
+	Iterate                   	   536	   598	     4.8
+	Iterate                   	   109	   195	     4.5
+
+A0AAE1PFN4	UNCHARACTERIZED PROTEIN {     37.8    7.4e-06  10   9.1  28.9
+	Iterate                   	   576	   659	     8.3
+	Iterate                   	   227	   310	     8.2
+	Iterate                   	   464	   554	     7.3
+	Iterate                   	   410	   499	     7.0
+	Iterate                   	   655	   722	     5.7
+	Iterate                   	   308	   371	     5.4
+	Iterate                   	   365	   426	     5.2
+	Iterate                   	   140	   197	     5.0
+	Iterate                   	   538	   602	     4.8
+	Iterate                   	   191	   254	     2.6
+
+A0AAF0R026	UNCHARACTERIZED PROTEIN {     35.8    2.9e-05   8   8.1  24.6
+	Iterate                   	   116	   166	     7.0
+	Iterate                   	   326	   377	     6.6
+	Iterate                   	    77	   120	     6.5
+	Iterate                   	   161	   221	     6.5
+	Iterate                   	   282	   327	     6.5
+	Iterate                   	   243	   286	     6.3
+	Iterate                   	    47	    82	     5.6
+	Iterate                   	   206	   257	     3.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0Q6FYU3.1	AF-A0A0Q6FYU3-F1-model_v4_TED01:3-63	1	AF-A0A0Q6FYU3-F1-model_v4_TED01	3-63	94.1%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P05679/Iterate
+GA   27.00 27.00;
+TC   30.70 79.10;
+NC   25.00 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

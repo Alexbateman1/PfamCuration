@@ -1,0 +1,101 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y532_AQUAE              Reviewed;         221 AA.
+AC   O66814;
+DE   RecName: Full=Uncharacterized protein aq_532;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=aq_532;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC06777.1; -; Genomic_DNA.
+DR   PIR; B70348; B70348.
+DR   RefSeq; NP_213374.1; NC_000918.1.
+DR   RefSeq; WP_010880312.1; NC_000918.1.
+DR   AlphaFoldDB; O66814; -.
+DR   STRING; 224324.aq_532; -.
+DR   EnsemblBacteria; AAC06777; AAC06777; aq_532.
+DR   KEGG; aae:aq_532; -.
+DR   HOGENOM; CLU_1248500_0_0_0; -.
+DR   InParanoid; O66814; -.
+DR   Proteomes; UP000000798; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..18
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           19..221
+FT                   /note="Uncharacterized protein aq_532"
+FT                   /id="PRO_0000013614"
+SQ   SEQUENCE   221 AA;  26410 MW;  709163BB9CCB92AB CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Hydrogenobacter
+1	6	Hydrogenivirga
+1	6	Aquifex
+3	5	Aquificaceae
+3	4	Aquificales
+3	3	Aquificia
+3	2	Aquificota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1M6THU4	OUTER MEMBRANE PROTEIN OM     38.9    4.5e-06   2   2.6   7.4
+	O66814_TED01              	    77	   191	    26.5
+	O66814_TED01              	    12	    96	    15.0
+	PF00691	OmpA            	   223	   318	    84.2
+
+A0A497XS90	OUTER MEMBRANE PROTEIN OM     75.6    2.5e-17   1   2.4   3.5
+	O66814_TED01              	     3	   198	    65.0
+	PF00691	OmpA            	   242	   337	    77.6
+
+A8UVX1	OMPA-LIKE DOMAIN-CONTAINING P     80.4    8.5e-19   2   2.4   7.0
+	O66814_TED01              	   100	   200	    51.7
+	O66814_TED01              	     5	   106	    31.5
+	PF00691	OmpA            	   244	   339	    74.6
+
+D3DHV5	OMPA-LIKE DOMAIN-CONTAINING P     29.6      0.003   1   2.3   0.9
+	O66814_TED01              	    92	   197	    29.6
+	PF00691	OmpA            	   227	   322	    84.6
+
+O66814	UNCHARACTERIZED PROTEIN AQ_532     497.5   2.1e-146   1   1.0  11.8
+	O66814_TED01              	     2	   217	   497.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O66814.1	AF-O66814-F1-model_v4_TED01:2-217	1	AF-O66814-F1-model_v4_TED01	2-217	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66814_TED01
+GA   27.00 27.00;
+TC   29.60 29.60;
+NC   25.10 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

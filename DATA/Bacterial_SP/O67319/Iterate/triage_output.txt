@@ -1,0 +1,153 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1287_AQUAE             Reviewed;         219 AA.
+AC   O67319;
+DE   RecName: Full=Uncharacterized protein aq_1287;
+GN   OrderedLocusNames=aq_1287;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000657; AAC07280.1; -; Genomic_DNA.
+DR   PIR; D70411; D70411.
+DR   RefSeq; NP_213883.1; NC_000918.1.
+DR   AlphaFoldDB; O67319; -.
+DR   STRING; 224324.aq_1287; -.
+DR   EnsemblBacteria; AAC07280; AAC07280; aq_1287.
+DR   KEGG; aae:aq_1287; -.
+DR   HOGENOM; CLU_109692_0_0_0; -.
+DR   InParanoid; O67319; -.
+DR   OrthoDB; 9857072at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0003909; F:DNA ligase activity; IEA:InterPro.
+DR   InterPro; IPR016059; DNA_ligase_ATP-dep_CS.
+DR   PROSITE; PS00697; DNA_LIGASE_A1; 1.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..219
+FT                   /note="Uncharacterized protein aq_1287"
+FT                   /id="PRO_0000186917"
+FT   TRANSMEM        13..32
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   219 AA;  25050 MW;  DF5C53C99F8C2EF0 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thermocrinis
+1	6	Hydrogenobacter
+1	6	Hydrogenivirga
+1	6	Aquifex
+4	5	Aquificaceae
+4	4	Aquificales
+4	3	Aquificia
+4	2	Aquificota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A497XWE2	TYPE II SECRETION SYSTEM      82.0      2e-19   1   1.0   7.1
+	Iterate                   	     1	   215	    81.9
+
+A8UQX3	TYPE II SECRETION SYSTEM PROT    115.6      1e-29   1   1.0   6.5
+	Iterate                   	     7	   224	   115.3
+
+D3DIT0	TYPE II SECRETION SYSTEM PROT     84.9    2.6e-20   1   1.0   6.2
+	Iterate                   	     3	   215	    84.6
+
+D3SMA8	TYPE II SECRETION SYSTEM PROT     67.5    5.3e-15   1   1.1   0.7
+	Iterate                   	     1	   202	    67.3
+
+O67319	UNCHARACTERIZED PROTEIN AQ_128    493.9   2.1e-145   1   1.0  17.9
+	Iterate                   	     1	   219	   493.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: F1MCK2 (E-value: 1.3e-07, Score: 37.1)
+Mentioned as: F1MCK2
+Description: AHNAK nucleoprotein
+Organism: Bos taurus
+PMID: 33072792
+Source: EuropePMC
+Title: High-Resolution Mass Spectrometer-Based Ultra-Deep Profile of Milk Whey Proteome in Indian Zebu (<i>Sahiwal</i>) Cattle
+Journal: Frontiers in nutrition (2020)
+Snippet: names Gene symbol ng Molecular function Cellular component Biological process Prosite Pfam InterPro SMART SUPFAM F1MCK2 AHNAK nucleoprotein AHNAK 0.074 Costamere Regulation of RNA splicing PS50106 IPR001478 SM00228 SSF50156 E1BPD7 Marker of proliferation Ki-67 MKI67 0.066 PS50006 PF00498 IPR000253 SM00240 SSF49879 F1N415 Piccolo presynaptic cytomatrix protein
+
+================================================================================
+Protein: K7FBT8 (E-value: 1.7e-06, Score: 33.4)
+Mentioned as: K7FBT8
+Description: AHNAK nucleoprotein
+Organism: Pelodiscus sinensis
+PMID: 38847939
+Source: EuropePMC
+Title: A novel ACE inhibitory peptide from Pelodiscus sinensis Wiegmann meat water-soluble protein hydrolysate
+Journal: Amino acids (2024)
+Snippet: K7FE14 15 18.8 118.53 132.68 1.71E+05 Nucleolin K7F2Y4 1 1.3 77.295 5.934 1.09E+05 AHNAK nucleoprotein K7FBT8 4 47.4 586.41 4.5687 9.20E+04 Alpha fetoprotein K7FQM8 23 2.9 69.527 323.31 7.17E+04 Transferrin K7FMT3 21 28.2 76.024 267.13 6.94E+04 Talin 2 K7FQM1 2 27.8 271.75 50.782 5.48E+04 WD repeat
+
+================================================================================
+Protein: A0JLR7 (E-value: 2.4e-05, Score: 29.7)
+Mentioned as: A0JLR7
+Description: Ahnak protein (Fragment)
+Organism: Mus musculus
+PMID: 20051463
+Source: EuropePMC
+Title: Global phosphoproteomics identifies a major role for AKT and 14-3-3 in regulating EDC3.
+Journal: Molecular & cellular proteomics : MCP (2010)
+
+================================================================================
+Protein: M3YRC0 (E-value: 4.2e-05, Score: 28.9)
+Mentioned as: M3YRC0
+Description: AHNAK nucleoprotein
+Organism: Mustela putorius furo
+PMID: 26801685
+Source: EuropePMC
+Title: Developmental alcohol exposure leads to a persistent change on astrocyte secretome
+Journal: Journal of neurochemistry (2016)
+Snippet: Mean S.E.M. is shown. Protein accession codes in order of appearance: M3Y4T8, M3Y6C5, M3XYI7, G9KN67, M3YRC0, M3Y2C7, M3YEJ9, G9KN61, M3YW77, M3YY79, M3YWS5, M3YPK1, M3XZQ1, M3Y3I4, M3XQJ3. Fig. 6 Long-term changes in ACM induced by early ethanol exposure - Proteins with annotated biological activity predominately related to
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A497XWE2.1	AF-A0A497XWE2-F1-model_v4_TED01:41-215	1	AF-A0A497XWE2-F1-model_v4_TED01	41-215	81.4%
+A8UQX3.1	AF-A8UQX3-F1-model_v4_TED01:42-113_121-127	1	AF-A8UQX3-F1-model_v4_TED01	42-127	38.4%
+D3DIT0.1	AF-D3DIT0-F1-model_v4_TED01:30-118	1	AF-D3DIT0-F1-model_v4_TED01	30-118	41.4%
+D3DIT0.1	AF-D3DIT0-F1-model_v4_TED02:120-216	1	AF-D3DIT0-F1-model_v4_TED02	120-216	44.7%
+D3SMA8.1	AF-D3SMA8-F1-model_v4_TED01:2-114	1	AF-D3SMA8-F1-model_v4_TED01	2-114	55.7%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67319/Iterate
+GA   27.00 27.00;
+TC   27.00 29.50;
+NC   26.90 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

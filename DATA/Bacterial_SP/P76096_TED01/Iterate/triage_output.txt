@@ -1,0 +1,149 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MOKB_ECOLI              Reviewed;          55 AA.
+AC   P76096; Q2MBC3;
+DE   RecName: Full=Regulatory protein MokB;
+GN   Name=mokB; OrderedLocusNames=b1420, JW5882;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [3]
+RP   PROBABLE FUNCTION.
+RX   PubMed=10361310; DOI=10.1046/j.1365-2958.1999.01431.x;
+RA   Pedersen K., Gerdes K.;
+RT   "Multiple hok genes on the chromosome of Escherichia coli.";
+RL   Mol. Microbiol. 32:1090-1102(1999).
+CC   -!- FUNCTION: Overlapping regulatory peptide whose translation enables hokB
+CC       expression. {ECO:0000305}.
+DR   EMBL; U00096; AAC74502.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76433.1; -; Genomic_DNA.
+DR   PIR; G64893; G64893.
+DR   RefSeq; NP_415937.1; NC_000913.3.
+DR   AlphaFoldDB; P76096; -.
+DR   FunCoup; P76096; 2.
+DR   STRING; 511145.b1420; -.
+DR   PaxDb; 511145-b1420; -.
+DR   EnsemblBacteria; AAC74502; AAC74502; b1420.
+DR   GeneID; 948820; -.
+DR   KEGG; ecj:JW5882; -.
+DR   KEGG; eco:b1420; -.
+DR   PATRIC; fig|1411691.4.peg.850; -.
+DR   EchoBASE; EB4159; -.
+DR   HOGENOM; CLU_3128707_0_0_6; -.
+DR   InParanoid; P76096; -.
+DR   BioCyc; EcoCyc:G6736-MONOMER; -.
+DR   PRO; PR:P76096; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..55
+FT                   /note="Regulatory protein MokB"
+FT                   /id="PRO_0000244985"
+SQ   SEQUENCE   55 AA;  5894 MW;  ECB69B2FAF13A676 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+2	6	Shigella.
+5	5	Enterobacteriaceae
+5	4	Enterobacterales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+B7L6D4	MOKB PROTEIN {ECO:0000313|EMB    135.4    2.4e-36   1   1.0   1.6
+	Iterate                   	     2	    50	   135.3
+
+P76096	REGULATORY PROTEIN MOKB            135.4    2.4e-36   1   1.0   1.6
+	Iterate                   	     2	    50	   135.3
+
+Q32FM6	REGULATORY PEPTIDE {ECO:00080    129.7    1.4e-34   1   1.0   1.5
+	Iterate                   	     2	    50	   129.6
+
+Q3Z1F0	REGULATORY PEPTIDE {ECO:00080    131.6    3.6e-35   1   1.0   1.7
+	Iterate                   	     2	    50	   131.5
+
+Q8X9U8	REGULATORY PEPTIDE {ECO:00003    129.7    1.4e-34   1   1.0   1.5
+	Iterate                   	     2	    50	   129.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS15541 (E-value: 2.2e-38, Score: 135.4)
+Mentioned as: b1420
+Description: regulatory peptide
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 20418396
+Source: EuropePMC
+Title: YieJ (CbrC) mediates CreBC-dependent colicin E2 tolerance in Escherichia coli
+Journal: Journal of bacteriology (2010)
+Snippet: 15.6 b3717 b0218 yieJ yafU 14.1 6.8 b0210 yafE 3.4 b1420 mokB 3.2 a P value (103)c 0.001 0.001 0.01 0.002 0.008 0.001 0.001 0.007 0.008 Unique gene identifier.
+
+================================================================================
+Protein: VIMSS15541 (E-value: 2.2e-38, Score: 135.4)
+Mentioned as: b1420
+Description: regulatory peptide
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 19502395
+Source: EuropePMC
+Title: Sxy induces a CRP-S regulon in Escherichia coli
+Journal: Journal of bacteriology (2009)
+Snippet: 5.24 7.84 5.14 13.04 9.89 11 12 13 14 15 16 b2733 b1420 b2305 b2936 b0228 b0913 mutS mokB yfcI yggG yafM ycaI 10.26 10.85 11.12 11.78 11.84 12.92 17 18 18 18 19
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76096.1	AF-P76096-F1-model_v4_TED01:2-50	1	AF-P76096-F1-model_v4_TED01	2-50	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76096_TED01/Iterate
+GA   27.00 27.00;
+TC   43.90 129.60;
+NC   24.70 19.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P76096
+RN   [1]
+RM   10361310
+RT   "Multiple hok genes on the chromosome of Escherichia coli.";
+RA   Pedersen K., Gerdes K.;
+RL   Mol. Microbiol. 32:1090-1102(1999).
+
+--- End of Current DESC file ---

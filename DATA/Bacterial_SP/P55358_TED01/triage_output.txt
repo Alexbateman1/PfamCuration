@@ -1,0 +1,86 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y4AK_SINFN              Reviewed;          50 AA.
+AC   P55358;
+DE   RecName: Full=Uncharacterized protein y4aK;
+GN   OrderedLocusNames=NGR_a00370; ORFNames=y4aK;
+OS   Sinorhizobium fredii (strain NBRC 101917 / NGR234).
+OG   Plasmid sym pNGR234a.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Rhizobiaceae; Sinorhizobium/Ensifer group; Sinorhizobium.
+OX   NCBI_TaxID=394;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=9163424; DOI=10.1038/387394a0;
+RA   Freiberg C.A., Fellay R., Bairoch A., Broughton W.J., Rosenthal A.,
+RA   Perret X.;
+RT   "Molecular basis of symbiosis between Rhizobium and legumes.";
+RL   Nature 387:394-401(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=19376903; DOI=10.1128/aem.00515-09;
+RA   Schmeisser C., Liesegang H., Krysciak D., Bakkou N., Le Quere A.,
+RA   Wollherr A., Heinemeyer I., Morgenstern B., Pommerening-Roeser A.,
+RA   Flores M., Palacios R., Brenner S., Gottschalk G., Schmitz R.A.,
+RA   Broughton W.J., Perret X., Strittmatter A.W., Streit W.R.;
+RT   "Rhizobium sp. strain NGR234 possesses a remarkable number of secretion
+RT   systems.";
+RL   Appl. Environ. Microbiol. 75:4035-4045(2009).
+DR   EMBL; U00090; AAB91608.1; -; Genomic_DNA.
+DR   RefSeq; NP_443770.1; NC_000914.2.
+DR   AlphaFoldDB; P55358; -.
+DR   KEGG; rhi:NGR_a00370; -.
+DR   PATRIC; fig|394.7.peg.35; -.
+DR   HOGENOM; CLU_3121957_0_0_5; -.
+DR   Proteomes; UP000001054; Plasmid pNGR234a.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..50
+FT                   /note="Uncharacterized protein y4aK"
+FT                   /id="PRO_0000200799"
+SQ   SEQUENCE   50 AA;  5521 MW;  0E6217B27287AF4C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Sinorhizobium.
+1	6	Sinorhizobium/Ensifer group
+1	5	Rhizobiaceae
+1	4	Hyphomicrobiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P55358	UNCHARACTERIZED PROTEIN Y4AK       128.9      2e-34   1   1.0   2.3
+	P55358_TED01              	     2	    49	   128.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P55358.1	AF-P55358-F1-model_v4_TED01:2-49	1	AF-P55358-F1-model_v4_TED01	2-49	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P55358_TED01
+GA   27.00 27.00;
+TC   27.50 128.80;
+NC   25.60 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

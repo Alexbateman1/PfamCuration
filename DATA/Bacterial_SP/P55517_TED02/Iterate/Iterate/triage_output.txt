@@ -1,0 +1,137 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y4JQ_SINFN              Reviewed;        1039 AA.
+AC   P55517;
+DE   RecName: Full=Uncharacterized protein y4jQ;
+GN   OrderedLocusNames=NGR_a02980; ORFNames=y4jQ;
+OS   Sinorhizobium fredii (strain NBRC 101917 / NGR234).
+OG   Plasmid sym pNGR234a.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Rhizobiaceae; Sinorhizobium/Ensifer group; Sinorhizobium.
+OX   NCBI_TaxID=394;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=9163424; DOI=10.1038/387394a0;
+RA   Freiberg C.A., Fellay R., Bairoch A., Broughton W.J., Rosenthal A.,
+RA   Perret X.;
+RT   "Molecular basis of symbiosis between Rhizobium and legumes.";
+RL   Nature 387:394-401(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=19376903; DOI=10.1128/aem.00515-09;
+RA   Schmeisser C., Liesegang H., Krysciak D., Bakkou N., Le Quere A.,
+RA   Wollherr A., Heinemeyer I., Morgenstern B., Pommerening-Roeser A.,
+RA   Flores M., Palacios R., Brenner S., Gottschalk G., Schmitz R.A.,
+RA   Broughton W.J., Perret X., Strittmatter A.W., Streit W.R.;
+RT   "Rhizobium sp. strain NGR234 possesses a remarkable number of secretion
+RT   systems.";
+RL   Appl. Environ. Microbiol. 75:4035-4045(2009).
+DR   EMBL; U00090; AAB91729.1; -; Genomic_DNA.
+DR   PIR; T28644; T28644.
+DR   RefSeq; NP_443927.1; NC_000914.2.
+DR   AlphaFoldDB; P55517; -.
+DR   KEGG; rhi:NGR_a02980; -.
+DR   PATRIC; fig|394.7.peg.313; -.
+DR   eggNOG; COG4585; Bacteria.
+DR   HOGENOM; CLU_293704_0_0_5; -.
+DR   OrthoDB; 7833808at2; -.
+DR   Proteomes; UP000001054; Plasmid pNGR234a.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..1039
+FT                   /note="Uncharacterized protein y4jQ"
+FT                   /id="PRO_0000200883"
+FT   REGION          1..38
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1..19
+FT                   /note="Basic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   1039 AA;  115913 MW;  10357BA3970CF693 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Sinorhizobium.
+1	7	Rhizobium.
+1	6	Sinorhizobium/Ensifer group
+1	6	Roseovarius.
+1	6	Rhizobium/Agrobacterium group
+1	6	Jannaschia.
+2	5	Roseobacteraceae
+2	5	Rhizobiaceae
+2	4	Rhodobacterales
+2	4	Hyphomicrobiales
+4	3	Alphaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0G4LWP4	KINESIN MOTOR DOMAIN-CONT     28.9     0.0035   3   3.5   0.1
+	Iterate                   	   391	   479	     8.1
+	Iterate                   	   630	   718	     8.1
+	Iterate                   	   869	   957	     8.1
+	PF16796	Microtub_bd     	     5	   161	      87
+	PF00225	Kinesin         	    14	   354	   370.9
+	PF16183	Kinesin_assoc   	   358	   511	   122.6
+	PF00498	FHA             	   512	   581	    23.1
+	PF16183	Kinesin_assoc   	   604	   750	   106.3
+	PF00498	FHA             	   751	   820	    23.1
+	PF16183	Kinesin_assoc   	   843	   989	   106.3
+	PF00498	FHA             	   990	  1059	    23.1
+	PF12423	KIF1B           	  1424	  1466	    40.6
+	PF12473	DUF3694         	  1648	  1729	      93
+	PF12473	DUF3694         	  1724	  1763	    33.2
+
+A0A0T5NT01	UNCHARACTERIZED PROTEIN {    131.1    2.5e-34   1   1.2   0.7
+	Iterate                   	    12	   298	   130.6
+	PF27260	Y4jQ            	   501	   770	   219.2
+
+A0A1H7KLN2	UNCHARACTERIZED PROTEIN {     29.7     0.0019   1   1.3   0.0
+	Iterate                   	   108	   318	    28.9
+	PF27260	Y4jQ            	   645	   916	   205.1
+
+A0ABF7QZ70	UNCHARACTERIZED PROTEIN {    629.1   4.6e-186   1   1.3   1.0
+	Iterate                   	   109	   395	   628.4
+	PF27260	Y4jQ            	   600	   869	   206.7
+
+P55517	UNCHARACTERIZED PROTEIN Y4JQ       628.9   5.1e-186   1   1.3   1.0
+	Iterate                   	   114	   400	   628.3
+	PF27260	Y4jQ            	   605	   874	   210.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1H7KLN2.1	AF-A0A1H7KLN2-F1-model_v4_TED01:10-37	1	AF-A0A1H7KLN2-F1-model_v4_TED01	10-37	0
+A0A1H7KLN2.1	AF-A0A1H7KLN2-F1-model_v4_TED02:78-253	1	AF-A0A1H7KLN2-F1-model_v4_TED02	78-253	64.9%
+A0A1H7KLN2.1	AF-A0A1H7KLN2-F1-model_v4_TED03:726-818_856-916	1	AF-A0A1H7KLN2-F1-model_v4_TED03	726-916	0
+A0A1H7KLN2.1	AF-A0A1H7KLN2-F1-model_v4_TED04:927-1079	1	AF-A0A1H7KLN2-F1-model_v4_TED04	927-1079	0
+P55517.1	AF-P55517-F1-model_v4_TED01:25-66	1	AF-P55517-F1-model_v4_TED01	25-66	0
+P55517.1	AF-P55517-F1-model_v4_TED02:114-400	1	AF-P55517-F1-model_v4_TED02	114-400	100.0%
+P55517.1	AF-P55517-F1-model_v4_TED03:605-874	1	AF-P55517-F1-model_v4_TED03	605-874	0
+P55517.1	AF-P55517-F1-model_v4_TED04:886-1036	1	AF-P55517-F1-model_v4_TED04	886-1036	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P55517_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   144.80 143.80;
+NC   26.80 23.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

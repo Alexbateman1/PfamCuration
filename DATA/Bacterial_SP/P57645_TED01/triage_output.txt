@@ -1,0 +1,82 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y585_BUCAI              Reviewed;         112 AA.
+AC   P57645;
+DE   RecName: Full=Uncharacterized protein BU585;
+DE   AltName: Full=yba4;
+GN   OrderedLocusNames=BU585;
+OS   Buchnera aphidicola subsp. Acyrthosiphon pisum (strain APS) (Acyrthosiphon
+OS   pisum symbiotic bacterium).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Erwiniaceae; Buchnera.
+OX   NCBI_TaxID=107806;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=APS;
+RX   PubMed=10993077; DOI=10.1038/35024074;
+RA   Shigenobu S., Watanabe H., Hattori M., Sakaki Y., Ishikawa H.;
+RT   "Genome sequence of the endocellular bacterial symbiont of aphids Buchnera
+RT   sp. APS.";
+RL   Nature 407:81-86(2000).
+CC   -!- SIMILARITY: To Buchnera BUsg564. {ECO:0000305}.
+DR   EMBL; BA000003; BAB13274.1; -; Genomic_DNA.
+DR   RefSeq; NP_240388.1; NC_002528.1.
+DR   RefSeq; WP_010896176.1; NC_002528.1.
+DR   AlphaFoldDB; P57645; -.
+DR   SMR; P57645; -.
+DR   STRING; 563178.BUAP5A_578; -.
+DR   EnsemblBacteria; BAB13274; BAB13274; BAB13274.
+DR   KEGG; buc:BU585; -.
+DR   PATRIC; fig|107806.10.peg.590; -.
+DR   eggNOG; ENOG5031MFZ; Bacteria.
+DR   HOGENOM; CLU_2141114_0_0_6; -.
+DR   BioCyc; BAPH107806:GBZJ-578-MONOMER; -.
+DR   Proteomes; UP000001806; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..112
+FT                   /note="Uncharacterized protein BU585"
+FT                   /id="PRO_0000216264"
+SQ   SEQUENCE   112 AA;  13121 MW;  9A4B0D4CD5C30E9E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Buchnera.
+1	5	Erwiniaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P57645	UNCHARACTERIZED PROTEIN BU585      123.8      9e-33   1   2.2  24.1
+	P57645_TED01              	    56	   112	   123.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P57645.1	AF-P57645-F1-model_v4_TED01:56-112	1	AF-P57645-F1-model_v4_TED01	56-112	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P57645_TED01
+GA   27.00 27.00;
+TC   123.80 123.80;
+NC   25.80 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

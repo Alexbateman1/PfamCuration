@@ -1,0 +1,92 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Anaplasma.
+1	5	Anaplasmataceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A6A6K034	UNCHARACTERIZED PROTEIN {     44.7    6.9e-08   2   3.0   2.8
+	Q2GIB5_TED01              	     2	   114	    24.8
+	Q2GIB5_TED01              	   256	   344	    18.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1302469 (E-value: 6.7e-92, Score: 310.1)
+Mentioned as: APH_1387
+Description: HGE-2 protein
+Organism: Anaplasma phagocytophilum HZ
+PMID: 37645379
+Source: EuropePMC
+Title: Establishing the intracellular niche of obligate intracellular vacuolar pathogens
+Journal: Frontiers in cellular and infection microbiology (2023)
+Snippet: ; Siadous etal., 2021 ). Finally, the ApV is actively modified by the bacterial protein APH_1387, which localizes to the ApV membrane and shares secondary structure characteristics with C. trachomatis Inc proteins ( Huang etal., 2010b ). Microenvironment of pathogen containing vacuoles Successful pathogens evade host
+
+================================================================================
+Protein: VIMSS1302469 (E-value: 6.7e-92, Score: 310.1)
+Mentioned as: APH_1387
+Description: HGE-2 protein
+Organism: Anaplasma phagocytophilum HZ
+PMID: 30466964
+Source: EuropePMC
+Title: Mutational analysis of gene function in the Anaplasmataceae: Challenges and perspectives
+Journal: Ticks and tick-borne diseases (2019)
+Snippet: similar increase in the expression of an Ap effector during intracellular infection was reported for APH_1387, which is a protein associated with the vacuolar membrane. APH_1387 expression increased from 8 h p.i. and reached its maximum by 48 h p.i. ( Huang et al., 2010 ).
+
+================================================================================
+Protein: VIMSS1302469 (E-value: 6.7e-92, Score: 310.1)
+Mentioned as: APH_1387
+Description: HGE-2 protein
+Organism: Anaplasma phagocytophilum HZ
+PMID: 23071137
+Source: EuropePMC
+Title: Anaplasma phagocytophilum Asp14 is an invasin that interacts with mammalian host cells via its C terminus to facilitate infection
+Journal: Infection and immunity (2013)
+Snippet: GST-tagged Asp14 or fragments thereof, or GST-tagged APH_1387 iai.asm.org 67 Downloaded from http://iai.asm.org/ on February 8, 2017 by University of
+
+================================================================================
+Protein: VIMSS821315 (E-value: 1.1e-05, Score: 31.0)
+Mentioned as: AM1226
+Description: hypothetical protein
+Organism: Anaplasma marginale str. St. Maries
+PMID: 18316389
+Source: EuropePMC
+Title: Composition of the surface proteome of Anaplasma marginale and its role in protective immunity induced by outer membrane immunization
+Journal: Infection and immunity (2008)
+Snippet: Am375 Am649 Am347 Am1248 Am630 Am540 Am368 Am550 Am1359 Am346 Am1041 Am1225 Am1226 Am185 Am265 Am712 Am354 Am359 63 27 85 57 153 22 62 22 21 85 180 28 24 40 41
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q2GIB5.1	AF-Q2GIB5-F1-model_v4_TED01:1-134	1	AF-Q2GIB5-F1-model_v4_TED01	1-134	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q2GIB5_TED01
+GA   27.00 27.00;
+TC   31.00 29.20;
+NC   23.00 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

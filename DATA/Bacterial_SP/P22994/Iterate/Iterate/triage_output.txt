@@ -1,0 +1,77 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	11	Acanthosepion.
+1	10	Sepiidae
+1	10	Diploscapter.
+1	9	Sepiina
+1	9	Rhabditidae
+1	8	Sepiida
+1	8	Rhabditoidea
+1	7	Rhabditomorpha
+1	7	Decapodiformes
+1	6	Rhabditina
+1	6	Erwinia.
+1	6	Coleoidea
+1	5	Rhabditida
+1	5	Erwiniaceae
+1	5	Cephalopoda
+1	4	Mollusca
+1	4	Enterobacterales
+1	4	Chromadorea
+1	3	Nematoda
+1	3	Lophotrochozoa
+1	3	Gammaproteobacteria
+1	2	Spiralia
+1	2	Pseudomonadota
+1	2	Ecdysozoa
+2	1	Metazoa
+1	1	Pseudomonadati
+2	0	Eukaryota
+1	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0M2KE21	UNCHARACTERIZED PROTEIN {     34.2    0.00011   1   1.0   0.0
+	Iterate                   	     1	    66	    34.2
+
+A0A2A2JXS5	UNCHARACTERIZED PROTEIN {     23.5       0.21   1   1.5   0.1
+	Iterate                   	     8	    74	    22.3
+
+A0A2A2K1D6	UNCHARACTERIZED PROTEIN {    504.2   2.3e-148   1   1.0  29.9
+	Iterate                   	    15	   237	   504.0
+
+A0A812DNS1	UNCHARACTERIZED PROTEIN {     70.5    8.6e-16   2   2.2  12.9
+	Iterate                   	   138	   201	    43.0
+	Iterate                   	    24	   109	    32.7
+
+A0AA35V9U9	TRNA-BINDING PROTEIN {ECO     22.6        0.4   1   1.2   0.1
+	Iterate                   	    22	   107	    22.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2A2K1D6.1	AF-A0A2A2K1D6-F1-model_v4_TED01:101-131	1	AF-A0A2A2K1D6-F1-model_v4_TED01	101-131	13.9%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P22994/Iterate/Iterate
+GA   27.00 27.00;
+TC   34.20 32.70;
+NC   23.50 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

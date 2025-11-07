@@ -1,0 +1,197 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   VAPB8_MYCTU             Reviewed;          90 AA.
+AC   O06775; L0T7D0;
+DE   RecName: Full=Putative antitoxin VapB8;
+GN   Name=vapB8; OrderedLocusNames=Rv0664;
+OS   Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex.
+OX   NCBI_TaxID=83332;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=9634230; DOI=10.1038/31159;
+RA   Cole S.T., Brosch R., Parkhill J., Garnier T., Churcher C.M., Harris D.E.,
+RA   Gordon S.V., Eiglmeier K., Gas S., Barry C.E. III, Tekaia F., Badcock K.,
+RA   Basham D., Brown D., Chillingworth T., Connor R., Davies R.M., Devlin K.,
+RA   Feltwell T., Gentles S., Hamlin N., Holroyd S., Hornsby T., Jagels K.,
+RA   Krogh A., McLean J., Moule S., Murphy L.D., Oliver S., Osborne J.,
+RA   Quail M.A., Rajandream M.A., Rogers J., Rutter S., Seeger K., Skelton S.,
+RA   Squares S., Squares R., Sulston J.E., Taylor K., Whitehead S.,
+RA   Barrell B.G.;
+RT   "Deciphering the biology of Mycobacterium tuberculosis from the complete
+RT   genome sequence.";
+RL   Nature 393:537-544(1998).
+RN   [2]
+RP   POSSIBLE FUNCTION.
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=15718296; DOI=10.1093/nar/gki201;
+RA   Pandey D.P., Gerdes K.;
+RT   "Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.";
+RL   Nucleic Acids Res. 33:966-976(2005).
+CC   -!- FUNCTION: Antitoxin component of a possible type II toxin-antitoxin
+CC       (TA) system. The cognate toxin is VapC8. {ECO:0000305|PubMed:15718296}.
+DR   EMBL; AL123456; CCP43407.1; -; Genomic_DNA.
+DR   PIR; C70535; C70535.
+DR   RefSeq; NP_215178.1; NC_000962.3.
+DR   RefSeq; WP_003900200.1; NC_000962.3.
+DR   AlphaFoldDB; O06775; -.
+DR   STRING; 83332.Rv0664; -.
+DR   PaxDb; 83332-Rv0664; -.
+DR   DNASU; 888146; -.
+DR   GeneID; 888146; -.
+DR   KEGG; mtu:Rv0664; -.
+DR   KEGG; mtv:RVBD_0664; -.
+DR   TubercuList; Rv0664; -.
+DR   InParanoid; O06775; -.
+DR   Proteomes; UP000001584; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome; Toxin-antitoxin system.
+FT   CHAIN           1..90
+FT                   /note="Putative antitoxin VapB8"
+FT                   /id="PRO_0000408057"
+FT   REGION          1..56
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        26..36
+FT                   /note="Gly residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   90 AA;  9250 MW;  6543B6DA6F5F8ECC CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	7	Mycobacterium tuberculosis complex.
+3	6	Mycobacterium
+1	6	Mycobacterium.
+4	5	Mycobacteriaceae
+4	4	Mycobacteriales
+4	3	Actinomycetes
+4	2	Actinomycetota
+4	1	Bacillati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1R3XW14	POSSIBLE ANTITOXIN VAPB8      90.4      2e-22   1   1.3   5.7
+	Iterate                   	    54	    88	    89.8
+
+A0A940JC85	ANTITOXIN {ECO:0000256|RU     39.3    2.1e-06   1   1.4   3.7
+	Iterate                   	    48	    79	    38.4
+	PF02604	PhdYeFM_antitox 	     1	    70	    34.5
+
+A0AA36H6C9	KASH DOMAIN-CONTAINING PR     40.7    7.8e-07  10  15.1  30.0
+	Iterate                   	  7150	  7172	     8.9
+	Iterate                   	  9771	  9793	     5.8
+	Iterate                   	   158	   180	     3.0
+	Iterate                   	  1032	  1054	     3.0
+	Iterate                   	  1906	  1928	     3.0
+	Iterate                   	  2780	  2802	     3.0
+	Iterate                   	  3654	  3676	     3.0
+	Iterate                   	  4528	  4550	     3.0
+	Iterate                   	  5402	  5424	     3.0
+	Iterate                   	  6276	  6298	     3.0
+	PF24615	Spectrin_Anc-1_2	    74	   168	    83.8
+	PF24611	Spectrin_Anc-1  	   245	   359	   134.1
+	PF24615	Spectrin_Anc-1_2	   948	  1042	    83.8
+	PF24611	Spectrin_Anc-1  	  1119	  1233	   134.1
+	PF24615	Spectrin_Anc-1_2	  1822	  1916	    83.8
+	PF24611	Spectrin_Anc-1  	  1993	  2107	   134.1
+	PF24615	Spectrin_Anc-1_2	  2696	  2790	    83.8
+	PF24611	Spectrin_Anc-1  	  2867	  2981	   134.3
+	PF24615	Spectrin_Anc-1_2	  3570	  3664	    83.8
+	PF24611	Spectrin_Anc-1  	  3741	  3855	   134.1
+	PF24615	Spectrin_Anc-1_2	  4444	  4538	    83.8
+	PF24611	Spectrin_Anc-1  	  4615	  4729	   134.1
+	PF24615	Spectrin_Anc-1_2	  5318	  5412	    83.8
+	PF24611	Spectrin_Anc-1  	  5489	  5603	   132.7
+	PF24615	Spectrin_Anc-1_2	  6192	  6286	    83.8
+	PF24611	Spectrin_Anc-1  	  6363	  6477	   132.7
+	PF24615	Spectrin_Anc-1_2	  7066	  7160	    79.6
+	PF24611	Spectrin_Anc-1  	  7237	  7351	     117
+	PF24615	Spectrin_Anc-1_2	  7940	  8034	      80
+	PF24611	Spectrin_Anc-1  	  8111	  8225	     123
+	PF24615	Spectrin_Anc-1_2	  8814	  8908	    80.7
+	PF24611	Spectrin_Anc-1  	  8985	  9098	   109.7
+	PF24615	Spectrin_Anc-1_2	  9687	  9781	    82.5
+	PF24611	Spectrin_Anc-1  	  9858	  9972	   112.9
+	PF24615	Spectrin_Anc-1_2	 10561	 10655	      64
+	PF24611	Spectrin_Anc-1  	 10732	 10847	    87.7
+	PF10541	KASH            	 11022	 11079	    81.1
+
+A5U049	ANTITOXIN VAPB8 {ECO:0008006|     90.4      2e-22   1   1.3   5.7
+	Iterate                   	    54	    88	    89.8
+
+O06775	PUTATIVE ANTITOXIN VAPB8           90.4      2e-22   1   1.3   5.7
+	Iterate                   	    54	    88	    89.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS32435 (E-value: 1.8e-24, Score: 90.4)
+Mentioned as: Rv0664
+Description: hypothetical protein
+Organism: Mycobacterium tuberculosis H37Rv
+PMID: 40357422
+Source: EuropePMC
+Title: &lt;i&gt;Mycobacterium tuberculosis&lt;/i&gt; Detection in Diverse Clinical Specimens by GeneXpert MTB/RIF: A Large-Scale Retrospective Study
+Journal: Infection and drug resistance (2025)
+
+================================================================================
+Protein: VIMSS32435 (E-value: 1.8e-24, Score: 90.4)
+Mentioned as: Rv0664
+Description: hypothetical protein
+Organism: Mycobacterium tuberculosis H37Rv
+PMID: 39501228
+Source: EuropePMC
+Title: Association between toxin-antitoxin system mutations and global transmission of MDR-TB
+Journal: BMC infectious diseases (2024)
+Snippet: 0.604(0.1772.057) Rv0662c vapB7 755,873 C151T Arg51Cys 0.730 1.137(0.5472.366) Rv0662c vapB7 755,947 G77A Arg26His 0.530 1.473(0.4394.946) Rv0664 vapB8 758,548 G17T Cys6Phe 0.580 1.375(0.4454.247) Rv1241 vapB33 1,384,315 G38A Arg13Gln 0.169 3.575(0.58221.976) Rv1246c relE 1,388,827 A152T Asn51Ile 0.998 - Rv1494 mazE4 1,686,299 T29G Ile10Ser 0.061 0.434(0.1811.039) Rv1740 vapB34 1,967,783
+
+================================================================================
+Protein: VIMSS32435 (E-value: 1.8e-24, Score: 90.4)
+Mentioned as: Rv0664
+Description: hypothetical protein
+Organism: Mycobacterium tuberculosis H37Rv
+PMID: 39436387
+Source: EuropePMC
+Title: Evaluation of GeneXpert MTB/Rif Ultra assay performance on formalin-fixed paraffin-embedded tissues for <i>Mycobacterium tuberculosis</i> detection
+Journal: Journal of medical microbiology (2024)
+Snippet: of care. Xpert MTB/Rif assay (Cepheid, USA) is a semi-nested real-time PCR-based assay targeting rpoB (Rv0664), which is FDA (Food and Drug Administration) approved for detecting MTB in sputum specimens. In a single cartridge, specimens undergo sample lysis, DNA extraction and amplification followed by detection of
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A5U049.1	AF-A5U049-F1-model_v4_TED01:56-88	1	AF-A5U049-F1-model_v4_TED01	56-88	94.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O06775_TED01/Iterate
+GA   27.00 27.00;
+TC   27.60 32.50;
+NC   23.60 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for O06775
+RN   [1]
+RM   15718296
+RT   "Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.";
+RA   Pandey D.P., Gerdes K.;
+RL   Nucleic Acids Res. 33:966-976(2005).
+
+--- End of Current DESC file ---

@@ -1,0 +1,187 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1514_PASMU             Reviewed;         331 AA.
+AC   Q9CKU2;
+DE   RecName: Full=Outer membrane lipoprotein PM1514;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=PM1514;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+RN   [2]
+RP   SUBCELLULAR LOCATION.
+RC   STRAIN=Pm70;
+RX   PubMed=28620585; DOI=10.3389/fcimb.2017.00207;
+RA   Hooda Y., Lai C.C.L., Moraes T.F.;
+RT   "Identification of a Large Family of Slam-Dependent Surface Lipoproteins in
+RT   Gram-Negative Bacteria.";
+RL   Front. Cell. Infect. Microbiol. 7:207-207(2017).
+CC   -!- SUBCELLULAR LOCATION: Cell outer membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303, ECO:0000269|PubMed:28620585}; Lipid-anchor
+CC       {ECO:0000255|PROSITE-ProRule:PRU00303}. Cell surface
+CC       {ECO:0000269|PubMed:28620585}. Note=When expressed in E.coli, requires
+CC       Slam for correct expression on the cell surface.
+CC       {ECO:0000269|PubMed:28620585}.
+DR   EMBL; AE004439; AAK03598.1; -; Genomic_DNA.
+DR   RefSeq; WP_010907200.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CKU2; -.
+DR   STRING; 272843.PM1514; -.
+DR   EnsemblBacteria; AAK03598; AAK03598; PM1514.
+DR   KEGG; pmu:PM1514; -.
+DR   PATRIC; fig|272843.6.peg.1530; -.
+DR   HOGENOM; CLU_820965_0_0_6; -.
+DR   OrthoDB; 10006514at2; -.
+DR   Proteomes; UP000000809; Chromosome.
+DR   GO; GO:0009279; C:cell outer membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0009986; C:cell surface; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell outer membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal.
+FT   SIGNAL          1..20
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           21..331
+FT                   /note="Outer membrane lipoprotein PM1514"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT                   /id="PRO_0000450810"
+FT   LIPID           21
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           21
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   331 AA;  37272 MW;  8CC9DAA01EDC4BAA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	6	Mesocricetibacter.
+3	6	Pasteurella.
+2	6	Phocoenobacter.
+18	5	Pasteurellaceae
+18	4	Pasteurellales
+18	3	Gammaproteobacteria
+18	2	Pseudomonadota
+18	1	Pseudomonadati
+18	0	Bacteria
+Total of 18 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2M8RTF9	TRANSFERRIN-BINDING PROTE    277.9    2.8e-79   1   1.2   9.2
+	Iterate                   	    95	   322	   277.3
+
+A0A4R6VBW1	UNCHARACTERIZED PROTEIN {    285.4    1.4e-81   1   1.0   5.6
+	Iterate                   	   121	   346	   285.1
+
+A0A4R6VCX5	TRANSFERRIN BINDING PROTE    236.8      1e-66   1   1.0   7.5
+	Iterate                   	   112	   343	   236.5
+
+Q9CKT9	PLPE {ECO:0000313|EMBL:AAK036    304.5      2e-87   1   1.2  14.3
+	Iterate                   	   105	   332	   304.1
+
+Q9CKU2	OUTER MEMBRANE LIPOPROTEIN PM1    271.3    2.9e-77   1   1.2   8.9
+	Iterate                   	    98	   326	   270.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS80593 (E-value: 1.9e-69, Score: 238.9)
+Mentioned as: PM1517
+Description: PlpE
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 28620585
+Source: EuropePMC
+Title: Identification of a Large Family of Slam-Dependent Surface Lipoproteins in Gram-Negative Bacteria
+Journal: Frontiers in cellular and infection microbiology (2017)
+Snippet: the known Slam-dependent neisserial SLPs. Interestingly, the Slam gene cluster also included two other SLPs, PM1517 (PlpD), and PM1518 (PlpE) that have been investigated as potential vaccine antigens against Pasteurella infections (Nardini et al., 1998 ; Wu et al., 2007 ). Figure 4 Identification of a
+
+================================================================================
+Protein: VIMSS80593 (E-value: 1.9e-69, Score: 238.9)
+Mentioned as: PM1517
+Description: PlpE
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 23672515
+Source: EuropePMC
+Title: Comparative genome analysis of an avirulent and two virulent strains of avian Pasteurella multocida reveals candidate genes involved in fitness and pathogenicity
+Journal: BMC microbiology (2013)
+Snippet: energy supply via iron transport 3 4 0.75 GlpQ (pm1444) Glycerophosphodiester 2 3 0.67 PlpE (pm1517) Protective outer membrane lipoprotein 24 39 0.62 PlpP (pm1518) Protective outer membrane lipoprotein 63 55 1.13 TorD (pm1794) Chaperone 4 3 1.33 Figure 4 Density map of single nucleotide polymorphisms
+
+================================================================================
+Protein: VIMSS80593 (E-value: 1.9e-69, Score: 238.9)
+Mentioned as: PM1517
+Description: PlpE
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 22792202
+Source: EuropePMC
+Title: Screening of 71 P. multocida proteins for protective efficacy in a fowl cholera infection model and characterization of the protective antigen PlpE
+Journal: PloS one (2012)
+Snippet: + + PM1501 27.4 VacJ lipoprotein homolog, Surface lipoprotein H. influenzae pDEST-17 I + + PM1517 37.3 PlpE - protective outer membrane lipoprotein pDEST-17 I + + + + PM1578 35.7 Pm1578 - uncharacterised lipoprotein pDEST-41BA S + + + PM1611 19.6 PM1611 - hypothetical protein
+
+================================================================================
+Protein: A5H9S0 (E-value: 5.4e-68, Score: 234.2)
+Mentioned as: A5H9S0
+Description: Lipoprotein E
+Organism: Pasteurella multocida
+PMID: 38407600
+Source: EuropePMC
+Title: Characterization and immunological effect of outer membrane vesicles from Pasteurella multocida on macrophages
+Journal: Applied microbiology and biotechnology (2024)
+Snippet: ABC transporter substrate-binding protein 61.6 P1062_0205060 Periplasm A0A126QGC9 Tol-Pal system protein TolB 45.9 tolB Periplasm A5H9S0 Lipoprotein E 37.5 plpE -- A0A8E2A638 Sugar ABC transporter substrate-binding protein 33.8 A0R67_09330 Periplasm A0A191VYV1 Outer membrane protein assembly factor BamA 87.7 bamA Outer membrane A0A379BDM0 Hemolysin activation/secretion protein-1 63.5
+
+================================================================================
+Protein: VIMSS80594 (E-value: 3.3e-65, Score: 225.1)
+Mentioned as: PM1518
+Description: PlpP
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 12057970
+Source: EuropePMC
+Title: Transcriptional response of Pasteurella multocida to nutrient limitation
+Journal: Journal of bacteriology (2002)
+Snippet: subunit and a protein transport protein, respectively (5). PM1518 and PM1926 are homologous to outer membrane lipoproteins, and both were expressed at higher
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A011NFC9.1	AF-A0A011NFC9-F1-model_v4_TED01:162-185_199-264	1	AF-A0A011NFC9-F1-model_v4_TED01	162-264	40.6%
+A0A011NFC9.1	AF-A0A011NFC9-F1-model_v4_TED02:275-399	1	AF-A0A011NFC9-F1-model_v4_TED02	275-399	54.6%
+A0A2M8RTF9.1	AF-A0A2M8RTF9-F1-model_v4_TED01:92-321	1	AF-A0A2M8RTF9-F1-model_v4_TED01	92-321	99.6%
+A0A379C7P7.1	AF-A0A379C7P7-F1-model_v4_TED01:116-188	1	AF-A0A379C7P7-F1-model_v4_TED01	116-188	31.3%
+A0A379C7P7.1	AF-A0A379C7P7-F1-model_v4_TED02:193-313	1	AF-A0A379C7P7-F1-model_v4_TED02	193-313	51.9%
+A0A448TVM7.1	AF-A0A448TVM7-F1-model_v4_TED01:100-332	1	AF-A0A448TVM7-F1-model_v4_TED01	100-332	99.6%
+A0A4R2NCY6.1	AF-A0A4R2NCY6-F1-model_v4_TED02:220-454	1	AF-A0A4R2NCY6-F1-model_v4_TED02	220-454	100.0%
+A0A4R2NCY6.1	AF-A0A4R2NCY6-F1-model_v4_TED01:190-219	1	AF-A0A4R2NCY6-F1-model_v4_TED01	190-219	0
+A0A4R6VBW1.1	AF-A0A4R6VBW1-F1-model_v4_TED01:114-346	1	AF-A0A4R6VBW1-F1-model_v4_TED01	114-346	100.0%
+Q9CKT8.1	AF-Q9CKT8-F1-model_v4_TED01:102-338	1	AF-Q9CKT8-F1-model_v4_TED01	102-338	100.0%
+Q9CKT9.1	AF-Q9CKT9-F1-model_v4_TED01:106-331	1	AF-Q9CKT9-F1-model_v4_TED01	106-331	99.1%
+Q9CKU2.1	AF-Q9CKU2-F1-model_v4_TED01:98-326	1	AF-Q9CKU2-F1-model_v4_TED01	98-326	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CKU2_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   76.20 75.50;
+NC   26.20 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

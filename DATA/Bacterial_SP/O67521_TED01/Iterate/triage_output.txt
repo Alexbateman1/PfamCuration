@@ -1,0 +1,103 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1581_AQUAE             Reviewed;         167 AA.
+AC   O67521;
+DE   RecName: Full=Uncharacterized protein aq_1581;
+GN   OrderedLocusNames=aq_1581;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE000657; AAC07489.1; -; Genomic_DNA.
+DR   PIR; G70436; G70436.
+DR   RefSeq; NP_214086.1; NC_000918.1.
+DR   RefSeq; WP_010881024.1; NC_000918.1.
+DR   AlphaFoldDB; O67521; -.
+DR   STRING; 224324.aq_1581; -.
+DR   EnsemblBacteria; AAC07489; AAC07489; aq_1581.
+DR   KEGG; aae:aq_1581; -.
+DR   eggNOG; ENOG50347UN; Bacteria.
+DR   HOGENOM; CLU_1591205_0_0_0; -.
+DR   InParanoid; O67521; -.
+DR   OrthoDB; 13122at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..167
+FT                   /note="Uncharacterized protein aq_1581"
+FT                   /id="PRO_0000186937"
+FT   TRANSMEM        5..27
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   167 AA;  20011 MW;  A4FA1CF36DA64554 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Sulfurihydrogenibium.
+1	6	Venenivibrio.
+1	6	Persephonella.
+1	6	Aquifex
+4	5	Hydrogenothermaceae
+1	5	Aquificaceae
+5	4	Aquificales
+5	3	Aquificia
+5	2	Aquificota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0AA45WMU6	DUF3108 DOMAIN-CONTAINING     89.9    7.2e-22   1   1.5  10.1
+	Iterate                   	    48	   201	    89.0
+
+C0QQ63	LIPOPROTEIN {ECO:0008006|GOOG    114.6    1.8e-29   1   1.0  10.5
+	Iterate                   	    20	   167	   114.3
+
+C1DXC9	OUTER MEMBRANE LIPOPROTEIN CA     71.4    3.6e-16   1   1.7  16.5
+	Iterate                   	    49	   207	    70.0
+
+C4FK49	LIPOPROTEIN {ECO:0008006|GOOG     70.9    5.2e-16   1   2.1  14.3
+	Iterate                   	    49	   206	    66.9
+
+O67521	UNCHARACTERIZED PROTEIN AQ_158    318.1    3.3e-92   1   1.0  21.5
+	Iterate                   	    18	   163	   317.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+C0QQ63.1	AF-C0QQ63-F1-model_v4_TED01:20-164	1	AF-C0QQ63-F1-model_v4_TED01	20-164	96.7%
+O67521.1	AF-O67521-F1-model_v4_TED01:18-163	1	AF-O67521-F1-model_v4_TED01	18-163	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67521_TED01/Iterate
+GA   27.00 27.00;
+TC   32.00 50.90;
+NC   23.10 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

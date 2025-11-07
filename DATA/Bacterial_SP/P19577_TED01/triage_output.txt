@@ -1,0 +1,105 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Dichelobacter.
+1	5	Cardiobacteriaceae
+1	4	Cardiobacteriales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A2DTE1	ANKYRIN REPEAT PROTEIN, PUTAT     58.8    1.3e-12   8   9.2   3.9
+	P19577_TED01              	   111	   135	     7.4
+	P19577_TED01              	   144	   168	     7.4
+	P19577_TED01              	    13	    36	     6.9
+	P19577_TED01              	    45	    64	     6.8
+	P19577_TED01              	   276	   295	     6.8
+	P19577_TED01              	   210	   229	     4.7
+	P19577_TED01              	    79	    97	     4.0
+	P19577_TED01              	   178	   196	     4.0
+	PF12796	Ank_2           	     4	    75	    53.7
+	PF00023	Ank             	    13	    43	    22.3
+	PF13637	Ank_4           	    16	    65	    34.1
+	PF13857	Ank_5           	    31	    82	    27.4
+	PF13606	Ank_3           	    44	    73	    18.8
+	PF00023	Ank             	    44	    76	    28.4
+	PF13637	Ank_4           	    49	    98	    38.2
+	PF12796	Ank_2           	    59	   141	    71.2
+	PF13857	Ank_5           	    64	   118	      39
+	PF13606	Ank_3           	    77	   106	      26
+	PF00023	Ank             	    77	   109	    28.6
+	PF12796	Ank_2           	    82	   174	    86.3
+	PF13637	Ank_4           	    82	   131	    41.2
+	PF13857	Ank_5           	    97	   151	    34.9
+	PF13606	Ank_3           	   110	   139	    20.5
+	PF00023	Ank             	   110	   142	    28.8
+	PF13637	Ank_4           	   115	   164	    34.8
+	PF12796	Ank_2           	   129	   207	    69.4
+	PF13857	Ank_5           	   130	   184	      33
+	PF13606	Ank_3           	   143	   172	    20.5
+	PF00023	Ank             	   143	   175	    29.7
+	PF13637	Ank_4           	   148	   188	    30.3
+	PF12796	Ank_2           	   161	   240	    73.9
+	PF13857	Ank_5           	   163	   217	      39
+	PF13606	Ank_3           	   176	   205	      26
+	PF00023	Ank             	   176	   208	    28.6
+	PF12796	Ank_2           	   181	   273	    86.1
+	PF13637	Ank_4           	   181	   230	    44.5
+	PF13857	Ank_5           	   196	   245	    30.2
+	PF13606	Ank_3           	   209	   238	    27.2
+	PF00023	Ank             	   209	   241	    33.7
+	PF13637	Ank_4           	   214	   251	      29
+	PF13857	Ank_5           	   229	   283	    35.7
+	PF12796	Ank_2           	   237	   307	    51.4
+	PF13606	Ank_3           	   242	   271	    20.6
+	PF00023	Ank             	   242	   274	    23.9
+	PF13637	Ank_4           	   247	   296	    41.3
+	PF00023	Ank             	   275	   306	    18.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P19577 (E-value: 3.3e-21, Score: 79.5)
+Mentioned as: P19577
+Description: Extracellular serine protease (Fragment)
+Organism: Dichelobacter nodosus
+PMID: 38961511
+Source: EuropePMC
+Title: Gut microbiota DPP4-like enzymes are increased in type-2 diabetes and contribute to incretin inactivation
+Journal: Genome biology (2024)
+Snippet: for comparison. The outlier consisted of an S17 peptidase sequence from Dichelobacter nodosus (SwissProt ID P19577). The annotation and grouping of protein sequences at the family and genus level was performed through the inspection of species retrieved from PSI-Blast search across the hierarchical levels of SILVA
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P19577.1	AF-P19577-F1-model_v4_TED01:119-149	1	AF-P19577-F1-model_v4_TED01	119-149	100.0%
+P19577.1	AF-P19577-F1-model_v4_TED02:156-203	1	AF-P19577-F1-model_v4_TED02	156-203	0
+P19577.1	AF-P19577-F1-model_v4_TED03:217-307_317-343_374-421	1	AF-P19577-F1-model_v4_TED03	217-421	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P19577_TED01
+GA   27.00 27.00;
+TC   28.40 28.10;
+NC   25.90 19.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

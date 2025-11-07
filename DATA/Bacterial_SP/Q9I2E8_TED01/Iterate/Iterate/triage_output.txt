@@ -1,0 +1,234 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   FAPA_PSEAE              Reviewed;         162 AA.
+AC   Q9I2E8;
+DE   RecName: Full=Functional amyloid chaperone FapA;
+DE   AltName: Full=Fibril amyloid chaperone protein FapA {ECO:0000305};
+DE   Flags: Precursor;
+GN   Name=fapA {ECO:0000303|PubMed:23504942};
+GN   OrderedLocusNames=PA1956 {ECO:0000312|EMBL:AAG05344.1};
+OS   Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+OS   14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pseudomonadales; Pseudomonadaceae; Pseudomonas.
+OX   NCBI_TaxID=208964;
+RN   [1] {ECO:0000312|EMBL:AAG05344.1}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=10984043; DOI=10.1038/35023079;
+RA   Stover C.K., Pham X.-Q.T., Erwin A.L., Mizoguchi S.D., Warrener P.,
+RA   Hickey M.J., Brinkman F.S.L., Hufnagle W.O., Kowalik D.J., Lagrou M.,
+RA   Garber R.L., Goltry L., Tolentino E., Westbrock-Wadman S., Yuan Y.,
+RA   Brody L.L., Coulter S.N., Folger K.R., Kas A., Larbig K., Lim R.M.,
+RA   Smith K.A., Spencer D.H., Wong G.K.-S., Wu Z., Paulsen I.T., Reizer J.,
+RA   Saier M.H. Jr., Hancock R.E.W., Lory S., Olson M.V.;
+RT   "Complete genome sequence of Pseudomonas aeruginosa PAO1, an opportunistic
+RT   pathogen.";
+RL   Nature 406:959-964(2000).
+RN   [2]
+RP   FUNCTION, POSSIBLE SUBCELLULAR LOCATION, INDUCTION, AND DISRUPTION
+RP   PHENOTYPE.
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=23504942; DOI=10.1002/mbo3.81;
+RA   Dueholm M.S., Soendergaard M.T., Nilsson M., Christiansen G.,
+RA   Stensballe A., Overgaard M.T., Givskov M., Tolker-Nielsen T., Otzen D.E.,
+RA   Nielsen P.H.;
+RT   "Expression of Fap amyloids in Pseudomonas aeruginosa, P. fluorescens, and
+RT   P. putida results in aggregation and increased biofilm formation.";
+RL   MicrobiologyOpen 2:365-382(2013).
+CC   -!- FUNCTION: An intrinsically disordered chaperone for fibril amyloid FapC
+CC       that guards against fibrillation within the periplasm (By similarity).
+CC       Upon overexpression of the endogenous six-gene locus (fapA-fapF), cells
+CC       form large clumps during liquid growth, make large amounts of biofilm
+CC       and produce amyloid fibrils. {ECO:0000250|UniProtKB:P0DXF3,
+CC       ECO:0000269|PubMed:23504942}.
+CC   -!- SUBUNIT: Monomer in solution. Interacts with FapC but not FapB in
+CC       vitro. {ECO:0000250|UniProtKB:P0DXF3}.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000305|PubMed:23504942}.
+CC   -!- INDUCTION: Constitutively transcribed with a peak during mid-
+CC       exponential phase; maximum transcripts are seen under 37 degrees
+CC       Celsius and at 200-500 mM NaCl. The first gene in the probable fapA-
+CC       fapF operon. {ECO:0000269|PubMed:23504942}.
+CC   -!- DISRUPTION PHENOTYPE: Both a single fapA deletion and deletion of the
+CC       entire fapA-fapF six-gene locus show no visible growth phenotype and no
+CC       change in biofilm formation. {ECO:0000269|PubMed:23504942}.
+CC   -!- SIMILARITY: Belongs to the FapA family. {ECO:0000305}.
+DR   EMBL; AE004091; AAG05344.1; -; Genomic_DNA.
+DR   PIR; C83401; C83401.
+DR   RefSeq; NP_250646.1; NC_002516.2.
+DR   RefSeq; WP_003113478.1; NC_002516.2.
+DR   AlphaFoldDB; Q9I2E8; -.
+DR   STRING; 208964.PA1956; -.
+DR   PaxDb; 208964-PA1956; -.
+DR   DNASU; 880791; -.
+DR   GeneID; 880791; -.
+DR   KEGG; pae:PA1956; -.
+DR   PATRIC; fig|208964.12.peg.2038; -.
+DR   PseudoCAP; PA1956; -.
+DR   HOGENOM; CLU_146708_0_0_6; -.
+DR   InParanoid; Q9I2E8; -.
+DR   OrthoDB; 7024471at2; -.
+DR   BioCyc; PAER208964:G1FZ6-1994-MONOMER; -.
+DR   Proteomes; UP000002438; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:1990000; P:amyloid fibril formation; IMP:PseudoCAP.
+PE   2: Evidence at transcript level;
+KW   Chaperone; Periplasm; Reference proteome; Signal.
+FT   SIGNAL          1..28
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           29..162
+FT                   /note="Functional amyloid chaperone FapA"
+FT                   /evidence="ECO:0000255"
+FT                   /id="PRO_5004328445"
+SQ   SEQUENCE   162 AA;  15837 MW;  9B66B560396682E1 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+20	6	Paraburkholderia.
+11	6	Pseudomonas.
+32	5	Burkholderiaceae
+14	5	Pseudomonadaceae
+13	5	Lysobacteraceae
+32	4	Burkholderiales
+19	4	Lysobacterales
+14	4	Pseudomonadales
+37	3	Betaproteobacteria
+36	3	Gammaproteobacteria
+74	2	Pseudomonadota
+74	1	Pseudomonadati
+74	0	Bacteria
+Total of 75 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0C5E217	FAP {ECO:0008006|GOOGLE:P    197.6    5.3e-55   1   1.0   2.7
+	Iterate                   	     3	   149	   197.5
+
+A0A2D2M7K0	FAP {ECO:0008006|GOOGLE:P    193.3    1.1e-53   1   1.0   6.1
+	Iterate                   	     3	   151	   193.2
+
+A0A7U7IBU5	FAP {ECO:0008006|GOOGLE:P    193.5      1e-53   1   1.0   4.7
+	Iterate                   	     3	   148	   193.3
+
+I4N3A0	FAP {ECO:0008006|GOOGLE:PROTN    191.8    3.3e-53   1   1.0   6.2
+	Iterate                   	     6	   145	   191.6
+
+Q9I2E8	FUNCTIONAL AMYLOID CHAPERONE FA    161.3    8.1e-44   1   1.0   6.5
+	Iterate                   	     5	   161	   161.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS218538 (E-value: 8.3e-50, Score: 174.2)
+Mentioned as: PP_2858
+Description: conserved hypothetical protein
+Organism: Pseudomonas putida KT2440
+PMID: 33975969
+Source: EuropePMC
+Title: Identification of c-di-GMP/FleQ-Regulated New Target Genes, Including <i>cyaA</i>, Encoding Adenylate Cyclase, in Pseudomonas putida
+Journal: mSystems (2021)
+Snippet: PP_1691 4.986 2.156 Hypothetical protein PP_1828 3.956 16.106 Hypothetical protein PP_2059 2.102 4.908 Hypothetical protein PP_2858 29.15 7.298 Hypothetical protein PP_3104 2.238 3.096 Hypothetical protein PP_3261 2.523 13.247 Hypothetical protein PP_3524 2.007 5.944 Hypothetical protein PP_3542 2.092 2.267 Hypothetical protein PP_3770 53.334 48.34 Hypothetical protein PP_3795
+
+================================================================================
+Protein: VIMSS218538 (E-value: 8.3e-50, Score: 174.2)
+Mentioned as: PP_2858
+Description: conserved hypothetical protein
+Organism: Pseudomonas putida KT2440
+PMID: 29736608
+Source: EuropePMC
+Title: Transcriptome remodeling of Pseudomonas putida KT2440 during mcl-PHAs synthesis: effect of different carbon sources and response to nitrogen stress
+Journal: Journal of industrial microbiology & biotechnology (2018)
+Snippet: of secondary metabolites, and carbon metabolism. In particular, the transcript levels of genes encoded by PP_2858, PP_2855, PP_4057, and those involved in acetoin metabolism ( acoA , acoB , and acoC ) were elevated, whereas those involved in the pentose-phosphate pathway, ABC transporters, nitrogen metabolism, and
+
+================================================================================
+Protein: VIMSS218538 (E-value: 8.3e-50, Score: 174.2)
+Mentioned as: PP2858
+Description: conserved hypothetical protein
+Organism: Pseudomonas putida KT2440
+PMID: 30557364
+Source: EuropePMC
+Title: The CbrB Regulon: Promoter dissection reveals novel insights into the CbrAB expression network in Pseudomonas putida
+Journal: PloS one (2018)
+Snippet: 2885949 2887273 2886048 2887173 25 PP2810 hypothetical protein 2.98 hypothetical 3202675 3203315 3202705 3203215 26 PP2858 hypothetical protein 2.75 hypothetical 3261156 3261619 3261202 3261519 27 PP3009 hypothetical protein 2.61 hypothetical 3401602 3401909 3401381 3403370 28 PP3012 hypothetical protein 2.61 hypothetical 3402885 3403137 3401381 3403370 29 PP3026
+
+================================================================================
+Protein: Q9I2E8 (E-value: 2.9e-38, Score: 136.7)
+Mentioned as: Q9I2E8
+Description: Functional amyloid chaperone FapA
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+  SwissProt:  - Functional amyloid chaperone FapA; Fibril amyloid chaperone protein FapA
+PMID: 40066032
+Source: EuropePMC
+Title: Proteome-wide identification of druggable targets and inhibitors for multidrug-resistant &lt;i&gt;Pseudomonas aeruginosa&lt;/i&gt; using an integrative subtractive proteomics and virtual screening approach
+Journal: Heliyon (2025)
+Snippet: 1047 Q9ZI86 2129 Q9I696 3211 Q9HXK9 4293 Q9I2E7 1048 E1JGJ8 2130 Q9I698 3212 Q9HXL0 4294 Q9I2E8 1049 G3XCT6 2131 Q9I699 3213 Q9HXL1 4295 Q9I2E9 1050 G3XCT7 2132 Q9I6A1 3214 Q9HXL2 4296 Q9I2F0 1051 G3XCU6 2133 Q9I6A9 3215 Q9HXL3 4297 Q9I2F2 1052 G3XCU9 2134 Q9I6B9 3216 Q9HXL7
+
+================================================================================
+Protein: Q9I2E8 (E-value: 2.9e-38, Score: 136.7)
+Mentioned as: Q9I2E8
+Description: Functional amyloid chaperone FapA
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+  SwissProt:  - Functional amyloid chaperone FapA; Fibril amyloid chaperone protein FapA
+PMID: 34393689
+Source: EuropePMC
+Title: Quest for Novel Preventive and Therapeutic Options Against Multidrug-Resistant <i>Pseudomonas aeruginosa</i>
+Journal: International journal of peptide research and therapeutics (2021)
+Snippet: v3.5.23 identified putative conserved domains for all proteins in other genera except for proteins PA1956 (Q9I2E8), pra (G3XDA9) and PA0724 (Q9I5K4) (Supplementary Tables S5, S6). For druggable targets search, the obtained 148 (KEGG output) essential cytoplasmic enzymes were subjected to host (human) homolog exclusion using BLAST
+
+================================================================================
+Protein: Q9I2E8 (E-value: 2.9e-38, Score: 136.7)
+Mentioned as: FAPA_PSEAE
+Description: Functional amyloid chaperone FapA
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+  SwissProt:  - Functional amyloid chaperone FapA; Fibril amyloid chaperone protein FapA
+PMID: 23504942
+Source: SwissProt
+Snippet: FUNCTION: An intrinsically disordered chaperone for fibril amyloid FapC that guards against fibrillation within the periplasm (By similarity). Upon overexpression of the endogenous six-gene locus (fapA-fapF), cells form large clumps during liquid growth, make large amounts of biofilm and produce amyloid fibrils. {ECO:0000250|UniProtKB:P0DXF3, ECO:0000269|PubMed:23504942}._:::_SUBUNIT: Monomer in solution. Interacts with FapC but not FapB in vitro. {ECO:0000250|UniProtKB:P0DXF3}._:::_SUBCELLULAR ...
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A024HHV7.1	AF-A0A024HHV7-F1-model_v4_TED01:65-95	1	AF-A0A024HHV7-F1-model_v4_TED01	65-95	21.5%
+A0A1G8L0N3.1	AF-A0A1G8L0N3-F1-model_v4_TED01:7-149	1	AF-A0A1G8L0N3-F1-model_v4_TED01	7-149	96.6%
+A0A1G9Z1J0.1	AF-A0A1G9Z1J0-F1-model_v4_TED01:7-148	1	AF-A0A1G9Z1J0-F1-model_v4_TED01	7-148	97.3%
+A0A1H7K9Z7.1	AF-A0A1H7K9Z7-F1-model_v4_TED01:114-131_147-167	1	AF-A0A1H7K9Z7-F1-model_v4_TED01	114-167	30.9%
+A0A2D2M7K0.1	AF-A0A2D2M7K0-F1-model_v4_TED01:4-150	1	AF-A0A2D2M7K0-F1-model_v4_TED01	4-150	98.7%
+A0A3M3ES50.1	AF-A0A3M3ES50-F1-model_v4_TED01:64-89	1	AF-A0A3M3ES50-F1-model_v4_TED01	64-89	17.9%
+A0A3M3X4F9.1	AF-A0A3M3X4F9-F1-model_v4_TED01:7-148	1	AF-A0A3M3X4F9-F1-model_v4_TED01	7-148	97.3%
+A0A5E4UFQ5.1	AF-A0A5E4UFQ5-F1-model_v4_TED01:65-108	1	AF-A0A5E4UFQ5-F1-model_v4_TED01	65-108	28.8%
+I4N3A0.1	AF-I4N3A0-F1-model_v4_TED01:63-96	1	AF-I4N3A0-F1-model_v4_TED01	63-96	24.3%
+Q88IZ1.1	AF-Q88IZ1-F1-model_v4_TED01:7-144	1	AF-Q88IZ1-F1-model_v4_TED01	7-144	97.2%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9I2E8_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.90 27.50;
+NC   26.50 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for Q9I2E8
+RN   [1]
+RM   23504942
+RT   "Expression of Fap amyloids in Pseudomonas aeruginosa, P. fluorescens, and
+RT   P. putida results in aggregation and increased biofilm formation.";
+RA   Dueholm M.S., Soendergaard M.T., Nilsson M., Christiansen G.,
+RA   Stensballe A., Overgaard M.T., Givskov M., Tolker-Nielsen T., Otzen D.E.,
+RA   Nielsen P.H.;
+RL   MicrobiologyOpen 2:365-382(2013).
+
+--- End of Current DESC file ---

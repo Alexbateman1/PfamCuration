@@ -1,0 +1,59 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Streptomyces.
+4	5	Streptomycetaceae
+4	4	Kitasatosporales
+4	3	Actinomycetes
+4	2	Actinomycetota
+4	1	Bacillati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1R1SFH8	DTDP-DIHYDROSTREPTOSE--ST    160.3    5.7e-44   1   1.3   0.3
+	Iterate                   	   287	   380	   159.7
+
+A0A429PVL8	DTDP-DIHYDROSTREPTOSE--ST    171.0    2.5e-47   1   1.3   0.1
+	Iterate                   	   287	   380	   170.4
+
+A0A918FT67	DTDP-DIHYDROSTREPTOSE--ST    144.5      5e-39   1   1.4   0.5
+	Iterate                   	   287	   380	   143.8
+
+A0A919B626	DTDP-DIHYDROSTREPTOSE--ST    150.8    5.4e-41   1   1.3   0.1
+	Iterate                   	   283	   376	   150.1
+
+Q54261	STRH {ECO:0000313|EMBL:CAA073    152.8    1.2e-41   1   1.3   0.2
+	Iterate                   	   287	   380	   152.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A429PVL8.1	AF-A0A429PVL8-F1-model_v4_TED01:24-169	1	AF-A0A429PVL8-F1-model_v4_TED01	24-169	0
+A0A429PVL8.1	AF-A0A429PVL8-F1-model_v4_TED02:177-260	1	AF-A0A429PVL8-F1-model_v4_TED02	177-260	0
+A0A429PVL8.1	AF-A0A429PVL8-F1-model_v4_TED03:305-384	1	AF-A0A429PVL8-F1-model_v4_TED03	305-384	80.9%
+Q54261.1	AF-Q54261-F1-model_v4_TED01:18-289	1	AF-Q54261-F1-model_v4_TED01	18-289	3.2%
+Q54261.1	AF-Q54261-F1-model_v4_TED02:296-381	1	AF-Q54261-F1-model_v4_TED02	296-381	90.4%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P09399_TED03/Iterate
+GA   27.00 27.00;
+TC   28.40 172.10;
+NC   25.60 21.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,182 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   FTSP_PASMU              Reviewed;         468 AA.
+AC   Q9CPE1;
+DE   RecName: Full=Cell division protein FtsP {ECO:0000255|HAMAP-Rule:MF_00915};
+DE   Flags: Precursor;
+GN   Name=ftsP {ECO:0000255|HAMAP-Rule:MF_00915}; OrderedLocusNames=PM0104;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+CC   -!- FUNCTION: Cell division protein that is required for growth during
+CC       stress conditions. May be involved in protecting or stabilizing the
+CC       divisomal assembly under conditions of stress. {ECO:0000255|HAMAP-
+CC       Rule:MF_00915}.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000255|HAMAP-Rule:MF_00915}.
+CC       Note=Localizes to the division septum. {ECO:0000255|HAMAP-
+CC       Rule:MF_00915}.
+CC   -!- PTM: Predicted to be exported by the Tat system. The position of the
+CC       signal peptide cleavage has not been experimentally proven.
+CC   -!- SIMILARITY: Belongs to the FtsP family. {ECO:0000255|HAMAP-
+CC       Rule:MF_00915}.
+DR   EMBL; AE004439; AAK02188.1; -; Genomic_DNA.
+DR   RefSeq; WP_010906483.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CPE1; -.
+DR   SMR; Q9CPE1; -.
+DR   STRING; 272843.PM0104; -.
+DR   EnsemblBacteria; AAK02188; AAK02188; PM0104.
+DR   KEGG; pmu:PM0104; -.
+DR   PATRIC; fig|272843.6.peg.107; -.
+DR   HOGENOM; CLU_009100_2_4_6; -.
+DR   OrthoDB; 9757546at2; -.
+DR   Proteomes; UP000000809; Chromosome.
+DR   GO; GO:0032153; C:cell division site; IEA:UniProtKB-UniRule.
+DR   GO; GO:0030288; C:outer membrane-bounded periplasmic space; IEA:UniProtKB-UniRule.
+DR   GO; GO:0005507; F:copper ion binding; IEA:InterPro.
+DR   GO; GO:0043093; P:FtsZ-dependent cytokinesis; IEA:UniProtKB-UniRule.
+DR   CDD; cd13867; CuRO_2_CueO_FtsP; 1.
+DR   CDD; cd13890; CuRO_3_CueO_FtsP; 1.
+DR   Gene3D; 2.60.40.420; Cupredoxins - blue copper proteins; 3.
+DR   HAMAP; MF_00915; FtsP; 1.
+DR   InterPro; IPR011707; Cu-oxidase-like_N.
+DR   InterPro; IPR045087; Cu-oxidase_fam.
+DR   InterPro; IPR008972; Cupredoxin.
+DR   InterPro; IPR026589; FtsP.
+DR   InterPro; IPR006311; TAT_signal.
+DR   PANTHER; PTHR48267:SF1; BILIRUBIN OXIDASE; 1.
+DR   PANTHER; PTHR48267; CUPREDOXIN SUPERFAMILY PROTEIN; 1.
+DR   Pfam; PF07732; Cu-oxidase_3; 1.
+DR   SUPFAM; SSF49503; Cupredoxins; 3.
+DR   PROSITE; PS51318; TAT; 1.
+PE   3: Inferred from homology;
+KW   Cell cycle; Cell division; Periplasm; Reference proteome; Signal.
+FT   SIGNAL          1..33
+FT                   /note="Tat-type signal"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_00915"
+FT   CHAIN           34..468
+FT                   /note="Cell division protein FtsP"
+FT                   /id="PRO_0000416011"
+SQ   SEQUENCE   468 AA;  52457 MW;  F83D5E95AEB1083B CRC64;
+//
+ID   Y732_HAEIN              Reviewed;          50 AA.
+AC   P44045;
+DE   RecName: Full=Uncharacterized protein HI_0732;
+GN   OrderedLocusNames=HI_0732;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+RN   [2]
+RP   IDENTIFICATION BY MASS SPECTROMETRY.
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=10675023;
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Pasteurella.
+1	6	Rodentibacter.
+1	6	Haemophilus.
+1	6	Avibacterium.
+1	6	Actinobacillus.
+7	5	Pasteurellaceae
+7	4	Pasteurellales
+7	3	Gammaproteobacteria
+7	2	Pseudomonadota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1Q9EQ52	PPM-TYPE PHOSPHATASE DOMA     37.4    7.7e-06   3   3.7   0.4
+	P44045_TED01              	   389	   428	    11.1
+	P44045_TED01              	   604	   643	    11.1
+	P44045_TED01              	   819	   858	    11.1
+	PF00481	PP2C            	    79	   241	    32.2
+
+A0A1V3J1J4	CELL DIVISION PROTEIN FTS     38.4    3.9e-06   1   1.5   0.0
+	P44045_TED01              	   307	   356	    37.4
+	PF07732	Cu-oxidase_3    	    51	   168	    84.1
+	PF07731	Cu-oxidase_2    	   335	   469	    23.6
+
+A0A2U0TCV4	CELL DIVISION PROTEIN FTS     36.4    1.6e-05   1   1.9   0.1
+	P44045_TED01              	   306	   345	    34.7
+	PF07732	Cu-oxidase_3    	    51	   167	    79.4
+
+A0A447SQH0	CELL DIVISION PROTEIN FTS     37.4    7.9e-06   1   1.7   0.9
+	P44045_TED01              	   307	   356	    36.1
+	PF07732	Cu-oxidase_3    	    51	   168	    71.7
+
+A0A6A4VD24	UNCHARACTERIZED PROTEIN {     49.7    1.1e-09   5   5.7   0.0
+	P44045_TED01              	  1547	  1576	     8.4
+	P44045_TED01              	   139	   168	     8.3
+	P44045_TED01              	   440	   469	     8.3
+	P44045_TED01              	  2059	  2088	     8.3
+	P44045_TED01              	  2496	  2525	     8.3
+
+P44045	UNCHARACTERIZED PROTEIN HI_0732    130.8    5.3e-35   1   1.0   3.1
+	P44045_TED01              	     2	    50	   130.7
+
+Q9CPE1	CELL DIVISION PROTEIN FTSP {ECO     35.2    3.7e-05   1   1.8   0.6
+	P44045_TED01              	   307	   356	    33.9
+	PF07732	Cu-oxidase_3    	    52	   168	    91.6
+
+V3ZW35	UNCHARACTERIZED PROTEIN {ECO:     45.9    1.7e-08   9  17.8  29.6
+	P44045_TED01              	   132	   153	     4.8
+	P44045_TED01              	   148	   169	     4.6
+	P44045_TED01              	   181	   201	     4.5
+	P44045_TED01              	   198	   217	     4.5
+	P44045_TED01              	   165	   184	     4.4
+	P44045_TED01              	   302	   321	     4.0
+	P44045_TED01              	   239	   257	     2.5
+	P44045_TED01              	   271	   287	     2.4
+	P44045_TED01              	    36	    73	     2.3
+	PF28756	Orcokinin       	   233	   293	    27.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P44045.1	AF-P44045-F1-model_v4_TED01:2-50	1	AF-P44045-F1-model_v4_TED01	2-50	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44045_TED01
+GA   27.00 27.00;
+TC   27.50 31.70;
+NC   26.90 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

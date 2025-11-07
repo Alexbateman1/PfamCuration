@@ -1,0 +1,929 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   ADHD_MYCTU              Reviewed;         368 AA.
+AC   P9WQB9; F2GNY2; L0TD46; O53303; Q7D655;
+DE   RecName: Full=Putative alcohol dehydrogenase D;
+DE            EC=1.1.1.1;
+GN   Name=adhD; OrderedLocusNames=Rv3086;
+OS   Mycobacterium tuberculosis (strain ATCC 25618 / H37Rv).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex.
+OX   NCBI_TaxID=83332;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=9634230; DOI=10.1038/31159;
+RA   Cole S.T., Brosch R., Parkhill J., Garnier T., Churcher C.M., Harris D.E.,
+RA   Gordon S.V., Eiglmeier K., Gas S., Barry C.E. III, Tekaia F., Badcock K.,
+RA   Basham D., Brown D., Chillingworth T., Connor R., Davies R.M., Devlin K.,
+RA   Feltwell T., Gentles S., Hamlin N., Holroyd S., Hornsby T., Jagels K.,
+RA   Krogh A., McLean J., Moule S., Murphy L.D., Oliver S., Osborne J.,
+RA   Quail M.A., Rajandream M.A., Rogers J., Rutter S., Seeger K., Skelton S.,
+RA   Squares S., Squares R., Sulston J.E., Taylor K., Whitehead S.,
+RA   Barrell B.G.;
+RT   "Deciphering the biology of Mycobacterium tuberculosis from the complete
+RT   genome sequence.";
+RL   Nature 393:537-544(1998).
+RN   [2]
+RP   INDUCTION, AND GENE NAME.
+RX   PubMed=14568148; DOI=10.1016/s0378-1097(03)00648-7;
+RA   Singh A., Jain S., Gupta S., Das T., Tyagi A.K.;
+RT   "mymA operon of Mycobacterium tuberculosis: its regulation and importance
+RT   in the cell envelope.";
+RL   FEMS Microbiol. Lett. 227:53-63(2003).
+RN   [3]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=Erdman;
+RX   PubMed=15937179; DOI=10.1128/jb.187.12.4173-4186.2005;
+RA   Singh A., Gupta R., Vishwakarma R.A., Narayanan P.R., Paramasivan C.N.,
+RA   Ramanathan V.D., Tyagi A.K.;
+RT   "Requirement of the mymA operon for appropriate cell wall ultrastructure
+RT   and persistence of Mycobacterium tuberculosis in the spleens of guinea
+RT   pigs.";
+RL   J. Bacteriol. 187:4173-4186(2005).
+RN   [4]
+RP   DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=16893682; DOI=10.1016/j.tube.2006.01.021;
+RA   Cheruvu M., Plikaytis B.B., Shinnick T.M.;
+RT   "The acid-induced operon Rv3083-Rv3089 is required for growth of
+RT   Mycobacterium tuberculosis in macrophages.";
+RL   Tuberculosis 87:12-20(2007).
+RN   [5]
+RP   IDENTIFICATION BY MASS SPECTROMETRY [LARGE SCALE ANALYSIS].
+RC   STRAIN=ATCC 25618 / H37Rv;
+RX   PubMed=21969609; DOI=10.1074/mcp.m111.011445;
+RA   Kelkar D.S., Kumar D., Kumar P., Balakrishnan L., Muthusamy B., Yadav A.K.,
+RA   Shrivastava P., Marimuthu A., Anand S., Sundaram H., Kingsbury R.,
+RA   Harsha H.C., Nair B., Prasad T.S., Chauhan D.S., Katoch K., Katoch V.M.,
+RA   Kumar P., Chaerkady R., Ramachandran S., Dash D., Pandey A.;
+RT   "Proteogenomic analysis of Mycobacterium tuberculosis by high resolution
+RT   mass spectrometry.";
+RL   Mol. Cell. Proteomics 10:M111.011627-M111.011627(2011).
+CC   -!- FUNCTION: Required for maintaining the appropriate mycolic acid
+CC       composition and permeability of the envelope on its exposure to acidic
+CC       pH. {ECO:0000269|PubMed:15937179}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a primary alcohol + NAD(+) = an aldehyde + NADH + H(+);
+CC         Xref=Rhea:RHEA:10736, ChEBI:CHEBI:15378, ChEBI:CHEBI:15734,
+CC         ChEBI:CHEBI:17478, ChEBI:CHEBI:57540, ChEBI:CHEBI:57945; EC=1.1.1.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a secondary alcohol + NAD(+) = a ketone + NADH + H(+);
+CC         Xref=Rhea:RHEA:10740, ChEBI:CHEBI:15378, ChEBI:CHEBI:17087,
+CC         ChEBI:CHEBI:35681, ChEBI:CHEBI:57540, ChEBI:CHEBI:57945; EC=1.1.1.1;
+CC   -!- COFACTOR:
+CC       Name=Zn(2+); Xref=ChEBI:CHEBI:29105; Evidence={ECO:0000250};
+CC       Note=Binds 2 Zn(2+) ions per subunit. {ECO:0000250};
+CC   -!- INDUCTION: Expression is controlled by VirS. Induced at acidic pH and
+CC       in macrophages. {ECO:0000269|PubMed:14568148}.
+CC   -!- DISRUPTION PHENOTYPE: Inactivation of the mymA operon causes altered
+CC       cell wall structure, reduced contents and altered composition of
+CC       mycolic acids along with the accumulation of saturated C24 and C26
+CC       fatty acids, and enhanced susceptibility to antibiotics, detergents and
+CC       acidic pH. Also impairs ability to survive in macrophages.
+CC       {ECO:0000269|PubMed:15937179, ECO:0000269|PubMed:16893682}.
+CC   -!- SIMILARITY: Belongs to the zinc-containing alcohol dehydrogenase
+CC       family. {ECO:0000305}.
+DR   EMBL; AL123456; CCP45895.1; -; Genomic_DNA.
+DR   PIR; B70853; B70853.
+DR   RefSeq; NP_217602.1; NC_000962.3.
+DR   RefSeq; WP_003416075.1; NZ_NVQJ01000011.1.
+DR   AlphaFoldDB; P9WQB9; -.
+DR   SMR; P9WQB9; -.
+DR   FunCoup; P9WQB9; 343.
+DR   STRING; 83332.Rv3086; -.
+DR   PaxDb; 83332-Rv3086; -.
+DR   GeneID; 888654; -.
+DR   KEGG; mtu:Rv3086; -.
+DR   KEGG; mtv:RVBD_3086; -.
+DR   TubercuList; Rv3086; -.
+DR   eggNOG; COG1062; Bacteria.
+DR   InParanoid; P9WQB9; -.
+DR   OrthoDB; 334894at2; -.
+DR   PhylomeDB; P9WQB9; -.
+DR   Proteomes; UP000001584; Chromosome.
+DR   GO; GO:0005829; C:cytosol; IBA:GO_Central.
+DR   GO; GO:0009274; C:peptidoglycan-based cell wall; HDA:MTBBASE.
+DR   GO; GO:0004022; F:alcohol dehydrogenase (NAD+) activity; IBA:GO_Central.
+DR   GO; GO:0051903; F:S-(hydroxymethyl)glutathione dehydrogenase [NAD(P)+] activity; IBA:GO_Central.
+DR   GO; GO:0008270; F:zinc ion binding; IBA:GO_Central.
+DR   GO; GO:0051701; P:biological process involved in interaction with host; IMP:MTBBASE.
+DR   GO; GO:0046294; P:formaldehyde catabolic process; IBA:GO_Central.
+DR   GO; GO:0010447; P:response to acidic pH; IEP:MTBBASE.
+DR   CDD; cd08279; Zn_ADH_class_III; 1.
+DR   FunFam; 3.40.50.720:FF:000482; Alcohol dehydrogenase D; 1.
+DR   Gene3D; 3.90.180.10; Medium-chain alcohol dehydrogenases, catalytic domain; 1.
+DR   Gene3D; 3.40.50.720; NAD(P)-binding Rossmann-like Domain; 1.
+DR   InterPro; IPR013149; ADH-like_C.
+DR   InterPro; IPR013154; ADH-like_N.
+DR   InterPro; IPR023921; ADH_Zn_actinomycetes.
+DR   InterPro; IPR002328; ADH_Zn_CS.
+DR   InterPro; IPR011032; GroES-like_sf.
+DR   InterPro; IPR036291; NAD(P)-bd_dom_sf.
+DR   InterPro; IPR020843; PKS_ER.
+DR   NCBIfam; TIGR03989; Rxyl_3153; 1.
+DR   PANTHER; PTHR43880; ALCOHOL DEHYDROGENASE; 1.
+DR   PANTHER; PTHR43880:SF12; ALCOHOL DEHYDROGENASE CLASS-3; 1.
+DR   Pfam; PF08240; ADH_N; 1.
+DR   Pfam; PF00107; ADH_zinc_N; 1.
+DR   SMART; SM00829; PKS_ER; 1.
+DR   SUPFAM; SSF50129; GroES-like; 2.
+DR   SUPFAM; SSF51735; NAD(P)-binding Rossmann-fold domains; 1.
+DR   PROSITE; PS00059; ADH_ZINC; 1.
+PE   1: Evidence at protein level;
+KW   Metal-binding; NAD; Oxidoreductase; Reference proteome; Zinc.
+FT   CHAIN           1..368
+FT                   /note="Putative alcohol dehydrogenase D"
+FT                   /id="PRO_0000420879"
+FT   BINDING         40
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="catalytic"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         61
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="catalytic"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         91
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         94
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         97
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         105
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         167
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="catalytic"
+FT                   /evidence="ECO:0000250"
+SQ   SEQUENCE   368 AA;  38342 MW;  A03FCB6F3C8003AF CRC64;
+//
+ID   ADHD_MYCTO              Reviewed;         368 AA.
+AC   P9WQB8; F2GNY2; L0TD46; O53303; Q7D655;
+DE   RecName: Full=Putative alcohol dehydrogenase D;
+DE            EC=1.1.1.1;
+GN   Name=adhD; OrderedLocusNames=MT3171;
+OS   Mycobacterium tuberculosis (strain CDC 1551 / Oshkosh).
+OC   Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales;
+OC   Mycobacteriaceae; Mycobacterium; Mycobacterium tuberculosis complex.
+OX   NCBI_TaxID=83331;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CDC 1551 / Oshkosh;
+RX   PubMed=12218036; DOI=10.1128/jb.184.19.5479-5490.2002;
+RA   Fleischmann R.D., Alland D., Eisen J.A., Carpenter L., White O.,
+RA   Peterson J.D., DeBoy R.T., Dodson R.J., Gwinn M.L., Haft D.H., Hickey E.K.,
+RA   Kolonay J.F., Nelson W.C., Umayam L.A., Ermolaeva M.D., Salzberg S.L.,
+RA   Delcher A., Utterback T.R., Weidman J.F., Khouri H.M., Gill J., Mikula A.,
+RA   Bishai W., Jacobs W.R. Jr., Venter J.C., Fraser C.M.;
+RT   "Whole-genome comparison of Mycobacterium tuberculosis clinical and
+RT   laboratory strains.";
+RL   J. Bacteriol. 184:5479-5490(2002).
+CC   -!- FUNCTION: Required for maintaining the appropriate mycolic acid
+CC       composition and permeability of the envelope on its exposure to acidic
+CC       pH. {ECO:0000250}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a primary alcohol + NAD(+) = an aldehyde + NADH + H(+);
+CC         Xref=Rhea:RHEA:10736, ChEBI:CHEBI:15378, ChEBI:CHEBI:15734,
+CC         ChEBI:CHEBI:17478, ChEBI:CHEBI:57540, ChEBI:CHEBI:57945; EC=1.1.1.1;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a secondary alcohol + NAD(+) = a ketone + NADH + H(+);
+CC         Xref=Rhea:RHEA:10740, ChEBI:CHEBI:15378, ChEBI:CHEBI:17087,
+CC         ChEBI:CHEBI:35681, ChEBI:CHEBI:57540, ChEBI:CHEBI:57945; EC=1.1.1.1;
+CC   -!- COFACTOR:
+CC       Name=Zn(2+); Xref=ChEBI:CHEBI:29105; Evidence={ECO:0000250};
+CC       Note=Binds 2 Zn(2+) ions per subunit. {ECO:0000250};
+CC   -!- SIMILARITY: Belongs to the zinc-containing alcohol dehydrogenase
+CC       family. {ECO:0000305}.
+DR   EMBL; AE000516; AAK47507.1; -; Genomic_DNA.
+DR   PIR; B70853; B70853.
+DR   RefSeq; WP_003416075.1; NZ_KK341227.1.
+DR   AlphaFoldDB; P9WQB8; -.
+DR   SMR; P9WQB8; -.
+DR   KEGG; mtc:MT3171; -.
+DR   PATRIC; fig|83331.31.peg.3417; -.
+DR   HOGENOM; CLU_026673_14_1_11; -.
+DR   Proteomes; UP000001020; Chromosome.
+DR   GO; GO:0005829; C:cytosol; IEA:TreeGrafter.
+DR   GO; GO:0004022; F:alcohol dehydrogenase (NAD+) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0051903; F:S-(hydroxymethyl)glutathione dehydrogenase [NAD(P)+] activity; IEA:TreeGrafter.
+DR   GO; GO:0008270; F:zinc ion binding; IEA:InterPro.
+DR   GO; GO:0046294; P:formaldehyde catabolic process; IEA:TreeGrafter.
+DR   CDD; cd08279; Zn_ADH_class_III; 1.
+DR   FunFam; 3.40.50.720:FF:000482; Alcohol dehydrogenase D; 1.
+DR   Gene3D; 3.90.180.10; Medium-chain alcohol dehydrogenases, catalytic domain; 1.
+DR   Gene3D; 3.40.50.720; NAD(P)-binding Rossmann-like Domain; 1.
+DR   InterPro; IPR013149; ADH-like_C.
+DR   InterPro; IPR013154; ADH-like_N.
+DR   InterPro; IPR023921; ADH_Zn_actinomycetes.
+DR   InterPro; IPR002328; ADH_Zn_CS.
+DR   InterPro; IPR011032; GroES-like_sf.
+DR   InterPro; IPR036291; NAD(P)-bd_dom_sf.
+DR   InterPro; IPR020843; PKS_ER.
+DR   NCBIfam; TIGR03989; Rxyl_3153; 1.
+DR   PANTHER; PTHR43880; ALCOHOL DEHYDROGENASE; 1.
+DR   PANTHER; PTHR43880:SF12; ALCOHOL DEHYDROGENASE CLASS-3; 1.
+DR   Pfam; PF08240; ADH_N; 1.
+DR   Pfam; PF00107; ADH_zinc_N; 1.
+DR   SMART; SM00829; PKS_ER; 1.
+DR   SUPFAM; SSF50129; GroES-like; 2.
+DR   SUPFAM; SSF51735; NAD(P)-binding Rossmann-fold domains; 1.
+DR   PROSITE; PS00059; ADH_ZINC; 1.
+PE   3: Inferred from homology;
+KW   Metal-binding; NAD; Oxidoreductase; Reference proteome; Zinc.
+FT   CHAIN           1..368
+FT                   /note="Putative alcohol dehydrogenase D"
+FT                   /id="PRO_0000426803"
+FT   BINDING         40
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="catalytic"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         61
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="catalytic"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         91
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         94
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         97
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         105
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         167
+FT                   /ligand="Zn(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:29105"
+FT                   /ligand_label="1"
+FT                   /ligand_note="catalytic"
+FT                   /evidence="ECO:0000250"
+SQ   SEQUENCE   368 AA;  38342 MW;  A03FCB6F3C8003AF CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+14	6	Sphingomonas.
+9	5	Pseudonocardiaceae
+9	5	Erythrobacteraceae
+25	5	Sphingomonadaceae
+9	4	Pseudonocardiales
+36	4	Sphingomonadales
+52	3	Alphaproteobacteria
+18	3	Actinomycetes
+54	2	Pseudomonadota
+18	2	Actinomycetota
+54	1	Pseudomonadati
+19	1	Bacillati
+73	0	Bacteria
+Total of 73 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0D8HRF9	PUTATIVE ALCOHOL DEHYDROG     33.0    0.00015   1   1.7   0.2
+	P81747                    	     1	    22	    31.8
+	PF08240	ADH_N           	    26	   155	    97.6
+	PF00107	ADH_zinc_N      	   195	   331	    77.6
+	PF13602	ADH_zinc_N_2    	   228	   366	    32.7
+
+A0A0D8I1G6	ALCOHOL DEHYDROGENASE {EC     33.5    0.00011   1   1.7   0.1
+	P81747                    	     1	    22	    32.3
+	PF08240	ADH_N           	    26	   156	      86
+	PF00107	ADH_zinc_N      	   196	   332	    76.9
+
+A0A0K2YIN4	ALCOHOL DEHYDROGENASE {EC     32.5    0.00022   1   1.8   0.6
+	P81747                    	     1	    22	    31.1
+	PF08240	ADH_N           	    26	   155	    98.5
+	PF00107	ADH_zinc_N      	   195	   331	    82.1
+	PF13602	ADH_zinc_N_2    	   228	   367	    31.8
+
+A0A0Q5Q9F2	ALCOHOL DEHYDROGENASE {EC     34.5    5.1e-05   1   1.7   0.0
+	P81747                    	     1	    22	    33.3
+	PF08240	ADH_N           	    26	   155	    95.3
+	PF00107	ADH_zinc_N      	   195	   331	    84.6
+
+A0A0Q5V6I8	ALCOHOL DEHYDROGENASE {EC     35.2    2.9e-05   1   1.7   0.1
+	P81747                    	     1	    22	    34.1
+	PF08240	ADH_N           	    26	   157	    95.7
+	PF00107	ADH_zinc_N      	   197	   333	    75.8
+
+A0A0T2Q8S2	S-(HYDROXYMETHYL)GLUTATHI     31.9    0.00035   1   1.8   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	      73
+	PF00107	ADH_zinc_N      	   197	   333	    88.5
+
+A0A0W1QNI8	S-(HYDROXYMETHYL)GLUTATHI     31.9    0.00034   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    74.5
+	PF00107	ADH_zinc_N      	   197	   333	    85.8
+
+A0A132PU63	ALCOHOL DEHYDROGENASE {EC     39.2    1.5e-06   1   1.7   0.7
+	P81747                    	     1	    22	    37.9
+	PF08240	ADH_N           	    26	   155	    96.6
+	PF00107	ADH_zinc_N      	   195	   330	    82.8
+
+A0A164IGY3	ALCOHOL DEHYDROGENASE {EC     43.7    5.2e-08   1   1.7   1.9
+	P81747                    	     1	    22	    42.5
+	PF08240	ADH_N           	    26	   156	      99
+	PF00107	ADH_zinc_N      	   196	   332	    80.6
+	PF13602	ADH_zinc_N_2    	   229	   365	    27.8
+
+A0A1C3P1J4	PUTATIVE ALCOHOL DEHYDROG     36.2    1.4e-05   1   1.7   0.3
+	P81747                    	     1	    22	    35.0
+	PF08240	ADH_N           	    26	   155	      98
+	PF00107	ADH_zinc_N      	   195	   331	    86.1
+
+A0A1D8T985	ALCOHOL DEHYDROGENASE {EC     45.1    1.9e-08   1   1.9   0.9
+	P81747                    	     1	    22	    43.6
+	PF08240	ADH_N           	    26	   155	    94.9
+	PF00107	ADH_zinc_N      	   195	   331	    80.1
+
+A0A1H7CV40	S-(HYDROXYMETHYL)GLUTATHI     32.0    0.00032   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    75.7
+	PF00107	ADH_zinc_N      	   197	   333	    87.9
+
+A0A1I4DE65	S-(HYDROXYMETHYL)GLUTATHI     34.3    5.9e-05   1   1.9   0.4
+	P81747                    	     1	    22	    32.7
+	PF08240	ADH_N           	    26	   155	    94.2
+	PF00107	ADH_zinc_N      	   195	   331	    83.1
+
+A0A1N6D9M5	S-(HYDROXYMETHYL)GLUTATHI     32.0    0.00032   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    76.3
+	PF00107	ADH_zinc_N      	   197	   331	   106.6
+	PF13602	ADH_zinc_N_2    	   230	   367	    35.7
+
+A0A1Q9UM17	ALCOHOL DEHYDROGENASE {EC     38.9    1.9e-06   1   1.8   0.1
+	P81747                    	     1	    22	    37.5
+	PF08240	ADH_N           	    26	   155	    96.1
+	PF00107	ADH_zinc_N      	   195	   331	    87.7
+	PF13602	ADH_zinc_N_2    	   228	   367	    27.2
+
+A0A1U7J7N6	UNCHARACTERIZED PROTEIN {     48.4    1.7e-09   5   5.0   1.1
+	P81747                    	    29	    45	    10.3
+	P81747                    	     1	    16	    10.2
+	P81747                    	    15	    30	    10.2
+	P81747                    	    43	    58	    10.2
+	P81747                    	    57	    71	     7.2
+
+A0A1X0UU16	ALCOHOL DEHYDROGENASE {EC     38.7    2.3e-06   1   1.8   0.7
+	P81747                    	     1	    22	    37.3
+	PF08240	ADH_N           	    26	   156	    94.5
+	PF00107	ADH_zinc_N      	   196	   332	    82.2
+	PF13602	ADH_zinc_N_2    	   229	   365	    31.1
+
+A0A1Y0CGM4	ALCOHOL DEHYDROGENASE {EC     35.7      2e-05   1   1.9   0.0
+	P81747                    	     1	    22	    34.2
+	PF08240	ADH_N           	    26	   155	    97.3
+	PF00107	ADH_zinc_N      	   195	   331	    83.5
+
+A0A1Y2MZZ3	NDMA-DEPENDENT ALCOHOL DE     38.1    3.4e-06   1   1.6   0.4
+	P81747                    	     1	    22	    37.0
+	PF08240	ADH_N           	    26	   157	    95.5
+	PF00107	ADH_zinc_N      	   197	   333	      72
+
+A0A222VXK1	S-(HYDROXYMETHYL)GLUTATHI     36.0    1.6e-05   1   1.9   0.1
+	P81747                    	     1	    22	    34.4
+	PF08240	ADH_N           	    26	   155	    97.2
+	PF00107	ADH_zinc_N      	   195	   331	    86.4
+	PF13602	ADH_zinc_N_2    	   228	   367	    29.6
+
+A0A261D0U4	PUTATIVE ALCOHOL DEHYDROG     33.6     0.0001   1   1.8   0.8
+	P81747                    	     1	    22	    32.2
+	PF08240	ADH_N           	    26	   155	    99.1
+	PF00107	ADH_zinc_N      	   195	   331	    81.3
+	PF13602	ADH_zinc_N_2    	   228	   364	    32.8
+
+A0A2C9T1P5	ALCOHOL DEHYDROGENASE {EC     38.9    1.8e-06   1   1.9   0.1
+	P81747                    	     1	    22	    37.5
+	PF08240	ADH_N           	    26	   155	      97
+	PF00107	ADH_zinc_N      	   195	   331	    85.3
+	PF13602	ADH_zinc_N_2    	   228	   364	    30.9
+
+A0A2T0LUP5	S-(HYDROXYMETHYL)GLUTATHI     36.1    1.6e-05   1   1.9   0.1
+	P81747                    	     1	    22	    34.5
+	PF08240	ADH_N           	    26	   155	    97.6
+	PF00107	ADH_zinc_N      	   195	   331	    81.7
+
+A0A2U2CIU8	S-(HYDROXYMETHYL)GLUTATHI     31.9    0.00035   1   1.8   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	      77
+	PF00107	ADH_zinc_N      	   197	   332	    89.5
+
+A0A2V4B8L7	ALCOHOL DEHYDROGENASE {EC     36.1    1.5e-05   1   2.0   0.0
+	P81747                    	     1	    22	    34.4
+	PF08240	ADH_N           	    26	   155	    99.6
+	PF00107	ADH_zinc_N      	   195	   331	    86.9
+	PF13602	ADH_zinc_N_2    	   228	   367	    30.2
+
+A0A318LV24	ALCOHOL DEHYDROGENASE {EC     35.9    1.7e-05   1   1.9   0.1
+	P81747                    	     1	    22	    34.4
+	PF08240	ADH_N           	    26	   155	    98.8
+	PF00107	ADH_zinc_N      	   195	   331	    86.6
+
+A0A328B2Y2	S-(HYDROXYMETHYL)GLUTATHI     32.1     0.0003   1   2.0   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    78.4
+	PF00107	ADH_zinc_N      	   197	   332	    83.3
+	PF13602	ADH_zinc_N_2    	   230	   368	    30.5
+
+A0A379PQJ7	ALCOHOL DEHYDROGENASE {EC     34.5    5.1e-05   1   1.8   0.2
+	P81747                    	     1	    22	    33.0
+	PF08240	ADH_N           	    26	   155	    98.3
+	PF00107	ADH_zinc_N      	   195	   331	    78.8
+	PF13602	ADH_zinc_N_2    	   228	   367	    27.1
+
+A0A3D9F8J7	S-(HYDROXYMETHYL)GLUTATHI     32.2    0.00027   1   2.1   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	      70
+	PF00107	ADH_zinc_N      	   197	   333	    86.3
+
+A0A3L8SFU9	ALCOHOL DEHYDROGENASE CLA     33.0    0.00015   2   3.4   0.4
+	P81747                    	     7	    28	    18.9
+	P81747                    	   776	   797	    10.2
+	PF08240	ADH_N           	    32	   129	    62.8
+	PF00107	ADH_zinc_N      	   169	   303	    94.6
+	PF08240	ADH_N           	   397	   527	    79.6
+	PF00107	ADH_zinc_N      	   567	   699	    92.2
+	PF08240	ADH_N           	   801	   932	    77.3
+	PF00107	ADH_zinc_N      	   972	  1104	    91.7
+
+A0A3R8R918	S-(HYDROXYMETHYL)GLUTATHI     35.2    2.9e-05   1   1.5   0.3
+	P81747                    	     1	    22	    34.3
+
+A0A3R9DB11	NDMA-DEPENDENT ALCOHOL DE     36.1    1.5e-05   1   1.9   0.1
+	P81747                    	     1	    22	    34.6
+	PF08240	ADH_N           	    26	   155	    97.4
+	PF00107	ADH_zinc_N      	   195	   331	    82.7
+	PF13602	ADH_zinc_N_2    	   228	   367	    28.9
+
+A0A401Y0I9	ALCOHOL DEHYDROGENASE {EC     34.1    6.9e-05   1   1.6   0.8
+	P81747                    	     1	    22	    33.0
+	PF08240	ADH_N           	    26	   155	    98.3
+	PF00107	ADH_zinc_N      	   195	   331	    79.4
+
+A0A427T246	NDMA-DEPENDENT ALCOHOL DE     34.4    5.4e-05   1   1.8   0.2
+	P81747                    	     1	    22	    33.0
+	PF08240	ADH_N           	    26	   155	    99.2
+	PF00107	ADH_zinc_N      	   195	   330	    82.3
+
+A0A4P6U683	ALCOHOL DEHYDROGENASE {EC     34.3    5.7e-05   1   1.7   0.2
+	P81747                    	     1	    22	    33.0
+	PF08240	ADH_N           	    26	   155	      98
+	PF00107	ADH_zinc_N      	   195	   331	      81
+	PF13602	ADH_zinc_N_2    	   228	   367	      29
+
+A0A4Q5W9K8	S-(HYDROXYMETHYL)GLUTATHI     32.1     0.0003   1   1.5   0.3
+	P81747                    	     1	    22	    31.1
+	PF08240	ADH_N           	    26	   157	    75.8
+	PF00107	ADH_zinc_N      	   197	   251	    40.3
+
+A0A4Q7V099	S-(HYDROXYMETHYL)GLUTATHI     36.0    1.6e-05   1   1.6   0.1
+	P81747                    	     1	    22	    34.9
+	PF08240	ADH_N           	    26	   155	    95.9
+	PF00107	ADH_zinc_N      	   195	   331	    72.5
+
+A0A4R2DIX3	ALCOHOL DEHYDROGENASE {EC     32.2    0.00027   1   2.1   0.8
+	P81747                    	     1	    22	    32.2
+	PF08240	ADH_N           	    26	   155	    99.8
+	PF00107	ADH_zinc_N      	   195	   331	    81.1
+	PF13602	ADH_zinc_N_2    	   228	   367	    27.4
+
+A0A4R4ZCG9	NDMA-DEPENDENT ALCOHOL DE     34.9    3.6e-05   1   1.8   0.1
+	P81747                    	     1	    22	    33.6
+	PF08240	ADH_N           	    26	   155	    99.4
+	PF00107	ADH_zinc_N      	   195	   330	    83.7
+	PF13602	ADH_zinc_N_2    	   228	   367	    32.7
+
+A0A4R6SDC7	S-(HYDROXYMETHYL)GLUTATHI     32.9    0.00016   1   1.6   0.1
+	P81747                    	     1	    22	    31.8
+	PF08240	ADH_N           	    26	   155	    95.8
+	PF00107	ADH_zinc_N      	   195	   330	    82.9
+
+A0A4V2AF66	S-(HYDROXYMETHYL)GLUTATHI     32.1     0.0003   1   1.5   0.3
+	P81747                    	     1	    22	    31.1
+	PF08240	ADH_N           	    26	   157	    75.9
+	PF00107	ADH_zinc_N      	   197	   251	    40.3
+
+A0A516ISA6	S-(HYDROXYMETHYL)GLUTATHI     31.9    0.00034   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    75.2
+	PF00107	ADH_zinc_N      	   197	   331	    87.4
+
+A0A557ZPL7	NDMA-DEPENDENT ALCOHOL DE     38.5    2.6e-06   1   1.9   0.5
+	P81747                    	     1	    22	    36.9
+	PF08240	ADH_N           	    26	   155	    93.7
+	PF00107	ADH_zinc_N      	   195	   331	    80.8
+
+A0A558A7F3	NDMA-DEPENDENT ALCOHOL DE     35.8    1.9e-05   1   1.8   1.1
+	P81747                    	     1	    22	    34.4
+	PF08240	ADH_N           	    26	   155	    93.8
+	PF00107	ADH_zinc_N      	   195	   331	    83.3
+
+A0A5A9ZPY1	ALCOHOL DEHYDROGENASE {EC     41.8    2.2e-07   1   1.9   0.4
+	P81747                    	     1	    22	    40.2
+	PF08240	ADH_N           	    26	   155	    93.9
+	PF00107	ADH_zinc_N      	   195	   331	    77.6
+	PF13602	ADH_zinc_N_2    	   228	   364	    27.6
+
+A0A5C4M6J2	NDMA-DEPENDENT ALCOHOL DE     37.0    7.8e-06   1   1.8   1.2
+	P81747                    	     1	    22	    35.6
+	PF08240	ADH_N           	    26	   155	    93.9
+	PF00107	ADH_zinc_N      	   195	   331	    76.3
+
+A0A5N0V275	NDMA-DEPENDENT ALCOHOL DE     33.6    9.5e-05   1   1.7   1.7
+	P81747                    	     1	    22	    32.4
+	PF08240	ADH_N           	    26	   155	    93.7
+	PF00107	ADH_zinc_N      	   195	   331	    84.5
+	PF13602	ADH_zinc_N_2    	   228	   364	    27.7
+
+A0A6H1RDH4	NDMA-DEPENDENT ALCOHOL DE     33.1    0.00014   1   1.7   0.1
+	P81747                    	     1	    22	    31.8
+	PF08240	ADH_N           	    26	   155	   100.5
+	PF00107	ADH_zinc_N      	   195	   330	    80.8
+	PF13602	ADH_zinc_N_2    	   228	   367	      30
+
+A0A6H2DK14	S-(HYDROXYMETHYL)GLUTATHI     31.9    0.00033   1   1.9   0.1
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	      74
+	PF00107	ADH_zinc_N      	   197	   332	    94.6
+
+A0A6I6MRG5	S-(HYDROXYMETHYL)GLUTATHI     32.1     0.0003   1   2.0   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    72.4
+	PF00107	ADH_zinc_N      	   197	   332	    92.6
+	PF13602	ADH_zinc_N_2    	   230	   368	    30.9
+
+A0A6L5EW11	NDMA-DEPENDENT ALCOHOL DE     37.1      7e-06   1   1.9   0.1
+	P81747                    	     1	    22	    35.6
+	PF08240	ADH_N           	    26	   155	    97.5
+	PF00107	ADH_zinc_N      	   195	   331	    81.3
+	PF13602	ADH_zinc_N_2    	   228	   364	      30
+
+A0A6N7C7T3	ALCOHOL DEHYDROGENASE {EC     35.0    3.4e-05   1   2.2   0.7
+	P81747                    	     1	    22	    35.0
+	PF08240	ADH_N           	    26	   155	    97.7
+	PF00107	ADH_zinc_N      	   195	   331	    78.9
+	PF13602	ADH_zinc_N_2    	   228	   367	    29.6
+
+A0A6N7C8Z0	ALCOHOL DEHYDROGENASE {EC     32.2    0.00027   1   1.6   0.2
+	P81747                    	     1	    22	    31.1
+	PF08240	ADH_N           	    26	   155	    94.7
+	PF00107	ADH_zinc_N      	   195	   331	    69.6
+
+A0A6N7I0Q1	NDMA-DEPENDENT ALCOHOL DE     36.2    1.4e-05   1   2.0   0.1
+	P81747                    	     1	    22	    34.6
+	PF08240	ADH_N           	    26	   155	    92.7
+	PF00107	ADH_zinc_N      	   195	   331	    85.5
+	PF13602	ADH_zinc_N_2    	   228	   364	    31.8
+
+A0A6N7YNB9	NDMA-DEPENDENT ALCOHOL DE     37.0    7.5e-06   1   1.8   1.2
+	P81747                    	     1	    22	    35.6
+	PF08240	ADH_N           	    26	   155	      94
+	PF00107	ADH_zinc_N      	   195	   331	    78.9
+	PF13602	ADH_zinc_N_2    	   228	   364	    27.1
+
+A0A7T7VP48	S-(HYDROXYMETHYL)GLUTATHI     32.0    0.00031   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    68.9
+	PF00107	ADH_zinc_N      	   197	   331	    92.1
+
+A0A7W6FNI0	S-(HYDROXYMETHYL)GLUTATHI     32.0    0.00031   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    78.4
+	PF00107	ADH_zinc_N      	   197	   333	    85.5
+
+A0A7W9ERA5	ZN-DEPENDENT ALCOHOL DEHY     34.3    5.6e-05   1   1.6   0.3
+	P81747                    	     1	    22	    33.3
+	PF08240	ADH_N           	    26	    87	    56.6
+
+A0A7Y9J6B2	S-(HYDROXYMETHYL)GLUTATHI     35.3    2.7e-05   1   1.7   0.1
+	P81747                    	     1	    22	    34.1
+	PF08240	ADH_N           	    26	   157	    93.1
+	PF00107	ADH_zinc_N      	   197	   333	    73.7
+
+A0A839RXM3	S-(HYDROXYMETHYL)GLUTATHI     36.3    1.3e-05   1   2.0   0.1
+	P81747                    	     1	    22	    34.6
+	PF08240	ADH_N           	    26	   155	    94.4
+	PF00107	ADH_zinc_N      	   195	   331	    82.5
+
+A0A840EW99	ALCOHOL DEHYDROGENASE {EC     34.1    6.9e-05   1   1.7   0.5
+	P81747                    	     1	    22	    32.9
+	PF08240	ADH_N           	    26	   156	    90.7
+	PF00107	ADH_zinc_N      	   196	   332	      69
+
+A0A840EXA7	ALCOHOL DEHYDROGENASE {EC     34.4    5.5e-05   1   1.9   0.3
+	P81747                    	     1	    22	    32.9
+	PF08240	ADH_N           	    26	   155	   100.6
+	PF00107	ADH_zinc_N      	   195	   331	    81.2
+
+A0A840QII7	S-(HYDROXYMETHYL)GLUTATHI     32.4    0.00024   1   1.7   0.1
+	P81747                    	     1	    22	    31.1
+	PF08240	ADH_N           	    26	   155	    99.1
+	PF00107	ADH_zinc_N      	   195	   330	    83.4
+	PF13602	ADH_zinc_N_2    	   228	   366	    29.7
+
+A0A848KXZ4	ALCOHOL DEHYDROGENASE {EC     33.1    0.00014   1   1.6   0.3
+	P81747                    	     1	    22	    32.1
+	PF08240	ADH_N           	    26	   165	    88.4
+	PF00107	ADH_zinc_N      	   205	   342	    71.4
+
+A0A848QQ17	S-(HYDROXYMETHYL)GLUTATHI     32.0    0.00033   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    69.5
+	PF00107	ADH_zinc_N      	   197	   331	    93.4
+
+A0A8H9J6J3	ALCOHOL DEHYDROGENASE {EC     35.8    1.9e-05   1   1.8   1.1
+	P81747                    	     1	    22	    34.4
+	PF08240	ADH_N           	    26	   155	    94.2
+	PF00107	ADH_zinc_N      	   195	   331	    85.8
+
+A0A8J7IPA0	S-(HYDROXYMETHYL)GLUTATHI     32.0    0.00032   1   1.9   0.1
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    69.2
+	PF00107	ADH_zinc_N      	   197	   331	    99.3
+
+A0A916XU61	S-(HYDROXYMETHYL)GLUTATHI     31.9    0.00035   1   1.8   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    74.7
+	PF00107	ADH_zinc_N      	   197	   332	    92.5
+
+A0A917LHG0	ALCOHOL DEHYDROGENASE {EC     43.8    4.9e-08   1   1.9   1.1
+	P81747                    	     1	    22	    42.3
+	PF08240	ADH_N           	    26	   156	    94.8
+	PF00107	ADH_zinc_N      	   196	   332	    81.5
+
+A0A926G3N2	S-(HYDROXYMETHYL)GLUTATHI     32.0    0.00033   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    76.2
+	PF00107	ADH_zinc_N      	   197	   333	    86.7
+
+A0A931HHJ4	ALCOHOL DEHYDROGENASE {EC     34.4    5.4e-05   1   1.8   0.2
+	P81747                    	     1	    22	    33.0
+	PF08240	ADH_N           	    26	   155	    97.6
+	PF00107	ADH_zinc_N      	   195	   331	    75.5
+
+A0A931HRI5	ALCOHOL DEHYDROGENASE {EC     35.2      3e-05   1   1.8   0.1
+	P81747                    	     1	    22	    33.9
+	PF08240	ADH_N           	    26	   155	    98.4
+	PF00107	ADH_zinc_N      	   195	   331	    75.9
+	PF13602	ADH_zinc_N_2    	   228	   366	    30.5
+
+A0A934QQ97	NDMA-DEPENDENT ALCOHOL DE     35.7      2e-05   1   1.8   0.1
+	P81747                    	     1	    22	    34.4
+	PF08240	ADH_N           	    26	   155	    98.8
+	PF00107	ADH_zinc_N      	   195	   331	    84.7
+
+A0A939EPR7	S-(HYDROXYMETHYL)GLUTATHI     32.2    0.00027   1   2.0   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    72.6
+	PF00107	ADH_zinc_N      	   197	   332	    85.9
+
+A0A964UMB7	NDMA-DEPENDENT ALCOHOL DE     33.1    0.00014   1   1.8   0.1
+	P81747                    	     1	    22	    31.7
+	PF08240	ADH_N           	    26	   155	    96.7
+	PF00107	ADH_zinc_N      	   195	   331	    86.8
+	PF13602	ADH_zinc_N_2    	   228	   367	    27.2
+
+A0A9P3Q7S9	ALCOHOL DEHYDROGENASE {EC     37.4    5.8e-06   1   1.9   0.2
+	P81747                    	     1	    22	    35.9
+	PF08240	ADH_N           	    26	   155	    93.5
+	PF00107	ADH_zinc_N      	   195	   331	    81.9
+	PF13602	ADH_zinc_N_2    	   228	   366	    28.3
+
+A0A9W6KX02	ALCOHOL DEHYDROGENASE D {     32.4    0.00024   1   1.7   0.4
+	P81747                    	     1	    22	    31.2
+	PF08240	ADH_N           	    26	   155	    98.2
+	PF00107	ADH_zinc_N      	   195	   331	    74.5
+
+A0A9X1P0F4	S-(HYDROXYMETHYL)GLUTATHI     32.0    0.00032   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    74.2
+	PF00107	ADH_zinc_N      	   197	   332	    95.9
+	PF13602	ADH_zinc_N_2    	   231	   368	    27.7
+
+A0A9X1QPW4	S-(HYDROXYMETHYL)GLUTATHI     32.1     0.0003   1   2.0   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    76.7
+	PF00107	ADH_zinc_N      	   197	   333	    90.2
+
+A0AA37VV95	ALCOHOL DEHYDROGENASE {EC     39.0    1.7e-06   1   1.9   0.1
+	P81747                    	     1	    22	    37.5
+	PF08240	ADH_N           	    26	   155	    98.4
+	PF00107	ADH_zinc_N      	   195	   331	    83.5
+
+A0AB38RIQ4	PUTATIVE ALCOHOL DEHYDROG     33.0    0.00015   1   1.7   0.2
+	P81747                    	     1	    22	    31.8
+	PF08240	ADH_N           	    26	   155	    97.5
+	PF00107	ADH_zinc_N      	   195	   331	    80.2
+	PF13602	ADH_zinc_N_2    	   228	   366	    31.9
+
+B2HJC8	ALCOHOL DEHYDROGENASE {ECO:00     32.4    0.00023   1   1.8   0.6
+	P81747                    	     1	    22	    31.1
+	PF08240	ADH_N           	    26	   155	    92.9
+	PF00107	ADH_zinc_N      	   195	   331	    78.5
+	PF13602	ADH_zinc_N_2    	   228	   367	    28.3
+
+B4RE03	S-(HYDROXYMETHYL)GLUTATHIONE      32.1    0.00029   1   2.0   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    77.7
+	PF00107	ADH_zinc_N      	   197	   332	    84.1
+	PF13602	ADH_zinc_N_2    	   230	   368	    31.9
+
+E9T2J8	ALCOHOL DEHYDROGENASE {ECO:00     32.0    0.00033   1   1.8   0.1
+	P81747                    	     1	    22	    30.6
+	PF08240	ADH_N           	    26	   155	    98.2
+	PF00107	ADH_zinc_N      	   195	   331	    76.8
+	PF13602	ADH_zinc_N_2    	   228	   366	    27.1
+
+F3L279	S-(HYDROXYMETHYL)GLUTATHIONE      32.6     0.0002   1   1.7   0.3
+	P81747                    	     1	    22	    31.5
+	PF08240	ADH_N           	    26	   157	    76.3
+	PF00107	ADH_zinc_N      	   197	   329	    94.6
+
+G8RKF9	ALCOHOL DEHYDROGENASE {ECO:00     36.4    1.2e-05   1   1.9   0.0
+	P81747                    	     1	    22	    34.9
+	PF08240	ADH_N           	    26	   155	    97.3
+	PF00107	ADH_zinc_N      	   195	   331	      85
+	PF13602	ADH_zinc_N_2    	   228	   362	    27.7
+
+H0QX86	ALCOHOL DEHYDROGENASE {ECO:00     36.4    1.2e-05   1   1.8   0.7
+	P81747                    	     1	    22	    35.0
+	PF08240	ADH_N           	    26	   155	    98.2
+	PF00107	ADH_zinc_N      	   195	   330	    82.2
+	PF13602	ADH_zinc_N_2    	   228	   364	    29.5
+
+H5XAZ9	OXIDOREDUCTASE, RXYL_3153 FAM     35.9    1.7e-05   1   1.8   0.1
+	P81747                    	     1	    22	    34.6
+	PF08240	ADH_N           	    26	   155	    97.9
+	PF00107	ADH_zinc_N      	   195	   331	    87.7
+	PF13602	ADH_zinc_N_2    	   228	   364	    28.8
+
+L7LEE3	ALCOHOL DEHYDROGENASE {ECO:00     33.3    0.00013   1   1.9   0.2
+	P81747                    	     1	    22	    31.8
+	PF08240	ADH_N           	    26	   155	    99.3
+	PF00107	ADH_zinc_N      	   195	   331	    81.5
+	PF13602	ADH_zinc_N_2    	   228	   364	    27.2
+
+M2U7W9	S-(HYDROXYMETHYL)GLUTATHIONE      32.0    0.00032   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    73.2
+	PF00107	ADH_zinc_N      	   197	   331	   103.5
+
+M2YRV2	ALCOHOL DEHYDROGENASE {ECO:00     34.1    6.8e-05   1   1.8   0.6
+	P81747                    	     1	    22	    32.8
+	PF08240	ADH_N           	    26	   157	    93.6
+	PF00107	ADH_zinc_N      	   197	   333	    77.1
+
+M2ZCJ9	ALCOHOL DEHYDROGENASE {ECO:00     37.6      5e-06   1   1.8   0.3
+	P81747                    	     1	    22	    36.3
+	PF08240	ADH_N           	    26	   155	    99.3
+	PF00107	ADH_zinc_N      	   195	   331	    83.1
+	PF13602	ADH_zinc_N_2    	   228	   367	    29.7
+
+M2ZK37	ALCOHOL DEHYDROGENASE {ECO:00     34.4    5.4e-05   1   1.8   0.2
+	P81747                    	     1	    22	    33.1
+	PF08240	ADH_N           	    26	   155	    98.7
+	PF00107	ADH_zinc_N      	   195	   331	    83.9
+	PF13602	ADH_zinc_N_2    	   228	   367	    30.5
+
+M3V9U3	ALCOHOL DEHYDROGENASE {ECO:00     36.4    1.2e-05   1   1.8   0.7
+	P81747                    	     1	    22	    35.0
+	PF08240	ADH_N           	    26	   155	   101.8
+	PF00107	ADH_zinc_N      	   195	   331	      86
+
+P9WQB8	PUTATIVE ALCOHOL DEHYDROGENASE      31.5    0.00045   1   1.7   0.3
+	P81747                    	     1	    22	    30.3
+	PF08240	ADH_N           	    26	   155	    97.2
+	PF00107	ADH_zinc_N      	   195	   331	      85
+
+P9WQB9	PUTATIVE ALCOHOL DEHYDROGENASE      31.5    0.00045   1   1.7   0.3
+	P81747                    	     1	    22	    30.3
+	PF08240	ADH_N           	    26	   155	    97.2
+	PF00107	ADH_zinc_N      	   195	   331	      85
+
+Q0C4Q4	S-(HYDROXYMETHYL)GLUTATHIONE      31.9    0.00035   1   1.8   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    75.6
+	PF00107	ADH_zinc_N      	   197	   331	     107
+	PF13602	ADH_zinc_N_2    	   230	   367	    36.8
+
+Q0RU67	ALCOHOL DEHYDROGENASE {ECO:00     34.3    5.6e-05   1   1.7   0.4
+	P81747                    	     1	    22	    33.2
+	PF08240	ADH_N           	    26	   155	    91.6
+	PF00107	ADH_zinc_N      	   195	   331	    69.5
+
+Q1YEU0	S-(HYDROXYMETHYL)GLUTATHIONE      32.0    0.00033   1   1.9   0.3
+	P81747                    	     1	    22	    30.4
+	PF08240	ADH_N           	    26	   157	    75.3
+	PF00107	ADH_zinc_N      	   197	   332	      94
+	PF13602	ADH_zinc_N_2    	   230	   368	    27.1
+
+V8NJM6	ALCOHOL DEHYDROGENASE CLASS-3     44.6    2.7e-08   4   6.0   5.7
+	P81747                    	   308	   329	    13.4
+	P81747                    	  1414	  1435	     9.5
+	P81747                    	     8	    29	     7.5
+	P81747                    	  1050	  1071	     7.4
+	PF08240	ADH_N           	    33	   163	      83
+	PF00107	ADH_zinc_N      	   203	   287	    64.3
+	PF08240	ADH_N           	   333	   460	    85.8
+	PF00107	ADH_zinc_N      	   480	   616	      85
+	PF08240	ADH_N           	   698	   829	    85.1
+	PF00107	ADH_zinc_N      	   869	  1003	    89.3
+	PF08240	ADH_N           	  1075	  1186	    46.9
+	PF00107	ADH_zinc_N      	  1226	  1361	    64.9
+	PF08240	ADH_N           	  1439	  1570	    76.8
+	PF00107	ADH_zinc_N      	  1610	  1743	    87.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS321426 (E-value: 1.9e-05, Score: 29.4)
+Mentioned as: blr6215
+Description: alcohol dehydrogenase class III
+Organism: Bradyrhizobium japonicum USDA 110
+PMID: 23666536
+Source: EuropePMC
+Title: Influence of elevated atmospheric carbon dioxide on transcriptional responses of Bradyrhizobium japonicum in the soybean rhizoplane
+Journal: Microbes and environments (2013)
+Snippet: 2.4 2.0 CbbX protein C1 and alcohol metabolism blr6213 mxaF 2.7 Methanol dehydrogenase large subunit-like blr6215 flhA 2.2 2.1 Glutathione-dependent formaldehyde dehydrogenase blr6216 gfa 3.4 Glutathione-dependent formaldehyde-activating enzyme bll3135 fdhD 1.6 1.8 Formate dehydrogenase bll3136 fdhF 2.0 2.0 Formate dehydrogenase alpha subunit bll5912 glyA 2.6 Serine
+
+================================================================================
+Protein: VIMSS321426 (E-value: 1.9e-05, Score: 29.4)
+Mentioned as: blr6215
+Description: alcohol dehydrogenase class III
+Organism: Bradyrhizobium japonicum USDA 110
+PMID: 19502448
+Source: EuropePMC
+Title: Aerobic vanillate degradation and C1 compound metabolism in Bradyrhizobium japonicum
+Journal: Applied and environmental microbiology (2009)
+Snippet: Primers for real-time reverse transcription (RT)-PCR of blr6215 (flhA) and blr6216 (gfa) were designed using Beacon Designer software (Premier Biosoft
+
+================================================================================
+Protein: VIMSS321426 (E-value: 1.9e-05, Score: 29.4)
+Mentioned as: blr6215
+Description: alcohol dehydrogenase class III
+Organism: Bradyrhizobium japonicum USDA 110
+PMID: 18511436
+Source: EuropePMC
+Title: Soybean seed extracts preferentially express genomic loci of Bradyrhizobium japonicum in the initial interaction with soybean, Glycine max (L.) Merr
+Journal: DNA research : an international journal for rapid publication of reports on genes and genomes (2008)
+Snippet: component sensor/regulator (bll6184blr6185 in LOS 18, bll7306bll7307 in LOS 21) and alcohol dehydrogenase (blr6207, blr6213, blr6215, and bll6220 in LOS 18) were repressed. 3.4. Expression loci shared between SSE- and genistein-treated cells In addition to genomic loci covering nod genes, six loci outside symbiosis island were
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P81747
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,78 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1386_PASMU             Reviewed;         112 AA.
+AC   Q9CL57;
+DE   RecName: Full=Uncharacterized protein PM1386;
+GN   OrderedLocusNames=PM1386;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE004439; AAK03470.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q9CL57; -.
+DR   STRING; 272843.PM1386; -.
+DR   EnsemblBacteria; AAK03470; AAK03470; PM1386.
+DR   KEGG; pmu:PM1386; -.
+DR   HOGENOM; CLU_2143453_0_0_6; -.
+DR   Proteomes; UP000000809; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..112
+FT                   /note="Uncharacterized protein PM1386"
+FT                   /id="PRO_0000216323"
+FT   TRANSMEM        82..104
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   112 AA;  12454 MW;  0BC503456FE4CED9 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pasteurella.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9CL57	UNCHARACTERIZED PROTEIN PM1386    157.2    4.6e-43   1   2.2  16.4
+	Q9CL57_TED01              	    46	   111	   157.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9CL57.1	AF-Q9CL57-F1-model_v4_TED01:46-60_72-111	1	AF-Q9CL57-F1-model_v4_TED01	46-111	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CL57_TED01
+GA   27.00 27.00;
+TC   29.30 157.20;
+NC   26.60 23.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

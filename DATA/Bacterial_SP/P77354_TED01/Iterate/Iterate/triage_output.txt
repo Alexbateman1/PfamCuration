@@ -1,0 +1,153 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YAFU_ECOLI              Reviewed;         112 AA.
+AC   P77354; Q2MCG0;
+DE   RecName: Full=Putative inner membrane protein YafU;
+GN   Name=yafU; OrderedLocusNames=b0218, JW0207;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RA   Chung E., Allen E., Araujo R., Aparicio A.M., Davis K., Duncan M.,
+RA   Federspiel N., Hyman R., Kalman S., Komp C., Kurdi O., Lew H., Lin D.,
+RA   Namath A., Oefner P., Roberts D., Schramm S., Davis R.W.;
+RT   "Sequence of minutes 4-25 of Escherichia coli.";
+RL   Submitted (JAN-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   SUBCELLULAR LOCATION, AND TOPOLOGY [LARGE SCALE ANALYSIS].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=15919996; DOI=10.1126/science.1109730;
+RA   Daley D.O., Rapp M., Granseth E., Melen K., Drew D., von Heijne G.;
+RT   "Global topology analysis of the Escherichia coli inner membrane
+RT   proteome.";
+RL   Science 308:1321-1323(2005).
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane
+CC       {ECO:0000269|PubMed:15919996}; Multi-pass membrane protein. Note=When
+CC       overexpressed using vectors that provide a promoter and ribosome
+CC       binding site (PubMed:15919996). {ECO:0000269|PubMed:15919996}.
+CC   -!- CAUTION: Could be the product of a pseudogene; is missing 186 N-
+CC       terminal amino acids compared to its orthologs. {ECO:0000305}.
+DR   EMBL; U70214; AAB08640.1; -; Genomic_DNA.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; BAE76046.1; -; Genomic_DNA.
+DR   PIR; C64746; C64746.
+DR   AlphaFoldDB; P77354; -.
+DR   SMR; P77354; -.
+DR   BioGRID; 4259759; 17.
+DR   FunCoup; P77354; 5.
+DR   KEGG; ecj:JW0207; -.
+DR   KEGG; ecoc:C3026_01025; -.
+DR   PATRIC; fig|83333.103.peg.968; -.
+DR   EchoBASE; EB3117; -.
+DR   eggNOG; COG4104; Bacteria.
+DR   HOGENOM; CLU_2141953_0_0_6; -.
+DR   InParanoid; P77354; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IDA:EcoCyc.
+PE   5: Uncertain;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN           1..112
+FT                   /note="Putative inner membrane protein YafU"
+FT                   /id="PRO_0000168543"
+FT   TOPO_DOM        1..21
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        22..42
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        43
+FT                   /note="Periplasmic"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        44..64
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        65..112
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255, ECO:0000269|PubMed:15919996"
+SQ   SEQUENCE   112 AA;  12136 MW;  7B8E901E02429F0D CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+1	6	Shigella.
+1	6	Hafnia.
+4	5	Enterobacteriaceae
+1	5	Hafniaceae
+5	4	Enterobacterales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A097QZ99	MEMBRANE PROTEIN {ECO:000     96.7    2.2e-24   1   1.4   0.3
+	Iterate                   	   259	   298	    95.9
+
+A7ZHV5	INNER MEMBRANE PROTEIN YAFU {     98.5    5.9e-25   1   1.6   0.1
+	Iterate                   	   264	   304	    97.4
+
+B7LHC3	YAFU PROTEIN {ECO:0000313|EMB     98.4      6e-25   1   1.6   0.1
+	Iterate                   	   269	   309	    97.4
+
+P77354	PUTATIVE INNER MEMBRANE PROTEIN    100.3    1.6e-25   1   1.2   0.1
+	Iterate                   	    72	   112	    99.9
+
+Q3Z5E6	INNER MEMBRANE PROTEIN YAFU {    100.3    1.6e-25   1   1.2   0.1
+	Iterate                   	    72	   112	    99.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A097QZ99.1	AF-A0A097QZ99-F1-model_v4_TED01:12-49	1	AF-A0A097QZ99-F1-model_v4_TED01	12-49	0
+A0A097QZ99.1	AF-A0A097QZ99-F1-model_v4_TED02:84-157	1	AF-A0A097QZ99-F1-model_v4_TED02	84-157	0
+L0MA52.1	AF-L0MA52-F1-model_v4_TED01:12-49	1	AF-L0MA52-F1-model_v4_TED01	12-49	0
+L0MA52.1	AF-L0MA52-F1-model_v4_TED02:58-75_84-157	1	AF-L0MA52-F1-model_v4_TED02	58-157	0
+L0MA52.1	AF-L0MA52-F1-model_v4_TED04:237-302	1	AF-L0MA52-F1-model_v4_TED04	237-302	100.0%
+L0MA52.1	AF-L0MA52-F1-model_v4_TED03:193-223	1	AF-L0MA52-F1-model_v4_TED03	193-223	0
+P77354.1	AF-P77354-F1-model_v4_TED01:72-112	1	AF-P77354-F1-model_v4_TED01	72-112	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P77354_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.50 83.10;
+NC   25.70 23.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

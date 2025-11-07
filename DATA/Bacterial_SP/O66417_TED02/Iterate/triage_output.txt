@@ -1,0 +1,113 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YZ26_AQUAE              Reviewed;         193 AA.
+AC   O66417;
+DE   RecName: Full=Uncharacterized protein aq_aa26;
+GN   OrderedLocusNames=aq_aa26;
+OS   Aquifex aeolicus (strain VF5).
+OG   Plasmid ece1.
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000667; AAC07969.1; -; Genomic_DNA.
+DR   RefSeq; NP_046417.1; NC_001880.1.
+DR   AlphaFoldDB; O66417; -.
+DR   EnsemblBacteria; AAC07969; AAC07969; aq_aa26.
+DR   KEGG; aae:aq_aa26; -.
+DR   HOGENOM; CLU_1406201_0_0_0; -.
+DR   InParanoid; O66417; -.
+DR   OrthoDB; 78158at2; -.
+DR   Proteomes; UP000000798; Plasmid ece1.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..193
+FT                   /note="Uncharacterized protein aq_aa26"
+FT                   /id="PRO_0000186997"
+SQ   SEQUENCE   193 AA;  22552 MW;  9DC21DCA7E1023BE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Venenivibrio.
+1	6	Aquifex
+1	5	Hydrogenothermaceae
+1	5	Aquificaceae
+2	4	Aquificales
+2	3	Aquificia
+2	2	Aquificota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A9B0UD60	HISTONE-LYSINE N-METHYLTR     26.6      0.022   3   6.2   0.0
+	Iterate                   	    80	   109	     6.5
+	Iterate                   	   257	   279	     4.5
+	Iterate                   	   207	   252	     3.0
+	PF00096	zf-C2H2         	    32	    54	      21
+	PF00096	zf-C2H2         	   116	   138	    26.1
+	PF00096	zf-C2H2         	   144	   166	    28.4
+	PF00096	zf-C2H2         	   172	   194	    26.3
+	PF00096	zf-C2H2         	   230	   252	    27.9
+	PF00096	zf-C2H2         	   258	   280	    23.2
+	PF00096	zf-C2H2         	   286	   308	      23
+	PF00096	zf-C2H2         	   314	   336	    27.2
+	PF00096	zf-C2H2         	   342	   364	    28.6
+	PF00096	zf-C2H2         	   370	   392	    31.3
+	PF13894	zf-C2H2_4       	   370	   393	    20.5
+
+A0AA45WNZ6	NGOFVII RESTRICTION ENDON     39.6    1.9e-06   1   1.9   0.5
+	Iterate                   	   562	   636	    38.0
+	PF09565	RE_NgoFVII      	    55	   187	    24.2
+	PF27394	Aq_aa27         	   311	   477	   150.6
+
+A0AA88YIF7	UNCHARACTERIZED PROTEIN {     26.7      0.021   8   5.7   0.1
+	Iterate                   	    22	    73	     5.5
+	Iterate                   	    96	   146	     4.9
+	Iterate                   	    43	    86	     4.5
+	Iterate                   	    70	   110	     4.5
+	Iterate                   	    11	    49	     4.2
+	Iterate                   	     1	    37	     3.9
+	Iterate                   	    59	    98	     3.8
+	Iterate                   	    80	   122	     3.7
+
+A0AAE0G5Q1	UNCHARACTERIZED PROTEIN {     31.8    0.00052   0  13.2   1.5
+
+O66417	UNCHARACTERIZED PROTEIN AQ_AA26    179.1    5.9e-50   1   1.5   2.1
+	Iterate                   	   101	   173	   178.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O66417.1	AF-O66417-F1-model_v4_TED01:6-98	1	AF-O66417-F1-model_v4_TED01	6-98	0
+O66417.1	AF-O66417-F1-model_v4_TED02:101-173	1	AF-O66417-F1-model_v4_TED02	101-173	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66417_TED02/Iterate
+GA   27.00 27.00;
+TC   39.00 142.00;
+NC   24.70 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

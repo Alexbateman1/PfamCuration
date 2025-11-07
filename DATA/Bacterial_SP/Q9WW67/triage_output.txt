@@ -1,0 +1,107 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1323_THEMA             Reviewed;          60 AA.
+AC   Q9WW67;
+DE   RecName: Full=Uncharacterized protein TM_1323/TM_1333;
+GN   OrderedLocusNames=TM_1323;
+GN   and
+GN   OrderedLocusNames=TM_1333;
+OS   Thermotoga maritima (strain ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826
+OS   / MSB8).
+OC   Bacteria; Thermotogati; Thermotogota; Thermotogae; Thermotogales;
+OC   Thermotogaceae; Thermotoga.
+OX   NCBI_TaxID=243274;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 43589 / DSM 3109 / JCM 10099 / NBRC 100826 / MSB8;
+RX   PubMed=10360571; DOI=10.1038/20601;
+RA   Nelson K.E., Clayton R.A., Gill S.R., Gwinn M.L., Dodson R.J., Haft D.H.,
+RA   Hickey E.K., Peterson J.D., Nelson W.C., Ketchum K.A., McDonald L.A.,
+RA   Utterback T.R., Malek J.A., Linher K.D., Garrett M.M., Stewart A.M.,
+RA   Cotton M.D., Pratt M.S., Phillips C.A., Richardson D.L., Heidelberg J.F.,
+RA   Sutton G.G., Fleischmann R.D., Eisen J.A., White O., Salzberg S.L.,
+RA   Smith H.O., Venter J.C., Fraser C.M.;
+RT   "Evidence for lateral gene transfer between Archaea and Bacteria from
+RT   genome sequence of Thermotoga maritima.";
+RL   Nature 399:323-329(1999).
+DR   EMBL; AE000512; AAD36395.1; -; Genomic_DNA.
+DR   EMBL; AE000512; AAD36405.1; -; Genomic_DNA.
+DR   PIR; A72268; A72268.
+DR   RefSeq; NP_229125.1; NC_000853.1.
+DR   RefSeq; NP_229135.1; NC_000853.1.
+DR   AlphaFoldDB; Q9WW67; -.
+DR   SMR; Q9WW67; -.
+DR   STRING; 243274.TM_1323; -.
+DR   PaxDb; 243274-THEMA_07680; -.
+DR   EnsemblBacteria; AAD36395; AAD36395; TM_1323.
+DR   EnsemblBacteria; AAD36405; AAD36405; TM_1333.
+DR   KEGG; tma:TM1323; -.
+DR   KEGG; tma:TM1333; -.
+DR   KEGG; tmi:THEMA_07680; -.
+DR   KEGG; tmi:THEMA_07730; -.
+DR   PATRIC; fig|243274.18.peg.1479; -.
+DR   InParanoid; Q9WW67; -.
+DR   OrthoDB; 38334at2; -.
+DR   Proteomes; UP000008183; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..60
+FT                   /note="Uncharacterized protein TM_1323/TM_1333"
+FT                   /id="PRO_0000216219"
+SQ   SEQUENCE   60 AA;  6589 MW;  D733C38162F60142 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thermotoga.
+1	5	Thermotogaceae
+1	4	Thermotogales
+1	3	Thermotogae
+1	2	Thermotogota
+1	1	Thermotogati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9WW67	UNCHARACTERIZED PROTEIN TM_132    157.0    4.3e-43   1   1.0   1.4
+	Q9WW67                    	     1	    60	   156.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS2214 (E-value: 3.8e-45, Score: 157.0)
+Mentioned as: TM1333
+Description: hypothetical protein
+Organism: Thermotoga maritima MSB8
+PMID: 23974142
+Source: EuropePMC
+Title: Stationary phase and nutrient levels trigger transcription of a genomic locus containing a novel peptide (TM1316) in the hyperthermophilic bacterium Thermotoga maritima
+Journal: Applied and environmental microbiology (2013)
+Snippet: 0.5 5.7 -2.1 0.9 TM0504 42 N 60 Y 1.6 1.5 1.2 0.8 TM1333 1.5 2.5 1.3 2.3 TM0518 64 N 44 N -0.7 0.1 -0.7 -0.1 TM1338 -0.2 0.3 -0.3 0.1 TM0566 64 N 69 N 1.7
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9WW67
+GA   27.00 27.00;
+TC   27.50 156.90;
+NC   26.40 23.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

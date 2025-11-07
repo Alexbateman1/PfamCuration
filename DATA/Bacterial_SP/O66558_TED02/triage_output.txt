@@ -1,0 +1,85 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y171_AQUAE              Reviewed;         246 AA.
+AC   O66558;
+DE   RecName: Full=Uncharacterized protein aq_171;
+GN   OrderedLocusNames=aq_171;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC06527.1; -; Genomic_DNA.
+DR   PIR; C70316; C70316.
+DR   RefSeq; NP_213118.1; NC_000918.1.
+DR   RefSeq; WP_010880056.1; NC_000918.1.
+DR   AlphaFoldDB; O66558; -.
+DR   SMR; O66558; -.
+DR   STRING; 224324.aq_171; -.
+DR   EnsemblBacteria; AAC06527; AAC06527; aq_171.
+DR   KEGG; aae:aq_171; -.
+DR   HOGENOM; CLU_1127262_0_0_0; -.
+DR   InParanoid; O66558; -.
+DR   OrthoDB; 459459at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+DR   Gene3D; 3.30.1460.10; -; 1.
+PE   4: Predicted;
+KW   Coiled coil; Reference proteome.
+FT   CHAIN           1..246
+FT                   /note="Uncharacterized protein aq_171"
+FT                   /id="PRO_0000186843"
+FT   COILED          204..243
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   246 AA;  28905 MW;  57F531D1FDFCCBD5 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Aquifex
+1	5	Aquificaceae
+1	4	Aquificales
+1	3	Aquificia
+1	2	Aquificota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O66558	UNCHARACTERIZED PROTEIN AQ_171     202.5    4.1e-57   1   1.8   3.4
+	O66558_TED02              	   108	   199	   201.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O66558.1	AF-O66558-F1-model_v4_TED01:8-101	1	AF-O66558-F1-model_v4_TED01	8-101	0
+O66558.1	AF-O66558-F1-model_v4_TED03:203-243	1	AF-O66558-F1-model_v4_TED03	203-243	0
+O66558.1	AF-O66558-F1-model_v4_TED02:108-199	1	AF-O66558-F1-model_v4_TED02	108-199	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66558_TED02
+GA   27.00 27.00;
+TC   29.00 201.10;
+NC   25.60 24.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

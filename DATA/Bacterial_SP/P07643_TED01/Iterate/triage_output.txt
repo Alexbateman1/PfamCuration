@@ -1,0 +1,203 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TMPA_TREPA              Reviewed;         345 AA.
+AC   P07643;
+DE   RecName: Full=Treponemal membrane protein A;
+DE   AltName: Full=Antigen TmpA;
+DE   AltName: Full=Membrane protein A;
+DE   Flags: Precursor;
+GN   Name=tmpA; OrderedLocusNames=TP_0768;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=3922944; DOI=10.1128/jb.162.3.1227-1237.1985;
+RA   Hansen E.B., Pedersen P.E., Schouls L.M., Severin E., van Embden J.D.A.;
+RT   "Genetic characterization and partial sequence determination of a Treponema
+RT   pallidum operon expressing two immunogenic membrane proteins in Escherichia
+RT   coli.";
+RL   J. Bacteriol. 162:1227-1237(1985).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+RN   [3]
+RP   DIACYLGLYCEROL AT CYS-22, PALMITOYLATION AT CYS-22, AND MUTAGENESIS OF
+RP   CYS-22.
+RC   STRAIN=Nichols;
+RX   PubMed=1894360; DOI=10.1128/iai.59.10.3536-3546.1991;
+RA   Schouls L.M., van der Heide H.G.J., van Embden J.D.A.;
+RT   "Characterization of the 35-kilodalton Treponema pallidum subsp. pallidum
+RT   recombinant lipoprotein TmpC and antibody response to lipidated and
+RT   nonlipidated T. pallidum antigens.";
+RL   Infect. Immun. 59:3536-3546(1991).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Lipid-anchor.
+CC   -!- SIMILARITY: To T.phagedenis TmpA. {ECO:0000305}.
+DR   EMBL; M10931; AAA27481.1; -; Genomic_DNA.
+DR   EMBL; AE000520; AAC65736.1; -; Genomic_DNA.
+DR   PIR; A24587; A24587.
+DR   RefSeq; WP_010882213.1; NC_021490.2.
+DR   AlphaFoldDB; P07643; -.
+DR   SMR; P07643; -.
+DR   IntAct; P07643; 2.
+DR   STRING; 243276.TP_0768; -.
+DR   EnsemblBacteria; AAC65736; AAC65736; TP_0768.
+DR   GeneID; 93876534; -.
+DR   KEGG; tpa:TP_0768; -.
+DR   KEGG; tpw:TPANIC_0768; -.
+DR   eggNOG; ENOG5031CFT; Bacteria.
+DR   HOGENOM; CLU_871359_0_0_12; -.
+DR   OrthoDB; 358281at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   1: Evidence at protein level;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal.
+FT   SIGNAL          1..21
+FT   CHAIN           22..345
+FT                   /note="Treponemal membrane protein A"
+FT                   /id="PRO_0000018197"
+FT   REGION          256..345
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        314..323
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   LIPID           22
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000269|PubMed:1894360"
+FT   LIPID           22
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000269|PubMed:1894360"
+FT   MUTAGEN         22
+FT                   /note="C->S: Loss of lipid incorporation and cleavage at
+FT                   alternative processing site."
+FT                   /evidence="ECO:0000269|PubMed:1894360"
+SQ   SEQUENCE   345 AA;  37285 MW;  92CA2331761BEC94 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Treponema.
+1	6	Teretinema.
+1	6	Gracilinema.
+6	5	Treponemataceae
+1	5	Breznakiellaceae
+7	4	Spirochaetales
+7	3	Spirochaetia
+7	2	Spirochaetota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GYN4	TREPONEMAL MEMBRANE PROTE     76.8    7.8e-18   1   2.3   4.9
+	Iterate                   	    39	   127	    76.8
+
+A0A210R0P3	UNCHARACTERIZED PROTEIN {     51.1    8.1e-10   7  10.1   4.4
+	Iterate                   	     1	    43	     8.0
+	Iterate                   	   262	   297	     7.7
+	Iterate                   	   323	   365	     6.3
+	Iterate                   	    86	   133	     4.9
+	Iterate                   	   290	   330	     4.0
+	Iterate                   	    69	   104	     3.6
+	Iterate                   	    35	    76	     3.0
+
+P07643	TREPONEMAL MEMBRANE PROTEIN A      196.2    4.6e-55   1   2.1   5.2
+	Iterate                   	    34	   122	   196.2
+
+Q73JI6	TREPONEMAL MEMBRANE PROTEIN,      29.1     0.0061   1   2.1   0.4
+	Iterate                   	    74	   150	    29.1
+
+S5ZJS7	TREPONEMAL MEMBRANE PROTEIN {     35.3    7.1e-05   1   2.1   0.6
+	Iterate                   	    58	   148	    35.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26586 (E-value: 2.8e-39, Score: 139.0)
+Mentioned as: TP0768
+Description: membrane protein (tmpA)
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 39932281
+Source: EuropePMC
+Title: Tp40: a new potential prognostic and diagnostic marker for syphilis
+Journal: Microbiology spectrum (2025)
+Snippet: team validated the potential diagnostic value of in vivo -induced antigen proteins Tp0971, Tp0462, and Tp0768 for syphilis ( 14 ). As shown in Fig. 5A , in the Live Tp group, three out of six New Zealand rabbits tested positive for TPPA and TRUST on
+
+================================================================================
+Protein: VIMSS26586 (E-value: 2.8e-39, Score: 139.0)
+Mentioned as: TP0768
+Description: membrane protein (tmpA)
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 38748684
+Source: EuropePMC
+Title: Treponema pallidum recombinant protein Tp0768 enhances the ability of HUVECs to promote neutrophil chemotaxis through the TLR2/ER stress signaling pathway
+Journal: Journal of leukocyte biology (2024)
+Snippet: of chemokines when stimulated with different concentrations of Tp0768 (also known as TpN44.5 or TmpA, a T. pallidum infection dependent antigen). The results
+
+================================================================================
+Protein: VIMSS26586 (E-value: 2.8e-39, Score: 139.0)
+Mentioned as: TP0768
+Description: membrane protein (tmpA)
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 38095465
+Source: EuropePMC
+Title: Evaluation of a minimal array of <i>Treponema pallidum</i> antigens as biomarkers for syphilis diagnosis, infection staging, and response to treatment
+Journal: Microbiology spectrum (2024)
+Snippet: 33 ), Tp0954, a putative T. pallidum lipoprotein and placental adhesin ( 34 ), and Tp0768 (the TmpA lipoprotein) ( 35 ), reactivity showed a good coefficient of correlation with the two immunodominant antigens ( Fig. 1A ). However, in patients with primary syphilis, the mean
+
+================================================================================
+Protein: P29721 (E-value: 7.9e-36, Score: 127.9)
+Mentioned as: P29721
+Description: Treponemal membrane protein A
+Organism: Treponema phagedenis
+PMID: 8962108
+Source: EuropePMC
+Title: cag, a pathogenicity island of Helicobacter pylori, encodes type I-specific and disease-associated virulence factors
+Journal: Proceedings of the National Academy of Sciences of the United States of America (1996)
+Snippet: FlaB C. coli A35146;Treponema membrane protein precursor P29721. cagH (LLS), extracellular protease precursor PROA_XANCP; GSP protein d precursor Erwinia
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B7GYN4.1	AF-A0A0B7GYN4-F1-model_v4_TED01:37-129	1	AF-A0A0B7GYN4-F1-model_v4_TED01	37-129	100.0%
+P07643.1	AF-P07643-F1-model_v4_TED01:34-122	1	AF-P07643-F1-model_v4_TED01	34-122	100.0%
+Q73JI6.1	AF-Q73JI6-F1-model_v4_TED01:65-150	1	AF-Q73JI6-F1-model_v4_TED01	65-150	93.5%
+Q73JI6.1	AF-Q73JI6-F1-model_v4_TED02:204-290	1	AF-Q73JI6-F1-model_v4_TED02	204-290	0
+S5ZJS7.1	AF-S5ZJS7-F1-model_v4_TED01:204-287	1	AF-S5ZJS7-F1-model_v4_TED01	204-287	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P07643_TED01/Iterate
+GA   27.00 27.00;
+TC   27.60 31.40;
+NC   26.50 24.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

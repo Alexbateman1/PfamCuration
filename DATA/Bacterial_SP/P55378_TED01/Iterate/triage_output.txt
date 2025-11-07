@@ -1,0 +1,117 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y4BK_SINFN              Reviewed;         222 AA.
+AC   P55378;
+DE   RecName: Full=Uncharacterized protein y4bK;
+GN   OrderedLocusNames=NGR_a00190; ORFNames=y4bK;
+OS   Sinorhizobium fredii (strain NBRC 101917 / NGR234).
+OG   Plasmid sym pNGR234a.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Rhizobiaceae; Sinorhizobium/Ensifer group; Sinorhizobium.
+OX   NCBI_TaxID=394;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=9163424; DOI=10.1038/387394a0;
+RA   Freiberg C.A., Fellay R., Bairoch A., Broughton W.J., Rosenthal A.,
+RA   Perret X.;
+RT   "Molecular basis of symbiosis between Rhizobium and legumes.";
+RL   Nature 387:394-401(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=19376903; DOI=10.1128/aem.00515-09;
+RA   Schmeisser C., Liesegang H., Krysciak D., Bakkou N., Le Quere A.,
+RA   Wollherr A., Heinemeyer I., Morgenstern B., Pommerening-Roeser A.,
+RA   Flores M., Palacios R., Brenner S., Gottschalk G., Schmitz R.A.,
+RA   Broughton W.J., Perret X., Strittmatter A.W., Streit W.R.;
+RT   "Rhizobium sp. strain NGR234 possesses a remarkable number of secretion
+RT   systems.";
+RL   Appl. Environ. Microbiol. 75:4035-4045(2009).
+DR   EMBL; U00090; AAB91626.1; -; Genomic_DNA.
+DR   RefSeq; NP_443788.1; NC_000914.2.
+DR   RefSeq; WP_010875061.1; NC_000914.2.
+DR   AlphaFoldDB; P55378; -.
+DR   SMR; P55378; -.
+DR   KEGG; rhi:NGR_a00190; -.
+DR   PATRIC; fig|394.7.peg.16; -.
+DR   eggNOG; ENOG5032X78; Bacteria.
+DR   HOGENOM; CLU_083597_0_0_5; -.
+DR   OrthoDB; 8401347at2; -.
+DR   Proteomes; UP000001054; Plasmid pNGR234a.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..222
+FT                   /note="Uncharacterized protein y4bK"
+FT                   /id="PRO_0000200808"
+SQ   SEQUENCE   222 AA;  24327 MW;  1DFE4A181C4E8EE4 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Sinorhizobium.
+1	7	Pseudorhizobium
+1	6	Sinorhizobium/Ensifer group
+1	6	Rhizobium/Agrobacterium group
+2	5	Rhizobiaceae
+2	4	Hyphomicrobiales
+2	3	Alphaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A7C9RIA1	XRE FAMILY TRANSCRIPTIONA     25.7      0.048   1   2.3   0.6
+	Iterate                   	    34	    86	    25.7
+
+A0A922NY84	XRE FAMILY TRANSCRIPTIONA    122.0    3.9e-32   1   1.6   5.3
+	Iterate                   	    34	    85	   121.0
+
+A0AA90NTK5	AUTOTRANSPORTER DOMAIN-CO     41.6      5e-07  12  12.2  15.8
+	Iterate                   	  2280	  2302	     3.0
+	Iterate                   	  2387	  2409	     3.0
+	Iterate                   	  2494	  2516	     3.0
+	Iterate                   	  2601	  2623	     3.0
+	Iterate                   	  2708	  2730	     3.0
+	Iterate                   	  2815	  2837	     3.0
+	Iterate                   	  2922	  2944	     3.0
+	Iterate                   	  3029	  3051	     3.0
+	Iterate                   	  3136	  3158	     3.0
+	Iterate                   	  3243	  3265	     3.0
+	Iterate                   	  3350	  3372	     3.0
+	Iterate                   	  3457	  3479	     3.0
+	PF03797	Autotransporter 	  3842	  4095	    89.8
+
+B6JK72	ANTITOXIN XRE/MBCA/PARS-LIKE      26.3      0.032   1   1.9   0.0
+	Iterate                   	    35	    86	    24.6
+
+P55378	UNCHARACTERIZED PROTEIN Y4BK       126.2    1.9e-33   1   1.6   6.3
+	Iterate                   	    34	    85	   125.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P55378.1	AF-P55378-F1-model_v4_TED01:34-85	1	AF-P55378-F1-model_v4_TED01	34-85	100.0%
+P55378.1	AF-P55378-F1-model_v4_TED02:114-219	1	AF-P55378-F1-model_v4_TED02	114-219	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P55378_TED01/Iterate
+GA   27.00 27.00;
+TC   41.60 121.00;
+NC   26.30 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

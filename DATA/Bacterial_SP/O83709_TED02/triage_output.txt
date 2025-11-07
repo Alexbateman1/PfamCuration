@@ -1,0 +1,569 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y711_TREPA              Reviewed;         190 AA.
+AC   O83709;
+DE   RecName: Full=Uncharacterized protein TP_0711;
+GN   OrderedLocusNames=TP_0711;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SIMILARITY: To B.burgdorferi BB0265. {ECO:0000305}.
+DR   EMBL; AE000520; AAC65677.1; -; Genomic_DNA.
+DR   PIR; C71290; C71290.
+DR   RefSeq; WP_010882156.1; NC_021490.2.
+DR   AlphaFoldDB; O83709; -.
+DR   IntAct; O83709; 47.
+DR   STRING; 243276.TP_0711; -.
+DR   EnsemblBacteria; AAC65677; AAC65677; TP_0711.
+DR   KEGG; tpa:TP_0711; -.
+DR   KEGG; tpw:TPANIC_0711; -.
+DR   eggNOG; ENOG5032NXZ; Bacteria.
+DR   HOGENOM; CLU_122426_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..190
+FT                   /note="Uncharacterized protein TP_0711"
+FT                   /id="PRO_0000202310"
+FT   TRANSMEM        1..21
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   REGION          103..130
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        103..114
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   190 AA;  21267 MW;  117CE4A992AD58EB CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Treponema.
+1	6	Spirochaeta.
+1	6	Sediminispirochaeta.
+1	6	Marispirochaeta.
+1	6	Desulforhabdus.
+1	6	Acidaminobacter.
+3	5	Spirochaetaceae
+2	5	Treponemataceae
+1	5	Syntrophobacteraceae
+1	5	Acidaminobacteraceae
+5	4	Spirochaetales
+1	4	Syntrophobacterales
+1	4	Peptostreptococcales
+5	3	Spirochaetia
+1	3	Syntrophobacteria
+1	3	Clostridia
+5	2	Spirochaetota
+1	2	Thermodesulfobacteriota
+1	2	Bacillota
+6	1	Pseudomonadati
+1	1	Bacillati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A8B8ACT9	ANKYRIN-3-LIKE ISOFORM X2     39.7    1.4e-06   2  11.5   0.0
+	O83709_TED02              	  1319	  1352	     8.0
+	O83709_TED02              	   926	   956	     5.1
+	PF20720	nSTAND3         	   233	   390	    87.3
+	PF12796	Ank_2           	   775	   862	    64.1
+	PF13857	Ank_5           	   787	   841	    33.9
+	PF00023	Ank             	   800	   832	    32.5
+	PF13606	Ank_3           	   800	   829	    24.7
+	PF13637	Ank_4           	   807	   854	    29.5
+	PF13606	Ank_3           	   833	   862	    19.1
+	PF00023	Ank             	   833	   865	    22.1
+	PF13857	Ank_5           	   834	   874	    28.7
+	PF13637	Ank_4           	   838	   881	    24.8
+	PF12796	Ank_2           	   845	   929	    66.8
+	PF00023	Ank             	   866	   898	    28.7
+	PF13606	Ank_3           	   866	   895	    19.7
+	PF13637	Ank_4           	   871	   920	    33.4
+	PF13606	Ank_3           	   899	   928	    22.7
+	PF00023	Ank             	   899	   931	    28.5
+	PF13637	Ank_4           	   904	   953	    33.2
+	PF12796	Ank_2           	   923	   995	    59.5
+	PF00023	Ank             	   932	   964	    29.5
+	PF13606	Ank_3           	   932	   961	    21.1
+	PF13637	Ank_4           	   944	   986	    39.7
+	PF13857	Ank_5           	   952	  1001	    28.8
+	PF00023	Ank             	   965	   997	    32.9
+	PF13606	Ank_3           	   965	   994	    19.7
+	PF12796	Ank_2           	   984	  1062	    53.9
+	PF00023	Ank             	   998	  1030	      27
+	PF13606	Ank_3           	   998	  1027	    18.8
+	PF13637	Ank_4           	  1003	  1052	    24.9
+	PF00023	Ank             	  1031	  1063	    25.9
+	PF13606	Ank_3           	  1031	  1060	    17.3
+	PF12796	Ank_2           	  1036	  1126	    61.4
+	PF00023	Ank             	  1064	  1096	    16.5
+	PF12796	Ank_2           	  1069	  1161	    65.5
+	PF00023	Ank             	  1097	  1129	    25.9
+	PF13606	Ank_3           	  1097	  1126	    19.3
+	PF13637	Ank_4           	  1102	  1151	    23.1
+	PF12796	Ank_2           	  1102	  1193	    77.5
+	PF13606	Ank_3           	  1130	  1159	    22.1
+	PF00023	Ank             	  1130	  1162	    27.4
+	PF13637	Ank_4           	  1135	  1184	    36.9
+	PF12796	Ank_2           	  1135	  1227	    81.3
+	PF13857	Ank_5           	  1161	  1204	    28.8
+	PF00023	Ank             	  1163	  1195	      32
+	PF13606	Ank_3           	  1163	  1192	    23.3
+	PF13637	Ank_4           	  1176	  1217	      30
+	PF13606	Ank_3           	  1196	  1225	    24.8
+	PF00023	Ank             	  1196	  1228	    29.3
+	PF13637	Ank_4           	  1201	  1250	    31.2
+	PF12796	Ank_2           	  1201	  1293	    75.6
+	PF13606	Ank_3           	  1229	  1258	    19.1
+	PF00023	Ank             	  1229	  1261	    23.8
+	PF12796	Ank_2           	  1234	  1325	    69.2
+	PF00023	Ank             	  1262	  1294	      28
+	PF13606	Ank_3           	  1262	  1291	    18.5
+	PF13637	Ank_4           	  1267	  1316	    30.3
+	PF13857	Ank_5           	  1282	  1336	    38.1
+	PF00023	Ank             	  1295	  1327	    24.6
+	PF12796	Ank_2           	  1300	  1392	    73.1
+	PF13637	Ank_4           	  1303	  1344	    27.1
+	PF00023	Ank             	  1328	  1360	    29.5
+	PF13606	Ank_3           	  1328	  1357	    19.1
+	PF13637	Ank_4           	  1339	  1382	    27.3
+	PF13606	Ank_3           	  1361	  1390	    19.5
+	PF00023	Ank             	  1361	  1393	    24.5
+
+A0A8B8B4N8	ANKYRIN-1-LIKE {ECO:00003     41.3    4.6e-07   3   9.3   0.0
+	O83709_TED02              	   341	   369	     8.2
+	O83709_TED02              	   761	   798	     6.5
+	O83709_TED02              	   406	   435	     3.6
+	PF20720	nSTAND3         	   172	   270	    52.3
+	PF12796	Ank_2           	   288	   374	    63.9
+	PF13637	Ank_4           	   293	   333	    25.7
+	PF00023	Ank             	   312	   344	    30.2
+	PF13637	Ank_4           	   317	   366	    37.5
+	PF13606	Ank_3           	   345	   374	    21.2
+	PF00023	Ank             	   345	   377	    30.8
+	PF12796	Ank_2           	   350	   442	    76.9
+	PF13637	Ank_4           	   356	   399	    31.8
+	PF13857	Ank_5           	   365	   412	    35.8
+	PF13606	Ank_3           	   378	   407	    23.5
+	PF00023	Ank             	   378	   410	    27.5
+	PF13637	Ank_4           	   383	   428	    27.4
+	PF13857	Ank_5           	   398	   447	      33
+	PF13606	Ank_3           	   411	   440	    18.6
+	PF00023	Ank             	   411	   443	    23.8
+	PF13637	Ank_4           	   425	   465	      30
+	PF12796	Ank_2           	   427	   508	      62
+	PF13606	Ank_3           	   444	   473	    19.3
+	PF00023	Ank             	   444	   476	    32.2
+	PF13637	Ank_4           	   455	   498	    30.1
+	PF00023	Ank             	   477	   509	    23.5
+	PF12796	Ank_2           	   482	   574	      82
+	PF13637	Ank_4           	   485	   531	      29
+	PF00023	Ank             	   510	   542	    25.5
+	PF13637	Ank_4           	   515	   564	    43.1
+	PF13857	Ank_5           	   530	   581	    30.5
+	PF13606	Ank_3           	   543	   572	    28.9
+	PF00023	Ank             	   543	   575	    41.4
+	PF13637	Ank_4           	   556	   597	    24.3
+	PF12796	Ank_2           	   566	   639	    53.2
+	PF00023	Ank             	   576	   608	    20.1
+	PF13637	Ank_4           	   581	   624	    27.9
+	PF12796	Ank_2           	   581	   673	    72.2
+	PF13606	Ank_3           	   609	   638	    23.4
+	PF00023	Ank             	   609	   641	    31.1
+	PF13637	Ank_4           	   617	   663	    36.5
+	PF12796	Ank_2           	   626	   706	    64.1
+	PF13606	Ank_3           	   642	   671	    17.5
+	PF00023	Ank             	   642	   674	    29.7
+	PF13637	Ank_4           	   647	   696	    36.7
+	PF12796	Ank_2           	   647	   739	    74.1
+	PF13606	Ank_3           	   675	   704	    19.6
+	PF00023	Ank             	   675	   707	    32.6
+	PF13637	Ank_4           	   680	   729	      37
+	PF12796	Ank_2           	   690	   772	      61
+	PF13606	Ank_3           	   708	   737	    21.2
+	PF00023	Ank             	   708	   740	      30
+	PF12796	Ank_2           	   713	   805	    78.4
+	PF13637	Ank_4           	   720	   762	    25.6
+	PF13857	Ank_5           	   728	   777	      31
+	PF00023	Ank             	   741	   773	    24.4
+	PF13637	Ank_4           	   746	   795	      40
+	PF13606	Ank_3           	   774	   803	    21.1
+	PF00023	Ank             	   774	   806	    31.1
+	PF12796	Ank_2           	   779	   870	      63
+	PF00023	Ank             	   807	   839	    26.2
+	PF13637	Ank_4           	   817	   861	    25.2
+
+A0A8B8BCM1	SERINE/THREONINE-PROTEIN      47.9    3.8e-09   4   9.3   0.0
+	O83709_TED02              	   152	   183	     7.1
+	O83709_TED02              	   350	   381	     7.1
+	O83709_TED02              	   278	   315	     6.5
+	O83709_TED02              	    78	   117	     6.0
+	PF12796	Ank_2           	    65	   157	    84.8
+	PF00023	Ank             	    67	    92	    19.8
+	PF13637	Ank_4           	    67	   114	    39.7
+	PF13857	Ank_5           	    79	   129	    32.7
+	PF00023	Ank             	    93	   125	    36.2
+	PF13606	Ank_3           	    93	   122	      27
+	PF13637	Ank_4           	   102	   147	    38.6
+	PF12796	Ank_2           	   108	   190	    77.3
+	PF13857	Ank_5           	   124	   162	    33.7
+	PF00023	Ank             	   126	   158	    39.4
+	PF13606	Ank_3           	   126	   155	    30.1
+	PF13637	Ank_4           	   131	   180	    44.8
+	PF12796	Ank_2           	   142	   221	    72.4
+	PF13857	Ank_5           	   156	   195	    30.3
+	PF00023	Ank             	   159	   191	    33.2
+	PF13606	Ank_3           	   159	   188	    26.3
+	PF12796	Ank_2           	   164	   256	    88.7
+	PF13637	Ank_4           	   164	   206	    34.9
+	PF00023	Ank             	   192	   224	    31.3
+	PF13606	Ank_3           	   192	   221	    20.8
+	PF13637	Ank_4           	   199	   246	    40.4
+	PF13857	Ank_5           	   223	   259	    32.4
+	PF00023	Ank             	   225	   257	    39.7
+	PF13606	Ank_3           	   225	   254	    30.2
+	PF12796	Ank_2           	   230	   322	    87.7
+	PF13637	Ank_4           	   230	   278	    32.1
+	PF13606	Ank_3           	   258	   287	    21.5
+	PF00023	Ank             	   259	   290	    28.6
+	PF12796	Ank_2           	   263	   355	    89.8
+	PF13637	Ank_4           	   263	   312	    45.2
+	PF13857	Ank_5           	   281	   328	    29.1
+	PF00023	Ank             	   291	   323	      37
+	PF13606	Ank_3           	   291	   320	    26.3
+	PF13637	Ank_4           	   303	   345	    36.1
+	PF13857	Ank_5           	   322	   358	    33.3
+	PF00023	Ank             	   324	   356	    39.4
+	PF13606	Ank_3           	   324	   353	    30.1
+	PF12796	Ank_2           	   329	   413	    68.4
+	PF13637	Ank_4           	   329	   378	    44.7
+	PF13857	Ank_5           	   355	   398	    31.6
+	PF00023	Ank             	   357	   389	    33.2
+	PF13606	Ank_3           	   357	   386	    26.3
+	PF13637	Ank_4           	   365	   403	    26.3
+
+A0A8B8BCM5	ANKYRIN-1-LIKE {ECO:00003     52.9    1.1e-10   6  10.3   0.0
+	O83709_TED02              	   290	   322	     7.0
+	O83709_TED02              	   117	   157	     5.9
+	O83709_TED02              	   158	   190	     5.7
+	O83709_TED02              	    20	    58	     5.2
+	O83709_TED02              	   219	   256	     5.0
+	O83709_TED02              	   415	   453	     3.8
+	PF12796	Ank_2           	     1	    65	    49.4
+	PF00023	Ank             	     1	    33	    28.2
+	PF13637	Ank_4           	     6	    55	    37.8
+	PF13606	Ank_3           	    34	    63	    19.6
+	PF00023	Ank             	    34	    66	    25.9
+	PF13637	Ank_4           	    39	    88	    40.2
+	PF12796	Ank_2           	    50	   131	    62.3
+	PF13606	Ank_3           	    67	    96	    23.2
+	PF00023	Ank             	    67	    99	    33.4
+	PF13637	Ank_4           	    73	   121	    34.1
+	PF00023	Ank             	   100	   132	    23.4
+	PF12796	Ank_2           	   105	   197	    73.9
+	PF13637	Ank_4           	   107	   154	      27
+	PF13606	Ank_3           	   133	   162	    25.2
+	PF00023	Ank             	   133	   165	    32.7
+	PF13637	Ank_4           	   138	   187	    34.4
+	PF13857	Ank_5           	   153	   204	    28.2
+	PF13606	Ank_3           	   166	   195	    25.2
+	PF00023	Ank             	   166	   198	    32.7
+	PF12796	Ank_2           	   171	   261	    76.8
+	PF00023	Ank             	   199	   231	    29.3
+	PF13637	Ank_4           	   204	   253	    39.9
+	PF13857	Ank_5           	   219	   270	    33.2
+	PF13606	Ank_3           	   232	   261	    21.9
+	PF00023	Ank             	   232	   264	    29.3
+	PF12796	Ank_2           	   237	   327	    76.6
+	PF13637	Ank_4           	   239	   278	    25.1
+	PF13606	Ank_3           	   265	   294	    18.6
+	PF00023	Ank             	   265	   297	    25.5
+	PF13637	Ank_4           	   271	   319	    43.6
+	PF13857	Ank_5           	   285	   332	    34.5
+	PF13606	Ank_3           	   298	   327	    21.8
+	PF00023	Ank             	   298	   330	    31.6
+	PF12796	Ank_2           	   303	   395	      81
+	PF13637	Ank_4           	   310	   352	      30
+	PF13606	Ank_3           	   331	   360	    26.2
+	PF00023	Ank             	   331	   363	    35.5
+	PF13637	Ank_4           	   336	   385	    39.5
+	PF13606	Ank_3           	   364	   393	    19.8
+	PF00023	Ank             	   364	   396	    26.8
+	PF13637	Ank_4           	   373	   418	    28.9
+	PF12796	Ank_2           	   380	   458	    60.4
+	PF13606	Ank_3           	   397	   426	    20.8
+	PF00023	Ank             	   397	   429	    31.9
+	PF13637	Ank_4           	   408	   450	    28.4
+	PF00023	Ank             	   430	   451	    15.8
+
+A0A8B8BCV8	ANKYRIN-3-LIKE {ECO:00003     55.7    1.4e-11   3  16.9   0.0
+	O83709_TED02              	   378	   410	     4.4
+	O83709_TED02              	    48	    80	     3.9
+	O83709_TED02              	   241	   280	     3.4
+	PF12796	Ank_2           	     1	    87	    71.2
+	PF00023	Ank             	    23	    55	    27.2
+	PF13606	Ank_3           	    23	    52	      18
+	PF13637	Ank_4           	    28	    71	    34.5
+	PF00023	Ank             	    56	    88	    31.8
+	PF13606	Ank_3           	    56	    85	    21.1
+	PF13637	Ank_4           	    63	   110	    34.8
+	PF12796	Ank_2           	    72	   153	    68.6
+	PF13857	Ank_5           	    76	   123	      28
+	PF13606	Ank_3           	    89	   118	    21.6
+	PF00023	Ank             	    89	   121	    27.4
+	PF13637	Ank_4           	    94	   143	    28.5
+	PF13606	Ank_3           	   122	   151	    23.7
+	PF00023	Ank             	   122	   154	    31.8
+	PF13637	Ank_4           	   127	   170	    28.7
+	PF12796	Ank_2           	   137	   219	    67.5
+	PF13606	Ank_3           	   155	   184	    21.3
+	PF00023	Ank             	   155	   187	      29
+	PF12796	Ank_2           	   160	   252	    80.2
+	PF13637	Ank_4           	   162	   209	    37.1
+	PF13606	Ank_3           	   188	   217	    19.1
+	PF00023	Ank             	   188	   220	    26.6
+	PF12796	Ank_2           	   193	   285	    79.6
+	PF13857	Ank_5           	   208	   259	    31.4
+	PF00023	Ank             	   221	   253	    31.8
+	PF13606	Ank_3           	   221	   250	    19.4
+	PF13637	Ank_4           	   226	   275	    34.2
+	PF00023	Ank             	   254	   286	    29.9
+	PF13606	Ank_3           	   254	   283	    20.8
+	PF13637	Ank_4           	   259	   308	    35.2
+	PF12796	Ank_2           	   259	   351	    81.5
+	PF13857	Ank_5           	   277	   324	      33
+	PF13606	Ank_3           	   287	   316	    24.5
+	PF00023	Ank             	   287	   319	    33.4
+	PF13637	Ank_4           	   295	   341	    30.4
+	PF13606	Ank_3           	   320	   349	    20.1
+	PF00023	Ank             	   320	   352	    27.7
+	PF13637	Ank_4           	   325	   374	    34.4
+	PF12796	Ank_2           	   325	   417	    80.8
+	PF13606	Ank_3           	   353	   382	    18.6
+	PF00023	Ank             	   353	   385	    26.9
+	PF12796	Ank_2           	   358	   450	    75.9
+	PF13637	Ank_4           	   360	   407	    30.9
+	PF13606	Ank_3           	   386	   415	    24.6
+	PF00023	Ank             	   386	   418	    29.7
+	PF13637	Ank_4           	   391	   432	    29.1
+	PF12796	Ank_2           	   409	   481	    52.8
+	PF00023	Ank             	   419	   451	    26.3
+	PF13637	Ank_4           	   424	   469	    31.9
+	PF12796	Ank_2           	   424	   516	    74.5
+	PF00023	Ank             	   452	   484	    23.5
+	PF13637	Ank_4           	   457	   503	    33.3
+	PF12796	Ank_2           	   467	   549	    64.7
+	PF13857	Ank_5           	   483	   523	    28.8
+	PF13606	Ank_3           	   485	   514	    23.7
+	PF00023	Ank             	   485	   517	      33
+	PF12796	Ank_2           	   490	   582	    76.4
+	PF13637	Ank_4           	   492	   531	    22.7
+	PF00023	Ank             	   518	   550	    22.9
+	PF13637	Ank_4           	   524	   571	    29.9
+	PF13857	Ank_5           	   538	   587	    34.8
+	PF13606	Ank_3           	   551	   580	    21.6
+	PF00023	Ank             	   551	   583	    28.8
+	PF12796	Ank_2           	   556	   648	    82.6
+	PF13637	Ank_4           	   562	   605	    27.6
+	PF13857	Ank_5           	   581	   620	      29
+	PF00023	Ank             	   584	   616	    33.2
+	PF13606	Ank_3           	   584	   613	    23.7
+	PF13637	Ank_4           	   592	   634	    27.9
+	PF13606	Ank_3           	   617	   646	    22.5
+	PF00023	Ank             	   617	   649	    29.9
+	PF12796	Ank_2           	   622	   714	    79.1
+	PF13637	Ank_4           	   628	   670	    25.5
+	PF13857	Ank_5           	   641	   684	    30.2
+	PF13606	Ank_3           	   650	   679	    20.6
+	PF00023	Ank             	   650	   682	    28.2
+	PF13637	Ank_4           	   657	   704	    35.8
+	PF00023	Ank             	   683	   715	    27.9
+	PF13606	Ank_3           	   683	   712	    18.5
+	PF12796	Ank_2           	   688	   780	    82.4
+	PF13637	Ank_4           	   690	   737	      29
+	PF13606	Ank_3           	   716	   745	    23.7
+	PF00023	Ank             	   716	   748	    31.8
+	PF13637	Ank_4           	   723	   770	    31.9
+	PF13606	Ank_3           	   749	   778	    22.2
+	PF00023	Ank             	   749	   781	    31.2
+	PF12796	Ank_2           	   754	   846	    85.1
+	PF13637	Ank_4           	   756	   803	    30.9
+	PF13857	Ank_5           	   780	   820	    32.1
+	PF00023	Ank             	   782	   814	    33.8
+	PF13606	Ank_3           	   782	   811	    23.7
+	PF13637	Ank_4           	   789	   832	    28.9
+	PF00023	Ank             	   815	   847	    33.7
+	PF13606	Ank_3           	   815	   844	    22.8
+
+A0A8B8BDU0	ANKYRIN-1-LIKE {ECO:00003     58.1    2.6e-12   7  12.5   1.8
+	O83709_TED02              	   472	   504	     6.0
+	O83709_TED02              	   736	   768	     6.0
+	O83709_TED02              	   603	   636	     4.7
+	O83709_TED02              	   339	   372	     4.4
+	O83709_TED02              	   233	   273	     4.0
+	O83709_TED02              	   400	   438	     4.0
+	O83709_TED02              	   665	   702	     3.9
+	PF12796	Ank_2           	   199	   280	    48.7
+	PF00023	Ank             	   217	   248	      25
+	PF12796	Ank_2           	   221	   313	    74.6
+	PF13637	Ank_4           	   221	   270	    39.4
+	PF13857	Ank_5           	   240	   287	    31.1
+	PF13606	Ank_3           	   249	   278	    18.6
+	PF00023	Ank             	   249	   281	    24.9
+	PF13637	Ank_4           	   256	   303	    37.1
+	PF12796	Ank_2           	   263	   345	    63.6
+	PF13606	Ank_3           	   282	   311	    21.9
+	PF00023	Ank             	   282	   314	    31.7
+	PF12796	Ank_2           	   287	   378	    74.5
+	PF13637	Ank_4           	   287	   336	    38.8
+	PF13606	Ank_3           	   315	   344	    17.7
+	PF00023	Ank             	   315	   345	    23.5
+	PF13637	Ank_4           	   327	   369	    25.5
+	PF13606	Ank_3           	   348	   377	      24
+	PF00023	Ank             	   348	   380	    30.2
+	PF12796	Ank_2           	   353	   443	    74.5
+	PF00023	Ank             	   381	   413	    28.3
+	PF13637	Ank_4           	   386	   435	    38.8
+	PF13857	Ank_5           	   401	   453	    32.1
+	PF13606	Ank_3           	   414	   443	    20.9
+	PF00023	Ank             	   414	   446	    28.3
+	PF12796	Ank_2           	   419	   510	    77.6
+	PF13637	Ank_4           	   419	   460	    25.7
+	PF13606	Ank_3           	   447	   476	    18.4
+	PF00023	Ank             	   447	   479	    26.7
+	PF13637	Ank_4           	   452	   501	    43.5
+	PF13606	Ank_3           	   480	   509	    20.7
+	PF00023	Ank             	   480	   512	    30.6
+	PF13637	Ank_4           	   495	   534	    23.4
+	PF12796	Ank_2           	   503	   577	    58.3
+	PF13606	Ank_3           	   513	   542	    25.2
+	PF00023	Ank             	   513	   545	    34.5
+	PF13637	Ank_4           	   518	   567	    38.4
+	PF13606	Ank_3           	   546	   575	    18.8
+	PF00023	Ank             	   546	   578	    25.7
+	PF12796	Ank_2           	   551	   643	    74.2
+	PF13637	Ank_4           	   557	   600	    27.3
+	PF13606	Ank_3           	   579	   608	    19.8
+	PF00023	Ank             	   579	   611	    29.2
+	PF13637	Ank_4           	   590	   633	    24.3
+	PF13857	Ank_5           	   599	   650	      27
+	PF13606	Ank_3           	   612	   641	    24.2
+	PF00023	Ank             	   612	   644	    31.7
+	PF12796	Ank_2           	   618	   709	    71.3
+	PF00023	Ank             	   645	   677	    25.8
+	PF12796	Ank_2           	   650	   742	    67.2
+	PF13637	Ank_4           	   650	   699	      36
+	PF13857	Ank_5           	   665	   716	    30.7
+	PF13606	Ank_3           	   678	   707	    20.9
+	PF00023	Ank             	   678	   710	    28.3
+	PF12796	Ank_2           	   685	   774	    73.1
+	PF13606	Ank_3           	   711	   740	    17.5
+	PF00023	Ank             	   711	   743	    24.5
+	PF12796	Ank_2           	   716	   808	    79.7
+	PF13637	Ank_4           	   716	   765	    43.1
+	PF13857	Ank_5           	   731	   778	    33.4
+	PF13606	Ank_3           	   744	   773	    20.7
+	PF00023	Ank             	   744	   776	    30.6
+	PF13857	Ank_5           	   770	   815	      27
+	PF13606	Ank_3           	   777	   806	    25.2
+	PF00023	Ank             	   777	   809	    34.5
+	PF12796	Ank_2           	   782	   855	    52.7
+	PF13637	Ank_4           	   782	   831	    38.4
+	PF13606	Ank_3           	   810	   839	    18.8
+	PF00023	Ank             	   810	   842	    25.7
+
+O83709	UNCHARACTERIZED PROTEIN TP_0711    102.9    2.4e-26   1   1.4   1.1
+	O83709_TED02              	   151	   190	   102.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26529 (E-value: 2.2e-28, Score: 102.9)
+Mentioned as: TP0711
+Description: conserved hypothetical protein
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 22661689
+Source: EuropePMC
+Title: Comparative investigation of the genomic regions involved in antigenic variation of the TprK antigen among treponemal species, subspecies, and strains
+Journal: Journal of bacteriology (2012)
+Snippet: TP0438 TP0456 TP0456 TP0458 IGR335 TP0488 IGR364 IGR483 TP0685 TP0711 TP0733 IGR549 TP0856 TP0859 TP0898 TP0898 TP0905 TP0978 TP1030 29 17 25 30 30 22 26 29
+
+================================================================================
+Protein: VIMSS26529 (E-value: 2.2e-28, Score: 102.9)
+Mentioned as: TP0711
+Description: conserved hypothetical protein
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 16936039
+Source: EuropePMC
+Title: Novel conserved assembly factor of the bacterial flagellum
+Journal: Journal of bacteriology (2006)
+Snippet: standard Western blotting procedures. The proteins TP0567 and TP0711 are randomly chosen negative controls to exclude the nonspecific binding of TP0658. Probing
+
+================================================================================
+Protein: VIMSS26529 (E-value: 2.2e-28, Score: 102.9)
+Mentioned as: TP0711
+Description: conserved hypothetical protein
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 12805273
+Source: EuropePMC
+Title: Systematic cloning of Treponema pallidum open reading frames for protein expression and antigen discovery
+Journal: Genome research (2003)
+Snippet: average-sized or within ORFs TP0013, TP0074, TP0350, TP0471, TP0711, and smaller. Another possibility is that these T. pallidum gene TP0782. An additional
+
+================================================================================
+Protein: VIMSS576970 (E-value: 0.00027, Score: 25.9)
+Mentioned as: TDE2680
+Description: conserved hypothetical protein
+Organism: Treponema denticola ATCC 35405
+PMID: 36043861
+Source: EuropePMC
+Title: Identification and Characterization of the Alternative σ<sup>28</sup> Factor in Treponema denticola
+Journal: Journal of bacteriology (2022)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83709.1	AF-O83709-F1-model_v4_TED01:28-95	1	AF-O83709-F1-model_v4_TED01	28-95	0
+O83709.1	AF-O83709-F1-model_v4_TED02:151-190	1	AF-O83709-F1-model_v4_TED02	151-190	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83709_TED02
+GA   27.00 27.00;
+TC   28.00 27.40;
+NC   26.70 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

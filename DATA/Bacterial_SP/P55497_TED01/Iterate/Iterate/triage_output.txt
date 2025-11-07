@@ -1,0 +1,132 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y4IN_SINFN              Reviewed;         208 AA.
+AC   P55497;
+DE   RecName: Full=Uncharacterized protein y4iN;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=NGR_a03190; ORFNames=y4iN;
+OS   Sinorhizobium fredii (strain NBRC 101917 / NGR234).
+OG   Plasmid sym pNGR234a.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Rhizobiaceae; Sinorhizobium/Ensifer group; Sinorhizobium.
+OX   NCBI_TaxID=394;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=9163424; DOI=10.1038/387394a0;
+RA   Freiberg C.A., Fellay R., Bairoch A., Broughton W.J., Rosenthal A.,
+RA   Perret X.;
+RT   "Molecular basis of symbiosis between Rhizobium and legumes.";
+RL   Nature 387:394-401(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=19376903; DOI=10.1128/aem.00515-09;
+RA   Schmeisser C., Liesegang H., Krysciak D., Bakkou N., Le Quere A.,
+RA   Wollherr A., Heinemeyer I., Morgenstern B., Pommerening-Roeser A.,
+RA   Flores M., Palacios R., Brenner S., Gottschalk G., Schmitz R.A.,
+RA   Broughton W.J., Perret X., Strittmatter A.W., Streit W.R.;
+RT   "Rhizobium sp. strain NGR234 possesses a remarkable number of secretion
+RT   systems.";
+RL   Appl. Environ. Microbiol. 75:4035-4045(2009).
+DR   EMBL; U00090; AAB91709.1; -; Genomic_DNA.
+DR   RefSeq; NP_443907.1; NC_000914.2.
+DR   AlphaFoldDB; P55497; -.
+DR   KEGG; rhi:NGR_a03190; -.
+DR   HOGENOM; CLU_1320055_0_0_5; -.
+DR   Proteomes; UP000001054; Plasmid pNGR234a.
+PE   3: Inferred from homology;
+KW   Plasmid; Reference proteome; Signal.
+FT   SIGNAL          1..34
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           35..208
+FT                   /note="Uncharacterized protein y4iN"
+FT                   /id="PRO_0000014167"
+SQ   SEQUENCE   208 AA;  22073 MW;  C6C6587AFD6ADA73 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Nitrosomonas.
+2	6	Methylobacter.
+5	5	Nitrosomonadaceae
+3	5	Methylococcaceae
+2	5	Paracoccaceae
+5	4	Nitrosomonadales
+3	4	Methylococcales
+2	4	Rhodobacterales
+6	3	Gammaproteobacteria
+5	3	Betaproteobacteria
+4	3	Alphaproteobacteria
+15	2	Pseudomonadota
+16	1	Pseudomonadati
+16	0	Bacteria
+Total of 16 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1H8PTK4	CYTOCHROME C DOMAIN-CONTA    138.5    3.2e-37   1   1.8   0.1
+	Iterate                   	    60	   144	   137.0
+	PF21419	RoxA-like_Cyt-c 	   490	   528	    66.5
+
+A0A1I1X8H0	CYTOCHROME C DOMAIN-CONTA    142.9    1.3e-38   1   2.0   0.5
+	Iterate                   	    72	   156	   141.5
+	PF21419	RoxA-like_Cyt-c 	   502	   540	    65.6
+
+A0A1Y6D1I5	CYTOCHROME C DOMAIN-CONTA    142.1    2.4e-38   1   1.8   0.6
+	Iterate                   	    63	   147	   140.8
+	PF21419	RoxA-like_Cyt-c 	   495	   533	    66.4
+
+A0A5R8QHY0	CYTOCHROME C {ECO:0000313    143.8      7e-39   1   1.6   0.4
+	Iterate                   	    61	   145	   142.7
+	PF00034	Cytochrom_C     	   400	   449	    21.7
+	PF21419	RoxA-like_Cyt-c 	   493	   531	    66.4
+
+P55497	UNCHARACTERIZED PROTEIN Y4IN       120.6    1.2e-31   1   1.3   0.4
+	Iterate                   	    73	   169	   120.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0F7KGT9.1	AF-A0A0F7KGT9-F1-model_v4_TED01:62-91_326-367_396-442_485-547	1	AF-A0A0F7KGT9-F1-model_v4_TED01	62-547	100.0%
+A0A0F7KGT9.1	AF-A0A0F7KGT9-F1-model_v4_TED02:92-176_201-304	1	AF-A0A0F7KGT9-F1-model_v4_TED02	92-304	90.5%
+A0A1H3EU61.1	AF-A0A1H3EU61-F1-model_v4_TED01:53-87_319-385_392-438_483-543	1	AF-A0A1H3EU61-F1-model_v4_TED01	53-543	100.0%
+A0A1H3EU61.1	AF-A0A1H3EU61-F1-model_v4_TED02:89-172_197-302	1	AF-A0A1H3EU61-F1-model_v4_TED02	89-302	89.5%
+A0A1H3EU61.1	AF-A0A1H3EU61-F1-model_v4_TED03:450-469_546-645	1	AF-A0A1H3EU61-F1-model_v4_TED03	450-645	0
+A0A1N6IWK0.1	AF-A0A1N6IWK0-F1-model_v4_TED01:64-253	1	AF-A0A1N6IWK0-F1-model_v4_TED01	64-253	100.0%
+A0A1N6IWK0.1	AF-A0A1N6IWK0-F1-model_v4_TED02:286-324_326-394_446-502	1	AF-A0A1N6IWK0-F1-model_v4_TED02	286-502	0
+A0A1N6IWK0.1	AF-A0A1N6IWK0-F1-model_v4_TED03:405-420_503-610	1	AF-A0A1N6IWK0-F1-model_v4_TED03	405-610	0
+A0A1Y6D1I5.1	AF-A0A1Y6D1I5-F1-model_v4_TED01:73-168_178-277	1	AF-A0A1Y6D1I5-F1-model_v4_TED01	73-277	88.2%
+A0A1Y6D1I5.1	AF-A0A1Y6D1I5-F1-model_v4_TED02:288-392_431-501	1	AF-A0A1Y6D1I5-F1-model_v4_TED02	288-501	0
+A0A1Y6D1I5.1	AF-A0A1Y6D1I5-F1-model_v4_TED03:402-418_506-604	1	AF-A0A1Y6D1I5-F1-model_v4_TED03	402-604	0
+A0A2G8REB6.1	AF-A0A2G8REB6-F1-model_v4_TED01:43-409	1	AF-A0A2G8REB6-F1-model_v4_TED01	43-409	100.0%
+A0A2P1BU83.1	AF-A0A2P1BU83-F1-model_v4_TED01:58-505_514-619	1	AF-A0A2P1BU83-F1-model_v4_TED01	58-619	100.0%
+A0A366C0X5.1	AF-A0A366C0X5-F1-model_v4_TED01:73-410_450-507	1	AF-A0A366C0X5-F1-model_v4_TED01	73-507	100.0%
+A0A366C0X5.1	AF-A0A366C0X5-F1-model_v4_TED02:421-436_520-625	1	AF-A0A366C0X5-F1-model_v4_TED02	421-625	0
+A0A4R2KX79.1	AF-A0A4R2KX79-F1-model_v4_TED01:83-325	1	AF-A0A4R2KX79-F1-model_v4_TED01	83-325	89.4%
+A0A5R8QHY0.1	AF-A0A5R8QHY0-F1-model_v4_TED01:60-281	1	AF-A0A5R8QHY0-F1-model_v4_TED01	60-281	100.0%
+A0A5R8QHY0.1	AF-A0A5R8QHY0-F1-model_v4_TED02:284-320_322-390_439-499	1	AF-A0A5R8QHY0-F1-model_v4_TED02	284-499	0
+A0A5R8QHY0.1	AF-A0A5R8QHY0-F1-model_v4_TED03:403-416_505-604	1	AF-A0A5R8QHY0-F1-model_v4_TED03	403-604	0
+F9ZJ10.1	AF-F9ZJ10-F1-model_v4_TED01:56-265	1	AF-F9ZJ10-F1-model_v4_TED01	56-265	100.0%
+G3IVB9.1	AF-G3IVB9-F1-model_v4_TED01:74-108	1	AF-G3IVB9-F1-model_v4_TED01	74-108	61.4%
+P55497.1	AF-P55497-F1-model_v4_TED01:73-169	1	AF-P55497-F1-model_v4_TED01	73-169	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P55497_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.20 27.00;
+NC   26.90 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,166 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YQEL_ECOLI              Reviewed;          26 AA.
+AC   C1P613;
+DE   RecName: Full=Uncharacterized protein YqeL;
+GN   Name=yqeL; OrderedLocusNames=b4683, JW5455.1;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [3]
+RP   IDENTIFICATION, AND INDUCTION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=19121005; DOI=10.1111/j.1365-2958.2008.06495.x;
+RA   Hemm M.R., Paul B.J., Schneider T.D., Storz G., Rudd K.E.;
+RT   "Small membrane proteins found by comparative genomics and ribosome binding
+RT   site models.";
+RL   Mol. Microbiol. 70:1487-1501(2008).
+RN   [4]
+RP   INDUCTION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=19734316; DOI=10.1128/jb.00872-09;
+RA   Hemm M.R., Paul B.J., Miranda-Rios J., Zhang A., Soltanzad N., Storz G.;
+RT   "Small stress response proteins in Escherichia coli: proteins missed by
+RT   classical proteomic studies.";
+RL   J. Bacteriol. 192:46-58(2010).
+CC   -!- INDUCTION: Constitutively expressed, induced at 45 degrees Celsius (at
+CC       protein level). {ECO:0000269|PubMed:19121005,
+CC       ECO:0000269|PubMed:19734316}.
+DR   EMBL; U00096; ACO60005.1; -; Genomic_DNA.
+DR   EMBL; AP009048; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   RefSeq; WP_000655820.1; NZ_LN832404.1.
+DR   RefSeq; YP_002791253.1; NC_000913.3.
+DR   AlphaFoldDB; C1P613; -.
+DR   STRING; 511145.b4683; -.
+DR   PaxDb; 511145-b4683; -.
+DR   EnsemblBacteria; ACO60005; ACO60005; b4683.
+DR   GeneID; 7751637; -.
+DR   KEGG; eco:b4683; -.
+DR   PATRIC; fig|511145.12.peg.2947; -.
+DR   InParanoid; C1P613; -.
+DR   BioCyc; EcoCyc:MONOMER0-2877; -.
+DR   PRO; PR:C1P613; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome; Stress response.
+FT   CHAIN           1..26
+FT                   /note="Uncharacterized protein YqeL"
+FT                   /id="PRO_0000381989"
+SQ   SEQUENCE   26 AA;  3203 MW;  A22201C2C72B2230 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A9D4RLD1	UNCHARACTERIZED PROTEIN {     19.8        3.1   1   8.4   5.4
+	Iterate                   	     2	    13	     2.4
+
+A7ZQV7	SMALL STRESS RESPONSE PROTEIN     64.2    2.5e-14   1   1.9   5.3
+	Iterate                   	    21	    46	    64.2
+
+C1P613	UNCHARACTERIZED PROTEIN YQEL        70.4    2.7e-16   1   1.0   6.8
+	Iterate                   	     1	    26	    70.3
+
+T1HLG0	UNCHARACTERIZED PROTEIN {ECO:     31.0    0.00085   7   8.9  14.6
+	Iterate                   	   109	   130	     5.3
+	Iterate                   	    50	    72	     4.6
+	Iterate                   	   274	   295	     4.6
+	Iterate                   	   132	   150	     4.3
+	Iterate                   	   297	   319	     4.0
+	Iterate                   	   222	   242	     3.9
+	Iterate                   	   164	   186	     3.5
+
+V4C3T4	SRCR DOMAIN-CONTAINING PROTEI     21.1        1.2   3   5.2   1.1
+	Iterate                   	    89	   107	     4.7
+	Iterate                   	    17	    33	     4.4
+	Iterate                   	    52	    65	     3.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: C1P613 (E-value: 2.4e-18, Score: 70.4)
+Mentioned as: C1P613
+Description: Uncharacterized protein YqeL
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Uncharacterized protein YqeL
+PMID: 34070637
+Source: EuropePMC
+Title: In Silico Prediction and Prioritization of Novel Selective Antimicrobial Drug Targets in <i>Escherichia coli</i>
+Journal: Antibiotics (Basel, Switzerland) (2021)
+Snippet: protein YgfZ P0ADE8 1VLY 1.30 Cytoplasm N/A 100% 84% 573 N/A yqeL Uncharacterized protein YqeL C1P613 N/D N/D N/A N/A N/A N/A N/A yrfF Putative membrane protein IgaA homolog P45800 4UZM N/D Cell inner membrane; Multi-pass membrane protein N/A 100% 73% 1089 N/A zipA Cell division
+
+================================================================================
+Protein: C1P613 (E-value: 2.4e-18, Score: 70.4)
+Mentioned as: YQEL_ECOLI
+Description: Uncharacterized protein YqeL
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Uncharacterized protein YqeL
+PMID: 19121005
+Source: SwissProt
+Snippet: INDUCTION: Constitutively expressed, induced at 45 degrees Celsius (at protein level). {ECO:0000269|PubMed:19121005, ECO:0000269|PubMed:19734316}.
+
+================================================================================
+Protein: C1P613 (E-value: 2.4e-18, Score: 70.4)
+Mentioned as: YQEL_ECOLI
+Description: Uncharacterized protein YqeL
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Uncharacterized protein YqeL
+PMID: 19734316
+Source: SwissProt
+Snippet: INDUCTION: Constitutively expressed, induced at 45 degrees Celsius (at protein level). {ECO:0000269|PubMed:19121005, ECO:0000269|PubMed:19734316}.
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:C1P613/Iterate
+GA   27.00 27.00;
+TC   31.00 64.20;
+NC   21.10 16.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

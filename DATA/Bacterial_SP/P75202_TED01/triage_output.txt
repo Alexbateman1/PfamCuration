@@ -1,0 +1,75 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y578_MYCPN              Reviewed;         100 AA.
+AC   P75202;
+DE   RecName: Full=Uncharacterized protein MPN_578;
+GN   OrderedLocusNames=MPN_578; ORFNames=D02_orf100, MP264;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+DR   EMBL; U00089; AAB95912.1; -; Genomic_DNA.
+DR   PIR; S73590; S73590.
+DR   RefSeq; NP_110267.1; NC_000912.1.
+DR   AlphaFoldDB; P75202; -.
+DR   EnsemblBacteria; AAB95912; AAB95912; MPN_578.
+DR   KEGG; mpn:MPN_578; -.
+DR   HOGENOM; CLU_2302790_0_0_14; -.
+DR   BioCyc; MPNE272634:G1GJ3-943-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..100
+FT                   /note="Uncharacterized protein MPN_578"
+FT                   /id="PRO_0000210695"
+SQ   SEQUENCE   100 AA;  11580 MW;  AE82D2B513BE3F5D CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Mycoplasmoides
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P75202	UNCHARACTERIZED PROTEIN MPN_578    217.0      1e-61   1   1.0   5.5
+	P75202_TED01              	    12	   100	   216.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75202.1	AF-P75202-F1-model_v4_TED01:12-100	1	AF-P75202-F1-model_v4_TED01	12-100	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75202_TED01
+GA   27.00 27.00;
+TC   33.70 216.80;
+NC   26.70 23.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

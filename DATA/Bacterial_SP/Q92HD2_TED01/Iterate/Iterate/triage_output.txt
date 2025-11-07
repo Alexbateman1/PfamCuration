@@ -1,0 +1,213 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   FAD3_RICPR              Reviewed;         720 AA.
+AC   Q9ZCZ1;
+DE   RecName: Full=Putative fatty acid oxidation complex trifunctional enzyme;
+DE   Includes:
+DE     RecName: Full=3-hydroxyacyl-CoA dehydrogenase;
+DE              EC=1.1.1.35;
+DE   Includes:
+DE     RecName: Full=Enoyl-CoA hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA isomerase;
+DE              EC=4.2.1.17;
+DE              EC=5.3.3.8;
+GN   OrderedLocusNames=RP560;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a (3S)-3-hydroxyacyl-CoA + NAD(+) = a 3-oxoacyl-CoA + NADH +
+CC         H(+); Xref=Rhea:RHEA:22432, ChEBI:CHEBI:15378, ChEBI:CHEBI:57318,
+CC         ChEBI:CHEBI:57540, ChEBI:CHEBI:57945, ChEBI:CHEBI:90726; EC=1.1.1.35;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a (3S)-3-hydroxyacyl-CoA = a (2E)-enoyl-CoA + H2O;
+CC         Xref=Rhea:RHEA:16105, ChEBI:CHEBI:15377, ChEBI:CHEBI:57318,
+CC         ChEBI:CHEBI:58856; EC=4.2.1.17;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a 4-saturated-(3S)-3-hydroxyacyl-CoA = a (3E)-enoyl-CoA + H2O;
+CC         Xref=Rhea:RHEA:20724, ChEBI:CHEBI:15377, ChEBI:CHEBI:58521,
+CC         ChEBI:CHEBI:137480; EC=4.2.1.17;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a (3Z)-enoyl-CoA = a 4-saturated (2E)-enoyl-CoA;
+CC         Xref=Rhea:RHEA:45900, ChEBI:CHEBI:85097, ChEBI:CHEBI:85489;
+CC         EC=5.3.3.8;
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a (3E)-enoyl-CoA = a 4-saturated (2E)-enoyl-CoA;
+CC         Xref=Rhea:RHEA:45228, ChEBI:CHEBI:58521, ChEBI:CHEBI:85097;
+CC         EC=5.3.3.8;
+CC   -!- SIMILARITY: In the N-terminal section; belongs to the 3-hydroxyacyl-CoA
+CC       dehydrogenase family. {ECO:0000305}.
+CC   -!- SIMILARITY: In the C-terminal section; belongs to the enoyl-CoA
+CC       hydratase/isomerase family. {ECO:0000305}.
+DR   EMBL; AJ235272; CAA15008.1; -; Genomic_DNA.
+DR   PIR; F71660; F71660.
+DR   RefSeq; NP_220931.1; NC_000963.1.
+DR   RefSeq; WP_004599039.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZCZ1; -.
+DR   SMR; Q9ZCZ1; -.
+DR   STRING; 272947.gene:17555640; -.
+DR   EnsemblBacteria; CAA15008; CAA15008; CAA15008.
+DR   KEGG; rpr:RP560; -.
+DR   PATRIC; fig|272947.5.peg.573; -.
+DR   eggNOG; COG1024; Bacteria.
+DR   eggNOG; COG1250; Bacteria.
+DR   HOGENOM; CLU_010448_0_0_5; -.
+DR   OrthoDB; 5389341at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   GO; GO:0003857; F:3-hydroxyacyl-CoA dehydrogenase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0004165; F:delta(3)-delta(2)-enoyl-CoA isomerase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0004300; F:enoyl-CoA hydratase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0070403; F:NAD+ binding; IEA:InterPro.
+DR   GO; GO:0009056; P:catabolic process; IEA:UniProtKB-ARBA.
+DR   GO; GO:0006631; P:fatty acid metabolic process; IEA:UniProtKB-KW.
+DR   CDD; cd06558; crotonase-like; 1.
+DR   Gene3D; 1.10.1040.50; -; 1.
+DR   Gene3D; 3.90.226.10; 2-enoyl-CoA Hydratase, Chain A, domain 1; 1.
+DR   Gene3D; 3.40.50.720; NAD(P)-binding Rossmann-like Domain; 1.
+DR   InterPro; IPR006176; 3-OHacyl-CoA_DH_NAD-bd.
+DR   InterPro; IPR006108; 3HC_DH_C.
+DR   InterPro; IPR008927; 6-PGluconate_DH-like_C_sf.
+DR   InterPro; IPR029045; ClpP/crotonase-like_dom_sf.
+DR   InterPro; IPR045004; ECH_dom.
+DR   InterPro; IPR036291; NAD(P)-bd_dom_sf.
+DR   PANTHER; PTHR48075; 3-HYDROXYACYL-COA DEHYDROGENASE FAMILY PROTEIN; 1.
+DR   PANTHER; PTHR48075:SF7; 3-HYDROXYACYL-COA DEHYDROGENASE-RELATED; 1.
+DR   Pfam; PF00725; 3HCDH; 1.
+DR   Pfam; PF02737; 3HCDH_N; 1.
+DR   Pfam; PF16113; ECH_2; 1.
+DR   SUPFAM; SSF48179; 6-phosphogluconate dehydrogenase C-terminal domain-like; 2.
+DR   SUPFAM; SSF52096; ClpP/crotonase; 1.
+DR   SUPFAM; SSF51735; NAD(P)-binding Rossmann-fold domains; 1.
+PE   3: Inferred from homology;
+KW   Fatty acid metabolism; Isomerase; Lipid metabolism; Lyase;
+KW   Multifunctional enzyme; NAD; Oxidoreductase; Reference proteome.
+FT   CHAIN           1..720
+FT                   /note="Putative fatty acid oxidation complex trifunctional
+FT                   enzyme"
+FT                   /id="PRO_0000285698"
+FT   REGION          1..384
+FT                   /note="3-hydroxyacyl-CoA dehydrogenase"
+FT   REGION          453..720
+FT                   /note="Enoyl-CoA hydratase/isomerase"
+SQ   SEQUENCE   720 AA;  81403 MW;  BAEC37A40044234E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	13	Pseudolycoriella
+1	12	Sciaridae
+1	11	Sciaroidea
+1	10	Nematocera
+1	9	Diptera
+1	9	Didymodactylos.
+1	8	typhus group.
+1	8	Philodinidae
+1	8	Endopterygota
+1	7	Rickettsia
+1	7	Philodinida
+1	7	Neoptera
+1	6	Rickettsieae
+1	6	Pterygota
+1	6	Bdelloidea
+1	5	Rickettsiaceae
+1	5	Insecta
+1	5	Eurotatoria
+1	4	Rotifera
+1	4	Rickettsiales
+1	4	Hexapoda
+1	3	Gnathifera
+1	3	Arthropoda
+1	3	Alphaproteobacteria
+1	2	Spiralia
+1	2	Pseudomonadota
+1	2	Ecdysozoa
+2	1	Metazoa
+1	1	Pseudomonadati
+2	0	Eukaryota
+1	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A150AE63	SECRETION SYSTEM C-TERMIN     42.5    2.2e-07   5  10.1   2.0
+	Iterate                   	   443	   467	     6.3
+	Iterate                   	   318	   356	     4.4
+	Iterate                   	   274	   298	     3.8
+	Iterate                   	   612	   636	     3.8
+	Iterate                   	   781	   805	     3.8
+	PF03629	SASA            	  1127	  1372	    99.8
+	PF18962	Por_Secre_tail  	  1562	  1641	    39.4
+
+A0A814KUC6	3-HYDROXYACYL-COA DEHYDRO    112.1    4.2e-29   1   1.9   1.9
+	Iterate                   	   366	   418	   110.5
+	PF02737	3HCDH_N         	     1	   176	   118.1
+	PF00725	3HCDH           	   178	   280	    49.1
+	PF16113	ECH_2           	   434	   609	    35.2
+	PF00378	ECH_1           	   435	   597	    41.5
+
+A0A914ILB1	PDZ DOMAIN-CONTAINING PRO     23.5        0.2   2   2.8   2.3
+	Iterate                   	   431	   465	    11.2
+	Iterate                   	   764	   798	    11.2
+	PF23598	LRR_14          	    56	   182	    52.9
+	PF13855	LRR_8           	   116	   166	    30.4
+	PF13855	LRR_8           	   155	   212	    29.5
+	PF13855	LRR_8           	   177	   235	    27.3
+	PF00595	PDZ             	   507	   591	    51.8
+	PF17820	PDZ_6           	   539	   592	      28
+	PF00595	PDZ             	   839	   920	    45.9
+	PF17820	PDZ_6           	   864	   921	    37.9
+
+A0A9Q0S6A4	PEPTIDYLPROLYL ISOMERASE      67.6    3.3e-15   1   1.9   1.5
+	Iterate                   	   382	   434	    66.1
+	PF02737	3HCDH_N         	     8	   192	   137.4
+	PF00725	3HCDH           	   194	   296	    52.1
+	PF16113	ECH_2           	   450	   591	    40.9
+	PF00378	ECH_1           	   451	   601	    47.8
+	PF00254	FKBP_C          	   683	   768	    27.3
+
+Q9ZCZ1	PUTATIVE FATTY ACID OXIDATION C    113.4    1.7e-29   1   2.2   3.7
+	Iterate                   	   381	   434	   113.4
+	PF02737	3HCDH_N         	     7	   191	   146.5
+	PF00725	3HCDH           	   193	   295	    59.6
+	PF00378	ECH_1           	   451	   597	    36.1
+	PF16113	ECH_2           	   451	   595	      38
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A814KUC6.1	AF-A0A814KUC6-F1-model_v4_TED01:2-174	1	AF-A0A814KUC6-F1-model_v4_TED01	2-174	0
+A0A814KUC6.1	AF-A0A814KUC6-F1-model_v4_TED02:181-407	1	AF-A0A814KUC6-F1-model_v4_TED02	181-407	79.2%
+A0A814KUC6.1	AF-A0A814KUC6-F1-model_v4_TED03:474-691	1	AF-A0A814KUC6-F1-model_v4_TED03	474-691	0
+Q9ZCZ1.1	AF-Q9ZCZ1-F1-model_v4_TED01:8-189	1	AF-Q9ZCZ1-F1-model_v4_TED01	8-189	0
+Q9ZCZ1.1	AF-Q9ZCZ1-F1-model_v4_TED02:196-418	1	AF-Q9ZCZ1-F1-model_v4_TED02	196-418	70.4%
+Q9ZCZ1.1	AF-Q9ZCZ1-F1-model_v4_TED03:430-716	1	AF-Q9ZCZ1-F1-model_v4_TED03	430-716	9.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q92HD2_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.70 100.00;
+NC   26.20 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

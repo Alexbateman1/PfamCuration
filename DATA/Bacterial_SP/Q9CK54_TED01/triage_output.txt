@@ -1,0 +1,76 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1780_PASMU             Reviewed;         108 AA.
+AC   Q9CK54;
+DE   RecName: Full=Uncharacterized protein PM1780;
+GN   OrderedLocusNames=PM1780;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK03864.1; -; Genomic_DNA.
+DR   RefSeq; WP_010907333.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CK54; -.
+DR   STRING; 272843.PM1780; -.
+DR   EnsemblBacteria; AAK03864; AAK03864; PM1780.
+DR   KEGG; pmu:PM1780; -.
+DR   PATRIC; fig|272843.6.peg.1803; -.
+DR   HOGENOM; CLU_2194439_0_0_6; -.
+DR   OrthoDB; 5681087at2; -.
+DR   Proteomes; UP000000809; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..108
+FT                   /note="Uncharacterized protein PM1780"
+FT                   /id="PRO_0000216334"
+SQ   SEQUENCE   108 AA;  12096 MW;  B3A4BB8CA6FD5C90 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pasteurella.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9CK54	UNCHARACTERIZED PROTEIN PM1780    136.5    1.2e-36   1   1.2   0.8
+	Q9CK54_TED01              	     4	    54	   136.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9CK54.1	AF-Q9CK54-F1-model_v4_TED01:4-54	1	AF-Q9CK54-F1-model_v4_TED01	4-54	100.0%
+Q9CK54.1	AF-Q9CK54-F1-model_v4_TED02:58-100	1	AF-Q9CK54-F1-model_v4_TED02	58-100	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CK54_TED01
+GA   27.00 27.00;
+TC   28.80 136.00;
+NC   26.40 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

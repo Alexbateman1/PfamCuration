@@ -1,0 +1,181 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   STEB_SALTY              Reviewed;         133 AA.
+AC   Q8ZPA6;
+DE   RecName: Full=Secreted effector protein SteB;
+DE   AltName: Full=Salmonella translocated effector B;
+GN   Name=steB; OrderedLocusNames=STM1629;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+CC   -!- FUNCTION: Effector proteins function to alter host cell physiology and
+CC       promote bacterial survival in host tissues. {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000250}. Host cytoplasm
+CC       {ECO:0000250}. Note=Secreted via type III secretion systems 1 and 2
+CC       (SPI-1 and SPI-2 T3SS), and delivered into the host cytoplasm.
+CC       {ECO:0000250}.
+DR   EMBL; AE006468; AAL20547.1; -; Genomic_DNA.
+DR   RefSeq; NP_448047.1; NC_003197.2.
+DR   RefSeq; WP_001540100.1; NC_003197.2.
+DR   AlphaFoldDB; Q8ZPA6; -.
+DR   STRING; 99287.STM1629; -.
+DR   PaxDb; 99287-STM1629; -.
+DR   GeneID; 1253147; -.
+DR   KEGG; stm:STM1629; -.
+DR   HOGENOM; CLU_1892472_0_0_6; -.
+DR   OMA; GCKEASR; -.
+DR   BioCyc; SENT99287:STM1629-MONOMER; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0030430; C:host cell cytoplasm; IEA:UniProtKB-SubCell.
+PE   3: Inferred from homology;
+KW   Host cytoplasm; Reference proteome; Secreted; Virulence.
+FT   CHAIN           1..133
+FT                   /note="Secreted effector protein SteB"
+FT                   /id="PRO_0000391637"
+SQ   SEQUENCE   133 AA;  14389 MW;  AB2D74BA1266236A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Salmonella.
+3	6	Microvirgula.
+4	5	Bruguierivoracaceae
+3	5	Morganellaceae
+3	5	Enterobacteriaceae
+3	5	Aquaspirillaceae
+4	4	Neisseriales
+14	4	Enterobacterales
+4	3	Betaproteobacteria
+15	3	Gammaproteobacteria
+20	2	Pseudomonadota
+21	1	Pseudomonadati
+22	0	Bacteria
+Total of 22 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2X4WDW7	DIPICOLINATE REDUCTASE {E    163.8      1e-44   1   1.6   4.6
+	Iterate                   	     2	   136	   162.4
+
+A0A4Z0LDI4	EFFECTOR PROTEIN {ECO:000    265.2    4.2e-76   1   1.0   5.1
+	Iterate                   	     2	   127	   265.0
+
+M1RH33	UNCHARACTERIZED PROTEIN {ECO:     69.9    1.1e-15   1   1.0   0.9
+	Iterate                   	     1	   128	    69.8
+
+Q7NQK3	UNCHARACTERIZED PROTEIN {ECO:     94.3    3.3e-23   1   1.0   0.2
+	Iterate                   	     2	   132	    94.1
+
+Q8ZPA6	SECRETED EFFECTOR PROTEIN STEB     294.9    2.6e-85   1   1.0   4.2
+	Iterate                   	     2	   127	   294.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3656149 (E-value: 6.4e-06, Score: 31.9)
+Mentioned as: SACE_5483
+Description: hypothetical protein
+Organism: Saccharopolyspora erythraea NRRL 2338
+PMID: 22401291
+Source: EuropePMC
+Title: Comparative genomics and transcriptional profiles of Saccharopolyspora erythraea NRRL 2338 and a classically improved erythromycin over-producing strain
+Journal: Microbial cell factories (2012)
+Snippet: 2898) Unknown function SACE_5460 330 Missense (P162F) Unknown function SACE_5482 632 Missense (L509P) Unknown function SACE_5483 11792 Missense (L1329F, T5002A, P8537L, R9518H) Unknown function SACE_5513 566 In frame deletion (S249-, E250-,G251-, T252-,T253-, G254-, G255-, T256-, G257-, G258-, A259-, G260-) Unknown function SACE_5523 5856 Nonsense (L370*) Unknown
+
+================================================================================
+Protein: VIMSS71721 (E-value: 0.0006, Score: 25.5)
+Mentioned as: Z0268
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 20350374
+Source: EuropePMC
+Title: Phylogenetic analysis of enterohemorrhagic Escherichia coli O157, Germany, 1987-2008
+Journal: Emerging infectious diseases (2010)
+Snippet: alleles Null allele frequency, % ID Typeability, % Minimum Maximum 3 Vhec3, TR5 6 + (Z0268) 3 23 22 + 2.0 0.86 98.0 34 Vhec2, TR6 18 + (Z5865) 4 12 8 0.66 100.0 9 Vhec4, TR1 6 + (Z3935/Z3936) 6 23 15 + 31.7 0.90
+
+================================================================================
+Protein: VIMSS71721 (E-value: 0.0006, Score: 25.5)
+Mentioned as: Z0268
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 19329643
+Source: EuropePMC
+Title: Genomic instability in regions adjacent to a highly conserved pch prophage in Escherichia coli O157:H7 generates diversity in expression patterns of the LEE pathogenicity island
+Journal: Journal of bacteriology (2009)
+Snippet: hit No hit No hit No hit No hit Z0165 (hemL) Z0268 to Z2069 (open reading frames in Rhs element) Z0318 (pinH from CP-933H); same as RDOBGS 7 Z196 to Z1204
+
+================================================================================
+Protein: VIMSS71721 (E-value: 0.0006, Score: 25.5)
+Mentioned as: Z0268
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 17506902
+Source: EuropePMC
+Title: Genome evolution in major Escherichia coli O157:H7 lineages
+Journal: BMC genomics (2007)
+Snippet: 211111 Lineage II-LSPA 222222 n = 15 n = 4 n = 12 S-loop#14/OI#7 ECs0237 (Z0268) RhsG core protein with extension 100% 100% 0% S-loop#14/OI#7 ECs0238 (Z0269) hypothetical protein 100% 100% 0% S-loop#14 ECs0239 hypothetical protein 100% 100% 0% S-loop#16 ECs0272 putative transcription antitermination protein 100%
+
+================================================================================
+Protein: VIMSS91706 (E-value: 0.00061, Score: 25.5)
+Mentioned as: ECs0237
+Description: RhsG core protein with extension
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 38461188
+Source: EuropePMC
+Title: Re-analysis of an outbreak of Shiga toxin-producing Escherichia coli O157:H7 associated with raw drinking milk using Nanopore sequencing
+Journal: Scientific reports (2024)
+Snippet: CODING n/a 1 Low coverage at position from Illumina data (FN) 270,579 A G R1168G ECs0237 RhsG core protein with extension 2 Ambiguous alignment at this position from Illumina data (FP) 270,595 C A T1173N ECs0237 RhsG core protein with extension 20 Ambiguous alignment at this
+
+================================================================================
+Protein: VIMSS91706 (E-value: 0.00061, Score: 25.5)
+Mentioned as: ECs0237
+Description: RhsG core protein with extension
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 31433830
+Source: EuropePMC
+Title: Comparison of single-nucleotide variants identified by Illumina and Oxford Nanopore technologies in the context of a potential outbreak of Shiga toxin-producing Escherichia coli
+Journal: GigaScience (2019)
+Snippet: Depth in ONT Variant Locus tag Annotation 1 270,595 C A 46 C 141 A ECs0237 rhsC 2 379,516 A G 114 A 100 G NON CODING N 3 1,681,338 C G 59 C 61 G ECs1685 Alanine racemase 2 4 1,681,339 G C 57 G
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2S0PBR0.1	AF-A0A2S0PBR0-F1-model_v4_TED01:25-93	1	AF-A0A2S0PBR0-F1-model_v4_TED01	25-93	0
+A0A2S0PBR0.1	AF-A0A2S0PBR0-F1-model_v4_TED02:199-338	1	AF-A0A2S0PBR0-F1-model_v4_TED02	199-338	99.2%
+A0A2X4WDW7.1	AF-A0A2X4WDW7-F1-model_v4_TED01:4-41_48-138	1	AF-A0A2X4WDW7-F1-model_v4_TED01	4-138	98.5%
+A0A7S8C2R2.1	AF-A0A7S8C2R2-F1-model_v4_TED01:22-140	1	AF-A0A7S8C2R2-F1-model_v4_TED01	22-140	97.5%
+M1RH33.1	AF-M1RH33-F1-model_v4_TED01:3-130	1	AF-M1RH33-F1-model_v4_TED01	3-130	98.4%
+Q7NQK3.1	AF-Q7NQK3-F1-model_v4_TED01:3-131	1	AF-Q7NQK3-F1-model_v4_TED01	3-131	98.5%
+Q8ZPA6.1	AF-Q8ZPA6-F1-model_v4_TED01:2-128	1	AF-Q8ZPA6-F1-model_v4_TED01	2-128	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:D0ZI38_TED01/Iterate
+GA   27.00 27.00;
+TC   27.00 28.40;
+NC   26.40 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

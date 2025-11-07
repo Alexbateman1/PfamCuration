@@ -1,0 +1,187 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   HOXY_CUPNH              Reviewed;         209 AA.
+AC   P22319;
+DE   RecName: Full=NAD-reducing hydrogenase HoxS subunit delta;
+DE            EC=1.12.1.2;
+GN   Name=hoxY; OrderedLocusNames=PHG090;
+OS   Cupriavidus necator (strain ATCC 17699 / DSM 428 / KCTC 22496 / NCIMB 10442
+OS   / H16 / Stanier 337) (Ralstonia eutropha).
+OG   Plasmid megaplasmid pHG1.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria;
+OC   Burkholderiales; Burkholderiaceae; Cupriavidus.
+OX   NCBI_TaxID=381666;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=2188945; DOI=10.1128/jb.172.6.2920-2929.1990;
+RA   Tran-Betcke A., Warnecke U., Boecker C., Zaborosch C., Friedrich B.;
+RT   "Cloning and nucleotide sequences of the genes for the subunits of NAD-
+RT   reducing hydrogenase of Alcaligenes eutrophus H16.";
+RL   J. Bacteriol. 172:2920-2929(1990).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 17699 / DSM 428 / KCTC 22496 / NCIMB 10442 / H16 / Stanier
+RC   337;
+RX   PubMed=12948488; DOI=10.1016/s0022-2836(03)00894-5;
+RA   Schwartz E., Henne A., Cramm R., Eitinger T., Friedrich B., Gottschalk G.;
+RT   "Complete nucleotide sequence of pHG1: a Ralstonia eutropha H16 megaplasmid
+RT   encoding key enzymes of H(2)-based lithoautotrophy and anaerobiosis.";
+RL   J. Mol. Biol. 332:369-383(2003).
+RN   [3]
+RP   PROTEIN SEQUENCE OF 1-20.
+RX   PubMed=2496982; DOI=10.1111/j.1432-1033.1989.tb14708.x;
+RA   Zaborosch C., Schneider K., Schlegel H.G., Kratzin H.;
+RT   "Comparison of the NH2-terminal amino acid sequences of the four non-
+RT   identical subunits of the NAD-linked hydrogenases from Nocardia opaca 1b
+RT   and Alcaligenes eutrophus H16.";
+RL   Eur. J. Biochem. 181:175-180(1989).
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=H2 + NAD(+) = NADH + H(+); Xref=Rhea:RHEA:24636,
+CC         ChEBI:CHEBI:15378, ChEBI:CHEBI:18276, ChEBI:CHEBI:57540,
+CC         ChEBI:CHEBI:57945; EC=1.12.1.2;
+CC   -!- COFACTOR:
+CC       Name=[4Fe-4S] cluster; Xref=ChEBI:CHEBI:49883;
+CC       Note=Binds 2 [4Fe-4S] clusters.;
+CC   -!- COFACTOR:
+CC       Name=[3Fe-4S] cluster; Xref=ChEBI:CHEBI:21137;
+CC       Note=Binds 1 [3Fe-4S] cluster.;
+CC   -!- COFACTOR:
+CC       Name=[2Fe-2S] cluster; Xref=ChEBI:CHEBI:190135;
+CC       Note=Binds 1 [2Fe-2S] cluster.;
+CC   -!- COFACTOR:
+CC       Name=FMN; Xref=ChEBI:CHEBI:58210;
+CC   -!- COFACTOR:
+CC       Name=Ni(2+); Xref=ChEBI:CHEBI:49786;
+CC   -!- SUBUNIT: Tetramer of an alpha and a gamma subunits (flavin-containing
+CC       dimer), and a delta and a nickel-containing beta subunits (hydrogenase
+CC       dimer).
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm.
+DR   EMBL; M55230; AAC06142.1; -; Genomic_DNA.
+DR   EMBL; AY305378; AAP85843.1; -; Genomic_DNA.
+DR   PIR; C35385; C35385.
+DR   RefSeq; WP_011154012.1; NC_005241.1.
+DR   AlphaFoldDB; P22319; -.
+DR   SMR; P22319; -.
+DR   KEGG; reh:PHG090; -.
+DR   eggNOG; COG1941; Bacteria.
+DR   HOGENOM; CLU_093095_0_0_4; -.
+DR   BioCyc; MetaCyc:HOXYALCA-MONOMER; -.
+DR   BRENDA; 1.12.1.2; 231.
+DR   Proteomes; UP000008210; Plasmid megaplasmid pHG1.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0051537; F:2 iron, 2 sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0051538; F:3 iron, 4 sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0051539; F:4 iron, 4 sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0047985; F:hydrogen dehydrogenase activity; IEA:UniProtKB-EC.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   Gene3D; 3.40.50.700; NADH:ubiquinone oxidoreductase-like, 20kDa subunit; 1.
+DR   InterPro; IPR051349; Hydrogenase_assoc-protein.
+DR   InterPro; IPR006137; NADH_UbQ_OxRdtase-like_20kDa.
+DR   InterPro; IPR037024; NiFe_Hase_small_N_sf.
+DR   PANTHER; PTHR42845; COENZYME F420-REDUCING HYDROGENASE, GAMMA SUBUNIT; 1.
+DR   PANTHER; PTHR42845:SF1; HYDROGENASE SMALL SUBUNIT; 1.
+DR   Pfam; PF01058; Oxidored_q6; 1.
+DR   SUPFAM; SSF56770; HydA/Nqo6-like; 1.
+PE   1: Evidence at protein level;
+KW   2Fe-2S; 3Fe-4S; 4Fe-4S; Cytoplasm; Direct protein sequencing; Iron;
+KW   Iron-sulfur; Metal-binding; NAD; Oxidoreductase; Plasmid;
+KW   Reference proteome.
+FT   CHAIN           1..209
+FT                   /note="NAD-reducing hydrogenase HoxS subunit delta"
+FT                   /id="PRO_0000199734"
+SQ   SEQUENCE   209 AA;  22881 MW;  247505ED38604686 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Mycolicibacterium.
+2	6	Mycobacterium.
+2	6	Cupriavidus.
+4	5	Mycobacteriaceae
+2	5	Burkholderiaceae
+4	4	Mycobacteriales
+2	4	Burkholderiales
+4	3	Actinomycetes
+2	3	Betaproteobacteria
+4	2	Actinomycetota
+2	2	Pseudomonadota
+4	1	Bacillati
+2	1	Pseudomonadati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A317N372	NAD-REDUCING HYDROGENASE      66.0    1.1e-14   1   1.3   5.6
+	Iterate                   	     1	    29	    65.3
+	PF01058	Oxidored_q6     	    41	   193	   100.5
+
+A0A6N4V631	HYDROGENASE {ECO:0000313|     64.7    2.6e-14   1   1.4   4.2
+	Iterate                   	     1	    29	    64.0
+	PF01058	Oxidored_q6     	    41	   193	    96.7
+
+A0A7I7L0Q2	HYDROGENASE {ECO:0000313|     69.5    8.1e-16   1   1.3   2.4
+	Iterate                   	     1	    29	    68.9
+	PF01058	Oxidored_q6     	    41	   193	    94.2
+
+P22319	NAD-REDUCING HYDROGENASE HOXS S     68.0    2.5e-15   1   1.3   5.0
+	Iterate                   	     1	    29	    67.3
+	PF01058	Oxidored_q6     	    41	   193	    99.2
+
+Q1LN69	NAD-REDUCING HYDROGENASE HOXS     66.0    1.1e-14   1   1.3   5.6
+	Iterate                   	     1	    29	    65.3
+	PF01058	Oxidored_q6     	    41	   193	   100.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P22660 (E-value: 1.1e-13, Score: 56.1)
+Mentioned as: P22660
+Description: NAD-reducing hydrogenase HoxS subunit delta (Fragment)
+Organism: Rhodococcus opacus
+PMID: 29677403
+Source: EuropePMC
+Title: INDEL variation in the regulatory region of the major flowering time gene LanFTc1 is associated with vernalization response and flowering time in narrow-leafed lupin (Lupinus angustifolius L.).
+Journal: Plant, cell & environment (2019)
+Snippet: accession that is highly responsive to vernalization; (b) 83A:476, a vernalizationinsensitive Australian breeding line; (c) P22660, a wild Israeli accession with mild sensitivity to vernalization; (d) P29039, a vernalizationinsensitive Belarussian breeding line; and (e) Russian cultivar, Krasnolistny, also insensitive to vernalization. P27255 and 83A:476 are the
+
+================================================================================
+Protein: P22660 (E-value: 1.1e-13, Score: 56.1)
+Mentioned as: P22660
+Description: NAD-reducing hydrogenase HoxS subunit delta (Fragment)
+Organism: Rhodococcus opacus
+PMID: 21819959
+Source: EuropePMC
+Title: Lung gene expression in a rhesus allergic asthma model correlates with physiologic parameters of disease and exhibits common and distinct pathways with human asthma and a mouse asthma model.
+Journal: The American journal of pathology (2011)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1X1TBK9.1	AF-A0A1X1TBK9-F1-model_v4_TED01:23-124_158-205	1	AF-A0A1X1TBK9-F1-model_v4_TED01	23-205	24.1%
+A0A317N372.1	AF-A0A317N372-F1-model_v4_TED01:27-123_160-198	1	AF-A0A317N372-F1-model_v4_TED01	27-198	10.3%
+A0A6N4V631.1	AF-A0A6N4V631-F1-model_v4_TED01:22-125_160-204	1	AF-A0A6N4V631-F1-model_v4_TED01	22-204	27.6%
+A0A7I7L0Q2.1	AF-A0A7I7L0Q2-F1-model_v4_TED01:24-123_160-200	1	AF-A0A7I7L0Q2-F1-model_v4_TED01	24-200	20.7%
+P22319.1	AF-P22319-F1-model_v4_TED01:28-204	1	AF-P22319-F1-model_v4_TED01	28-204	6.9%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P22660/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 54.70;
+NC   23.70 23.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

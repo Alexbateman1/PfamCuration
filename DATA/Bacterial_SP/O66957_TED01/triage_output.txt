@@ -1,0 +1,118 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y755_AQUAE              Reviewed;         242 AA.
+AC   O66957;
+DE   RecName: Full=Uncharacterized protein aq_755;
+GN   OrderedLocusNames=aq_755;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC06923.1; -; Genomic_DNA.
+DR   PIR; B70366; B70366.
+DR   RefSeq; NP_213518.1; NC_000918.1.
+DR   RefSeq; WP_010880456.1; NC_000918.1.
+DR   AlphaFoldDB; O66957; -.
+DR   STRING; 224324.aq_755; -.
+DR   EnsemblBacteria; AAC06923; AAC06923; aq_755.
+DR   KEGG; aae:aq_755; -.
+DR   eggNOG; COG1332; Bacteria.
+DR   HOGENOM; CLU_1145367_0_0_0; -.
+DR   InParanoid; O66957; -.
+DR   OrthoDB; 9779564at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..242
+FT                   /note="Uncharacterized protein aq_755"
+FT                   /id="PRO_0000186877"
+SQ   SEQUENCE   242 AA;  28618 MW;  CE2C25680D721E93 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thermodesulfatator.
+1	6	Oceanithermus
+1	6	Nitratifractor.
+1	6	Desulfurobacterium.
+1	6	Aquifex
+1	5	Thermosulfidibacteraceae.
+1	5	Thermodesulfatatoraceae
+1	5	Thermaceae
+1	5	Sulfurovaceae
+1	5	Desulfurobacteriaceae
+1	5	Aquificaceae
+1	4	Thermosulfidibacterales
+1	4	Thermodesulfobacteriales
+1	4	Thermales
+1	4	Desulfurobacteriales
+1	4	Campylobacterales
+1	4	Aquificales
+2	3	Aquificia
+1	3	Thermosulfidibacteria
+1	3	Thermodesulfobacteria
+1	3	Epsilonproteobacteria
+1	3	Deinococci
+2	2	Aquificota
+1	2	Thermosulfidibacterota
+1	2	Thermodesulfobacteriota
+1	2	Deinococcota
+1	2	Campylobacterota
+5	1	Pseudomonadati
+1	1	Thermotogati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0S3QRJ2	UNCHARACTERIZED PROTEIN {    205.3    5.4e-57   1   1.0   1.7
+	O66957_TED01              	     3	   239	   205.1
+
+A0A1R1MMJ8	UNCHARACTERIZED PROTEIN {    192.9    3.3e-53   1   1.0   7.7
+	O66957_TED01              	     3	   239	   192.7
+
+E4U5W6	UNCHARACTERIZED PROTEIN {ECO:     52.7    2.2e-10   1   1.4   0.0
+	O66957_TED01              	     4	   241	    51.8
+
+E6X0V8	UNCHARACTERIZED PROTEIN {ECO:    138.6    1.2e-36   1   1.0   0.1
+	O66957_TED01              	     2	   240	   138.4
+
+F8A8A6	UNCHARACTERIZED PROTEIN {ECO:    114.5    2.8e-29   1   1.0   0.0
+	O66957_TED01              	     5	   238	   114.3
+
+O66957	UNCHARACTERIZED PROTEIN AQ_755     553.9   1.7e-163   1   1.0  11.1
+	O66957_TED01              	     3	   240	   553.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O66957.1	AF-O66957-F1-model_v4_TED01:3-240	1	AF-O66957-F1-model_v4_TED01	3-240	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66957_TED01
+GA   27.00 27.00;
+TC   52.70 51.80;
+NC   25.00 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

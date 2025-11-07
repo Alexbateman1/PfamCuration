@@ -1,0 +1,117 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y4206_ALKPO             Reviewed;          55 AA.
+AC   Q45132; D3G1H6;
+DE   RecName: Full=Uncharacterized protein BpOF4_21034;
+GN   OrderedLocusNames=BpOF4_21034;
+OS   Alkalihalophilus pseudofirmus (strain ATCC BAA-2126 / JCM 17055 / OF4)
+OS   (Bacillus pseudofirmus).
+OG   Plasmid pBpOF4-01.
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae;
+OC   Alkalihalophilus.
+OX   NCBI_TaxID=398511;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=8626304; DOI=10.1128/jb.178.6.1742-1749.1996;
+RA   Sturr M.G., Krulwich T.A., Hicks D.B.;
+RT   "Purification of a cytochrome bd terminal oxidase encoded by the
+RT   Escherichia coli app locus from a delta cyo delta cyd strain complemented
+RT   by genes from Bacillus firmus OF4.";
+RL   J. Bacteriol. 178:1742-1749(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-2126 / JCM 17055 / OF4; PLASMID=pBpOF4-01;
+RX   PubMed=21951522; DOI=10.1111/j.1462-2920.2011.02591.x;
+RA   Janto B., Ahmed A., Ito M., Liu J., Hicks D.B., Pagni S., Fackelmayer O.J.,
+RA   Smith T.A., Earl J., Elbourne L.D., Hassan K., Paulsen I.T., Kolsto A.B.,
+RA   Tourasse N.J., Ehrlich G.D., Boissy R., Ivey D.M., Li G., Xue Y., Ma Y.,
+RA   Hu F.Z., Krulwich T.A.;
+RT   "Genome of alkaliphilic Bacillus pseudofirmus OF4 reveals adaptations that
+RT   support the ability to grow in an external pH range from 7.5 to 11.4.";
+RL   Environ. Microbiol. 13:3289-3309(2011).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAB05372.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U39410; AAB05372.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; CP001879; ADC52202.1; -; Genomic_DNA.
+DR   RefSeq; WP_012961111.1; NC_013792.1.
+DR   AlphaFoldDB; Q45132; -.
+DR   KEGG; bpf:BpOF4_21034; -.
+DR   HOGENOM; CLU_3022468_0_0_9; -.
+DR   Proteomes; UP000001544; Plasmid pBpOF4-01.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Plasmid; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..55
+FT                   /note="Uncharacterized protein BpOF4_21034"
+FT                   /id="PRO_0000066242"
+FT   TRANSMEM        2..19
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        24..46
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   CONFLICT        49..55
+FT                   /note="KNAISNN -> GKMQLVIIKLFLVLTGAFL (in Ref. 1;
+FT                   AAB05372)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   55 AA;  6221 MW;  3487962D594F372C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Halalkalibacter
+1	6	Alkalihalophilus
+2	5	Bacillaceae
+2	4	Bacillales
+2	3	Bacilli
+2	2	Bacillota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1X9MI94	UNCHARACTERIZED PROTEIN {     37.5    7.3e-06   1   1.6   1.3
+	Iterate                   	    18	    51	    37.5
+
+A0AAD5RVN2	BACTERIAL LOW TEMPERATURE     23.6       0.17   1   1.7   0.6
+	Iterate                   	   415	   447	    22.2
+	PF06772	LtrA            	   269	   677	   150.9
+
+A0AAE0XNW6	UNCHARACTERIZED PROTEIN {     23.6       0.17   0   5.7   0.0
+
+A0AAE3XLV5	ZN-DEPENDENT PROTEASE WIT     22.0       0.54   1   1.8   0.1
+	Iterate                   	    51	    90	    20.6
+	PF01435	Peptidase_M48   	    97	   365	    43.3
+
+Q45132	UNCHARACTERIZED PROTEIN BPOF4_     98.7    4.8e-25   1   1.6   8.0
+	Iterate                   	    18	    55	    98.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1X9MI94.1	AF-A0A1X9MI94-F1-model_v4_TED01:3-51	1	AF-A0A1X9MI94-F1-model_v4_TED01	3-51	100.0%
+Q45132.2	AF-Q45132-F1-model_v4_TED01:18-55	1	AF-Q45132-F1-model_v4_TED01	18-55	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q45132_TED01/Iterate
+GA   27.00 27.00;
+TC   34.40 73.60;
+NC   24.50 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

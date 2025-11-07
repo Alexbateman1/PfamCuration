@@ -1,0 +1,281 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   CHPEP_HELPY             Reviewed;         505 AA.
+AC   O25089;
+DE   RecName: Full=Chemotaxis regulatory protein ChePep {ECO:0000303|PubMed:21791582};
+GN   Name=chePep {ECO:0000303|PubMed:21791582}; OrderedLocusNames=HP_0322;
+OS   Helicobacter pylori (strain ATCC 700392 / 26695) (Campylobacter pylori).
+OC   Bacteria; Pseudomonadati; Campylobacterota; Epsilonproteobacteria;
+OC   Campylobacterales; Helicobacteraceae; Helicobacter.
+OX   NCBI_TaxID=85962;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700392 / 26695;
+RX   PubMed=9252185; DOI=10.1038/41483;
+RA   Tomb J.-F., White O., Kerlavage A.R., Clayton R.A., Sutton G.G.,
+RA   Fleischmann R.D., Ketchum K.A., Klenk H.-P., Gill S.R., Dougherty B.A.,
+RA   Nelson K.E., Quackenbush J., Zhou L., Kirkness E.F., Peterson S.N.,
+RA   Loftus B.J., Richardson D.L., Dodson R.J., Khalak H.G., Glodek A.,
+RA   McKenney K., FitzGerald L.M., Lee N., Adams M.D., Hickey E.K., Berg D.E.,
+RA   Gocayne J.D., Utterback T.R., Peterson J.D., Kelley J.M., Cotton M.D.,
+RA   Weidman J.F., Fujii C., Bowman C., Watthey L., Wallin E., Hayes W.S.,
+RA   Borodovsky M., Karp P.D., Smith H.O., Fraser C.M., Venter J.C.;
+RT   "The complete genome sequence of the gastric pathogen Helicobacter
+RT   pylori.";
+RL   Nature 388:539-547(1997).
+RN   [2]
+RP   FUNCTION, DISRUPTION PHENOTYPE, AND SUBCELLULAR LOCATION.
+RX   PubMed=21791582; DOI=10.1128/mbio.00098-11;
+RA   Howitt M.R., Lee J.Y., Lertsethtakarn P., Vogelmann R., Joubert L.M.,
+RA   Ottemann K.M., Amieva M.R.;
+RT   "ChePep controls Helicobacter pylori Infection of the gastric glands and
+RT   chemotaxis in the Epsilonproteobacteria.";
+RL   MBio 2:0-0(2011).
+RN   [3]
+RP   FUNCTION, SUBCELLULAR LOCATION, AND INTERACTION WITH CHEZ.
+RC   STRAIN=G27;
+RX   PubMed=26061894; DOI=10.1111/mmi.13086;
+RA   Lertsethtakarn P., Howitt M.R., Castellon J., Amieva M.R., Ottemann K.M.;
+RT   "Helicobacter pylori CheZ(HP) and ChePep form a novel chemotaxis-regulatory
+RT   complex distinct from the core chemotaxis signaling proteins and the
+RT   flagellar motor.";
+RL   Mol. Microbiol. 97:1063-1078(2015).
+CC   -!- FUNCTION: Plays an essential role in chemotaxis. Regulates flagellar
+CC       rotation through the formation of a complex with chemotaxis protein
+CC       CheZ (PubMed:21791582, PubMed:26061894). Plays a major role in
+CC       colonization of the stomach (PubMed:21791582).
+CC       {ECO:0000269|PubMed:21791582, ECO:0000269|PubMed:26061894}.
+CC   -!- SUBUNIT: Interacts with CheZ; the interaction is essential for each
+CC       other polar localization. {ECO:0000269|PubMed:26061894}.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:21791582,
+CC       ECO:0000269|PubMed:26061894}. Note=Localizes to the cell poles.
+CC       {ECO:0000269|PubMed:26061894}.
+CC   -!- DISRUPTION PHENOTYPE: Deletion mutants cannot control the rotation of
+CC       their flagella and swim with abnormally frequent reversals.
+CC       {ECO:0000269|PubMed:21791582}.
+DR   EMBL; AE000511; AAD07390.1; -; Genomic_DNA.
+DR   PIR; B64560; B64560.
+DR   RefSeq; NP_207120.1; NC_000915.1.
+DR   RefSeq; WP_000782061.1; NC_018939.1.
+DR   AlphaFoldDB; O25089; -.
+DR   SMR; O25089; -.
+DR   IntAct; O25089; 1.
+DR   STRING; 85962.HP_0322; -.
+DR   PaxDb; 85962-C694_01630; -.
+DR   EnsemblBacteria; AAD07390; AAD07390; HP_0322.
+DR   KEGG; heo:C694_01630; -.
+DR   KEGG; hpy:HP_0322; -.
+DR   PATRIC; fig|85962.47.peg.344; -.
+DR   InParanoid; O25089; -.
+DR   OrthoDB; 5324656at2; -.
+DR   Proteomes; UP000000429; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   InterPro; IPR049800; Chtaxis_ChePep.
+DR   NCBIfam; NF041272; Chtaxis_ChePep; 1.
+PE   1: Evidence at protein level;
+KW   Cytoplasm; Reference proteome.
+FT   CHAIN           1..505
+FT                   /note="Chemotaxis regulatory protein ChePep"
+FT                   /id="PRO_0000448753"
+FT   REGION          154..403
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          420..465
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        172..263
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        289..311
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        337..346
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        359..373
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        386..398
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        440..451
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   505 AA;  58469 MW;  B7633BA416820C70 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	6	Helicobacter.
+9	5	Helicobacteraceae
+10	4	Campylobacterales
+10	3	Epsilonproteobacteria
+10	2	Campylobacterota
+10	1	Pseudomonadati
+10	0	Bacteria
+Total of 10 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A099TYC3	POLY E-RICH PROTEIN {ECO:     36.6    2.6e-05   1   2.3   2.4
+	O25089_TED01              	     1	    99	    34.5
+
+A0A347VPP3	POLY E-RICH PROTEIN {ECO:     38.1      9e-06   1   2.5   0.5
+	O25089_TED01              	     4	   102	    35.6
+
+A0A3D8IQV9	POLY E-RICH PROTEIN {ECO:     31.1     0.0013   1   3.9   0.5
+	O25089_TED01              	     1	    99	    31.1
+
+A0A5P8NYJ7	DNA TOPOISOMERASE IV {ECO     29.5     0.0042   1   3.0   0.4
+	O25089_TED01              	     1	    98	    29.5
+
+A0A6P4YKT9	LOW QUALITY PROTEIN: UNCH     29.2      0.005   5   5.9   0.0
+	O25089_TED01              	  1344	  1406	     4.5
+	O25089_TED01              	  1818	  1880	     4.5
+	O25089_TED01              	  1028	  1090	     3.6
+	O25089_TED01              	  1501	  1563	     3.6
+	O25089_TED01              	  1659	  1721	     3.6
+	PF00754	F5_F8_type_C    	    35	   160	    44.8
+	PF22633	F5_F8_type_C_2  	    49	   146	    80.8
+	PF00754	F5_F8_type_C    	   188	   313	    44.8
+	PF22633	F5_F8_type_C_2  	   202	   299	    80.8
+	PF00754	F5_F8_type_C    	   346	   475	    47.8
+	PF22633	F5_F8_type_C_2  	   363	   459	      44
+	PF00754	F5_F8_type_C    	   510	   634	      40
+	PF22633	F5_F8_type_C_2  	   524	   621	    73.1
+	PF00754	F5_F8_type_C    	   678	   806	    42.7
+	PF22633	F5_F8_type_C_2  	   694	   790	    39.7
+	PF00754	F5_F8_type_C    	   852	   977	      37
+	PF22633	F5_F8_type_C_2  	   866	   963	    64.9
+	PF00754	F5_F8_type_C    	  1010	  1135	    35.9
+	PF22633	F5_F8_type_C_2  	  1024	  1121	    63.6
+	PF00754	F5_F8_type_C    	  1162	  1291	    36.1
+	PF22633	F5_F8_type_C_2  	  1179	  1275	    36.2
+	PF00754	F5_F8_type_C    	  1325	  1450	    35.4
+	PF22633	F5_F8_type_C_2  	  1339	  1436	    62.8
+	PF00754	F5_F8_type_C    	  1483	  1608	    36.4
+	PF22633	F5_F8_type_C_2  	  1497	  1594	    63.2
+	PF00754	F5_F8_type_C    	  1641	  1766	    36.8
+	PF22633	F5_F8_type_C_2  	  1655	  1752	    63.8
+	PF00754	F5_F8_type_C    	  1799	  1924	    36.5
+	PF22633	F5_F8_type_C_2  	  1813	  1910	    62.8
+	PF00008	EGF             	  1957	  1987	    28.7
+	PF12661	hEGF            	  1962	  1983	    24.2
+	PF00008	EGF             	  1995	  2025	    30.7
+	PF12661	hEGF            	  2000	  2021	    27.1
+	PF00008	EGF             	  2033	  2063	    30.9
+	PF12661	hEGF            	  2038	  2059	    27.3
+	PF00008	EGF             	  2071	  2101	    30.7
+	PF12661	hEGF            	  2076	  2097	    27.1
+	PF00008	EGF             	  2109	  2139	    30.4
+	PF12661	hEGF            	  2114	  2135	    27.4
+	PF00008	EGF             	  2147	  2177	    31.1
+	PF12661	hEGF            	  2152	  2173	    27.1
+	PF00008	EGF             	  2185	  2215	    31.3
+	PF12661	hEGF            	  2190	  2211	    27.3
+
+A0AAD7T4J5	UNCHARACTERIZED PROTEIN {     34.7    9.8e-05   5   5.4   6.6
+	O25089_TED01              	    90	   158	     7.3
+	O25089_TED01              	   368	   448	     7.3
+	O25089_TED01              	   206	   270	     7.1
+	O25089_TED01              	   458	   522	     6.4
+	O25089_TED01              	     2	    54	     5.5
+	PF04505	CD225           	   557	   623	      42
+
+B5ZA89	POLYE-RICH PROTEIN {ECO:00003    218.2    9.6e-62   1   3.0   6.6
+	O25089_TED01              	     1	   109	   218.2
+
+C3XGN9	HIGHLY ACIDIC PROTEIN {ECO:00     33.6    0.00021   1   3.4   1.4
+	O25089_TED01              	    39	   137	    33.6
+
+F8KTC4	MJ0042 FAMILY FINGER-LIKE PRO     40.0    2.3e-06   1   2.0   0.1
+	O25089_TED01              	     1	   103	    38.1
+
+O25089	CHEMOTAXIS REGULATORY PROTEIN     242.4    2.7e-69   1   3.3   5.4
+	O25089_TED01              	     1	   109	   242.4
+
+V8CGW1	POLY E-RICH PROTEIN {ECO:0008     30.1     0.0026   1   2.4   1.1
+	O25089_TED01              	     1	    99	    28.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: O25089 (E-value: 2.4e-71, Score: 242.4)
+Mentioned as: O25089
+Description: Chemotaxis regulatory protein ChePep
+Organism: Helicobacter pylori (strain ATCC 700392 / 26695)
+  SwissProt:  - Chemotaxis regulatory protein ChePep
+PMID: 35036696
+Source: EuropePMC
+Title: Outer Membrane Vesicles Secreted by <i>Helicobacter pylori</i> Transmitting Gastric Pathogenic Virulence Factors
+Journal: ACS omega (2022)
+Snippet: O25067 amiE 119 P56060 kdsA 120 O25658 HdhA 121 O25936 fbp 122 P55982 nrdA 123 O25089 HP_0322 124 P66928 trxA 125 P56047 rplV 126 O24990 fabI 127 P0A0R3 groS 128 O26104 FlgG 129 O25560 hypB 130 O25571 Omp21 131 O25873 HP_1286 132 P56078 rplY 133 O25608
+
+================================================================================
+Protein: O25089 (E-value: 2.4e-71, Score: 242.4)
+Mentioned as: CHPEP_HELPY
+Description: Chemotaxis regulatory protein ChePep
+Organism: Helicobacter pylori (strain ATCC 700392 / 26695)
+  SwissProt:  - Chemotaxis regulatory protein ChePep
+PMID: 21791582
+Source: SwissProt
+Snippet: FUNCTION: Plays an essential role in chemotaxis. Regulates flagellar rotation through the formation of a complex with chemotaxis protein CheZ (PubMed:21791582, PubMed:26061894). Plays a major role in colonization of the stomach (PubMed:21791582). {ECO:0000269|PubMed:21791582, ECO:0000269|PubMed:26061894}._:::_SUBUNIT: Interacts with CheZ; the interaction is essential for each other polar localization. {ECO:0000269|PubMed:26061894}._:::_SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:21791582...
+
+================================================================================
+Protein: O25089 (E-value: 2.4e-71, Score: 242.4)
+Mentioned as: CHPEP_HELPY
+Description: Chemotaxis regulatory protein ChePep
+Organism: Helicobacter pylori (strain ATCC 700392 / 26695)
+  SwissProt:  - Chemotaxis regulatory protein ChePep
+PMID: 26061894
+Source: SwissProt
+Snippet: FUNCTION: Plays an essential role in chemotaxis. Regulates flagellar rotation through the formation of a complex with chemotaxis protein CheZ (PubMed:21791582, PubMed:26061894). Plays a major role in colonization of the stomach (PubMed:21791582). {ECO:0000269|PubMed:21791582, ECO:0000269|PubMed:26061894}._:::_SUBUNIT: Interacts with CheZ; the interaction is essential for each other polar localization. {ECO:0000269|PubMed:26061894}._:::_SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:21791582...
+
+================================================================================
+Protein: VIMSS27161 (E-value: 2.2e-66, Score: 226.5)
+Mentioned as: jhp0305
+Description: putative
+Organism: Helicobacter pylori J99
+PMID: 15676066
+Source: EuropePMC
+Title: Inter-species horizontal transfer resulting in core-genome and niche-adaptive variation within Helicobacter pylori
+Journal: BMC genomics (2005)
+Snippet: HP0609/10 4/13 5 4 4 JHP0274 vacuolating cytotoxin (vacA) paralog HP0289 2 6 5 5 JHP0305 hypothetical protein HP0322 3 8 10 6 JHP0942 hypothetical protein HP0996 5 13 27 7 JHP0856 vacuolating cytotoxin (vacA) paralog HP0922 6 9 6 8 JHP0050 hypothetical protein HP0058 88
+
+================================================================================
+Protein: VIMSS27161 (E-value: 2.2e-66, Score: 226.5)
+Mentioned as: jhp0305
+Description: putative
+Organism: Helicobacter pylori J99
+PMID: 15576679
+Source: EuropePMC
+Title: Identification of genes with fast-evolving regions in microbial genomes
+Journal: Nucleic acids research (2004)
+Snippet: jhp1032 jhp1364 jhp1008 jhp1326 jhp0058 jhp0856 jhp0052 jhp0305 jhp0021 jhp1272 jhp0476 jhp1330 jhp0941 jhp0029 jhp0274 jhp1164 jhp0458 jhp1431 jhp0786 jhp1070
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O25089.1	AF-O25089-F1-model_v4_TED01:1-109	1	AF-O25089-F1-model_v4_TED01	1-109	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O25089_TED01
+GA   27.00 27.00;
+TC   27.00 28.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

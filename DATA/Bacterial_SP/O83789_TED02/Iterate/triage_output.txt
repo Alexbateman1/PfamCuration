@@ -1,0 +1,115 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y813_TREPA              Reviewed;         428 AA.
+AC   O83789;
+DE   RecName: Full=Uncharacterized protein TP_0813;
+GN   OrderedLocusNames=TP_0813;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65785.1; -; Genomic_DNA.
+DR   PIR; B71278; B71278.
+DR   RefSeq; WP_010882257.1; NC_000919.1.
+DR   AlphaFoldDB; O83789; -.
+DR   IntAct; O83789; 4.
+DR   EnsemblBacteria; AAC65785; AAC65785; TP_0813.
+DR   KEGG; tpa:TP_0813; -.
+DR   eggNOG; ENOG503391B; Bacteria.
+DR   HOGENOM; CLU_052664_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..428
+FT                   /note="Uncharacterized protein TP_0813"
+FT                   /id="PRO_0000202332"
+SQ   SEQUENCE   428 AA;  48023 MW;  CB6487DCAF145D78 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+17	6	Treponema.
+4	5	Spirochaetaceae
+4	5	Breznakiellaceae
+18	5	Treponemataceae
+27	4	Spirochaetales
+27	3	Spirochaetia
+27	2	Spirochaetota
+28	1	Pseudomonadati
+28	0	Bacteria
+Total of 28 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GQI1	UNCHARACTERIZED PROTEIN {    153.3    2.7e-41   1   1.5   0.0
+	Iterate                   	   192	   342	   152.2
+	PF27435	TP_0813_N       	    24	   191	   215.4
+
+A0AAE3JHA3	UNCHARACTERIZED PROTEIN {    126.6    4.3e-33   1   1.7   0.1
+	Iterate                   	   192	   343	   125.0
+	PF27435	TP_0813_N       	    24	   191	   215.6
+
+F4LIC8	UNCHARACTERIZED PROTEIN {ECO:    123.7    3.4e-32   1   1.7   0.3
+	Iterate                   	   202	   354	   122.2
+	PF27435	TP_0813_N       	    34	   201	   218.5
+
+O83789	UNCHARACTERIZED PROTEIN TP_0813    375.2   1.5e-109   1   1.7   1.0
+	Iterate                   	   176	   337	   375.2
+	PF27435	TP_0813_N       	    16	   175	     153
+
+S3LAT2	UNCHARACTERIZED PROTEIN {ECO:    143.2    3.4e-38   1   2.7   0.6
+	Iterate                   	   192	   341	   138.8
+	PF27435	TP_0813_N       	    24	   191	   205.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26630 (E-value: 1.3e-111, Score: 375.2)
+Mentioned as: TP0813
+Description: T. pallidum predicted coding region TP0813
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 40604007
+Source: EuropePMC
+Title: High quality transcriptome profiling confirms the transcriptional landscape of Treponema pallidum subsp. pallidum
+Journal: Scientific reports (2025)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83789.1	AF-O83789-F1-model_v4_TED01:16-175	1	AF-O83789-F1-model_v4_TED01	16-175	0
+O83789.1	AF-O83789-F1-model_v4_TED02:176-337	1	AF-O83789-F1-model_v4_TED02	176-337	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83789_TED02/Iterate
+GA   27.00 27.00;
+TC   28.50 37.50;
+NC   23.30 18.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

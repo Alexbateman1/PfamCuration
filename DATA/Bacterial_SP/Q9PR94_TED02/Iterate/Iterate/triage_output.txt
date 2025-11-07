@@ -1,0 +1,139 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y051_UREPA              Reviewed;         170 AA.
+AC   Q9PR94;
+DE   RecName: Full=Uncharacterized protein UU051;
+GN   OrderedLocusNames=UU051;
+OS   Ureaplasma parvum serovar 3 (strain ATCC 700970).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Ureaplasma.
+OX   NCBI_TaxID=273119;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700970;
+RX   PubMed=11048724; DOI=10.1038/35037619;
+RA   Glass J.I., Lefkowitz E.J., Glass J.S., Heiner C.R., Chen E.Y.,
+RA   Cassell G.H.;
+RT   "The complete sequence of the mucosal pathogen Ureaplasma urealyticum.";
+RL   Nature 407:757-762(2000).
+DR   EMBL; AF222894; AAF30456.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q9PR94; -.
+DR   STRING; 273119.UU051; -.
+DR   EnsemblBacteria; AAF30456; AAF30456; UU051.
+DR   KEGG; uur:UU051; -.
+DR   eggNOG; ENOG5034AM4; Bacteria.
+DR   HOGENOM; CLU_130375_0_0_14; -.
+DR   Proteomes; UP000000423; Chromosome.
+DR   NCBIfam; NF045935; MSC_0621_epsi; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..170
+FT                   /note="Uncharacterized protein UU051"
+FT                   /id="PRO_0000220793"
+SQ   SEQUENCE   170 AA;  20287 MW;  B01153D6A9A40F13 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	5	Mycoplasma
+11	5	Mycoplasmopsis.
+11	5	Metamycoplasma.
+5	4	Mycoplasmataceae
+22	4	Metamycoplasmataceae
+5	3	Mollicutes
+24	3	Mycoplasmoidales
+29	2	Mycoplasmatota
+29	1	Bacillati
+29	0	Bacteria
+Total of 29 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A3Q9V9J6	DUF402 DOMAIN-CONTAINING      97.6    1.8e-24   1   1.8   5.9
+	Iterate                   	   103	   153	    97.6
+	PF27304	UU051_N         	    11	    91	      96
+
+A0A7R9GQQ2	UNCHARACTERIZED PROTEIN {     57.2    7.3e-12   1   1.7   2.5
+	Iterate                   	   103	   155	    57.2
+	PF27304	UU051_N         	    13	    93	    87.8
+
+A0AAE0SJF4	UNCHARACTERIZED PROTEIN {     57.7    5.1e-12   0  16.0   1.1
+
+A5IY80	UNCHARACTERIZED PROTEIN {ECO:     87.0    3.6e-21   1   1.7   7.5
+	Iterate                   	    99	   146	    85.6
+	PF27304	UU051_N         	     7	    87	    89.9
+
+Q9PR94	UNCHARACTERIZED PROTEIN UU051       93.3    3.7e-23   1   2.0   8.7
+	Iterate                   	   108	   165	    93.3
+	PF27304	UU051_N         	    17	    97	    85.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS45388 (E-value: 3.1e-17, Score: 67.5)
+Mentioned as: UU051
+Description: unique hypothetical
+Organism: Ureaplasma parvum serovar 3 str. ATCC 700970
+PMID: 19816563
+Source: EuropePMC
+Title: Life on arginine for Mycoplasma hominis: clues from its minimal genome and comparison with other human urogenital mycoplasmas
+Journal: PLoS genetics (2009)
+Snippet: hypothetical protein UU052 U. parvum 69 46 3 TMB b predicted MHO_3150 Conserved hypothetical protein UU051 U. parvum 68 57 MHO_3160 Conserved hypothetical protein UU050 U. parvum 82 69 MHO_3170 Conserved hypothetical protein UU049 U. parvum 69 61 MHO_3180 Conserved hypothetical protein UU048 U. parvum 72
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A059XQQ3.1	AF-A0A059XQQ3-F1-model_v4_TED01:6-89	1	AF-A0A059XQQ3-F1-model_v4_TED01	6-89	0
+A0A059XQQ3.1	AF-A0A059XQQ3-F1-model_v4_TED02:98-147	1	AF-A0A059XQQ3-F1-model_v4_TED02	98-147	92.2%
+A0A2Z5IQR9.1	AF-A0A2Z5IQR9-F1-model_v4_TED01:7-87	1	AF-A0A2Z5IQR9-F1-model_v4_TED01	7-87	0
+A0A2Z5IQR9.1	AF-A0A2Z5IQR9-F1-model_v4_TED02:99-147	1	AF-A0A2Z5IQR9-F1-model_v4_TED02	99-147	96.1%
+A0A3Q9V9J6.1	AF-A0A3Q9V9J6-F1-model_v4_TED01:11-92	1	AF-A0A3Q9V9J6-F1-model_v4_TED01	11-92	0
+A0A3Q9V9J6.1	AF-A0A3Q9V9J6-F1-model_v4_TED02:93-158	1	AF-A0A3Q9V9J6-F1-model_v4_TED02	93-158	100.0%
+A0A448ZVM5.1	AF-A0A448ZVM5-F1-model_v4_TED01:7-92	1	AF-A0A448ZVM5-F1-model_v4_TED01	7-92	0
+A0A448ZVM5.1	AF-A0A448ZVM5-F1-model_v4_TED02:99-149	1	AF-A0A448ZVM5-F1-model_v4_TED02	99-149	100.0%
+A0A4P6MRZ2.1	AF-A0A4P6MRZ2-F1-model_v4_TED01:7-86	1	AF-A0A4P6MRZ2-F1-model_v4_TED01	7-86	0
+A0A4P6MRZ2.1	AF-A0A4P6MRZ2-F1-model_v4_TED02:98-147	1	AF-A0A4P6MRZ2-F1-model_v4_TED02	98-147	92.2%
+A0A6H2DTT8.1	AF-A0A6H2DTT8-F1-model_v4_TED01:8-89	1	AF-A0A6H2DTT8-F1-model_v4_TED01	8-89	0
+A0A6H2DTT8.1	AF-A0A6H2DTT8-F1-model_v4_TED02:101-151	1	AF-A0A6H2DTT8-F1-model_v4_TED02	101-151	100.0%
+A0A6H2DV51.1	AF-A0A6H2DV51-F1-model_v4_TED01:7-91	1	AF-A0A6H2DV51-F1-model_v4_TED01	7-91	0
+A0A6H2DV51.1	AF-A0A6H2DV51-F1-model_v4_TED02:101-151	1	AF-A0A6H2DV51-F1-model_v4_TED02	101-151	100.0%
+A0A6M4JB18.1	AF-A0A6M4JB18-F1-model_v4_TED01:8-91	1	AF-A0A6M4JB18-F1-model_v4_TED01	8-91	0
+A0A6M4JB18.1	AF-A0A6M4JB18-F1-model_v4_TED02:100-149	1	AF-A0A6M4JB18-F1-model_v4_TED02	100-149	92.2%
+A0A6M4JC66.1	AF-A0A6M4JC66-F1-model_v4_TED01:9-89	1	AF-A0A6M4JC66-F1-model_v4_TED01	9-89	0
+A0A6M4JC66.1	AF-A0A6M4JC66-F1-model_v4_TED02:100-150	1	AF-A0A6M4JC66-F1-model_v4_TED02	100-150	92.2%
+A5IY80.1	AF-A5IY80-F1-model_v4_TED01:7-88	1	AF-A5IY80-F1-model_v4_TED01	7-88	0
+A5IY80.1	AF-A5IY80-F1-model_v4_TED02:99-149	1	AF-A5IY80-F1-model_v4_TED02	99-149	100.0%
+B3PMA7.1	AF-B3PMA7-F1-model_v4_TED01:11-95	1	AF-B3PMA7-F1-model_v4_TED01	11-95	0
+B3PMA7.1	AF-B3PMA7-F1-model_v4_TED02:106-159	1	AF-B3PMA7-F1-model_v4_TED02	106-159	100.0%
+D1J8A3.1	AF-D1J8A3-F1-model_v4_TED01:11-92	1	AF-D1J8A3-F1-model_v4_TED01	11-92	0
+D1J8A3.1	AF-D1J8A3-F1-model_v4_TED02:104-149	1	AF-D1J8A3-F1-model_v4_TED02	104-149	90.2%
+M9W9Y9.1	AF-M9W9Y9-F1-model_v4_TED01:8-94	1	AF-M9W9Y9-F1-model_v4_TED01	8-94	0
+M9W9Y9.1	AF-M9W9Y9-F1-model_v4_TED02:101-145	1	AF-M9W9Y9-F1-model_v4_TED02	101-145	88.2%
+N9TSH2.1	AF-N9TSH2-F1-model_v4_TED01:7-87	1	AF-N9TSH2-F1-model_v4_TED01	7-87	0
+N9TSH2.1	AF-N9TSH2-F1-model_v4_TED02:100-147	1	AF-N9TSH2-F1-model_v4_TED02	100-147	90.2%
+Q6MSZ5.1	AF-Q6MSZ5-F1-model_v4_TED01:2-87	1	AF-Q6MSZ5-F1-model_v4_TED01	2-87	0
+Q6MSZ5.1	AF-Q6MSZ5-F1-model_v4_TED02:95-145	1	AF-Q6MSZ5-F1-model_v4_TED02	95-145	96.1%
+Q9PR94.1	AF-Q9PR94-F1-model_v4_TED01:17-97	1	AF-Q9PR94-F1-model_v4_TED01	17-97	0
+Q9PR94.1	AF-Q9PR94-F1-model_v4_TED02:109-165	1	AF-Q9PR94-F1-model_v4_TED02	109-165	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9PR94_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.30 29.40;
+NC   26.60 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

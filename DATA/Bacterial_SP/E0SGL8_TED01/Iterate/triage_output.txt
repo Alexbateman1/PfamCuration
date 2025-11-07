@@ -1,0 +1,143 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   RHSIC_DICD3             Reviewed;         140 AA.
+AC   E0SGL8;
+DE   RecName: Full=Immunity protein RhsIC;
+GN   Name=rhsIC; OrderedLocusNames=Dda3937_00826;
+OS   Dickeya dadantii (strain 3937) (Erwinia chrysanthemi (strain 3937)).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Pectobacteriaceae; Dickeya.
+OX   NCBI_TaxID=198628;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=3937;
+RX   PubMed=21217001; DOI=10.1128/jb.01513-10;
+RA   Glasner J.D., Yang C.H., Reverchon S., Hugouvieux-Cotte-Pattat N.,
+RA   Condemine G., Bohin J.P., Van Gijsegem F., Yang S., Franza T., Expert D.,
+RA   Plunkett G. III, San Francisco M.J., Charkowski A.O., Py B., Bell K.,
+RA   Rauscher L., Rodriguez-Palenzuela P., Toussaint A., Holeva M.C., He S.Y.,
+RA   Douet V., Boccara M., Blanco C., Toth I., Anderson B.D., Biehl B.S.,
+RA   Mau B., Flynn S.M., Barras F., Lindeberg M., Birch P.R., Tsuyumu S.,
+RA   Shi X., Hibbing M., Yap M.N., Carpentier M., Dassa E., Umehara M.,
+RA   Kim J.F., Rusch M., Soni P., Mayhew G.F., Fouts D.E., Gill S.R.,
+RA   Blattner F.R., Keen N.T., Perna N.T.;
+RT   "Genome sequence of the plant-pathogenic bacterium Dickeya dadantii 3937.";
+RL   J. Bacteriol. 193:2076-2077(2011).
+RN   [2]
+RP   FUNCTION AS AN IMMUNITY PROTEIN, EXPRESSION IN E.COLI, AND DISRUPTION
+RP   PHENOTYPE.
+RC   STRAIN=3937;
+RX   PubMed=23572593; DOI=10.1073/pnas.1300627110;
+RA   Koskiniemi S., Lamoureux J.G., Nikolakakis K.C., t'Kint de Roodenbeke C.,
+RA   Kaplan M.D., Low D.A., Hayes C.S.;
+RT   "Rhs proteins from diverse bacteria mediate intercellular competition.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 110:7032-7037(2013).
+CC   -!- FUNCTION: Putative immunity protein component of a toxin-immunity
+CC       protein module, which may function as a cellular contact-dependent
+CC       growth inhibition (CDI) system. Blocks the toxic effects of expression
+CC       of the C-terminus (residues 1519-1658) of cognate toxin RhsC in E.coli.
+CC       {ECO:0000269|PubMed:23572593}.
+CC   -!- DISRUPTION PHENOTYPE: A double rhsC-rhsIC deletion is not outcompeted
+CC       by wild-type cells. {ECO:0000269|PubMed:23572593}.
+DR   EMBL; CP002038; ADM97667.1; -; Genomic_DNA.
+DR   RefSeq; WP_013317128.1; NC_014500.1.
+DR   AlphaFoldDB; E0SGL8; -.
+DR   STRING; 198628.Dda3937_00826; -.
+DR   KEGG; ddd:Dda3937_00826; -.
+DR   eggNOG; ENOG502ZJWN; Bacteria.
+DR   HOGENOM; CLU_1822431_0_0_6; -.
+DR   OrthoDB; 6637505at2; -.
+DR   Proteomes; UP000006859; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..140
+FT                   /note="Immunity protein RhsIC"
+FT                   /id="PRO_0000423981"
+SQ   SEQUENCE   140 AA;  16525 MW;  7B36A674D8BD061E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Cylindrospermum.
+1	6	Salmonirosea.
+1	6	Rhodocytophaga.
+1	6	Niabella.
+1	6	Hymenobacter.
+1	6	Dyadobacter.
+1	6	Dickeya.
+1	6	Anaeromicrobium.
+2	5	Spirosomataceae
+2	5	Nostocaceae
+1	5	Thermotaleaceae
+1	5	Rhodocytophagaceae
+1	5	Pectobacteriaceae
+1	5	Hymenobacteraceae
+1	5	Chitinophagaceae
+4	4	Cytophagales
+2	4	Nostocales
+1	4	Peptostreptococcales
+1	4	Enterobacterales
+1	4	Chitinophagales
+4	3	Cytophagia
+2	3	Cyanophyceae
+1	3	Gammaproteobacteria
+1	3	Clostridia
+1	3	Chitinophagia
+5	2	Bacteroidota
+2	2	Cyanobacteriota
+1	2	Pseudomonadota
+1	2	Bacillota
+6	1	Pseudomonadati
+3	1	Bacillati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0Q5URX1	UNCHARACTERIZED PROTEIN {     60.1    1.3e-12   1   1.0   0.3
+	Iterate                   	     3	   138	    59.7
+
+A0A1G6URT6	UNCHARACTERIZED PROTEIN {     55.6    3.1e-11   1   1.0   1.0
+	Iterate                   	     3	   137	    55.3
+
+E0SGL8	IMMUNITY PROTEIN RHSIC            319.0    1.4e-92   1   1.0   1.6
+	Iterate                   	     5	   140	   318.8
+
+K9X7D6	UNCHARACTERIZED PROTEIN {ECO:     79.7    1.1e-18   1   1.0   0.3
+	Iterate                   	     1	   138	    79.6
+
+W8EYP4	UNCHARACTERIZED PROTEIN {ECO:     56.2      2e-11   1   1.0   0.0
+	Iterate                   	     3	   138	    55.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+E0SGL8.1	AF-E0SGL8-F1-model_v4_TED01:5-140	1	AF-E0SGL8-F1-model_v4_TED01	5-140	100.0%
+K9X7D6.1	AF-K9X7D6-F1-model_v4_TED01:6-140	1	AF-K9X7D6-F1-model_v4_TED01	6-140	99.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:E0SGL8_TED01/Iterate
+GA   27.00 27.00;
+TC   29.00 30.80;
+NC   25.40 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RC   Function description for E0SGL8
+RN   [1]
+RM   23572593
+RT   "Rhs proteins from diverse bacteria mediate intercellular competition.";
+RA   Koskiniemi S., Lamoureux J.G., Nikolakakis K.C., t'Kint de Roodenbeke C.,
+RA   Kaplan M.D., Low D.A., Hayes C.S.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 110:7032-7037(2013).
+
+--- End of Current DESC file ---

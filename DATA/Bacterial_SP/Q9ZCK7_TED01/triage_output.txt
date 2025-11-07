@@ -1,0 +1,95 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y722_RICPR              Reviewed;         148 AA.
+AC   Q9ZCK7;
+DE   RecName: Full=Uncharacterized protein RP722;
+GN   OrderedLocusNames=RP722;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AJ235273; CAA15153.1; -; Genomic_DNA.
+DR   PIR; A71632; A71632.
+DR   RefSeq; NP_221077.1; NC_000963.1.
+DR   RefSeq; WP_004597055.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZCK7; -.
+DR   SMR; Q9ZCK7; -.
+DR   EnsemblBacteria; CAA15153; CAA15153; CAA15153.
+DR   KEGG; rpr:RP722; -.
+DR   PATRIC; fig|272947.5.peg.758; -.
+DR   HOGENOM; CLU_1757432_0_0_5; -.
+DR   OrthoDB; 7160971at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..148
+FT                   /note="Uncharacterized protein RP722"
+FT                   /id="PRO_0000101411"
+FT   TRANSMEM        20..42
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        52..74
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        118..135
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   148 AA;  17604 MW;  D31F2319D99DB420 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+1	7	Rickettsia
+1	6	Rickettsieae
+1	5	Rickettsiaceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9ZCK7	UNCHARACTERIZED PROTEIN RP722      326.0    1.5e-94   1   1.0  20.7
+	Q9ZCK7_TED01              	     2	   148	   325.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZCK7.1	AF-Q9ZCK7-F1-model_v4_TED01:2-148	1	AF-Q9ZCK7-F1-model_v4_TED01	2-148	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZCK7_TED01
+GA   27.00 27.00;
+TC   326.00 325.90;
+NC   25.50 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

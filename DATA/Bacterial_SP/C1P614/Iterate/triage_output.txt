@@ -1,0 +1,119 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YQFG_ECOLI              Reviewed;          41 AA.
+AC   C1P614;
+DE   RecName: Full=Uncharacterized protein YqfG;
+DE   Flags: Precursor;
+GN   Name=yqfG; OrderedLocusNames=b4684, JW5470.1;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [3]
+RP   IDENTIFICATION, AND INDUCTION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=19121005; DOI=10.1111/j.1365-2958.2008.06495.x;
+RA   Hemm M.R., Paul B.J., Schneider T.D., Storz G., Rudd K.E.;
+RT   "Small membrane proteins found by comparative genomics and ribosome binding
+RT   site models.";
+RL   Mol. Microbiol. 70:1487-1501(2008).
+CC   -!- INDUCTION: In stationary phase (at protein level).
+CC       {ECO:0000269|PubMed:19121005}.
+DR   EMBL; U00096; ACO60006.1; -; Genomic_DNA.
+DR   EMBL; AP009048; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   RefSeq; WP_001010156.1; NZ_STEB01000001.1.
+DR   RefSeq; YP_002791254.1; NC_000913.3.
+DR   AlphaFoldDB; C1P614; -.
+DR   STRING; 511145.b4684; -.
+DR   PaxDb; 511145-b4684; -.
+DR   EnsemblBacteria; ACO60006; ACO60006; b4684.
+DR   GeneID; 7751638; -.
+DR   KEGG; eco:b4684; -.
+DR   KEGG; ecoc:C3026_15840; -.
+DR   PATRIC; fig|511145.12.peg.2981; -.
+DR   InParanoid; C1P614; -.
+DR   BioCyc; EcoCyc:MONOMER0-2883; -.
+DR   PRO; PR:C1P614; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           24..41
+FT                   /note="Uncharacterized protein YqfG"
+FT                   /id="PRO_0000381990"
+SQ   SEQUENCE   41 AA;  4791 MW;  D73DB99EA5803C68 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+6	6	Escherichia.
+1	6	Shigella.
+7	5	Enterobacteriaceae
+7	4	Enterobacterales
+7	3	Gammaproteobacteria
+7	2	Pseudomonadota
+7	1	Pseudomonadati
+7	0	Bacteria
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2VBV2	UNCHARACTERIZED PROTEIN {    104.7    7.8e-27   1   1.1  10.4
+	Iterate                   	     7	    47	   104.5
+
+A0A0H3EP71	UNCHARACTERIZED PROTEIN {    104.9    6.9e-27   1   1.0  10.4
+	Iterate                   	     5	    45	   104.7
+
+A0A2Z5XQC2	UNCHARACTERIZED PROTEIN {    108.9    3.8e-28   1   1.0  10.7
+	Iterate                   	     1	    41	   108.8
+
+A7ZQZ7	UNCHARACTERIZED PROTEIN {ECO:    108.3      6e-28   1   1.1  10.7
+	Iterate                   	     7	    47	   108.1
+
+C1P614	UNCHARACTERIZED PROTEIN YQFG       108.9    3.8e-28   1   1.0  10.7
+	Iterate                   	     1	    41	   108.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2Z5XQC2.1	AF-A0A2Z5XQC2-F1-model_v4_TED01:1-41	1	AF-A0A2Z5XQC2-F1-model_v4_TED01	1-41	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:C1P614/Iterate
+GA   27.00 27.00;
+TC   27.60 99.20;
+NC   26.00 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

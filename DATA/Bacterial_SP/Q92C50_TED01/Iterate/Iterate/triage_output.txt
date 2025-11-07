@@ -1,0 +1,147 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YNEA_LISMO              Reviewed;         109 AA.
+AC   Q8Y7H6;
+DE   RecName: Full=Cell division suppressor protein YneA {ECO:0000255|HAMAP-Rule:MF_02014};
+GN   Name=yneA {ECO:0000255|HAMAP-Rule:MF_02014};
+GN   OrderedLocusNames=lmo1303;
+OS   Listeria monocytogenes serovar 1/2a (strain ATCC BAA-679 / EGD-e).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Listeriaceae;
+OC   Listeria.
+OX   NCBI_TaxID=169963;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-679 / EGD-e;
+RX   PubMed=11679669; DOI=10.1126/science.1063447;
+RA   Glaser P., Frangeul L., Buchrieser C., Rusniok C., Amend A., Baquero F.,
+RA   Berche P., Bloecker H., Brandt P., Chakraborty T., Charbit A.,
+RA   Chetouani F., Couve E., de Daruvar A., Dehoux P., Domann E.,
+RA   Dominguez-Bernal G., Duchaud E., Durant L., Dussurget O., Entian K.-D.,
+RA   Fsihi H., Garcia-del Portillo F., Garrido P., Gautier L., Goebel W.,
+RA   Gomez-Lopez N., Hain T., Hauf J., Jackson D., Jones L.-M., Kaerst U.,
+RA   Kreft J., Kuhn M., Kunst F., Kurapkat G., Madueno E., Maitournam A.,
+RA   Mata Vicente J., Ng E., Nedjari H., Nordsiek G., Novella S., de Pablos B.,
+RA   Perez-Diaz J.-C., Purcell R., Remmel B., Rose M., Schlueter T., Simoes N.,
+RA   Tierrez A., Vazquez-Boland J.-A., Voss H., Wehland J., Cossart P.;
+RT   "Comparative genomics of Listeria species.";
+RL   Science 294:849-852(2001).
+CC   -!- FUNCTION: Inhibits cell division during the SOS response. Affects a
+CC       later stage of the cell division protein assembly, after the assembly
+CC       of the Z ring, by probably suppressing recruitment of FtsL and/or DivIC
+CC       to the division machinery. {ECO:0000255|HAMAP-Rule:MF_02014}.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000255|HAMAP-Rule:MF_02014}.
+CC   -!- SIMILARITY: Belongs to the YneA family. {ECO:0000255|HAMAP-
+CC       Rule:MF_02014}.
+DR   EMBL; AL591978; CAC99381.1; -; Genomic_DNA.
+DR   PIR; AG1237; AG1237.
+DR   RefSeq; NP_464828.1; NC_003210.1.
+DR   RefSeq; WP_003723439.1; NZ_CP149495.1.
+DR   AlphaFoldDB; Q8Y7H6; -.
+DR   SMR; Q8Y7H6; -.
+DR   STRING; 169963.gene:17593960; -.
+DR   PaxDb; 169963-lmo1303; -.
+DR   EnsemblBacteria; CAC99381; CAC99381; CAC99381.
+DR   GeneID; 987680; -.
+DR   KEGG; lmo:lmo1303; -.
+DR   PATRIC; fig|169963.11.peg.1339; -.
+DR   eggNOG; COG1388; Bacteria.
+DR   HOGENOM; CLU_136034_4_0_9; -.
+DR   OrthoDB; 2679564at2; -.
+DR   BioCyc; LMON169963:LMO1303-MONOMER; -.
+DR   Proteomes; UP000000817; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0000917; P:division septum assembly; IEA:UniProtKB-KW.
+DR   GO; GO:0006281; P:DNA repair; IEA:UniProtKB-KW.
+DR   GO; GO:0051782; P:negative regulation of cell division; IEA:UniProtKB-UniRule.
+DR   GO; GO:0009432; P:SOS response; EXP:CollecTF.
+DR   Gene3D; 3.10.350.10; LysM domain; 1.
+DR   HAMAP; MF_02014; YneA; 1.
+DR   InterPro; IPR022887; Cell_div_suppressor_YneA.
+DR   InterPro; IPR018392; LysM_dom.
+DR   InterPro; IPR036779; LysM_dom_sf.
+DR   NCBIfam; NF010723; PRK14125.1; 1.
+DR   Pfam; PF01476; LysM; 1.
+DR   PROSITE; PS51782; LYSM; 1.
+PE   3: Inferred from homology;
+KW   Cell cycle; Cell division; Cytoplasm; DNA damage; DNA repair;
+KW   Reference proteome; Septation; SOS response.
+FT   CHAIN           1..109
+FT                   /note="Cell division suppressor protein YneA"
+FT                   /id="PRO_0000346645"
+FT   DOMAIN          39..90
+FT                   /note="LysM"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01118"
+SQ   SEQUENCE   109 AA;  11910 MW;  6891BBB58AF88F17 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Listeria
+2	6	Jeotgalibacillus
+1	6	Lederbergia
+1	6	Heyndrickxia
+5	5	Listeriaceae
+2	5	Caryophanaceae
+2	5	Bacillaceae
+9	4	Bacillales
+9	3	Bacilli
+9	2	Bacillota
+9	1	Bacillati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A099WAB2	CELL DIVISION SUPPRESSOR      72.1    1.1e-16   1   1.3   6.0
+	Iterate                   	     2	    37	    71.5
+	PF01476	LysM            	    42	    92	    21.6
+
+A0A2X3IWM8	CELL DIVISION SUPPRESSOR      73.0    5.8e-17   1   1.3   2.1
+	Iterate                   	    33	    68	    72.4
+	PF01476	LysM            	    73	   123	    20.9
+
+A0A3D8TVF9	CELL DIVISION SUPPRESSOR      73.7    3.3e-17   1   1.2   5.0
+	Iterate                   	     2	    37	    73.3
+	PF01476	LysM            	    43	    92	    21.6
+
+D7UYL1	LYSM DOMAIN PROTEIN {ECO:0000     72.8    6.7e-17   1   1.3   5.0
+	Iterate                   	     2	    37	    72.2
+	PF01476	LysM            	    42	    92	    21.7
+
+Q8Y7H6	CELL DIVISION SUPPRESSOR PROTEI     67.8    2.3e-15   1   1.2   5.8
+	Iterate                   	     2	    37	    67.4
+	PF01476	LysM            	    41	    91	    21.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A099WAB2.1	AF-A0A099WAB2-F1-model_v4_TED02:41-92	1	AF-A0A099WAB2-F1-model_v4_TED02	41-92	0
+A0A099WAB2.1	AF-A0A099WAB2-F1-model_v4_TED01:2-34	1	AF-A0A099WAB2-F1-model_v4_TED01	2-34	91.7%
+A0A2X3IWM8.1	AF-A0A2X3IWM8-F1-model_v4_TED01:2-67	1	AF-A0A2X3IWM8-F1-model_v4_TED01	2-67	97.2%
+A0A2X3IWM8.1	AF-A0A2X3IWM8-F1-model_v4_TED02:72-129	1	AF-A0A2X3IWM8-F1-model_v4_TED02	72-129	0
+A0A3D8TVF9.1	AF-A0A3D8TVF9-F1-model_v4_TED02:42-91	1	AF-A0A3D8TVF9-F1-model_v4_TED02	42-91	0
+A0A3D8TVF9.1	AF-A0A3D8TVF9-F1-model_v4_TED01:2-36	1	AF-A0A3D8TVF9-F1-model_v4_TED01	2-36	97.2%
+D7UYL1.1	AF-D7UYL1-F1-model_v4_TED02:39-90	1	AF-D7UYL1-F1-model_v4_TED02	39-90	0
+D7UYL1.1	AF-D7UYL1-F1-model_v4_TED01:1-35	1	AF-D7UYL1-F1-model_v4_TED01	1-35	94.4%
+Q8Y7H6.1	AF-Q8Y7H6-F1-model_v4_TED02:37-101	1	AF-Q8Y7H6-F1-model_v4_TED02	37-101	0
+Q8Y7H6.1	AF-Q8Y7H6-F1-model_v4_TED01:1-35	1	AF-Q8Y7H6-F1-model_v4_TED01	1-35	97.1%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q92C50_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.40 27.00;
+NC   26.70 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

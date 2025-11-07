@@ -1,0 +1,84 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YSAE_ECOLI              Reviewed;          23 AA.
+AC   P0DSH1; A0A7H2C799;
+DE   RecName: Full=Protein YsaE {ECO:0000303|PubMed:30837344};
+GN   Name=ysaE {ECO:0000303|PubMed:30837344};
+GN   OrderedLocusNames=b4793 {ECO:0000312|EMBL:QNV50546.1};
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION, AND INDUCTION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=30837344; DOI=10.1128/mbio.02819-18;
+RA   Weaver J., Mohammad F., Buskirk A.R., Storz G.;
+RT   "Identifying small proteins by ribosome profiling with stalled initiation
+RT   complexes.";
+RL   MBio 10:0-0(2019).
+CC   -!- INDUCTION: Expressed in both exponential and stationary phase in rich
+CC       medium; expression is considerably higher during exponential phase (at
+CC       protein level). {ECO:0000269|PubMed:30837344}.
+DR   EMBL; U00096; QNV50546.1; -; Genomic_DNA.
+DR   AlphaFoldDB; P0DSH1; -.
+DR   InParanoid; P0DSH1; -.
+DR   BioCyc; EcoCyc:MONOMER0-4505; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..23
+FT                   /note="Protein YsaE"
+FT                   /id="PRO_0000447168"
+SQ   SEQUENCE   23 AA;  2605 MW;  13D37D5D07745EBD CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P0DSH1	PROTEIN YSAE {ECO:0000303|PUBME     60.8    2.1e-13   1   1.0   1.9
+	P0DSH1                    	     1	    23	    60.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DSH1
+GA   27.00 27.00;
+TC   27.90 60.70;
+NC   25.40 16.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

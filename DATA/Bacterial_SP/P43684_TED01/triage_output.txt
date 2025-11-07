@@ -1,0 +1,44 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Oscillatoria.
+1	6	Oscillatoriaceae
+1	5	Oscillatoriales
+1	4	Oscillatoriophycideae
+1	3	Cyanophyceae
+1	2	Cyanobacteriota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+K9TFM6	DPRA WINGED HELIX DOMAIN-CONT     39.7    1.7e-06   1   1.1   0.2
+	P43684_TED01              	    14	    77	    39.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P43684.1	AF-P43684-F1-model_v4_TED01:13-76	1	AF-P43684-F1-model_v4_TED01	13-76	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P43684_TED01
+GA   27.00 27.00;
+TC   27.80 39.50;
+NC   24.90 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

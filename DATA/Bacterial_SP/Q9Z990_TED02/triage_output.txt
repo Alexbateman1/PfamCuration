@@ -1,0 +1,149 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   VATI_CHLTR              Reviewed;         649 AA.
+AC   O84307;
+DE   RecName: Full=V-type ATP synthase subunit I;
+DE   AltName: Full=V-ATPase subunit I;
+GN   Name=atpI; OrderedLocusNames=CT_305;
+OS   Chlamydia trachomatis serovar D (strain ATCC VR-885 / DSM 19411 / UW-3/Cx).
+OC   Bacteria; Pseudomonadati; Chlamydiota; Chlamydiia; Chlamydiales;
+OC   Chlamydiaceae; Chlamydia/Chlamydophila group; Chlamydia.
+OX   NCBI_TaxID=272561;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC VR-885 / DSM 19411 / UW-3/Cx;
+RX   PubMed=9784136; DOI=10.1126/science.282.5389.754;
+RA   Stephens R.S., Kalman S., Lammel C.J., Fan J., Marathe R., Aravind L.,
+RA   Mitchell W.P., Olinger L., Tatusov R.L., Zhao Q., Koonin E.V., Davis R.W.;
+RT   "Genome sequence of an obligate intracellular pathogen of humans: Chlamydia
+RT   trachomatis.";
+RL   Science 282:754-759(1998).
+CC   -!- FUNCTION: Produces ATP from ADP in the presence of a proton gradient
+CC       across the membrane.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the V-ATPase 116 kDa subunit family.
+CC       {ECO:0000305}.
+DR   EMBL; AE001273; AAC67898.1; -; Genomic_DNA.
+DR   PIR; G71530; G71530.
+DR   RefSeq; NP_219810.1; NC_000117.1.
+DR   RefSeq; WP_010725153.1; NC_000117.1.
+DR   AlphaFoldDB; O84307; -.
+DR   STRING; 272561.CT_305; -.
+DR   EnsemblBacteria; AAC67898; AAC67898; CT_305.
+DR   GeneID; 884819; -.
+DR   KEGG; ctr:CT_305; -.
+DR   PATRIC; fig|272561.5.peg.326; -.
+DR   HOGENOM; CLU_025558_1_1_0; -.
+DR   InParanoid; O84307; -.
+DR   OrthoDB; 9803814at2; -.
+DR   Proteomes; UP000000431; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0033179; C:proton-transporting V-type ATPase, V0 domain; IEA:InterPro.
+DR   GO; GO:0016471; C:vacuolar proton-transporting V-type ATPase complex; IBA:GO_Central.
+DR   GO; GO:0051117; F:ATPase binding; IBA:GO_Central.
+DR   GO; GO:0046961; F:proton-transporting ATPase activity, rotational mechanism; IEA:InterPro.
+DR   GO; GO:0007035; P:vacuolar acidification; IBA:GO_Central.
+DR   InterPro; IPR002490; V-ATPase_116kDa_su.
+DR   NCBIfam; NF004431; PRK05771.2-5; 1.
+DR   PANTHER; PTHR11629:SF63; V-TYPE PROTON ATPASE SUBUNIT A; 1.
+DR   PANTHER; PTHR11629; VACUOLAR PROTON ATPASES; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Hydrogen ion transport; Ion transport; Membrane;
+KW   Reference proteome; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..649
+FT                   /note="V-type ATP synthase subunit I"
+FT                   /id="PRO_0000119240"
+FT   TRANSMEM        312..332
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        360..380
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        453..473
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        485..505
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        520..540
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        556..576
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        593..613
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   649 AA;  73214 MW;  1D3FC48CF49850FB CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Chlamydia.
+1	6	Chlamydia/Chlamydophila group
+1	5	Chlamydiaceae
+1	4	Chlamydiales
+1	3	Chlamydiia
+1	2	Chlamydiota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O84307	V-TYPE ATP SYNTHASE SUBUNIT I       85.9    6.3e-21   1   2.0   0.6
+	Q9Z990_TED02              	   111	   179	    84.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS309 (E-value: 5.6e-23, Score: 85.9)
+Mentioned as: CT305
+Description: ATP Synthase Subunit I
+Organism: Chlamydia trachomatis D/UW-3/CX
+PMID: 22688818
+Source: EuropePMC
+Title: The alternative translational profile that underlies the immune-evasive state of persistence in Chlamydiaceae exploits differential tryptophan contents of the protein repertoire
+Journal: Microbiology and molecular biology reviews : MMBR (2012)
+Snippet: PC1629 2.66 1.71 Na-specific A1A0type ATPase genes CT303 CT304 CT305 CT306 CT307 CT308 CT309 CT310 3.07 0 0.81 0.52 0.72 1.24 2.37 1.01 PC1659 PC1676 PC1677
+
+================================================================================
+Protein: VIMSS309 (E-value: 5.6e-23, Score: 85.9)
+Mentioned as: CT305
+Description: ATP Synthase Subunit I
+Organism: Chlamydia trachomatis D/UW-3/CX
+PMID: 15213176
+Source: EuropePMC
+Title: Chlamydia trachomatis lacks an adaptive response to changes in carbon source availability
+Journal: Infection and immunity (2004)
+Snippet: 0.02 ATP biogenesis and metabolism CT065 adt CT304 atpK CT305 atpI CT306 atpD CT307 atpB CT308 atpA CT310 atpE CT495 adt CT719 fliF ADP/ATP translocase V-type
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9Z990.1	AF-Q9Z990-F1-model_v4_TED01:1-89_189-278	1	AF-Q9Z990-F1-model_v4_TED01	1-278	100.0%
+Q9Z990.1	AF-Q9Z990-F1-model_v4_TED02:111-179	1	AF-Q9Z990-F1-model_v4_TED02	111-179	100.0%
+Q9Z990.1	AF-Q9Z990-F1-model_v4_TED03:285-629	1	AF-Q9Z990-F1-model_v4_TED03	285-629	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9Z990_TED02
+GA   27.00 27.00;
+TC   28.20 84.40;
+NC   25.00 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,460 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   KPSE_ECOL6              Reviewed;         382 AA.
+AC   P62587; P42214;
+DE   RecName: Full=Capsule polysaccharide export inner-membrane protein KpsE;
+GN   Name=kpsE; OrderedLocusNames=c3687;
+OS   Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=199310;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CFT073 / ATCC 700928 / UPEC;
+RX   PubMed=12471157; DOI=10.1073/pnas.252529799;
+RA   Welch R.A., Burland V., Plunkett G. III, Redford P., Roesch P., Rasko D.,
+RA   Buckles E.L., Liou S.-R., Boutin A., Hackett J., Stroud D., Mayhew G.F.,
+RA   Rose D.J., Zhou S., Schwartz D.C., Perna N.T., Mobley H.L.T.,
+RA   Donnenberg M.S., Blattner F.R.;
+RT   "Extensive mosaic structure revealed by the complete genome sequence of
+RT   uropathogenic Escherichia coli.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:17020-17024(2002).
+CC   -!- FUNCTION: Involved in the translocation of the polysialic acid capsule.
+CC       {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Multi-pass
+CC       membrane protein {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the BexC/CtrB/KpsE family. {ECO:0000305}.
+DR   EMBL; AE014075; AAN82135.1; -; Genomic_DNA.
+DR   RefSeq; WP_000905920.1; NZ_CP051263.1.
+DR   AlphaFoldDB; P62587; -.
+DR   SMR; P62587; -.
+DR   STRING; 199310.c3687; -.
+DR   KEGG; ecc:c3687; -.
+DR   eggNOG; COG3524; Bacteria.
+DR   HOGENOM; CLU_027864_2_0_6; -.
+DR   BioCyc; ECOL199310:C3687-MONOMER; -.
+DR   Proteomes; UP000001410; Chromosome.
+DR   GO; GO:0009276; C:Gram-negative-bacterium-type cell wall; IEA:InterPro.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005351; F:carbohydrate:proton symporter activity; IEA:InterPro.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IEA:TreeGrafter.
+DR   GO; GO:0015774; P:polysaccharide transport; IEA:UniProtKB-KW.
+DR   InterPro; IPR050445; Bact_polysacc_biosynth/exp.
+DR   InterPro; IPR005705; BexC_CtrB_KpsE_VexD.
+DR   NCBIfam; TIGR01010; BexC_CtrB_KpsE; 1.
+DR   PANTHER; PTHR32309:SF13; FERRIC ENTEROBACTIN TRANSPORT PROTEIN FEPE; 1.
+DR   PANTHER; PTHR32309; TYROSINE-PROTEIN KINASE; 1.
+PE   3: Inferred from homology;
+KW   Capsule biogenesis/degradation; Cell inner membrane; Cell membrane;
+KW   Membrane; Polysaccharide transport; Reference proteome; Sugar transport;
+KW   Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..382
+FT                   /note="Capsule polysaccharide export inner-membrane protein
+FT                   KpsE"
+FT                   /id="PRO_0000084318"
+FT   TRANSMEM        28..48
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        357..377
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   382 AA;  43045 MW;  44E9508484DC05B2 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	5	Roseobacteraceae
+11	5	Paracoccaceae
+20	4	Rhodobacterales
+12	4	Hyphomicrobiales
+10	4	Alteromonadales
+45	3	Alphaproteobacteria
+25	3	Gammaproteobacteria
+10	3	Betaproteobacteria
+80	2	Pseudomonadota
+83	1	Pseudomonadati
+83	0	Bacteria
+Total of 83 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A011N148	TYROSINE-PROTEIN KINASE P     67.9    4.7e-15   1   1.7   3.6
+	P42501_TED02              	   202	   338	    66.6
+
+A0A014P1J0	CHAIN-LENGTH DETERMINING      78.6    2.4e-18   1   1.4   5.0
+	P42501_TED02              	   187	   324	    77.8
+
+A0A059KMY0	UNCHARACTERIZED PROTEIN {     66.0    1.9e-14   1   1.4   5.3
+	P42501_TED02              	   183	   325	    65.2
+
+A0A085GK60	KPSE FAMILY CAPSULAR POLY    237.2    2.5e-67   1   1.3   7.0
+	P42501_TED02              	   199	   336	   236.7
+
+A0A089WQV2	ABC TRANSPORTER PERMEASE      72.3    2.1e-16   1   1.3   6.2
+	P42501_TED02              	   180	   318	    71.6
+
+A0A0C5VT22	CAPSULE POLYSACCHARIDE EX     71.9    2.9e-16   1   1.4   4.2
+	P42501_TED02              	   176	   313	    71.0
+
+A0A0G3BFU5	CAPSULAR BIOSYNTHESIS PRO     87.0    6.1e-21   1   1.3   7.2
+	P42501_TED02              	   179	   317	    86.4
+
+A0A0H2Z3F2	POLYSIALIC ACID TRANSPORT    306.1    1.4e-88   1   1.5   8.6
+	P42501_TED02              	   195	   332	   305.0
+
+A0A0H3EPD6	CAPSULE POLYSACCHARIDE EX    301.0    5.3e-87   1   1.6   9.1
+	P42501_TED02              	   195	   334	   299.9
+
+A0A0J6NQT8	CAPSULE BIOSYNTHESIS PROT    127.4      2e-33   1   1.3   7.7
+	P42501_TED02              	   177	   314	   126.7
+
+A0A0S1YBG9	CHAIN-LENGTH DETERMINING      71.1      5e-16   1   1.3   2.0
+	P42501_TED02              	   177	   313	    70.4
+
+A0A0U3V9A8	CAPSULE BIOSYNTHESIS PROT    252.4    5.2e-72   1   1.7   6.7
+	P42501_TED02              	   195	   332	   250.8
+
+A0A0W7Z1V5	CHAIN-LENGTH DETERMINING      75.9    1.6e-17   1   1.6   6.3
+	P42501_TED02              	   185	   320	    75.9
+
+A0A157S948	MPA2 FAMILY PROTEIN INVOL     72.1    2.5e-16   1   1.5   7.1
+	P42501_TED02              	   120	   258	    71.2
+
+A0A1B2M1Z9	CAPSULE BIOSYNTHESIS PROT    129.7    3.9e-34   1   1.3   5.5
+	P42501_TED02              	   178	   315	   129.1
+
+A0A1B8PHT3	CAPSULE BIOSYNTHESIS PROT    110.2    4.1e-28   1   1.5   8.4
+	P42501_TED02              	   183	   319	   109.2
+
+A0A1G7F8K6	CAPSULAR POLYSACCHARIDE T     78.8    2.1e-18   1   1.3   6.4
+	P42501_TED02              	   210	   347	    78.2
+
+A0A1H4A2N2	CAPSULAR POLYSACCHARIDE T     67.9    4.8e-15   1   1.4   3.1
+	P42501_TED02              	   173	   310	    67.1
+
+A0A1S2SYS2	CHAIN-LENGTH DETERMINING      76.7    9.3e-18   1   1.7   6.5
+	P42501_TED02              	   159	   311	    76.7
+
+A0A1S9ZXY8	VI POLYSACCHARIDE EXPORT     129.0    6.5e-34   1   1.4   6.9
+	P42501_TED02              	   180	   317	   128.3
+
+A0A1T0CDA1	CAPSULE BIOSYNTHESIS PROT    136.1    4.2e-36   1   1.5   5.3
+	P42501_TED02              	   182	   319	   135.2
+
+A0A1T0CPM4	CAPSULE BIOSYNTHESIS PROT    124.4    1.8e-32   1   1.8   6.4
+	P42501_TED02              	   180	   317	   124.4
+
+A0A1U9JYT2	ABC TRANSPORTER PERMEASE      62.4    2.4e-13   1   1.3   6.5
+	P42501_TED02              	   176	   314	    61.8
+
+A0A1X9SQH3	CAPSULAR POLYSACCHARIDE E     68.8    2.6e-15   1   1.3   4.6
+	P42501_TED02              	   192	   330	    68.2
+
+A0A1Y1SA49	CAPSULE TRANSPORT PROTEIN     74.3    5.2e-17   1   1.4   4.9
+	P42501_TED02              	   181	   318	    73.5
+
+A0A1Y6C0S1	CAPSULAR POLYSACCHARIDE T     75.2    2.7e-17   1   2.1   2.7
+	P42501_TED02              	   211	   350	    73.2
+
+A0A221KDJ8	CAPSULAR BIOSYNTHESIS PRO     64.8    4.3e-14   1   1.4   6.7
+	P42501_TED02              	   171	   310	    64.1
+
+A0A222MVW8	CAPSULAR POLYSACCHARIDE E     71.3    4.5e-16   1   1.3   4.7
+	P42501_TED02              	   213	   351	    70.6
+
+A0A241VYZ7	CAPSULE BIOSYNTHESIS PROT    109.5    6.9e-28   1   1.4   5.4
+	P42501_TED02              	   178	   315	   108.7
+
+A0A257C8A4	CAPSULAR BIOSYNTHESIS PRO     63.2    1.4e-13   1   1.3   6.6
+	P42501_TED02              	   184	   322	    62.6
+
+A0A2N3PH91	CAPSULE BIOSYNTHESIS PROT     65.8    2.2e-14   1   1.3   4.3
+	P42501_TED02              	   183	   321	    65.1
+
+A0A2N5EMF1	CAPSULE BIOSYNTHESIS PROT    224.1      3e-63   1   1.3   5.0
+	P42501_TED02              	   190	   327	   223.5
+
+A0A2N7TRF6	CHAIN-LENGTH DETERMINING      62.3    2.5e-13   1   1.3   2.9
+	P42501_TED02              	   173	   310	    61.8
+
+A0A2P5TR62	CHAIN-LENGTH DETERMINING      63.7    9.4e-14   1   1.3   4.1
+	P42501_TED02              	   173	   310	    63.2
+
+A0A2S5T4A0	CAPSULAR POLYSACCHARIDE T    107.1    3.7e-27   1   1.2   7.8
+	P42501_TED02              	   182	   320	   106.7
+
+A0A2V1H1J6	CAPSULE BIOSYNTHESIS PROT     70.4    8.5e-16   1   1.5   1.6
+	P42501_TED02              	   206	   342	    69.3
+
+A0A2W6MXY2	CAPSULE BIOSYNTHESIS PROT     82.8    1.2e-19   1   1.3   7.3
+	P42501_TED02              	   203	   341	    82.1
+
+A0A2X3GGK6	VI POLYSACCHARIDE EXPORT     202.5    1.3e-56   1   1.5   7.8
+	P42501_TED02              	   202	   339	   201.5
+
+A0A3E0WPA8	CHAIN-LENGTH DETERMINING      77.5    5.1e-18   1   1.4   0.4
+	P42501_TED02              	   173	   310	    76.8
+
+A0A3M0CS95	CAPSULAR POLYSACCHARIDE T     99.9    6.5e-25   1   1.3   4.4
+	P42501_TED02              	   226	   363	    99.3
+
+A0A3N7DJI0	LIPOPOLYSACCHARIDE BIOSYN    107.2    3.6e-27   1   1.3   3.6
+	P42501_TED02              	   194	   335	   106.4
+
+A0A3N9U177	CHAIN-LENGTH DETERMINING      64.5    5.6e-14   1   1.3   2.1
+	P42501_TED02              	   173	   310	    63.9
+
+A0A3S2UMY6	CAPSULAR BIOSYNTHESIS PRO     93.4    6.6e-23   1   1.4   4.8
+	P42501_TED02              	   180	   319	    92.7
+
+A0A3S8ZUX5	CHAIN-LENGTH DETERMINING      67.9      5e-15   1   1.4   5.4
+	P42501_TED02              	   166	   303	    67.0
+
+A0A485C0A4	VI POLYSACCHARIDE EXPORT      71.5    3.8e-16   1   1.3   5.9
+	P42501_TED02              	   213	   350	    70.9
+
+A0A4P7JIU6	LIPOPOLYSACCHARIDE BIOSYN     74.8    3.6e-17   1   1.2   6.0
+	P42501_TED02              	   212	   349	    74.2
+
+A0A4Q5VKM5	CAPSULE BIOSYNTHESIS PROT    120.7    2.4e-31   1   1.7   6.7
+	P42501_TED02              	   180	   318	   120.7
+
+A0A4Q7VN26	CAPSULAR POLYSACCHARIDE T    108.7    1.2e-27   1   1.2   6.5
+	P42501_TED02              	   179	   317	   108.2
+
+A0A4U1B6S9	LIPOPOLYSACCHARIDE BIOSYN     70.9    5.7e-16   1   1.3   8.0
+	P42501_TED02              	   212	   349	    70.3
+
+A0A4U8UF22	CAPSULE BIOSYNTHESIS PROT     73.4    9.5e-17   1   1.7   9.1
+	P42501_TED02              	   188	   326	    73.4
+
+A0A4Z0BKT0	CHAIN-LENGTH DETERMINING      62.3    2.6e-13   1   1.3   2.3
+	P42501_TED02              	   182	   319	    61.7
+
+A0A523Q280	CAPSULAR BIOSYNTHESIS PRO     75.2    2.7e-17   1   1.5   9.6
+	P42501_TED02              	   176	   314	    74.2
+
+A0A553ZSP0	CAPSULE BIOSYNTHESIS PROT    177.3      8e-49   1   1.0   4.2
+	P42501_TED02              	     1	    83	   177.2
+
+A0A5C2HI46	CHAIN-LENGTH DETERMINING      62.1      3e-13   1   1.6   7.1
+	P42501_TED02              	   176	   313	    61.2
+
+A0A5P1R998	CHAIN-LENGTH DETERMINING      64.5    5.3e-14   1   1.9   2.0
+	P42501_TED02              	   179	   315	    63.5
+
+A0A5P9ESU2	CHAIN LENGTH DETERMINANT      65.0    3.7e-14   1   1.8   4.0
+	P42501_TED02              	   219	   360	    64.0
+
+A0A5P9ISV8	CHROMOSOME PARTITION PROT     63.8      9e-14   1   1.3   3.8
+	P42501_TED02              	   173	   310	    63.1
+
+A0A643FEG8	CAPSULAR BIOSYNTHESIS PRO     62.8    1.8e-13   1   1.5   9.5
+	P42501_TED02              	   184	   322	    61.9
+
+A0A6J5GTV9	CHAIN-LENGTH DETERMINING      66.1    1.7e-14   1   1.5   3.6
+	P42501_TED02              	   205	   341	    65.2
+
+A0A6M0JUB6	CHAIN-LENGTH DETERMINING      69.5    1.6e-15   1   1.2   1.1
+	P42501_TED02              	   172	   309	    69.0
+
+A0A6M8SN69	CHAIN-LENGTH DETERMINING      72.3    2.2e-16   1   1.4   4.4
+	P42501_TED02              	   199	   335	    71.3
+
+A0A6P1UAG1	CAPSULE BIOSYNTHESIS PROT     64.6    4.9e-14   1   1.6   1.2
+	P42501_TED02              	   182	   324	    63.5
+
+A0A7C9TI01	CAPSULAR BIOSYNTHESIS PRO     63.9    8.6e-14   1   1.2   6.7
+	P42501_TED02              	   182	   320	    63.3
+	PF02706	Wzz             	     3	    95	    26.3
+
+A0A7M1AVH3	CAPSULE BIOSYNTHESIS PROT     63.9    8.3e-14   1   1.5   4.6
+	P42501_TED02              	   234	   371	    62.9
+
+A0A7M2V5A2	CAPSULE BIOSYNTHESIS PROT    193.3      9e-54   1   1.3   7.3
+	P42501_TED02              	   196	   333	   192.6
+
+A0A7S8HCE0	CAPSULE BIOSYNTHESIS PROT     61.7    3.9e-13   1   1.5   1.9
+	P42501_TED02              	   197	   334	    60.7
+
+A0A839HMF2	CAPSULAR BIOSYNTHESIS PRO    112.3    9.5e-29   1   1.3   5.4
+	P42501_TED02              	   179	   319	   111.7
+
+A0A840HQ74	CAPSULAR POLYSACCHARIDE T     75.7    1.9e-17   1   1.3   0.2
+	P42501_TED02              	   203	   337	    74.9
+
+A0A916BCM6	CAPSULAR POLYSACCHARIDE E     63.7    9.6e-14   1   1.2   5.9
+	P42501_TED02              	   200	   337	    63.1
+
+A0A919AQF6	CAPSULE POLYSACCHARIDE TR     61.8    3.6e-13   1   1.4   5.2
+	P42501_TED02              	   173	   311	    61.0
+
+A0A940YQ49	CAPSULAR BIOSYNTHESIS PRO     63.9    8.1e-14   1   1.3   6.1
+	P42501_TED02              	   186	   325	    63.3
+
+A0A942LIJ1	CHAIN-LENGTH DETERMINING      63.8      9e-14   1   1.4   3.9
+	P42501_TED02              	   185	   322	    63.0
+
+A0A9X0R940	CHAIN-LENGTH DETERMINING      65.9    2.1e-14   1   1.4   3.2
+	P42501_TED02              	   174	   311	    65.1
+
+A0A9X1WV53	CAPSULE BIOSYNTHESIS PROT    121.5    1.4e-31   1   2.0   8.3
+	P42501_TED02              	   181	   319	   121.3
+
+A0A9X2CL48	LIPOPOLYSACCHARIDE BIOSYN     69.4    1.7e-15   1   1.4   8.5
+	P42501_TED02              	   222	   359	    68.6
+
+A0A9X3IV35	LIPOPOLYSACCHARIDE BIOSYN     81.8    2.4e-19   1   1.3   7.7
+	P42501_TED02              	   204	   341	    81.2
+
+A0AAF0BMW8	CAPSULAR POLYSACCHARIDE T     96.6    6.8e-24   1   1.4   5.6
+	P42501_TED02              	   205	   342	    95.8
+
+A2SDE5	CAPSULAR POLYSACCHARIDE ABC T     87.8    3.4e-21   1   1.3   2.5
+	P42501_TED02              	   179	   317	    87.2
+
+A4BRU3	CHAIN LENGTH DETERMINANT PROT     85.5    1.8e-20   1   1.6   2.5
+	P42501_TED02              	   174	   311	    84.4
+
+A7MII0	CAPSULE BIOSYNTHESIS PROTEIN     189.8    1.1e-52   1   1.4   6.8
+	P42501_TED02              	   184	   321	   189.1
+
+B7MN84	CAPSULE POLYSACCHARIDE EXPORT    306.1    1.4e-88   1   1.5   8.6
+	P42501_TED02              	   195	   332	   305.0
+
+B8GQX0	CHAIN LENGTH DETERMINANT PROT     73.0    1.3e-16   1   1.6   3.9
+	P42501_TED02              	   173	   310	    72.5
+
+B9KF19	CAPSULAR POLYSACCHARIDE EXPOR     70.6    7.2e-16   1   1.6   4.6
+	P42501_TED02              	   183	   321	    69.5
+
+C5ZVJ5	CAPSULE POLYSACCHARIDE EXPORT     94.5      3e-23   1   1.3   7.3
+	P42501_TED02              	   187	   325	    93.9
+
+D3RMB9	CHAIN LENGTH DETERMINANT PROT     62.1      3e-13   1   1.5   0.9
+	P42501_TED02              	   172	   309	    61.1
+
+E3GAR3	CAPSULE POLYSACCHARIDE EXPORT    206.1    1.1e-57   1   1.4   7.5
+	P42501_TED02              	   203	   340	   205.3
+
+H2FUE6	CHAIN-LENGTH DETERMINING PROT     67.8    5.3e-15   1   1.3   5.9
+	P42501_TED02              	   173	   310	    67.2
+
+H5UZQ1	CAPSULE BIOSYNTHESIS PROTEIN     248.7    7.2e-71   1   1.4   5.9
+	P42501_TED02              	   196	   333	   248.0
+
+L2FA45	CAPSULE POLYSACCHARIDE EXPORT     96.2    8.8e-24   1   1.3   8.0
+	P42501_TED02              	   186	   323	    95.6
+
+M4U7A7	LIPOPOLYSACCHARIDE BIOSYNTHES     67.0    9.1e-15   1   1.3   3.9
+	P42501_TED02              	   186	   323	    66.3
+
+P62587	CAPSULE POLYSACCHARIDE EXPORT I    304.1    5.7e-88   1   1.6   8.3
+	P42501_TED02              	   195	   332	   303.1
+
+Q0P8G9	CAPSULE POLYSACCHARIDE EXPORT     63.5    1.1e-13   1   1.3   9.8
+	P42501_TED02              	   184	   322	    62.9
+
+Q1N091	KPSE PROTEIN {ECO:0000313|EMB     66.4    1.4e-14   1   1.7   9.2
+	P42501_TED02              	   212	   349	    66.4
+
+Q82UT9	CHAIN LENGTH DETERMINANT PROT     72.1    2.4e-16   1   1.4   4.8
+	P42501_TED02              	   201	   338	    71.3
+
+R4YMZ5	CAPSULE TRANSPORT PROTEIN KPS     74.7    3.8e-17   1   1.3   4.8
+	P42501_TED02              	   229	   366	    74.1
+
+S3MPX6	CAPSULAR POLYSACCHARIDE TRANS    123.4    3.5e-32   1   1.5   6.4
+	P42501_TED02              	   178	   315	   123.4
+
+S3N6U4	CAPSULAR POLYSACCHARIDE TRANS     98.9    1.3e-24   1   1.5   8.4
+	P42501_TED02              	   178	   315	    97.9
+
+U1YB36	CHAIN-LENGTH DETERMINING PROT     78.4    2.8e-18   1   1.3   2.6
+	P42501_TED02              	   174	   311	    77.8
+
+W1NBU6	CHAIN-LENGTH DETERMINING PROT     65.1    3.5e-14   1   1.6   5.8
+	P42501_TED02              	   185	   322	    64.9
+
+W9H580	RKPR, POLYSACCHARIDE EXPORT P     66.4    1.4e-14   1   1.3   1.6
+	P42501_TED02              	   215	   354	    65.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS3410157 (E-value: 9.8e-55, Score: 189.8)
+Mentioned as: ESA_03349
+Description: hypothetical protein
+Organism: Enterobacter sakazakii ATCC BAA-894
+PMID: 21239552
+Source: EuropePMC
+Title: Comprehensive approaches to molecular biomarker discovery for detection and identification of Cronobacter spp. (Enterobacter sakazakii) and Salmonella spp
+Journal: Applied and environmental microbiology (2011)
+Snippet: ESA_02653 ESA_02727 ESA_02861 ESA_03232 ESA_03233 ESA_03349 156533745 156533747 156533748 156533753 156533960 156534135 156534173 156534174 156534462 156534650
+
+================================================================================
+Protein: VIMSS47315 (E-value: 9.8e-16, Score: 63.5)
+Mentioned as: Cj1445c
+Description: putative capsule polysaccharide export system inner membrane protein
+Organism: Campylobacter jejuni subsp. jejuni NCTC 11168
+PMID: 19273563
+Source: EuropePMC
+Title: Campylobacter jejuni cocultured with epithelial cells reduces surface capsular polysaccharide expression
+Journal: Infection and immunity (2009)
+Snippet: Expression (fold) Pb Cj1413c Cj1419c Cj1424c Cj1436c Cj1443c Cj1444c Cj1445c 0.57 0.47 0.68 0.26 0.70 0.79 0.55 0.023 0.026 0.013 0.030 0.017 0.044 0.012 Common
+
+================================================================================
+Protein: VIMSS742772 (E-value: 6.1e-06, Score: 31.8)
+Mentioned as: BPSL2806
+Description: putative capsule polysaccharide export ABC transporter transmembrane protein
+Organism: Burkholderia pseudomallei K96243
+PMID: 25214426
+Source: EuropePMC
+Title: Transcriptional profiles of Burkholderia pseudomallei reveal the direct and indirect roles of Sigma E under oxidative stress conditions
+Journal: BMC genomics (2014)
+Snippet: ECF sigma factors 1.41 NS bpsl0785 Peptidase 1.19 NS bpsl0963 Putative permease protein 1.13 NS bpsl2806 Capsular polysaccharide 1.07 NS bpss0585 AraC family transcriptional regulator 1.07 NS bpsl1527 Tex transcriptional factor 1.05 NS bpsl0186 MreB 1.04 NS bpsl3312 Putative glycosyltransferase 1.00 NS E -dependent and OSR
+
+================================================================================
+Protein: VIMSS742772 (E-value: 6.1e-06, Score: 31.8)
+Mentioned as: BPSL2806
+Description: putative capsule polysaccharide export ABC transporter transmembrane protein
+Organism: Burkholderia pseudomallei K96243
+PMID: 16725056
+Source: EuropePMC
+Title: Genomic patterns of pathogen evolution revealed by comparison of Burkholderia pseudomallei, the causative agent of melioidosis, to avirulent Burkholderia thailandensis
+Journal: BMC microbiology (2006)
+Snippet: GDP-D-rhamnose 9.7 66.2 BPSL2793- Capsule biosynthesis 13.9 57.1 BPSS1412 (TTS1)* BTH_II0072 proteins BTH_I1335 biosynthesis + BPSL2806 proteins* BPSL2848- Phosphonate utilization 12 70.9 BTH_II1626- L-arabinose assimilation 10.4 71 BTH_II0431- Transposase 6.8 62.4 BPSS1940- Signal transduction; 4.4 69.4 BPSL2860 operon + BTH_II1633 operon * BTH_II0436 BPSS1941 chemotaxis *
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P42501.1	AF-P42501-F1-model_v4_TED01:50-69_78-192_339-381	1	AF-P42501-F1-model_v4_TED01	50-381	100.0%
+P42501.1	AF-P42501-F1-model_v4_TED02:195-332	1	AF-P42501-F1-model_v4_TED02	195-332	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P42501_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 8tsh
+RN   [1]
+RM   38570679
+RT   Molecular insights into capsular polysaccharide secretion.
+RA   Kuklewicz J, Zimmer J;
+RL   Nature. 2024;628:901-909.
+
+--- End of Current DESC file ---

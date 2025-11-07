@@ -1,0 +1,152 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   SCVA_COXBU              Reviewed;          30 AA.
+AC   Q45966;
+DE   RecName: Full=Protein ScvA;
+DE   AltName: Full=Small-cell-variant protein A;
+DE            Short=SCV protein A;
+GN   Name=scvA; OrderedLocusNames=CBU_1267.1;
+OS   Coxiella burnetii (strain RSA 493 / Nine Mile phase I).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Legionellales; Coxiellaceae; Coxiella.
+OX   NCBI_TaxID=227377;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], PROTEIN SEQUENCE OF 1-25, AND POSSIBLE
+RP   ROLE IN DNA-BINDING.
+RC   STRAIN=Nine Mile phase I, and Nine Mile phase II;
+RX   PubMed=8899704; DOI=10.1111/j.1365-2958.1996.tb02651.x;
+RA   Heinzen R.A., Howe D., Mallavia L.P., Rockey D.D., Hackstadt T.;
+RT   "Developmentally regulated synthesis of an unusually small, basic peptide
+RT   by Coxiella burnetii.";
+RL   Mol. Microbiol. 22:9-19(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=RSA 493 / Nine Mile phase I;
+RX   PubMed=12704232; DOI=10.1073/pnas.0931379100;
+RA   Seshadri R., Paulsen I.T., Eisen J.A., Read T.D., Nelson K.E., Nelson W.C.,
+RA   Ward N.L., Tettelin H., Davidsen T.M., Beanan M.J., DeBoy R.T.,
+RA   Daugherty S.C., Brinkac L.M., Madupu R., Dodson R.J., Khouri H.M.,
+RA   Lee K.H., Carty H.A., Scanlan D., Heinzen R.A., Thompson H.A., Samuel J.E.,
+RA   Fraser C.M., Heidelberg J.F.;
+RT   "Complete genome sequence of the Q-fever pathogen, Coxiella burnetii.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:5455-5460(2003).
+RN   [3]
+RP   DEVELOPMENTAL STAGE.
+RC   STRAIN=RSA 493 / Nine Mile phase I;
+RX   PubMed=11447163; DOI=10.1128/iai.69.8.4874-4883.2001;
+RA   Seshadri R., Samuel J.E.;
+RT   "Characterization of a stress-induced alternate sigma factor, RpoS, of
+RT   Coxiella burnetii and its expression during the development cycle.";
+RL   Infect. Immun. 69:4874-4883(2001).
+CC   -!- FUNCTION: Might be involved in DNA-binding; the protein binds DNA in
+CC       gel-shift assays and immunogold electron microscopy shows labelling of
+CC       condensed chromatin.
+CC   -!- DEVELOPMENTAL STAGE: Only detected in the small cell variant (SCV)
+CC       stage (at protein level). LCVs are more metabolically active than SCVs.
+CC       The protein is present in SCVs from Nine Mile phase I strains, but its
+CC       distribution in phase II strains was not examined (PubMed:8899704).
+CC       {ECO:0000269|PubMed:11447163, ECO:0000269|PubMed:8899704}.
+CC   -!- MISCELLANEOUS: The protein sequence was determined from Nine Mile phase
+CC       II cells.
+DR   EMBL; L49019; AAB39278.1; -; Genomic_DNA.
+DR   EMBL; AE016828; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   PIR; S72626; S72626.
+DR   RefSeq; WP_010958114.1; NZ_CDBG01000001.1.
+DR   RefSeq; YP_002332993.1; NC_002971.4.
+DR   AlphaFoldDB; Q45966; -.
+DR   STRING; 227377.CBU_1267a; -.
+DR   GeneID; 7065864; -.
+DR   KEGG; cbu:CBU_1267a; -.
+DR   Proteomes; UP000002671; Chromosome.
+DR   GO; GO:0003677; F:DNA binding; IEA:UniProtKB-KW.
+PE   1: Evidence at protein level;
+KW   Direct protein sequencing; DNA-binding; Reference proteome.
+FT   CHAIN           1..30
+FT                   /note="Protein ScvA"
+FT                   /id="PRO_0000318559"
+FT   REGION          1..30
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   30 AA;  3614 MW;  44D6BBBCA242FC04 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Coxiella.
+2	5	Coxiellaceae
+2	4	Legionellales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A9Q0I1J0	UNCHARACTERIZED PROTEIN {     40.6    9.4e-07   5   5.5   0.0
+	Iterate                   	    19	    37	     6.7
+	Iterate                   	    59	    77	     6.7
+	Iterate                   	    99	   117	     6.7
+	Iterate                   	   139	   157	     6.7
+	Iterate                   	   179	   197	     6.3
+
+B5QSC0	SCVA {ECO:0000313|EMBL:ACI152     72.6    7.8e-17   1   1.0  19.4
+	Iterate                   	     1	    30	    72.5
+
+G3ID01	UNCHARACTERIZED PROTEIN {ECO:     25.2       0.07   5   8.6   0.2
+	Iterate                   	   243	   269	     3.9
+	Iterate                   	    41	    63	     1.3
+	Iterate                   	    22	    45	     1.1
+	Iterate                   	   109	   129	     1.1
+	Iterate                   	   177	   197	     1.1
+
+Q45966	PROTEIN SCVA                        72.6    7.8e-17   1   1.0  19.4
+	Iterate                   	     1	    30	    72.5
+
+V4B1S7	UNCHARACTERIZED PROTEIN {ECO:     20.4        2.3   7   7.3  38.8
+	Iterate                   	    51	    66	     6.8
+	Iterate                   	   120	   135	     6.8
+	Iterate                   	    74	    89	     6.7
+	Iterate                   	    97	   112	     6.7
+	Iterate                   	     5	    20	     6.6
+	Iterate                   	    28	    43	     6.5
+	Iterate                   	   143	   157	     6.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: B5QSC0 (E-value: 7e-19, Score: 72.6)
+Mentioned as: B5QSC0
+Description: ScvA
+Organism: Coxiella burnetii (strain RSA 493 / Nine Mile phase I)
+PMID: 22438959
+Source: EuropePMC
+Title: Quantitative proteome profiling of C. burnetii under tetracycline stress conditions
+Journal: PloS one (2012)
+Snippet: ribonucleoside salvage (Q83FC4), transport and binding (Q83BF9, Q82OW5, Q83DI7 and Q83AW2) and unknown function (B5QSC3, B5QSC0, Q83A96, Q83EA1, Q83EJ9, Q83A79, Q83D04, Q83DR4, Q83B41 and Q83CL9). One example of the latter is ScvA (B5QSC0), a highly basic DNA binding protein specific for the small cell variant (SCV)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q45966/Iterate
+GA   27.00 27.00;
+TC   40.60 72.50;
+NC   25.20 18.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

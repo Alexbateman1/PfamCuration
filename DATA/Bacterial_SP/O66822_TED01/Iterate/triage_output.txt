@@ -1,0 +1,121 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y545_AQUAE              Reviewed;         399 AA.
+AC   O66822;
+DE   RecName: Full=Uncharacterized protein aq_545;
+GN   OrderedLocusNames=aq_545;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC06792.1; -; Genomic_DNA.
+DR   PIR; B70349; B70349.
+DR   RefSeq; NP_213382.1; NC_000918.1.
+DR   RefSeq; WP_010880320.1; NC_000918.1.
+DR   AlphaFoldDB; O66822; -.
+DR   SMR; O66822; -.
+DR   EnsemblBacteria; AAC06792; AAC06792; aq_545.
+DR   KEGG; aae:aq_545; -.
+DR   HOGENOM; CLU_705510_0_0_0; -.
+DR   InParanoid; O66822; -.
+DR   OrthoDB; 10243at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..399
+FT                   /note="Uncharacterized protein aq_545"
+FT                   /id="PRO_0000186868"
+SQ   SEQUENCE   399 AA;  46953 MW;  AA57D8680674318B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thermocrinis
+1	6	Hydrogenobacter
+1	6	Hydrogenivirga
+1	6	Aquifex
+4	5	Aquificaceae
+4	4	Aquificales
+4	3	Aquificia
+4	2	Aquificota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A497XN21	UNCHARACTERIZED PROTEIN {    374.2   1.7e-108   1   1.7   2.0
+	Iterate                   	     3	   265	   374.2
+
+A0A6C1BP04	UNCHARACTERIZED PROTEIN {    321.6    1.9e-92   2   2.0   2.6
+	Iterate                   	     3	   264	   316.5
+	Iterate                   	   284	   370	     5.0
+
+A8UTM1	UNCHARACTERIZED PROTEIN {ECO:    356.6   4.2e-103   1   1.2   2.5
+	Iterate                   	     7	   269	   356.1
+
+D3DJ35	UNCHARACTERIZED PROTEIN {ECO:    184.8      1e-50   1   1.2   0.2
+	Iterate                   	     1	   264	   184.4
+
+O66822	UNCHARACTERIZED PROTEIN AQ_545     614.4   9.7e-182   1   1.2  13.2
+	Iterate                   	     3	   265	   613.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS2452 (E-value: 0.00016, Score: 26.5)
+Mentioned as: TM1573
+Description: conserved hypothetical protein
+Organism: Thermotoga maritima MSB8
+PMID: 11071948
+Source: EuropePMC
+Title: Analysis of the Thermotoga maritima genome combining a variety of sequence similarity and genome context tools
+Journal: Nucleic acids research (2000)
+Snippet: detection using family models in Pfam is the ORF TM1573, a protein containing the bacterial PQQ domain, and the ORF TM1741, an RNA methyltransferase. Examples
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1M6TCD9.1	AF-A0A1M6TCD9-F1-model_v4_TED01:3-260	1	AF-A0A1M6TCD9-F1-model_v4_TED01	3-260	100.0%
+A0A1M6TCD9.1	AF-A0A1M6TCD9-F1-model_v4_TED02:269-385	1	AF-A0A1M6TCD9-F1-model_v4_TED02	269-385	0
+A0A497XN21.1	AF-A0A497XN21-F1-model_v4_TED01:3-265	1	AF-A0A497XN21-F1-model_v4_TED01	3-265	100.0%
+A0A497XN21.1	AF-A0A497XN21-F1-model_v4_TED02:274-390	1	AF-A0A497XN21-F1-model_v4_TED02	274-390	0
+A0A6C1BP04.1	AF-A0A6C1BP04-F1-model_v4_TED01:4-232	1	AF-A0A6C1BP04-F1-model_v4_TED01	4-232	87.4%
+A0A6C1BP04.1	AF-A0A6C1BP04-F1-model_v4_TED02:273-388	1	AF-A0A6C1BP04-F1-model_v4_TED02	273-388	0
+A8UTM1.1	AF-A8UTM1-F1-model_v4_TED01:7-269	1	AF-A8UTM1-F1-model_v4_TED01	7-269	100.0%
+A8UTM1.1	AF-A8UTM1-F1-model_v4_TED02:278-394	1	AF-A8UTM1-F1-model_v4_TED02	278-394	0
+D3DJ35.1	AF-D3DJ35-F1-model_v4_TED01:3-267	1	AF-D3DJ35-F1-model_v4_TED01	3-267	100.0%
+D3DJ35.1	AF-D3DJ35-F1-model_v4_TED02:273-390	1	AF-D3DJ35-F1-model_v4_TED02	273-390	0
+O66822.1	AF-O66822-F1-model_v4_TED01:3-265	1	AF-O66822-F1-model_v4_TED01	3-265	100.0%
+O66822.1	AF-O66822-F1-model_v4_TED02:274-397	1	AF-O66822-F1-model_v4_TED02	274-397	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O66822_TED01/Iterate
+GA   27.00 27.00;
+TC   27.50 386.20;
+NC   26.90 23.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

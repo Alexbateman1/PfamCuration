@@ -1,0 +1,70 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Staphylococcus
+1	6	Enterococcus
+1	6	Cuspidothrix.
+1	5	Staphylococcaceae
+1	5	Enterococcaceae
+1	5	Aphanizomenonaceae
+1	4	Nostocales
+1	4	Lactobacillales
+1	4	Bacillales
+2	3	Bacilli
+1	3	Cyanophyceae
+2	2	Bacillota
+1	2	Cyanobacteriota
+3	1	Bacillati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1L8SM14	MOBILIZATION PROTEIN {ECO    122.5    3.2e-32   1   1.3   0.7
+	Iterate                   	     1	    79	   121.9
+
+A0A2S6CP06	MOBILIZATION PROTEIN {ECO    188.3    9.7e-53   1   2.1   5.0
+	Iterate                   	    58	   149	   188.3
+
+A0A3N0YRT4	C-TYPE LECTIN DOMAIN FAMI     72.1    1.7e-16   1  10.3  27.7
+	Iterate                   	    93	   141	     9.9
+	PF24161	CCDC39          	    90	   427	    74.7
+	PF05701	WEMBL           	   215	   427	    37.6
+
+A0A3N0Z9G0	EPIDERMAL GROWTH FACTOR R     48.2    4.8e-09   2   5.5   8.5
+	Iterate                   	     1	    48	    11.8
+	Iterate                   	    26	   178	    10.2
+	PF27605	ODF2_C          	     1	   178	    48.7
+
+Q5HS41	MOBILIZATION PROTEIN {ECO:000    190.1    2.6e-53   1   2.9   3.5
+	Iterate                   	   125	   216	   190.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2S6CP06.1	AF-A0A2S6CP06-F1-model_v4_TED01:2-58	1	AF-A0A2S6CP06-F1-model_v4_TED01	2-58	1.1%
+A0A2S6CP06.1	AF-A0A2S6CP06-F1-model_v4_TED02:154-201	1	AF-A0A2S6CP06-F1-model_v4_TED02	154-201	0
+Q5HS41.1	AF-Q5HS41-F1-model_v4_TED01:22-46_54-125	1	AF-Q5HS41-F1-model_v4_TED01	22-125	1.1%
+Q5HS41.1	AF-Q5HS41-F1-model_v4_TED02:214-268	1	AF-Q5HS41-F1-model_v4_TED02	214-268	3.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P14503_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   33.40 121.90;
+NC   26.90 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

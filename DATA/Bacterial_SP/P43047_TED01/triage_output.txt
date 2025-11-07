@@ -1,0 +1,57 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Mycoplasma
+1	4	Mycoplasmataceae
+1	3	Mollicutes
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q6MRT5	HYPOTHETICAL TRANSMEMBRANE PR     29.1     0.0047   1   1.5  30.2
+	P43047_TED01              	    44	   151	    29.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS543995 (E-value: 4.2e-05, Score: 29.1)
+Mentioned as: MSC_1052
+Description: hypothetical protein
+Organism: Mycoplasma mycoides subsp. mycoides SC str. PG1
+PMID: 19696080
+Source: EuropePMC
+Title: Recombinant surface proteomics as a tool to analyze humoral immune responses in bovines infected by Mycoplasma mycoides subsp. mycoides small colony type
+Journal: Molecular & cellular proteomics : MCP (2009)
+Snippet: protein and two hypothetical proteins (MSC_0576 and MSC_1052). In contrast, five of the seven native proteins corresponding to the recombinant proteins
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P43047.2	AF-P43047-F1-model_v4_TED01:45-152	1	AF-P43047-F1-model_v4_TED01	45-152	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P43047_TED01
+GA   27.00 27.00;
+TC   27.80 29.10;
+NC   23.30 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

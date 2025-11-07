@@ -1,0 +1,120 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YFFL_ECOLI              Reviewed;         213 AA.
+AC   P76543;
+DE   RecName: Full=Uncharacterized protein YffL;
+GN   Name=yffL; OrderedLocusNames=b2443;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+DR   EMBL; U00096; AAC75496.1; -; Genomic_DNA.
+DR   PIR; B65019; B65019.
+DR   RefSeq; NP_416938.1; NC_000913.3.
+DR   RefSeq; WP_000458337.1; NZ_JACEFS010000004.1.
+DR   AlphaFoldDB; P76543; -.
+DR   SMR; P76543; -.
+DR   DIP; DIP-12026N; -.
+DR   FunCoup; P76543; 145.
+DR   IntAct; P76543; 8.
+DR   STRING; 511145.b2443; -.
+DR   PaxDb; 511145-b2443; -.
+DR   EnsemblBacteria; AAC75496; AAC75496; b2443.
+DR   GeneID; 946922; -.
+DR   KEGG; eco:b2443; -.
+DR   KEGG; ecoc:C3026_13565; -.
+DR   PATRIC; fig|83333.110.peg.3369; -.
+DR   EchoBASE; EB3925; -.
+DR   InParanoid; P76543; -.
+DR   BioCyc; EcoCyc:G7273-MONOMER; -.
+DR   PRO; PR:P76543; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..213
+FT                   /note="Uncharacterized protein YffL"
+FT                   /id="PRO_0000169232"
+FT   REGION          1..21
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          63..98
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        1..11
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        12..21
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        63..93
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   213 AA;  25143 MW;  F56CDCA0D4754336 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P76543	UNCHARACTERIZED PROTEIN YFFL       247.1      8e-71   1   1.6   2.2
+	P76543_TED02              	    98	   204	   247.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS16542 (E-value: 7.1e-73, Score: 247.1)
+Mentioned as: b2443
+Description: CPZ-55 prophage; predicted protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 14973045
+Source: EuropePMC
+Title: Identification and mapping of self-assembling protein domains encoded by the Escherichia coli K-12 genome by use of lambda repressor fusions
+Journal: Journal of bacteriology (2004)
+Snippet: b2245 b2249 b2291 b2294 b2355 b2360 b2398 b2399 b2427 b2443 b2450 b2561 b2556 b2664 b2735 b2738 b2869 b3105 b3200 b3243 b3346 b3376 b3521 b0360 b1403 b1997
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76543.1	AF-P76543-F1-model_v4_TED02:98-204	1	AF-P76543-F1-model_v4_TED02	98-204	100.0%
+P76543.1	AF-P76543-F1-model_v4_TED01:6-36	1	AF-P76543-F1-model_v4_TED01	6-36	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76543_TED02
+GA   27.00 27.00;
+TC   50.80 247.10;
+NC   25.50 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,107 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y709_RICPR              Reviewed;          98 AA.
+AC   Q9ZCL6;
+DE   RecName: Full=Uncharacterized protein RP709;
+GN   OrderedLocusNames=RP709;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+DR   EMBL; AJ235273; CAA15144.1; -; Genomic_DNA.
+DR   PIR; H71630; H71630.
+DR   RefSeq; NP_221068.1; NC_000963.1.
+DR   RefSeq; WP_004598899.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZCL6; -.
+DR   SMR; Q9ZCL6; -.
+DR   EnsemblBacteria; CAA15144; CAA15144; CAA15144.
+DR   KEGG; rpr:RP709; -.
+DR   PATRIC; fig|272947.5.peg.732; -.
+DR   HOGENOM; CLU_2331877_0_0_5; -.
+DR   Proteomes; UP000002480; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..98
+FT                   /note="Uncharacterized protein RP709"
+FT                   /id="PRO_0000101408"
+SQ   SEQUENCE   98 AA;  10996 MW;  24C7EAA1327CF517 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	typhus group.
+1	7	Rickettsia
+1	6	Rickettsieae
+1	5	Rickettsiaceae
+1	4	Rickettsiales
+1	3	Alphaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9ZCL6	UNCHARACTERIZED PROTEIN RP709      188.6    6.5e-53   1   1.0   8.5
+	Q9ZCL6_TED01              	     2	    84	   188.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS36370 (E-value: 5.8e-55, Score: 188.6)
+Mentioned as: RP709
+Description: unknown
+Organism: Rickettsia prowazekii str. Madrid E
+PMID: 17916642
+Source: EuropePMC
+Title: Lateral gene transfer between obligate intracellular bacteria: evidence from the Rickettsia massiliae genome
+Journal: Genome research (2007)
+Snippet: (RBE_1035) and the R. prowazekii (pseudogene between RP708 and RP709) genomes. The R. prowazekii U pseudogene is located in a 12-kb region specific to R.
+
+================================================================================
+Protein: VIMSS36370 (E-value: 5.8e-55, Score: 188.6)
+Mentioned as: RP709
+Description: unknown
+Organism: Rickettsia prowazekii str. Madrid E
+PMID: 15317790
+Source: EuropePMC
+Title: Complete genome sequence of Rickettsia typhi and comparison with sequences of other rickettsiae
+Journal: Journal of bacteriology (2004)
+Snippet: prowazekii (Fig. 2). As a result, nine R. prowazekii ORFs (RP709 to RP717) are not present in the R. typhi chromosome. This region is also absent from R.
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZCL6.1	AF-Q9ZCL6-F1-model_v4_TED01:2-56_67-84	1	AF-Q9ZCL6-F1-model_v4_TED01	2-84	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZCL6_TED01
+GA   27.00 27.00;
+TC   27.70 188.40;
+NC   25.80 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

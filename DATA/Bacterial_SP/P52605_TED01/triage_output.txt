@@ -1,0 +1,67 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+Total of 0 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A6P2G1B0	CONJUGAL TRANSFER PROTEIN    120.7    1.2e-31   1   1.7   0.8
+	P52605_TED01              	     2	   121	   119.4
+	PF27393	KlcB_N          	   111	   187	     113
+	PF27190	KlcB_3rd        	   201	   294	    70.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P52605 (E-value: 1.9e-69, Score: 235.4)
+Mentioned as: P52605
+Description: Protein KlcB
+Organism: Escherichia coli
+PMID: 19190096
+Source: EuropePMC
+Title: Crystal structure of KorA bound to operator DNA: insight into repressor cooperation in RP4 gene regulation
+Journal: Nucleic acids research (2009)
+Snippet: shared identity toward full-length KorA RP4 : P03052, 100%; Q57423, 79%; Q01716, 51%; Q56468, 59%; P52605, 32%; and P52604, 41%). The secondary structure elements of KorA are represented above the aligned sequences. Identical and similar residues are highlighted in green and yellow, respectively. Dots mark KorA
+
+================================================================================
+Protein: VIMSS1733760 (E-value: 1.1e-33, Score: 120.7)
+Mentioned as: NP_990888
+Description: KlcB
+Organism: Achromobacter denitrificans
+PMID: 20018208
+Source: EuropePMC
+Title: Comparative genomics of pAKD4, the prototype IncP-1delta plasmid with a complete backbone
+Journal: Plasmid (2010)
+Snippet: 56 klcB 46941 48347 469 66 stable inheritance protein KlcB [ Achromobacter denitrificans , pEST4011] NP_990888 99 57 klcA 48395 48829 145 63 antirestriction protein KlcA [ Achromobacter denitrificans , pEST4011] NP_990889 100 58 orf58 48927 49211 95 64 conserved hypothetical protein Orf10 [ Burkholderia cepacia
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P52605.2	AF-P52605-F1-model_v4_TED01:1-100	1	AF-P52605-F1-model_v4_TED01	1-100	100.0%
+P52605.2	AF-P52605-F1-model_v4_TED02:102-184	1	AF-P52605-F1-model_v4_TED02	102-184	0
+P52605.2	AF-P52605-F1-model_v4_TED04:388-458	1	AF-P52605-F1-model_v4_TED04	388-458	0
+P52605.2	AF-P52605-F1-model_v4_TED03:198-291	1	AF-P52605-F1-model_v4_TED03	198-291	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P52605_TED01
+GA   27.00 27.00;
+TC   28.50 119.40;
+NC   23.50 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

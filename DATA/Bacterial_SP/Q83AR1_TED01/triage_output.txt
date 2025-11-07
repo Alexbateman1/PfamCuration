@@ -1,0 +1,105 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1819_COXBU             Reviewed;         377 AA.
+AC   Q83AR1;
+DE   RecName: Full=Uncharacterized protein CBU_1819;
+GN   OrderedLocusNames=CBU_1819;
+OS   Coxiella burnetii (strain RSA 493 / Nine Mile phase I).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Legionellales; Coxiellaceae; Coxiella.
+OX   NCBI_TaxID=227377;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=RSA 493 / Nine Mile phase I;
+RX   PubMed=12704232; DOI=10.1073/pnas.0931379100;
+RA   Seshadri R., Paulsen I.T., Eisen J.A., Read T.D., Nelson K.E., Nelson W.C.,
+RA   Ward N.L., Tettelin H., Davidsen T.M., Beanan M.J., DeBoy R.T.,
+RA   Daugherty S.C., Brinkac L.M., Madupu R., Dodson R.J., Khouri H.M.,
+RA   Lee K.H., Carty H.A., Scanlan D., Heinzen R.A., Thompson H.A., Samuel J.E.,
+RA   Fraser C.M., Heidelberg J.F.;
+RT   "Complete genome sequence of the Q-fever pathogen, Coxiella burnetii.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:5455-5460(2003).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE016828; AAO91312.1; -; Genomic_DNA.
+DR   RefSeq; NP_820798.1; NC_002971.4.
+DR   RefSeq; WP_010958463.1; NC_002971.4.
+DR   AlphaFoldDB; Q83AR1; -.
+DR   SMR; Q83AR1; -.
+DR   EnsemblBacteria; AAO91312; AAO91312; CBU_1819.
+DR   GeneID; 1209730; -.
+DR   KEGG; cbu:CBU_1819; -.
+DR   PATRIC; fig|227377.7.peg.1805; -.
+DR   HOGENOM; CLU_733027_0_0_6; -.
+DR   Proteomes; UP000002671; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..377
+FT                   /note="Uncharacterized protein CBU_1819"
+FT                   /id="PRO_0000309269"
+FT   TRANSMEM        71..91
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        140..160
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   377 AA;  42315 MW;  10D3EC72FC777016 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Coxiella.
+1	5	Coxiellaceae
+1	4	Legionellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q83AR1	UNCHARACTERIZED PROTEIN CBU_18    153.6    6.2e-42   1   1.6  11.0
+	Q83AR1_TED01              	   192	   261	   152.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS222798 (E-value: 5.5e-44, Score: 153.6)
+Mentioned as: CBU_1819
+Description: hypothetical protein
+Organism: Coxiella burnetii RSA 493
+PMID: 36723494
+Source: EuropePMC
+Title: Identification of essential genes in <i>Coxiella burnetii</i>
+Journal: Microbial genomics (2023)
+Snippet: ] CBU_1614 CBU_1614 Hypothetical protein [ 81 ] CBU_1686 CBU_1686 Hypothetical protein [ 81 ] CBU_1819 CBU_1819 Hypothetical membrane associated protein [ 93 ] CBUA0023 CBUA0023 Hypothetical protein [ 94 ] Conclusion We present the first report of a whole genome TraDIS study in C. burnetii
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q83AR1.1	AF-Q83AR1-F1-model_v4_TED01:192-261	1	AF-Q83AR1-F1-model_v4_TED01	192-261	100.0%
+Q83AR1.1	AF-Q83AR1-F1-model_v4_TED02:272-334	1	AF-Q83AR1-F1-model_v4_TED02	272-334	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q83AR1_TED01
+GA   27.00 27.00;
+TC   27.70 152.60;
+NC   26.60 25.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

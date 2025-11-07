@@ -1,0 +1,116 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1163_AQUAE             Reviewed;         125 AA.
+AC   O67227;
+DE   RecName: Full=Uncharacterized protein aq_1163;
+GN   OrderedLocusNames=aq_1163;
+OS   Aquifex aeolicus (strain VF5).
+OC   Bacteria; Pseudomonadati; Aquificota; Aquificia; Aquificales; Aquificaceae;
+OC   Aquifex.
+OX   NCBI_TaxID=224324;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=VF5;
+RX   PubMed=9537320; DOI=10.1038/32831;
+RA   Deckert G., Warren P.V., Gaasterland T., Young W.G., Lenox A.L.,
+RA   Graham D.E., Overbeek R., Snead M.A., Keller M., Aujay M., Huber R.,
+RA   Feldman R.A., Short J.M., Olsen G.J., Swanson R.V.;
+RT   "The complete genome of the hyperthermophilic bacterium Aquifex aeolicus.";
+RL   Nature 392:353-358(1998).
+DR   EMBL; AE000657; AAC07189.1; -; Genomic_DNA.
+DR   PIR; H70399; H70399.
+DR   RefSeq; NP_213791.1; NC_000918.1.
+DR   RefSeq; WP_010880729.1; NC_000918.1.
+DR   AlphaFoldDB; O67227; -.
+DR   SMR; O67227; -.
+DR   STRING; 224324.aq_1163; -.
+DR   EnsemblBacteria; AAC07189; AAC07189; aq_1163.
+DR   KEGG; aae:aq_1163; -.
+DR   HOGENOM; CLU_1988002_0_0_0; -.
+DR   InParanoid; O67227; -.
+DR   OrthoDB; 14337at2; -.
+DR   Proteomes; UP000000798; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..125
+FT                   /note="Uncharacterized protein aq_1163"
+FT                   /id="PRO_0000186905"
+SQ   SEQUENCE   125 AA;  14895 MW;  4712D79A3392DD14 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Hydrogenivirga
+1	6	Aquifex
+2	5	Aquificaceae
+2	4	Aquificales
+2	3	Aquificia
+2	2	Aquificota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A497XTQ8	UNCHARACTERIZED PROTEIN {     84.0    4.1e-20   1   1.0   0.1
+	Iterate                   	     4	   128	    83.8
+
+A0A7J6KG36	TRANSMEMBRANE PROTEIN {EC     56.0    1.9e-11   0  24.7   0.0
+
+A0A812E6E2	UNCHARACTERIZED PROTEIN {     26.7      0.023   2   7.0   0.6
+	Iterate                   	   481	   538	     2.5
+	Iterate                   	   603	   661	     2.4
+	PF29058	Shell_matrix-like_N	   153	   208	    37.6
+	PF29058	Shell_matrix-like_N	   231	   288	    45.2
+	PF29058	Shell_matrix-like_N	   297	   352	    41.7
+	PF29058	Shell_matrix-like_N	   360	   415	      40
+	PF29058	Shell_matrix-like_N	   423	   478	      40
+	PF29058	Shell_matrix-like_N	   614	   669	      40
+
+A8UR72	UNCHARACTERIZED PROTEIN {ECO:     89.4    8.8e-22   1   1.0   0.1
+	Iterate                   	     4	   127	    89.1
+
+O67227	UNCHARACTERIZED PROTEIN AQ_116    288.8    1.6e-83   1   1.0   1.7
+	Iterate                   	     2	   124	   288.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS25099 (E-value: 3.7e-59, Score: 203.9)
+Mentioned as: aq_1163
+Description: putative protein
+Organism: Aquifex aeolicus VF5
+PMID: 36983784
+Source: EuropePMC
+Title: Carbon Fixation in the Chemolithoautotrophic Bacterium <i>Aquifex aeolicus</i> Involves Two Low-Potential Ferredoxins as Partners of the PFOR and OGOR Enzymes
+Journal: Life (Basel, Switzerland) (2023)
+Snippet: for OGOR, in addition to the five For subunits, two proteins annotated as uncharacterized proteins, Aq_1163 and reverse gyrase 2, whose genes are adjacent to those encoding the OGOR subunits ( Figure S5 ), were captured in the pull-down experiment and identified by proteomics ( Tables
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A497XTQ8.1	AF-A0A497XTQ8-F1-model_v4_TED01:4-134	1	AF-A0A497XTQ8-F1-model_v4_TED01	4-134	100.0%
+A8UR72.1	AF-A8UR72-F1-model_v4_TED01:4-134	1	AF-A8UR72-F1-model_v4_TED01	4-134	100.0%
+O67227.1	AF-O67227-F1-model_v4_TED01:2-124	1	AF-O67227-F1-model_v4_TED01	2-124	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O67227_TED01/Iterate
+GA   27.00 27.00;
+TC   32.60 203.70;
+NC   23.90 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

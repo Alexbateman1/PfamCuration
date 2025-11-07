@@ -1,0 +1,136 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MSA_STAA8               Reviewed;         133 AA.
+AC   Q2FYN3;
+DE   RecName: Full=Protein msa;
+DE   AltName: Full=Modulator of SarA;
+GN   Name=msa; OrderedLocusNames=SAOUHSC_01402;
+OS   Staphylococcus aureus (strain NCTC 8325 / PS 47).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Staphylococcaceae;
+OC   Staphylococcus.
+OX   NCBI_TaxID=93061;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NCTC 8325 / PS 47;
+RA   Gillaspy A.F., Worrell V., Orvis J., Roe B.A., Dyer D.W., Iandolo J.J.;
+RT   "The Staphylococcus aureus NCTC 8325 genome.";
+RL   (In) Fischetti V., Novick R., Ferretti J., Portnoy D., Rood J. (eds.);
+RL   Gram positive pathogens, 2nd edition, pp.381-412, ASM Press, Washington
+RL   D.C. (2006).
+RN   [2]
+RP   FUNCTION.
+RX   PubMed=16946251; DOI=10.1099/mic.0.29071-0;
+RA   Sambanthamoorthy K., Smeltzer M.S., Elasri M.O.;
+RT   "Identification and characterization of msa (SA1233), a gene involved in
+RT   expression of SarA and several virulence factors in Staphylococcus
+RT   aureus.";
+RL   Microbiology 152:2559-2572(2006).
+CC   -!- FUNCTION: Accessory element involved in the expression of sarA and
+CC       several virulence factors. Modulates SarA production and/or function in
+CC       a strain-dependent manner. Affects the transcription of the accessory
+CC       gene regulator (agr) and genes encoding virulence factors including
+CC       alpha toxin (hla) and protein A (spa). {ECO:0000269|PubMed:16946251}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; CP000253; ABD30496.1; -; Genomic_DNA.
+DR   RefSeq; WP_000876201.1; NZ_LS483365.1.
+DR   RefSeq; YP_499929.1; NC_007795.1.
+DR   AlphaFoldDB; Q2FYN3; -.
+DR   SMR; Q2FYN3; -.
+DR   PaxDb; 1280-SAXN108_1418; -.
+DR   GeneID; 3920692; -.
+DR   KEGG; sao:SAOUHSC_01402; -.
+DR   PATRIC; fig|93061.5.peg.1283; -.
+DR   HOGENOM; CLU_157294_0_0_9; -.
+DR   OrthoDB; 2414128at2; -.
+DR   PRO; PR:Q2FYN3; -.
+DR   Proteomes; UP000008816; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   NCBIfam; NF038270; membran_MsaC; 1.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..133
+FT                   /note="Protein msa"
+FT                   /id="PRO_0000253055"
+FT   TRANSMEM        3..23
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        27..47
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        55..75
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        103..123
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   133 AA;  15657 MW;  7733CA6C85E6A7B8 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Staphylococcus
+1	5	Staphylococcaceae
+1	4	Bacillales
+1	3	Bacilli
+1	2	Bacillota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q2FYN3	PROTEIN MSA                         277.6    7.9e-80   1   1.0  28.3
+	Q2FYN3_TED01              	     1	   133	   277.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS103540 (E-value: 7.1e-82, Score: 277.6)
+Mentioned as: NP_374514
+Description: hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus N315
+PMID: 18047728
+Source: EuropePMC
+Title: Structure and function predictions of the Msa protein in Staphylococcus aureus
+Journal: BMC bioinformatics (2007)
+Snippet: SAV1401, msa , SAS1342, MW1289, SAR1413, and SAB1257c) and protein sequences (YP_493991, YP_186288, YP_499929, NP_371925, NP_374514, YP_043463, NP_646106) from different strains show that they are identical. The only two exceptions were strains RF122 and MRSA252 which showed slight variations in the Msa sequences. In RF122, the
+
+================================================================================
+Protein: VIMSS666718 (E-value: 1.6e-77, Score: 263.5)
+Mentioned as: SAR1413
+Description: putative membrane protein
+Organism: Staphylococcus aureus subsp. aureus MRSA252
+PMID: 34825882
+Source: EuropePMC
+Title: A functional menadione biosynthesis pathway is required for capsule production by &lt;i&gt;Staphylococcus aureus&lt;/i&gt;
+Journal: Microbiology (Reading, England) (2021)
+Snippet: biotin carboxylase subunit of acetyl-CoA carboxylase 0.039515902 lysS lysyl-tRNA synthetase 0.039515902 Intergenic between lysS and SAR1413 0.039515902 Intergenic between SAR1326 and SAR1327 0.039515902 pbp4 penicillin-binding protein 4 0.039515902 SAR0880 conserved hypothetical protein 0.039515902 Intergenic between ehb and SAR1448 0.039515902 vraD ABC transporter ATP-binding protein 0.039515902 SAR1265
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q2FYN3.1	AF-Q2FYN3-F1-model_v4_TED01:1-133	1	AF-Q2FYN3-F1-model_v4_TED01	1-133	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q2FYN3_TED01
+GA   27.00 27.00;
+TC   30.80 277.50;
+NC   22.00 19.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

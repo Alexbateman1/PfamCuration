@@ -1,0 +1,108 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	Racocetra.
+1	8	Geodia.
+1	8	Ambispora.
+1	7	Ralstoniasolanacearum species complex.
+1	7	Gigasporaceae
+1	7	Geodiidae
+1	7	Ambisporaceae
+1	6	Ralstonia
+1	6	Helicobacter.
+1	6	Diversisporales
+1	6	Astrophorina
+1	6	Archaeosporales
+2	5	Glomeromycetes
+1	5	Tetractinellida
+1	5	Helicobacteraceae
+1	5	Burkholderiaceae
+2	4	Glomeromycotina
+1	4	Heteroscleromorpha
+1	4	Campylobacterales
+1	4	Burkholderiales
+2	3	Mucoromycota
+1	3	Epsilonproteobacteria
+1	3	Demospongiae
+1	3	Betaproteobacteria
+2	2	Fungi incertae sedis
+1	2	Pseudomonadota
+1	2	Porifera
+1	2	Campylobacterota
+2	1	Pseudomonadati
+2	1	Fungi
+1	1	Metazoa
+3	0	Eukaryota
+2	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A4U8UIA5	RESTRICTION ENDONUCLEASE      75.6    1.8e-17   1   1.2   2.7
+	P00643_TED02              	    65	   193	    75.0
+
+A0A7U7JCX0	PROBABLE TYPE II RESTRICT     70.1      9e-16   1   1.2   0.5
+	P00643_TED02              	    57	   189	    69.6
+
+A0A975S9W6	RESTRICTION ENDONUCLEASE     198.6    1.9e-55   1   1.3   4.0
+	P00643_TED02              	    51	   187	   198.0
+
+A0A9N8YVK5	17230_T:CDS:1 {ECO:000031     77.2    5.5e-18   1   1.2   3.3
+	P00643_TED02              	    95	   234	    76.7
+	PF01555	N6_N4_Mtase     	     1	    65	    42.7
+
+A0A9N9HVD7	12924_T:CDS:1 {ECO:000031     78.4    2.3e-18   1   1.5   2.1
+	P00643_TED02              	   267	   398	    77.4
+
+A0AA35RWA4	MODIFICATION METHYLASE HH     81.4    2.7e-19   1   1.3   0.1
+	P00643_TED02              	   293	   425	    80.7
+	PF01555	N6_N4_Mtase     	    46	   232	    47.1
+
+A0AAD8EXZ7	UNCHARACTERIZED PROTEIN {     85.9    1.2e-20  19  19.0  32.2
+	P00643_TED02              	   665	   715	     5.1
+	P00643_TED02              	   625	   670	     5.0
+	P00643_TED02              	   146	   188	     4.9
+	P00643_TED02              	   220	   262	     4.9
+	P00643_TED02              	   258	   300	     4.9
+	P00643_TED02              	   294	   336	     4.9
+	P00643_TED02              	   368	   410	     4.9
+	P00643_TED02              	   406	   448	     4.9
+	P00643_TED02              	   442	   484	     4.9
+	P00643_TED02              	    36	    76	     4.8
+	P00643_TED02              	    71	   112	     4.8
+	P00643_TED02              	   109	   150	     4.8
+	P00643_TED02              	   184	   224	     4.8
+	P00643_TED02              	   330	   372	     4.8
+	P00643_TED02              	   516	   557	     4.8
+	P00643_TED02              	   554	   594	     4.8
+	P00643_TED02              	   479	   519	     4.7
+	P00643_TED02              	   590	   630	     4.7
+	P00643_TED02              	     5	    39	     2.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P00643.1	AF-P00643-F1-model_v4_TED01:3-40_194-224	1	AF-P00643-F1-model_v4_TED01	3-224	100.0%
+P00643.1	AF-P00643-F1-model_v4_TED02:52-189	1	AF-P00643-F1-model_v4_TED02	52-189	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P00643_TED02
+GA   27.00 27.00;
+TC   28.10 39.40;
+NC   23.80 23.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

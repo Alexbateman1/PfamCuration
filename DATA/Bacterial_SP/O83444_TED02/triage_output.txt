@@ -1,0 +1,160 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   VATI1_TREPA             Reviewed;         622 AA.
+AC   O83444;
+DE   RecName: Full=V-type ATP synthase subunit I 1;
+DE   AltName: Full=V-ATPase subunit I 1;
+GN   Name=atpI1; OrderedLocusNames=TP_0429;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+CC   -!- FUNCTION: Produces ATP from ADP in the presence of a proton gradient
+CC       across the membrane.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the V-ATPase 116 kDa subunit family.
+CC       {ECO:0000305}.
+DR   EMBL; AE000520; AAC65415.1; -; Genomic_DNA.
+DR   PIR; B71326; B71326.
+DR   AlphaFoldDB; O83444; -.
+DR   SMR; O83444; -.
+DR   STRING; 243276.TP_0429; -.
+DR   TCDB; 3.A.2.3.3; the h+- or na+-translocating f-type, v-type and a-type atpase (f-atpase) superfamily.
+DR   EnsemblBacteria; AAC65415; AAC65415; TP_0429.
+DR   KEGG; tpa:TP_0429; -.
+DR   KEGG; tpw:TPANIC_0429; -.
+DR   eggNOG; COG1269; Bacteria.
+DR   HOGENOM; CLU_025558_1_1_12; -.
+DR   OrthoDB; 9803814at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0033179; C:proton-transporting V-type ATPase, V0 domain; IEA:InterPro.
+DR   GO; GO:0016471; C:vacuolar proton-transporting V-type ATPase complex; IEA:TreeGrafter.
+DR   GO; GO:0051117; F:ATPase binding; IEA:TreeGrafter.
+DR   GO; GO:0046961; F:proton-transporting ATPase activity, rotational mechanism; IEA:InterPro.
+DR   GO; GO:0007035; P:vacuolar acidification; IEA:TreeGrafter.
+DR   InterPro; IPR002490; V-ATPase_116kDa_su.
+DR   NCBIfam; NF004429; PRK05771.2-2; 1.
+DR   PANTHER; PTHR11629:SF63; V-TYPE PROTON ATPASE SUBUNIT A; 1.
+DR   PANTHER; PTHR11629; VACUOLAR PROTON ATPASES; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Hydrogen ion transport; Ion transport; Membrane;
+KW   Reference proteome; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..622
+FT                   /note="V-type ATP synthase subunit I 1"
+FT                   /id="PRO_0000119242"
+FT   TRANSMEM        306..326
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        328..348
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        373..393
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        428..448
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        459..479
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        485..505
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        532..552
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        562..582
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   622 AA;  69077 MW;  2AECAD4E47821C91 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Treponema.
+1	6	Teretinema.
+1	6	Gracilinema.
+5	5	Treponemataceae
+1	5	Breznakiellaceae
+6	4	Spirochaetales
+6	3	Spirochaetia
+6	2	Spirochaetota
+6	1	Pseudomonadati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GQ65	V-TYPE ATP SYNTHASE SUBUN     78.1    1.7e-18   1   1.6   0.1
+	O83444_TED02              	   118	   189	    77.1
+	PF01496	V_ATPase_I      	   187	   397	      34
+
+A0AAD6RYQ8	UNCHARACTERIZED PROTEIN {     34.2    8.7e-05   5   5.7   0.6
+	O83444_TED02              	   409	   464	     6.9
+	O83444_TED02              	    46	   112	     5.9
+	O83444_TED02              	   156	   208	     4.9
+	O83444_TED02              	   263	   315	     4.9
+	O83444_TED02              	   337	   386	     4.3
+
+A0AAE1CSF4	UNCHARACTERIZED PROTEIN {     46.6    1.3e-08  10  12.0  39.3
+	O83444_TED02              	   301	   329	     8.0
+	O83444_TED02              	   249	   277	     7.2
+	O83444_TED02              	   274	   302	     7.2
+	O83444_TED02              	    79	   107	     7.0
+	O83444_TED02              	   128	   165	     7.0
+	O83444_TED02              	    29	    57	     6.7
+	O83444_TED02              	   165	   186	     6.7
+	O83444_TED02              	   199	   229	     6.1
+	O83444_TED02              	   225	   253	     4.4
+	O83444_TED02              	    53	    78	     4.1
+
+A0AAE3JK09	V-TYPE ATP SYNTHASE SUBUN     58.3    2.7e-12   1   1.8   0.2
+	O83444_TED02              	   116	   187	    57.0
+
+O83444	V-TYPE ATP SYNTHASE SUBUNIT I     165.8    7.3e-46   1   2.4   3.9
+	O83444_TED02              	   119	   190	   165.8
+
+S3MDN5	V-TYPE ATP SYNTHASE SUBUNIT I     35.3      4e-05   1   1.5   0.0
+	O83444_TED02              	   118	   189	    34.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83444.1	AF-O83444-F1-model_v4_TED01:1-87_216-296	1	AF-O83444-F1-model_v4_TED01	1-296	100.0%
+O83444.1	AF-O83444-F1-model_v4_TED02:119-190	1	AF-O83444-F1-model_v4_TED02	119-190	100.0%
+O83444.1	AF-O83444-F1-model_v4_TED03:306-613	1	AF-O83444-F1-model_v4_TED03	306-613	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83444_TED02
+GA   27.00 27.00;
+TC   27.80 27.00;
+NC   26.80 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

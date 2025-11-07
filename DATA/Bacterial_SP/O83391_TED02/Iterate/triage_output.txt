@@ -1,0 +1,144 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y376_TREPA              Reviewed;         301 AA.
+AC   O83391;
+DE   RecName: Full=Uncharacterized protein TP_0376;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=TP_0376;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65381.1; -; Genomic_DNA.
+DR   PIR; B71330; B71330.
+DR   RefSeq; WP_010881824.1; NC_000919.1.
+DR   AlphaFoldDB; O83391; -.
+DR   SMR; O83391; -.
+DR   IntAct; O83391; 8.
+DR   STRING; 243276.TP_0376; -.
+DR   EnsemblBacteria; AAC65381; AAC65381; TP_0376.
+DR   KEGG; tpa:TP_0376; -.
+DR   HOGENOM; CLU_072078_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..28
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           29..301
+FT                   /note="Uncharacterized protein TP_0376"
+FT                   /id="PRO_0000014247"
+SQ   SEQUENCE   301 AA;  33685 MW;  AE4D0CF255EE0A25 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+13	6	Treponema.
+14	5	Treponemataceae
+14	4	Spirochaetales
+14	3	Spirochaetia
+14	2	Spirochaetota
+14	1	Pseudomonadati
+14	0	Bacteria
+Total of 14 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GT42	THIOREDOXIN FAMILY PROTEI    109.6    3.4e-28   1   1.6   0.7
+	Iterate                   	   204	   301	   108.5
+	PF13899	Thioredoxin_7   	    24	   115	    35.8
+
+A0AAE3EGL2	THIOREDOXIN FAMILY PROTEI     42.1    3.9e-07   1   1.5   0.0
+	Iterate                   	   207	   303	    41.1
+	PF13899	Thioredoxin_7   	    27	   120	    31.4
+	PF13098	Thioredoxin_2   	    32	   149	    36.9
+
+F4LKJ6	THIOREDOXIN DOMAIN-CONTAINING     30.0     0.0023   1   2.1   0.3
+	Iterate                   	   231	   327	    28.0
+	PF13899	Thioredoxin_7   	    33	   145	    35.3
+	PF13098	Thioredoxin_2   	    38	   173	    42.2
+
+O83391	UNCHARACTERIZED PROTEIN TP_0376    223.3    1.2e-63   1   2.3   5.6
+	Iterate                   	   203	   301	   222.8
+
+S3LBX8	LIPOPROTEIN {ECO:0008006|GOOG     67.3    5.3e-15   1   1.8   0.1
+	Iterate                   	   207	   302	    65.9
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26197 (E-value: 1.1e-44, Score: 155.8)
+Mentioned as: TP0376
+Description: T. pallidum predicted coding region TP0376
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 22720110
+Source: EuropePMC
+Title: Footprint of positive selection in Treponema pallidum subsp. pallidum genome sequences suggests adaptive microevolution of the syphilis pathogen
+Journal: PLoS neglected tropical diseases (2012)
+Snippet: 5135 574 Yes TPChic0348 TP0348 Hypothetical protein R G insertion 374026:375150 374 469 Yes TPChic0376 TP0376 Hypothetical protein R C insertion 402077:402973 298 301 Yes TPChic0377 TP0377 3 TP0378 Flagellar basal body-associated protein, FliL F G deletion 403076:403555 513 574 Yes TPChic0397 TP0397 Flagellar basal-body rod
+
+================================================================================
+Protein: VIMSS26197 (E-value: 1.1e-44, Score: 155.8)
+Mentioned as: TP0376
+Description: T. pallidum predicted coding region TP0376
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 18482458
+Source: EuropePMC
+Title: Complete genome sequence of Treponema pallidum ssp. pallidum strain SS14 determined with oligonucleotide arrays
+Journal: BMC microbiology (2008)
+Snippet: TP0321TP0322 2640 336149 338788 - - 10 TP0323 851 338885 339735 - 1 SNP 11 TP0376 806 400903 401708 - - 12 TP0377 78 401851 401928 - - 13 TP0516 1533 556351 557883 - - 14 TP0519 1277 559215 560491 - - 15 TP0580 1242 630328
+
+================================================================================
+Protein: VIMSS1108159 (E-value: 0.00011, Score: 27.5)
+Mentioned as: Mbar_A2604
+Description: TPR repeat
+Organism: Methanosarcina barkeri str. fusaro
+PMID: 20027221
+Source: EuropePMC
+Title: Genome sequence of the endosymbiont Rickettsia peacockii and comparison with virulent Rickettsia rickettsii: identification of virulence factors
+Journal: PloS one (2009)
+Snippet: SMR-type multi-drug efflux transporter, E=2e41, Positives=94/103 (91%) Not found in other Rickettsiae. RPR_p18 Methanosarcina barkeri Mbar_A2604 TPR repeat-containing protein, E=8e13, Positives=64/116 (55%) RPR_p19 First half of protein is fragment of Rickettsia conorii protein PS 120 (Sca4) E=2e68, Positives=164/223 (73%). Second half of protein yields no homologies.
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B7GT42.1	AF-A0A0B7GT42-F1-model_v4_TED01:30-145	1	AF-A0A0B7GT42-F1-model_v4_TED01	30-145	0
+A0A0B7GT42.1	AF-A0A0B7GT42-F1-model_v4_TED02:227-302	1	AF-A0A0B7GT42-F1-model_v4_TED02	227-302	76.8%
+F4LKJ6.1	AF-F4LKJ6-F1-model_v4_TED01:39-179	1	AF-F4LKJ6-F1-model_v4_TED01	39-179	0
+F4LKJ6.1	AF-F4LKJ6-F1-model_v4_TED02:212-329	1	AF-F4LKJ6-F1-model_v4_TED02	212-329	100.0%
+O83391.1	AF-O83391-F1-model_v4_TED01:33-147	1	AF-O83391-F1-model_v4_TED01	33-147	0
+O83391.1	AF-O83391-F1-model_v4_TED02:203-301	1	AF-O83391-F1-model_v4_TED02	203-301	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83391_TED02/Iterate
+GA   27.00 27.00;
+TC   27.70 35.20;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

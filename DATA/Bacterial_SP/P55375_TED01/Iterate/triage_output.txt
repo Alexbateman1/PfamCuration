@@ -1,0 +1,137 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y4BH_SINFN              Reviewed;          91 AA.
+AC   P55375;
+DE   RecName: Full=Uncharacterized protein y4bH;
+GN   OrderedLocusNames=NGR_a00220; ORFNames=y4bH;
+OS   Sinorhizobium fredii (strain NBRC 101917 / NGR234).
+OG   Plasmid sym pNGR234a.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Rhizobiaceae; Sinorhizobium/Ensifer group; Sinorhizobium.
+OX   NCBI_TaxID=394;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=9163424; DOI=10.1038/387394a0;
+RA   Freiberg C.A., Fellay R., Bairoch A., Broughton W.J., Rosenthal A.,
+RA   Perret X.;
+RT   "Molecular basis of symbiosis between Rhizobium and legumes.";
+RL   Nature 387:394-401(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=19376903; DOI=10.1128/aem.00515-09;
+RA   Schmeisser C., Liesegang H., Krysciak D., Bakkou N., Le Quere A.,
+RA   Wollherr A., Heinemeyer I., Morgenstern B., Pommerening-Roeser A.,
+RA   Flores M., Palacios R., Brenner S., Gottschalk G., Schmitz R.A.,
+RA   Broughton W.J., Perret X., Strittmatter A.W., Streit W.R.;
+RT   "Rhizobium sp. strain NGR234 possesses a remarkable number of secretion
+RT   systems.";
+RL   Appl. Environ. Microbiol. 75:4035-4045(2009).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; U00090; AAB91623.1; -; Genomic_DNA.
+DR   RefSeq; NP_443785.1; NC_000914.2.
+DR   AlphaFoldDB; P55375; -.
+DR   KEGG; rhi:NGR_a00220; -.
+DR   HOGENOM; CLU_2424855_0_0_5; -.
+DR   Proteomes; UP000001054; Plasmid pNGR234a.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Plasmid; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..91
+FT                   /note="Uncharacterized protein y4bH"
+FT                   /id="PRO_0000200807"
+FT   TRANSMEM        10..30
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        46..66
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   REGION          68..91
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   91 AA;  9641 MW;  469A5ACC81DD4697 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	7	Sinorhizobium.
+1	7	Rhizobium.
+3	6	Sinorhizobium/Ensifer group
+2	6	Sphingomonas.
+1	6	Rhizobium/Agrobacterium group
+1	6	Phenylobacterium.
+1	6	Novosphingobium.
+1	6	Allopontixanthobacter.
+4	5	Rhizobiaceae
+3	5	Sphingomonadaceae
+1	5	Erythrobacteraceae
+1	5	Caulobacteraceae
+4	4	Sphingomonadales
+4	4	Hyphomicrobiales
+1	4	Caulobacterales
+9	3	Alphaproteobacteria
+9	2	Pseudomonadota
+9	1	Pseudomonadati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A7S200	UNCHARACTERIZED PROTEIN {ECO:     80.6    2.7e-19   4  24.5   0.5
+	Iterate                   	    85	   103	     3.5
+	Iterate                   	   348	   366	     3.5
+	Iterate                   	   488	   506	     3.5
+	Iterate                   	   708	   726	     3.5
+
+A7SUF6	UNCHARACTERIZED PROTEIN {ECO:     70.6    3.6e-16   0  19.5   0.0
+
+A7T179	UNCHARACTERIZED PROTEIN {ECO:     91.9    7.7e-23  11  19.8   0.0
+	Iterate                   	    71	    89	     4.1
+	Iterate                   	   300	   318	     3.9
+	Iterate                   	   320	   338	     3.9
+	Iterate                   	   360	   378	     3.9
+	Iterate                   	   380	   398	     3.9
+	Iterate                   	   400	   418	     3.9
+	Iterate                   	   420	   438	     3.9
+	Iterate                   	   440	   458	     3.9
+	Iterate                   	   460	   478	     3.9
+	Iterate                   	   500	   518	     3.9
+	Iterate                   	   520	   538	     3.9
+
+A7T180	UNCHARACTERIZED PROTEIN {ECO:     72.8    7.3e-17   4  19.4   0.0
+	Iterate                   	   245	   263	     4.1
+	Iterate                   	   385	   403	     4.1
+	Iterate                   	   445	   463	     4.1
+	Iterate                   	   426	   443	     3.4
+
+P55375	UNCHARACTERIZED PROTEIN Y4BH       124.2    6.7e-33   2   2.1   5.5
+	Iterate                   	    32	    77	   122.8
+	Iterate                   	    10	    33	     5.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P55375.1	AF-P55375-F1-model_v4_TED01:32-77	1	AF-P55375-F1-model_v4_TED01	32-77	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P55375_TED01/Iterate
+GA   27.00 27.00;
+TC   27.90 28.60;
+NC   26.60 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

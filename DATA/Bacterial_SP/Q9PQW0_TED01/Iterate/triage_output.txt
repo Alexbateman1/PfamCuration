@@ -1,0 +1,108 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y183_UREPA              Reviewed;         291 AA.
+AC   Q9PQW0;
+DE   RecName: Full=Uncharacterized protein UU183;
+GN   OrderedLocusNames=UU183;
+OS   Ureaplasma parvum serovar 3 (strain ATCC 700970).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Ureaplasma.
+OX   NCBI_TaxID=273119;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700970;
+RX   PubMed=11048724; DOI=10.1038/35037619;
+RA   Glass J.I., Lefkowitz E.J., Glass J.S., Heiner C.R., Chen E.Y.,
+RA   Cassell G.H.;
+RT   "The complete sequence of the mucosal pathogen Ureaplasma urealyticum.";
+RL   Nature 407:757-762(2000).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AF222894; AAF30590.1; -; Genomic_DNA.
+DR   RefSeq; WP_006688911.1; NC_002162.1.
+DR   AlphaFoldDB; Q9PQW0; -.
+DR   SMR; Q9PQW0; -.
+DR   STRING; 273119.UU183; -.
+DR   EnsemblBacteria; AAF30590; AAF30590; UU183.
+DR   GeneID; 29672644; -.
+DR   KEGG; uur:UU183; -.
+DR   HOGENOM; CLU_956277_0_0_14; -.
+DR   OrthoDB; 404087at2; -.
+DR   Proteomes; UP000000423; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..291
+FT                   /note="Uncharacterized protein UU183"
+FT                   /id="PRO_0000220830"
+FT   TRANSMEM        13..33
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        84..104
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        111..131
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        219..239
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   291 AA;  34342 MW;  19C9382DE6288358 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	5	Ureaplasma
+2	4	Mycoplasmoidaceae
+2	3	Mycoplasmoidales
+2	2	Mycoplasmatota
+2	1	Bacillati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A078B0R7	UNCHARACTERIZED PROTEIN {     21.1       0.75   1   1.1   2.0
+	Iterate                   	    21	   128	    20.8
+
+A0A084EWF2	TRANSMEMBRANE PROTEIN {EC    168.1    9.8e-46   1   1.0  38.6
+	Iterate                   	     1	   249	   167.9
+
+A0A1K2IP87	CRP/FNR FAMILY TRANSCRIPT     26.9      0.013   1   1.4   2.9
+	Iterate                   	     7	   112	    26.9
+	PF13545	HTH_Crp_2       	   157	   227	      48
+
+A0AAD8F5K1	SODIUM- AND CHLORIDE-DEPE     22.2       0.35   1   1.8   6.2
+	Iterate                   	    57	   219	    21.4
+	PF00209	SNF             	     1	   379	   364.5
+
+Q9PQW0	UNCHARACTERIZED PROTEIN UU183      553.8   1.8e-163   1   1.0  47.3
+	Iterate                   	     1	   250	   553.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A084EWF2.1	AF-A0A084EWF2-F1-model_v4_TED01:4-34_51-194_218-252	1	AF-A0A084EWF2-F1-model_v4_TED01	4-252	98.8%
+Q9PQW0.1	AF-Q9PQW0-F1-model_v4_TED01:1-37_51-134_213-250	1	AF-Q9PQW0-F1-model_v4_TED01	1-250	100.0%
+Q9PQW0.1	AF-Q9PQW0-F1-model_v4_TED02:136-201	1	AF-Q9PQW0-F1-model_v4_TED02	136-201	26.4%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9PQW0_TED01/Iterate
+GA   27.00 27.00;
+TC   452.30 452.10;
+NC   24.40 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

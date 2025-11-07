@@ -1,0 +1,172 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YGEN_ECOLI              Reviewed;         235 AA.
+AC   Q46793; P76640; Q2M9Y1; Q46794; Q7DFU9;
+DE   RecName: Full=Putative uncharacterized protein YgeN;
+GN   Name=ygeN; Synonyms=ygeM; OrderedLocusNames=b2858, JW5459/JW5460;
+GN   ORFNames=b2857;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- CAUTION: Could be the product of a pseudogene. A frameshift in position
+CC       87 produces two separate ORFs. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA83039.1; Type=Frameshift; Evidence={ECO:0000305};
+CC       Sequence=AAA83040.1; Type=Frameshift; Evidence={ECO:0000305};
+CC       Sequence=BAE76925.1; Type=Frameshift; Evidence={ECO:0000305};
+CC       Sequence=U00096; Type=Frameshift; Evidence={ECO:0000305};
+DR   EMBL; U28375; AAA83039.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; U28375; AAA83040.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; BAE76925.1; ALT_FRAME; Genomic_DNA.
+DR   PIR; B65069; B65069.
+DR   PIR; C65069; C65069.
+DR   AlphaFoldDB; Q46793; -.
+DR   BioGRID; 4259234; 10.
+DR   FunCoup; Q46793; 7.
+DR   IntAct; Q46793; 9.
+DR   KEGG; ecj:JW5459; -.
+DR   HOGENOM; CLU_1803210_0_0_6; -.
+DR   InParanoid; Q46793; -.
+DR   OrthoDB; 6428979at2; -.
+DR   PhylomeDB; Q46793; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..235
+FT                   /note="Putative uncharacterized protein YgeN"
+FT                   /id="PRO_0000252283"
+SQ   SEQUENCE   235 AA;  27365 MW;  D6F0EC35E9686555 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Escherichia.
+4	5	Enterobacteriaceae
+4	4	Enterobacterales
+4	3	Gammaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A6F9CIJ7	UNCHARACTERIZED PROTEIN {     63.4    8.4e-14  23  17.8  22.9
+	Iterate                   	   320	   363	     5.1
+	Iterate                   	    45	    74	     3.8
+	Iterate                   	    59	    89	     3.8
+	Iterate                   	    77	   105	     3.8
+	Iterate                   	    91	   119	     3.8
+	Iterate                   	   136	   164	     3.8
+	Iterate                   	   166	   195	     3.8
+	Iterate                   	   181	   209	     3.8
+	Iterate                   	   211	   239	     3.8
+	Iterate                   	   225	   254	     3.8
+	Iterate                   	   348	   378	     3.8
+	Iterate                   	    32	    59	     3.7
+	Iterate                   	   125	   154	     3.7
+	Iterate                   	   197	   224	     3.7
+	Iterate                   	   258	   284	     3.7
+	Iterate                   	   109	   134	     3.6
+	Iterate                   	   242	   268	     3.6
+	Iterate                   	   304	   330	     3.6
+	Iterate                   	    18	    43	     3.5
+	Iterate                   	   153	   178	     3.5
+	Iterate                   	   273	   298	     3.5
+	Iterate                   	     4	    29	     3.4
+	Iterate                   	   289	   311	     3.2
+
+A7ZQW2	OXYGEN-REGULATED INVASION PRO    155.0    2.2e-42   1   1.4   5.7
+	Iterate                   	    15	    85	   154.2
+
+B7LF33	YGEM PROTEIN {ECO:0000313|EMB    155.0    2.2e-42   1   1.4   5.7
+	Iterate                   	    15	    85	   154.2
+
+Q46793	PUTATIVE UNCHARACTERIZED PROTEI    169.9    4.7e-47   1   1.5   7.7
+	Iterate                   	   107	   177	   169.0
+
+Q8X6G8	OXYGEN-REGULATED INVASION PRO    168.2    1.6e-46   1   1.3   6.6
+	Iterate                   	    15	    85	   167.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS95182 (E-value: 1.4e-48, Score: 168.2)
+Mentioned as: ECs3713
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 24641581
+Source: EuropePMC
+Title: Escherichia coli type III secretion system 2: a new kind of T3SS?
+Journal: Veterinary research (2014)
+Snippet: Transcriptional regulator ECs3710 219 B2853 ECs3711 402 B2854, iagB ECs3712 633 ygeK /B2856, ssrB Regulator ECs3713 432 B2857 ECs3714 261 B2858, orgB ECs3715 582 B2859, orgA ECs3716/ eprK 735 prgK Lipoprotein precursor ECs3717/ eprJ 333 prgJ , mxiI ECs3718/ eprI 240 prgI , mxiH ECs3719/ eprH
+
+================================================================================
+Protein: VIMSS95182 (E-value: 1.4e-48, Score: 168.2)
+Mentioned as: ECs3713
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 18222925
+Source: EuropePMC
+Title: Global regulation by horizontally transferred regulators establishes the pathogenicity of Escherichia coli
+Journal: DNA research : an international journal for rapid publication of reports on genes and genomes (2008)
+Snippet: L ECs3616 ybdY Hypothetical protein K12 P + L ECs3703 yqeH Hypothetical protein K12 P ECs3713 b2857 Hypothetical protein K12 P ECs3718 eprI Type III secretion protein EprI ETT2 P ECs3720 Putative transcriptional regulator ETT2 P ECs3721 epaS Type III secretion protein EprS ETT2 P ECs3855*
+
+================================================================================
+Protein: VIMSS95182 (E-value: 1.4e-48, Score: 168.2)
+Mentioned as: ECs3713
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 15150243
+Source: EuropePMC
+Title: The ETT2 gene cluster, encoding a second type III secretion system from Escherichia coli, is present in the majority of strains but has undergone widespread mutational attrition
+Journal: Journal of bacteriology (2004)
+Snippet: of ECs3714 in the Sakai strain (Table 3): they are ECs3713 (a pseudogene, homologous to part of orgB from Spi-1 [19% identity at the protein level over a
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q46793.3	AF-Q46793-F1-model_v4_TED01:107-177	1	AF-Q46793-F1-model_v4_TED01	107-177	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q46793_TED01/Iterate
+GA   27.00 27.00;
+TC   27.30 154.20;
+NC   26.70 17.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

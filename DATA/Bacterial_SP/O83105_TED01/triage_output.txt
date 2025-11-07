@@ -1,0 +1,827 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y066_TREPA              Reviewed;         104 AA.
+AC   O83105;
+DE   RecName: Full=Uncharacterized protein TP_0066;
+GN   OrderedLocusNames=TP_0066;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65065.1; -; Genomic_DNA.
+DR   PIR; B71371; B71371.
+DR   RefSeq; WP_010881515.1; NC_021490.2.
+DR   AlphaFoldDB; O83105; -.
+DR   SMR; O83105; -.
+DR   IntAct; O83105; 12.
+DR   STRING; 243276.TP_0066; -.
+DR   EnsemblBacteria; AAC65065; AAC65065; TP_0066.
+DR   KEGG; tpa:TP_0066; -.
+DR   KEGG; tpw:TPANIC_0066; -.
+DR   eggNOG; ENOG502ZPBI; Bacteria.
+DR   HOGENOM; CLU_2157247_0_0_12; -.
+DR   OrthoDB; 342681at2; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..104
+FT                   /note="Uncharacterized protein TP_0066"
+FT                   /id="PRO_0000202184"
+SQ   SEQUENCE   104 AA;  12013 MW;  37422ECBF0D8D894 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	6	Leptospira.
+17	6	Treponema.
+18	5	Treponemataceae
+11	5	Spirochaetaceae
+11	5	Leptospiraceae
+32	4	Spirochaetales
+11	4	Leptospirales
+45	3	Spirochaetia
+45	2	Spirochaetota
+45	1	Pseudomonadati
+45	0	Bacteria
+Total of 45 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GSY5	TETRATRICOPEPTIDE REPEAT      90.8    2.1e-22   1   1.2   0.0
+	O83105_TED01              	    28	   106	    90.3
+
+A0A178Z4N3	UNCHARACTERIZED PROTEIN {     46.0      2e-08   7   8.4   7.8
+	O83105_TED01              	   973	  1037	     8.2
+	O83105_TED01              	   717	   754	     6.3
+	O83105_TED01              	   888	   926	     5.8
+	O83105_TED01              	   801	   836	     5.0
+	O83105_TED01              	   927	   964	     5.0
+	O83105_TED01              	   759	   796	     4.6
+	O83105_TED01              	   847	   880	     4.2
+	PF06985	HET             	    25	   128	    37.2
+	PF00931	NB-ARC          	   274	   460	      26
+	PF13424	TPR_12          	   679	   732	    31.8
+	PF13374	TPR_10          	   681	   720	      31
+	PF13181	TPR_8           	   682	   708	    14.3
+	PF13176	TPR_7           	   682	   716	    15.8
+	PF13424	TPR_12          	   720	   774	    39.9
+	PF13374	TPR_10          	   721	   762	    41.4
+	PF13181	TPR_8           	   724	   750	    13.4
+	PF13374	TPR_10          	   763	   804	    43.9
+	PF13424	TPR_12          	   763	   816	    42.2
+	PF13181	TPR_8           	   766	   792	    16.3
+	PF13176	TPR_7           	   766	   800	    19.3
+	PF13424	TPR_12          	   804	   880	    57.4
+	PF13374	TPR_10          	   805	   846	    41.6
+	PF13181	TPR_8           	   808	   834	    13.1
+	PF13176	TPR_7           	   808	   842	    14.1
+	PF13374	TPR_10          	   847	   888	    42.7
+	PF13424	TPR_12          	   847	   922	    66.4
+	PF13181	TPR_8           	   848	   876	      17
+	PF13176	TPR_7           	   850	   884	    19.1
+	PF13432	TPR_16          	   852	   928	      20
+	PF13424	TPR_12          	   888	   942	    47.8
+	PF13374	TPR_10          	   889	   930	    49.8
+	PF13181	TPR_8           	   890	   918	      16
+	PF13176	TPR_7           	   892	   926	    18.2
+	PF13424	TPR_12          	   930	  1006	      62
+	PF13374	TPR_10          	   931	   972	      45
+	PF13181	TPR_8           	   932	   960	    17.6
+	PF13176	TPR_7           	   934	   968	    20.2
+	PF13374	TPR_10          	   973	  1011	    31.7
+	PF13181	TPR_8           	   974	  1002	    17.6
+	PF13176	TPR_7           	   976	  1011	    18.7
+	PF13424	TPR_12          	   977	  1052	    33.3
+
+A0A1H9IK74	UNCHARACTERIZED PROTEIN {     78.0      2e-18   1   1.2   0.2
+	O83105_TED01              	    36	   114	    77.6
+
+A0A1N6WIE5	TETRATRICOPEPTIDE REPEAT-     46.0      2e-08   1   1.1   0.0
+	O83105_TED01              	    33	   111	    45.8
+
+A0A1T4JVZ2	TETRATRICOPEPTIDE REPEAT-     74.0    3.7e-17   1   1.3   0.2
+	O83105_TED01              	    29	   109	    73.4
+
+A0A1T4KNQ1	TETRATRICOPEPTIDE REPEAT-     85.5    9.8e-21   1   1.2   0.0
+	O83105_TED01              	    33	   112	    85.0
+
+A0A1W9N8R8	UNCHARACTERIZED PROTEIN {     49.9    1.2e-09   1   1.1   0.0
+	O83105_TED01              	    21	    99	    49.8
+
+A0A1Y1S330	UNCHARACTERIZED PROTEIN {     55.6      2e-11   1   1.1   0.1
+	O83105_TED01              	    27	   105	    55.3
+
+A0A1Y2D778	TFP PILUS ASSEMBLY PROTEI     92.4    6.7e-23  10  13.9  29.8
+	O83105_TED01              	   397	   432	    10.1
+	O83105_TED01              	   228	   259	     9.6
+	O83105_TED01              	   480	   511	     9.6
+	O83105_TED01              	    19	    49	     9.4
+	O83105_TED01              	   145	   175	     9.4
+	O83105_TED01              	   271	   306	     8.0
+	O83105_TED01              	   438	   474	     8.0
+	O83105_TED01              	   522	   558	     8.0
+	O83105_TED01              	    60	    91	     7.6
+	O83105_TED01              	   187	   217	     7.1
+	PF13424	TPR_12          	     1	    53	    32.6
+	PF13374	TPR_10          	    20	    61	    37.6
+	PF13181	TPR_8           	    21	    50	    17.2
+	PF13424	TPR_12          	    23	    95	    53.7
+	PF13176	TPR_7           	    23	    54	    18.7
+	PF13424	TPR_12          	    61	   137	    51.3
+	PF13374	TPR_10          	    62	   103	    37.8
+	PF13181	TPR_8           	    63	    92	    15.8
+	PF13176	TPR_7           	    65	    96	    17.3
+	PF13424	TPR_12          	   102	   179	    55.3
+	PF13374	TPR_10          	   104	   145	    34.6
+	PF13424	TPR_12          	   145	   221	    56.7
+	PF13374	TPR_10          	   146	   187	    37.6
+	PF13181	TPR_8           	   147	   176	    17.2
+	PF13176	TPR_7           	   149	   180	    18.7
+	PF13432	TPR_16          	   151	   224	    15.8
+	PF13424	TPR_12          	   187	   263	      57
+	PF13374	TPR_10          	   188	   229	      38
+	PF13181	TPR_8           	   189	   218	    15.1
+	PF13176	TPR_7           	   191	   222	    17.9
+	PF13424	TPR_12          	   229	   305	    53.6
+	PF13374	TPR_10          	   230	   271	    38.4
+	PF13181	TPR_8           	   231	   260	      17
+	PF13176	TPR_7           	   233	   264	    18.7
+	PF13424	TPR_12          	   269	   347	    51.3
+	PF13374	TPR_10          	   272	   313	    34.2
+	PF13181	TPR_8           	   273	   301	    12.4
+	PF13176	TPR_7           	   275	   305	    14.3
+	PF13424	TPR_12          	   313	   389	    52.7
+	PF13374	TPR_10          	   314	   355	    30.9
+	PF13424	TPR_12          	   354	   431	    57.6
+	PF13374	TPR_10          	   356	   397	    36.4
+	PF13181	TPR_8           	   357	   388	    14.9
+	PF13176	TPR_7           	   359	   389	    15.5
+	PF13424	TPR_12          	   397	   473	    61.8
+	PF13374	TPR_10          	   398	   439	    40.9
+	PF13181	TPR_8           	   399	   427	    17.1
+	PF13176	TPR_7           	   401	   431	    18.2
+	PF13432	TPR_16          	   403	   476	    16.6
+	PF13424	TPR_12          	   439	   515	    60.9
+	PF13374	TPR_10          	   440	   481	      42
+	PF13181	TPR_8           	   441	   469	    14.8
+	PF13176	TPR_7           	   443	   473	    17.3
+	PF13424	TPR_12          	   481	   557	    59.5
+	PF13374	TPR_10          	   482	   523	    38.4
+	PF13181	TPR_8           	   483	   512	      17
+	PF13176	TPR_7           	   485	   516	    18.7
+	PF13424	TPR_12          	   523	   596	    58.8
+	PF13374	TPR_10          	   524	   565	      42
+	PF13181	TPR_8           	   525	   553	    14.8
+	PF13176	TPR_7           	   527	   557	    17.3
+	PF13432	TPR_16          	   529	   597	      21
+	PF13374	TPR_10          	   566	   596	    25.2
+	PF13181	TPR_8           	   567	   595	    14.7
+	PF13176	TPR_7           	   570	   596	    14.5
+
+A0A1Y2D8H7	UNCHARACTERIZED PROTEIN {     57.6    4.8e-12   6   6.1   9.6
+	O83105_TED01              	    61	    96	    11.4
+	O83105_TED01              	    18	    50	    11.0
+	O83105_TED01              	   102	   134	    11.0
+	O83105_TED01              	   228	   278	     9.9
+	O83105_TED01              	   145	   176	     8.4
+	O83105_TED01              	   187	   218	     6.6
+	PF13424	TPR_12          	     1	    53	    33.9
+	PF13424	TPR_12          	    19	    95	    58.7
+	PF13374	TPR_10          	    20	    61	    39.8
+	PF13181	TPR_8           	    21	    52	    18.4
+	PF13176	TPR_7           	    23	    53	    19.6
+	PF13424	TPR_12          	    61	   137	    58.9
+	PF13374	TPR_10          	    62	   103	      41
+	PF13181	TPR_8           	    63	    91	    18.5
+	PF13176	TPR_7           	    65	    95	    19.5
+	PF13424	TPR_12          	   103	   179	    58.8
+	PF13374	TPR_10          	   104	   145	    39.8
+	PF13181	TPR_8           	   105	   136	    18.4
+	PF13176	TPR_7           	   107	   137	    19.6
+	PF13424	TPR_12          	   145	   221	    58.3
+	PF13374	TPR_10          	   146	   187	    38.2
+	PF13181	TPR_8           	   147	   178	    16.5
+	PF13176	TPR_7           	   149	   179	    18.7
+	PF13432	TPR_16          	   151	   227	    16.1
+	PF13424	TPR_12          	   187	   263	    54.9
+	PF13374	TPR_10          	   188	   229	    37.4
+	PF13181	TPR_8           	   189	   218	    18.2
+	PF13176	TPR_7           	   191	   222	    18.1
+	PF13374	TPR_10          	   230	   270	    36.4
+	PF13181	TPR_8           	   231	   259	    12.9
+	PF13176	TPR_7           	   233	   268	    17.2
+
+A0A1Y2E5J9	UNCHARACTERIZED PROTEIN {     48.4    3.5e-09   3  10.0  15.2
+	O83105_TED01              	   102	   133	     9.9
+	O83105_TED01              	    61	    91	     7.4
+	O83105_TED01              	   397	   454	     5.0
+	PF13424	TPR_12          	     1	    53	    35.5
+	PF13374	TPR_10          	    20	    61	    36.7
+	PF13181	TPR_8           	    21	    50	      15
+	PF13176	TPR_7           	    23	    54	    16.2
+	PF13424	TPR_12          	    24	    95	    56.1
+	PF13424	TPR_12          	    61	   137	    57.4
+	PF13374	TPR_10          	    62	   103	    38.2
+	PF13181	TPR_8           	    63	    92	    15.3
+	PF13176	TPR_7           	    65	    96	    18.1
+	PF13424	TPR_12          	   103	   179	    59.5
+	PF13374	TPR_10          	   104	   145	    38.7
+	PF13181	TPR_8           	   105	   134	    17.2
+	PF13176	TPR_7           	   107	   138	      19
+	PF13432	TPR_16          	   109	   182	    15.8
+	PF13424	TPR_12          	   145	   221	    62.5
+	PF13374	TPR_10          	   146	   187	    40.7
+	PF13181	TPR_8           	   147	   175	    14.8
+	PF13176	TPR_7           	   149	   179	    15.6
+	PF13424	TPR_12          	   187	   263	    59.7
+	PF13374	TPR_10          	   188	   229	    37.4
+	PF13181	TPR_8           	   189	   218	    14.8
+	PF13176	TPR_7           	   191	   222	    16.2
+	PF13424	TPR_12          	   229	   305	    61.6
+	PF13374	TPR_10          	   230	   271	    39.9
+	PF13181	TPR_8           	   231	   259	      15
+	PF13176	TPR_7           	   233	   263	    15.6
+	PF13424	TPR_12          	   271	   347	    59.7
+	PF13374	TPR_10          	   272	   313	    37.4
+	PF13181	TPR_8           	   273	   302	    14.8
+	PF13176	TPR_7           	   275	   306	    16.2
+	PF13424	TPR_12          	   312	   389	    61.4
+	PF13374	TPR_10          	   314	   355	    39.9
+	PF13181	TPR_8           	   315	   343	      15
+	PF13176	TPR_7           	   317	   347	    15.6
+	PF13424	TPR_12          	   355	   431	    60.5
+	PF13374	TPR_10          	   356	   397	    37.4
+	PF13181	TPR_8           	   357	   386	    14.8
+	PF13176	TPR_7           	   359	   390	    16.2
+	PF13374	TPR_10          	   398	   438	    35.2
+	PF13181	TPR_8           	   399	   427	      15
+	PF13176	TPR_7           	   401	   436	    16.6
+	PF13374	TPR_10          	   445	   485	    25.2
+
+A0A370AVY2	UNCHARACTERIZED PROTEIN {     55.3    2.6e-11   1   1.1   0.2
+	O83105_TED01              	    28	   105	    55.0
+
+A0A3M7NJI5	UNCHARACTERIZED PROTEIN {     40.0    1.5e-06   7   8.4  10.2
+	O83105_TED01              	   909	   947	     7.0
+	O83105_TED01              	   825	   860	     5.2
+	O83105_TED01              	   738	   776	     5.1
+	O83105_TED01              	   701	   737	     4.9
+	O83105_TED01              	   948	   990	     4.5
+	O83105_TED01              	   784	   818	     4.4
+	O83105_TED01              	   868	   902	     4.4
+	PF17107	SesA            	    10	   133	   102.7
+	PF13191	AAA_16          	   254	   400	    33.2
+	PF00931	NB-ARC          	   258	   443	    28.6
+	PF13424	TPR_12          	   658	   733	    56.8
+	PF13374	TPR_10          	   660	   699	    36.5
+	PF13374	TPR_10          	   700	   741	    44.2
+	PF13424	TPR_12          	   701	   766	    53.6
+	PF13181	TPR_8           	   701	   729	    16.9
+	PF13176	TPR_7           	   703	   737	    15.3
+	PF13424	TPR_12          	   742	   802	    46.1
+	PF13374	TPR_10          	   742	   783	    47.5
+	PF13181	TPR_8           	   743	   771	    15.8
+	PF13176	TPR_7           	   745	   780	      16
+	PF13432	TPR_16          	   747	   824	    17.9
+	PF13424	TPR_12          	   784	   859	    64.4
+	PF13374	TPR_10          	   784	   825	    47.8
+	PF13181	TPR_8           	   785	   813	    14.8
+	PF13176	TPR_7           	   787	   821	    15.3
+	PF13374	TPR_10          	   826	   867	    48.5
+	PF13181	TPR_8           	   827	   855	    15.6
+	PF13424	TPR_12          	   828	   892	    55.4
+	PF13176	TPR_7           	   829	   864	      16
+	PF13432	TPR_16          	   831	   908	    17.9
+	PF13374	TPR_10          	   868	   909	    47.8
+	PF13424	TPR_12          	   869	   932	    53.8
+	PF13181	TPR_8           	   869	   897	    14.8
+	PF13176	TPR_7           	   871	   905	    15.3
+	PF13374	TPR_10          	   910	   951	    44.8
+	PF13181	TPR_8           	   911	   939	    15.6
+	PF13424	TPR_12          	   912	   985	    64.4
+	PF13176	TPR_7           	   913	   947	    14.9
+	PF13432	TPR_16          	   915	   989	    18.5
+	PF13374	TPR_10          	   952	   990	    35.4
+	PF13181	TPR_8           	   953	   981	    13.7
+	PF13176	TPR_7           	   955	   990	    16.8
+
+A0A421KA42	UNCHARACTERIZED PROTEIN {     55.6      2e-11   1   1.1   0.0
+	O83105_TED01              	    21	    98	    55.4
+
+A0A4R4BN99	TETRATRICOPEPTIDE REPEAT      65.9    1.2e-14   1   1.1   0.1
+	O83105_TED01              	    20	    98	    65.6
+
+A0A5C1QN27	UNCHARACTERIZED PROTEIN {     61.6    2.8e-13   1   1.1   0.1
+	O83105_TED01              	    27	   105	    61.4
+
+A0A6A6DWY1	TPR-LIKE PROTEIN {ECO:000     43.9    9.1e-08   5   6.1   6.1
+	O83105_TED01              	   144	   181	    10.5
+	O83105_TED01              	   186	   223	     8.3
+	O83105_TED01              	   103	   136	     7.9
+	O83105_TED01              	    19	    57	     5.5
+	O83105_TED01              	   229	   266	     5.1
+	PF13424	TPR_12          	     1	    53	    40.9
+	PF13424	TPR_12          	    20	    86	    58.4
+	PF13374	TPR_10          	    20	    61	      48
+	PF13181	TPR_8           	    21	    49	    15.7
+	PF13176	TPR_7           	    23	    57	    15.5
+	PF13432	TPR_16          	    25	    96	    16.7
+	PF13424	TPR_12          	    61	   128	    59.8
+	PF13374	TPR_10          	    62	   103	    47.4
+	PF13181	TPR_8           	    63	    91	    15.7
+	PF13176	TPR_7           	    65	   100	    16.4
+	PF13424	TPR_12          	   103	   158	    45.1
+	PF13374	TPR_10          	   104	   145	    49.2
+	PF13181	TPR_8           	   105	   133	      16
+	PF13176	TPR_7           	   107	   140	    16.6
+	PF13424	TPR_12          	   146	   209	    55.6
+	PF13374	TPR_10          	   146	   187	      49
+	PF13181	TPR_8           	   147	   175	    16.7
+	PF13176	TPR_7           	   149	   183	    18.6
+	PF13424	TPR_12          	   187	   263	    65.6
+	PF13374	TPR_10          	   188	   229	    47.7
+	PF13181	TPR_8           	   189	   217	    16.5
+	PF13176	TPR_7           	   191	   225	    18.2
+	PF13432	TPR_16          	   193	   267	    18.7
+	PF13374	TPR_10          	   230	   268	    37.7
+	PF13181	TPR_8           	   231	   259	    16.2
+	PF13176	TPR_7           	   233	   268	      14
+	PF07721	TPR_4           	   233	   256	      12
+
+A0A6A6E597	TPR-LIKE PROTEIN {ECO:000     48.5    3.5e-09   5   8.7  12.1
+	O83105_TED01              	   234	   278	    11.3
+	O83105_TED01              	   319	   362	     8.5
+	O83105_TED01              	   150	   194	     8.2
+	O83105_TED01              	   109	   146	     6.3
+	O83105_TED01              	   359	   397	     4.8
+	PF13424	TPR_12          	    24	   100	      60
+	PF13374	TPR_10          	    25	    66	    35.7
+	PF13181	TPR_8           	    28	    55	    16.4
+	PF13374	TPR_10          	    67	   107	    31.2
+	PF13181	TPR_8           	    68	    98	    21.1
+	PF13176	TPR_7           	    70	   105	    17.3
+	PF13432	TPR_16          	    72	   143	    16.5
+	PF13424	TPR_12          	   107	   184	    67.5
+	PF13374	TPR_10          	   109	   150	    38.4
+	PF13181	TPR_8           	   110	   138	    20.4
+	PF13176	TPR_7           	   112	   147	    18.5
+	PF13374	TPR_10          	   151	   192	    47.4
+	PF13181	TPR_8           	   152	   180	    18.1
+	PF13424	TPR_12          	   152	   226	    61.5
+	PF13176	TPR_7           	   154	   189	    23.1
+	PF13374	TPR_10          	   193	   234	    23.1
+	PF13181	TPR_8           	   196	   224	    18.4
+	PF13424	TPR_12          	   232	   310	    61.4
+	PF13374	TPR_10          	   235	   276	    45.5
+	PF13181	TPR_8           	   236	   264	    19.2
+	PF13176	TPR_7           	   239	   273	    23.1
+	PF13424	TPR_12          	   277	   328	      34
+	PF13374	TPR_10          	   277	   318	    31.4
+	PF13181	TPR_8           	   280	   308	    18.3
+	PF13424	TPR_12          	   318	   394	    65.1
+	PF13374	TPR_10          	   319	   360	    40.4
+	PF13181	TPR_8           	   320	   348	    20.7
+	PF13176	TPR_7           	   322	   357	    15.1
+	PF13374	TPR_10          	   361	   398	    27.5
+	PF13181	TPR_8           	   364	   390	      20
+
+A0A7G9FFV0	UNCHARACTERIZED PROTEIN {     80.1    4.5e-19   1   1.4   0.0
+	O83105_TED01              	    31	   109	    79.3
+
+A0A7T3V409	UNCHARACTERIZED PROTEIN {     81.0    2.4e-19   1   1.1   0.0
+	O83105_TED01              	    30	   108	    80.7
+
+A0A7T7XKK8	UNCHARACTERIZED PROTEIN {     79.6    6.4e-19   1   1.2   0.0
+	O83105_TED01              	    27	   104	    79.2
+
+A0A7W8G7K3	PUTATIVE NEGATIVE REGULAT     78.0      2e-18   1   1.2   0.1
+	O83105_TED01              	    31	   112	    77.6
+
+A0A840S736	TETRATRICOPEPTIDE REPEAT-     80.0      5e-19   1   1.1   0.2
+	O83105_TED01              	    30	   111	    79.6
+
+A0A841RA60	UNCHARACTERIZED PROTEIN {     48.3    3.9e-09   1   1.2   0.0
+	O83105_TED01              	    27	   105	    48.0
+
+A0A8H3FYF5	KINESIN LIGHT CHAIN {ECO:     42.0    3.6e-07   5   5.3   7.4
+	O83105_TED01              	   187	   248	    12.9
+	O83105_TED01              	   104	   143	    12.4
+	O83105_TED01              	    20	    60	     5.9
+	O83105_TED01              	    61	   100	     5.4
+	O83105_TED01              	   144	   184	     5.4
+	PF13424	TPR_12          	     1	    53	    38.6
+	PF13424	TPR_12          	    19	    95	    65.1
+	PF13374	TPR_10          	    20	    61	    43.2
+	PF13181	TPR_8           	    21	    49	    16.1
+	PF13176	TPR_7           	    23	    57	    17.2
+	PF13424	TPR_12          	    60	   137	    65.1
+	PF13374	TPR_10          	    62	   102	    41.7
+	PF13181	TPR_8           	    64	    91	    17.8
+	PF13176	TPR_7           	    65	    99	      17
+	PF13424	TPR_12          	   103	   179	    66.5
+	PF13374	TPR_10          	   104	   145	      47
+	PF13181	TPR_8           	   105	   133	    18.3
+	PF13176	TPR_7           	   107	   141	    18.8
+	PF13424	TPR_12          	   143	   221	    62.3
+	PF13374	TPR_10          	   146	   187	    43.5
+	PF13181	TPR_8           	   147	   175	    19.2
+	PF13176	TPR_7           	   149	   183	    14.2
+	PF13374	TPR_10          	   188	   226	    39.2
+	PF13181	TPR_8           	   189	   217	    18.2
+	PF13176	TPR_7           	   191	   226	    18.2
+
+A0A8H7AUG9	KINESIN LIGHT CHAIN {ECO:     59.1    1.6e-12   5   7.2  10.0
+	O83105_TED01              	   217	   255	    12.5
+	O83105_TED01              	   385	   438	    11.1
+	O83105_TED01              	   301	   338	    10.0
+	O83105_TED01              	   258	   294	     9.6
+	O83105_TED01              	   175	   210	     8.5
+	PF13374	TPR_10          	    93	   132	    29.9
+	PF13424	TPR_12          	    94	   166	    44.3
+	PF13374	TPR_10          	   133	   172	    26.6
+	PF13424	TPR_12          	   174	   250	      67
+	PF13374	TPR_10          	   175	   216	    31.4
+	PF13181	TPR_8           	   176	   208	    15.4
+	PF13176	TPR_7           	   178	   213	    21.3
+	PF13374	TPR_10          	   217	   255	    39.8
+	PF13181	TPR_8           	   218	   246	    18.8
+	PF13176	TPR_7           	   220	   255	    23.8
+	PF13432	TPR_16          	   222	   299	    25.4
+	PF13424	TPR_12          	   256	   334	    64.9
+	PF13374	TPR_10          	   259	   300	    36.8
+	PF13181	TPR_8           	   260	   288	    17.4
+	PF13176	TPR_7           	   263	   297	    19.5
+	PF07721	TPR_4           	   264	   285	      10
+	PF13432	TPR_16          	   264	   334	    26.6
+	PF13374	TPR_10          	   301	   341	    38.2
+	PF13181	TPR_8           	   302	   330	    13.8
+	PF13176	TPR_7           	   305	   339	    17.9
+	PF13424	TPR_12          	   306	   376	    65.6
+	PF13424	TPR_12          	   342	   418	    56.1
+	PF13374	TPR_10          	   343	   384	    44.5
+	PF13176	TPR_7           	   346	   381	    18.1
+	PF13374	TPR_10          	   385	   426	    23.8
+	PF07721	TPR_4           	   387	   411	    11.9
+
+A0A923SUG5	UNCHARACTERIZED PROTEIN {     79.8    5.7e-19   1   1.2   0.2
+	O83105_TED01              	    36	   114	    79.4
+
+A0A968GEF8	TETRATRICOPEPTIDE REPEAT      51.2      5e-10   1   1.4   0.1
+	O83105_TED01              	    28	   105	    50.5
+
+A0A968GFQ7	UNCHARACTERIZED PROTEIN {     59.9    9.2e-13   1   1.3   0.3
+	O83105_TED01              	    28	   106	    59.3
+
+A0A975F4E6	UNCHARACTERIZED PROTEIN {     89.1    7.1e-22   1   1.2   0.0
+	O83105_TED01              	    30	   111	    88.6
+
+A0A9P8UT33	KINESIN LIGHT CHAIN {ECO:     51.6    3.7e-10   5  10.8  15.1
+	O83105_TED01              	   202	   235	     7.1
+	O83105_TED01              	   371	   407	     7.0
+	O83105_TED01              	   412	   444	     6.4
+	O83105_TED01              	    76	   113	     5.4
+	O83105_TED01              	   328	   361	     4.6
+	PF13176	TPR_7           	     1	    28	    15.8
+	PF13424	TPR_12          	     1	    69	    54.9
+	PF13374	TPR_10          	     1	    35	    25.7
+	PF13374	TPR_10          	    36	    77	    35.4
+	PF13181	TPR_8           	    37	    68	    17.3
+	PF13176	TPR_7           	    39	    70	    20.9
+	PF13424	TPR_12          	    76	   153	    65.9
+	PF13374	TPR_10          	    78	   119	    40.2
+	PF13181	TPR_8           	    79	   107	    15.5
+	PF13176	TPR_7           	    81	   111	    18.5
+	PF13374	TPR_10          	   120	   161	    33.2
+	PF13181	TPR_8           	   121	   152	      16
+	PF13176	TPR_7           	   123	   154	    20.5
+	PF17874	TPR_MalT        	   156	   322	    45.2
+	PF13424	TPR_12          	   161	   237	    64.6
+	PF13374	TPR_10          	   162	   203	    38.7
+	PF13181	TPR_8           	   163	   191	    17.2
+	PF13176	TPR_7           	   165	   195	    20.3
+	PF13374	TPR_10          	   204	   245	    37.8
+	PF13181	TPR_8           	   205	   236	    17.4
+	PF13424	TPR_12          	   206	   279	    60.3
+	PF13176	TPR_7           	   207	   238	    22.9
+	PF13424	TPR_12          	   245	   321	    57.6
+	PF13374	TPR_10          	   246	   287	    35.4
+	PF13181	TPR_8           	   247	   278	    17.3
+	PF13176	TPR_7           	   249	   280	    20.9
+	PF13424	TPR_12          	   285	   363	    61.8
+	PF13374	TPR_10          	   288	   329	    33.9
+	PF13181	TPR_8           	   289	   315	      15
+	PF13176	TPR_7           	   291	   316	    16.3
+	PF13374	TPR_10          	   330	   371	    35.8
+	PF13181	TPR_8           	   331	   362	    15.5
+	PF13176	TPR_7           	   333	   364	    19.1
+	PF13424	TPR_12          	   371	   447	    64.1
+	PF13374	TPR_10          	   372	   413	      40
+	PF13181	TPR_8           	   373	   401	    13.6
+	PF13176	TPR_7           	   375	   405	      19
+	PF13374	TPR_10          	   414	   451	    30.8
+	PF13181	TPR_8           	   415	   446	    18.9
+	PF13176	TPR_7           	   417	   448	      22
+
+A0A9P9BIF3	UNCHARACTERIZED PROTEIN {     41.2    6.2e-07   4  11.8  20.7
+	O83105_TED01              	  1003	  1042	     5.9
+	O83105_TED01              	  1129	  1172	     5.5
+	O83105_TED01              	   752	   787	     5.4
+	O83105_TED01              	   917	   958	     5.0
+	PF06985	HET             	    28	   127	    34.2
+	PF00931	NB-ARC          	   275	   458	      29
+	PF13424	TPR_12          	   669	   744	    54.5
+	PF13181	TPR_8           	   670	   697	    13.3
+	PF13374	TPR_10          	   671	   710	    35.6
+	PF13176	TPR_7           	   672	   706	    15.5
+	PF13374	TPR_10          	   711	   752	    41.1
+	PF13181	TPR_8           	   712	   739	    13.8
+	PF13176	TPR_7           	   714	   748	    15.1
+	PF13424	TPR_12          	   715	   779	    46.7
+	PF13424	TPR_12          	   752	   828	    59.1
+	PF13374	TPR_10          	   753	   794	    43.1
+	PF13181	TPR_8           	   754	   786	    17.6
+	PF13176	TPR_7           	   756	   790	    16.2
+	PF13374	TPR_10          	   795	   836	    40.7
+	PF13176	TPR_7           	   798	   832	    15.5
+	PF13424	TPR_12          	   799	   870	    53.6
+	PF13424	TPR_12          	   836	   912	    58.2
+	PF13374	TPR_10          	   837	   878	    42.4
+	PF13181	TPR_8           	   838	   865	    13.4
+	PF13176	TPR_7           	   840	   874	    15.1
+	PF13374	TPR_10          	   879	   920	    37.2
+	PF13181	TPR_8           	   880	   907	    13.3
+	PF13176	TPR_7           	   882	   914	    16.1
+	PF13432	TPR_16          	   884	   960	    15.8
+	PF13424	TPR_12          	   919	   991	    52.5
+	PF13374	TPR_10          	   921	   962	    42.5
+	PF13181	TPR_8           	   922	   949	    13.3
+	PF13424	TPR_12          	   962	  1038	    56.7
+	PF13374	TPR_10          	   963	  1004	    39.2
+	PF13374	TPR_10          	  1005	  1046	    38.4
+	PF13181	TPR_8           	  1006	  1033	    12.9
+	PF13176	TPR_7           	  1008	  1040	    14.6
+	PF13424	TPR_12          	  1045	  1117	    51.9
+	PF13374	TPR_10          	  1047	  1088	    41.3
+	PF13181	TPR_8           	  1048	  1075	    13.6
+	PF13176	TPR_7           	  1050	  1084	    15.1
+	PF13424	TPR_12          	  1088	  1164	    56.3
+	PF13374	TPR_10          	  1089	  1130	    39.2
+	PF13374	TPR_10          	  1131	  1171	    33.7
+	PF13181	TPR_8           	  1132	  1159	    12.9
+	PF13176	TPR_7           	  1134	  1164	    14.5
+	PF13374	TPR_10          	  1178	  1218	    22.6
+
+A0AA47BUU7	UNCHARACTERIZED PROTEIN {     42.3    2.9e-07   1   1.1   0.0
+	O83105_TED01              	    20	    97	    42.0
+
+A0AAD6N1F0	NUCLEOSIDE PHOSPHORYLASE      60.8    4.8e-13  11  21.2  57.0
+	O83105_TED01              	  1064	  1101	     9.1
+	O83105_TED01              	  1190	  1226	     9.0
+	O83105_TED01              	  1650	  1689	     6.6
+	O83105_TED01              	  1272	  1303	     5.2
+	O83105_TED01              	  1315	  1345	     5.2
+	O83105_TED01              	  1146	  1185	     5.0
+	O83105_TED01              	  1356	  1387	     5.0
+	O83105_TED01              	  1482	  1513	     5.0
+	O83105_TED01              	  1398	  1437	     4.3
+	O83105_TED01              	  1524	  1563	     4.3
+	O83105_TED01              	  1734	  1771	     4.2
+	PF01048	PNP_UDP_1       	    13	   309	    44.9
+	PF13191	AAA_16          	   346	   504	      36
+	PF00931	NB-ARC          	   350	   524	    27.4
+	PF13374	TPR_10          	   772	   809	    36.8
+	PF13424	TPR_12          	   772	   845	    71.1
+	PF13181	TPR_8           	   773	   799	    15.9
+	PF13176	TPR_7           	   774	   807	    19.1
+	PF13374	TPR_10          	   812	   853	    43.4
+	PF13181	TPR_8           	   813	   841	    17.1
+	PF13176	TPR_7           	   815	   847	    17.1
+	PF13432	TPR_16          	   817	   893	    15.8
+	PF13424	TPR_12          	   853	   929	    60.5
+	PF13374	TPR_10          	   854	   895	    47.4
+	PF13181	TPR_8           	   855	   882	      16
+	PF13176	TPR_7           	   857	   891	    15.5
+	PF13374	TPR_10          	   896	   937	    44.2
+	PF13424	TPR_12          	   896	   971	    55.8
+	PF13181	TPR_8           	   897	   924	    18.1
+	PF13176	TPR_7           	   899	   933	    18.1
+	PF13374	TPR_10          	   938	   979	    39.8
+	PF13424	TPR_12          	   954	  1013	    49.8
+	PF17874	TPR_MalT        	   971	  1133	    52.9
+	PF13424	TPR_12          	   979	  1055	    66.6
+	PF13374	TPR_10          	   980	  1021	    45.4
+	PF13181	TPR_8           	   981	  1009	    15.5
+	PF13374	TPR_10          	  1022	  1063	    40.8
+	PF13424	TPR_12          	  1023	  1097	    60.5
+	PF13181	TPR_8           	  1024	  1050	    13.8
+	PF13176	TPR_7           	  1025	  1059	    17.9
+	PF13432	TPR_16          	  1028	  1101	    17.5
+	PF13424	TPR_12          	  1063	  1138	    60.1
+	PF13374	TPR_10          	  1064	  1105	    44.8
+	PF13181	TPR_8           	  1065	  1092	    17.2
+	PF13176	TPR_7           	  1067	  1101	    18.7
+	PF13432	TPR_16          	  1069	  1145	    18.5
+	PF13424	TPR_12          	  1105	  1181	    62.1
+	PF13374	TPR_10          	  1106	  1147	    39.5
+	PF13181	TPR_8           	  1107	  1134	    18.2
+	PF13176	TPR_7           	  1109	  1143	    17.4
+	PF13374	TPR_10          	  1148	  1189	    42.5
+	PF13181	TPR_8           	  1149	  1176	    15.5
+	PF13432	TPR_16          	  1153	  1228	    15.9
+	PF13424	TPR_12          	  1188	  1265	    61.4
+	PF13374	TPR_10          	  1190	  1231	    44.4
+	PF13181	TPR_8           	  1191	  1218	    17.2
+	PF13176	TPR_7           	  1193	  1227	    18.7
+	PF13424	TPR_12          	  1231	  1307	      66
+	PF13374	TPR_10          	  1232	  1273	    44.3
+	PF13181	TPR_8           	  1233	  1261	    12.3
+	PF13424	TPR_12          	  1273	  1349	    77.6
+	PF13374	TPR_10          	  1274	  1315	      55
+	PF13181	TPR_8           	  1275	  1303	    17.1
+	PF13176	TPR_7           	  1277	  1311	    22.1
+	PF17874	TPR_MalT        	  1311	  1471	    53.1
+	PF13374	TPR_10          	  1316	  1357	    51.2
+	PF13181	TPR_8           	  1317	  1345	    17.1
+	PF13176	TPR_7           	  1319	  1353	    21.7
+	PF13424	TPR_12          	  1356	  1433	    75.7
+	PF13374	TPR_10          	  1358	  1399	    51.7
+	PF13181	TPR_8           	  1359	  1387	    16.8
+	PF13176	TPR_7           	  1361	  1395	    21.3
+	PF13432	TPR_16          	  1363	  1434	    17.6
+	PF13424	TPR_12          	  1399	  1475	    73.7
+	PF13374	TPR_10          	  1400	  1441	      51
+	PF13181	TPR_8           	  1401	  1429	    18.1
+	PF13176	TPR_7           	  1403	  1437	    20.1
+	PF13432	TPR_16          	  1405	  1476	    15.7
+	PF17874	TPR_MalT        	  1436	  1597	    54.6
+	PF13374	TPR_10          	  1442	  1483	    45.1
+	PF13181	TPR_8           	  1443	  1471	    17.7
+	PF13176	TPR_7           	  1445	  1479	    18.7
+	PF17874	TPR_MalT        	  1480	  1643	    50.1
+	PF13424	TPR_12          	  1483	  1559	    75.9
+	PF13374	TPR_10          	  1484	  1525	    51.7
+	PF13181	TPR_8           	  1485	  1513	    16.8
+	PF13176	TPR_7           	  1487	  1521	    21.3
+	PF13432	TPR_16          	  1489	  1560	    17.7
+	PF13424	TPR_12          	  1525	  1601	    73.1
+	PF13374	TPR_10          	  1526	  1567	      51
+	PF13181	TPR_8           	  1527	  1555	    18.1
+	PF13176	TPR_7           	  1529	  1563	    20.1
+	PF13432	TPR_16          	  1531	  1604	    15.7
+	PF13424	TPR_12          	  1567	  1643	    65.7
+	PF13374	TPR_10          	  1568	  1609	    45.1
+	PF13181	TPR_8           	  1569	  1597	    17.7
+	PF13176	TPR_7           	  1571	  1605	    18.7
+	PF13374	TPR_10          	  1610	  1651	    45.1
+	PF13181	TPR_8           	  1611	  1639	    17.1
+	PF13176	TPR_7           	  1613	  1646	    17.2
+	PF13424	TPR_12          	  1651	  1727	    78.1
+	PF13374	TPR_10          	  1652	  1693	      52
+	PF13181	TPR_8           	  1653	  1681	    17.8
+	PF13176	TPR_7           	  1655	  1689	    21.1
+	PF13432	TPR_16          	  1657	  1728	    17.5
+	PF13374	TPR_10          	  1694	  1735	    47.6
+	PF13181	TPR_8           	  1695	  1723	    17.1
+	PF13176	TPR_7           	  1697	  1730	    17.2
+	PF13424	TPR_12          	  1699	  1769	    68.8
+	PF13424	TPR_12          	  1735	  1790	    38.1
+	PF13374	TPR_10          	  1736	  1777	    50.1
+	PF13181	TPR_8           	  1737	  1765	    15.1
+	PF13176	TPR_7           	  1740	  1773	    14.4
+
+A0AAE3JIR1	UNCHARACTERIZED PROTEIN {     75.7    1.1e-17   1   1.1   0.0
+	O83105_TED01              	    29	   107	    75.4
+
+A0AAE9YWE4	TETRATRICOPEPTIDE REPEAT      41.6    4.7e-07   0  11.0   0.0
+	PF13181	TPR_8           	    69	   101	    13.2
+	PF13176	TPR_7           	    70	   104	    14.1
+	PF13424	TPR_12          	   114	   196	    36.2
+	PF13181	TPR_8           	   117	   149	    13.8
+	PF13181	TPR_8           	   165	   197	    13.2
+	PF13176	TPR_7           	   166	   200	    14.1
+	PF13181	TPR_8           	   213	   245	      14
+	PF13181	TPR_8           	   261	   293	    13.8
+	PF13181	TPR_8           	   309	   341	    11.8
+	PF13181	TPR_8           	   405	   437	    13.4
+	PF13424	TPR_12          	   450	   532	    36.8
+	PF13181	TPR_8           	   453	   485	    13.4
+	PF13181	TPR_8           	   501	   533	    13.2
+	PF13176	TPR_7           	   502	   536	    14.1
+	PF13424	TPR_12          	   546	   628	    32.1
+	PF13181	TPR_8           	   549	   581	    13.4
+	PF13176	TPR_7           	   550	   584	    14.3
+
+E1R5B3	SEL1 DOMAIN PROTEIN REPEAT-CO     60.5      6e-13   1   1.1   0.0
+	O83105_TED01              	    19	    97	    60.2
+
+F2NS35	UNCHARACTERIZED PROTEIN {ECO:     85.0    1.4e-20   1   1.1   0.1
+	O83105_TED01              	    30	   110	    84.7
+
+F4LN50	UNCHARACTERIZED PROTEIN {ECO:     69.1    1.2e-15   1   1.1   0.1
+	O83105_TED01              	    31	   111	    68.7
+
+F5YAZ4	UNCHARACTERIZED PROTEIN {ECO:     76.7    5.5e-18   1   1.3   0.0
+	O83105_TED01              	    26	   104	    76.0
+
+F5YMU3	UNCHARACTERIZED PROTEIN {ECO:     73.3    6.3e-17   1   1.1   0.0
+	O83105_TED01              	    26	   104	    72.9
+
+F8EXJ7	TETRATRICOPEPTIDE REPEAT PROT     69.5    9.2e-16   1   1.1   0.0
+	O83105_TED01              	    27	   104	    69.1
+
+G0GFT9	UNCHARACTERIZED PROTEIN {ECO:     60.2    7.4e-13   1   1.1   0.0
+	O83105_TED01              	    40	   118	    59.9
+
+H7EMB5	UNCHARACTERIZED PROTEIN {ECO:     92.5    6.4e-23   1   1.1   0.0
+	O83105_TED01              	    31	   109	    92.1
+
+H9UL75	UNCHARACTERIZED PROTEIN {ECO:     66.8    6.7e-15   1   1.2   0.2
+	O83105_TED01              	    29	   107	    66.4
+
+I0X6L1	UNCHARACTERIZED PROTEIN {ECO:     76.0    8.5e-18   1   1.2   0.1
+	O83105_TED01              	    36	   114	    75.5
+
+I4B8Z6	UNCHARACTERIZED PROTEIN {ECO:     44.8    4.7e-08   1   1.3   0.1
+	O83105_TED01              	     4	    83	    44.3
+
+O83105	UNCHARACTERIZED PROTEIN TP_0066    190.2    1.9e-53   1   1.1   0.9
+	O83105_TED01              	    24	   102	   190.0
+
+Q73KZ5	TPR DOMAIN PROTEIN {ECO:00080     64.4    3.6e-14   1   1.1   0.3
+	O83105_TED01              	    20	    98	    64.1
+
+S3JXW1	TETRATRICOPEPTIDE REPEAT PROT     85.5    9.4e-21   1   1.2   0.1
+	O83105_TED01              	    31	   111	    85.0
+
+S3LBS7	UNCHARACTERIZED PROTEIN {ECO:     87.1      3e-21   1   1.1   0.1
+	O83105_TED01              	    20	    98	    86.8
+
+S6A0U5	BETA-LACTAMASE {ECO:0008006|G     70.9    3.5e-16   1   1.1   0.2
+	O83105_TED01              	    19	    97	    70.6
+
+V5WFP4	UNCHARACTERIZED PROTEIN {ECO:     56.5    1.1e-11   1   1.1   0.2
+	O83105_TED01              	    25	   103	    56.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS5651539 (E-value: 1.7e-55, Score: 190.2)
+Mentioned as: TPASS_0066
+Description: hypothetical protein
+Organism: Treponema pallidum subsp. pallidum SS14
+PMID: 29758067
+Source: EuropePMC
+Title: Correction: Identification of Functional Candidates amongst Hypothetical Proteins of Treponema pallidum ssp. pallidum
+Journal: PloS one (2018)
+Snippet: 6332880 B2S212 Alpha-ketoacid dehydrogenase kinase(N terminal) 13. HP TPASS_0065 6333159 B2S213 S-adenosyl-L-methionine-dependent methyltransferases 14. HP TPASS_0066 6333156 B2S214 Tetratricopeptide repeat containing protein 15. HP TPASS_0067 6332879 B2S215 Tetratricopeptide repeat containing protein 16. HP TPASS_0068 6333820 B2S216 Ribosomal RNA large subunit methyltransferase N (Radical SAM enzyme) 17.
+
+================================================================================
+Protein: VIMSS5651539 (E-value: 1.7e-55, Score: 190.2)
+Mentioned as: TPASS_0066
+Description: hypothetical protein
+Organism: Treponema pallidum subsp. pallidum SS14
+PMID: 25894582
+Source: EuropePMC
+Title: Identification of functional candidates amongst hypothetical proteins of Treponema pallidum ssp. pallidum
+Journal: PloS one (2015)
+Snippet: HP TPASS_0064 6332880 B2S212 Alpha-ketoacid dehydrogenase kinase(N terminal) HP TPASS_0065 6333159 B2S213 S-adenosyl-L-methionine-dependent methyltransferases HP TPASS_0066 6333156 B2S214 Tetratricopeptide repeat containing protein HP TPASS_0067 6332879 B2S215 Tetratricopeptide repeat containing protein HP TPASS_0068 6333820 B2S216 Ribosomal RNA large subunit methyltransferase N (Radical SAM enzyme) HP TPASS_0072 6333819
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83105.1	AF-O83105-F1-model_v4_TED01:24-102	1	AF-O83105-F1-model_v4_TED01	24-102	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83105_TED01
+GA   27.00 27.00;
+TC   27.10 29.70;
+NC   26.80 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

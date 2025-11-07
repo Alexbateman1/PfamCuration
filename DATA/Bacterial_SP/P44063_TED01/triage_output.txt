@@ -1,0 +1,1215 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   WZZE_SHIFL              Reviewed;         348 AA.
+AC   P0AG02; P25905; P76752;
+DE   RecName: Full=ECA polysaccharide chain length modulation protein {ECO:0000255|HAMAP-Rule:MF_02025};
+GN   Name=wzzE {ECO:0000255|HAMAP-Rule:MF_02025}; Synonyms=wzz;
+GN   OrderedLocusNames=SF3859, S3901;
+OS   Shigella flexneri.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Shigella.
+OX   NCBI_TaxID=623;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=301 / Serotype 2a;
+RX   PubMed=12384590; DOI=10.1093/nar/gkf566;
+RA   Jin Q., Yuan Z., Xu J., Wang Y., Shen Y., Lu W., Wang J., Liu H., Yang J.,
+RA   Yang F., Zhang X., Zhang J., Yang G., Wu H., Qu D., Dong J., Sun L.,
+RA   Xue Y., Zhao A., Gao Y., Zhu J., Kan B., Ding K., Chen S., Cheng H.,
+RA   Yao Z., He B., Chen R., Ma D., Qiang B., Wen Y., Hou Y., Yu J.;
+RT   "Genome sequence of Shigella flexneri 2a: insights into pathogenicity
+RT   through comparison with genomes of Escherichia coli K12 and O157.";
+RL   Nucleic Acids Res. 30:4432-4441(2002).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700930 / 2457T / Serotype 2a;
+RX   PubMed=12704152; DOI=10.1128/iai.71.5.2775-2786.2003;
+RA   Wei J., Goldberg M.B., Burland V., Venkatesan M.M., Deng W., Fournier G.,
+RA   Mayhew G.F., Plunkett G. III, Rose D.J., Darling A., Mau B., Perna N.T.,
+RA   Payne S.M., Runyen-Janecky L.J., Zhou S., Schwartz D.C., Blattner F.R.;
+RT   "Complete genome sequence and comparative genomics of Shigella flexneri
+RT   serotype 2a strain 2457T.";
+RL   Infect. Immun. 71:2775-2786(2003).
+CC   -!- FUNCTION: Modulates the polysaccharide chain length of enterobacterial
+CC       common antigen (ECA). {ECO:0000255|HAMAP-Rule:MF_02025}.
+CC   -!- PATHWAY: Bacterial outer membrane biogenesis; enterobacterial common
+CC       antigen biosynthesis. {ECO:0000255|HAMAP-Rule:MF_02025}.
+CC   -!- SUBUNIT: Probably part of a complex composed of WzxE, WzyE and WzzE.
+CC       {ECO:0000255|HAMAP-Rule:MF_02025}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|HAMAP-
+CC       Rule:MF_02025}; Multi-pass membrane protein {ECO:0000255|HAMAP-
+CC       Rule:MF_02025}.
+CC   -!- SIMILARITY: Belongs to the WzzB/Cld/Rol family. {ECO:0000255|HAMAP-
+CC       Rule:MF_02025}.
+DR   EMBL; AE005674; AAN45296.2; -; Genomic_DNA.
+DR   EMBL; AE014073; AAP18902.1; -; Genomic_DNA.
+DR   RefSeq; NP_709589.2; NC_004337.2.
+DR   RefSeq; WP_001295256.1; NZ_WPGW01000028.1.
+DR   AlphaFoldDB; P0AG02; -.
+DR   SMR; P0AG02; -.
+DR   STRING; 198214.SF3859; -.
+DR   PaxDb; 198214-SF3859; -.
+DR   GeneID; 1026033; -.
+DR   GeneID; 93778159; -.
+DR   KEGG; sfl:SF3859; -.
+DR   KEGG; sfx:S3901; -.
+DR   PATRIC; fig|198214.7.peg.4549; -.
+DR   HOGENOM; CLU_060925_2_1_6; -.
+DR   UniPathway; UPA00566; -.
+DR   Proteomes; UP000001006; Chromosome.
+DR   Proteomes; UP000002673; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IEA:TreeGrafter.
+DR   GO; GO:0009246; P:enterobacterial common antigen biosynthetic process; IEA:UniProtKB-UniRule.
+DR   Gene3D; 3.30.1890.10; FepE-like; 1.
+DR   HAMAP; MF_02025; WzzE; 1.
+DR   InterPro; IPR050445; Bact_polysacc_biosynth/exp.
+DR   InterPro; IPR003856; LPS_length_determ_N_term.
+DR   InterPro; IPR032895; WzzE.
+DR   NCBIfam; NF008645; PRK11638.1; 1.
+DR   PANTHER; PTHR32309:SF16; ECA POLYSACCHARIDE CHAIN LENGTH MODULATION PROTEIN; 1.
+DR   PANTHER; PTHR32309; TYROSINE-PROTEIN KINASE; 1.
+DR   Pfam; PF02706; Wzz; 1.
+DR   SUPFAM; SSF160355; Bacterial polysaccharide co-polymerase-like; 1.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN           1..348
+FT                   /note="ECA polysaccharide chain length modulation protein"
+FT                   /id="PRO_0000065998"
+FT   TRANSMEM        31..51
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_02025"
+FT   TRANSMEM        323..343
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_02025"
+SQ   SEQUENCE   348 AA;  39489 MW;  4BE76BE122A1679F CRC64;
+//
+ID   WZZE_SALTY              Reviewed;         348 AA.
+AC   O33789; Q9L6R6;
+DE   RecName: Full=ECA polysaccharide chain length modulation protein {ECO:0000255|HAMAP-Rule:MF_02025};
+GN   Name=wzzE {ECO:0000255|HAMAP-Rule:MF_02025}; Synonyms=metN;
+GN   OrderedLocusNames=STM3919; ORFNames=STMD1.71;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=LT2;
+RA   Mouslim C., Cano D.A., Casadesus J.;
+RL   Submitted (OCT-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+CC   -!- FUNCTION: Modulates the polysaccharide chain length of enterobacterial
+CC       common antigen (ECA). {ECO:0000255|HAMAP-Rule:MF_02025}.
+CC   -!- PATHWAY: Bacterial outer membrane biogenesis; enterobacterial common
+CC       antigen biosynthesis. {ECO:0000255|HAMAP-Rule:MF_02025}.
+CC   -!- SUBUNIT: Probably part of a complex composed of WzxE, WzyE and WzzE.
+CC       {ECO:0000255|HAMAP-Rule:MF_02025}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|HAMAP-
+CC       Rule:MF_02025}; Multi-pass membrane protein {ECO:0000255|HAMAP-
+CC       Rule:MF_02025}.
+CC   -!- SIMILARITY: Belongs to the WzzB/Cld/Rol family. {ECO:0000255|HAMAP-
+CC       Rule:MF_02025}.
+DR   EMBL; AJ002275; CAA05288.1; -; Genomic_DNA.
+DR   EMBL; AF233324; AAF33468.1; -; Genomic_DNA.
+DR   EMBL; AE006468; AAL22768.1; -; Genomic_DNA.
+DR   RefSeq; NP_462809.1; NC_003197.2.
+DR   RefSeq; WP_000193413.1; NC_003197.2.
+DR   AlphaFoldDB; O33789; -.
+DR   SMR; O33789; -.
+DR   STRING; 99287.STM3919; -.
+DR   PaxDb; 99287-STM3919; -.
+DR   GeneID; 1255445; -.
+DR   KEGG; stm:STM3919; -.
+DR   PATRIC; fig|99287.12.peg.4140; -.
+DR   HOGENOM; CLU_060925_2_1_6; -.
+DR   OMA; GLCCTLW; -.
+DR   PhylomeDB; O33789; -.
+DR   BioCyc; SENT99287:STM3919-MONOMER; -.
+DR   UniPathway; UPA00566; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IBA:GO_Central.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IBA:GO_Central.
+DR   GO; GO:0009246; P:enterobacterial common antigen biosynthetic process; IEA:UniProtKB-UniRule.
+DR   Gene3D; 3.30.1890.10; FepE-like; 1.
+DR   HAMAP; MF_02025; WzzE; 1.
+DR   InterPro; IPR050445; Bact_polysacc_biosynth/exp.
+DR   InterPro; IPR003856; LPS_length_determ_N_term.
+DR   InterPro; IPR032895; WzzE.
+DR   NCBIfam; NF008645; PRK11638.1; 1.
+DR   PANTHER; PTHR32309:SF16; ECA POLYSACCHARIDE CHAIN LENGTH MODULATION PROTEIN; 1.
+DR   PANTHER; PTHR32309; TYROSINE-PROTEIN KINASE; 1.
+DR   Pfam; PF02706; Wzz; 1.
+DR   SUPFAM; SSF160355; Bacterial polysaccharide co-polymerase-like; 1.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN           1..348
+FT                   /note="ECA polysaccharide chain length modulation protein"
+FT                   /id="PRO_0000065999"
+FT   TRANSMEM        31..51
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_02025"
+FT   TRANSMEM        323..343
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_02025"
+FT   CONFLICT        8..12
+FT                   /note="ARAVS -> KHARD (in Ref. 1; CAA05288)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        34..63
+FT                   /note="IGIGLLFALIALAYTFFARQEWSATAITDR -> DRHWPAICPYRVSLYLFC
+FT                   SSGVECDGDHRS (in Ref. 1; CAA05288)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        170
+FT                   /note="Missing (in Ref. 1; CAA05288)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        180
+FT                   /note="A -> R (in Ref. 1; CAA05288)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        303..314
+FT                   /note="QTYRYLRTPEEP -> SDLSLFAYAGRT (in Ref. 1; CAA05288)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   348 AA;  39461 MW;  DC911233B5AE783A CRC64;
+//
+ID   WZZE_ECOLI              Reviewed;         348 AA.
+AC   P0AG00; P25905; P76752; Q2M893;
+DE   RecName: Full=ECA polysaccharide chain length modulation protein {ECO:0000255|HAMAP-Rule:MF_02025, ECO:0000305};
+GN   Name=wzzE {ECO:0000255|HAMAP-Rule:MF_02025};
+GN   Synonyms=wzz {ECO:0000303|PubMed:10515954}, yifC;
+GN   OrderedLocusNames=b3785, JW5601;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=K12;
+RX   PubMed=1730666; DOI=10.1016/s0021-9258(18)48347-0;
+RA   Meier-Dieter U., Barr K., Starman R., Hatch L., Rick P.D.;
+RT   "Nucleotide sequence of the Escherichia coli rfe gene involved in the
+RT   synthesis of enterobacterial common antigen. Molecular cloning of the rfe-
+RT   rff gene cluster.";
+RL   J. Biol. Chem. 267:746-753(1992).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=1379743; DOI=10.1126/science.1379743;
+RA   Daniels D.L., Plunkett G. III, Burland V.D., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome: DNA sequence of the region from
+RT   84.5 to 86.5 minutes.";
+RL   Science 257:771-778(1992).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [5]
+RP   FUNCTION, AND PATHWAY.
+RX   PubMed=10515954; DOI=10.1128/jb.181.20.6564-6568.1999;
+RA   Barr K., Klena J., Rick P.D.;
+RT   "The modality of enterobacterial common antigen polysaccharide chain
+RT   lengths is regulated by o349 of the wec gene cluster of Escherichia coli K-
+RT   12.";
+RL   J. Bacteriol. 181:6564-6568(1999).
+RN   [6]
+RP   FUNCTION, PATHWAY, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12;
+RX   PubMed=16199561; DOI=10.1128/jb.187.20.6917-6927.2005;
+RA   Kajimura J., Rahman A., Rick P.D.;
+RT   "Assembly of cyclic enterobacterial common antigen in Escherichia coli K-
+RT   12.";
+RL   J. Bacteriol. 187:6917-6927(2005).
+RN   [7]
+RP   TOPOLOGY [LARGE SCALE ANALYSIS].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=15919996; DOI=10.1126/science.1109730;
+RA   Daley D.O., Rapp M., Granseth E., Melen K., Drew D., von Heijne G.;
+RT   "Global topology analysis of the Escherichia coli inner membrane
+RT   proteome.";
+RL   Science 308:1321-1323(2005).
+RN   [8]
+RP   SUBUNIT.
+RX   PubMed=16816184; DOI=10.1128/jb.00461-06;
+RA   Marolda C.L., Tatar L.D., Alaimo C., Aebi M., Valvano M.A.;
+RT   "Interplay of the Wzx translocase and the corresponding polymerase and
+RT   chain length regulator proteins in the translocation and periplasmic
+RT   assembly of lipopolysaccharide o antigen.";
+RL   J. Bacteriol. 188:5124-5135(2006).
+CC   -!- FUNCTION: Modulates the polysaccharide chain length of enterobacterial
+CC       common antigen (ECA). Required for the assembly of the
+CC       phosphoglyceride-linked form of ECA (ECA(PG)) and the water-soluble
+CC       cyclic form of ECA (ECA(CYC)). {ECO:0000269|PubMed:10515954,
+CC       ECO:0000269|PubMed:16199561}.
+CC   -!- PATHWAY: Bacterial outer membrane biogenesis; enterobacterial common
+CC       antigen biosynthesis. {ECO:0000255|HAMAP-Rule:MF_02025,
+CC       ECO:0000269|PubMed:10515954, ECO:0000269|PubMed:16199561}.
+CC   -!- SUBUNIT: Probably part of a complex composed of WzxE, WzyE and WzzE.
+CC       {ECO:0000255|HAMAP-Rule:MF_02025, ECO:0000305|PubMed:16816184}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|HAMAP-
+CC       Rule:MF_02025, ECO:0000305}; Multi-pass membrane protein
+CC       {ECO:0000255|HAMAP-Rule:MF_02025}.
+CC   -!- DISRUPTION PHENOTYPE: Null mutation abolishes ECA(CYC) synthesis.
+CC       {ECO:0000269|PubMed:16199561}.
+CC   -!- SIMILARITY: Belongs to the WzzB/Cld/Rol family. {ECO:0000255|HAMAP-
+CC       Rule:MF_02025}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA67585.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; M87049; AAA67585.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; M76129; AAA24527.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC76790.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE77513.1; -; Genomic_DNA.
+DR   PIR; D65182; D65182.
+DR   RefSeq; NP_418232.2; NC_000913.3.
+DR   RefSeq; WP_001295256.1; NZ_STEB01000021.1.
+DR   PDB; 8BHW; EM; 3.20 A; A/B/C/D/E/F/G/H=1-348.
+DR   PDB; 8P3O; EM; 2.90 A; A/B/C/D/E/F/G/H=1-348.
+DR   PDB; 8P3P; EM; 2.50 A; A/B/C/D/E/F/G/H=1-348.
+DR   PDBsum; 8BHW; -.
+DR   PDBsum; 8P3O; -.
+DR   PDBsum; 8P3P; -.
+DR   AlphaFoldDB; P0AG00; -.
+DR   EMDB; EMD-16071; -.
+DR   EMDB; EMD-16072; -.
+DR   EMDB; EMD-16073; -.
+DR   EMDB; EMD-17387; -.
+DR   EMDB; EMD-17388; -.
+DR   EMDB; EMD-17389; -.
+DR   EMDB; EMD-17390; -.
+DR   SMR; P0AG00; -.
+DR   BioGRID; 4259698; 165.
+DR   FunCoup; P0AG00; 38.
+DR   STRING; 511145.b3785; -.
+DR   jPOST; P0AG00; -.
+DR   PaxDb; 511145-b3785; -.
+DR   EnsemblBacteria; AAC76790; AAC76790; b3785.
+DR   GeneID; 93778159; -.
+DR   GeneID; 944815; -.
+DR   KEGG; ecj:JW5601; -.
+DR   KEGG; eco:b3785; -.
+DR   KEGG; ecoc:C3026_20495; -.
+DR   PATRIC; fig|511145.12.peg.3901; -.
+DR   EchoBASE; EB1272; -.
+DR   eggNOG; COG3765; Bacteria.
+DR   HOGENOM; CLU_060925_2_1_6; -.
+DR   InParanoid; P0AG00; -.
+DR   OMA; GLCCTLW; -.
+DR   OrthoDB; 9775724at2; -.
+DR   PhylomeDB; P0AG00; -.
+DR   BioCyc; EcoCyc:EG11295-MONOMER; -.
+DR   BioCyc; MetaCyc:EG11295-MONOMER; -.
+DR   UniPathway; UPA00566; -.
+DR   PRO; PR:P0AG00; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IBA:GO_Central.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IBA:GO_Central.
+DR   GO; GO:0009246; P:enterobacterial common antigen biosynthetic process; IMP:EcoCyc.
+DR   Gene3D; 3.30.1890.10; FepE-like; 1.
+DR   HAMAP; MF_02025; WzzE; 1.
+DR   InterPro; IPR050445; Bact_polysacc_biosynth/exp.
+DR   InterPro; IPR003856; LPS_length_determ_N_term.
+DR   InterPro; IPR032895; WzzE.
+DR   NCBIfam; NF008645; PRK11638.1; 1.
+DR   PANTHER; PTHR32309:SF16; ECA POLYSACCHARIDE CHAIN LENGTH MODULATION PROTEIN; 1.
+DR   PANTHER; PTHR32309; TYROSINE-PROTEIN KINASE; 1.
+DR   Pfam; PF02706; Wzz; 1.
+DR   SUPFAM; SSF160355; Bacterial polysaccharide co-polymerase-like; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Cell inner membrane; Cell membrane; Membrane;
+KW   Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..348
+FT                   /note="ECA polysaccharide chain length modulation protein"
+FT                   /id="PRO_0000065996"
+FT   TOPO_DOM        1..30
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000305"
+FT   TRANSMEM        31..51
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_02025"
+FT   TOPO_DOM        52..322
+FT                   /note="Periplasmic"
+FT                   /evidence="ECO:0000305"
+FT   TRANSMEM        323..343
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_02025"
+FT   TOPO_DOM        344..348
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000269|PubMed:15919996"
+FT   HELIX           19..23
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   TURN            24..29
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           30..49
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   STRAND          55..62
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           67..69
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           72..85
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           96..108
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           111..119
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   STRAND          121..123
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   TURN            124..127
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           132..145
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   STRAND          147..149
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           153..155
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   STRAND          160..167
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           168..237
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   TURN            238..241
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           246..248
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   TURN            255..258
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           261..274
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           280..293
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   STRAND          306..309
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+FT   HELIX           322..345
+FT                   /evidence="ECO:0007829|PDB:8P3P"
+SQ   SEQUENCE   348 AA;  39489 MW;  4BE76BE122A1679F CRC64;
+//
+ID   WZZE_ECO57              Reviewed;         348 AA.
+AC   P0AG01; P25905; P76752;
+DE   RecName: Full=ECA polysaccharide chain length modulation protein {ECO:0000255|HAMAP-Rule:MF_02025};
+GN   Name=wzzE {ECO:0000255|HAMAP-Rule:MF_02025}; Synonyms=wzz;
+GN   OrderedLocusNames=Z5296, ECs4718;
+OS   Escherichia coli O157:H7.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=11206551; DOI=10.1038/35054089;
+RA   Perna N.T., Plunkett G. III, Burland V., Mau B., Glasner J.D., Rose D.J.,
+RA   Mayhew G.F., Evans P.S., Gregor J., Kirkpatrick H.A., Posfai G.,
+RA   Hackett J., Klink S., Boutin A., Shao Y., Miller L., Grotbeck E.J.,
+RA   Davis N.W., Lim A., Dimalanta E.T., Potamousis K., Apodaca J.,
+RA   Anantharaman T.S., Lin J., Yen G., Schwartz D.C., Welch R.A.,
+RA   Blattner F.R.;
+RT   "Genome sequence of enterohaemorrhagic Escherichia coli O157:H7.";
+RL   Nature 409:529-533(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=11258796; DOI=10.1093/dnares/8.1.11;
+RA   Hayashi T., Makino K., Ohnishi M., Kurokawa K., Ishii K., Yokoyama K.,
+RA   Han C.-G., Ohtsubo E., Nakayama K., Murata T., Tanaka M., Tobe T., Iida T.,
+RA   Takami H., Honda T., Sasakawa C., Ogasawara N., Yasunaga T., Kuhara S.,
+RA   Shiba T., Hattori M., Shinagawa H.;
+RT   "Complete genome sequence of enterohemorrhagic Escherichia coli O157:H7 and
+RT   genomic comparison with a laboratory strain K-12.";
+RL   DNA Res. 8:11-22(2001).
+RN   [3]
+RP   X-RAY CRYSTALLOGRAPHY (2.40 ANGSTROMS) OF 54-318, AND SUBUNIT.
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=18204465; DOI=10.1038/nsmb.1374;
+RA   Tocilj A., Munger C., Proteau A., Morona R., Purins L., Ajamian E.,
+RA   Wagner J., Papadopoulos M., Van Den Bosch L., Rubinstein J.L., Fethiere J.,
+RA   Matte A., Cygler M.;
+RT   "Bacterial polysaccharide co-polymerases share a common framework for
+RT   control of polymer length.";
+RL   Nat. Struct. Mol. Biol. 15:130-138(2008).
+RN   [4]
+RP   X-RAY CRYSTALLOGRAPHY (5.99 ANGSTROMS) OF 2-348, SUBUNIT, AND SUBCELLULAR
+RP   LOCATION.
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=25307743; DOI=10.1002/pro.2586;
+RA   Kalynych S., Cherney M., Bostina M., Rouiller I., Cygler M.;
+RT   "Quaternary structure of WzzB and WzzE polysaccharide copolymerases.";
+RL   Protein Sci. 24:58-69(2015).
+CC   -!- FUNCTION: Modulates the polysaccharide chain length of enterobacterial
+CC       common antigen (ECA). {ECO:0000255|HAMAP-Rule:MF_02025}.
+CC   -!- PATHWAY: Bacterial outer membrane biogenesis; enterobacterial common
+CC       antigen biosynthesis. {ECO:0000255|HAMAP-Rule:MF_02025}.
+CC   -!- SUBUNIT: Homooctamer (PubMed:18204465, PubMed:25307743). Probably part
+CC       of a complex composed of WzxE, WzyE and WzzE (By similarity).
+CC       {ECO:0000255|HAMAP-Rule:MF_02025, ECO:0000269|PubMed:18204465,
+CC       ECO:0000269|PubMed:25307743}.
+CC   -!- INTERACTION:
+CC       P0AG01; P0AG01: wzzE; NbExp=5; IntAct=EBI-15680585, EBI-15680585;
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|HAMAP-
+CC       Rule:MF_02025, ECO:0000269|PubMed:25307743}; Multi-pass membrane
+CC       protein {ECO:0000255|HAMAP-Rule:MF_02025}.
+CC   -!- SIMILARITY: Belongs to the WzzB/Cld/Rol family. {ECO:0000255|HAMAP-
+CC       Rule:MF_02025}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAG58980.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; AE005174; AAG58980.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; BA000007; BAB38141.2; -; Genomic_DNA.
+DR   PIR; F91218; F91218.
+DR   PIR; H86064; H86064.
+DR   RefSeq; NP_312745.2; NC_002695.1.
+DR   RefSeq; WP_001295256.1; NZ_VOAI01000017.1.
+DR   PDB; 3B8O; X-ray; 2.40 A; A/B/C/D/E/F/G/H=54-318.
+DR   PDB; 4WL1; X-ray; 5.99 A; A/B/C/D/E/F/G/H/I/J/K/L/M/N/O/P/Q/R/S/T/U/V/W/X/Y/Z/a/b/c/d/e/f=2-348.
+DR   PDBsum; 3B8O; -.
+DR   PDBsum; 4WL1; -.
+DR   AlphaFoldDB; P0AG01; -.
+DR   SMR; P0AG01; -.
+DR   DIP; DIP-46395N; -.
+DR   STRING; 155864.Z5296; -.
+DR   GeneID; 915243; -.
+DR   GeneID; 93778159; -.
+DR   KEGG; ece:Z5296; -.
+DR   KEGG; ecs:ECs_4718; -.
+DR   PATRIC; fig|386585.9.peg.4922; -.
+DR   eggNOG; COG3765; Bacteria.
+DR   HOGENOM; CLU_060925_2_1_6; -.
+DR   OMA; GLCCTLW; -.
+DR   UniPathway; UPA00566; -.
+DR   EvolutionaryTrace; P0AG01; -.
+DR   Proteomes; UP000000558; Chromosome.
+DR   Proteomes; UP000002519; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0042802; F:identical protein binding; IPI:IntAct.
+DR   GO; GO:0004713; F:protein tyrosine kinase activity; IEA:TreeGrafter.
+DR   GO; GO:0009246; P:enterobacterial common antigen biosynthetic process; IEA:UniProtKB-UniRule.
+DR   Gene3D; 3.30.1890.10; FepE-like; 1.
+DR   HAMAP; MF_02025; WzzE; 1.
+DR   InterPro; IPR050445; Bact_polysacc_biosynth/exp.
+DR   InterPro; IPR003856; LPS_length_determ_N_term.
+DR   InterPro; IPR032895; WzzE.
+DR   NCBIfam; NF008645; PRK11638.1; 1.
+DR   PANTHER; PTHR32309:SF16; ECA POLYSACCHARIDE CHAIN LENGTH MODULATION PROTEIN; 1.
+DR   PANTHER; PTHR32309; TYROSINE-PROTEIN KINASE; 1.
+DR   Pfam; PF02706; Wzz; 1.
+DR   SUPFAM; SSF160355; Bacterial polysaccharide co-polymerase-like; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Cell inner membrane; Cell membrane; Membrane;
+KW   Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..348
+FT                   /note="ECA polysaccharide chain length modulation protein"
+FT                   /id="PRO_0000065997"
+FT   TOPO_DOM        1..30
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000305"
+FT   TRANSMEM        31..51
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_02025"
+FT   TOPO_DOM        52..322
+FT                   /note="Periplasmic"
+FT                   /evidence="ECO:0000305"
+FT   TRANSMEM        323..343
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255|HAMAP-Rule:MF_02025"
+FT   TOPO_DOM        344..348
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000305"
+FT   STRAND          55..62
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   HELIX           66..69
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   HELIX           71..80
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   HELIX           96..109
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   HELIX           111..119
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   HELIX           122..125
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   HELIX           132..143
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   STRAND          146..149
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   TURN            153..156
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   STRAND          160..167
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   HELIX           168..228
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   HELIX           266..274
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   HELIX           280..294
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+FT   STRAND          306..309
+FT                   /evidence="ECO:0007829|PDB:3B8O"
+SQ   SEQUENCE   348 AA;  39489 MW;  4BE76BE122A1679F CRC64;
+//
+ID   Y866_HAEIN              Reviewed;         207 AA.
+AC   P44063;
+DE   RecName: Full=Uncharacterized protein HI_0866;
+GN   OrderedLocusNames=HI_0866;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+RN   [2]
+RP   SEQUENCE REVISION.
+RA   White O., Clayton R.A., Kerlavage A.R., Fleischmann R.D., Peterson J.,
+RA   Hickey E., Dodson R., Gwinn M.;
+RL   Submitted (MAY-1998) to the EMBL/GenBank/DDBJ databases.
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; L42023; AAC22527.1; -; Genomic_DNA.
+DR   PIR; I64014; I64014.
+DR   RefSeq; NP_439026.1; NC_000907.1.
+DR   AlphaFoldDB; P44063; -.
+DR   SMR; P44063; -.
+DR   STRING; 71421.HI_0866; -.
+DR   EnsemblBacteria; AAC22527; AAC22527; HI_0866.
+DR   KEGG; hin:HI_0866; -.
+DR   PATRIC; fig|71421.8.peg.907; -.
+DR   eggNOG; COG3765; Bacteria.
+DR   HOGENOM; CLU_1324841_0_0_6; -.
+DR   OrthoDB; 6535795at2; -.
+DR   PhylomeDB; P44063; -.
+DR   BioCyc; HINF71421:G1GJ1-907-MONOMER; -.
+DR   Proteomes; UP000000579; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+DR   Gene3D; 3.30.1890.10; FepE-like; 1.
+DR   InterPro; IPR050445; Bact_polysacc_biosynth/exp.
+DR   PANTHER; PTHR32309:SF13; FERRIC ENTEROBACTIN TRANSPORT PROTEIN FEPE; 1.
+DR   PANTHER; PTHR32309; TYROSINE-PROTEIN KINASE; 1.
+DR   SUPFAM; SSF160355; Bacterial polysaccharide co-polymerase-like; 1.
+PE   4: Predicted;
+KW   Membrane; Reference proteome; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..207
+FT                   /note="Uncharacterized protein HI_0866"
+FT                   /id="PRO_0000077962"
+FT   TRANSMEM        177..197
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   207 AA;  23656 MW;  E398FC0CB7217455 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+12	6	Escherichia.
+10	6	Budvicia.
+34	5	Enterobacteriaceae
+13	5	Erwiniaceae
+12	5	Budviciaceae
+74	4	Enterobacterales
+87	3	Gammaproteobacteria
+92	2	Pseudomonadota
+92	1	Pseudomonadati
+92	0	Bacteria
+Total of 93 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A011NA68	WZZ {ECO:0000313|EMBL:EXI     98.4    1.8e-24   1   2.2  12.0
+	P44063_TED01              	   169	   342	    93.4
+	PF02706	Wzz             	    13	   116	    61.5
+
+A0A014M9C6	ECA POLYSACCHARIDE CHAIN      28.7     0.0052   1   1.7   0.4
+	P44063_TED01              	   163	   314	    27.7
+	PF02706	Wzz             	     9	   112	    40.7
+
+A0A077PGK3	ECA POLYSACCHARIDE CHAIN      29.0     0.0042   1   1.5   0.2
+	P44063_TED01              	   196	   347	    28.0
+	PF02706	Wzz             	    41	   125	    48.3
+
+A0A090V0C1	CHAIN LENGTH DETERMINANT      30.9      0.001   1   1.2   1.7
+	P44063_TED01              	   139	   289	    30.4
+	PF02706	Wzz             	    16	   119	    54.4
+
+A0A095Z444	POLYSACCHARIDE CHAIN LENG     58.9    2.5e-12   1   1.3   0.3
+	P44063_TED01              	   176	   340	    58.4
+	PF02706	Wzz             	    17	   111	    48.5
+
+A0A097QXL9	ECA POLYSACCHARIDE CHAIN      31.2    0.00085   1   1.3   0.0
+	P44063_TED01              	   170	   321	    30.6
+	PF02706	Wzz             	    16	    94	    48.5
+
+A0A0H2Z5E1	ECA POLYSACCHARIDE CHAIN      28.6     0.0055   1   1.7   0.0
+	P44063_TED01              	   170	   320	    27.2
+	PF02706	Wzz             	    15	   104	    54.5
+
+A0A0H3CNV8	CHAIN LENGTH DETERMINANT      37.0    1.5e-05   1   1.3   3.4
+	P44063_TED01              	   142	   292	    36.3
+	PF02706	Wzz             	    16	   123	    62.8
+
+A0A0H3CSF1	ECA POLYSACCHARIDE CHAIN      29.3     0.0033   1   1.5   0.0
+	P44063_TED01              	   170	   320	    28.3
+	PF02706	Wzz             	    15	   120	      53
+
+A0A0H3EKF2	CHAIN LENGTH DETERMINANT      29.9     0.0022   1   1.2   3.9
+	P44063_TED01              	   142	   292	    29.4
+	PF02706	Wzz             	    16	   122	    64.5
+
+A0A0H3FUL7	ECA POLYSACCHARIDE CHAIN      31.7    0.00062   1   1.3   0.0
+	P44063_TED01              	   160	   310	    30.9
+	PF02706	Wzz             	     5	    96	    50.6
+
+A0A0L7T1B7	CHAIN LENGTH DETERMINANT      29.4     0.0032   1   1.4   1.9
+	P44063_TED01              	   139	   289	    28.5
+	PF02706	Wzz             	    10	   104	    53.2
+
+A0A0N0Z9L6	ECA POLYSACCHARIDE CHAIN      35.0    5.9e-05   1   1.5   0.2
+	P44063_TED01              	   173	   323	    34.0
+	PF02706	Wzz             	    17	   102	    49.5
+
+A0A0U3UUC9	ECA POLYSACCHARIDE CHAIN      28.8     0.0049   1   1.4   0.0
+	P44063_TED01              	   164	   315	    28.0
+	PF02706	Wzz             	     8	   115	    37.7
+
+A0A1A7NW15	LIPOPOLYSACCHARIDE BIOSYN     53.4    1.3e-10   1   2.0   5.7
+	P44063_TED01              	   181	   340	    53.4
+	PF02706	Wzz             	    13	   116	    38.9
+
+A0A1B7JVI0	ECA POLYSACCHARIDE CHAIN      30.5     0.0014   1   1.4   0.1
+	P44063_TED01              	   173	   324	    29.8
+	PF02706	Wzz             	    17	    94	    46.8
+
+A0A1I7GMV7	ECA POLYSACCHARIDE CHAIN      31.0      0.001   1   1.4   0.2
+	P44063_TED01              	   172	   323	    30.2
+	PF02706	Wzz             	    17	    96	    53.5
+
+A0A1S1HNG6	ECA POLYSACCHARIDE CHAIN      30.3     0.0017   1   1.4   0.1
+	P44063_TED01              	   173	   324	    29.6
+	PF02706	Wzz             	    17	   111	    46.6
+
+A0A1T0ATI9	CHAIN LENGTH DETERMINATIO    114.0    2.9e-29   1   2.4   9.6
+	P44063_TED01              	   170	   342	   109.9
+	PF02706	Wzz             	    15	   125	    52.5
+
+A0A1W6B4R3	ECA POLYSACCHARIDE CHAIN      32.3    0.00041   1   1.5   0.2
+	P44063_TED01              	   164	   315	    31.4
+	PF02706	Wzz             	     8	   115	    44.9
+
+A0A1W6B7U6	CHAIN LENGTH DETERMINANT      31.3    0.00084   1   1.6   0.8
+	P44063_TED01              	   152	   302	    30.5
+	PF02706	Wzz             	    23	   125	    64.4
+
+A0A2C6C149	CHAIN-LENGTH DETERMINING      46.7    1.5e-08   1   1.3   0.5
+	P44063_TED01              	   184	   341	    46.0
+	PF02706	Wzz             	    31	   133	    59.3
+
+A0A2C6CNL4	CHAIN-LENGTH DETERMINING      45.6    3.3e-08   1   1.3   0.3
+	P44063_TED01              	   186	   343	    44.9
+	PF02706	Wzz             	    33	   135	    58.5
+
+A0A2C6CQ72	CHAIN-LENGTH DETERMINING      52.1    3.2e-10   1   1.2   1.1
+	P44063_TED01              	   182	   339	    51.6
+	PF02706	Wzz             	    29	   131	    60.8
+
+A0A2C6DFC5	CHAIN-LENGTH DETERMINING      47.3      1e-08   1   1.3   1.0
+	P44063_TED01              	   184	   341	    46.6
+	PF02706	Wzz             	    31	   133	    61.2
+
+A0A2C6DIC1	CHAIN-LENGTH DETERMINING      50.3    1.2e-09   1   1.4   0.9
+	P44063_TED01              	   184	   341	    49.5
+	PF02706	Wzz             	    31	   133	    62.5
+
+A0A2C6DIQ2	CHAIN-LENGTH DETERMINING      50.4    1.1e-09   1   1.3   0.8
+	P44063_TED01              	   184	   341	    49.8
+	PF02706	Wzz             	    31	   133	    61.2
+
+A0A2C6DJ61	POLYSACCHARIDE ANTIGEN CH     48.6    3.7e-09   1   1.0   0.6
+	P44063_TED01              	     9	   166	    48.4
+
+A0A2C6DMY4	POLYSACCHARIDE ANTIGEN CH     47.9    6.5e-09   1   1.3   0.6
+	P44063_TED01              	   186	   343	    47.3
+	PF02706	Wzz             	    33	   135	    63.2
+
+A0A2C6DNT6	CHAIN-LENGTH DETERMINING      53.0    1.7e-10   1   1.3   1.0
+	P44063_TED01              	   184	   341	    52.4
+	PF02706	Wzz             	    31	   146	    58.7
+
+A0A2C6DNV9	CHAIN-LENGTH DETERMINING      48.9    3.1e-09   1   1.2   0.7
+	P44063_TED01              	   184	   341	    48.4
+	PF02706	Wzz             	    31	   133	    59.6
+
+A0A2C6DRS4	POLYSACCHARIDE ANTIGEN CH     49.5      2e-09   1   1.2   1.0
+	P44063_TED01              	   184	   341	    49.0
+	PF02706	Wzz             	    31	   130	      61
+
+A0A2C6DTM7	POLYSACCHARIDE ANTIGEN CH     53.9    8.9e-11   1   1.4   2.5
+	P44063_TED01              	   178	   335	    53.1
+	PF02706	Wzz             	    25	   126	    56.3
+
+A0A2D0KTH9	ECA POLYSACCHARIDE CHAIN      31.2     0.0009   1   1.4   0.1
+	P44063_TED01              	   172	   323	    30.4
+	PF02706	Wzz             	    17	    95	    49.8
+
+A0A2I0FQS8	ECA POLYSACCHARIDE CHAIN      30.8     0.0012   1   1.5   0.0
+	P44063_TED01              	   172	   323	    29.9
+	PF02706	Wzz             	    16	   123	    42.3
+
+A0A2M8RX89	CHAIN LENGTH DETERMINATIO    105.6    1.1e-26   1   2.3  12.5
+	P44063_TED01              	   168	   342	    98.0
+	PF02706	Wzz             	    13	    94	    60.8
+
+A0A2X4UPQ0	FERRIC ENTEROBACTIN TRANS     52.6    2.3e-10   1   1.3   0.6
+	P44063_TED01              	   173	   330	    51.9
+	PF02706	Wzz             	    20	   102	    39.3
+
+A0A2X4UYY5	POLYSACCHARIDE ANTIGEN CH     57.0    9.7e-12   1   1.3   1.5
+	P44063_TED01              	   173	   328	    56.3
+	PF02706	Wzz             	    20	   141	    41.2
+
+A0A2X4Y715	ECA POLYSACCHARIDE CHAIN      29.6     0.0027   1   1.5   0.0
+	P44063_TED01              	   165	   316	    28.7
+	PF02706	Wzz             	    10	    99	    41.6
+
+A0A328TQ78	CHAIN LENGTH DETERMINANT      31.0      0.001   1   1.6   2.6
+	P44063_TED01              	   151	   301	    30.8
+	PF02706	Wzz             	    22	   164	    58.1
+
+A0A349IIP4	ECA POLYSACCHARIDE CHAIN      37.4    1.1e-05   1   1.4   0.1
+	P44063_TED01              	   165	   315	    36.4
+	PF02706	Wzz             	     8	   116	    37.9
+
+A0A366H4K1	CHAIN LENGTH DETERMINANT      60.0    1.2e-12   1   2.2   0.0
+	P44063_TED01              	   169	   327	    55.0
+	PF02706	Wzz             	    15	   115	    55.1
+
+A0A369ZNL5	CHAIN-LENGTH DETERMINING     263.6    2.6e-75   1   2.4  12.1
+	P44063_TED01              	   170	   342	   257.6
+	PF02706	Wzz             	    10	   113	    63.8
+
+A0A370Q9U4	ECA POLYSACCHARIDE CHAIN      30.0      0.002   1   1.4   0.0
+	P44063_TED01              	   179	   329	    29.2
+	PF02706	Wzz             	    23	   103	    41.7
+
+A0A379B2M2	LIPOPOLYSACCHARIDE BIOSYN     94.3    3.4e-23   1   2.9  11.9
+	P44063_TED01              	   169	   343	    91.8
+	PF02706	Wzz             	    14	   114	    63.4
+
+A0A380MZA8	LIPOPOLYSACCHARIDE BIOSYN     64.8    4.1e-14   2   2.7  14.5
+	P44063_TED01              	   253	   350	    49.0
+	P44063_TED01              	   169	   273	    23.1
+	PF02706	Wzz             	    13	   116	      68
+
+A0A380QQK9	ECA POLYSACCHARIDE CHAIN      31.7     0.0006   1   1.4   0.0
+	P44063_TED01              	   172	   323	    31.0
+	PF02706	Wzz             	    17	    97	    48.9
+
+A0A3N4VIR3	CHAIN LENGTH DETERMINANT     103.9    3.6e-26   2   2.5  12.0
+	P44063_TED01              	   259	   343	    69.5
+	P44063_TED01              	   169	   266	    41.7
+	PF02706	Wzz             	    14	   116	    57.4
+
+A0A3R9IDE1	ECA POLYSACCHARIDE CHAIN      29.8     0.0024   1   1.4   0.0
+	P44063_TED01              	   170	   320	    29.0
+	PF02706	Wzz             	    15	   101	    49.7
+
+A0A443IAU1	CHAIN LENGTH DETERMINANT      42.0    4.1e-07   1   1.5   2.6
+	P44063_TED01              	   153	   303	    41.2
+	PF02706	Wzz             	    24	   130	    58.6
+
+A0A443IFC9	ECA POLYSACCHARIDE CHAIN      37.1    1.3e-05   1   1.5   0.3
+	P44063_TED01              	   171	   322	    36.3
+	PF02706	Wzz             	    16	    95	    49.6
+
+A0A448TRL0	WZZ-LIKE PROTEIN {ECO:000     62.7    1.7e-13   1   1.4   1.8
+	P44063_TED01              	   170	   327	    61.9
+	PF02706	Wzz             	    13	   118	    62.5
+
+A0A484WUP6	ECA POLYSACCHARIDE CHAIN      30.6     0.0013   1   1.6   0.0
+	P44063_TED01              	   159	   309	    29.4
+	PF02706	Wzz             	     4	   109	    53.9
+
+A0A4P8YHB9	ECA POLYSACCHARIDE CHAIN      35.8    3.5e-05   1   1.5   0.0
+	P44063_TED01              	   167	   318	    34.9
+	PF02706	Wzz             	    13	   119	    53.4
+
+A0A4R1L124	CHAIN LENGTH DETERMINANT      96.2    8.5e-24   1   1.6   3.1
+	P44063_TED01              	   167	   330	    96.2
+	PF02706	Wzz             	    12	   114	    63.5
+
+A0A4R2T0E2	CHAIN LENGTH DETERMINANT      96.0      1e-23   2   2.3  10.9
+	P44063_TED01              	   248	   347	    67.4
+	P44063_TED01              	   169	   259	    32.8
+	PF02706	Wzz             	    10	   115	      54
+
+A0A4R3M4Y9	CHAIN LENGTH DETERMINANT      55.1    3.9e-11   1   1.4   0.1
+	P44063_TED01              	   169	   327	    54.3
+	PF02706	Wzz             	    15	   117	    60.9
+
+A0A4Z0KQS6	ECA POLYSACCHARIDE CHAIN      29.3     0.0033   1   1.3   0.0
+	P44063_TED01              	   160	   310	    28.5
+	PF02706	Wzz             	     5	    94	    54.8
+
+A0A5M7Q8R2	ECA POLYSACCHARIDE CHAIN      36.1    2.8e-05   1   1.5   0.1
+	P44063_TED01              	   165	   315	    35.0
+	PF02706	Wzz             	     8	   116	    40.5
+
+A0A653BJC1	ENTEROBACTERIAL COMMON AN     31.2    0.00085   1   1.1   0.0
+	P44063_TED01              	    22	   172	    30.8
+
+A0A6D1SDL7	ECA POLYSACCHARIDE CHAIN      30.0      0.002   1   1.5   0.0
+	P44063_TED01              	   160	   310	    29.0
+	PF02706	Wzz             	     5	    94	    51.8
+
+A0A6H0T491	POLYSACCHARIDE CHAIN LENG    120.6    2.6e-31   1   1.5   6.1
+	P44063_TED01              	   169	   336	   119.7
+	PF02706	Wzz             	     7	   110	      68
+
+A0A6I4V8A4	ECA POLYSACCHARIDE CHAIN      37.0    1.4e-05   1   1.4   0.1
+	P44063_TED01              	   165	   315	    36.1
+	PF02706	Wzz             	     8	   116	    36.8
+
+A0A6M8UGZ5	ECA POLYSACCHARIDE CHAIN      35.4    4.3e-05   1   1.5   0.0
+	P44063_TED01              	   165	   315	    34.4
+	PF02706	Wzz             	     8	    98	    43.5
+
+A0A6M8URL8	CHAIN LENGTH DETERMINANT      35.4    4.3e-05   1   1.5   3.8
+	P44063_TED01              	   153	   303	    34.5
+	PF02706	Wzz             	    24	   116	    56.9
+
+A0A831EF07	ECA POLYSACCHARIDE CHAIN      31.9    0.00055   1   1.3   0.1
+	P44063_TED01              	   170	   320	    31.1
+	PF02706	Wzz             	    15	   106	    49.1
+
+A0A845SGY0	ECA POLYSACCHARIDE CHAIN      32.9    0.00027   1   1.5   0.0
+	P44063_TED01              	   171	   322	    31.8
+	PF02706	Wzz             	    16	   122	    53.2
+
+A0A853FGA5	LPS O-ANTIGEN CHAIN LENGT     48.0    5.8e-09   1   1.3   0.0
+	P44063_TED01              	   168	   325	    47.4
+	PF02706	Wzz             	    14	   102	    46.2
+
+A0A8H9YWC2	CHAIN LENGTH DETERMINANT      29.7     0.0025   1   1.3   3.1
+	P44063_TED01              	   147	   297	    29.1
+	PF02706	Wzz             	    15	   124	    59.5
+
+A0A8H9Z3X2	ECA POLYSACCHARIDE CHAIN      30.2     0.0017   1   1.7   0.0
+	P44063_TED01              	   170	   320	    28.5
+	PF02706	Wzz             	    15	   121	    56.7
+
+A0A8K0V4G8	CHAIN LENGTH DETERMINANT      29.4     0.0032   1   1.3   2.3
+	P44063_TED01              	   145	   295	    28.7
+	PF02706	Wzz             	    16	   125	    59.2
+
+A0AAE0THT7	UNCHARACTERIZED PROTEIN {     35.3    4.8e-05  10  10.2  17.5
+	P44063_TED01              	   497	   588	     4.4
+	P44063_TED01              	    10	    93	     4.1
+	P44063_TED01              	   100	   193	     4.1
+	P44063_TED01              	   315	   402	     3.9
+	P44063_TED01              	   436	   526	     3.8
+	P44063_TED01              	    67	   154	     3.7
+	P44063_TED01              	   531	   618	     3.6
+	P44063_TED01              	   189	   255	     3.3
+	P44063_TED01              	   249	   321	     3.2
+	P44063_TED01              	   593	   658	     3.2
+
+A0AAE0VSS0	UNCHARACTERIZED PROTEIN {     36.3    2.3e-05   5   5.5  27.2
+	P44063_TED01              	   133	   198	    12.6
+	P44063_TED01              	   245	   327	    10.4
+	P44063_TED01              	    14	    88	    10.2
+	P44063_TED01              	   190	   264	    10.2
+	P44063_TED01              	    80	   148	     9.8
+
+A7ZNJ9	CHAIN LENGTH DETERMINANT PROT     29.6     0.0028   1   1.3   3.7
+	P44063_TED01              	   161	   311	    29.0
+	PF02706	Wzz             	    35	   141	    65.5
+
+A8ACT7	ECA POLYSACCHARIDE CHAIN LENG     29.8     0.0024   1   1.4   0.0
+	P44063_TED01              	   170	   320	    29.0
+	PF02706	Wzz             	    15	   101	    49.7
+
+A8AJM0	POLYSACCHARIDE CHAIN LENGTH D     29.2     0.0037   1   1.3   1.5
+	P44063_TED01              	   194	   348	    28.5
+	PF02706	Wzz             	    38	   137	    57.5
+
+A9MJ25	ECA POLYSACCHARIDE CHAIN LENG     29.9     0.0022   1   1.3   0.0
+	P44063_TED01              	   170	   320	    29.1
+	PF02706	Wzz             	    15	   104	    54.8
+
+B2TYF3	CHAIN LENGTH DETERMINANT PROT     29.3     0.0033   1   1.3   3.7
+	P44063_TED01              	   161	   311	    28.7
+	PF02706	Wzz             	    35	   141	      66
+
+B2VG62	ECA POLYSACCHARIDE CHAIN LENG     30.9      0.001   1   1.2   0.0
+	P44063_TED01              	   163	   314	    30.4
+	PF02706	Wzz             	     9	    95	    42.6
+
+B7L8C7	ECA POLYSACCHARIDE CHAIN LENG     28.7     0.0053   1   1.7   0.0
+	P44063_TED01              	   170	   320	    27.2
+	PF02706	Wzz             	    15	    95	    55.7
+
+B7MDI1	CHAIN LENGTH DETERMINANT PROT     29.3     0.0034   1   1.3   3.1
+	P44063_TED01              	   142	   292	    28.6
+	PF02706	Wzz             	    16	   122	    66.1
+
+B7MGJ5	ECA POLYSACCHARIDE CHAIN LENG     28.6     0.0055   1   1.7   0.0
+	P44063_TED01              	   170	   320	    27.2
+	PF02706	Wzz             	    15	   104	    54.5
+
+B7UMP1	ECA POLYSACCHARIDE CHAIN LENG     28.6     0.0055   1   1.7   0.0
+	P44063_TED01              	   170	   320	    27.2
+	PF02706	Wzz             	    15	   104	    54.5
+
+B7UT64	CHAIN LENGTH DETERMINANT PROT     31.8    0.00057   1   1.2   3.8
+	P44063_TED01              	   142	   292	    31.3
+	PF02706	Wzz             	    16	   122	    64.5
+
+C4L7N8	LIPOPOLYSACCHARIDE BIOSYNTHES     51.2    6.1e-10   1   1.5   1.0
+	P44063_TED01              	   183	   337	    50.2
+	PF02706	Wzz             	    24	   155	    53.5
+
+D8MKS2	ECA POLYSACCHARIDE CHAIN LENG     34.5    8.2e-05   1   2.0   0.4
+	P44063_TED01              	   163	   314	    32.5
+	PF02706	Wzz             	     9	   101	    39.1
+
+E9CP44	ECA POLYSACCHARIDE CHAIN LENG     33.7    0.00014   1   1.3   0.0
+	P44063_TED01              	   169	   321	    33.2
+	PF02706	Wzz             	    17	   116	    25.9
+
+K8WLY8	ECA POLYSACCHARIDE CHAIN LENG     30.4     0.0016   1   1.3   0.1
+	P44063_TED01              	   174	   324	    29.6
+	PF02706	Wzz             	    17	   122	    45.2
+
+O33789	ECA POLYSACCHARIDE CHAIN LENGTH     29.9     0.0022   1   1.3   0.0
+	P44063_TED01              	   170	   320	    29.1
+	PF02706	Wzz             	    15	   104	    54.8
+
+P0AG00	ECA POLYSACCHARIDE CHAIN LENGTH     28.6     0.0056   1   1.7   0.0
+	P44063_TED01              	   170	   320	    27.2
+	PF02706	Wzz             	    15	   104	    54.5
+
+P0AG01	ECA POLYSACCHARIDE CHAIN LENGTH     28.6     0.0056   1   1.7   0.0
+	P44063_TED01              	   170	   320	    27.2
+	PF02706	Wzz             	    15	   104	    54.5
+
+P0AG02	ECA POLYSACCHARIDE CHAIN LENGTH     28.6     0.0056   1   1.7   0.0
+	P44063_TED01              	   170	   320	    27.2
+	PF02706	Wzz             	    15	   104	    54.5
+
+P44063	UNCHARACTERIZED PROTEIN HI_0866    358.0   2.4e-104   1   1.1   8.7
+	P44063_TED01              	    16	   173	   357.7
+
+Q329W4	ECA POLYSACCHARIDE CHAIN LENG     28.6     0.0056   1   1.7   0.0
+	P44063_TED01              	   171	   321	    27.2
+	PF02706	Wzz             	    16	   105	    54.4
+
+Q3YTC2	O ANTIGEN CHAIN LENGTH DETERM     49.9    1.6e-09   1   1.3   2.1
+	P44063_TED01              	   160	   312	    49.2
+	PF02706	Wzz             	     6	   107	    71.6
+
+Q6CZE3	ECA POLYSACCHARIDE CHAIN LENG     28.8     0.0049   1   1.3   0.0
+	P44063_TED01              	   171	   321	    28.0
+	PF02706	Wzz             	    15	    90	    39.2
+
+R8ASG8	O ANTIGEN CHAIN LENGTH DETERM     47.8    6.7e-09   1   1.2   2.1
+	P44063_TED01              	   182	   334	    47.3
+	PF02706	Wzz             	    28	   144	      66
+
+U3TY68	ECA POLYSACCHARIDE CHAIN LENG     32.0    0.00048   1   1.3   0.0
+	P44063_TED01              	   165	   315	    31.4
+	PF02706	Wzz             	     8	    99	    40.6
+
+V8GAD7	POLYSACCHARIDE CHAIN LENGTH D     35.4    4.4e-05   1   1.6   0.8
+	P44063_TED01              	   140	   295	    34.4
+	PF02706	Wzz             	     1	    88	    36.9
+
+W0HLS5	ECA POLYSACCHARIDE CHAIN LENG     29.0     0.0043   1   1.3   0.1
+	P44063_TED01              	   174	   324	    28.2
+	PF02706	Wzz             	    18	   108	    53.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P44063 (E-value: 2.1e-106, Score: 358.0)
+Mentioned as: P44063
+Description: Uncharacterized protein HI_0866
+Organism: Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd)
+PMID: 24391926
+Source: EuropePMC
+Title: Functional annotation of conserved hypothetical proteins from Haemophilus influenzae Rd KW20
+Journal: PloS one (2013)
+Snippet: BolA family transcriptional regulator 132. HP HI0858 949870 P44905 5-formyltetrahydrofolate cyclo-ligase 133. HP HI0866 950756 P44063 lipopolysaccharide biosynthesis protein WzzE 134 HP HI0868 949464 Q57022 glycosyl transferase family A protein 135. HP HI0869 949879 P44064 Glycosyltransferase 136. HP HI0874 949882 P44067 O-antigen ligase WaaL 137. HP
+
+================================================================================
+Protein: VIMSS902225 (E-value: 1.8e-05, Score: 30.0)
+Mentioned as: SC3824
+Description: modulator of enterobacterial common antigen (ECA) polysaccharide chain length
+Organism: Salmonella enterica subsp. enterica serovar Choleraesuis str. SC-B67
+PMID: 16299315
+Source: EuropePMC
+Title: Novel attenuated Salmonella enterica serovar Choleraesuis strains as live vaccine candidates generated by signature-tagged mutagenesis
+Journal: Infection and immunity (2005)
+Snippet: vitro In vivo SC19C11 SC9C5 SC3A5 wzzE (SC3824) manC (SC2016) steB (SC2890) LPS biosynthesis Mannose-1-phosphate guanyltransferase Outer membrane usher protein
+
+================================================================================
+Protein: O33789 (E-value: 2e-05, Score: 29.9)
+Mentioned as: O33789
+Description: ECA polysaccharide chain length modulation protein
+Organism: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+PMID: 10400585
+Source: EuropePMC
+Title: Characterization of the serogroup O11 O-antigen locus of Pseudomonas aeruginosa PA103
+Journal: Journal of bacteriology (1999)
+Snippet: (3.2 1043) 41 (2.2 1021) 34 (1.7 1031) 18 O33789 (SP) P25905 (SP) AF030373 O33953 (SP) Q46632 (SP) AF028810 AF028810 AE000595 U27301 P54183 (SP) AF015775 U73374
+
+================================================================================
+Protein: Q6CZE3 (E-value: 4.4e-05, Score: 28.8)
+Mentioned as: Q6CZE3
+Description: ECA polysaccharide chain length modulation protein
+Organism: Pectobacterium atrosepticum (strain SCRI 1043 / ATCC BAA-672)
+PMID: 36944376
+Source: EuropePMC
+Title: The lipid linked oligosaccharide polymerase Wzy and its regulating co-polymerase, Wzz, from enterobacterial common antigen biosynthesis form a complex
+Journal: Open biology (2023)
+Snippet: of our research. 4 . Methods 4.1 . Cloning The genes encoding WzzEPA (Uniprot ID: Q6CZE3; gene locus ECA4209) and WzyEPA (UniProt ID: Q6CZF1; gene locus ECA4201)) were PCR amplified from genomic DNA of P. atrosepticum SCRI 1043 (ATCC BAA-672). The DNA fragment encoding WzzE PA
+
+================================================================================
+Protein: VIMSS5796838 (E-value: 0.00011, Score: 27.4)
+Mentioned as: SEN2078
+Description: polysaccharide chain length regulator
+Organism: Salmonella enterica subsp. enterica serovar Enteritidis str. P125109
+PMID: 37219927
+Source: EuropePMC
+Title: Genome-wide fitness analysis identifies genes required for <i>in vitro</i> growth and macrophage infection by African and global epidemic pathovariants of <i>Salmonella enterica</i> Enteritidis
+Journal: Microbial genomics (2023)
+Snippet: SPI-2 genes ( ssaT , ssaH , ttrAB ), two SPI-6 genes ( SEN2077 and SEN2078 ), two SPI-10 genes ( SEN4248 and SEN4250 ) and one SPI-14 gene ( SEN0801 ). Several genes identified as required for in vitro growth in both S. enterica Enteritidis
+
+================================================================================
+Protein: VIMSS5796838 (E-value: 0.00011, Score: 27.4)
+Mentioned as: SEN2078
+Description: polysaccharide chain length regulator
+Organism: Salmonella enterica subsp. enterica serovar Enteritidis str. P125109
+PMID: 33361201
+Source: EuropePMC
+Title: Salmonella enterica Serovars Dublin and Enteritidis Comparative Proteomics Reveals Differential Expression of Proteins Involved in Stress Resistance, Virulence, and Anaerobic Metabolism
+Journal: Infection and immunity (2021)
+
+================================================================================
+Protein: VIMSS153854 (E-value: 0.00011, Score: 27.4)
+Mentioned as: STY2288
+Description: polysaccharide chain length regulator
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 19746165
+Source: EuropePMC
+Title: Comparative proteomic analysis of the PhoP regulon in Salmonella enterica serovar Typhi versus Typhimurium
+Journal: PloS one (2009)
+Snippet: authentic frameshift STY3094 t2865 STM2956 relA GTP pyrophosphokinase STY0937 t1992 STM0941 ybjY probable exported protein STY2288 t0794 STM2079 cld polysaccharide chain length regulator STY3909 t3650 STM3869 atpF ATP synthase F0, B subunit STY3881 t3621 STM3999 polA DNA polymerase I STY3243 t3002 STM3090 metK ** S-adenosylmethionine synthetase
+
+================================================================================
+Protein: VIMSS900403 (E-value: 0.00013, Score: 27.2)
+Mentioned as: SC2089
+Description: regulator of length of O-antigen component of lipopolysaccharide chains
+Organism: Salmonella enterica subsp. enterica serovar Choleraesuis str. SC-B67
+PMID: 1597425
+Source: EuropePMC
+Title: Molecular genetics of the flgI region and its role in flagellum biosynthesis in Caulobacter crescentus
+Journal: Journal of bacteriology (1992)
+Snippet: 48 15 45 27 27 27 13 SC1591 SC2089 SC2090 SC3336 SC3337 SC3338 SC3529 str-142 hunC145 str-152 flgII41 hunCl45::Tn5 flgI141 hunCl15::TnS syn-1000 cheL126 recA526
+
+================================================================================
+Protein: VIMSS903663 (E-value: 0.00017, Score: 26.8)
+Mentioned as: SPA0792
+Description: polysaccharide chain length regulator
+Organism: Salmonella enterica subsp. enterica serovar Paratyphi A str. ATCC 9150
+PMID: 36679935
+Source: EuropePMC
+Title: A Bivalent MAPS Vaccine Induces Protective Antibody Responses against <i>Salmonella</i> Typhi and Paratyphi A
+Journal: Vaccines (2022)
+Snippet: ]. The Wzz gene was deleted with a suicide pCACTUS plasmid carrying S . Paratyphi SPA0792 ( wzzB ) gene. The resulting mutant was transformed with a pBluescript plasmid carrying the S . Paratyphi fepe gene under the control of the promoter of pTac from S
+
+================================================================================
+Protein: VIMSS364587 (E-value: 0.00028, Score: 26.1)
+
+... (truncated - showing first 100 of 139 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P44063.2	AF-P44063-F1-model_v4_TED01:16-76_126-173	1	AF-P44063-F1-model_v4_TED01	16-173	100.0%
+P44063.2	AF-P44063-F1-model_v4_TED02:174-207	1	AF-P44063-F1-model_v4_TED02	174-207	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44063_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 3b8o
+RN   [1]
+RM   18204465
+RT   Bacterial polysaccharide co-polymerases share a common framework for
+RT   control of  polymer length.
+RA   Tocilj A, Munger C, Proteau A, Morona R, Purins L, Ajamian E, Wagner
+RA   J, Papadopoulos M, Van Den Bosch L, Rubinstein JL, Fethiere J, Matte
+RA   A, Cygler M;
+RL   Nat Struct Mol Biol. 2008;15:130-138.
+RC   Paper describing PDB structure 4wl1
+RN   [2]
+RM   25307743
+RT   Quaternary structure of WzzB and WzzE polysaccharide copolymerases.
+RA   Kalynych S, Cherney M, Bostina M, Rouiller I, Cygler M;
+RL   Protein Sci. 2015;24:58-69.
+RC   Paper describing PDB structure 8bhw
+RN   [3]
+RM   37532793
+RT   Alternating L4 loop architecture of the bacterial polysaccharide
+RT   co-polymerase  WzzE.
+RA   Wiseman B, Widmalm G, Hogbom M;
+RL   Commun Biol. 2023;6:802.
+RC   Paper describing PDB structure 8c0e
+RN   [4]
+RM   36944376
+RT   The lipid linked oligosaccharide polymerase Wzy and its regulating
+RT   co-polymerase,  Wzz, from enterobacterial common antigen biosynthesis
+RT   form a complex.
+RA   Weckener M, Woodward LS, Clarke BR, Liu H, Ward PN, Le Bas A, Bhella
+RA   D, Whitfield C, Naismith JH;
+RL   Open Biol. 2023;13:220373.
+
+--- End of Current DESC file ---

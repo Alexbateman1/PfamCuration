@@ -1,0 +1,65 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2XKY0	REPA {ECO:0000313|EMBL:AB    138.4    3.3e-37   1   1.4   6.6
+	Iterate                   	    33	    87	   137.7
+
+A0A0H3ER55	PUTATIVE REPLICATION PROT    138.5    3.1e-37   1   1.4   6.6
+	Iterate                   	    29	    83	   137.8
+
+A0A0H5DPJ4	UNCHARACTERIZED PROTEIN {     20.6        2.1   5   6.7   9.6
+	Iterate                   	   236	   264	     6.0
+	Iterate                   	   358	   386	     4.4
+	Iterate                   	   333	   356	     3.8
+	Iterate                   	   383	   413	     3.1
+	Iterate                   	   283	   308	     2.1
+
+A0A7T8HMJ5	UNCHARACTERIZED PROTEIN {     21.6          1   4   4.0   0.0
+	Iterate                   	    60	    83	     4.9
+	Iterate                   	     4	    25	     4.7
+	Iterate                   	    89	   116	     4.0
+	Iterate                   	    31	    54	     2.9
+
+A0AAE0Y048	UNCHARACTERIZED PROTEIN {     22.8       0.42   4   4.6  17.5
+	Iterate                   	    72	   122	    12.4
+	Iterate                   	   206	   251	     7.9
+	Iterate                   	   121	   167	     6.7
+	Iterate                   	   165	   211	     5.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0H3ER55.1	AF-A0A0H3ER55-F1-model_v4_TED01:27-145	1	AF-A0A0H3ER55-F1-model_v4_TED01	27-145	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P13960_TED01/Iterate
+GA   27.00 27.00;
+TC   141.30 140.60;
+NC   25.20 17.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

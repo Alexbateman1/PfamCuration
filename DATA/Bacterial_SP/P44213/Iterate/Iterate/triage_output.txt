@@ -1,0 +1,129 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1486_HAEIN             Reviewed;          57 AA.
+AC   P44213;
+DE   RecName: Full=Putative uncharacterized protein HI_1486 in Mu-like prophage FluMu region;
+GN   OrderedLocusNames=HI_1486;
+OS   Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 / Rd).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Haemophilus.
+OX   NCBI_TaxID=71421;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51907 / DSM 11121 / KW20 / Rd;
+RX   PubMed=7542800; DOI=10.1126/science.7542800;
+RA   Fleischmann R.D., Adams M.D., White O., Clayton R.A., Kirkness E.F.,
+RA   Kerlavage A.R., Bult C.J., Tomb J.-F., Dougherty B.A., Merrick J.M.,
+RA   McKenney K., Sutton G.G., FitzHugh W., Fields C.A., Gocayne J.D.,
+RA   Scott J.D., Shirley R., Liu L.-I., Glodek A., Kelley J.M., Weidman J.F.,
+RA   Phillips C.A., Spriggs T., Hedblom E., Cotton M.D., Utterback T.R.,
+RA   Hanna M.C., Nguyen D.T., Saudek D.M., Brandon R.C., Fine L.D.,
+RA   Fritchman J.L., Fuhrmann J.L., Geoghagen N.S.M., Gnehm C.L., McDonald L.A.,
+RA   Small K.V., Fraser C.M., Smith H.O., Venter J.C.;
+RT   "Whole-genome random sequencing and assembly of Haemophilus influenzae
+RT   Rd.";
+RL   Science 269:496-512(1995).
+CC   -!- CAUTION: Could be the product of a pseudogene. {ECO:0000305}.
+DR   EMBL; L42023; AAC23141.1; -; Genomic_DNA.
+DR   PIR; G64031; G64031.
+DR   RefSeq; NP_439636.1; NC_000907.1.
+DR   AlphaFoldDB; P44213; -.
+DR   SMR; P44213; -.
+DR   STRING; 71421.HI_1486; -.
+DR   EnsemblBacteria; AAC23141; AAC23141; HI_1486.
+DR   KEGG; hin:HI_1486; -.
+DR   PATRIC; fig|71421.8.peg.1554; -.
+DR   eggNOG; ENOG5031KE8; Bacteria.
+DR   HOGENOM; CLU_209759_0_0_6; -.
+DR   OrthoDB; 9881898at2; -.
+DR   BioCyc; HINF71421:G1GJ1-1510-MONOMER; -.
+DR   Proteomes; UP000000579; Chromosome.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..57
+FT                   /note="Putative uncharacterized protein HI_1486 in Mu-like
+FT                   prophage FluMu region"
+FT                   /id="PRO_0000078070"
+SQ   SEQUENCE   57 AA;  6588 MW;  DCA9EE0991029E2D CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Haemophilus.
+1	6	Pasteurella.
+1	6	Mannheimia.
+1	6	Glaesserella.
+5	5	Pasteurellaceae
+5	4	Pasteurellales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0M3LSN0	UNCHARACTERIZED PROTEIN {     54.3    4.6e-11   1   1.0   0.5
+	Iterate                   	     1	    60	    54.2
+
+A0A2A6BLG4	RNASE NYN DOMAIN-CONTAINI     78.4    1.3e-18  10  11.3  20.1
+	Iterate                   	   705	   755	     9.2
+	Iterate                   	   748	   788	     8.5
+	Iterate                   	   783	   821	     8.5
+	Iterate                   	   814	   854	     8.5
+	Iterate                   	   915	   953	     8.5
+	Iterate                   	   848	   887	     8.4
+	Iterate                   	   883	   920	     8.4
+	Iterate                   	   948	   986	     8.4
+	Iterate                   	   982	  1019	     8.4
+	Iterate                   	  1107	  1151	     5.8
+	PF11977	RNase_Zc3h12a   	    10	   154	    80.1
+
+B8F589	UNCHARACTERIZED PROTEIN {ECO:     43.4    1.1e-07   1   1.1   0.4
+	Iterate                   	     4	    48	    43.2
+
+P44213	PUTATIVE UNCHARACTERIZED PROTE    134.9    3.1e-36   1   1.0   2.2
+	Iterate                   	     1	    57	   134.8
+
+Q7VNL7	UNCHARACTERIZED PROTEIN {ECO:    136.8    8.2e-37   1   1.0   1.8
+	Iterate                   	     1	    59	   136.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS526992 (E-value: 3.7e-36, Score: 128.1)
+Mentioned as: HD0492
+Description: conserved hypothetical protein
+Organism: Haemophilus ducreyi 35000HP
+PMID: 22276113
+Source: EuropePMC
+Title: RNA-seq based transcriptional map of bovine respiratory disease pathogen "Histophilus somni 2336"
+Journal: PloS one (2012)
+Snippet: conserved hypothetical protein [ Haemophilus influenzae RdAW] HSP10 754234 754398 + 165 NP_873053.1 hypothetical protein HD0492 [ Haemophilus ducreyi 35000HP] HSP11 758474 758698 + 225 ZP_05848108.1 conserved hypothetical protein [ Haemophilus influenzae RdAW] HSP12 764501 764686 + 186 ABX51978.1 hypothetical protein [ Haemophilus phage SuMu] HSP13
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q7VNL7.1	AF-Q7VNL7-F1-model_v4_TED01:20-59	1	AF-Q7VNL7-F1-model_v4_TED01	20-59	67.8%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P44213/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.10 32.50;
+NC   23.10 22.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,126 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1897_PASMU             Reviewed;         107 AA.
+AC   Q9CJU4;
+DE   RecName: Full=Uncharacterized lipoprotein PM1897;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=PM1897;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+DR   EMBL; AE004439; AAK03981.1; -; Genomic_DNA.
+DR   RefSeq; WP_005737117.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CJU4; -.
+DR   STRING; 272843.PM1897; -.
+DR   EnsemblBacteria; AAK03981; AAK03981; PM1897.
+DR   KEGG; pmu:PM1897; -.
+DR   PATRIC; fig|272843.6.peg.1919; -.
+DR   HOGENOM; CLU_175536_0_0_6; -.
+DR   OrthoDB; 5688775at2; -.
+DR   Proteomes; UP000000809; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal.
+FT   SIGNAL          1..17
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           18..107
+FT                   /note="Uncharacterized lipoprotein PM1897"
+FT                   /id="PRO_0000014187"
+FT   LIPID           18
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           18
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   107 AA;  12214 MW;  920C61E14A10F405 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Haemophilus.
+10	5	Pasteurellaceae
+10	4	Pasteurellales
+10	3	Gammaproteobacteria
+10	2	Pseudomonadota
+10	1	Pseudomonadati
+10	0	Bacteria
+Total of 10 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A011LWY2	LIPOPROTEIN {ECO:0008006|     78.9    1.5e-18   1   1.3   0.6
+	Iterate                   	    68	   137	    78.3
+
+A0A1V3IX19	UNCHARACTERIZED PROTEIN {     75.1    2.4e-17   1   1.3   1.1
+	Iterate                   	     8	    95	    74.7
+
+A0A1V3TVL5	LIPOPROTEIN {ECO:0008006|     75.0    2.6e-17   1   1.1   0.8
+	Iterate                   	    44	   115	    74.5
+
+A0A4R2MTU5	LIPOPROTEIN {ECO:0008006|     93.5    4.2e-23   1   1.1   2.9
+	Iterate                   	    40	   113	    93.2
+
+Q9CJU4	UNCHARACTERIZED LIPOPROTEIN PM    191.2    1.5e-53   1   1.2   1.9
+	Iterate                   	    32	   105	   190.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS80973 (E-value: 1.3e-33, Score: 120.1)
+Mentioned as: PM1897
+Description: unknown
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 28070502
+Source: EuropePMC
+Title: Comparative Genomics Analysis of Two Different Virulent Bovine <i>Pasteurella multocida</i> Isolates
+Journal: International journal of genomics (2016)
+Snippet: Nonspecific tight adherence protein D PmCQ6_6g0048 Nucleoside-diphosphate sugar epimerase/dehydratase Secreted proteins PmCQ2_1g0033 Pmu_14370 PMCN06_1474 NT08PM_1498 PM1897 Hypothetical protein, uncharacterized lipoprotein PM1897 PmCQ2_3g0252 Pmu_08050 PMCN06_0796 NT08PM_0537 PM0734 Periplasmic serine protease do/hhoA-like protein PmCQ2_2g0088 ModB, partial Membrane proteins PmCQ2_1g0666 Pmu_21540 PMCN06_2233 NT08PM_2236 PM1230 Penicillin-binding protein 1A NT08PM_2237 PmCQ2_4g0293
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A011LWY2.1	AF-A0A011LWY2-F1-model_v4_TED01:86-138	1	AF-A0A011LWY2-F1-model_v4_TED01	86-138	63.4%
+A0A1T0AV43.1	AF-A0A1T0AV43-F1-model_v4_TED01:60-105	1	AF-A0A1T0AV43-F1-model_v4_TED01	60-105	60.0%
+A0A1V3IX19.1	AF-A0A1V3IX19-F1-model_v4_TED01:30-80	1	AF-A0A1V3IX19-F1-model_v4_TED01	30-80	70.8%
+A0A1V3TVL5.1	AF-A0A1V3TVL5-F1-model_v4_TED01:64-116	1	AF-A0A1V3TVL5-F1-model_v4_TED01	64-116	71.2%
+A0A369ZMB0.1	AF-A0A369ZMB0-F1-model_v4_TED01:85-140	1	AF-A0A369ZMB0-F1-model_v4_TED01	85-140	73.0%
+A0A377IWD8.1	AF-A0A377IWD8-F1-model_v4_TED01:56-108	1	AF-A0A377IWD8-F1-model_v4_TED01	56-108	72.6%
+A0A377IWE0.1	AF-A0A377IWE0-F1-model_v4_TED01:45-99	1	AF-A0A377IWE0-F1-model_v4_TED01	45-99	71.4%
+A0A3N4VS77.1	AF-A0A3N4VS77-F1-model_v4_TED01:81-135	1	AF-A0A3N4VS77-F1-model_v4_TED01	81-135	66.7%
+A0A4R2MTU5.1	AF-A0A4R2MTU5-F1-model_v4_TED01:61-114	1	AF-A0A4R2MTU5-F1-model_v4_TED01	61-114	71.6%
+A3MZS7.1	AF-A3MZS7-F1-model_v4_TED01:83-140	1	AF-A3MZS7-F1-model_v4_TED01	83-140	73.3%
+Q9CJU4.1	AF-Q9CJU4-F1-model_v4_TED01:32-105	1	AF-Q9CJU4-F1-model_v4_TED01	32-105	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CJU4_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 97.80;
+NC   26.40 18.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

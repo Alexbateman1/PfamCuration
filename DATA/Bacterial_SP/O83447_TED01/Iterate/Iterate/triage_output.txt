@@ -1,0 +1,97 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y432_TREPA              Reviewed;         183 AA.
+AC   O83447;
+DE   RecName: Full=Uncharacterized protein TP_0432;
+GN   OrderedLocusNames=TP_0432;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65420.1; -; Genomic_DNA.
+DR   PIR; E71326; E71326.
+DR   AlphaFoldDB; O83447; -.
+DR   IntAct; O83447; 3.
+DR   STRING; 243276.TP_0432; -.
+DR   EnsemblBacteria; AAC65420; AAC65420; TP_0432.
+DR   KEGG; tpa:TP_0432; -.
+DR   KEGG; tpw:TPANIC_0432; -.
+DR   HOGENOM; CLU_1517273_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..183
+FT                   /note="Uncharacterized protein TP_0432"
+FT                   /id="PRO_0000202254"
+SQ   SEQUENCE   183 AA;  19537 MW;  75759BE26C369A35 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+17	6	Treponema.
+18	5	Treponemataceae
+18	4	Spirochaetales
+18	3	Spirochaetia
+18	2	Spirochaetota
+18	1	Pseudomonadati
+18	0	Bacteria
+Total of 18 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7GRP2	UNCHARACTERIZED PROTEIN {    255.5    7.3e-73   1   1.5   0.3
+	Iterate                   	    24	   165	   254.5
+
+A0A840SCS7	UNCHARACTERIZED PROTEIN {     35.3    4.3e-05   1   2.6   0.8
+	Iterate                   	    23	   170	    29.5
+
+O83447	UNCHARACTERIZED PROTEIN TP_0432    254.1    2.1e-72   1   1.1   0.2
+	Iterate                   	    30	   171	   253.8
+
+Q73NG6	LIPOPROTEIN {ECO:0008006|GOOG     58.9    2.3e-12   1   1.9   1.0
+	Iterate                   	    22	   164	    55.8
+
+S3LU25	UNCHARACTERIZED PROTEIN {ECO:     37.7    8.1e-06   1   2.0   0.1
+	Iterate                   	    23	   164	    33.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B7GRP2.1	AF-A0A0B7GRP2-F1-model_v4_TED01:23-168	1	AF-A0A0B7GRP2-F1-model_v4_TED01	23-168	100.0%
+A0A840SCS7.1	AF-A0A840SCS7-F1-model_v4_TED01:20-170	1	AF-A0A840SCS7-F1-model_v4_TED01	20-170	100.0%
+O83447.1	AF-O83447-F1-model_v4_TED01:30-103_117-171	1	AF-O83447-F1-model_v4_TED01	30-171	100.0%
+Q73NG6.1	AF-Q73NG6-F1-model_v4_TED01:27-166	1	AF-Q73NG6-F1-model_v4_TED01	27-166	96.5%
+S5ZRD3.1	AF-S5ZRD3-F1-model_v4_TED01:22-172	1	AF-S5ZRD3-F1-model_v4_TED01	22-172	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83447_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.00 31.40;
+NC   24.90 24.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

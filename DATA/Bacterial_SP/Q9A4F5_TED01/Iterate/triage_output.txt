@@ -1,0 +1,199 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   RELB3_CAUVC             Reviewed;         117 AA.
+AC   Q9A4F5;
+DE   RecName: Full=Antitoxin RelB3;
+GN   Name=relB3; OrderedLocusNames=CC_2879;
+OS   Caulobacter vibrioides (strain ATCC 19089 / CIP 103742 / CB 15)
+OS   (Caulobacter crescentus).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Caulobacterales; Caulobacteraceae; Caulobacter.
+OX   NCBI_TaxID=190650;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 19089 / CIP 103742 / CB 15;
+RX   PubMed=11259647; DOI=10.1073/pnas.061029298;
+RA   Nierman W.C., Feldblyum T.V., Laub M.T., Paulsen I.T., Nelson K.E.,
+RA   Eisen J.A., Heidelberg J.F., Alley M.R.K., Ohta N., Maddock J.R.,
+RA   Potocka I., Nelson W.C., Newton A., Stephens C., Phadke N.D., Ely B.,
+RA   DeBoy R.T., Dodson R.J., Durkin A.S., Gwinn M.L., Haft D.H., Kolonay J.F.,
+RA   Smit J., Craven M.B., Khouri H.M., Shetty J., Berry K.J., Utterback T.R.,
+RA   Tran K., Wolf A.M., Vamathevan J.J., Ermolaeva M.D., White O.,
+RA   Salzberg S.L., Venter J.C., Shapiro L., Fraser C.M.;
+RT   "Complete genome sequence of Caulobacter crescentus.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:4136-4141(2001).
+RN   [2]
+RP   POSSIBLE FUNCTION.
+RC   STRAIN=ATCC 19089 / CIP 103742 / CB 15;
+RX   PubMed=15718296; DOI=10.1093/nar/gki201;
+RA   Pandey D.P., Gerdes K.;
+RT   "Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.";
+RL   Nucleic Acids Res. 33:966-976(2005).
+RN   [3]
+RP   FUNCTION AS AN ANTITOXIN, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=ATCC 19089 / CIP 103742 / CB 15;
+RX   PubMed=20487277; DOI=10.1111/j.1365-2958.2010.07207.x;
+RA   Fiebig A., Castro Rojas C.M., Siegal-Gaskins D., Crosson S.;
+RT   "Interaction specificity, toxicity and regulation of a paralogous set of
+RT   ParE/RelE-family toxin-antitoxin systems.";
+RL   Mol. Microbiol. 77:236-251(2010).
+CC   -!- FUNCTION: Antitoxin component of a type II toxin-antitoxin (TA) system.
+CC       Neutralizes the effect of cognate toxin RelE3, but no other RelE or
+CC       ParE toxin. {ECO:0000269|PubMed:20487277}.
+CC   -!- DISRUPTION PHENOTYPE: Cannot be disrupted, suggesting it is a
+CC       functional antitoxin. No visible phenotype when the relBE3 operon is
+CC       deleted. {ECO:0000269|PubMed:20487277}.
+DR   EMBL; AE005673; AAK24843.1; -; Genomic_DNA.
+DR   PIR; G87605; G87605.
+DR   RefSeq; NP_421675.1; NC_002696.2.
+DR   AlphaFoldDB; Q9A4F5; -.
+DR   SMR; Q9A4F5; -.
+DR   STRING; 190650.CC_2879; -.
+DR   EnsemblBacteria; AAK24843; AAK24843; CC_2879.
+DR   KEGG; ccr:CC_2879; -.
+DR   PATRIC; fig|190650.5.peg.2883; -.
+DR   HOGENOM; CLU_2080543_0_0_5; -.
+DR   BioCyc; CAULO:CC2879-MONOMER; -.
+DR   Proteomes; UP000001816; Chromosome.
+DR   GO; GO:0009432; P:SOS response; EXP:CollecTF.
+PE   1: Evidence at protein level;
+KW   Reference proteome; Toxin-antitoxin system.
+FT   CHAIN           1..117
+FT                   /note="Antitoxin RelB3"
+FT                   /id="PRO_0000408466"
+SQ   SEQUENCE   117 AA;  13275 MW;  7CCC6302B4D95258 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Caulobacter.
+2	5	Caulobacteraceae
+2	4	Caulobacterales
+2	3	Alphaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3CBZ7	ANTITOXIN PROTEIN RELB-3      87.8    1.3e-21   1   1.7   4.7
+	Iterate                   	    10	    43	    87.8
+	PF27535	RelB3_C         	    52	    93	    56.4
+
+A0A1I3S1D2	GLIDING MOTILITY-ASSOCIAT     37.4    9.2e-06   8  10.6  13.7
+	Iterate                   	   889	   905	     5.0
+	Iterate                   	  1203	  1227	     5.0
+	Iterate                   	  1284	  1300	     5.0
+	Iterate                   	  1440	  1464	     4.3
+	Iterate                   	  1125	  1141	     3.5
+	Iterate                   	  1362	  1378	     3.5
+	Iterate                   	   810	   825	     3.1
+	Iterate                   	  1048	  1062	     2.9
+	PF18676	MBG_2           	   692	   765	    70.8
+	PF18676	MBG_2           	   771	   844	    62.6
+	PF18676	MBG_2           	   850	   923	    64.5
+	PF18676	MBG_2           	   929	  1002	    66.6
+	PF18676	MBG_2           	  1008	  1081	    65.8
+	PF18676	MBG_2           	  1087	  1160	    70.9
+	PF18676	MBG_2           	  1166	  1239	    70.4
+	PF18676	MBG_2           	  1245	  1318	    64.8
+	PF18676	MBG_2           	  1324	  1397	    66.3
+	PF18676	MBG_2           	  1403	  1476	    63.6
+	PF18676	MBG_2           	  1482	  1555	      64
+	PF18657	YDG             	  1557	  1643	    50.6
+	PF18657	YDG             	  1647	  1730	    62.6
+	PF18657	YDG             	  1737	  1823	    62.9
+	PF00630	Filamin         	  1827	  1922	    43.9
+	PF00041	fn3             	  1930	  2019	    39.7
+	PF18676	MBG_2           	  2267	  2342	      68
+	PF13585	CHU_C           	  2435	  2524	    73.6
+
+A0A8S1V0E5	TETRATRICOPEPTIDE REPEAT      29.7     0.0024   0   9.2   2.2
+	PF12895	ANAPC3          	   160	   230	    29.4
+	PF07719	TPR_2           	   204	   237	    23.3
+	PF13181	TPR_8           	   205	   237	    16.1
+	PF13432	TPR_16          	   214	   272	    21.7
+	PF12895	ANAPC3          	   217	   298	    40.4
+	PF14559	TPR_19          	   217	   279	    29.7
+	PF13431	TPR_17          	   226	   259	    23.3
+	PF13181	TPR_8           	   238	   271	    13.3
+	PF12895	ANAPC3          	   250	   332	    37.4
+	PF13181	TPR_8           	   274	   305	    14.5
+	PF13424	TPR_12          	   305	   372	    30.2
+	PF12895	ANAPC3          	   318	   400	    32.4
+	PF13424	TPR_12          	   340	   406	    30.1
+	PF12895	ANAPC3          	   352	   434	    32.4
+	PF13424	TPR_12          	   374	   440	    30.1
+	PF13424	TPR_12          	   407	   474	    30.2
+	PF12895	ANAPC3          	   420	   502	    32.4
+	PF13424	TPR_12          	   475	   542	    30.2
+	PF12895	ANAPC3          	   522	   604	    33.5
+	PF13424	TPR_12          	   544	   607	    33.1
+	PF13181	TPR_8           	   546	   577	    13.8
+	PF13176	TPR_7           	   580	   612	    19.4
+	PF13181	TPR_8           	   580	   611	    13.1
+
+A0A940RN01	ANTITOXIN {ECO:0000313|EM     56.5    8.7e-12   1   1.8   1.4
+	Iterate                   	    16	    49	    56.5
+	PF27535	RelB3_C         	    58	    99	    51.6
+
+Q9A4F5	ANTITOXIN RELB3                    87.3    1.9e-21   1   1.6   4.7
+	Iterate                   	    31	    64	    87.3
+	PF27535	RelB3_C         	    73	   114	    55.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS99685 (E-value: 1.7e-22, Score: 84.3)
+Mentioned as: CC_2879
+Description: hypothetical protein
+Organism: Caulobacter crescentus CB15
+PMID: 18083815
+Source: EuropePMC
+Title: Characterization of the SOS regulon of Caulobacter crescentus
+Journal: Journal of bacteriology (2008)
+Snippet: CC_1532, CC_1927 and CC_1928, CC_2589 and CC_2590, CC_2878.1 and CC_2879, CC_3038 and CC_3039, and CC_0382 and CC_0383 (Table 2; see Fig. S1 in the supplemental
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0H3CBZ7.1	AF-A0A0H3CBZ7-F1-model_v4_TED02:48-96	1	AF-A0A0H3CBZ7-F1-model_v4_TED02	48-96	0
+A0A0H3CBZ7.1	AF-A0A0H3CBZ7-F1-model_v4_TED01:10-42	1	AF-A0A0H3CBZ7-F1-model_v4_TED01	10-42	97.1%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9A4F5_TED01/Iterate
+GA   27.00 27.00;
+TC   30.20 83.50;
+NC   25.60 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for Q9A4F5
+RN   [1]
+RM   15718296
+RT   "Toxin-antitoxin loci are highly abundant in free-living but lost from
+RT   host-associated prokaryotes.";
+RA   Pandey D.P., Gerdes K.;
+RL   Nucleic Acids Res. 33:966-976(2005).
+RC   Function description for Q9A4F5
+RN   [2]
+RM   20487277
+RT   "Interaction specificity, toxicity and regulation of a paralogous set of
+RT   ParE/RelE-family toxin-antitoxin systems.";
+RA   Fiebig A., Castro Rojas C.M., Siegal-Gaskins D., Crosson S.;
+RL   Mol. Microbiol. 77:236-251(2010).
+
+--- End of Current DESC file ---

@@ -1,0 +1,135 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   TIMP_ECOLI              Reviewed;          41 AA.
+AC   P0DUM3; A0A9F2H0S5;
+DE   RecName: Full=Putative toxic protein TimP {ECO:0000250|UniProtKB:P0DUM2};
+GN   Name=timP {ECO:0000312|EMBL:UMR55116.1};
+GN   Synonyms=ECK4669 {ECO:0000312|EMBL:UMR55116.1}, ryfA;
+GN   OrderedLocusNames=b4812;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+CC   -!- FUNCTION: Putative toxic component of a potential type I toxin-
+CC       antitoxin (TA) system. Neutralized by sRNA antitoxin TimR which binds
+CC       to the 5' UTR of timP mRNA and inhibits translation. The antitoxin gene
+CC       is encoded immediately upstream and transcribed divergently from the
+CC       toxin gene; antitoxin RNA is less stable than timP mRNA.
+CC       {ECO:0000250|UniProtKB:P0DUM2}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane
+CC       {ECO:0000250|UniProtKB:P0DUM2}; Single-pass membrane protein
+CC       {ECO:0000250|UniProtKB:P0DUM2}. Note=The signal sequence is not cleaved
+CC       and anchors the protein in the cell inner membrane.
+CC       {ECO:0000250|UniProtKB:P0DUM2}.
+CC   -!- SIMILARITY: Belongs to the TimP toxin family. {ECO:0000305}.
+DR   EMBL; U00096; UMR55116.1; -; Genomic_DNA.
+DR   AlphaFoldDB; P0DUM3; -.
+DR   InParanoid; P0DUM3; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   NCBIfam; NF040796; toxic_TimP; 1.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Toxin-antitoxin system; Transmembrane.
+FT   CHAIN           1..41
+FT                   /note="Putative toxic protein TimP"
+FT                   /id="PRO_0000453138"
+FT   TRANSMEM        1..17
+FT                   /evidence="ECO:0000250|UniProtKB:P0DUM2"
+SQ   SEQUENCE   41 AA;  4477 MW;  301B1523E10ED6AD CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2V9H9	UNCHARACTERIZED PROTEIN {    100.9    1.4e-25   1   1.0   6.5
+	Iterate                   	     5	    45	   100.7
+
+A0A1S4EGN9	UNCHARACTERIZED PROTEIN L     30.7     0.0012   0  11.0   1.9
+
+A0A8B6EHG8	UNCHARACTERIZED PROTEIN {     48.8    2.6e-09  10   9.7  22.5
+	Iterate                   	   135	   162	    10.1
+	Iterate                   	    75	   102	     9.5
+	Iterate                   	    38	    68	     8.2
+	Iterate                   	   165	   198	     6.5
+	Iterate                   	   241	   269	     6.0
+	Iterate                   	   107	   131	     5.8
+	Iterate                   	   207	   239	     4.8
+	Iterate                   	     1	    24	     3.6
+	Iterate                   	    51	    80	     3.3
+	Iterate                   	    21	    47	     3.2
+
+A7T6Q8	UNCHARACTERIZED PROTEIN {ECO:     50.2    9.3e-10  11  10.1   2.7
+	Iterate                   	   135	   167	     6.0
+	Iterate                   	     6	    36	     5.9
+	Iterate                   	   118	   147	     5.9
+	Iterate                   	   182	   211	     5.9
+	Iterate                   	   199	   228	     5.8
+	Iterate                   	    71	    99	     5.0
+	Iterate                   	   165	   195	     3.2
+	Iterate                   	    24	    53	     3.1
+	Iterate                   	    37	    67	     2.9
+	Iterate                   	   151	   181	     2.3
+	Iterate                   	   101	   121	     2.2
+
+P0DUM3	PUTATIVE TOXIC PROTEIN TIMP {EC    110.9      1e-28   1   1.0   7.0
+	Iterate                   	     1	    41	   110.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS304810 (E-value: 1.2e-27, Score: 100.9)
+Mentioned as: c3046
+Description: Hypothetical protein
+Organism: Escherichia coli CFT073
+PMID: 16714589
+Source: EuropePMC
+Title: Global gene expression profiling of the asymptomatic bacteriuria Escherichia coli strain 83972 in the human urinary tract
+Journal: Infection and immunity (2006)
+Snippet: c4141 b1475 b0873 b3240 b3556 b2732 b3437 b3242 b0872 c3046 c3973 c1382 b1445 b0620 c2901 b3241 b1335 Z1954 b1430 b3238 b0849 b0151 fepE ydhC evgA nlpI Z4919
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DUM3/Iterate
+GA   27.00 27.00;
+TC   29.00 100.70;
+NC   25.40 24.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

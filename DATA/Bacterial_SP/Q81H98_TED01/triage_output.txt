@@ -1,0 +1,270 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   ATOX1_BACCR             Reviewed;         117 AA.
+AC   Q81H98;
+DE   RecName: Full=Immunity protein BC_0921;
+GN   OrderedLocusNames=BC_0921;
+OS   Bacillus cereus (strain ATCC 14579 / DSM 31 / CCUG 7414 / JCM 2152 / NBRC
+OS   15305 / NCIMB 9373 / NCTC 2599 / NRRL B-3711).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae; Bacillus;
+OC   Bacillus cereus group.
+OX   NCBI_TaxID=226900;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 14579 / DSM 31 / CCUG 7414 / JCM 2152 / NBRC 15305 / NCIMB
+RC   9373 / NCTC 2599 / NRRL B-3711;
+RX   PubMed=12721630; DOI=10.1038/nature01582;
+RA   Ivanova N., Sorokin A., Anderson I., Galleron N., Candelon B., Kapatral V.,
+RA   Bhattacharyya A., Reznik G., Mikhailova N., Lapidus A., Chu L., Mazur M.,
+RA   Goltsman E., Larsen N., D'Souza M., Walunas T., Grechkin Y., Pusch G.,
+RA   Haselkorn R., Fonstein M., Ehrlich S.D., Overbeek R., Kyrpides N.C.;
+RT   "Genome sequence of Bacillus cereus and comparative analysis with Bacillus
+RT   anthracis.";
+RL   Nature 423:87-91(2003).
+RN   [2]
+RP   FUNCTION AS AN IMMUNITY PROTEIN, AND EXPRESSION IN E.COLI.
+RC   STRAIN=ATCC 14579 / DSM 31 / CCUG 7414 / JCM 2152 / NBRC 15305 / NCIMB
+RC   9373 / NCTC 2599 / NRRL B-3711;
+RX   PubMed=22200572; DOI=10.1016/j.febslet.2011.12.020;
+RA   Holberger L.E., Garza-Sanchez F., Lamoureux J., Low D.A., Hayes C.S.;
+RT   "A novel family of toxin/antitoxin proteins in Bacillus species.";
+RL   FEBS Lett. 586:132-136(2012).
+RN   [3]
+RP   FUNCTION.
+RC   STRAIN=ATCC 14579 / DSM 31 / CCUG 7414 / JCM 2152 / NBRC 15305 / NCIMB
+RC   9373 / NCTC 2599 / NRRL B-3711;
+RX   PubMed=29923643; DOI=10.1111/mmi.14007;
+RA   Michalska K., Quan Nhan D., Willett J.L.E., Stols L.M., Eschenfeldt W.H.,
+RA   Jones A.M., Nguyen J.Y., Koskiniemi S., Low D.A., Goulding C.W.,
+RA   Joachimiak A., Hayes C.S.;
+RT   "Functional plasticity of antibacterial EndoU toxins.";
+RL   Mol. Microbiol. 109:509-527(2018).
+CC   -!- FUNCTION: Immunity component of an LXG toxin-immunity module.
+CC       Neutralizes the RNase activity of cognate toxin BC_0920. Probably does
+CC       not have immunity protein activity on other toxins with the LXG domain.
+CC       {ECO:0000269|PubMed:22200572, ECO:0000269|PubMed:29923643}.
+CC   -!- SUBUNIT: Probably interacts with cognate toxin BC_0920 but not with
+CC       other non-cognate toxins. The interaction inhibits the toxic activity
+CC       of BC_0920 (Probable). {ECO:0000305}.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000305}.
+DR   EMBL; AE016877; AAP07908.1; -; Genomic_DNA.
+DR   RefSeq; NP_830707.1; NC_004722.1.
+DR   RefSeq; WP_000877046.1; NZ_CP138336.1.
+DR   AlphaFoldDB; Q81H98; -.
+DR   SMR; Q81H98; -.
+DR   STRING; 226900.BC_0921; -.
+DR   KEGG; bce:BC0921; -.
+DR   PATRIC; fig|226900.8.peg.869; -.
+DR   HOGENOM; CLU_166653_0_0_9; -.
+DR   OrthoDB; 2882689at2; -.
+DR   Proteomes; UP000001417; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+PE   1: Evidence at protein level;
+KW   Cytoplasm; Reference proteome.
+FT   CHAIN           1..117
+FT                   /note="Immunity protein BC_0921"
+FT                   /id="PRO_0000424069"
+SQ   SEQUENCE   117 AA;  13464 MW;  02703C0AEB0B49F2 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	7	Bacilluscereus group.
+5	6	Granulicatella.
+5	6	Fictibacillus
+5	6	Bacillus
+5	5	Fictibacillaceae
+5	5	Carnobacteriaceae
+16	5	Bacillaceae
+7	4	Lactobacillales
+4	4	Eubacteriales
+23	4	Bacillales
+4	3	Clostridia
+30	3	Bacilli
+34	2	Bacillota
+34	1	Bacillati
+35	0	Bacteria
+Total of 35 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A073K009	ANTITOXIN {ECO:0008006|GO    231.2    7.2e-66   1   1.0   3.1
+	Q81H98_TED01              	     5	   115	   231.1
+
+A0A0M0KNI2	UNCHARACTERIZED PROTEIN {     41.5    5.8e-07   1   1.0   2.2
+	Q81H98_TED01              	     3	   114	    41.4
+
+A0A0M0KZZ8	UNCHARACTERIZED PROTEIN {     39.1    3.3e-06   1   1.0   0.6
+	Q81H98_TED01              	     3	   115	    39.1
+
+A0A0M0LCN1	UNCHARACTERIZED PROTEIN {     30.1      0.002   1   1.1   0.9
+	Q81H98_TED01              	     3	   115	    30.1
+
+A0A165WBY9	UNCHARACTERIZED PROTEIN {     50.7    8.3e-10   1   1.1   1.3
+	Q81H98_TED01              	     3	   105	    50.7
+
+A0A1M6SD38	UNCHARACTERIZED PROTEIN {     30.7     0.0014   1   1.1   0.7
+	Q81H98_TED01              	     6	   122	    30.3
+
+A0A1M6X7I5	UNCHARACTERIZED PROTEIN {     31.3     0.0009   1   1.3   0.5
+	Q81H98_TED01              	     6	   120	    30.6
+
+A0A1W6WME7	ANTITOXIN {ECO:0008006|GO     96.6    4.7e-24   1   1.0   1.3
+	Q81H98_TED01              	     3	   113	    96.4
+
+A0A2A8SHV5	UNCHARACTERIZED PROTEIN {     49.9    1.5e-09   1   1.0   0.5
+	Q81H98_TED01              	     3	   113	    49.8
+
+A0A2A8SIZ1	UNCHARACTERIZED PROTEIN {     57.1    8.4e-12   1   1.0   0.0
+	Q81H98_TED01              	     3	   110	    57.1
+
+A0A2M9A8V9	UNCHARACTERIZED PROTEIN {     45.9    2.6e-08   1   1.1   0.9
+	Q81H98_TED01              	    10	   119	    45.6
+
+A0A2V3WAZ5	UNCHARACTERIZED PROTEIN {     47.0    1.2e-08   1   1.1   1.0
+	Q81H98_TED01              	     7	   121	    46.9
+
+A0A374UQ80	UNCHARACTERIZED PROTEIN {     76.9    6.1e-18   1   1.1   1.1
+	Q81H98_TED01              	     6	   114	    76.7
+
+A0A3G9IJ28	UNCHARACTERIZED PROTEIN {     27.8      0.011   1   1.1   0.3
+	Q81H98_TED01              	     5	   111	    27.5
+
+A0A3Q9QSR7	UNCHARACTERIZED PROTEIN {     44.6    6.6e-08   1   1.0   0.3
+	Q81H98_TED01              	     3	   111	    44.5
+
+A0A3R6TIY5	UNCHARACTERIZED PROTEIN {     79.5    9.3e-19   1   1.1   0.5
+	Q81H98_TED01              	     8	   117	    79.3
+
+A0A511V0Q7	UNCHARACTERIZED PROTEIN {     38.8    4.2e-06   1   1.1   0.1
+	Q81H98_TED01              	    10	   120	    38.7
+
+A0A5C8LM13	SMI1/KNR4 FAMILY PROTEIN      31.6    0.00069   1   1.0   0.6
+	Q81H98_TED01              	     1	   109	    31.5
+
+A0A5C8NRS9	UNCHARACTERIZED PROTEIN {     41.8    4.8e-07   1   1.1   0.7
+	Q81H98_TED01              	     3	   124	    41.6
+
+A0A6B3W375	UNCHARACTERIZED PROTEIN {     30.6     0.0015   1   1.0   0.8
+	Q81H98_TED01              	     1	    88	    30.5
+
+A0A6L8NWB4	ANTITOXIN {ECO:0008006|GO    196.3      5e-55   1   1.0   1.9
+	Q81H98_TED01              	     5	   113	   196.2
+
+A0A7X9M2L4	UNCHARACTERIZED PROTEIN {     47.8    6.6e-09   1   1.1   0.4
+	Q81H98_TED01              	     5	   109	    47.6
+
+A0A8T8I9F8	UNCHARACTERIZED PROTEIN {     36.7    1.9e-05   1   1.1   0.0
+	Q81H98_TED01              	     2	    76	    36.5
+
+A0A919ZA69	ANTITOXIN {ECO:0000313|EM     70.5    5.7e-16   1   1.0   0.0
+	Q81H98_TED01              	     3	   116	    70.5
+
+A0A923J170	UNCHARACTERIZED PROTEIN {     53.1    1.5e-10   1   1.0   0.5
+	Q81H98_TED01              	     5	   108	    52.8
+
+A0AA95S6B0	UNCHARACTERIZED PROTEIN {     30.7     0.0014   1   1.1   0.4
+	Q81H98_TED01              	    12	   108	    30.5
+
+A0AAJ1T4C0	IDEAL DOMAIN-CONTAINING P     47.9    6.3e-09   1   1.2   1.0
+	Q81H98_TED01              	     3	   106	    47.6
+
+A3CLE4	ANTITOXIN {ECO:0008006|GOOGLE     33.2    0.00022   1   1.1   0.3
+	Q81H98_TED01              	    14	   118	    33.0
+
+A3CLE7	ANTITOXIN {ECO:0008006|GOOGLE     37.7    8.7e-06   1   1.1   0.2
+	Q81H98_TED01              	     9	   118	    37.5
+
+C0ZJQ1	UNCHARACTERIZED PROTEIN {ECO:     36.2    2.7e-05   1   1.2   0.1
+	Q81H98_TED01              	     4	   125	    35.7
+
+C8NID5	ANTITOXIN {ECO:0008006|GOOGLE     32.1    0.00048   1   1.2   0.2
+	Q81H98_TED01              	     8	   118	    31.8
+
+C8NIT2	ANTITOXIN {ECO:0008006|GOOGLE     30.4     0.0016   1   1.1   0.3
+	Q81H98_TED01              	    14	   118	    30.2
+
+C8NIT3	ANTITOXIN {ECO:0008006|GOOGLE     36.6    1.9e-05   1   1.1   0.3
+	Q81H98_TED01              	    12	   126	    36.4
+
+C8NIT6	UNCHARACTERIZED PROTEIN {ECO:     30.2     0.0019   1   1.1   0.1
+	Q81H98_TED01              	    20	   124	    30.0
+
+C8NIT7	ANTITOXIN {ECO:0008006|GOOGLE     31.4    0.00079   1   1.1   0.2
+	Q81H98_TED01              	     5	   117	    31.3
+
+G8LSG6	HICB-LIKE ANTITOXIN OF TOXIN-     43.6    1.3e-07   1   1.0   0.7
+	Q81H98_TED01              	     5	   118	    43.4
+
+G8M2X8	HICB-LIKE ANTITOXIN OF TOXIN-     46.6    1.6e-08   1   1.0   0.7
+	Q81H98_TED01              	     5	   118	    46.4
+
+I8AFG2	RHOPTRY PROTEIN {ECO:0008006|     32.2    0.00047   1   1.0   0.3
+	Q81H98_TED01              	     5	   109	    31.8
+
+I8J5V4	RHOPTRY PROTEIN {ECO:0000313|     27.7      0.011   1   1.0   0.6
+	Q81H98_TED01              	     5	   109	    27.4
+
+I8UAY9	RHOPTRY PROTEIN {ECO:0000313|     29.3     0.0036   1   1.0   0.4
+	Q81H98_TED01              	     5	   109	    29.0
+
+I8UJX7	RHOPTRY PROTEIN {ECO:0000313|     27.4      0.014   1   1.0   0.6
+	Q81H98_TED01              	     5	   109	    27.1
+
+I8UK34	RHOPTRY PROTEIN {ECO:0000313|     27.9       0.01   1   1.0   0.9
+	Q81H98_TED01              	     1	    95	    27.7
+
+Q5WBD4	UNCHARACTERIZED PROTEIN {ECO:     50.8    7.8e-10   1   1.0   1.1
+	Q81H98_TED01              	     3	   105	    50.6
+
+Q81H98	IMMUNITY PROTEIN BC_0921          252.9    1.3e-72   1   1.0   2.9
+	Q81H98_TED01              	     5	   115	   252.8
+
+Q81RF0	UNCHARACTERIZED PROTEIN {ECO:     49.9    1.4e-09   1   1.0   0.1
+	Q81H98_TED01              	     3	    54	    49.8
+
+U5MY97	ANTITOXIN {ECO:0008006|GOOGLE     94.3    2.5e-23   1   1.0   0.8
+	Q81H98_TED01              	    10	   117	    94.1
+
+V2Y9Q8	UNCHARACTERIZED PROTEIN {ECO:     35.5    4.4e-05   1   1.5   0.1
+	Q81H98_TED01              	     9	   122	    34.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS358245 (E-value: 1.2e-74, Score: 252.9)
+Mentioned as: BC0921
+Description: hypothetical protein
+Organism: Bacillus cereus ATCC 14579
+PMID: 29923643
+Source: EuropePMC
+Title: Functional plasticity of antibacterial EndoU toxins
+Journal: Molecular microbiology (2018)
+Snippet: Like the other nucleases, BC0920 activity was suppressed when the reaction was supplemented with purified BC0921 immunity protein (Fig. 7 B). Finally, we confirmed the substrate specificity of CdiACT STECO31 toxin in vitro . Purified CdiACT STECO31 cleaves tRNA UUC Glu efficiently and shows partial activity
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q81H98.1	AF-Q81H98-F1-model_v4_TED01:5-115	1	AF-Q81H98-F1-model_v4_TED01	5-115	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q81H98_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.70 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

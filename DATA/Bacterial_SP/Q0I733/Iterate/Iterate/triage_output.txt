@@ -1,0 +1,113 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PETL_SYNS3              Reviewed;          37 AA.
+AC   Q0I733;
+DE   RecName: Full=Cytochrome b6-f complex subunit 6;
+DE   AltName: Full=Cytochrome b6-f complex subunit PetL;
+DE   AltName: Full=Cytochrome b6-f complex subunit VI;
+GN   Name=petL; OrderedLocusNames=sync_2550;
+OS   Synechococcus sp. (strain CC9311).
+OC   Bacteria; Bacillati; Cyanobacteriota; Cyanophyceae; Synechococcales;
+OC   Synechococcaceae; Synechococcus.
+OX   NCBI_TaxID=64471;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CC9311;
+RX   PubMed=16938853; DOI=10.1073/pnas.0602963103;
+RA   Palenik B., Ren Q., Dupont C.L., Myers G.S., Heidelberg J.F., Badger J.H.,
+RA   Madupu R., Nelson W.C., Brinkac L.M., Dodson R.J., Durkin A.S.,
+RA   Daugherty S.C., Sullivan S.A., Khouri H., Mohamoud Y., Halpin R.,
+RA   Paulsen I.T.;
+RT   "Genome sequence of Synechococcus CC9311: insights into adaptation to a
+RT   coastal environment.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 103:13555-13559(2006).
+CC   -!- FUNCTION: Component of the cytochrome b6-f complex, which mediates
+CC       electron transfer between photosystem II (PSII) and photosystem I
+CC       (PSI), cyclic electron flow around PSI, and state transitions. PetL is
+CC       important for photoautotrophic growth as well as for electron transfer
+CC       efficiency and stability of the cytochrome b6-f complex (By
+CC       similarity). {ECO:0000250}.
+CC   -!- SUBUNIT: The 4 large subunits of the cytochrome b6-f complex are
+CC       cytochrome b6, subunit IV (17 kDa polypeptide, PetD), cytochrome f and
+CC       the Rieske protein, while the 4 small subunits are PetG, PetL, PetM and
+CC       PetN. The complex functions as a dimer (By similarity). {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Cellular thylakoid membrane {ECO:0000250};
+CC       Single-pass membrane protein {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the PetL family. {ECO:0000305}.
+DR   EMBL; CP000435; ABI47008.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q0I733; -.
+DR   SMR; Q0I733; -.
+DR   STRING; 64471.sync_2550; -.
+DR   KEGG; syg:sync_2550; -.
+DR   HOGENOM; CLU_219686_0_0_3; -.
+DR   Proteomes; UP000001961; Chromosome.
+DR   GO; GO:0031676; C:plasma membrane-derived thylakoid membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0015979; P:photosynthesis; IEA:UniProtKB-KW.
+PE   3: Inferred from homology;
+KW   Electron transport; Membrane; Photosynthesis; Reference proteome;
+KW   Thylakoid; Transmembrane; Transmembrane helix; Transport.
+FT   CHAIN           1..37
+FT                   /note="Cytochrome b6-f complex subunit 6"
+FT                   /id="PRO_0000278084"
+FT   TRANSMEM        7..27
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   37 AA;  3839 MW;  EB0F3C405A8492DD CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Prochlorococcus.
+3	6	Synechococcus.
+1	6	Cyanobium.
+5	5	Prochlorococcaceae
+3	5	Synechococcaceae
+8	4	Synechococcales
+8	3	Cyanophyceae
+8	2	Cyanobacteriota
+8	1	Bacillati
+8	0	Bacteria
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1J0P8S7	CYTOCHROME B6 {ECO:000031     58.2    2.7e-12   1   1.0   8.1
+	Iterate                   	     1	    30	    58.1
+
+A4CQH5	UNCHARACTERIZED PROTEIN {ECO:     63.3    6.9e-14   1   1.1   8.0
+	Iterate                   	    41	    77	    63.0
+
+B9ERD0	CYTOCHROME B6 {ECO:0008006|GO     71.6    1.7e-16   1   1.0  10.7
+	Iterate                   	     1	    33	    71.6
+
+Q0I733	CYTOCHROME B6-F COMPLEX SUBUNIT     71.0    2.7e-16   1   1.0   5.9
+	Iterate                   	     1	    37	    70.9
+
+Q7VE91	CYTOCHROME B6-F COMPLEX SUBUN     69.9    6.1e-16   1   1.0   8.7
+	Iterate                   	     2	    34	    69.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A4CQH5.1	AF-A4CQH5-F1-model_v4_TED01:38-75	1	AF-A4CQH5-F1-model_v4_TED01	38-75	49.4%
+Q7VE91.1	AF-Q7VE91-F1-model_v4_TED01:2-34	1	AF-Q7VE91-F1-model_v4_TED01	2-34	97.1%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q0I733/Iterate/Iterate
+GA   27.00 27.00;
+TC   34.80 34.70;
+NC   25.50 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

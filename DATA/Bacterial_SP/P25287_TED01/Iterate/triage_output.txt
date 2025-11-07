@@ -1,0 +1,67 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Thalassotalea.
+1	5	Colwelliaceae
+1	4	Alteromonadales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1I0H427	UNCHARACTERIZED PROTEIN {     34.5    6.3e-05   1   1.2   3.9
+	Iterate                   	    30	    62	    34.0
+
+A0A4Y7ZYC3	UNCHARACTERIZED PROTEIN {     62.9    7.3e-14   1   1.3   2.9
+	Iterate                   	    30	    62	    62.4
+
+A0A812DIL8	UNCHARACTERIZED PROTEIN {     33.6    0.00012   5  11.8  17.2
+	Iterate                   	   465	   484	     5.3
+	Iterate                   	   315	   334	     3.9
+	Iterate                   	   340	   359	     3.9
+	Iterate                   	   490	   509	     3.9
+	Iterate                   	   416	   434	     3.8
+
+A0AAD1SZH5	ABNORMAL SPINDLE-LIKE MIC     48.5    2.5e-09   1  13.2   5.2
+	Iterate                   	    14	    37	     2.7
+
+A0AAY5EU54	UNCHARACTERIZED PROTEIN {     32.2    0.00033   8   8.0  16.6
+	Iterate                   	   129	   151	     6.1
+	Iterate                   	    45	    64	     5.9
+	Iterate                   	   115	   134	     5.8
+	Iterate                   	    59	    78	     5.4
+	Iterate                   	    87	   106	     5.4
+	Iterate                   	   101	   120	     5.4
+	Iterate                   	    30	    45	     4.5
+	Iterate                   	    73	    88	     4.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1I0H427.1	AF-A0A1I0H427-F1-model_v4_TED01:16-58	1	AF-A0A1I0H427-F1-model_v4_TED01	16-58	87.9%
+A0A4Y7ZYC3.1	AF-A0A4Y7ZYC3-F1-model_v4_TED01:31-62	1	AF-A0A4Y7ZYC3-F1-model_v4_TED01	31-62	97.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P25287_TED01/Iterate
+GA   27.00 27.00;
+TC   27.50 80.20;
+NC   26.60 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

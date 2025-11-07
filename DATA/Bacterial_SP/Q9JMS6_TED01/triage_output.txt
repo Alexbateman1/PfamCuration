@@ -1,0 +1,49 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+Total of 0 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A257LB74	PKD DOMAIN-CONTAINING PRO     34.5    8.9e-05   3   5.2  11.7
+	Q9JMS6_TED01              	   168	   220	    14.2
+	Q9JMS6_TED01              	   251	   305	    14.1
+	Q9JMS6_TED01              	   337	   373	     7.9
+	PF18911	PKD_4           	    39	   121	    43.9
+	PF18911	PKD_4           	   124	   206	    45.4
+	PF00801	PKD             	   131	   201	    26.5
+	PF18911	PKD_4           	   207	   289	    39.1
+	PF00801	PKD             	   218	   284	    28.7
+	PF18911	PKD_4           	   296	   372	    47.3
+	PF00801	PKD             	   308	   367	    39.4
+	PF18911	PKD_4           	   377	   457	    30.5
+	PF18911	PKD_4           	   556	   631	    36.4
+	PF00801	PKD             	   560	   623	    33.5
+	PF18962	Por_Secre_tail  	   646	   724	    70.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9JMS6.1	AF-Q9JMS6-F1-model_v4_TED01:1-75	1	AF-Q9JMS6-F1-model_v4_TED01	1-75	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9JMS6_TED01
+GA   27.00 27.00;
+TC   28.00 28.50;
+NC   24.50 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,62 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Acinetobactercalcoaceticus/baumannii complex.
+1	6	Acinetobacter
+1	5	Moraxellaceae
+1	4	Moraxellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A8C7F2G9	DUF1601 DOMAIN-CONTAINING     35.1      2e-05   0  16.6  17.1
+	PF07671	DUF1601         	    12	    49	     5.1
+	PF07671	DUF1601         	    46	   105	     4.9
+	PF07671	DUF1601         	   103	   138	     5.2
+	PF07671	DUF1601         	   202	   227	       5
+	PF07671	DUF1601         	   223	   240	     4.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: D0C8Y6 (E-value: 7e-05, Score: 27.3)
+Mentioned as: D0C8Y6
+Description: Isocitrate lyase
+Organism: Acinetobacter baumannii (strain ATCC 19606 / DSM 30007 / JCM 6841 / CCUG 19606 / CIP 70.34 / NBRC 109757 / NCIMB 12457 / NCTC 12156 / 81)
+PMID: 33203690
+Source: EuropePMC
+Title: Proteomic and Systematic Functional Profiling Unveils Citral Targeting Antibiotic Resistance, Antioxidant Defense, and Biofilm-Associated Two-Component Systems of Acinetobacter baumannii To Encumber Biofilm and Virulence Traits
+Journal: mSystems (2020)
+Snippet: 0.0277549 2.07E+09 33 19 N9JU68 Chaperone SurA surA 58 90 1.67489 0.0255439 4.28E+07 24 19 D0C8Y6 Isocitrate lyase aceA 59 91 1.67054 0.2635 4.28E+07 24 19 D0C8Y6 Isocitrate lyase aceA 60 92 1.66276 0.0106452 270,816 27 12 D0CBN6 Uncharacterized protein HMPREF0010_02166 61 94 1.62852 0.038033 3,987
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P28467
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   26.50 25.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

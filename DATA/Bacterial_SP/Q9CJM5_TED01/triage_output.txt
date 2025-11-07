@@ -1,0 +1,90 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y1972_PASMU             Reviewed;          71 AA.
+AC   Q9CJM5;
+DE   RecName: Full=Uncharacterized protein PM1972;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=PM1972;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK04056.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q9CJM5; -.
+DR   STRING; 272843.PM1972; -.
+DR   EnsemblBacteria; AAK04056; AAK04056; PM1972.
+DR   KEGG; pmu:PM1972; -.
+DR   HOGENOM; CLU_2736432_0_0_6; -.
+DR   Proteomes; UP000000809; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..19
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           20..71
+FT                   /note="Uncharacterized protein PM1972"
+FT                   /id="PRO_0000014188"
+SQ   SEQUENCE   71 AA;  8662 MW;  37C1C429168E8D55 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pasteurella.
+1	5	Pasteurellaceae
+1	4	Pasteurellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q9CJM5	UNCHARACTERIZED PROTEIN PM1972    164.1    3.3e-45   1   1.0  12.6
+	Q9CJM5_TED01              	     4	    70	   164.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS81048 (E-value: 2.9e-47, Score: 164.1)
+Mentioned as: PM1972
+Description: unknown
+Organism: Pasteurella multocida subsp. multocida str. Pm70
+PMID: 12426360
+Source: EuropePMC
+Title: Transcriptional response of Pasteurella multocida to defined iron sources
+Journal: Journal of bacteriology (2002)
+Snippet: and PM0436 (phosphate), PM0914 (peptide), and PM1971 and PM1972 (carbohydrate and an unknown product, respectively). Genes expressed at lower levels in the
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9CJM5.1	AF-Q9CJM5-F1-model_v4_TED01:4-70	1	AF-Q9CJM5-F1-model_v4_TED01	4-70	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CJM5_TED01
+GA   27.00 27.00;
+TC   32.40 164.00;
+NC   24.90 24.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

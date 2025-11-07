@@ -1,0 +1,60 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Neisseria.
+4	5	Neisseriaceae
+4	4	Neisseriales
+4	3	Betaproteobacteria
+4	2	Pseudomonadota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1D3G3S5	PROTEIN A {ECO:0000313|EM     69.9    3.2e-16   1   2.1   1.8
+	Iterate                   	    57	    84	    69.9
+	PF25860	CPPA            	     2	    51	    74.8
+
+A0A378VK05	PROTEIN A {ECO:0000313|EM     36.4    1.5e-05   1   1.9   2.2
+	Iterate                   	    54	    76	    36.4
+
+A0A379B1X3	PROTEIN A {ECO:0000313|EM     70.4    2.2e-16   1   1.9   1.8
+	Iterate                   	    44	    71	    70.4
+	PF25860	CPPA            	     4	    38	    35.4
+
+A0A673Y606	FMS RELATED RECEPTOR TYRO     34.6    5.7e-05   0  14.9  20.7
+
+A0A7W7H169	PUTATIVE HTH DOMAIN ANTIT     37.4    6.9e-06   3   3.7   8.6
+	Iterate                   	    97	   124	    15.9
+	Iterate                   	   171	   198	    15.9
+	Iterate                   	    23	    50	     9.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A378VK05.1	AF-A0A378VK05-F1-model_v4_TED01:20-53	1	AF-A0A378VK05-F1-model_v4_TED01	20-53	0
+A0A378VK05.1	AF-A0A378VK05-F1-model_v4_TED02:55-87	1	AF-A0A378VK05-F1-model_v4_TED02	55-87	97.1%
+A0A379B1X3.1	AF-A0A379B1X3-F1-model_v4_TED01:2-69	1	AF-A0A379B1X3-F1-model_v4_TED01	2-69	92.9%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P07048_TED02/Iterate
+GA   27.00 27.00;
+TC   32.70 37.50;
+NC   24.50 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

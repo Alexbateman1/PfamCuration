@@ -1,0 +1,118 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YDFE_ECOLI              Reviewed;         306 AA.
+AC   Q47138; P77663;
+DE   RecName: Full=Putative uncharacterized protein YdfE;
+DE   AltName: Full=ORF6;
+GN   Name=ydfE; OrderedLocusNames=b1577, JW1568;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=2477663; DOI=10.1111/j.1365-2958.1989.tb00249.x;
+RA   Bouche F., Bouche J.-P.;
+RT   "Genetic evidence that DicF, a second division inhibitor encoded by the
+RT   Escherichia coli dicB operon, is probably RNA.";
+RL   Mol. Microbiol. 3:991-994(1989).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9097039; DOI=10.1093/dnares/3.6.363;
+RA   Aiba H., Baba T., Fujita K., Hayashi K., Inada T., Isono K., Itoh T.,
+RA   Kasai H., Kashimoto K., Kimura S., Kitakawa M., Kitagawa M., Makino K.,
+RA   Miki T., Mizobuchi K., Mori H., Mori T., Motomura K., Nakade S.,
+RA   Nakamura Y., Nashimoto H., Nishio Y., Oshima T., Saito N., Sampei G.,
+RA   Seki Y., Sivasundaram S., Tagami H., Takeda J., Takemoto K., Takeuchi Y.,
+RA   Wada C., Yamamoto Y., Horiuchi T.;
+RT   "A 570-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 28.0-40.1 min region on the linkage map.";
+RL   DNA Res. 3:363-377(1996).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- CAUTION: Could be the product of a pseudogene. The original protein is
+CC       truncated by an IS2 element which is inserted after residue 255, giving
+CC       an altered C-terminus. {ECO:0000305}.
+DR   EMBL; X07465; CAA30353.1; -; Genomic_DNA.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; BAA15281.2; -; Genomic_DNA.
+DR   PIR; S03698; S03698.
+DR   AlphaFoldDB; Q47138; -.
+DR   BioGRID; 4260249; 16.
+DR   FunCoup; Q47138; 179.
+DR   IntAct; Q47138; 4.
+DR   jPOST; Q47138; -.
+DR   KEGG; ecj:JW1568; -.
+DR   EchoBASE; EB1281; -.
+DR   eggNOG; COG0847; Bacteria.
+DR   HOGENOM; CLU_009076_0_1_6; -.
+DR   InParanoid; Q47138; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..306
+FT                   /note="Putative uncharacterized protein YdfE"
+FT                   /id="PRO_0000168956"
+SQ   SEQUENCE   306 AA;  35071 MW;  DBD70C22AA4E4A30 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q47138	PUTATIVE UNCHARACTERIZED PROTEI     93.7    2.9e-23   1   1.5   5.2
+	P19778_TED01              	   253	   294	    92.6
+	PF27430	YdfE_N          	     4	    95	   127.7
+	PF27432	YdfE_C          	   107	   205	     141
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P19778.1	AF-P19778-F1-model_v4_TED01:18-85	1	AF-P19778-F1-model_v4_TED01	18-85	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P19778_TED01
+GA   27.00 27.00;
+TC   79.40 92.60;
+NC   26.50 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

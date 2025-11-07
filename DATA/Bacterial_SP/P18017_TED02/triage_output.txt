@@ -1,0 +1,65 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Clostridium
+4	5	Clostridiaceae
+4	4	Eubacteriales
+4	3	Clostridia
+4	2	Bacillota
+4	1	Bacillati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1D7XNR5	DNA-BINDING PROTEIN {ECO:     44.9    4.9e-08   1   1.9  11.7
+	P18017_TED02              	   104	   161	    43.3
+
+A0A937K2I2	DUF536 DOMAIN-CONTAINING      39.7    2.1e-06   1   2.1  10.2
+	P18017_TED02              	   107	   168	    39.7
+
+A0AA88R2G3	RETROTRANSPOSON GAG DOMAI     40.9    8.5e-07   5   5.3   0.9
+	P18017_TED02              	    61	   108	     6.9
+	P18017_TED02              	   167	   214	     6.9
+	P18017_TED02              	   273	   320	     6.9
+	P18017_TED02              	   379	   426	     6.9
+	P18017_TED02              	   485	   532	     6.9
+	PF03732	Retrotrans_gag  	     5	    71	    29.4
+
+F0Y4J3	UNCHARACTERIZED PROTEIN {ECO:     42.1    3.8e-07   8  13.0  37.6
+	P18017_TED02              	   685	   713	     9.6
+	P18017_TED02              	   173	   201	     8.3
+	P18017_TED02              	   634	   661	     8.0
+	P18017_TED02              	   280	   310	     7.3
+	P18017_TED02              	   450	   477	     5.2
+	P18017_TED02              	   203	   230	     3.9
+	P18017_TED02              	   311	   338	     3.9
+	P18017_TED02              	   232	   258	     3.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P18017.1	AF-P18017-F1-model_v4_TED01:4-66	1	AF-P18017-F1-model_v4_TED01	4-66	0
+P18017.1	AF-P18017-F1-model_v4_TED02:108-166	1	AF-P18017-F1-model_v4_TED02	108-166	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P18017_TED02
+GA   27.00 27.00;
+TC   28.30 28.90;
+NC   26.70 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,814 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   CYCB_GEOSL              Reviewed;         744 AA.
+AC   Q749K5;
+DE   RecName: Full=C-type polyheme cytochrome OmcB;
+DE   AltName: Full=Outer membrane c-type cytochrome B;
+DE   Flags: Precursor;
+GN   Name=omcB; OrderedLocusNames=GSU2737;
+OS   Geobacter sulfurreducens (strain ATCC 51573 / DSM 12127 / PCA).
+OC   Bacteria; Pseudomonadati; Thermodesulfobacteriota; Desulfuromonadia;
+OC   Geobacterales; Geobacteraceae; Geobacter.
+OX   NCBI_TaxID=243231;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51573 / DSM 12127 / PCA;
+RX   PubMed=14671304; DOI=10.1126/science.1088727;
+RA   Methe B.A., Nelson K.E., Eisen J.A., Paulsen I.T., Nelson W.C.,
+RA   Heidelberg J.F., Wu D., Wu M., Ward N.L., Beanan M.J., Dodson R.J.,
+RA   Madupu R., Brinkac L.M., Daugherty S.C., DeBoy R.T., Durkin A.S.,
+RA   Gwinn M.L., Kolonay J.F., Sullivan S.A., Haft D.H., Selengut J.,
+RA   Davidsen T.M., Zafar N., White O., Tran B., Romero C., Forberger H.A.,
+RA   Weidman J.F., Khouri H.M., Feldblyum T.V., Utterback T.R., Van Aken S.E.,
+RA   Lovley D.R., Fraser C.M.;
+RT   "Genome of Geobacter sulfurreducens: metal reduction in subsurface
+RT   environments.";
+RL   Science 302:1967-1969(2003).
+RN   [2]
+RP   FUNCTION.
+RC   STRAIN=DL-1 / KN400;
+RX   PubMed=12644478; DOI=10.1128/jb.185.7.2096-2103.2003;
+RA   Leang C., Coppi M.V., Lovley D.R.;
+RT   "OmcB, a c-type polyheme cytochrome, involved in Fe(III) reduction in
+RT   Geobacter sulfurreducens.";
+RL   J. Bacteriol. 185:2096-2103(2003).
+RN   [3]
+RP   INDUCTION.
+RC   STRAIN=ATCC 51573 / DSM 12127 / PCA;
+RX   PubMed=15345398; DOI=10.1128/aem.70.9.5183-5189.2004;
+RA   Chin K.J., Esteve-Nunez A., Leang C., Lovley D.R.;
+RT   "Direct correlation between rates of anaerobic respiration and levels of
+RT   mRNA for key respiratory genes in Geobacter sulfurreducens.";
+RL   Appl. Environ. Microbiol. 70:5183-5189(2004).
+CC   -!- FUNCTION: Involved in anaerobic respiration with Fe(3+) as terminal
+CC       electron acceptor. Acts as an electron-transport mediator in the
+CC       dissimilatory reduction of Fe(3+). {ECO:0000269|PubMed:12644478}.
+CC   -!- SUBCELLULAR LOCATION: Cell outer membrane {ECO:0000250}; Lipid-anchor
+CC       {ECO:0000305}.
+CC   -!- INDUCTION: Up-regulated by Fe(3+). {ECO:0000269|PubMed:15345398}.
+CC   -!- PTM: Binds 12 heme c groups per subunit. {ECO:0000305}.
+DR   EMBL; AE017180; AAR36109.1; -; Genomic_DNA.
+DR   RefSeq; NP_953782.1; NC_002939.5.
+DR   RefSeq; WP_010943369.1; NC_002939.5.
+DR   AlphaFoldDB; Q749K5; -.
+DR   STRING; 243231.GSU2737; -.
+DR   TCDB; 5.B.8.1.1; the trans-outer membrane electron transfer porin/cytochrome complex (et-pcc) family.
+DR   EnsemblBacteria; AAR36109; AAR36109; GSU2737.
+DR   KEGG; gsu:GSU2737; -.
+DR   PATRIC; fig|243231.5.peg.2761; -.
+DR   eggNOG; COG3005; Bacteria.
+DR   HOGENOM; CLU_355545_0_0_7; -.
+DR   InParanoid; Q749K5; -.
+DR   OrthoDB; 5477228at2; -.
+DR   Proteomes; UP000000577; Chromosome.
+DR   GO; GO:0009279; C:cell outer membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0016491; F:oxidoreductase activity; IBA:GO_Central.
+DR   FunFam; 1.10.1130.10:FF:000006; C-type polyheme cytochrome OmcB; 1.
+DR   Gene3D; 1.10.1130.10; Flavocytochrome C3, Chain A; 2.
+DR   InterPro; IPR036280; Multihaem_cyt_sf.
+DR   PANTHER; PTHR39425:SF1; CYTOCHROME C7-LIKE DOMAIN-CONTAINING PROTEIN; 1.
+DR   PANTHER; PTHR39425; LIPOPROTEIN CYTOCHROME C; 1.
+DR   SUPFAM; SSF48695; Multiheme cytochromes; 2.
+DR   PROSITE; PS51008; MULTIHEME_CYTC; 1.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   2: Evidence at transcript level;
+KW   Cell outer membrane; Electron transport; Heme; Iron; Lipoprotein; Membrane;
+KW   Metal-binding; Palmitate; Reference proteome; Signal; Transport.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           24..744
+FT                   /note="C-type polyheme cytochrome OmcB"
+FT                   /id="PRO_0000429039"
+FT   BINDING         48
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         51
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         52
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         81
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         84
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         85
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         107
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         110
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         111
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         141
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         144
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         145
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         185
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         188
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         189
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         225
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         228
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         229
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         303
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         306
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         307
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         382
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         385
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         386
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         430
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="9"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         433
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="9"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         434
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="9"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         480
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="10"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         483
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="10"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         484
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="10"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         555
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="11"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         558
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="11"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         559
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="11"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         587
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="12"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         590
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="12"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         591
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="12"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   LIPID           24
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000250"
+FT   LIPID           24
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   744 AA;  77177 MW;  7BC25F00F986DF9D CRC64;
+//
+ID   CYCC_GEOSL              Reviewed;         768 AA.
+AC   Q749L1; Q93M26;
+DE   RecName: Full=C-type polyheme cytochrome OmcC;
+DE   AltName: Full=Outer membrane c-type cytochrome C;
+DE   AltName: Full=Polyheme membrane-associated cytochrome c;
+DE   Flags: Precursor;
+GN   Name=omcC; Synonyms=ferA; OrderedLocusNames=GSU2731;
+OS   Geobacter sulfurreducens (strain ATCC 51573 / DSM 12127 / PCA).
+OC   Bacteria; Pseudomonadati; Thermodesulfobacteriota; Desulfuromonadia;
+OC   Geobacterales; Geobacteraceae; Geobacter.
+OX   NCBI_TaxID=243231;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 51573 / DSM 12127 / PCA;
+RX   PubMed=14671304; DOI=10.1126/science.1088727;
+RA   Methe B.A., Nelson K.E., Eisen J.A., Paulsen I.T., Nelson W.C.,
+RA   Heidelberg J.F., Wu D., Wu M., Ward N.L., Beanan M.J., Dodson R.J.,
+RA   Madupu R., Brinkac L.M., Daugherty S.C., DeBoy R.T., Durkin A.S.,
+RA   Gwinn M.L., Kolonay J.F., Sullivan S.A., Haft D.H., Selengut J.,
+RA   Davidsen T.M., Zafar N., White O., Tran B., Romero C., Forberger H.A.,
+RA   Weidman J.F., Khouri H.M., Feldblyum T.V., Utterback T.R., Van Aken S.E.,
+RA   Lovley D.R., Fraser C.M.;
+RT   "Genome of Geobacter sulfurreducens: metal reduction in subsurface
+RT   environments.";
+RL   Science 302:1967-1969(2003).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-459, PROTEIN SEQUENCE OF 275-281 AND
+RP   341-348, AND SUBCELLULAR LOCATION.
+RC   STRAIN=ATCC 51573 / DSM 12127 / PCA;
+RX   PubMed=11563978; DOI=10.1042/0264-6021:3590147;
+RA   Magnuson T.S., Isoyama N., Hodges-Myerson A.L., Davidson G., Maroney M.J.,
+RA   Geesey G.G., Lovley D.R.;
+RT   "Isolation, characterization and gene sequence analysis of a membrane-
+RT   associated 89 kDa Fe(III) reducing cytochrome c from Geobacter
+RT   sulfurreducens.";
+RL   Biochem. J. 359:147-152(2001).
+RN   [3]
+RP   FUNCTION.
+RC   STRAIN=DL-1 / KN400;
+RX   PubMed=12644478; DOI=10.1128/jb.185.7.2096-2103.2003;
+RA   Leang C., Coppi M.V., Lovley D.R.;
+RT   "OmcB, a c-type polyheme cytochrome, involved in Fe(III) reduction in
+RT   Geobacter sulfurreducens.";
+RL   J. Bacteriol. 185:2096-2103(2003).
+RN   [4]
+RP   INDUCTION.
+RC   STRAIN=ATCC 51573 / DSM 12127 / PCA;
+RX   PubMed=15345398; DOI=10.1128/aem.70.9.5183-5189.2004;
+RA   Chin K.J., Esteve-Nunez A., Leang C., Lovley D.R.;
+RT   "Direct correlation between rates of anaerobic respiration and levels of
+RT   mRNA for key respiratory genes in Geobacter sulfurreducens.";
+RL   Appl. Environ. Microbiol. 70:5183-5189(2004).
+CC   -!- FUNCTION: Not involved in Fe(3+) reduction.
+CC       {ECO:0000269|PubMed:12644478}.
+CC   -!- SUBCELLULAR LOCATION: Cell outer membrane {ECO:0000305}; Lipid-anchor
+CC       {ECO:0000255|PROSITE-ProRule:PRU00303}.
+CC   -!- INDUCTION: Not regulated by Fe(3+). {ECO:0000269|PubMed:15345398}.
+CC   -!- PTM: Binds 12 heme c groups per subunit. {ECO:0000305}.
+CC   -!- CAUTION: Was initially thought to act as an electron-transport mediator
+CC       in the dissimilatory reduction of Fe(3+).
+CC       {ECO:0000305|PubMed:11563978}.
+DR   EMBL; AE017180; AAR36103.1; -; Genomic_DNA.
+DR   EMBL; AY033095; AAK53456.2; -; Genomic_DNA.
+DR   RefSeq; NP_953776.1; NC_002939.5.
+DR   RefSeq; WP_010943365.1; NC_002939.5.
+DR   AlphaFoldDB; Q749L1; -.
+DR   STRING; 243231.GSU2731; -.
+DR   TCDB; 5.B.3.1.1; the geobacter nanowire electron transfer (g-net) family.
+DR   EnsemblBacteria; AAR36103; AAR36103; GSU2731.
+DR   KEGG; gsu:GSU2731; -.
+DR   PATRIC; fig|243231.5.peg.2757; -.
+DR   eggNOG; COG3005; Bacteria.
+DR   HOGENOM; CLU_355545_0_0_7; -.
+DR   InParanoid; Q749L1; -.
+DR   OrthoDB; 5477228at2; -.
+DR   Proteomes; UP000000577; Chromosome.
+DR   GO; GO:0009279; C:cell outer membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0009055; F:electron transfer activity; IDA:TIGR.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0016491; F:oxidoreductase activity; IBA:GO_Central.
+DR   GO; GO:0019645; P:anaerobic electron transport chain; IDA:TIGR.
+DR   FunFam; 1.10.1130.10:FF:000006; C-type polyheme cytochrome OmcB; 1.
+DR   Gene3D; 1.10.1130.10; Flavocytochrome C3, Chain A; 1.
+DR   InterPro; IPR023155; Cyt_c-552/4.
+DR   InterPro; IPR036280; Multihaem_cyt_sf.
+DR   InterPro; IPR051829; Multiheme_Cytochr_ET.
+DR   PANTHER; PTHR35038:SF8; C-TYPE POLYHEME CYTOCHROME OMCC; 1.
+DR   PANTHER; PTHR35038; DISSIMILATORY SULFITE REDUCTASE SIRA; 1.
+DR   Pfam; PF13435; Cytochrome_C554; 1.
+DR   SUPFAM; SSF48695; Multiheme cytochromes; 2.
+DR   PROSITE; PS51008; MULTIHEME_CYTC; 1.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+DR   PROSITE; PS00108; PROTEIN_KINASE_ST; 1.
+PE   1: Evidence at protein level;
+KW   Cell outer membrane; Direct protein sequencing; Electron transport; Heme;
+KW   Iron; Lipoprotein; Membrane; Metal-binding; Palmitate; Reference proteome;
+KW   Signal; Transport.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           24..768
+FT                   /note="C-type polyheme cytochrome OmcC"
+FT                   /id="PRO_0000429037"
+FT   BINDING         48
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         51
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         52
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="1"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         80
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         83
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         84
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="2"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         112
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         115
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         116
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="3"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         148
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         151
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         152
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="4"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         193
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         196
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         197
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="5"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         238
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         241
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         242
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="6"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         320
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         323
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         324
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="7"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         405
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         408
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         409
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="8"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         454
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="9"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         457
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="9"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         458
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="9"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         504
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="10"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         507
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="10"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         508
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="10"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         579
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="11"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         582
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="11"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         583
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="11"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         611
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="12"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         614
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="12"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         615
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_label="12"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255"
+FT   LIPID           24
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           24
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   768 AA;  80591 MW;  3253D240CC93E1A1 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Geobacter.
+2	6	Geoalkalibacter.
+1	6	Oryzomonas.
+1	6	Desulfuromusa.
+1	6	Desulfurispirillum.
+1	6	Citrifermentans.
+4	5	Geobacteraceae
+2	5	Geoalkalibacteraceae
+1	5	Geopsychrobacteraceae
+1	5	Chrysiogenaceae
+4	4	Geobacterales
+3	4	Desulfuromonadales
+1	4	Chrysiogenales
+7	3	Desulfuromonadia
+1	3	Chrysiogenia
+7	2	Thermodesulfobacteriota
+1	2	Chrysiogenota
+8	1	Pseudomonadati
+8	0	Bacteria
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A5A9XE37	CYTOCHROME C {ECO:0000313     89.6    8.3e-22   2   6.1   3.6
+	Iterate                   	   129	   254	    89.6
+	Iterate                   	   376	   501	     9.9
+
+A0A6F9WUJ9	UNCHARACTERIZED PROTEIN {     61.6      4e-13   1   5.8   7.0
+	Iterate                   	   302	   429	    61.6
+	PF22352	K319L-like_PKD  	   193	   274	    32.7
+
+A0A7Y7N724	C-TYPE POLYHEME CYTOCHROM     90.6    4.1e-22   2   5.4   6.3
+	Iterate                   	   137	   259	    90.6
+	Iterate                   	   606	   673	     3.9
+
+Q749K5	C-TYPE POLYHEME CYTOCHROME OMCB    292.1    1.9e-84   3   5.6   7.7
+	Iterate                   	   126	   252	   292.1
+	Iterate                   	   368	   410	     7.8
+	Iterate                   	   420	   511	     4.6
+
+Q749L1	C-TYPE POLYHEME CYTOCHROME OMCC     77.7    4.2e-18   2   4.3   2.6
+	Iterate                   	   143	   264	    77.7
+	Iterate                   	   392	   467	     8.0
+	PF13435	Cytochrome_C554 	    28	    85	    19.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS383051 (E-value: 5.3e-58, Score: 200.0)
+Mentioned as: GSU2737
+Description: polyheme membrane-associated cytochrome c
+Organism: Geobacter sulfurreducens PCA
+PMID: 38770058
+Source: EuropePMC
+Title: Nonelectroactive <i>clostridium</i> obtains extracellular electron transfer-capability after forming chimera with <i>Geobacter</i>
+Journal: ISME communications (2024)
+Snippet: gltA (GSU1106 deletion), G.s - omcS (GSU2504 deletion), and G.s - omcBEST (quadruple genes of GSU2737, GSU0618, GSU2504, and GSU2503 deletion) [ 41 , 42 ]. C.i was routinely cultured in modified DSMZ medium 135 omitting sodium resazurin, and G.s strains were grown in bicarbonate-based medium
+
+================================================================================
+Protein: VIMSS383051 (E-value: 5.3e-58, Score: 200.0)
+Mentioned as: GSU2737
+Description: polyheme membrane-associated cytochrome c
+Organism: Geobacter sulfurreducens PCA
+PMID: 33837010
+Source: EuropePMC
+Title: Proteolytic Maturation of the Outer Membrane <i>c</i>-Type Cytochrome OmcZ by a Subtilisin-Like Serine Protease Is Essential for Optimal Current Production by Geobacter sulfurreducens
+Journal: Applied and environmental microbiology (2021)
+
+================================================================================
+Protein: VIMSS383051 (E-value: 5.3e-58, Score: 200.0)
+Mentioned as: GSU2737
+Description: polyheme membrane-associated cytochrome c
+Organism: Geobacter sulfurreducens PCA
+PMID: 33185968
+Source: EuropePMC
+Title: Comparative proteomics of Geobacter sulfurreducens PCA<sup>T</sup> in response to acetate, formate and/or hydrogen as electron donor
+Journal: Environmental microbiology (2021)
+Snippet: of G. sulfurreducens that lack omcS in cocultures mediating FIT. Another outer membrane cytochromes, OmcB (GSU2737) has an important function in electron transport to Fe(III) (Leang et al ., 2003 ; Mehta et al ., 2005 ; Leang et al ., 2010 ). The localization of
+
+================================================================================
+Protein: VIMSS7186670 (E-value: 5.6e-17, Score: 67.3)
+Mentioned as: Gbem_3379
+Description: polyheme membrane-associated cytochrome c
+Organism: Geobacter bemidjiensis Bem
+PMID: 20828392
+Source: EuropePMC
+Title: The genome of Geobacter bemidjiensis, exemplar for the subsurface clade of Geobacter species that predominate in Fe(III)-reducing subsurface environments
+Journal: BMC genomics (2010)
+Snippet: family (Gbem_1116, Gbem_1117, Gbem_1131, Gbem_2679, Gbem_2680) [ 63 ], one member of the omcB family (Gbem_3379) [ 64 ], and two omcF -related genes (Gbem_1585, Gbem_2183) [ 65 ]. There is no homolog of omcE [ 63 ]. Although G. bemidjiensis was reported not to grow
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A5A9XE37.1	AF-A0A5A9XE37-F1-model_v4_TED01:51-214	1	AF-A0A5A9XE37-F1-model_v4_TED01	51-214	66.2%
+A0A5A9XE37.1	AF-A0A5A9XE37-F1-model_v4_TED02:218-448	1	AF-A0A5A9XE37-F1-model_v4_TED02	218-448	31.5%
+A0A5A9XE37.1	AF-A0A5A9XE37-F1-model_v4_TED03:633-776	1	AF-A0A5A9XE37-F1-model_v4_TED03	633-776	0
+A0A7Y7N724.1	AF-A0A7Y7N724-F1-model_v4_TED01:308-493	1	AF-A0A7Y7N724-F1-model_v4_TED01	308-493	0
+A0A7Y7N724.1	AF-A0A7Y7N724-F1-model_v4_TED02:502-751	1	AF-A0A7Y7N724-F1-model_v4_TED02	502-751	0
+Q749K5.1	AF-Q749K5-F1-model_v4_TED01:602-740	1	AF-Q749K5-F1-model_v4_TED01	602-740	0
+Q749L1.1	AF-Q749L1-F1-model_v4_TED01:58-86_105-248	1	AF-Q749L1-F1-model_v4_TED01	58-248	82.6%
+Q749L1.1	AF-Q749L1-F1-model_v4_TED02:253-404_457-467	1	AF-Q749L1-F1-model_v4_TED02	253-467	14.6%
+Q749L1.1	AF-Q749L1-F1-model_v4_TED03:508-574_624-764	1	AF-Q749L1-F1-model_v4_TED03	508-764	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:D7ALQ0_TED01/Iterate
+GA   27.00 27.00;
+TC   28.00 29.20;
+NC   26.30 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for Q749L1
+RN   [1]
+RM   12644478
+RT   "OmcB, a c-type polyheme cytochrome, involved in Fe(III) reduction in
+RT   Geobacter sulfurreducens.";
+RA   Leang C., Coppi M.V., Lovley D.R.;
+RL   J. Bacteriol. 185:2096-2103(2003).
+
+--- End of Current DESC file ---

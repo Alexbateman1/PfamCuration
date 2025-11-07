@@ -1,0 +1,236 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   SADB_SALTY              Reviewed;         227 AA.
+AC   Q8ZL65;
+DE   RecName: Full=Inner membrane lipoprotein SadB {ECO:0000305};
+DE   Flags: Precursor;
+GN   Name=sadB {ECO:0000303|PubMed:24369174};
+GN   OrderedLocusNames=STM3690 {ECO:0000312|EMBL:AAL22549.1};
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+RN   [2] {ECO:0007744|PDB:4C47}
+RP   X-RAY CRYSTALLOGRAPHY (2.45 ANGSTROMS) OF 23-227, FUNCTION, SUBUNIT,
+RP   SUBCELLULAR LOCATION, AND DOMAIN.
+RX   PubMed=24369174; DOI=10.1074/jbc.m113.513275;
+RA   Grin I., Hartmann M.D., Sauer G., Hernandez Alvarez B., Schuetz M.,
+RA   Wagner S., Madlung J., Macek B., Felipe-Lopez A., Hensel M., Lupas A.,
+RA   Linke D.;
+RT   "A trimeric lipoprotein assists in trimeric autotransporter biogenesis in
+RT   enterobacteria.";
+RL   J. Biol. Chem. 289:7388-7398(2014).
+CC   -!- FUNCTION: Required for proper surface expression of the autotransporter
+CC       adhesin SadA. Could be directly involved in the biogenesis of
+CC       functionally active SadA. {ECO:0000269|PubMed:24369174}.
+CC   -!- SUBUNIT: Homotrimer. {ECO:0000269|PubMed:24369174}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane
+CC       {ECO:0000269|PubMed:24369174}; Lipid-anchor {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303, ECO:0000269|PubMed:24369174}.
+CC   -!- DOMAIN: The homotrimer is held together by an extended N-terminal
+CC       coiled coil, which leads into three separate globular C-terminal
+CC       domains of beta-sandwich topology. {ECO:0000269|PubMed:24369174}.
+DR   EMBL; AE006468; AAL22549.1; -; Genomic_DNA.
+DR   RefSeq; NP_462590.1; NC_003197.2.
+DR   RefSeq; WP_000549457.1; NC_003197.2.
+DR   PDB; 4C47; X-ray; 2.45 A; A/B/C=23-227.
+DR   PDBsum; 4C47; -.
+DR   AlphaFoldDB; Q8ZL65; -.
+DR   SMR; Q8ZL65; -.
+DR   STRING; 99287.STM3690; -.
+DR   PaxDb; 99287-STM3690; -.
+DR   GeneID; 1255214; -.
+DR   KEGG; stm:STM3690; -.
+DR   PATRIC; fig|99287.12.peg.3903; -.
+DR   HOGENOM; CLU_112391_0_0_6; -.
+DR   OMA; HATWGNE; -.
+DR   BioCyc; SENT99287:STM3690-MONOMER; -.
+DR   EvolutionaryTrace; Q8ZL65; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   Gene3D; 2.60.40.1620; Lipoprotein YajI-like; 1.
+DR   InterPro; IPR037125; YajI-like_sf.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Cell inner membrane; Cell membrane; Coiled coil; Lipoprotein;
+KW   Membrane; Palmitate; Reference proteome; Signal.
+FT   SIGNAL          1..21
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           22..227
+FT                   /note="Inner membrane lipoprotein SadB"
+FT                   /id="PRO_0000437737"
+FT   COILED          31..68
+FT                   /evidence="ECO:0000255"
+FT   LIPID           22
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           22
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   HELIX           28..91
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   STRAND          93..95
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   STRAND          101..106
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   STRAND          111..122
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   STRAND          125..134
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   STRAND          136..138
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   STRAND          140..142
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   STRAND          144..151
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   HELIX           157..159
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   HELIX           160..166
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   STRAND          168..173
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   STRAND          184..191
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   TURN            195..197
+FT                   /evidence="ECO:0007829|PDB:4C47"
+FT   STRAND          200..206
+FT                   /evidence="ECO:0007829|PDB:4C47"
+SQ   SEQUENCE   227 AA;  25906 MW;  821E311C996E3A47 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+6	6	Escherichia.
+3	6	Shigella.
+2	6	Salmonella.
+11	5	Enterobacteriaceae
+11	4	Enterobacterales
+11	3	Gammaproteobacteria
+11	2	Pseudomonadota
+11	1	Pseudomonadati
+11	0	Bacteria
+Total of 11 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2VBX8	UNCHARACTERIZED PROTEIN {    109.7    2.3e-28   1   2.0  13.7
+	Iterate                   	    28	    91	   107.9
+
+A0A0H3ENE6	UNCHARACTERIZED PROTEIN {    113.8    1.2e-29   1   2.0  13.7
+	Iterate                   	    28	    91	   111.9
+
+A7ZTF5	PUTATIVE LIPOPROTEIN {ECO:000    111.2    7.7e-29   1   1.3  14.1
+	Iterate                   	    28	    91	   110.6
+
+B7L727	UNCHARACTERIZED PROTEIN {ECO:    111.2    7.7e-29   1   1.3  14.1
+	Iterate                   	    28	    91	   110.6
+
+Q8ZL65	INNER MEMBRANE LIPOPROTEIN SADB    106.7      2e-27   1   1.5  18.1
+	Iterate                   	    28	    91	   105.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS150971 (E-value: 1.8e-29, Score: 106.7)
+Mentioned as: STM3690
+Description: putative inner membrane lipoprotein
+Organism: Salmonella typhimurium LT2
+PMID: 40470954
+Source: EuropePMC
+Title: Genetic analysis of flagellar-mediated surface sensing by &lt;i&gt;Pseudomonas aeruginosa&lt;/i&gt; PA14
+Journal: Journal of bacteriology (2025)
+
+================================================================================
+Protein: VIMSS150971 (E-value: 1.8e-29, Score: 106.7)
+Mentioned as: STM3690
+Description: putative inner membrane lipoprotein
+Organism: Salmonella typhimurium LT2
+PMID: 32033951
+Source: EuropePMC
+Title: Factors Required for Adhesion of Salmonella enterica Serovar Typhimurium to Corn Salad (Valerianella locusta)
+Journal: Applied and environmental microbiology (2020)
+
+================================================================================
+Protein: VIMSS150971 (E-value: 1.8e-29, Score: 106.7)
+Mentioned as: STM3690
+Description: putative inner membrane lipoprotein
+Organism: Salmonella typhimurium LT2
+PMID: 24369174
+Source: EuropePMC
+Title: A trimeric lipoprotein assists in trimeric autotransporter biogenesis in enterobacteria
+Journal: The Journal of biological chemistry (2014)
+Snippet: ). Further investigation revealed that the adhesin forms an operon with a small predicted lipoprotein (STM3690 in Salmonella enterica ) encoded directly upstream of the adhesin gene. We named this lipoprotein SadB in S. enterica . In this study, we determined the three-dimensional structure of SadB
+
+================================================================================
+Protein: VIMSS95948 (E-value: 6e-26, Score: 95.4)
+Mentioned as: ECs4479
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 20843356
+Source: EuropePMC
+Title: Pan-genome sequence analysis using Panseq: an online tool for the rapid analysis of core and accessory genomic regions
+Journal: BMC bioinformatics (2010)
+Snippet: C C C C C C C C C C C C C C 60 ECs4479 G G G G T T T T T T T T T T G T T - - 60 Loci are listed in order of choice and with points
+
+================================================================================
+Protein: VIMSS155463 (E-value: 7.6e-25, Score: 91.9)
+Mentioned as: STY4106
+Description: putative lipoprotein
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 35344544
+Source: EuropePMC
+Title: Whole genome sequence analysis of Salmonella Typhi in Papua New Guinea reveals an established population of genotype 2.1.7 sensitive to antimicrobials
+Journal: PLoS neglected tropical diseases (2022)
+Snippet: 2.1.7.2 can be identified by the presence of a synonymous marker SNV C540T in gene STY4106 (position 3967063 in CT18). These genotypes have been added to the GenoTyphi scheme available at http://github.com/katholt/genotyphi )[ 27 , 35 , 56 ]. No known acquired AMR genes, nor mutations
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0H3ENE6.1	AF-A0A0H3ENE6-F1-model_v4_TED02:94-213	1	AF-A0A0H3ENE6-F1-model_v4_TED02	94-213	0
+A0A0H3ENE6.1	AF-A0A0H3ENE6-F1-model_v4_TED01:9-90	1	AF-A0A0H3ENE6-F1-model_v4_TED01	9-90	98.4%
+A7ZTF5.1	AF-A7ZTF5-F1-model_v4_TED02:92-211	1	AF-A7ZTF5-F1-model_v4_TED02	92-211	0
+A7ZTF5.1	AF-A7ZTF5-F1-model_v4_TED01:42-88	1	AF-A7ZTF5-F1-model_v4_TED01	42-88	73.4%
+Q8ZL65.1	AF-Q8ZL65-F1-model_v4_TED02:92-211	1	AF-Q8ZL65-F1-model_v4_TED02	92-211	0
+Q8ZL65.1	AF-Q8ZL65-F1-model_v4_TED01:28-91	1	AF-Q8ZL65-F1-model_v4_TED01	28-91	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q8ZL65_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.40 34.60;
+NC   26.90 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for Q8ZL65
+RN   [2]
+RM   24369174
+RT   "A trimeric lipoprotein assists in trimeric autotransporter biogenesis in
+RT   enterobacteria.";
+RA   Grin I., Hartmann M.D., Sauer G., Hernandez Alvarez B., Schuetz M.,
+RA   Wagner S., Madlung J., Macek B., Felipe-Lopez A., Hensel M., Lupas A.,
+RA   Linke D.;
+RL   J. Biol. Chem. 289:7388-7398(2014).
+
+--- End of Current DESC file ---

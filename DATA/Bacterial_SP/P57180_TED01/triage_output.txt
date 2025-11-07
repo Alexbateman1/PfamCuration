@@ -1,0 +1,78 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y078_BUCAI              Reviewed;         112 AA.
+AC   P57180;
+DE   RecName: Full=Uncharacterized protein BU078;
+GN   OrderedLocusNames=BU078;
+OS   Buchnera aphidicola subsp. Acyrthosiphon pisum (strain APS) (Acyrthosiphon
+OS   pisum symbiotic bacterium).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Erwiniaceae; Buchnera.
+OX   NCBI_TaxID=107806;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=APS;
+RX   PubMed=10993077; DOI=10.1038/35024074;
+RA   Shigenobu S., Watanabe H., Hattori M., Sakaki Y., Ishikawa H.;
+RT   "Genome sequence of the endocellular bacterial symbiont of aphids Buchnera
+RT   sp. APS.";
+RL   Nature 407:81-86(2000).
+DR   EMBL; BA000003; BAB12798.1; -; Genomic_DNA.
+DR   RefSeq; WP_010895931.1; NC_002528.1.
+DR   AlphaFoldDB; P57180; -.
+DR   EnsemblBacteria; BAB12798; BAB12798; BAB12798.
+DR   KEGG; buc:BU078; -.
+DR   eggNOG; ENOG50328W0; Bacteria.
+DR   HOGENOM; CLU_2244836_0_0_6; -.
+DR   Proteomes; UP000001806; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..112
+FT                   /note="Uncharacterized protein BU078"
+FT                   /id="PRO_0000216245"
+FT   REGION          90..112
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   112 AA;  13210 MW;  A53E818F72CDDFA2 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Buchnera.
+1	5	Erwiniaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P57180	UNCHARACTERIZED PROTEIN BU078      225.4    4.4e-64   1   1.0  30.5
+	P57180_TED01              	     2	   110	   225.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P57180.1	AF-P57180-F1-model_v4_TED01:2-110	1	AF-P57180-F1-model_v4_TED01	2-110	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P57180_TED01
+GA   27.00 27.00;
+TC   27.60 225.30;
+NC   23.40 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

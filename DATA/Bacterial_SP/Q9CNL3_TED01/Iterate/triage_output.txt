@@ -1,0 +1,94 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y415_PASMU              Reviewed;          81 AA.
+AC   Q9CNL3;
+DE   RecName: Full=Uncharacterized protein PM0415;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=PM0415;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+CC   -!- SUBCELLULAR LOCATION: Membrane {ECO:0000305}; Single-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AE004439; AAK02499.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q9CNL3; -.
+DR   EnsemblBacteria; AAK02499; AAK02499; PM0415.
+DR   KEGG; pmu:PM0415; -.
+DR   HOGENOM; CLU_173276_0_0_6; -.
+DR   Proteomes; UP000000809; Chromosome.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-SubCell.
+PE   3: Inferred from homology;
+KW   Membrane; Reference proteome; Signal; Transmembrane; Transmembrane helix.
+FT   SIGNAL          1..31
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           32..81
+FT                   /note="Uncharacterized protein PM0415"
+FT                   /id="PRO_0000014175"
+FT   TRANSMEM        52..74
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   81 AA;  9432 MW;  0FB82498E5351973 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pasteurella.
+1	6	Bisgaardia.
+2	5	Pasteurellaceae
+2	4	Pasteurellales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2P4P653	UNCHARACTERIZED PROTEIN {     22.5       0.64   1   1.4   4.3
+	Iterate                   	    46	   123	    21.7
+
+A0A372QYF9	ION TRANSPORT DOMAIN-CONT     22.5       0.64   1   1.4   4.3
+	Iterate                   	    46	   123	    21.7
+
+A0A4R2MT41	SMALL MULTIDRUG RESISTANC     36.7    2.4e-05   1   1.9   0.3
+	Iterate                   	     1	    47	    36.7
+
+A0A8H4YEI4	FATTY ACID DESATURASE DOM     22.4        0.7   1   2.0   0.5
+	Iterate                   	   122	   194	    20.5
+	PF00487	FA_desaturase   	   137	   372	    49.6
+
+Q9CNL3	UNCHARACTERIZED PROTEIN PM0415     183.4      4e-51   1   1.0  12.3
+	Iterate                   	     2	    81	   183.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9CNL3.1	AF-Q9CNL3-F1-model_v4_TED01:2-81	1	AF-Q9CNL3-F1-model_v4_TED01	2-81	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CNL3_TED01/Iterate
+GA   27.00 27.00;
+TC   36.70 36.70;
+NC   22.50 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

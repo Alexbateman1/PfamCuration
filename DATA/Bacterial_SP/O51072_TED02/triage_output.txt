@@ -1,0 +1,128 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y043_BORBU              Reviewed;         346 AA.
+AC   O51072;
+DE   RecName: Full=Uncharacterized protein BB_0043;
+GN   OrderedLocusNames=BB_0043;
+OS   Borreliella burgdorferi (strain ATCC 35210 / DSM 4680 / CIP 102532 / B31)
+OS   (Borrelia burgdorferi).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Borreliaceae; Borreliella.
+OX   NCBI_TaxID=224326;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 35210 / DSM 4680 / CIP 102532 / B31;
+RX   PubMed=9403685; DOI=10.1038/37551;
+RA   Fraser C.M., Casjens S., Huang W.M., Sutton G.G., Clayton R.A.,
+RA   Lathigra R., White O., Ketchum K.A., Dodson R.J., Hickey E.K., Gwinn M.L.,
+RA   Dougherty B.A., Tomb J.-F., Fleischmann R.D., Richardson D.L.,
+RA   Peterson J.D., Kerlavage A.R., Quackenbush J., Salzberg S.L., Hanson M.,
+RA   van Vugt R., Palmer N., Adams M.D., Gocayne J.D., Weidman J.F.,
+RA   Utterback T.R., Watthey L., McDonald L.A., Artiach P., Bowman C.,
+RA   Garland S.A., Fujii C., Cotton M.D., Horst K., Roberts K.M., Hatch B.,
+RA   Smith H.O., Venter J.C.;
+RT   "Genomic sequence of a Lyme disease spirochaete, Borrelia burgdorferi.";
+RL   Nature 390:580-586(1997).
+DR   EMBL; AE000783; AAC66443.1; -; Genomic_DNA.
+DR   PIR; C70105; C70105.
+DR   RefSeq; NP_212177.1; NC_001318.1.
+DR   RefSeq; WP_010889664.1; NC_001318.1.
+DR   AlphaFoldDB; O51072; -.
+DR   SMR; O51072; -.
+DR   STRING; 224326.BB_0043; -.
+DR   PaxDb; 224326-BB_0043; -.
+DR   EnsemblBacteria; AAC66443; AAC66443; BB_0043.
+DR   KEGG; bbu:BB_0043; -.
+DR   PATRIC; fig|224326.49.peg.441; -.
+DR   HOGENOM; CLU_069999_0_0_12; -.
+DR   OrthoDB; 350349at2; -.
+DR   Proteomes; UP000001807; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..346
+FT                   /note="Uncharacterized protein BB_0043"
+FT                   /id="PRO_0000174373"
+SQ   SEQUENCE   346 AA;  40531 MW;  D74C7192E140E062 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Borrelia.
+1	6	Sediminispirochaeta.
+1	6	Borreliella.
+3	5	Borreliaceae
+1	5	Spirochaetaceae
+4	4	Spirochaetales
+4	3	Spirochaetia
+4	2	Spirochaetota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0L7L703	TETRATRICOPEPTIDE REPEAT      69.6    1.9e-15   3  15.1   0.0
+	O51072_TED02              	  1551	  1639	     3.2
+	O51072_TED02              	  1274	  1359	     2.9
+	O51072_TED02              	  1115	  1196	     2.7
+	PF10366	Vps39_1         	   391	   478	    52.3
+
+A0ABF7PUP0	UNCHARACTERIZED PROTEIN {    244.9    3.2e-69   1   1.8  28.3
+	O51072_TED02              	   154	   339	   244.9
+
+O51072	UNCHARACTERIZED PROTEIN BB_0043    403.2     9e-118   1   1.7  30.8
+	O51072_TED02              	   159	   344	   403.2
+
+W6TGP5	TETRATRICOPEPTIDE REPEAT FAMI    247.1    6.9e-70   1   1.5  28.4
+	O51072_TED02              	   106	   291	   247.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS43685 (E-value: 8e-120, Score: 403.2)
+Mentioned as: BB0043
+Description: B. burgdorferi predicted coding region BB0043
+Organism: Borrelia burgdorferi B31
+PMID: 31086414
+Source: EuropePMC
+Title: Genome-wide screen identifies novel genes required for Borrelia burgdorferi survival in its Ixodes tick vector
+Journal: PLoS pathogens (2019)
+Snippet: putative lipoprotein Lipoprotein bb0042 phoU phosphate transport system regulatory protein Inorganic ion transport and metabolism bb0043 hypothetical protein Unknown bb0051 hypothetical protein Unknown bb0071 putative lipoprotein Lipoprotein bb0116 pts system, maltose and glucose- specific iiabc component Carbohydrate Transport and metabolism bb0138 hypothetical protein Unknown bb0155 hypothetical
+
+================================================================================
+Protein: VIMSS43685 (E-value: 8e-120, Score: 403.2)
+Mentioned as: BB0043
+Description: B. burgdorferi predicted coding region BB0043
+Organism: Borrelia burgdorferi B31
+PMID: 27400788
+Source: EuropePMC
+Title: Consensus computational network analysis for identifying candidate outer membrane proteins from Borrelia spirochetes
+Journal: BMC microbiology (2016)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O51072.1	AF-O51072-F1-model_v4_TED01:30-120	1	AF-O51072-F1-model_v4_TED01	30-120	0
+O51072.1	AF-O51072-F1-model_v4_TED02:159-344	1	AF-O51072-F1-model_v4_TED02	159-344	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O51072_TED02
+GA   27.00 27.00;
+TC   27.00 29.20;
+NC   26.60 25.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

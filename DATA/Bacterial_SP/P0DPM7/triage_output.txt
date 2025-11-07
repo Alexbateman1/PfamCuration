@@ -1,0 +1,86 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YADW_ECOLI              Reviewed;          21 AA.
+AC   P0DPM7; A0A385XJ07;
+DE   RecName: Full=Protein YadW {ECO:0000303|PubMed:29645342};
+GN   Name=yadW {ECO:0000303|PubMed:29645342}; OrderedLocusNames=b4728;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION, AND INDUCTION.
+RX   PubMed=29645342; DOI=10.1002/pmic.201700064;
+RA   VanOrsdel C.E., Kelly J.P., Burke B.N., Lein C.D., Oufiero C.E.,
+RA   Sanchez J.F., Wimmers L.E., Hearn D.J., Abuikhdair F.J., Barnhart K.R.,
+RA   Duley M.L., Ernst S.E.G., Kenerson B.A., Serafin A.J., Hemm M.R.;
+RT   "Identifying new small proteins in Escherichia coli.";
+RL   Proteomics 18:E1700064-E1700064(2018).
+CC   -!- INDUCTION: Expressed in both exponential and stationary phase;
+CC       expression is considerably higher in exponential phase (at protein
+CC       level). {ECO:0000269|PubMed:29645342}.
+DR   EMBL; U00096; AYC08166.1; -; Genomic_DNA.
+DR   AlphaFoldDB; P0DPM7; -.
+DR   EnsemblBacteria; AYC08166; AYC08166; b4728.
+DR   InParanoid; P0DPM7; -.
+DR   BioCyc; EcoCyc:MONOMER0-4405; -.
+DR   PRO; PR:P0DPM7; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   NCBIfam; NF040926; small_YadW; 1.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..21
+FT                   /note="Protein YadW"
+FT                   /id="PRO_0000445155"
+SQ   SEQUENCE   21 AA;  2330 MW;  02B03E630233AA9D CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P0DPM7	PROTEIN YADW {ECO:0000303|PUBME     57.7      2e-12   1   1.0   1.2
+	P0DPM7                    	     1	    21	    57.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DPM7
+GA   27.00 27.00;
+TC   30.30 57.60;
+NC   26.40 16.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

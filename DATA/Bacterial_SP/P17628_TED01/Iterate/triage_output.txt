@@ -1,0 +1,78 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Leptospira.
+4	5	Leptospiraceae
+4	4	Leptospirales
+4	3	Spirochaetia
+4	2	Spirochaetota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A7J5Y328	UNCHARACTERIZED PROTEIN {     62.9      8e-14   9   9.0  63.9
+	Iterate                   	    40	    71	    15.0
+	Iterate                   	   173	   191	    13.0
+	Iterate                   	   113	   132	    12.1
+	Iterate                   	    83	   110	    11.9
+	Iterate                   	   128	   146	    11.9
+	Iterate                   	   143	   161	    11.9
+	Iterate                   	    68	    86	    11.8
+	Iterate                   	   158	   176	    11.7
+	Iterate                   	    98	   116	     6.8
+
+M3GAD0	UNCHARACTERIZED PROTEIN {ECO:     95.6      5e-24   1   1.3   7.0
+	Iterate                   	    35	    80	    95.1
+
+M3HP02	UNCHARACTERIZED PROTEIN {ECO:    113.0    1.9e-29   1   1.3   7.1
+	Iterate                   	    35	    80	   112.5
+
+M6RMD6	OUTER MEMBRANE PROTEIN BETA-B     82.6    5.7e-20   1   1.5   2.6
+	Iterate                   	    29	    74	    81.7
+
+M6ZUX7	UNCHARACTERIZED PROTEIN {ECO:     85.1    9.5e-21   1   1.2   2.6
+	Iterate                   	    29	    74	    84.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS659327 (E-value: 4.9e-30, Score: 108.3)
+Mentioned as: LIC10642
+Description: conserved hypothetical protein
+Organism: Leptospira interrogans serovar Copenhageni str. Fiocruz L1-130
+PMID: 15064809
+Source: EuropePMC
+Title: Genome features of Leptospira interrogans serovar Copenhageni
+Journal: Brazilian journal of medical and biological research = Revista brasileira de pesquisas medicas e biologicas (2004)
+Snippet: leptospiral protein with a transmembrane beta-sheet structure is LIC10642 which is predicted to be a member of the OMP superfamily. Among these newly identified
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+M6ZUX7.1	AF-M6ZUX7-F1-model_v4_TED01:27-93	1	AF-M6ZUX7-F1-model_v4_TED01	27-93	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P17628_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 96.90;
+NC   25.60 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

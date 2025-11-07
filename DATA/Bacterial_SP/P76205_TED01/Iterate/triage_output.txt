@@ -1,0 +1,142 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   ARPB_ECOLI              Reviewed;         157 AA.
+AC   P76205; P77764;
+DE   RecName: Full=Putative ankyrin repeat protein B;
+GN   Name=arpB; OrderedLocusNames=b4494, JW5278/JW1710;
+GN   ORFNames=b1720/b1721;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9097039; DOI=10.1093/dnares/3.6.363;
+RA   Aiba H., Baba T., Fujita K., Hayashi K., Inada T., Isono K., Itoh T.,
+RA   Kasai H., Kashimoto K., Kimura S., Kitakawa M., Kitagawa M., Makino K.,
+RA   Miki T., Mizobuchi K., Mori H., Mori T., Motomura K., Nakade S.,
+RA   Nakamura Y., Nashimoto H., Nishio Y., Oshima T., Saito N., Sampei G.,
+RA   Seki Y., Sivasundaram S., Tagami H., Takeda J., Takemoto K., Takeuchi Y.,
+RA   Wada C., Yamamoto Y., Horiuchi T.;
+RT   "A 570-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 28.0-40.1 min region on the linkage map.";
+RL   DNA Res. 3:363-377(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- CAUTION: Could be the product of a pseudogene, it is missing the C-
+CC       terminus compared to orthologs. A full-length version has several
+CC       ankyrin repeats (see for example AC A0A0H3JEK5). {ECO:0000305}.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   AlphaFoldDB; P76205; -.
+DR   DIP; DIP-9160N; -.
+DR   FunCoup; P76205; 35.
+DR   IntAct; P76205; 1.
+DR   EchoBASE; EB3739; -.
+DR   InParanoid; P76205; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..157
+FT                   /note="Putative ankyrin repeat protein B"
+FT                   /id="PRO_0000067229"
+SQ   SEQUENCE   157 AA;  18234 MW;  D686DDAA796DE825 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Escherichia.
+5	5	Enterobacteriaceae
+5	4	Enterobacterales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2V7X3	PUTATIVE CONSERVED PROTEI    116.1      5e-30   1   1.9   1.8
+	Iterate                   	     2	    71	   116.1
+
+A0A0H2YZ77	ANKYRIN REPEAT REGULATORY    237.6    1.1e-67   1   1.1   6.8
+	Iterate                   	     8	   125	   237.2
+
+A0A0H3EKK4	ANKYRIN REPEAT REGULATORY    108.4    1.2e-27   1   2.0   2.1
+	Iterate                   	     2	    71	   108.4
+
+A0A0H3JEK5	T3SS EFFECTOR-LIKE PROTEI    258.5    3.8e-74   1   2.6   5.6
+	Iterate                   	     8	   125	   258.5
+	PF07906	Toxin_15        	   123	   396	   152.8
+
+P76205	PUTATIVE ANKYRIN REPEAT PROTEIN    271.6    3.1e-78   1   1.3   6.4
+	Iterate                   	     8	   125	   271.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS93896 (E-value: 3.4e-76, Score: 258.5)
+Mentioned as: ECs2427
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 29718957
+Source: EuropePMC
+Title: Sulfamethoxazole - Trimethoprim represses csgD but maintains virulence genes at 30°C in a clinical Escherichia coli O157:H7 isolate
+Journal: PloS one (2018)
+Snippet: 3.28 * ECs2229 hypothetical protein NleG2-4 Sp12 0.90 -0.96 * -0.06 0.92 -1.36 * -0.45 ECs2427 hypothetical protein EspL1 No # 0.15 -0.13 0.01 0.09 -0.38 -0.29 ECs2714 hypothetical protein EspJ Sp14 0.61 -1.20 * -0.59 1.30 0.24 1.54 * ECs2715 EspF-like protein TccP Sp14 -1.22
+
+================================================================================
+Protein: VIMSS93896 (E-value: 3.4e-76, Score: 258.5)
+Mentioned as: ECs2427
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 16990433
+Source: EuropePMC
+Title: An extensive repertoire of type III secretion effectors in Escherichia coli O157 and the role of lambdoid phages in their dissemination
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2006)
+Snippet: ECs2073 ECs20745 ECs2154 ECs2155 ECs2156 ECs2226** ECs22278 ECs2229 ECs2427 ECs2672 ECs2674 ECs2714 PPR SopD-N SopD-N SopD-N; PRR NleB NleC NleH NleD PPR EspF
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76205.3	AF-P76205-F1-model_v4_TED01:8-14_30-125	1	AF-P76205-F1-model_v4_TED01	8-125	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76205_TED01/Iterate
+GA   27.00 27.00;
+TC   108.40 108.40;
+NC   26.30 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

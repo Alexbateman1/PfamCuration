@@ -1,0 +1,167 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y6541_BACAN             Reviewed;         128 AA.
+AC   Q9RMZ2;
+DE   RecName: Full=Uncharacterized protein pXO2-40/BXB0041/GBAA_pXO2_0041;
+GN   OrderedLocusNames=pXO2-40, BXB0041, GBAA_pXO2_0041;
+OS   Bacillus anthracis.
+OG   Plasmid pXO2.
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Bacillaceae; Bacillus;
+OC   Bacillus cereus group.
+OX   NCBI_TaxID=1392;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Pasteur;
+RX   PubMed=10475962; DOI=10.1046/j.1365-2672.1999.00883.x;
+RA   Okinaka R.T., Cloud K., Hampton O., Hoffmaster A., Hill K.K., Keim P.,
+RA   Koehler T., Lamke G., Kumano S., Manter D., Martinez Y., Ricke D.,
+RA   Svensson R., Jackson P.J.;
+RT   "Sequence, assembly and analysis of pXO1 and pXO2.";
+RL   J. Appl. Microbiol. 87:261-262(1999).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=Ames / isolate Florida / A2012;
+RX   PubMed=12004073; DOI=10.1126/science.1071837;
+RA   Read T.D., Salzberg S.L., Pop M., Shumway M.F., Umayam L., Jiang L.,
+RA   Holtzapple E., Busch J.D., Smith K.L., Schupp J.M., Solomon D., Keim P.,
+RA   Fraser C.M.;
+RT   "Comparative genome sequencing for discovery of novel polymorphisms in
+RT   Bacillus anthracis.";
+RL   Science 296:2028-2033(2002).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Ames ancestor;
+RX   PubMed=18952800; DOI=10.1128/jb.01347-08;
+RA   Ravel J., Jiang L., Stanley S.T., Wilson M.R., Decker R.S., Read T.D.,
+RA   Worsham P., Keim P.S., Salzberg S.L., Fraser-Liggett C.M., Rasko D.A.;
+RT   "The complete genome sequence of Bacillus anthracis Ames 'Ancestor'.";
+RL   J. Bacteriol. 191:445-446(2009).
+DR   EMBL; AF188935; AAF13645.1; -; Genomic_DNA.
+DR   EMBL; AE011191; AAM26201.1; -; Genomic_DNA.
+DR   EMBL; AE017335; AAT28971.2; -; Genomic_DNA.
+DR   RefSeq; NP_053195.1; NC_002146.1.
+DR   RefSeq; WP_000064258.1; NZ_VTZL01000009.1.
+DR   AlphaFoldDB; Q9RMZ2; -.
+DR   SMR; Q9RMZ2; -.
+DR   KEGG; banh:HYU01_29205; -.
+DR   KEGG; bar:GBAA_pXO2_0041; -.
+DR   HOGENOM; CLU_2044894_0_0_9; -.
+DR   OMA; IRMPLET; -.
+DR   Proteomes; UP000000594; Plasmid pXO2.
+PE   4: Predicted;
+KW   Plasmid; Reference proteome.
+FT   CHAIN           1..128
+FT                   /note="Uncharacterized protein pXO2-
+FT                   40/BXB0041/GBAA_pXO2_0041"
+FT                   /id="PRO_0000216851"
+FT   REGION          1..50
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        18..36
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   128 AA;  14687 MW;  D54C69BADA5A0AFA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Bacilluscereus group.
+3	6	Enterococcus
+1	6	Vagococcus
+1	6	Pediococcus
+1	6	Paucilactobacillus
+1	6	Lacticaseibacillus
+1	6	Bacillus
+4	5	Enterococcaceae
+3	5	Lactobacillaceae
+1	5	Bacillaceae
+7	4	Lactobacillales
+1	4	Bacillales
+8	3	Bacilli
+8	2	Bacillota
+8	1	Bacillati
+8	0	Bacteria
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0R1ZWG0	UNCHARACTERIZED PROTEIN {    108.0    1.1e-27   1   1.4   3.1
+	Iterate                   	    59	   127	   107.3
+
+A0A813ENP1	SFI1 SPINDLE BODY DOMAIN-     68.2      3e-15   6  17.6  20.7
+	Iterate                   	   666	   698	     9.2
+	Iterate                   	   626	   655	     5.2
+	Iterate                   	   243	   273	     3.8
+	Iterate                   	   329	   359	     3.8
+	Iterate                   	   458	   488	     3.8
+	Iterate                   	   114	   144	     3.7
+
+A0AAD7ZCM4	CYTOCHROME P450 {ECO:0008     43.0    2.1e-07   4   4.5   1.3
+	Iterate                   	  2070	  2126	    13.5
+	Iterate                   	   952	  1008	    10.9
+	Iterate                   	  1516	  1572	     9.5
+	Iterate                   	   455	   507	     4.1
+	PF00067	p450            	   193	   622	     320
+	PF00067	p450            	   675	  1119	     322
+	PF00067	p450            	  1228	  1684	   342.4
+	PF00067	p450            	  1776	  2238	   332.5
+
+Q9RMZ2	UNCHARACTERIZED PROTEIN PXO2-4    119.6    2.6e-31   1   1.3   3.0
+	Iterate                   	    65	   128	   118.9
+
+W7CA24	UNCHARACTERIZED PROTEIN {ECO:    102.3    6.7e-26   1   1.2   1.1
+	Iterate                   	    48	   108	   101.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS632295 (E-value: 1.6e-27, Score: 100.8)
+Mentioned as: GBAA_pXO2_0041
+Description: conserved hypothetical protein, (pXO2-40)
+Organism: Bacillus anthracis str. 'Ames Ancestor'
+PMID: 34498664
+Source: EuropePMC
+Title: Certain Listeria monocytogenes plasmids contribute to increased UVC ultraviolet light stress
+Journal: FEMS microbiology letters (2021)
+Snippet: other L. monocytogenes strains. However, a distant homolog was found on the Bacillus pXO2 plasmid (GBAA_pXO2_0041, 30% amino acid identity and 97% coverage). GBAA_pXO2_0041 is 128 amino acids in length and has a predicted p I of 8.5 and a high percentage of lysine residues (16%),
+
+================================================================================
+Protein: VIMSS632295 (E-value: 1.6e-27, Score: 100.8)
+Mentioned as: GBAA_pXO2_0041
+Description: conserved hypothetical protein, (pXO2-40)
+Organism: Bacillus anthracis str. 'Ames Ancestor'
+PMID: 16042811
+Source: EuropePMC
+Title: Conjugative plasmid pAW63 brings new insights into the genesis of the Bacillus anthracis virulence plasmid pXO2 and of the Bacillus thuringiensis plasmid pBT9727
+Journal: BMC genomics (2005)
+Snippet: pBT9727_0012 - GBAA_pXO2_0028 67% pBT9727_0024 - GBAA_pXO2_0035 64% pBT9727_0038 - GBAA_pXO2_0040 91% pBT9727_0047 replication-associated protein GBAA_pXO2_0041 79% pBT9727_0048 replication-associated protein GBAA_pXO2_0052 89% pBT9727_0039 - GBAA_pXO2_0053 72% pBT9727_0040 CAAX N-terminal protease GBAA_pXO2_0054 92% pBT9727_0041 - GBAA_pXO2_0055 97% pBT9727_0042 transcriptional regulator TetR GBAA_pXO2_0056 96% pBT9727_0043 IS 231 transposase
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A376L4R0.1	AF-A0A376L4R0-F1-model_v4_TED01:42-91	1	AF-A0A376L4R0-F1-model_v4_TED01	42-91	52.9%
+A0A376L4R0.1	AF-A0A376L4R0-F1-model_v4_TED02:93-123	1	AF-A0A376L4R0-F1-model_v4_TED02	93-123	45.6%
+G8PF84.1	AF-G8PF84-F1-model_v4_TED01:74-135	1	AF-G8PF84-F1-model_v4_TED01	74-135	95.4%
+Q9RMZ2.1	AF-Q9RMZ2-F1-model_v4_TED01:65-128	1	AF-Q9RMZ2-F1-model_v4_TED01	65-128	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9RMZ2_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.40 39.30;
+NC   24.60 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

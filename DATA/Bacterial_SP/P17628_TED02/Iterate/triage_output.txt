@@ -1,0 +1,73 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+6	6	Leptospira.
+6	5	Leptospiraceae
+6	4	Leptospirales
+6	3	Spirochaetia
+6	2	Spirochaetota
+6	1	Pseudomonadati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+M3FRS0	OUTER MEMBRANE PROTEIN BETA-B    386.1   2.1e-112   1   1.0   9.1
+	Iterate                   	     1	   200	   385.9
+
+M3GEJ6	UNCHARACTERIZED PROTEIN {ECO:    134.3      2e-35   1   1.2   0.2
+	Iterate                   	     1	    67	   133.8
+
+M3HP02	UNCHARACTERIZED PROTEIN {ECO:    292.7    7.4e-84   1   1.1   9.8
+	Iterate                   	   102	   235	   292.3
+
+M6RMD6	OUTER MEMBRANE PROTEIN BETA-B    287.1    3.9e-82   1   1.1  10.1
+	Iterate                   	    97	   319	   286.8
+
+M6ZN26	UNCHARACTERIZED PROTEIN {ECO:    128.8    9.8e-34   1   1.0   3.5
+	Iterate                   	     1	   135	   128.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS659327 (E-value: 1.6e-129, Score: 435.1)
+Mentioned as: LIC10642
+Description: conserved hypothetical protein
+Organism: Leptospira interrogans serovar Copenhageni str. Fiocruz L1-130
+PMID: 15064809
+Source: EuropePMC
+Title: Genome features of Leptospira interrogans serovar Copenhageni
+Journal: Brazilian journal of medical and biological research = Revista brasileira de pesquisas medicas e biologicas (2004)
+Snippet: leptospiral protein with a transmembrane beta-sheet structure is LIC10642 which is predicted to be a member of the OMP superfamily. Among these newly identified
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+M3FRS0.1	AF-M3FRS0-F1-model_v4_TED01:33-61_109-199	1	AF-M3FRS0-F1-model_v4_TED01	33-199	83.5%
+M6RMD6.1	AF-M6RMD6-F1-model_v4_TED01:29-75	1	AF-M6RMD6-F1-model_v4_TED01	29-75	0
+M6RMD6.1	AF-M6RMD6-F1-model_v4_TED02:97-176_218-319	1	AF-M6RMD6-F1-model_v4_TED02	97-319	100.0%
+M6RMD6.1	AF-M6RMD6-F1-model_v4_TED03:178-217	1	AF-M6RMD6-F1-model_v4_TED03	178-217	19.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P17628_TED02/Iterate
+GA   27.00 27.00;
+TC   27.20 110.30;
+NC   26.70 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

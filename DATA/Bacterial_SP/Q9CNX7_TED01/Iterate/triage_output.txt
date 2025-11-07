@@ -1,0 +1,114 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y294_PASMU              Reviewed;         423 AA.
+AC   Q9CNX7;
+DE   RecName: Full=Uncharacterized protein PM0294;
+GN   OrderedLocusNames=PM0294;
+OS   Pasteurella multocida (strain Pm70).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pasteurellales; Pasteurellaceae; Pasteurella.
+OX   NCBI_TaxID=272843;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Pm70;
+RX   PubMed=11248100; DOI=10.1073/pnas.051634598;
+RA   May B.J., Zhang Q., Li L.L., Paustian M.L., Whittam T.S., Kapur V.;
+RT   "Complete genomic sequence of Pasteurella multocida Pm70.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 98:3460-3465(2001).
+DR   EMBL; AE004439; AAK02378.1; -; Genomic_DNA.
+DR   RefSeq; WP_010906569.1; NC_002663.1.
+DR   AlphaFoldDB; Q9CNX7; -.
+DR   STRING; 272843.PM0294; -.
+DR   EnsemblBacteria; AAK02378; AAK02378; PM0294.
+DR   KEGG; pmu:PM0294; -.
+DR   PATRIC; fig|272843.6.peg.304; -.
+DR   HOGENOM; CLU_640533_0_0_6; -.
+DR   OrthoDB; 5688981at2; -.
+DR   Proteomes; UP000000809; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..423
+FT                   /note="Uncharacterized protein PM0294"
+FT                   /id="PRO_0000216289"
+SQ   SEQUENCE   423 AA;  50450 MW;  8ABD9B36DECE6833 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Pasteurella.
+1	6	Formosa.
+1	6	Fodinibius
+1	6	Cytophaga.
+1	6	Algibacter.
+3	5	Flavobacteriaceae
+1	5	Pasteurellaceae
+1	5	Cytophagaceae
+1	5	Balneolaceae
+3	4	Flavobacteriales
+1	4	Pasteurellales
+1	4	Cytophagales
+1	4	Balneolales
+3	3	Flavobacteriia
+1	3	Gammaproteobacteria
+1	3	Cytophagia
+1	3	Balneolia
+4	2	Bacteroidota
+1	2	Pseudomonadota
+1	2	Balneolota
+6	1	Pseudomonadati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A090VJI6	UNCHARACTERIZED PROTEIN {     51.3    7.4e-10   1   1.7   1.8
+	Iterate                   	    18	   119	    50.0
+	PF27496	PM0294_M        	   126	   263	   178.2
+
+A0A176TA57	UNCHARACTERIZED PROTEIN {     35.9    4.6e-05   1   2.1   1.2
+	Iterate                   	    22	   119	    35.9
+	PF27496	PM0294_M        	   126	   285	   230.7
+	PF27495	PM0294_C        	   290	   427	   184.9
+
+A0A6M1TBD6	UNCHARACTERIZED PROTEIN {     33.8    0.00021   1   2.3   1.1
+	Iterate                   	    22	   114	    33.8
+	PF27496	PM0294_M        	   121	   280	   222.5
+	PF27495	PM0294_C        	   285	   421	   169.7
+
+A0A6N4STJ6	UNCHARACTERIZED PROTEIN {     40.2    2.1e-06   2   2.7   3.4
+	Iterate                   	    28	   115	    35.6
+	Iterate                   	   183	   288	     4.3
+	PF27496	PM0294_M        	   122	   280	     226
+	PF27495	PM0294_C        	   285	   423	   178.8
+
+Q9CNX7	UNCHARACTERIZED PROTEIN PM0294     248.2      5e-71   1   1.6   6.2
+	Iterate                   	     7	   115	   247.1
+	PF27496	PM0294_M        	   122	   276	   153.4
+	PF27495	PM0294_C        	   281	   420	   158.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9CNX7.1	AF-Q9CNX7-F1-model_v4_TED01:7-115	1	AF-Q9CNX7-F1-model_v4_TED01	7-115	100.0%
+Q9CNX7.1	AF-Q9CNX7-F1-model_v4_TED02:122-276	1	AF-Q9CNX7-F1-model_v4_TED02	122-276	0
+Q9CNX7.1	AF-Q9CNX7-F1-model_v4_TED03:281-421	1	AF-Q9CNX7-F1-model_v4_TED03	281-421	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9CNX7_TED01/Iterate
+GA   27.00 27.00;
+TC   27.30 28.90;
+NC   26.10 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

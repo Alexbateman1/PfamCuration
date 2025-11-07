@@ -1,0 +1,102 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y690_TREPA              Reviewed;         193 AA.
+AC   O83688;
+DE   RecName: Full=Uncharacterized protein TP_0690;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=TP_0690;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65664.1; -; Genomic_DNA.
+DR   PIR; G71292; G71292.
+DR   AlphaFoldDB; O83688; -.
+DR   IntAct; O83688; 1.
+DR   STRING; 243276.TP_0690; -.
+DR   EnsemblBacteria; AAC65664; AAC65664; TP_0690.
+DR   KEGG; tpa:TP_0690; -.
+DR   KEGG; tpw:TPANIC_0690; -.
+DR   eggNOG; ENOG5031CXJ; Bacteria.
+DR   HOGENOM; CLU_1229453_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..26
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           27..193
+FT                   /note="Uncharacterized protein TP_0690"
+FT                   /id="PRO_0000014253"
+SQ   SEQUENCE   193 AA;  22604 MW;  6D7AD5BB4CE73992 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	6	Treponema.
+1	6	Teretinema.
+6	5	Treponemataceae
+6	4	Spirochaetales
+6	3	Spirochaetia
+6	2	Spirochaetota
+6	1	Pseudomonadati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0B7H2T9	DUF3828 DOMAIN-CONTAINING    167.2    5.5e-46   1   1.2   0.0
+	Iterate                   	    88	   193	   166.7
+
+O83688	UNCHARACTERIZED PROTEIN TP_0690    176.8      6e-49   1   1.2   1.1
+	Iterate                   	    85	   190	   176.3
+
+Q73NN3	LIPOPROTEIN {ECO:0008006|GOOG    181.0    2.9e-50   1   1.2   2.1
+	Iterate                   	    95	   203	   180.5
+
+S3L5M8	LIPOPROTEIN {ECO:0008006|GOOG     57.1    9.2e-12   2   2.2   0.1
+	Iterate                   	    82	   163	    47.2
+	Iterate                   	   185	   231	     8.0
+
+S6A016	LIPOPROTEIN {ECO:0008006|GOOG    100.6    2.8e-25   1   1.3   0.8
+	Iterate                   	   137	   244	   100.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B7H2T9.1	AF-A0A0B7H2T9-F1-model_v4_TED01:91-192	1	AF-A0A0B7H2T9-F1-model_v4_TED01	91-192	96.2%
+O83688.1	AF-O83688-F1-model_v4_TED01:85-190	1	AF-O83688-F1-model_v4_TED01	85-190	100.0%
+Q73NN3.1	AF-Q73NN3-F1-model_v4_TED01:87-201	1	AF-Q73NN3-F1-model_v4_TED01	87-201	98.2%
+S6A016.1	AF-S6A016-F1-model_v4_TED01:135-239	1	AF-S6A016-F1-model_v4_TED01	135-239	95.4%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83688_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   61.60 47.30;
+NC   23.50 23.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,77 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	8	Klebsiella pneumoniae complex.
+2	7	Raoultella
+2	7	Enterobactercloacae complex.
+1	7	Klebsiella
+4	6	Escherichia.
+3	6	Klebsiella/Raoultella group
+2	6	Enterobacter
+9	5	Enterobacteriaceae
+9	4	Enterobacterales
+9	3	Gammaproteobacteria
+9	2	Pseudomonadota
+9	1	Pseudomonadati
+9	0	Bacteria
+Total of 9 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2XKU0	UNCHARACTERIZED PROTEIN {    191.2    1.3e-53   1   1.1   0.2
+	Iterate                   	    15	    95	   190.9
+
+A0A0H3ERK5	YUBO PROTEIN {ECO:0008006    191.2    1.3e-53   1   1.1   0.2
+	Iterate                   	    15	    95	   190.9
+
+A0A377YWC8	UNCHARACTERIZED PROTEIN {    191.3    1.2e-53   1   1.1   0.1
+	Iterate                   	    15	    95	   191.0
+
+B7LI59	UNCHARACTERIZED PROTEIN {ECO:    190.6    1.9e-53   1   1.3   0.2
+	Iterate                   	    15	    95	   190.6
+
+B7LX01	UNCHARACTERIZED PROTEIN {ECO:    191.3    1.2e-53   1   1.1   0.1
+	Iterate                   	    15	    95	   191.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1726545 (E-value: 1.3e-50, Score: 175.0)
+Mentioned as: O2ColV143
+Description: hypothetical protein
+Organism: Escherichia coli
+PMID: 19307211
+Source: EuropePMC
+Title: The plasmid of Escherichia coli strain S88 (O45:K1:H7) that causes neonatal meningitis is closely related to avian pathogenic E. coli plasmids and is associated with high-level bacteremia in a neonatal rat meningitis model
+Journal: Infection and immunity (2009)
+Snippet: regulator of conjugal transfer operon) Product O2ColV143 O2ColV142 O2ColV141 O2ColV140 O2ColV139 O2ColV145 O2ColV144 O2ColV72 O2ColV73 O2ColV148 O2ColV152
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A7Z9CPG0.1	AF-A0A7Z9CPG0-F1-model_v4_TED01:28-107	1	AF-A0A7Z9CPG0-F1-model_v4_TED01	28-107	98.8%
+B7LX01.1	AF-B7LX01-F1-model_v4_TED01:13-92	1	AF-B7LX01-F1-model_v4_TED01	13-92	96.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q02885_TED01/Iterate
+GA   27.00 27.00;
+TC   28.30 123.00;
+NC   26.40 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

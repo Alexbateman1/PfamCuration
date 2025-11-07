@@ -1,0 +1,193 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MCHB_ECOL6              Reviewed;          75 AA.
+AC   P62531; Q9RM53;
+DE   RecName: Full=Microcin H47;
+DE            Short=MccH47;
+DE   Flags: Precursor;
+GN   Name=mchB; OrderedLocusNames=c1227;
+OS   Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=199310;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CFT073 / ATCC 700928 / UPEC;
+RX   PubMed=12471157; DOI=10.1073/pnas.252529799;
+RA   Welch R.A., Burland V., Plunkett G. III, Redford P., Roesch P., Rasko D.,
+RA   Buckles E.L., Liou S.-R., Boutin A., Hackett J., Stroud D., Mayhew G.F.,
+RA   Rose D.J., Zhou S., Schwartz D.C., Perna N.T., Mobley H.L.T.,
+RA   Donnenberg M.S., Blattner F.R.;
+RT   "Extensive mosaic structure revealed by the complete genome sequence of
+RT   uropathogenic Escherichia coli.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:17020-17024(2002).
+CC   -!- FUNCTION: Bactericidal antibiotic. Active on bacteria phylogenetically
+CC       related to the producing strain (By similarity). {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Secreted {ECO:0000250}. Host cell membrane
+CC       {ECO:0000305}; Single-pass membrane protein {ECO:0000305}.
+CC       Note=Probably through the MchEF ABC transporter system. {ECO:0000250}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAN79685.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+DR   EMBL; AE014075; AAN79685.1; ALT_INIT; Genomic_DNA.
+DR   RefSeq; WP_001375214.1; NZ_CP051263.1.
+DR   AlphaFoldDB; P62531; -.
+DR   STRING; 199310.c1227; -.
+DR   KEGG; ecc:c1227; -.
+DR   HOGENOM; CLU_182906_0_0_6; -.
+DR   Proteomes; UP000001410; Chromosome.
+DR   GO; GO:0005576; C:extracellular region; IEA:UniProtKB-SubCell.
+DR   GO; GO:0020002; C:host cell plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016020; C:membrane; IEA:UniProtKB-KW.
+DR   GO; GO:0042742; P:defense response to bacterium; IEA:UniProtKB-KW.
+DR   GO; GO:0031640; P:killing of cells of another organism; IEA:UniProtKB-KW.
+PE   3: Inferred from homology;
+KW   Antibiotic; Antimicrobial; Bacteriocin; Host cell membrane; Host membrane;
+KW   Membrane; Reference proteome; Secreted; Transmembrane; Transmembrane helix.
+FT   PROPEP          1..15
+FT                   /evidence="ECO:0000255"
+FT                   /id="PRO_0000021658"
+FT   CHAIN           16..75
+FT                   /note="Microcin H47"
+FT                   /id="PRO_0000021659"
+FT   TRANSMEM        30..50
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   75 AA;  6600 MW;  1AD5EE9F1B58123C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Tenebrionibacter.
+1	6	Tenebrionibacter/Tenebrionicolagroup
+1	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A813FIT9	UNCHARACTERIZED PROTEIN {     49.8    1.2e-09  15  18.1  55.0
+	Iterate                   	  2418	  2443	     5.3
+	Iterate                   	  2444	  2470	     5.3
+	Iterate                   	  2471	  2497	     5.3
+	Iterate                   	  2521	  2551	     5.3
+	Iterate                   	  2579	  2605	     5.3
+	Iterate                   	  2607	  2632	     5.3
+	Iterate                   	  2634	  2659	     5.3
+	Iterate                   	  2734	  2759	     5.3
+	Iterate                   	  2708	  2732	     5.2
+	Iterate                   	  2287	  2310	     5.1
+	Iterate                   	  2265	  2289	     4.9
+	Iterate                   	  2663	  2686	     3.9
+	Iterate                   	  2315	  2335	     3.7
+	Iterate                   	  2369	  2389	     3.7
+	Iterate                   	  2396	  2416	     3.7
+	PF01496	V_ATPase_I      	     6	   662	   702.9
+	PF00109	ketoacyl-synt   	   654	   858	   171.7
+	PF02801	Ketoacyl-synt_C 	   864	   985	    95.2
+	PF00698	Acyl_transf_1   	  1058	  1295	   140.1
+	PF00109	ketoacyl-synt   	  1645	  1902	   151.4
+	PF02801	Ketoacyl-synt_C 	  1909	  2026	     116
+	PF14765	PS-DH           	  2880	  3039	    45.2
+	PF22953	SpnB_Rossmann   	  3072	  3270	    40.9
+
+A0A8K0V6K7	MICROCIN H47 {ECO:0000313     49.7    1.3e-09   1   1.4  23.2
+	Iterate                   	    20	    65	    49.0
+
+A0A9D3MYE7	UNCHARACTERIZED PROTEIN {     23.3       0.23   3   3.3   8.1
+	Iterate                   	    21	    40	    12.9
+	Iterate                   	    72	    90	     9.6
+	Iterate                   	     1	    15	     4.2
+
+A7RG68	UNCHARACTERIZED PROTEIN {ECO:     27.6      0.011  11  11.8  70.9
+	Iterate                   	   148	   163	     8.6
+	Iterate                   	   111	   125	     7.7
+	Iterate                   	    52	    78	     7.0
+	Iterate                   	     2	    17	     6.8
+	Iterate                   	    16	    29	     6.6
+	Iterate                   	    98	   114	     6.6
+	Iterate                   	   124	   137	     6.5
+	Iterate                   	   136	   149	     6.5
+	Iterate                   	    27	    41	     6.1
+	Iterate                   	    39	    53	     6.0
+	Iterate                   	    66	   101	     3.9
+
+P62531	MICROCIN H47                        93.1    3.5e-23   1   1.4  24.4
+	Iterate                   	    21	    65	    92.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P62530 (E-value: 2.6e-22, Score: 83.7)
+Mentioned as: P62530
+Description: Microcin H47
+Organism: Escherichia coli
+PMID: 31443193
+Source: EuropePMC
+Title: Bacteriocin Occurrence and Activity in <i>Escherichia coli</i> Isolated from Bovines and Wastewater
+Journal: Toxins (2019)
+Snippet: 75 aa peptide. In isolate 0067K, mchB shared 100% aa identity with the prototype (UniProtKB: P62530), whereas the immunity protein, encoded by mchI , shared 95.7% aa identity with its prototype (UniProtKB: O86200). The small genomic island also harbors genes for microcin I47 and the cognate
+
+================================================================================
+Protein: P62530 (E-value: 2.6e-22, Score: 83.7)
+Mentioned as: P62530
+Description: Microcin H47
+Organism: Escherichia coli
+PMID: 19884380
+Source: EuropePMC
+Title: Isolation and characterization of two members of the siderophore-microcin family, microcins M and H47
+Journal: Antimicrobial agents and chemotherapy (2010)
+Snippet: MceA (accession no. Q9Z4N4), MceL, MchB (accession no. P62530), McmA (accession no. Q83TS1), and MchS2 (accession no. Q712Q0) correspond to the MccE492,
+
+================================================================================
+Protein: VIMSS303024 (E-value: 5.1e-22, Score: 82.7)
+Mentioned as: c1227
+Description: MchB protein
+Organism: Escherichia coli CFT073
+PMID: 18317809
+Source: EuropePMC
+Title: Transcriptomics and adaptive genomics of the asymptomatic bacteriuria Escherichia coli strain 83972
+Journal: Molecular genetics and genomics : MGG (2008)
+Snippet: CFT073 c0253c0368 96 40 (42) cdiA (c0345), picU (c0350) PAI-CFT073-serX c1165c1293 92 33 (36) mchBCDEF (c1227, c12291232), sfa/foc (c1237c1247), iroNEDCB (c1250c1254), ag43 (c1273) PAI-CFT073-icdA c1518c1601 42 5 (12) sitDCBA (c15971600) PAI-CFT073-asnT HPI CFT073 c2418c2437 19 3 (16) fyuA (1246) PAI-CFT073-metV c3385c3410 26 17 (65) hcp (c3391),
+
+================================================================================
+Protein: VIMSS303024 (E-value: 5.1e-22, Score: 82.7)
+Mentioned as: c1227
+Description: MchB protein
+Organism: Escherichia coli CFT073
+PMID: 17351047
+Source: EuropePMC
+Title: Defining genomic islands and uropathogen-specific genes in uropathogenic Escherichia coli
+Journal: Journal of bacteriology (2007)
+Snippet: and picU (c0350) 99 Prophage DNA mchBCDEF (c1227 and c1229-c1232), sfa/F1C operon (c1237-c1247), iroNEDCB (c1250c1254), and antigen 43 precursor (c1273)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P62531.1	AF-P62531-F1-model_v4_TED01:19-62	1	AF-P62531-F1-model_v4_TED01	19-62	93.3%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P62530_TED01/Iterate
+GA   27.00 27.00;
+TC   37.00 82.10;
+NC   25.10 21.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

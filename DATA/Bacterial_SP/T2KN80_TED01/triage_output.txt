@@ -1,0 +1,444 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PLH22_FORAG             Reviewed;         272 AA.
+AC   T2KN80;
+DE   RecName: Full=Uncharacterized protein P22 {ECO:0000303|PubMed:31285597};
+DE   AltName: Full=Polysaccharide utilization locus H protein P22 {ECO:0000303|PubMed:31285597};
+DE            Short=PUL H protein P22;
+GN   ORFNames=BN863_22110;
+OS   Formosa agariphila (strain DSM 15362 / KCTC 12365 / LMG 23005 / KMM 3901 /
+OS   M-2Alg 35-1).
+OC   Bacteria; Pseudomonadati; Bacteroidota; Flavobacteriia; Flavobacteriales;
+OC   Flavobacteriaceae; Formosa.
+OX   NCBI_TaxID=1347342;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=DSM 15362 / KCTC 12365 / LMG 23005 / KMM 3901 / M-2Alg 35-1;
+RX   PubMed=23995932; DOI=10.1128/aem.01937-13;
+RA   Mann A.J., Hahnke R.L., Huang S., Werner J., Xing P., Barbeyron T.,
+RA   Huettel B., Stueber K., Reinhardt R., Harder J., Gloeckner F.O.,
+RA   Amann R.I., Teeling H.;
+RT   "The genome of the alga-associated marine flavobacterium Formosa agariphila
+RT   KMM 3901T reveals a broad potential for degradation of algal
+RT   polysaccharides.";
+RL   Appl. Environ. Microbiol. 79:6813-6822(2013).
+RN   [2]
+RP   FUNCTION, SUBCELLULAR LOCATION, AND INDUCTION.
+RX   PubMed=31285597; DOI=10.1038/s41589-019-0311-9;
+RA   Reisky L., Prechoux A., Zuehlke M.K., Baeumgen M., Robb C.S., Gerlach N.,
+RA   Roret T., Stanetty C., Larocque R., Michel G., Song T., Markert S.,
+RA   Unfried F., Mihovilovic M.D., Trautwein-Schult A., Becher D., Schweder T.,
+RA   Bornscheuer U.T., Hehemann J.H.;
+RT   "A marine bacterial enzymatic cascade degrades the algal polysaccharide
+RT   ulvan.";
+RL   Nat. Chem. Biol. 15:803-812(2019).
+CC   -!- FUNCTION: May be involved in ulvan degradation (Probable). Ulvan is the
+CC       main polysaccharide component of the Ulvales (green seaweed) cell wall.
+CC       It is composed of disaccharide building blocks comprising 3-sulfated
+CC       rhamnose (Rha3S) linked to D-glucuronic acid (GlcA), L-iduronic acid
+CC       (IduA), or D-xylose (Xyl) (Probable). {ECO:0000305|PubMed:31285597}.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000305|PubMed:31285597}.
+CC   -!- INDUCTION: By ulvan and rhamnose. {ECO:0000269|PubMed:31285597}.
+DR   EMBL; HG315671; CDF79923.1; -; Genomic_DNA.
+DR   AlphaFoldDB; T2KN80; -.
+DR   STRING; 1347342.BN863_22110; -.
+DR   PATRIC; fig|1347342.6.peg.2218; -.
+DR   eggNOG; ENOG502Z7WN; Bacteria.
+DR   HOGENOM; CLU_072023_0_0_10; -.
+DR   Proteomes; UP000016160; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+PE   2: Evidence at transcript level;
+KW   Periplasm; Reference proteome.
+FT   CHAIN           1..272
+FT                   /note="Uncharacterized protein P22"
+FT                   /id="PRO_0000448319"
+SQ   SEQUENCE   272 AA;  30279 MW;  4F053A9A0E1CFDD6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+42	5	Flavobacteriaceae
+13	5	Pirellulaceae
+42	4	Flavobacteriales
+16	4	Pirellulales
+42	3	Flavobacteriia
+17	3	Planctomycetia
+52	2	Bacteroidota
+18	2	Planctomycetota
+82	1	Pseudomonadati
+84	0	Bacteria
+Total of 84 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A090Q772	UNCHARACTERIZED PROTEIN {    438.2   4.3e-128   1   1.2   3.6
+	T2KN80_TED01              	   295	   545	   437.8
+
+A0A090W6C8	UNCHARACTERIZED PROTEIN {     72.0    2.4e-16   1   1.5   2.9
+	T2KN80_TED01              	    31	   282	    71.0
+
+A0A0C5WBK1	UNCHARACTERIZED PROTEIN {    474.9   2.7e-139   1   1.0   4.4
+	T2KN80_TED01              	    48	   301	   474.7
+
+A0A0D8JAI3	UNCHARACTERIZED PROTEIN {    453.6   8.7e-133   1   1.0   2.5
+	T2KN80_TED01              	    30	   287	   453.4
+
+A0A0J8GRK0	UNCHARACTERIZED PROTEIN {    263.1    1.2e-74   1   1.1   0.1
+	T2KN80_TED01              	    40	   291	   262.8
+
+A0A0N8WFH2	3-KETO-DISACCHARIDE HYDRO     76.5    1.1e-17   1   1.8   3.7
+	T2KN80_TED01              	    32	   269	    74.9
+	PF06439	3keto-disac_hyd 	   282	   510	    95.5
+
+A0A0P0CPB9	INOSINE/URIDINE-PREFERRIN     81.1    4.2e-19   1   1.7   3.6
+	T2KN80_TED01              	    35	   300	    79.2
+
+A0A0P7ABG9	GYLCOSYL HYDROLASE 115 C-    474.8   2.9e-139   1   1.3   2.1
+	T2KN80_TED01              	   414	   665	   474.2
+
+A0A0Q1BHI1	INOSINE/URIDINE-PREFERRIN     64.0    6.7e-14   1   1.7   2.4
+	T2KN80_TED01              	    22	   270	    62.1
+
+A0A142ENY9	DUF1593 DOMAIN-CONTAINING     81.6    2.9e-19   1   1.8   1.3
+	T2KN80_TED01              	    30	   282	    79.7
+
+A0A163CR06	UNCHARACTERIZED PROTEIN {     68.8    2.4e-15   1   1.5   1.7
+	T2KN80_TED01              	    37	   275	    67.7
+	PF06268	Fascin          	   301	   414	    24.1
+	PF18962	Por_Secre_tail  	   426	   521	    30.9
+
+A0A1B1Y3M8	INOSINE/URIDINE-PREFERRIN     72.2    2.2e-16   1   1.6   2.7
+	T2KN80_TED01              	    30	   279	    70.8
+
+A0A1B1Y552	UNCHARACTERIZED PROTEIN {    480.6   4.8e-141   1   1.0   2.3
+	T2KN80_TED01              	    30	   280	   480.5
+
+A0A1G9XT13	UNCHARACTERIZED PROTEIN {    465.8   1.6e-136   1   1.1   3.5
+	T2KN80_TED01              	    93	   343	   465.5
+
+A0A1H2WWB9	UNCHARACTERIZED PROTEIN {     68.5      3e-15   1   1.5   1.8
+	T2KN80_TED01              	    46	   283	    67.3
+
+A0A1H9D8B2	UNCHARACTERIZED PROTEIN {    468.4   2.6e-137   1   1.0   1.5
+	T2KN80_TED01              	    30	   281	   468.1
+
+A0A1H9H095	UNCHARACTERIZED PROTEIN {     78.2    3.1e-18   1   1.3   2.2
+	T2KN80_TED01              	    76	   312	    77.5
+
+A0A1H9IUD1	UNCHARACTERIZED PROTEIN {    451.1   4.9e-132   1   1.0   2.2
+	T2KN80_TED01              	    43	   296	   450.9
+
+A0A1I1R0E9	UNCHARACTERIZED PROTEIN {    472.3   1.6e-138   1   1.2   4.2
+	T2KN80_TED01              	   417	   668	   471.9
+
+A0A1I2J3W0	UNCHARACTERIZED PROTEIN {     61.7    3.4e-13   1   2.0   1.6
+	T2KN80_TED01              	    43	   301	    58.2
+
+A0A1M6A4B9	DUF1593 DOMAIN-CONTAINING    447.9   4.6e-131   1   1.0   2.8
+	T2KN80_TED01              	    31	   283	   447.8
+
+A0A1M6HM70	DNA PHOSPHOROTHIOATION-DE    447.5   6.1e-131   1   1.3   2.0
+	T2KN80_TED01              	   266	   517	   447.0
+
+A0A1Q9S0N8	INOSINE/URIDINE-PREFERRIN     59.0    2.3e-12   1   1.3   0.7
+	T2KN80_TED01              	    36	   259	    58.2
+
+A0A1S1YUW3	UNCHARACTERIZED PROTEIN {    442.2   2.6e-129   1   1.0   0.3
+	T2KN80_TED01              	    30	   280	   442.0
+
+A0A1U7DSY4	DUF1593 DOMAIN-CONTAINING    446.3   1.5e-130   1   1.0   1.8
+	T2KN80_TED01              	    31	   284	   446.1
+
+A0A1W2C4P0	UNCHARACTERIZED PROTEIN {    463.5   8.3e-136   1   1.0   3.0
+	T2KN80_TED01              	    31	   283	   463.3
+
+A0A1Y0MVM1	UNCHARACTERIZED PROTEIN {     60.2    9.7e-13   1   1.3   0.6
+	T2KN80_TED01              	    43	   292	    59.5
+
+A0A238YK64	UNCHARACTERIZED PROTEIN {    493.7   4.9e-145   1   1.0   3.0
+	T2KN80_TED01              	    30	   282	   493.5
+
+A0A263DJA1	GLYCOSIDE HYDROLASE {ECO:     67.7      5e-15   1   1.3   0.2
+	T2KN80_TED01              	   127	   350	    67.0
+	PF13204	Apiosidase      	   398	   725	   313.7
+	PF12904	Collagen_bind_2 	   727	   812	    57.3
+
+A0A263DSE7	UNCHARACTERIZED PROTEIN {     74.8    3.5e-17   1   1.2   2.5
+	T2KN80_TED01              	    76	   300	    74.2
+
+A0A263E1P6	UNCHARACTERIZED PROTEIN {     74.4    4.5e-17   1   1.3   2.0
+	T2KN80_TED01              	    80	   305	    73.7
+
+A0A286IJ59	UNCHARACTERIZED PROTEIN {    477.7   3.6e-140   1   1.0   2.9
+	T2KN80_TED01              	    30	   282	   477.6
+
+A0A2N3I3X6	CBM6 DOMAIN-CONTAINING PR     69.2    1.7e-15   1   1.4   1.6
+	T2KN80_TED01              	    20	   269	    68.4
+
+A0A2S0VNA8	UNCHARACTERIZED PROTEIN {     58.5    3.3e-12   2   2.2   2.7
+	T2KN80_TED01              	    30	   185	    34.5
+	T2KN80_TED01              	   205	   292	    23.6
+
+A0A2S0VXR6	UNCHARACTERIZED PROTEIN {    252.5      2e-71   1   1.0   0.2
+	T2KN80_TED01              	    31	   281	   252.2
+
+A0A2S7WG77	CBM6 DOMAIN-CONTAINING PR    228.7    3.6e-64   1   1.3   0.4
+	T2KN80_TED01              	   382	   629	   228.0
+	PF17957	Big_7           	   634	   709	    30.4
+	PF18962	Por_Secre_tail  	   923	   983	    20.1
+
+A0A2Z6UB22	UNCHARACTERIZED PROTEIN {    263.2    1.1e-74   2   2.4   1.3
+	T2KN80_TED01              	   465	   719	   258.1
+	T2KN80_TED01              	   221	   305	     3.3
+
+A0A395JYM6	DUF1593 DOMAIN-CONTAINING    481.4   2.8e-141   1   1.0   2.4
+	T2KN80_TED01              	    30	   282	   481.2
+
+A0A3A9YYC5	UNCHARACTERIZED PROTEIN {     93.7    5.8e-23   1   1.2   3.2
+	T2KN80_TED01              	    43	   273	    93.2
+
+A0A3A9YZH5	CARBOHYDRATE-BINDING PROT     65.3    2.8e-14   1   1.3   0.4
+	T2KN80_TED01              	     1	   213	    64.6
+	PF03422	CBM_6           	   226	   346	   102.5
+
+A0A3D8M5P0	DUF1593 DOMAIN-CONTAINING    259.3    1.7e-73   1   1.0   0.4
+	T2KN80_TED01              	    47	   298	   259.0
+
+A0A3D9HED7	UNCHARACTERIZED PROTEIN {    434.8   4.6e-127   1   1.0   1.4
+	T2KN80_TED01              	    30	   283	   434.6
+
+A0A495DU24	UNCHARACTERIZED PROTEIN {     60.9    6.2e-13   1   1.4   2.1
+	T2KN80_TED01              	    30	   279	    60.0
+
+A0A4P6PKL4	DUF1593 DOMAIN-CONTAINING     80.7    5.3e-19   1   1.7   0.8
+	T2KN80_TED01              	    21	   248	    79.3
+
+A0A4Q8UL36	UNCHARACTERIZED PROTEIN {    242.3    2.6e-68   1   1.0   0.0
+	T2KN80_TED01              	     1	   255	   242.2
+
+A0A4Q9FRM0	DUF1593 DOMAIN-CONTAINING    432.5   2.3e-126   1   1.0   2.2
+	T2KN80_TED01              	    30	   283	   432.3
+
+A0A4R1RJ75	UNCHARACTERIZED PROTEIN {     74.6    4.1e-17   1   1.2   3.3
+	T2KN80_TED01              	    32	   286	    73.9
+
+A0A4V1MWM0	UNCHARACTERIZED PROTEIN {    495.4   1.5e-145   1   1.0   4.1
+	T2KN80_TED01              	    30	   281	   495.2
+
+A0A517TIF1	UNCHARACTERIZED PROTEIN {     75.9    1.6e-17   1   1.4   0.1
+	T2KN80_TED01              	    37	   267	    75.0
+
+A0A517TK56	ALPHA-L-RHAMNOSIDASE {ECO    254.5    4.8e-72   1   1.3   0.1
+	T2KN80_TED01              	  1083	  1329	   253.9
+	PF25788	Ig_Rha78A_N     	    47	   155	   106.2
+	PF08531	Bac_rhamnosid_N 	   340	   508	   155.1
+	PF05592	Bac_rhamnosid   	   516	   622	    73.3
+	PF17389	Bac_rhamnosid6H 	   626	   961	   172.6
+	PF17390	Bac_rhamnosid_C 	   963	  1037	    63.7
+
+A0A518DA97	UNCHARACTERIZED PROTEIN {     77.4    5.5e-18   1   1.1   0.1
+	T2KN80_TED01              	    33	   241	    77.1
+
+A0A518DBU6	ALPHA-L-RHAMNOSIDASE {ECO    258.8    2.4e-73   1   1.6   0.0
+	T2KN80_TED01              	  1069	  1314	   257.6
+	PF25788	Ig_Rha78A_N     	    32	   140	   102.4
+	PF08531	Bac_rhamnosid_N 	   325	   493	   145.4
+	PF05592	Bac_rhamnosid   	   501	   607	    70.8
+	PF17389	Bac_rhamnosid6H 	   611	   946	   156.2
+	PF17390	Bac_rhamnosid_C 	   948	  1026	    57.9
+
+A0A518DGW5	UNCHARACTERIZED PROTEIN {     66.3    1.3e-14   1   1.1   1.6
+	T2KN80_TED01              	    67	   316	    65.9
+
+A0A553FPR6	DUF1080 DOMAIN-CONTAINING     89.9    8.3e-22   1   1.6   0.9
+	T2KN80_TED01              	   447	   683	    88.7
+	PF05448	AXE1            	    47	   271	    35.6
+	PF00326	Peptidase_S9    	   156	   324	    33.5
+	PF06439	3keto-disac_hyd 	   683	   911	    96.2
+
+A0A553FTR0	CARBOHYDRATE-BINDING PROT     63.5    9.9e-14   1   1.7   5.3
+	T2KN80_TED01              	    37	   278	    62.0
+	PF27624	Porph_assoc     	   290	   378	    88.9
+	PF03422	CBM_6           	   432	   545	      67
+	PF18099	CBM_35_2        	   435	   545	    50.4
+	PF18962	Por_Secre_tail  	   573	   643	    30.5
+
+A0A5B1CK32	UNCHARACTERIZED PROTEIN {    293.3    7.1e-84   1   1.1   0.7
+	T2KN80_TED01              	   249	   494	   292.8
+
+A0A5B7SZ05	UNCHARACTERIZED PROTEIN {    474.9   2.7e-139   1   1.0   3.2
+	T2KN80_TED01              	    17	   267	   474.7
+
+A0A5B9P865	ARYLSULFATASE {ECO:000031    299.2    1.1e-85   1   1.8   2.0
+	T2KN80_TED01              	   103	   354	   298.1
+	PF00884	Sulfatase       	   356	   623	   120.4
+	PF16347	SGSH_C          	   570	   683	    54.5
+
+A0A5C4SN81	UNCHARACTERIZED PROTEIN {    453.2   1.1e-132   1   1.0   3.9
+	T2KN80_TED01              	    15	   266	   453.1
+
+A0A5C5Y9Z3	UNCHARACTERIZED PROTEIN {     80.8    4.9e-19   1   1.7   1.0
+	T2KN80_TED01              	    38	   274	    79.5
+
+A0A5C5Z0L5	DUF1593 DOMAIN-CONTAINING     81.5    3.1e-19   1   1.5   1.1
+	T2KN80_TED01              	    82	   310	    80.4
+
+A0A5C6APU9	GYLCOSYL HYDROLASE 115 C-    296.6    7.1e-85   1   1.6   2.7
+	T2KN80_TED01              	   707	   955	   296.6
+	PF17829	GH115_C         	    86	   231	    24.4
+
+A0A5C6CYE8	UNCHARACTERIZED PROTEIN {     58.1    4.3e-12   1   1.3   1.2
+	T2KN80_TED01              	    40	   290	    57.3
+
+A0A5C7B1H2	UNCHARACTERIZED PROTEIN {     67.0    8.2e-15   1   1.3   1.3
+	T2KN80_TED01              	    45	   283	    66.2
+
+A0A5C7GEY0	UNCHARACTERIZED PROTEIN {     69.6    1.3e-15   1   1.4   0.8
+	T2KN80_TED01              	    46	   284	    68.7
+
+A0A5C7GMN5	DUF1593 DOMAIN-CONTAINING    446.0   1.8e-130   1   1.0   2.6
+	T2KN80_TED01              	    36	   289	   445.8
+
+A0A5S3PDR5	UNCHARACTERIZED PROTEIN {    484.2     4e-142   1   1.0   3.8
+	T2KN80_TED01              	    17	   267	   484.0
+
+A0A6A7KXE4	UNCHARACTERIZED PROTEIN {     67.0    8.5e-15   1   1.2   0.0
+	T2KN80_TED01              	    40	   227	    66.4
+
+A0A6C2TYU2	UNCHARACTERIZED PROTEIN {    259.3    1.7e-73   1   1.4   0.3
+	T2KN80_TED01              	   390	   641	   258.4
+
+A0A6C2U9V7	UNCHARACTERIZED PROTEIN {    259.5    1.5e-73   1   2.5   0.5
+	T2KN80_TED01              	   785	  1041	   259.5
+
+A0A6C2UE09	UNCHARACTERIZED PROTEIN {     71.8    2.8e-16   1   1.7   0.4
+	T2KN80_TED01              	    37	   269	    70.4
+
+A0A6I2MLV6	UNCHARACTERIZED PROTEIN {    477.3   4.9e-140   1   1.0   2.4
+	T2KN80_TED01              	    13	   263	   477.1
+
+A0A6I2MNA1	DUF1593 DOMAIN-CONTAINING     71.6    3.3e-16   1   1.5   1.5
+	T2KN80_TED01              	    34	   286	    70.4
+
+A0A6I5WIN1	CARBOHYDRATE-BINDING PROT     72.4    1.9e-16   1   1.2   0.6
+	T2KN80_TED01              	     1	   211	    71.8
+	PF03422	CBM_6           	   226	   346	    98.7
+
+A0A7K0EBV2	UNCHARACTERIZED PROTEIN {    487.6   3.5e-143   1   1.0   3.8
+	T2KN80_TED01              	    17	   268	   487.5
+
+A0A7W5E3F5	BETA-MANNOSIDASE-LIKE GAL    272.9    1.2e-77   1   1.2   0.6
+	T2KN80_TED01              	  1244	  1491	   272.3
+	PF17132	Glyco_hydro_106 	    64	   913	   608.8
+	PF22666	Glyco_hydro_2_N2	  1057	  1169	    31.4
+
+A0A7W5H9R8	UNCHARACTERIZED PROTEIN {     88.3    2.7e-21   1   1.7   0.5
+	T2KN80_TED01              	    54	   282	    86.8
+
+A0A7X0H5W3	UNCHARACTERIZED PROTEIN {     76.7    8.9e-18   1   1.5   0.6
+	T2KN80_TED01              	    38	   260	    75.7
+
+A0A7X0HBI9	UNCHARACTERIZED PROTEIN {     66.4    1.3e-14   1   2.0   0.3
+	T2KN80_TED01              	    49	   282	    64.0
+
+A0A7X0LKK2	UNCHARACTERIZED PROTEIN {    166.2    4.3e-45   1   1.7   2.6
+	T2KN80_TED01              	    31	   306	   164.4
+
+A0A842ISB7	UNCHARACTERIZED PROTEIN {    459.8   1.1e-134   1   1.0   1.8
+	T2KN80_TED01              	    16	   265	   459.6
+
+A0A8J6QU73	UNCHARACTERIZED PROTEIN {    251.8    3.4e-71   2   2.3   2.3
+	T2KN80_TED01              	   469	   719	   248.5
+	T2KN80_TED01              	   249	   341	     2.7
+
+A0A918PWF3	UNCHARACTERIZED PROTEIN {    432.2   2.9e-126   1   1.2   0.4
+	T2KN80_TED01              	   261	   512	   431.7
+
+A0A918TE57	UNCHARACTERIZED PROTEIN {     87.0    6.5e-21   1   1.5   0.0
+	T2KN80_TED01              	    40	   263	    86.0
+
+A0A918TZV8	PKD/CHITINASE DOMAIN-CONT    243.7    9.6e-69   1   1.2   0.0
+	T2KN80_TED01              	     7	   265	   243.2
+	PF22352	K319L-like_PKD  	   486	   567	    63.7
+
+A0A923KIJ9	DUF1593 DOMAIN-CONTAINING    432.5   2.3e-126   1   1.0   2.1
+	T2KN80_TED01              	    32	   284	   432.2
+
+A0A934VDX3	DUF5060 DOMAIN-CONTAINING    254.0    7.1e-72   1   1.4   0.2
+	T2KN80_TED01              	   388	   643	   253.0
+	PF13385	Laminin_G_3     	   698	   857	    69.5
+	PF22352	K319L-like_PKD  	  1091	  1172	    69.4
+	PF16586	DUF5060         	  1185	  1270	    74.7
+	PF12904	Collagen_bind_2 	  1684	  1777	    31.9
+
+A0A975EJ07	DUF5060 DOMAIN-CONTAINING    273.0    1.2e-77   1   1.4   0.3
+	T2KN80_TED01              	   379	   630	   272.1
+	PF16586	DUF5060         	   761	   846	    73.8
+	PF12904	Collagen_bind_2 	  1261	  1352	      31
+
+A0AA42B8K3	UNCHARACTERIZED PROTEIN {    269.2    1.6e-76   2   2.3   1.2
+	T2KN80_TED01              	   470	   720	   262.9
+	T2KN80_TED01              	   212	   345	     5.0
+
+D5ENX7	UNCHARACTERIZED PROTEIN {ECO:     85.5    1.8e-20   1   1.8   0.5
+	T2KN80_TED01              	    38	   272	    84.2
+
+D5EQM5	CARBOHYDRATE-BINDING MODULE F     75.7    1.9e-17   1   1.5   1.4
+	T2KN80_TED01              	    38	   265	    74.5
+	PF24517	CBM96           	   503	   651	    42.9
+	PF27624	Porph_assoc     	   661	   749	    53.9
+
+E6X5I8	UNCHARACTERIZED PROTEIN {ECO:     83.4      8e-20   1   1.3   6.3
+	T2KN80_TED01              	    36	   288	    82.7
+
+G0J7X4	UNCHARACTERIZED PROTEIN {ECO:    453.5     9e-133   1   1.1   1.1
+	T2KN80_TED01              	    79	   330	   453.2
+
+M5RC35	SECRETED PROTEIN {ECO:0008006    285.6    1.5e-81   1   1.0   0.2
+	T2KN80_TED01              	    49	   296	   285.3
+
+M5TRQ8	CARBOHYDRATE BINDING FAMILY 6    320.8    2.9e-92   1   1.2   0.1
+	T2KN80_TED01              	   375	   635	   320.3
+	PF03422	CBM_6           	   231	   355	    65.7
+
+M5UAR9	UNCHARACTERIZED PROTEIN {ECO:     81.1      4e-19   1   1.6   0.6
+	T2KN80_TED01              	    16	   242	    80.0
+
+T2KJU3	UNCHARACTERIZED PROTEIN {ECO:     76.2    1.3e-17   1   1.7   4.0
+	T2KN80_TED01              	    31	   282	    74.6
+
+T2KN80	UNCHARACTERIZED PROTEIN P22 {E    608.4   4.7e-180   1   1.0   3.3
+	T2KN80_TED01              	    20	   272	   608.3
+
+W7QV36	LIPOPROTEIN {ECO:0008006|GOOG    262.0    2.6e-74   2   2.2   2.2
+	T2KN80_TED01              	   472	   722	   255.0
+	T2KN80_TED01              	   249	   351	     6.6
+
+W7QV65	UNCHARACTERIZED PROTEIN {ECO:     68.4    3.1e-15   2   2.3   2.3
+	T2KN80_TED01              	    32	   188	    36.9
+	T2KN80_TED01              	   204	   294	    30.6
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+T2KN80.1	AF-T2KN80-F1-model_v4_TED01:20-272	1	AF-T2KN80-F1-model_v4_TED01	20-272	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:T2KN80_TED01
+GA   27.00 27.00;
+TC   29.30 27.10;
+NC   26.70 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

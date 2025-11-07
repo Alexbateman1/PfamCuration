@@ -1,0 +1,72 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	20	Pisum.
+2	19	Fabeae
+2	18	IRL clade
+2	17	Hologalegina
+2	16	NPAAAclade
+2	15	50 kb inversion clade
+2	14	Papilionoideae
+2	13	Fabaceae
+2	12	Fabales
+2	11	fabids
+3	10	rosids
+2	10	asterids
+5	9	Pentapetalae
+2	9	Poaceae
+5	8	Gunneridae
+2	8	Poales
+5	7	eudicotyledons
+3	7	Liliopsida
+8	6	Magnoliopsida
+8	5	Spermatophyta
+8	4	Tracheophyta
+8	3	Embryophyta
+8	2	Streptophyta
+8	1	Viridiplantae
+10	0	Eukaryota
+Total of 11 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2K2DEL0	UNCHARACTERIZED PROTEIN {    185.3      2e-51   1   1.3   5.8
+	Iterate                   	    27	   149	   184.7
+
+A0A5A7R2H1	BZIP TRANSCRIPTION FACTOR    186.6    8.1e-52   1   1.2   8.6
+	Iterate                   	    91	   211	   186.2
+
+A0A7I8L0X8	UNCHARACTERIZED PROTEIN {    199.7    7.1e-56   1   1.1   6.2
+	Iterate                   	    31	   153	   199.4
+
+A0A9D4W0R6	UNCHARACTERIZED PROTEIN {EC    208.7    1.2e-58   1   1.1   3.4
+	Iterate                   	    31	   153	   208.4
+
+A0A9D4Y906	UNCHARACTERIZED PROTEIN {EC    213.7    3.3e-60   1   1.1   2.7
+	Iterate                   	    31	   153	   213.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P20343/Iterate/Iterate
+GA   27.00 27.00;
+TC   32.00 36.00;
+NC   26.80 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,484 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   LDMS_STAA8              Reviewed;         397 AA.
+AC   Q2FWC5;
+DE   RecName: Full=L-aspartate--L-methionine ligase {ECO:0000303|PubMed:35988643};
+DE            Short=LdmS {ECO:0000303|PubMed:35988643};
+DE            EC=6.3.2.- {ECO:0000269|PubMed:35988643};
+DE   AltName: Full=ATP-dependent dipeptide ligase {ECO:0000305};
+DE   AltName: Full=ATP-grasp enzyme {ECO:0000303|PubMed:35988643};
+DE   AltName: Full=L-Asp-L-Met ligase {ECO:0000303|PubMed:35988643};
+DE   AltName: Full=L-amino acid ligase {ECO:0000303|PubMed:35988643};
+DE            Short=LAL {ECO:0000303|PubMed:35988643};
+GN   OrderedLocusNames=SAOUHSC_02373 {ECO:0000312|EMBL:ABD31404.1};
+OS   Staphylococcus aureus (strain NCTC 8325 / PS 47).
+OC   Bacteria; Bacillati; Bacillota; Bacilli; Bacillales; Staphylococcaceae;
+OC   Staphylococcus.
+OX   NCBI_TaxID=93061 {ECO:0000312|EMBL:ABD31404.1, ECO:0000312|Proteomes:UP000008816};
+RN   [1] {ECO:0000312|Proteomes:UP000008816}
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NCTC 8325 / PS 47 {ECO:0000312|Proteomes:UP000008816};
+RA   Gillaspy A.F., Worrell V., Orvis J., Roe B.A., Dyer D.W., Iandolo J.J.;
+RT   "The Staphylococcus aureus NCTC 8325 genome.";
+RL   (In) Fischetti V., Novick R., Ferretti J., Portnoy D., Rood J. (eds.);
+RL   Gram positive pathogens, 2nd edition, pp.381-412, ASM Press, Washington
+RL   D.C. (2006).
+RN   [2]
+RP   DISRUPTION PHENOTYPE.
+RC   STRAIN=NCTC 8325 / PS 47 {ECO:0000303|PubMed:25888466};
+RX   PubMed=25888466; DOI=10.1186/s12864-015-1361-3;
+RA   Santiago M., Matano L.M., Moussa S.H., Gilmore M.S., Walker S.,
+RA   Meredith T.C.;
+RT   "A new platform for ultra-high density Staphylococcus aureus transposon
+RT   libraries.";
+RL   BMC Genomics 16:252-252(2015).
+RN   [3] {ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q}
+RP   X-RAY CRYSTALLOGRAPHY (1.37 ANGSTROMS) IN COMPLEX WITH ADP; CITRATE;
+RP   MAGNESIUM AND SODIUM, FUNCTION, CATALYTIC ACTIVITY, SUBSTRATE SPECIFICITY,
+RP   COFACTOR, BIOPHYSICOCHEMICAL PROPERTIES, PATHWAY, SUBUNIT, ACTIVE SITE,
+RP   MUTAGENESIS OF LEU-44; ARG-47; TYR-111; TYR-252; ASN-255; ARG-305; ASN-307
+RP   AND SER-309, AND REACTION MECHANISM.
+RC   STRAIN=NCTC 8325 / PS 47 {ECO:0000303|PubMed:35988643};
+RX   PubMed=35988643; DOI=10.1016/j.jbc.2022.102392;
+RA   Pederick J.L., Horsfall A.J., Jovcevski B., Klose J., Abell A.D.,
+RA   Pukala T.L., Bruning J.B.;
+RT   "Discovery of an -amino acid ligase implicated in Staphylococcal sulfur
+RT   amino acid metabolism.";
+RL   J. Biol. Chem. 298:102392-102392(2022).
+CC   -!- FUNCTION: L-amino acid ligase, which preferentially catalyzes the
+CC       formation of L-aspartyl-L-methionine dipeptide from L-aspartate and L-
+CC       methionine in the presence of ATP. Less active with L-asparagine and L-
+CC       methionine as substrates. Less active with L-aspartate and either L-
+CC       phenylalanine, L-valine, L-leucine or L-isoleucine as substrates.
+CC       Decreased activity when L-methionine is substituted with seleno-DL-
+CC       methionine, L-homocysteine, L-methionine sulfoxide, L-methionine
+CC       sulfoximine and o-acetyl-L-serine. Decreased activity with acetylation
+CC       of L-methionine amino group. Decreased activity by modification of L-
+CC       methionine carboxylate to L-methionine methyl ester. No activity when
+CC       L-methionine is substituted with L-homoserine. No activity with
+CC       formylation of L-methionine amino group. No activity by modification of
+CC       L-methionine carboxylate to L-methionine-glycine carboxylate. No
+CC       activity when L-aspartate substrate is replaced by analogs such as L-
+CC       homoserine, DL-aspartate beta-methyl ester, L-glutamate or o-acetyl-L-
+CC       serine. No activity when L-aspartate amino and alpha-carboxylate groups
+CC       are modified to L-malate, glycine-L-aspartate, L-aspartate-glycine or
+CC       N-carbamoyl-DL-aspartate. No activity with L-methionine or L-aspartate
+CC       as sole substrates. No activity in presence of other nucleoside
+CC       triphosphates including GTP, CTP, UTP, TTP or ITP. Involved in sulfur
+CC       amino acid metabolism. {ECO:0000269|PubMed:35988643}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=L-aspartate + L-methionine + ATP = L-aspartyl-L-methionine +
+CC         ADP + phosphate + H(+); Xref=Rhea:RHEA:76447, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:29991, ChEBI:CHEBI:30616, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:57844, ChEBI:CHEBI:195235, ChEBI:CHEBI:456216;
+CC         Evidence={ECO:0000269|PubMed:35988643};
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420;
+CC         Evidence={ECO:0000269|PubMed:35988643};
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=310 uM for ATP (at pH 8.0 and 37 degrees Celsius)
+CC         {ECO:0000269|PubMed:35988643};
+CC         KM=11000 uM for L-aspartate (at pH 8.0 and 37 degrees Celsius)
+CC         {ECO:0000269|PubMed:35988643};
+CC         KM=580 uM for L-methionine (at pH 8.0 and 37 degrees Celsius)
+CC         {ECO:0000269|PubMed:35988643};
+CC         Vmax=2.99 umol/sec/mg enzyme for the L-aspartate and L-methionine
+CC         substrate pair (at pH 8.0 and 37 degrees Celsius)
+CC         {ECO:0000269|PubMed:35988643};
+CC         Note=kcat is 48 sec(-1) for ATP. {ECO:0000269|PubMed:35988643};
+CC       pH dependence:
+CC         Optimum pH is 7.5-8.5. {ECO:0000269|PubMed:35988643};
+CC   -!- PATHWAY: Amino-acid metabolism. {ECO:0000269|PubMed:35988643}.
+CC   -!- SUBUNIT: Primarily a monomer in solution. Minor homodimer formation.
+CC       {ECO:0000269|PubMed:35988643}.
+CC   -!- DISRUPTION PHENOTYPE: Grows in rich growth medium.
+CC       {ECO:0000269|PubMed:25888466}.
+DR   EMBL; CP000253; ABD31404.1; -; Genomic_DNA.
+DR   RefSeq; YP_500850.1; NC_007795.1.
+DR   PDB; 7R8P; X-ray; 1.37 A; A=1-397.
+DR   PDB; 7R8Q; X-ray; 2.00 A; A/B=1-397.
+DR   PDBsum; 7R8P; -.
+DR   PDBsum; 7R8Q; -.
+DR   AlphaFoldDB; Q2FWC5; -.
+DR   SMR; Q2FWC5; -.
+DR   STRING; 93061.SAOUHSC_02373; -.
+DR   PaxDb; 1280-SAXN108_2377; -.
+DR   GeneID; 3919416; -.
+DR   KEGG; sao:SAOUHSC_02373; -.
+DR   PATRIC; fig|93061.5.peg.2150; -.
+DR   eggNOG; COG1181; Bacteria.
+DR   HOGENOM; CLU_064012_0_0_9; -.
+DR   OrthoDB; 7839480at2; -.
+DR   Proteomes; UP000008816; Chromosome.
+DR   GO; GO:0016881; F:acid-amino acid ligase activity; IDA:UniProtKB.
+DR   GO; GO:0005524; F:ATP binding; IDA:UniProtKB.
+DR   GO; GO:0042802; F:identical protein binding; IDA:UniProtKB.
+DR   GO; GO:0034026; F:L-amino-acid alpha-ligase activity; IDA:UniProtKB.
+DR   GO; GO:0000287; F:magnesium ion binding; IDA:UniProtKB.
+DR   GO; GO:0042803; F:protein homodimerization activity; IDA:UniProtKB.
+DR   GO; GO:1901605; P:alpha-amino acid metabolic process; IDA:UniProtKB.
+DR   GO; GO:0006555; P:methionine metabolic process; IDA:UniProtKB.
+DR   GO; GO:0000096; P:sulfur amino acid metabolic process; IDA:UniProtKB.
+DR   Gene3D; 3.30.470.20; ATP-grasp fold, B domain; 1.
+DR   InterPro; IPR053269; Asp-Met_ligase.
+DR   InterPro; IPR011761; ATP-grasp.
+DR   PANTHER; PTHR37018; CULTURE SPECIFIC PROTEIN, PUTATIVE (AFU_ORTHOLOGUE AFUA_2G00130)-RELATED; 1.
+DR   PANTHER; PTHR37018:SF1; CULTURE SPECIFIC PROTEIN, PUTATIVE (AFU_ORTHOLOGUE AFUA_2G00130)-RELATED; 1.
+DR   SUPFAM; SSF56059; Glutathione synthetase ATP-binding domain-like; 1.
+DR   PROSITE; PS50975; ATP_GRASP; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; ATP-binding; Ligase; Magnesium; Metal-binding;
+KW   Nucleotide-binding; Reference proteome.
+FT   CHAIN           1..397
+FT                   /note="L-aspartate--L-methionine ligase"
+FT                   /id="PRO_0000458768"
+FT   DOMAIN          131..347
+FT                   /note="ATP-grasp"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00409"
+FT   ACT_SITE        305
+FT                   /note="Critical for catalysis"
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   BINDING         136
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         171
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         173
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         183
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8Q"
+FT   BINDING         186
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         188
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         215
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         216
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         218
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         223
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8Q"
+FT   BINDING         246
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         288
+FT                   /ligand="Mg(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:18420"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         290
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         300
+FT                   /ligand="ADP"
+FT                   /ligand_id="ChEBI:CHEBI:456216"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   BINDING         301
+FT                   /ligand="Mg(2+)"
+FT                   /ligand_id="ChEBI:CHEBI:18420"
+FT                   /evidence="ECO:0000269|PubMed:35988643,
+FT                   ECO:0007744|PDB:7R8P, ECO:0007744|PDB:7R8Q"
+FT   MUTAGEN         44
+FT                   /note="L->A: 19% relative activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         44
+FT                   /note="L->E,D: Loss of activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         44
+FT                   /note="L->F: 14% relative activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         44
+FT                   /note="L->H: 13% relative activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         44
+FT                   /note="L->K: 7% relative activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         44
+FT                   /note="L->Y: 8% relative activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         47
+FT                   /note="R->A,H: Loss of activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         47
+FT                   /note="R->K: 9% relative activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         111
+FT                   /note="Y->F: No effect on activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         252
+FT                   /note="Y->F: 2% relative activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         255
+FT                   /note="N->A: Loss of activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         305
+FT                   /note="R->A: Loss of activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         307
+FT                   /note="N->A: 10% relative activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   MUTAGEN         309
+FT                   /note="S->A: Loss of activity."
+FT                   /evidence="ECO:0000269|PubMed:35988643"
+FT   HELIX           12..14
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          20..23
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           38..44
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   TURN            45..48
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           49..52
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          57..60
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           61..64
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           66..74
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          83..86
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           89..102
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          106..111
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   TURN            115..117
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           120..122
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          123..125
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           127..133
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           136..138
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           139..143
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          150..155
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           156..163
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          168..174
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   TURN            182..185
+FT                   /evidence="ECO:0007829|PDB:7R8Q"
+FT   STRAND          187..191
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           192..202
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           205..208
+FT                   /evidence="ECO:0007829|PDB:7R8Q"
+FT   STRAND          211..216
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          221..231
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   TURN            232..234
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          235..246
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          252..259
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           263..278
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          283..291
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          297..305
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           308..314
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           316..318
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          321..330
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           335..348
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          350..357
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           359..362
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   TURN            364..366
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   STRAND          370..378
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+FT   HELIX           380..394
+FT                   /evidence="ECO:0007829|PDB:7R8P"
+SQ   SEQUENCE   397 AA;  45646 MW;  C7DB2FED93581701 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Staphylococcus
+2	6	Macrococcoides
+2	6	Lysinibacillus
+2	5	Caryophanaceae
+2	5	Bacillaceae
+11	5	Staphylococcaceae
+16	4	Bacillales
+16	3	Bacilli
+16	2	Bacillota
+16	1	Bacillati
+16	0	Bacteria
+Total of 16 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A239YLV7	ATP-GRASP DOMAIN PROTEIN     119.7    2.2e-31   1   1.9   3.0
+	Iterate                   	   315	   393	   118.1
+	PF27267	LdmS_N          	    12	   130	     139
+
+B9DMB9	BIFUNCTIONAL PROTEIN {ECO:000    123.4    1.6e-32   1   2.0   1.9
+	Iterate                   	   716	   794	   121.7
+	PF01546	Peptidase_M20   	    78	   371	    29.8
+	PF07687	M20_dimer       	   172	   268	    33.5
+	PF27267	LdmS_N          	   408	   528	   153.7
+
+Q2FWC5	L-ASPARTATE--L-METHIONINE LIGAS    189.9    2.8e-53   1   1.7   4.1
+	Iterate                   	   317	   395	   188.7
+	PF27267	LdmS_N          	    11	   131	   153.1
+
+Q49Z78	ATP-GRASP DOMAIN-CONTAINING P    107.2    1.8e-27   1   1.5   0.2
+	Iterate                   	   319	   396	   106.1
+	PF27267	LdmS_N          	    12	   132	   150.2
+
+Q5HM90	ATP-GRASP DOMAIN-CONTAINING P    114.8    7.8e-30   1   2.1   4.4
+	Iterate                   	   317	   395	   114.8
+	PF27267	LdmS_N          	    11	   131	   149.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS104265 (E-value: 9.9e-37, Score: 130.0)
+Mentioned as: SA1934
+Description: hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus N315
+PMID: 21039920
+Source: EuropePMC
+Title: Characterizing the effects of inorganic acid and alkaline shock on the Staphylococcus aureus transcriptome and messenger RNA turnover
+Journal: FEMS immunology and medical microbiology (2010)
+Snippet: 2.5 SA1923 hypothetical protein sa_c3696s3175_a_at 2.2 2.5 2.5 SA1928 hypothetical protein sa_c10117s8839_a_at 2.7 2.5 2.5 SA1934 hypothetical protein sa_c3709s9185_a_at 5.9 2.5 2.5 SA1935 hypothetical protein sa_c3750s3226_a_at 2.5 2.5 ND SA1947 hypothetical protein sa_c3786s3258_a_at 3.2 2.5 2.5 SA1956 hypothetical protein sa_c3842s3311_at 2.2 2.5 5 SA1972 hypothetical protein
+
+================================================================================
+Protein: VIMSS913600 (E-value: 9.9e-37, Score: 130.0)
+Mentioned as: SACOL2124
+Description: hypothetical protein
+Organism: Staphylococcus aureus subsp. aureus COL
+PMID: 28539731
+Source: EuropePMC
+Title: Improved Annotations of 23 Differentially Expressed Hypothetical Proteins in Methicillin Resistant S.aureus
+Journal: Bioinformation (2017)
+Snippet: protein. SACOL2123 had equal scores to a M20/M25/M40 family peptidase (SACOL2125) and a hypothetical protein (SACOL2124). SACOL0710 equally matched a phosphotransferase mannose-specific family component IIA (SACOL0709) and a DAK2 domain-containing protein (SACOL0708). These results did not correlate with the findings from other programs used in this
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A143HHB2.1	AF-A0A143HHB2-F1-model_v4_TED01:8-127	1	AF-A0A143HHB2-F1-model_v4_TED01	8-127	0
+A0A143HHB2.1	AF-A0A143HHB2-F1-model_v4_TED02:144-208	1	AF-A0A143HHB2-F1-model_v4_TED02	144-208	0
+A0A1E9A5X4.1	AF-A0A1E9A5X4-F1-model_v4_TED01:12-133	1	AF-A0A1E9A5X4-F1-model_v4_TED01	12-133	0
+A0A1E9A5X4.1	AF-A0A1E9A5X4-F1-model_v4_TED02:151-216	1	AF-A0A1E9A5X4-F1-model_v4_TED02	151-216	0
+A0A1E9A5X4.1	AF-A0A1E9A5X4-F1-model_v4_TED03:219-312	1	AF-A0A1E9A5X4-F1-model_v4_TED03	219-312	0
+A0A1E9A5X4.1	AF-A0A1E9A5X4-F1-model_v4_TED04:315-394	1	AF-A0A1E9A5X4-F1-model_v4_TED04	315-394	97.5%
+A0A1W7AE71.1	AF-A0A1W7AE71-F1-model_v4_TED01:13-132	1	AF-A0A1W7AE71-F1-model_v4_TED01	13-132	0
+A0A1W7AE71.1	AF-A0A1W7AE71-F1-model_v4_TED02:149-213	1	AF-A0A1W7AE71-F1-model_v4_TED02	149-213	0
+A0A239YLV7.1	AF-A0A239YLV7-F1-model_v4_TED01:3-133	1	AF-A0A239YLV7-F1-model_v4_TED01	3-133	0
+A0A239YLV7.1	AF-A0A239YLV7-F1-model_v4_TED02:151-215	1	AF-A0A239YLV7-F1-model_v4_TED02	151-215	0
+A0A239YLV7.1	AF-A0A239YLV7-F1-model_v4_TED03:217-311	1	AF-A0A239YLV7-F1-model_v4_TED03	217-311	0
+A0A239YLV7.1	AF-A0A239YLV7-F1-model_v4_TED04:319-393	1	AF-A0A239YLV7-F1-model_v4_TED04	319-393	94.9%
+A0A380H2D7.1	AF-A0A380H2D7-F1-model_v4_TED01:3-65	1	AF-A0A380H2D7-F1-model_v4_TED01	3-65	0
+A0A380H2D7.1	AF-A0A380H2D7-F1-model_v4_TED02:77-147	1	AF-A0A380H2D7-F1-model_v4_TED02	77-147	0
+A0A380H2D7.1	AF-A0A380H2D7-F1-model_v4_TED03:151-279	1	AF-A0A380H2D7-F1-model_v4_TED03	151-279	82.5%
+A0A3N5BG34.1	AF-A0A3N5BG34-F1-model_v4_TED01:12-133	1	AF-A0A3N5BG34-F1-model_v4_TED01	12-133	0
+A0A3N5BG34.1	AF-A0A3N5BG34-F1-model_v4_TED02:149-215	1	AF-A0A3N5BG34-F1-model_v4_TED02	149-215	0
+A0A3N5BG34.1	AF-A0A3N5BG34-F1-model_v4_TED03:218-310	1	AF-A0A3N5BG34-F1-model_v4_TED03	218-310	0
+A0A3N5BG34.1	AF-A0A3N5BG34-F1-model_v4_TED04:312-401	1	AF-A0A3N5BG34-F1-model_v4_TED04	312-401	100.0%
+A0A433RPI3.1	AF-A0A433RPI3-F1-model_v4_TED01:9-126	1	AF-A0A433RPI3-F1-model_v4_TED01	9-126	0
+A0A433RPI3.1	AF-A0A433RPI3-F1-model_v4_TED02:143-207	1	AF-A0A433RPI3-F1-model_v4_TED02	143-207	0
+A0A4Q1B3Y3.1	AF-A0A4Q1B3Y3-F1-model_v4_TED01:11-131	1	AF-A0A4Q1B3Y3-F1-model_v4_TED01	11-131	0
+A0A4Q1B3Y3.1	AF-A0A4Q1B3Y3-F1-model_v4_TED02:149-213	1	AF-A0A4Q1B3Y3-F1-model_v4_TED02	149-213	0
+A0A4Q1B3Y3.1	AF-A0A4Q1B3Y3-F1-model_v4_TED03:216-300	1	AF-A0A4Q1B3Y3-F1-model_v4_TED03	216-300	0
+A0A4Q1B3Y3.1	AF-A0A4Q1B3Y3-F1-model_v4_TED04:313-389	1	AF-A0A4Q1B3Y3-F1-model_v4_TED04	313-389	98.7%
+A0A4R6BU32.1	AF-A0A4R6BU32-F1-model_v4_TED01:6-127	1	AF-A0A4R6BU32-F1-model_v4_TED01	6-127	0
+A0A4R6BU32.1	AF-A0A4R6BU32-F1-model_v4_TED02:150-214	1	AF-A0A4R6BU32-F1-model_v4_TED02	150-214	0
+A0A4R6BU32.1	AF-A0A4R6BU32-F1-model_v4_TED03:216-299	1	AF-A0A4R6BU32-F1-model_v4_TED03	216-299	0
+A0A4R6BU32.1	AF-A0A4R6BU32-F1-model_v4_TED04:317-392	1	AF-A0A4R6BU32-F1-model_v4_TED04	317-392	96.2%
+B9DMB9.1	AF-B9DMB9-F1-model_v4_TED01:4-166_284-398	1	AF-B9DMB9-F1-model_v4_TED01	4-398	0
+B9DMB9.1	AF-B9DMB9-F1-model_v4_TED02:170-277	1	AF-B9DMB9-F1-model_v4_TED02	170-277	0
+B9DMB9.1	AF-B9DMB9-F1-model_v4_TED03:410-526	1	AF-B9DMB9-F1-model_v4_TED03	410-526	0
+K9B069.1	AF-K9B069-F1-model_v4_TED01:10-130	1	AF-K9B069-F1-model_v4_TED01	10-130	0
+K9B069.1	AF-K9B069-F1-model_v4_TED02:148-213	1	AF-K9B069-F1-model_v4_TED02	148-213	0
+Q2FWC5.1	AF-Q2FWC5-F1-model_v4_TED01:11-131	1	AF-Q2FWC5-F1-model_v4_TED01	11-131	0
+Q2FWC5.1	AF-Q2FWC5-F1-model_v4_TED02:150-215	1	AF-Q2FWC5-F1-model_v4_TED02	150-215	0
+Q2FWC5.1	AF-Q2FWC5-F1-model_v4_TED03:219-311	1	AF-Q2FWC5-F1-model_v4_TED03	219-311	0
+Q2FWC5.1	AF-Q2FWC5-F1-model_v4_TED04:317-395	1	AF-Q2FWC5-F1-model_v4_TED04	317-395	100.0%
+Q49Z78.1	AF-Q49Z78-F1-model_v4_TED01:14-135	1	AF-Q49Z78-F1-model_v4_TED01	14-135	0
+Q49Z78.1	AF-Q49Z78-F1-model_v4_TED02:153-218	1	AF-Q49Z78-F1-model_v4_TED02	153-218	0
+Q49Z78.1	AF-Q49Z78-F1-model_v4_TED03:222-314	1	AF-Q49Z78-F1-model_v4_TED03	222-314	0
+Q49Z78.1	AF-Q49Z78-F1-model_v4_TED04:320-397	1	AF-Q49Z78-F1-model_v4_TED04	320-397	97.5%
+Q5HM90.1	AF-Q5HM90-F1-model_v4_TED01:11-132	1	AF-Q5HM90-F1-model_v4_TED01	11-132	0
+Q5HM90.1	AF-Q5HM90-F1-model_v4_TED02:150-215	1	AF-Q5HM90-F1-model_v4_TED02	150-215	0
+S2XDJ9.1	AF-S2XDJ9-F1-model_v4_TED01:152-217	1	AF-S2XDJ9-F1-model_v4_TED01	152-217	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q2FWC5_TED04/Iterate
+GA   27.00 27.00;
+TC   27.20 36.80;
+NC   26.20 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RC   Function description for Q2FWC5
+RN   [2]
+RM   35988643
+RT   "Discovery of an -amino acid ligase implicated in Staphylococcal sulfur
+RT   amino acid metabolism.";
+RA   Pederick J.L., Horsfall A.J., Jovcevski B., Klose J., Abell A.D.,
+RA   Pukala T.L., Bruning J.B.;
+RL   J. Biol. Chem. 298:102392-102392(2022).
+
+--- End of Current DESC file ---

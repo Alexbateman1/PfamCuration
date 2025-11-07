@@ -1,0 +1,159 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y478_RICPR              Reviewed;         554 AA.
+AC   Q9ZD66;
+DE   RecName: Full=Uncharacterized protein RP478;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=RP478;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+DR   EMBL; AJ235271; CAA14933.1; -; Genomic_DNA.
+DR   RefSeq; NP_220857.1; NC_000963.1.
+DR   RefSeq; WP_010886304.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZD66; -.
+DR   SMR; Q9ZD66; -.
+DR   STRING; 272947.gene:17555558; -.
+DR   EnsemblBacteria; CAA14933; CAA14933; CAA14933.
+DR   KEGG; rpr:RP478; -.
+DR   PATRIC; fig|272947.5.peg.490; -.
+DR   eggNOG; ENOG50301A9; Bacteria.
+DR   HOGENOM; CLU_468409_0_0_5; -.
+DR   OrthoDB; 7160460at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..33
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           34..554
+FT                   /note="Uncharacterized protein RP478"
+FT                   /id="PRO_0000014226"
+SQ   SEQUENCE   554 AA;  64342 MW;  EC2C55EA9E2F373E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	13	Pseudolycoriella
+2	12	Sciaridae
+2	11	Sciaroidea
+2	10	Nematocera
+2	9	Diptera
+2	8	Endopterygota
+1	8	typhus group.
+3	7	Orientia.
+2	7	Neoptera
+1	7	Rickettsia
+4	6	Rickettsieae
+2	6	Pterygota
+1	6	Candidatus Phycorickettsia.
+5	5	Rickettsiaceae
+2	5	Insecta
+5	4	Rickettsiales
+2	4	Hexapoda
+5	3	Alphaproteobacteria
+2	3	Arthropoda
+5	2	Pseudomonadota
+2	2	Ecdysozoa
+5	1	Pseudomonadati
+2	1	Metazoa
+5	0	Bacteria
+2	0	Eukaryota
+Total of 7 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0F3MA80	UNCHARACTERIZED PROTEIN {     37.4    8.5e-06   2   3.2  11.1
+	Q9ZD66_TED01              	     2	   236	    37.4
+	Q9ZD66_TED01              	   434	   516	     1.7
+
+A0A0F3MQL3	UNCHARACTERIZED PROTEIN {     52.2    2.7e-10   1   3.0  14.0
+	Q9ZD66_TED01              	     2	   223	    52.2
+
+A0A261DC40	MOLECULAR CHAPERONE HSCA     264.7    3.3e-75   1   1.7  11.4
+	Q9ZD66_TED01              	     2	   244	   264.7
+
+A0A2P1P7R2	DUF748 DOMAIN-CONTAINING      86.2    1.1e-20   1   2.1   1.5
+	Q9ZD66_TED01              	     6	   237	    86.2
+
+A0A9Q0N796	MULTIFUNCTIONAL FUSION PR    199.2    3.3e-55   1   1.9  13.5
+	Q9ZD66_TED01              	  1325	  1564	   197.5
+	PF00317	Ribonuc_red_lgN 	    11	    77	    61.8
+	PF02867	Ribonuc_red_lgC 	    80	   404	   265.9
+	PF02867	Ribonuc_red_lgC 	   402	   556	   130.6
+	PF00268	Ribonuc_red_sm  	   598	   870	   246.2
+	PF03219	TLC             	   897	  1341	   516.2
+	PF00348	polyprenyl_synt 	  1875	  2123	   223.9
+
+A0A9Q0N7L2	POLYPRENYL SYNTHETASE FAM    261.6      3e-74   1   1.5   9.7
+	Q9ZD66_TED01              	     2	   245	   260.7
+	PF00348	polyprenyl_synt 	   545	   793	     228
+
+A5CCG4	UNCHARACTERIZED PROTEIN {ECO:     36.5    1.6e-05   2   3.4  10.4
+	Q9ZD66_TED01              	     2	   230	    36.5
+	Q9ZD66_TED01              	   420	   505	     2.0
+
+Q9ZD66	UNCHARACTERIZED PROTEIN RP478      562.8   3.2e-166   1   2.5  18.4
+	Q9ZD66_TED01              	     2	   247	   562.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS614570 (E-value: 8.4e-151, Score: 505.6)
+Mentioned as: RT0465
+Description: rickettsial conserved hypothetical protein
+Organism: Rickettsia typhi str. wilmington
+PMID: 18641131
+Source: EuropePMC
+Title: Characterization of Sec-translocon-dependent extracytoplasmic proteins of Rickettsia typhi
+Journal: Journal of bacteriology (2008)
+Snippet: RT0393 RT0395 RT0399 RT0406 RT0417 RT0438 RT0444 RT0445 RT0465 RT0475 RT0491 RT0492 RT0546 RT0548 RT0551 RT0561 RT0565 RT0601 RT0667 RT0692 RT0694 RT0697 RT0699
+
+================================================================================
+Protein: VIMSS135651 (E-value: 4.5e-139, Score: 467.2)
+Mentioned as: RC0723
+Description: unknown
+Organism: Rickettsia conorii str. Malish 7
+PMID: 27834404
+Source: EuropePMC
+Title: Small Regulatory RNAs of Rickettsia conorii
+Journal: Scientific reports (2016)
+Snippet: 172 cis peg.793 ( RC0698 ) </> Rc _sR19 693856 694153 298 cis peg.823 ( RC0723 ) </> Rc _sR20 732978 733122 145 trans peg.876 ( RC0773 ) peg.877 ( RC0774 ) </</< Rc _sR21 (RNaseP_bact_a) 739375 739855 481 peg.887 ( RC0782 ) peg.888 ( RC0783
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q9ZD66.1	AF-Q9ZD66-F1-model_v4_TED01:2-247	1	AF-Q9ZD66-F1-model_v4_TED01	2-247	100.0%
+Q9ZD66.1	AF-Q9ZD66-F1-model_v4_TED02:402-554	1	AF-Q9ZD66-F1-model_v4_TED02	402-554	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q9ZD66_TED01
+GA   27.00 27.00;
+TC   36.50 36.50;
+NC   23.30 19.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

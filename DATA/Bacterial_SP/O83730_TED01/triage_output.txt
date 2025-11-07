@@ -1,0 +1,108 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y749_TREPA              Reviewed;          73 AA.
+AC   O83730;
+DE   RecName: Full=Uncharacterized protein TP_0749;
+GN   OrderedLocusNames=TP_0749;
+OS   Treponema pallidum (strain Nichols).
+OC   Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales;
+OC   Treponemataceae; Treponema.
+OX   NCBI_TaxID=243276;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Nichols;
+RX   PubMed=9665876; DOI=10.1126/science.281.5375.375;
+RA   Fraser C.M., Norris S.J., Weinstock G.M., White O., Sutton G.G.,
+RA   Dodson R.J., Gwinn M.L., Hickey E.K., Clayton R.A., Ketchum K.A.,
+RA   Sodergren E., Hardham J.M., McLeod M.P., Salzberg S.L., Peterson J.D.,
+RA   Khalak H.G., Richardson D.L., Howell J.K., Chidambaram M., Utterback T.R.,
+RA   McDonald L.A., Artiach P., Bowman C., Cotton M.D., Fujii C., Garland S.A.,
+RA   Hatch B., Horst K., Roberts K.M., Sandusky M., Weidman J.F., Smith H.O.,
+RA   Venter J.C.;
+RT   "Complete genome sequence of Treponema pallidum, the syphilis spirochete.";
+RL   Science 281:375-388(1998).
+DR   EMBL; AE000520; AAC65719.1; -; Genomic_DNA.
+DR   PIR; B71287; B71287.
+DR   RefSeq; WP_010882194.1; NC_021490.2.
+DR   AlphaFoldDB; O83730; -.
+DR   SMR; O83730; -.
+DR   STRING; 243276.TP_0749; -.
+DR   EnsemblBacteria; AAC65719; AAC65719; TP_0749.
+DR   KEGG; tpa:TP_0749; -.
+DR   KEGG; tpw:TPANIC_0749; -.
+DR   HOGENOM; CLU_2703759_0_0_12; -.
+DR   Proteomes; UP000000811; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..73
+FT                   /note="Uncharacterized protein TP_0749"
+FT                   /id="PRO_0000202314"
+SQ   SEQUENCE   73 AA;  8606 MW;  844EE7CC035B6AC9 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Treponema.
+1	5	Treponemataceae
+1	4	Spirochaetales
+1	3	Spirochaetia
+1	2	Spirochaetota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+O83730	UNCHARACTERIZED PROTEIN TP_0749    154.6    2.4e-42   1   1.0   2.4
+	O83730_TED01              	    13	    69	   154.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS26567 (E-value: 2.2e-44, Score: 154.6)
+Mentioned as: TP0749
+Description: T. pallidum predicted coding region TP0749
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 35722306
+Source: EuropePMC
+Title: Identification and Functional Characterization of Peptides With Antimicrobial Activity From the Syphilis Spirochete, <i>Treponema pallidum</i>
+Journal: Frontiers in microbiology (2022)
+Snippet: of potential AMPs. This analysis identified 45 T. pallidum AMP candidates; of these, Tp0451a and Tp0749 were subjected to further bioinformatic analyses to identify AMP critical core regions (AMPCCRs). Four potential AMPCCRs from the two predicted AMPs were identified and peptides corresponding to these AMPCCRs were
+
+================================================================================
+Protein: VIMSS26567 (E-value: 2.2e-44, Score: 154.6)
+Mentioned as: TP0749
+Description: T. pallidum predicted coding region TP0749
+Organism: Treponema pallidum subsp. pallidum str. Nichols
+PMID: 24303899
+Source: EuropePMC
+Title: The multifunctional role of the pallilysin-associated Treponema pallidum protein, Tp0750, in promoting fibrinolysis and extracellular matrix component degradation
+Journal: Molecular microbiology (2014)
+Snippet: reading frame, separated by a 36 base pair intergenic region and flanked by the genes tp0749 and tp0752 on the opposite (reverse) strand ( Fig. 1A ). These genomic features are synonymous with prokaryotic operon arrangement ( Chuang et al. , 2012 ). Indeed, both the
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+O83730.1	AF-O83730-F1-model_v4_TED01:13-69	1	AF-O83730-F1-model_v4_TED01	13-69	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:O83730_TED01
+GA   27.00 27.00;
+TC   27.80 154.40;
+NC   26.10 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

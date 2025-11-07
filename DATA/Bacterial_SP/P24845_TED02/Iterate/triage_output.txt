@@ -1,0 +1,59 @@
+--- sp.seq_info content (copy to Claude) ---
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Leptospira.
+4	5	Leptospiraceae
+4	4	Leptospirales
+4	3	Spirochaetia
+4	2	Spirochaetota
+4	1	Pseudomonadati
+4	0	Bacteria
+Total of 4 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0AAD7JJV1	UNCHARACTERIZED PROTEIN {     34.7    6.6e-05   3  10.0   2.4
+	Iterate                   	   342	   363	     5.7
+	Iterate                   	   367	   388	     5.3
+	Iterate                   	     5	    32	     4.9
+
+M3H1Q7	SIGMA FACTOR REGULATORY PROTE     69.6    8.4e-16   1   2.4   3.2
+	Iterate                   	   398	   435	    69.6
+
+M3HN25	UNCHARACTERIZED PROTEIN {ECO:     78.4    1.5e-18   1   1.9   1.3
+	Iterate                   	    50	    88	    78.4
+
+M6RFH4	PF14238 DOMAIN PROTEIN {ECO:0     61.2    3.6e-13   1   2.1   1.8
+	Iterate                   	   225	   271	    59.9
+
+M6ZGG9	UNCHARACTERIZED PROTEIN {ECO:     64.7    2.9e-14   1   1.3   1.1
+	Iterate                   	    24	    70	    64.0
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+M3HN25.1	AF-M3HN25-F1-model_v4_TED01:47-82	1	AF-M3HN25-F1-model_v4_TED01	47-82	84.6%
+M6RFH4.1	AF-M6RFH4-F1-model_v4_TED01:15-188	1	AF-M6RFH4-F1-model_v4_TED01	15-188	0
+M6RFH4.1	AF-M6RFH4-F1-model_v4_TED02:225-271	1	AF-M6RFH4-F1-model_v4_TED02	225-271	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P24845_TED02/Iterate
+GA   27.00 27.00;
+TC   27.40 79.10;
+NC   25.70 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

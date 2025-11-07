@@ -1,0 +1,120 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y2079_COXBU             Reviewed;         134 AA.
+AC   Q83A32;
+DE   RecName: Full=Uncharacterized protein CBU_2079;
+DE   Flags: Precursor;
+GN   OrderedLocusNames=CBU_2079;
+OS   Coxiella burnetii (strain RSA 493 / Nine Mile phase I).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Legionellales; Coxiellaceae; Coxiella.
+OX   NCBI_TaxID=227377;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=RSA 493 / Nine Mile phase I;
+RX   PubMed=12704232; DOI=10.1073/pnas.0931379100;
+RA   Seshadri R., Paulsen I.T., Eisen J.A., Read T.D., Nelson K.E., Nelson W.C.,
+RA   Ward N.L., Tettelin H., Davidsen T.M., Beanan M.J., DeBoy R.T.,
+RA   Daugherty S.C., Brinkac L.M., Madupu R., Dodson R.J., Khouri H.M.,
+RA   Lee K.H., Carty H.A., Scanlan D., Heinzen R.A., Thompson H.A., Samuel J.E.,
+RA   Fraser C.M., Heidelberg J.F.;
+RT   "Complete genome sequence of the Q-fever pathogen, Coxiella burnetii.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:5455-5460(2003).
+RN   [2]
+RP   IDENTIFICATION BY MASS SPECTROMETRY, AND DEVELOPMENTAL STAGE.
+RC   STRAIN=Nine Mile Crazy / RSA 514;
+RX   PubMed=17088354; DOI=10.1128/iai.00883-06;
+RA   Coleman S.A., Fischer E.R., Cockrell D.C., Voth D.E., Howe D., Mead D.J.,
+RA   Samuel J.E., Heinzen R.A.;
+RT   "Proteome and antigen profiling of Coxiella burnetii developmental forms.";
+RL   Infect. Immun. 75:290-298(2007).
+CC   -!- DEVELOPMENTAL STAGE: More than twofold more abundant in the small cell
+CC       variant (SCV) stage than in the large cell variant (LCV) stage (at
+CC       protein level). LCVs are more metabolically active than SCVs.
+CC       {ECO:0000269|PubMed:17088354}.
+DR   EMBL; AE016828; AAO91563.1; -; Genomic_DNA.
+DR   RefSeq; NP_821049.1; NC_002971.4.
+DR   RefSeq; WP_010958637.1; NZ_CDBG01000001.1.
+DR   AlphaFoldDB; Q83A32; -.
+DR   STRING; 227377.CBU_2079; -.
+DR   EnsemblBacteria; AAO91563; AAO91563; CBU_2079.
+DR   GeneID; 1209992; -.
+DR   KEGG; cbu:CBU_2079; -.
+DR   HOGENOM; CLU_2057467_0_0_6; -.
+DR   Proteomes; UP000002671; Chromosome.
+PE   1: Evidence at protein level;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..37
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           38..134
+FT                   /note="Uncharacterized protein CBU_2079"
+FT                   /id="PRO_0000320584"
+SQ   SEQUENCE   134 AA;  14264 MW;  24486AD75509A0D9 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Coxiella.
+1	5	Coxiellaceae
+1	4	Legionellales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Q83A32	UNCHARACTERIZED PROTEIN CBU_20    214.2    7.6e-61   1   1.1   3.2
+	Q83A32_TED01              	    37	   127	   213.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q83A32 (E-value: 6.8e-63, Score: 214.2)
+Mentioned as: Q83A32
+Description: Uncharacterized protein CBU_2079
+Organism: Coxiella burnetii (strain RSA 493 / Nine Mile phase I)
+  SwissProt:  - Uncharacterized protein CBU_2079
+PMID: 38129801
+Source: EuropePMC
+Title: Unveiling promising immunogenic targets in Coxiella burnetii through in silico analysis: paving the way for novel vaccine strategies
+Journal: BMC infectious diseases (2023)
+Snippet: cell division. Additionally, three proteins (21.4%) displayed uncharacterized functions (CBU_0736 (Q83DJ4), CBU_1095 (Q83CL9), and CBU_2079 (Q83A32)). The congruent results obtained from molecular docking and immune response stimulation lend support to the inclusion of all 14 putative proteins as potential vaccine candidates. Notably, seven proteins with well-defined
+
+================================================================================
+Protein: Q83A32 (E-value: 6.8e-63, Score: 214.2)
+Mentioned as: Y2079_COXBU
+Description: Uncharacterized protein CBU_2079
+Organism: Coxiella burnetii (strain RSA 493 / Nine Mile phase I)
+  SwissProt:  - Uncharacterized protein CBU_2079
+PMID: 17088354
+Source: SwissProt
+Snippet: DEVELOPMENTAL STAGE: More than twofold more abundant in the small cell variant (SCV) stage than in the large cell variant (LCV) stage (at protein level). LCVs are more metabolically active than SCVs. {ECO:0000269|PubMed:17088354}.
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q83A32.1	AF-Q83A32-F1-model_v4_TED01:37-127	1	AF-Q83A32-F1-model_v4_TED01	37-127	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q83A32_TED01
+GA   27.00 27.00;
+TC   27.30 213.80;
+NC   25.60 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

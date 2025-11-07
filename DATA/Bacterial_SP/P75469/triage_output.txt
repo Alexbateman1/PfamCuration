@@ -1,0 +1,122 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   Y312_MYCPN              Reviewed;         218 AA.
+AC   P75469; O08090;
+DE   RecName: Full=Uncharacterized protein MPN_312;
+GN   OrderedLocusNames=MPN_312; ORFNames=F10_orf218, MP524;
+OS   Mycoplasma pneumoniae (strain ATCC 29342 / M129 / Subtype 1)
+OS   (Mycoplasmoides pneumoniae).
+OC   Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae;
+OC   Mycoplasmoides.
+OX   NCBI_TaxID=272634;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=8948633; DOI=10.1093/nar/24.22.4420;
+RA   Himmelreich R., Hilbert H., Plagens H., Pirkl E., Li B.-C., Herrmann R.;
+RT   "Complete sequence analysis of the genome of the bacterium Mycoplasma
+RT   pneumoniae.";
+RL   Nucleic Acids Res. 24:4420-4449(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 29342 / M129 / Subtype 1;
+RX   PubMed=9098066; DOI=10.1128/jb.179.8.2668-2677.1997;
+RA   Krause D.C., Proft T., Hedreyda C.T., Hilbert H., Plagens H., Herrmann R.;
+RT   "Transposon mutagenesis reinforces the correlation between Mycoplasma
+RT   pneumoniae cytoskeletal protein HMW2 and cytadherence.";
+RL   J. Bacteriol. 179:2668-2677(1997).
+DR   EMBL; U00089; AAB96172.1; -; Genomic_DNA.
+DR   EMBL; U59896; AAB52529.1; -; Genomic_DNA.
+DR   PIR; S73850; S73850.
+DR   RefSeq; NP_110000.1; NC_000912.1.
+DR   RefSeq; WP_010874668.1; NZ_OU342337.1.
+DR   AlphaFoldDB; P75469; -.
+DR   STRING; 272634.MPN_312; -.
+DR   EnsemblBacteria; AAB96172; AAB96172; MPN_312.
+DR   KEGG; mpn:MPN_312; -.
+DR   PATRIC; fig|272634.6.peg.336; -.
+DR   HOGENOM; CLU_1265792_0_0_14; -.
+DR   BioCyc; MPNE272634:G1GJ3-498-MONOMER; -.
+DR   Proteomes; UP000000808; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..218
+FT                   /note="Uncharacterized protein MPN_312"
+FT                   /id="PRO_0000210660"
+SQ   SEQUENCE   218 AA;  24208 MW;  EF717BA6A4FC752C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	5	Mycoplasmoides
+1	4	Mycoplasmoidaceae
+1	3	Mycoplasmoidales
+1	2	Mycoplasmatota
+1	1	Bacillati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P75469	UNCHARACTERIZED PROTEIN MPN_312    489.2     6e-144   1   1.0  19.1
+	P75469                    	     1	   218	   489.0
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS13768 (E-value: 5.3e-146, Score: 489.2)
+Mentioned as: MPN312
+Description: hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 40771685
+Source: EuropePMC
+Title: Advances in adhesion-related pathogenesis in &lt;i&gt;Mycoplasma pneumoniae&lt;/i&gt; infection
+Journal: Frontiers in microbiology (2025)
+
+================================================================================
+Protein: VIMSS13768 (E-value: 5.3e-146, Score: 489.2)
+Mentioned as: MPN312
+Description: hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 28373274
+Source: EuropePMC
+Title: The Variable Internal Structure of the Mycoplasma penetrans Attachment Organelle Revealed by Biochemical and Microscopic Analyses: Implications for Attachment Organelle Mechanism and Evolution
+Journal: Journal of bacteriology (2017)
+Snippet: pneumoniae HMW1 (MPN447) HMW2 (MPN310) HMW3 (MPN453) P24 (MPN312) P41 (MPN311) P65 (MPN309) P200 (MPN567) TopJ (MPN119) M. mobile MMOB0150 MMOB1620 MMOB1630
+
+================================================================================
+Protein: VIMSS13768 (E-value: 5.3e-146, Score: 489.2)
+Mentioned as: MPN312
+Description: hypothetical protein
+Organism: Mycoplasma pneumoniae M129
+PMID: 27446003
+Source: EuropePMC
+Title: Integrated Information and Prospects for Gliding Mechanism of the Pathogenic Bacterium Mycoplasma pneumoniae
+Journal: Frontiers in microbiology (2016)
+Snippet: methods. MPN387, the C terminus of HMW2 (MPN310), P41 (MPN311), P200 (MPN567), TopJ (MPN119), P24 (MPN312), and Lon (MPN332) appear to be localized on the bowl complex (Kenri et al., 2004 ; Jordan et al., 2007 ; Cloward and Krause, 2009 ; Nakane et al., 2015
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75469
+GA   27.00 27.00;
+TC   28.70 489.00;
+NC   23.70 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---
