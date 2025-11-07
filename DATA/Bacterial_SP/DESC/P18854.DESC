@@ -1,0 +1,15 @@
+ID   TrpL
+DE   Trp operon leader peptide
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P18854
+GA   27.00 27.00;
+TC   36.90 36.90;
+NC   24.70 14.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the trp operon leader peptide found in
+CC   bacteria such as Sinorhizobium meliloti. This short peptide is
+CC   involved in the control of tryptophan biosynthesis through
+CC   attenuation. It is annotated by NCBIfam as NF038137
+CC   (leader_TrpLE_al).

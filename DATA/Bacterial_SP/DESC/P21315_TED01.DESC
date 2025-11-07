@@ -1,0 +1,15 @@
+ID   Phage_regulator
+DE   Prophage regulator protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P21315_TED01
+GA   27.00 27.00;
+TC   27.30 27.10;
+NC   26.50 26.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a prophage regulator protein found in bacteria
+CC   and bacteriophages, particularly in Enterobacteriaceae and
+CC   Vibrionaceae. In Escherichia coli, the protein is encoded by ORFa in
+CC   retron Ec67. These regulators are involved in controlling prophage
+CC   gene expression.

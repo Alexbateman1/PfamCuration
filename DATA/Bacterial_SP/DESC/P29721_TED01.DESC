@@ -1,0 +1,21 @@
+ID   TmpA
+DE   Treponemal membrane protein A
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P29721_TED01
+GA   27.00 27.00;
+TC   27.40 31.70;
+NC   26.80 23.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   38748684
+RT   Treponema pallidum recombinant protein Tp0768 enhances the ability of
+RT   HUVECs to promote neutrophil chemotaxis through the TLR2/ER stress
+RT   signaling pathway.
+RA   Wu Z, Yang X, Yue Y, Ma Y, Pan H, Zhang M, Wang Q, Huang W, Bao F,
+RA   Yang T;
+RL   J. Leukoc. Biol. 2024;116:1159-1171.
+CC   This entry represents treponemal membrane protein A (TmpA) found in
+CC   Treponema and related Spirochaetota. TmpA is a lipoprotein that
+CC   enhances neutrophil chemotaxis in Treponema pallidum infections [1].

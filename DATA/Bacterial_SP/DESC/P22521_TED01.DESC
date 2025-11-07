@@ -1,0 +1,15 @@
+ID   Cvi
+DE   Colicin V immunity protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P22521_TED01
+GA   27.00 27.00;
+TC   27.10 160.50;
+NC   24.70 21.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the colicin V immunity protein (Cvi), which
+CC   protects bacteria producing colicin V from its bactericidal effects.
+CC   Colicin V is a bacteriocin that inhibits the growth of sensitive
+CC   bacterial strains. This family is found in plasmids of Escherichia
+CC   coli.

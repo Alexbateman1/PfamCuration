@@ -1,0 +1,21 @@
+ID   Cellulase_N
+DE   Endoglucanase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P17877/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 32.60;
+NC   26.90 25.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   1744052
+RT   Characterization of endoglucanase A from Clostridium cellulolyticum.
+RA   Fierobe H.-P., Gaudin C., Belaich A., Loufti M., Faure E., Bagnara
+RA   C., Baty D., Belaich J.-P.;
+RL   J. Bacteriol. 173:7956-7962(1991).
+CC   This entry represents the N-terminal domain of endoglucanase A from
+CC   Clostridium cellulolyticum and related proteins found in Bacillota.
+CC   Endoglucanase A contains a glycosyl hydrolase domain
+CC   (Pfam:PF00150) and a dockerin domain (Pfam:PF00404) [1]. The
+CC   function of this N-terminal domain remains to be determined.
