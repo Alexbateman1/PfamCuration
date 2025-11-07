@@ -1,0 +1,14 @@
+ID   TP_0535
+DE   TP_0535 protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83546_TED01
+GA   27.00 27.00;
+TC   31.30 162.50;
+NC   23.50 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents TP_0535, a 70 amino acid uncharacterised protein
+CC   from Treponema pallidum. The protein is found only in Treponema pallidum.
+CC   The function of this protein remains to be determined.
+//

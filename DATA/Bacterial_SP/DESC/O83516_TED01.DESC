@@ -1,0 +1,17 @@
+ID   TP_0503
+DE   TP_0503 lipoprotein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83516_TED01
+GA   27.00 27.00;
+TC   27.60 47.30;
+NC   23.60 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents TP_0503, a 187 amino acid uncharacterised
+CC   lipoprotein from Treponema pallidum. The protein contains a signal peptide
+CC   (residues 1-17) and is predicted to localise to the plasma membrane. The
+CC   protein is found in 31 proteins across Bacteria, including Spirochaetota
+CC   (Treponemataceae and Spirochaetaceae). The function of this protein
+CC   remains to be determined.
+//

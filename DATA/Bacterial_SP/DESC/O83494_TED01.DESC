@@ -1,0 +1,17 @@
+ID   TP_0481_N
+DE   TP_0481 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83494_TED01
+GA   27.00 27.00;
+TC   28.40 141.30;
+NC   26.50 18.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 31-86) of TP_0481, a
+CC   477 amino acid uncharacterised membrane protein from Treponema pallidum.
+CC   The full-length protein contains a transmembrane helix (residues 107-129),
+CC   is annotated as COG2982, and is predicted to localise to the membrane. The
+CC   protein is found only in Treponema pallidum. The specific function of this
+CC   domain remains to be determined.
+//
