@@ -1,0 +1,17 @@
+ID   YorV
+DE   SPbeta prophage-derived protein YorV
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31893_TED01/Iterate
+GA   27.00 27.00;
+TC   47.50 134.50;
+NC   25.60 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a region of approximately 53 amino acids
+CC   (residues 17-69) found in protein YorV from Bacillus subtilis (72 amino
+CC   acids), derived from the SPbeta prophage. The protein shows similarity
+CC   to putative nucleic acid binding proteins. This family is found in 2
+CC   proteins across Bacteria and Viruses. The function of this family
+CC   remains to be determined.
+//

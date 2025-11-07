@@ -1,0 +1,16 @@
+ID   YosB
+DE   SPbeta prophage-derived protein YosB
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O31887_TED01/Iterate
+GA   27.00 27.00;
+TC   27.80 150.30;
+NC   26.70 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a region of approximately 56 amino acids
+CC   (residues 2-57) found in protein YosB from Bacillus subtilis (59 amino
+CC   acids), derived from the SPbeta prophage. This family is found in 2
+CC   proteins across Bacteria and Viruses. The function of this family
+CC   remains to be determined.
+//
