@@ -1,0 +1,20 @@
+ID   PolB_pipolin
+DE   Primer-independent DNA polymerase PolB domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P0DPS1_TED02
+GA   27.00 27.00;
+TC   28.20 65.50;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in primer-independent DNA
+CC   polymerase PolB proteins associated with pipolin mobile genetic
+CC   elements in Pseudomonadota. The domain is approximately 121 amino
+CC   acids in length and is found in 11 proteins. The full-length PolB
+CC   protein has primer-independent and primer-dependent DNA
+CC   polymerisation activity, translesion synthesis activity, 3'-5'
+CC   exodeoxyribonuclease activity, and de novo primer synthesis
+CC   activity. The specific function of this domain remains to be
+CC   determined.
+//
