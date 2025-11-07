@@ -1,0 +1,13 @@
+ID   YozW
+DE   YozW protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:C0H424_TED01
+GA   27.00 27.00;
+TC   27.10 32.20;
+NC   26.60 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a small protein family of approximately 31
+CC   amino acids found in Bacillaceae, including YozW from Bacillus
+CC   subtilis. The function of this protein remains to be determined.
