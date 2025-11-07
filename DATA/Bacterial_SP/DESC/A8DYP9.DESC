@@ -1,0 +1,23 @@
+ID   Uof
+DE   fur leader peptide
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A8DYP9
+GA   27.00 27.00;
+TC   27.00 82.20;
+NC   25.80 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   17268550
+RT   Control of Fur synthesis by the non-coding RNA RyhB and
+RT   iron-responsive decoding.
+RA   Vecerek B., Moll I., Blaesi U.;
+RL   EMBO J. 26:965-975(2007).
+CC   This entry represents the fur leader peptide (also known as uof) of
+CC   approximately 28 amino acids found in Escherichia coli and related
+CC   bacteria. This peptide is cotranscribed with fur and is essential for
+CC   fur translation. The fur ribosomal binding site is occluded by the
+CC   5'-mRNA secondary structure, which is opened by uof translation. The
+CC   peptide is induced by iron depletion and repressed by the ncRNA ryhB
+CC   [1].

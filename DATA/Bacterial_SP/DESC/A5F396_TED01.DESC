@@ -1,0 +1,17 @@
+ID   TcpR_N
+DE   Toxin coregulated pilus biosynthesis protein R N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A5F396_TED01
+GA   27.00 27.00;
+TC   27.70 28.00;
+NC   25.10 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of approximately 103
+CC   amino acids found in toxin coregulated pilus (TCP) biosynthesis
+CC   protein R (TcpR) from Vibrio cholerae. TcpR is involved in TCP pilus
+CC   biogenesis and helps in high osmolality tolerance in the intestinal
+CC   lumen, promoting colonisation. The full-length protein is a
+CC   single-pass membrane protein. The function of this N-terminal domain
+CC   remains to be determined.
