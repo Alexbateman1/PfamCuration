@@ -1,0 +1,34 @@
+ID   BoNT_Wo_mid
+DE   Botulinum toxin Wo middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A069CUU9_TED02
+GA   27.00 27.00;
+TC   29.80 212.40;
+NC   23.60 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RC   Functional characterisation of the full-length toxin
+RN   [1]
+RM   27443638
+RT   The first non Clostridial botulinum-like toxin cleaves VAMP within
+RT   the juxtamembrane domain.
+RA   Zornetta I, Azarnia Tehran D, Arrigoni G, Anniballi F, Bano L, Leka
+RA   O, Zanotti G, Binz T, Montecucco C;
+RL   Sci. Rep. 2016;6:30257.
+RC   Crystal structure of the catalytic domain
+RN   [2]
+RM   31111466
+RT   Crystal structure of the catalytic domain of the Weissella oryzae
+RT   botulinum-like toxin.
+RA   Kosenina S, Masuyer G, Zhang S, Dong M, Stenmark P;
+RL   FEBS Lett. 2019;593:1403-1410.
+CC   This entry represents a domain of approximately 95 amino acids found
+CC   in botulinum-like toxins from Weissella species. The domain is
+CC   located between the peptidase M27 catalytic domain (Pfam:PF26320) and
+CC   the toxin translocation domain (Pfam:PF26319). The full-length
+CC   protein BXWO_WOIOS is a zinc-dependent metalloprotease that cleaves
+CC   synaptobrevin-2/VAMP2, potentially affecting neurotransmitter release
+CC   [1]. The N-terminal region containing the catalytic domain has been
+CC   structurally characterised [2]. The specific function of this domain
+CC   remains to be determined.

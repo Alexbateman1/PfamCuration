@@ -1,0 +1,25 @@
+ID   PEPCK_PPi_N
+DE   PPi-type PEPCK N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0C5URS1_TED02
+GA   27.00 27.00;
+TC   29.20 113.30;
+NC   22.30 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   26269598
+RT   Discovery of PPi-type phosphoenolpyruvate carboxykinase genes in
+RT   eukaryotes and bacteria.
+RA   Chiba Y., Kamikawa R., Nakada-Tsukui K., Saito-Nakano Y., Nozaki T.;
+RL   J. Biol. Chem. 2015;290:23960-23970.
+CC   This entry represents an N-terminal domain of approximately 290
+CC   amino acids found in PPi-type phosphoenolpyruvate carboxykinase
+CC   (PEPCK) enzymes. These enzymes use inorganic pyrophosphate (PPi) as
+CC   a phosphoryl donor to convert oxaloacetate to phosphoenolpyruvate,
+CC   playing a key role in central carbon metabolism [1]. The full-length
+CC   enzymes are found in both bacteria and eukaryotes, including
+CC   Entamoeba histolytica where three paralogues (PEPCK1-3) have been
+CC   experimentally characterised [1]. The specific function of this
+CC   N-terminal domain remains to be determined.
