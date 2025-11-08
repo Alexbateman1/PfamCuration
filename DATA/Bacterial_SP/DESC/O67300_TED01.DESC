@@ -1,0 +1,15 @@
+ID   aq_1259_N
+DE   Uncharacterized protein aq_1259 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67300_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved N-terminal domain found in
+CC   aq_1259 and related uncharacterised proteins from Aquificota
+CC   bacteria. The protein is classified as COG1730 and contains a
+CC   predicted signal peptide and a porin domain superfamily fold. The
+CC   function of this domain remains to be determined.
