@@ -1,0 +1,16 @@
+ID   PifC_2nd
+DE   PifC transcriptional repressor second domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P10030_TED02
+GA   27.00 27.00;
+TC   27.00 31.90;
+NC   26.60 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the second domain of the PifC family
+CC   transcriptional repressor found in Enterobacteriaceae and
+CC   Betaproteobacteria. The full-length PifC protein contains
+CC   multiple domains. The function of this domain remains to be
+CC   determined.
+//

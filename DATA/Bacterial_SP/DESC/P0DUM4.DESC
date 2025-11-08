@@ -1,0 +1,41 @@
+ID   AapA
+DE   Type I toxin AapA
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DUM4/Iterate
+GA   27.00 27.00;
+TC   31.70 59.50;
+NC   25.00 19.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the AapA family of type I toxins found in
+CC   Helicobacter pylori. These small membrane-associated peptides of 30
+CC   amino acids are toxic components of type I toxin-antitoxin systems
+CC   that are neutralised by cognate antisense RNA antitoxins (IsoA).
+CC   The toxins bind bacterial membranes and may penetrate the membrane,
+CC   leading to lipid reorganisation and membrane thinning [1,2,3].
+CC   Induction of toxin in the absence of antitoxin causes conversion of
+CC   cells from spiral-shaped to coccoid forms, membrane depolarisation,
+CC   decreased ATP content, and alterations in peptidoglycan [3].
+CC   Expression is involved in the oxidative stress response [3].
+RN   [1]
+RM   28077560
+RT   Mechanistic insights into type I toxin antitoxin systems in
+RT   Helicobacter pylori: the importance of mRNA folding in controlling
+RT   toxin expression.
+RA   Arnion H, Korkut DN, Masachis Gelo S, Chabas S, Reignier J, Iost I,
+RA   Darfeuille F;
+RL   Nucleic Acids Res 2017;45:4782-4795.
+RN   [2]
+RM   31476357
+RT   Structural insights into the AapA1 toxin of Helicobacter pylori.
+RA   Korkut DN, Alves ID, Vogel A, Chabas S, Sharma CM, Martinez D,
+RA   Loquet A, Salgado GF, Darfeuille F;
+RL   Biochim Biophys Acta Gen Subj 2020;1864:129423.
+RN   [3]
+RM   33229580
+RT   A peptide of a type I toxin-antitoxin system induces Helicobacter
+RT   pylori morphological transformation from spiral shape to coccoids.
+RA   El Mortaji L, Tejada-Arranz A, Rifflet A, Boneca IG, Pehau-Arnaudet
+RA   G, Radicella JP, Marsin S, De Reuse H;
+RL   Proc Natl Acad Sci U S A 2020;117:31398-31409.

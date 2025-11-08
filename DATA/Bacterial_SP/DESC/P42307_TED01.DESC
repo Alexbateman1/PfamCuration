@@ -1,0 +1,14 @@
+ID   YxiP
+DE   Uncharacterised lipoprotein YxiP
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P42307_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 202.60;
+NC   24.40 23.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised lipoprotein found in
+CC   Bacillus subtilis (YxiP) and related Bacillota. The protein contains
+CC   a signal peptide and is predicted to be a lipoprotein. The function
+CC   of this protein remains to be determined.

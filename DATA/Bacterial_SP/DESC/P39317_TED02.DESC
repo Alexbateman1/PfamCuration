@@ -1,0 +1,14 @@
+ID   YtfI_C
+DE   Uncharacterised protein YtfI C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P39317_TED02/Iterate
+GA   27.00 27.00;
+TC   39.70 125.30;
+NC   25.60 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of uncharacterised
+CC   protein YtfI found in Escherichia coli and related
+CC   Enterobacteriaceae. The protein is approximately 310 amino acids in
+CC   length. The function of this domain remains to be determined.

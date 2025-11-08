@@ -1,0 +1,16 @@
+ID   TP_0473
+DE   Uncharacterised protein TP_0473
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83486_TED01/Iterate
+GA   27.00 27.00;
+TC   45.10 45.10;
+NC   26.60 21.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the uncharacterised protein TP_0473 from
+CC   Treponema pallidum. The protein is 214 amino acids long and is
+CC   found in Treponema species. The protein is predicted to be a
+CC   multi-pass transmembrane protein localised to the cell membrane,
+CC   with seven predicted transmembrane helices. The function of this
+CC   protein remains to be determined.

@@ -1,0 +1,14 @@
+ID   DprA_WH
+DE   DprA winged helix domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P43684_TED01
+GA   27.00 27.00;
+TC   27.80 39.50;
+NC   24.90 20.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a winged helix domain found in DprA proteins
+CC   from Cyanobacteria. DprA proteins are involved in DNA processing
+CC   during natural transformation. The function of this domain remains to
+CC   be determined.

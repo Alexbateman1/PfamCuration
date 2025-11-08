@@ -1,0 +1,21 @@
+ID   HI_0205
+DE   Uncharacterised protein HI_0205
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P43963_TED01
+GA   27.00 27.00;
+TC   253.40 253.40;
+NC   25.40 24.00;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   16980474
+RT   NAD+ utilization in Pasteurellaceae: simplification of a complex
+RT   pathway.
+RA   Kemmer G, Reilly TJ, Schmidt-Brauns J, Zlotnik GW, Green BA,
+RA   Fiske MJ, Herbert M, Kraiss A, Schlor S, Smith A, Reidl J;
+RL   J Bacteriol 2006;188:6719-6729.
+CC   This entry represents the uncharacterised protein HI_0205 from
+CC   Haemophilus influenzae and related Pasteurellaceae. HI_0205 is a
+CC   conserved and protective antigen located in the soluble periplasm
+CC   [1]. The function of this protein remains to be determined.

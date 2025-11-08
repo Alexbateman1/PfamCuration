@@ -1,0 +1,17 @@
+ID   TP_0763_C
+DE   Uncharacterised Treponema protein TP_0763 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83744_TED03/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 58.50;
+NC   26.90 22.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of an uncharacterised
+CC   protein (TP_0763) from Treponema pallidum and related spirochaete
+CC   bacteria. The full-length protein contains two predicted
+CC   transmembrane helices (residues 42-64 and 74-96) and is predicted to
+CC   be a multi-pass membrane protein. The C-terminal domain is
+CC   approximately 117 amino acids in length. The function of this domain
+CC   remains to be determined.

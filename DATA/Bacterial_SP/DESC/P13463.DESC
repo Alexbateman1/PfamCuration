@@ -1,0 +1,25 @@
+ID   VirD3
+DE   Protein VirD3 family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P18593
+GA   27.00 27.00;
+TC   27.50 78.70;
+NC   26.90 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the VirD3 protein family, a 673-amino acid
+CC   protein found on the Ti plasmid of Agrobacterium tumefaciens [1].
+CC   VirD3 is part of the vir regulon, which contains at least six
+CC   transcriptional units essential for efficient crown-gall
+CC   tumorigenesis [1]. The Ti plasmid encodes the machinery for
+CC   transferring T-DNA to plant cells [1]. The specific function of
+CC   VirD3 remains to be determined.
+RN   [1]
+RM   2194232
+RT   "Molecular characterization of the vir regulon of Agrobacterium
+RT   tumefaciens: complete nucleotide sequence and gene organization of the
+RT   28.63-kbp regulon cloned as a single unit.";
+RA   Rogowsky P.M., Powell B.S., Shirasu K., Lin T.-S., Morel P., Zyprian E.M.,
+RA   Steck T.R., Kado C.I.;
+RL   Plasmid 23:85-106(1990).
