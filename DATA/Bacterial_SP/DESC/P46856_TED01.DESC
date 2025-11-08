@@ -1,0 +1,16 @@
+ID   YrhA
+DE   Uncharacterised protein YrhA
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P46856_TED01
+GA   27.00 27.00;
+TC   28.50 38.30;
+NC   24.40 23.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in
+CC   Escherichia coli (YrhA) and related Enterobacterales. This protein
+CC   is reported to be the product of a pseudogene. Some homologues
+CC   contain an SMI1/KNR4-like domain. This protein is annotated by
+CC   NCBIfam as YPO0640_fam. The function of this protein remains to be
+CC   determined.

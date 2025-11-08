@@ -1,0 +1,30 @@
+ID   MuPhage_tail
+DE   Mu-like prophage tail fiber protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P44242_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.70 26.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   31209305
+RT   Phage tail fibre assembly proteins employ a modular structure to
+RT   drive the correct folding of diverse fibres.
+RA   North OI, Sakai K, Yamashita E, Nakagawa A, Iwazaki T, Buttner CR,
+RA   Takeda S, Davidson AR;
+RL   Nat Microbiol. 2019;4:1645-1653.
+RN   [2]
+RM   38382161
+RT   Determination of the three-dimensional structure of bacteriophage
+RT   Mu(-) tail fiber and its characterization.
+RA   Mori Y, Yamashita E, Nakagawa A, Matsuzawa T, Inagaki M, Aiba Y,
+RA   Tanaka S, Hatori S, Ayami M, Takeda S;
+RL   Virology. 2024;593:110017.
+CC   This entry represents the N-terminal domain of Mu-like prophage
+CC   tail fiber proteins, including the defective tail fiber protein from
+CC   Haemophilus influenzae (HI_1522) and related proteins in
+CC   Pseudomonadota. Tail fiber proteins are responsible for host
+CC   recognition and binding. The full-length protein also contains a
+CC   beta-propeller domain (Pfam:PF27114).
