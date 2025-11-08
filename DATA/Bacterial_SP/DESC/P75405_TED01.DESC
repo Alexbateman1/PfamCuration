@@ -1,0 +1,31 @@
+ID   MPN376_TED01
+DE   MPN376 protein domain 1
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75405_TED01
+GA   27.00 27.00;
+TC   28.10 109.80;
+NC   25.40 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a domain found in uncharacterised membrane
+CC   protein MPN_376 (1140 amino acids) from Mycoplasmoides pneumoniae.
+CC   Transposon mutagenesis studies identified MPN376 as a cytoskeletal
+CC   protein associated with gliding motility [1]. The protein has been
+CC   identified as a surface-accessible lipoprotein that undergoes
+CC   multiple processing events [2]. The function of this domain remains
+CC   to be determined.
+RN   [1]
+RM   16923901
+RT   Transposon mutagenesis identifies genes associated with Mycoplasma
+RT   pneumoniae gliding motility.
+RA   Jordan JL, Chang HY, Balish MF, Holt LS, Bose SR, Hasselbring BM,
+RA   Waldo RH 3rd, Krunkosky TM, Krause DC;
+RL   J Bacteriol 2007;188:6335-6345.
+RN   [2]
+RM   28248283
+RT   P40 and P90 from Mpn142 are Targets of Multiple Processing Events
+RT   on the Surface of Mycoplasma pneumoniae.
+RA   Lluch-Senar M, Vallmitjana M, Querol E, Pinol J;
+RL   Proteomes 2015;3:1-19.
+**

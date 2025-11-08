@@ -1,0 +1,30 @@
+ID   MPN387_N
+DE   MPN387 gliding motility protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75395_TED01/Iterate
+GA   27.00 27.00;
+TC   29.40 154.20;
+NC   26.70 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal domain found in uncharacterised
+CC   protein MG269 and its homologue MPN387 from Mycoplasmoides species.
+CC   Transposon mutagenesis studies identified MPN387 as a cytoskeletal
+CC   protein associated with gliding motility [1]. Structural studies of
+CC   MPN387 have been reported [2]. The specific function of this domain
+CC   remains to be determined.
+RN   [1]
+RM   16923901
+RT   Transposon mutagenesis identifies genes associated with Mycoplasma
+RT   pneumoniae gliding motility.
+RA   Jordan JL, Chang HY, Balish MF, Holt LS, Bose SR, Hasselbring BM,
+RA   Waldo RH 3rd, Krunkosky TM, Krause DC;
+RL   J Bacteriol 2007;188:6335-6345.
+RN   [2]
+RM   27325681
+RT   Structural Study of MPN387, an Essential Protein for Gliding
+RT   Motility of a Human-Pathogenic Bacterium, Mycoplasma pneumoniae.
+RA   Kelley LA, Mezulis S, Yates CM, Wass MN, Sternberg MJ;
+RL   J Bacteriol 2016;198:2424-2432.
+**
