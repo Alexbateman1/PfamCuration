@@ -1,0 +1,14 @@
+ID   Y4jQ_C
+DE   Uncharacterised protein y4jQ C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P55517_TED04
+GA   27.00 27.00;
+TC   27.40 27.30;
+NC   26.90 26.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of uncharacterised
+CC   protein y4jQ from Sinorhizobium fredii and related bacteria,
+CC   including Planctomycetota and Bacillota. The protein is assigned
+CC   to COG4585. The function of this domain remains to be determined.

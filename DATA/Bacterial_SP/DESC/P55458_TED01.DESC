@@ -1,0 +1,15 @@
+ID   Y4gB_N
+DE   Uncharacterised protein y4gB N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P55458_TED01
+GA   27.00 27.00;
+TC   32.50 31.40;
+NC   24.60 23.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of uncharacterised
+CC   protein y4gB from Sinorhizobium fredii and related
+CC   Alphaproteobacteria. The domain is found in proteins annotated as
+CC   integrases and recombinases. The protein is assigned to COG0582.
+CC   The function of this domain remains to be determined.

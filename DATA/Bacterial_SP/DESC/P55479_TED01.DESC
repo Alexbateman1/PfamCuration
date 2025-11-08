@@ -1,0 +1,13 @@
+ID   Y4hL_C
+DE   Uncharacterised protein y4hL C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P55479_TED01
+GA   27.00 27.00;
+TC   31.60 88.50;
+NC   25.10 17.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of uncharacterised
+CC   protein y4hL from Sinorhizobium fredii. The function of this
+CC   domain remains to be determined.
