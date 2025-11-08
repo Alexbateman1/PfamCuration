@@ -1,0 +1,15 @@
+ID   HI_0559
+DE   Uncharacterized protein HI_0559.1
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O86226_TED01
+GA   27.00 27.00;
+TC   27.40 161.40;
+NC   26.40 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in an uncharacterized protein
+CC   HI_0559.1 from Haemophilus and related Pasteurellaceae species.
+CC   The protein is predicted to be a multi-pass membrane protein
+CC   localised to the cell membrane with three transmembrane helices.
+CC   The function of this domain remains to be determined.

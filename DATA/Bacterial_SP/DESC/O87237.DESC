@@ -1,0 +1,16 @@
+ID   Lacticin_A2
+DE   Lantibiotic lacticin 3147 A2
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:O87237
+GA   27.00 27.00;
+TC   27.10 70.10;
+NC   26.50 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents lantibiotic lacticin 3147 A2 from Lactococcus
+CC   lactis and related bacteria. Lacticin 3147 is a two-component
+CC   lantibiotic antimicrobial peptide consisting of peptides alpha and
+CC   beta. This family represents the A2 component. Lantibiotics are
+CC   bacteriocins containing the thioether amino acids lanthionine and
+CC   methyllanthionine.
