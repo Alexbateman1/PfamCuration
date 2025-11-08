@@ -1,0 +1,29 @@
+ID   AlbD_C
+DE   AlbD C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P71008_TED02/Iterate
+GA   27.00 27.00;
+TC   35.30 35.30;
+NC   25.00 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   10572140
+RT   Genes of the sbo-alb locus of Bacillus subtilis are required for
+RT   production of the antilisterial bacteriocin subtilosin.
+RA   Zheng G., Yan L.Z., Vederas J.C., Zuber P.;
+RL   J. Bacteriol. 1999;181:7346-7355.
+RN   [2]
+RM   10809709
+RT   Mutational analysis of the sbo-alb locus of Bacillus subtilis:
+RT   identification of genes required for subtilosin production and
+RT   immunity.
+RA   Zheng G., Hehn R., Zuber P.;
+RL   J. Bacteriol. 2000;182:3266-3273.
+CC   This entry represents the C-terminal domain of the membrane protein
+CC   AlbD from Bacillus and related bacteria. AlbD is involved in the
+CC   production of the bacteriocin subtilosin and is required for immunity
+CC   to subtilosin [1,2]. The full-length protein is predicted to localise
+CC   to the cell membrane with multiple transmembrane helices. The
+CC   function of this domain remains to be determined.

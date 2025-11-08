@@ -1,0 +1,14 @@
+ID   HI_1339
+DE   HI_1339 domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P71378_TED01
+GA   27.00 27.00;
+TC   27.70 28.00;
+NC   26.50 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in the uncharacterised protein
+CC   HI_1339/HI_1462.1 from Haemophilus influenzae and related bacteria
+CC   within the Pasteurellaceae family. The function of this domain
+CC   remains to be determined.

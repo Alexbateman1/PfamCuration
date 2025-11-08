@@ -1,0 +1,23 @@
+ID   Phasin_PhaP
+DE   Phasin PhaP
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P73545/Iterate
+GA   27.00 27.00;
+TC   27.50 64.40;
+NC   26.90 24.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   25911471
+RT   Photoautotrophic polyhydroxybutyrate granule formation is regulated
+RT   by cyanobacterial phasin PhaP in Synechocystis sp. strain PCC 6803.
+RA   Hauf W., Watzer B., Roos N., Klotz A., Forchhammer K.;
+RL   Appl. Environ. Microbiol. 2015;81:4411-4422.
+CC   This entry represents the phasin PhaP from cyanobacteria. Phasin PhaP
+CC   attaches to the polyhydroxybutyrate (PHB) granule surface, regulating
+CC   the number and size of PHB granules within a cell [1]. It probably
+CC   also acts as a regulator affecting the biosynthetic activity of PHB
+CC   synthase in vivo. The protein forms homotetramers and contains two
+CC   alpha-helices that are required for oligomerisation and targeting to
+CC   PHB granules.
