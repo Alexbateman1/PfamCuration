@@ -1,0 +1,15 @@
+ID   YubJ_N
+DE   N-terminal domain of YubJ
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O82902_TED01/Iterate
+GA   27.00 27.00;
+TC   29.00 96.20;
+NC   25.30 24.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved N-terminal domain found in YubJ,
+CC   an uncharacterised 140-amino acid plasmid-encoded protein from
+CC   Escherichia coli O157:H7. Orthologues are found on plasmids in
+CC   related Enterobacteriaceae. The function of this domain remains to
+CC   be determined.
