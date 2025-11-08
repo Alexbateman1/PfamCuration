@@ -1,0 +1,14 @@
+ID   TP_0129
+DE   Uncharacterised protein TP_0129
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:O83166
+GA   27.00 27.00;
+TC   364.90 364.70;
+NC   24.90 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents TP_0129, an uncharacterised 158-amino acid
+CC   protein from Treponema pallidum, the syphilis spirochaete. This
+CC   appears to be a species-specific protein with no characterised
+CC   orthologues. The function of this protein remains to be determined.

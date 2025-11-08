@@ -1,0 +1,13 @@
+ID   Unchar_Teven_P03845
+DE   Uncharacterised protein P03845
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P03845
+GA   27.00 27.00;
+TC   27.30 48.70;
+NC   23.80 25.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in
+CC   Enterobacteria phage T4. The function of this protein remains to be
+CC   determined.

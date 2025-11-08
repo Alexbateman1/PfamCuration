@@ -1,0 +1,16 @@
+ID   TP_0138_C
+DE   C-terminal domain of TP_0138
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83174_TED03/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.40 27.50;
+NC   26.50 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved C-terminal domain found in
+CC   TP_0138, an uncharacterised 245-amino acid protein from Treponema
+CC   pallidum. The full-length protein is predicted to be a multi-pass
+CC   membrane protein with two transmembrane helices. Orthologues are
+CC   found in related Spirochaetota bacteria. The function of this
+CC   domain remains to be determined.

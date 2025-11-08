@@ -1,0 +1,16 @@
+ID   YubC
+DE   Uncharacterised protein YubC
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:O82896/Iterate
+GA   27.00 27.00;
+TC   32.90 151.90;
+NC   22.90 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents YubC, an uncharacterised protein of
+CC   approximately 101-103 amino acids found on plasmids in
+CC   Enterobacteriaceae. The protein is found on the virulence plasmid
+CC   pO157 of Escherichia coli O157:H7 and the virulence plasmid pWR100
+CC   of Shigella flexneri. The function of this protein remains to be
+CC   determined.

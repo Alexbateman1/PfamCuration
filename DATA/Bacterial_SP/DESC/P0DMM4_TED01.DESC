@@ -1,0 +1,13 @@
+ID   Rv0572A
+DE   Uncharacterised protein Rv0572A
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P0DMM4_TED01
+GA   27.00 27.00;
+TC   27.30 47.70;
+NC   24.10 22.00;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents Rv0572A, an uncharacterised protein found in
+CC   Mycobacterium tuberculosis. The function of this protein remains to
+CC   be determined.

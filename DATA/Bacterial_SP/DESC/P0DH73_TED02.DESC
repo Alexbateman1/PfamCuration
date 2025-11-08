@@ -1,0 +1,13 @@
+ID   PrgT_2nd
+DE   PrgT regulatory protein second domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P0DH73_TED02
+GA   27.00 27.00;
+TC   27.30 43.10;
+NC   23.50 22.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the second domain of PrgT, a regulatory
+CC   protein found in Enterococcus faecalis. The function of this domain
+CC   remains to be determined.
