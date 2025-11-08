@@ -1,0 +1,19 @@
+ID   LysC_leader
+DE   Aspartokinase II operon leader peptide
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P08497
+GA   27.00 27.00;
+TC   27.10 68.30;
+NC   23.90 16.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   1624109
+RT   Fine-structure mapping of cis-acting control sites in the lysC
+RT   operon of Bacillus subtilis.
+RA   Lu Y., Shevtchenko T.N., Paulus H.;
+RL   FEMS Microbiol. Lett. 1992;71:23-27.
+CC   This entry represents the aspartokinase II operon leader peptide
+CC   found in Bacillus subtilis. This peptide is involved in the
+CC   repression of the lysC operon which encodes aspartokinase 2 [1].

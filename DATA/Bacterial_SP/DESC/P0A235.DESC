@@ -1,0 +1,23 @@
+ID   Wzy
+DE   O-antigen polymerase
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0A235
+GA   27.00 27.00;
+TC   27.00 198.70;
+NC   26.50 20.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   1707412
+RT   Molecular cloning, characterization, and nucleotide sequence of the
+RT   rfc gene, which encodes an O-antigen polymerase of Salmonella
+RT   typhimurium.
+RA   Collins L.V., Hackett J.;
+RL   J. Bacteriol. 1991;173:2521-2529.
+CC   This entry represents the O-antigen polymerase (Wzy) found in
+CC   Gammaproteobacteria, particularly Salmonella and Enterobacteriaceae.
+CC   This enzyme catalyses the polymerisation of O-antigen repeat units on
+CC   the periplasmic face of the inner membrane, leading to the formation
+CC   of lipid-linked O-antigen molecules [1]. It is annotated by NCBIfam
+CC   as TIGR04370 (glyco_rpt_poly).

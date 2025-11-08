@@ -1,0 +1,13 @@
+ID   Unchar_VZVD
+DE   Uncharacterised protein P04126
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P04126
+GA   27.00 27.00;
+TC   27.30 49.90;
+NC   24.00 19.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in Human
+CC   herpesvirus 3 (Varicella-zoster virus). The function of this protein
+CC   remains to be determined.

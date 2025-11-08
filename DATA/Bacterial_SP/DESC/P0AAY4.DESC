@@ -1,0 +1,14 @@
+ID   YbjH
+DE   Uncharacterised protein YbjH
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0AAY4/Iterate
+GA   27.00 27.00;
+TC   27.00 57.40;
+NC   26.70 24.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the uncharacterised protein YbjH found in
+CC   Enterobacteriaceae, particularly Escherichia coli and Shigella
+CC   species. The protein contains a predicted signal peptide. The
+CC   function of this protein remains to be determined.
