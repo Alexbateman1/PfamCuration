@@ -1,0 +1,13 @@
+ID   DUF
+DE   Uncharacterised protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P31849_TED01
+GA   27.00 27.00;
+TC   29.20 28.30;
+NC   25.10 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   bacteria.
+CC   The function of this domain remains to be determined.

@@ -1,0 +1,13 @@
+ID   mazE1
+DE   Probable antitoxin MazE1 {ECO:0000305}
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P0CL57_TED01
+GA   27.00 27.00;
+TC   29.80 97.90;
+NC   26.90 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   bacteria.
+CC   The function of this domain remains to be determined.

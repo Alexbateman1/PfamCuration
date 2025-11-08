@@ -1,0 +1,14 @@
+ID   tsi5
+DE   Immune protein Tsi5 {ECO:0000303|PubMed:24589350}
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P0DTB6_TED01
+GA   27.00 27.00;
+TC   30.60 48.90;
+NC   26.60 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   bacteria.
+CC   The protein is predicted to localise to the membrane.
+CC   The function of this domain remains to be determined.
