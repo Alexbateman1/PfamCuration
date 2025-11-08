@@ -1,0 +1,13 @@
+ID   Aq_805
+DE   Uncharacterised protein aq_805
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O66989_TED01
+GA   27.00 27.00;
+TC   27.10 175.00;
+NC   26.70 22.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in Aquifex
+CC   aeolicus (aq_805) and related Aquificota. The function of this
+CC   protein remains to be determined.

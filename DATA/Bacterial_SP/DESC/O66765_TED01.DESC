@@ -1,0 +1,14 @@
+ID   Aq_460
+DE   Uncharacterised protein aq_460
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O66765_TED01
+GA   27.00 27.00;
+TC   27.00 154.40;
+NC   26.90 19.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in Aquifex
+CC   aeolicus (aq_460) and related Aquificota. The protein has a
+CC   TPR-like helical domain superfamily structure. The function of this
+CC   protein remains to be determined.
