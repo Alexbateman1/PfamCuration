@@ -1,0 +1,29 @@
+ID   SpfP
+DE   Small protein SpfP family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P0DW56
+GA   27.00 27.00;
+TC   33.10 38.20;
+NC   22.60 17.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the SpfP family, a small 15-amino acid
+CC   protein found in Enterobacteriaceae. SpfP plays a role in carbon
+CC   catabolite repression (CCR), which prevents expression of genes
+CC   involved in catabolism of nonpreferred carbon sources when glucose
+CC   is present [1]. The protein is encoded in the dual-function Spot 42
+CC   sRNA (spf gene) and inhibits CRP-mediated gene activation when
+CC   cells are grown in glucose, especially at temperatures above 30
+CC   degrees Celsius [1]. SpfP interacts with the DNA-binding
+CC   transcriptional dual regulator CRP and affects expression of some
+CC   but not all CRP-dependent operons, particularly blocking galactose-
+CC   and maltose-specific operons [1]. Expression increases after
+CC   temperature shift to 42 and 45 degrees Celsius [1].
+RC   Function description for P0DW56
+RN   [1]
+RM   35239441
+RT   "Dual-function Spot 42 RNA encodes a 15-amino acid protein that regulates
+RT   the CRP transcription factor.";
+RA   Aoyama J.J., Raina M., Zhong A., Storz G.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 119:e2119866119-e2119866119(2022).
