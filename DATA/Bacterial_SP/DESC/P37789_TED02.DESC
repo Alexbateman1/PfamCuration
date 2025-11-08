@@ -1,0 +1,14 @@
+ID   SF2092
+DE   Uncharacterised protein SF2092
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P37789_TED02
+GA   27.00 27.00;
+TC   28.30 29.10;
+NC   25.30 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in uncharacterised protein
+CC   SF2092 from Shigella flexneri. The protein is approximately 180
+CC   amino acids in length and is found in the rfc region of the
+CC   chromosome. The function of this domain remains to be determined.
