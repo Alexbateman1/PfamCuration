@@ -1,0 +1,15 @@
+ID   MG414_MG415_N
+DE   MG414/MG415 family N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75181_TED01/Iterate
+GA   27.00 27.00;
+TC   31.40 159.50;
+NC   23.40 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of proteins belonging
+CC   to the MG414/MG415 family found in Mycoplasmoides species. Members
+CC   include MG414, MG415 and their homologues MPN_612 and MPN_614. The
+CC   full-length proteins range from approximately 334 to 1036 amino
+CC   acids. The function of this domain remains to be determined.
