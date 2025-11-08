@@ -1,0 +1,16 @@
+ID   TP_0123_2nd
+DE   TPR repeat-containing protein TP_0123 second domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83160_TED02
+GA   27.00 27.00;
+TC   27.90 113.10;
+NC   24.30 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the second domain of the TPR repeat-containing
+CC   protein TP_0123 and related proteins from Spirochaetota,
+CC   particularly Treponema. The domain is approximately 235 residues in
+CC   length. The full-length protein contains multiple tetratricopeptide
+CC   repeat (TPR) domains and belongs to the TPR-like helical domain
+CC   superfamily. The function of this domain remains to be determined.
