@@ -1,0 +1,15 @@
+ID   TP_0690
+DE   Uncharacterised Treponema protein TP_0690
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83688_TED01
+GA   27.00 27.00;
+TC   61.60 47.30;
+NC   23.50 23.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved domain found in uncharacterised
+CC   proteins from Treponema and related spirochete species. The domain
+CC   spans approximately 105 amino acids in the C-terminal region of
+CC   these proteins, which typically contain an N-terminal signal
+CC   peptide. The function of this domain remains to be determined.

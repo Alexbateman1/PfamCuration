@@ -1,0 +1,17 @@
+ID   TP_0763_C
+DE   Uncharacterised Treponema protein TP_0763 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83744_TED03
+GA   27.00 27.00;
+TC   27.10 58.50;
+NC   26.90 22.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of approximately 117
+CC   amino acids found in uncharacterised membrane proteins from
+CC   spirochete bacteria. The domain is found in the protein TP_0763 and
+CC   related sequences from Treponema, Spirochaeta, and other
+CC   Spirochaetota species. The full-length proteins are predicted to be
+CC   multi-pass membrane proteins localised to the cell membrane. The
+CC   function of this domain remains to be determined.

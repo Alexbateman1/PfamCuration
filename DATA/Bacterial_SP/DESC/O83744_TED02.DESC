@@ -1,0 +1,18 @@
+ID   TP_0763_mid
+DE   Uncharacterised Treponema protein TP_0763 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83744_TED02
+GA   27.00 27.00;
+TC   27.60 33.30;
+NC   25.10 23.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved domain of approximately 68 amino
+CC   acids found in uncharacterised membrane proteins from spirochete
+CC   bacteria. The domain is located between predicted transmembrane
+CC   helices in the protein TP_0763 and related sequences from Treponema,
+CC   Spirochaeta, and other Spirochaetota species. The full-length
+CC   proteins are predicted to be multi-pass membrane proteins localised
+CC   to the cell membrane. The function of this domain remains to be
+CC   determined.

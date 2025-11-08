@@ -1,0 +1,17 @@
+ID   CT_036_N
+DE   Chlamydial protein CT_036 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O84039_TED01
+GA   27.00 27.00;
+TC   31.80 157.20;
+NC   25.30 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of approximately 70
+CC   amino acids found in the uncharacterised protein CT_036 from
+CC   Chlamydia trachomatis. The full-length protein is 403 amino acids
+CC   and is predicted to be a multi-pass membrane protein localised to
+CC   the cell membrane. The protein has been annotated as a putative
+CC   inclusion membrane protein. The function of this domain remains to
+CC   be determined.

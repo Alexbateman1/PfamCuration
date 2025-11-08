@@ -1,0 +1,24 @@
+ID   TepP_mid
+DE   Chlamydial translocated early phosphoprotein TepP middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O84883_TED01
+GA   27.00 27.00;
+TC   42.40 168.50;
+NC   26.20 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   37920447
+RT   Molecular pathogenesis of Chlamydia trachomatis.
+RA   Nunes A, Borrego MJ, Gomes JP;
+RL   Front. Cell. Infect. Microbiol. 2023;13:1229663.
+CC   This entry represents a domain of approximately 71 amino acids found
+CC   in translocated early phosphoprotein TepP (CT_875) from Chlamydia
+CC   trachomatis. TepP is a 591 amino acid type III secretion effector
+CC   protein that is translocated into the host cell cytosol near the
+CC   inclusion during infection. The full-length protein TepP interacts
+CC   with host proteins CRK, CRKL, GSK3B and PI3K, and functions to
+CC   regulate innate immune signalling and prevent neutrophil-mediated
+CC   recruitment during Chlamydia infection [1]. The specific function of
+CC   this domain remains to be determined.

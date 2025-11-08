@@ -1,0 +1,18 @@
+ID   TP_0772
+DE   Uncharacterised Treponema protein TP_0772
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83751_TED01
+GA   27.00 27.00;
+TC   41.90 50.70;
+NC   22.00 21.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved domain of approximately 162 amino
+CC   acids found in uncharacterised proteins from Treponema species. The
+CC   domain comprises most of the length of these proteins, which are
+CC   approximately 170-250 amino acids in total. Some members are
+CC   annotated as lipoproteins. The protein TP_0772 from Treponema
+CC   pallidum has been detected in proteomic analyses and elicits an IgM
+CC   antibody response during infection. The function of this domain
+CC   remains to be determined.

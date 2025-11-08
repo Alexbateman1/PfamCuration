@@ -1,0 +1,15 @@
+ID   TP_1001_N
+DE   Uncharacterised Treponema protein TP_1001 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83966_TED01
+GA   27.00 27.00;
+TC   278.00 278.00;
+NC   23.20 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of approximately 123
+CC   amino acids found in the uncharacterised protein TP_1001 from
+CC   Treponema pallidum. The full-length protein is 393 amino acids and
+CC   also contains a second domain (Pfam:PF26342). The function of this
+CC   domain remains to be determined.

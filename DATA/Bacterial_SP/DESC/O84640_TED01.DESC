@@ -1,0 +1,19 @@
+ID   CT_635
+DE   Chlamydial putative type III secretion chaperone CT_635
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O84640_TED01
+GA   27.00 27.00;
+TC   28.50 110.90;
+NC   25.30 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved domain of approximately 40 amino
+CC   acids found in small proteins from Chlamydia species. The protein
+CC   CT_635 is a 144 amino acid protein that has been annotated as a
+CC   putative type III secretion chaperone. CT_635 associates with the
+CC   type III secretion effector CT622 and is thought to facilitate the
+CC   secretion of effector proteins. The protein is upregulated during
+CC   membrane reorganisation and is associated with T3SS-related
+CC   functions. The specific function of this domain remains to be
+CC   determined.

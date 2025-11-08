@@ -1,0 +1,16 @@
+ID   CT_696_N
+DE   Chlamydial protein CT_696 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O84702_TED01
+GA   27.00 27.00;
+TC   293.80 293.00;
+NC   22.60 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of approximately 132
+CC   amino acids found in the uncharacterised protein CT_696 from
+CC   Chlamydia trachomatis. The full-length protein is 392 amino acids.
+CC   CT_696 has been investigated in studies of type III secretion
+CC   effector proteins in Chlamydia. The function of this domain remains
+CC   to be determined.
