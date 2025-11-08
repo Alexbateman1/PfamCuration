@@ -1,0 +1,30 @@
+ID   XtpA
+DE   XtpA transcriptional regulator
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DXX6
+GA   27.00 27.00;
+TC   28.70 159.80;
+NC   25.60 17.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the XtpA transcriptional regulator family
+CC   found in Escherichia coli. This family is 60 amino acids in length.
+CC   XtpA controls the expression of small non-coding RNA GcvB, which
+CC   represses the expression of many amino acid transporter proteins
+CC   and uptake of aminoglycoside antibiotics in cells [1]. An RNA (xtr)
+CC   with a tRNA-like fold possibly derived from tRNA-Arg(UCG) is
+CC   encoded entirely within the protein; xtr does not have the sequence
+CC   corresponding to tRNA anticodon or variable arms [1]. This is a
+CC   leaderless mRNA [1]. Deletion of xtpA results in increased
+CC   susceptibility to sub-lethal concentrations of aminoglycoside
+CC   antibiotics neomycin, kanamycin, streptomycin, spectinomycin and
+CC   kasugamycin [1].
+RN   [1]
+RM   35081614
+RT   A leaderless mRNA including tRNA-like sequence encodes a small
+RT   peptide that regulates the expression of GcvB small RNA in
+RT   Escherichia coli.
+RA   Muto A, Goto S, Kurita D, Ushida C, Soma A, Himeno H;
+RL   J. Biochem. 2022;171:459-465.
+//
