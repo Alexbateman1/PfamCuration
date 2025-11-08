@@ -1,0 +1,15 @@
+ID   aq_1909_N
+DE   Uncharacterized protein aq_1909, N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67744_TED01
+GA   27.00 27.00;
+TC   29.20 155.40;
+NC   23.80 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of an uncharacterised
+CC   protein found in Aquificaceae, including species of Aquifex,
+CC   Thermocrinis, Hydrogenobacter, and Hydrogenivirga. The protein
+CC   belongs to COG1547. The function of this domain remains to be
+CC   determined.

@@ -1,0 +1,15 @@
+ID   aq_1627
+DE   Uncharacterized protein aq_1627
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67549_TED01
+GA   27.00 27.00;
+TC   27.50 126.90;
+NC   25.80 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in small
+CC   proteins of Aquificaceae, including species of Aquifex,
+CC   Thermocrinis, and Hydrogenobacter. The structure of this domain has
+CC   been determined (PDB: 2EHP, 2EIU). The function of this domain
+CC   remains to be determined.

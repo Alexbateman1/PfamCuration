@@ -1,0 +1,16 @@
+ID   aq_1465_C
+DE   Uncharacterized protein aq_1465, C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67445_TED02
+GA   27.00 27.00;
+TC   28.10 32.50;
+NC   26.50 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of an uncharacterised
+CC   protein found in Aquificaceae, including species of Aquifex,
+CC   Thermocrinis, and Hydrogenobacter. The full-length protein is
+CC   predicted to contain a signal peptide and is likely secreted or
+CC   localised to the periplasm. The function of this domain remains to
+CC   be determined.

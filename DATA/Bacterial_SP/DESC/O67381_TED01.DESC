@@ -1,0 +1,14 @@
+ID   aq_1369_N
+DE   Uncharacterized protein aq_1369, N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67381_TED01
+GA   27.00 27.00;
+TC   27.10 29.60;
+NC   26.20 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of an uncharacterised
+CC   protein found in Aquificaceae, including species of Aquifex,
+CC   Thermocrinis, Hydrogenobacter, and Hydrogenivirga. The function of
+CC   this domain remains to be determined.

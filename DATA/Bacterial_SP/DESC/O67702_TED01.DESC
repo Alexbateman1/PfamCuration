@@ -1,0 +1,16 @@
+ID   aq_1850
+DE   Uncharacterized protein aq_1850
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67702_TED01
+GA   27.00 27.00;
+TC   34.30 34.30;
+NC   22.50 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in both
+CC   Bacteria and Archaea. In Bacteria, it is present in Pseudomonadota
+CC   and Pseudomonadati species. In Archaea, it is found in
+CC   Thermoproteota (including Thermoprotei and Thermofilales) and
+CC   Methanobacteriati. The function of this domain remains to be
+CC   determined.

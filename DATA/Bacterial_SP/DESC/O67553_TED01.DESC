@@ -1,0 +1,15 @@
+ID   aq_1631
+DE   Uncharacterized protein aq_1631
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67553_TED01
+GA   27.00 27.00;
+TC   30.50 42.30;
+NC   26.80 23.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in proteins
+CC   of Aquificales, including species from Aquificaceae (Thermocrinis)
+CC   and Hydrogenothermaceae (Sulfurihydrogenibium). The protein
+CC   contains a predicted coiled-coil region. The function of this
+CC   domain remains to be determined.
