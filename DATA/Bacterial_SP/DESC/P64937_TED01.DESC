@@ -1,0 +1,13 @@
+ID   Rv2247_dom
+DE   Mycobacterium Rv2247 domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P64937_TED01
+GA   27.00 27.00;
+TC   27.60 106.70;
+NC   24.60 21.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in uncharacterised protein Rv2247
+CC   and its orthologues, found in Mycobacterium tuberculosis complex
+CC   species. The function of this domain remains to be determined.

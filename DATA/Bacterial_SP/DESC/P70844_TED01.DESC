@@ -1,0 +1,29 @@
+ID   BBD22_dom
+DE   Borrelia burgdorferi BBD22 domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P70844_TED01
+GA   27.00 27.00;
+TC   27.50 97.30;
+NC   25.90 18.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in uncharacterised protein BBD22,
+CC   found in Borreliella burgdorferi. The protein is encoded on linear
+CC   plasmid lp17. BBD22 is co-transcribed with bbd21, and deletion of
+CC   these genes affects plasmid copy number [1]. The protein is involved
+CC   in prophage and virulence factor induction during tick transmission
+CC   [2]. The function of this domain remains to be determined.
+RN   [1]
+RM   35493747
+RT   Deletion of a Genetic Region of lp17 Affects Plasmid Copy Number in
+RT   Borrelia burgdorferi.
+RA   Jackson MK, Moriarty TJ, Adams CA, Tufts DM, Delorey MJ, Tsao JI,
+RA   Barbour AG;
+RL   Front Cell Infect Microbiol 2022;12:849084.
+RN   [2]
+RM   36639656
+RT   Coupled induction of prophage and virulence factors during tick
+RT   transmission of the Lyme disease spirochete.
+RA   Phelan JP, Barreras H, Fitzgerald B, Stevenson B;
+RL   Nat Commun 2023;14:245.

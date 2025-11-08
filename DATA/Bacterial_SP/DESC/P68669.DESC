@@ -1,0 +1,17 @@
+ID   Phage_G9P
+DE   Inovirus tail virion protein G9P family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P68669/Iterate
+GA   27.00 27.00;
+TC   27.50 98.20;
+NC   25.90 18.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the tail virion protein G9P of filamentous
+CC   inoviruses and prophage-derived homologues found in Xanthomonas
+CC   species. G9P may initiate with G7P the virion concomitant
+CC   assembly-budding process, by interacting with the packaging signal of
+CC   the viral genome. There are about five copies of this protein per
+CC   mature phage that are located on the tail side of the filamentous
+CC   virion with G7P.

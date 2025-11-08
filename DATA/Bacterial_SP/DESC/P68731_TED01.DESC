@@ -1,0 +1,20 @@
+ID   DegR
+DE   DegR domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P68731_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.50 92.70;
+NC   26.40 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the DegR domain found in the regulatory protein
+CC   DegR and its orthologues, found in Bacillus species. DegR stabilises
+CC   the phosphorylated form of DegU, leading to enhanced production of
+CC   levansucrase, alkaline protease, and neutral protease [1]. The protein
+CC   forms a homotetramer.
+RN   [1]
+RM   1459944
+RT   Stabilization of phosphorylated Bacillus subtilis DegU by DegR.
+RA   Mukai K, Kawata-Mukai M, Tanaka T;
+RL   J Bacteriol 1992;174:7954-7962.
