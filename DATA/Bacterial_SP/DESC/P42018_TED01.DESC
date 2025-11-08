@@ -1,0 +1,13 @@
+ID   YkoW_N
+DE   Uncharacterised protein YkoW N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P42018_TED01
+GA   27.00 27.00;
+TC   28.50 82.80;
+NC   26.40 25.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of the uncharacterised
+CC   protein YkoW found in Bacillus subtilis and related Bacillota. The
+CC   function of this domain remains to be determined.
