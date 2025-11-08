@@ -1,0 +1,22 @@
+ID   HsdR_N
+DE   Type I restriction enzyme R protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75453_TED01
+GA   27.00 27.00;
+TC   29.10 360.10;
+NC   26.80 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23300489
+RT   Comprehensive methylome characterization of Mycoplasma genitalium
+RT   and Mycoplasma pneumoniae at single-base resolution.
+RA   Lluch-Senar M, Luong K, Llorens-Rico V, Delgado J, Fang G, Spittle K,
+RA   Clark TA, Schadt E, Turner SW, Korlach J, Serrano L;
+RL   PLoS Genet. 2013;9:e1003191.
+CC   This entry represents the N-terminal domain of the type I
+CC   restriction enzyme R protein (HsdR) from Mycoplasma species. In
+CC   Mycoplasma pneumoniae, the protein MPN109 (P75453) is part of a
+CC   putative type II restriction enzyme and methyltransferase system
+CC   [1]. The function of this domain remains to be determined.

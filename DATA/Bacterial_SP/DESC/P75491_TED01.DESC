@@ -1,0 +1,27 @@
+ID   Adhesin_P1_2
+DE   Adhesin P1-like domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75491_TED01
+GA   27.00 27.00;
+TC   29.50 28.50;
+NC   25.10 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   33057023
+RT   Immunodominant proteins P1 and P40/P90 from human pathogen Mycoplasma
+RT   pneumoniae.
+RA   Vizarraga D, Kawamoto A, Matsumoto U, Illanes R, Perez-Luque R,
+RA   Martin J, Mazzolini R, Bierge P, Pich OQ, Espasa M, Sanfeliu I,
+RA   Esperalba J, Fernandez-Huerta M, Scheffer MP, Pinyol J, Frangakis AS,
+RA   Lluch-Senar M, Mori S, Shibayama K, Kenri T, Kato T, Namba K, Fita I,
+RA   Miyata M, Aparicio D;
+RL   Nat Commun. 2020;11:5188.
+CC   This entry represents a conserved domain found in adhesin P1-like
+CC   proteins from Mycoplasma species. These proteins belong to the
+CC   adhesin P1 family. In Mycoplasma pneumoniae, the protein P75491
+CC   (MPN_286) is a putative adhesin P1-like protein that may be the
+CC   product of a pseudogene. While the full-length adhesin P1 protein is
+CC   involved in cytadherence [1], the specific function of this domain
+CC   remains to be determined.
