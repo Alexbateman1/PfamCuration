@@ -1,0 +1,17 @@
+ID   Y4bO_N
+DE   Uncharacterised protein y4bO N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P55382_TED01
+GA   27.00 27.00;
+TC   110.60 109.60;
+NC   26.40 25.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of uncharacterised
+CC   protein y4bO from Sinorhizobium fredii strain NGR234. Y4bO is a
+CC   multi-domain protein of 606 amino acids encoded on the symbiotic
+CC   plasmid pNGR234a. This domain corresponds to residues 2-56 of the
+CC   full-length protein and is part of a multi-domain architecture that
+CC   includes Pfam:PF27477 (Y4bO_3rd). The function of this domain
+CC   remains to be determined.

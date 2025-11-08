@@ -1,0 +1,26 @@
+ID   FliZ_N
+DE   Flagellar regulatory protein FliZ N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P52629_TED01
+GA   27.00 27.00;
+TC   27.00 95.10;
+NC   26.80 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   18765794
+RT   Inverse regulatory coordination of motility and curli-mediated
+RT   adhesion in Escherichia coli.
+RA   Pesavento C, Becker G, Sommerfeldt N, Possling A, Tschowri N,
+RA   Mehlis A, Hengge R;
+RL   Genes Dev. 2008;22:2434-2446.
+CC   This entry represents the N-terminal domain of protein FliZ, a
+CC   flagellar regulatory protein found in Enterobacteriales and related
+CC   Gammaproteobacteria. FliZ transiently interferes with RpoS (sigma S)
+CC   activity during post-exponential growth phase without affecting RpoS
+CC   expression [1]. FliZ acts as a timing device for expression of genes
+CC   for adhesive curli fimbriae by indirectly decreasing expression of
+CC   the curli regulator CsgD [1]. This domain is found at the N-terminus
+CC   alongside Pfam:PF02899 (Phage_int_SAM_1). The specific function of
+CC   this domain remains to be determined.
