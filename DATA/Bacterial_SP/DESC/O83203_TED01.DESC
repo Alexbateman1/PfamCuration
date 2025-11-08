@@ -1,0 +1,15 @@
+ID   TP_0203_N
+DE   Uncharacterised protein TP_0203 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83203_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.00 35.30;
+NC   26.10 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of uncharacterised
+CC   protein TP_0203 from Treponema pallidum. The protein is 1029 amino
+CC   acids long and contains a signal peptide (residues 1-23). This
+CC   domain is found at approximately residues 46-140 in the full-length
+CC   protein. The function of this domain remains to be determined.

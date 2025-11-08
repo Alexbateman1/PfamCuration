@@ -1,0 +1,17 @@
+ID   TP_0435
+DE   Uncharacterised protein TP_0435
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83435_TED01/Iterate
+GA   27.00 27.00;
+TC   27.00 44.40;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the uncharacterised protein TP_0435 from
+CC   Treponema pallidum, also known as Tp17. The protein is 163 amino
+CC   acids long and is found in Treponema species. The protein contains
+CC   a signal peptide (residues 1-26) and is predicted to be a
+CC   lipoprotein with N-palmitoyl cysteine and S-diacylglycerol cysteine
+CC   lipid anchors at residue 27. The function of this protein remains
+CC   to be determined.
