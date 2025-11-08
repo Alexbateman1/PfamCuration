@@ -1,0 +1,13 @@
+ID   MG219
+DE   Uncharacterised protein MG219
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P47461
+GA   27.00 27.00;
+TC   27.20 319.30;
+NC   26.90 23.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in
+CC   Mycoplasmoides genitalium (MG219). The function of this protein
+CC   remains to be determined.
