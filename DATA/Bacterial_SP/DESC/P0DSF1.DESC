@@ -1,0 +1,22 @@
+ID   YnaN
+DE   Small protein YnaN
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DSF1
+GA   27.00 27.00;
+TC   33.20 35.90;
+NC   22.70 15.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents YnaN, a small protein of 15 amino acids found
+CC   in Escherichia coli. YnaN was identified by ribosome profiling with
+CC   stalled initiation complexes [1]. The protein is expressed in both
+CC   exponential and stationary phase in rich medium, with slightly
+CC   higher expression in stationary phase. The function of this protein
+CC   remains to be determined.
+RN   [1]
+RM   30837344
+RT   Identifying small proteins by ribosome profiling with stalled
+RT   initiation complexes.
+RA   Weaver J, Mohammad F, Buskirk AR, Storz G;
+RL   MBio 2019;10:0.

@@ -1,0 +1,22 @@
+ID   YqfH
+DE   Small protein YqfH
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DPP4
+GA   27.00 27.00;
+TC   27.90 65.40;
+NC   26.50 19.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents YqfH, a small protein of 23 amino acids found
+CC   in Escherichia coli. YqfH was identified in a proteomics study
+CC   focused on discovering new small proteins [1]. Expression of this
+CC   protein occurs during stationary phase. The function of this protein
+CC   remains to be determined.
+RN   [1]
+RM   29645342
+RT   Identifying new small proteins in Escherichia coli.
+RA   VanOrsdel CE, Kelly JP, Burke BN, Lein CD, Oufiero CE, Sanchez JF,
+RA   Wimmers LE, Hearn DJ, Abuikhdair FJ, Barnhart KR, Duley ML, Ernst SE,
+RA   Kenerson BA, Serafin AJ, Hemm MR;
+RL   Proteomics 2018;18:E1700064.

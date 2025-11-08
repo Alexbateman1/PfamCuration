@@ -1,0 +1,18 @@
+ID   TimP
+DE   Type I toxin TimP
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DUM3/Iterate
+GA   27.00 27.00;
+TC   29.00 100.70;
+NC   25.40 24.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents TimP, a putative toxic component of a type I
+CC   toxin-antitoxin system found in Escherichia coli. The protein of 41
+CC   amino acids is anchored in the cell inner membrane by an N-terminal
+CC   transmembrane helix. The toxin is neutralised by the sRNA antitoxin
+CC   TimR, which binds to the 5' UTR of timP mRNA and inhibits
+CC   translation. The antitoxin gene is encoded immediately upstream and
+CC   transcribed divergently from the toxin gene. This family is
+CC   annotated in NCBIfam as NF040796 (toxic_TimP).

@@ -1,0 +1,23 @@
+ID   YliM
+DE   Small protein YliM
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DPN6/Iterate
+GA   27.00 27.00;
+TC   32.60 43.40;
+NC   21.30 18.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents YliM, a small protein of 21 amino acids found
+CC   in Enterobacteriaceae. YliM was identified in a proteomics study
+CC   focused on discovering new small proteins in Escherichia coli [1].
+CC   The protein is expressed in both exponential and stationary growth
+CC   phases, with considerably higher expression during exponential
+CC   phase. The function of this protein remains to be determined.
+RN   [1]
+RM   29645342
+RT   Identifying new small proteins in Escherichia coli.
+RA   VanOrsdel CE, Kelly JP, Burke BN, Lein CD, Oufiero CE, Sanchez JF,
+RA   Wimmers LE, Hearn DJ, Abuikhdair FJ, Barnhart KR, Duley ML, Ernst SE,
+RA   Kenerson BA, Serafin AJ, Hemm MR;
+RL   Proteomics 2018;18:E1700064.

@@ -1,0 +1,21 @@
+ID   YtiB
+DE   Small protein YtiB
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DSE5
+GA   27.00 27.00;
+TC   28.10 47.00;
+NC   26.20 16.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents YtiB, a small protein of 18 amino acids found
+CC   in Escherichia coli. YtiB was identified by ribosome profiling with
+CC   stalled initiation complexes [1]. The protein is expressed at low
+CC   levels in exponential phase in rich medium. The function of this
+CC   protein remains to be determined.
+RN   [1]
+RM   30837344
+RT   Identifying small proteins by ribosome profiling with stalled
+RT   initiation complexes.
+RA   Weaver J, Mohammad F, Buskirk AR, Storz G;
+RL   MBio 2019;10:0.

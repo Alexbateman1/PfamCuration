@@ -1,0 +1,23 @@
+ID   YriA
+DE   Small protein YriA
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DSG9
+GA   27.00 27.00;
+TC   35.40 68.10;
+NC   26.70 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents YriA, a small protein of 24 amino acids found
+CC   in Escherichia coli. YriA was identified by ribosome profiling with
+CC   stalled initiation complexes [1]. The protein is expressed in both
+CC   exponential and stationary phase in rich medium, with higher
+CC   expression in exponential phase. This gene overlaps yriB on the same
+CC   strand in another reading frame. The function of this protein
+CC   remains to be determined.
+RN   [1]
+RM   30837344
+RT   Identifying small proteins by ribosome profiling with stalled
+RT   initiation complexes.
+RA   Weaver J, Mohammad F, Buskirk AR, Storz G;
+RL   MBio 2019;10:0.
