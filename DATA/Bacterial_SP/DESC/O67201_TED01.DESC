@@ -1,0 +1,18 @@
+ID   aq_1121
+DE   aq_1121 domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67201_TED01
+GA   27.00 27.00;
+TC   28.10 186.50;
+NC   24.00 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in aq_1121, an uncharacterised
+CC   268 amino acid protein from Aquifex aeolicus. The protein is
+CC   annotated with a porin domain superfamily (InterPro:IPR023614). The
+CC   family is found in proteins from Aquificales, including members of
+CC   the genera Aquifex, Thermocrinis, Hydrogenobacter, and
+CC   Hydrogenivirga. Some proteins in the family are annotated as porins.
+CC   The function of this domain remains to be determined.
+//
