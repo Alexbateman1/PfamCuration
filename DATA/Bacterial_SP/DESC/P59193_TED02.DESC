@@ -1,0 +1,14 @@
+ID   YfdT_C
+DE   Protein YfdT C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P59193_TED02
+GA   27.00 27.00;
+TC   27.30 75.80;
+NC   26.20 20.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of protein YfdT, found
+CC   in Enterobacterales and bacteriophages. The protein is encoded
+CC   within prophage regions and some proteins are annotated as
+CC   excisionase. The function of this domain remains to be determined.
