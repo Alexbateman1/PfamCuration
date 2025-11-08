@@ -1,0 +1,22 @@
+ID   Low_temp_prot
+DE   Low temperature-induced protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P29711
+GA   27.00 27.00;
+TC   30.60 27.80;
+NC   23.40 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a family of low temperature-induced proteins
+CC   found in Cyanobacteria, particularly in Nostoc and related species.
+CC   These proteins are approximately 110-130 amino acids in length. The
+CC   protein all0459 from Nostoc sp. PCC 7120 has been described as a
+CC   nutrient stress-responsive protein [1]. The precise function of this
+CC   protein family remains to be determined.
+RN   [1]
+RM   27012282
+RT   Calcium impacts carbon and nitrogen balance in the filamentous
+RT   cyanobacterium Anabaena sp. PCC 7120.
+RA   Zhao MX, Jiang YL, Xu BY, Chen Y, Zhang CC, Zhou CZ;
+RL   J Exp Bot. 2016;67:3427-3436.

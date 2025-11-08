@@ -1,0 +1,14 @@
+ID   YibG_N
+DE   Protein YibG N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P32106_TED01/Iterate
+GA   27.00 27.00;
+TC   27.20 120.00;
+NC   26.40 25.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of YibG proteins found in
+CC   Escherichia coli and related Enterobacteriaceae. The full-length
+CC   protein YibG contains a signal peptide and is predicted to be secreted.
+CC   The function of this N-terminal domain remains to be determined.

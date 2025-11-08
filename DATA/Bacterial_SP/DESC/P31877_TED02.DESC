@@ -1,0 +1,21 @@
+ID   HydE
+DE   Protein HydE domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P31877_TED02
+GA   27.00 27.00;
+TC   32.50 31.50;
+NC   26.10 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in HydE proteins from
+CC   Campylobacterota, particularly in Helicobacter and Wolinella species.
+CC   HydE is part of the hydrogenase-specific operon and is involved in
+CC   hydrogenase maturation [1]. The function of this domain remains to be
+CC   determined.
+RN   [1]
+RM   16113246
+RT   Helicobacter hepaticus hydrogenase mutants are deficient in hydrogen-
+RT   supported amino acid uptake and in causing liver lesions in A/J mice.
+RA   Maier RJ, Olczak A, Maier S, Soni S, Gunn J;
+RL   Infect Immun. 2005;73:5311-5318.
