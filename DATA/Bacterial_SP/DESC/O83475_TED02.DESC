@@ -1,0 +1,15 @@
+ID   TP013X_lip_C
+DE   TP013X lipoprotein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83475_TED02
+GA   27.00 27.00;
+TC   28.10 128.00;
+NC   26.60 19.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain found in members of the
+CC   TP013X lipoprotein family from Treponema pallidum. Members of this
+CC   family include TP_0133, TP_0134, TP_0136, and TP_0462/TP_0463. The
+CC   domain is approximately 128 residues in length. The function of
+CC   this domain remains to be determined.
