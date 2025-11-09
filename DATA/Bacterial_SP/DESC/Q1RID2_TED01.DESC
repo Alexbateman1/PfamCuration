@@ -1,0 +1,18 @@
+ID   RARP-2
+DE   Rickettsial ankyrin repeat protein 2 domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q1RID2_TED01
+GA   27.00 27.00;
+TC   36.90 92.90;
+NC   21.80 20.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of rickettsial ankyrin repeat protein
+CC   2 (RARP-2), found in Rickettsia species. The representative member
+CC   from Rickettsia rickettsii strain Sheila Smith is a Type IV secreted
+CC   effector that associates with the endoplasmic reticulum. The protein
+CC   has been shown to cause fragmentation of the trans-Golgi network.
+CC   Ankyrin repeat proteins serve as effector proteins or virulence
+CC   factors in several pathogens.
+//

@@ -1,0 +1,36 @@
+ID   OmcS_C
+DE   C-type cytochrome OmcS C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q74A86_TED01
+GA   27.00 27.00;
+TC   27.10 30.60;
+NC   26.30 25.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of the outer membrane
+CC   c-type cytochrome OmcS from Geobacter species. The full-length OmcS
+CC   is approximately 432 amino acids and plays an important role in
+CC   extracellular electron transfer. OmcS can transfer electrons to
+CC   insoluble iron (III) oxides as well as other extracellular electron
+CC   acceptors including manganese (IV) oxide and humic substances. The
+CC   protein binds six low-spin haem groups and is loosely associated with
+CC   the cell surface, where it localises along pili. OmcS is essential for
+CC   direct interspecies electron transfer (DIET) in cocultures with
+CC   Geobacter metallireducens. Members are found in Geobacter,
+CC   Anaeromyxobacter and related Desulfuromonadia. The function of this
+CC   C-terminal domain remains to be determined.
+RN   [1]
+RM   16332857
+RT   Outer membrane c-type cytochromes required for Fe(III) and Mn(IV)
+RT   oxide reduction in Geobacter sulfurreducens.
+RA   Mehta T., Coppi M.V., Childers S.E., Lovley D.R.;
+RL   Appl. Environ. Microbiol. 2005;71:8634-8641.
+RN   [2]
+RM   21236241
+RT   Biochemical characterization of purified OmcS, a c-type cytochrome
+RT   required for insoluble Fe(III) reduction in Geobacter sulfurreducens.
+RA   Qian X., Mester T., Morgado L., Arakawa T., Sharma M.L., Inoue K.,
+RA   Joseph C., Salgueiro C.A., Maroney M.J., Lovley D.R.;
+RL   Biochim. Biophys. Acta 2011;1807:404-412.
+//

@@ -1,0 +1,20 @@
+ID   TubT
+DE   Tuberculosinyl adenosine transferase family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P9WJ61_TED01
+GA   27.00 27.00;
+TC   28.60 31.10;
+NC   25.60 21.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the tuberculosinyl adenosine transferase
+CC   family, found in Mycobacterium tuberculosis. The representative
+CC   member from Mycobacterium tuberculosis strain CDC 1551 is a 296
+CC   amino acid enzyme (EC 2.5.1.153) that catalyses the condensation of
+CC   adenosine and tuberculosinyl diphosphate to generate 1-
+CC   tuberculosinyladenosine, which acts as an antiacid that protects
+CC   M.tuberculosis from acid pH. The enzyme also acts as a phosphatase
+CC   producing tuberculosinol and isotuberculosinol. It belongs to the
+CC   diterpene synthase family and functions as a homodimer.
+//

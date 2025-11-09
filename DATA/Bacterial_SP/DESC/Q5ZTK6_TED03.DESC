@@ -1,0 +1,21 @@
+ID   SidJ_3rd
+DE   Calmodulin-dependent glutamylase SidJ third domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q5ZTK6_TED03
+GA   27.00 27.00;
+TC   27.90 571.50;
+NC   26.10 25.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the third domain of calmodulin-dependent
+CC   glutamylase SidJ from Legionella pneumophila. The full-length SidJ
+CC   protein is approximately 873 amino acids and is a virulence effector
+CC   that mediates protein polyglutamylation to inhibit the SidE-family
+CC   ubiquitin ligases. SidJ catalyses the attachment of glutamate
+CC   moieties to SdeA, SdeB, SdeC and SidE, requiring host calmodulin for
+CC   activity. The protein interacts with host calmodulin and may also
+CC   have deubiquitinase activity. Members are found in COG1413 and
+CC   NCBIfam NF033873. The function of this third domain remains to be
+CC   determined.
+//

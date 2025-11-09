@@ -1,0 +1,16 @@
+ID   YlcH
+DE   Escherichia coli YlcH protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q47268
+GA   27.00 27.00;
+TC   27.40 68.90;
+NC   26.00 21.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YlcH protein family, found in Escherichia
+CC   coli. The representative member YlcH from Escherichia coli strain
+CC   K12 is a 33 amino acid protein encoded by the cryptic lambdoid
+CC   prophage DLP12. YlcH has a similar protein in phage 82. The function
+CC   of this protein remains to be determined.
+//

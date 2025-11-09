@@ -1,0 +1,37 @@
+ID   MamL
+DE   Magnetosome protein MamL
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q6NE58_TED01
+GA   27.00 27.00;
+TC   43.30 43.00;
+NC   26.40 24.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the magnetosome protein MamL from
+CC   Magnetospirillum species. MamL is approximately 78 amino acids in
+CC   length and is involved in magnetite crystal maturation. The protein is
+CC   localised to the magnetosome membrane and is one of seven genes
+CC   (mamLQBIEMO) able to induce magnetosome membrane biogenesis.
+CC   Expression of mamLQRBIEMO in a deletion strain restores magnetosome
+CC   vesicle formation. MamL is part of the 17-gene mamAB operon and is
+CC   essential for the formation of minimal magnetosome chains with small
+CC   magnetite particles. Disruption of mamL leads to loss of magnetic
+CC   response and absence of magnetosomes. The protein is predicted to be a
+CC   single-pass membrane protein. Members are found in NCBIfam NF040988.
+RN   [1]
+RM   24816605
+RT   Genetic dissection of the mamAB and mms6 operons reveals a gene set
+RT   essential for magnetosome biogenesis in Magnetospirillum
+RT   gryphiswaldense.
+RA   Lohsse A., Borg S., Raschdorf O., Kolinko I., Tompa E., Posfai M.,
+RA   Faivre D., Baumgartner J., Schueler D.;
+RL   J. Bacteriol. 2014;196:2658-2669.
+RN   [2]
+RM   27286560
+RT   Genetic and Ultrastructural Analysis Reveals the Key Players and
+RT   Initial Steps of Bacterial Magnetosome Membrane Biogenesis.
+RA   Raschdorf O., Forstner Y., Kolinko I., Uebe R., Plitzko J.M., Schueler
+RA   D.;
+RL   PLoS Genet. 2016;12:E1006101.
+//

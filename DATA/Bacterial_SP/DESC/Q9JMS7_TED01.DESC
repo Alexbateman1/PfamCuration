@@ -1,0 +1,14 @@
+ID   DUF
+DE   Uncharacterised protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:Q9JMS7_TED01
+GA   27.00 27.00;
+TC   27.10 32.80;
+NC   26.40 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein family found in
+CC   Pseudomonas and Burkholderia species. The function of this family
+CC   remains to be determined.
+//

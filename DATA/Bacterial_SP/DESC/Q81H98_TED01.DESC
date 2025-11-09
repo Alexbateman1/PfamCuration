@@ -1,0 +1,15 @@
+ID   BC0921_immun
+DE   Immunity protein BC_0921
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q81H98_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.70 26.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the immunity protein BC_0921 from Bacillus
+CC   cereus. The protein is approximately 117 amino acids in length.
+CC   Members are found in Bacillus and related Bacillota. The function of
+CC   this protein remains to be determined.
+//

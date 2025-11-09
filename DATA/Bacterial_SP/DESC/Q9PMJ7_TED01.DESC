@@ -1,0 +1,15 @@
+ID   Cj1463_N
+DE   Uncharacterised protein Cj1463 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9PMJ7_TED01
+GA   27.00 27.00;
+TC   27.50 78.30;
+NC   26.30 17.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 2-32) of
+CC   uncharacterised protein Cj1463, a 113-residue protein from
+CC   Campylobacter jejuni. The protein is similar to Helicobacter pylori
+CC   HP0245/JHP0230. The function of this protein remains to be determined.
+//

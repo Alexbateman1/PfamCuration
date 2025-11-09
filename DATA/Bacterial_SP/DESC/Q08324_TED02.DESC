@@ -1,0 +1,16 @@
+ID   Radical_SAM_2
+DE   Radical SAM domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q08324_TED02
+GA   27.00 27.00;
+TC   50.80 92.50;
+NC   26.90 25.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a radical SAM (S-adenosylmethionine) domain,
+CC   found in Actinomycetes including Micromonospora, Frankia and
+CC   Dactylosporangium species. Radical SAM enzymes use a [4Fe-4S] cluster
+CC   and SAM to generate radical species for various biochemical
+CC   transformations. The function of this domain remains to be determined.
+//

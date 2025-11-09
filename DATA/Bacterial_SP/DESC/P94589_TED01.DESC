@@ -1,0 +1,16 @@
+ID   YwpG
+DE   YwpG protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P94589_TED01
+GA   27.00 27.00;
+TC   27.90 30.00;
+NC   26.70 24.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YwpG protein family, found in Bacillus
+CC   subtilis. The representative member YwpG from Bacillus subtilis
+CC   strain 168 is a 127 amino acid protein. YwpG interacts with both the
+CC   D1 and D2 domains of dynamin-like protein DynA. The function of this
+CC   protein remains to be determined.
+//

@@ -1,0 +1,18 @@
+ID   BBA03
+DE   Borrelia outer membrane protein BBA03 family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q44849_TED01
+GA   27.00 27.00;
+TC   28.60 244.20;
+NC   26.90 26.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the BBA03 outer membrane protein family, found
+CC   in Borrelia burgdorferi. The representative member BBA03 from
+CC   Borrelia burgdorferi strain B31 is a 169 amino acid protein
+CC   localised to the cell outer membrane. The protein is encoded on the
+CC   lp54 plasmid. BBA03 has been studied as a potential epitope for the
+CC   serodiagnosis of human borreliosis and for Lyme disease vaccine
+CC   development. The function of this protein remains to be determined.
+//

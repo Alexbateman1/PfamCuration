@@ -1,0 +1,18 @@
+ID   LC3_antibac
+DE   Antibacterial protein LC3
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:Q9R5C6
+GA   27.00 27.00;
+TC   27.10 50.40;
+NC   26.50 24.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents antibacterial protein LC3 from Bacillus
+CC   species. This protein has demonstrated antibacterial activity
+CC   against Xanthomonas campestris, Pseudomonas solanacearum, and
+CC   Clostridium perfringens. The protein contains multiple leucine-rich
+CC   repeat (LRR) domains and has an experimentally determined pI of
+CC   9.12. The exact mechanism of antibacterial action remains to be
+CC   determined.
+//

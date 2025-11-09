@@ -1,0 +1,24 @@
+ID   CT_036
+DE   Chlamydial inclusion membrane protein CT_036 family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9JRX2_TED01
+GA   27.00 27.00;
+TC   36.40 31.70;
+NC   26.70 19.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents uncharacterised protein CT_036, a 403-residue
+CC   membrane protein from Chlamydia trachomatis with two transmembrane
+CC   helices (residues 29-49 and 55-75). The protein belongs to the
+CC   chlamydial CPn_0129/CT_036/TC_0306 family. Members of this family have
+CC   been identified as putative inclusion membrane (Inc) proteins in
+CC   chlamydiae [1]. The function of this protein family remains to be
+CC   determined.
+RN   [1]
+RM   21324157
+RT   Multi-genome identification and characterization of chlamydiae-
+RT   specific type III secretion substrates: the Inc proteins.
+RA   Dehoux P., Flores R., Dauga C., Zhong G., Subtil A.;
+RL   BMC Genomics 12:109-109(2011).
+//

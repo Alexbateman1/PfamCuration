@@ -1,0 +1,16 @@
+ID   HlyD_2
+DE   Hemolysin D C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q08675_TED02
+GA   27.00 27.00;
+TC   27.10 141.40;
+NC   24.90 24.00;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of hemolysin D (HlyD),
+CC   found in Pseudoalteromonas, Photobacterium, and Armatimonas species.
+CC   The full-length protein is a membrane fusion protein component of
+CC   type I secretion systems. The function of this domain remains to be
+CC   determined.
+//

@@ -1,0 +1,15 @@
+ID   UU153_N
+DE   Uncharacterised protein UU153 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9PQZ1_TED01
+GA   27.00 27.00;
+TC   27.30 110.20;
+NC   26.80 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 7-50) of
+CC   uncharacterised protein UU153 from Ureaplasma. This small 111 amino
+CC   acid protein is conserved within Ureaplasma species. The function of
+CC   this domain remains to be determined.
+//

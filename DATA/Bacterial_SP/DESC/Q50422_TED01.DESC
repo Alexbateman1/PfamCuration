@@ -1,0 +1,20 @@
+ID   MauL_N
+DE   Methylamine utilization protein MauL N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q50422_TED01
+GA   27.00 27.00;
+TC   28.00 84.20;
+NC   26.80 18.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of methylamine
+CC   utilization protein MauL from methylotrophic bacteria. This domain
+CC   is approximately 32 amino acids in length and is located at
+CC   positions 22-53 in MauL from Methylobacillus flagellatus. The
+CC   full-length MauL protein is probably involved in tryptophan
+CC   tryptophylquinone (TTQ) prosthetic group biosynthesis. MauL is
+CC   involved in the methylamine degradation pathway of one-carbon
+CC   metabolism. Members belong to the cupredoxin superfamily. The
+CC   function of this domain remains to be determined.
+//

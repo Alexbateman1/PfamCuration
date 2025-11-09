@@ -1,0 +1,17 @@
+ID   pXO2_37_C
+DE   Uncharacterised protein pXO2-37 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q6F047_TED02
+GA   27.00 27.00;
+TC   32.40 35.10;
+NC   26.60 26.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of an uncharacterised
+CC   protein encoded on plasmid pXO2 from Bacillus anthracis. The
+CC   full-length protein pXO2-37 (also known as BXB0038 or GBAA_pXO2_0038)
+CC   is approximately 259 amino acids. Plasmid pXO2 is one of two virulence
+CC   plasmids found in Bacillus anthracis, the causative agent of anthrax.
+CC   The function of this C-terminal domain remains to be determined.
+//

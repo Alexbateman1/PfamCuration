@@ -1,0 +1,20 @@
+ID   FimV_Acineto
+DE   Fimbrial assembly protein FimV domain from Acinetobacter
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q6FEV0_TED01
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of the fimbrial assembly protein FimV
+CC   from Acinetobacter species. FimV proteins are involved in type IV
+CC   pilus biogenesis and are predicted to be inner membrane proteins. In
+CC   Acinetobacter baumannii, the protein encoded by locus A1S_0425
+CC   contributes to abiotic surface colonisation and biofilm formation. The
+CC   protein has similarity to the C-terminal region of Pseudomonas
+CC   aeruginosa FimV. Members are found in Acinetobacter species including
+CC   the Acinetobacter calcoaceticus/baumannii complex. The function of
+CC   this domain remains to be determined.
+//

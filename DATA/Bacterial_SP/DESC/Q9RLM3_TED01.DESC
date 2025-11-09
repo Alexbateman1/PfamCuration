@@ -1,0 +1,17 @@
+ID   DUF
+DE   Domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9RLM3_TED01
+GA   27.00 27.00;
+TC   27.10 38.90;
+NC   26.50 21.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found predominantly in bacteria from
+CC   diverse phyla including Bacillota, Bacteroidota and Pseudomonadota.
+CC   The domain is often found in association with the NmeDI_C domain
+CC   (Pfam:PF27126), suggesting a possible role in restriction-
+CC   modification systems. The function of this domain remains to be
+CC   determined.
+//

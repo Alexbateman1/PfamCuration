@@ -1,0 +1,21 @@
+ID   PhrH
+DE   Phosphatase RapH inhibitor
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q59HN7_TED01
+GA   27.00 27.00;
+TC   50.00 148.60;
+NC   26.70 22.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents phosphatase RapH inhibitor (PhrH) from
+CC   Bacillus subtilis. PhrH is a small signalling peptide of
+CC   approximately 57 amino acids that regulates sporulation and
+CC   competence development. The protein is synthesised as a precursor
+CC   and secreted, with the mature active peptide comprising residues
+CC   35-40. The secreted peptide is then actively transported back into
+CC   the cell by the oligopeptide permease where it inhibits RapH
+CC   activity. PhrH can inhibit both RapH functions: dephosphorylation
+CC   of Spo0F and sequestration of ComA. The protein belongs to the Phr
+CC   family of regulatory peptides.
+//

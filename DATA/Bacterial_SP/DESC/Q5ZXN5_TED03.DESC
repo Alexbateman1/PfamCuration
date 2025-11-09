@@ -1,0 +1,21 @@
+ID   Lem3_3rd
+DE   Phosphocholine hydrolase Lem3 third domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q5ZXN5_TED03
+GA   27.00 27.00;
+TC   29.80 230.00;
+NC   26.60 22.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the third domain of phosphocholine hydrolase
+CC   Lem3 from Legionella pneumophila. The full-length Lem3 protein is
+CC   approximately 570 amino acids and acts as a virulence effector that
+CC   mediates the hydrolysis of phosphocholine from host Rab1 proteins.
+CC   Lem3 regulates small GTPase Rab1 activity by reversible
+CC   phosphorylcholination and plays a role in hijacking host vesicular
+CC   trafficking. The protein can act on both GDP-bound and GTP-bound Rab
+CC   proteins and is translocated via the type IV secretion system. Members
+CC   are found in COG1391. The function of this third domain remains to be
+CC   determined.
+//

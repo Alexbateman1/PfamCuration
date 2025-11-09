@@ -1,0 +1,17 @@
+ID   MG269
+DE   Mycoplasma MG269 protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q49329_TED01
+GA   27.00 27.00;
+TC   28.60 236.70;
+NC   25.50 20.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the MG269 protein family, found in
+CC   Mycoplasmoides genitalium and Mycoplasmoides pneumoniae. Members are
+CC   small proteins of approximately 128 amino acids. The representative
+CC   member MG269.1 from Mycoplasma genitalium is mentioned in various
+CC   transcriptional and proteomic studies. The function of this protein
+CC   remains to be determined.
+//

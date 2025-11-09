@@ -1,0 +1,14 @@
+ID   UU164_3rd
+DE   Uncharacterised protein UU164 third domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9PQY0_TED03
+GA   27.00 27.00;
+TC   33.70 198.80;
+NC   25.20 21.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a third domain found in the uncharacterised
+CC   protein UU164 from Ureaplasma. The full-length protein is 395 amino
+CC   acids in length. The function of this domain remains to be determined.
+//

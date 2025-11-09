@@ -1,0 +1,41 @@
+ID   FimL_C
+DE   Scaffold protein FimL C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9I2S3_TED03
+GA   27.00 27.00;
+TC   27.10 131.40;
+NC   26.30 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain (residues 304-408) of
+CC   scaffold protein FimL, a 562-residue protein from Pseudomonas
+CC   aeruginosa. FimL regulates multiple virulence functions including
+CC   type IV pilus assembly, twitching motility and cAMP-dependent
+CC   virulence gene expression [1,2]. The protein functions as a scaffold
+CC   linking FimV and PilG at the cell pole, where type IV pilus (T4P),
+CC   the Chp chemosensory system and the CyaB adenylate cyclase interact
+CC   [3]. The full-length protein contains an N-terminal domain (Pfam:
+CC   PF27543), a second domain (Pfam:PF26379) and this C-terminal domain.
+RN   [1]
+RM   15720546
+RT   Pseudomonas aeruginosa fimL regulates multiple virulence functions by
+RT   intersecting with Vfr-modulated pathways.
+RA   Whitchurch C.B., Beatson S.A., Comolli J.C., Jakobsen T., Sargent J.L.,
+RA   Bertrand J.J., West J., Klausen M., Waite L.L., Kang P.J.,
+RA   Tolker-Nielsen T., Mattick J.S., Engel J.N.;
+RL   Mol. Microbiol. 55:1357-1378(2005).
+RN   [2]
+RM   21264306
+RT   FimL regulates cAMP synthesis in Pseudomonas aeruginosa.
+RA   Inclan Y.F., Huseby M.J., Engel J.N.;
+RL   PLoS ONE 6:e15867-e15867(2011).
+RN   [3]
+RM   27145134
+RT   A scaffold protein connects type IV pili with the Chp chemosensory
+RT   system to mediate activation of virulence signaling in Pseudomonas
+RT   aeruginosa.
+RA   Inclan Y.F., Persat A., Greninger A., Von Dollen J., Johnson J.,
+RA   Krogan N., Gitai Z., Engel J.N.;
+RL   Mol. Microbiol. 101:590-605(2016).
+//

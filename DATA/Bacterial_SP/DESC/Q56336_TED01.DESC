@@ -1,0 +1,20 @@
+ID   CfpA_N
+DE   Cytoplasmic filament protein A N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q56336_TED01
+GA   27.00 27.00;
+TC   27.00 32.80;
+NC   25.90 21.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of cytoplasmic filament
+CC   protein A (CfpA) from Treponema pallidum. The full-length CfpA
+CC   protein is 678 amino acids and is a component of the cytoplasmic
+CC   filaments that run the length of the organism just underneath the
+CC   cytoplasmic membrane. An array of 4 to 6 filaments lie in close
+CC   apposition to the inner membrane and are always localised directly
+CC   underneath the corresponding group of periplasmic flagella. Members
+CC   are classified in NCBIfam as cfpA_ASD. The function of this
+CC   N-terminal domain remains to be determined.
+//

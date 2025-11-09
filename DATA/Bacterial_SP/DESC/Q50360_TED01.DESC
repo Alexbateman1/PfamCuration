@@ -1,0 +1,23 @@
+ID   HMW3_N
+DE   Cytadherence high molecular weight protein 3 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q50360_TED01
+GA   27.00 27.00;
+TC   28.10 165.10;
+NC   26.60 22.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of cytadherence high
+CC   molecular weight protein 3 (HMW3) from Mycoplasmoides pneumoniae and
+CC   Mycoplasmoides genitalium. This domain is approximately 77 amino
+CC   acids in length. The full-length HMW3 protein is a component of the
+CC   cytoskeleton-like structure which stabilises the shape of the
+CC   wall-less mycoplasma. This cytoskeleton-like network of accessory
+CC   proteins containing HMW proteins 1 to 5 allows the proper anchoring
+CC   of cytadhesin proteins in the mycoplasmal membrane at the attachment
+CC   organelle. HMW3 is essential for successful surface parasitism and
+CC   localises specifically to the attachment organelle membrane. Members
+CC   are found in COG3115. The function of this domain remains to be
+CC   determined.
+//

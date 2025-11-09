@@ -1,0 +1,42 @@
+ID   LvgA
+DE   Type IV adapter protein LvgA
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q5ZY48_TED01
+GA   27.00 27.00;
+TC   207.50 207.30;
+NC   25.10 22.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the type IV adapter protein LvgA from Legionella
+CC   pneumophila. LvgA is approximately 208 amino acids in length and is a
+CC   component of the Dot/Icm type IVB secretion system (T4BSS), which
+CC   injects bacterial effector proteins into eukaryotic host cells. The
+CC   protein is part of the type IV coupling complex (T4CC), composed of the
+CC   DotLMNYZ core and the IcmSW-LvgA adapter subunits. LvgA is a critical
+CC   subunit for binding a subset of effector proteins and recognises more
+CC   than one type of binding motif. The protein interacts with DotL, IcmS,
+CC   IcmW and various effector proteins including VpdB, SetA, PieA and SidH.
+CC   LvgA may be a critical factor that confers host specificity. The
+CC   protein is localised to the cytoplasm.
+RN   [1]
+RM   16803597
+RT   The Legionella pneumophila IcmS-LvgA protein complex is important for
+RT   Dot/Icm-dependent intracellular growth.
+RA   Vincent C.D., Vogel J.P.;
+RL   Mol. Microbiol. 2006;61:596-613.
+RN   [2]
+RM   28714967
+RT   Architecture of the type IV coupling protein complex of Legionella
+RT   pneumophila.
+RA   Kwak M.J., Kim J.D., Kim H., Kim C., Bowman J.W., Kim S., Joo K., Lee
+RA   J., Jin K.S., Kim Y.G., Lee N.K., Jung J.U., Oh B.H.;
+RL   Nat. Microbiol. 2017;2:17114.
+RN   [3]
+RM   32457311
+RT   Structural basis for effector protein recognition by the Dot/Icm Type
+RT   IVB coupling protein complex.
+RA   Kim H., Kubori T., Yamazaki K., Kwak M.J., Park S.Y., Nagai H., Vogel
+RA   J.P., Oh B.H.;
+RL   Nat. Commun. 2020;11:2623.
+//

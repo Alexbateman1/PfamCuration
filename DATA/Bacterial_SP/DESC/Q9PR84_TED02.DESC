@@ -1,0 +1,14 @@
+ID   UU061_C
+DE   Uncharacterised protein UU061 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9PR84_TED02
+GA   27.00 27.00;
+TC   60.30 347.40;
+NC   21.30 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain (residues 110-263) of
+CC   uncharacterised protein UU061 from Ureaplasma. The function of this
+CC   domain remains to be determined.
+//

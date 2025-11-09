@@ -1,0 +1,20 @@
+ID   HMW3_2nd
+DE   Cytadherence high molecular weight protein 3 second domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q50360_TED02
+GA   27.00 27.00;
+TC   27.60 66.90;
+NC   26.50 21.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the second domain of cytadherence high
+CC   molecular weight protein 3 (HMW3) from Mycoplasmoides pneumoniae and
+CC   Mycoplasmoides genitalium. This domain is approximately 56 amino
+CC   acids in length and is located at positions 80-135 in HMW3 from
+CC   Mycoplasmoides pneumoniae. The full-length HMW3 protein is a
+CC   component of the cytoskeleton-like structure essential for successful
+CC   surface parasitism. The protein localises specifically to the
+CC   attachment organelle membrane. The function of this domain remains to
+CC   be determined.
+//

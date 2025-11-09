@@ -1,0 +1,20 @@
+ID   PigD_C
+DE   Biosynthesis protein PigD C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q5W251_TED04
+GA   27.00 27.00;
+TC   27.10 253.20;
+NC   25.50 26.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of biosynthesis protein
+CC   PigD and related multi-domain proteins. Members are found in
+CC   Streptomyces and other Actinomycetes, as well as various
+CC   Gammaproteobacteria and Betaproteobacteria. The domain is
+CC   approximately 200 amino acids in length and is part of multi-domain
+CC   proteins involved in secondary metabolite biosynthesis. Related
+CC   proteins include decarboxylases, acetolactate synthase and
+CC   biosynthesis proteins. The function of this C-terminal domain remains
+CC   to be determined.
+//

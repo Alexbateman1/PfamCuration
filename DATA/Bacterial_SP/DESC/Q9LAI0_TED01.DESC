@@ -1,0 +1,22 @@
+ID   R_BslI_beta
+DE   Type II restriction enzyme BslI subunit beta
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9LAI0_TED01
+GA   27.00 27.00;
+TC   27.90 162.60;
+NC   26.80 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the catalytic domain (residues 27-233) of Type
+CC   II restriction enzyme BslI subunit beta (EC 3.1.21.4), a protein from
+CC   Bacillus species. BslI is a type IIT restriction enzyme that recognises
+CC   the double-stranded sequence 5'-CCN(7)GG-3' and cleaves after N-7 [1].
+CC   The enzyme binds one zinc ion per subunit [1].
+RN   [1]
+RM   10648519
+RT   The restriction endonuclease BslI is a member of the eukaryotic-like
+RT   fold restriction enzyme superfamily.
+RA   Dorner L.F., Schildkraut I.;
+RL   Nucleic Acids Res. 28:476-487(2000).
+//

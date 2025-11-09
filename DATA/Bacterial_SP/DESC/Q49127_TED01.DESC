@@ -1,0 +1,19 @@
+ID   MauJ_N
+DE   Methylamine utilization protein MauJ N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q49127_TED01
+GA   27.00 27.00;
+TC   28.30 161.10;
+NC   26.70 23.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of the methylamine
+CC   utilization protein MauJ, found in Alphaproteobacteria including
+CC   Paracoccus and Hyphomicrobium species. MauJ from Methylorubrum
+CC   extorquens is a 295 amino acid protein involved in the methylamine
+CC   degradation pathway, part of one-carbon metabolism. This domain is
+CC   approximately 120 amino acids in length and is located at the
+CC   N-terminus of the protein. The function of this domain remains to be
+CC   determined.
+//

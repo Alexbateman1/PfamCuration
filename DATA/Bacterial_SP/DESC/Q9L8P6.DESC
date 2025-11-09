@@ -1,0 +1,16 @@
+ID   LipB
+DE   Lipoprotein B
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:Q9L8P6
+GA   27.00 27.00;
+TC   376.80 376.80;
+NC   21.50 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents lipoprotein B (LipB), a 236-residue membrane-
+CC   anchored protein from Mycoplasmopsis pulmonis with a signal peptide
+CC   (residues 1-27) and lipid anchor at residue 28. The protein belongs
+CC   to the M.pulmonis LipAB lipoprotein family. The function of this
+CC   protein remains to be determined.
+//

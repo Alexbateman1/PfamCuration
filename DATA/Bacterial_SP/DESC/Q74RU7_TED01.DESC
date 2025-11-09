@@ -1,0 +1,29 @@
+ID   CdiI
+DE   Contact-dependent growth inhibition immunity protein CdiI
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q74RU7_TED01
+GA   27.00 27.00;
+TC   27.70 27.50;
+NC   26.30 26.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the immunity protein component CdiI of a
+CC   toxin-immunity protein module involved in contact-dependent growth
+CC   inhibition (CDI). CdiI proteins are approximately 77 amino acids in
+CC   length and protect cells against the CDI activity of their cognate
+CC   toxin protein CdiA. The CDI system allows bacteria to communicate with
+CC   and inhibit the growth of closely related neighbouring bacteria in a
+CC   contact-dependent fashion. CdiI proteins are predicted to be membrane
+CC   proteins with two transmembrane helices and probably interact with
+CC   cognate toxin CdiA. Each CdiI protein is specific for its cognate CdiA
+CC   and does not protect against non-cognate variants. Members are found
+CC   in Yersinia and related Gammaproteobacteria.
+RN   [1]
+RM   21085179
+RT   A widespread family of polymorphic contact-dependent toxin delivery
+RT   systems in bacteria.
+RA   Aoki S.K., Diner E.J., de Roodenbeke C.T., Burgess B.R., Poole S.J.,
+RA   Braaten B.A., Jones A.M., Webb J.S., Hayes C.S., Cotter P.A., Low D.A.;
+RL   Nature 2010;468:439-442.
+//

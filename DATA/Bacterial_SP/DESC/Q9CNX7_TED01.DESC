@@ -1,0 +1,16 @@
+ID   PM0294_N
+DE   Uncharacterised protein PM0294 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9CNX7_TED01
+GA   27.00 27.00;
+TC   27.30 28.90;
+NC   26.10 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 7-115) of
+CC   uncharacterised protein PM0294, a 423-residue protein found in
+CC   bacteria. The protein also contains a middle domain (Pfam:PF27496,
+CC   residues 122-276) and a C-terminal domain (Pfam:PF27495, residues
+CC   281-420). The function of this domain remains to be determined.
+//

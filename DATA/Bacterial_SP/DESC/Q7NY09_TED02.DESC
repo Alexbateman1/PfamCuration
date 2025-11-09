@@ -1,0 +1,27 @@
+ID   CteC_C
+DE   Ubiquitin ADP-ribosyltransferase CteC C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q7NY09_TED02
+GA   27.00 27.00;
+TC   27.30 120.60;
+NC   26.70 22.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of the type III effector
+CC   CteC from Chromobacterium violaceum. The full-length CteC is
+CC   approximately 276 amino acids and is an NAD(+)--protein-threonine
+CC   ADP-ribosyltransferase that specifically modifies host ubiquitin on
+CC   threonine-66, blocking host ubiquitination. This virulence effector
+CC   causes dysfunction of polyubiquitin chains and is crucial for
+CC   bacterial colonisation. CteC is secreted via the type III secretion
+CC   system and the ADP-ribosylation activity is likely irreversible. The
+CC   function of this C-terminal domain remains to be determined.
+RN   [1]
+RM   32330457
+RT   Threonine ADP-ribosylation of ubiquitin by a bacterial effector family
+RT   blocks host ubiquitination.
+RA   Yan F., Huang C., Wang X., Tan J., Cheng S., Wan M., Wang Z., Wang S.,
+RA   Luo S., Li A., Guo X., Feng M., Liu X., Zhu Y., Zhou Y.;
+RL   Mol. Cell 2020;78:641-652.
+//

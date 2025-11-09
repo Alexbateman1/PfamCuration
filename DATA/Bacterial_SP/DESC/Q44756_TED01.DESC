@@ -1,0 +1,17 @@
+ID   FlgV_N
+DE   Flagellar protein FlgV N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q44756_TED01
+GA   27.00 27.00;
+TC   28.10 70.70;
+NC   26.70 20.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of flagellar protein
+CC   FlgV (BB_0268), found in Borrelia burgdorferi. The full-length FlgV
+CC   protein is a structural flagellar component that modulates flagellar
+CC   assembly and controls Borrelia burgdorferi dissemination in mice.
+CC   FlgV was previously misannotated as the RNA-binding protein Hfq.
+CC   The function of this domain remains to be determined.
+//

@@ -1,0 +1,15 @@
+ID   PM0415
+DE   Uncharacterised protein PM0415
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9CNL3_TED01
+GA   27.00 27.00;
+TC   36.70 36.70;
+NC   22.50 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents uncharacterised protein PM0415, an 81-residue
+CC   membrane protein found in bacteria. The protein has a signal peptide
+CC   (residues 1-31) and a transmembrane helix (residues 52-74). The
+CC   function of this protein remains to be determined.
+//

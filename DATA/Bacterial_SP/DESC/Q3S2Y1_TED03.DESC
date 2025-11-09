@@ -1,0 +1,27 @@
+ID   GlyD_C
+DE   Glycosyltransferase GlyD C-terminal GT-D domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q3S2Y1_TED03
+GA   27.00 27.00;
+TC   27.50 30.00;
+NC   26.50 25.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   28246170
+RT   Defining the enzymatic pathway for polymorphic O-glycosylation of
+RT   the pneumococcal serine-rich repeat protein PsrP.
+RA   Jiang Y.L., Jin H., Yang H.B., Zhao R.L., Wang S., Chen Y.,
+RA   Zhou C.Z.;
+RL   J. Biol. Chem. 292:6213-6224(2017).
+CC   This entry represents the C-terminal GT-D domain of
+CC   glycosyltransferase GlyD, found in Streptococcus pneumoniae. The
+CC   full-length GlyD protein is involved in the polymorphic O-
+CC   glycosylation of the serine-rich repeat protein PsrP [1]. The GT-D
+CC   domain catalyses transfer of galactose and glucose to the acceptor
+CC   protein in both the third and fourth glycosylation steps. The domain
+CC   transfers glucose from UDP-glucose to the terminal glucose moiety of
+CC   already-glycosylated PsrP, and also transfers galactose from UDP-
+CC   galactose.
+//

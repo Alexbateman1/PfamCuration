@@ -1,0 +1,14 @@
+ID   UU183_mid
+DE   Uncharacterised protein UU183 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9PQW0_TED02/Iterate
+GA   27.00 27.00;
+TC   27.20 123.40;
+NC   26.60 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle domain found in the uncharacterised
+CC   protein UU183 from Ureaplasma. The function of this domain remains to
+CC   be determined.
+//

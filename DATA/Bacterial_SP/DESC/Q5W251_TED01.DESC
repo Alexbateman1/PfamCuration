@@ -1,0 +1,19 @@
+ID   PigD_N
+DE   Biosynthesis protein PigD N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q5W251_TED01
+GA   27.00 27.00;
+TC   43.30 156.60;
+NC   25.60 23.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of biosynthesis protein
+CC   PigD from marine bacteria including Pseudoalteromonas, Vibrio,
+CC   Photobacterium, Hahella and related Gammaproteobacteria. The
+CC   full-length protein is approximately 820 amino acids and contains
+CC   four domains. Members are found in species from Alteromonadales,
+CC   Vibrionales, Oceanospirillales and Enterobacterales. The protein
+CC   appears to be involved in secondary metabolite biosynthesis. The
+CC   function of this N-terminal domain remains to be determined.
+//

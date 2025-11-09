@@ -1,0 +1,19 @@
+ID   PseG
+DE   UDP-sugar hydrolase PseG family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q0P8U5_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the pseudaminic acid biosynthesis protein G
+CC   (PseG) family, a UDP-sugar hydrolase (EC 3.6.1.57) found in
+CC   Campylobacter jejuni. The representative member PseG from
+CC   Campylobacter jejuni strain ATCC 700819 is a 274 amino acid enzyme
+CC   that catalyses the fourth step in pseudaminic acid biosynthesis.
+CC   PseG mediates the removal of UDP from UDP-2,4-diacetamido-2,4,6-
+CC   trideoxy-beta-L-altropyranose. Pseudaminic acid is a sialic acid-
+CC   like sugar used to modify flagellin.
+//

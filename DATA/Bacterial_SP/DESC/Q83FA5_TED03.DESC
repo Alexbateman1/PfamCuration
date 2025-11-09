@@ -1,0 +1,18 @@
+ID   CBU0041_C
+DE   Uncharacterised protein CBU_0041 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q83FA5_TED03
+GA   27.00 27.00;
+TC   552.10 552.10;
+NC   22.30 21.00;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of an uncharacterised
+CC   protein CBU_0041 from Coxiella burnetii. The full-length protein is
+CC   approximately 710 amino acids and contains coiled-coil regions.
+CC   CBU_0041 mediates perturbation of the host actin cytoskeleton via
+CC   filamentous actin depolymerisation. Members are found in Coxiella
+CC   species. The function of this C-terminal domain remains to be
+CC   determined.
+//

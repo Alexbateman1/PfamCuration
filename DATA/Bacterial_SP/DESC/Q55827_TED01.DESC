@@ -1,0 +1,18 @@
+ID   YdgK_like
+DE   YdgK-like membrane protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q55827_TED01
+GA   27.00 27.00;
+TC   27.70 27.00;
+NC   26.20 25.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised membrane protein family
+CC   similar to Escherichia coli YdgK. Members are found in Cyanobacteria
+CC   including Synechocystis,  Rippkaea and Tautonia species, as well as
+CC   Planctomycetes. The protein from Synechocystis sp. (sll0481) is 155
+CC   amino acids in length and is predicted to be a multi-pass membrane
+CC   protein with two transmembrane helices at positions 33-53 and 83-103.
+CC   The function of this protein family remains to be determined.
+//

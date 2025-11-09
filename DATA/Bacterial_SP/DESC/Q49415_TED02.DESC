@@ -1,0 +1,19 @@
+ID   MG314_C
+DE   Mycoplasma MG314 protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q49415_TED02
+GA   27.00 27.00;
+TC   249.90 249.30;
+NC   24.90 24.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of the uncharacterised
+CC   MG314 protein family, found in Mycoplasmoides genitalium and
+CC   Mycoplasmoides pneumoniae. This domain is approximately 225 amino
+CC   acids in length and is located at the C-terminus of the protein. The
+CC   full-length MG314 protein from Mycoplasma genitalium has been
+CC   annotated as a putative putrescine transporter PotE. The protein is
+CC   mentioned in studies of macrolide resistance and protein quality
+CC   control. The function of this domain remains to be determined.
+//
