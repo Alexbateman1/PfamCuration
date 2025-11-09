@@ -1,23 +1,24 @@
 ID   Cyt_bc1_IV_N
-DE   Cytochrome b-c1 subunit IV N-terminal domain
+DE   Cytochrome b-c1 complex subunit IV N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P16536_TED01/Iterate
+SE   TED:P16536_TED01
 GA   27.00 27.00;
 TC   34.00 118.20;
 NC   26.70 21.50;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents the N-terminal domain of cytochrome b-c1 complex
-CC   subunit IV found in Alphaproteobacteria. The cytochrome bc1 complex is
-CC   a key component of the respiratory electron transport chain. The
-CC   structure of the four-subunit Rhodobacter sphaeroides cytochrome bc1
-CC   complex has been determined [1].
 RN   [1]
 RM   36913593
 RT   Cryo-EM structure of the four-subunit Rhodobacter sphaeroides
-RT   cytochrome bc(1)  complex in styrene maleic acid nanodiscs.
-RA   Swainsbury DJK, Hawkings FR, Martin EC, Musial S, Salisbury JH,
-RA   Jackson PJ, Farmer DA, Johnson MP, Siebert CA, Hitchcock A, Hunter
-RA   CN;
-RL   Proc Natl Acad Sci U S A. 2023;120:e2217922120.
+RT   cytochrome bc(1) complex in styrene maleic acid nanodiscs.
+RA   Swainsbury D.J.K., Hawkings F.R., Martin E.C., Musial S.,
+RA   Salisbury J.H., Jackson P.J., Farmer D.A., Johnson M.P.,
+RA   Siebert C.A., Hitchcock A., Hunter C.N.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2023;120:e2217922120.
+CC   This entry represents the N-terminal domain of cytochrome b-c1
+CC   complex subunit IV found in Alphaproteobacteria, particularly
+CC   Paracoccaceae [1]. The full-length protein is part of the
+CC   cytochrome bc1 complex. The function of this domain remains to
+CC   be determined.
+//

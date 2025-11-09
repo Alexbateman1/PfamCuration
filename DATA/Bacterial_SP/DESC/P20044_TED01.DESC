@@ -1,14 +1,14 @@
-ID   RepA_Lacto
-DE   Plasmid replication protein RepA
+ID   RepA_N
+DE   Replication protein A N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P20044_TED01/Iterate
+SE   TED:P20044_TED01
 GA   27.00 27.00;
 TC   27.60 38.60;
 NC   26.20 22.90;
-BM   hmmbuild -o /dev/null HMM SEED
+BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
-TP   Family
-CC   This entry represents the plasmid replication protein RepA found in
-CC   Lactobacillaceae including Lentilactobacillus, Loigolactobacillus,
-CC   Leuconostoc and Amylolactobacillus species. RepA proteins are involved
-CC   in plasmid replication initiation.
+TP   Domain
+CC   This entry represents the N-terminal domain of replication protein
+CC   A (RepA), found in bacterial plasmids. RepA is involved in plasmid
+CC   replication initiation.
+//

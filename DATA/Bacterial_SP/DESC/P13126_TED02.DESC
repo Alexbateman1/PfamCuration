@@ -1,5 +1,5 @@
-ID   DUF
-DE   Uncharacterised repeat domain
+ID   HPI_2nd
+DE   HPI surface protein second domain
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P13126_TED02
 GA   27.00 27.00;
@@ -8,7 +8,17 @@ NC   25.80 26.40;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents an uncharacterised repeat domain,
-CC   approximately 80 amino acids in length. The domain appears to occur
-CC   in tandem repeats in some proteins. The function of this domain
-CC   remains to be determined.
+RN   [1]
+RM   37043530
+RT   Interdigitated immunoglobulin arrays form the hyperstable surface
+RT   layer of the extremophilic bacterium Deinococcus radiodurans.
+RA   von Kugelgen A., van Dorst S., Yamashita K., Sexton D.L.,
+RA   Tocheva E.I., Murshudov G., Alva V., Bharat T.A.M.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2023;120:e2215808120.
+CC   This entry represents the second domain of the hexagonally packed
+CC   intermediate-layer (HPI) surface protein found in Deinococcus
+CC   radiodurans. The HPI protein forms a hyperstable S-layer with
+CC   hexagonal symmetry [1]. While the HPI protein is involved in
+CC   shape maintenance and cell wall organisation, the specific
+CC   function of this domain remains to be determined.
+//
