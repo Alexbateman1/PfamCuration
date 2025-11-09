@@ -1,0 +1,17 @@
+ID   MPN_687_C
+DE   Mycoplasma MPN_687 protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q50315_TED01
+GA   27.00 27.00;
+TC   27.20 84.60;
+NC   26.90 26.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of the uncharacterised
+CC   protein MPN_687 from Mycoplasmoides pneumoniae. This domain is
+CC   approximately 37 amino acids in length and is located at positions
+CC   214-250 of the full-length protein. The full-length MPN_687 protein
+CC   is 250 amino acids. The protein has been identified by mass
+CC   spectrometry. The function of this domain remains to be determined.
+//

@@ -1,0 +1,16 @@
+ID   DUF
+DE   Uncharacterised domain in antibiotic biosynthesis proteins
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q4H4F7_TED03
+GA   27.00 27.00;
+TC   31.00 39.40;
+NC   26.80 20.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain approximately 210
+CC   amino acids in length, found in bacteria including Trinickia,
+CC   Xenorhabdus, Streptomyces, Sodalis and related species. This domain
+CC   is found in proteins annotated as putative antibiotic synthases. The
+CC   function of this domain remains to be determined.
+//

@@ -1,0 +1,18 @@
+ID   Staph_lipo
+DE   Staphylococcal lipoprotein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q49ZU4_TED01
+GA   27.00 27.00;
+TC   28.60 38.60;
+NC   26.60 24.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of an uncharacterised
+CC   lipoprotein family found in Staphylococcus species. This domain is
+CC   approximately 90 amino acids in length. The full-length proteins are
+CC   lipoproteins of 210-275 amino acids, localised to the cell membrane
+CC   with N-terminal signal peptides and lipid anchors. Members have been
+CC   identified in various studies on Staphylococcus aureus biofilms and
+CC   secretomes. The function of this domain remains to be determined.
+//
