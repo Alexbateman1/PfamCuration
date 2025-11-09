@@ -1,0 +1,17 @@
+ID   YzgL
+DE   YzgL protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P76692_TED01
+GA   27.00 27.00;
+TC   28.40 39.10;
+NC   26.50 22.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YzgL protein family, found in Escherichia,
+CC   Shigella, and Salmonella. The representative member YzgL from
+CC   Escherichia coli K12 is a 93 amino acid protein annotated as
+CC   COG0226. This protein is missing up to 410 C-terminal residues
+CC   compared to orthologues. The function of this protein remains to be
+CC   determined.
+//
