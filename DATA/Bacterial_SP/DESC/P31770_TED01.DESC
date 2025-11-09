@@ -1,0 +1,19 @@
+ID   ComC
+DE   Competence protein C
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P31770_TED01
+GA   27.00 27.00;
+TC   30.20 30.00;
+NC   26.00 23.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   22821979
+RT   Seventeen Sxy-dependent cyclic AMP receptor protein site-regulated
+RT   genes are needed for natural transformation in Haemophilus influenzae.
+RA   Cameron ADS, Dorman MJ, Dorf MB, Redfield RJ;
+RL   J. Bacteriol. 2012;194:5817-5825.
+CC   This entry represents competence protein C (ComC) found in
+CC   Haemophilus and related Pasteurellaceae. ComC is involved in
+CC   transformation and genetic competence for DNA uptake [1].

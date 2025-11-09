@@ -1,0 +1,14 @@
+ID   TP_0904
+DE   TP_0904 protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83874_TED01
+GA   27.00 27.00;
+TC   33.40 80.40;
+NC   25.50 18.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents TP_0904, an 83 amino acid uncharacterised protein
+CC   from Treponema pallidum. The protein is found only in Treponema pallidum.
+CC   The function of this protein remains to be determined.
+//

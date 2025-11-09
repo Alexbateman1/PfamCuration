@@ -1,0 +1,16 @@
+ID   CT_474_N
+DE   Uncharacterized protein CT_474, N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O84480_TED01
+GA   27.00 27.00;
+TC   27.40 215.70;
+NC   26.30 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 59-154) of
+CC   an uncharacterized protein CT_474 from Chlamydia trachomatis. The
+CC   full-length protein is predicted to be a single-pass membrane
+CC   protein. Members of this family belong to the chlamydial
+CC   CPn_0593/CT_474/TC_0759 family. The function of this domain remains
+CC   to be determined.

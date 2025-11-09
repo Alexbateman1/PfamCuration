@@ -1,0 +1,13 @@
+ID   YkzA
+DE   Uncharacterised protein YkzA
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P42030_TED01/Iterate
+GA   27.00 27.00;
+TC   27.50 91.50;
+NC   26.80 26.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in Bacillus
+CC   subtilis (YkzA) and related Bacillota. The function of this protein
+CC   remains to be determined.

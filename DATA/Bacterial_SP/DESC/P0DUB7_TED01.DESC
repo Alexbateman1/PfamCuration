@@ -1,0 +1,15 @@
+ID   DUF
+DE   Uncharacterised protein domain (DUF)
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P0DUB7_TED01
+GA   27.00 27.00;
+TC   28.70 36.10;
+NC   26.70 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of unknown function found in putative
+CC   lipoproteins from Tannerella species. This domain of approximately
+CC   100 amino acids is predicted by the TED pipeline based on AlphaFold
+CC   structures (residues 37-140). The function of this domain remains to
+CC   be determined.

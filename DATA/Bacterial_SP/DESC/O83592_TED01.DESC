@@ -1,0 +1,14 @@
+ID   TP_0583
+DE   TP_0583 protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83592_TED01
+GA   27.00 27.00;
+TC   27.10 101.50;
+NC   26.60 25.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents TP_0583, a 41 amino acid uncharacterised protein
+CC   from Treponema pallidum. The protein is found only in Treponema pallidum.
+CC   The function of this protein remains to be determined.
+//

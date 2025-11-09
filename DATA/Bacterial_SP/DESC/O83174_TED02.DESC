@@ -1,0 +1,16 @@
+ID   TP_0138_2nd
+DE   Second domain of TP_0138
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83174_TED02/Iterate
+GA   27.00 27.00;
+TC   27.20 94.60;
+NC   25.20 25.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved second domain found in TP_0138,
+CC   an uncharacterised 245-amino acid protein from Treponema pallidum.
+CC   The full-length protein is predicted to be a multi-pass membrane
+CC   protein with two transmembrane helices. Orthologues are found in
+CC   related Spirochaetota bacteria. The function of this domain remains
+CC   to be determined.

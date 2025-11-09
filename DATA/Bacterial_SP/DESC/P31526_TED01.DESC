@@ -1,0 +1,14 @@
+ID   DUF
+DE   Uncharacterised protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P31526_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in
+CC   Cyanobacteriota, particularly in Waterburya, Acaryochloris and
+CC   Picosynechococcus species. The function of this protein remains to be
+CC   determined.

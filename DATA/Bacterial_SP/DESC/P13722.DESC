@@ -1,0 +1,25 @@
+ID   DacA_C
+DE   D-alanyl-D-alanine carboxypeptidase DacA C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P08750
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the C-terminal region (approximately 30
+CC   amino acids) of D-alanyl-D-alanine carboxypeptidase DacA, found in
+CC   Bacillales. DacA (also known as penicillin-binding protein 5)
+CC   removes C-terminal D-alanyl residues from sugar-peptide cell wall
+CC   precursors [1]. The full-length protein contains an N-terminal
+CC   Peptidase_S11 domain and a C-terminal PBP5_C domain, with this
+CC   entry representing the extreme C-terminus beyond the PBP5_C domain
+CC   [1].
+RN   [1]
+RM   6768745
+RT   "Sequence of active site peptides from the penicillin-sensitive D-alanine
+RT   carboxypeptidase of Bacillus subtilis. Mechanism of penicillin action and
+RT   sequence homology to beta-lactamases.";
+RA   Waxman D.J., Strominger J.L.;
+RL   J. Biol. Chem. 255:3964-3976(1980).

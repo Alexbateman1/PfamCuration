@@ -1,0 +1,13 @@
+ID   aq_1120
+DE   Uncharacterized protein aq_1120
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67200_TED01
+GA   27.00 27.00;
+TC   29.50 230.20;
+NC   26.60 18.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved domain found in aq_1120 and
+CC   related uncharacterised proteins from Aquificota bacteria. The
+CC   function of this domain remains to be determined.

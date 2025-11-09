@@ -1,0 +1,25 @@
+ID   Rv1078A
+DE   Rv1078A protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P0DV55
+GA   27.00 27.00;
+TC   27.80 117.40;
+NC   25.00 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the Rv1078A protein family, found in
+CC   Mycobacterium species. This 82-amino acid cytoplasmic protein was
+CC   identified through N-terminomics in Mycobacterium tuberculosis H37Rv
+CC   [1]. The gene is encoded entirely within Rv1078 (pra), on the same
+CC   strand in another reading frame [1]. The protein contains a
+CC   disordered C-terminal region (residues 35-82) with a basic
+CC   compositional bias [1]. The function of this protein remains to be
+CC   determined.
+RN   [1]
+RM   34915127
+RT   "Deep N-terminomics of Mycobacterium tuberculosis H37Rv extensively correct
+RT   annotated encoding genes.";
+RA   Shi J., Meng S., Wan L., Zhang Z., Jiang S., Zhu H., Dai E., Chang L.,
+RA   Gao H., Wan K., Zhang L., Zhao X., Liu H., Lyu Z., Zhang Y., Xu P.;
+RL   Genomics 114:292-304(2022).

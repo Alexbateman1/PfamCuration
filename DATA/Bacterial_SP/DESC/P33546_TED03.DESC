@@ -1,0 +1,39 @@
+ID   IcsB_C
+DE   IcsB C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P33546_TED03/Iterate
+GA   27.00 27.00;
+TC   87.60 170.20;
+NC   24.80 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   12753186
+RT   IcsB, secreted via the type III secretion system, is chaperoned by
+RT   IpgA and required at the post-invasion stage of Shigella
+RT   pathogenicity.
+RA   Ogawa M., Suzuki T., Tatsuno I., Abe H., Sasakawa C.;
+RL   Mol. Microbiol. 48:913-931(2003).
+RN   [2]
+RM   15576571
+RT   Escape of intracellular Shigella from autophagy.
+RA   Ogawa M., Yoshimori T., Suzuki T., Sagara H., Mizushima N.,
+RA   Sasakawa C.;
+RL   Science 307:727-731(2005).
+RN   [3]
+RM   30061757
+RT   N-epsilon-fatty acylation of multiple membrane-associated proteins by
+RT   Shigella IcsB effector to modulate host function.
+RA   Liu W., Zhou Y., Peng T., Zhou P., Ding X., Li Z., Zhong H., Xu Y.,
+RA   Chen S., Hang H.C., Shao F.;
+RL   Nat. Microbiol. 3:996-1009(2018).
+CC   This entry represents the C-terminal domain of IcsB, a virulence
+CC   protein from Shigella flexneri. IcsB is an N-epsilon-fatty
+CC   acyltransferase that mediates lysine-stearoylation of host Rho
+CC   GTPase proteins [3]. IcsB is secreted via the type III secretion
+CC   system and is required at the post-invasion stage of Shigella
+CC   pathogenicity [1]. IcsB contributes to bacterial escape from
+CC   autophagy [2]. The catalytic domain is found in the middle region
+CC   (Pfam:PF27349). The function of this C-terminal domain remains to be
+CC   determined.

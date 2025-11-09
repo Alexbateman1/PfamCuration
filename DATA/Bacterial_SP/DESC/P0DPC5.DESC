@@ -1,0 +1,15 @@
+ID   YtiD
+DE   Protein YtiD
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P0DPC5
+GA   27.00 27.00;
+TC   30.60 126.40;
+NC   22.70 18.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents protein YtiD from Escherichia coli and related
+CC   Enterobacteriaceae. This is a small protein of 47 amino acids that
+CC   is expressed at low levels during late logarithmic and stationary
+CC   growth. Disruption of ytiD has no effect on iraD expression. The
+CC   function of this protein remains to be determined.

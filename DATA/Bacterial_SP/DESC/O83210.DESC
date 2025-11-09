@@ -1,0 +1,15 @@
+ID   TP_0210
+DE   Uncharacterised protein TP_0210
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:O83210
+GA   27.00 27.00;
+TC   27.00 33.30;
+NC   26.90 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the uncharacterised protein TP_0210 from
+CC   Treponema pallidum. The protein is 29 amino acids long and is found
+CC   in Treponema species. The protein is completely disordered according
+CC   to MobiDB-lite prediction. The function of this protein remains to
+CC   be determined.

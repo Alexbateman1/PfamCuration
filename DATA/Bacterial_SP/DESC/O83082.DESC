@@ -1,0 +1,15 @@
+ID   TP_0041
+DE   Uncharacterised protein TP_0041
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:O83082
+GA   27.00 27.00;
+TC   29.00 111.40;
+NC   26.50 21.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents TP_0041, an uncharacterised 40-amino acid
+CC   protein from Treponema pallidum, the syphilis spirochaete. The
+CC   protein contains a disordered region with polar residues. This
+CC   appears to be a species-specific protein with no characterised
+CC   orthologues. The function of this protein remains to be determined.

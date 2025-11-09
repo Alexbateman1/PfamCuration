@@ -1,0 +1,15 @@
+ID   MG331
+DE   Uncharacterised protein MG331
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P47573
+GA   27.00 27.00;
+TC   33.30 33.20;
+NC   25.10 24.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised membrane protein found in
+CC   Mycoplasmatota, including MG331 from Mycoplasmoides genitalium and
+CC   its MPN477 homolog from Mycoplasmoides pneumoniae. These proteins
+CC   are predicted to be single-pass membrane proteins. The function of
+CC   this protein remains to be determined.

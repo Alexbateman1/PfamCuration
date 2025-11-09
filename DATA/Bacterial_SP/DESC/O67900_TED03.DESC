@@ -1,0 +1,15 @@
+ID   aq_2144_C
+DE   C-terminal domain of aq_2144
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67900_TED03/Iterate
+GA   27.00 27.00;
+TC   31.00 135.10;
+NC   26.90 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved C-terminal domain found in
+CC   aq_2144, an uncharacterised 298-amino acid protein from Aquifex
+CC   aeolicus that is annotated as belonging to COG4972. Orthologues are
+CC   found in related Aquificota bacteria. The function of this domain
+CC   remains to be determined.

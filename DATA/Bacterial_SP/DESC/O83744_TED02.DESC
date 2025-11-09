@@ -1,0 +1,17 @@
+ID   TP_0763
+DE   Uncharacterised Treponema protein TP_0763
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83744_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.60 33.30;
+NC   25.10 23.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved domain found in an uncharacterised
+CC   protein (TP_0763) from Treponema pallidum and related spirochaete
+CC   bacteria. The full-length protein contains two predicted
+CC   transmembrane helices (residues 42-64 and 74-96) and is predicted to
+CC   be a multi-pass membrane protein. The domain is approximately 68
+CC   amino acids in length. The function of this domain remains to be
+CC   determined.

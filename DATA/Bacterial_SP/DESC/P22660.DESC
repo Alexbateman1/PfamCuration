@@ -1,0 +1,15 @@
+ID   Hydrog_delta_N
+DE   NAD-reducing hydrogenase delta subunit N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P22660/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 54.70;
+NC   23.70 23.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of the NAD-reducing
+CC   hydrogenase delta subunit found in bacteria. The full-length NAD-
+CC   reducing hydrogenase HoxS subunit delta is involved in hydrogen
+CC   oxidation coupled to NAD+ reduction (EC 1.12.1.2). The function of this
+CC   N-terminal domain remains to be determined.

@@ -1,0 +1,14 @@
+ID   YxcA
+DE   Uncharacterised protein YxcA
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P46332_TED01
+GA   27.00 27.00;
+TC   30.90 202.30;
+NC   23.20 22.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised membrane protein found in
+CC   Bacillus subtilis (YxcA). This protein contains two predicted
+CC   transmembrane helices. The function of this protein remains to be
+CC   determined.

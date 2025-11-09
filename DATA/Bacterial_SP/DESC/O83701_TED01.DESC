@@ -1,0 +1,15 @@
+ID   TP_0703
+DE   TP_0703 domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83701_TED01
+GA   27.00 27.00;
+TC   37.20 284.70;
+NC   26.20 22.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in TP_0703, a 226 amino acid
+CC   uncharacterised protein from Treponema pallidum. The protein is annotated
+CC   as COG0739. The protein is found only in Treponema pallidum. The specific
+CC   function of this domain remains to be determined.
+//

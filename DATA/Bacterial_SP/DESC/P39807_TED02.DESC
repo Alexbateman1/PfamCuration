@@ -1,0 +1,13 @@
+ID   YrzJ
+DE   Uncharacterised protein YrzJ
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P39807_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.30 69.80;
+NC   26.90 26.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in Bacillus
+CC   subtilis (YrzJ) and related Bacillota. The function of this protein
+CC   remains to be determined.

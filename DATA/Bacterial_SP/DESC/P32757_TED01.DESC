@@ -1,0 +1,20 @@
+ID   PHG004
+DE   Uncharacterised protein PHG004 family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P32757_TED01
+GA   27.00 27.00;
+TC   34.90 123.30;
+NC   25.30 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein family found in
+CC   Cupriavidus necator. The gene is located on plasmid megaplasmid pHG1
+CC   near the hydrogenase gene cluster [1]. The function of this protein
+CC   family remains to be determined.
+RN   [1]
+RM   1383192
+RT   A gene complex coding for the membrane-bound hydrogenase of Alcaligenes
+RT   eutrophus H16.
+RA   Kortlueke C, Horstmann K, Schwartz E, Rohde M, Binsack R, Friedrich B;
+RL   J Bacteriol. 1992;174:6277-6289.

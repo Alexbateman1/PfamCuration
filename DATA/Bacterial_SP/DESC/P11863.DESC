@@ -1,0 +1,23 @@
+ID   CotT
+DE   Spore coat protein T family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P11863
+GA   27.00 27.00;
+TC   27.70 27.40;
+NC   26.60 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the spore coat protein T (CotT) family, found
+CC   in Bacillales. CotT is an inner spore coat protein which appears to
+CC   play a role in germination [1]. The protein is present in increased
+CC   levels in yabG mutant spores [1]. The family is found primarily in
+CC   Bacillus species.
+RN   [1]
+RM   10714992
+RT   "The Bacillus subtilis yabG gene is transcribed by SigK RNA polymerase
+RT   during sporulation, and yabG mutant spores have altered coat protein
+RT   composition.";
+RA   Takamatsu H., Kodama T., Imamura A., Asai K., Kobayashi K., Nakayama T.,
+RA   Ogasawara N., Watabe K.;
+RL   J. Bacteriol. 182:1883-1888(2000).

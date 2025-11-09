@@ -1,0 +1,23 @@
+ID   P450_N
+DE   Cytochrome P450 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P31718/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   25.70 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of cytochrome P450
+CC   monooxygenases (EC 1.14.-.-) found in Actinomycetes. The full-length
+CC   protein contains a P450 domain (Pfam:PF00067). The structure of a
+CC   P450 aromatic O-demethylase has been determined [1]. The function of
+CC   this N-terminal domain remains to be determined.
+RN   [1]
+RM   29950589
+RT   A promiscuous cytochrome P450 aromatic O-demethylase for lignin
+RT   bioconversion.
+RA   Mallinson SJB, Machovina MM, Silveira RL, Garcia-Borras M, Gallup N,
+RA   Johnson CW, Allen MD, Skaf MS, Crowley MF, Neidle EL, Houk KN,
+RA   Beckham GT, DuBois JL, McGeehan JE;
+RL   Nat Commun. 2018;9:2487.

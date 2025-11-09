@@ -1,0 +1,14 @@
+ID   Aq_272
+DE   Uncharacterised protein aq_272
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O66629_TED01
+GA   27.00 27.00;
+TC   33.30 101.80;
+NC   26.10 22.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in Aquifex
+CC   aeolicus (aq_272) and related Aquificota. The protein contains
+CC   predicted coiled-coil structure. The function of this protein remains
+CC   to be determined.

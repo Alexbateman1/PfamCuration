@@ -1,0 +1,15 @@
+ID   YubG_N
+DE   N-terminal domain of YubG
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O82899_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   29.50 43.50;
+NC   25.30 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved N-terminal domain found in YubG,
+CC   an uncharacterised 258-amino acid plasmid-encoded protein from
+CC   Escherichia coli O157:H7. Orthologues are found on plasmids in
+CC   related Enterobacteriaceae. The function of this domain remains to
+CC   be determined.

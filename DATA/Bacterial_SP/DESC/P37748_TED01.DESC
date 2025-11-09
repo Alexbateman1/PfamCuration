@@ -1,0 +1,21 @@
+ID   Wzy_K12
+DE   O-antigen polymerase Wzy
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P37748_TED01
+GA   27.00 27.00;
+TC   34.10 34.10;
+NC   23.80 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents O-antigen polymerase (Wzy) found in
+CC   Escherichia coli K12 and a few related bacteria. Wzy may function as
+CC   a polymerase that catalyses the polymerisation of the O-antigen
+CC   repeat units on the periplasmic face of the inner membrane, leading
+CC   to the formation of the lipid-linked O-antigen molecule. However, E.
+CC   coli K12 strains do not normally produce the O-antigen due to
+CC   mutations in the rfb gene cluster. K12 strains are phenotypically
+CC   rough, their lipopolysaccharide having a complete core structure but
+CC   no O-antigen. The protein is localised to the cell inner membrane
+CC   with multiple transmembrane helices and is classified as
+CC   NCBIfam:TIGR04370 (glyco_rpt_poly).

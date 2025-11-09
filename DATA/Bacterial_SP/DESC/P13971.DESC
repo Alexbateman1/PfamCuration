@@ -1,0 +1,20 @@
+ID   Sok
+DE   Sok protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P13971
+GA   27.00 27.00;
+TC   27.20 178.50;
+NC   26.00 18.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the Sok protein family, a small protein of
+CC   approximately 74 amino acids found on Escherichia coli plasmids
+CC   [1]. The Sok protein family is found in Enterobacteriaceae. The
+CC   function of this protein family remains to be determined.
+RN   [1]
+RM   16251312
+RT   "DNA sequence and comparative genomics of pAPEC-O2-R, an avian pathogenic
+RT   Escherichia coli transmissible R plasmid.";
+RA   Johnson T.J., Siek K.E., Johnson S.J., Nolan L.K.;
+RL   Antimicrob. Agents Chemother. 50:806-812(2006).

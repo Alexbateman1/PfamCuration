@@ -1,0 +1,21 @@
+ID   YtgB
+DE   YtgB protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DV21
+GA   27.00 27.00;
+TC   29.60 47.10;
+NC   25.50 16.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YtgB protein family found in Escherichia
+CC   coli. This family is 18 amino acids in length. The protein is
+CC   identified when cells are grown in rich medium [1]. The function of
+CC   this protein family remains to be determined.
+RN   [1]
+RM   34662240
+RT   Identification of novel translated small ORFs in Escherichia coli
+RT   using complementary ribosome profiling approaches.
+RA   Stringer A, Smith C, Mangano K, Wade JT;
+RL   J. Bacteriol. 2022;204:JB0035221-JB0035221.
+//

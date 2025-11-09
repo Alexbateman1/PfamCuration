@@ -1,0 +1,13 @@
+ID   Aq_252
+DE   Uncharacterised protein aq_252
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O66613_TED01
+GA   27.00 27.00;
+TC   48.70 48.50;
+NC   26.80 25.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in Aquifex
+CC   aeolicus (aq_252) and related Aquificota. The function of this
+CC   protein remains to be determined.

@@ -1,0 +1,54 @@
+ID   AapA
+DE   AapA toxin family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P0DUM5
+GA   27.00 27.00;
+TC   27.90 27.50;
+NC   21.50 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the AapA toxin family, found in Helicobacter
+CC   species. These are small proteins (approximately 30 amino acids)
+CC   that function as the toxic component of type I toxin-antitoxin
+CC   systems [1,2,3,4]. AapA toxins are neutralised by cognate IsoA
+CC   antisense RNA antitoxins which form extensive duplexes with the
+CC   toxin mRNA [1,3]. The toxins bind to bacterial membranes with high
+CC   affinity, penetrating the membrane and causing lipid
+CC   reorganisation and membrane thinning [2]. When AapA toxins are
+CC   expressed in the absence of their antitoxins, cells rapidly convert
+CC   from spiral-shaped to coccoid forms, with moderate decreases in
+CC   membrane potential and ATP content [3]. Oxidative stress may
+CC   trigger coccoid transformation via these type I TA systems, though
+CC   other factors also contribute to morphology changes [3].
+RC   Function description for P0DUM4
+RN   [1]
+RM   28077560
+RT   "Mechanistic insights into type I toxin antitoxin systems in Helicobacter
+RT   pylori: the importance of mRNA folding in controlling toxin expression.";
+RA   Arnion H., Korkut D.N., Masachis Gelo S., Chabas S., Reignier J., Iost I.,
+RA   Darfeuille F.;
+RL   Nucleic Acids Res. 45:4782-4795(2017).
+RC   Function description for P0DUM4
+RN   [2]
+RM   31476357
+RT   "Structural insights into the AapA1 toxin of Helicobacter pylori.";
+RA   Korkut D.N., Alves I.D., Vogel A., Chabas S., Sharma C.M., Martinez D.,
+RA   Loquet A., Salgado G.F., Darfeuille F.;
+RL   Biochim. Biophys. Acta 1864:129423-129423(2020).
+RC   Function description for P0DUM4
+RN   [3]
+RM   33229580
+RT   "A peptide of a type I toxin-antitoxin system induces Helicobacter pylori
+RT   morphological transformation from spiral shape to coccoids.";
+RA   El Mortaji L., Tejada-Arranz A., Rifflet A., Boneca I.G.,
+RA   Pehau-Arnaudet G., Radicella J.P., Marsin S., De Reuse H.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 117:31398-31409(2020).
+RC   Function description for P0DUM5
+RN   [4]
+RM   31411564
+RT   "A genetic selection reveals functional metastable structures embedded in a
+RT   toxin-encoding mRNA.";
+RA   Masachis S., Tourasse N.J., Lays C., Faucher M., Chabas S., Iost I.,
+RA   Darfeuille F.;
+RL   Elife 8:0-0(2019).

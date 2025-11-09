@@ -1,0 +1,16 @@
+ID   SO_0736
+DE   Uncharacterised protein SO_0736 central domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P46149_TED02
+GA   27.00 27.00;
+TC   27.60 27.30;
+NC   26.50 26.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the central domain of an uncharacterised
+CC   protein found in Shewanella oneidensis (SO_0736) and related
+CC   bacteria across Gammaproteobacteria. The protein contains a
+CC   predicted signal peptide and is annotated in eggNOG as COG0834. The
+CC   protein contains a periplasmic binding protein-like II superfamily
+CC   domain. The function of this domain remains to be determined.

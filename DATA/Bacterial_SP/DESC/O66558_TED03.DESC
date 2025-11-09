@@ -1,0 +1,14 @@
+ID   Aq_171_3rd
+DE   Uncharacterised protein aq_171 third domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O66558_TED03
+GA   27.00 27.00;
+TC   27.30 75.30;
+NC   26.80 26.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the third domain of an uncharacterised protein
+CC   found in Aquifex aeolicus (aq_171). The domain contains predicted
+CC   coiled-coil structure. The function of this domain remains to be
+CC   determined.

@@ -1,0 +1,21 @@
+ID   CS1_fimbrial_B
+DE   CS1 fimbrial subunit B
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P25731_TED02
+GA   27.00 27.00;
+TC   29.00 198.70;
+NC   26.10 23.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   25122114
+RT   Structure of CfaA suggests a new family of chaperones essential for
+RT   assembly of class 5 fimbriae.
+RA   Li YF, Poole S, Nishio K, Jang K, Rasulova F, McVeigh A, Savarino
+RA   SJ, Xia D, Bullitt E;
+RL   PLoS Pathog. 2014;10:e1004316.
+CC   This entry represents CS1 fimbrial subunit B (CooB), found in
+CC   enterotoxigenic Escherichia coli. CS1 is a colonisation factor
+CC   antigen and class 5 adhesive fimbriae. The protein structure has been
+CC   studied [1].
