@@ -1,0 +1,17 @@
+ID   b0309
+DE   b0309 protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75688_TED01
+GA   27.00 27.00;
+TC   31.30 89.80;
+NC   25.50 18.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the b0309 protein family, found in Escherichia
+CC   and related bacteria. The representative member b0309 from
+CC   Escherichia coli K12 is a 70 amino acid protein of uncertain
+CC   function. The protein was detected in E. coli K12 upon treatment with
+CC   thymol, an essential oil component. The function of this protein
+CC   remains to be determined.
+//
