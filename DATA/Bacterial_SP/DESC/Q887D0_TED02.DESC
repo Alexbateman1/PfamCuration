@@ -1,0 +1,40 @@
+ID   HopM1_C
+DE   Effector protein HopM1 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q887D0_TED02
+GA   27.00 27.00;
+TC   413.60 413.30;
+NC   23.20 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of effector protein
+CC   HopM1 (also known as hopPtoM or holPtoX) from Pseudomonas syringae
+CC   pv. tomato. HopM1 is involved in the suppression of basal resistance
+CC   and promotion of disease symptoms in plants [1]. The full-length
+CC   protein mediates the ubiquitination and degradation, via the host
+CC   proteasome, of a low-abundance immunity-associated protein in
+CC   Arabidopsis thaliana, and may be involved in the inhibition of a host
+CC   vesicle trafficking pathway [1-3]. The specific function of this
+CC   domain remains to be determined.
+RN   [1]
+RM   12940984
+RT   Pseudomonas syringae pv. tomato DC3000 HopPtoM (CEL ORF3) is
+RT   important for lesion formation but not growth in tomato and is
+RT   secreted and translocated by the Hrp type III secretion system in a
+RT   chaperone-dependent manner.
+RA   Badel JL, Nomura K, Bandyopadhyay S, Shimizu R, Collmer A, He SY;
+RL   Mol. Microbiol. 2003;49:1239-1251.
+RN   [2]
+RM   15210989
+RT   A family of conserved bacterial effectors inhibits salicylic
+RT   acid-mediated basal immunity and promotes disease necrosis in plants.
+RA   DebRoy S, Thilmony R, Kwack YB, Nomura K, He SY;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2004;101:9927-9932.
+RN   [3]
+RM   16840699
+RT   A bacterial virulence protein suppresses host innate immunity to
+RT   cause plant disease.
+RA   Nomura K, DebRoy S, Lee YH, Pumplin N, Jones J, He SY;
+RL   Science 2006;313:220-223.
+//

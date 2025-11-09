@@ -1,0 +1,24 @@
+ID   TubR
+DE   DNA-binding protein TubR
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q848W2_TED01
+GA   27.00 27.00;
+TC   27.90 49.70;
+NC   26.80 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents TubR, a DNA-binding protein that is part of
+CC   the type III plasmid partition system used to ensure correct
+CC   segregation of the pBM400 plasmid in Priestia megaterium (formerly
+CC   Bacillus megaterium) [1]. TubR binds the plasmid origin of
+CC   replication, probably cooperatively, forming a ring or short helix
+CC   with external DNA. Dimers bind to DNA, forming a protein-bound
+CC   filament which may form a helix around the TubZ filament [1].
+RN   [1]
+RM   23010931
+RT   Superstructure of the centromeric complex of TubZRC plasmid
+RT   partitioning systems.
+RA   Aylett CH, Lowe J;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2012;109:16522-16527.
+//

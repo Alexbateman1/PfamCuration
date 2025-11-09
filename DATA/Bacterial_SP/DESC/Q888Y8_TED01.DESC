@@ -1,0 +1,41 @@
+ID   HopD2
+DE   Tyrosine-protein phosphatase HopD2
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q888Y8_TED01
+GA   27.00 27.00;
+TC   27.40 169.60;
+NC   23.40 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents HopD2 (also known as hopPtoD2 or hopA01), an
+CC   effector protein showing tyrosine-phosphatase activity required for
+CC   host defence suppression in Pseudomonas syringae pv. tomato [1,2].
+CC   HopD2 functions inside plant cells causing suppression of
+CC   hypersensitive response (HR), PR1 gene expression and oxidative burst
+CC   probably by interfering with a MAPK (mitogen-activated protein kinase)
+CC   pathway [1,2]. MAPK cascades are known to activate defence-related
+CC   transcription factors. HopD2 inhibits plant pattern-recognition
+CC   receptors (PRRs) activation [3]. The protein is secreted via type III
+CC   secretion system (T3SS) [1,2].
+RN   [1]
+RM   12828636
+RT   The Pseudomonas syringae type III-secreted protein HopPtoD2 possesses
+RT   protein tyrosine phosphatase activity and suppresses programmed cell
+RT   death in plants.
+RA   Espinosa A, Guo M, Tam VC, Fu ZQ, Alfano JR;
+RL   Mol. Microbiol. 2003;49:377-387.
+RN   [2]
+RM   12828637
+RT   A translocated protein tyrosine phosphatase of Pseudomonas syringae
+RT   pv. tomato DC3000 modulates plant defence response to infection.
+RA   Bretz JR, Mock NM, Charity JC, Zeyad S, Baker CJ, Hutcheson SW;
+RL   Mol. Microbiol. 2003;49:389-400.
+RN   [3]
+RM   24357608
+RT   The Arabidopsis PEPR pathway couples local and systemic plant
+RT   immunity.
+RA   Ross A, Yamada K, Hiruma K, Yamashita-Yamada M, Lu X, Takano Y,
+RA   Tsuda K, Saijo Y;
+RL   EMBO J. 2014;33:62-75.
+//

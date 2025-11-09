@@ -1,0 +1,37 @@
+ID   HopAM1
+DE   3' cyclic ADP-D-ribose synthase HopAM1
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q877R9_TED01
+GA   27.00 27.00;
+TC   27.10 28.80;
+NC   26.60 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents HopAM1, a NAD(+) hydrolase (NADase) that
+CC   cleaves NAD(+) into nicotinamide and 3' cyclic ADP-D-ribose (3'cADPR,
+CC   v2-cADPR) [1,2]. HopAM1 is a type III secretion system effector from
+CC   Pseudomonas syringae pv. tomato that is delivered into plant host
+CC   cells [1,2]. Upon infiltration of Arabidopsis thaliana, 3'cADPR
+CC   levels rise and plant immune responses are suppressed [1]. Transgenic
+CC   A.thaliana expressing HopAM1 suppresses its plant immune system upon
+CC   challenge; the plants produce 3'cADPR without significantly depleting
+CC   NAD(+) [2].
+RN   [1]
+RM   34657283
+RT   A phytobacterial TIR domain effector manipulates NAD+ to promote
+RT   virulence.
+RA   Eastman S, Smith T, Zaydman MA, Kim P, Martinez S, Damaraju N,
+RA   DiAntonio A, Milbrandt J, Clemente TE, Alfano JR, Guo M;
+RL   New Phytol. 2022;233:890-904.
+RN   [2]
+RM   36048923
+RT   Cyclic ADP ribose isomers: Production, chemical structures, and
+RT   immune signaling.
+RA   Manik MK, Shi Y, Li S, Zaydman MA, Damaraju N, Eastman S, Smith TG,
+RA   Gu W, Masic V, Mosaiab T, Weagley JS, Hancock SJ, Vasquez E,
+RA   Hartley-Tassell L, Kargios N, Maruta N, Lim BYJ, Burdett H,
+RA   Landsberg MJ, Schembri MA, Prokes I, Song L, Grant M, DiAntonio A,
+RA   Nanson JD, Guo M, Milbrandt J, Ve T, Kobe B;
+RL   Science 2022;377:eadc8969-eadc8969.
+//

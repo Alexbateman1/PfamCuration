@@ -1,0 +1,35 @@
+ID   ZorO
+DE   Small toxic protein ZorO
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q8X3T6
+GA   27.00 27.00;
+TC   29.00 61.00;
+NC   22.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents ZorO, a small toxic protein that is the toxic
+CC   component of a type I toxin-antitoxin (TA) system in Escherichia coli
+CC   [1-3]. ZorO is a 29-amino acid protein. Expression of ZorO in the
+CC   absence of its cognate antitoxin (small sRNA OrzO) leads to cell
+CC   stasis and a decrease in colony-forming units [2,3]. Repression of
+CC   ZorO toxicity requires base pairing between zorO mRNA and sRNA OrzO,
+CC   as well as RNase III (rnc), suggesting the mRNA is degraded [2,3].
+RN   [1]
+RM   20156992
+RT   Characterization of novel small RNAs using comparative genomics and
+RT   microarrays.
+RA   Raghavan R, Groisman EA, Ochman H;
+RL   Genes Dev. 2010;24:2793-2798.
+RN   [2]
+RM   24203704
+RT   Small stress response proteins in Escherichia coli: proteins missed
+RT   by classical proteomic studies.
+RA   Hemm MR, Paul BJ, Miranda-Rios J, Zhang A, Soltanzad N, Storz G;
+RL   J. Bacteriol. 2010;192:46-58.
+RN   [3]
+RM   27903909
+RT   zor-orz: a novel toxin-antitoxin system in Escherichia coli.
+RA   Wen J, Harp JR, Fozo EM;
+RL   Nucleic Acids Res. 2017;45:1938-1952.
+//
