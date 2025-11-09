@@ -6,8 +6,8 @@ GA   27.00 27.00;
 TC   28.50 28.50;
 NC   25.80 24.30;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
-TP   Family
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
 CC   This entry represents gas vesicle protein C (GvpC), found in
 CC   cyanobacteria. GvpC confers stability to gas vesicles, hollow gas-
 CC   filled proteinaceous nanostructures that allow positioning of the

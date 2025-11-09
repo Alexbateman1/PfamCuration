@@ -3,11 +3,11 @@ DE   Microcin H47
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P62530_TED01
 GA   27.00 27.00;
-TC   28.80 141.20;
-NC   23.30 22.40;
+TC   37.00 82.10;
+NC   25.10 21.60;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
-TP   Family
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
 CC   This entry represents microcin H47 (MccH47), a bactericidal antibiotic
 CC   peptide of approximately 60 amino acids found in Escherichia coli and
 CC   related Enterobacteriaceae. The mature peptide is secreted, probably

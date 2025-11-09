@@ -3,18 +3,11 @@ DE   P65 protein N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P47459_TED01
 GA   27.00 27.00;
-TC   27.10 189.00;
-NC   24.10 22.70;
+TC   27.00 137.80;
+NC   26.60 26.60;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-RN   [1]
-RM   7768845
-RT   The proline-rich P65 protein of Mycoplasma pneumoniae is a
-RT   component of the Triton X-100-insoluble fraction and exhibits size
-RT   polymorphism in the strains M129 and FH.
-RA   Proft T., Hilbert H., Layh-Schmitt G., Herrmann R.;
-RL   J. Bacteriol. 1995;177:3370-3378.
 CC   This entry represents an N-terminal domain of approximately 135
 CC   amino acids found in proline-rich P65 proteins from Mycoplasma
 CC   species. The full-length P65 protein from Mycoplasma pneumoniae is

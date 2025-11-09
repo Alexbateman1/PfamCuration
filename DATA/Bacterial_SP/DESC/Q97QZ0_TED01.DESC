@@ -3,17 +3,11 @@ DE   SP_1052 family
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:Q97QZ0_TED01
 GA   27.00 27.00;
-TC   27.40 28.50;
-NC   25.90 24.90;
+TC   28.20 28.50;
+NC   25.10 24.40;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
-TP   Family
-RN   [1]
-RM   14977965
-RT   A locus contained within a variable region of pneumococcal
-RT   pathogenicity island 1 contributes to virulence in mice.
-RA   Brown J.S., Gilliland S.M., Spratt B.G., Holden D.W.;
-RL   Infect. Immun. 2004;72:1587-1593.
+TP   Domain
 CC   This entry represents an uncharacterised protein family of
 CC   approximately 258 amino acids found in Bacillota, including SP_1052
 CC   from Streptococcus pneumoniae. In S. pneumoniae strain 0100993,

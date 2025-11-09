@@ -6,8 +6,8 @@ GA   27.00 27.00;
 TC   27.40 28.50;
 NC   25.90 24.90;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
-TP   Family
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
 CC   This entry represents the DUF4320 family of approximately 117 amino
 CC   acids found in Bacillota. Members include proteins from Bacillus
 CC   anthracis plasmid pXO2, which are predicted to be single-pass

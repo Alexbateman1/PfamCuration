@@ -6,8 +6,8 @@ GA   27.00 27.00;
 TC   52.70 52.20;
 NC   23.30 23.00;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
-TP   Family
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
 CC   This entry represents a small peptide family found in Streptomyces
 CC   species. Members may include aborycin-family tricyclic peptides. The
 CC   function of this family remains to be determined.

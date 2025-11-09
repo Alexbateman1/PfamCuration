@@ -1,0 +1,14 @@
+ID   DUF
+DE   Uncharacterized protein HP_0560
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P64661_TED01
+GA   27.00 27.00;
+TC   60.50 60.40;
+NC   21.40 19.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved domain of unknown function
+CC   found in Helicobacter pylori (strain ATCC 700392 / 26695) (Campylobacter
+CC   pylori)
+CC   The function of this domain remains to be determined.
