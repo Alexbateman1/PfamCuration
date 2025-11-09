@@ -1,0 +1,18 @@
+ID   MG328
+DE   Mycoplasma MG328 protein domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q49419_TED01
+GA   27.00 27.00;
+TC   29.80 186.70;
+NC   25.30 22.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in the uncharacterised MG328
+CC   protein from Mycoplasmoides genitalium. This domain is approximately
+CC   90 amino acids in length and is located towards the C-terminus of the
+CC   756 amino acid protein. MG328 has been annotated in COG1511 and
+CC   mentioned in studies as a putative cytoskeletal protein that shows
+CC   differential phosphorylation. The function of this domain remains to
+CC   be determined.
+//
