@@ -1,0 +1,16 @@
+ID   RegB
+DE   RegB protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q03381_TED01
+GA   27.00 27.00;
+TC   27.50 157.90;
+NC   26.20 19.00;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the RegB protein family, found in Pseudomonas
+CC   aeruginosa. The representative member RegB from Pseudomonas
+CC   aeruginosa strain PAO1 is a 75 amino acid protein required for
+CC   optimal exotoxin A production. The function of this protein remains
+CC   to be determined.
+//
