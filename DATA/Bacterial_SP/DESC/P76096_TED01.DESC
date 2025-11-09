@@ -1,0 +1,16 @@
+ID   MokB
+DE   MokB regulatory protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P76096_TED01
+GA   27.00 27.00;
+TC   43.90 129.60;
+NC   24.70 19.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the MokB regulatory protein family, found in
+CC   Escherichia and related bacteria. The representative member MokB from
+CC   Escherichia coli K12 is a 55 amino acid overlapping regulatory
+CC   peptide whose translation enables hokB expression. The function of
+CC   this protein remains to be determined.
+//

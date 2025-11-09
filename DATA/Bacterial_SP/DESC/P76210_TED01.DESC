@@ -1,0 +1,16 @@
+ID   YdjO_N
+DE   YdjO N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P76210_TED01
+GA   27.00 27.00;
+TC   235.10 235.10;
+NC   25.40 22.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of YdjO, an
+CC   uncharacterised protein from Escherichia and related
+CC   Enterobacteriaceae. The full-length YdjO protein from Escherichia
+CC   coli K12 is a 267 amino acid protein. The function of this domain
+CC   remains to be determined.
+//
