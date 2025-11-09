@@ -1,0 +1,15 @@
+ID   Rv3630_N
+DE   Polysaccharide biosynthesis/transport protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P59985_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.50 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of integral membrane
+CC   proteins Rv3630, Rv1510, and Mb3654, found in Actinomycetota. The
+CC   full-length proteins are annotated as polysaccharide biosynthesis
+CC   and transport proteins (InterPro:IPR050833, PANTHER:PTHR30250).
+CC   The specific function of this domain remains to be determined.

@@ -1,0 +1,15 @@
+ID   MG414_N
+DE   MG414 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P47653_TED01/Iterate
+GA   27.00 27.00;
+TC   316.20 315.50;
+NC   22.60 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the N-terminal domain of uncharacterised
+CC   protein MG414 and its homologues from Mycoplasmoides species. These
+CC   proteins belong to the MG414/MG415 family. The full-length protein
+CC   is predicted to be a multi-pass membrane protein. The function of
+CC   this domain remains to be determined.

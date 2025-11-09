@@ -1,0 +1,16 @@
+ID   y4wI_mid
+DE   Protein y4wI middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P55687_TED02
+GA   27.00 27.00;
+TC   87.90 87.90;
+NC   25.40 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the central domain of protein y4wI, found in
+CC   diverse bacteria. The full-length protein is annotated as a
+CC   radical SAM family RIPP maturase (NCBIfam:TIGR04517, InterPro:
+CC   IPR030950), involved in post-translational modification of
+CC   ribosomally synthesised and post-translationally modified peptides.
+CC   The specific function of this domain remains to be determined.

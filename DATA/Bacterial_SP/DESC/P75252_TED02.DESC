@@ -1,0 +1,16 @@
+ID   MG350_MPN526_C
+DE   MG350/MPN_526 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75252_TED02/Iterate
+GA   27.00 27.00;
+TC   220.40 219.80;
+NC   23.80 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of the uncharacterised
+CC   protein MG350 and its homologue MPN_526 found in Mycoplasmoides
+CC   species. The full-length proteins are approximately 311-328 amino
+CC   acids. The MPN_526 gene is cotranscribed with MPN_525, which
+CC   encodes the replication initiation protein DnaB. The function of
+CC   this domain remains to be determined.

@@ -1,0 +1,21 @@
+ID   MPN312
+DE   Mycoplasma pneumoniae protein MPN312
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P75469
+GA   27.00 27.00;
+TC   28.70 489.00;
+NC   23.70 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   27446003
+RT   Integrated Information and Prospects for Gliding Mechanism of the
+RT   Pathogenic Bacterium Mycoplasma pneumoniae.
+RA   Nakane D, Miyata M;
+RL   Front. Microbiol. 2016;7:960.
+CC   This entry represents a conserved family of proteins found in
+CC   Mycoplasma species. The protein P75469 (MPN_312) from Mycoplasma
+CC   pneumoniae is also known as P24. The protein appears to be localised
+CC   on the bowl complex and may be involved in gliding motility [1].
+CC   The function of this protein remains to be determined.

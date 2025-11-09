@@ -1,0 +1,15 @@
+ID   Y4iN
+DE   Uncharacterised protein y4iN
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P55497_TED01
+GA   27.00 27.00;
+TC   28.20 27.00;
+NC   26.90 25.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in
+CC   Sinorhizobium fredii (y4iN) and related bacteria, including
+CC   Betaproteobacteria and Gammaproteobacteria. The protein contains
+CC   a predicted signal peptide. The function of this protein remains
+CC   to be determined.

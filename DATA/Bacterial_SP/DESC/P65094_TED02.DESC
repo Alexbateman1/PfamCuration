@@ -1,0 +1,22 @@
+ID   Rv3785_C
+DE   Mycobacterium Rv3785 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P65094_TED02
+GA   27.00 27.00;
+TC   28.80 27.60;
+NC   24.80 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of uncharacterised protein
+CC   Rv3785 and its orthologues, found in Mycobacterium tuberculosis
+CC   complex and other Actinomycetota species. The protein also contains an
+CC   Rv3785_N domain (Pfam:PF27209). In M. tuberculosis CDC1551, Rv3785 and
+CC   Rv3784 (encoding dTDP-glucose 4,6-dehydratase) are fused as a single
+CC   gene MT3893 [1]. The function of this domain remains to be determined.
+RN   [1]
+RM   18325090
+RT   Detecting the molecular scars of evolution in the Mycobacterium
+RT   tuberculosis complex by analyzing interrupted coding sequences.
+RA   Casali N, Riley LW;
+RL   BMC Evol Biol 2008;8:78.

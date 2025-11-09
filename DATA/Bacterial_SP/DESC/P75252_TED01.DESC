@@ -1,0 +1,16 @@
+ID   MPN526_N
+DE   MPN526 protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75252_TED01
+GA   27.00 27.00;
+TC   144.30 144.30;
+NC   26.90 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal domain found in uncharacterised
+CC   protein MG350 homologue MPN_526 (328 amino acids) from
+CC   Mycoplasmoides pneumoniae. The protein is cotranscribed with mpn525
+CC   which putatively encodes the replication initiation protein DnaB.
+CC   The function of this domain remains to be determined.
+**

@@ -1,0 +1,17 @@
+ID   KlcB_4th
+DE   Stable inheritance protein KlcB 4th domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P52605_TED04
+GA   27.00 27.00;
+TC   28.80 67.50;
+NC   23.50 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the fourth domain of protein KlcB, a stable
+CC   inheritance protein found on IncP-1 plasmids. KlcB is found on
+CC   conjugative plasmids such as pEST4011 from Achromobacter
+CC   denitrificans and related Betaproteobacteria and Bacilli. This
+CC   domain is located at the C-terminal region of the protein and is
+CC   part of a multi-domain architecture that includes Pfam:PF27393 and
+CC   Pfam:PF27190. The function of this domain remains to be determined.

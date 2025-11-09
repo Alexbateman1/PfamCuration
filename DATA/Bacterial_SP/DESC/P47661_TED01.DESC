@@ -1,0 +1,13 @@
+ID   MG422_N
+DE   MG422 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P47661_TED01/Iterate
+GA   27.00 27.00;
+TC   27.30 114.10;
+NC   26.60 23.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the N-terminal domain of uncharacterised
+CC   protein MG422 and its homologues from Mycoplasmoides species. The
+CC   function of this domain remains to be determined.

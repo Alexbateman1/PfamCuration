@@ -1,0 +1,13 @@
+ID   Rv3424c_dom
+DE   Mycobacterium Rv3424c domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P65086_TED01/Iterate
+GA   27.00 27.00;
+TC   30.70 146.60;
+NC   26.80 17.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in uncharacterised protein
+CC   Rv3424c and its orthologues, found in Mycobacterium tuberculosis
+CC   complex species. The function of this domain remains to be determined.

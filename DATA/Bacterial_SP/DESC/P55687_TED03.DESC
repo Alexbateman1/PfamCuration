@@ -1,0 +1,16 @@
+ID   y4wI_C
+DE   Protein y4wI C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P55687_TED03
+GA   27.00 27.00;
+TC   27.20 28.70;
+NC   26.50 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of protein y4wI, found
+CC   in bacteria. The full-length protein is annotated as a radical SAM
+CC   family RIPP maturase (NCBIfam:TIGR04517, InterPro:IPR030950),
+CC   involved in post-translational modification of ribosomally
+CC   synthesised and post-translationally modified peptides. The
+CC   specific function of this domain remains to be determined.

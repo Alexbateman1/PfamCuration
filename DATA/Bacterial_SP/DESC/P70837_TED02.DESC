@@ -1,0 +1,23 @@
+ID   BBD10_C
+DE   Borrelia burgdorferi BBD10 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P70837_TED02
+GA   27.00 27.00;
+TC   30.10 335.90;
+NC   25.20 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of uncharacterised
+CC   lipoprotein BBD10, found in Borreliella burgdorferi. The protein is
+CC   encoded on linear plasmid lp17 and is a surface lipoprotein [1]. The
+CC   protein also contains an N-terminal domain. The function of this
+CC   domain remains to be determined.
+RN   [1]
+RM   28069820
+RT   Comprehensive Spatial Analysis of the Borrelia burgdorferi
+RT   Lipoproteome Reveals a Compartmentalization Bias toward the Bacterial
+RT   Surface.
+RA   Dowdell AS, Murphy MD, Azodi C, Swanson SK, Florens L, Chen S,
+RA   Zuckert WR;
+RL   J Bacteriol 2017;199:e00116-17.

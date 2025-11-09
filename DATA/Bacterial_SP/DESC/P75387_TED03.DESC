@@ -1,0 +1,16 @@
+ID   SecD_MPN340_2nd
+DE   SecD-like protein MPN340 second domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75387_TED03/Iterate
+GA   27.00 27.00;
+TC   50.20 449.90;
+NC   26.60 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a second domain found in uncharacterised
+CC   protein MG277 homologue MPN_340 (971 amino acids) from
+CC   Mycoplasmoides species. The proteins are SecD-like and part of the
+CC   Sec secretion pathway involved in protein export. The function of
+CC   this domain remains to be determined.
+**

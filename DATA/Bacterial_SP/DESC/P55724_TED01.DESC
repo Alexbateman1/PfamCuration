@@ -1,0 +1,21 @@
+ID   NopP
+DE   Nodulation outer protein P
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P55724_TED01
+GA   27.00 27.00;
+TC   52.40 52.20;
+NC   21.70 20.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   15231809
+RT   Characterization of NopP, a type III secreted effector of
+RT   Rhizobium sp. strain NGR234.
+RA   Ausmees N., Kobayashi H., Deakin W.J., Marie C., Krishnan H.B.,
+RA   Broughton W.J., Perret X.;
+RL   J. Bacteriol. 186:4774-4780(2004).
+CC   This entry represents nodulation outer protein P (NopP), a type III
+CC   secreted effector found in Alphaproteobacteria. NopP is secreted
+CC   via the type III secretion system and is phosphorylated. It is a
+CC   major determinant of nodulation in tropical legumes [1].

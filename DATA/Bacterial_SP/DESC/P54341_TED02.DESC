@@ -1,0 +1,16 @@
+ID   XkdV_2nd
+DE   Phage-like element PBSX protein XkdV 2nd domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P54341_TED02
+GA   27.00 27.00;
+TC   27.70 212.70;
+NC   25.00 17.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the second domain of phage-like element PBSX
+CC   protein XkdV from Bacillus subtilis. XkdV is part of the PBSX
+CC   prophage element and shows similarity to protein YqcC from the same
+CC   organism. This domain is part of a multi-domain architecture that
+CC   includes Pfam:PF27308 (XkdV_N). The function of this domain remains
+CC   to be determined.

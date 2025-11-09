@@ -1,0 +1,28 @@
+ID   BBD24
+DE   Borrelia burgdorferi BBD24 family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P70845_TED01
+GA   27.00 27.00;
+TC   160.30 160.10;
+NC   18.90 18.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the BBD24 family of small uncharacterised
+CC   membrane proteins with three predicted transmembrane helices, found in
+CC   Borreliella burgdorferi. The protein is encoded on linear plasmid
+CC   lp17. Expression is up-regulated by the response regulator Rrp2 [1]
+CC   and the regulator BadR [2]. The function of this family remains to be
+CC   determined.
+RN   [1]
+RM   18573895
+RT   Essential role of the response regulator Rrp2 in the infectious cycle
+RT   of Borrelia burgdorferi.
+RA   Boardman BK, He M, Ouyang Z, Xu H, Pang X, Yang XF;
+RL   Infect Immun 2008;76:3844-3853.
+RN   [2]
+RM   23387366
+RT   Borrelia host adaptation Regulator (BadR) regulates rpoS to modulate
+RT   host adaptation and virulence factors in Borrelia burgdorferi.
+RA   Miller CL, Karna SL, Seshu J;
+RL   Mol Microbiol 2013;88:622-639.

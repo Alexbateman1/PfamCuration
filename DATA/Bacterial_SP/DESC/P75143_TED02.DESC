@@ -1,0 +1,14 @@
+ID   MPN_143_C
+DE   MPN_143 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75143_TED02
+GA   27.00 27.00;
+TC   35.90 102.80;
+NC   23.00 20.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of the uncharacterised
+CC   protein MPN_143 from Mycoplasmoides pneumoniae. The gene is located
+CC   downstream of the cytadherence genes MPN141 and MPN142. The function
+CC   of this domain remains to be determined.

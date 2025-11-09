@@ -1,0 +1,28 @@
+ID   YwhK_N
+DE   YwhK N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P71003_TED01/Iterate
+GA   27.00 27.00;
+TC   28.10 27.60;
+NC   25.70 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   12073041
+RT   The beta-propeller protein YxaL increases the processivity of the
+RT   PcrA helicase.
+RA   Noirot-Gros M.F., Soultanas P., Wigley D.B., Ehrlich S.D., Noirot P.,
+RA   Petit M.A.;
+RL   Mol. Genet. Genomics 2002;267:391-400.
+RN   [2]
+RM   12060778
+RT   An expanded view of bacterial DNA replication.
+RA   Noirot-Gros M.F., Dervyn E., Wu L.J., Mervelet P., Errington J.,
+RA   Ehrlich S.D., Noirot P.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2002;99:8342-8347.
+CC   This entry represents the N-terminal domain of YwhK and related
+CC   proteins from Bacillus and Clostridium species. YwhK interacts with
+CC   the DNA helicase PcrA, although this interaction is not essential for
+CC   cell viability or repair of UV-induced lesions [1,2]. The function of
+CC   this domain remains to be determined.
