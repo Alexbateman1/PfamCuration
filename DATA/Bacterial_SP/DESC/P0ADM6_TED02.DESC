@@ -1,13 +1,17 @@
-ID   YidX_2nd
-DE   YidX second domain
+ID   YidX_C
+DE   YidX C-terminal domain
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P0ADM6_TED02
 GA   27.00 27.00;
-TC   30.20 46.40;
-NC   25.20 23.60;
-BM   hmmbuild -o /dev/null HMM SEED
-SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TC   27.80 27.10;
+NC   24.60 23.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
 TP   Domain
-CC   This entry represents the second domain of YidX, an uncharacterised
-CC   protein found in Escherichia coli. The function of this domain
-CC   remains to be determined.
+CC   This entry represents the C-terminal domain of the YidX
+CC   lipoprotein family, found in Enterobacterales. The domain is
+CC   approximately 62 amino acids in length and is found in 14
+CC   proteins. YidX is predicted to be membrane-anchored via an
+CC   N-terminal lipid attachment. The function of this C-terminal
+CC   domain remains to be determined.
+//

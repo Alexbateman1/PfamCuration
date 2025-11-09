@@ -1,12 +1,15 @@
-ID   DUF
-DE   Domain of unknown function
+ID   Mob_prot
+DE   Mobilisation protein family
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P14503_TED02/Iterate/Iterate
+SE   TED:P14503_TED02
 GA   27.00 27.00;
 TC   33.40 121.90;
 NC   26.90 25.60;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
-TP   Domain
-CC   This entry represents a domain of unknown function found in bacterial
-CC   proteins. The function of this domain remains to be determined.
+TP   Family
+CC   This entry represents a mobilisation protein family found in
+CC   Bacilli and Cyanobacteria. This family is approximately 79 amino
+CC   acids in length. The function of this protein family remains to
+CC   be determined.
+//

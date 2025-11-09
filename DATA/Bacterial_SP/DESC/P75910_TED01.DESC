@@ -1,0 +1,18 @@
+ID   YcdU_N
+DE   YcdU N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75910_TED01
+GA   27.00 27.00;
+TC   211.70 211.70;
+NC   25.40 22.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of YcdU from
+CC   Escherichia and related Enterobacteriaceae. The full-length YcdU
+CC   protein from Escherichia coli K12 is a 328 amino acid multi-pass
+CC   membrane protein with eight predicted transmembrane helices and
+CC   localised to the cell inner membrane. The YcdU C-terminal domain is
+CC   represented by Pfam:PF29186. The function of this domain remains to
+CC   be determined.
+//

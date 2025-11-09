@@ -1,4 +1,4 @@
-ID   Plasmid_stb
+ID   Plasmid_stab
 DE   Plasmid stability protein family
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P11907_TED01
@@ -8,14 +8,8 @@ NC   26.30 24.10;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
 TP   Family
-CC   This entry represents a plasmid stability (stb) locus protein
-CC   family, found in Enterobacteriaceae plasmids. These proteins are
-CC   approximately 84 amino acids in length and are encoded on bacterial
-CC   plasmids [1]. The function of this protein family remains to be
-CC   determined.
-RN   [1]
-RM   10496929
-RT   "Complete DNA sequence and structural analysis of the enteropathogenic
-RT   Escherichia coli adherence factor plasmid.";
-RA   Tobe T., Hayashi T., Han C.G., Schoolnik G.K., Ohtsubo E., Sasakawa C.;
-RL   Infection and immunity 67:5455-5462(1999).
+CC   This entry represents a plasmid stability protein family found in
+CC   Enterobacteriaceae and Streptomyces. This family is approximately
+CC   84 amino acids in length. The function of this protein family
+CC   remains to be determined.
+//

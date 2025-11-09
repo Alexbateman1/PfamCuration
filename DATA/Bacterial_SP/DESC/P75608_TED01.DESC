@@ -1,0 +1,17 @@
+ID   MPN_085_N
+DE   MPN_085 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75608_TED01
+GA   27.00 27.00;
+TC   29.30 29.10;
+NC   26.40 25.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of MPN_085, an
+CC   uncharacterised membrane protein from Mycoplasmoides (formerly
+CC   Mycoplasma). MPN_085 is a 440 amino acid multi-pass membrane protein
+CC   predicted to be localised to the cell membrane with multiple
+CC   transmembrane helices. The function of this domain remains to be
+CC   determined.
+//

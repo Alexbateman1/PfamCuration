@@ -1,13 +1,16 @@
-ID   Lept_OMP_2
+ID   Leptospira_OMP_2nd
 DE   Leptospira outer membrane protein second domain
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P17628_TED02/Iterate
+SE   TED:P17628_TED02
 GA   27.00 27.00;
 TC   27.20 110.30;
 NC   26.70 26.40;
-BM   hmmbuild -o /dev/null HMM SEED
+BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
 TP   Domain
-CC   This entry represents a second domain found in Leptospira outer
-CC   membrane proteins. These proteins are predicted to belong to the
-CC   OMP superfamily.
+CC   This entry represents the second domain of an outer membrane
+CC   protein family found in Leptospira. The full-length protein is
+CC   predicted to have a transmembrane beta-sheet structure and may
+CC   be a member of the OMP superfamily. The function of this domain
+CC   remains to be determined.
+//

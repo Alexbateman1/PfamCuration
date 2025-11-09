@@ -1,16 +1,24 @@
 ID   RseD
-DE   rpoE leader peptide RseD
+DE   RseD rpoE leader peptide family
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P0DPC7_TED01
 GA   27.00 27.00;
-TC   30.70 135.10;
-NC   24.00 22.40;
+TC   28.30 30.90;
+NC   25.90 22.10;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
-TP   Domain
-CC   This entry represents a domain found in the rpoE leader peptide
-CC   (RseD) from Escherichia coli and related Enterobacteriaceae. This is
-CC   a short protein of 51 amino acids whose stop codon overlaps with the
-CC   start codon of downstream rpoE. A premature stop codon at position
-CC   12 results in decreased expression of ECF sigma factor RpoE; thus
-CC   the two proteins are translationally coupled.
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   28924029
+RT   Circuitry linking the global Csr and sigma(E)-dependent cell
+RT   envelope stress response systems.
+RA   Yakhnin H., Aichele R., Ades S.E., Romeo T., Babitzke P.;
+RL   J. Bacteriol. 2017;199:e00484-17.
+CC   This entry represents the RseD leader peptide family found in
+CC   Enterobacterales. The family is approximately 51 amino acids in
+CC   length and is found in 6 proteins. RseD is a short protein whose
+CC   stop codon overlaps with the start codon of downstream rpoE; a
+CC   premature stop codon at position 12 results in decreased
+CC   expression of ECF sigma factor RpoE, thus they are translationally
+CC   coupled [1].
+//

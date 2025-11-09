@@ -1,0 +1,17 @@
+ID   YmfH
+DE   YmfH protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P75971_TED01
+GA   27.00 27.00;
+TC   27.10 33.30;
+NC   24.00 20.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YmfH protein family, found in Escherichia.
+CC   The representative member YmfH from Escherichia coli K12 is a 103
+CC   amino acid protein predicted to be a multi-pass inner membrane
+CC   protein with two transmembrane helices. The gene is encoded in the
+CC   lambdoid prophage element e14 and may be a pseudogene. The function
+CC   of this protein remains to be determined.
+//
