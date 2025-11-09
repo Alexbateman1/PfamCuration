@@ -1,0 +1,21 @@
+ID   Cep
+DE   Colonisation factor Cep
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:Q9K323
+GA   27.00 27.00;
+TC   27.80 27.60;
+NC   26.70 23.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents colonisation factor Cep, an 82-residue secreted
+CC   protein from Vibrio cholerae with a signal peptide (residues 1-33).
+CC   The protein is encoded within the CTX genetic element and functions
+CC   as an intestinal colonisation factor [1].
+RN   [1]
+RM   8475125
+RT   CTX genetic element encodes a site-specific recombination system and
+RT   an intestinal colonization factor.
+RA   Pearson G.D., Woods A., Chiang S.L., Mekalanos J.J.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 90:3750-3754(1993).
+//
