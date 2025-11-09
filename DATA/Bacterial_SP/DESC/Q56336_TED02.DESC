@@ -1,0 +1,19 @@
+ID   CfpA_C
+DE   Cytoplasmic filament protein A C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q56336_TED02
+GA   27.00 27.00;
+TC   34.80 84.90;
+NC   23.10 22.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of cytoplasmic filament
+CC   protein A (CfpA) from Treponema pallidum. The full-length CfpA
+CC   protein is a component of the cytoplasmic filaments that run the
+CC   length of the organism underneath the cytoplasmic membrane. The
+CC   protein contains several coiled coil regions and the C-terminal
+CC   region (residues 656-678) is predicted to be disordered. Members are
+CC   classified in NCBIfam as cfpA_ASD. The function of this C-terminal
+CC   domain remains to be determined.
+//

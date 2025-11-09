@@ -1,0 +1,17 @@
+ID   HMW3_mid
+DE   Cytadherence high molecular weight protein 3 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q57081_TED02
+GA   27.00 27.00;
+TC   27.10 110.40;
+NC   26.70 24.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle domain of cytadherence high molecular
+CC   weight protein 3 (HMW3) from Mycoplasmoides genitalium. HMW3 is a
+CC   component of the cytoskeleton-like structure essential for successful
+CC   surface parasitism and allows the proper anchoring of cytadhesin
+CC   proteins at the attachment organelle membrane. Members are found in
+CC   COG3115. The function of this middle domain remains to be determined.
+//

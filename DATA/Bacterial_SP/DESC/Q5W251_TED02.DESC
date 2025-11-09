@@ -1,0 +1,20 @@
+ID   PigD_TPP
+DE   Biosynthesis protein PigD thiamine pyrophosphate-binding domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q5W251_TED02
+GA   27.00 27.00;
+TC   27.10 107.30;
+NC   26.10 18.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a thiamine pyrophosphate (TPP)-binding domain
+CC   from biosynthesis protein PigD and related proteins. Members are
+CC   found in Streptomyces and other Actinomycetes, as well as various
+CC   Gammaproteobacteria and Betaproteobacteria. The domain is
+CC   approximately 170 amino acids in length and is part of multi-domain
+CC   proteins involved in secondary metabolite biosynthesis. Related
+CC   proteins include decarboxylases, acetolactate synthase large subunits
+CC   and 3-acetyloctanal synthase. The function of this domain remains to
+CC   be determined.
+//

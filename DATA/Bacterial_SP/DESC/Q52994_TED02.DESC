@@ -1,0 +1,20 @@
+ID   GlutR_mid
+DE   Glutamyl-tRNA reductase middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q52994_TED02
+GA   27.00 27.00;
+TC   27.00 33.30;
+NC   26.30 25.00;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle domain found in glutamyl-tRNA
+CC   reductase from diverse bacteria including Methylobacterium, Vibrio,
+CC   Desulfobacula and Catenulispora species. This domain is
+CC   approximately 136 amino acids in length and is located at positions
+CC   143-278. Glutamyl-tRNA reductase catalyses the NADPH-dependent
+CC   reduction of glutamyl-tRNA to glutamate 1-semialdehyde. The
+CC   full-length enzyme contains the GlutR_N domain (Pfam:PF05201) at the
+CC   N-terminus. The function of this middle domain remains to be
+CC   determined.
+//

@@ -1,0 +1,21 @@
+ID   Lem3_C
+DE   Phosphocholine hydrolase Lem3 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q5ZXN5_TED02
+GA   27.00 27.00;
+TC   27.00 126.40;
+NC   26.90 23.50;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of phosphocholine hydrolase
+CC   Lem3 (dephosphocholinase Lem3) from Legionella pneumophila. The
+CC   full-length Lem3 protein is approximately 570 amino acids and acts as
+CC   a phosphocholine hydrolase that mediates the hydrolysis of
+CC   phosphocholine from host Rab1 proteins. This activity is important
+CC   for regulating small GTPase Rab1 activity by reversible
+CC   phosphorylcholination. The protein can act on both GDP-bound and
+CC   GTP-bound Rab proteins and plays a role in hijacking host vesicular
+CC   trafficking. Members are found in COG1391. The function of this
+CC   C-terminal domain remains to be determined.
+//

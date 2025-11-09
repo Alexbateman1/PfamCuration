@@ -1,0 +1,17 @@
+ID   DUF
+DE   Polysaccharide lyase-like domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q59639_TED01
+GA   27.00 27.00;
+TC   27.10 28.80;
+NC   26.90 25.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a polysaccharide lyase-like domain found in
+CC   bacteria and fungi. Members have been identified in Streptomyces,
+CC   Amycolatopsis, Reinekea and the fungal Torrubiella clade. The
+CC   domain is approximately 200 amino acids in length. Some members
+CC   show weak similarity to alginate lyase domains. The function of
+CC   this domain remains to be determined.
+//
