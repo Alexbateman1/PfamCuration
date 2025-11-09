@@ -1,0 +1,16 @@
+ID   TP_0041
+DE   Treponema pallidum protein TP_0041
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83082
+GA   27.00 27.00;
+TC   29.00 111.40;
+NC   26.50 21.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein, TP_0041, found in
+CC   Treponema pallidum. The protein is 40 amino acids in length and
+CC   contains disordered and polar residue regions. This short open
+CC   reading frame may represent a pseudogene. The function of this
+CC   protein remains to be determined.
+**

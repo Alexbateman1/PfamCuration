@@ -1,0 +1,15 @@
+ID   TP_0281
+DE   Treponema pallidum protein TP_0281
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83305
+GA   27.00 27.00;
+TC   27.70 115.50;
+NC   25.30 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein, TP_0281, found in
+CC   Treponema pallidum. The protein is 42 amino acids in length and
+CC   appears to be specific to T. pallidum. The function of this protein
+CC   remains to be determined.
+**

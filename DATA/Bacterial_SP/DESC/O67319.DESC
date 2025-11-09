@@ -1,0 +1,16 @@
+ID   aq_1287
+DE   Aquificales protein aq_1287
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O67319/Iterate
+GA   27.00 27.00;
+TC   27.00 29.50;
+NC   26.90 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in Aquificales
+CC   bacteria, including Aquifex aeolicus protein aq_1287. The protein is
+CC   approximately 219 amino acids in length and contains a predicted
+CC   transmembrane region. It also contains a DNA ligase ATP-dependent
+CC   conserved site. The function of this protein remains to be determined.
+**

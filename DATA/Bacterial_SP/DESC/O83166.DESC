@@ -1,0 +1,16 @@
+ID   TP_0129
+DE   Treponema pallidum protein TP_0129
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:O83166
+GA   27.00 27.00;
+TC   364.90 364.70;
+NC   24.90 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein, TP_0129, found in
+CC   Treponema pallidum. The protein is 158 amino acids in length and is
+CC   present in T. pallidum subspecies pallidum. Some subspecies endemicum
+CC   strains contain sequence variations in this gene region. The function
+CC   of this protein remains to be determined.
+**
