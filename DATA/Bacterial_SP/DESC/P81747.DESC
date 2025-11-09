@@ -1,0 +1,18 @@
+ID   AdhD
+DE   Alcohol dehydrogenase D family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P81747
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the alcohol dehydrogenase D (AdhD) family,
+CC   found in Mycobacterium tuberculosis. The representative member AdhD
+CC   from Mycobacterium tuberculosis strain H37Rv is a 368 amino acid
+CC   putative alcohol dehydrogenase (EC 1.1.1.1). This enzyme is part of
+CC   the mymA operon, which is required for appropriate cell wall
+CC   ultrastructure and persistence. The function of this enzyme remains
+CC   to be determined.
+//

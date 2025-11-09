@@ -1,0 +1,20 @@
+ID   RplE
+DE   Large ribosomal subunit protein uL5 family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P83065
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the large ribosomal subunit protein uL5 (50S
+CC   ribosomal protein L5) family, found in Streptococcus mutans. The
+CC   representative member RplE from Streptococcus mutans strain ATCC
+CC   700610 is a 180 amino acid protein. RplE is one of the proteins that
+CC   bind and mediate the attachment of the 5S rRNA into the large
+CC   ribosomal subunit, where it forms part of the central protuberance.
+CC   In the 70S ribosome it contacts protein S13 of the 30S subunit,
+CC   connecting the two subunits. It contacts the P site tRNA and might
+CC   help stabilise positioning of ribosome-bound tRNAs.
+//
