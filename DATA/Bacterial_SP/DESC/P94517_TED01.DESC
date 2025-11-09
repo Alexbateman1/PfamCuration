@@ -1,0 +1,16 @@
+ID   YscB
+DE   YscB protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P94517_TED01
+GA   27.00 27.00;
+TC   29.30 160.60;
+NC   25.70 23.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YscB protein family, found in Bacillus
+CC   subtilis. The representative member YscB from Bacillus subtilis
+CC   strain 168 is a 221 amino acid uncharacterised protein with a
+CC   predicted signal peptide. The function of this protein remains to be
+CC   determined.
+//
