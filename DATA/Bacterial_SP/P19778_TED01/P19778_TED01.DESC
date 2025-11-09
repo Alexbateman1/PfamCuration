@@ -1,0 +1,15 @@
+ID   YdfE_N
+DE   Uncharacterised protein YdfE N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P19778_TED01
+GA   27.00 27.00;
+TC   79.40 92.60;
+NC   26.50 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of uncharacterised
+CC   protein YdfE, found in Escherichia coli. The full protein contains
+CC   both YdfE_N (Pfam:PF27430) and YdfE_C (Pfam:PF27432) domains. The
+CC   function of this protein remains to be determined.
+//

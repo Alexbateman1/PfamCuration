@@ -1,0 +1,16 @@
+ID   TrpB_TED
+DE   Tryptophan synthase beta chain TED domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P14552
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain found in the tryptophan synthase
+CC   beta chain from Yersinia pestis. While the full-length TrpB
+CC   protein catalyses the synthesis of L-tryptophan from indole and
+CC   L-serine, the specific function of this domain remains to be
+CC   determined.
+//

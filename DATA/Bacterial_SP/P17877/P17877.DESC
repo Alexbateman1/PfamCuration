@@ -1,0 +1,23 @@
+ID   CelA_N
+DE   Endoglucanase A N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P17877
+GA   27.00 27.00;
+TC   27.00 32.60;
+NC   26.90 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   1744052
+RT   Characterization of endoglucanase A from Clostridium
+RT   cellulolyticum.
+RA   Fierobe H.P., Gaudin C., Belaich A., Loufti M., Faure E.,
+RA   Bagnara C., Baty D., Belaich J.P.;
+RL   J. Bacteriol. 1991;173:7956-7962.
+CC   This entry represents the N-terminal domain of endoglucanase A
+CC   found in Clostridia. The full-length endoglucanase A belongs to
+CC   the glycosyl hydrolase 5 family and is involved in cellulose
+CC   degradation [1]. The specific function of this domain remains to
+CC   be determined.
+//
