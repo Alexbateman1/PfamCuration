@@ -1,12 +1,13 @@
 ID   DUF
 DE   Domain of unknown function
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P19937_TED01/Iterate
+SE   TED:P19937_TED01
 GA   27.00 27.00;
 TC   28.50 78.30;
 NC   26.90 18.80;
-BM   hmmbuild -o /dev/null HMM SEED
-SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
-TP   Family
-CC   This entry represents an uncharacterised domain found in Yersinia
-CC   species. The function of this domain remains to be determined.
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Yersinia. within Bacteria. The function of this domain remains to be
+CC   determined.

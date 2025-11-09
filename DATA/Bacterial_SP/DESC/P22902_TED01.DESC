@@ -1,14 +1,13 @@
 ID   DUF
-DE   Uncharacterised protein
+DE   Domain of unknown function
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P22902_TED01
 GA   27.00 27.00;
 TC   27.70 177.00;
 NC   22.80 26.70;
-BM   hmmbuild -o /dev/null HMM SEED
-SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
-TP   Family
-CC   This entry represents an uncharacterised protein found in
-CC   Burkholderia and Gulbenkiania species within the
-CC   Betaproteobacteria. This family is found in two proteins. The
-CC   function of this protein remains to be determined.
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Gulbenkiania. within Bacteria. The function of this domain remains to be
+CC   determined.

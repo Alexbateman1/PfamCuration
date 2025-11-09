@@ -1,0 +1,13 @@
+ID   OrderedLocusNames=PM1780
+DE   Uncharacterized protein PM1780
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9CK54_TED02
+GA   27.00 27.00;
+TC   31.20 120.00;
+NC   26.60 18.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Pasteurella. within Bacteria. The function of this domain remains to be
+CC   determined.

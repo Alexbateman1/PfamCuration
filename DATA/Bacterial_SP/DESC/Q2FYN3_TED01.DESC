@@ -1,0 +1,13 @@
+ID   msa
+DE   Protein msa
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q2FYN3_TED01
+GA   27.00 27.00;
+TC   30.80 277.50;
+NC   22.00 19.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Staphylococcus within Bacteria. The function of this domain remains to be
+CC   determined.

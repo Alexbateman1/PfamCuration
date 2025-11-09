@@ -1,12 +1,13 @@
 ID   DUF
 DE   Domain of unknown function
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P35648/Iterate
+SE   TED:P35648
 GA   27.00 27.00;
 TC   31.90 49.60;
 NC   26.40 19.80;
-BM   hmmbuild -o /dev/null HMM SEED
+BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
-TP   Family
-CC   This entry represents an uncharacterised protein. The function of
-CC   this protein remains to be determined.
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Rothia. within Bacteria. The function of this domain remains to be
+CC   determined.

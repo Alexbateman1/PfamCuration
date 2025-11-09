@@ -6,9 +6,8 @@ GA   27.00 27.00;
 TC   27.10 90.80;
 NC   23.90 18.40;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
-TP   Family
-CC   This entry represents a small uncharacterised protein family found
-CC   in diverse taxa including bacteria and eukaryotes. The function of
-CC   this family remains to be determined.
-//
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Leptidea. within Bacteria. The function of this domain remains to be
+CC   determined.
