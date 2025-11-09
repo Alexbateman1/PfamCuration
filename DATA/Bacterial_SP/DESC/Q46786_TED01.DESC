@@ -1,0 +1,17 @@
+ID   YgeF
+DE   Escherichia coli YgeF protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q46786_TED01
+GA   27.00 27.00;
+TC   31.50 153.70;
+NC   22.90 21.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the YgeF protein family, found in Escherichia
+CC   coli and Shigella species. The representative member YgeF from
+CC   Escherichia coli strain K12 is a 148 amino acid protein. YgeF may be
+CC   the product of a pseudogene. YgeF is located in a genomic region
+CC   encoding a putative type III secretion system (ETT2). The function
+CC   of this protein remains to be determined.
+//

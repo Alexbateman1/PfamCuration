@@ -1,0 +1,18 @@
+ID   YgeN
+DE   Escherichia coli YgeN protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q46793_TED01
+GA   27.00 27.00;
+TC   27.30 154.20;
+NC   26.70 17.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the YgeN protein family, found in Escherichia
+CC   coli. The representative member YgeN from Escherichia coli strain
+CC   K12 is a 235 amino acid protein. YgeN may be the product of a
+CC   pseudogene due to a frameshift in position 87 that produces two
+CC   separate ORFs. YgeN is located in the ETT2 gene cluster encoding a
+CC   type III secretion system. The function of this protein remains to
+CC   be determined.
+//
