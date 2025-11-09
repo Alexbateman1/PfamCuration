@@ -1,0 +1,21 @@
+ID   PHG004
+DE   Uncharacterised protein PHG004
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P32757_TED01
+GA   27.00 27.00;
+TC   34.90 123.30;
+NC   25.30 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   1383192
+RT   A gene complex coding for the membrane-bound hydrogenase of
+RT   Alcaligenes eutrophus H16.
+RA   Kortlueke C, Horstmann K, Schwartz E, Rohde M, Binsack R,
+RA   Friedrich B;
+RL   J Bacteriol. 1992;174:6277-6289.
+CC   This entry represents the C-terminal domain of the uncharacterised
+CC   protein PHG004 encoded on the pHG1 megaplasmid of Cupriavidus
+CC   necator H16. This gene is part of the hydrogenase gene complex [1].
+CC   The function of this protein remains to be determined.

@@ -1,0 +1,21 @@
+ID   HydE_mid
+DE   Hydrogenase maturation protein HydE middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P31877_TED02
+GA   27.00 27.00;
+TC   32.50 31.50;
+NC   26.10 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16113246
+RT   Helicobacter hepaticus hydrogenase mutants are deficient in
+RT   hydrogen-supported amino acid uptake and in causing liver lesions
+RT   in A/J mice.
+RA   Young KT, Engel C, Veron M, Kreikemeyer B, Suerbaum S;
+RL   Infect Immun. 2005;73:5311-5318.
+CC   This entry represents the middle domain of protein HydE found in
+CC   Campylobacterota and related organisms. HydE is a hydrogenase-
+CC   specific protein involved in hydrogenase maturation [1]. The
+CC   function of this domain remains to be determined.

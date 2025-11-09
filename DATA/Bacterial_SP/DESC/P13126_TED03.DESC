@@ -1,0 +1,21 @@
+ID   HPI_rpt
+DE   Hexagonally packed intermediate layer repeat
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P13126_TED03
+GA   27.00 27.00;
+TC   34.90 34.90;
+NC   23.60 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   37043530
+RT   Interdigitated immunoglobulin arrays form the hyperstable surface
+RT   layer of the extremophilic bacterium Deinococcus radiodurans.
+RA   von Kugelgen A, van Dorst S, Yamashita K, Sexton DL, Tocheva EI,
+RA   Murshudov G, Alva V, Bharat TAM;
+RL   Proc Natl Acad Sci U S A. 2023;120:e2215808120.
+CC   This entry represents a repeat domain found in the hexagonally
+CC   packed intermediate-layer surface protein from Deinococcus
+CC   radiodurans [1]. The function of this domain remains to be
+CC   determined.

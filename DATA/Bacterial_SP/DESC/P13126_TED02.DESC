@@ -1,0 +1,14 @@
+ID   DUF
+DE   Domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P13126_TED02
+GA   27.00 27.00;
+TC   28.00 34.10;
+NC   25.80 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a conserved repeat domain found in various
+CC   bacterial proteins. This domain is present in multiple copies in
+CC   some proteins, particularly in cell wall surface anchor proteins.
+CC   The function of this domain remains to be determined.

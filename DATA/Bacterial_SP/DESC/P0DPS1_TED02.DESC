@@ -1,0 +1,24 @@
+ID   piPolB_C
+DE   Primer-independent DNA polymerase PolB C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P0DPS1_TED02
+GA   27.00 27.00;
+TC   27.60 126.20;
+NC   22.60 21.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   29117562
+RT   Primer-independent DNA polymerase PolB: structure-function
+RT   relationship and mechanism.
+RA   Chen S, de Vries J, Bell SD;
+RL   Nucleic Acids Res 2017;45:7693-7699.
+CC   This entry represents the C-terminal domain of primer-independent
+CC   DNA polymerase PolB (piPolB). piPolB is a DNA polymerase with
+CC   primer-independent templated DNA polymerisation activity,
+CC   primer-dependent DNA polymerisation activity with strand
+CC   displacement, translesion synthesis activity across non-bulky base
+CC   damage, 3'-5' exodeoxyribonuclease activity, and de novo primer
+CC   synthesis activity [1]. The enzyme is processive and faithful. This
+CC   family is found in Pseudomonadota, including Enterobacteriaceae.

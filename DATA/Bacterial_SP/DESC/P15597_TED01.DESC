@@ -1,0 +1,19 @@
+ID   VirF1
+DE   Virulence protein VirF1
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P15597_TED01
+GA   27.00 27.00;
+TC   28.00 31.40;
+NC   26.70 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   22876890
+RT   AtlasT4SS: a curated database for type IV secretion systems.
+RA   Goldberg T, Rost B, Haufschildt K, Auer J;
+RL   BMC Microbiol. 2012;12:172.
+CC   This entry represents a domain found in the virulence protein
+CC   VirF1 from Alphaproteobacteria, particularly in Rhizobium and
+CC   related genera. VirF1 is associated with type IV secretion systems
+CC   [1]. The function of this domain remains to be determined.

@@ -1,0 +1,21 @@
+ID   NopC
+DE   Nodulation outer protein C
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P12780_TED01
+GA   27.00 27.00;
+TC   29.40 50.90;
+NC   24.40 18.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   38542415
+RT   Calcium Induces the Cleavage of NopA and Regulates the Expression
+RT   of Nodulation Genes and Secretion of T3SS Effectors in Sinorhizobium
+RT   fredii NGR234.
+RA   Ge Y, Li Y, Feng L, Xu C, Zhao P, Lei Y, Staehelin C, Xie Z;
+RL   Int J Mol Sci. 2024;25:3563.
+CC   This entry represents the nodulation outer protein C (NopC), a
+CC   small domain found in rhizobial bacteria. NopC is linked to type
+CC   III secretion pilus [1]. The function of this domain remains to be
+CC   determined.
