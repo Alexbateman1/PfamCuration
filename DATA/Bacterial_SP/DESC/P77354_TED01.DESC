@@ -1,0 +1,17 @@
+ID   YafU
+DE   YafU membrane protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P77354_TED01
+GA   27.00 27.00;
+TC   27.50 83.10;
+NC   25.70 23.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YafU protein family, found in Escherichia.
+CC   The representative member YafU from Escherichia coli K12 is a 112
+CC   amino acid putative inner membrane protein annotated as COG4104.
+CC   This protein is missing 186 N-terminal amino acids compared to its
+CC   orthologues and could be the product of a pseudogene. The function
+CC   of this protein remains to be determined.
+//
