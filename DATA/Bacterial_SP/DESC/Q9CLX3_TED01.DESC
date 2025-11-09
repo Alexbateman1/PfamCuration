@@ -1,0 +1,13 @@
+ID   DUF
+DE   Uncharacterised protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9CLX3_TED01
+GA   27.00 27.00;
+TC   29.70 179.80;
+NC   23.20 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in bacteria.
+CC   The function of this protein remains to be determined.
+//
