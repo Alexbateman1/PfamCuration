@@ -1,0 +1,26 @@
+ID   UU376_C
+DE   Ureaplasma phase-variable membrane protein UU376 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9PQB5_TED02/Iterate
+GA   27.00 27.00;
+TC   27.20 103.60;
+NC   24.60 23.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of the uncharacterised
+CC   protein UU376 from Ureaplasma. The protein undergoes alternate phase
+CC   variation with the adjacent multiple banded antigen gene UU375 [1,2].
+CC   The function of this domain remains to be determined.
+RN   [1]
+RM   22253806
+RT   The role of the multiple banded antigen of Ureaplasma parvum in
+RT   intra-amniotic infection: major virulence factor or decoy?
+RA   Zimmerman CU, Stiedl T, Rosengarten R, Spergser J;
+RL   PLoS One 2012;7:e31752.
+RN   [2]
+RM   27974410
+RT   The Human Ureaplasma Species as Causative Agents of Chorioamnionitis.
+RA   Sweeney EL, Dando SJ, Kallapur SG, Knox CL;
+RL   Clin Microbiol Rev 2017;30:349-379.
+//

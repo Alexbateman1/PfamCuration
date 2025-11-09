@@ -1,0 +1,14 @@
+ID   UU168_N
+DE   Uncharacterised protein UU168 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9PQX5_TED01
+GA   27.00 27.00;
+TC   183.10 183.10;
+NC   22.60 20.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of the uncharacterised
+CC   protein UU168 from Ureaplasma. The function of this domain remains to
+CC   be determined.
+//
