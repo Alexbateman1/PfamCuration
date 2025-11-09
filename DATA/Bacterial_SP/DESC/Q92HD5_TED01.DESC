@@ -1,0 +1,20 @@
+ID   FAD3_mid
+DE   Fatty acid oxidation complex trifunctional enzyme middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q92HD5_TED01
+GA   27.00 27.00;
+TC   28.60 89.30;
+NC   25.00 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle domain from the putative fatty acid
+CC   oxidation complex trifunctional enzyme from Rickettsia prowazekii and
+CC   related bacteria. The full-length protein is a multifunctional enzyme
+CC   comprising 3-hydroxyacyl-CoA dehydrogenase and enoyl-CoA
+CC   hydratase/Delta(3)-cis-Delta(2)-trans-enoyl-CoA isomerase activities.
+CC   The N-terminal section of the protein belongs to the 3-hydroxyacyl-CoA
+CC   dehydrogenase family, whilst the C-terminal section belongs to the
+CC   enoyl-CoA hydratase/isomerase family. The specific function of this
+CC   domain remains to be determined.
+//
