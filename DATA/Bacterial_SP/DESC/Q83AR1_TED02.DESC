@@ -1,0 +1,16 @@
+ID   CBU1819_C
+DE   Uncharacterised protein CBU_1819 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q83AR1_TED02
+GA   27.00 27.00;
+TC   28.00 157.20;
+NC   26.00 22.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of an uncharacterised
+CC   protein CBU_1819 from Coxiella burnetii. The full-length protein is
+CC   approximately 377 amino acids. Members are found in Coxiella and
+CC   related Gammaproteobacteria. The function of this C-terminal domain
+CC   remains to be determined.
+//

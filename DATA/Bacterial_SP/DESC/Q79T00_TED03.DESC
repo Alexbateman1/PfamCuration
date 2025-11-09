@@ -1,0 +1,27 @@
+ID   GlyF_C
+DE   Glycosyltransferase GlyF C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q79T00_TED03
+GA   27.00 27.00;
+TC   27.90 27.20;
+NC   23.20 22.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of glycosyltransferase
+CC   GlyF from Streptococcus pneumoniae. The full-length GlyF protein is
+CC   approximately 398 amino acids and may be involved in the polymorphic
+CC   O-glycosylation of the serine-rich repeat protein PsrP. The N-terminal
+CC   section of GlyF (residues 1-259) belongs to the glycosyltransferase 8
+CC   family (GT8). GlyF has hydrolytic activity against UDP-galactose and
+CC   to a lesser extent against UDP-glucose. The protein is encoded in
+CC   RD10, a pathogenicity island associated with invasive pneumococcal
+CC   disease. Members are found in COG1442. The function of this C-terminal
+CC   domain remains to be determined.
+RN   [1]
+RM   28246170
+RT   Defining the enzymatic pathway for polymorphic O-glycosylation of the
+RT   pneumococcal serine-rich repeat protein PsrP.
+RA   Jiang Y.L., Jin H., Yang H.B., Zhao R.L., Wang S., Chen Y., Zhou C.Z.;
+RL   J. Biol. Chem. 2017;292:6213-6224.
+//

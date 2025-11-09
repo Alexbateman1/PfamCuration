@@ -1,0 +1,28 @@
+ID   SirA_mid
+DE   Dissimilatory sulfite reductase SirA middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q7MSJ8_TED02
+GA   27.00 27.00;
+TC   28.10 37.60;
+NC   25.30 22.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle domain of the dissimilatory sulfite
+CC   reductase SirA (also called MccA) from Shewanella oneidensis. The
+CC   full-length SirA is approximately 708 amino acids and is a respiratory
+CC   sulfite reductase that catalyses the reduction of sulfite to sulfide
+CC   in a single step, consuming six electrons. The protein binds eight
+CC   haem c groups covalently per monomer and also binds a copper (I) ion.
+CC   SirA is required for sulfite respiration under anaerobic growth
+CC   conditions and forms homotrimers. The protein is localised to the
+CC   periplasm. Members are found in COG0484 and belong to the multihaem
+CC   cytochrome c family. The function of this middle domain remains to be
+CC   determined.
+RN   [1]
+RM   21199252
+RT   The octahaem SirA catalyses dissimilatory sulfite reduction in
+RT   Shewanella oneidensis MR-1.
+RA   Shirodkar S., Reed S., Romine M., Saffarini D.;
+RL   Environ. Microbiol. 2011;13:108-115.
+//

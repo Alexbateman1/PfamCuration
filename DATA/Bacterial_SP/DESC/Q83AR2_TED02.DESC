@@ -1,0 +1,16 @@
+ID   CBU1818_mid
+DE   Uncharacterised protein CBU_1818 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q83AR2_TED02
+GA   27.00 27.00;
+TC   303.00 301.50;
+NC   25.90 20.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents the middle domain of an uncharacterised protein
+CC   CBU_1818 from Coxiella burnetii. The full-length protein is
+CC   approximately 481 amino acids. Members are found in Coxiella and
+CC   related Gammaproteobacteria. The function of this middle domain
+CC   remains to be determined.
+//
