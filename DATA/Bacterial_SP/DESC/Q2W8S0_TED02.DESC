@@ -1,0 +1,43 @@
+ID   MamC_C
+DE   Magnetosome protein MamC C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q2W8S0_TED02
+GA   27.00 27.00;
+TC   27.50 54.70;
+NC   24.00 21.60;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17965152
+RT   The major magnetosome proteins MamGFDC are not essential for
+RT   magnetite biomineralization in Magnetospirillum gryphiswaldense but
+RT   regulate the size of magnetosome crystals.
+RA   Scheffel A., Gaerdes A., Gruenberg K., Wanner G., Schueler D.;
+RL   J. Bacteriol. 190:377-386(2008).
+RN   [2]
+RM   25874532
+RT   Size control of in vitro synthesized magnetite crystals by the MamC
+RT   protein of Magnetococcus marinus strain MC-1.
+RA   Valverde-Tercedor C., Montalban-Lopez M., Perez-Gonzalez T.,
+RA   Sanchez-Quesada M.S., Prozorov T., Pineda-Molina E.,
+RA   Fernandez-Vivas M.A., Rodriguez-Navarro A.B., Trubitsyn D.,
+RA   Bazylinski D.A., Jimenez-Lopez C.;
+RL   Appl. Microbiol. Biotechnol. 99:5109-5121(2015).
+RN   [3]
+RM   26970040
+RT   Structure-function studies of the magnetite-biomineralizing
+RT   magnetosome-associated protein MamC.
+RA   Nudelman H., Tercedor C.V., Kolusheva S., Gonzalez T.P.,
+RA   Widdrat M., Grimberg N., Levi H., Nelkenbaum O., Davidov G.,
+RA   Faivre D., Jimenez-Lopez C., Zarivach R.;
+RL   J. Struct. Biol. 194:244-252(2016).
+CC   This entry represents the C-terminal domain of magnetosome protein
+CC   MamC, found in magnetotactic bacteria. The full-length MamC protein
+CC   is localised to the magnetosome membrane and plays a role in
+CC   regulating magnetite crystal size [1,2,3]. MamC contains a lumenal
+CC   magnetite interacting component (MIC) that binds magnetite crystals,
+CC   affecting crystal size and shape. MamC binds Fe(3+) and helps
+CC   control the size of magnetite crystals. The function of this domain
+CC   remains to be determined.
+//

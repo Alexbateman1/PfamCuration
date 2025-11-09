@@ -1,0 +1,19 @@
+ID   YydH
+DE   Peptide zinc metalloprotease YydH family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q45594_TED01
+GA   27.00 27.00;
+TC   28.00 93.80;
+NC   25.00 20.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YydH peptide zinc metalloprotease family,
+CC   belonging to the peptidase M50B family. The representative member
+CC   YydH from Bacillus subtilis strain 168 is a 252 amino acid protein
+CC   localised to the cell membrane with five predicted transmembrane
+CC   helices. YydH is required for production of the modified peptide
+CC   YydF and may process the precursor form of YydF to release the
+CC   active peptide. The enzyme binds one zinc ion per subunit. Part of
+CC   the yydFGHIJ operon.
+//

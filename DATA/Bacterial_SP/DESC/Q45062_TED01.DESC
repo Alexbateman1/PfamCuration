@@ -1,0 +1,16 @@
+ID   YneQ
+DE   YneQ protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q45062_TED01
+GA   27.00 27.00;
+TC   32.40 32.40;
+NC   26.80 26.00;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YneQ protein family, found in Bacillus
+CC   subtilis and related species within the Bacillaceae and
+CC   Paenibacillaceae families. The representative member YneQ from
+CC   Bacillus subtilis strain 168 is a 99 amino acid protein. The
+CC   function of this protein remains to be determined.
+//
