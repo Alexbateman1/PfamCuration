@@ -1,0 +1,16 @@
+ID   pXO2-80_C
+DE   Uncharacterised plasmid protein pXO2-80, C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9RMV5_TED02
+GA   27.00 27.00;
+TC   28.50 74.70;
+NC   24.30 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of an uncharacterised
+CC   protein encoded on plasmid pXO2 of Bacillus anthracis. The protein
+CC   is also known by locus tags pXO2-80, BXB0110, and GBAA_pXO2_0110.
+CC   Plasmid pXO2 is one of the two virulence plasmids of Bacillus
+CC   anthracis. The function of this domain remains to be determined.
+//

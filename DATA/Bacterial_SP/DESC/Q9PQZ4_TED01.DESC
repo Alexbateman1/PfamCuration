@@ -1,0 +1,15 @@
+ID   UU150_mid
+DE   Uncharacterised protein UU150 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9PQZ4_TED01
+GA   27.00 27.00;
+TC   33.90 90.20;
+NC   24.20 17.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle region domain (residues 32-65) of
+CC   uncharacterised protein UU150 from Ureaplasma. This small 78 amino
+CC   acid protein is conserved within Ureaplasma species. The function of
+CC   this domain remains to be determined.
+//

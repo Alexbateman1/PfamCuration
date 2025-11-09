@@ -1,0 +1,18 @@
+ID   PopA
+DE   Type III effector protein PopA
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9RBS0_TED01
+GA   27.00 27.00;
+TC   29.80 29.70;
+NC   25.00 24.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the conserved domain (residues 34-334) of type
+CC   III effector protein PopA from Ralstonia. PopA acts as a specific
+CC   hypersensitive response (HR) elicitor on tobacco and petunia plants
+CC   but is without activity on tomato. PopA is secreted via a type III
+CC   secretion system (T3SS) and undergoes proteolytic processing to
+CC   generate PopA2 and PopA3 variants, with PopA3 appearing more active
+CC   than a PopA1-PopA2 mixture.
+//

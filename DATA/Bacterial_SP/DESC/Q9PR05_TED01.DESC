@@ -1,0 +1,15 @@
+ID   UU139_N
+DE   Uncharacterised protein UU139 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q9PR05_TED01
+GA   27.00 27.00;
+TC   302.60 302.60;
+NC   24.00 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain (residues 2-144) of
+CC   uncharacterised protein UU139 from Ureaplasma. This 236 amino acid
+CC   protein is conserved within the Ureaplasma genus. The function of
+CC   this domain remains to be determined.
+//
