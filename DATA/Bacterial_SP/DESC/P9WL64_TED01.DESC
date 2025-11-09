@@ -1,0 +1,16 @@
+ID   Rv2628
+DE   Rv2628 protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P9WL64_TED01
+GA   27.00 27.00;
+TC   29.20 92.20;
+NC   26.60 21.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the Rv2628 protein family, found in
+CC   Mycobacterium tuberculosis. The representative member Rv2628 from
+CC   Mycobacterium tuberculosis strain H37Rv is a 120 amino acid
+CC   uncharacterised protein. The function of this protein remains to be
+CC   determined.
+//
