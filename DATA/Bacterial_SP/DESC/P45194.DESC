@@ -1,0 +1,15 @@
+ID   HI_1390
+DE   Uncharacterised protein HI_1390
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P45194
+GA   27.00 27.00;
+TC   28.60 55.70;
+NC   26.30 18.00;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in
+CC   Haemophilus influenzae (HI_1390). This is a very small protein of
+CC   only 21 amino acids. The protein contains a hydrogenase assembly
+CC   chaperone protein conserved site (PROSITE:PS01097). The function of
+CC   this protein remains to be determined.

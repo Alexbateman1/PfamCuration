@@ -1,12 +1,13 @@
-ID   DUF
-DE   Domain of unknown function
+ID   HI_0476
+DE   Uncharacterised protein HI_0476
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P44002_TED01
 GA   27.00 27.00;
 TC   35.10 130.00;
 NC   25.20 18.50;
-BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
-TP   Domain
-CC   This entry represents an uncharacterised domain. The function of
-CC   this domain remains to be determined.
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the uncharacterised protein HI_0476 from
+CC   Haemophilus influenzae. This is a small protein of 50 amino acids.
+CC   The function of this protein remains to be determined.

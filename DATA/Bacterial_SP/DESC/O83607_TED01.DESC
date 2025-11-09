@@ -1,17 +1,16 @@
-ID   TP_0598_mid
-DE   TP_0598 middle domain
+ID   TP_0598_N
+DE   Uncharacterised protein TP_0598 N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:O83607_TED01
+SE   TED:O83607_TED01/Iterate
 GA   27.00 27.00;
 TC   27.00 33.10;
 NC   26.80 26.20;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents the middle domain of TP_0598, an
-CC   uncharacterised 605 amino acid protein from Treponema pallidum and
-CC   related species within Spirochaetota. The protein contains WD40
-CC   repeat-like structural domains and haem d1 superfamily domains. This
-CC   family is found in Treponema and Teretinema species. The function of
-CC   this domain remains to be determined.
-//
+CC   This entry represents the N-terminal domain of uncharacterised
+CC   protein TP_0598 from Treponema pallidum. The full-length protein is
+CC   605 amino acids long. This domain is found at approximately residues
+CC   276-397 in the full-length protein. In some strains, this protein
+CC   is fused with TP_0597 as a result of frameshift mutations. The
+CC   function of this domain remains to be determined.

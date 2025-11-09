@@ -1,12 +1,18 @@
-ID   DUF
-DE   Domain of unknown function
+ID   MG406_AtpI
+DE   ATP synthase protein I
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P33250_TED01
 GA   27.00 27.00;
 TC   338.30 338.20;
 NC   26.50 22.00;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
-TP   Domain
-CC   This entry represents an uncharacterised domain. The function of
-CC   this domain remains to be determined.
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents ATP synthase protein I, a membrane protein
+CC   found in Mycoplasmoides gallisepticum and related Mycoplasmatota. A
+CC   possible function for this protein is to guide the assembly of the
+CC   membrane sector of the ATPase enzyme complex. The protein belongs to
+CC   the bacterial AtpI family and is classified as NCBIfam:NF033688
+CC   (MG406_fam). This protein is localised to the cell membrane with
+CC   four predicted transmembrane helices. The function of this protein
+CC   remains to be determined.

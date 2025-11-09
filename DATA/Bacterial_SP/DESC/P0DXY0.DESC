@@ -1,0 +1,14 @@
+ID   DUF
+DE   Uncharacterised protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P0DXY0
+GA   27.00 27.00;
+TC   40.80 40.50;
+NC   26.10 23.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein family of
+CC   approximately 95-100 amino acids, found in Enterobacteriaceae and
+CC   related Gammaproteobacteria. The function of this family remains to
+CC   be determined.

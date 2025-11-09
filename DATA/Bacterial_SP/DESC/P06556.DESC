@@ -1,0 +1,14 @@
+ID   TrpL_Coryne
+DE   Trp operon leader peptide
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P06556
+GA   27.00 27.00;
+TC   29.30 44.90;
+NC   23.00 15.80;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents the trp operon leader peptide found in
+CC   Corynebacterium glutamicum. This short peptide is involved in the
+CC   control of tryptophan biosynthesis through attenuation. It is
+CC   annotated by NCBIfam as TrpL_Coryne.

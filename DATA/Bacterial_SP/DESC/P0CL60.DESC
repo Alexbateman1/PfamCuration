@@ -1,0 +1,20 @@
+ID   MazE8
+DE   MazE8 antitoxin
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0CL60
+GA   27.00 27.00;
+TC   27.40 51.20;
+NC   23.60 22.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   22753059
+RT   Toxin-antitoxin systems are important for niche-specific
+RT   colonization and stress resistance of uropathogenic Escherichia
+RT   coli.
+RA   Norton J.P., Mulvey M.A.;
+RL   PLoS Pathog. 2012;8:e1002954.
+CC   This entry represents MazE8, an antitoxin component of the MazEF
+CC   toxin-antitoxin system found in Escherichia coli. These systems are
+CC   important for stress resistance and niche-specific colonisation [1].

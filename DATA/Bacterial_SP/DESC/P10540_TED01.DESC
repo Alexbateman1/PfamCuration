@@ -7,15 +7,18 @@ TC   32.20 116.20;
 NC   25.00 20.10;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
-TP   Domain
+TP   Family
+CC   This entry represents the leader peptide of aspartate-
+CC   semialdehyde dehydrogenase found in Streptococcus. This family is
+CC   approximately 42 amino acids in length. The gene encoding this
+CC   peptide contains evidence for attenuator-like sequences preceding
+CC   the structural gene [1]. The function of this protein family
+CC   remains to be determined.
 RN   [1]
 RM   2434499
 RT   Nucleotide sequence of the asd gene of Streptococcus mutans.
-RT   Identification of the promoter region and evidence for
-RT   attenuator-like sequences preceding the structural gene.
-RA   Cardineau GA, Curtiss R III;
-RL   J Biol Chem. 1987;262:3344-3353.
-CC   This entry represents the leader peptide of aspartate-semialdehyde
-CC   dehydrogenase from Streptococcus mutans. The asd gene contains
-CC   attenuator-like sequences preceding the structural gene [1]. The
-CC   function of this leader peptide remains to be determined.
+RT   Identification of the promoter region and evidence for attenuator-
+RT   like sequences preceding the structural gene.
+RA   Cardineau GA, Curtiss R 3rd;
+RL   J. Biol. Chem. 1987;262:3344-3353.
+//

@@ -1,5 +1,5 @@
-ID   tsi5
-DE   Immune protein Tsi5 {ECO:0000303|PubMed:24589350}
+ID   Tsi5
+DE   Type VI secretion system immunity protein Tsi5
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P0DTB6_TED01
 GA   27.00 27.00;
@@ -7,8 +7,18 @@ TC   30.60 48.90;
 NC   26.60 23.50;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
-TP   Domain
-CC   This entry represents an uncharacterised domain found in
-CC   bacteria.
-CC   The protein is predicted to localise to the membrane.
-CC   The function of this domain remains to be determined.
+TP   Family
+CC   This entry represents the immunity protein Tsi5, which prevents
+CC   early activation of the cognate toxin Tse5 in the type VI secretion
+CC   system [1]. This small membrane protein of 76 amino acids contains
+CC   two transmembrane helices. Deletion of Tsi5 together with deletion
+CC   of Tse5 leads to a significant loss of fitness advantage when placed
+CC   in competition with parental strains in Pseudomonas aeruginosa. The
+CC   protein is found in Pseudomonas species.
+RN   [1]
+RM   24589350
+RT   Genetically distinct pathways guide effector export through the type
+RT   VI secretion system.
+RA   Whitney JC, Beck CM, Goo YA, Russell AB, Harding BN, De Leon JA,
+RA   Cunningham DA, Tran BQ, Low DA, Goodlett DR, Hayes CS, Mougous JD;
+RL   Mol Microbiol 2014;92:529-542.

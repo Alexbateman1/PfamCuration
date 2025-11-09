@@ -1,16 +1,16 @@
-ID   TP_0064
-DE   Uncharacterized protein TP_0064
+ID   TP_0064_C
+DE   C-terminal domain of TP_0064
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:O83103_TED01
+SE   TED:O83103_TED01/Iterate
 GA   27.00 27.00;
 TC   27.20 29.00;
 NC   25.70 25.30;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
 TP   Domain
-CC   This entry represents an uncharacterised domain found in the
-CC   TP_0064 protein and related proteins from Spirochaetota,
-CC   particularly Treponema and Spirochaeta. The domain is approximately
-CC   132 residues in length. TP_0064 is found in Treponema pallidum, the
-CC   syphilis spirochete. The function of this domain remains to be
-CC   determined.
+CC   This entry represents a conserved C-terminal domain found in
+CC   TP_0064, an uncharacterised 191-amino acid protein from Treponema
+CC   pallidum. The protein is encoded in an operon involved in DNA
+CC   metabolism and cell division, alongside genes TP_0066, TP_0067, and
+CC   TP_0068. Orthologues are found in related Spirochaetota bacteria.
+CC   The function of this domain remains to be determined.

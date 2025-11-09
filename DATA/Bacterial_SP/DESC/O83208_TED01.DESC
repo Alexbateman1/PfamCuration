@@ -1,14 +1,15 @@
-ID   TP_0178_N
-DE   Uncharacterized protein TP_0178 N-terminal domain
+ID   TP_0208_N
+DE   Uncharacterised protein TP_0208 N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:O83208_TED01
+SE   TED:O83208_TED01/Iterate/Iterate
 GA   27.00 27.00;
-TC   27.30 32.30;
-NC   22.80 26.80;
+TC   27.00 29.40;
+NC   26.90 26.20;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents the N-terminal domain of the uncharacterised
-CC   protein TP_0178 and related proteins from Spirochaetota,
-CC   particularly Treponema. The domain is approximately 165 residues in
-CC   length. The function of this domain remains to be determined.
+CC   This entry represents the N-terminal domain of uncharacterised
+CC   protein TP_0208 from Treponema pallidum. The protein is 384 amino
+CC   acids long and contains a predicted signal peptide. This domain is
+CC   found at approximately residues 32-129 in the full-length protein.
+CC   The function of this domain remains to be determined.

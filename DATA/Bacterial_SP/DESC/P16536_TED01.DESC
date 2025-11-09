@@ -1,13 +1,23 @@
-ID   DUF
-DE   Uncharacterised protein
+ID   Cyt_bc1_IV_N
+DE   Cytochrome b-c1 subunit IV N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P16536_TED01
+SE   TED:P16536_TED01/Iterate
 GA   27.00 27.00;
 TC   34.00 118.20;
 NC   26.70 21.50;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents an uncharacterised domain found in
-CC   bacteria.
-CC   The function of this domain remains to be determined.
+CC   This entry represents the N-terminal domain of cytochrome b-c1 complex
+CC   subunit IV found in Alphaproteobacteria. The cytochrome bc1 complex is
+CC   a key component of the respiratory electron transport chain. The
+CC   structure of the four-subunit Rhodobacter sphaeroides cytochrome bc1
+CC   complex has been determined [1].
+RN   [1]
+RM   36913593
+RT   Cryo-EM structure of the four-subunit Rhodobacter sphaeroides
+RT   cytochrome bc(1)  complex in styrene maleic acid nanodiscs.
+RA   Swainsbury DJK, Hawkings FR, Martin EC, Musial S, Salisbury JH,
+RA   Jackson PJ, Farmer DA, Johnson MP, Siebert CA, Hitchcock A, Hunter
+RA   CN;
+RL   Proc Natl Acad Sci U S A. 2023;120:e2217922120.

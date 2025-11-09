@@ -1,14 +1,14 @@
-ID   yqaP_N
-DE   Uncharacterized protein YqaP domain
+ID   YqaP_N
+DE   Uncharacterised protein YqaP N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P45913_TED01
 GA   27.00 27.00;
 TC   28.30 74.90;
 NC   25.90 23.70;
-BM   hmmbuild  -o /dev/null HMM SEED
+BM   hmmbuild -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents a domain found in Uncharacterized protein YqaP from
-CC   Bacillus subtilis (strain 168).
+CC   This entry represents the N-terminal domain of an uncharacterised
+CC   protein found in Bacillus subtilis in the skin element (YqaP). The
+CC   skin element is excised by DNA rearrangement during sporulation.
 CC   The function of this domain remains to be determined.
-//

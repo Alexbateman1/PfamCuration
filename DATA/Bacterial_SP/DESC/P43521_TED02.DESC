@@ -1,12 +1,13 @@
-ID   DUF_C
-DE   Domain of unknown function
+ID   YbbR_C
+DE   YbbR family C-terminal domain
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P43521_TED02
 GA   27.00 27.00;
 TC   28.10 129.50;
 NC   25.70 25.70;
-BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents an uncharacterised domain. The function of
-CC   this domain remains to be determined.
+CC   This entry represents the C-terminal domain of YbbR family proteins
+CC   found in thermophilic bacteria such as Thermus thermophilus. The
+CC   function of this domain remains to be determined.

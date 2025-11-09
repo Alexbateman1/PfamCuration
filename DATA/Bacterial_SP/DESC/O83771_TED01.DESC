@@ -1,7 +1,7 @@
 ID   TP_0793_N
-DE   Uncharacterised protein TP_0793 N-terminal domain
+DE   Uncharacterised Treponema protein TP_0793 N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:O83771_TED01
+SE   TED:O83771_TED01/Iterate
 GA   27.00 27.00;
 TC   27.10 116.00;
 NC   26.90 20.80;
@@ -9,6 +9,8 @@ BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
 TP   Domain
 CC   This entry represents the N-terminal domain of an uncharacterised
-CC   protein found in bacteria of the Spirochaetota phylum. The protein
-CC   contains multiple domains. The function of this domain remains to
-CC   be determined.
+CC   protein (TP_0793) from Treponema pallidum and related spirochaete
+CC   bacteria. The full-length 539-amino-acid protein contains multiple
+CC   domains and a disordered region (residues 316-433). This N-terminal
+CC   domain is approximately 85 amino acids in length. The function of
+CC   this domain remains to be determined.

@@ -1,0 +1,16 @@
+ID   NifD_N
+DE   Nitrogenase molybdenum-iron protein alpha chain N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P33177/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.60 53.40;
+NC   26.60 23.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of the nitrogenase
+CC   molybdenum-iron protein alpha chain found in nitrogen-fixing bacteria,
+CC   particularly in Cyanobacteria. The full-length protein catalyses the
+CC   key enzymatic reaction in nitrogen fixation (EC 1.18.6.1) and contains
+CC   a larger Pfam:PF00148 Oxidored_nitro domain. The function of this
+CC   N-terminal domain remains to be determined.

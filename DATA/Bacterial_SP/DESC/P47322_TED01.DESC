@@ -1,14 +1,15 @@
-ID   Y214_N
-DE   Uncharacterized protein MG076 homolog domain
+ID   MG076
+DE   Uncharacterised protein MG076
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P47322_TED01
 GA   27.00 27.00;
 TC   32.70 250.60;
 NC   22.10 21.30;
-BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
-TP   Domain
-CC   This entry represents a domain found in Uncharacterized protein MG076
-CC   homolog from (Mycoplasmoides pneumoniae).
-CC   The function of this domain remains to be determined.
-//
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised membrane protein found in
+CC   Mycoplasma genitalium (MG076) and Mycoplasma pneumoniae (MPN214).
+CC   This protein contains three predicted transmembrane helices and is
+CC   annotated by NCBIfam as MPN214. The function of this protein
+CC   remains to be determined.

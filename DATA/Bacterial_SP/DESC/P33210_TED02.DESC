@@ -8,14 +8,16 @@ NC   26.60 26.00;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
 TP   Domain
+CC   This entry represents the C-terminal domain of nodulation protein
+CC   NolU, found in Sinorhizobium and related rhizobia. NolU is possibly
+CC   linked to type III secretion and is involved in nodulation processes
+CC   during symbiosis with legumes. Calcium induces the expression of
+CC   nodulation genes including nolU in Sinorhizobium fredii NGR234 [1].
+CC   The specific function of this domain remains to be determined.
 RN   [1]
 RM   38542415
-RT   Calcium Induces the Cleavage of NopA and Regulates the Expression
-RT   of Nodulation Genes and Secretion of T3SS Effectors in Sinorhizobium
+RT   Calcium Induces the Cleavage of NopA and Regulates the Expression of
+RT   Nodulation Genes and Secretion of T3SS Effectors in Sinorhizobium
 RT   fredii NGR234.
-RA   Ge Y, Li Y, Feng L, Xu C, Zhao P, Lei Y, Staehelin C, Xie Z;
-RL   Int J Mol Sci. 2024;25:3563.
-CC   This entry represents the C-terminal domain of the nodulation
-CC   protein NolU found in rhizobial bacteria. NolU is possibly linked
-CC   to type III secretion [1]. The function of this domain remains to
-CC   be determined.
+RA   Wang Y., Shen J., Wang H., Chen C., Chen G., Xie Z.;
+RL   Int. J. Mol. Sci. 25:2024(2024).

@@ -1,11 +1,14 @@
-ID   ywjC
-AC   PF
-DE   Uncharacterized protein YwjC
-TP   Domain
-ML   100
+ID   YwjC
+DE   Uncharacterised protein YwjC
+AU   Bateman A;0000-0002-6982-4660
 SE   TED:P45863_TED01
-CC   This entry represents a domain found in ywjC
-CC   from Bacillus subtilis (strain 168)
-CC
-CC   The function of this domain remains to be determined.
-**
+GA   27.00 27.00;
+TC   27.40 31.40;
+NC   25.40 24.10;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in Bacillus
+CC   subtilis (YwjC) and related bacteria within Bacillales. Some
+CC   homologues are annotated as general stress proteins. The function
+CC   of this protein remains to be determined.

@@ -1,12 +1,38 @@
-ID   DUF_C
-DE   Domain of unknown function
+ID   CgeA_C
+DE   Spore crust protein CgeA C-terminal domain
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P42089_TED02
+SE   TED:P42089_TED02/Iterate
 GA   27.00 27.00;
 TC   27.00 27.90;
 NC   26.40 25.60;
-BM   hmmbuild  -o /dev/null HMM SEED
+BM   hmmbuild -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents an uncharacterised domain. The function of
-CC   this domain remains to be determined.
+RN   [1]
+RM   21665972
+RT   Proteins involved in formation of the outermost layer of Bacillus
+RT   subtilis spores.
+RA   Imamura D., Kuwana R., Takamatsu H., Watabe K.;
+RL   J. Bacteriol. 193:4075-4080(2011).
+RN   [2]
+RM   31502725
+RT   The Bacillus subtilis endospore crust: protein interaction network,
+RT   architecture and glycosylation state of a potential glycoprotein
+RT   layer.
+RA   Bartels J., Blueher A., Lopez Castellanos S., Richter M., Guenther M.,
+RA   Mascher T.;
+RL   Mol. Microbiol. 112:1576-1592(2019).
+RN   [3]
+RM   37485949
+RT   Identification of CgeA as a glycoprotein that anchors polysaccharides
+RT   to the spore surface in Bacillus subtilis.
+RA   Nakaya Y., Uchiike M., Hattori M., Moriyama M., Abe K., Kim E.,
+RA   Eichenberger P., Imamura D., Sato T.;
+RL   Mol. Microbiol. 120:384-396(2023).
+CC   This entry represents the C-terminal domain of the spore crust
+CC   protein CgeA from Bacillus subtilis and related bacteria. CgeA is
+CC   involved in the formation of the spore crust, the outermost layer of
+CC   the spore [1,2,3]. CgeA plays a role in crust glycosylation and is
+CC   required to initiate spore polysaccharide (SPS) assembly [2,3]. The
+CC   C-terminal half of CgeA is necessary for SPS addition [3]. The
+CC   function of this domain remains to be determined.

@@ -1,13 +1,15 @@
-ID   DUF
-DE   Uncharacterized lipoprotein MG149
+ID   MG149_N
+DE   Uncharacterised lipoprotein MG149 N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P47395_TED01
 GA   27.00 27.00;
 TC   27.60 126.40;
 NC   26.60 24.50;
-BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents a conserved domain of unknown function
-CC   found in (Mycoplasmoides genitalium)
-CC   The function of this domain remains to be determined.
+CC   This entry represents the N-terminal domain of an uncharacterised
+CC   lipoprotein found in Mycoplasmoides species, including MG149 from
+CC   Mycoplasmoides genitalium and its MPN162 homolog from Mycoplasmoides
+CC   pneumoniae. The family is annotated as NCBIfam:NF045741. The function
+CC   of this domain remains to be determined.

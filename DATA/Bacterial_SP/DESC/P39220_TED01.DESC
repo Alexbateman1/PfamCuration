@@ -1,13 +1,16 @@
-ID   yabP
+ID   YabP
 DE   Protein YabP
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P39220_TED01
+SE   TED:P39220_TED01/Iterate
 GA   27.00 27.00;
 TC   30.00 80.60;
 NC   26.60 19.40;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
-TP   Domain
-CC   This entry represents an uncharacterised domain found in
-CC   Enterobacteriaceae.
-CC   The function of this domain remains to be determined.
+TP   Family
+CC   This entry represents protein YabP found in Escherichia coli and
+CC   related Enterobacteriaceae. The protein is approximately 215 amino
+CC   acids in length and may be missing up to 80 C-terminal residues
+CC   compared to orthologues. The protein is classified as COG1357 and
+CC   has been identified as a T3SS effector-like protein in some studies.
+CC   The function of this protein remains to be determined.

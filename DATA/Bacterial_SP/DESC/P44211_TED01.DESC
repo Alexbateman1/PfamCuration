@@ -1,12 +1,14 @@
-ID   DUF
-AC   PF
-DE   Putative uncharacterized protein HI_1484 in Mu-like prophage FluMu ...
-TP   Domain
-ML   100
+ID   HI_1484
+DE   Uncharacterised protein HI_1484
+AU   Bateman A;0000-0002-6982-4660
 SE   TED:P44211_TED01
-CC   This entry represents a conserved domain of unknown function
-CC   found in Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 /
-CC   Rd)
-CC
-CC   The function of this domain remains to be determined.
-**
+GA   27.00 27.00;
+TC   30.30 117.60;
+NC   25.70 20.00;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in
+CC   Haemophilus influenzae in the Mu-like prophage FluMu region
+CC   (HI_1484). This protein is found only in Haemophilus. The function
+CC   of this protein remains to be determined.

@@ -1,14 +1,14 @@
-ID   hydE
-DE   Protein HydE
+ID   HydE_N
+DE   Protein HydE N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:P31877_TED01
+SE   TED:P31877_TED01/Iterate
 GA   27.00 27.00;
 TC   27.00 35.20;
 NC   26.90 25.40;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
 TP   Domain
-CC   This entry represents an uncharacterised domain found in
-CC   bacteria.
-CC   The protein is predicted to localise to the membrane.
-CC   The function of this domain remains to be determined.
+CC   This entry represents the N-terminal domain of HydE proteins found in
+CC   Campylobacterota. HydE is a component of the hydrogenase-specific
+CC   operon involved in hydrogenase maturation. The function of this
+CC   N-terminal domain remains to be determined.

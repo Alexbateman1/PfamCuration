@@ -1,0 +1,22 @@
+ID   YsaE
+DE   Small protein YsaE
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DSH1
+GA   27.00 27.00;
+TC   27.90 60.70;
+NC   25.40 16.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents YsaE, a small protein of 23 amino acids found
+CC   in Escherichia coli. YsaE was identified by ribosome profiling with
+CC   stalled initiation complexes [1]. The protein is expressed in both
+CC   exponential and stationary phase in rich medium, with considerably
+CC   higher expression during exponential phase. The function of this
+CC   protein remains to be determined.
+RN   [1]
+RM   30837344
+RT   Identifying small proteins by ribosome profiling with stalled
+RT   initiation complexes.
+RA   Weaver J, Mohammad F, Buskirk AR, Storz G;
+RL   MBio 2019;10:0.

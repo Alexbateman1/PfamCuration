@@ -1,12 +1,15 @@
-ID   DUF
-AC   PF
-DE   Uncharacterized protein HI_1651
-TP   Domain
-ML   100
+ID   HI_1651
+DE   Uncharacterised protein HI_1651
+AU   Bateman A;0000-0002-6982-4660
 SE   TED:P44282_TED01
-CC   This entry represents a conserved domain of unknown function
-CC   found in Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 /
-CC   Rd)
-CC
-CC   The function of this domain remains to be determined.
-**
+GA   27.00 27.00;
+TC   27.30 105.20;
+NC   26.90 21.30;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein found in
+CC   Haemophilus influenzae (HI_1651). This protein is annotated in
+CC   eggNOG as COG2198 and contains a histidine phosphotransfer (HPT)
+CC   domain superfamily. The function of this protein remains to be
+CC   determined.

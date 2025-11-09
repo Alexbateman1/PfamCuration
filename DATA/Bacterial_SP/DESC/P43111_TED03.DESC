@@ -1,12 +1,15 @@
-ID   DUF_C
-DE   Domain of unknown function
+ID   PolyC_exp_tail
+DE   Polysaccharide export C-terminal tail
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P43111_TED03
 GA   27.00 27.00;
 TC   44.30 44.30;
 NC   24.30 20.60;
-BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents an uncharacterised domain. The function of
-CC   this domain remains to be determined.
+CC   This entry represents a short C-terminal tail found in bacterial
+CC   polysaccharide export inner-membrane proteins, including the vexD
+CC   protein in Salmonella enterica. This domain is located immediately
+CC   downstream of the PolyC_exp_C domain. The function of this domain
+CC   remains to be determined.

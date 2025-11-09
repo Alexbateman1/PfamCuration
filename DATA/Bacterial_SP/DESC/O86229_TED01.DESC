@@ -1,5 +1,5 @@
 ID   HI_0870
-DE   Uncharacterised Haemophilus protein HI_0870
+DE   Uncharacterized protein HI_0870.1
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:O86229_TED01
 GA   27.00 27.00;
@@ -8,7 +8,8 @@ NC   23.10 23.10;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
 TP   Domain
-CC   This entry represents a conserved domain found in small
-CC   uncharacterised proteins from Haemophilus influenzae. The protein
-CC   HI_0870.1 is 96 amino acids in length. The function of this domain
-CC   remains to be determined.
+CC   This entry represents a domain found in an uncharacterized protein
+CC   HI_0870.1 from Haemophilus influenzae. This is a small protein of
+CC   96 amino acids predicted to be a multi-pass membrane protein
+CC   localised to the cell membrane. The function of this domain remains
+CC   to be determined.

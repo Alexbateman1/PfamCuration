@@ -1,15 +1,15 @@
-ID   VPS_3rd
-DE   Mu-like prophage FluMu defective tail fiber protein domain
+ID   MuPhage_tail2
+DE   Mu-like prophage tail fiber protein central domain
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P44242_TED03
 GA   27.00 27.00;
 TC   28.80 109.10;
 NC   20.80 20.30;
-BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
 TP   Domain
-CC   This entry represents a domain found in Mu-like prophage FluMu defective
-CC   tail fiber protein from Haemophilus influenzae (strain ATCC 51907 / DSM
-CC   11121 / KW20 / Rd).
-CC   The function of this domain remains to be determined.
-//
+CC   This entry represents the central domain of Mu-like prophage tail
+CC   fiber proteins, including the defective tail fiber protein from
+CC   Haemophilus influenzae (HI_1522). Tail fiber proteins are
+CC   responsible for host recognition and binding. The function of this
+CC   domain remains to be determined.

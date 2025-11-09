@@ -1,12 +1,15 @@
-ID   DUF
-AC   PF
-DE   Uncharacterized protein HI_1718
-TP   Domain
-ML   100
+ID   HI_1718_C
+DE   Uncharacterised protein HI_1718 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
 SE   TED:P44296_TED02
-CC   This entry represents a conserved domain of unknown function
-CC   found in Haemophilus influenzae (strain ATCC 51907 / DSM 11121 / KW20 /
-CC   Rd)
-CC
-CC   The function of this domain remains to be determined.
-**
+GA   27.00 27.00;
+TC   28.40 134.80;
+NC   26.70 20.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of an uncharacterised
+CC   protein found in Haemophilus influenzae (HI_1718). The protein
+CC   contains a serralysin-like metalloprotease C-terminal superfamily
+CC   domain and has been annotated as a trimeric autotransporter
+CC   adhesin. The function of this domain remains to be determined.

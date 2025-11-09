@@ -1,0 +1,14 @@
+ID   YabR
+DE   Protein YabR
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:P0DPM5
+GA   27.00 27.00;
+TC   32.00 38.40;
+NC   26.30 16.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents protein YabR from Escherichia coli. This is a
+CC   very small protein of 14 amino acids that is expressed at low levels
+CC   in stationary phase. The function of this protein remains to be
+CC   determined.

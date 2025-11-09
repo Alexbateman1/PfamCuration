@@ -1,15 +1,14 @@
 ID   TP_0161
-DE   Treponema pallidum protein TP_0161
+DE   Uncharacterised protein TP_0161
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:O83196
+SE   Jackhmmer:O83196
 GA   27.00 27.00;
 TC   33.10 85.80;
 NC   24.70 18.80;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
 TP   Family
-CC   This entry represents an uncharacterised protein, TP_0161, found in
-CC   Treponema pallidum. The protein is 30 amino acids in length and
-CC   appears to be specific to T. pallidum. The function of this protein
-CC   remains to be determined.
-**
+CC   This entry represents TP_0161, an uncharacterised 30-amino acid
+CC   protein from Treponema pallidum, the syphilis spirochaete. This
+CC   appears to be a species-specific protein with no characterised
+CC   orthologues. The function of this protein remains to be determined.

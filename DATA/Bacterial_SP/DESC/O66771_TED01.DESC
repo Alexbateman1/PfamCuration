@@ -1,17 +1,14 @@
-ID   aq_473
-DE   aq_473 family
+ID   Aq_473
+DE   Uncharacterised membrane protein aq_473
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:O66771_TED01
 GA   27.00 27.00;
 TC   27.40 100.60;
 NC   24.50 24.10;
-BM   hmmbuild  -o /dev/null HMM SEED
+BM   hmmbuild -o /dev/null HMM SEED
 SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
-TP   Domain
-CC   This entry represents a domain found in uncharacterised protein
-CC   aq_473, a 215 amino acid protein from Aquifex aeolicus and related
-CC   proteins from both Bacteria and Archaea. The protein is predicted to
-CC   be a multi-pass membrane protein with multiple transmembrane helices.
-CC   The protein is annotated as COG3063 in eggNOG. The protein belongs to
-CC   remains to be determined.
-//
+TP   Family
+CC   This entry represents an uncharacterised membrane protein found in
+CC   Aquifex aeolicus (aq_473) and related bacteria. The protein
+CC   contains four predicted transmembrane helices. The function of this
+CC   protein remains to be determined.

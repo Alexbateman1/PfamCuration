@@ -1,11 +1,28 @@
-ID   wzzE
-AC   PF
-DE   ECA polysaccharide chain length modulation protein
-TP   Domain
-ML   100
+ID   WzzE
+DE   ECA polysaccharide chain length modulation protein WzzE
+AU   Bateman A;0000-0002-6982-4660
 SE   TED:P44063_TED01
-CC   This entry represents a domain found in wzzE
-CC   from Shigella flexneri
-CC
-CC   The function of this domain remains to be determined.
-**
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   18204465
+RT   Bacterial polysaccharide co-polymerases share a common framework
+RT   for control of polymer length.
+RA   Tocilj A, Munger C, Proteau A, Morona R, Purins L, Ajamian E,
+RA   Wagner J, Papadopoulos M, Van Den Bosch L, Rubinstein JL,
+RA   Fethiere J, Matte A, Cygler M;
+RL   Nat Struct Mol Biol 2008;15:130-138.
+RN   [2]
+RM   25307743
+RT   Quaternary structure of WzzB and WzzE polysaccharide copolymerases.
+RA   Kalynych S, Cherney M, Bostina M, Rouiller I, Cygler M;
+RL   Protein Sci 2015;24:58-69.
+CC   This entry represents the WzzE polysaccharide co-polymerase from
+CC   Enterobacterales. WzzE modulates the polysaccharide chain length of
+CC   enterobacterial common antigen (ECA) [1,2]. The protein is part of a
+CC   complex with WzxE and WzyE, and belongs to the WzzB/Cld/Rol family.
+CC   The Wzz domain (Pfam:PF02706) is also present in these proteins.

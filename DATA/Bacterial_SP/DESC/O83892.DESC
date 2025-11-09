@@ -1,0 +1,15 @@
+ID   TP_0922
+DE   Uncharacterised Treponema protein TP_0922
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:O83892
+GA   27.00 27.00;
+TC   34.50 683.80;
+NC   24.50 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein (TP_0922) from
+CC   Treponema pallidum. The protein is 297 amino acids in length and
+CC   contains a disordered region (residues 267-297). This protein
+CC   appears to be specific to Treponema pallidum. The function of this
+CC   protein remains to be determined.

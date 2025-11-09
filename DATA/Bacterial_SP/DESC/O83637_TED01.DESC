@@ -1,15 +1,16 @@
 ID   TP_0629
-DE   TP_0629 family
+DE   Uncharacterised protein TP_0629
 AU   Bateman A;0000-0002-6982-4660
-SE   TED:O83637_TED01
+SE   TED:O83637_TED01/Iterate
 GA   27.00 27.00;
 TC   27.70 122.30;
 NC   24.70 19.00;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
-TP   Domain
-CC   This entry represents a domain found in the uncharacterised protein
-CC   TP_0629 from Treponema pallidum and related spirochaetes, as well
-CC   as members of the Brachyspiraceae. The domain is approximately 199
-CC   residues in length. The function of this domain remains to be
-CC   determined.
+TP   Family
+CC   This entry represents the uncharacterised protein TP_0629 from
+CC   Treponema pallidum. The protein is 274 amino acids long and is
+CC   found in Spirochaetales bacteria including Treponema and
+CC   Brachyspira species. The protein is predicted to contain at least
+CC   one beta-propeller motif. The function of this protein remains to
+CC   be determined.
