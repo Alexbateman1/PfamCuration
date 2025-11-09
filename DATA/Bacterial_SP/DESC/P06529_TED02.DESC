@@ -6,9 +6,8 @@ GA   27.00 27.00;
 TC   81.00 80.30;
 NC   26.70 26.50;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents an uncharacterised protein domain found in
-CC   Bacillales and the fungus Batrachochytrium. The function of this
-CC   domain remains to be determined.
-//
+CC   This entry represents an uncharacterised domain found in
+CC   Batrachochytrium. within Bacteria. The function of this domain remains to be
+CC   determined.

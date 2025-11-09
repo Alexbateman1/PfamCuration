@@ -1,0 +1,13 @@
+ID   OrderedLocusNames=RP413
+DE   Uncharacterized lipoprotein RP413
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q1RI56_TED02
+GA   27.00 27.00;
+TC   31.20 77.70;
+NC   25.30 20.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   typhus group. within Bacteria. The function of this domain remains to be
+CC   determined.

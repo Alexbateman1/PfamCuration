@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 ID   Wzy_K12
 DE   O-antigen polymerase Wzy
+=======
+ID   wbbH
+DE   Putative O-antigen polymerase {ECO:0000305}
+>>>>>>> ef5ca92d124e1b0579ddc22f997705ba1cf9513a
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P37748_TED01
 GA   27.00 27.00;
 TC   34.10 34.10;
 NC   23.80 23.60;
 BM   hmmbuild  -o /dev/null HMM SEED
+<<<<<<< HEAD
 SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
 TP   Family
 CC   This entry represents O-antigen polymerase (Wzy) found in
@@ -19,3 +25,10 @@ CC   rough, their lipopolysaccharide having a complete core structure but
 CC   no O-antigen. The protein is localised to the cell inner membrane
 CC   with multiple transmembrane helices and is classified as
 CC   NCBIfam:TIGR04370 (glyco_rpt_poly).
+=======
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Prevotella. within Bacteria. The function of this domain remains to be
+CC   determined.
+>>>>>>> ef5ca92d124e1b0579ddc22f997705ba1cf9513a

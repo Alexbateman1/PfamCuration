@@ -1,12 +1,13 @@
-ID   DUF
-DE   Domain of unknown function
+ID   ybbD
+DE   Putative uncharacterized protein YbbD
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P33669_TED01
 GA   27.00 27.00;
-TC   27.00 37.60;
-NC   26.90 26.20;
-BM   hmmbuild -o /dev/null HMM SEED
+TC   64.20 63.20;
+NC   22.60 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents a domain of unknown function. The function of
-CC   this domain remains to be determined.
+CC   This entry represents an uncharacterised domain found in
+CC   Escherichia. within Bacteria. The function of this domain remains to be
+CC   determined.

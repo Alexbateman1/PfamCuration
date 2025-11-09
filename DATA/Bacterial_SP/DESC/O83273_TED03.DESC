@@ -1,16 +1,13 @@
-ID   DUF
-DE   Domain of unknown function
+ID   TP_0245
+DE   Uncharacterized protein TP_0245
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:O83273_TED03
 GA   27.00 27.00;
-TC   27.20 120.60;
-NC   25.90 25.10;
+TC   29.80 228.60;
+NC   26.30 25.90;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
 TP   Domain
-CC   This entry represents an AAA-type ATPase domain of approximately 175
-CC   amino acids found in large proteins from Bacillota and Spirochaetes,
-CC   including TP_0245 from Treponema pallidum (the syphilis spirochaete).
-CC   The domain belongs to the P-loop containing nucleoside triphosphate
-CC   hydrolase superfamily. The function of this domain remains to be
+CC   This entry represents an uncharacterised domain found in
+CC   Vagococcus within Bacteria. The function of this domain remains to be
 CC   determined.

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ID   YabQ
+=======
+ID   yabQ
+>>>>>>> ef5ca92d124e1b0579ddc22f997705ba1cf9513a
 DE   Protein YabQ
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P39221_TED01
@@ -6,6 +10,7 @@ GA   27.00 27.00;
 TC   27.80 75.70;
 NC   26.60 18.50;
 BM   hmmbuild  -o /dev/null HMM SEED
+<<<<<<< HEAD
 SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
 TP   Family
 RN   [1]
@@ -19,4 +24,10 @@ CC   This entry represents protein YabQ found in Escherichia coli. The
 CC   protein is 52 amino acids in length and has been identified as a
 CC   multicopy suppressor of the slow growth phenotype of an rsgA (yjeQ)
 CC   deletion mutant [1]. The function of this protein remains to be
+=======
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Escherichia. within Bacteria. The function of this domain remains to be
+>>>>>>> ef5ca92d124e1b0579ddc22f997705ba1cf9513a
 CC   determined.

@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 ID   EspV
 DE   Type III secretion effector protein EspV
+=======
+ID   DUF
+DE   Domain of unknown function
+>>>>>>> ef5ca92d124e1b0579ddc22f997705ba1cf9513a
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:P11437_TED01
 GA   27.00 27.00;
 TC   28.20 75.30;
 NC   24.60 21.30;
 BM   hmmbuild  -o /dev/null HMM SEED
+<<<<<<< HEAD
 SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
 TP   Family
 CC   This entry represents the type III secretion system effector
@@ -14,3 +20,10 @@ CC   Burkholderiaceae. This family is approximately 310 amino acids in
 CC   length. The function of this protein family remains to be
 CC   determined.
 //
+=======
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Trinickia. within Bacteria. The function of this domain remains to be
+CC   determined.
+>>>>>>> ef5ca92d124e1b0579ddc22f997705ba1cf9513a

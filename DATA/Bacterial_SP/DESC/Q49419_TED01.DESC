@@ -1,0 +1,13 @@
+ID   OrderedLocusNames=MG328
+DE   Uncharacterized protein MG328
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q49419_TED01
+GA   27.00 27.00;
+TC   29.80 186.70;
+NC   25.30 22.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain found in
+CC   Mycoplasmoides within Bacteria. The function of this domain remains to be
+CC   determined.
