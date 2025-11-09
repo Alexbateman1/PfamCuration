@@ -1,0 +1,16 @@
+ID   HlyD
+DE   Hemolysin D family
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q08675_TED01
+GA   27.00 27.00;
+TC   28.10 381.50;
+NC   24.00 26.20;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the hemolysin D (HlyD) family, found in
+CC   Pseudoalteromonas, Photobacterium, and related Gammaproteobacteria.
+CC   Hemolysin D is a membrane fusion protein component of type I secretion
+CC   systems involved in the export of toxins and other proteins. The
+CC   function of this protein remains to be determined.
+//

@@ -1,0 +1,16 @@
+ID   YubK
+DE   YubK serine-rich protein family
+AU   Bateman A;0000-0002-6982-4660
+SE   Jackhmmer:Q1R1V4
+GA   27.00 27.00;
+TC   27.10 40.40;
+NC   25.50 22.40;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents the YubK serine-rich protein family, found in
+CC   Escherichia coli O157:H7. The representative member YubK from
+CC   Escherichia coli O157:H7 is a 129 amino acid protein with a signal
+CC   peptide. This protein is encoded on the large virulence plasmid
+CC   pO157. The function of this protein remains to be determined.
+//

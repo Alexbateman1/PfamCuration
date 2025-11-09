@@ -1,0 +1,17 @@
+ID   RP413_N
+DE   Rickettsial lipoprotein RP413 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q1RI56_TED01
+GA   27.00 27.00;
+TC   40.70 42.90;
+NC   24.10 19.70;
+BM   hmmbuild -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of rickettsial
+CC   lipoprotein RP413, found in Rickettsia prowazekii. The
+CC   representative member RP413 from Rickettsia prowazekii strain Madrid
+CC   E is a 219 amino acid lipoprotein anchored to the cell membrane.
+CC   The protein is a Sec-translocon-dependent extracytoplasmic protein.
+CC   The function of this domain remains to be determined.
+//
