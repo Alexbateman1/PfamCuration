@@ -537,6 +537,12 @@ def main():
         print("Error: No sequences found in SEED file")
         sys.exit(1)
 
+    # Limit to first 20 sequences for performance
+    max_sequences = 20
+    if len(sequences) > max_sequences:
+        print(f"Limiting to first {max_sequences} sequences for performance (skipping {len(sequences) - max_sequences})")
+        sequences = sequences[:max_sequences]
+
     # Create or verify foldseek database exists
     print("\nChecking foldseek database...")
     foldseek_db = create_foldseek_database(args.source_dir, args.database)
