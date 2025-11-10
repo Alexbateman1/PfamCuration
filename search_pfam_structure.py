@@ -20,6 +20,7 @@ import re
 import urllib.request
 import subprocess
 import tempfile
+import shutil
 from pathlib import Path
 from Bio.PDB import MMCIFParser, MMCIFIO, Select
 from collections import defaultdict
@@ -118,7 +119,7 @@ def get_pfam_info(pfam_accs, connection=None):
     # Query for Pfam ID and clan information
     placeholders = ','.join(['%s'] * len(pfam_accs))
     query = f"""
-        SELECT pfamA_acc, pfamA_id, clan_acc
+        SELECT pfamA_acc, pfamA_id, clan
         FROM pfamA
         WHERE pfamA_acc IN ({placeholders})
     """
@@ -131,7 +132,7 @@ def get_pfam_info(pfam_accs, connection=None):
     for row in results:
         pfam_info[row['pfamA_acc']] = {
             'pfam_id': row['pfamA_id'],
-            'clan_acc': row['clan_acc'] if row['clan_acc'] else 'No_clan'
+            'clan_acc': row['clan'] if row['clan'] else 'No_clan'
         }
 
     cursor.close()
@@ -539,47 +540,61 @@ def main():
     print("\nChecking foldseek database...")
     foldseek_db = create_foldseek_database(args.source_dir, args.database)
 
-    # Create temporary directory for downloads
+    # Check if chopped model already exists in curation directory
+    saved_chopped_model = os.path.join(args.curation_dir, 'query_model.cif')
+
+    # Create temporary directory for foldseek
     with tempfile.TemporaryDirectory() as tmp_dir:
-        best_model = None
-        best_plddt = 0
-        best_info = None
+        if os.path.exists(saved_chopped_model):
+            print(f"\nFound existing chopped model: {saved_chopped_model}")
+            print("Using cached model (delete this file to force reprocessing)")
+            chopped_model = saved_chopped_model
+        else:
+            # Process SEED sequences to find best model
+            best_model = None
+            best_plddt = 0
+            best_info = None
 
-        # Process each sequence
-        for uniprot_acc, start, end, alignment_seq in sequences:
-            print(f"\nProcessing {uniprot_acc} ({start}-{end})...")
+            # Process each sequence
+            for uniprot_acc, start, end, alignment_seq in sequences:
+                print(f"\nProcessing {uniprot_acc} ({start}-{end})...")
 
-            # Download AlphaFold model
-            cif_file = download_alphafold_model(uniprot_acc, tmp_dir)
-            if not cif_file:
-                continue
+                # Download AlphaFold model
+                cif_file = download_alphafold_model(uniprot_acc, tmp_dir)
+                if not cif_file:
+                    continue
 
-            # Verify sequence match (alignment_seq already has gaps removed)
-            structure_seq = get_sequence_from_cif(cif_file)
-            if not verify_sequence_match(alignment_seq, structure_seq, start, end, verbose=True):
-                print(f"Warning: Sequence mismatch for {uniprot_acc}. Skipping.")
-                continue
+                # Verify sequence match (alignment_seq already has gaps removed)
+                structure_seq = get_sequence_from_cif(cif_file)
+                if not verify_sequence_match(alignment_seq, structure_seq, start, end, verbose=True):
+                    print(f"Warning: Sequence mismatch for {uniprot_acc}. Skipping.")
+                    continue
 
-            # Calculate mean pLDDT (only for the alignment region)
-            mean_plddt, num_residues = calculate_mean_plddt(cif_file, start, end, verbose=True)
-            print(f"  Mean pLDDT: {mean_plddt:.2f}")
+                # Calculate mean pLDDT (only for the alignment region)
+                mean_plddt, num_residues = calculate_mean_plddt(cif_file, start, end, verbose=True)
+                print(f"  Mean pLDDT: {mean_plddt:.2f}")
 
-            if mean_plddt > best_plddt:
-                best_plddt = mean_plddt
-                best_model = cif_file
-                best_info = (uniprot_acc, start, end)
+                if mean_plddt > best_plddt:
+                    best_plddt = mean_plddt
+                    best_model = cif_file
+                    best_info = (uniprot_acc, start, end)
 
-        if not best_model:
-            print("\nError: No valid models found with matching sequences")
-            sys.exit(1)
+            if not best_model:
+                print("\nError: No valid models found with matching sequences")
+                sys.exit(1)
 
-        print(f"\nBest model: {best_info[0]} ({best_info[1]}-{best_info[2]}) "
-              f"with mean pLDDT {best_plddt:.2f}")
+            print(f"\nBest model: {best_info[0]} ({best_info[1]}-{best_info[2]}) "
+                  f"with mean pLDDT {best_plddt:.2f}")
 
-        # Chop the best model to alignment boundaries
-        chopped_model = os.path.join(tmp_dir, 'query_chopped.cif')
-        print(f"Chopping structure to region {best_info[1]}-{best_info[2]}...")
-        chop_structure(best_model, chopped_model, best_info[1], best_info[2])
+            # Chop the best model to alignment boundaries
+            chopped_model_tmp = os.path.join(tmp_dir, 'query_chopped.cif')
+            print(f"Chopping structure to region {best_info[1]}-{best_info[2]}...")
+            chop_structure(best_model, chopped_model_tmp, best_info[1], best_info[2])
+
+            # Save chopped model to curation directory for reuse
+            print(f"Saving chopped model to {saved_chopped_model}")
+            shutil.copy2(chopped_model_tmp, saved_chopped_model)
+            chopped_model = saved_chopped_model
 
         # Run foldseek search
         print(f"\nSearching against database: {foldseek_db}")
