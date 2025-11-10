@@ -119,9 +119,10 @@ def get_pfam_info(pfam_accs, connection=None):
     # Query for Pfam ID and clan information
     placeholders = ','.join(['%s'] * len(pfam_accs))
     query = f"""
-        SELECT pfamA_acc, pfamA_id, clan
+        SELECT pfamA.pfamA_acc, pfamA.pfamA_id, clan_membership.clan_acc
         FROM pfamA
-        WHERE pfamA_acc IN ({placeholders})
+        LEFT JOIN clan_membership ON pfamA.pfamA_acc = clan_membership.pfamA_acc
+        WHERE pfamA.pfamA_acc IN ({placeholders})
     """
 
     cursor.execute(query, pfam_accs)
@@ -132,7 +133,7 @@ def get_pfam_info(pfam_accs, connection=None):
     for row in results:
         pfam_info[row['pfamA_acc']] = {
             'pfam_id': row['pfamA_id'],
-            'clan_acc': row['clan'] if row['clan'] else 'No_clan'
+            'clan_acc': row['clan_acc'] if row['clan_acc'] else 'No_clan'
         }
 
     cursor.close()
