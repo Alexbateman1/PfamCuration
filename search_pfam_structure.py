@@ -100,7 +100,7 @@ def get_sequence_from_cif(cif_file):
     return ''.join(sequence)
 
 
-def calculate_mean_plddt(cif_file, start, end):
+def calculate_mean_plddt(cif_file, start, end, verbose=False):
     """
     Calculate mean pLDDT score for a specific region in the structure.
 
@@ -108,9 +108,10 @@ def calculate_mean_plddt(cif_file, start, end):
         cif_file: path to CIF file
         start: start residue position (1-indexed)
         end: end residue position (1-indexed)
+        verbose: print debug information
 
     Returns:
-        float: mean pLDDT score, or 0 if failed
+        tuple: (mean pLDDT score, number of residues counted)
     """
     parser = MMCIFParser(QUIET=True)
     structure = parser.get_structure('protein', cif_file)
@@ -118,31 +119,53 @@ def calculate_mean_plddt(cif_file, start, end):
     chain = next(structure.get_chains())
 
     plddt_scores = []
+    residue_count = 0
     for residue in chain.get_residues():
         res_id = residue.get_id()[1]
         if start <= res_id <= end:
             # pLDDT is stored in the B-factor field
             for atom in residue.get_atoms():
                 plddt_scores.append(atom.get_bfactor())
+                residue_count += 1
                 break  # Only need one atom per residue
 
+    if verbose and plddt_scores:
+        print(f"  pLDDT calculated over {residue_count} residues (region {start}-{end})")
+
     if plddt_scores:
-        return sum(plddt_scores) / len(plddt_scores)
-    return 0
+        return sum(plddt_scores) / len(plddt_scores), residue_count
+    return 0, 0
 
 
-def verify_sequence_match(alignment_seq, structure_seq, start, end):
+def verify_sequence_match(alignment_seq, structure_seq, start, end, verbose=False):
     """
-    Verify that the alignment sequence matches the structure sequence.
+    Verify that the alignment sequence (with gaps removed) matches the structure sequence.
+
+    Args:
+        alignment_seq: sequence from SEED alignment (gaps already removed)
+        structure_seq: full sequence from AlphaFold structure
+        start: start residue position (1-indexed)
+        end: end residue position (1-indexed)
+        verbose: print debug information
 
     Returns:
-        bool: True if sequences match
+        bool: True if sequences match exactly
     """
-    # Extract the relevant region from structure sequence
+    # Extract the relevant region from structure sequence (convert to 0-indexed)
     structure_region = structure_seq[start-1:end]
 
-    # Compare (allowing for some flexibility)
-    return alignment_seq == structure_region
+    # Compare sequences
+    match = alignment_seq == structure_region
+
+    if verbose and not match:
+        print(f"  Sequence mismatch detected:")
+        print(f"    Expected length: {len(alignment_seq)}")
+        print(f"    Structure length: {len(structure_region)}")
+        if len(alignment_seq) > 0 and len(structure_region) > 0:
+            print(f"    Alignment (first 50): {alignment_seq[:50]}")
+            print(f"    Structure (first 50): {structure_region[:50]}")
+
+    return match
 
 
 class RegionSelect(Select):
@@ -175,9 +198,54 @@ def chop_structure(input_cif, output_cif, start, end):
     io.save(output_cif, RegionSelect(start, end))
 
 
-def run_foldseek_search(query_cif, database_dir, output_file, tmp_dir):
+def create_foldseek_database(source_dir, db_path):
+    """
+    Create a foldseek database from a directory of CIF files.
+    Only creates if database doesn't already exist.
+
+    Args:
+        source_dir: directory containing CIF files
+        db_path: path where foldseek database should be created
+
+    Returns:
+        str: path to the database
+    """
+    # Check if database already exists (foldseek creates multiple files with this prefix)
+    if os.path.exists(db_path) or os.path.exists(f"{db_path}.dbtype"):
+        print(f"Foldseek database already exists at {db_path}")
+        return db_path
+
+    print(f"Creating foldseek database at {db_path}...")
+    print(f"  Source: {source_dir}")
+    print("  This is a one-time setup and may take several minutes...")
+
+    # Create directory if it doesn't exist
+    db_dir = os.path.dirname(db_path)
+    os.makedirs(db_dir, exist_ok=True)
+
+    # Run foldseek createdb
+    cmd = ['foldseek', 'createdb', source_dir, db_path]
+
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            raise RuntimeError(f"Foldseek createdb failed: {result.stderr}")
+        print("  Database created successfully!")
+    except Exception as e:
+        raise RuntimeError(f"Failed to create foldseek database: {e}")
+
+    return db_path
+
+
+def run_foldseek_search(query_cif, database_path, output_file, tmp_dir):
     """
     Run foldseek easy-search against the Pfam structure database.
+
+    Args:
+        query_cif: path to query structure
+        database_path: path to indexed foldseek database
+        output_file: where to write results
+        tmp_dir: temporary directory for foldseek
 
     Returns:
         str: path to foldseek output file
@@ -188,7 +256,7 @@ def run_foldseek_search(query_cif, database_dir, output_file, tmp_dir):
     cmd = [
         'foldseek', 'easy-search',
         query_cif,
-        database_dir,
+        database_path,
         foldseek_output,
         tmp_dir
     ]
@@ -303,9 +371,14 @@ def main():
         help='Path to Pfam curation directory containing SEED file'
     )
     parser.add_argument(
-        '--database',
+        '--source-dir',
         default='/nfs/production/agb/interpro/users/typhaine/interpro-pfam-curation-tools/pfam_add_clan_search/results/chopped_cif',
-        help='Path to Pfam AlphaFold structure database (default: chopped_cif location)'
+        help='Path to directory containing Pfam AlphaFold CIF files (default: chopped_cif location)'
+    )
+    parser.add_argument(
+        '--database',
+        default='/nfs/production/agb/pfam/curation/foldseek/pfam_db',
+        help='Path to foldseek database (default: /nfs/production/agb/pfam/curation/foldseek/pfam_db)'
     )
     parser.add_argument(
         '--output',
@@ -338,6 +411,10 @@ def main():
         print("Error: No sequences found in SEED file")
         sys.exit(1)
 
+    # Create or verify foldseek database exists
+    print("\nChecking foldseek database...")
+    foldseek_db = create_foldseek_database(args.source_dir, args.database)
+
     # Create temporary directory for downloads
     with tempfile.TemporaryDirectory() as tmp_dir:
         best_model = None
@@ -353,16 +430,14 @@ def main():
             if not cif_file:
                 continue
 
-            # Verify sequence match
+            # Verify sequence match (alignment_seq already has gaps removed)
             structure_seq = get_sequence_from_cif(cif_file)
-            if not verify_sequence_match(alignment_seq, structure_seq, start, end):
+            if not verify_sequence_match(alignment_seq, structure_seq, start, end, verbose=True):
                 print(f"Warning: Sequence mismatch for {uniprot_acc}. Skipping.")
-                print(f"  Alignment: {alignment_seq[:50]}...")
-                print(f"  Structure: {structure_seq[start-1:end][:50]}...")
                 continue
 
-            # Calculate mean pLDDT
-            mean_plddt = calculate_mean_plddt(cif_file, start, end)
+            # Calculate mean pLDDT (only for the alignment region)
+            mean_plddt, num_residues = calculate_mean_plddt(cif_file, start, end, verbose=True)
             print(f"  Mean pLDDT: {mean_plddt:.2f}")
 
             if mean_plddt > best_plddt:
@@ -383,10 +458,10 @@ def main():
         chop_structure(best_model, chopped_model, best_info[1], best_info[2])
 
         # Run foldseek search
-        print(f"\nSearching against database: {args.database}")
+        print(f"\nSearching against database: {foldseek_db}")
         foldseek_output = run_foldseek_search(
             chopped_model,
-            args.database,
+            foldseek_db,
             output_file,
             tmp_dir
         )
