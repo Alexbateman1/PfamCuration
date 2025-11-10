@@ -23,6 +23,8 @@ import tempfile
 from pathlib import Path
 from Bio.PDB import MMCIFParser, MMCIFIO, Select
 from collections import defaultdict
+import mysql.connector
+from configparser import ConfigParser
 
 
 def parse_seed_alignment(seed_file):
@@ -50,6 +52,101 @@ def parse_seed_alignment(seed_file):
                 sequences.append((uniprot_acc, start, end, sequence))
 
     return sequences
+
+
+def connect_to_pfam_db(config_file='~/.my.cnf'):
+    """
+    Connect to the Pfam MySQL database using credentials from config file.
+
+    Args:
+        config_file: path to MySQL config file (default: ~/.my.cnf)
+
+    Returns:
+        mysql.connector connection object
+    """
+    config_file = os.path.expanduser(config_file)
+
+    if not os.path.exists(config_file):
+        raise FileNotFoundError(f"MySQL config file not found: {config_file}")
+
+    # Parse MySQL config file
+    config = ConfigParser()
+    config.read(config_file)
+
+    # Get credentials from [client] section
+    if 'client' not in config:
+        raise ValueError(f"No [client] section found in {config_file}")
+
+    db_config = {
+        'host': config.get('client', 'host', fallback='localhost'),
+        'user': config.get('client', 'user'),
+        'password': config.get('client', 'password', fallback=''),
+        'database': 'pfam_live'
+    }
+
+    if config.has_option('client', 'port'):
+        db_config['port'] = config.getint('client', 'port')
+
+    try:
+        connection = mysql.connector.connect(**db_config)
+        return connection
+    except mysql.connector.Error as e:
+        raise RuntimeError(f"Failed to connect to Pfam database: {e}")
+
+
+def get_pfam_info(pfam_accs, connection=None):
+    """
+    Query Pfam database to get Pfam ID and clan information for given accessions.
+
+    Args:
+        pfam_accs: list of Pfam accessions (e.g., ['PF00001', 'PF00002'])
+        connection: mysql connection object (will create new one if None)
+
+    Returns:
+        dict: {pfam_acc: {'pfam_id': str, 'clan_acc': str or None}}
+    """
+    if not pfam_accs:
+        return {}
+
+    close_connection = False
+    if connection is None:
+        connection = connect_to_pfam_db()
+        close_connection = True
+
+    cursor = connection.cursor(dictionary=True)
+
+    # Query for Pfam ID and clan information
+    placeholders = ','.join(['%s'] * len(pfam_accs))
+    query = f"""
+        SELECT pfamA_acc, pfamA_id, clan_acc
+        FROM pfamA
+        WHERE pfamA_acc IN ({placeholders})
+    """
+
+    cursor.execute(query, pfam_accs)
+    results = cursor.fetchall()
+
+    # Build result dictionary
+    pfam_info = {}
+    for row in results:
+        pfam_info[row['pfamA_acc']] = {
+            'pfam_id': row['pfamA_id'],
+            'clan_acc': row['clan_acc'] if row['clan_acc'] else 'No_clan'
+        }
+
+    cursor.close()
+    if close_connection:
+        connection.close()
+
+    # Fill in missing entries
+    for acc in pfam_accs:
+        if acc not in pfam_info:
+            pfam_info[acc] = {
+                'pfam_id': 'Unknown',
+                'clan_acc': 'Unknown'
+            }
+
+    return pfam_info
 
 
 def download_alphafold_model(uniprot_acc, output_dir):
@@ -275,11 +372,14 @@ def parse_and_filter_results(foldseek_output, curation_dir, output_file,
                              min_overlap=0.6, max_evalue=1e-3):
     """
     Parse foldseek results and filter by overlap and E-value.
+    Queries Pfam database to get Pfam ID and clan information.
 
     Outputs a TSV file with columns:
     - Curation directory
     - Query info
     - Target Pfam accession
+    - Pfam ID (name)
+    - Clan accession
     - Identity
     - Alignment length
     - Query length
@@ -334,12 +434,34 @@ def parse_and_filter_results(foldseek_output, curation_dir, output_file,
     # Sort by E-value
     results.sort(key=lambda x: x['evalue'])
 
+    # Query database for Pfam ID and clan information
+    print("Querying Pfam database for family names and clan information...")
+    unique_pfam_accs = list(set([r['pfam_acc'] for r in results]))
+
+    try:
+        pfam_info = get_pfam_info(unique_pfam_accs)
+    except Exception as e:
+        print(f"Warning: Could not query Pfam database: {e}")
+        print("Continuing without Pfam ID and clan information...")
+        pfam_info = {acc: {'pfam_id': 'Unknown', 'clan_acc': 'Unknown'}
+                     for acc in unique_pfam_accs}
+
+    # Add Pfam ID and clan info to results
+    for r in results:
+        pfam_acc = r['pfam_acc']
+        if pfam_acc in pfam_info:
+            r['pfam_id'] = pfam_info[pfam_acc]['pfam_id']
+            r['clan_acc'] = pfam_info[pfam_acc]['clan_acc']
+        else:
+            r['pfam_id'] = 'Unknown'
+            r['clan_acc'] = 'Unknown'
+
     # Write output
     with open(output_file, 'w') as out:
         # Header
         out.write('\t'.join([
-            'Curation_Dir', 'Query', 'Pfam_Accession', 'Target_Full',
-            'Identity', 'Aln_Length', 'Query_Length', 'Target_Length',
+            'Curation_Dir', 'Query', 'Pfam_Accession', 'Pfam_ID', 'Clan_Accession',
+            'Target_Full', 'Identity', 'Aln_Length', 'Query_Length', 'Target_Length',
             'Overlap', 'E-value', 'Bitscore'
         ]) + '\n')
 
@@ -349,6 +471,8 @@ def parse_and_filter_results(foldseek_output, curation_dir, output_file,
                 r['curation_dir'],
                 r['query'],
                 r['pfam_acc'],
+                r['pfam_id'],
+                r['clan_acc'],
                 r['target_full'],
                 f"{r['identity']:.2f}",
                 str(r['alnlen']),
