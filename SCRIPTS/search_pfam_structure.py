@@ -17,15 +17,6 @@ import argparse
 import os
 import sys
 import re
-import urllib.request
-import subprocess
-import tempfile
-import shutil
-from pathlib import Path
-from Bio.PDB import MMCIFParser, MMCIFIO, Select
-from collections import defaultdict
-import mysql.connector
-from configparser import ConfigParser
 
 
 def parse_seed_alignment(seed_file):
@@ -65,6 +56,9 @@ def connect_to_pfam_db(config_file='~/.my.cnf'):
     Returns:
         mysql.connector connection object
     """
+    import mysql.connector
+    from configparser import ConfigParser
+
     config_file = os.path.expanduser(config_file)
 
     if not os.path.exists(config_file):
@@ -158,6 +152,8 @@ def download_alphafold_model(uniprot_acc, output_dir):
     Returns:
         str: path to downloaded CIF file, or None if failed
     """
+    import urllib.request
+
     url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-model_v6.cif"
     output_file = os.path.join(output_dir, f"AF-{uniprot_acc}-F1-model_v6.cif")
 
@@ -177,6 +173,8 @@ def get_sequence_from_cif(cif_file):
     Returns:
         str: amino acid sequence
     """
+    from Bio.PDB import MMCIFParser
+
     parser = MMCIFParser(QUIET=True)
     structure = parser.get_structure('protein', cif_file)
 
@@ -212,6 +210,8 @@ def calculate_mean_plddt(cif_file, start, end, verbose=False):
     Returns:
         tuple: (mean pLDDT score, number of residues counted)
     """
+    from Bio.PDB import MMCIFParser
+
     parser = MMCIFParser(QUIET=True)
     structure = parser.get_structure('protein', cif_file)
 
@@ -267,18 +267,6 @@ def verify_sequence_match(alignment_seq, structure_seq, start, end, verbose=Fals
     return match
 
 
-class RegionSelect(Select):
-    """Select only residues within a specific region."""
-
-    def __init__(self, start, end):
-        self.start = start
-        self.end = end
-
-    def accept_residue(self, residue):
-        res_id = residue.get_id()[1]
-        return self.start <= res_id <= self.end
-
-
 def chop_structure(input_cif, output_cif, start, end):
     """
     Chop a structure to keep only residues in the specified region.
@@ -289,6 +277,19 @@ def chop_structure(input_cif, output_cif, start, end):
         start: start residue (1-indexed)
         end: end residue (1-indexed)
     """
+    from Bio.PDB import MMCIFParser, MMCIFIO, Select
+
+    class RegionSelect(Select):
+        """Select only residues within a specific region."""
+
+        def __init__(self, start, end):
+            self.start = start
+            self.end = end
+
+        def accept_residue(self, residue):
+            res_id = residue.get_id()[1]
+            return self.start <= res_id <= self.end
+
     parser = MMCIFParser(QUIET=True)
     structure = parser.get_structure('protein', input_cif)
 
@@ -309,6 +310,8 @@ def create_foldseek_database(source_dir, db_path):
     Returns:
         str: path to the database
     """
+    import subprocess
+
     # Check if database already exists (foldseek creates multiple files with this prefix)
     if os.path.exists(db_path) or os.path.exists(f"{db_path}.dbtype"):
         print(f"Foldseek database already exists at {db_path}")
@@ -349,6 +352,8 @@ def run_foldseek_search(query_cif, database_path, output_file, tmp_dir):
     Returns:
         str: path to foldseek output file
     """
+    import subprocess
+
     foldseek_output = os.path.join(tmp_dir, 'foldseek_raw.out')
     log_file = os.path.join(tmp_dir, 'foldseek.log')
 
@@ -521,6 +526,10 @@ def main():
         sys.exit(1)
 
     print(f"Processing curation directory: {args.curation_dir}")
+
+    # Import remaining modules only when actually needed
+    import tempfile
+    import shutil
 
     # Parse SEED alignment
     print("Parsing SEED alignment...")
