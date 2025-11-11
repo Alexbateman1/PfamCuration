@@ -29,7 +29,7 @@ class ClanNetworkVisualizer:
     def __init__(self, foldseek_file, mysql_config_file):
         """
         Initialize the visualizer.
-        
+
         Args:
             foldseek_file: Path to foldseek results file
             mysql_config_file: Path to MySQL config file (e.g., ~/.my.cnf)
@@ -37,7 +37,26 @@ class ClanNetworkVisualizer:
         self.foldseek_file = foldseek_file
         self.mysql_config_file = mysql_config_file
         self.connection = None
-        
+
+        # Map Pfam types to shapes for visualization
+        self.type_to_shape = {
+            'Domain': 'o',       # Circle (matplotlib) / 'dot' (vis.js)
+            'Family': 's',       # Square (matplotlib) / 'box' (vis.js)
+            'Repeat': '^',       # Triangle (matplotlib) / 'triangle' (vis.js)
+            'Coiled-coil': 'D',  # Diamond/Oval (matplotlib) / 'ellipse' (vis.js)
+            'Motif': '8',        # Octagon (matplotlib) / 'star' (vis.js) - closest to octagon
+            'Disordered': 'h'    # Hexagon (matplotlib) / 'hexagon' (vis.js)
+        }
+
+        self.type_to_vis_shape = {
+            'Domain': 'dot',
+            'Family': 'box',
+            'Repeat': 'triangle',
+            'Coiled-coil': 'ellipse',
+            'Motif': 'star',
+            'Disordered': 'hexagon'
+        }
+
     def connect_to_database(self):
         """Connect to the Pfam database using the config file."""
         config = {}
@@ -270,6 +289,7 @@ class ClanNetworkVisualizer:
             G.add_node(fam['pfamA_acc'],
                       pfam_id=fam['pfamA_id'],
                       model_length=fam['model_length'],
+                      type=fam['type'],
                       in_clan=True,
                       clan_acc=clan_acc,
                       description=fam['description'])
@@ -289,6 +309,7 @@ class ClanNetworkVisualizer:
                     G.add_node(query_pfam,
                               pfam_id=query_info['pfamA_id'],
                               model_length=query_info['model_length'],
+                              type=query_info['type'],
                               in_clan=query_pfam in clan_pfam_accs,
                               clan_acc=query_info['clan_acc'],
                               description=query_info['description'])
@@ -297,6 +318,7 @@ class ClanNetworkVisualizer:
                     G.add_node(query_pfam,
                               pfam_id=query_pfam,
                               model_length=100,
+                              type='Domain',  # Default to Domain
                               in_clan=query_pfam in clan_pfam_accs,
                               clan_acc=None,
                               description='Unknown')
@@ -308,6 +330,7 @@ class ClanNetworkVisualizer:
                     G.add_node(target_pfam,
                               pfam_id=target_info['pfamA_id'],
                               model_length=target_info['model_length'],
+                              type=target_info['type'],
                               in_clan=target_pfam in clan_pfam_accs,
                               clan_acc=target_info['clan_acc'],
                               description=target_info['description'])
@@ -316,6 +339,7 @@ class ClanNetworkVisualizer:
                     G.add_node(target_pfam,
                               pfam_id=target_pfam,
                               model_length=100,
+                              type='Domain',  # Default to Domain
                               in_clan=target_pfam in clan_pfam_accs,
                               clan_acc=None,
                               description='Unknown')
@@ -440,33 +464,64 @@ class ClanNetworkVisualizer:
                 edge_colors.append('lightcoral')
         
         nx.draw_networkx_edges(G, pos, width=edge_widths, edge_color=edge_colors, alpha=0.6)
-        
-        # Draw target clan nodes (green)
-        if target_clan_nodes:
-            nx.draw_networkx_nodes(G, pos, nodelist=target_clan_nodes, 
-                                  node_size=target_clan_sizes,
-                                  node_color='green', 
-                                  alpha=0.8,
-                                  edgecolors='darkgreen',
-                                  linewidths=2)
-        
-        # Draw no-clan nodes (grey)
-        if no_clan_nodes:
-            nx.draw_networkx_nodes(G, pos, nodelist=no_clan_nodes, 
-                                  node_size=no_clan_sizes,
-                                  node_color='lightgrey', 
-                                  alpha=0.6,
-                                  edgecolors='grey',
-                                  linewidths=1)
-        
-        # Draw different-clan nodes (red)
-        if different_clan_nodes:
-            nx.draw_networkx_nodes(G, pos, nodelist=different_clan_nodes, 
-                                  node_size=different_clan_sizes,
-                                  node_color='red', 
-                                  alpha=0.8,
-                                  edgecolors='darkred',
-                                  linewidths=2)
+
+        # Draw nodes by type and clan membership for different shapes
+        # Group nodes by type and clan status
+        from collections import defaultdict
+        nodes_by_type_clan = defaultdict(list)
+
+        for n in G.nodes():
+            node_data = G.nodes[n]
+            node_type = node_data.get('type', 'Domain')
+            node_clan = node_data.get('clan_acc', None)
+            in_clan = node_data.get('in_clan', False)
+
+            # Determine clan category
+            if in_clan:
+                clan_cat = 'target'
+            elif node_clan is None:
+                clan_cat = 'no_clan'
+            else:
+                clan_cat = 'different'
+
+            nodes_by_type_clan[(node_type, clan_cat)].append(n)
+
+        # Draw each type/clan combination with appropriate shape and color
+        for (node_type, clan_cat), nodes in nodes_by_type_clan.items():
+            if not nodes:
+                continue
+
+            # Get shape for this type
+            marker = self.type_to_shape.get(node_type, 'o')  # Default to circle
+
+            # Get color for clan category
+            if clan_cat == 'target':
+                color = 'green'
+                edge_color = 'darkgreen'
+                linewidth = 2
+                alpha = 0.8
+            elif clan_cat == 'no_clan':
+                color = 'lightgrey'
+                edge_color = 'grey'
+                linewidth = 1
+                alpha = 0.6
+            else:  # different clan
+                color = 'red'
+                edge_color = 'darkred'
+                linewidth = 2
+                alpha = 0.8
+
+            # Get sizes
+            sizes = [scale_size(G.nodes[n].get('model_length', 100)) for n in nodes]
+
+            # Draw nodes with this type/color combination
+            nx.draw_networkx_nodes(G, pos, nodelist=nodes,
+                                  node_size=sizes,
+                                  node_shape=marker,
+                                  node_color=color,
+                                  alpha=alpha,
+                                  edgecolors=edge_color,
+                                  linewidths=linewidth)
         
         # Draw labels with ID and accession on separate lines
         labels = {n: f"{G.nodes[n].get('pfam_id', n)}\n{n}" for n in G.nodes()}
@@ -479,15 +534,28 @@ class ClanNetworkVisualizer:
         cat2_threshold = evalue_threshold
         
         legend_elements = [
-            plt.Line2D([0], [0], marker='o', color='w', label='Target clan families', 
+            plt.Line2D([0], [0], marker='o', color='w', label='Target clan families',
                       markerfacecolor='green', markersize=12, markeredgecolor='darkgreen', markeredgewidth=2),
-            plt.Line2D([0], [0], marker='o', color='w', label='Families with no clan', 
+            plt.Line2D([0], [0], marker='o', color='w', label='Families with no clan',
                       markerfacecolor='lightgrey', markersize=12, markeredgecolor='grey'),
-            plt.Line2D([0], [0], marker='o', color='w', label='Families in different clan', 
+            plt.Line2D([0], [0], marker='o', color='w', label='Families in different clan',
                       markerfacecolor='red', markersize=12, markeredgecolor='darkred', markeredgewidth=2),
             plt.Line2D([0], [0], color='darkred', linewidth=3, label=f'E-value < 1e-10'),
             plt.Line2D([0], [0], color='red', linewidth=2, label=f'E-value 1e-10 to 1e-5'),
             plt.Line2D([0], [0], color='lightcoral', linewidth=1, label=f'E-value 1e-5 to {evalue_threshold:.0e}'),
+            # Add shape legend
+            plt.Line2D([0], [0], marker='o', color='w', label='Domain (circle)',
+                      markerfacecolor='grey', markersize=10, markeredgecolor='black'),
+            plt.Line2D([0], [0], marker='s', color='w', label='Family (square)',
+                      markerfacecolor='grey', markersize=10, markeredgecolor='black'),
+            plt.Line2D([0], [0], marker='^', color='w', label='Repeat (triangle)',
+                      markerfacecolor='grey', markersize=10, markeredgecolor='black'),
+            plt.Line2D([0], [0], marker='D', color='w', label='Coiled-coil (diamond)',
+                      markerfacecolor='grey', markersize=10, markeredgecolor='black'),
+            plt.Line2D([0], [0], marker='8', color='w', label='Motif (octagon)',
+                      markerfacecolor='grey', markersize=10, markeredgecolor='black'),
+            plt.Line2D([0], [0], marker='h', color='w', label='Disordered (hexagon)',
+                      markerfacecolor='grey', markersize=10, markeredgecolor='black'),
         ]
         
         # Place legend in the right margin (using figure coordinates)
@@ -540,19 +608,25 @@ class ClanNetworkVisualizer:
             # Node size based on model length
             model_length = data.get('model_length', 100)
             size = 20 + (model_length / 10)  # Scale size
-            
+
+            # Get shape based on type
+            node_type = data.get('type', 'Domain')
+            shape = self.type_to_vis_shape.get(node_type, 'dot')
+
             # Store title separately (not in node data)
             node_titles[node] = (f"<div style='font-family: Arial; padding: 5px;'>"
                         f"<b style='font-size: 16px;'>{data.get('pfam_id', node)}</b><br/>"
                         f"<span style='color: #666; font-size: 14px;'>{node}</span><br/>"
+                        f"<b style='font-size: 13px;'>Type:</b> <span style='font-size: 13px;'>{node_type}</span><br/>"
                         f"<b style='font-size: 13px;'>Length:</b> <span style='font-size: 13px;'>{model_length}</span><br/>"
                         f"<b style='font-size: 13px;'>Clan:</b> <span style='font-size: 13px;'>{node_clan if node_clan else 'None'}</span><br/>"
                         f"<span style='font-size: 12px; color: #555;'>{data.get('description', '')}</span>"
                         f"</div>")
-            
+
             nodes.append({
                 'id': node,
                 'label': f"{data.get('pfam_id', node)}\n{node}",  # Show both on node
+                'shape': shape,
                 'color': {
                     'background': color,
                     'border': border_color,
@@ -987,16 +1061,18 @@ class ClanNetworkVisualizer:
         
         # Create network
         G = self.create_network(clan_acc, clan_families, matches)
-        
-        # Visualize
-        if output_file is None:
-            output_file = f'/home/claude/{clan_acc}_network.png'
-        
-        self.visualize_network(G, clan_acc, evalue_threshold, output_file)
-        
-        # Also create interactive HTML version
-        html_file = output_file.rsplit('.', 1)[0] + '_interactive.html'
+
+        # Always create interactive HTML version based on clan accession
+        html_file = f'{clan_acc}_interactive.html'
         self.export_interactive_html(G, clan_acc, evalue_threshold, html_file)
+
+        # Optionally create static visualization if output file is specified
+        if output_file:
+            self.visualize_network(G, clan_acc, evalue_threshold, output_file)
+        else:
+            # Skip static visualization, show the network briefly
+            print("\nSkipping static visualization (no --output specified)")
+            print(f"View the interactive HTML: {html_file}")
         
         # Print some interesting statistics
         print(f"\nTop external families by number of connections:")
