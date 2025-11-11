@@ -40,8 +40,8 @@ class ClanNetworkVisualizer:
 
         # Map Pfam types to shapes for visualization
         self.type_to_shape = {
-            'Domain': 'o',       # Circle (matplotlib) / 'dot' (vis.js)
-            'Family': 's',       # Square (matplotlib) / 'box' (vis.js)
+            'Domain': 's',       # Square (matplotlib) / 'box' (vis.js)
+            'Family': 'o',       # Circle (matplotlib) / 'dot' (vis.js)
             'Repeat': '^',       # Triangle (matplotlib) / 'triangle' (vis.js)
             'Coiled-coil': 'D',  # Diamond/Oval (matplotlib) / 'ellipse' (vis.js)
             'Motif': '8',        # Octagon (matplotlib) / 'star' (vis.js) - closest to octagon
@@ -49,8 +49,8 @@ class ClanNetworkVisualizer:
         }
 
         self.type_to_vis_shape = {
-            'Domain': 'dot',
-            'Family': 'box',
+            'Domain': 'box',
+            'Family': 'dot',
             'Repeat': 'triangle',
             'Coiled-coil': 'ellipse',
             'Motif': 'star',
@@ -544,9 +544,9 @@ class ClanNetworkVisualizer:
             plt.Line2D([0], [0], color='red', linewidth=2, label=f'E-value 1e-10 to 1e-5'),
             plt.Line2D([0], [0], color='lightcoral', linewidth=1, label=f'E-value 1e-5 to {evalue_threshold:.0e}'),
             # Add shape legend
-            plt.Line2D([0], [0], marker='o', color='w', label='Domain (circle)',
+            plt.Line2D([0], [0], marker='s', color='w', label='Domain (square)',
                       markerfacecolor='grey', markersize=10, markeredgecolor='black'),
-            plt.Line2D([0], [0], marker='s', color='w', label='Family (square)',
+            plt.Line2D([0], [0], marker='o', color='w', label='Family (circle)',
                       markerfacecolor='grey', markersize=10, markeredgecolor='black'),
             plt.Line2D([0], [0], marker='^', color='w', label='Repeat (triangle)',
                       markerfacecolor='grey', markersize=10, markeredgecolor='black'),
