@@ -514,12 +514,6 @@ def main():
 
     args = parser.parse_args()
 
-    # Check if output already exists
-    output_file = os.path.join(args.curation_dir, args.output)
-    if os.path.exists(output_file):
-        print(f"Output file {output_file} already exists. Skipping to avoid duplication.")
-        sys.exit(0)
-
     # Check SEED file exists
     seed_file = os.path.join(args.curation_dir, 'SEED')
     if not os.path.exists(seed_file):
@@ -625,4 +619,17 @@ def main():
 
 
 if __name__ == '__main__':
+    # EARLY EXIT: Quick check before importing heavy modules
+    import argparse
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument('curation_dir')
+    parser.add_argument('--output', default='foldseek')
+    args, _ = parser.parse_known_args()
+
+    output_file = os.path.join(args.curation_dir, args.output)
+    if os.path.exists(output_file):
+        print(f"Output file {output_file} already exists. Skipping to avoid duplication.")
+        sys.exit(0)
+
+    # Output doesn't exist, proceed with full processing
     main()
