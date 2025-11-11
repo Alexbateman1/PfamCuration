@@ -432,21 +432,18 @@ class ClanNetworkVisualizer:
                 different_clan_nodes.append(n)
         
         # Calculate node sizes based on model_length
-        # Scale to reasonable display sizes
+        # Scale to reasonable display sizes - will be applied to ALL node types
         model_lengths = [G.nodes[n].get('model_length', 100) for n in G.nodes()]
         max_length = max(model_lengths) if model_lengths else 1000
         min_length = min(model_lengths) if model_lengths else 50
-        
+
         def scale_size(length):
             # Scale between 300 and 3000 for node size
+            # This applies to ALL marker shapes (circles, squares, triangles, etc.)
             if max_length == min_length:
                 return 1000
             return 300 + (length - min_length) / (max_length - min_length) * 2700
-        
-        target_clan_sizes = [scale_size(G.nodes[n].get('model_length', 100)) for n in target_clan_nodes]
-        no_clan_sizes = [scale_size(G.nodes[n].get('model_length', 100)) for n in no_clan_nodes]
-        different_clan_sizes = [scale_size(G.nodes[n].get('model_length', 100)) for n in different_clan_nodes]
-        
+
         # Draw edges with different widths based on E-value category
         edge_widths = []
         edge_colors = []
@@ -511,10 +508,12 @@ class ClanNetworkVisualizer:
                 linewidth = 2
                 alpha = 0.8
 
-            # Get sizes
+            # Get sizes proportional to model_length for this type/clan combination
+            # Note: All node types (circles, squares, triangles, etc.) are scaled by model_length
             sizes = [scale_size(G.nodes[n].get('model_length', 100)) for n in nodes]
 
             # Draw nodes with this type/color combination
+            # 's' marker renders as true squares (not rectangles) in matplotlib
             nx.draw_networkx_nodes(G, pos, nodelist=nodes,
                                   node_size=sizes,
                                   node_shape=marker,
