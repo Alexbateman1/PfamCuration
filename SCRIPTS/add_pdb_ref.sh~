@@ -1,0 +1,1 @@
+current_dir=$(pwd); awk '{system("cd "$1"; echo "$1"; add_pdb_ref.pl; cd '"$current_dir"'")}' triage
