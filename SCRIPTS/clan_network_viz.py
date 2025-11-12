@@ -612,6 +612,71 @@ class ClanNetworkVisualizer:
             node_type = data.get('type', 'Domain')
             shape = self.type_to_vis_shape.get(node_type, 'dot')
 
+            # For box and ellipse shapes, we need special handling to prevent text from being inside
+            # and to ensure proper sizing (box=square, ellipse=oval proportional to model_length)
+            if shape == 'box':
+                # Position label below the box, not inside it
+                font_config = {
+                    'size': 18,
+                    'color': '#000000',
+                    'face': 'Arial',
+                    'bold': {'size': 20},
+                    'vadjust': 25  # Move label below the box
+                }
+                # Make box a fixed square size (not resizing to fit text)
+                node_config = {
+                    'id': node,
+                    'label': f"{data.get('pfam_id', node)}\n{node}",
+                    'shape': shape,
+                    'color': {
+                        'background': color,
+                        'border': border_color,
+                        'highlight': {'background': color, 'border': '#000000'}
+                    },
+                    'size': size,
+                    'font': font_config,
+                    'widthConstraint': {'minimum': size, 'maximum': size},  # Force square
+                    'heightConstraint': {'minimum': size, 'maximum': size}  # Force square
+                }
+            elif shape == 'ellipse':
+                # Position label below the ellipse, not inside it
+                font_config = {
+                    'size': 18,
+                    'color': '#000000',
+                    'face': 'Arial',
+                    'bold': {'size': 20},
+                    'vadjust': 25  # Move label below the ellipse
+                }
+                # Make ellipse a fixed size (not resizing to fit text)
+                node_config = {
+                    'id': node,
+                    'label': f"{data.get('pfam_id', node)}\n{node}",
+                    'shape': shape,
+                    'color': {
+                        'background': color,
+                        'border': border_color,
+                        'highlight': {'background': color, 'border': '#000000'}
+                    },
+                    'size': size,
+                    'font': font_config,
+                    'widthConstraint': {'minimum': size * 1.5, 'maximum': size * 1.5},  # Oval width
+                    'heightConstraint': {'minimum': size, 'maximum': size}  # Oval height
+                }
+            else:
+                # For other shapes (dot, triangle, hexagon, star), use default label positioning
+                node_config = {
+                    'id': node,
+                    'label': f"{data.get('pfam_id', node)}\n{node}",
+                    'shape': shape,
+                    'color': {
+                        'background': color,
+                        'border': border_color,
+                        'highlight': {'background': color, 'border': '#000000'}
+                    },
+                    'size': size,
+                    'font': {'size': 18, 'color': '#000000', 'face': 'Arial', 'bold': {'size': 20}}
+                }
+
             # Store title separately (not in node data)
             node_titles[node] = (f"<div style='font-family: Arial; padding: 5px;'>"
                         f"<b style='font-size: 16px;'>{data.get('pfam_id', node)}</b><br/>"
@@ -622,18 +687,7 @@ class ClanNetworkVisualizer:
                         f"<span style='font-size: 12px; color: #555;'>{data.get('description', '')}</span>"
                         f"</div>")
 
-            nodes.append({
-                'id': node,
-                'label': f"{data.get('pfam_id', node)}\n{node}",  # Show both on node
-                'shape': shape,
-                'color': {
-                    'background': color,
-                    'border': border_color,
-                    'highlight': {'background': color, 'border': '#000000'}
-                },
-                'size': size,
-                'font': {'size': 18, 'color': '#000000', 'face': 'Arial', 'bold': {'size': 20}}
-            })
+            nodes.append(node_config)
         
         # Prepare edges data
         edges = []
