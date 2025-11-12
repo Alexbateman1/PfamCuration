@@ -155,24 +155,50 @@ class CurationPipeline:
                 print(f"\n⚠ Error checking job status: {e}", file=sys.stderr)
                 return False
     
+    def accession_directories_exist(self, accession: str) -> bool:
+        """
+        Check if any directories already exist for this accession
+
+        Args:
+            accession: UniProt accession to check
+
+        Returns:
+            True if directories exist, False otherwise
+        """
+        # Check for directories that start with the accession
+        # TED domains typically create directories like: ACCESSION_1-100
+        # build.sh creates directories like: ACCESSION
+        pattern = f"{accession}*"
+        matching_dirs = list(self.working_dir.glob(pattern))
+        # Filter to only directories (not files)
+        matching_dirs = [d for d in matching_dirs if d.is_dir()]
+        return len(matching_dirs) > 0
+
     def run_ted_build(self):
         """Run ted_build.py for each accession, fallback to build.sh if no TED domains"""
         if self.is_step_complete('ted_build'):
             print("⊳ TED build already completed, skipping...")
             return
-        
+
         print(f"\n{'='*60}")
         print("STEP 1: Running TED build for all accessions")
         print(f"{'='*60}")
-        
+
         failed_accessions = []
-        
+        skipped_accessions = []
+
         for i, accession in enumerate(self.accessions, 1):
+            # Check if directories already exist for this accession
+            if self.accession_directories_exist(accession):
+                print(f"[{i}/{len(self.accessions)}] Skipping {accession} (directories already exist)")
+                skipped_accessions.append(accession)
+                continue
+
             print(f"[{i}/{len(self.accessions)}] Building domains for {accession}")
-            
+
             # Count directories before TED build
             dirs_before = set(d.name for d in self.working_dir.iterdir() if d.is_dir())
-            
+
             try:
                 # Try TED build first
                 result = subprocess.run(
@@ -181,11 +207,11 @@ class CurationPipeline:
                     text=True,
                     cwd=self.working_dir
                 )
-                
+
                 # Count directories after TED build
                 dirs_after = set(d.name for d in self.working_dir.iterdir() if d.is_dir())
                 new_dirs = dirs_after - dirs_before
-                
+
                 # If no new directories created, TED probably found no domains
                 if not new_dirs:
                     print(f"  → No TED domains found, using whole sequence (build.sh)")
@@ -196,20 +222,24 @@ class CurationPipeline:
                     )
                 else:
                     print(f"  → Created {len(new_dirs)} TED domain(s)")
-                    
+
             except subprocess.CalledProcessError as e:
                 print(f"  ⚠ Failed to build {accession}: {e}")
                 failed_accessions.append(accession)
         
+        # Print summary
+        if skipped_accessions:
+            print(f"\n✓ Skipped {len(skipped_accessions)} accessions (directories already exist)")
+
         if failed_accessions:
             print(f"\n⚠ Warning: {len(failed_accessions)} accessions failed:")
             for acc in failed_accessions:
                 print(f"  - {acc}")
-        
+
         # Wait for all pfbuild jobs to complete
         if not self.wait_for_jobs():
             print("⚠ Warning: Some jobs may still be running")
-        
+
         self.mark_step_complete('ted_build')
     
     def run_triage(self) -> bool:
