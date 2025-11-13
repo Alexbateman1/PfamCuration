@@ -24,7 +24,8 @@ from hhblits_runner import HHblitsRunner
 class PfamHHblitsPipeline:
     """Main pipeline orchestrator."""
 
-    def __init__(self, work_dir, svn_url, e_value_threshold=1e-10, incremental=True):
+    def __init__(self, work_dir, svn_url, e_value_threshold=1e-10, incremental=True,
+                 use_slurm=True, batch_size=100):
         """
         Initialize pipeline.
 
@@ -33,11 +34,15 @@ class PfamHHblitsPipeline:
             svn_url: Pfam SVN repository URL
             e_value_threshold: E-value cutoff for HHblits
             incremental: Enable incremental updates
+            use_slurm: Use SLURM for parallel processing
+            batch_size: Number of families per SLURM batch
         """
         self.work_dir = Path(work_dir)
         self.svn_url = svn_url
         self.e_value_threshold = e_value_threshold
         self.incremental = incremental
+        self.use_slurm = use_slurm
+        self.batch_size = batch_size
 
         # Create directory structure
         self.work_dir.mkdir(parents=True, exist_ok=True)
@@ -169,7 +174,7 @@ class PfamHHblitsPipeline:
         self.mark_step_complete('db_build')
         return db_file
 
-    def run_hhblits_searches(self, hhblits_runner, families, database):
+    def run_hhblits_searches(self, hhblits_runner, families, database, use_slurm=True, batch_size=100):
         """Step 4: Run all-against-all HHblits searches."""
         if self.is_step_complete('hhblits'):
             logging.info("HHblits searches already complete, skipping...")
@@ -180,18 +185,41 @@ class PfamHHblitsPipeline:
         total = len(families)
         logging.info(f"Running HHblits for {total} families...")
 
-        all_hits = {}
-        for i, family_id in enumerate(families, 1):
-            if i % 100 == 0:
-                logging.info(f"Progress: {i}/{total} searches completed")
+        if use_slurm:
+            # Set up SLURM batch processing
+            slurm_script, num_batches = hhblits_runner.setup_slurm_batches(
+                families, database, batch_size=batch_size
+            )
 
-            hits = hhblits_runner.run_search_for_family(family_id, database)
-            all_hits[family_id] = hits
+            logging.info(f"SLURM batch setup complete: {num_batches} batches")
+            logging.info(f"To submit jobs, run:")
+            logging.info(f"  sbatch {slurm_script}")
+            logging.info(f"")
+            logging.info(f"Or submit now with auto-wait:")
+            logging.info(f"  python -c 'from pathlib import Path; import subprocess; subprocess.run([\"sbatch\", \"{slurm_script}\"])'")
+            logging.info(f"")
+            logging.info(f"Monitor with: squeue -u $USER")
+            logging.info(f"")
+            logging.info(f"When complete, re-run pipeline to aggregate results")
 
-        logging.info(f"HHblits searches complete: {total} families processed")
-        self.mark_step_complete('hhblits')
+            # Don't mark as complete - user needs to run SLURM jobs
+            logging.info("NOTE: Pipeline paused. Submit SLURM jobs, then re-run to continue.")
 
-        return all_hits
+        else:
+            # Sequential processing (for testing or small runs)
+            logging.info("Running in sequential mode (no SLURM)...")
+            all_hits = {}
+            for i, family_id in enumerate(families, 1):
+                if i % 100 == 0:
+                    logging.info(f"Progress: {i}/{total} searches completed")
+
+                hits = hhblits_runner.run_search_for_family(family_id, database)
+                all_hits[family_id] = hits
+
+            logging.info(f"HHblits searches complete: {total} families processed")
+            self.mark_step_complete('hhblits')
+
+            return all_hits
 
     def run_aggregation(self):
         """Step 5: Aggregate results into summary files."""
@@ -332,7 +360,8 @@ class PfamHHblitsPipeline:
 
         database = self.run_db_build(hhblits_runner)
 
-        self.run_hhblits_searches(hhblits_runner, families, database)
+        self.run_hhblits_searches(hhblits_runner, families, database,
+                                 use_slurm=self.use_slurm, batch_size=self.batch_size)
 
         self.run_aggregation()
 
@@ -368,6 +397,17 @@ def main():
         help='Force full run (disable incremental mode)'
     )
     parser.add_argument(
+        '--no-slurm',
+        action='store_true',
+        help='Run sequentially without SLURM (for testing)'
+    )
+    parser.add_argument(
+        '--batch-size',
+        type=int,
+        default=100,
+        help='Number of families per SLURM batch (default: 100)'
+    )
+    parser.add_argument(
         '--reset',
         help='Reset progress from specified step (svn_discovery, extraction, db_build, hhblits, aggregation)'
     )
@@ -395,7 +435,9 @@ def main():
         work_dir=args.work_dir,
         svn_url=args.svn_url,
         e_value_threshold=args.e_value,
-        incremental=not args.full
+        incremental=not args.full,
+        use_slurm=not args.no_slurm,
+        batch_size=args.batch_size
     )
 
     # Reset if requested

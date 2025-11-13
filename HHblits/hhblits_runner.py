@@ -81,33 +81,62 @@ class HHblitsRunner:
             logging.error(f"Failed to convert {seed_file} to A3M: {e}")
             return False
 
-    def build_hhm_database(self):
+    def build_hhm_database(self, use_ffindex=True):
         """
         Build HHblits database from HMM files.
-        This concatenates all HMMs into a single database.
+        Uses ffindex for efficient random access.
+
+        Args:
+            use_ffindex: Use ffindex format (recommended for large databases)
 
         Returns:
-            Path to database file
+            Path to database file (without extension)
         """
-        db_file = self.results_dir / "pfam_hhm_db"
+        db_base = self.results_dir / "pfam_hhm_db"
 
         try:
-            # Concatenate all HMM files
             hmm_files = sorted(self.hmm_dir.glob("PF*.hmm"))
             logging.info(f"Building HHM database from {len(hmm_files)} HMM files...")
 
-            with open(db_file, 'w') as outf:
-                for hmm_file in hmm_files:
-                    with open(hmm_file, 'r') as inf:
-                        outf.write(inf.read())
-                        outf.write('\n')
+            if use_ffindex:
+                # Use ffindex for efficient indexed database
+                db_dir = self.results_dir / "ffindex_db"
+                db_dir.mkdir(exist_ok=True)
 
-            logging.info(f"HHM database created: {db_file}")
-            return db_file
+                # Create ffindex database
+                ffdata = db_dir / "pfam_db_hhm.ffdata"
+                ffindex = db_dir / "pfam_db_hhm.ffindex"
+
+                # Build ffindex
+                cmd = f"ffindex_build -s {ffdata} {ffindex} {self.hmm_dir}/ -d"
+                result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+
+                if result.returncode != 0:
+                    logging.warning(f"ffindex_build failed, falling back to simple concatenation: {result.stderr}")
+                    return self._build_simple_database(hmm_files, db_base)
+
+                logging.info(f"ffindex database created: {db_dir}/pfam_db")
+                return str(db_dir / "pfam_db")
+
+            else:
+                return self._build_simple_database(hmm_files, db_base)
 
         except Exception as e:
             logging.error(f"Failed to build HHM database: {e}")
             raise
+
+    def _build_simple_database(self, hmm_files, db_file):
+        """Fallback: simple concatenation database."""
+        logging.info("Building simple concatenated database...")
+
+        with open(db_file, 'w') as outf:
+            for hmm_file in hmm_files:
+                with open(hmm_file, 'r') as inf:
+                    outf.write(inf.read())
+                    outf.write('\n')
+
+        logging.info(f"Simple database created: {db_file}")
+        return str(db_file)
 
     def run_hhblits(self, query_a3m, database, output_hhr, num_threads=8, max_iterations=2):
         """
@@ -247,6 +276,136 @@ class HHblitsRunner:
 
         except Exception as e:
             logging.error(f"Failed to save hits to {output_file}: {e}")
+
+    def create_family_batches(self, families, batch_size=100):
+        """
+        Split families into batches for SLURM array jobs.
+
+        Args:
+            families: List of family IDs
+            batch_size: Number of families per batch
+
+        Returns:
+            List of batches
+        """
+        batches = []
+        for i in range(0, len(families), batch_size):
+            batches.append(families[i:i + batch_size])
+
+        logging.info(f"Created {len(batches)} batches of ~{batch_size} families each")
+        return batches
+
+    def generate_slurm_script(self, database, batch_dir, num_batches,
+                             partition="standard", time_limit="02:00:00",
+                             memory="16GB", cpus=8):
+        """
+        Generate SLURM array job script for batch processing.
+
+        Args:
+            database: Path to HHM database
+            batch_dir: Directory containing batch files
+            num_batches: Number of batches (for array size)
+            partition: SLURM partition
+            time_limit: Job time limit
+            memory: Memory per job
+            cpus: CPUs per job
+
+        Returns:
+            Path to generated SLURM script
+        """
+        script_path = self.results_dir / "run_hhblits_batch.sh"
+
+        script_content = f"""#!/bin/bash
+#SBATCH --job-name=pfam_hhblits
+#SBATCH --array=1-{num_batches}
+#SBATCH --partition={partition}
+#SBATCH --time={time_limit}
+#SBATCH --mem={memory}
+#SBATCH --cpus-per-task={cpus}
+#SBATCH --output={self.results_dir}/slurm_logs/hhblits_%A_%a.out
+#SBATCH --error={self.results_dir}/slurm_logs/hhblits_%A_%a.err
+
+# Load modules if needed
+# module load hhsuite
+
+# Get batch file for this array task
+BATCH_FILE={batch_dir}/batch_${{SLURM_ARRAY_TASK_ID}}.txt
+
+# Read families from batch file
+while read FAMILY_ID; do
+    echo "Processing $FAMILY_ID..."
+
+    SEED_FILE={self.seed_dir}/${{FAMILY_ID}}_SEED
+    A3M_FILE={self.a3m_dir}/${{FAMILY_ID}}.a3m
+    HHR_FILE={self.hhr_dir}/${{FAMILY_ID}}.hhr
+
+    # Convert SEED to A3M
+    python -c "
+from hhblits_runner import HHblitsRunner
+runner = HHblitsRunner('{self.seed_dir}', '{self.hmm_dir}', '{self.results_dir}')
+runner.mul_to_a3m('$SEED_FILE', '$A3M_FILE')
+"
+
+    # Run HHblits
+    hhblits -i $A3M_FILE -d {database} -o $HHR_FILE \\
+        -cpu {cpus} -n 2 -e {self.e_value_threshold}
+
+    # Parse results
+    python -c "
+from hhblits_runner import HHblitsRunner
+runner = HHblitsRunner('{self.seed_dir}', '{self.hmm_dir}', '{self.results_dir}')
+hits = runner.parse_hhr('$HHR_FILE')
+parsed_file = '{self.parsed_dir}/${{FAMILY_ID}}_hits.tsv'
+runner.save_hits('$FAMILY_ID', hits, parsed_file)
+"
+
+done < $BATCH_FILE
+
+echo "Batch ${{SLURM_ARRAY_TASK_ID}} complete"
+"""
+
+        with open(script_path, 'w') as f:
+            f.write(script_content)
+
+        # Make executable
+        script_path.chmod(0o755)
+
+        logging.info(f"SLURM script created: {script_path}")
+        return script_path
+
+    def setup_slurm_batches(self, families, database, batch_size=100):
+        """
+        Set up SLURM batch processing infrastructure.
+
+        Args:
+            families: List of family IDs
+            database: Path to HHM database
+            batch_size: Families per batch
+
+        Returns:
+            Tuple of (slurm_script_path, num_batches)
+        """
+        # Create batch directory
+        batch_dir = self.results_dir / "batches"
+        batch_dir.mkdir(exist_ok=True)
+
+        # Create SLURM logs directory
+        (self.results_dir / "slurm_logs").mkdir(exist_ok=True)
+
+        # Create batches
+        batches = self.create_family_batches(families, batch_size)
+
+        # Write batch files
+        for i, batch in enumerate(batches, 1):
+            batch_file = batch_dir / f"batch_{i}.txt"
+            with open(batch_file, 'w') as f:
+                f.write('\n'.join(batch))
+
+        # Generate SLURM script
+        slurm_script = self.generate_slurm_script(database, batch_dir, len(batches))
+
+        logging.info(f"SLURM batch setup complete: {len(batches)} batches, {len(families)} families")
+        return slurm_script, len(batches)
 
 
 if __name__ == "__main__":
