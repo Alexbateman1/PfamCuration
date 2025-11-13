@@ -39,26 +39,27 @@ class HHblitsRunner:
         logging.info(f"Results directory: {self.results_dir}")
         logging.info(f"E-value threshold: {self.e_value_threshold}")
 
-    def stockholm_to_a3m(self, seed_file, output_file):
+    def mul_to_a3m(self, seed_file, output_file):
         """
-        Convert Stockholm format SEED to A3M format for HHblits.
+        Convert mul format SEED to A3M format for HHblits.
+        Mul format is: one line per sequence, format "seq_id<whitespace>sequence"
 
         Args:
-            seed_file: Path to Stockholm format SEED file
+            seed_file: Path to mul format SEED file
             output_file: Path to output A3M file
 
         Returns:
             True if successful, False otherwise
         """
         try:
-            # Simple conversion: extract sequences, remove gaps in first sequence
             sequences = {}
             with open(seed_file, 'r') as f:
                 for line in f:
                     line = line.strip()
-                    if not line or line.startswith('#') or line.startswith('//'):
+                    if not line:
                         continue
-                    parts = line.split()
+                    # Split on whitespace - first part is ID, rest is sequence
+                    parts = line.split(None, 1)
                     if len(parts) >= 2:
                         seq_id = parts[0]
                         seq = parts[1]
@@ -68,12 +69,12 @@ class HHblitsRunner:
                 logging.warning(f"No sequences found in {seed_file}")
                 return False
 
-            # Write A3M format
+            # Write A3M format (FASTA-like)
             with open(output_file, 'w') as f:
                 for seq_id, seq in sequences.items():
                     f.write(f">{seq_id}\n{seq}\n")
 
-            logging.debug(f"Converted {seed_file} to A3M format")
+            logging.debug(f"Converted {seed_file} to A3M format ({len(sequences)} sequences)")
             return True
 
         except Exception as e:
@@ -210,7 +211,7 @@ class HHblitsRunner:
             logging.warning(f"SEED file not found: {seed_file}")
             return []
 
-        if not self.stockholm_to_a3m(seed_file, a3m_file):
+        if not self.mul_to_a3m(seed_file, a3m_file):
             return []
 
         # Run HHblits
