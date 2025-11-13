@@ -150,15 +150,28 @@ class SVNManager:
         hmm_path = self.extract_hmm(family_id)
         return (seed_path, hmm_path)
 
-    def bulk_export_all_families(self):
+    def bulk_export_all_families(self, skip_existing=True):
         """
         Bulk export entire Families directory (much faster than individual exports).
+        Resumable: skips families that have already been extracted.
+
+        Args:
+            skip_existing: Skip families that already have SEED/HMM files
 
         Returns:
             Dictionary mapping family_id to (seed_path, hmm_path)
         """
         import shutil
         from tempfile import mkdtemp
+
+        # Check what's already been extracted
+        if skip_existing:
+            existing_seeds = {f.stem.replace('_SEED', '') for f in self.seed_dir.glob("PF*_SEED")}
+            existing_hmms = {f.stem for f in self.hmm_dir.glob("PF*.hmm")}
+            already_extracted = existing_seeds & existing_hmms  # Both must exist
+            logging.info(f"Found {len(already_extracted)} families already extracted, will skip them")
+        else:
+            already_extracted = set()
 
         temp_dir = Path(mkdtemp(prefix="pfam_bulk_"))
         logging.info(f"Performing bulk SVN export to {temp_dir}...")
@@ -171,6 +184,8 @@ class SVNManager:
 
             results = {}
             families_dir = temp_dir / "Families"
+            copied = 0
+            skipped = 0
 
             # Iterate through exported families
             for family_dir in sorted(families_dir.glob("PF*")):
@@ -178,6 +193,15 @@ class SVNManager:
                     continue
 
                 family_id = family_dir.name
+
+                # Skip if already extracted
+                if skip_existing and family_id in already_extracted:
+                    seed_path = self.seed_dir / f"{family_id}_SEED"
+                    hmm_path = self.hmm_dir / f"{family_id}.hmm"
+                    results[family_id] = (seed_path, hmm_path)
+                    skipped += 1
+                    continue
+
                 seed_src = family_dir / "SEED"
                 hmm_src = family_dir / "HMM"
 
@@ -195,11 +219,12 @@ class SVNManager:
                     shutil.copy2(hmm_src, hmm_path)
 
                 results[family_id] = (seed_path, hmm_path)
+                copied += 1
 
-                if len(results) % 1000 == 0:
-                    logging.info(f"Progress: {len(results)} families copied")
+                if (copied + skipped) % 1000 == 0:
+                    logging.info(f"Progress: {copied} copied, {skipped} skipped, {copied + skipped} total")
 
-            logging.info(f"Bulk extraction complete: {len(results)} families processed")
+            logging.info(f"Bulk extraction complete: {copied} families copied, {skipped} skipped")
             return results
 
         finally:
