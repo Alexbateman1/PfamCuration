@@ -59,34 +59,36 @@ class ClanNetworkVisualizer:
 
     def connect_to_database(self):
         """Connect to the Pfam database using the config file."""
-        config = {}
-        
-        # Parse the MySQL config file
-        with open(Path(self.mysql_config_file).expanduser(), 'r') as f:
-            for line in f:
-                line = line.strip()
-                if line.startswith('[') or not line or line.startswith('#'):
-                    continue
-                if '=' in line:
-                    key, value = line.split('=', 1)
-                    key = key.strip()
-                    value = value.strip()
-                    
-                    # Map MySQL config keys to Python connector keys
-                    if key == 'user':
-                        config['user'] = value
-                    elif key == 'password':
-                        config['password'] = value
-                    elif key == 'host':
-                        config['host'] = value
-                    elif key == 'port':
-                        config['port'] = int(value)
-        
-        # Add database name
-        config['database'] = 'pfam_live'
-        
-        self.connection = mysql.connector.connect(**config)
-        print(f"Connected to database: {config['database']}")
+        from configparser import ConfigParser
+
+        config_file = Path(self.mysql_config_file).expanduser()
+
+        if not config_file.exists():
+            raise FileNotFoundError(f"MySQL config file not found: {config_file}")
+
+        # Parse MySQL config file using ConfigParser
+        config = ConfigParser()
+        config.read(str(config_file))
+
+        # Get credentials from [client] section
+        if 'client' not in config:
+            raise ValueError(f"No [client] section found in {config_file}")
+
+        db_config = {
+            'host': config.get('client', 'host', fallback='localhost'),
+            'user': config.get('client', 'user'),
+            'password': config.get('client', 'password', fallback=''),
+            'database': 'pfam_live'
+        }
+
+        if config.has_option('client', 'port'):
+            db_config['port'] = config.getint('client', 'port')
+
+        try:
+            self.connection = mysql.connector.connect(**db_config)
+            print(f"Connected to database: {db_config['database']}")
+        except mysql.connector.Error as e:
+            raise Exception(f"Failed to connect to database: {e}")
         
     def get_clan_families(self, clan_acc):
         """
