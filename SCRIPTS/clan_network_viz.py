@@ -70,9 +70,16 @@ class ClanNetworkVisualizer:
         config = ConfigParser()
         config.read(str(config_file))
 
+        # Debug: show what sections were found
+        print(f"DEBUG: Config file: {config_file}")
+        print(f"DEBUG: Sections found: {config.sections()}")
+
         # Get credentials from [client] section
         if 'client' not in config:
             raise ValueError(f"No [client] section found in {config_file}")
+
+        # Debug: show what options are in [client] section
+        print(f"DEBUG: Options in [client]: {config.options('client')}")
 
         db_config = {
             'host': config.get('client', 'host', fallback='localhost'),
@@ -80,6 +87,11 @@ class ClanNetworkVisualizer:
             'password': config.get('client', 'password', fallback=''),
             'database': 'pfam_live'
         }
+
+        # Debug: show config (without exposing password)
+        debug_config = {k: ('***' if k == 'password' and v else v) for k, v in db_config.items()}
+        print(f"DEBUG: db_config: {debug_config}")
+        print(f"DEBUG: Has password: {bool(db_config.get('password'))}")
 
         if config.has_option('client', 'port'):
             db_config['port'] = config.getint('client', 'port')
