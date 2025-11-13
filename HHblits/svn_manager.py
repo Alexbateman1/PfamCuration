@@ -150,12 +150,71 @@ class SVNManager:
         hmm_path = self.extract_hmm(family_id)
         return (seed_path, hmm_path)
 
-    def extract_all_families(self, families=None):
+    def bulk_export_all_families(self):
+        """
+        Bulk export entire Families directory (much faster than individual exports).
+
+        Returns:
+            Dictionary mapping family_id to (seed_path, hmm_path)
+        """
+        import shutil
+        from tempfile import mkdtemp
+
+        temp_dir = Path(mkdtemp(prefix="pfam_bulk_"))
+        logging.info(f"Performing bulk SVN export to {temp_dir}...")
+
+        try:
+            # Export entire Families directory
+            cmd = f"svn export {self.families_url} {temp_dir}/Families"
+            subprocess.run(cmd, shell=True, check=True, capture_output=True)
+            logging.info("Bulk export complete, copying files...")
+
+            results = {}
+            families_dir = temp_dir / "Families"
+
+            # Iterate through exported families
+            for family_dir in sorted(families_dir.glob("PF*")):
+                if not family_dir.is_dir():
+                    continue
+
+                family_id = family_dir.name
+                seed_src = family_dir / "SEED"
+                hmm_src = family_dir / "HMM"
+
+                seed_path = None
+                hmm_path = None
+
+                # Copy SEED if exists
+                if seed_src.exists():
+                    seed_path = self.seed_dir / f"{family_id}_SEED"
+                    shutil.copy2(seed_src, seed_path)
+
+                # Copy HMM if exists
+                if hmm_src.exists():
+                    hmm_path = self.hmm_dir / f"{family_id}.hmm"
+                    shutil.copy2(hmm_src, hmm_path)
+
+                results[family_id] = (seed_path, hmm_path)
+
+                if len(results) % 1000 == 0:
+                    logging.info(f"Progress: {len(results)} families copied")
+
+            logging.info(f"Bulk extraction complete: {len(results)} families processed")
+            return results
+
+        finally:
+            # Clean up temp directory
+            if temp_dir.exists():
+                shutil.rmtree(temp_dir)
+                logging.info(f"Cleaned up temp directory: {temp_dir}")
+
+    def extract_all_families(self, families=None, use_bulk=True):
         """
         Extract SEED and HMM files for all families.
 
         Args:
             families: List of family IDs to extract (if None, extracts all)
+            use_bulk: Use bulk export method (much faster for large sets)
 
         Returns:
             Dictionary mapping family_id to (seed_path, hmm_path)
@@ -163,10 +222,24 @@ class SVNManager:
         if families is None:
             families = self.list_all_families()
 
+        # Use bulk export if processing many families
+        if use_bulk and len(families) > 100:
+            logging.info(f"Using bulk export for {len(families)} families...")
+            all_results = self.bulk_export_all_families()
+
+            # Filter to requested families if specified
+            if families != self.list_all_families():
+                results = {fam: all_results.get(fam, (None, None)) for fam in families}
+            else:
+                results = all_results
+
+            return results
+
+        # Fall back to individual extraction for small sets
         results = {}
         total = len(families)
 
-        logging.info(f"Extracting {total} families...")
+        logging.info(f"Extracting {total} families individually...")
 
         for i, family_id in enumerate(families, 1):
             if i % 100 == 0:
