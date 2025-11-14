@@ -10,32 +10,34 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def build_sequence_to_family_map(seed_dir):
-    """Build mapping from sequence IDs to Pfam families."""
+def build_sequence_to_family_map(a3m_dir):
+    """Build mapping from sequence IDs to Pfam families by reading A3M files."""
     seq_to_family = {}
-    seed_dir = Path(seed_dir)
+    a3m_dir = Path(a3m_dir)
 
-    seed_files = list(seed_dir.glob("PF*_SEED"))
-    logging.info(f"Building sequence-to-family map from {len(seed_files)} SEED files...")
+    a3m_files = list(a3m_dir.glob("PF*.a3m"))
+    logging.info(f"Building sequence-to-family map from {len(a3m_files)} A3M files...")
 
-    for i, seed_file in enumerate(seed_files, 1):
+    for i, a3m_file in enumerate(a3m_files, 1):
         if i % 1000 == 0:
-            logging.info(f"Progress: {i}/{len(seed_files)}")
+            logging.info(f"Progress: {i}/{len(a3m_files)}")
 
-        family_id = seed_file.stem.replace('_SEED', '')
+        family_id = a3m_file.stem  # PF00001.a3m -> PF00001
 
         try:
-            with open(seed_file, 'r') as f:
+            with open(a3m_file, 'r') as f:
                 for line in f:
                     line = line.strip()
-                    if not line:
-                        continue
-                    parts = line.split(None, 1)
-                    if len(parts) >= 2:
-                        seq_id = parts[0]
+                    if line.startswith('>'):
+                        # Extract sequence ID (remove '>')
+                        seq_id = line[1:]
                         seq_to_family[seq_id] = family_id
+                        # Also map without /start-end if present
+                        if '/' in seq_id:
+                            base_id = seq_id.split('/')[0]
+                            seq_to_family[base_id] = family_id
         except Exception as e:
-            logging.warning(f"Failed to read {seed_file}: {e}")
+            logging.warning(f"Failed to read {a3m_file}: {e}")
 
     logging.info(f"Mapped {len(seq_to_family)} sequences to families")
     return seq_to_family
@@ -77,15 +79,15 @@ def add_pfam_mapping(input_file, output_file, seq_to_family):
 
 if __name__ == '__main__':
     if len(sys.argv) != 4:
-        print("Usage: python3 add_pfam_mapping.py <seed_dir> <input_tsv> <output_tsv>")
+        print("Usage: python3 add_pfam_mapping.py <a3m_dir> <input_tsv> <output_tsv>")
         sys.exit(1)
 
-    seed_dir = sys.argv[1]
+    a3m_dir = sys.argv[1]
     input_file = sys.argv[2]
     output_file = sys.argv[3]
 
     # Build mapping
-    seq_to_family = build_sequence_to_family_map(seed_dir)
+    seq_to_family = build_sequence_to_family_map(a3m_dir)
 
     # Add mapping to results
     add_pfam_mapping(input_file, output_file, seq_to_family)
