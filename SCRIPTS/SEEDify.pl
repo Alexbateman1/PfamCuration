@@ -99,7 +99,37 @@ if (-e "ALIGN"){
 	warn "In $0: Failed to build SEED4";
 	exit;
     }
-    system("belvu -n 80 SEED4 -o mul | grep -v '//' > NEWSEED");
+
+    # Make non-redundant at 80% identity
+    my $nr_thresh = 80;
+    system("belvu -n $nr_thresh SEED4 -o mul | grep -v '//' > NEWSEED");
+
+    # Check if we ended up with only 1 sequence
+    my $seed_size = num_seq("NEWSEED");
+
+    if ($seed_size == 1) {
+	print STDERR "Only 1 sequence in NEWSEED at ${nr_thresh}% identity, trying higher thresholds...\n";
+	$nr_thresh = 85;  # Start at 85%
+
+	while ($nr_thresh <= 100 && $seed_size == 1) {
+	    system("belvu -n $nr_thresh SEED4 -o mul | grep -v '//' > NEWSEED");
+	    $seed_size = num_seq("NEWSEED");
+
+	    if ($seed_size > 1) {
+		print STDERR "Found $seed_size sequences at ${nr_thresh}% identity\n";
+		last;
+	    }
+
+	    $nr_thresh += 5;
+	}
+
+	if ($seed_size == 1) {
+	    warn "In $0: Still only 1 sequence after trying all thresholds up to 100%. Cannot create multi-sequence SEED alignment.";
+	    exit;
+	}
+    } else {
+	print STDERR "Created NEWSEED with $seed_size sequences at ${nr_thresh}% identity\n";
+    }
 } else {
     die "Cannot find file ALIGN in current directory!";
 }
