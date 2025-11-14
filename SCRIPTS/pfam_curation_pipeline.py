@@ -35,7 +35,8 @@ class CurationPipeline:
         'add_paperblast': '.add_paperblast_complete',
         'add_species': '.add_species_complete',
         'add_swiss': '.add_swiss_complete',
-        'add_ted': '.add_ted_complete'
+        'add_ted': '.add_ted_complete',
+        'add_foldseek': '.add_foldseek_complete'
     }
     
     def __init__(self, working_dir: str = '.'):
@@ -272,22 +273,22 @@ class CurationPipeline:
             True if new Iterate directories were created, False otherwise
         """
         print("\nRunning iteration cycle...")
-        
-        # Count existing Iterate directories before
-        before_count = len(list(self.working_dir.glob('*/Iterate')))
-        
+
+        # Count existing Iterate directories before (at all levels)
+        before_count = len(list(self.working_dir.glob('**/Iterate')))
+
         # Run iterate.sh equivalent
         try:
             with open(self.working_dir / 'triage', 'r') as f:
                 triage_lines = f.readlines()
-            
+
             # Shuffle lines and filter
             import random
             random.shuffle(triage_lines)
-            
+
             for line in triage_lines:
-                # Skip if too many Iterate levels
-                if 'Iterate/Iterate/Iterate/Iterate/Iterate/Iterate' in line:
+                # Skip if at max Iterate depth (6 levels)
+                if 'Iterate/Iterate/Iterate/Iterate/Iterate/Iterate/Iterate' in line:
                     continue
                 
                 fields = line.split()
@@ -314,12 +315,12 @@ class CurationPipeline:
         # Wait for pfbuilds to complete
         if not self.wait_for_jobs():
             print("⚠ Warning: Some jobs may still be running")
-        
+
         # Run triage again
         self.run_triage()
-        
-        # Count Iterate directories after
-        after_count = len(list(self.working_dir.glob('*/Iterate')))
+
+        # Count Iterate directories after (at all levels)
+        after_count = len(list(self.working_dir.glob('**/Iterate')))
         
         new_directories = after_count - before_count
         if new_directories > 0:
@@ -522,6 +523,10 @@ awk '{{
             'add_ted': {
                 'cmd': f'current_dir=$(pwd); awk \'{{system("cd "$1"; echo "$1"; ted_ali.pl SEED; cd \'"$current_dir"\'")}}\'  {filtered_triage}',
                 'desc': 'Adding TED files'
+            },
+            'add_foldseek': {
+                'cmd': f'current_dir=$(pwd); awk \'{{system("cd "$1"; echo "$1"; add_foldseek.sh; cd \'"$current_dir"\'")}}\'  {filtered_triage}',
+                'desc': 'Adding Foldseek files'
             }
         }
         
