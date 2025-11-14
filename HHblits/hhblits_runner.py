@@ -145,8 +145,8 @@ class HHblitsRunner:
                 logging.info("Falling back to concatenated database...")
                 return self._build_concatenated_hhm_database(hhm_dir, db_dir)
 
-            logging.info(f"HH-suite database created: {db_dir}/pfam_db")
-            return str(db_dir / "pfam_db")
+            logging.info(f"HH-suite database created: {db_dir}/pfam_db_hhm")
+            return str(db_dir / "pfam_db_hhm")
 
         except Exception as e:
             logging.error(f"Failed to build HH-suite database: {e}")
