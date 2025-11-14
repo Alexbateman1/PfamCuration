@@ -287,8 +287,8 @@ class CurationPipeline:
             random.shuffle(triage_lines)
 
             for line in triage_lines:
-                # Skip if at max Iterate depth (4 levels)
-                if 'Iterate/Iterate/Iterate/Iterate/Iterate' in line:
+                # Skip if at max Iterate depth (6 levels)
+                if 'Iterate/Iterate/Iterate/Iterate/Iterate/Iterate/Iterate' in line:
                     continue
                 
                 fields = line.split()
