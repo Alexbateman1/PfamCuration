@@ -150,96 +150,63 @@ class SVNManager:
         hmm_path = self.extract_hmm(family_id)
         return (seed_path, hmm_path)
 
-    def bulk_export_all_families(self, skip_existing=True):
+    def incremental_export_all_families(self, families):
         """
-        Bulk export entire Families directory (much faster than individual exports).
-        Resumable: skips families that have already been extracted.
+        Export families one at a time directly to final location.
+        Fully resumable - downloads directly to destination, skips existing files.
 
         Args:
-            skip_existing: Skip families that already have SEED/HMM files
+            families: List of family IDs to extract
 
         Returns:
             Dictionary mapping family_id to (seed_path, hmm_path)
         """
-        import shutil
-        from tempfile import mkdtemp
+        results = {}
+        total = len(families)
 
         # Check what's already been extracted
-        if skip_existing:
-            existing_seeds = {f.stem.replace('_SEED', '') for f in self.seed_dir.glob("PF*_SEED")}
-            existing_hmms = {f.stem for f in self.hmm_dir.glob("PF*.hmm")}
-            already_extracted = existing_seeds & existing_hmms  # Both must exist
-            logging.info(f"Found {len(already_extracted)} families already extracted, will skip them")
-        else:
-            already_extracted = set()
+        existing_seeds = {f.stem.replace('_SEED', '') for f in self.seed_dir.glob("PF*_SEED")}
+        existing_hmms = {f.stem for f in self.hmm_dir.glob("PF*.hmm")}
+        already_extracted = existing_seeds & existing_hmms  # Both must exist
 
-        temp_dir = Path(mkdtemp(prefix="pfam_bulk_"))
-        logging.info(f"Performing bulk SVN export to {temp_dir}...")
+        to_download = [f for f in families if f not in already_extracted]
 
-        try:
-            # Export entire Families directory
-            cmd = f"svn export {self.families_url} {temp_dir}/Families"
-            subprocess.run(cmd, shell=True, check=True, capture_output=True)
-            logging.info("Bulk export complete, copying files...")
+        logging.info(f"Found {len(already_extracted)} families already extracted")
+        logging.info(f"Need to download {len(to_download)} families")
 
-            results = {}
-            families_dir = temp_dir / "Families"
-            copied = 0
-            skipped = 0
+        # Add already extracted to results
+        for family_id in already_extracted:
+            seed_path = self.seed_dir / f"{family_id}_SEED"
+            hmm_path = self.hmm_dir / f"{family_id}.hmm"
+            results[family_id] = (seed_path, hmm_path)
 
-            # Iterate through exported families
-            for family_dir in sorted(families_dir.glob("PF*")):
-                if not family_dir.is_dir():
-                    continue
-
-                family_id = family_dir.name
-
-                # Skip if already extracted
-                if skip_existing and family_id in already_extracted:
-                    seed_path = self.seed_dir / f"{family_id}_SEED"
-                    hmm_path = self.hmm_dir / f"{family_id}.hmm"
-                    results[family_id] = (seed_path, hmm_path)
-                    skipped += 1
-                    continue
-
-                seed_src = family_dir / "SEED"
-                hmm_src = family_dir / "HMM"
-
-                seed_path = None
-                hmm_path = None
-
-                # Copy SEED if exists
-                if seed_src.exists():
-                    seed_path = self.seed_dir / f"{family_id}_SEED"
-                    shutil.copy2(seed_src, seed_path)
-
-                # Copy HMM if exists
-                if hmm_src.exists():
-                    hmm_path = self.hmm_dir / f"{family_id}.hmm"
-                    shutil.copy2(hmm_src, hmm_path)
-
+        # Download remaining families directly to final location
+        for i, family_id in enumerate(to_download, 1):
+            try:
+                seed_path, hmm_path = self.extract_family(family_id)
                 results[family_id] = (seed_path, hmm_path)
-                copied += 1
 
-                if (copied + skipped) % 1000 == 0:
-                    logging.info(f"Progress: {copied} copied, {skipped} skipped, {copied + skipped} total")
+                if i % 100 == 0:
+                    remaining = len(to_download) - i
+                    logging.info(f"Progress: {i}/{len(to_download)} downloaded, {remaining} remaining, "
+                               f"{len(already_extracted) + i}/{total} total complete")
 
-            logging.info(f"Bulk extraction complete: {copied} families copied, {skipped} skipped")
-            return results
+            except Exception as e:
+                logging.error(f"Failed to extract {family_id}: {e}")
+                results[family_id] = (None, None)
 
-        finally:
-            # Clean up temp directory
-            if temp_dir.exists():
-                shutil.rmtree(temp_dir)
-                logging.info(f"Cleaned up temp directory: {temp_dir}")
+        logging.info(f"Extraction complete: {len(results)} families total, "
+                    f"{len(already_extracted)} were cached, {len(to_download)} downloaded")
 
-    def extract_all_families(self, families=None, use_bulk=True):
+        return results
+
+    def extract_all_families(self, families=None):
         """
         Extract SEED and HMM files for all families.
+        Fully resumable - downloads directly to destination, skips existing files.
 
         Args:
             families: List of family IDs to extract (if None, extracts all)
-            use_bulk: Use bulk export method (much faster for large sets)
 
         Returns:
             Dictionary mapping family_id to (seed_path, hmm_path)
@@ -247,33 +214,12 @@ class SVNManager:
         if families is None:
             families = self.list_all_families()
 
-        # Use bulk export if processing many families
-        if use_bulk and len(families) > 100:
-            logging.info(f"Using bulk export for {len(families)} families...")
-            all_results = self.bulk_export_all_families()
+        logging.info(f"Extracting {len(families)} families (resumable mode)...")
 
-            # Filter to requested families if specified
-            if families != self.list_all_families():
-                results = {fam: all_results.get(fam, (None, None)) for fam in families}
-            else:
-                results = all_results
+        # Use incremental approach - downloads directly to final location
+        # and is fully resumable if interrupted
+        results = self.incremental_export_all_families(families)
 
-            return results
-
-        # Fall back to individual extraction for small sets
-        results = {}
-        total = len(families)
-
-        logging.info(f"Extracting {total} families individually...")
-
-        for i, family_id in enumerate(families, 1):
-            if i % 100 == 0:
-                logging.info(f"Progress: {i}/{total} families extracted")
-
-            seed_path, hmm_path = self.extract_family(family_id)
-            results[family_id] = (seed_path, hmm_path)
-
-        logging.info(f"Extraction complete: {total} families processed")
         return results
 
 
