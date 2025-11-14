@@ -390,7 +390,7 @@ runner.mul_to_a3m('$SEED_FILE', '$A3M_FILE')
 
     # Run HHblits (note: database path without extension)
     hhblits -i $A3M_FILE -d {database} -o $HHR_FILE \\
-        -cpu {cpus} -n 2 -e {self.e_value_threshold}
+        -cpu {cpus} -n 2 -e {self.e_value_threshold} -M first
 
     # Parse results
     python3 -c "
