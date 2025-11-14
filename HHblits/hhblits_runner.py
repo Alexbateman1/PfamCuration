@@ -81,61 +81,90 @@ class HHblitsRunner:
             logging.error(f"Failed to convert {seed_file} to A3M: {e}")
             return False
 
-    def build_hhm_database(self, use_ffindex=True):
+    def build_hhm_database(self):
         """
-        Build HHblits database from HMM files.
-        Uses ffindex for efficient random access.
-
-        Args:
-            use_ffindex: Use ffindex format (recommended for large databases)
+        Build HH-suite database from SEED alignments using hhmake.
+        Note: Pfam HMM files are in HMMER format, but HHblits needs HH-suite format.
+        We build HH-suite profiles from SEED alignments instead.
 
         Returns:
-            Path to database file (without extension)
+            Path to database directory (for use with hhblits -d)
         """
-        db_base = self.results_dir / "pfam_hhm_db"
+        db_dir = self.results_dir / "hhsuite_db"
+        db_dir.mkdir(exist_ok=True)
 
         try:
-            hmm_files = sorted(self.hmm_dir.glob("PF*.hmm"))
-            logging.info(f"Building HHM database from {len(hmm_files)} HMM files...")
+            seed_files = sorted(self.seed_dir.glob("PF*_SEED"))
+            logging.info(f"Building HH-suite database from {len(seed_files)} SEED alignments...")
+            logging.info("This may take some time (converting alignments to HH-suite profiles)...")
 
-            if use_ffindex:
-                # Use ffindex for efficient indexed database
-                db_dir = self.results_dir / "ffindex_db"
-                db_dir.mkdir(exist_ok=True)
+            # Build HHsuite profiles from SEED alignments
+            hhm_dir = db_dir / "hhm_files"
+            hhm_dir.mkdir(exist_ok=True)
 
-                # Create ffindex database
-                ffdata = db_dir / "pfam_db_hhm.ffdata"
-                ffindex = db_dir / "pfam_db_hhm.ffindex"
+            failed = 0
+            for i, seed_file in enumerate(seed_files, 1):
+                if i % 100 == 0:
+                    logging.info(f"Progress: {i}/{len(seed_files)} profiles built")
 
-                # Build ffindex
-                cmd = f"ffindex_build -s {ffdata} {ffindex} {self.hmm_dir}/ -d"
+                family_id = seed_file.stem.replace('_SEED', '')
+                a3m_file = self.a3m_dir / f"{family_id}.a3m"
+                hhm_file = hhm_dir / f"{family_id}.hhm"
+
+                # Skip if already built
+                if hhm_file.exists():
+                    continue
+
+                # Convert SEED to A3M if not already done
+                if not a3m_file.exists():
+                    if not self.mul_to_a3m(seed_file, a3m_file):
+                        failed += 1
+                        continue
+
+                # Build HH-suite profile with hhmake
+                cmd = f"hhmake -i {a3m_file} -o {hhm_file}"
                 result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
                 if result.returncode != 0:
-                    logging.warning(f"ffindex_build failed, falling back to simple concatenation: {result.stderr}")
-                    return self._build_simple_database(hmm_files, db_base)
+                    logging.warning(f"hhmake failed for {family_id}: {result.stderr}")
+                    failed += 1
 
-                logging.info(f"ffindex database created: {db_dir}/pfam_db")
-                return str(db_dir / "pfam_db")
+            logging.info(f"Profile building complete: {len(seed_files) - failed} succeeded, {failed} failed")
 
-            else:
-                return self._build_simple_database(hmm_files, db_base)
+            # Build ffindex database from HHM files
+            ffdata = db_dir / "pfam_db_hhm.ffdata"
+            ffindex = db_dir / "pfam_db_hhm.ffindex"
+
+            logging.info("Building ffindex database from HH-suite profiles...")
+            cmd = f"ffindex_build -s {ffdata} {ffindex} {hhm_dir}/"
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+
+            if result.returncode != 0:
+                logging.error(f"ffindex_build failed: {result.stderr}")
+                logging.info("Falling back to concatenated database...")
+                return self._build_concatenated_hhm_database(hhm_dir, db_dir)
+
+            logging.info(f"HH-suite database created: {db_dir}/pfam_db")
+            return str(db_dir / "pfam_db")
 
         except Exception as e:
-            logging.error(f"Failed to build HHM database: {e}")
+            logging.error(f"Failed to build HH-suite database: {e}")
             raise
 
-    def _build_simple_database(self, hmm_files, db_file):
-        """Fallback: simple concatenation database."""
-        logging.info("Building simple concatenated database...")
+    def _build_concatenated_hhm_database(self, hhm_dir, db_dir):
+        """Fallback: concatenate HHM files into single file."""
+        logging.info("Building concatenated HH-suite database...")
+
+        db_file = db_dir / "pfam_db_concat"
+        hhm_files = sorted(hhm_dir.glob("*.hhm"))
 
         with open(db_file, 'w') as outf:
-            for hmm_file in hmm_files:
-                with open(hmm_file, 'r') as inf:
+            for hhm_file in hhm_files:
+                with open(hhm_file, 'r') as inf:
                     outf.write(inf.read())
                     outf.write('\n')
 
-        logging.info(f"Simple database created: {db_file}")
+        logging.info(f"Concatenated database created: {db_file}")
         return str(db_file)
 
     def run_hhblits(self, query_a3m, database, output_hhr, num_threads=8, max_iterations=2):
@@ -315,6 +344,9 @@ class HHblitsRunner:
         """
         script_path = self.results_dir / "run_hhblits_batch.sh"
 
+        # Get the directory containing the pipeline scripts
+        pipeline_dir = Path(__file__).parent.absolute()
+
         script_content = f"""#!/bin/bash
 #SBATCH --job-name=pfam_hhblits
 #SBATCH --array=1-{num_batches}
@@ -324,6 +356,9 @@ class HHblitsRunner:
 #SBATCH --cpus-per-task={cpus}
 #SBATCH --output={self.results_dir}/slurm_logs/hhblits_%A_%a.out
 #SBATCH --error={self.results_dir}/slurm_logs/hhblits_%A_%a.err
+
+# Add pipeline directory to PYTHONPATH
+export PYTHONPATH={pipeline_dir}:$PYTHONPATH
 
 # Load modules if needed
 # module load hhsuite
@@ -339,19 +374,25 @@ while read FAMILY_ID; do
     A3M_FILE={self.a3m_dir}/${{FAMILY_ID}}.a3m
     HHR_FILE={self.hhr_dir}/${{FAMILY_ID}}.hhr
 
+    # Skip if already processed
+    if [ -f "{self.parsed_dir}/${{FAMILY_ID}}_hits.tsv" ]; then
+        echo "  Already processed, skipping..."
+        continue
+    fi
+
     # Convert SEED to A3M
-    python -c "
+    python3 -c "
 from hhblits_runner import HHblitsRunner
 runner = HHblitsRunner('{self.seed_dir}', '{self.hmm_dir}', '{self.results_dir}')
 runner.mul_to_a3m('$SEED_FILE', '$A3M_FILE')
 "
 
-    # Run HHblits
+    # Run HHblits (note: database path without extension)
     hhblits -i $A3M_FILE -d {database} -o $HHR_FILE \\
         -cpu {cpus} -n 2 -e {self.e_value_threshold}
 
     # Parse results
-    python -c "
+    python3 -c "
 from hhblits_runner import HHblitsRunner
 runner = HHblitsRunner('{self.seed_dir}', '{self.hmm_dir}', '{self.results_dir}')
 hits = runner.parse_hhr('$HHR_FILE')
