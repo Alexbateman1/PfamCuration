@@ -70,9 +70,16 @@ class ClanNetworkVisualizer:
         config = ConfigParser()
         config.read(str(config_file))
 
+        # Debug: show what sections were found
+        print(f"DEBUG: Config file: {config_file}")
+        print(f"DEBUG: Sections found: {config.sections()}")
+
         # Get credentials from [client] section
         if 'client' not in config:
             raise ValueError(f"No [client] section found in {config_file}")
+
+        # Debug: show what options are in [client] section
+        print(f"DEBUG: Options in [client]: {config.options('client')}")
 
         db_config = {
             'host': config.get('client', 'host', fallback='localhost'),
@@ -80,6 +87,11 @@ class ClanNetworkVisualizer:
             'password': config.get('client', 'password', fallback=''),
             'database': 'pfam_live'
         }
+
+        # Debug: show config (without exposing password)
+        debug_config = {k: ('***' if k == 'password' and v else v) for k, v in db_config.items()}
+        print(f"DEBUG: db_config: {debug_config}")
+        print(f"DEBUG: Has password: {bool(db_config.get('password'))}")
 
         if config.has_option('client', 'port'):
             db_config['port'] = config.getint('client', 'port')
@@ -817,6 +829,16 @@ class ClanNetworkVisualizer:
             Click the button to enable editing mode for easier node repositioning
         </div>
     </div>
+
+    <div style="text-align: center; margin-bottom: 15px; background-color: white; padding: 15px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <label for="sizeSlider" style="font-weight: bold; margin-right: 10px;">Node & Text Scale:</label>
+        <input type="range" id="sizeSlider" min="0.3" max="3.0" step="0.1" value="1.0"
+               style="width: 300px; vertical-align: middle;">
+        <span id="sizeValue" style="margin-left: 10px; font-weight: bold; color: #4CAF50;">100%</span>
+        <div style="font-size: 12px; color: #666; margin-top: 5px;">
+            Adjust the size of all nodes and text labels
+        </div>
+    </div>
     
     <div class="legend">
         <strong>Legend:</strong>
@@ -897,7 +919,7 @@ class ClanNetworkVisualizer:
         var gridCols = Math.ceil(Math.sqrt(isolatedNodes.length));
         var gridRows = Math.ceil(isolatedNodes.length / gridCols);
         var gridSpacing = 150;
-        var gridStartX = -1000;  // Position grid on far left
+        var gridStartX = -2500;  // Position grid far on the left to avoid overlap
         var gridStartY = -400;
         
         // Position isolated nodes in a grid
@@ -1047,12 +1069,76 @@ class ClanNetworkVisualizer:
         network.on('dragStart', function() {{
             tooltip.style.visibility = 'hidden';
         }});
-        
+
+        // Store original node sizes and font sizes for scaling
+        var originalNodeData = {{}};
+        nodes.forEach(function(node) {{
+            originalNodeData[node.id] = {{
+                size: node.size,
+                fontSize: node.font ? node.font.size : 18,
+                boldSize: node.font && node.font.bold ? node.font.bold.size : 20,
+                vadjust: node.font && node.font.vadjust ? node.font.vadjust : 0,
+                widthMin: node.widthConstraint ? node.widthConstraint.minimum : null,
+                widthMax: node.widthConstraint ? node.widthConstraint.maximum : null,
+                heightMin: node.heightConstraint ? node.heightConstraint.minimum : null,
+                heightMax: node.heightConstraint ? node.heightConstraint.maximum : null
+            }};
+        }});
+
+        // Handle size slider changes
+        var sizeSlider = document.getElementById('sizeSlider');
+        var sizeValue = document.getElementById('sizeValue');
+
+        sizeSlider.addEventListener('input', function() {{
+            var scale = parseFloat(this.value);
+            sizeValue.textContent = Math.round(scale * 100) + '%';
+
+            // Update all nodes with scaled sizes
+            var updates = [];
+            nodes.forEach(function(node) {{
+                var original = originalNodeData[node.id];
+                var update = {{
+                    id: node.id,
+                    size: original.size * scale,
+                    font: {{
+                        size: Math.round(original.fontSize * scale),
+                        color: node.font.color,
+                        face: node.font.face,
+                        bold: {{ size: Math.round(original.boldSize * scale) }}
+                    }}
+                }};
+
+                // Scale vadjust for ellipse shapes
+                if (original.vadjust) {{
+                    update.font.vadjust = Math.round(original.vadjust * scale);
+                }}
+
+                // Scale width/height constraints for ellipse shapes
+                if (original.widthMin !== null) {{
+                    update.widthConstraint = {{
+                        minimum: original.widthMin * scale,
+                        maximum: original.widthMax * scale
+                    }};
+                }}
+                if (original.heightMin !== null) {{
+                    update.heightConstraint = {{
+                        minimum: original.heightMin * scale,
+                        maximum: original.heightMax * scale
+                    }};
+                }}
+
+                updates.push(update);
+            }});
+
+            nodes.update(updates);
+        }});
+
         // Add some info on console
         console.log('Network created with ' + nodes.length + ' nodes and ' + edges.length + ' edges');
         console.log('Isolated nodes arranged in grid on left side: ' + isolatedNodes.length);
         console.log('Toggle editing mode to prevent accidental page opens while repositioning nodes.');
         console.log('Drag nodes to reposition them. Hover over nodes and edges to see details.');
+        console.log('Use the size slider to adjust node and text scale.');
     </script>
 </body>
 </html>'''
