@@ -182,6 +182,23 @@ class ClanNetworkVisualizer:
         else:
             return 2  # Moderate
 
+    def categorize_pvalue(self, pvalue):
+        """
+        Categorize p-value into significance levels (for HHblits).
+
+        Args:
+            pvalue: p-value
+
+        Returns:
+            Category number (0-2) where 0 is most significant
+        """
+        if pvalue < 1e-10:
+            return 0  # Very significant
+        elif pvalue < 1e-5:
+            return 1  # Significant
+        else:
+            return 2  # Moderate
+
     def categorize_scoop_score(self, score):
         """
         Categorize SCOOP score into significance levels.
@@ -275,19 +292,19 @@ class ClanNetworkVisualizer:
         print(f"Total: {total_rows:,} rows -> {len(edges)} unique edges")
         return edges
 
-    def parse_hhblits_results(self, clan_families, evalue_threshold=1e-3):
+    def parse_hhblits_results(self, clan_families, pvalue_threshold=0.01):
         """
         Parse HHblits results and extract matches involving clan families.
 
         Args:
             clan_families: DataFrame of families in the clan
-            evalue_threshold: Maximum E-value to include
+            pvalue_threshold: Maximum p-value to include (column 6)
 
         Returns:
-            Dictionary mapping (pfam1, pfam2) to {'evalue': value, 'category': cat}
+            Dictionary mapping (pfam1, pfam2) to {'pvalue': value, 'category': cat}
         """
         print(f"\n[HHBLITS] Reading results from {self.hhblits_file}...")
-        print(f"Filtering for E-value < {evalue_threshold}")
+        print(f"Filtering for p-value < {pvalue_threshold}")
 
         clan_pfam_accs = set(clan_families['pfamA_acc'])
 
@@ -309,14 +326,14 @@ class ClanNetworkVisualizer:
                     if len(chunk) > 0:
                         print(f"    query_family: {chunk.iloc[0]['query_family']}")
                         print(f"    target_pfam_family: {chunk.iloc[0]['target_pfam_family']}")
-                        print(f"    e_value: {chunk.iloc[0]['e_value']}")
+                        print(f"    p_value: {chunk.iloc[0]['p_value']}")
                     first_chunk = False
 
-                # Convert E-value to float and filter
-                chunk['e_value'] = pd.to_numeric(chunk['e_value'], errors='coerce')
+                # Convert p-value to float and filter
+                chunk['p_value'] = pd.to_numeric(chunk['p_value'], errors='coerce')
                 pre_filter_count = len(chunk)
-                chunk = chunk[chunk['e_value'] < evalue_threshold]
-                print(f"  DEBUG: E-value filter: {pre_filter_count} -> {len(chunk)} rows")
+                chunk = chunk[chunk['p_value'] < pvalue_threshold]
+                print(f"  DEBUG: p-value filter: {pre_filter_count} -> {len(chunk)} rows")
 
                 if len(chunk) == 0:
                     continue
@@ -341,11 +358,11 @@ class ClanNetworkVisualizer:
                         continue
 
                     edge_key = tuple(sorted([pfam1, pfam2]))
-                    evalue = row['e_value']
-                    category = self.categorize_evalue(evalue)
+                    pvalue = row['p_value']
+                    category = self.categorize_pvalue(pvalue)
 
-                    if edge_key not in edges or evalue < edges[edge_key]['evalue']:
-                        edges[edge_key] = {'evalue': evalue, 'category': category}
+                    if edge_key not in edges or pvalue < edges[edge_key]['pvalue']:
+                        edges[edge_key] = {'pvalue': pvalue, 'category': category}
 
                 if total_rows % 1000000 == 0:
                     print(f"  Processed {total_rows:,} rows, kept {kept_rows:,}")
@@ -650,6 +667,8 @@ class ClanNetworkVisualizer:
                 # Build tooltip
                 if method == 'scoop':
                     score_or_eval = f"SCOOP Score: {data['score']:.2f}"
+                elif method == 'hhblits':
+                    score_or_eval = f"p-value: {data['pvalue']:.2e}"
                 else:
                     score_or_eval = f"E-value: {data['evalue']:.2e}"
 
@@ -1120,6 +1139,10 @@ class ClanNetworkVisualizer:
                 cat0_label = 'Score ≥ 30'
                 cat1_label = 'Score 20-30'
                 cat2_label = 'Score 10-20'
+            elif method == 'hhblits':
+                cat0_label = 'p-value < 1e-10'
+                cat1_label = 'p-value 1e-10 to 1e-5'
+                cat2_label = 'p-value 1e-5 to threshold'
             else:
                 cat0_label = 'E-value < 1e-10'
                 cat1_label = 'E-value 1e-10 to 1e-5'
@@ -1144,7 +1167,7 @@ class ClanNetworkVisualizer:
 
         return '\n'.join(legend_parts)
 
-    def analyze_clan(self, clan_acc, selected_methods, evalue_threshold=1e-5, hhblits_evalue_threshold=0.01, scoop_threshold=10.0):
+    def analyze_clan(self, clan_acc, selected_methods, evalue_threshold=1e-5, hhblits_pvalue_threshold=0.01, scoop_threshold=10.0):
         """
         Complete analysis pipeline for a clan.
 
@@ -1152,7 +1175,7 @@ class ClanNetworkVisualizer:
             clan_acc: Clan accession (e.g., 'CL0004')
             selected_methods: List of methods to use (['foldseek'], ['hhblits'], ['scoop'], or combinations)
             evalue_threshold: Maximum E-value for foldseek
-            hhblits_evalue_threshold: Maximum E-value for hhblits (default 0.01, higher due to database size correction)
+            hhblits_pvalue_threshold: Maximum p-value for hhblits (default 0.01)
             scoop_threshold: Minimum SCOOP score
         """
         print(f"\n{'='*60}")
@@ -1176,7 +1199,7 @@ class ClanNetworkVisualizer:
             foldseek_edges = self.parse_foldseek_results(clan_families, evalue_threshold)
 
         if 'hhblits' in selected_methods:
-            hhblits_edges = self.parse_hhblits_results(clan_families, hhblits_evalue_threshold)
+            hhblits_edges = self.parse_hhblits_results(clan_families, hhblits_pvalue_threshold)
 
         if 'scoop' in selected_methods:
             scoop_edges = self.parse_scoop_results(clan_families, scoop_threshold)
@@ -1236,7 +1259,7 @@ Examples:
   %(prog)s CL0004 --all
 
   # Custom thresholds
-  %(prog)s CL0004 --all --evalue-threshold 1e-10 --hhblits-evalue-threshold 0.001 --scoop-threshold 20
+  %(prog)s CL0004 --all --evalue-threshold 1e-10 --hhblits-pvalue-threshold 0.001 --scoop-threshold 20
         '''
     )
 
@@ -1247,8 +1270,8 @@ Examples:
     parser.add_argument('--all', action='store_true', help='Include all comparison methods')
     parser.add_argument('--evalue-threshold', type=float, default=1e-5,
                        help='E-value threshold for foldseek (default: 1e-5)')
-    parser.add_argument('--hhblits-evalue-threshold', type=float, default=0.01,
-                       help='E-value threshold for hhblits (default: 0.01, higher due to database size correction)')
+    parser.add_argument('--hhblits-pvalue-threshold', type=float, default=0.01,
+                       help='p-value threshold for hhblits (default: 0.01)')
     parser.add_argument('--scoop-threshold', type=float, default=10.0,
                        help='Minimum SCOOP score threshold (default: 10.0)')
     parser.add_argument('--mysql-config', default='~/.my.cnf',
@@ -1277,7 +1300,7 @@ Examples:
 
     try:
         viz.connect_to_database()
-        viz.analyze_clan(args.clan, selected_methods, args.evalue_threshold, args.hhblits_evalue_threshold, args.scoop_threshold)
+        viz.analyze_clan(args.clan, selected_methods, args.evalue_threshold, args.hhblits_pvalue_threshold, args.scoop_threshold)
     finally:
         viz.close()
 
