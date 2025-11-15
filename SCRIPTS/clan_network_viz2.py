@@ -296,43 +296,65 @@ class ClanNetworkVisualizer:
         edges = {}
         total_rows = 0
         kept_rows = 0
+        first_chunk = True
 
-        for chunk in pd.read_csv(self.hhblits_file, sep='\t', chunksize=chunk_size):
-            total_rows += len(chunk)
+        try:
+            for chunk in pd.read_csv(self.hhblits_file, sep='\t', chunksize=chunk_size):
+                total_rows += len(chunk)
 
-            # Convert E-value to float and filter
-            chunk['e_value'] = pd.to_numeric(chunk['e_value'], errors='coerce')
-            chunk = chunk[chunk['e_value'] < evalue_threshold]
+                # Debug: show column names on first chunk
+                if first_chunk:
+                    print(f"  DEBUG: HHblits file columns: {list(chunk.columns)}")
+                    print(f"  DEBUG: First row sample:")
+                    if len(chunk) > 0:
+                        print(f"    query_family: {chunk.iloc[0]['query_family']}")
+                        print(f"    target_pfam_family: {chunk.iloc[0]['target_pfam_family']}")
+                        print(f"    e_value: {chunk.iloc[0]['e_value']}")
+                    first_chunk = False
 
-            if len(chunk) == 0:
-                continue
+                # Convert E-value to float and filter
+                chunk['e_value'] = pd.to_numeric(chunk['e_value'], errors='coerce')
+                pre_filter_count = len(chunk)
+                chunk = chunk[chunk['e_value'] < evalue_threshold]
+                print(f"  DEBUG: E-value filter: {pre_filter_count} -> {len(chunk)} rows")
 
-            # Filter for clan families
-            mask = (chunk['query_family'].isin(clan_pfam_accs)) | (chunk['target_pfam_family'].isin(clan_pfam_accs))
-            chunk = chunk[mask]
-
-            if len(chunk) == 0:
-                continue
-
-            kept_rows += len(chunk)
-
-            # Build edges dictionary
-            for _, row in chunk.iterrows():
-                pfam1 = row['query_family']
-                pfam2 = row['target_pfam_family']
-
-                if pd.isna(pfam1) or pd.isna(pfam2) or pfam1 == pfam2:
+                if len(chunk) == 0:
                     continue
 
-                edge_key = tuple(sorted([pfam1, pfam2]))
-                evalue = row['e_value']
-                category = self.categorize_evalue(evalue)
+                # Filter for clan families
+                mask = (chunk['query_family'].isin(clan_pfam_accs)) | (chunk['target_pfam_family'].isin(clan_pfam_accs))
+                pre_clan_count = len(chunk)
+                chunk = chunk[mask]
+                print(f"  DEBUG: Clan filter: {pre_clan_count} -> {len(chunk)} rows")
 
-                if edge_key not in edges or evalue < edges[edge_key]['evalue']:
-                    edges[edge_key] = {'evalue': evalue, 'category': category}
+                if len(chunk) == 0:
+                    continue
 
-            if total_rows % 1000000 == 0:
-                print(f"  Processed {total_rows:,} rows, kept {kept_rows:,}")
+                kept_rows += len(chunk)
+
+                # Build edges dictionary
+                for _, row in chunk.iterrows():
+                    pfam1 = row['query_family']
+                    pfam2 = row['target_pfam_family']
+
+                    if pd.isna(pfam1) or pd.isna(pfam2) or pfam1 == pfam2:
+                        continue
+
+                    edge_key = tuple(sorted([pfam1, pfam2]))
+                    evalue = row['e_value']
+                    category = self.categorize_evalue(evalue)
+
+                    if edge_key not in edges or evalue < edges[edge_key]['evalue']:
+                        edges[edge_key] = {'evalue': evalue, 'category': category}
+
+                if total_rows % 1000000 == 0:
+                    print(f"  Processed {total_rows:,} rows, kept {kept_rows:,}")
+
+        except Exception as e:
+            print(f"  ERROR parsing HHblits file: {e}")
+            import traceback
+            traceback.print_exc()
+            return {}
 
         print(f"Total: {total_rows:,} rows -> {len(edges)} unique edges")
         return edges
@@ -595,6 +617,13 @@ class ClanNetworkVisualizer:
         edges = []
         edge_titles = {}
 
+        # Define offset for each method to separate multiple edges visually
+        method_offsets = {
+            'foldseek': -0.2,   # Curve slightly to one side
+            'hhblits': 0,       # Straight
+            'scoop': 0.2        # Curve slightly to other side
+        }
+
         for edge_key, method_data in combined_edges.items():
             pfam1, pfam2 = edge_key
 
@@ -632,14 +661,35 @@ class ClanNetworkVisualizer:
                             f"<span style='color: #666; font-size: 13px;'>{pfam2}</span>"
                             f"</div>")
 
+                # Use different smooth settings to offset edges
+                roundness = method_offsets.get(method, 0)
+                if roundness == 0:
+                    # Straight edge
+                    smooth_config = {'enabled': False}
+                else:
+                    # Slightly curved to separate from other edges
+                    smooth_config = {'enabled': True, 'type': 'curvedCW' if roundness > 0 else 'curvedCCW', 'roundness': abs(roundness)}
+
                 edges.append({
                     'id': edge_id,
                     'from': pfam1,
                     'to': pfam2,
                     'value': width,
                     'color': {'color': color, 'highlight': '#000000'},
-                    'smooth': {'type': 'straightCross', 'roundness': 0}  # Straight edges
+                    'smooth': smooth_config
                 })
+
+        # Debug: count edges per method
+        edge_counts = {method: 0 for method in selected_methods}
+        for edge in edges:
+            for method in selected_methods:
+                if edge['id'].endswith(f'-{method}'):
+                    edge_counts[method] += 1
+
+        print(f"\nEdge counts by method:")
+        for method, count in edge_counts.items():
+            print(f"  {method.upper()}: {count} edges")
+        print(f"  Total edges in visualization: {len(edges)}")
 
         # Build legend items for selected methods
         legend_html = self._build_legend_html(selected_methods)
@@ -869,11 +919,8 @@ class ClanNetworkVisualizer:
             }},
             edges: {{
                 width: 1,
-                shadow: true,
-                smooth: {{
-                    type: 'straightCross',
-                    roundness: 0
-                }}
+                shadow: true
+                // Individual edge smooth settings will override
             }},
             physics: {{
                 enabled: true,
