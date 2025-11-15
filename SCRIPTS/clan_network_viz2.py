@@ -194,10 +194,10 @@ class ClanNetworkVisualizer:
         """
         if score >= 30:
             return 0  # Very significant
-        elif score >= 10:
+        elif score >= 20:
             return 1  # Significant
         else:
-            return 2  # Moderate (5-10 range)
+            return 2  # Moderate (10-20 range)
 
     def parse_foldseek_results(self, clan_families, evalue_threshold=1e-3):
         """
@@ -337,7 +337,7 @@ class ClanNetworkVisualizer:
         print(f"Total: {total_rows:,} rows -> {len(edges)} unique edges")
         return edges
 
-    def parse_scoop_results(self, clan_families, score_threshold=5.0):
+    def parse_scoop_results(self, clan_families, score_threshold=10.0):
         """
         Parse SCOOP results and extract matches involving clan families.
 
@@ -1071,8 +1071,8 @@ class ClanNetworkVisualizer:
 
             if method == 'scoop':
                 cat0_label = 'Score ≥ 30'
-                cat1_label = 'Score 10-30'
-                cat2_label = 'Score 5-10'
+                cat1_label = 'Score 20-30'
+                cat2_label = 'Score 10-20'
             else:
                 cat0_label = 'E-value < 1e-10'
                 cat1_label = 'E-value 1e-10 to 1e-5'
@@ -1097,7 +1097,7 @@ class ClanNetworkVisualizer:
 
         return '\n'.join(legend_parts)
 
-    def analyze_clan(self, clan_acc, selected_methods, evalue_threshold=1e-5, scoop_threshold=5.0):
+    def analyze_clan(self, clan_acc, selected_methods, evalue_threshold=1e-5, scoop_threshold=10.0):
         """
         Complete analysis pipeline for a clan.
 
@@ -1199,8 +1199,8 @@ Examples:
     parser.add_argument('--all', action='store_true', help='Include all comparison methods')
     parser.add_argument('--evalue-threshold', type=float, default=1e-5,
                        help='E-value threshold for foldseek/hhblits (default: 1e-5)')
-    parser.add_argument('--scoop-threshold', type=float, default=5.0,
-                       help='Minimum SCOOP score threshold (default: 5.0)')
+    parser.add_argument('--scoop-threshold', type=float, default=10.0,
+                       help='Minimum SCOOP score threshold (default: 10.0)')
     parser.add_argument('--mysql-config', default='~/.my.cnf',
                        help='Path to MySQL config file (default: ~/.my.cnf)')
 
