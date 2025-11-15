@@ -683,8 +683,8 @@ class ClanNetworkVisualizer:
                 # Use different smooth settings to offset edges
                 roundness = method_offsets.get(method, 0)
                 if roundness == 0:
-                    # Straight edge
-                    smooth_config = {'enabled': False}
+                    # Straight edge - use False directly for vis.js
+                    smooth_config = False
                 else:
                     # Slightly curved to separate from other edges
                     smooth_config = {'enabled': True, 'type': 'curvedCW' if roundness > 0 else 'curvedCCW', 'roundness': abs(roundness)}
