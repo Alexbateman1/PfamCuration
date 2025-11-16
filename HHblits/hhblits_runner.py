@@ -41,11 +41,16 @@ class HHblitsRunner:
 
     def mul_to_a3m(self, seed_file, output_file):
         """
-        Convert mul format SEED to A3M format for HHblits.
-        Mul format is: one line per sequence, format "seq_id<whitespace>sequence"
+        Convert Pfam SEED alignment to A3M format for HHblits.
+        SEED files are in Stockholm-like format with aligned sequences.
+
+        Format: seq_id<whitespace>aligned_sequence
+        - Lines starting with # are annotations (skip them)
+        - Gap character '.' needs to be converted to '-'
+        - Case is already meaningful (uppercase=match, lowercase=insert)
 
         Args:
-            seed_file: Path to mul format SEED file
+            seed_file: Path to SEED alignment file
             output_file: Path to output A3M file
 
         Returns:
@@ -58,18 +63,24 @@ class HHblitsRunner:
                     line = line.strip()
                     if not line:
                         continue
+                    # Skip Stockholm annotation lines (start with #)
+                    if line.startswith('#'):
+                        continue
+
                     # Split on whitespace - first part is ID, rest is sequence
                     parts = line.split(None, 1)
                     if len(parts) >= 2:
                         seq_id = parts[0]
                         seq = parts[1]
+                        # Convert gap character from '.' to '-' for A3M format
+                        seq = seq.replace('.', '-')
                         sequences[seq_id] = seq
 
             if not sequences:
                 logging.warning(f"No sequences found in {seed_file}")
                 return False
 
-            # Write A3M format (FASTA-like)
+            # Write A3M format (FASTA-like with aligned sequences)
             with open(output_file, 'w') as f:
                 for seq_id, seq in sequences.items():
                     f.write(f">{seq_id}\n{seq}\n")
@@ -388,9 +399,13 @@ runner = HHblitsRunner('{self.seed_dir}', '{self.hmm_dir}', '{self.results_dir}'
 runner.mul_to_a3m('$SEED_FILE', '$A3M_FILE')
 "
 
-    # Run HHblits (note: database path without extension)
+    # Run HHblits with sensitivity parameters
+    # -n 3: 3 iterations for better sensitivity
+    # -maxfilt 100000: allow more sequences in filtering
+    # -realign_max 100000: realign more hits with MAC algorithm
     hhblits -i $A3M_FILE -d {database} -o $HHR_FILE \\
-        -cpu {cpus} -n 2 -e {self.e_value_threshold} -M first
+        -cpu {cpus} -n 3 -e {self.e_value_threshold} \\
+        -maxfilt 100000 -realign_max 100000
 
     # Parse results
     python3 -c "
