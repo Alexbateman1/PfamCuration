@@ -148,6 +148,17 @@ class HHsearchRunner:
                 logging.info("Falling back to concatenated database...")
                 return self._build_concatenated_hhm_database(hhm_dir, db_dir)
 
+            # Create symlinks for HH-suite companion files
+            # HHsearch looks for files with suffixes like _cs219, _a3m, etc.
+            logging.info("Creating symlinks for HH-suite companion database files...")
+            for suffix in ['cs219', 'a3m']:
+                for ext in ['ffdata', 'ffindex']:
+                    target = db_dir / f"pfam_db_hhm.{ext}"
+                    link = db_dir / f"pfam_db_hhm_{suffix}.{ext}"
+                    if not link.exists() and target.exists():
+                        link.symlink_to(target.name)
+                        logging.debug(f"Created symlink: {link.name} -> {target.name}")
+
             logging.info(f"HH-suite database created: {db_dir}/pfam_db_hhm")
             return str(db_dir / "pfam_db_hhm")
 
