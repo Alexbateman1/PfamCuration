@@ -76,7 +76,8 @@ class HHsearchRunner:
                         seq = parts[1]
                         # Convert gap character from '.' to '-' for A3M format
                         seq = seq.replace('.', '-')
-                        sequences[seq_id] = seq
+                        # Concatenate if this seq_id was seen before (multi-line sequences in Stockholm)
+                        sequences[seq_id] = sequences.get(seq_id, '') + seq
 
             # Write aligned FASTA format (all sequences same length)
             with open(output_file, 'w') as f:
