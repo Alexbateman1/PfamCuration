@@ -171,7 +171,7 @@ class HHblitsRunner:
         logging.info(f"Concatenated database created: {db_file}")
         return str(db_file)
 
-    def clean_results(self, clean_a3m=True, clean_hhm=True, clean_hhr=True, clean_parsed=True, clean_db=True):
+    def clean_results(self, clean_a3m=True, clean_hhm=True, clean_hhr=True, clean_parsed=True, clean_db=True, clean_summary=True):
         """
         Clean up results from previous runs to ensure fresh start.
 
@@ -181,6 +181,7 @@ class HHblitsRunner:
             clean_hhr: Remove HHR search result files
             clean_parsed: Remove parsed TSV files
             clean_db: Remove ffindex database files
+            clean_summary: Remove summary files (aggregated results)
         """
         logging.info("=== Cleaning up old results ===")
 
@@ -189,7 +190,8 @@ class HHblitsRunner:
             'hhm': 0,
             'hhr': 0,
             'parsed': 0,
-            'db_files': 0
+            'db_files': 0,
+            'summary': 0
         }
 
         # Clean A3M files
@@ -236,11 +238,21 @@ class HHblitsRunner:
                     f.unlink()
                 logging.info(f"Removed {cleaned_counts['db_files']} database files from {db_dir}")
 
+        # Clean summary files
+        if clean_summary:
+            summary_dir = self.results_dir / "SUMMARY"
+            if summary_dir.exists():
+                summary_files = list(summary_dir.glob("*.tsv")) + list(summary_dir.glob("*.json"))
+                cleaned_counts['summary'] = len(summary_files)
+                for f in summary_files:
+                    f.unlink()
+                logging.info(f"Removed {cleaned_counts['summary']} summary files from {summary_dir}")
+
         total_cleaned = sum(cleaned_counts.values())
         logging.info(f"Cleanup complete: {total_cleaned} total files removed")
         logging.info(f"  - A3M: {cleaned_counts['a3m']}, HHM: {cleaned_counts['hhm']}, "
                     f"HHR: {cleaned_counts['hhr']}, Parsed: {cleaned_counts['parsed']}, "
-                    f"DB files: {cleaned_counts['db_files']}")
+                    f"DB files: {cleaned_counts['db_files']}, Summary: {cleaned_counts['summary']}")
 
         return cleaned_counts
 

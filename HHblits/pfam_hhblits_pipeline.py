@@ -103,18 +103,23 @@ class PfamHHblitsPipeline:
             )
 
             # Determine what to clean based on which steps are being reset
+            # db_build creates: A3M, HHM, DB files
+            # hhblits creates: HHR, parsed TSV files
+            # aggregation creates: summary files (uses parsed TSV as input)
             clean_a3m = 'db_build' in steps
             clean_hhm = 'db_build' in steps
             clean_db = 'db_build' in steps
             clean_hhr = 'hhblits' in steps
-            clean_parsed = 'hhblits' in steps or 'aggregation' in steps
+            clean_parsed = 'hhblits' in steps
+            clean_summary = 'aggregation' in steps
 
             hhblits_runner.clean_results(
                 clean_a3m=clean_a3m,
                 clean_hhm=clean_hhm,
                 clean_hhr=clean_hhr,
                 clean_parsed=clean_parsed,
-                clean_db=clean_db
+                clean_db=clean_db,
+                clean_summary=clean_summary
             )
 
         for step in steps:
