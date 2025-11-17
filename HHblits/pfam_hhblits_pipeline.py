@@ -200,8 +200,8 @@ class PfamHHblitsPipeline:
         """Step 3: Build HHblits database."""
         if self.is_step_complete('db_build'):
             logging.info("Database build already complete, skipping...")
-            db_file = self.results_dir / "pfam_hhm_db"
-            return db_file
+            db_file = self.results_dir / "hhsuite_db" / "pfam_db_hhm"
+            return str(db_file)
 
         logging.info("=== Step 3: HHblits Database Build ===")
 
