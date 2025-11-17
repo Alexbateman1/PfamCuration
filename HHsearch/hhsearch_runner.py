@@ -42,12 +42,15 @@ class HHsearchRunner:
 
     def mul_to_a3m(self, seed_file, output_file):
         """
-        Convert Pfam SEED alignment (Stockholm format) to A3M format for HH-suite.
+        Convert Pfam SEED alignment (Stockholm format) to aligned FASTA for hhmake.
 
-        Uses HH-suite's reformat.pl which properly handles:
-        - #=RF reference line to define match vs insert columns
-        - Proper A3M format with uppercase=match, lowercase=insert
-        - All Stockholm format annotations
+        Note: We use simple conversion rather than reformat.pl because:
+        - reformat.pl creates proper A3M with insertion encoding (lowercase)
+        - This causes sequences to have different lengths
+        - hhmake with -M first can't handle variable-length input
+
+        This creates aligned FASTA (all sequences same length, gaps as '-')
+        which hhmake can process with -M first flag.
 
         Args:
             seed_file: Path to SEED alignment file (Stockholm format)
@@ -57,24 +60,30 @@ class HHsearchRunner:
             True if successful, False otherwise
         """
         try:
-            # Use HH-suite's reformat.pl for proper Stockholm to A3M conversion
-            cmd = f"reformat.pl sto a3m {seed_file} {output_file}"
-            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+            sequences = {}
+            with open(seed_file, 'r') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    # Skip Stockholm annotation lines (start with #)
+                    if line.startswith('#'):
+                        continue
 
-            if result.returncode != 0:
-                logging.error(f"reformat.pl failed for {seed_file}: {result.stderr}")
-                return False
+                    parts = line.split(None, 1)
+                    if len(parts) >= 2:
+                        seq_id = parts[0]
+                        seq = parts[1]
+                        # Convert gap character from '.' to '-' for A3M format
+                        seq = seq.replace('.', '-')
+                        sequences[seq_id] = seq
 
-            # Parse stdout to get sequence count
-            # Output format: "Reformatted ... with N sequences ..."
-            if "with" in result.stdout and "sequences" in result.stdout:
-                parts = result.stdout.split()
-                for i, part in enumerate(parts):
-                    if part == "with" and i+1 < len(parts):
-                        seq_count = parts[i+1]
-                        logging.debug(f"Converted {seed_file} to A3M format ({seq_count} sequences)")
-                        break
+            # Write aligned FASTA format (all sequences same length)
+            with open(output_file, 'w') as f:
+                for seq_id, seq in sequences.items():
+                    f.write(f">{seq_id}\n{seq}\n")
 
+            logging.debug(f"Converted {seed_file} to aligned FASTA format ({len(sequences)} sequences)")
             return True
 
         except Exception as e:
