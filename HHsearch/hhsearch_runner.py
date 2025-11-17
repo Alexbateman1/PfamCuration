@@ -124,7 +124,8 @@ class HHsearchRunner:
                         continue
 
                 # Build HH-suite profile with hhmake
-                cmd = f"hhmake -i {a3m_file} -o {hhm_file}"
+                # Use -M first to handle alignment column variations
+                cmd = f"hhmake -i {a3m_file} -o {hhm_file} -M first"
                 result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
                 if result.returncode != 0:
