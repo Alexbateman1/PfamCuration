@@ -41,51 +41,39 @@ class HHblitsRunner:
 
     def mul_to_a3m(self, seed_file, output_file):
         """
-        Convert Pfam SEED alignment to A3M format for HHblits.
-        SEED files are in Stockholm-like format with aligned sequences.
+        Convert Pfam SEED alignment (Stockholm format) to A3M format for HHblits.
 
-        Format: seq_id<whitespace>aligned_sequence
-        - Lines starting with # are annotations (skip them)
-        - Gap character '.' needs to be converted to '-'
-        - Case is already meaningful (uppercase=match, lowercase=insert)
+        Uses HH-suite's reformat.pl which properly handles:
+        - #=RF reference line to define match vs insert columns
+        - Proper A3M format with uppercase=match, lowercase=insert
+        - All Stockholm format annotations
 
         Args:
-            seed_file: Path to SEED alignment file
+            seed_file: Path to SEED alignment file (Stockholm format)
             output_file: Path to output A3M file
 
         Returns:
             True if successful, False otherwise
         """
         try:
-            sequences = {}
-            with open(seed_file, 'r') as f:
-                for line in f:
-                    line = line.strip()
-                    if not line:
-                        continue
-                    # Skip Stockholm annotation lines (start with #)
-                    if line.startswith('#'):
-                        continue
+            # Use HH-suite's reformat.pl for proper Stockholm to A3M conversion
+            cmd = f"reformat.pl sto a3m {seed_file} {output_file}"
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
-                    # Split on whitespace - first part is ID, rest is sequence
-                    parts = line.split(None, 1)
-                    if len(parts) >= 2:
-                        seq_id = parts[0]
-                        seq = parts[1]
-                        # Convert gap character from '.' to '-' for A3M format
-                        seq = seq.replace('.', '-')
-                        sequences[seq_id] = seq
-
-            if not sequences:
-                logging.warning(f"No sequences found in {seed_file}")
+            if result.returncode != 0:
+                logging.error(f"reformat.pl failed for {seed_file}: {result.stderr}")
                 return False
 
-            # Write A3M format (FASTA-like with aligned sequences)
-            with open(output_file, 'w') as f:
-                for seq_id, seq in sequences.items():
-                    f.write(f">{seq_id}\n{seq}\n")
+            # Parse stdout to get sequence count
+            # Output format: "Reformatted ... with N sequences ..."
+            if "with" in result.stdout and "sequences" in result.stdout:
+                parts = result.stdout.split()
+                for i, part in enumerate(parts):
+                    if part == "with" and i+1 < len(parts):
+                        seq_count = parts[i+1]
+                        logging.debug(f"Converted {seed_file} to A3M format ({seq_count} sequences)")
+                        break
 
-            logging.debug(f"Converted {seed_file} to A3M format ({len(sequences)} sequences)")
             return True
 
         except Exception as e:
@@ -133,8 +121,7 @@ class HHblitsRunner:
                         continue
 
                 # Build HH-suite profile with hhmake
-                # Use -M first to handle alignment column variations more permissively
-                cmd = f"hhmake -i {a3m_file} -o {hhm_file} -M first"
+                cmd = f"hhmake -i {a3m_file} -o {hhm_file}"
                 result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
                 if result.returncode != 0:
