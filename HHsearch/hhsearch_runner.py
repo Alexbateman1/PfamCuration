@@ -273,7 +273,7 @@ class HHsearchRunner:
             # HHsearch command for profile-profile comparison
             # No iteration (-n) since we're comparing pre-built profiles
             cmd = (f"hhsearch -i {query_hhm} -d {database} -o {output_hhr} "
-                   f"-cpu {num_threads} -e {self.e_value_threshold} -maxfilt 100000")
+                   f"-cpu {num_threads} -e {self.e_value_threshold}")
 
             result = subprocess.run(cmd, shell=True, check=True,
                                   capture_output=True, text=True)
@@ -468,7 +468,7 @@ while read FAMILY_ID; do
     # Run HHsearch (profile-profile comparison)
     # No iteration (-n) since we're comparing pre-built HMM profiles
     hhsearch -i $HHM_FILE -d {database} -o $HHR_FILE \\
-        -cpu {cpus} -e {self.e_value_threshold} -maxfilt 100000
+        -cpu {cpus} -e {self.e_value_threshold}
 
     # Parse results
     python3 -c "
