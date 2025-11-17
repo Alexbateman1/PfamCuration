@@ -102,9 +102,11 @@ class HHblitsRunner:
             hhm_dir.mkdir(exist_ok=True)
 
             failed = 0
+            skipped = 0
+            built = 0
             for i, seed_file in enumerate(seed_files, 1):
                 if i % 100 == 0:
-                    logging.info(f"Progress: {i}/{len(seed_files)} profiles built")
+                    logging.info(f"Progress: {i}/{len(seed_files)} processed - {built} built, {skipped} skipped (already exist), {failed} failed")
 
                 family_id = seed_file.stem.replace('_SEED', '')
                 a3m_file = self.a3m_dir / f"{family_id}.a3m"
@@ -112,6 +114,7 @@ class HHblitsRunner:
 
                 # Skip if already built
                 if hhm_file.exists():
+                    skipped += 1
                     continue
 
                 # Convert SEED to A3M if not already done
@@ -127,8 +130,10 @@ class HHblitsRunner:
                 if result.returncode != 0:
                     logging.warning(f"hhmake failed for {family_id}: {result.stderr}")
                     failed += 1
+                else:
+                    built += 1
 
-            logging.info(f"Profile building complete: {len(seed_files) - failed} succeeded, {failed} failed")
+            logging.info(f"Profile building complete: {built} built, {skipped} skipped (already exist), {failed} failed")
 
             # Build ffindex database from HHM files
             ffdata = db_dir / "pfam_db_hhm.ffdata"
@@ -165,6 +170,79 @@ class HHblitsRunner:
 
         logging.info(f"Concatenated database created: {db_file}")
         return str(db_file)
+
+    def clean_results(self, clean_a3m=True, clean_hhm=True, clean_hhr=True, clean_parsed=True, clean_db=True):
+        """
+        Clean up results from previous runs to ensure fresh start.
+
+        Args:
+            clean_a3m: Remove A3M alignment files
+            clean_hhm: Remove HHM profile files
+            clean_hhr: Remove HHR search result files
+            clean_parsed: Remove parsed TSV files
+            clean_db: Remove ffindex database files
+        """
+        logging.info("=== Cleaning up old results ===")
+
+        cleaned_counts = {
+            'a3m': 0,
+            'hhm': 0,
+            'hhr': 0,
+            'parsed': 0,
+            'db_files': 0
+        }
+
+        # Clean A3M files
+        if clean_a3m and self.a3m_dir.exists():
+            a3m_files = list(self.a3m_dir.glob("*.a3m"))
+            cleaned_counts['a3m'] = len(a3m_files)
+            for f in a3m_files:
+                f.unlink()
+            logging.info(f"Removed {cleaned_counts['a3m']} A3M files from {self.a3m_dir}")
+
+        # Clean HHM files
+        if clean_hhm:
+            hhm_dir = self.results_dir / "hhsuite_db" / "hhm_files"
+            if hhm_dir.exists():
+                hhm_files = list(hhm_dir.glob("*.hhm"))
+                cleaned_counts['hhm'] = len(hhm_files)
+                for f in hhm_files:
+                    f.unlink()
+                logging.info(f"Removed {cleaned_counts['hhm']} HHM files from {hhm_dir}")
+
+        # Clean HHR files
+        if clean_hhr and self.hhr_dir.exists():
+            hhr_files = list(self.hhr_dir.glob("*.hhr"))
+            cleaned_counts['hhr'] = len(hhr_files)
+            for f in hhr_files:
+                f.unlink()
+            logging.info(f"Removed {cleaned_counts['hhr']} HHR files from {self.hhr_dir}")
+
+        # Clean parsed files
+        if clean_parsed and self.parsed_dir.exists():
+            parsed_files = list(self.parsed_dir.glob("*_hits.tsv"))
+            cleaned_counts['parsed'] = len(parsed_files)
+            for f in parsed_files:
+                f.unlink()
+            logging.info(f"Removed {cleaned_counts['parsed']} parsed TSV files from {self.parsed_dir}")
+
+        # Clean database files
+        if clean_db:
+            db_dir = self.results_dir / "hhsuite_db"
+            if db_dir.exists():
+                db_files = list(db_dir.glob("pfam_db_hhm.*"))
+                cleaned_counts['db_files'] = len(db_files)
+                for f in db_files:
+                    f.unlink()
+                logging.info(f"Removed {cleaned_counts['db_files']} database files from {db_dir}")
+
+        total_cleaned = sum(cleaned_counts.values())
+        logging.info(f"Cleanup complete: {total_cleaned} total files removed")
+        logging.info(f"  - A3M: {cleaned_counts['a3m']}, HHM: {cleaned_counts['hhm']}, "
+                    f"HHR: {cleaned_counts['hhr']}, Parsed: {cleaned_counts['parsed']}, "
+                    f"DB files: {cleaned_counts['db_files']}")
+
+        return cleaned_counts
 
     def run_hhblits(self, query_a3m, database, output_hhr, num_threads=8, max_iterations=2):
         """

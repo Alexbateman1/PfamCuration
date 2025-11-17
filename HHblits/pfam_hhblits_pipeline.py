@@ -79,12 +79,43 @@ class PfamHHblitsPipeline:
         self.markers[step].touch()
         logging.info(f"Step '{step}' marked complete")
 
-    def reset_progress(self, from_step=None):
-        """Reset progress markers from a specific step onwards."""
+    def reset_progress(self, from_step=None, clean_files=True):
+        """
+        Reset progress markers from a specific step onwards.
+
+        Args:
+            from_step: Step to reset from (if None, reset all)
+            clean_files: Also clean up result files associated with the steps being reset
+        """
         steps = list(self.markers.keys())
         if from_step:
             idx = steps.index(from_step)
             steps = steps[idx:]
+
+        # Clean up files before resetting markers
+        if clean_files and steps:
+            logging.info("Cleaning up old result files...")
+            hhblits_runner = HHblitsRunner(
+                seed_dir=self.data_dir / "SEED",
+                hmm_dir=self.data_dir / "HMM",
+                results_dir=self.results_dir,
+                e_value_threshold=self.e_value_threshold
+            )
+
+            # Determine what to clean based on which steps are being reset
+            clean_a3m = 'db_build' in steps
+            clean_hhm = 'db_build' in steps
+            clean_db = 'db_build' in steps
+            clean_hhr = 'hhblits' in steps
+            clean_parsed = 'hhblits' in steps or 'aggregation' in steps
+
+            hhblits_runner.clean_results(
+                clean_a3m=clean_a3m,
+                clean_hhm=clean_hhm,
+                clean_hhr=clean_hhr,
+                clean_parsed=clean_parsed,
+                clean_db=clean_db
+            )
 
         for step in steps:
             if self.markers[step].exists():
@@ -412,6 +443,11 @@ def main():
         help='Reset progress from specified step (svn_discovery, extraction, db_build, hhblits, aggregation)'
     )
     parser.add_argument(
+        '--no-clean',
+        action='store_true',
+        help='Skip cleaning result files when using --reset (default: clean files)'
+    )
+    parser.add_argument(
         '--log-level',
         default='INFO',
         choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'],
@@ -442,7 +478,7 @@ def main():
 
     # Reset if requested
     if args.reset:
-        pipeline.reset_progress(from_step=args.reset)
+        pipeline.reset_progress(from_step=args.reset, clean_files=not args.no_clean)
 
     # Run pipeline
     try:
