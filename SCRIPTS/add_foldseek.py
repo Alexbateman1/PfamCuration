@@ -149,13 +149,20 @@ def download_alphafold_model(uniprot_acc, output_dir):
     """
     Download AlphaFold v6 CIF model for a given UniProt accession.
 
+    Args:
+        uniprot_acc: UniProt accession (may include version like "P12345.2")
+        output_dir: directory to save the file
+
     Returns:
         str: path to downloaded CIF file, or None if failed
     """
     import urllib.request
 
-    url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-model_v6.cif"
-    output_file = os.path.join(output_dir, f"AF-{uniprot_acc}-F1-model_v6.cif")
+    # Strip version number from accession for AlphaFold API (P12345.2 -> P12345)
+    base_acc = uniprot_acc.split('.')[0]
+
+    url = f"https://alphafold.ebi.ac.uk/files/AF-{base_acc}-F1-model_v6.cif"
+    output_file = os.path.join(output_dir, f"AF-{base_acc}-F1-model_v6.cif")
 
     try:
         print(f"Downloading {url}...")
