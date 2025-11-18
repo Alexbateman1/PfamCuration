@@ -291,13 +291,13 @@ class HHsearchRunner:
 
         return cleaned_counts
 
-    def run_hhsearch(self, query_hhm, database, output_hhr, num_threads=8):
+    def run_hhsearch(self, query_a3m, database, output_hhr, num_threads=8):
         """
         Run HHsearch profile-profile comparison.
 
         Args:
-            query_hhm: Path to query HHM profile
-            database: Path to HHM database
+            query_a3m: Path to query A3M alignment file
+            database: Path to HHM database base name (without suffix)
             output_hhr: Path to output HHR file
             num_threads: Number of CPU threads
 
@@ -306,17 +306,17 @@ class HHsearchRunner:
         """
         try:
             # HHsearch command for profile-profile comparison
-            # No iteration (-n) since we're comparing pre-built profiles
-            cmd = (f"hhsearch -i {query_hhm} -d {database} -o {output_hhr} "
+            # Uses A3M alignment as query against HHM database
+            cmd = (f"hhsearch -i {query_a3m} -d {database} -o {output_hhr} "
                    f"-cpu {num_threads} -e {self.e_value_threshold}")
 
             result = subprocess.run(cmd, shell=True, check=True,
                                   capture_output=True, text=True)
-            logging.debug(f"HHsearch completed for {query_hhm}")
+            logging.debug(f"HHsearch completed for {query_a3m}")
             return True
 
         except subprocess.CalledProcessError as e:
-            logging.error(f"HHsearch failed for {query_hhm}: {e}")
+            logging.error(f"HHsearch failed for {query_a3m}: {e}")
             return False
 
     def parse_hhr(self, hhr_file):
@@ -381,21 +381,21 @@ class HHsearchRunner:
 
         Args:
             family_id: Pfam family ID (e.g., PF00001)
-            database: Path to HHM database
+            database: Path to HHM database base name (e.g., /path/to/pfam)
 
         Returns:
             List of hits
         """
-        # Get HHM profile
-        hhm_file = self.results_dir / "hhsuite_db" / "hhm_files" / f"{family_id}.hhm"
+        # Get A3M query file (HHsearch uses A3M as query, not HHM)
+        a3m_file = self.a3m_dir / f"{family_id}.a3m"
 
-        if not hhm_file.exists():
-            logging.warning(f"HHM file not found: {hhm_file}")
+        if not a3m_file.exists():
+            logging.warning(f"A3M file not found: {a3m_file}")
             return []
 
         # Run HHsearch
         hhr_file = self.hhr_dir / f"{family_id}.hhr"
-        if not self.run_hhsearch(hhm_file, database, hhr_file):
+        if not self.run_hhsearch(a3m_file, database, hhr_file):
             return []
 
         # Parse results
@@ -491,7 +491,7 @@ BATCH_FILE={batch_dir}/batch_${{SLURM_ARRAY_TASK_ID}}.txt
 while read FAMILY_ID; do
     echo "Processing $FAMILY_ID..."
 
-    HHM_FILE={self.results_dir}/hhsuite_db/hhm_files/${{FAMILY_ID}}.hhm
+    A3M_FILE={self.a3m_dir}/${{FAMILY_ID}}.a3m
     HHR_FILE={self.hhr_dir}/${{FAMILY_ID}}.hhr
 
     # Skip if already processed
@@ -500,9 +500,8 @@ while read FAMILY_ID; do
         continue
     fi
 
-    # Run HHsearch (profile-profile comparison)
-    # No iteration (-n) since we're comparing pre-built HMM profiles
-    hhsearch -i $HHM_FILE -d {database} -o $HHR_FILE \\
+    # Run HHsearch (uses A3M alignment as query against HHM database)
+    hhsearch -i $A3M_FILE -d {database} -o $HHR_FILE \\
         -cpu {cpus} -e {self.e_value_threshold}
 
     # Parse results
