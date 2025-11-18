@@ -516,6 +516,11 @@ def main():
         default='foldseek',
         help='Output file name (default: foldseek)'
     )
+    parser.add_argument(
+        '--force',
+        action='store_true',
+        help='Force rerun even if output files already exist'
+    )
 
     args = parser.parse_args()
 
@@ -555,15 +560,21 @@ def main():
 
     # Create temporary directory for foldseek
     with tempfile.TemporaryDirectory() as tmp_dir:
-        if os.path.exists(saved_chopped_model):
+        if os.path.exists(saved_chopped_model) and not args.force:
             print(f"\nFound existing chopped model: {saved_chopped_model}")
-            print("Using cached model (delete this file to force reprocessing)")
+            print("Using cached model (use --force to reprocess)")
             chopped_model = saved_chopped_model
         else:
+            if args.force and os.path.exists(saved_chopped_model):
+                print(f"\nForce flag set, reprocessing models (ignoring cached model)")
+
             # Process SEED sequences to find best model
             best_model = None
             best_plddt = 0
             best_info = None
+
+            # Collect all pLDDT scores for output file
+            plddt_scores = []
 
             # Process each sequence
             for uniprot_acc, start, end, alignment_seq in sequences:
@@ -584,6 +595,12 @@ def main():
                 mean_plddt, num_residues = calculate_mean_plddt(cif_file, start, end, verbose=True)
                 print(f"  Mean pLDDT: {mean_plddt:.2f}")
 
+                # Store pLDDT score for output file
+                plddt_scores.append({
+                    'accession': f"{uniprot_acc}/{start}-{end}",
+                    'mean_plddt': mean_plddt
+                })
+
                 if mean_plddt > best_plddt:
                     best_plddt = mean_plddt
                     best_model = cif_file
@@ -592,6 +609,17 @@ def main():
             if not best_model:
                 print("\nError: No valid models found with matching sequences")
                 sys.exit(1)
+
+            # Write pLDDT scores to file, sorted by highest score first
+            if plddt_scores:
+                plddt_file = os.path.join(args.curation_dir, 'pLDDT')
+                plddt_scores.sort(key=lambda x: x['mean_plddt'], reverse=True)
+
+                with open(plddt_file, 'w') as f:
+                    for entry in plddt_scores:
+                        f.write(f"{entry['mean_plddt']:.2f}\t{entry['accession']}\n")
+
+                print(f"\nWrote pLDDT scores for {len(plddt_scores)} sequences to {plddt_file}")
 
             print(f"\nBest model: {best_info[0]} ({best_info[1]}-{best_info[2]}) "
                   f"with mean pLDDT {best_plddt:.2f}")
@@ -633,12 +661,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument('curation_dir')
     parser.add_argument('--output', default='foldseek')
+    parser.add_argument('--force', action='store_true')
     args, _ = parser.parse_known_args()
 
     output_file = os.path.join(args.curation_dir, args.output)
-    if os.path.exists(output_file):
+    if os.path.exists(output_file) and not args.force:
         print(f"Output file {output_file} already exists. Skipping to avoid duplication.")
+        print(f"Use --force to rerun anyway.")
         sys.exit(0)
 
-    # Output doesn't exist, proceed with full processing
+    # Output doesn't exist or force flag is set, proceed with full processing
     main()
