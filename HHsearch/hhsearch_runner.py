@@ -94,10 +94,10 @@ class HHsearchRunner:
     def build_hhm_database(self):
         """
         Build HH-suite database from SEED alignments using hhmake.
-        Creates HHM profiles suitable for HHsearch profile-profile comparison.
+        Creates three ffindex databases with consistent base name: pfam_a3m, pfam_hhm, pfam_cs219.
 
         Returns:
-            Path to database directory (for use with hhsearch -d)
+            Path to database base name (for use with hhsearch -d)
         """
         db_dir = self.results_dir / "hhsuite_db"
         db_dir.mkdir(exist_ok=True)
@@ -107,9 +107,11 @@ class HHsearchRunner:
             logging.info(f"Building HH-suite database from {len(seed_files)} SEED alignments...")
             logging.info("This may take some time (converting alignments to HH-suite profiles)...")
 
-            # Build HHsuite profiles from SEED alignments
-            hhm_dir = db_dir / "hhm_files"
-            hhm_dir.mkdir(exist_ok=True)
+            # Create temporary directories for building databases
+            a3m_build_dir = db_dir / "a3m_dir"
+            hhm_build_dir = db_dir / "hhm_dir"
+            a3m_build_dir.mkdir(exist_ok=True)
+            hhm_build_dir.mkdir(exist_ok=True)
 
             failed = 0
             skipped = 0
@@ -120,58 +122,69 @@ class HHsearchRunner:
 
                 family_id = seed_file.stem.replace('_SEED', '')
                 a3m_file = self.a3m_dir / f"{family_id}.a3m"
-                hhm_file = hhm_dir / f"{family_id}.hhm"
+                hhm_file = hhm_build_dir / f"{family_id}.hhm"
+                a3m_copy = a3m_build_dir / f"{family_id}.a3m"
 
                 # Skip if already built
-                if hhm_file.exists():
+                if hhm_file.exists() and a3m_copy.exists():
                     skipped += 1
                     continue
 
-                # Convert SEED to A3M if not already done
+                # Convert SEED to A3M using reformat.pl for proper A3M format
                 if not a3m_file.exists():
-                    if not self.mul_to_a3m(seed_file, a3m_file):
+                    cmd = f"reformat.pl sto a3m {seed_file} {a3m_file}"
+                    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+                    if result.returncode != 0:
+                        logging.warning(f"reformat.pl failed for {family_id}: {result.stderr}")
                         failed += 1
                         continue
 
-                # Build HH-suite profile with hhmake
-                # Use -M first to handle alignment column variations
-                cmd = f"hhmake -i {a3m_file} -o {hhm_file} -M first"
-                result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+                # Copy A3M to build directory
+                if not a3m_copy.exists():
+                    import shutil
+                    shutil.copy(a3m_file, a3m_copy)
 
-                if result.returncode != 0:
-                    logging.warning(f"hhmake failed for {family_id}: {result.stderr}")
-                    failed += 1
+                # Build HH-suite profile with hhmake
+                if not hhm_file.exists():
+                    cmd = f"hhmake -i {a3m_file} -o {hhm_file} -v 0"
+                    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+
+                    if result.returncode != 0:
+                        logging.warning(f"hhmake failed for {family_id}: {result.stderr}")
+                        failed += 1
+                    else:
+                        built += 1
                 else:
                     built += 1
 
             logging.info(f"Profile building complete: {built} built, {skipped} skipped (already exist), {failed} failed")
 
-            # Build ffindex database from HHM files
-            ffdata = db_dir / "pfam_db_hhm.ffdata"
-            ffindex = db_dir / "pfam_db_hhm.ffindex"
+            # Build ffindex databases with consistent base name 'pfam'
+            base_name = "pfam"
 
-            logging.info("Building ffindex database from HH-suite profiles...")
-            cmd = f"ffindex_build -s {ffdata} {ffindex} {hhm_dir}/"
+            logging.info("Building pfam_a3m ffindex database...")
+            cmd = f"ffindex_build -as {db_dir}/{base_name}_a3m.ffdata {db_dir}/{base_name}_a3m.ffindex {a3m_build_dir}/"
             result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-
             if result.returncode != 0:
-                logging.error(f"ffindex_build failed: {result.stderr}")
-                logging.info("Falling back to concatenated database...")
-                return self._build_concatenated_hhm_database(hhm_dir, db_dir)
+                logging.error(f"ffindex_build for A3M failed: {result.stderr}")
+                raise RuntimeError("Failed to build A3M ffindex database")
 
-            # Create symlinks for HH-suite companion files
-            # HHsearch looks for files with suffixes like _cs219, _a3m, etc.
-            logging.info("Creating symlinks for HH-suite companion database files...")
-            for suffix in ['cs219', 'a3m']:
-                for ext in ['ffdata', 'ffindex']:
-                    target = db_dir / f"pfam_db_hhm.{ext}"
-                    link = db_dir / f"pfam_db_hhm_{suffix}.{ext}"
-                    if not link.exists() and target.exists():
-                        link.symlink_to(target.name)
-                        logging.debug(f"Created symlink: {link.name} -> {target.name}")
+            logging.info("Building pfam_hhm ffindex database...")
+            cmd = f"ffindex_build -as {db_dir}/{base_name}_hhm.ffdata {db_dir}/{base_name}_hhm.ffindex {hhm_build_dir}/"
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+            if result.returncode != 0:
+                logging.error(f"ffindex_build for HHM failed: {result.stderr}")
+                raise RuntimeError("Failed to build HHM ffindex database")
 
-            logging.info(f"HH-suite database created: {db_dir}/pfam_db_hhm")
-            return str(db_dir / "pfam_db_hhm")
+            logging.info("Building pfam_cs219 database with cstranslate...")
+            cmd = f"cstranslate -i {db_dir}/{base_name}_a3m -o {db_dir}/{base_name}_cs219 -b -f -I a3m"
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+            if result.returncode != 0:
+                logging.warning(f"cstranslate failed: {result.stderr}")
+                logging.warning("Proceeding without CS219 prefiltering (searches will be slower)")
+
+            logging.info(f"HH-suite database created: {db_dir}/{base_name}")
+            return str(db_dir / base_name)
 
         except Exception as e:
             logging.error(f"Failed to build HH-suite database: {e}")
