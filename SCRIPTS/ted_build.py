@@ -106,57 +106,61 @@ def fetch_ted_domains(uniprot_acc: str) -> Dict:
         sys.exit(1)
 
 def fetch_pfam_domains(uniprot_acc: str) -> List[Dict]:
-    """Fetch Pfam domains from InterPro API"""
-    interpro_api_url = f"https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/{uniprot_acc}"
-    
-    print("Fetching Pfam domains from InterPro...")
-    
+    """Fetch Pfam domains from pfamlive database"""
+
+    print("Fetching Pfam domains from pfamlive database...")
+
     pfam_domains = []
-    
+
     try:
-        response = requests.get(interpro_api_url, timeout=30)
-        response.raise_for_status()
-        interpro_data = response.json()
-        
-        # Extract Pfam domains
-        if 'results' in interpro_data and isinstance(interpro_data['results'], list):
-            for result in interpro_data['results']:
-                if ('metadata' in result and 
-                    'member_databases' in result['metadata'] and 
-                    'pfam' in result['metadata']['member_databases']):
-                    
-                    pfam_dict = result['metadata']['member_databases']['pfam']
-                    pfam_id = list(pfam_dict.keys())[0]
-                    pfam_name = pfam_dict[pfam_id]
-                    
-                    print(f"Found Pfam domain: {pfam_id} ({pfam_name})")
-                    
-                    # Extract positions
-                    if 'proteins' in result and isinstance(result['proteins'], list):
-                        for protein in result['proteins']:
-                            if protein['accession'].lower() == uniprot_acc.lower():
-                                if ('entry_protein_locations' in protein and 
-                                    isinstance(protein['entry_protein_locations'], list)):
-                                    
-                                    for location in protein['entry_protein_locations']:
-                                        if 'fragments' in location and isinstance(location['fragments'], list):
-                                            for fragment in location['fragments']:
-                                                if 'start' in fragment and 'end' in fragment:
-                                                    pfam_domains.append({
-                                                        'pfam_id': pfam_id,
-                                                        'pfam_name': pfam_name,
-                                                        'start': int(fragment['start']),
-                                                        'end': int(fragment['end'])
-                                                    })
-                                                    print(f"  Position: {fragment['start']}-{fragment['end']}")
-    
-    except requests.exceptions.RequestException as e:
-        print(f"Warning: Failed to fetch InterPro information for {uniprot_acc}: {e}. "
+        # Build MySQL query
+        query = f"select pfamseq_acc,seq_start,seq_end,pfamA_acc from pfamA_reg_full_significant where pfamseq_acc='{uniprot_acc}'"
+
+        # Expand ~ in config file path
+        config_file = os.path.expanduser('~/.my.cnf')
+
+        # Run MySQL command
+        cmd = [
+            'mysql',
+            f'--defaults-file={config_file}',
+            'pfam_live',
+            '--quick',
+            '-e',
+            query
+        ]
+
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            check=True
+        )
+
+        # Parse output (skip header line)
+        lines = result.stdout.strip().split('\n')
+        if len(lines) > 1:
+            for line in lines[1:]:  # Skip header
+                fields = line.split('\t')
+                if len(fields) >= 4:
+                    pfam_acc = fields[3]
+                    start = int(fields[1])
+                    end = int(fields[2])
+
+                    pfam_domains.append({
+                        'pfam_id': pfam_acc,
+                        'pfam_name': pfam_acc,  # We don't get name from this query
+                        'start': start,
+                        'end': end
+                    })
+                    print(f"Found Pfam domain: {pfam_acc} at {start}-{end}")
+
+    except subprocess.CalledProcessError as e:
+        print(f"Warning: Failed to query pfamlive database for {uniprot_acc}: {e}. "
               "Continuing without Pfam checking.")
-    except (json.JSONDecodeError, KeyError) as e:
-        print(f"Warning: Failed to parse InterPro information for {uniprot_acc}: {e}. "
+    except Exception as e:
+        print(f"Warning: Failed to parse pfamlive results for {uniprot_acc}: {e}. "
               "Continuing without Pfam checking.")
-    
+
     return pfam_domains
 
 def run_command(cmd: str, error_msg: str = None):
