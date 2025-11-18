@@ -35,7 +35,7 @@ def parse_seed_alignment(seed_file):
                 continue
 
             # Match lines like: P39607.2/21-100  SEQUENCE...
-            match = re.match(r'^(\w+)\.?\d*/(\d+)-(\d+)\s+(.+)$', line)
+            match = re.match(r'^(\w+\.?\d*)/(\d+)-(\d+)\s+(.+)$', line)
             if match:
                 uniprot_acc = match.group(1)
                 start = int(match.group(2))
