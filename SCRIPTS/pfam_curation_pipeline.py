@@ -35,7 +35,8 @@ class CurationPipeline:
         'add_paperblast': '.add_paperblast_complete',
         'add_species': '.add_species_complete',
         'add_swiss': '.add_swiss_complete',
-        'add_ted': '.add_ted_complete'
+        'add_ted': '.add_ted_complete',
+        'add_foldseek': '.add_foldseek_complete'
     }
     
     def __init__(self, working_dir: str = '.'):
@@ -155,24 +156,50 @@ class CurationPipeline:
                 print(f"\n⚠ Error checking job status: {e}", file=sys.stderr)
                 return False
     
+    def accession_directories_exist(self, accession: str) -> bool:
+        """
+        Check if any directories already exist for this accession
+
+        Args:
+            accession: UniProt accession to check
+
+        Returns:
+            True if directories exist, False otherwise
+        """
+        # Check for directories that start with the accession
+        # TED domains typically create directories like: ACCESSION_1-100
+        # build.sh creates directories like: ACCESSION
+        pattern = f"{accession}*"
+        matching_dirs = list(self.working_dir.glob(pattern))
+        # Filter to only directories (not files)
+        matching_dirs = [d for d in matching_dirs if d.is_dir()]
+        return len(matching_dirs) > 0
+
     def run_ted_build(self):
         """Run ted_build.py for each accession, fallback to build.sh if no TED domains"""
         if self.is_step_complete('ted_build'):
             print("⊳ TED build already completed, skipping...")
             return
-        
+
         print(f"\n{'='*60}")
         print("STEP 1: Running TED build for all accessions")
         print(f"{'='*60}")
-        
+
         failed_accessions = []
-        
+        skipped_accessions = []
+
         for i, accession in enumerate(self.accessions, 1):
+            # Check if directories already exist for this accession
+            if self.accession_directories_exist(accession):
+                print(f"[{i}/{len(self.accessions)}] Skipping {accession} (directories already exist)")
+                skipped_accessions.append(accession)
+                continue
+
             print(f"[{i}/{len(self.accessions)}] Building domains for {accession}")
-            
+
             # Count directories before TED build
             dirs_before = set(d.name for d in self.working_dir.iterdir() if d.is_dir())
-            
+
             try:
                 # Try TED build first
                 result = subprocess.run(
@@ -181,35 +208,55 @@ class CurationPipeline:
                     text=True,
                     cwd=self.working_dir
                 )
-                
+
                 # Count directories after TED build
                 dirs_after = set(d.name for d in self.working_dir.iterdir() if d.is_dir())
                 new_dirs = dirs_after - dirs_before
-                
-                # If no new directories created, TED probably found no domains
+
+                # Check if no new directories were created
                 if not new_dirs:
-                    print(f"  → No TED domains found, using whole sequence (build.sh)")
-                    subprocess.run(
-                        ['bash', 'build.sh', accession],
-                        check=True,
-                        cwd=self.working_dir
-                    )
+                    # Parse output to distinguish between "no TED domains" vs "all skipped"
+                    output = result.stdout + result.stderr
+
+                    # Check if truly no TED domains were found
+                    if f"No domains found for {accession} in TED." in output:
+                        print(f"  → No TED domains found, using whole sequence (build.sh)")
+                        subprocess.run(
+                            ['bash', 'build.sh', accession],
+                            check=True,
+                            cwd=self.working_dir
+                        )
+                    # Check if domains were skipped due to Pfam overlap
+                    elif "SKIPPED (PFAM OVERLAP)" in output:
+                        print(f"  → TED domains found but all overlap with existing Pfam families")
+                        print(f"  → Not building whole sequence (already covered by Pfam)")
+                    # Check if all directories already existed
+                    elif "SKIPPED (ALREADY EXISTS)" in output or "Skipped (already exists):" in output:
+                        print(f"  → All TED domain directories already exist")
+                    else:
+                        # Unexpected case - no domains created but unclear why
+                        print(f"  → No directories created (reason unclear)")
+                        print(f"  → Not building whole sequence to be safe")
                 else:
                     print(f"  → Created {len(new_dirs)} TED domain(s)")
-                    
+
             except subprocess.CalledProcessError as e:
                 print(f"  ⚠ Failed to build {accession}: {e}")
                 failed_accessions.append(accession)
         
+        # Print summary
+        if skipped_accessions:
+            print(f"\n✓ Skipped {len(skipped_accessions)} accessions (directories already exist)")
+
         if failed_accessions:
             print(f"\n⚠ Warning: {len(failed_accessions)} accessions failed:")
             for acc in failed_accessions:
                 print(f"  - {acc}")
-        
+
         # Wait for all pfbuild jobs to complete
         if not self.wait_for_jobs():
             print("⚠ Warning: Some jobs may still be running")
-        
+
         self.mark_step_complete('ted_build')
     
     def run_triage(self) -> bool:
@@ -242,22 +289,22 @@ class CurationPipeline:
             True if new Iterate directories were created, False otherwise
         """
         print("\nRunning iteration cycle...")
-        
-        # Count existing Iterate directories before
-        before_count = len(list(self.working_dir.glob('*/Iterate')))
-        
+
+        # Count existing Iterate directories before (at all levels)
+        before_count = len(list(self.working_dir.glob('**/Iterate')))
+
         # Run iterate.sh equivalent
         try:
             with open(self.working_dir / 'triage', 'r') as f:
                 triage_lines = f.readlines()
-            
+
             # Shuffle lines and filter
             import random
             random.shuffle(triage_lines)
-            
+
             for line in triage_lines:
-                # Skip if too many Iterate levels
-                if 'Iterate/Iterate/Iterate/Iterate/Iterate/Iterate' in line:
+                # Skip if at max Iterate depth (6 levels)
+                if 'Iterate/Iterate/Iterate/Iterate/Iterate/Iterate/Iterate' in line:
                     continue
                 
                 fields = line.split()
@@ -284,12 +331,12 @@ class CurationPipeline:
         # Wait for pfbuilds to complete
         if not self.wait_for_jobs():
             print("⚠ Warning: Some jobs may still be running")
-        
+
         # Run triage again
         self.run_triage()
-        
-        # Count Iterate directories after
-        after_count = len(list(self.working_dir.glob('*/Iterate')))
+
+        # Count Iterate directories after (at all levels)
+        after_count = len(list(self.working_dir.glob('**/Iterate')))
         
         new_directories = after_count - before_count
         if new_directories > 0:
@@ -492,6 +539,10 @@ awk '{{
             'add_ted': {
                 'cmd': f'current_dir=$(pwd); awk \'{{system("cd "$1"; echo "$1"; ted_ali.pl SEED; cd \'"$current_dir"\'")}}\'  {filtered_triage}',
                 'desc': 'Adding TED files'
+            },
+            'add_foldseek': {
+                'cmd': f'current_dir=$(pwd); awk \'{{system("cd "$1"; echo "$1"; add_foldseek.sh; cd \'"$current_dir"\'")}}\'  {filtered_triage}',
+                'desc': 'Adding Foldseek files'
             }
         }
         
