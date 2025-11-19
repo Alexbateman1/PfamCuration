@@ -672,10 +672,18 @@ if __name__ == '__main__':
     args, _ = parser.parse_known_args()
 
     output_file = os.path.join(args.curation_dir, args.output)
-    if os.path.exists(output_file) and not args.force:
-        print(f"Output file {output_file} already exists. Skipping to avoid duplication.")
+    plddt_file = os.path.join(args.curation_dir, 'pLDDT')
+    query_model_file = os.path.join(args.curation_dir, 'query_model.cif')
+
+    # Check if all output files exist
+    all_outputs_exist = (os.path.exists(output_file) and
+                        os.path.exists(plddt_file) and
+                        os.path.exists(query_model_file))
+
+    if all_outputs_exist and not args.force:
+        print(f"Output files already exist in {args.curation_dir}. Skipping to avoid duplication.")
         print(f"Use --force to rerun anyway.")
         sys.exit(0)
 
-    # Output doesn't exist or force flag is set, proceed with full processing
+    # Output files missing or force flag is set, proceed with full processing
     main()
