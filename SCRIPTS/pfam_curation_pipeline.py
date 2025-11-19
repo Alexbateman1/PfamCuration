@@ -213,14 +213,30 @@ class CurationPipeline:
                 dirs_after = set(d.name for d in self.working_dir.iterdir() if d.is_dir())
                 new_dirs = dirs_after - dirs_before
 
-                # If no new directories created, TED probably found no domains
+                # Check if no new directories were created
                 if not new_dirs:
-                    print(f"  → No TED domains found, using whole sequence (build.sh)")
-                    subprocess.run(
-                        ['bash', 'build.sh', accession],
-                        check=True,
-                        cwd=self.working_dir
-                    )
+                    # Parse output to distinguish between "no TED domains" vs "all skipped"
+                    output = result.stdout + result.stderr
+
+                    # Check if truly no TED domains were found
+                    if f"No domains found for {accession} in TED." in output:
+                        print(f"  → No TED domains found, using whole sequence (build.sh)")
+                        subprocess.run(
+                            ['bash', 'build.sh', accession],
+                            check=True,
+                            cwd=self.working_dir
+                        )
+                    # Check if domains were skipped due to Pfam overlap
+                    elif "SKIPPED (PFAM OVERLAP)" in output:
+                        print(f"  → TED domains found but all overlap with existing Pfam families")
+                        print(f"  → Not building whole sequence (already covered by Pfam)")
+                    # Check if all directories already existed
+                    elif "SKIPPED (ALREADY EXISTS)" in output or "Skipped (already exists):" in output:
+                        print(f"  → All TED domain directories already exist")
+                    else:
+                        # Unexpected case - no domains created but unclear why
+                        print(f"  → No directories created (reason unclear)")
+                        print(f"  → Not building whole sequence to be safe")
                 else:
                     print(f"  → Created {len(new_dirs)} TED domain(s)")
 
