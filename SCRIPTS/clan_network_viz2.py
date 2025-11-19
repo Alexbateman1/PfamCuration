@@ -192,7 +192,7 @@ class ClanNetworkVisualizer:
         Returns:
             Category number (0-2) where 0 is most significant
         """
-        if score > 50:
+        if score > 100:
             return 0  # Very significant
         elif score >= 30:
             return 1  # Significant
@@ -1117,8 +1117,8 @@ class ClanNetworkVisualizer:
             name = method_names[method]
 
             if method == 'scoop':
-                cat0_label = 'Score > 50'
-                cat1_label = 'Score 30-50'
+                cat0_label = 'Score > 100'
+                cat1_label = 'Score 30-100'
                 cat2_label = 'Score threshold-30'
             else:
                 cat0_label = 'E-value < 1e-10'
