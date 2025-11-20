@@ -122,20 +122,20 @@ class CurationPipeline:
     def capture_job_ids_from_output(self, output: str):
         """
         Extract job IDs from command output and add to tracking set
-        Looks for patterns like "Submitted batch job 12345" or just job numbers
+        Only matches actual SLURM sbatch submission messages
 
         Args:
             output: stdout/stderr from command that may contain job IDs
         """
-        # Pattern for "Submitted batch job 12345" or similar
+        # Only match actual SLURM sbatch output format
+        # This is very specific to avoid false positives
         job_patterns = [
-            r'Submitted batch job (\d+)',
-            r'job\s+(\d+)',
-            r'Job\s+<(\d+)>',
+            r'Submitted batch job (\d+)',  # SLURM sbatch output
+            r'sbatch:\s+Submitted batch job (\d+)',  # Alternate format
         ]
 
         for pattern in job_patterns:
-            matches = re.findall(pattern, output, re.IGNORECASE)
+            matches = re.findall(pattern, output)
             for job_id in matches:
                 self.submitted_jobs.add(job_id)
                 print(f"  Tracking job ID: {job_id}")
