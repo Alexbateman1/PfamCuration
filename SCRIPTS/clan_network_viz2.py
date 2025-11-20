@@ -814,12 +814,33 @@ class ClanNetworkVisualizer:
             color: #666;
             margin-bottom: 20px;
         }}
-        .legend {{
+        .controls-container {{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }}
+        .legend-box {{
+            flex: 1;
             background-color: white;
             padding: 15px;
             border: 1px solid #ddd;
-            margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+        .controls-box {{
+            flex: 1;
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }}
+        .control-item {{
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #fafafa;
         }}
         .legend-item {{
             display: inline-block;
@@ -870,50 +891,63 @@ class ClanNetworkVisualizer:
         <small>Click nodes to open InterPro | Drag nodes to reposition | Hover for details | Scroll to zoom | Navigation buttons in bottom-left</small>
     </div>
 
-    <div style="text-align: center; margin-bottom: 15px;">
-        <button id="editModeBtn" onclick="toggleEditMode()" style="
-            padding: 10px 20px;
-            font-size: 14px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        ">
-            🔓 Editing Mode: OFF (Click opens InterPro)
-        </button>
-        <div id="editModeStatus" style="font-size: 12px; color: #666; margin-top: 5px;">
-            Click the button to enable editing mode for easier node repositioning
+    <div class="controls-container">
+        <!-- Left box: Legend -->
+        <div class="legend-box">
+            <strong>Node Colors:</strong>
+            <div class="legend-item">
+                <span class="legend-circle" style="background-color: #4CAF50; border-color: #2E7D32;"></span>
+                Target clan families
+            </div>
+            <div class="legend-item">
+                <span class="legend-circle" style="background-color: #BDBDBD; border-color: #757575;"></span>
+                Families with no clan
+            </div>
+            <div class="legend-item">
+                <span class="legend-circle" style="background-color: #F44336; border-color: #C62828;"></span>
+                Families in different clan
+            </div>
+            <br/><br/>
+            <strong>Edge Colors by Method:</strong>
+            {legend_html}
         </div>
-    </div>
 
-    <div style="text-align: center; margin-bottom: 15px; background-color: white; padding: 15px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-        <label for="sizeSlider" style="font-weight: bold; margin-right: 10px;">Node & Text Scale:</label>
-        <input type="range" id="sizeSlider" min="0.3" max="3.0" step="0.1" value="1.0"
-               style="width: 300px; vertical-align: middle;">
-        <span id="sizeValue" style="margin-left: 10px; font-weight: bold; color: #4CAF50;">100%</span>
-        <div style="font-size: 12px; color: #666; margin-top: 5px;">
-            Adjust the size of all nodes and text labels
-        </div>
-    </div>
+        <!-- Right box: Controls -->
+        <div class="controls-box">
+            <!-- Editing Mode Control -->
+            <div class="control-item">
+                <div style="text-align: center;">
+                    <button id="editModeBtn" onclick="toggleEditMode()" style="
+                        padding: 10px 20px;
+                        font-size: 14px;
+                        background-color: #4CAF50;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                    ">
+                        🔓 Editing Mode: OFF (Click opens InterPro)
+                    </button>
+                    <div id="editModeStatus" style="font-size: 12px; color: #666; margin-top: 8px;">
+                        Click the button to enable editing mode for easier node repositioning
+                    </div>
+                </div>
+            </div>
 
-    <div class="legend">
-        <strong>Node Colors:</strong>
-        <div class="legend-item">
-            <span class="legend-circle" style="background-color: #4CAF50; border-color: #2E7D32;"></span>
-            Target clan families
+            <!-- Size Slider Control -->
+            <div class="control-item">
+                <div style="text-align: center;">
+                    <label for="sizeSlider" style="font-weight: bold; margin-right: 10px;">Node & Text Scale:</label>
+                    <input type="range" id="sizeSlider" min="0.3" max="3.0" step="0.1" value="1.0"
+                           style="width: 60%; vertical-align: middle;">
+                    <span id="sizeValue" style="margin-left: 10px; font-weight: bold; color: #4CAF50;">100%</span>
+                    <div style="font-size: 12px; color: #666; margin-top: 8px;">
+                        Adjust the size of all nodes and text labels
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="legend-item">
-            <span class="legend-circle" style="background-color: #BDBDBD; border-color: #757575;"></span>
-            Families with no clan
-        </div>
-        <div class="legend-item">
-            <span class="legend-circle" style="background-color: #F44336; border-color: #C62828;"></span>
-            Families in different clan
-        </div>
-        <br/><br/>
-        {legend_html}
     </div>
 
     <div id="mynetwork"></div>
