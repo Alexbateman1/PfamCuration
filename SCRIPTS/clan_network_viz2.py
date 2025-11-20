@@ -2,7 +2,8 @@
 """
 Visualize clan relationships using multiple comparison methods:
 - Foldseek (structural comparison)
-- HHblits (sequence profile comparison)
+- HHsearch (sequence profile comparison)
+- Reseek (profile comparison)
 - SCOOP (profile-profile comparison)
 
 This script:
@@ -35,6 +36,7 @@ class ClanNetworkVisualizer:
         # Hardcoded file paths for comparison methods
         self.foldseek_file = '/nfs/production/agb/interpro/users/typhaine/interpro-pfam-curation-tools/pfam_add_clan_search/results/foldseek_all.out'
         self.hhsearch_file = '/nfs/production/agb/pfam/users/agb/HHsearch2/query_results/all_results.tsv'
+        self.reseek_file = '/nfs/production/agb/pfam/data/all_vs_all/reseek/all_results.tsv'
         self.scoop_file = '/nfs/research/agb/research/agb/SCOOP/Latest/sump.E100.output'
 
         # Map Pfam types to vis.js shapes
@@ -59,6 +61,11 @@ class ClanNetworkVisualizer:
                 0: '#D55E00',  # Dark orange (strong)
                 1: '#DD7E33',  # Medium orange
                 2: '#E69F00'   # Light orange (weak)
+            },
+            'reseek': {
+                0: '#CC79A7',  # Dark purple/magenta (strong)
+                1: '#D896BC',  # Medium purple
+                2: '#E4B3D1'   # Light purple (weak)
             },
             'scoop': {
                 0: '#009E73',  # Dark teal (strong)
@@ -359,6 +366,90 @@ class ClanNetworkVisualizer:
         print(f"Total: {total_rows:,} rows -> {len(edges)} unique edges")
         return edges
 
+    def parse_reseek_results(self, clan_families, evalue_threshold=0.01):
+        """
+        Parse Reseek results and extract matches involving clan families.
+
+        Args:
+            clan_families: DataFrame of families in the clan
+            evalue_threshold: Maximum E-value to include
+
+        Returns:
+            Dictionary mapping (pfam1, pfam2) to {'evalue': value, 'category': cat}
+        """
+        print(f"\n[RESEEK] Reading results from {self.reseek_file}...")
+        print(f"Filtering for E-value < {evalue_threshold}")
+
+        clan_pfam_accs = set(clan_families['pfamA_acc'])
+
+        # Read file in chunks
+        chunk_size = 100000
+        edges = {}
+        total_rows = 0
+        kept_rows = 0
+        first_chunk = True
+
+        try:
+            for chunk in pd.read_csv(self.reseek_file, sep='\t', chunksize=chunk_size):
+                total_rows += len(chunk)
+
+                # Debug: show column names on first chunk
+                if first_chunk:
+                    print(f"  DEBUG: Reseek file columns: {list(chunk.columns)}")
+                    print(f"  DEBUG: First row sample:")
+                    if len(chunk) > 0:
+                        print(f"    QueryFamily: {chunk.iloc[0]['QueryFamily']}")
+                        print(f"    Hit: {chunk.iloc[0]['Hit']}")
+                        print(f"    E-value: {chunk.iloc[0]['E-value']}")
+                    first_chunk = False
+
+                # Convert E-value to float and filter
+                chunk['E-value'] = pd.to_numeric(chunk['E-value'], errors='coerce')
+                pre_filter_count = len(chunk)
+                chunk = chunk[chunk['E-value'] < evalue_threshold]
+                print(f"  DEBUG: E-value filter: {pre_filter_count} -> {len(chunk)} rows")
+
+                if len(chunk) == 0:
+                    continue
+
+                # Filter for clan families
+                mask = (chunk['QueryFamily'].isin(clan_pfam_accs)) | (chunk['Hit'].isin(clan_pfam_accs))
+                pre_clan_count = len(chunk)
+                chunk = chunk[mask]
+                print(f"  DEBUG: Clan filter: {pre_clan_count} -> {len(chunk)} rows")
+
+                if len(chunk) == 0:
+                    continue
+
+                kept_rows += len(chunk)
+
+                # Build edges dictionary
+                for _, row in chunk.iterrows():
+                    pfam1 = row['QueryFamily']
+                    pfam2 = row['Hit']
+
+                    if pd.isna(pfam1) or pd.isna(pfam2) or pfam1 == pfam2:
+                        continue
+
+                    edge_key = tuple(sorted([pfam1, pfam2]))
+                    evalue = row['E-value']
+                    category = self.categorize_evalue(evalue)
+
+                    if edge_key not in edges or evalue < edges[edge_key]['evalue']:
+                        edges[edge_key] = {'evalue': evalue, 'category': category}
+
+                if total_rows % 1000000 == 0:
+                    print(f"  Processed {total_rows:,} rows, kept {kept_rows:,}")
+
+        except Exception as e:
+            print(f"  ERROR parsing Reseek file: {e}")
+            import traceback
+            traceback.print_exc()
+            return {}
+
+        print(f"Total: {total_rows:,} rows -> {len(edges)} unique edges")
+        return edges
+
     def parse_scoop_results(self, clan_families, score_threshold=10.0):
         """
         Parse SCOOP results and extract matches involving clan families.
@@ -420,13 +511,14 @@ class ClanNetworkVisualizer:
         print(f"Total: {total_rows:,} rows -> {len(edges)} unique edges")
         return edges
 
-    def combine_method_results(self, foldseek_edges, hhsearch_edges, scoop_edges, selected_methods):
+    def combine_method_results(self, foldseek_edges, hhsearch_edges, reseek_edges, scoop_edges, selected_methods):
         """
         Combine results from different methods into a unified structure.
 
         Args:
             foldseek_edges: Dictionary of foldseek edges
             hhsearch_edges: Dictionary of hhsearch edges
+            reseek_edges: Dictionary of reseek edges
             scoop_edges: Dictionary of scoop edges
             selected_methods: List of method names to include
 
@@ -446,6 +538,12 @@ class ClanNetworkVisualizer:
                 if edge_key not in combined:
                     combined[edge_key] = {}
                 combined[edge_key]['hhsearch'] = data
+
+        if 'reseek' in selected_methods and reseek_edges:
+            for edge_key, data in reseek_edges.items():
+                if edge_key not in combined:
+                    combined[edge_key] = {}
+                combined[edge_key]['reseek'] = data
 
         if 'scoop' in selected_methods and scoop_edges:
             for edge_key, data in scoop_edges.items():
@@ -619,9 +717,10 @@ class ClanNetworkVisualizer:
 
         # Define offset for each method to separate multiple edges visually
         method_offsets = {
-            'foldseek': -0.2,   # Curve slightly to one side
-            'hhsearch': 0,      # Straight
-            'scoop': 0.2        # Curve slightly to other side
+            'foldseek': -0.3,   # Curve to one side
+            'hhsearch': -0.1,   # Slight curve
+            'reseek': 0.1,      # Slight curve other side
+            'scoop': 0.3        # Curve to other side
         }
 
         for edge_key, method_data in combined_edges.items():
@@ -1109,6 +1208,7 @@ class ClanNetworkVisualizer:
         method_names = {
             'foldseek': 'Foldseek (structural)',
             'hhsearch': 'HHsearch (profile)',
+            'reseek': 'Reseek (profile)',
             'scoop': 'SCOOP (profile-profile)'
         }
 
@@ -1144,15 +1244,16 @@ class ClanNetworkVisualizer:
 
         return '\n'.join(legend_parts)
 
-    def analyze_clan(self, clan_acc, selected_methods, evalue_threshold=1e-5, hhsearch_evalue_threshold=0.01, scoop_threshold=10.0):
+    def analyze_clan(self, clan_acc, selected_methods, evalue_threshold=1e-5, hhsearch_evalue_threshold=0.01, reseek_evalue_threshold=0.01, scoop_threshold=10.0):
         """
         Complete analysis pipeline for a clan.
 
         Args:
             clan_acc: Clan accession (e.g., 'CL0004')
-            selected_methods: List of methods to use (['foldseek'], ['hhsearch'], ['scoop'], or combinations)
+            selected_methods: List of methods to use (['foldseek'], ['hhsearch'], ['reseek'], ['scoop'], or combinations)
             evalue_threshold: Maximum E-value for foldseek
             hhsearch_evalue_threshold: Maximum E-value for hhsearch (default 0.01)
+            reseek_evalue_threshold: Maximum E-value for reseek (default 0.01)
             scoop_threshold: Minimum SCOOP score
         """
         print(f"\n{'='*60}")
@@ -1170,6 +1271,7 @@ class ClanNetworkVisualizer:
         # Parse results from selected methods
         foldseek_edges = {}
         hhsearch_edges = {}
+        reseek_edges = {}
         scoop_edges = {}
 
         if 'foldseek' in selected_methods:
@@ -1178,11 +1280,14 @@ class ClanNetworkVisualizer:
         if 'hhsearch' in selected_methods:
             hhsearch_edges = self.parse_hhsearch_results(clan_families, hhsearch_evalue_threshold)
 
+        if 'reseek' in selected_methods:
+            reseek_edges = self.parse_reseek_results(clan_families, reseek_evalue_threshold)
+
         if 'scoop' in selected_methods:
             scoop_edges = self.parse_scoop_results(clan_families, scoop_threshold)
 
         # Combine results
-        combined_edges = self.combine_method_results(foldseek_edges, hhsearch_edges, scoop_edges, selected_methods)
+        combined_edges = self.combine_method_results(foldseek_edges, hhsearch_edges, reseek_edges, scoop_edges, selected_methods)
 
         if len(combined_edges) == 0:
             print(f"No matches found for clan {clan_acc}")
@@ -1226,29 +1331,33 @@ Examples:
   # Single method
   %(prog)s CL0004 --foldseek
   %(prog)s CL0004 --hhsearch
+  %(prog)s CL0004 --reseek
   %(prog)s CL0004 --scoop
 
   # Multiple methods
   %(prog)s CL0004 --foldseek --hhsearch
-  %(prog)s CL0004 --foldseek --scoop
+  %(prog)s CL0004 --foldseek --reseek --scoop
 
   # All methods
   %(prog)s CL0004 --all
 
   # Custom thresholds
-  %(prog)s CL0004 --all --evalue-threshold 1e-10 --hhsearch-evalue-threshold 0.001 --scoop-threshold 30
+  %(prog)s CL0004 --all --evalue-threshold 1e-10 --hhsearch-evalue-threshold 0.001 --reseek-evalue-threshold 0.001 --scoop-threshold 30
         '''
     )
 
     parser.add_argument('clan', help='Clan accession (e.g., CL0004)')
     parser.add_argument('--foldseek', action='store_true', help='Include foldseek structural comparisons')
     parser.add_argument('--hhsearch', action='store_true', help='Include HHsearch profile comparisons')
+    parser.add_argument('--reseek', action='store_true', help='Include Reseek profile comparisons')
     parser.add_argument('--scoop', action='store_true', help='Include SCOOP profile-profile comparisons')
     parser.add_argument('--all', action='store_true', help='Include all comparison methods')
     parser.add_argument('--evalue-threshold', type=float, default=1e-5,
                        help='E-value threshold for foldseek (default: 1e-5)')
     parser.add_argument('--hhsearch-evalue-threshold', type=float, default=0.01,
                        help='E-value threshold for hhsearch (default: 0.01)')
+    parser.add_argument('--reseek-evalue-threshold', type=float, default=0.01,
+                       help='E-value threshold for reseek (default: 0.01)')
     parser.add_argument('--scoop-threshold', type=float, default=10.0,
                        help='Minimum SCOOP score threshold (default: 10.0)')
     parser.add_argument('--mysql-config', default='~/.my.cnf',
@@ -1259,17 +1368,19 @@ Examples:
     # Determine which methods to use
     selected_methods = []
     if args.all:
-        selected_methods = ['foldseek', 'hhsearch', 'scoop']
+        selected_methods = ['foldseek', 'hhsearch', 'reseek', 'scoop']
     else:
         if args.foldseek:
             selected_methods.append('foldseek')
         if args.hhsearch:
             selected_methods.append('hhsearch')
+        if args.reseek:
+            selected_methods.append('reseek')
         if args.scoop:
             selected_methods.append('scoop')
 
     if not selected_methods:
-        print("Error: Must specify at least one method (--foldseek, --hhsearch, --scoop, or --all)")
+        print("Error: Must specify at least one method (--foldseek, --hhsearch, --reseek, --scoop, or --all)")
         sys.exit(1)
 
     # Create visualizer
@@ -1277,7 +1388,7 @@ Examples:
 
     try:
         viz.connect_to_database()
-        viz.analyze_clan(args.clan, selected_methods, args.evalue_threshold, args.hhsearch_evalue_threshold, args.scoop_threshold)
+        viz.analyze_clan(args.clan, selected_methods, args.evalue_threshold, args.hhsearch_evalue_threshold, args.reseek_evalue_threshold, args.scoop_threshold)
     finally:
         viz.close()
 
