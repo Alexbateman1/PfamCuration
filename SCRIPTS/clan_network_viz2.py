@@ -189,6 +189,23 @@ class ClanNetworkVisualizer:
         else:
             return 2  # Moderate
 
+    def categorize_reseek_evalue(self, evalue):
+        """
+        Categorize Reseek E-value into significance levels.
+
+        Args:
+            evalue: E-value
+
+        Returns:
+            Category number (0-2) where 0 is most significant
+        """
+        if evalue < 1e-5:
+            return 0  # Very significant
+        elif evalue < 0.001:
+            return 1  # Significant
+        else:
+            return 2  # Moderate (threshold to 0.001)
+
     def categorize_scoop_score(self, score):
         """
         Categorize SCOOP score into significance levels.
@@ -303,36 +320,21 @@ class ClanNetworkVisualizer:
         edges = {}
         total_rows = 0
         kept_rows = 0
-        first_chunk = True
 
         try:
             for chunk in pd.read_csv(self.hhsearch_file, sep='\t', chunksize=chunk_size):
                 total_rows += len(chunk)
 
-                # Debug: show column names on first chunk
-                if first_chunk:
-                    print(f"  DEBUG: HHsearch file columns: {list(chunk.columns)}")
-                    print(f"  DEBUG: First row sample:")
-                    if len(chunk) > 0:
-                        print(f"    QueryFamily: {chunk.iloc[0]['QueryFamily']}")
-                        print(f"    Hit: {chunk.iloc[0]['Hit']}")
-                        print(f"    E-value: {chunk.iloc[0]['E-value']}")
-                    first_chunk = False
-
                 # Convert E-value to float and filter
                 chunk['E-value'] = pd.to_numeric(chunk['E-value'], errors='coerce')
-                pre_filter_count = len(chunk)
                 chunk = chunk[chunk['E-value'] < evalue_threshold]
-                print(f"  DEBUG: E-value filter: {pre_filter_count} -> {len(chunk)} rows")
 
                 if len(chunk) == 0:
                     continue
 
                 # Filter for clan families
                 mask = (chunk['QueryFamily'].isin(clan_pfam_accs)) | (chunk['Hit'].isin(clan_pfam_accs))
-                pre_clan_count = len(chunk)
                 chunk = chunk[mask]
-                print(f"  DEBUG: Clan filter: {pre_clan_count} -> {len(chunk)} rows")
 
                 if len(chunk) == 0:
                     continue
@@ -387,36 +389,21 @@ class ClanNetworkVisualizer:
         edges = {}
         total_rows = 0
         kept_rows = 0
-        first_chunk = True
 
         try:
             for chunk in pd.read_csv(self.reseek_file, sep='\t', chunksize=chunk_size):
                 total_rows += len(chunk)
 
-                # Debug: show column names on first chunk
-                if first_chunk:
-                    print(f"  DEBUG: Reseek file columns: {list(chunk.columns)}")
-                    print(f"  DEBUG: First row sample:")
-                    if len(chunk) > 0:
-                        print(f"    QueryFamily: {chunk.iloc[0]['QueryFamily']}")
-                        print(f"    Hit: {chunk.iloc[0]['Hit']}")
-                        print(f"    E-value: {chunk.iloc[0]['E-value']}")
-                    first_chunk = False
-
                 # Convert E-value to float and filter
                 chunk['E-value'] = pd.to_numeric(chunk['E-value'], errors='coerce')
-                pre_filter_count = len(chunk)
                 chunk = chunk[chunk['E-value'] < evalue_threshold]
-                print(f"  DEBUG: E-value filter: {pre_filter_count} -> {len(chunk)} rows")
 
                 if len(chunk) == 0:
                     continue
 
                 # Filter for clan families
                 mask = (chunk['QueryFamily'].isin(clan_pfam_accs)) | (chunk['Hit'].isin(clan_pfam_accs))
-                pre_clan_count = len(chunk)
                 chunk = chunk[mask]
-                print(f"  DEBUG: Clan filter: {pre_clan_count} -> {len(chunk)} rows")
 
                 if len(chunk) == 0:
                     continue
@@ -433,7 +420,7 @@ class ClanNetworkVisualizer:
 
                     edge_key = tuple(sorted([pfam1, pfam2]))
                     evalue = row['E-value']
-                    category = self.categorize_evalue(evalue)
+                    category = self.categorize_reseek_evalue(evalue)
 
                     if edge_key not in edges or evalue < edges[edge_key]['evalue']:
                         edges[edge_key] = {'evalue': evalue, 'category': category}
@@ -1220,6 +1207,10 @@ class ClanNetworkVisualizer:
                 cat0_label = 'Score > 100'
                 cat1_label = 'Score 30-100'
                 cat2_label = 'Score threshold-30'
+            elif method == 'reseek':
+                cat0_label = 'E-value < 1e-5'
+                cat1_label = 'E-value 1e-5 to 0.001'
+                cat2_label = 'E-value threshold-0.001'
             else:
                 cat0_label = 'E-value < 1e-10'
                 cat1_label = 'E-value 1e-10 to 1e-5'
