@@ -69,6 +69,7 @@ def run_reseek_search(query_file, db_file, output_file, sensitivity='sensitive',
     """
     # Specify columns to match HHsearch-like output
     # query, target, qlo, qhi, tlo, thi, ql, tl, pctid, evalue, pvalue, aq
+    # Note: Reseek uses + to separate column names, not commas
     cmd = [
         'reseek',
         '-search', str(query_file),
@@ -77,7 +78,7 @@ def run_reseek_search(query_file, db_file, output_file, sensitivity='sensitive',
         '-output', str(output_file),
         '-threads', str(threads),
         '-evalue', '10',  # Match HHsearch default
-        '-columns', 'query,target,qlo,qhi,tlo,thi,ql,tl,pctid,evalue,pvalue,aq',
+        '-columns', 'query+target+qlo+qhi+tlo+thi+ql+tl+pctid+evalue+pvalue+aq',
     ]
 
     try:
