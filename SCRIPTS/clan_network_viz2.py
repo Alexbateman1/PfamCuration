@@ -183,9 +183,16 @@ class ClanNetworkVisualizer:
             Dictionary with:
             - 'nested_pairs': set of tuples (pfamA_acc, nests_pfamA_acc)
             - 'nested_nodes': set of nests_pfamA_acc (nodes that are nested)
+            - 'nested_in': dict mapping nests_pfamA_acc -> list of pfamA_acc (what this domain nests in)
+            - 'contains_nested': dict mapping pfamA_acc -> list of nests_pfamA_acc (what nests in this domain)
         """
         if not pfam_accs:
-            return {'nested_pairs': set(), 'nested_nodes': set()}
+            return {
+                'nested_pairs': set(),
+                'nested_nodes': set(),
+                'nested_in': {},
+                'contains_nested': {}
+            }
 
         # Convert set to list for SQL query
         pfam_list = list(pfam_accs)
@@ -205,17 +212,31 @@ class ClanNetworkVisualizer:
 
         nested_pairs = set()
         nested_nodes = set()
+        nested_in = {}  # nests_pfamA_acc -> [pfamA_acc, ...]
+        contains_nested = {}  # pfamA_acc -> [nests_pfamA_acc, ...]
 
         for pfamA_acc, nests_pfamA_acc in results:
             nested_pairs.add((pfamA_acc, nests_pfamA_acc))
             nested_nodes.add(nests_pfamA_acc)
+
+            # Track what each nested domain nests inside
+            if nests_pfamA_acc not in nested_in:
+                nested_in[nests_pfamA_acc] = []
+            nested_in[nests_pfamA_acc].append(pfamA_acc)
+
+            # Track what each domain contains
+            if pfamA_acc not in contains_nested:
+                contains_nested[pfamA_acc] = []
+            contains_nested[pfamA_acc].append(nests_pfamA_acc)
 
         print(f"\nFound {len(nested_pairs)} nested domain relationships")
         print(f"Found {len(nested_nodes)} nodes that are nested domains")
 
         return {
             'nested_pairs': nested_pairs,
-            'nested_nodes': nested_nodes
+            'nested_nodes': nested_nodes,
+            'nested_in': nested_in,
+            'contains_nested': contains_nested
         }
 
     def categorize_evalue(self, evalue):
@@ -678,6 +699,8 @@ class ClanNetworkVisualizer:
         # Extract nested domain info
         nested_nodes = nested_info['nested_nodes']
         nested_pairs = nested_info['nested_pairs']
+        nested_in = nested_info['nested_in']
+        contains_nested = nested_info['contains_nested']
 
         # Prepare nodes data
         nodes = []
@@ -751,12 +774,22 @@ class ClanNetworkVisualizer:
                 if is_nested:
                     node_config['shapeProperties'] = {'borderDashes': [5, 5]}
 
+            # Build nested domain info for tooltip
+            nested_info_html = ""
+            if node in nested_in:
+                parents = ', '.join(nested_in[node])
+                nested_info_html += f"<b style='font-size: 13px; color: #D55E00;'>Nests inside:</b> <span style='font-size: 13px;'>{parents}</span><br/>"
+            if node in contains_nested:
+                children = ', '.join(contains_nested[node])
+                nested_info_html += f"<b style='font-size: 13px; color: #009E73;'>Contains nested:</b> <span style='font-size: 13px;'>{children}</span><br/>"
+
             node_titles[node] = (f"<div style='font-family: Arial; padding: 5px;'>"
                         f"<b style='font-size: 16px;'>{data.get('pfam_id', node)}</b><br/>"
                         f"<span style='color: #666; font-size: 14px;'>{node}</span><br/>"
                         f"<b style='font-size: 13px;'>Type:</b> <span style='font-size: 13px;'>{node_type}</span><br/>"
                         f"<b style='font-size: 13px;'>Length:</b> <span style='font-size: 13px;'>{model_length}</span><br/>"
                         f"<b style='font-size: 13px;'>Clan:</b> <span style='font-size: 13px;'>{node_clan if node_clan else 'None'}</span><br/>"
+                        f"{nested_info_html}"
                         f"<span style='font-size: 12px; color: #555;'>{data.get('description', '')}</span>"
                         f"</div>")
 
@@ -835,8 +868,11 @@ class ClanNetworkVisualizer:
                 }
 
                 # Add dashed line if nested domain relationship
+                # Scale dash pattern with line width for better visibility
                 if is_nested_edge:
-                    edge_config['dashes'] = [5, 5]
+                    dash_length = 10 * width  # Longer dashes for thicker lines
+                    gap_length = 10 * width
+                    edge_config['dashes'] = [dash_length, gap_length]
 
                 edges.append(edge_config)
 
