@@ -68,8 +68,9 @@ def run_reseek_search(query_file, db_file, output_file, sensitivity='sensitive',
         bool: True if successful, False otherwise
     """
     # Specify columns to match HHsearch-like output
-    # query, target, qlo, qhi, tlo, thi, ql, tl, pctid, evalue, pvalue, aq
+    # query, target, qlo, qhi, tlo, thi, ql, tl, pctid, evalue, aq
     # Note: Reseek uses + to separate column names, not commas
+    # Note: pvalue is not available in this version of reseek
     cmd = [
         'reseek',
         '-search', str(query_file),
@@ -78,7 +79,7 @@ def run_reseek_search(query_file, db_file, output_file, sensitivity='sensitive',
         '-output', str(output_file),
         '-threads', str(threads),
         '-evalue', '10',  # Match HHsearch default
-        '-columns', 'query+target+qlo+qhi+tlo+thi+ql+tl+pctid+evalue+pvalue+aq',
+        '-columns', 'query+target+qlo+qhi+tlo+thi+ql+tl+pctid+evalue+aq',
     ]
 
     try:
@@ -97,7 +98,7 @@ def parse_reseek_output(reseek_output_file, query_pfam_acc):
     Parse Reseek output and convert to HHsearch-like format.
 
     Reseek output columns (with -columns flag):
-        query, target, qlo, qhi, tlo, thi, ql, tl, pctid, evalue, pvalue, aq
+        query, target, qlo, qhi, tlo, thi, ql, tl, pctid, evalue, aq
 
     Returns:
         list of dicts with parsed results
@@ -114,7 +115,7 @@ def parse_reseek_output(reseek_output_file, query_pfam_acc):
                 continue
 
             fields = line.split('\t')
-            if len(fields) < 12:
+            if len(fields) < 11:
                 continue
 
             try:
@@ -128,8 +129,10 @@ def parse_reseek_output(reseek_output_file, query_pfam_acc):
                 tl = int(fields[7])
                 pctid = float(fields[8])
                 evalue = float(fields[9])
-                pvalue = float(fields[10])
-                aq = float(fields[11])  # alignment quality (0-1 scale)
+                aq = float(fields[10])  # alignment quality (0-1 scale)
+
+                # P-value not available in this version of reseek, use evalue as proxy
+                pvalue = evalue
 
                 # Extract Pfam accessions
                 query_pfam = extract_pfam_accession(query_name)
