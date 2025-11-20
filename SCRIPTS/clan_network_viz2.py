@@ -702,6 +702,18 @@ class ClanNetworkVisualizer:
         nested_in = nested_info['nested_in']
         contains_nested = nested_info['contains_nested']
 
+        # Determine which nested nodes should actually have dashed borders
+        # Only if both nodes in the relationship are present AND connected in the graph
+        nodes_with_dashed_borders = set()
+        for pfamA_acc, nests_pfamA_acc in nested_pairs:
+            # Check both nodes are in graph
+            if pfamA_acc in G.nodes() and nests_pfamA_acc in G.nodes():
+                # Check if there's an edge between them in combined_edges
+                edge_key = tuple(sorted([pfamA_acc, nests_pfamA_acc]))
+                if edge_key in combined_edges:
+                    # Only the nested node (nests_pfamA_acc) gets dashed border
+                    nodes_with_dashed_borders.add(nests_pfamA_acc)
+
         # Prepare nodes data
         nodes = []
         node_titles = {}
@@ -728,8 +740,9 @@ class ClanNetworkVisualizer:
             node_type = data.get('type', 'Domain')
             shape = self.type_to_vis_shape.get(node_type, 'dot')
 
-            # Check if this node is a nested domain
-            is_nested = node in nested_nodes
+            # Check if this node should have dashed border
+            # Only if both nodes in relationship are present AND connected
+            is_nested = node in nodes_with_dashed_borders
 
             # Handle ellipse shapes specially
             if shape == 'ellipse':
@@ -868,11 +881,9 @@ class ClanNetworkVisualizer:
                 }
 
                 # Add dashed line if nested domain relationship
-                # Scale dash pattern with line width for better visibility
+                # Use consistent dash pattern for all line widths
                 if is_nested_edge:
-                    dash_length = 10 * width  # Longer dashes for thicker lines
-                    gap_length = 10 * width
-                    edge_config['dashes'] = [dash_length, gap_length]
+                    edge_config['dashes'] = [10, 10]
 
                 edges.append(edge_config)
 
