@@ -172,6 +172,52 @@ class ClanNetworkVisualizer:
             }
         return None
 
+    def get_nested_domains(self, pfam_accs):
+        """
+        Get nested domain relationships for a set of Pfam families.
+
+        Args:
+            pfam_accs: Set of Pfam accessions to check
+
+        Returns:
+            Dictionary with:
+            - 'nested_pairs': set of tuples (pfamA_acc, nests_pfamA_acc)
+            - 'nested_nodes': set of nests_pfamA_acc (nodes that are nested)
+        """
+        if not pfam_accs:
+            return {'nested_pairs': set(), 'nested_nodes': set()}
+
+        # Convert set to list for SQL query
+        pfam_list = list(pfam_accs)
+        placeholders = ','.join(['%s'] * len(pfam_list))
+
+        query = f"""
+            SELECT pfamA_acc, nests_pfamA_acc
+            FROM nested_domains
+            WHERE pfamA_acc IN ({placeholders})
+            OR nests_pfamA_acc IN ({placeholders})
+        """
+
+        cursor = self.connection.cursor()
+        cursor.execute(query, pfam_list + pfam_list)
+        results = cursor.fetchall()
+        cursor.close()
+
+        nested_pairs = set()
+        nested_nodes = set()
+
+        for pfamA_acc, nests_pfamA_acc in results:
+            nested_pairs.add((pfamA_acc, nests_pfamA_acc))
+            nested_nodes.add(nests_pfamA_acc)
+
+        print(f"\nFound {len(nested_pairs)} nested domain relationships")
+        print(f"Found {len(nested_nodes)} nodes that are nested domains")
+
+        return {
+            'nested_pairs': nested_pairs,
+            'nested_nodes': nested_nodes
+        }
+
     def categorize_evalue(self, evalue):
         """
         Categorize E-value into significance levels.
@@ -550,7 +596,7 @@ class ClanNetworkVisualizer:
             combined_edges: Dictionary of combined edge data
 
         Returns:
-            NetworkX graph with nodes and combined_edges dict
+            Tuple of (NetworkX graph, combined_edges dict, nested_info dict)
         """
         G = nx.Graph()
 
@@ -598,6 +644,10 @@ class ClanNetworkVisualizer:
             if not G.has_edge(edge_key[0], edge_key[1]):
                 G.add_edge(edge_key[0], edge_key[1])
 
+        # Get nested domain relationships for all nodes in the network
+        all_nodes = set(G.nodes())
+        nested_info = self.get_nested_domains(all_nodes)
+
         print(f"\nNetwork statistics:")
         print(f"  Nodes: {G.number_of_nodes()}")
         print(f"  Unique edge pairs: {len(combined_edges)}")
@@ -611,19 +661,24 @@ class ClanNetworkVisualizer:
         print(f"  Families with no clan: {no_clan_count}")
         print(f"  Families in different clan: {different_clan_count}")
 
-        return G, combined_edges
+        return G, combined_edges, nested_info
 
-    def export_interactive_html(self, G, combined_edges, clan_acc, selected_methods, output_file):
+    def export_interactive_html(self, G, combined_edges, nested_info, clan_acc, selected_methods, output_file):
         """
         Export network as interactive HTML using vis.js with multiple edges per node pair.
 
         Args:
             G: NetworkX graph
             combined_edges: Dictionary of combined edge data
+            nested_info: Dictionary with nested domain information
             clan_acc: Clan accession
             selected_methods: List of selected method names
             output_file: Output HTML file path
         """
+        # Extract nested domain info
+        nested_nodes = nested_info['nested_nodes']
+        nested_pairs = nested_info['nested_pairs']
+
         # Prepare nodes data
         nodes = []
         node_titles = {}
@@ -650,6 +705,9 @@ class ClanNetworkVisualizer:
             node_type = data.get('type', 'Domain')
             shape = self.type_to_vis_shape.get(node_type, 'dot')
 
+            # Check if this node is a nested domain
+            is_nested = node in nested_nodes
+
             # Handle ellipse shapes specially
             if shape == 'ellipse':
                 font_config = {
@@ -673,6 +731,9 @@ class ClanNetworkVisualizer:
                     'widthConstraint': {'minimum': size * 1.5, 'maximum': size * 1.5},
                     'heightConstraint': {'minimum': size, 'maximum': size}
                 }
+                # Add dashed border if nested domain
+                if is_nested:
+                    node_config['shapeProperties'] = {'borderDashes': [5, 5]}
             else:
                 node_config = {
                     'id': node,
@@ -686,6 +747,9 @@ class ClanNetworkVisualizer:
                     'size': size,
                     'font': {'size': 18, 'color': '#000000', 'face': 'Arial', 'bold': {'size': 20}}
                 }
+                # Add dashed border if nested domain
+                if is_nested:
+                    node_config['shapeProperties'] = {'borderDashes': [5, 5]}
 
             node_titles[node] = (f"<div style='font-family: Arial; padding: 5px;'>"
                         f"<b style='font-size: 16px;'>{data.get('pfam_id', node)}</b><br/>"
@@ -713,6 +777,9 @@ class ClanNetworkVisualizer:
         for edge_key, method_data in combined_edges.items():
             pfam1, pfam2 = edge_key
 
+            # Check if this edge represents a nested domain relationship
+            is_nested_edge = (pfam1, pfam2) in nested_pairs or (pfam2, pfam1) in nested_pairs
+
             # Create separate edges for each method present
             for method in selected_methods:
                 if method not in method_data:
@@ -739,12 +806,14 @@ class ClanNetworkVisualizer:
                 else:
                     score_or_eval = f"E-value: {data['evalue']:.2e}"
 
+                nested_label = "<br/><b style='color: #D55E00;'>Nested Domain Relationship</b>" if is_nested_edge else ""
                 edge_titles[edge_id] = (f"<div style='font-family: Arial; padding: 5px;'>"
                             f"<b style='font-size: 15px;'>{method.upper()}</b><br/>"
                             f"<b style='font-size: 14px;'>{score_or_eval}</b><br/>"
                             f"<b style='font-size: 13px;'>Between:</b><br/>"
                             f"<span style='color: #666; font-size: 13px;'>{pfam1}</span><br/>"
                             f"<span style='color: #666; font-size: 13px;'>{pfam2}</span>"
+                            f"{nested_label}"
                             f"</div>")
 
                 # Use different smooth settings to offset edges
@@ -756,14 +825,20 @@ class ClanNetworkVisualizer:
                     # Slightly curved to separate from other edges
                     smooth_config = {'enabled': True, 'type': 'curvedCW' if roundness > 0 else 'curvedCCW', 'roundness': abs(roundness)}
 
-                edges.append({
+                edge_config = {
                     'id': edge_id,
                     'from': pfam1,
                     'to': pfam2,
                     'value': width,
                     'color': {'color': color, 'highlight': '#000000'},
                     'smooth': smooth_config
-                })
+                }
+
+                # Add dashed line if nested domain relationship
+                if is_nested_edge:
+                    edge_config['dashes'] = [5, 5]
+
+                edges.append(edge_config)
 
         # Debug: count edges per method
         edge_counts = {method: 0 for method in selected_methods}
@@ -910,6 +985,12 @@ class ClanNetworkVisualizer:
             <br/><br/>
             <strong>Edge Colors by Method:</strong>
             {legend_html}
+            <br/>
+            <strong>Nested Domains:</strong>
+            <div class="legend-item">
+                <span style="display: inline-block; width: 30px; height: 2px; border-top: 2px dashed #666; margin-right: 5px; vertical-align: middle;"></span>
+                Dashed edges/borders indicate nested domain relationships
+            </div>
         </div>
 
         <!-- Right box: Controls -->
@@ -1319,12 +1400,12 @@ class ClanNetworkVisualizer:
             return
 
         # Create network
-        G, combined_edges = self.create_network(clan_acc, clan_families, combined_edges)
+        G, combined_edges, nested_info = self.create_network(clan_acc, clan_families, combined_edges)
 
         # Create interactive HTML
         methods_str = '_'.join(selected_methods)
         html_file = f'{clan_acc}_{methods_str}_interactive.html'
-        self.export_interactive_html(G, combined_edges, clan_acc, selected_methods, html_file)
+        self.export_interactive_html(G, combined_edges, nested_info, clan_acc, selected_methods, html_file)
 
         print(f"\nView the interactive HTML: {html_file}")
 
