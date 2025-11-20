@@ -44,7 +44,7 @@ def extract_pfam_accession(filename):
     return None
 
 
-def build_pfam_model_index(models_dir, num_families):
+def build_pfam_model_index(models_dir, num_families=None):
     """Build an index of available Pfam AlphaFold models."""
     print("=== Building Pfam model index ===")
 
@@ -62,13 +62,21 @@ def build_pfam_model_index(models_dir, num_families):
     for cif_file in cif_files:
         pfam_acc = extract_pfam_accession(cif_file.name)
         if pfam_acc:
-            # Only include families within the requested range
-            pfam_num = int(pfam_acc[2:])
-            if 1 <= pfam_num <= num_families:
+            if num_families is None:
+                # Include all families
                 if pfam_acc not in model_index:
                     model_index[pfam_acc] = cif_file
+            else:
+                # Only include families within the requested range
+                pfam_num = int(pfam_acc[2:])
+                if 1 <= pfam_num <= num_families:
+                    if pfam_acc not in model_index:
+                        model_index[pfam_acc] = cif_file
 
-    print(f"Indexed {len(model_index)} Pfam families (PF00001 to PF{num_families:05d})")
+    if num_families is None:
+        print(f"Indexed {len(model_index)} Pfam families (all available)")
+    else:
+        print(f"Indexed {len(model_index)} Pfam families (PF00001 to PF{num_families:05d})")
     return model_index
 
 
@@ -278,8 +286,8 @@ def main():
         description="Perform all-vs-all Pfam comparison using Reseek (efficient version)"
     )
     parser.add_argument(
-        '-n', type=int, required=True,
-        help="Number of Pfam families to process (PF00001 to PFxxxxx)"
+        '-n', type=int, default=None,
+        help="Number of Pfam families to process (PF00001 to PFxxxxx). If not specified, uses all available families."
     )
     parser.add_argument(
         '-dir', type=str, required=True,
@@ -303,7 +311,10 @@ def main():
     work_dir = Path(args.dir)
     work_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"Reseek all-vs-all pipeline for {args.n} Pfam families")
+    if args.n is None:
+        print(f"Reseek all-vs-all pipeline for all available Pfam families")
+    else:
+        print(f"Reseek all-vs-all pipeline for {args.n} Pfam families")
     print(f"Working directory: {work_dir}")
     print(f"Models directory: {args.models_dir}")
     print()
