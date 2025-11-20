@@ -881,9 +881,9 @@ class ClanNetworkVisualizer:
                 }
 
                 # Add dashed line if nested domain relationship
-                # Use consistent dash pattern for all line widths
+                # Use dash pattern with larger gap to prevent visual overlap on thick lines
                 if is_nested_edge:
-                    edge_config['dashes'] = [10, 10]
+                    edge_config['dashes'] = [8, 12]
 
                 edges.append(edge_config)
 
