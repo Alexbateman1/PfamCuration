@@ -456,8 +456,19 @@ def extract_chain_from_pdb(input_pdb, output_pdb, chain_id='B'):
                     if line.startswith(('ATOM', 'HETATM')):
                         if len(line) > 21 and line[21] == chain_id:
                             outfile.write(line)
-                    # Keep header lines
-                    elif line.startswith(('HEADER', 'TITLE', 'COMPND', 'SOURCE', 'REMARK')):
+                    # Skip FATCAT REMARK lines which cause errors in Chimera
+                    elif line.startswith('REMARK'):
+                        # Filter out FATCAT-specific remarks
+                        if any(keyword in line for keyword in [
+                            'superimposed protein', 'twisted protein',
+                            'result after optimizing', 'chain A', 'chain B',
+                            'PF0', '.pdb'  # Also skip lines mentioning PDB files
+                        ]):
+                            continue
+                        # Keep other REMARK lines
+                        outfile.write(line)
+                    # Keep other header lines
+                    elif line.startswith(('HEADER', 'TITLE', 'COMPND', 'SOURCE')):
                         outfile.write(line)
                 outfile.write("END\n")
         return True
