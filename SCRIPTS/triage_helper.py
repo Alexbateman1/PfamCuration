@@ -309,6 +309,12 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, skip_to_pfne
     
     # Skip only the initial setup and SEED editing if we're coming back from DESC edit
     if not skip_to_pfnew:
+        # Check for ted.png and display it if it exists
+        ted_png = Path('ted.png')
+        if ted_png.exists():
+            print("\nDisplaying ted.png...")
+            run_command("display ted.png", wait=False)
+
         # Launch belvu for SEED review
         print("\nLaunching belvu for SEED alignment review...")
         belvu_success = run_command("belvu SEED", wait=True)
