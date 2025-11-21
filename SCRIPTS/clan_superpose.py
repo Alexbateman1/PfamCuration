@@ -12,7 +12,7 @@ This script:
    - Saves as PFXXXXX.pdb
 3. Orders domains by mean pLDDT
 4. Uses the highest scoring domain as reference
-5. Superposes all other structures using FATCAT
+5. Superposes all other structures using rigid-body alignment (Bio.PDB)
 6. Creates a combined PDB file with all superposed structures
 """
 
@@ -482,6 +482,80 @@ def extract_chain_from_pdb(input_pdb, output_pdb, chain_id='B'):
         return False
 
 
+def run_rigid_superposition(reference_pdb, target_pdb, output_dir, target_name):
+    """
+    Perform rigid-body superposition using Bio.PDB (no flexible alignment).
+
+    Args:
+        reference_pdb: Reference structure PDB file
+        target_pdb: Target structure PDB file to superpose
+        output_dir: Directory to save output files
+        target_name: Name for output file (e.g., 'PF00651')
+
+    Returns:
+        Path to superposed PDB file, or None if failed
+    """
+    from Bio.PDB import PDBParser, PDBIO, Superimposer
+
+    try:
+        parser = PDBParser(QUIET=True)
+
+        # Load structures
+        ref_structure = parser.get_structure('reference', reference_pdb)
+        target_structure = parser.get_structure('target', target_pdb)
+
+        # Get CA atoms from both structures
+        ref_atoms = []
+        target_atoms = []
+
+        ref_model = ref_structure[0]
+        target_model = target_structure[0]
+
+        # Collect CA atoms
+        for ref_chain in ref_model:
+            for ref_res in ref_chain:
+                if 'CA' in ref_res:
+                    ref_atoms.append(ref_res['CA'])
+
+        for target_chain in target_model:
+            for target_res in target_chain:
+                if 'CA' in target_res:
+                    target_atoms.append(target_res['CA'])
+
+        # Use the minimum number of atoms available
+        num_atoms = min(len(ref_atoms), len(target_atoms))
+
+        if num_atoms < 3:
+            print(f"  ERROR: Not enough CA atoms for superposition (need >= 3, found {num_atoms})")
+            return None
+
+        print(f"  Superposing {num_atoms} CA atoms")
+
+        # Perform superposition
+        super_imposer = Superimposer()
+        super_imposer.set_atoms(ref_atoms[:num_atoms], target_atoms[:num_atoms])
+
+        # Apply transformation to entire target structure
+        super_imposer.apply(target_structure.get_atoms())
+
+        # Save superposed structure
+        output_pdb = os.path.join(output_dir, f"{target_name}_superposed.pdb")
+        io = PDBIO()
+        io.set_structure(target_structure)
+        io.save(output_pdb)
+
+        print(f"  RMSD: {super_imposer.rms:.2f} Å")
+        print(f"  Saved superposed structure to: {output_pdb}")
+
+        return output_pdb
+
+    except Exception as e:
+        print(f"  ERROR: Superposition failed: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
+
+
 def run_fatcat(reference_pdb, target_pdb, output_dir, target_name, fatcat_path='FATCAT'):
     """
     Run FATCAT to superpose target structure onto reference and extract chain B.
@@ -622,11 +696,6 @@ def main():
         help='Output directory for PDB files (default: current directory)'
     )
     parser.add_argument(
-        '--fatcat',
-        default='FATCAT',
-        help='Path to FATCAT executable (default: FATCAT in PATH)'
-    )
-    parser.add_argument(
         '--config',
         default='~/.my.cnf',
         help='Path to MySQL config file (default: ~/.my.cnf)'
@@ -689,7 +758,7 @@ def main():
 
         # Superpose all other structures
         print(f"\n{'='*60}")
-        print(f"Superposing structures using FATCAT")
+        print(f"Superposing structures using rigid-body alignment")
         print(f"{'='*60}")
 
         superposed_files = []
@@ -702,12 +771,11 @@ def main():
         for result in family_results[1:]:
             print(f"\nSuperposing {result['pfam_acc']} onto reference...")
 
-            superposed_pdb = run_fatcat(
+            superposed_pdb = run_rigid_superposition(
                 reference['pdb_file'],
                 result['pdb_file'],
                 str(output_dir),
-                result['pfam_acc'],
-                args.fatcat
+                result['pfam_acc']
             )
 
             if superposed_pdb:
@@ -715,7 +783,7 @@ def main():
                 structure_labels.append(result['pfam_acc'])
                 print(f"  Successfully superposed {result['pfam_acc']}")
             else:
-                print(f"  WARNING: Skipping {result['pfam_acc']} due to FATCAT failure")
+                print(f"  WARNING: Skipping {result['pfam_acc']} due to superposition failure")
 
         # Combine all structures into one file
         final_output = output_dir / f"{args.clan_acc}_superposed.pdb"
