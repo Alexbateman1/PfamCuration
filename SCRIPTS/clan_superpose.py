@@ -551,8 +551,8 @@ def run_fatcat(reference_pdb, target_pdb, output_dir, target_name, fatcat_path='
 
 def combine_structures(pdb_files, output_file, labels=None):
     """
-    Combine multiple PDB structures into a single file.
-    Each structure is assigned a different chain ID (A, B, C, etc.).
+    Combine multiple PDB structures into a single file using MODEL blocks.
+    Each structure is saved as a separate MODEL.
 
     Args:
         pdb_files: List of PDB file paths
@@ -562,42 +562,18 @@ def combine_structures(pdb_files, output_file, labels=None):
     print(f"\nCombining {len(pdb_files)} structures:")
     for i, pdb_file in enumerate(pdb_files, 1):
         label = labels[i-1] if labels and i-1 < len(labels) else "Unknown"
-        chain_id = chr(ord('A') + i - 1)  # A, B, C, etc.
-        print(f"  {i}. {pdb_file} ({label}) -> Chain {chain_id}")
+        print(f"  {i}. {pdb_file} ({label})")
 
     with open(output_file, 'w') as out:
-        # Write header
-        import os.path
-        clan_name = os.path.basename(output_file).replace('_superposed.pdb', '')
-        out.write(f"HEADER    SUPERPOSED PFAM DOMAINS FROM {clan_name}\n")
+        model_num = 1
 
-        # Write COMPND records for each chain
-        for idx, pdb_file in enumerate(pdb_files):
-            if not os.path.exists(pdb_file):
-                continue
-            label = labels[idx] if labels and idx < len(labels) else f"Unknown_{idx+1}"
-            chain_id = chr(ord('A') + idx)
-            mol_id = idx + 1
-
-            out.write(f"COMPND    MOL_ID: {mol_id};\n")
-            out.write(f"COMPND   2 MOLECULE: {label};\n")
-            out.write(f"COMPND   3 CHAIN: {chain_id};\n")
-
-        # Write SOURCE records
-        out.write(f"SOURCE    MOL_ID: 1;\n")
-        out.write(f"SOURCE   2 ORGANISM_SCIENTIFIC: VARIOUS;\n")
-
-        # Now write all structures as different chains (no MODEL blocks)
-        chain_num = 0
         for idx, pdb_file in enumerate(pdb_files):
             if not os.path.exists(pdb_file):
                 print(f"  WARNING: File not found, skipping: {pdb_file}")
                 continue
 
-            chain_id = chr(ord('A') + chain_num)
-            label = labels[idx] if labels and idx < len(labels) else f"Unknown_{chain_num+1}"
-
-            out.write(f"REMARK 210 CHAIN {chain_id}: {label}\n")
+            label = labels[idx] if labels and idx < len(labels) else f"Model_{model_num}"
+            out.write(f"MODEL     {model_num:4d}\n")
 
             with open(pdb_file, 'r') as f:
                 for line in f:
@@ -617,19 +593,14 @@ def combine_structures(pdb_files, output_file, labels=None):
                                                       'chain A' in line or
                                                       'chain B' in line):
                         continue
-
-                    # For ATOM/HETATM records, replace the chain ID (column 22)
-                    if line.startswith(('ATOM  ', 'HETATM')):
-                        # PDB format: chain ID is at position 21 (0-indexed)
-                        line = line[:21] + chain_id + line[22:]
-
                     out.write(line)
 
-            chain_num += 1
+            out.write("ENDMDL\n")
+            model_num += 1
 
         out.write("END\n")
 
-    print(f"\nSuccessfully combined {chain_num} structures into {output_file}")
+    print(f"\nSuccessfully combined {model_num - 1} structures into {output_file}")
 
 
 def main():
