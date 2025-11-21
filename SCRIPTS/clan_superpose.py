@@ -345,6 +345,20 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
     print(f"Processing {pfam_acc} ({pfam_id})")
     print(f"{'='*60}")
 
+    # Check if PDB already exists
+    output_pdb = os.path.join(output_dir, f"{pfam_acc}.pdb")
+    if os.path.exists(output_pdb):
+        print(f"PDB file already exists: {output_pdb}")
+        print("Skipping processing (delete file to reprocess)")
+        # Still need to get pLDDT - read it from filename or set to 0
+        # For now, set to 0 (will be sorted to end)
+        return {
+            'pfam_acc': pfam_acc,
+            'pfam_id': pfam_id,
+            'pdb_file': output_pdb,
+            'mean_plddt': 0.0  # Unknown, but file exists
+        }
+
     # Checkout family and get SEED alignment
     seed_file = checkout_family(pfam_acc, work_dir)
     if not seed_file:
@@ -406,19 +420,53 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
     }
 
 
-def run_fatcat(reference_pdb, target_pdb, output_prefix, fatcat_path='FATCAT'):
+def extract_chain_from_pdb(input_pdb, output_pdb, chain_id='B'):
     """
-    Run FATCAT to superpose target structure onto reference.
+    Extract a specific chain from a PDB file.
+
+    Args:
+        input_pdb: Input PDB file
+        output_pdb: Output PDB file
+        chain_id: Chain ID to extract (default: 'B')
+
+    Returns:
+        bool: True if successful, False otherwise
+    """
+    try:
+        with open(input_pdb, 'r') as infile:
+            with open(output_pdb, 'w') as outfile:
+                for line in infile:
+                    # Keep ATOM/HETATM lines for the specified chain
+                    if line.startswith(('ATOM', 'HETATM')):
+                        if len(line) > 21 and line[21] == chain_id:
+                            outfile.write(line)
+                    # Keep header lines
+                    elif line.startswith(('HEADER', 'TITLE', 'COMPND', 'SOURCE', 'REMARK')):
+                        outfile.write(line)
+                outfile.write("END\n")
+        return True
+    except Exception as e:
+        print(f"  Error extracting chain {chain_id}: {e}")
+        return False
+
+
+def run_fatcat(reference_pdb, target_pdb, output_dir, target_name, fatcat_path='FATCAT'):
+    """
+    Run FATCAT to superpose target structure onto reference and extract chain B.
 
     Args:
         reference_pdb: Reference structure PDB file
         target_pdb: Target structure PDB file to superpose
-        output_prefix: Prefix for output files
+        output_dir: Directory to save output files
+        target_name: Name for output file (e.g., 'PF00651')
         fatcat_path: Path to FATCAT executable
 
     Returns:
-        Path to superposed PDB file, or None if failed
+        Path to superposed PDB file (chain B only), or None if failed
     """
+    # Output prefix in the output directory
+    output_prefix = os.path.join(output_dir, f"fatcat_{target_name}")
+
     cmd = [
         fatcat_path,
         '-p1', reference_pdb,
@@ -427,28 +475,45 @@ def run_fatcat(reference_pdb, target_pdb, output_prefix, fatcat_path='FATCAT'):
         '-m'  # Output combined PDB
     ]
 
+    print(f"  Running: {' '.join(cmd)}")
+
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
 
         if result.returncode != 0:
-            print(f"Warning: FATCAT failed for {target_pdb}")
-            print(f"  stderr: {result.stderr}")
+            print(f"  ERROR: FATCAT failed (return code {result.returncode})")
+            print(f"  stdout: {result.stdout[:500]}")
+            print(f"  stderr: {result.stderr[:500]}")
             return None
 
-        # FATCAT creates output_prefix.pdb with both structures
-        superposed_pdb = f"{output_prefix}.pdb"
+        # FATCAT creates output_prefix.pdb with both structures (chain A = reference, chain B = target)
+        fatcat_output = f"{output_prefix}.pdb"
 
-        if os.path.exists(superposed_pdb):
-            return superposed_pdb
+        if not os.path.exists(fatcat_output):
+            print(f"  ERROR: Expected output file not found: {fatcat_output}")
+            return None
+
+        print(f"  FATCAT output created: {fatcat_output}")
+
+        # Extract only chain B (the superposed target structure)
+        chain_b_output = os.path.join(output_dir, f"{target_name}_superposed.pdb")
+
+        if extract_chain_from_pdb(fatcat_output, chain_b_output, chain_id='B'):
+            print(f"  Extracted chain B to: {chain_b_output}")
+            return chain_b_output
         else:
-            print(f"Warning: Expected output file {superposed_pdb} not found")
+            print(f"  ERROR: Failed to extract chain B")
             return None
 
     except subprocess.TimeoutExpired:
-        print(f"Warning: FATCAT timed out for {target_pdb}")
+        print(f"  ERROR: FATCAT timed out after 300 seconds")
+        return None
+    except FileNotFoundError:
+        print(f"  ERROR: FATCAT executable not found: {fatcat_path}")
+        print(f"  Please ensure FATCAT is installed and in your PATH")
         return None
     except Exception as e:
-        print(f"Warning: FATCAT error for {target_pdb}: {e}")
+        print(f"  ERROR: FATCAT exception: {e}")
         return None
 
 
@@ -461,10 +526,18 @@ def combine_structures(pdb_files, output_file):
         pdb_files: List of PDB file paths
         output_file: Output combined PDB file
     """
+    print(f"\nCombining {len(pdb_files)} structures:")
+    for i, pdb_file in enumerate(pdb_files, 1):
+        print(f"  {i}. {pdb_file}")
+
     with open(output_file, 'w') as out:
         model_num = 1
 
         for pdb_file in pdb_files:
+            if not os.path.exists(pdb_file):
+                print(f"  WARNING: File not found, skipping: {pdb_file}")
+                continue
+
             out.write(f"MODEL     {model_num:4d}\n")
 
             with open(pdb_file, 'r') as f:
@@ -482,7 +555,7 @@ def combine_structures(pdb_files, output_file):
 
         out.write("END\n")
 
-    print(f"\nCombined {len(pdb_files)} structures into {output_file}")
+    print(f"\nSuccessfully combined {model_num - 1} structures into {output_file}")
 
 
 def main():
@@ -582,21 +655,19 @@ def main():
         for result in family_results[1:]:
             print(f"\nSuperposing {result['pfam_acc']} onto reference...")
 
-            output_prefix = os.path.join(tmp_dir, f"{reference['pfam_acc']}_{result['pfam_acc']}")
             superposed_pdb = run_fatcat(
                 reference['pdb_file'],
                 result['pdb_file'],
-                output_prefix,
+                str(output_dir),
+                result['pfam_acc'],
                 args.fatcat
             )
 
             if superposed_pdb:
-                # FATCAT output contains both structures
-                # We need to extract just chain B (the superposed target)
-                # For simplicity, we'll use the FATCAT output as-is
                 superposed_files.append(superposed_pdb)
+                print(f"  Successfully superposed {result['pfam_acc']}")
             else:
-                print(f"Warning: Skipping {result['pfam_acc']} due to FATCAT failure")
+                print(f"  WARNING: Skipping {result['pfam_acc']} due to FATCAT failure")
 
         # Combine all structures into one file
         final_output = output_dir / f"{args.clan_acc}_superposed.pdb"
