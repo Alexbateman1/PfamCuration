@@ -776,6 +776,11 @@ def main():
         help='Output directory for PDB files (default: current directory)'
     )
     parser.add_argument(
+        '--reference',
+        default=None,
+        help='Pfam accession to use as reference (default: highest pLDDT)'
+    )
+    parser.add_argument(
         '--config',
         default='~/.my.cnf',
         help='Path to MySQL config file (default: ~/.my.cnf)'
@@ -832,9 +837,22 @@ def main():
             print("No structures successfully processed")
             sys.exit(1)
 
-        # Use highest pLDDT as reference
-        reference = family_results[0]
-        print(f"\nUsing {reference['pfam_acc']} as reference (pLDDT: {reference['mean_plddt']:.2f})")
+        # Select reference structure
+        if args.reference:
+            # Use user-specified reference
+            reference = None
+            for result in family_results:
+                if result['pfam_acc'] == args.reference:
+                    reference = result
+                    break
+            if not reference:
+                print(f"ERROR: Specified reference {args.reference} not found in processed families")
+                sys.exit(1)
+            print(f"\nUsing {reference['pfam_acc']} as reference (user-specified, pLDDT: {reference['mean_plddt']:.2f})")
+        else:
+            # Use highest pLDDT as reference
+            reference = family_results[0]
+            print(f"\nUsing {reference['pfam_acc']} as reference (highest pLDDT: {reference['mean_plddt']:.2f})")
 
         # Superpose all other structures
         print(f"\n{'='*60}")
