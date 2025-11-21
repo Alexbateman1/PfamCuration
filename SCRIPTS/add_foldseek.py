@@ -491,7 +491,8 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
                 'seed_start': seed_start,
                 'seed_end': seed_end,
                 'protein_length': ted_data['protein_length'],
-                'domains': ted_data['domains']
+                'domains': ted_data['domains'],
+                'mean_plddt': score_entry['mean_plddt']
             })
 
     if not proteins_data:
@@ -536,7 +537,8 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
 
             # Draw label on first line only
             if line_idx == 0:
-                ax.text(margin_left - 10, current_y, protein['accession'],
+                label = f"{protein['accession']} ({protein['mean_plddt']:.2f})"
+                ax.text(margin_left - 10, current_y, label,
                        ha='right', va='center', fontsize=9, family='monospace')
 
             # Convert to pixel coordinates
