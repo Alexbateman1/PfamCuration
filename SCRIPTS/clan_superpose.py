@@ -533,27 +533,32 @@ def run_fatcat(reference_pdb, target_pdb, output_dir, target_name, fatcat_path='
         return None
 
 
-def combine_structures(pdb_files, output_file):
+def combine_structures(pdb_files, output_file, labels=None):
     """
     Combine multiple PDB structures into a single file.
-    Each structure is saved as a separate MODEL.
+    Each structure is saved as a separate MODEL with a descriptive label.
 
     Args:
         pdb_files: List of PDB file paths
         output_file: Output combined PDB file
+        labels: Optional list of labels (e.g., Pfam accessions) for each structure
     """
     print(f"\nCombining {len(pdb_files)} structures:")
     for i, pdb_file in enumerate(pdb_files, 1):
-        print(f"  {i}. {pdb_file}")
+        label = labels[i-1] if labels and i-1 < len(labels) else "Unknown"
+        print(f"  {i}. {pdb_file} ({label})")
 
     with open(output_file, 'w') as out:
         model_num = 1
 
-        for pdb_file in pdb_files:
+        for idx, pdb_file in enumerate(pdb_files):
             if not os.path.exists(pdb_file):
                 print(f"  WARNING: File not found, skipping: {pdb_file}")
                 continue
 
+            # Add TITLE record with Pfam accession for this model
+            label = labels[idx] if labels and idx < len(labels) else f"Model_{model_num}"
+            out.write(f"TITLE     {label}\n")
             out.write(f"MODEL     {model_num:4d}\n")
 
             with open(pdb_file, 'r') as f:
@@ -563,6 +568,9 @@ def combine_structures(pdb_files, output_file):
                         continue
                     # Skip END line
                     if line.startswith('END') and not line.startswith('ENDMDL'):
+                        continue
+                    # Skip existing TITLE/HEADER lines to avoid duplicates
+                    if line.startswith('TITLE') or line.startswith('HEADER'):
                         continue
                     out.write(line)
 
@@ -664,9 +672,11 @@ def main():
         print(f"{'='*60}")
 
         superposed_files = []
+        structure_labels = []
 
         # Add reference structure (chain A)
         superposed_files.append(reference['pdb_file'])
+        structure_labels.append(f"{reference['pfam_acc']} (reference)")
 
         for result in family_results[1:]:
             print(f"\nSuperposing {result['pfam_acc']} onto reference...")
@@ -681,13 +691,14 @@ def main():
 
             if superposed_pdb:
                 superposed_files.append(superposed_pdb)
+                structure_labels.append(result['pfam_acc'])
                 print(f"  Successfully superposed {result['pfam_acc']}")
             else:
                 print(f"  WARNING: Skipping {result['pfam_acc']} due to FATCAT failure")
 
         # Combine all structures into one file
         final_output = output_dir / f"{args.clan_acc}_superposed.pdb"
-        combine_structures(superposed_files, str(final_output))
+        combine_structures(superposed_files, str(final_output), labels=structure_labels)
 
         print(f"\n{'='*60}")
         print(f"SUCCESS!")
