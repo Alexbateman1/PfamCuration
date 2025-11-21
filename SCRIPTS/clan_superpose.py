@@ -556,9 +556,9 @@ def combine_structures(pdb_files, output_file, labels=None):
                 print(f"  WARNING: File not found, skipping: {pdb_file}")
                 continue
 
-            # Add TITLE record with Pfam accession for this model
+            # Add COMPND record with Pfam accession for this model
             label = labels[idx] if labels and idx < len(labels) else f"Model_{model_num}"
-            out.write(f"TITLE     {label}\n")
+            out.write(f"COMPND    {label}\n")
             out.write(f"MODEL     {model_num:4d}\n")
 
             with open(pdb_file, 'r') as f:
@@ -569,8 +569,15 @@ def combine_structures(pdb_files, output_file, labels=None):
                     # Skip END line
                     if line.startswith('END') and not line.startswith('ENDMDL'):
                         continue
-                    # Skip existing TITLE/HEADER lines to avoid duplicates
-                    if line.startswith('TITLE') or line.startswith('HEADER'):
+                    # Skip existing TITLE/HEADER/COMPND lines to avoid duplicates
+                    if line.startswith(('TITLE', 'HEADER', 'COMPND')):
+                        continue
+                    # Skip FATCAT REMARK lines which cause errors in Chimera
+                    if line.startswith('REMARK') and ('superimposed protein' in line or
+                                                      'twisted protein' in line or
+                                                      'result after optimizing' in line or
+                                                      'chain A' in line or
+                                                      'chain B' in line):
                         continue
                     out.write(line)
 
