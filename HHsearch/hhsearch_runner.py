@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Simple HHblits runner for all-against-all Pfam family comparisons.
+HHsearch runner for all-against-all Pfam family comparisons.
+Uses HHsearch for profile-profile comparisons (HMM vs HMM).
 """
 
 import subprocess
@@ -9,18 +10,18 @@ import logging
 from pathlib import Path
 import re
 
-class HHblitsRunner:
-    """Manages HHblits searches and result parsing."""
+class HHsearchRunner:
+    """Manages HHsearch searches and result parsing."""
 
-    def __init__(self, seed_dir, hmm_dir, results_dir, e_value_threshold=1e-10):
+    def __init__(self, seed_dir, hmm_dir, results_dir, e_value_threshold=1.0):
         """
-        Initialize HHblits runner.
+        Initialize HHsearch runner.
 
         Args:
             seed_dir: Directory containing SEED alignment files
-            hmm_dir: Directory containing HMM files
-            results_dir: Directory for HHblits results
-            e_value_threshold: E-value cutoff for significant hits
+            hmm_dir: Directory containing HMM files (not used but kept for compatibility)
+            results_dir: Directory for HHsearch results
+            e_value_threshold: E-value cutoff for significant hits (default: 1.0)
         """
         self.seed_dir = Path(seed_dir)
         self.hmm_dir = Path(hmm_dir)
@@ -35,18 +36,21 @@ class HHblitsRunner:
         for dir_path in [self.a3m_dir, self.hhr_dir, self.parsed_dir]:
             dir_path.mkdir(parents=True, exist_ok=True)
 
-        logging.info(f"HHblits runner initialized")
+        logging.info(f"HHsearch runner initialized")
         logging.info(f"Results directory: {self.results_dir}")
         logging.info(f"E-value threshold: {self.e_value_threshold}")
 
     def mul_to_a3m(self, seed_file, output_file):
         """
-        Convert Pfam SEED alignment (Stockholm format) to A3M format for HHblits.
+        Convert Pfam SEED alignment (Stockholm format) to aligned FASTA for hhmake.
 
-        Uses HH-suite's reformat.pl which properly handles:
-        - #=RF reference line to define match vs insert columns
-        - Proper A3M format with uppercase=match, lowercase=insert
-        - All Stockholm format annotations
+        Note: We use simple conversion rather than reformat.pl because:
+        - reformat.pl creates proper A3M with insertion encoding (lowercase)
+        - This causes sequences to have different lengths
+        - hhmake with -M first can't handle variable-length input
+
+        This creates aligned FASTA (all sequences same length, gaps as '-')
+        which hhmake can process with -M first flag.
 
         Args:
             seed_file: Path to SEED alignment file (Stockholm format)
@@ -56,24 +60,31 @@ class HHblitsRunner:
             True if successful, False otherwise
         """
         try:
-            # Use HH-suite's reformat.pl for proper Stockholm to A3M conversion
-            cmd = f"reformat.pl sto a3m {seed_file} {output_file}"
-            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+            sequences = {}
+            with open(seed_file, 'r') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    # Skip Stockholm annotation lines (start with #)
+                    if line.startswith('#'):
+                        continue
 
-            if result.returncode != 0:
-                logging.error(f"reformat.pl failed for {seed_file}: {result.stderr}")
-                return False
+                    parts = line.split(None, 1)
+                    if len(parts) >= 2:
+                        seq_id = parts[0]
+                        seq = parts[1]
+                        # Convert gap character from '.' to '-' for A3M format
+                        seq = seq.replace('.', '-')
+                        # Concatenate if this seq_id was seen before (multi-line sequences in Stockholm)
+                        sequences[seq_id] = sequences.get(seq_id, '') + seq
 
-            # Parse stdout to get sequence count
-            # Output format: "Reformatted ... with N sequences ..."
-            if "with" in result.stdout and "sequences" in result.stdout:
-                parts = result.stdout.split()
-                for i, part in enumerate(parts):
-                    if part == "with" and i+1 < len(parts):
-                        seq_count = parts[i+1]
-                        logging.debug(f"Converted {seed_file} to A3M format ({seq_count} sequences)")
-                        break
+            # Write aligned FASTA format (all sequences same length)
+            with open(output_file, 'w') as f:
+                for seq_id, seq in sequences.items():
+                    f.write(f">{seq_id}\n{seq}\n")
 
+            logging.debug(f"Converted {seed_file} to aligned FASTA format ({len(sequences)} sequences)")
             return True
 
         except Exception as e:
@@ -83,11 +94,10 @@ class HHblitsRunner:
     def build_hhm_database(self):
         """
         Build HH-suite database from SEED alignments using hhmake.
-        Note: Pfam HMM files are in HMMER format, but HHblits needs HH-suite format.
-        We build HH-suite profiles from SEED alignments instead.
+        Creates three ffindex databases with consistent base name: pfam_a3m, pfam_hhm, pfam_cs219.
 
         Returns:
-            Path to database directory (for use with hhblits -d)
+            Path to database base name (for use with hhsearch -d)
         """
         db_dir = self.results_dir / "hhsuite_db"
         db_dir.mkdir(exist_ok=True)
@@ -97,9 +107,11 @@ class HHblitsRunner:
             logging.info(f"Building HH-suite database from {len(seed_files)} SEED alignments...")
             logging.info("This may take some time (converting alignments to HH-suite profiles)...")
 
-            # Build HHsuite profiles from SEED alignments
-            hhm_dir = db_dir / "hhm_files"
-            hhm_dir.mkdir(exist_ok=True)
+            # Create temporary directories for building databases
+            a3m_build_dir = db_dir / "a3m_dir"
+            hhm_build_dir = db_dir / "hhm_dir"
+            a3m_build_dir.mkdir(exist_ok=True)
+            hhm_build_dir.mkdir(exist_ok=True)
 
             failed = 0
             skipped = 0
@@ -110,46 +122,69 @@ class HHblitsRunner:
 
                 family_id = seed_file.stem.replace('_SEED', '')
                 a3m_file = self.a3m_dir / f"{family_id}.a3m"
-                hhm_file = hhm_dir / f"{family_id}.hhm"
+                hhm_file = hhm_build_dir / f"{family_id}.hhm"
+                a3m_copy = a3m_build_dir / f"{family_id}.a3m"
 
                 # Skip if already built
-                if hhm_file.exists():
+                if hhm_file.exists() and a3m_copy.exists():
                     skipped += 1
                     continue
 
-                # Convert SEED to A3M if not already done
+                # Convert SEED to A3M using reformat.pl for proper A3M format
                 if not a3m_file.exists():
-                    if not self.mul_to_a3m(seed_file, a3m_file):
+                    cmd = f"reformat.pl sto a3m {seed_file} {a3m_file}"
+                    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+                    if result.returncode != 0:
+                        logging.warning(f"reformat.pl failed for {family_id}: {result.stderr}")
                         failed += 1
                         continue
 
-                # Build HH-suite profile with hhmake
-                cmd = f"hhmake -i {a3m_file} -o {hhm_file}"
-                result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+                # Copy A3M to build directory
+                if not a3m_copy.exists():
+                    import shutil
+                    shutil.copy(a3m_file, a3m_copy)
 
-                if result.returncode != 0:
-                    logging.warning(f"hhmake failed for {family_id}: {result.stderr}")
-                    failed += 1
+                # Build HH-suite profile with hhmake
+                if not hhm_file.exists():
+                    cmd = f"hhmake -i {a3m_file} -o {hhm_file} -v 0"
+                    result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+
+                    if result.returncode != 0:
+                        logging.warning(f"hhmake failed for {family_id}: {result.stderr}")
+                        failed += 1
+                    else:
+                        built += 1
                 else:
                     built += 1
 
             logging.info(f"Profile building complete: {built} built, {skipped} skipped (already exist), {failed} failed")
 
-            # Build ffindex database from HHM files
-            ffdata = db_dir / "pfam_db_hhm.ffdata"
-            ffindex = db_dir / "pfam_db_hhm.ffindex"
+            # Build ffindex databases with consistent base name 'pfam'
+            base_name = "pfam"
 
-            logging.info("Building ffindex database from HH-suite profiles...")
-            cmd = f"ffindex_build -s {ffdata} {ffindex} {hhm_dir}/"
+            logging.info("Building pfam_a3m ffindex database...")
+            cmd = f"ffindex_build -as {db_dir}/{base_name}_a3m.ffdata {db_dir}/{base_name}_a3m.ffindex {a3m_build_dir}/"
             result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
-
             if result.returncode != 0:
-                logging.error(f"ffindex_build failed: {result.stderr}")
-                logging.info("Falling back to concatenated database...")
-                return self._build_concatenated_hhm_database(hhm_dir, db_dir)
+                logging.error(f"ffindex_build for A3M failed: {result.stderr}")
+                raise RuntimeError("Failed to build A3M ffindex database")
 
-            logging.info(f"HH-suite database created: {db_dir}/pfam_db_hhm")
-            return str(db_dir / "pfam_db_hhm")
+            logging.info("Building pfam_hhm ffindex database...")
+            cmd = f"ffindex_build -as {db_dir}/{base_name}_hhm.ffdata {db_dir}/{base_name}_hhm.ffindex {hhm_build_dir}/"
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+            if result.returncode != 0:
+                logging.error(f"ffindex_build for HHM failed: {result.stderr}")
+                raise RuntimeError("Failed to build HHM ffindex database")
+
+            logging.info("Building pfam_cs219 database with cstranslate...")
+            cmd = f"cstranslate -i {db_dir}/{base_name}_a3m -o {db_dir}/{base_name}_cs219 -b -f -I a3m"
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+            if result.returncode != 0:
+                logging.warning(f"cstranslate failed: {result.stderr}")
+                logging.warning("Proceeding without CS219 prefiltering (searches will be slower)")
+
+            logging.info(f"HH-suite database created: {db_dir}/{base_name}")
+            return str(db_dir / base_name)
 
         except Exception as e:
             logging.error(f"Failed to build HH-suite database: {e}")
@@ -256,36 +291,37 @@ class HHblitsRunner:
 
         return cleaned_counts
 
-    def run_hhblits(self, query_a3m, database, output_hhr, num_threads=8, max_iterations=2):
+    def run_hhsearch(self, query_a3m, database, output_hhr, num_threads=8):
         """
-        Run HHblits search.
+        Run HHsearch profile-profile comparison.
 
         Args:
-            query_a3m: Path to query alignment in A3M format
-            database: Path to HHM database
+            query_a3m: Path to query A3M alignment file
+            database: Path to HHM database base name (without suffix)
             output_hhr: Path to output HHR file
             num_threads: Number of CPU threads
-            max_iterations: Number of HHblits iterations
 
         Returns:
             True if successful, False otherwise
         """
         try:
-            cmd = (f"hhblits -i {query_a3m} -d {database} -o {output_hhr} "
-                   f"-cpu {num_threads} -n {max_iterations} -e {self.e_value_threshold}")
+            # HHsearch command for profile-profile comparison
+            # Uses A3M alignment as query against HHM database
+            cmd = (f"hhsearch -i {query_a3m} -d {database} -o {output_hhr} "
+                   f"-cpu {num_threads} -e {self.e_value_threshold}")
 
             result = subprocess.run(cmd, shell=True, check=True,
                                   capture_output=True, text=True)
-            logging.debug(f"HHblits search completed for {query_a3m}")
+            logging.debug(f"HHsearch completed for {query_a3m}")
             return True
 
         except subprocess.CalledProcessError as e:
-            logging.error(f"HHblits failed for {query_a3m}: {e}")
+            logging.error(f"HHsearch failed for {query_a3m}: {e}")
             return False
 
     def parse_hhr(self, hhr_file):
         """
-        Parse HHblits HHR output file.
+        Parse HHR output file to extract hits.
 
         Args:
             hhr_file: Path to HHR file
@@ -341,29 +377,25 @@ class HHblitsRunner:
 
     def run_search_for_family(self, family_id, database):
         """
-        Run complete HHblits search for one family.
+        Run complete HHsearch for one family.
 
         Args:
             family_id: Pfam family ID (e.g., PF00001)
-            database: Path to HHM database
+            database: Path to HHM database base name (e.g., /path/to/pfam)
 
         Returns:
             List of hits
         """
-        # Convert SEED to A3M
-        seed_file = self.seed_dir / f"{family_id}_SEED"
+        # Get A3M query file (HHsearch uses A3M as query, not HHM)
         a3m_file = self.a3m_dir / f"{family_id}.a3m"
 
-        if not seed_file.exists():
-            logging.warning(f"SEED file not found: {seed_file}")
+        if not a3m_file.exists():
+            logging.warning(f"A3M file not found: {a3m_file}")
             return []
 
-        if not self.mul_to_a3m(seed_file, a3m_file):
-            return []
-
-        # Run HHblits
+        # Run HHsearch
         hhr_file = self.hhr_dir / f"{family_id}.hhr"
-        if not self.run_hhblits(a3m_file, database, hhr_file):
+        if not self.run_hhsearch(a3m_file, database, hhr_file):
             return []
 
         # Parse results
@@ -431,20 +463,20 @@ class HHblitsRunner:
         Returns:
             Path to generated SLURM script
         """
-        script_path = self.results_dir / "run_hhblits_batch.sh"
+        script_path = self.results_dir / "run_hhsearch_batch.sh"
 
         # Get the directory containing the pipeline scripts
         pipeline_dir = Path(__file__).parent.absolute()
 
         script_content = f"""#!/bin/bash
-#SBATCH --job-name=pfam_hhblits
+#SBATCH --job-name=pfam_hhsearch
 #SBATCH --array=1-{num_batches}
 #SBATCH --partition={partition}
 #SBATCH --time={time_limit}
 #SBATCH --mem={memory}
 #SBATCH --cpus-per-task={cpus}
-#SBATCH --output={self.results_dir}/slurm_logs/hhblits_%A_%a.out
-#SBATCH --error={self.results_dir}/slurm_logs/hhblits_%A_%a.err
+#SBATCH --output={self.results_dir}/slurm_logs/hhsearch_%A_%a.out
+#SBATCH --error={self.results_dir}/slurm_logs/hhsearch_%A_%a.err
 
 # Add pipeline directory to PYTHONPATH
 export PYTHONPATH={pipeline_dir}:$PYTHONPATH
@@ -459,7 +491,6 @@ BATCH_FILE={batch_dir}/batch_${{SLURM_ARRAY_TASK_ID}}.txt
 while read FAMILY_ID; do
     echo "Processing $FAMILY_ID..."
 
-    SEED_FILE={self.seed_dir}/${{FAMILY_ID}}_SEED
     A3M_FILE={self.a3m_dir}/${{FAMILY_ID}}.a3m
     HHR_FILE={self.hhr_dir}/${{FAMILY_ID}}.hhr
 
@@ -469,25 +500,14 @@ while read FAMILY_ID; do
         continue
     fi
 
-    # Convert SEED to A3M
-    python3 -c "
-from hhblits_runner import HHblitsRunner
-runner = HHblitsRunner('{self.seed_dir}', '{self.hmm_dir}', '{self.results_dir}')
-runner.mul_to_a3m('$SEED_FILE', '$A3M_FILE')
-"
-
-    # Run HHblits with sensitivity parameters
-    # -n 3: 3 iterations for better sensitivity
-    # -maxfilt 100000: allow more sequences in filtering
-    # -realign_max 100000: realign more hits with MAC algorithm
-    hhblits -i $A3M_FILE -d {database} -o $HHR_FILE \\
-        -cpu {cpus} -n 3 -e {self.e_value_threshold} \\
-        -maxfilt 100000 -realign_max 100000
+    # Run HHsearch (uses A3M alignment as query against HHM database)
+    hhsearch -i $A3M_FILE -d {database} -o $HHR_FILE \\
+        -cpu {cpus} -e {self.e_value_threshold}
 
     # Parse results
     python3 -c "
-from hhblits_runner import HHblitsRunner
-runner = HHblitsRunner('{self.seed_dir}', '{self.hmm_dir}', '{self.results_dir}')
+from hhsearch_runner import HHsearchRunner
+runner = HHsearchRunner('{self.seed_dir}', '{self.hmm_dir}', '{self.results_dir}', {self.e_value_threshold})
 hits = runner.parse_hhr('$HHR_FILE')
 parsed_file = '{self.parsed_dir}/${{FAMILY_ID}}_hits.tsv'
 runner.save_hits('$FAMILY_ID', hits, parsed_file)
@@ -540,30 +560,3 @@ echo "Batch ${{SLURM_ARRAY_TASK_ID}} complete"
 
         logging.info(f"SLURM batch setup complete: {len(batches)} batches, {len(families)} families")
         return slurm_script, len(batches)
-
-
-if __name__ == "__main__":
-    # Test the HHblits runner
-    logging.basicConfig(level=logging.INFO,
-                       format='%(asctime)s - %(levelname)s - %(message)s')
-
-    seed_dir = "./test_output/SEED"
-    hmm_dir = "./test_output/HMM"
-    results_dir = "./test_results"
-
-    runner = HHblitsRunner(seed_dir, hmm_dir, results_dir)
-
-    # Test building database
-    print("Building HHM database...")
-    db_file = runner.build_hhm_database()
-    print(f"Database: {db_file}")
-
-    # Test running search for one family
-    families = [f.stem.replace('_SEED', '') for f in Path(seed_dir).glob("PF*_SEED")]
-    if families:
-        test_family = families[0]
-        print(f"\nTesting HHblits search for {test_family}...")
-        hits = runner.run_search_for_family(test_family, db_file)
-        print(f"Found {len(hits)} hits")
-        if hits:
-            print(f"Top hit: {hits[0]}")

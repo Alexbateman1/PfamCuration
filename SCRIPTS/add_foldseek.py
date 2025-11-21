@@ -35,7 +35,7 @@ def parse_seed_alignment(seed_file):
                 continue
 
             # Match lines like: P39607.2/21-100  SEQUENCE...
-            match = re.match(r'^(\w+)\.?\d*/(\d+)-(\d+)\s+(.+)$', line)
+            match = re.match(r'^(\w+\.?\d*)/(\d+)-(\d+)\s+(.+)$', line)
             if match:
                 uniprot_acc = match.group(1)
                 start = int(match.group(2))
@@ -149,13 +149,20 @@ def download_alphafold_model(uniprot_acc, output_dir):
     """
     Download AlphaFold v6 CIF model for a given UniProt accession.
 
+    Args:
+        uniprot_acc: UniProt accession (may include version like "P12345.2")
+        output_dir: directory to save the file
+
     Returns:
         str: path to downloaded CIF file, or None if failed
     """
     import urllib.request
 
-    url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-model_v6.cif"
-    output_file = os.path.join(output_dir, f"AF-{uniprot_acc}-F1-model_v6.cif")
+    # Strip version number from accession for AlphaFold API (P12345.2 -> P12345)
+    base_acc = uniprot_acc.split('.')[0]
+
+    url = f"https://alphafold.ebi.ac.uk/files/AF-{base_acc}-F1-model_v6.cif"
+    output_file = os.path.join(output_dir, f"AF-{base_acc}-F1-model_v6.cif")
 
     try:
         print(f"Downloading {url}...")
@@ -375,6 +382,253 @@ def run_foldseek_search(query_cif, database_path, output_file, tmp_dir):
     return foldseek_output
 
 
+def fetch_ted_domains(uniprot_acc):
+    """
+    Fetch TED domain information from TED API.
+
+    Args:
+        uniprot_acc: UniProt accession (may include version)
+
+    Returns:
+        dict with 'protein_length' and 'domains' list, or None if failed
+    """
+    import urllib.request
+    import json
+    import tempfile
+
+    # Strip version number for TED API
+    base_acc = uniprot_acc.split('.')[0]
+
+    url = f"https://ted.cathdb.info/api/v1/uniprot/summary/{base_acc}?skip=0&limit=100"
+
+    try:
+        with urllib.request.urlopen(url, timeout=30) as response:
+            data = json.loads(response.read().decode())
+
+            if not data or 'data' not in data:
+                return None
+
+            # Try to get protein length from API response
+            protein_length = data.get('protein_length') or data.get('sequence_length') or data.get('uniprot_length')
+
+            # If not in API, get it from AlphaFold model
+            if not protein_length:
+                # Download AlphaFold model to get sequence length
+                with tempfile.TemporaryDirectory() as tmp_dir:
+                    cif_file = download_alphafold_model(base_acc, tmp_dir)
+                    if cif_file:
+                        sequence = get_sequence_from_cif(cif_file)
+                        protein_length = len(sequence)
+
+            domains = []
+
+            for domain in data.get('data', []):
+                ted_id = domain.get('ted_id', '')
+                chopping = domain.get('chopping', '')
+
+                if not chopping:
+                    continue
+
+                # Parse chopping format: "1-100" or "1-100_150-200"
+                segments = []
+                for segment in chopping.split('_'):
+                    if '-' in segment:
+                        start, end = segment.split('-')
+                        segments.append({
+                            'start': int(start),
+                            'end': int(end)
+                        })
+
+                domains.append({
+                    'ted_id': ted_id,
+                    'segments': segments
+                })
+
+            return {
+                'protein_length': protein_length if protein_length else 0,
+                'domains': domains
+            }
+
+    except Exception as e:
+        print(f"Warning: Failed to fetch TED domains for {uniprot_acc}: {e}")
+        return None
+
+
+def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
+    """
+    Create a visualization of TED domains for proteins in the SEED alignment.
+
+    Args:
+        plddt_scores: list of dicts with 'accession' and 'mean_plddt'
+        curation_dir: path to curation directory
+        output_file: output filename (default: ted.png)
+    """
+    try:
+        import matplotlib.pyplot as plt
+        import matplotlib.patches as patches
+    except ImportError:
+        print("Warning: matplotlib not available, skipping TED visualization")
+        return
+
+    # Color scheme for TED domains (official TED database colors)
+    domain_colors = ['#4A79A7', '#F28E2C', '#E15759', '#76B7B2', '#59A14F',
+                     '#EDC949', '#AF7AA1', '#FF9DA7', '#9C755F', '#BAB0AB']
+
+    # Fetch TED domain information for each protein
+    proteins_data = []
+
+    for score_entry in plddt_scores:
+        accession = score_entry['accession']  # Format: P12345.1/10-145
+
+        # Parse accession
+        if '/' not in accession:
+            continue
+
+        parts = accession.split('/')
+        uniprot_acc = parts[0]
+        region_parts = parts[1].split('-')
+        seed_start = int(region_parts[0])
+        seed_end = int(region_parts[1])
+
+        # Fetch TED domains
+        ted_data = fetch_ted_domains(uniprot_acc)
+
+        if ted_data:
+            proteins_data.append({
+                'accession': accession,
+                'uniprot_acc': uniprot_acc,
+                'seed_start': seed_start,
+                'seed_end': seed_end,
+                'protein_length': ted_data['protein_length'],
+                'domains': ted_data['domains'],
+                'mean_plddt': score_entry['mean_plddt']
+            })
+
+    if not proteins_data:
+        print("Warning: No TED domain data available for visualization")
+        return
+
+    # Calculate figure dimensions
+    residues_per_line = 1500
+    line_height = 60  # pixels per protein line
+    margin_left = 150  # space for labels
+    margin_right = 50
+    margin_top = 40
+    margin_bottom = 40
+    line_spacing = 10
+
+    # Calculate total lines needed
+    total_lines = 0
+    for protein in proteins_data:
+        lines_needed = (protein['protein_length'] + residues_per_line - 1) // residues_per_line
+        protein['lines_needed'] = lines_needed
+        total_lines += lines_needed
+
+    # Create figure
+    fig_width = margin_left + residues_per_line + margin_right
+    fig_height = margin_top + (total_lines * (line_height + line_spacing)) + margin_bottom
+
+    fig, ax = plt.subplots(figsize=(fig_width / 100, fig_height / 100), dpi=100)
+    ax.set_xlim(0, fig_width)
+    ax.set_ylim(0, fig_height)
+    ax.axis('off')
+
+    # Draw proteins
+    current_y = fig_height - margin_top - line_height / 2
+
+    for protein in proteins_data:
+        protein_length = protein['protein_length']
+        lines_needed = protein['lines_needed']
+
+        for line_idx in range(lines_needed):
+            line_start = line_idx * residues_per_line
+            line_end = min(line_start + residues_per_line, protein_length)
+
+            # Draw label on first line only
+            if line_idx == 0:
+                label = f"{protein['accession']} ({protein['mean_plddt']:.2f})"
+                ax.text(margin_left - 10, current_y, label,
+                       ha='right', va='center', fontsize=9, family='monospace')
+
+            # Convert to pixel coordinates
+            x_start = margin_left + (0 if line_idx == 0 else 0)
+            x_end = margin_left + (line_end - line_start)
+
+            # Draw protein backbone (grey line)
+            backbone_height = 8
+            backbone = patches.Rectangle(
+                (x_start, current_y - backbone_height / 2),
+                x_end - x_start, backbone_height,
+                linewidth=0, facecolor='#CCCCCC'
+            )
+            ax.add_patch(backbone)
+
+            # Draw TED domains
+            for domain_idx, domain in enumerate(protein['domains']):
+                color = domain_colors[domain_idx % len(domain_colors)]
+                ted_id = domain.get('ted_id', '')
+
+                # Extract TED domain number (e.g., "TED01" from "P12345_TED01")
+                ted_label = ted_id.split('_')[-1] if '_' in ted_id else ted_id
+
+                for segment in domain['segments']:
+                    seg_start = segment['start']
+                    seg_end = segment['end']
+
+                    # Check if segment overlaps with current line
+                    if seg_end >= line_start and seg_start <= line_end:
+                        # Calculate visible portion
+                        visible_start = max(seg_start, line_start)
+                        visible_end = min(seg_end, line_end)
+
+                        # Convert to pixel coordinates relative to line
+                        domain_x = margin_left + (visible_start - line_start)
+                        domain_width = visible_end - visible_start
+
+                        domain_height = 20
+                        domain_rect = patches.Rectangle(
+                            (domain_x, current_y - domain_height / 2),
+                            domain_width, domain_height,
+                            linewidth=1, edgecolor='black', facecolor=color, alpha=0.8
+                        )
+                        ax.add_patch(domain_rect)
+
+                        # Add TED domain label inside the box if there's enough space
+                        if domain_width > 30:  # Only add text if box is wide enough
+                            ax.text(domain_x + domain_width / 2, current_y,
+                                   ted_label, ha='center', va='center',
+                                   fontsize=7, weight='bold', color='white')
+
+            # Draw SEED region
+            seed_start = protein['seed_start']
+            seed_end = protein['seed_end']
+
+            if seed_end >= line_start and seed_start <= line_end:
+                visible_start = max(seed_start, line_start)
+                visible_end = min(seed_end, line_end)
+
+                seed_x = margin_left + (visible_start - line_start)
+                seed_width = visible_end - visible_start
+
+                seed_height = 30
+                seed_rect = patches.Rectangle(
+                    (seed_x, current_y - seed_height / 2),
+                    seed_width, seed_height,
+                    linewidth=2, edgecolor='black', facecolor='none', alpha=0.6
+                )
+                ax.add_patch(seed_rect)
+
+            current_y -= (line_height + line_spacing)
+
+    # Save figure
+    output_path = f"{curation_dir}/{output_file}"
+    plt.tight_layout()
+    plt.savefig(output_path, dpi=100, bbox_inches='tight')
+    plt.close()
+
+    print(f"\nCreated TED domain visualization: {output_path}")
+
+
 def parse_and_filter_results(foldseek_output, curation_dir, output_file,
                              min_overlap=0.6, max_evalue=1e-3):
     """
@@ -516,6 +770,11 @@ def main():
         default='foldseek',
         help='Output file name (default: foldseek)'
     )
+    parser.add_argument(
+        '--force',
+        action='store_true',
+        help='Force rerun even if output files already exist'
+    )
 
     args = parser.parse_args()
 
@@ -555,15 +814,21 @@ def main():
 
     # Create temporary directory for foldseek
     with tempfile.TemporaryDirectory() as tmp_dir:
-        if os.path.exists(saved_chopped_model):
+        if os.path.exists(saved_chopped_model) and not args.force:
             print(f"\nFound existing chopped model: {saved_chopped_model}")
-            print("Using cached model (delete this file to force reprocessing)")
+            print("Using cached model (use --force to reprocess)")
             chopped_model = saved_chopped_model
         else:
+            if args.force and os.path.exists(saved_chopped_model):
+                print(f"\nForce flag set, reprocessing models (ignoring cached model)")
+
             # Process SEED sequences to find best model
             best_model = None
             best_plddt = 0
             best_info = None
+
+            # Collect all pLDDT scores for output file
+            plddt_scores = []
 
             # Process each sequence
             for uniprot_acc, start, end, alignment_seq in sequences:
@@ -584,6 +849,12 @@ def main():
                 mean_plddt, num_residues = calculate_mean_plddt(cif_file, start, end, verbose=True)
                 print(f"  Mean pLDDT: {mean_plddt:.2f}")
 
+                # Store pLDDT score for output file
+                plddt_scores.append({
+                    'accession': f"{uniprot_acc}/{start}-{end}",
+                    'mean_plddt': mean_plddt
+                })
+
                 if mean_plddt > best_plddt:
                     best_plddt = mean_plddt
                     best_model = cif_file
@@ -592,6 +863,21 @@ def main():
             if not best_model:
                 print("\nError: No valid models found with matching sequences")
                 sys.exit(1)
+
+            # Write pLDDT scores to file, sorted by highest score first
+            if plddt_scores:
+                plddt_file = os.path.join(args.curation_dir, 'pLDDT')
+                plddt_scores.sort(key=lambda x: x['mean_plddt'], reverse=True)
+
+                with open(plddt_file, 'w') as f:
+                    for entry in plddt_scores:
+                        f.write(f"{entry['mean_plddt']:.2f}\t{entry['accession']}\n")
+
+                print(f"\nWrote pLDDT scores for {len(plddt_scores)} sequences to {plddt_file}")
+
+                # Create TED domain visualization
+                print("\nCreating TED domain visualization...")
+                create_ted_visualization(plddt_scores, args.curation_dir)
 
             print(f"\nBest model: {best_info[0]} ({best_info[1]}-{best_info[2]}) "
                   f"with mean pLDDT {best_plddt:.2f}")
@@ -633,12 +919,24 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(add_help=False)
     parser.add_argument('curation_dir')
     parser.add_argument('--output', default='foldseek')
+    parser.add_argument('--force', action='store_true')
     args, _ = parser.parse_known_args()
 
     output_file = os.path.join(args.curation_dir, args.output)
-    if os.path.exists(output_file):
-        print(f"Output file {output_file} already exists. Skipping to avoid duplication.")
+    plddt_file = os.path.join(args.curation_dir, 'pLDDT')
+    query_model_file = os.path.join(args.curation_dir, 'query_model.cif')
+    ted_png_file = os.path.join(args.curation_dir, 'ted.png')
+
+    # Check if all output files exist
+    all_outputs_exist = (os.path.exists(output_file) and
+                        os.path.exists(plddt_file) and
+                        os.path.exists(query_model_file) and
+                        os.path.exists(ted_png_file))
+
+    if all_outputs_exist and not args.force:
+        print(f"Output files already exist in {args.curation_dir}. Skipping to avoid duplication.")
+        print(f"Use --force to rerun anyway.")
         sys.exit(0)
 
-    # Output doesn't exist, proceed with full processing
+    # Output files missing or force flag is set, proceed with full processing
     main()

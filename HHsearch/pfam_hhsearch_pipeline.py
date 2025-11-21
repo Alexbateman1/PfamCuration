@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Main pipeline for Pfam SEED/HMM extraction and HHblits all-against-all comparison.
+Main pipeline for Pfam HHsearch all-against-all profile comparison.
 
 This pipeline:
-1. Extracts SEED and HMM files from Pfam SVN repository
-2. Builds HHblits database
-3. Runs all-against-all HHblits comparisons
+1. Extracts SEED files from Pfam SVN repository (can reuse from HHblits)
+2. Builds HH-suite HMM database
+3. Runs all-against-all HHsearch profile comparisons
 4. Aggregates results into summary files
 5. Supports incremental updates via SVN revision tracking
 """
@@ -18,13 +18,13 @@ import json
 from datetime import datetime
 
 from svn_manager import SVNManager
-from hhblits_runner import HHblitsRunner
+from hhsearch_runner import HHsearchRunner
 
 
-class PfamHHblitsPipeline:
-    """Main pipeline orchestrator."""
+class PfamHHsearchPipeline:
+    """Main pipeline orchestrator for HHsearch all-against-all."""
 
-    def __init__(self, work_dir, svn_url, e_value_threshold=1e-10, incremental=True,
+    def __init__(self, work_dir, svn_url, e_value_threshold=1.0, incremental=True,
                  use_slurm=True, batch_size=100):
         """
         Initialize pipeline.
@@ -32,7 +32,7 @@ class PfamHHblitsPipeline:
         Args:
             work_dir: Working directory for all pipeline files
             svn_url: Pfam SVN repository URL
-            e_value_threshold: E-value cutoff for HHblits
+            e_value_threshold: E-value cutoff for HHsearch (default: 1.0)
             incremental: Enable incremental updates
             use_slurm: Use SLURM for parallel processing
             batch_size: Number of families per SLURM batch
@@ -61,7 +61,7 @@ class PfamHHblitsPipeline:
             'svn_discovery': self.progress_dir / '.svn_discovery_complete',
             'extraction': self.progress_dir / '.extraction_complete',
             'db_build': self.progress_dir / '.db_build_complete',
-            'hhblits': self.progress_dir / '.hhblits_complete',
+            'hhsearch': self.progress_dir / '.hhsearch_complete',
             'aggregation': self.progress_dir / '.aggregation_complete'
         }
 
@@ -95,7 +95,7 @@ class PfamHHblitsPipeline:
         # Clean up files before resetting markers
         if clean_files and steps:
             logging.info("Cleaning up old result files...")
-            hhblits_runner = HHblitsRunner(
+            hhsearch_runner = HHsearchRunner(
                 seed_dir=self.data_dir / "SEED",
                 hmm_dir=self.data_dir / "HMM",
                 results_dir=self.results_dir,
@@ -104,16 +104,16 @@ class PfamHHblitsPipeline:
 
             # Determine what to clean based on which steps are being reset
             # db_build creates: A3M, HHM, DB files
-            # hhblits creates: HHR, parsed TSV files
+            # hhsearch creates: HHR, parsed TSV files
             # aggregation creates: summary files (uses parsed TSV as input)
             clean_a3m = 'db_build' in steps
             clean_hhm = 'db_build' in steps
             clean_db = 'db_build' in steps
-            clean_hhr = 'hhblits' in steps
-            clean_parsed = 'hhblits' in steps
+            clean_hhr = 'hhsearch' in steps
+            clean_parsed = 'hhsearch' in steps
             clean_summary = 'aggregation' in steps
 
-            hhblits_runner.clean_results(
+            hhsearch_runner.clean_results(
                 clean_a3m=clean_a3m,
                 clean_hhm=clean_hhm,
                 clean_hhr=clean_hhr,
@@ -175,12 +175,12 @@ class PfamHHblitsPipeline:
         return families
 
     def run_extraction(self, svn_manager, families):
-        """Step 2: Extract SEED and HMM files."""
+        """Step 2: Extract SEED files."""
         if self.is_step_complete('extraction'):
             logging.info("Extraction already complete, skipping...")
             return
 
-        logging.info("=== Step 2: SEED/HMM Extraction ===")
+        logging.info("=== Step 2: SEED Extraction ===")
 
         results = svn_manager.extract_all_families(families)
 
@@ -196,43 +196,40 @@ class PfamHHblitsPipeline:
         logging.info(f"Extraction complete: {len(results)} families")
         self.mark_step_complete('extraction')
 
-    def run_db_build(self, hhblits_runner):
-        """Step 3: Build HHblits database."""
+    def run_db_build(self, hhsearch_runner):
+        """Step 3: Build HHsearch database."""
         if self.is_step_complete('db_build'):
             logging.info("Database build already complete, skipping...")
             db_file = self.results_dir / "hhsuite_db" / "pfam_db_hhm"
             return str(db_file)
 
-        logging.info("=== Step 3: HHblits Database Build ===")
+        logging.info("=== Step 3: HH-suite Database Build ===")
 
-        db_file = hhblits_runner.build_hhm_database()
+        db_file = hhsearch_runner.build_hhm_database()
 
         self.mark_step_complete('db_build')
         return db_file
 
-    def run_hhblits_searches(self, hhblits_runner, families, database, use_slurm=True, batch_size=100):
-        """Step 4: Run all-against-all HHblits searches."""
-        if self.is_step_complete('hhblits'):
-            logging.info("HHblits searches already complete, skipping...")
+    def run_hhsearch_searches(self, hhsearch_runner, families, database, use_slurm=True, batch_size=100):
+        """Step 4: Run all-against-all HHsearch comparisons."""
+        if self.is_step_complete('hhsearch'):
+            logging.info("HHsearch searches already complete, skipping...")
             return
 
-        logging.info("=== Step 4: HHblits All-Against-All Searches ===")
+        logging.info("=== Step 4: HHsearch All-Against-All Profile Comparisons ===")
 
         total = len(families)
-        logging.info(f"Running HHblits for {total} families...")
+        logging.info(f"Running HHsearch for {total} families...")
 
         if use_slurm:
             # Set up SLURM batch processing
-            slurm_script, num_batches = hhblits_runner.setup_slurm_batches(
+            slurm_script, num_batches = hhsearch_runner.setup_slurm_batches(
                 families, database, batch_size=batch_size
             )
 
             logging.info(f"SLURM batch setup complete: {num_batches} batches")
             logging.info(f"To submit jobs, run:")
             logging.info(f"  sbatch {slurm_script}")
-            logging.info(f"")
-            logging.info(f"Or submit now with auto-wait:")
-            logging.info(f"  python -c 'from pathlib import Path; import subprocess; subprocess.run([\"sbatch\", \"{slurm_script}\"])'")
             logging.info(f"")
             logging.info(f"Monitor with: squeue -u $USER")
             logging.info(f"")
@@ -249,11 +246,11 @@ class PfamHHblitsPipeline:
                 if i % 100 == 0:
                     logging.info(f"Progress: {i}/{total} searches completed")
 
-                hits = hhblits_runner.run_search_for_family(family_id, database)
+                hits = hhsearch_runner.run_search_for_family(family_id, database)
                 all_hits[family_id] = hits
 
-            logging.info(f"HHblits searches complete: {total} families processed")
-            self.mark_step_complete('hhblits')
+            logging.info(f"HHsearch searches complete: {total} families processed")
+            self.mark_step_complete('hhsearch')
 
             return all_hits
 
@@ -267,7 +264,7 @@ class PfamHHblitsPipeline:
 
         # Aggregate all parsed hits into single file
         parsed_dir = self.results_dir / "PARSED"
-        all_hits_file = self.summary_dir / "hhblits_all_vs_all.tsv"
+        all_hits_file = self.summary_dir / "hhsearch_all_vs_all.tsv"
 
         hit_count = 0
         with open(all_hits_file, 'w') as outf:
@@ -327,8 +324,8 @@ class PfamHHblitsPipeline:
                     family_stats[query]['best_target'] = target
                     family_stats[query]['best_score'] = score
 
-                # Collect high confidence hits (e.g., e-value < 1e-20)
-                if e_value < 1e-20:
+                # Collect high confidence hits (e.g., e-value < 1e-10)
+                if e_value < 1e-10:
                     high_conf_hits.append(line)
 
         # Write family statistics
@@ -367,12 +364,12 @@ class PfamHHblitsPipeline:
     def run(self):
         """Run the complete pipeline."""
         logging.info("=" * 60)
-        logging.info("Pfam HHblits All-Against-All Pipeline")
+        logging.info("Pfam HHsearch All-Against-All Pipeline")
         logging.info("=" * 60)
 
         # Initialize managers
         svn_manager = SVNManager(self.svn_url, self.data_dir)
-        hhblits_runner = HHblitsRunner(
+        hhsearch_runner = HHsearchRunner(
             seed_dir=self.data_dir / "SEED",
             hmm_dir=self.data_dir / "HMM",
             results_dir=self.results_dir,
@@ -394,10 +391,10 @@ class PfamHHblitsPipeline:
 
         self.run_extraction(svn_manager, families)
 
-        database = self.run_db_build(hhblits_runner)
+        database = self.run_db_build(hhsearch_runner)
 
-        self.run_hhblits_searches(hhblits_runner, families, database,
-                                 use_slurm=self.use_slurm, batch_size=self.batch_size)
+        self.run_hhsearch_searches(hhsearch_runner, families, database,
+                                   use_slurm=self.use_slurm, batch_size=self.batch_size)
 
         self.run_aggregation()
 
@@ -409,12 +406,12 @@ class PfamHHblitsPipeline:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Pfam SEED/HMM extraction and HHblits all-against-all comparison pipeline"
+        description="Pfam HHsearch all-against-all profile comparison pipeline"
     )
     parser.add_argument(
         '--work-dir', '-w',
-        default='./HHBLITS_PIPELINE',
-        help='Working directory for pipeline (default: ./HHBLITS_PIPELINE)'
+        default='./HHSEARCH_PIPELINE',
+        help='Working directory for pipeline (default: ./HHSEARCH_PIPELINE)'
     )
     parser.add_argument(
         '--svn-url',
@@ -424,8 +421,8 @@ def main():
     parser.add_argument(
         '--e-value', '-e',
         type=float,
-        default=1e-10,
-        help='E-value threshold for HHblits (default: 1e-10)'
+        default=1.0,
+        help='E-value threshold for HHsearch (default: 1.0)'
     )
     parser.add_argument(
         '--full',
@@ -445,7 +442,7 @@ def main():
     )
     parser.add_argument(
         '--reset',
-        help='Reset progress from specified step (svn_discovery, extraction, db_build, hhblits, aggregation)'
+        help='Reset progress from specified step (svn_discovery, extraction, db_build, hhsearch, aggregation)'
     )
     parser.add_argument(
         '--no-clean',
@@ -472,7 +469,7 @@ def main():
     )
 
     # Initialize pipeline
-    pipeline = PfamHHblitsPipeline(
+    pipeline = PfamHHsearchPipeline(
         work_dir=args.work_dir,
         svn_url=args.svn_url,
         e_value_threshold=args.e_value,
