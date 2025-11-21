@@ -12,7 +12,7 @@ This script:
    - Saves as PFXXXXX.pdb
 3. Orders domains by mean pLDDT
 4. Uses the highest scoring domain as reference
-5. Superposes all other structures using Bio.PDB rigid-body superposition
+5. Superposes all other structures using TM-align
 6. Creates a combined PDB file with all superposed structures
 """
 
@@ -482,6 +482,85 @@ def extract_chain_from_pdb(input_pdb, output_pdb, chain_id='B'):
         return False
 
 
+def run_tmalign_superposition(reference_pdb, target_pdb, output_dir, target_name, tmalign_path='TMalign'):
+    """
+    Perform structural superposition using TM-align.
+
+    Args:
+        reference_pdb: Reference structure PDB file
+        target_pdb: Target structure PDB file to superpose
+        output_dir: Directory to save output files
+        target_name: Name for output file (e.g., 'PF00651')
+        tmalign_path: Path to TMalign executable
+
+    Returns:
+        Path to superposed PDB file, or None if failed
+    """
+    import subprocess
+
+    output_prefix = os.path.join(output_dir, f"tmalign_{target_name}")
+
+    # TM-align syntax: TMalign structure1.pdb structure2.pdb -o output_prefix
+    # This superimposes structure1 onto structure2
+    cmd = [
+        tmalign_path,
+        target_pdb,
+        reference_pdb,
+        '-o', output_prefix
+    ]
+
+    print(f"  Running: {' '.join(cmd)}")
+
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+
+        # TM-align creates files: output_prefix, output_prefix_all, output_prefix_atm
+        # The main file (output_prefix) contains the superposed target structure
+
+        if os.path.exists(output_prefix):
+            # Rename to our standard naming
+            output_pdb = os.path.join(output_dir, f"{target_name}_superposed.pdb")
+            import shutil
+            shutil.move(output_prefix, output_pdb)
+
+            # Extract TM-score from output
+            for line in result.stdout.split('\n'):
+                if 'TM-score' in line:
+                    print(f"  {line.strip()}")
+                    break
+
+            print(f"  Saved superposed structure to: {output_pdb}")
+
+            # Clean up extra files
+            for suffix in ['_all', '_all_atm', '_all_atm_lig', '_atm', '_atm_lig']:
+                extra_file = f"{output_prefix}{suffix}"
+                if os.path.exists(extra_file):
+                    os.remove(extra_file)
+
+            return output_pdb
+        else:
+            print(f"  ERROR: TM-align failed - output file not found: {output_prefix}")
+            print(f"  Return code: {result.returncode}")
+            if result.stdout:
+                print(f"  stdout: {result.stdout[:500]}")
+            if result.stderr:
+                print(f"  stderr: {result.stderr[:500]}")
+            return None
+
+    except subprocess.TimeoutExpired:
+        print(f"  ERROR: TM-align timed out after 300 seconds")
+        return None
+    except FileNotFoundError:
+        print(f"  ERROR: TM-align executable not found: {tmalign_path}")
+        print(f"  Please ensure TM-align is installed and in your PATH")
+        return None
+    except Exception as e:
+        print(f"  ERROR: TM-align exception: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
+
+
 def run_rigid_superposition(reference_pdb, target_pdb, output_dir, target_name):
     """
     Perform rigid-body superposition using Bio.PDB (no flexible alignment).
@@ -759,7 +838,7 @@ def main():
 
         # Superpose all other structures
         print(f"\n{'='*60}")
-        print(f"Superposing structures using Bio.PDB rigid-body alignment")
+        print(f"Superposing structures using TM-align")
         print(f"{'='*60}")
 
         superposed_files = []
@@ -772,11 +851,12 @@ def main():
         for result in family_results[1:]:
             print(f"\nSuperposing {result['pfam_acc']} onto reference...")
 
-            superposed_pdb = run_rigid_superposition(
+            superposed_pdb = run_tmalign_superposition(
                 reference['pdb_file'],
                 result['pdb_file'],
                 str(output_dir),
-                result['pfam_acc']
+                result['pfam_acc'],
+                'TMalign'
             )
 
             if superposed_pdb:
@@ -784,7 +864,7 @@ def main():
                 structure_labels.append(result['pfam_acc'])
                 print(f"  Successfully superposed {result['pfam_acc']}")
             else:
-                print(f"  WARNING: Skipping {result['pfam_acc']} due to superposition failure")
+                print(f"  WARNING: Skipping {result['pfam_acc']} due to TM-align failure")
 
         # Combine all structures into one file
         final_output = output_dir / f"{args.clan_acc}_superposed.pdb"
