@@ -101,55 +101,60 @@ def get_clan_families(clan_acc, connection):
     return families
 
 
-def checkout_family(pfam_acc, work_dir):
+def fetch_seed_file(pfam_acc, work_dir):
     """
-    Checkout a Pfam family using pfco command.
+    Fetch SEED file for a Pfam family directly from SVN repository.
+    This is much faster than pfco as it only downloads the SEED file.
 
     Args:
-        pfam_acc: Pfam accession
-        work_dir: Working directory where family will be checked out
+        pfam_acc: Pfam accession (e.g., 'PF00001')
+        work_dir: Working directory where SEED file will be saved
 
     Returns:
-        Path to SEED file, or None if checkout failed
+        Path to SEED file, or None if fetch failed
     """
     family_dir = Path(work_dir) / pfam_acc
     seed_path = family_dir / 'SEED'
 
-    # Check if already checked out
+    # Check if already exists
     if seed_path.exists():
-        print(f"  Family {pfam_acc} already checked out")
+        print(f"  Family {pfam_acc} SEED file already exists")
         return str(seed_path)
 
-    # Checkout using pfco command
+    # Create family directory if needed
+    family_dir.mkdir(parents=True, exist_ok=True)
+
+    # Fetch SEED file directly from SVN
+    svn_url = f"https://xfam-svn-hl.ebi.ac.uk/svn/pfam/trunk/Data/Families/{pfam_acc}/SEED"
+
     try:
         result = subprocess.run(
-            ['pfco', pfam_acc],
-            cwd=work_dir,
+            ['svn', 'cat', svn_url],
             capture_output=True,
             text=True,
-            timeout=60
+            timeout=30
         )
 
         if result.returncode != 0:
-            print(f"  Warning: pfco failed for {pfam_acc}")
+            print(f"  Warning: SVN fetch failed for {pfam_acc}")
             print(f"    stderr: {result.stderr}")
             return None
 
-        # Verify SEED file exists
-        if seed_path.exists():
-            return str(seed_path)
-        else:
-            print(f"  Warning: SEED file not found after checkout at {seed_path}")
-            return None
+        # Write SEED file
+        with open(seed_path, 'w') as f:
+            f.write(result.stdout)
+
+        print(f"  Fetched SEED file from SVN: {seed_path}")
+        return str(seed_path)
 
     except subprocess.TimeoutExpired:
-        print(f"  Warning: pfco timed out for {pfam_acc}")
+        print(f"  Warning: SVN fetch timed out for {pfam_acc}")
         return None
     except FileNotFoundError:
-        print(f"  Error: pfco command not found. Please ensure it's in your PATH")
+        print(f"  Error: svn command not found. Please ensure it's in your PATH")
         return None
     except Exception as e:
-        print(f"  Warning: pfco failed for {pfam_acc}: {e}")
+        print(f"  Warning: Error fetching SEED for {pfam_acc}: {e}")
         return None
 
 
@@ -370,8 +375,8 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
             'mean_plddt': mean_plddt
         }
 
-    # Checkout family and get SEED alignment
-    seed_file = checkout_family(pfam_acc, work_dir)
+    # Fetch SEED file from SVN
+    seed_file = fetch_seed_file(pfam_acc, work_dir)
     if not seed_file:
         return None
 
