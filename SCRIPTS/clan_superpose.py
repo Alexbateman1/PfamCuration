@@ -12,7 +12,7 @@ This script:
    - Saves as PFXXXXX.pdb
 3. Orders domains by mean pLDDT
 4. Uses the highest scoring domain as reference
-5. Superposes all other structures using rigid-body alignment (Bio.PDB)
+5. Superposes all other structures using FATCAT rigid-body mode (.ini.twist.pdb)
 6. Creates a combined PDB file with all superposed structures
 """
 
@@ -587,8 +587,9 @@ def run_fatcat(reference_pdb, target_pdb, output_dir, target_name, fatcat_path='
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
 
         # Note: FATCAT may return exit code 1 even on success, so we check for output files instead
-        # FATCAT creates output_prefix.opt.twist.pdb with both structures superposed
-        fatcat_output = f"{output_prefix}.opt.twist.pdb"
+        # FATCAT creates .ini.twist.pdb (rigid-body) and .opt.twist.pdb (flexible)
+        # Use .ini.twist.pdb for rigid-body superposition without flexibility
+        fatcat_output = f"{output_prefix}.ini.twist.pdb"
 
         if not os.path.exists(fatcat_output):
             print(f"  ERROR: FATCAT failed - output file not found: {fatcat_output}")
@@ -758,7 +759,7 @@ def main():
 
         # Superpose all other structures
         print(f"\n{'='*60}")
-        print(f"Superposing structures using rigid-body alignment")
+        print(f"Superposing structures using FATCAT (rigid-body mode)")
         print(f"{'='*60}")
 
         superposed_files = []
@@ -771,11 +772,12 @@ def main():
         for result in family_results[1:]:
             print(f"\nSuperposing {result['pfam_acc']} onto reference...")
 
-            superposed_pdb = run_rigid_superposition(
+            superposed_pdb = run_fatcat(
                 reference['pdb_file'],
                 result['pdb_file'],
                 str(output_dir),
-                result['pfam_acc']
+                result['pfam_acc'],
+                'FATCAT'
             )
 
             if superposed_pdb:
@@ -783,7 +785,7 @@ def main():
                 structure_labels.append(result['pfam_acc'])
                 print(f"  Successfully superposed {result['pfam_acc']}")
             else:
-                print(f"  WARNING: Skipping {result['pfam_acc']} due to superposition failure")
+                print(f"  WARNING: Skipping {result['pfam_acc']} due to FATCAT failure")
 
         # Combine all structures into one file
         final_output = output_dir / f"{args.clan_acc}_superposed.pdb"
