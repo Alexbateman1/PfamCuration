@@ -16,7 +16,6 @@ import subprocess
 import sys
 import time
 import os
-import re
 from pathlib import Path
 import requests
 from typing import List, Set
@@ -43,7 +42,6 @@ class CurationPipeline:
     def __init__(self, working_dir: str = '.'):
         self.working_dir = Path(working_dir)
         self.accessions: List[str] = []
-        self.submitted_jobs: Set[str] = set()  # Track job IDs submitted by this script
         
     def get_proteome_accessions(self, proteome_id: str) -> List[str]:
         """
@@ -119,78 +117,41 @@ class CurationPipeline:
         progress_file.touch()
         print(f"✓ Marked {step} as complete")
     
-    def capture_job_ids_from_output(self, output: str):
-        """
-        Extract job IDs from command output and add to tracking set
-        Looks for patterns like "Submitted batch job 12345" or just job numbers
-
-        Args:
-            output: stdout/stderr from command that may contain job IDs
-        """
-        # Pattern for "Submitted batch job 12345" or similar
-        job_patterns = [
-            r'Submitted batch job (\d+)',
-            r'job\s+(\d+)',
-            r'Job\s+<(\d+)>',
-        ]
-
-        for pattern in job_patterns:
-            matches = re.findall(pattern, output, re.IGNORECASE)
-            for job_id in matches:
-                self.submitted_jobs.add(job_id)
-                print(f"  Tracking job ID: {job_id}")
-
     def wait_for_jobs(self, timeout: int = 3600):
         """
-        Wait for tracked jobs to complete by monitoring squeue
-        Only waits for jobs submitted by this script, not all user jobs
-
+        Wait for all user jobs to complete by monitoring squeue
+        
         Args:
             timeout: Maximum time to wait in seconds (default 1 hour)
         """
-        if not self.submitted_jobs:
-            print("No jobs to wait for")
-            return True
-
-        print(f"Waiting for {len(self.submitted_jobs)} job(s) to complete...")
+        print("Waiting for jobs to complete...")
         start_time = time.time()
-
+        
         while True:
             try:
-                # Check for our specific jobs
+                # Check for any running jobs from this user
                 result = subprocess.run(
-                    ['squeue', '--me', '--noheader', '--format=%i %T'],
+                    ['squeue', '--me', '--noheader'],
                     capture_output=True,
                     text=True,
                     check=True
                 )
-
-                # Parse running jobs and check if any are ours
-                running_jobs = set()
-                if result.stdout.strip():
-                    for line in result.stdout.strip().split('\n'):
-                        fields = line.split()
-                        if fields:
-                            job_id = fields[0]
-                            if job_id in self.submitted_jobs:
-                                running_jobs.add(job_id)
-
-                if not running_jobs:
-                    print("✓ All tracked jobs completed")
-                    self.submitted_jobs.clear()
+                
+                if not result.stdout.strip():
+                    print("✓ All jobs completed")
                     return True
-
-                # Show status
-                print(f"  {len(running_jobs)} tracked job(s) still running...", end='\r')
-
+                
+                # Count running jobs
+                job_count = len([line for line in result.stdout.strip().split('\n') if line])
+                print(f"  {job_count} job(s) still running...", end='\r')
+                
                 # Check timeout
                 if time.time() - start_time > timeout:
                     print(f"\n⚠ Timeout reached after {timeout}s")
-                    print(f"  Still running: {running_jobs}")
                     return False
-
+                
                 time.sleep(30)  # Check every 30 seconds
-
+                
             except subprocess.CalledProcessError as e:
                 print(f"\n⚠ Error checking job status: {e}", file=sys.stderr)
                 return False
@@ -248,27 +209,34 @@ class CurationPipeline:
                     cwd=self.working_dir
                 )
 
-                # Extract job IDs from output
-                self.capture_job_ids_from_output(result.stdout)
-                self.capture_job_ids_from_output(result.stderr)
-
                 # Count directories after TED build
                 dirs_after = set(d.name for d in self.working_dir.iterdir() if d.is_dir())
                 new_dirs = dirs_after - dirs_before
 
-                # If no new directories created, TED probably found no domains
+                # Check if no new directories were created
                 if not new_dirs:
-                    print(f"  → No TED domains found, using whole sequence (build.sh)")
-                    result = subprocess.run(
-                        ['bash', 'build.sh', accession],
-                        capture_output=True,
-                        text=True,
-                        check=True,
-                        cwd=self.working_dir
-                    )
-                    # Extract job IDs from build.sh output
-                    self.capture_job_ids_from_output(result.stdout)
-                    self.capture_job_ids_from_output(result.stderr)
+                    # Parse output to distinguish between "no TED domains" vs "all skipped"
+                    output = result.stdout + result.stderr
+
+                    # Check if truly no TED domains were found
+                    if f"No domains found for {accession} in TED." in output:
+                        print(f"  → No TED domains found, using whole sequence (build.sh)")
+                        subprocess.run(
+                            ['bash', 'build.sh', accession],
+                            check=True,
+                            cwd=self.working_dir
+                        )
+                    # Check if domains were skipped due to Pfam overlap
+                    elif "SKIPPED (PFAM OVERLAP)" in output:
+                        print(f"  → TED domains found but all overlap with existing Pfam families")
+                        print(f"  → Not building whole sequence (already covered by Pfam)")
+                    # Check if all directories already existed
+                    elif "SKIPPED (ALREADY EXISTS)" in output or "Skipped (already exists):" in output:
+                        print(f"  → All TED domain directories already exist")
+                    else:
+                        # Unexpected case - no domains created but unclear why
+                        print(f"  → No directories created (reason unclear)")
+                        print(f"  → Not building whole sequence to be safe")
                 else:
                     print(f"  → Created {len(new_dirs)} TED domain(s)")
 
@@ -348,16 +316,11 @@ class CurationPipeline:
                     if float(fields[4]) > 0.99 and float(fields[3]) > 1:
                         directory = fields[0]
                         print(f"  Iterating {directory}")
-                        result = subprocess.run(
+                        subprocess.run(
                             ['/homes/agb/Scripts/iterate_inline.pl', directory],
-                            capture_output=True,
-                            text=True,
                             check=True,
                             cwd=self.working_dir
                         )
-                        # Extract job IDs from iterate output
-                        self.capture_job_ids_from_output(result.stdout)
-                        self.capture_job_ids_from_output(result.stderr)
                 except (ValueError, subprocess.CalledProcessError) as e:
                     continue
             

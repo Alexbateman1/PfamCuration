@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --time=4:00:00
-#SBATCH --mem=4G
+#SBATCH --time=6:00:00
+#SBATCH --mem=8G
 #SBATCH --job-name=scoop_weekly
 #SBATCH --mail-type=FAIL
-#SBATCH --mail-user=your.email@ebi.ac.uk
+#SBATCH --mail-user=agb@ebi.ac.uk
 #SBATCH --output=/nfs/production/agb/pfam/data/all_vs_all/SCOOP/scoop_job_%j.out
 #SBATCH --error=/nfs/production/agb/pfam/data/all_vs_all/SCOOP/scoop_job_%j.err
 
