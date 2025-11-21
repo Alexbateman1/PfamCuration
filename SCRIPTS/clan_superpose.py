@@ -567,9 +567,10 @@ def combine_structures(pdb_files, output_file, labels=None):
                 print(f"  WARNING: File not found, skipping: {pdb_file}")
                 continue
 
-            # Add COMPND record with Pfam accession for this model
+            # Add TITLE and REMARK records with Pfam accession for this model
             label = labels[idx] if labels and idx < len(labels) else f"Model_{model_num}"
-            out.write(f"COMPND    {label}\n")
+            out.write(f"TITLE     {label}\n")
+            out.write(f"REMARK 220 MODEL {model_num}: {label}\n")
             out.write(f"MODEL     {model_num:4d}\n")
 
             with open(pdb_file, 'r') as f:
