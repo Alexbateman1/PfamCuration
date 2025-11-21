@@ -12,7 +12,7 @@ This script:
    - Saves as PFXXXXX.pdb
 3. Orders domains by mean pLDDT
 4. Uses the highest scoring domain as reference
-5. Superposes all other structures using FATCAT rigid-body mode (.ini.twist.pdb)
+5. Superposes all other structures using Bio.PDB rigid-body superposition
 6. Creates a combined PDB file with all superposed structures
 """
 
@@ -759,7 +759,7 @@ def main():
 
         # Superpose all other structures
         print(f"\n{'='*60}")
-        print(f"Superposing structures using FATCAT (rigid-body mode)")
+        print(f"Superposing structures using Bio.PDB rigid-body alignment")
         print(f"{'='*60}")
 
         superposed_files = []
@@ -772,12 +772,11 @@ def main():
         for result in family_results[1:]:
             print(f"\nSuperposing {result['pfam_acc']} onto reference...")
 
-            superposed_pdb = run_fatcat(
+            superposed_pdb = run_rigid_superposition(
                 reference['pdb_file'],
                 result['pdb_file'],
                 str(output_dir),
-                result['pfam_acc'],
-                'FATCAT'
+                result['pfam_acc']
             )
 
             if superposed_pdb:
@@ -785,7 +784,7 @@ def main():
                 structure_labels.append(result['pfam_acc'])
                 print(f"  Successfully superposed {result['pfam_acc']}")
             else:
-                print(f"  WARNING: Skipping {result['pfam_acc']} due to FATCAT failure")
+                print(f"  WARNING: Skipping {result['pfam_acc']} due to superposition failure")
 
         # Combine all structures into one file
         final_output = output_dir / f"{args.clan_acc}_superposed.pdb"
