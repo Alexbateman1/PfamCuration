@@ -394,6 +394,7 @@ def fetch_ted_domains(uniprot_acc):
     """
     import urllib.request
     import json
+    import tempfile
 
     # Strip version number for TED API
     base_acc = uniprot_acc.split('.')[0]
@@ -407,8 +408,18 @@ def fetch_ted_domains(uniprot_acc):
             if not data or 'data' not in data:
                 return None
 
-            # Get protein length from first domain if available
-            protein_length = 0
+            # Try to get protein length from API response
+            protein_length = data.get('protein_length') or data.get('sequence_length') or data.get('uniprot_length')
+
+            # If not in API, get it from AlphaFold model
+            if not protein_length:
+                # Download AlphaFold model to get sequence length
+                with tempfile.TemporaryDirectory() as tmp_dir:
+                    cif_file = download_alphafold_model(base_acc, tmp_dir)
+                    if cif_file:
+                        sequence = get_sequence_from_cif(cif_file)
+                        protein_length = len(sequence)
+
             domains = []
 
             for domain in data.get('data', []):
@@ -427,8 +438,6 @@ def fetch_ted_domains(uniprot_acc):
                             'start': int(start),
                             'end': int(end)
                         })
-                        # Update protein length
-                        protein_length = max(protein_length, int(end))
 
                 domains.append({
                     'ted_id': ted_id,
@@ -436,7 +445,7 @@ def fetch_ted_domains(uniprot_acc):
                 })
 
             return {
-                'protein_length': protein_length,
+                'protein_length': protein_length if protein_length else 0,
                 'domains': domains
             }
 
