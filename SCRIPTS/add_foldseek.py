@@ -461,9 +461,9 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
         print("Warning: matplotlib not available, skipping TED visualization")
         return
 
-    # Color scheme for TED domains
-    domain_colors = ['#4472C4', '#E74C3C', '#F39C12', '#27AE60', '#9B59B6',
-                     '#1ABC9C', '#E67E22', '#3498DB', '#E91E63', '#16A085']
+    # Color scheme for TED domains (official TED database colors)
+    domain_colors = ['#4A79A7', '#F28E2C', '#E15759', '#76B7B2', '#59A14F',
+                     '#EDC949', '#AF7AA1', '#FF9DA7', '#9C755F', '#BAB0AB']
 
     # Fetch TED domain information for each protein
     proteins_data = []
