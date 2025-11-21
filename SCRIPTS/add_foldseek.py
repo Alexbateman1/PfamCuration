@@ -555,6 +555,10 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
             # Draw TED domains
             for domain_idx, domain in enumerate(protein['domains']):
                 color = domain_colors[domain_idx % len(domain_colors)]
+                ted_id = domain.get('ted_id', '')
+
+                # Extract TED domain number (e.g., "TED01" from "P12345_TED01")
+                ted_label = ted_id.split('_')[-1] if '_' in ted_id else ted_id
 
                 for segment in domain['segments']:
                     seg_start = segment['start']
@@ -577,6 +581,12 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
                             linewidth=1, edgecolor='black', facecolor=color, alpha=0.8
                         )
                         ax.add_patch(domain_rect)
+
+                        # Add TED domain label inside the box if there's enough space
+                        if domain_width > 30:  # Only add text if box is wide enough
+                            ax.text(domain_x + domain_width / 2, current_y,
+                                   ted_label, ha='center', va='center',
+                                   fontsize=7, weight='bold', color='white')
 
             # Draw SEED region
             seed_start = protein['seed_start']
