@@ -488,7 +488,7 @@ def run_fatcat(reference_pdb, target_pdb, output_dir, target_name, fatcat_path='
         '-p1', reference_pdb,
         '-p2', target_pdb,
         '-o', output_prefix,
-        '-m'  # Output combined PDB
+        '-t'  # Output transformed PDB files
     ]
 
     print(f"  Running: {' '.join(cmd)}")
@@ -496,24 +496,17 @@ def run_fatcat(reference_pdb, target_pdb, output_dir, target_name, fatcat_path='
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
 
-        if result.returncode != 0:
-            print(f"  ERROR: FATCAT failed (return code {result.returncode})")
+        # Note: FATCAT may return exit code 1 even on success, so we check for output files instead
+        # FATCAT creates output_prefix.opt.twist.pdb with both structures superposed
+        fatcat_output = f"{output_prefix}.opt.twist.pdb"
+
+        if not os.path.exists(fatcat_output):
+            print(f"  ERROR: FATCAT failed - output file not found: {fatcat_output}")
+            print(f"  Return code: {result.returncode}")
             if result.stdout:
                 print(f"  stdout: {result.stdout[:1000]}")
             if result.stderr:
                 print(f"  stderr: {result.stderr[:1000]}")
-            if not result.stdout and not result.stderr:
-                print(f"  No output from FATCAT. This usually means:")
-                print(f"    - FATCAT binary issue")
-                print(f"    - Input PDB files have format problems")
-                print(f"    - Try running manually: {' '.join(cmd)}")
-            return None
-
-        # FATCAT creates output_prefix.pdb with both structures (chain A = reference, chain B = target)
-        fatcat_output = f"{output_prefix}.pdb"
-
-        if not os.path.exists(fatcat_output):
-            print(f"  ERROR: Expected output file not found: {fatcat_output}")
             return None
 
         print(f"  FATCAT output created: {fatcat_output}")
