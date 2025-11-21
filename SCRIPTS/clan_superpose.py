@@ -560,6 +560,14 @@ def combine_structures(pdb_files, output_file, labels=None):
         print(f"  {i}. {pdb_file} ({label})")
 
     with open(output_file, 'w') as out:
+        # Write a single header for the entire file
+        # Extract clan accession from output filename if available
+        import os.path
+        clan_name = os.path.basename(output_file).replace('_superposed.pdb', '')
+        out.write(f"HEADER    SUPERPOSED PFAM DOMAINS FROM {clan_name}\n")
+        out.write(f"COMPND    MOL_ID: 1;\n")
+        out.write(f"COMPND   2 MOLECULE: PFAM CLAN {clan_name} SUPERPOSITION;\n")
+
         model_num = 1
 
         for idx, pdb_file in enumerate(pdb_files):
@@ -567,10 +575,9 @@ def combine_structures(pdb_files, output_file, labels=None):
                 print(f"  WARNING: File not found, skipping: {pdb_file}")
                 continue
 
-            # Add TITLE and REMARK records with Pfam accession for this model
+            # Add REMARK with Pfam accession before each model
             label = labels[idx] if labels and idx < len(labels) else f"Model_{model_num}"
-            out.write(f"TITLE     {label}\n")
-            out.write(f"REMARK 220 MODEL {model_num}: {label}\n")
+            out.write(f"REMARK 210 PFAM_ID: {label}\n")
             out.write(f"MODEL     {model_num:4d}\n")
 
             with open(pdb_file, 'r') as f:
