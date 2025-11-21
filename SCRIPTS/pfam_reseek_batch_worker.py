@@ -67,6 +67,10 @@ def run_reseek_search(query_file, db_file, output_file, sensitivity='sensitive',
     Returns:
         bool: True if successful, False otherwise
     """
+    # Specify columns to match HHsearch-like output
+    # query, target, qlo, qhi, tlo, thi, ql, tl, pctid, evalue, aq
+    # Note: Reseek uses + to separate column names, not commas
+    # Note: pvalue is not available in this version of reseek
     cmd = [
         'reseek',
         '-search', str(query_file),
@@ -75,6 +79,7 @@ def run_reseek_search(query_file, db_file, output_file, sensitivity='sensitive',
         '-output', str(output_file),
         '-threads', str(threads),
         '-evalue', '10',  # Match HHsearch default
+        '-columns', 'query+target+qlo+qhi+tlo+thi+ql+tl+pctid+evalue+aq',
     ]
 
     try:
@@ -92,8 +97,8 @@ def parse_reseek_output(reseek_output_file, query_pfam_acc):
     """
     Parse Reseek output and convert to HHsearch-like format.
 
-    Reseek output columns (default):
-        query, target, identity, alnlen, qstart, qend, tstart, tend, evalue, bitscore
+    Reseek output columns (with -columns flag):
+        query, target, qlo, qhi, tlo, thi, ql, tl, pctid, evalue, aq
 
     Returns:
         list of dicts with parsed results
@@ -110,51 +115,54 @@ def parse_reseek_output(reseek_output_file, query_pfam_acc):
                 continue
 
             fields = line.split('\t')
-            if len(fields) < 10:
+            if len(fields) < 11:
                 continue
 
             try:
                 query_name = fields[0]
                 target_name = fields[1]
-                identity = float(fields[2])
-                alnlen = int(fields[3])
-                qstart = int(fields[4])
-                qend = int(fields[5])
-                tstart = int(fields[6])
-                tend = int(fields[7])
-                evalue = float(fields[8])
-                bitscore = float(fields[9])
+                qlo = int(fields[2])
+                qhi = int(fields[3])
+                tlo = int(fields[4])
+                thi = int(fields[5])
+                ql = int(fields[6])
+                tl = int(fields[7])
+                pctid = float(fields[8])
+                evalue = float(fields[9])
+                aq = float(fields[10])  # alignment quality (0-1 scale)
+
+                # P-value not available in this version of reseek, use evalue as proxy
+                pvalue = evalue
 
                 # Extract Pfam accessions
                 query_pfam = extract_pfam_accession(query_name)
                 target_pfam = extract_pfam_accession(target_name)
 
+                # Calculate alignment length
+                alnlen = max(qhi - qlo + 1, thi - tlo + 1)
+
                 # Calculate probability (rough approximation from E-value)
-                # P = 1 - e^(-E)  but for very small E, P ≈ E
-                # For display, convert to percentage-like value
+                # Convert to percentage similar to HHsearch
                 if evalue < 1e-100:
                     prob = 100.0
+                elif evalue < 1e-10:
+                    prob = 99.9
+                elif evalue < 0.01:
+                    prob = 99.0 + (1 - evalue * 100)
                 elif evalue < 1:
-                    prob = 100.0 * (1.0 - pow(10, min(evalue, 0)))
+                    prob = 90.0 + (1 - evalue) * 9
                 else:
                     prob = 100.0 / (1.0 + evalue)
 
-                # P-value (not provided by Reseek, use E-value as proxy)
-                pvalue = evalue
+                # Use alignment quality * 100 as score (similar to bitscore)
+                score = aq * 100
 
                 # SS (secondary structure score, not provided by Reseek)
                 ss = 0.0
 
                 # Query and Template ranges
-                query_range = f"{qstart}-{qend}"
-                template_range = f"{tstart}-{tend}"
-
-                # Query length (approximate from alignment range)
-                qlen = qend - qstart + 1
-                tlen = tend - tstart + 1
-
-                query_str = f"{query_range}"
-                template_str = f"{template_range} ({tlen})"
+                query_str = f"{qlo}-{qhi}"
+                template_str = f"{tlo}-{thi} ({tl})"
 
                 results.append({
                     'query_family': query_pfam,
@@ -162,7 +170,7 @@ def parse_reseek_output(reseek_output_file, query_pfam_acc):
                     'prob': prob,
                     'evalue': evalue,
                     'pvalue': pvalue,
-                    'score': bitscore,
+                    'score': score,
                     'ss': ss,
                     'cols': alnlen,
                     'query': query_str,

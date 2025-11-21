@@ -106,57 +106,61 @@ def fetch_ted_domains(uniprot_acc: str) -> Dict:
         sys.exit(1)
 
 def fetch_pfam_domains(uniprot_acc: str) -> List[Dict]:
-    """Fetch Pfam domains from InterPro API"""
-    interpro_api_url = f"https://www.ebi.ac.uk/interpro/api/entry/interpro/protein/uniprot/{uniprot_acc}"
-    
-    print("Fetching Pfam domains from InterPro...")
-    
+    """Fetch Pfam domains from pfamlive database"""
+
+    print("Fetching Pfam domains from pfamlive database...")
+
     pfam_domains = []
-    
+
     try:
-        response = requests.get(interpro_api_url, timeout=30)
-        response.raise_for_status()
-        interpro_data = response.json()
-        
-        # Extract Pfam domains
-        if 'results' in interpro_data and isinstance(interpro_data['results'], list):
-            for result in interpro_data['results']:
-                if ('metadata' in result and 
-                    'member_databases' in result['metadata'] and 
-                    'pfam' in result['metadata']['member_databases']):
-                    
-                    pfam_dict = result['metadata']['member_databases']['pfam']
-                    pfam_id = list(pfam_dict.keys())[0]
-                    pfam_name = pfam_dict[pfam_id]
-                    
-                    print(f"Found Pfam domain: {pfam_id} ({pfam_name})")
-                    
-                    # Extract positions
-                    if 'proteins' in result and isinstance(result['proteins'], list):
-                        for protein in result['proteins']:
-                            if protein['accession'].lower() == uniprot_acc.lower():
-                                if ('entry_protein_locations' in protein and 
-                                    isinstance(protein['entry_protein_locations'], list)):
-                                    
-                                    for location in protein['entry_protein_locations']:
-                                        if 'fragments' in location and isinstance(location['fragments'], list):
-                                            for fragment in location['fragments']:
-                                                if 'start' in fragment and 'end' in fragment:
-                                                    pfam_domains.append({
-                                                        'pfam_id': pfam_id,
-                                                        'pfam_name': pfam_name,
-                                                        'start': int(fragment['start']),
-                                                        'end': int(fragment['end'])
-                                                    })
-                                                    print(f"  Position: {fragment['start']}-{fragment['end']}")
-    
-    except requests.exceptions.RequestException as e:
-        print(f"Warning: Failed to fetch InterPro information for {uniprot_acc}: {e}. "
+        # Build MySQL query
+        query = f"select pfamseq_acc,seq_start,seq_end,pfamA_acc from pfamA_reg_full_significant where pfamseq_acc='{uniprot_acc}'"
+
+        # Expand ~ in config file path
+        config_file = os.path.expanduser('~/.my.cnf')
+
+        # Run MySQL command
+        cmd = [
+            'mysql',
+            f'--defaults-file={config_file}',
+            'pfam_live',
+            '--quick',
+            '-e',
+            query
+        ]
+
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            check=True
+        )
+
+        # Parse output (skip header line)
+        lines = result.stdout.strip().split('\n')
+        if len(lines) > 1:
+            for line in lines[1:]:  # Skip header
+                fields = line.split('\t')
+                if len(fields) >= 4:
+                    pfam_acc = fields[3]
+                    start = int(fields[1])
+                    end = int(fields[2])
+
+                    pfam_domains.append({
+                        'pfam_id': pfam_acc,
+                        'pfam_name': pfam_acc,  # We don't get name from this query
+                        'start': start,
+                        'end': end
+                    })
+                    print(f"Found Pfam domain: {pfam_acc} at {start}-{end}")
+
+    except subprocess.CalledProcessError as e:
+        print(f"Warning: Failed to query pfamlive database for {uniprot_acc}: {e}. "
               "Continuing without Pfam checking.")
-    except (json.JSONDecodeError, KeyError) as e:
-        print(f"Warning: Failed to parse InterPro information for {uniprot_acc}: {e}. "
+    except Exception as e:
+        print(f"Warning: Failed to parse pfamlive results for {uniprot_acc}: {e}. "
               "Continuing without Pfam checking.")
-    
+
     return pfam_domains
 
 def run_command(cmd: str, error_msg: str = None):
@@ -172,29 +176,24 @@ def run_command(cmd: str, error_msg: str = None):
 def main():
     args = parse_arguments()
     uniprot_acc = args.uniprot_acc
-
+    
     print(f"Fetching domain information for UniProt accession: {uniprot_acc}")
-
+    
     # Fetch TED domains
     domain_data = fetch_ted_domains(uniprot_acc)
-
+    
     # Extract domain count
     domain_count = domain_data.get('count', 0)
     if domain_count == 0:
         print(f"No domains found for {uniprot_acc} in TED.")
         sys.exit(0)
-
+    
     print(f"Found {domain_count} domains for {uniprot_acc} in TED.")
-
+    
     # Fetch Pfam domains
     pfam_domains = fetch_pfam_domains(uniprot_acc)
     print(f"Found {len(pfam_domains)} Pfam domains for {uniprot_acc}.")
-
-    # Track statistics
-    skipped_existing = []
-    skipped_overlap = []
-    created_dirs = []
-
+    
     # Process each TED domain
     for domain in domain_data.get('data', []):
         ted_id = domain['ted_id']
@@ -237,52 +236,19 @@ def main():
                 break
         
         if dir_exists:
-            print(f"\n{'='*70}")
-            print(f"SKIPPED (ALREADY EXISTS): {ted_id}")
-            print(f"  Directory already exists at: {existing_location}")
-            print(f"  Not rebuilding to preserve existing curation work")
-            print(f"{'='*70}\n")
-            skipped_existing.append({
-                'ted_id': ted_id,
-                'location': str(existing_location)
-            })
+            print(f"Skipping domain {ted_id}: Directory already exists at {existing_location}")
             continue
-
+        
         # Check for overlap with Pfam domains
         overlap_result = check_overlap_with_pfam(start_residue, end_residue, pfam_domains)
-
+        
         if overlap_result['overlaps']:
-            print(f"\n{'='*70}")
-            print(f"SKIPPED (PFAM OVERLAP): {ted_id}")
-            print(f"  Overlaps {overlap_result['overlap_percentage']:.1f}% with Pfam family:")
-            print(f"  Pfam ID: {overlap_result['pfam_id']}")
-            print(f"  Pfam Name: {overlap_result['pfam_name']}")
-            print(f"  TED region: {start_residue}-{end_residue}")
-            print(f"  Skipping because overlap exceeds 50% threshold")
-            print(f"{'='*70}\n")
-            skipped_overlap.append({
-                'ted_id': ted_id,
-                'pfam_id': overlap_result['pfam_id'],
-                'pfam_name': overlap_result['pfam_name'],
-                'overlap_percentage': overlap_result['overlap_percentage'],
-                'ted_region': f"{start_residue}-{end_residue}"
-            })
+            print(f"Skipping domain {ted_id}: Overlaps {overlap_result['overlap_percentage']:.2f}% "
+                  f"with Pfam domain {overlap_result['pfam_id']} ({overlap_result['pfam_name']})")
             continue
-
-        # Create directory (without exist_ok to prevent accidental overwrites)
-        try:
-            Path(dir_name).mkdir(exist_ok=False)
-        except FileExistsError:
-            print(f"\n{'='*70}")
-            print(f"ERROR: Directory {dir_name} was created after our check!")
-            print(f"This shouldn't happen - possible race condition")
-            print(f"Skipping to avoid overwriting existing work")
-            print(f"{'='*70}\n")
-            skipped_existing.append({
-                'ted_id': ted_id,
-                'location': dir_name
-            })
-            continue
+        
+        # Create directory
+        Path(dir_name).mkdir(exist_ok=True)
         
         # Store current directory
         current_dir = os.getcwd()
@@ -311,45 +277,14 @@ def main():
             # Download TED domain PDB file
             pdb_file = f"{ted_id}.pdb"
             download_ted_pdb(ted_id, pdb_file)
-
+            
             print(f"Processing of domain {ted_id} completed.")
-            created_dirs.append({
-                'ted_id': ted_id,
-                'dir_name': dir_name,
-                'region': f"{start_residue}-{end_residue}"
-            })
-
+            
         finally:
             # Return to original directory
             os.chdir(current_dir)
-
-    # Print summary
-    print("\n" + "="*70)
-    print("SUMMARY")
-    print("="*70)
-    print(f"Total TED domains found: {domain_count}")
-    print(f"New curation directories created: {len(created_dirs)}")
-    print(f"Skipped (already exists): {len(skipped_existing)}")
-    print(f"Skipped (Pfam overlap >50%): {len(skipped_overlap)}")
-    print("="*70)
-
-    if created_dirs:
-        print("\nNEW DIRECTORIES CREATED:")
-        for item in created_dirs:
-            print(f"  - {item['dir_name']} ({item['ted_id']}, region: {item['region']})")
-
-    if skipped_existing:
-        print("\nSKIPPED - ALREADY EXISTS:")
-        for item in skipped_existing:
-            print(f"  - {item['ted_id']} at {item['location']}")
-
-    if skipped_overlap:
-        print("\nSKIPPED - PFAM OVERLAP:")
-        for item in skipped_overlap:
-            print(f"  - {item['ted_id']} ({item['ted_region']})")
-            print(f"    {item['overlap_percentage']:.1f}% overlap with {item['pfam_id']} ({item['pfam_name']})")
-
-    print("\nAll domains processed successfully.")
+    
+    print("All domains processed successfully.")
 
 if __name__ == "__main__":
     main()

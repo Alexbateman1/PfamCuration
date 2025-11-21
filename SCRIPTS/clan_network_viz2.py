@@ -2,7 +2,8 @@
 """
 Visualize clan relationships using multiple comparison methods:
 - Foldseek (structural comparison)
-- HHblits (sequence profile comparison)
+- HHsearch (sequence profile comparison)
+- Reseek (profile comparison)
 - SCOOP (profile-profile comparison)
 
 This script:
@@ -35,7 +36,8 @@ class ClanNetworkVisualizer:
         # Hardcoded file paths for comparison methods
         self.foldseek_file = '/nfs/production/agb/interpro/users/typhaine/interpro-pfam-curation-tools/pfam_add_clan_search/results/foldseek_all.out'
         self.hhsearch_file = '/nfs/production/agb/pfam/users/agb/HHsearch2/query_results/all_results.tsv'
-        self.scoop_file = '/nfs/research/agb/research/agb/SCOOP/Latest/sump.E100.output'
+        self.reseek_file = '/nfs/production/agb/pfam/data/all_vs_all/reseek/all_results.tsv'
+        self.scoop_file = '/nfs/production/agb/pfam/data/all_vs_all/SCOOP/sump.E100.output'
 
         # Map Pfam types to vis.js shapes
         self.type_to_vis_shape = {
@@ -59,6 +61,11 @@ class ClanNetworkVisualizer:
                 0: '#D55E00',  # Dark orange (strong)
                 1: '#DD7E33',  # Medium orange
                 2: '#E69F00'   # Light orange (weak)
+            },
+            'reseek': {
+                0: '#CC79A7',  # Dark purple/magenta (strong)
+                1: '#D896BC',  # Medium purple
+                2: '#E4B3D1'   # Light purple (weak)
             },
             'scoop': {
                 0: '#009E73',  # Dark teal (strong)
@@ -165,6 +172,73 @@ class ClanNetworkVisualizer:
             }
         return None
 
+    def get_nested_domains(self, pfam_accs):
+        """
+        Get nested domain relationships for a set of Pfam families.
+
+        Args:
+            pfam_accs: Set of Pfam accessions to check
+
+        Returns:
+            Dictionary with:
+            - 'nested_pairs': set of tuples (pfamA_acc, nests_pfamA_acc)
+            - 'nested_nodes': set of nests_pfamA_acc (nodes that are nested)
+            - 'nested_in': dict mapping nests_pfamA_acc -> list of pfamA_acc (what this domain nests in)
+            - 'contains_nested': dict mapping pfamA_acc -> list of nests_pfamA_acc (what nests in this domain)
+        """
+        if not pfam_accs:
+            return {
+                'nested_pairs': set(),
+                'nested_nodes': set(),
+                'nested_in': {},
+                'contains_nested': {}
+            }
+
+        # Convert set to list for SQL query
+        pfam_list = list(pfam_accs)
+        placeholders = ','.join(['%s'] * len(pfam_list))
+
+        query = f"""
+            SELECT pfamA_acc, nests_pfamA_acc
+            FROM nested_domains
+            WHERE pfamA_acc IN ({placeholders})
+            OR nests_pfamA_acc IN ({placeholders})
+        """
+
+        cursor = self.connection.cursor()
+        cursor.execute(query, pfam_list + pfam_list)
+        results = cursor.fetchall()
+        cursor.close()
+
+        nested_pairs = set()
+        nested_nodes = set()
+        nested_in = {}  # nests_pfamA_acc -> [pfamA_acc, ...]
+        contains_nested = {}  # pfamA_acc -> [nests_pfamA_acc, ...]
+
+        for pfamA_acc, nests_pfamA_acc in results:
+            nested_pairs.add((pfamA_acc, nests_pfamA_acc))
+            nested_nodes.add(nests_pfamA_acc)
+
+            # Track what each nested domain nests inside
+            if nests_pfamA_acc not in nested_in:
+                nested_in[nests_pfamA_acc] = []
+            nested_in[nests_pfamA_acc].append(pfamA_acc)
+
+            # Track what each domain contains
+            if pfamA_acc not in contains_nested:
+                contains_nested[pfamA_acc] = []
+            contains_nested[pfamA_acc].append(nests_pfamA_acc)
+
+        print(f"\nFound {len(nested_pairs)} nested domain relationships")
+        print(f"Found {len(nested_nodes)} nodes that are nested domains")
+
+        return {
+            'nested_pairs': nested_pairs,
+            'nested_nodes': nested_nodes,
+            'nested_in': nested_in,
+            'contains_nested': contains_nested
+        }
+
     def categorize_evalue(self, evalue):
         """
         Categorize E-value into significance levels.
@@ -181,6 +255,23 @@ class ClanNetworkVisualizer:
             return 1  # Significant
         else:
             return 2  # Moderate
+
+    def categorize_reseek_evalue(self, evalue):
+        """
+        Categorize Reseek E-value into significance levels.
+
+        Args:
+            evalue: E-value
+
+        Returns:
+            Category number (0-2) where 0 is most significant
+        """
+        if evalue < 1e-5:
+            return 0  # Very significant
+        elif evalue < 0.001:
+            return 1  # Significant
+        else:
+            return 2  # Moderate (threshold to 0.001)
 
     def categorize_scoop_score(self, score):
         """
@@ -296,36 +387,21 @@ class ClanNetworkVisualizer:
         edges = {}
         total_rows = 0
         kept_rows = 0
-        first_chunk = True
 
         try:
             for chunk in pd.read_csv(self.hhsearch_file, sep='\t', chunksize=chunk_size):
                 total_rows += len(chunk)
 
-                # Debug: show column names on first chunk
-                if first_chunk:
-                    print(f"  DEBUG: HHsearch file columns: {list(chunk.columns)}")
-                    print(f"  DEBUG: First row sample:")
-                    if len(chunk) > 0:
-                        print(f"    QueryFamily: {chunk.iloc[0]['QueryFamily']}")
-                        print(f"    Hit: {chunk.iloc[0]['Hit']}")
-                        print(f"    E-value: {chunk.iloc[0]['E-value']}")
-                    first_chunk = False
-
                 # Convert E-value to float and filter
                 chunk['E-value'] = pd.to_numeric(chunk['E-value'], errors='coerce')
-                pre_filter_count = len(chunk)
                 chunk = chunk[chunk['E-value'] < evalue_threshold]
-                print(f"  DEBUG: E-value filter: {pre_filter_count} -> {len(chunk)} rows")
 
                 if len(chunk) == 0:
                     continue
 
                 # Filter for clan families
                 mask = (chunk['QueryFamily'].isin(clan_pfam_accs)) | (chunk['Hit'].isin(clan_pfam_accs))
-                pre_clan_count = len(chunk)
                 chunk = chunk[mask]
-                print(f"  DEBUG: Clan filter: {pre_clan_count} -> {len(chunk)} rows")
 
                 if len(chunk) == 0:
                     continue
@@ -352,6 +428,75 @@ class ClanNetworkVisualizer:
 
         except Exception as e:
             print(f"  ERROR parsing HHsearch file: {e}")
+            import traceback
+            traceback.print_exc()
+            return {}
+
+        print(f"Total: {total_rows:,} rows -> {len(edges)} unique edges")
+        return edges
+
+    def parse_reseek_results(self, clan_families, evalue_threshold=0.01):
+        """
+        Parse Reseek results and extract matches involving clan families.
+
+        Args:
+            clan_families: DataFrame of families in the clan
+            evalue_threshold: Maximum E-value to include
+
+        Returns:
+            Dictionary mapping (pfam1, pfam2) to {'evalue': value, 'category': cat}
+        """
+        print(f"\n[RESEEK] Reading results from {self.reseek_file}...")
+        print(f"Filtering for E-value < {evalue_threshold}")
+
+        clan_pfam_accs = set(clan_families['pfamA_acc'])
+
+        # Read file in chunks
+        chunk_size = 100000
+        edges = {}
+        total_rows = 0
+        kept_rows = 0
+
+        try:
+            for chunk in pd.read_csv(self.reseek_file, sep='\t', chunksize=chunk_size):
+                total_rows += len(chunk)
+
+                # Convert E-value to float and filter
+                chunk['E-value'] = pd.to_numeric(chunk['E-value'], errors='coerce')
+                chunk = chunk[chunk['E-value'] < evalue_threshold]
+
+                if len(chunk) == 0:
+                    continue
+
+                # Filter for clan families
+                mask = (chunk['QueryFamily'].isin(clan_pfam_accs)) | (chunk['Hit'].isin(clan_pfam_accs))
+                chunk = chunk[mask]
+
+                if len(chunk) == 0:
+                    continue
+
+                kept_rows += len(chunk)
+
+                # Build edges dictionary
+                for _, row in chunk.iterrows():
+                    pfam1 = row['QueryFamily']
+                    pfam2 = row['Hit']
+
+                    if pd.isna(pfam1) or pd.isna(pfam2) or pfam1 == pfam2:
+                        continue
+
+                    edge_key = tuple(sorted([pfam1, pfam2]))
+                    evalue = row['E-value']
+                    category = self.categorize_reseek_evalue(evalue)
+
+                    if edge_key not in edges or evalue < edges[edge_key]['evalue']:
+                        edges[edge_key] = {'evalue': evalue, 'category': category}
+
+                if total_rows % 1000000 == 0:
+                    print(f"  Processed {total_rows:,} rows, kept {kept_rows:,}")
+
+        except Exception as e:
+            print(f"  ERROR parsing Reseek file: {e}")
             import traceback
             traceback.print_exc()
             return {}
@@ -420,13 +565,14 @@ class ClanNetworkVisualizer:
         print(f"Total: {total_rows:,} rows -> {len(edges)} unique edges")
         return edges
 
-    def combine_method_results(self, foldseek_edges, hhsearch_edges, scoop_edges, selected_methods):
+    def combine_method_results(self, foldseek_edges, hhsearch_edges, reseek_edges, scoop_edges, selected_methods):
         """
         Combine results from different methods into a unified structure.
 
         Args:
             foldseek_edges: Dictionary of foldseek edges
             hhsearch_edges: Dictionary of hhsearch edges
+            reseek_edges: Dictionary of reseek edges
             scoop_edges: Dictionary of scoop edges
             selected_methods: List of method names to include
 
@@ -447,6 +593,12 @@ class ClanNetworkVisualizer:
                     combined[edge_key] = {}
                 combined[edge_key]['hhsearch'] = data
 
+        if 'reseek' in selected_methods and reseek_edges:
+            for edge_key, data in reseek_edges.items():
+                if edge_key not in combined:
+                    combined[edge_key] = {}
+                combined[edge_key]['reseek'] = data
+
         if 'scoop' in selected_methods and scoop_edges:
             for edge_key, data in scoop_edges.items():
                 if edge_key not in combined:
@@ -465,7 +617,7 @@ class ClanNetworkVisualizer:
             combined_edges: Dictionary of combined edge data
 
         Returns:
-            NetworkX graph with nodes and combined_edges dict
+            Tuple of (NetworkX graph, combined_edges dict, nested_info dict)
         """
         G = nx.Graph()
 
@@ -513,6 +665,10 @@ class ClanNetworkVisualizer:
             if not G.has_edge(edge_key[0], edge_key[1]):
                 G.add_edge(edge_key[0], edge_key[1])
 
+        # Get nested domain relationships for all nodes in the network
+        all_nodes = set(G.nodes())
+        nested_info = self.get_nested_domains(all_nodes)
+
         print(f"\nNetwork statistics:")
         print(f"  Nodes: {G.number_of_nodes()}")
         print(f"  Unique edge pairs: {len(combined_edges)}")
@@ -526,19 +682,38 @@ class ClanNetworkVisualizer:
         print(f"  Families with no clan: {no_clan_count}")
         print(f"  Families in different clan: {different_clan_count}")
 
-        return G, combined_edges
+        return G, combined_edges, nested_info
 
-    def export_interactive_html(self, G, combined_edges, clan_acc, selected_methods, output_file):
+    def export_interactive_html(self, G, combined_edges, nested_info, clan_acc, selected_methods, output_file):
         """
         Export network as interactive HTML using vis.js with multiple edges per node pair.
 
         Args:
             G: NetworkX graph
             combined_edges: Dictionary of combined edge data
+            nested_info: Dictionary with nested domain information
             clan_acc: Clan accession
             selected_methods: List of selected method names
             output_file: Output HTML file path
         """
+        # Extract nested domain info
+        nested_nodes = nested_info['nested_nodes']
+        nested_pairs = nested_info['nested_pairs']
+        nested_in = nested_info['nested_in']
+        contains_nested = nested_info['contains_nested']
+
+        # Determine which nested nodes should actually have dashed borders
+        # Only if both nodes in the relationship are present AND connected in the graph
+        nodes_with_dashed_borders = set()
+        for pfamA_acc, nests_pfamA_acc in nested_pairs:
+            # Check both nodes are in graph
+            if pfamA_acc in G.nodes() and nests_pfamA_acc in G.nodes():
+                # Check if there's an edge between them in combined_edges
+                edge_key = tuple(sorted([pfamA_acc, nests_pfamA_acc]))
+                if edge_key in combined_edges:
+                    # Only the nested node (nests_pfamA_acc) gets dashed border
+                    nodes_with_dashed_borders.add(nests_pfamA_acc)
+
         # Prepare nodes data
         nodes = []
         node_titles = {}
@@ -565,6 +740,10 @@ class ClanNetworkVisualizer:
             node_type = data.get('type', 'Domain')
             shape = self.type_to_vis_shape.get(node_type, 'dot')
 
+            # Check if this node should have dashed border
+            # Only if both nodes in relationship are present AND connected
+            is_nested = node in nodes_with_dashed_borders
+
             # Handle ellipse shapes specially
             if shape == 'ellipse':
                 font_config = {
@@ -588,6 +767,9 @@ class ClanNetworkVisualizer:
                     'widthConstraint': {'minimum': size * 1.5, 'maximum': size * 1.5},
                     'heightConstraint': {'minimum': size, 'maximum': size}
                 }
+                # Add dashed border if nested domain
+                if is_nested:
+                    node_config['shapeProperties'] = {'borderDashes': [5, 5]}
             else:
                 node_config = {
                     'id': node,
@@ -601,6 +783,18 @@ class ClanNetworkVisualizer:
                     'size': size,
                     'font': {'size': 18, 'color': '#000000', 'face': 'Arial', 'bold': {'size': 20}}
                 }
+                # Add dashed border if nested domain
+                if is_nested:
+                    node_config['shapeProperties'] = {'borderDashes': [5, 5]}
+
+            # Build nested domain info for tooltip
+            nested_info_html = ""
+            if node in nested_in:
+                parents = ', '.join(nested_in[node])
+                nested_info_html += f"<b style='font-size: 13px; color: #D55E00;'>Nests inside:</b> <span style='font-size: 13px;'>{parents}</span><br/>"
+            if node in contains_nested:
+                children = ', '.join(contains_nested[node])
+                nested_info_html += f"<b style='font-size: 13px; color: #009E73;'>Contains nested:</b> <span style='font-size: 13px;'>{children}</span><br/>"
 
             node_titles[node] = (f"<div style='font-family: Arial; padding: 5px;'>"
                         f"<b style='font-size: 16px;'>{data.get('pfam_id', node)}</b><br/>"
@@ -608,6 +802,7 @@ class ClanNetworkVisualizer:
                         f"<b style='font-size: 13px;'>Type:</b> <span style='font-size: 13px;'>{node_type}</span><br/>"
                         f"<b style='font-size: 13px;'>Length:</b> <span style='font-size: 13px;'>{model_length}</span><br/>"
                         f"<b style='font-size: 13px;'>Clan:</b> <span style='font-size: 13px;'>{node_clan if node_clan else 'None'}</span><br/>"
+                        f"{nested_info_html}"
                         f"<span style='font-size: 12px; color: #555;'>{data.get('description', '')}</span>"
                         f"</div>")
 
@@ -619,13 +814,17 @@ class ClanNetworkVisualizer:
 
         # Define offset for each method to separate multiple edges visually
         method_offsets = {
-            'foldseek': -0.2,   # Curve slightly to one side
-            'hhsearch': 0,      # Straight
-            'scoop': 0.2        # Curve slightly to other side
+            'foldseek': -0.3,   # Curve to one side
+            'hhsearch': -0.1,   # Slight curve
+            'reseek': 0.1,      # Slight curve other side
+            'scoop': 0.3        # Curve to other side
         }
 
         for edge_key, method_data in combined_edges.items():
             pfam1, pfam2 = edge_key
+
+            # Check if this edge represents a nested domain relationship
+            is_nested_edge = (pfam1, pfam2) in nested_pairs or (pfam2, pfam1) in nested_pairs
 
             # Create separate edges for each method present
             for method in selected_methods:
@@ -653,12 +852,14 @@ class ClanNetworkVisualizer:
                 else:
                     score_or_eval = f"E-value: {data['evalue']:.2e}"
 
+                nested_label = "<br/><b style='color: #D55E00;'>Nested Domain Relationship</b>" if is_nested_edge else ""
                 edge_titles[edge_id] = (f"<div style='font-family: Arial; padding: 5px;'>"
                             f"<b style='font-size: 15px;'>{method.upper()}</b><br/>"
                             f"<b style='font-size: 14px;'>{score_or_eval}</b><br/>"
                             f"<b style='font-size: 13px;'>Between:</b><br/>"
                             f"<span style='color: #666; font-size: 13px;'>{pfam1}</span><br/>"
                             f"<span style='color: #666; font-size: 13px;'>{pfam2}</span>"
+                            f"{nested_label}"
                             f"</div>")
 
                 # Use different smooth settings to offset edges
@@ -670,14 +871,21 @@ class ClanNetworkVisualizer:
                     # Slightly curved to separate from other edges
                     smooth_config = {'enabled': True, 'type': 'curvedCW' if roundness > 0 else 'curvedCCW', 'roundness': abs(roundness)}
 
-                edges.append({
+                edge_config = {
                     'id': edge_id,
                     'from': pfam1,
                     'to': pfam2,
                     'value': width,
                     'color': {'color': color, 'highlight': '#000000'},
                     'smooth': smooth_config
-                })
+                }
+
+                # Add dashed line if nested domain relationship
+                # Use dash pattern with larger gap to prevent visual overlap on thick lines
+                if is_nested_edge:
+                    edge_config['dashes'] = [8, 16]
+
+                edges.append(edge_config)
 
         # Debug: count edges per method
         edge_counts = {method: 0 for method in selected_methods}
@@ -728,12 +936,33 @@ class ClanNetworkVisualizer:
             color: #666;
             margin-bottom: 20px;
         }}
-        .legend {{
+        .controls-container {{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }}
+        .legend-box {{
+            flex: 1;
             background-color: white;
             padding: 15px;
             border: 1px solid #ddd;
-            margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+        .controls-box {{
+            flex: 1;
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }}
+        .control-item {{
+            padding: 10px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #fafafa;
         }}
         .legend-item {{
             display: inline-block;
@@ -784,50 +1013,69 @@ class ClanNetworkVisualizer:
         <small>Click nodes to open InterPro | Drag nodes to reposition | Hover for details | Scroll to zoom | Navigation buttons in bottom-left</small>
     </div>
 
-    <div style="text-align: center; margin-bottom: 15px;">
-        <button id="editModeBtn" onclick="toggleEditMode()" style="
-            padding: 10px 20px;
-            font-size: 14px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        ">
-            🔓 Editing Mode: OFF (Click opens InterPro)
-        </button>
-        <div id="editModeStatus" style="font-size: 12px; color: #666; margin-top: 5px;">
-            Click the button to enable editing mode for easier node repositioning
+    <div class="controls-container">
+        <!-- Left box: Legend -->
+        <div class="legend-box">
+            <strong>Node Colors:</strong>
+            <div class="legend-item">
+                <span class="legend-circle" style="background-color: #4CAF50; border-color: #2E7D32;"></span>
+                Target clan families
+            </div>
+            <div class="legend-item">
+                <span class="legend-circle" style="background-color: #BDBDBD; border-color: #757575;"></span>
+                Families with no clan
+            </div>
+            <div class="legend-item">
+                <span class="legend-circle" style="background-color: #F44336; border-color: #C62828;"></span>
+                Families in different clan
+            </div>
+            <br/><br/>
+            <strong>Edge Colors by Method:</strong>
+            {legend_html}
+            <br/>
+            <strong>Nested Domains:</strong>
+            <div class="legend-item">
+                <span style="display: inline-block; width: 30px; height: 2px; border-top: 2px dashed #666; margin-right: 5px; vertical-align: middle;"></span>
+                Dashed edges/borders indicate nested domain relationships
+            </div>
         </div>
-    </div>
 
-    <div style="text-align: center; margin-bottom: 15px; background-color: white; padding: 15px; border: 1px solid #ddd; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-        <label for="sizeSlider" style="font-weight: bold; margin-right: 10px;">Node & Text Scale:</label>
-        <input type="range" id="sizeSlider" min="0.3" max="3.0" step="0.1" value="1.0"
-               style="width: 300px; vertical-align: middle;">
-        <span id="sizeValue" style="margin-left: 10px; font-weight: bold; color: #4CAF50;">100%</span>
-        <div style="font-size: 12px; color: #666; margin-top: 5px;">
-            Adjust the size of all nodes and text labels
-        </div>
-    </div>
+        <!-- Right box: Controls -->
+        <div class="controls-box">
+            <!-- Editing Mode Control -->
+            <div class="control-item">
+                <div style="text-align: center;">
+                    <button id="editModeBtn" onclick="toggleEditMode()" style="
+                        padding: 10px 20px;
+                        font-size: 14px;
+                        background-color: #4CAF50;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                    ">
+                        🔓 Editing Mode: OFF (Click opens InterPro)
+                    </button>
+                    <div id="editModeStatus" style="font-size: 12px; color: #666; margin-top: 8px;">
+                        Click the button to enable editing mode for easier node repositioning
+                    </div>
+                </div>
+            </div>
 
-    <div class="legend">
-        <strong>Node Colors:</strong>
-        <div class="legend-item">
-            <span class="legend-circle" style="background-color: #4CAF50; border-color: #2E7D32;"></span>
-            Target clan families
+            <!-- Size Slider Control -->
+            <div class="control-item">
+                <div style="text-align: center;">
+                    <label for="sizeSlider" style="font-weight: bold; margin-right: 10px;">Node & Text Scale:</label>
+                    <input type="range" id="sizeSlider" min="0.3" max="3.0" step="0.1" value="1.0"
+                           style="width: 60%; vertical-align: middle;">
+                    <span id="sizeValue" style="margin-left: 10px; font-weight: bold; color: #4CAF50;">100%</span>
+                    <div style="font-size: 12px; color: #666; margin-top: 8px;">
+                        Adjust the size of all nodes and text labels
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="legend-item">
-            <span class="legend-circle" style="background-color: #BDBDBD; border-color: #757575;"></span>
-            Families with no clan
-        </div>
-        <div class="legend-item">
-            <span class="legend-circle" style="background-color: #F44336; border-color: #C62828;"></span>
-            Families in different clan
-        </div>
-        <br/><br/>
-        {legend_html}
     </div>
 
     <div id="mynetwork"></div>
@@ -1109,6 +1357,7 @@ class ClanNetworkVisualizer:
         method_names = {
             'foldseek': 'Foldseek (structural)',
             'hhsearch': 'HHsearch (profile)',
+            'reseek': 'Reseek (profile)',
             'scoop': 'SCOOP (profile-profile)'
         }
 
@@ -1120,6 +1369,10 @@ class ClanNetworkVisualizer:
                 cat0_label = 'Score > 100'
                 cat1_label = 'Score 30-100'
                 cat2_label = 'Score threshold-30'
+            elif method == 'reseek':
+                cat0_label = 'E-value < 1e-5'
+                cat1_label = 'E-value 1e-5 to 0.001'
+                cat2_label = 'E-value threshold-0.001'
             else:
                 cat0_label = 'E-value < 1e-10'
                 cat1_label = 'E-value 1e-10 to 1e-5'
@@ -1144,15 +1397,16 @@ class ClanNetworkVisualizer:
 
         return '\n'.join(legend_parts)
 
-    def analyze_clan(self, clan_acc, selected_methods, evalue_threshold=1e-5, hhsearch_evalue_threshold=0.01, scoop_threshold=10.0):
+    def analyze_clan(self, clan_acc, selected_methods, evalue_threshold=1e-5, hhsearch_evalue_threshold=0.01, reseek_evalue_threshold=0.01, scoop_threshold=10.0):
         """
         Complete analysis pipeline for a clan.
 
         Args:
             clan_acc: Clan accession (e.g., 'CL0004')
-            selected_methods: List of methods to use (['foldseek'], ['hhsearch'], ['scoop'], or combinations)
+            selected_methods: List of methods to use (['foldseek'], ['hhsearch'], ['reseek'], ['scoop'], or combinations)
             evalue_threshold: Maximum E-value for foldseek
             hhsearch_evalue_threshold: Maximum E-value for hhsearch (default 0.01)
+            reseek_evalue_threshold: Maximum E-value for reseek (default 0.01)
             scoop_threshold: Minimum SCOOP score
         """
         print(f"\n{'='*60}")
@@ -1170,6 +1424,7 @@ class ClanNetworkVisualizer:
         # Parse results from selected methods
         foldseek_edges = {}
         hhsearch_edges = {}
+        reseek_edges = {}
         scoop_edges = {}
 
         if 'foldseek' in selected_methods:
@@ -1178,23 +1433,26 @@ class ClanNetworkVisualizer:
         if 'hhsearch' in selected_methods:
             hhsearch_edges = self.parse_hhsearch_results(clan_families, hhsearch_evalue_threshold)
 
+        if 'reseek' in selected_methods:
+            reseek_edges = self.parse_reseek_results(clan_families, reseek_evalue_threshold)
+
         if 'scoop' in selected_methods:
             scoop_edges = self.parse_scoop_results(clan_families, scoop_threshold)
 
         # Combine results
-        combined_edges = self.combine_method_results(foldseek_edges, hhsearch_edges, scoop_edges, selected_methods)
+        combined_edges = self.combine_method_results(foldseek_edges, hhsearch_edges, reseek_edges, scoop_edges, selected_methods)
 
         if len(combined_edges) == 0:
             print(f"No matches found for clan {clan_acc}")
             return
 
         # Create network
-        G, combined_edges = self.create_network(clan_acc, clan_families, combined_edges)
+        G, combined_edges, nested_info = self.create_network(clan_acc, clan_families, combined_edges)
 
         # Create interactive HTML
         methods_str = '_'.join(selected_methods)
         html_file = f'{clan_acc}_{methods_str}_interactive.html'
-        self.export_interactive_html(G, combined_edges, clan_acc, selected_methods, html_file)
+        self.export_interactive_html(G, combined_edges, nested_info, clan_acc, selected_methods, html_file)
 
         print(f"\nView the interactive HTML: {html_file}")
 
@@ -1226,29 +1484,33 @@ Examples:
   # Single method
   %(prog)s CL0004 --foldseek
   %(prog)s CL0004 --hhsearch
+  %(prog)s CL0004 --reseek
   %(prog)s CL0004 --scoop
 
   # Multiple methods
   %(prog)s CL0004 --foldseek --hhsearch
-  %(prog)s CL0004 --foldseek --scoop
+  %(prog)s CL0004 --foldseek --reseek --scoop
 
   # All methods
   %(prog)s CL0004 --all
 
   # Custom thresholds
-  %(prog)s CL0004 --all --evalue-threshold 1e-10 --hhsearch-evalue-threshold 0.001 --scoop-threshold 30
+  %(prog)s CL0004 --all --evalue-threshold 1e-10 --hhsearch-evalue-threshold 0.001 --reseek-evalue-threshold 0.001 --scoop-threshold 30
         '''
     )
 
     parser.add_argument('clan', help='Clan accession (e.g., CL0004)')
     parser.add_argument('--foldseek', action='store_true', help='Include foldseek structural comparisons')
     parser.add_argument('--hhsearch', action='store_true', help='Include HHsearch profile comparisons')
+    parser.add_argument('--reseek', action='store_true', help='Include Reseek profile comparisons')
     parser.add_argument('--scoop', action='store_true', help='Include SCOOP profile-profile comparisons')
     parser.add_argument('--all', action='store_true', help='Include all comparison methods')
     parser.add_argument('--evalue-threshold', type=float, default=1e-5,
                        help='E-value threshold for foldseek (default: 1e-5)')
     parser.add_argument('--hhsearch-evalue-threshold', type=float, default=0.01,
                        help='E-value threshold for hhsearch (default: 0.01)')
+    parser.add_argument('--reseek-evalue-threshold', type=float, default=0.01,
+                       help='E-value threshold for reseek (default: 0.01)')
     parser.add_argument('--scoop-threshold', type=float, default=10.0,
                        help='Minimum SCOOP score threshold (default: 10.0)')
     parser.add_argument('--mysql-config', default='~/.my.cnf',
@@ -1259,17 +1521,19 @@ Examples:
     # Determine which methods to use
     selected_methods = []
     if args.all:
-        selected_methods = ['foldseek', 'hhsearch', 'scoop']
+        selected_methods = ['foldseek', 'hhsearch', 'reseek', 'scoop']
     else:
         if args.foldseek:
             selected_methods.append('foldseek')
         if args.hhsearch:
             selected_methods.append('hhsearch')
+        if args.reseek:
+            selected_methods.append('reseek')
         if args.scoop:
             selected_methods.append('scoop')
 
     if not selected_methods:
-        print("Error: Must specify at least one method (--foldseek, --hhsearch, --scoop, or --all)")
+        print("Error: Must specify at least one method (--foldseek, --hhsearch, --reseek, --scoop, or --all)")
         sys.exit(1)
 
     # Create visualizer
@@ -1277,7 +1541,7 @@ Examples:
 
     try:
         viz.connect_to_database()
-        viz.analyze_clan(args.clan, selected_methods, args.evalue_threshold, args.hhsearch_evalue_threshold, args.scoop_threshold)
+        viz.analyze_clan(args.clan, selected_methods, args.evalue_threshold, args.hhsearch_evalue_threshold, args.reseek_evalue_threshold, args.scoop_threshold)
     finally:
         viz.close()
 
