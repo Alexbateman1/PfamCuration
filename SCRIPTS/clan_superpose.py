@@ -347,16 +347,27 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
 
     # Check if PDB already exists
     output_pdb = os.path.join(output_dir, f"{pfam_acc}.pdb")
+    plddt_file = os.path.join(output_dir, f"{pfam_acc}.plddt")
+
     if os.path.exists(output_pdb):
         print(f"PDB file already exists: {output_pdb}")
         print("Skipping processing (delete file to reprocess)")
-        # Still need to get pLDDT - read it from filename or set to 0
-        # For now, set to 0 (will be sorted to end)
+
+        # Try to read pLDDT from saved file
+        mean_plddt = 0.0
+        if os.path.exists(plddt_file):
+            try:
+                with open(plddt_file, 'r') as f:
+                    mean_plddt = float(f.read().strip())
+                print(f"Read pLDDT score: {mean_plddt:.2f}")
+            except:
+                print("Warning: Could not read pLDDT file, using 0.0")
+
         return {
             'pfam_acc': pfam_acc,
             'pfam_id': pfam_id,
             'pdb_file': output_pdb,
-            'mean_plddt': 0.0  # Unknown, but file exists
+            'mean_plddt': mean_plddt
         }
 
     # Checkout family and get SEED alignment
@@ -411,6 +422,11 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
     output_pdb = os.path.join(output_dir, f"{pfam_acc}.pdb")
     chop_structure_to_pdb(best_model, output_pdb, best_info[1], best_info[2])
     print(f"Saved domain structure to {output_pdb}")
+
+    # Save pLDDT score to a file for future reference
+    plddt_file = os.path.join(output_dir, f"{pfam_acc}.plddt")
+    with open(plddt_file, 'w') as f:
+        f.write(f"{best_plddt:.2f}\n")
 
     return {
         'pfam_acc': pfam_acc,
@@ -482,8 +498,15 @@ def run_fatcat(reference_pdb, target_pdb, output_dir, target_name, fatcat_path='
 
         if result.returncode != 0:
             print(f"  ERROR: FATCAT failed (return code {result.returncode})")
-            print(f"  stdout: {result.stdout[:500]}")
-            print(f"  stderr: {result.stderr[:500]}")
+            if result.stdout:
+                print(f"  stdout: {result.stdout[:1000]}")
+            if result.stderr:
+                print(f"  stderr: {result.stderr[:1000]}")
+            if not result.stdout and not result.stderr:
+                print(f"  No output from FATCAT. This usually means:")
+                print(f"    - FATCAT binary issue")
+                print(f"    - Input PDB files have format problems")
+                print(f"    - Try running manually: {' '.join(cmd)}")
             return None
 
         # FATCAT creates output_prefix.pdb with both structures (chain A = reference, chain B = target)
