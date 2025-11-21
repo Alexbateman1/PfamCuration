@@ -101,24 +101,56 @@ def get_clan_families(clan_acc, connection):
     return families
 
 
-def get_seed_alignment(pfam_acc, svn_root='/nfs/production/agb/pfam/svn/pfam/trunk/Families'):
+def checkout_family(pfam_acc, work_dir):
     """
-    Get SEED alignment for a Pfam family from SVN repository.
+    Checkout a Pfam family using pfco command.
 
     Args:
         pfam_acc: Pfam accession
-        svn_root: Root directory of Pfam SVN checkout
+        work_dir: Working directory where family will be checked out
 
     Returns:
-        Path to SEED file, or None if not found
+        Path to SEED file, or None if checkout failed
     """
-    seed_path = Path(svn_root) / pfam_acc / 'SEED'
+    family_dir = Path(work_dir) / pfam_acc
+    seed_path = family_dir / 'SEED'
 
+    # Check if already checked out
     if seed_path.exists():
+        print(f"  Family {pfam_acc} already checked out")
         return str(seed_path)
 
-    print(f"Warning: SEED file not found for {pfam_acc} at {seed_path}")
-    return None
+    # Checkout using pfco command
+    try:
+        result = subprocess.run(
+            ['pfco', pfam_acc],
+            cwd=work_dir,
+            capture_output=True,
+            text=True,
+            timeout=60
+        )
+
+        if result.returncode != 0:
+            print(f"  Warning: pfco failed for {pfam_acc}")
+            print(f"    stderr: {result.stderr}")
+            return None
+
+        # Verify SEED file exists
+        if seed_path.exists():
+            return str(seed_path)
+        else:
+            print(f"  Warning: SEED file not found after checkout at {seed_path}")
+            return None
+
+    except subprocess.TimeoutExpired:
+        print(f"  Warning: pfco timed out for {pfam_acc}")
+        return None
+    except FileNotFoundError:
+        print(f"  Error: pfco command not found. Please ensure it's in your PATH")
+        return None
+    except Exception as e:
+        print(f"  Warning: pfco failed for {pfam_acc}: {e}")
+        return None
 
 
 def parse_seed_alignment(seed_file, max_sequences=20):
@@ -295,14 +327,14 @@ def chop_structure_to_pdb(input_cif, output_pdb, start, end):
     io.save(output_pdb, RegionSelect(start, end))
 
 
-def process_family(pfam_acc, pfam_id, svn_root, output_dir, tmp_dir):
+def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
     """
     Process a single Pfam family to get the best AlphaFold domain structure.
 
     Args:
         pfam_acc: Pfam accession
         pfam_id: Pfam ID (name)
-        svn_root: Root of Pfam SVN repository
+        work_dir: Working directory where families will be checked out
         output_dir: Directory to save output PDB files
         tmp_dir: Temporary directory for downloads
 
@@ -313,8 +345,8 @@ def process_family(pfam_acc, pfam_id, svn_root, output_dir, tmp_dir):
     print(f"Processing {pfam_acc} ({pfam_id})")
     print(f"{'='*60}")
 
-    # Get SEED alignment
-    seed_file = get_seed_alignment(pfam_acc, svn_root)
+    # Checkout family and get SEED alignment
+    seed_file = checkout_family(pfam_acc, work_dir)
     if not seed_file:
         return None
 
@@ -462,9 +494,9 @@ def main():
         help='Clan accession (e.g., CL0004)'
     )
     parser.add_argument(
-        '--svn-root',
-        default='/nfs/production/agb/pfam/svn/pfam/trunk/Families',
-        help='Root directory of Pfam SVN checkout (default: /nfs/production/agb/pfam/svn/pfam/trunk/Families)'
+        '--work-dir',
+        default='.',
+        help='Working directory where families will be checked out (default: current directory)'
     )
     parser.add_argument(
         '--output-dir',
@@ -484,7 +516,10 @@ def main():
 
     args = parser.parse_args()
 
-    # Create output directory
+    # Create directories
+    work_dir = Path(args.work_dir)
+    work_dir.mkdir(parents=True, exist_ok=True)
+
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -492,6 +527,7 @@ def main():
     print(f"Clan Superposition Pipeline")
     print(f"{'='*60}")
     print(f"Clan: {args.clan_acc}")
+    print(f"Working directory: {work_dir}")
     print(f"Output directory: {output_dir}")
 
     # Connect to database
@@ -510,7 +546,7 @@ def main():
 
     with tempfile.TemporaryDirectory() as tmp_dir:
         for pfam_acc, pfam_id, description in families:
-            result = process_family(pfam_acc, pfam_id, args.svn_root, output_dir, tmp_dir)
+            result = process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir)
             if result:
                 family_results.append(result)
 
