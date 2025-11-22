@@ -582,6 +582,100 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
     return results
 
 
+def write_detailed_results(results: Dict, pfam_dir: str):
+    """
+    Write detailed results file showing ALL domains and clusters found.
+
+    Args:
+        results: Results dictionary from analyze_networks()
+        pfam_dir: Path to Pfam family directory
+    """
+    # Create STRING subdirectory
+    string_dir = os.path.join(pfam_dir, 'STRING')
+    os.makedirs(string_dir, exist_ok=True)
+
+    output_file = os.path.join(string_dir, 'detailed_results.txt')
+
+    with open(output_file, 'w') as f:
+        f.write("=" * 80 + "\n")
+        f.write("STRING Network Analysis - Detailed Results (ALL findings)\n")
+        f.write("=" * 80 + "\n\n")
+
+        f.write(f"Query proteins: {len(results['query_proteins'])}\n")
+        f.write(f"Total networks analyzed: {results['total_networks']}\n")
+        f.write(f"Total network proteins: {results['total_proteins']}\n\n")
+
+        # All Pfam domains (no threshold)
+        f.write("=" * 80 + "\n")
+        f.write("ALL Pfam Domains Found (no frequency filter)\n")
+        f.write("=" * 80 + "\n\n")
+
+        if results['pfam_domains']:
+            # Sort by network count
+            pfam_sorted = sorted(results['pfam_domains'].items(),
+                               key=lambda x: len(x[1]['networks']),
+                               reverse=True)
+
+            f.write(f"{'Pfam Domain':<15} {'Networks':<12} {'Proteins':<12} {'Frequency':<12}\n")
+            f.write("-" * 80 + "\n")
+
+            for domain, data in pfam_sorted:
+                network_freq = len(data['networks']) / results['total_networks'] if results['total_networks'] > 0 else 0
+                f.write(f"{domain:<15} {len(data['networks']):<12} {len(data['proteins']):<12} {network_freq:>6.1%}\n")
+
+            f.write(f"\nTotal unique Pfam domains: {len(results['pfam_domains'])}\n\n")
+
+            # Detailed breakdown
+            f.write("\nDetailed Pfam Domain Breakdown:\n")
+            f.write("-" * 80 + "\n")
+            for domain, data in pfam_sorted:
+                f.write(f"\n{domain}:\n")
+                f.write(f"  Found in {len(data['networks'])} network(s):\n")
+                for network_id in sorted(data['networks']):
+                    f.write(f"    - {network_id}\n")
+                f.write(f"  Total proteins: {len(data['proteins'])}\n")
+        else:
+            f.write("No Pfam domains found in any network partners.\n")
+
+        f.write("\n")
+
+        # All UniRef clusters (no threshold)
+        f.write("=" * 80 + "\n")
+        f.write("ALL UniRef50 Clusters Found (proteins without Pfam domains, no frequency filter)\n")
+        f.write("=" * 80 + "\n\n")
+
+        if results['uniref_clusters']:
+            # Sort by network count
+            uniref_sorted = sorted(results['uniref_clusters'].items(),
+                                 key=lambda x: len(x[1]['networks']),
+                                 reverse=True)
+
+            f.write(f"{'UniRef50 Cluster':<30} {'Networks':<12} {'Proteins':<12} {'Frequency':<12}\n")
+            f.write("-" * 80 + "\n")
+
+            for cluster, data in uniref_sorted:
+                network_freq = len(data['networks']) / results['total_networks'] if results['total_networks'] > 0 else 0
+                f.write(f"{cluster:<30} {len(data['networks']):<12} {len(data['proteins']):<12} {network_freq:>6.1%}\n")
+
+            f.write(f"\nTotal unique UniRef50 clusters: {len(results['uniref_clusters'])}\n\n")
+
+            # Detailed breakdown (top 20)
+            f.write("\nDetailed UniRef50 Cluster Breakdown (top 20):\n")
+            f.write("-" * 80 + "\n")
+            for cluster, data in uniref_sorted[:20]:
+                f.write(f"\n{cluster}:\n")
+                f.write(f"  Found in {len(data['networks'])} network(s):\n")
+                for network_id in sorted(data['networks']):
+                    f.write(f"    - {network_id}\n")
+                f.write(f"  Total proteins: {len(data['proteins'])}\n")
+        else:
+            f.write("No UniRef50 clusters found in any network partners.\n")
+
+        f.write("\n" + "=" * 80 + "\n")
+
+    print(f"\n  Detailed results written to: {output_file}")
+
+
 def print_report(results: Dict, min_frequency: float = 0.2, output_file: Optional[str] = None):
     """
     Print analysis report.
@@ -784,6 +878,9 @@ def main():
         args.debug_limit,
         not args.no_download
     )
+
+    # Write detailed results file
+    write_detailed_results(results, args.pfam_dir)
 
     # Print report
     print_report(results, args.min_frequency, args.output)
