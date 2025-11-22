@@ -8,9 +8,9 @@ This script:
 3. Retrieves network partners for each protein (direct or multi-hop)
 4. Maps proteins to UniProt accessions
 5. Looks up Pfam domains for each UniProt accession
-6. For proteins without domains, identifies UniRef_50 clusters
-7. Calculates enrichment statistics for domains and clusters
-8. Reports over-represented domains/clusters above frequency threshold
+6. For proteins without domains, records the UniProt accession
+7. Calculates enrichment statistics for domains
+8. Reports over-represented domains above frequency threshold
 
 Usage:
     analyze_string_network.py <pfam_directory> [options]
@@ -27,8 +27,6 @@ import subprocess
 import sys
 from collections import defaultdict
 from typing import Dict, List, Set, Tuple, Optional
-import urllib.request
-import urllib.error
 import time
 
 
@@ -410,38 +408,6 @@ def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG
         return []
 
 
-def fetch_uniref50_from_uniprot(uniprot_acc: str, verbose: bool = True) -> Optional[str]:
-    """
-    Fetch UniRef50 cluster from UniProt REST API.
-
-    Args:
-        uniprot_acc: UniProt accession
-        verbose: If True, print error messages
-
-    Returns:
-        UniRef50 cluster ID, or None if not found
-    """
-    try:
-        url = f"https://www.uniprot.org/uniprotkb/{uniprot_acc}.txt"
-
-        with urllib.request.urlopen(url, timeout=10) as response:
-            content = response.read().decode('utf-8')
-
-            # Look for UniRef50 cross-reference
-            match = re.search(r'DR\s+UniRef;\s+(UniRef50_\S+);', content)
-            if match:
-                return match.group(1)
-
-    except urllib.error.HTTPError as e:
-        if verbose and e.code != 404:
-            print(f"\n         ERROR fetching UniRef50 for {uniprot_acc}: HTTP {e.code}")
-    except Exception as e:
-        if verbose:
-            print(f"\n         ERROR fetching UniRef50 for {uniprot_acc}: {e}")
-
-    return None
-
-
 def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int = 400,
                      network_depth: int = 1, mysql_config: str = DEFAULT_MYSQL_CONFIG,
                      debug_limit: Optional[int] = None, auto_download: bool = True) -> Dict:
@@ -462,7 +428,7 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
     """
     results = {
         'pfam_domains': defaultdict(lambda: {'networks': set(), 'proteins': defaultdict(set), 'pfamA_id': None}),
-        'uniref_clusters': defaultdict(lambda: {'networks': set(), 'proteins': defaultdict(set)}),
+        'proteins_without_domains': set(),
         'total_networks': 0,
         'total_proteins': 0,
         'query_proteins': []
@@ -573,7 +539,7 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
 
             partners_with_uniprot = 0
             pfam_domains_found = 0
-            uniref_clusters_found = 0
+            proteins_without_domains = 0
 
             for partner_string_id in network_partners:
                 results['total_proteins'] += 1
@@ -600,20 +566,13 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
                             results['pfam_domains'][pfamA_acc]['proteins'][partner_string_id].add(uniprot_acc)
                             results['pfam_domains'][pfamA_acc]['pfamA_id'] = pfamA_id
                     else:
-                        print(f" no domains, checking UniRef50...", end='')
-                        # No Pfam domains - get UniRef50 cluster
-                        uniref_cluster = fetch_uniref50_from_uniprot(uniprot_acc)
-
-                        if uniref_cluster:
-                            print(f" found {uniref_cluster}")
-                            uniref_clusters_found += 1
-                            results['uniref_clusters'][uniref_cluster]['networks'].add(network_id)
-                            results['uniref_clusters'][uniref_cluster]['proteins'][partner_string_id].add(uniprot_acc)
-                        else:
-                            print(f" not found")
+                        print(f" no domains")
+                        # No Pfam domains - record this UniProt accession
+                        results['proteins_without_domains'].add(uniprot_acc)
+                        proteins_without_domains += 1
 
             print(f"     {partners_with_uniprot}/{len(network_partners)} have UniProt mappings")
-            print(f"     Found {pfam_domains_found} Pfam domains, {uniref_clusters_found} UniRef clusters")
+            print(f"     Found {pfam_domains_found} Pfam domains, {proteins_without_domains} proteins without domains")
 
     return results
 
@@ -683,41 +642,17 @@ def write_detailed_results(results: Dict, pfam_dir: str):
 
         f.write("\n")
 
-        # All UniRef clusters (no threshold)
+        # Proteins without Pfam domains
         f.write("=" * 80 + "\n")
-        f.write("ALL UniRef50 Clusters Found (proteins without Pfam domains, no frequency filter)\n")
+        f.write("Proteins Without Pfam Domains\n")
         f.write("=" * 80 + "\n\n")
 
-        if results['uniref_clusters']:
-            # Sort by network count
-            uniref_sorted = sorted(results['uniref_clusters'].items(),
-                                 key=lambda x: len(x[1]['networks']),
-                                 reverse=True)
-
-            f.write(f"{'UniRef50 Cluster':<30} {'Networks':<12} {'Proteins':<12} {'Frequency':<12}\n")
-            f.write("-" * 80 + "\n")
-
-            for cluster, data in uniref_sorted:
-                network_freq = len(data['networks']) / results['total_networks'] if results['total_networks'] > 0 else 0
-                f.write(f"{cluster:<30} {len(data['networks']):<12} {len(data['proteins']):<12} {network_freq:>6.1%}\n")
-
-            f.write(f"\nTotal unique UniRef50 clusters: {len(results['uniref_clusters'])}\n\n")
-
-            # Detailed breakdown (top 20)
-            f.write("\nDetailed UniRef50 Cluster Breakdown (top 20):\n")
-            f.write("-" * 80 + "\n")
-            for cluster, data in uniref_sorted[:20]:
-                f.write(f"\n{cluster}:\n")
-                f.write(f"  Found in {len(data['networks'])} network(s):\n")
-                # List all proteins with their UniProt accessions
-                for string_id in sorted(data['proteins'].keys()):
-                    uniprot_accs = data['proteins'][string_id]
-                    # Show each UniProt accession associated with this STRING ID
-                    for uniprot_acc in sorted(uniprot_accs):
-                        f.write(f"    - {uniprot_acc} ({string_id})\n")
-                f.write(f"  Total proteins: {len(data['proteins'])}\n")
+        if results['proteins_without_domains']:
+            f.write(f"Total UniProt accessions without Pfam domains: {len(results['proteins_without_domains'])}\n\n")
+            for uniprot_acc in sorted(results['proteins_without_domains']):
+                f.write(f"  {uniprot_acc}\n")
         else:
-            f.write("No UniRef50 clusters found in any network partners.\n")
+            f.write("All proteins have Pfam domain assignments.\n")
 
         f.write("\n" + "=" * 80 + "\n")
 
@@ -772,34 +707,11 @@ def print_report(results: Dict, min_frequency: float = 0.2, output_file: Optiona
         output.append(f"No Pfam domains found above {min_frequency:.1%} frequency threshold.")
 
     output.append("")
-
-    # UniRef clusters
     output.append("=" * 80)
-    output.append("UniRef50 Cluster Enrichment (proteins without Pfam domains)")
+    output.append(f"Proteins Without Pfam Domains: {len(results['proteins_without_domains'])}")
     output.append("=" * 80)
     output.append("")
-
-    # Filter by frequency threshold and sort by network count
-    uniref_data = []
-    for cluster, data in results['uniref_clusters'].items():
-        network_freq = len(data['networks']) / results['total_networks'] if results['total_networks'] > 0 else 0
-        if network_freq >= min_frequency:
-            uniref_data.append((cluster, data['networks'], data['proteins'], network_freq))
-
-    uniref_data.sort(key=lambda x: len(x[1]), reverse=True)
-
-    if uniref_data:
-        output.append(f"{'UniRef50 Cluster':<30} {'Networks':<12} {'Proteins':<12} {'Frequency':<12}")
-        output.append("-" * 80)
-
-        for cluster, networks, proteins, freq in uniref_data[:50]:  # Top 50
-            output.append(f"{cluster:<30} {len(networks):<12} {len(proteins):<12} {freq:>6.1%}")
-
-        if len(uniref_data) > 50:
-            output.append(f"\n... and {len(uniref_data) - 50} more clusters above threshold")
-    else:
-        output.append(f"No UniRef50 clusters found above {min_frequency:.1%} frequency threshold.")
-
+    output.append("(See detailed results file for full list)")
     output.append("")
     output.append("=" * 80)
 
