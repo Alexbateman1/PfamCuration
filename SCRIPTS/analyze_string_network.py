@@ -625,11 +625,8 @@ def write_detailed_results(results: Dict, pfam_dir: str):
         results: Results dictionary from analyze_networks()
         pfam_dir: Path to Pfam family directory
     """
-    # Create STRING subdirectory
-    string_dir = os.path.join(pfam_dir, 'STRING')
-    os.makedirs(string_dir, exist_ok=True)
-
-    output_file = os.path.join(string_dir, 'detailed_results.txt')
+    # Write to STRING file in pfam_dir
+    output_file = os.path.join(pfam_dir, 'STRING')
 
     with open(output_file, 'w') as f:
         f.write("=" * 80 + "\n")
