@@ -461,8 +461,8 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
         Dictionary with analysis results
     """
     results = {
-        'pfam_domains': defaultdict(lambda: {'networks': set(), 'proteins': set(), 'pfamA_id': None}),
-        'uniref_clusters': defaultdict(lambda: {'networks': set(), 'proteins': set()}),
+        'pfam_domains': defaultdict(lambda: {'networks': set(), 'proteins': defaultdict(set), 'pfamA_id': None}),
+        'uniref_clusters': defaultdict(lambda: {'networks': set(), 'proteins': defaultdict(set)}),
         'total_networks': 0,
         'total_proteins': 0,
         'query_proteins': []
@@ -597,7 +597,7 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
                         pfam_domains_found += len(domains)
                         for pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id in domains:
                             results['pfam_domains'][pfamA_acc]['networks'].add(network_id)
-                            results['pfam_domains'][pfamA_acc]['proteins'].add(partner_string_id)
+                            results['pfam_domains'][pfamA_acc]['proteins'][partner_string_id].add(uniprot_acc)
                             results['pfam_domains'][pfamA_acc]['pfamA_id'] = pfamA_id
                     else:
                         print(f" no domains, checking UniRef50...", end='')
@@ -608,7 +608,7 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
                             print(f" found {uniref_cluster}")
                             uniref_clusters_found += 1
                             results['uniref_clusters'][uniref_cluster]['networks'].add(network_id)
-                            results['uniref_clusters'][uniref_cluster]['proteins'].add(partner_string_id)
+                            results['uniref_clusters'][uniref_cluster]['proteins'][partner_string_id].add(uniprot_acc)
                         else:
                             print(f" not found")
 
@@ -671,8 +671,12 @@ def write_detailed_results(results: Dict, pfam_dir: str):
                 domain_display = f"{domain} ({data['pfamA_id']})" if data['pfamA_id'] else domain
                 f.write(f"\n{domain_display}:\n")
                 f.write(f"  Found in {len(data['networks'])} network(s):\n")
-                for network_id in sorted(data['networks']):
-                    f.write(f"    - {network_id}\n")
+                # List all proteins with their UniProt accessions
+                for string_id in sorted(data['proteins'].keys()):
+                    uniprot_accs = data['proteins'][string_id]
+                    # Show each UniProt accession associated with this STRING ID
+                    for uniprot_acc in sorted(uniprot_accs):
+                        f.write(f"    - {uniprot_acc} ({string_id})\n")
                 f.write(f"  Total proteins: {len(data['proteins'])}\n")
         else:
             f.write("No Pfam domains found in any network partners.\n")
@@ -705,8 +709,12 @@ def write_detailed_results(results: Dict, pfam_dir: str):
             for cluster, data in uniref_sorted[:20]:
                 f.write(f"\n{cluster}:\n")
                 f.write(f"  Found in {len(data['networks'])} network(s):\n")
-                for network_id in sorted(data['networks']):
-                    f.write(f"    - {network_id}\n")
+                # List all proteins with their UniProt accessions
+                for string_id in sorted(data['proteins'].keys()):
+                    uniprot_accs = data['proteins'][string_id]
+                    # Show each UniProt accession associated with this STRING ID
+                    for uniprot_acc in sorted(uniprot_accs):
+                        f.write(f"    - {uniprot_acc} ({string_id})\n")
                 f.write(f"  Total proteins: {len(data['proteins'])}\n")
         else:
             f.write("No UniRef50 clusters found in any network partners.\n")
