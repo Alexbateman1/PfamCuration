@@ -127,7 +127,10 @@ def download_string_file(taxid: str, filename: str, output_dir: str, max_retries
         return output_path
 
     # Construct download URL
-    url = f"{STRING_DOWNLOAD_BASE_URL}/{filename}/{full_filename}"
+    # Directory name is filename without .txt.gz extension
+    # e.g., protein.links.full.v12.0.txt.gz -> protein.links.full.v12.0
+    dir_name = filename.replace('.txt.gz', '')
+    url = f"{STRING_DOWNLOAD_BASE_URL}/{dir_name}/{full_filename}"
 
     print(f"  Downloading {full_filename}...")
 
