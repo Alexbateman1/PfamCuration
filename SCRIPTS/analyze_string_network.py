@@ -340,13 +340,14 @@ def parse_protein_aliases(aliases_file: str, string_ids: Set[str]) -> Dict[str, 
     return string_to_uniprot
 
 
-def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG) -> List[Tuple[str, int, int, str]]:
+def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG, verbose: bool = True) -> List[Tuple[str, int, int, str]]:
     """
     Query pfam_live database for Pfam domains in a UniProt sequence.
 
     Args:
         uniprot_acc: UniProt accession
         config_file: Path to MySQL config file
+        verbose: If True, print error messages
 
     Returns:
         List of tuples: (pfamseq_acc, seq_start, seq_end, pfamA_acc)
@@ -388,16 +389,18 @@ def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG
         return results
 
     except Exception as e:
-        # Silently handle errors - not all proteins will be in database
+        if verbose:
+            print(f"\n         ERROR querying database for {uniprot_acc}: {e}")
         return []
 
 
-def fetch_uniref50_from_uniprot(uniprot_acc: str) -> Optional[str]:
+def fetch_uniref50_from_uniprot(uniprot_acc: str, verbose: bool = True) -> Optional[str]:
     """
     Fetch UniRef50 cluster from UniProt REST API.
 
     Args:
         uniprot_acc: UniProt accession
+        verbose: If True, print error messages
 
     Returns:
         UniRef50 cluster ID, or None if not found
@@ -413,8 +416,12 @@ def fetch_uniref50_from_uniprot(uniprot_acc: str) -> Optional[str]:
             if match:
                 return match.group(1)
 
+    except urllib.error.HTTPError as e:
+        if verbose and e.code != 404:
+            print(f"\n         ERROR fetching UniRef50 for {uniprot_acc}: HTTP {e.code}")
     except Exception as e:
-        pass
+        if verbose:
+            print(f"\n         ERROR fetching UniRef50 for {uniprot_acc}: {e}")
 
     return None
 
@@ -549,6 +556,9 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
             networks_processed += 1
 
             partners_with_uniprot = 0
+            pfam_domains_found = 0
+            uniref_clusters_found = 0
+
             for partner_string_id in network_partners:
                 results['total_proteins'] += 1
 
@@ -563,21 +573,30 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
                 # For each UniProt accession
                 for uniprot_acc in uniprot_accs:
                     # Query Pfam domains
+                    print(f"       Querying Pfam domains for {uniprot_acc}...", end='')
                     domains = query_pfam_domains(uniprot_acc, mysql_config)
 
                     if domains:
+                        print(f" found {len(domains)} domain(s)")
+                        pfam_domains_found += len(domains)
                         for pfamseq_acc, seq_start, seq_end, pfamA_acc in domains:
                             results['pfam_domains'][pfamA_acc]['networks'].add(network_id)
                             results['pfam_domains'][pfamA_acc]['proteins'].add(partner_string_id)
                     else:
+                        print(f" no domains, checking UniRef50...", end='')
                         # No Pfam domains - get UniRef50 cluster
                         uniref_cluster = fetch_uniref50_from_uniprot(uniprot_acc)
 
                         if uniref_cluster:
+                            print(f" found {uniref_cluster}")
+                            uniref_clusters_found += 1
                             results['uniref_clusters'][uniref_cluster]['networks'].add(network_id)
                             results['uniref_clusters'][uniref_cluster]['proteins'].add(partner_string_id)
+                        else:
+                            print(f" not found")
 
             print(f"     {partners_with_uniprot}/{len(network_partners)} have UniProt mappings")
+            print(f"     Found {pfam_domains_found} Pfam domains, {uniref_clusters_found} UniRef clusters")
 
     return results
 
