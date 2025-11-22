@@ -352,42 +352,55 @@ def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG
     Returns:
         List of tuples: (pfamseq_acc, seq_start, seq_end, pfamA_acc)
     """
-    import mysql.connector
-    from configparser import ConfigParser
-
     config_file = os.path.expanduser(config_file)
 
     try:
-        # Parse MySQL config file
-        config = ConfigParser()
-        config.read(config_file)
+        # Use mysql command line tool via subprocess - more reliable than mysql.connector
+        query = f"SELECT pfamseq_acc, seq_start, seq_end, pfamA_acc FROM pfamA_reg_full_significant WHERE pfamseq_acc = '{uniprot_acc}'"
 
-        # Get credentials
-        db_config = {
-            'host': config.get('client', 'host', fallback='localhost'),
-            'user': config.get('client', 'user'),
-            'password': config.get('client', 'password', fallback=''),
-            'database': 'pfam_live'
-        }
+        cmd = [
+            'mysql',
+            f'--defaults-file={config_file}',
+            'pfam_live',
+            '--quick',
+            '--silent',
+            '--skip-column-names',
+            '-e',
+            query
+        ]
 
-        # Connect and query
-        conn = mysql.connector.connect(**db_config)
-        cursor = conn.cursor()
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
 
-        query = """
-            SELECT pfamseq_acc, seq_start, seq_end, pfamA_acc
-            FROM pfamA_reg_full_significant
-            WHERE pfamseq_acc = %s
-        """
+        if result.returncode != 0:
+            if verbose:
+                print(f"\n         ERROR: mysql returned code {result.returncode}")
+                if result.stderr:
+                    print(f"         {result.stderr}")
+            return []
 
-        cursor.execute(query, (uniprot_acc,))
-        results = cursor.fetchall()
-
-        cursor.close()
-        conn.close()
+        # Parse output
+        results = []
+        for line in result.stdout.strip().split('\n'):
+            if line:
+                parts = line.split('\t')
+                if len(parts) >= 4:
+                    pfamseq_acc = parts[0]
+                    seq_start = int(parts[1])
+                    seq_end = int(parts[2])
+                    pfamA_acc = parts[3]
+                    results.append((pfamseq_acc, seq_start, seq_end, pfamA_acc))
 
         return results
 
+    except subprocess.TimeoutExpired:
+        if verbose:
+            print(f"\n         ERROR: Query timeout for {uniprot_acc}")
+        return []
     except Exception as e:
         if verbose:
             print(f"\n         ERROR querying database for {uniprot_acc}: {e}")
