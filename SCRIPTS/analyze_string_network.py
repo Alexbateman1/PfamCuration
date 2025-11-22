@@ -629,6 +629,11 @@ def write_detailed_results(results: Dict, pfam_dir: str):
     # Write to STRING file in pfam_dir
     output_file = os.path.join(pfam_dir, 'STRING')
 
+    # Remove old STRING directory if it exists
+    if os.path.isdir(output_file):
+        import shutil
+        shutil.rmtree(output_file)
+
     with open(output_file, 'w') as f:
         f.write("=" * 80 + "\n")
         f.write("STRING Network Analysis - Detailed Results (ALL findings)\n")
