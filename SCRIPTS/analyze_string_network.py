@@ -357,7 +357,8 @@ def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG
     try:
         # Use mysql command line tool via subprocess - more reliable than mysql.connector
         # Join with pfamA table to get pfamA_id
-        query = f"SELECT r.pfamseq_acc, r.seq_start, r.seq_end, r.pfamA_acc, a.pfamA_id FROM pfamA_reg_full_significant r JOIN pfamA a ON r.pfamA_acc = a.pfamA_acc WHERE r.pfamseq_acc = '{uniprot_acc}'"
+        # Filter for in_full = 1 to only get domains from full sequences
+        query = f"SELECT r.pfamseq_acc, r.seq_start, r.seq_end, r.pfamA_acc, a.pfamA_id FROM pfamA_reg_full_significant r JOIN pfamA a ON r.pfamA_acc = a.pfamA_acc WHERE r.pfamseq_acc = '{uniprot_acc}' AND r.in_full = 1"
 
         cmd = [
             'mysql',
