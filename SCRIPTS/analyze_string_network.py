@@ -340,7 +340,7 @@ def parse_protein_aliases(aliases_file: str, string_ids: Set[str]) -> Dict[str, 
     return string_to_uniprot
 
 
-def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG, verbose: bool = True) -> List[Tuple[str, int, int, str]]:
+def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG, verbose: bool = True) -> List[Tuple[str, int, int, str, str]]:
     """
     Query pfam_live database for Pfam domains in a UniProt sequence.
 
@@ -350,13 +350,14 @@ def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG
         verbose: If True, print error messages
 
     Returns:
-        List of tuples: (pfamseq_acc, seq_start, seq_end, pfamA_acc)
+        List of tuples: (pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id)
     """
     config_file = os.path.expanduser(config_file)
 
     try:
         # Use mysql command line tool via subprocess - more reliable than mysql.connector
-        query = f"SELECT pfamseq_acc, seq_start, seq_end, pfamA_acc FROM pfamA_reg_full_significant WHERE pfamseq_acc = '{uniprot_acc}'"
+        # Join with pfamA table to get pfamA_id
+        query = f"SELECT r.pfamseq_acc, r.seq_start, r.seq_end, r.pfamA_acc, a.pfamA_id FROM pfamA_reg_full_significant r JOIN pfamA a ON r.pfamA_acc = a.pfamA_acc WHERE r.pfamseq_acc = '{uniprot_acc}'"
 
         cmd = [
             'mysql',
@@ -388,12 +389,13 @@ def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG
         for line in result.stdout.strip().split('\n'):
             if line:
                 parts = line.split('\t')
-                if len(parts) >= 4:
+                if len(parts) >= 5:
                     pfamseq_acc = parts[0]
                     seq_start = int(parts[1])
                     seq_end = int(parts[2])
                     pfamA_acc = parts[3]
-                    results.append((pfamseq_acc, seq_start, seq_end, pfamA_acc))
+                    pfamA_id = parts[4]
+                    results.append((pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id))
 
         return results
 
@@ -458,7 +460,7 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
         Dictionary with analysis results
     """
     results = {
-        'pfam_domains': defaultdict(lambda: {'networks': set(), 'proteins': set()}),
+        'pfam_domains': defaultdict(lambda: {'networks': set(), 'proteins': set(), 'pfamA_id': None}),
         'uniref_clusters': defaultdict(lambda: {'networks': set(), 'proteins': set()}),
         'total_networks': 0,
         'total_proteins': 0,
@@ -592,9 +594,10 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
                     if domains:
                         print(f" found {len(domains)} domain(s)")
                         pfam_domains_found += len(domains)
-                        for pfamseq_acc, seq_start, seq_end, pfamA_acc in domains:
+                        for pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id in domains:
                             results['pfam_domains'][pfamA_acc]['networks'].add(network_id)
                             results['pfam_domains'][pfamA_acc]['proteins'].add(partner_string_id)
+                            results['pfam_domains'][pfamA_acc]['pfamA_id'] = pfamA_id
                     else:
                         print(f" no domains, checking UniRef50...", end='')
                         # No Pfam domains - get UniRef50 cluster
@@ -648,12 +651,13 @@ def write_detailed_results(results: Dict, pfam_dir: str):
                                key=lambda x: len(x[1]['networks']),
                                reverse=True)
 
-            f.write(f"{'Pfam Domain':<15} {'Networks':<12} {'Proteins':<12} {'Frequency':<12}\n")
+            f.write(f"{'Pfam Domain':<25} {'Networks':<12} {'Proteins':<12} {'Frequency':<12}\n")
             f.write("-" * 80 + "\n")
 
             for domain, data in pfam_sorted:
                 network_freq = len(data['networks']) / results['total_networks'] if results['total_networks'] > 0 else 0
-                f.write(f"{domain:<15} {len(data['networks']):<12} {len(data['proteins']):<12} {network_freq:>6.1%}\n")
+                domain_display = f"{domain} ({data['pfamA_id']})" if data['pfamA_id'] else domain
+                f.write(f"{domain_display:<25} {len(data['networks']):<12} {len(data['proteins']):<12} {network_freq:>6.1%}\n")
 
             f.write(f"\nTotal unique Pfam domains: {len(results['pfam_domains'])}\n\n")
 
@@ -661,7 +665,8 @@ def write_detailed_results(results: Dict, pfam_dir: str):
             f.write("\nDetailed Pfam Domain Breakdown:\n")
             f.write("-" * 80 + "\n")
             for domain, data in pfam_sorted:
-                f.write(f"\n{domain}:\n")
+                domain_display = f"{domain} ({data['pfamA_id']})" if data['pfamA_id'] else domain
+                f.write(f"\n{domain_display}:\n")
                 f.write(f"  Found in {len(data['networks'])} network(s):\n")
                 for network_id in sorted(data['networks']):
                     f.write(f"    - {network_id}\n")
@@ -741,16 +746,17 @@ def print_report(results: Dict, min_frequency: float = 0.2, output_file: Optiona
     for domain, data in results['pfam_domains'].items():
         network_freq = len(data['networks']) / results['total_networks'] if results['total_networks'] > 0 else 0
         if network_freq >= min_frequency:
-            pfam_data.append((domain, data['networks'], data['proteins'], network_freq))
+            pfam_data.append((domain, data['pfamA_id'], data['networks'], data['proteins'], network_freq))
 
-    pfam_data.sort(key=lambda x: len(x[1]), reverse=True)
+    pfam_data.sort(key=lambda x: len(x[2]), reverse=True)
 
     if pfam_data:
-        output.append(f"{'Pfam Domain':<15} {'Networks':<12} {'Proteins':<12} {'Frequency':<12}")
+        output.append(f"{'Pfam Domain':<25} {'Networks':<12} {'Proteins':<12} {'Frequency':<12}")
         output.append("-" * 80)
 
-        for domain, networks, proteins, freq in pfam_data:
-            output.append(f"{domain:<15} {len(networks):<12} {len(proteins):<12} {freq:>6.1%}")
+        for domain, pfam_id, networks, proteins, freq in pfam_data:
+            domain_display = f"{domain} ({pfam_id})" if pfam_id else domain
+            output.append(f"{domain_display:<25} {len(networks):<12} {len(proteins):<12} {freq:>6.1%}")
     else:
         output.append(f"No Pfam domains found above {min_frequency:.1%} frequency threshold.")
 
