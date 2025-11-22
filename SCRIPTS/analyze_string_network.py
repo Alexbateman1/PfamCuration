@@ -4,7 +4,7 @@ Analyze STRING protein networks for Pfam families to identify over-represented d
 
 This script:
 1. Extracts STRING identifiers from a Pfam family's seq_info file
-2. Reads local STRING network data files
+2. Streams through global STRING network data files
 3. Retrieves network partners for each protein (direct or multi-hop)
 4. Maps proteins to UniProt accessions
 5. Looks up Pfam domains for each UniProt accession
@@ -25,12 +25,10 @@ import os
 import re
 import subprocess
 import sys
-from collections import defaultdict, Counter
-from pathlib import Path
+from collections import defaultdict
 from typing import Dict, List, Set, Tuple, Optional
 import urllib.request
 import urllib.error
-import json
 
 
 # Default paths
@@ -105,135 +103,103 @@ def run_species_summary(pfam_dir: str) -> bool:
         return False
 
 
-def get_string_file_path(taxid: str, filename: str, string_data_dir: str) -> Optional[str]:
+def build_networks_from_links(links_file: str, query_proteins: Set[str],
+                              score_threshold: int = 400, network_depth: int = 1) -> Dict[str, Set[str]]:
     """
-    Get path to a local STRING data file.
-
-    Args:
-        taxid: NCBI taxonomy ID
-        filename: Name of the file (e.g., 'protein.links.full.v12.0.txt.gz')
-        string_data_dir: Base directory for STRING data
-
-    Returns:
-        Path to file if it exists, None otherwise
-    """
-    # Try direct path in base directory
-    full_filename = f"{taxid}.{filename}"
-    file_path = os.path.join(string_data_dir, full_filename)
-
-    if os.path.exists(file_path):
-        return file_path
-
-    # Try species-specific subdirectory
-    file_path = os.path.join(string_data_dir, taxid, full_filename)
-
-    if os.path.exists(file_path):
-        return file_path
-
-    return None
-
-
-def parse_protein_links_full(links_file: str, score_threshold: int = 400) -> Dict[str, Set[str]]:
-    """
-    Parse STRING protein.links.full file to get network connections.
+    Stream through protein.links.full file to build networks for query proteins.
 
     Args:
         links_file: Path to protein.links.full.v12.0.txt.gz file
+        query_proteins: Set of STRING protein IDs to find networks for
         score_threshold: Minimum combined score (0-999) to include link
+        network_depth: Number of network hops
 
     Returns:
         Dictionary mapping protein -> set of connected proteins
     """
-    networks = defaultdict(set)
+    print(f"  Building networks from links file (threshold={score_threshold}, depth={network_depth})...")
 
-    print(f"  Parsing protein links (threshold={score_threshold})...")
+    # For depth > 1, we need to iteratively expand
+    proteins_of_interest = query_proteins.copy()
+    all_networks = defaultdict(set)
 
-    with gzip.open(links_file, 'rt') as f:
-        # Read header
-        header = f.readline().strip().split()
+    for depth in range(network_depth):
+        print(f"    Depth {depth + 1}: Looking for networks of {len(proteins_of_interest):,} proteins...")
 
-        # Find column indices
-        try:
-            protein1_idx = header.index('protein1')
-            protein2_idx = header.index('protein2')
-            combined_idx = header.index('combined_score')
-        except ValueError as e:
-            print(f"  Error: Expected column not found in header: {e}")
-            return networks
+        # Stream through file to find links for proteins of interest
+        links_found = 0
+        lines_processed = 0
 
-        line_count = 0
-        link_count = 0
+        with gzip.open(links_file, 'rt') as f:
+            # Read header
+            header = f.readline().strip().split()
 
-        for line in f:
-            line_count += 1
-            parts = line.strip().split()
+            # Find column indices
+            try:
+                protein1_idx = header.index('protein1')
+                protein2_idx = header.index('protein2')
+                combined_idx = header.index('combined_score')
+            except ValueError as e:
+                print(f"  Error: Expected column not found in header: {e}")
+                return all_networks
 
-            if len(parts) > max(protein1_idx, protein2_idx, combined_idx):
-                protein1 = parts[protein1_idx]
-                protein2 = parts[protein2_idx]
-                score = int(parts[combined_idx])
+            for line in f:
+                lines_processed += 1
+                parts = line.strip().split()
 
-                if score >= score_threshold:
-                    networks[protein1].add(protein2)
-                    networks[protein2].add(protein1)
-                    link_count += 1
+                if len(parts) > max(protein1_idx, protein2_idx, combined_idx):
+                    protein1 = parts[protein1_idx]
+                    protein2 = parts[protein2_idx]
+                    score = int(parts[combined_idx])
 
-            if line_count % 100000 == 0:
-                print(f"    Processed {line_count:,} lines, {link_count:,} links above threshold...")
+                    if score >= score_threshold:
+                        # Check if either protein is in our current set of interest
+                        if protein1 in proteins_of_interest:
+                            all_networks[protein1].add(protein2)
+                            links_found += 1
 
-    print(f"  Loaded {len(networks):,} proteins with {link_count:,} links")
-    return networks
+                        if protein2 in proteins_of_interest:
+                            all_networks[protein2].add(protein1)
+                            links_found += 1
+
+                if lines_processed % 10000000 == 0:
+                    print(f"      Processed {lines_processed:,} lines, found {links_found:,} links...")
+
+        print(f"    Depth {depth + 1}: Found {links_found:,} links from {lines_processed:,} total lines")
+
+        # For next depth, expand to neighbors
+        if depth + 1 < network_depth:
+            new_proteins = set()
+            for protein in proteins_of_interest:
+                if protein in all_networks:
+                    new_proteins.update(all_networks[protein])
+
+            # Only add proteins we haven't seen before
+            proteins_of_interest = new_proteins - proteins_of_interest - query_proteins
+
+            if not proteins_of_interest:
+                print(f"    No new proteins to expand at depth {depth + 2}, stopping early")
+                break
+
+    return all_networks
 
 
-def expand_network(start_proteins: Set[str], networks: Dict[str, Set[str]], depth: int = 1) -> Set[str]:
+def get_uniprot_mappings(aliases_file: str, string_ids: Set[str]) -> Dict[str, Set[str]]:
     """
-    Expand a set of proteins to include neighbors up to specified depth.
-
-    Args:
-        start_proteins: Initial set of protein IDs
-        networks: Network dictionary (protein -> set of neighbors)
-        depth: Number of hops (1 = direct neighbors, 2 = neighbors of neighbors, etc.)
-
-    Returns:
-        Set of all proteins within depth hops
-    """
-    if depth < 1:
-        return start_proteins
-
-    current_level = start_proteins.copy()
-    all_proteins = start_proteins.copy()
-
-    for hop in range(depth):
-        next_level = set()
-        for protein in current_level:
-            if protein in networks:
-                neighbors = networks[protein]
-                next_level.update(neighbors)
-
-        # Remove proteins already visited
-        next_level -= all_proteins
-        all_proteins.update(next_level)
-        current_level = next_level
-
-        if not current_level:
-            break
-
-    return all_proteins
-
-
-def parse_protein_aliases(aliases_file: str) -> Dict[str, Set[str]]:
-    """
-    Parse STRING protein.aliases file to map STRING IDs to UniProt accessions.
+    Stream through protein.aliases file to get UniProt mappings for specific STRING IDs.
 
     Args:
         aliases_file: Path to protein.aliases.v12.0.txt.gz file
+        string_ids: Set of STRING protein IDs to find mappings for
 
     Returns:
         Dictionary mapping STRING protein ID -> set of UniProt accessions
     """
-    string_to_uniprot = defaultdict(set)
+    print(f"  Getting UniProt mappings for {len(string_ids):,} STRING proteins...")
 
-    print(f"  Parsing protein aliases...")
+    string_to_uniprot = defaultdict(set)
+    lines_processed = 0
+    mappings_found = 0
 
     with gzip.open(aliases_file, 'rt') as f:
         # Read header
@@ -248,18 +214,28 @@ def parse_protein_aliases(aliases_file: str) -> Dict[str, Set[str]]:
             return string_to_uniprot
 
         for line in f:
+            lines_processed += 1
             parts = line.strip().split('\t')
 
             if len(parts) > max(string_id_idx, alias_idx, source_idx):
                 string_id = parts[string_id_idx]
-                alias = parts[alias_idx]
-                source = parts[source_idx]
 
-                # Look specifically for UniProt_AC source
-                if source == 'UniProt_AC':
-                    string_to_uniprot[string_id].add(alias)
+                # Only process if this is a STRING ID we care about
+                if string_id in string_ids:
+                    alias = parts[alias_idx]
+                    source = parts[source_idx]
 
+                    # Look specifically for UniProt_AC source
+                    if source == 'UniProt_AC':
+                        string_to_uniprot[string_id].add(alias)
+                        mappings_found += 1
+
+            if lines_processed % 10000000 == 0:
+                print(f"    Processed {lines_processed:,} lines, found {mappings_found:,} UniProt mappings...")
+
+    print(f"  Found {mappings_found:,} UniProt mappings from {lines_processed:,} total lines")
     print(f"  Mapped {len(string_to_uniprot):,} STRING IDs to UniProt")
+
     return string_to_uniprot
 
 
@@ -381,96 +357,94 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
     print(f"   Found {len(string_ids)} STRING identifiers")
     results['query_proteins'] = string_ids
 
-    # Group by taxonomy ID
-    taxids = defaultdict(list)
+    # Build full STRING IDs (taxid.protein_id)
+    query_proteins = set()
     for taxid, protein_id in string_ids:
-        taxids[taxid].append(protein_id)
+        full_string_id = f"{taxid}.{protein_id}"
+        query_proteins.add(full_string_id)
 
-    print(f"   Covering {len(taxids)} species")
+    print(f"   Query proteins: {len(query_proteins)}")
 
-    # Process each species
-    for taxid, protein_ids in taxids.items():
-        print(f"\n2. Processing species {taxid} ({len(protein_ids)} proteins)...")
+    # Get paths to STRING files
+    links_file = os.path.join(string_data_dir, 'protein.links.full.v12.0.txt.gz')
+    aliases_file = os.path.join(string_data_dir, 'protein.aliases.v12.0.txt.gz')
 
-        # Get paths to local STRING files
-        print("   Looking for local STRING data files...")
-        links_file = get_string_file_path(taxid, 'protein.links.full.v12.0.txt.gz', string_data_dir)
-        aliases_file = get_string_file_path(taxid, 'protein.aliases.v12.0.txt.gz', string_data_dir)
+    # Check files exist
+    if not os.path.exists(links_file):
+        print(f"ERROR: Links file not found: {links_file}")
+        return results
 
-        if not links_file:
-            print(f"   ERROR: Links file not found for species {taxid}")
-            print(f"   Expected: {taxid}.protein.links.full.v12.0.txt.gz")
-            print(f"   Searched in: {string_data_dir} and {string_data_dir}/{taxid}/")
+    if not os.path.exists(aliases_file):
+        print(f"ERROR: Aliases file not found: {aliases_file}")
+        return results
+
+    print(f"   Using links file: {links_file}")
+    print(f"   Using aliases file: {aliases_file}")
+
+    # Build networks by streaming through links file
+    print("\n2. Building networks...")
+    networks = build_networks_from_links(links_file, query_proteins, score_threshold, network_depth)
+
+    if not networks:
+        print("No networks found for query proteins!")
+        return results
+
+    # Collect all proteins we need UniProt mappings for
+    all_network_proteins = set()
+    for query_protein in query_proteins:
+        if query_protein in networks:
+            all_network_proteins.update(networks[query_protein])
+            results['total_networks'] += 1
+
+    print(f"\n   Found networks for {results['total_networks']} query proteins")
+    print(f"   Total network partners: {len(all_network_proteins):,}")
+
+    # Get UniProt mappings for all network proteins
+    print("\n3. Mapping network partners to UniProt...")
+    string_to_uniprot = get_uniprot_mappings(aliases_file, all_network_proteins)
+
+    # Analyze each query protein's network
+    print("\n4. Analyzing Pfam domains and UniRef clusters...")
+    for query_protein in query_proteins:
+        if query_protein not in networks:
             continue
 
-        if not aliases_file:
-            print(f"   ERROR: Aliases file not found for species {taxid}")
-            print(f"   Expected: {taxid}.protein.aliases.v12.0.txt.gz")
-            print(f"   Searched in: {string_data_dir} and {string_data_dir}/{taxid}/")
-            continue
+        network_id = query_protein
+        network_partners = networks[query_protein]
 
-        print(f"   Found links file: {links_file}")
-        print(f"   Found aliases file: {aliases_file}")
+        print(f"\n   Analyzing {query_protein}: {len(network_partners)} partners")
 
-        # Parse network data
-        print("   Parsing network data...")
-        networks = parse_protein_links_full(links_file, score_threshold)
-        string_to_uniprot = parse_protein_aliases(aliases_file)
+        partners_with_uniprot = 0
+        for partner_string_id in network_partners:
+            results['total_proteins'] += 1
 
-        # Analyze each query protein
-        for protein_id in protein_ids:
-            full_string_id = f"{taxid}.{protein_id}"
+            # Get UniProt accessions for this partner
+            uniprot_accs = string_to_uniprot.get(partner_string_id, set())
 
-            print(f"\n3. Analyzing network for {full_string_id}...")
-
-            if full_string_id not in networks:
-                print(f"   No network found for {full_string_id}")
+            if not uniprot_accs:
                 continue
 
-            # Get network partners (direct or multi-hop)
-            if network_depth == 1:
-                network_partners = networks[full_string_id]
-            else:
-                network_partners = expand_network({full_string_id}, networks, network_depth)
-                network_partners.discard(full_string_id)  # Remove query protein itself
+            partners_with_uniprot += 1
 
-            print(f"   Found {len(network_partners)} network partners (depth={network_depth})")
+            # For each UniProt accession
+            for uniprot_acc in uniprot_accs:
+                # Query Pfam domains
+                domains = query_pfam_domains(uniprot_acc, mysql_config)
 
-            results['total_networks'] += 1
-            network_id = full_string_id
+                if domains:
+                    # Has Pfam domains
+                    for pfamseq_acc, seq_start, seq_end, pfamA_acc in domains:
+                        results['pfam_domains'][pfamA_acc]['networks'].add(network_id)
+                        results['pfam_domains'][pfamA_acc]['proteins'].add(partner_string_id)
+                else:
+                    # No Pfam domains - get UniRef50 cluster
+                    uniref_cluster = fetch_uniref50_from_uniprot(uniprot_acc)
 
-            # Process each network partner
-            partners_with_uniprot = 0
-            for partner_string_id in network_partners:
-                results['total_proteins'] += 1
+                    if uniref_cluster:
+                        results['uniref_clusters'][uniref_cluster]['networks'].add(network_id)
+                        results['uniref_clusters'][uniref_cluster]['proteins'].add(partner_string_id)
 
-                # Get UniProt accessions for this partner
-                uniprot_accs = string_to_uniprot.get(partner_string_id, set())
-
-                if not uniprot_accs:
-                    continue
-
-                partners_with_uniprot += 1
-
-                # For each UniProt accession
-                for uniprot_acc in uniprot_accs:
-                    # Query Pfam domains
-                    domains = query_pfam_domains(uniprot_acc, mysql_config)
-
-                    if domains:
-                        # Has Pfam domains
-                        for pfamseq_acc, seq_start, seq_end, pfamA_acc in domains:
-                            results['pfam_domains'][pfamA_acc]['networks'].add(network_id)
-                            results['pfam_domains'][pfamA_acc]['proteins'].add(partner_string_id)
-                    else:
-                        # No Pfam domains - get UniRef50 cluster
-                        uniref_cluster = fetch_uniref50_from_uniprot(uniprot_acc)
-
-                        if uniref_cluster:
-                            results['uniref_clusters'][uniref_cluster]['networks'].add(network_id)
-                            results['uniref_clusters'][uniref_cluster]['proteins'].add(partner_string_id)
-
-            print(f"   {partners_with_uniprot}/{len(network_partners)} partners have UniProt mappings")
+        print(f"     {partners_with_uniprot}/{len(network_partners)} partners have UniProt mappings")
 
     return results
 
@@ -579,7 +553,7 @@ def main():
     parser.add_argument(
         '--string-data-dir',
         default=DEFAULT_STRING_DATA_DIR,
-        help=f'Directory for STRING data files (default: {DEFAULT_STRING_DATA_DIR})'
+        help=f'Directory containing STRING data files (default: {DEFAULT_STRING_DATA_DIR})'
     )
 
     parser.add_argument(
