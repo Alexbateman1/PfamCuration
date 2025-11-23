@@ -46,6 +46,80 @@ def parse_seed_alignment(seed_file):
     return sequences
 
 
+def parse_desc_ted_reference(desc_file):
+    """
+    Parse DESC file to find TED reference lines.
+
+    Looks for lines like: SE   TED:Q9RYM9_TED03
+
+    Returns:
+        dict with 'uniprot_acc' and 'ted_id', or None if not found
+    """
+    if not os.path.exists(desc_file):
+        return None
+
+    with open(desc_file, 'r') as f:
+        for line in f:
+            # Match lines like: SE   TED:Q9RYM9_TED03
+            match = re.match(r'^SE\s+TED:(\w+\.?\d*)_(\w+)', line)
+            if match:
+                return {
+                    'uniprot_acc': match.group(1),
+                    'ted_id': f"{match.group(1)}_{match.group(2)}"
+                }
+
+    return None
+
+
+def get_ted_domain_coordinates(uniprot_acc, ted_id):
+    """
+    Fetch coordinates for a specific TED domain.
+
+    Args:
+        uniprot_acc: UniProt accession
+        ted_id: Full TED domain ID (e.g., "Q9RYM9_TED03")
+
+    Returns:
+        tuple: (start, end) coordinates, or None if not found
+    """
+    import urllib.request
+    import json
+
+    # Strip version number for TED API
+    base_acc = uniprot_acc.split('.')[0]
+
+    url = f"https://ted.cathdb.info/api/v1/uniprot/summary/{base_acc}?skip=0&limit=100"
+
+    try:
+        with urllib.request.urlopen(url, timeout=30) as response:
+            data = json.loads(response.read().decode())
+
+            if not data or 'data' not in data:
+                return None
+
+            # Find the specific TED domain
+            for domain in data.get('data', []):
+                if domain.get('ted_id') == ted_id:
+                    chopping = domain.get('chopping', '')
+                    if chopping:
+                        # Parse chopping format: "1-100" or "1-100_150-200"
+                        segments = []
+                        for segment in chopping.split('_'):
+                            if '-' in segment:
+                                start, end = segment.split('-')
+                                segments.append((int(start), int(end)))
+
+                        if segments:
+                            # Return first start and last end
+                            return (min(s[0] for s in segments), max(s[1] for s in segments))
+
+            return None
+
+    except Exception as e:
+        print(f"Warning: Failed to fetch TED domain coordinates for {ted_id}: {e}")
+        return None
+
+
 def connect_to_pfam_db(config_file='~/.my.cnf'):
     """
     Connect to the Pfam MySQL database using credentials from config file.
@@ -860,10 +934,24 @@ def main():
     import tempfile
     import shutil
 
+    # Check for TED reference in DESC file
+    desc_file = os.path.join(args.curation_dir, 'DESC')
+    ted_reference = parse_desc_ted_reference(desc_file)
+
     # Parse SEED alignment
     print("Parsing SEED alignment...")
     sequences = parse_seed_alignment(seed_file)
     print(f"Found {len(sequences)} sequences in SEED alignment")
+
+    if ted_reference:
+        print(f"\nFound TED reference in DESC: {ted_reference['ted_id']}")
+        coords = get_ted_domain_coordinates(ted_reference['uniprot_acc'], ted_reference['ted_id'])
+        if coords:
+            print(f"  TED domain coordinates: {coords[0]}-{coords[1]}")
+            # Add TED reference to beginning of sequences list (with empty sequence as placeholder)
+            sequences.insert(0, (ted_reference['uniprot_acc'], coords[0], coords[1], ''))
+        else:
+            print(f"  Warning: Could not fetch coordinates for {ted_reference['ted_id']}")
 
     if not sequences:
         print("Error: No sequences found in SEED file")
@@ -912,11 +1000,17 @@ def main():
                 if not cif_file:
                     continue
 
-                # Verify sequence match (alignment_seq already has gaps removed)
+                # Get structure sequence
                 structure_seq = get_sequence_from_cif(cif_file)
-                if not verify_sequence_match(alignment_seq, structure_seq, start, end, verbose=True):
-                    print(f"Warning: Sequence mismatch for {uniprot_acc}. Skipping.")
-                    continue
+
+                # Verify sequence match only if alignment_seq is provided (not empty)
+                # Empty alignment_seq indicates a TED reference from DESC file
+                if alignment_seq:
+                    if not verify_sequence_match(alignment_seq, structure_seq, start, end, verbose=True):
+                        print(f"Warning: Sequence mismatch for {uniprot_acc}. Skipping.")
+                        continue
+                else:
+                    print(f"  Processing TED reference from DESC file")
 
                 # Cache protein length for later use
                 protein_length_cache[uniprot_acc] = len(structure_seq)
