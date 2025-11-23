@@ -13,10 +13,10 @@ This script:
 8. Reports over-represented domains above frequency threshold
 
 Usage:
-    analyze_string_network.py <pfam_directory> [options]
+    add_string.py <pfam_directory> [options]
 
 Example:
-    analyze_string_network.py /path/to/PF06267 --score-threshold 400 --min-frequency 0.2
+    add_string.py /path/to/PF06267 --score-threshold 400 --min-frequency 0.3
 """
 
 import argparse
@@ -661,7 +661,7 @@ def write_detailed_results(results: Dict, pfam_dir: str):
     print(f"\n  Detailed results written to: {output_file}")
 
 
-def print_report(results: Dict, min_frequency: float = 0.2, output_file: Optional[str] = None):
+def print_report(results: Dict, min_frequency: float = 0.3, output_file: Optional[str] = None):
     """
     Print analysis report.
 
@@ -763,8 +763,8 @@ def main():
     parser.add_argument(
         '--min-frequency',
         type=float,
-        default=0.2,
-        help='Minimum frequency (0.0-1.0) to report domain/cluster (default: 0.2 = 20%%)'
+        default=0.3,
+        help='Minimum frequency (0.0-1.0) to report domain/cluster (default: 0.3 = 30%%)'
     )
 
     parser.add_argument(
