@@ -382,12 +382,13 @@ def run_foldseek_search(query_cif, database_path, output_file, tmp_dir):
     return foldseek_output
 
 
-def fetch_ted_domains(uniprot_acc):
+def fetch_ted_domains(uniprot_acc, protein_length_cache=None):
     """
     Fetch TED domain information from TED API.
 
     Args:
         uniprot_acc: UniProt accession (may include version)
+        protein_length_cache: dict of {uniprot_acc: length} to avoid re-downloading
 
     Returns:
         dict with 'protein_length' and 'domains' list, or None if failed
@@ -411,14 +412,17 @@ def fetch_ted_domains(uniprot_acc):
             # Try to get protein length from API response
             protein_length = data.get('protein_length') or data.get('sequence_length') or data.get('uniprot_length')
 
-            # If not in API, get it from AlphaFold model
+            # If not in API, check cache first before downloading
             if not protein_length:
-                # Download AlphaFold model to get sequence length
-                with tempfile.TemporaryDirectory() as tmp_dir:
-                    cif_file = download_alphafold_model(base_acc, tmp_dir)
-                    if cif_file:
-                        sequence = get_sequence_from_cif(cif_file)
-                        protein_length = len(sequence)
+                if protein_length_cache and uniprot_acc in protein_length_cache:
+                    protein_length = protein_length_cache[uniprot_acc]
+                else:
+                    # Last resort: download AlphaFold model to get sequence length
+                    with tempfile.TemporaryDirectory() as tmp_dir:
+                        cif_file = download_alphafold_model(base_acc, tmp_dir)
+                        if cif_file:
+                            sequence = get_sequence_from_cif(cif_file)
+                            protein_length = len(sequence)
 
             domains = []
 
@@ -454,13 +458,66 @@ def fetch_ted_domains(uniprot_acc):
         return None
 
 
-def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
+def calculate_ted_consistency_score(seed_start, seed_end, ted_domains):
+    """
+    Calculate TED-Pfam consistency score for a SEED region.
+
+    Uses bidirectional coverage with minimum:
+    - Coverage_TED = (SEED residues covered by TED) / (SEED length)
+    - Coverage_SEED = (TED residues within SEED) / (TED total length)
+    - Score = min(Coverage_TED, Coverage_SEED)
+
+    Args:
+        seed_start: SEED region start position
+        seed_end: SEED region end position
+        ted_domains: list of TED domains with segments
+
+    Returns:
+        float: consistency score from 0 to 1, or 0 if no TED domains
+    """
+    if not ted_domains:
+        return 0.0
+
+    seed_length = seed_end - seed_start + 1
+    best_score = 0.0
+
+    for domain in ted_domains:
+        segments = domain.get('segments', [])
+        if not segments:
+            continue
+
+        # Treat multi-segment domain as continuous from first start to last end
+        ted_start = min(seg['start'] for seg in segments)
+        ted_end = max(seg['end'] for seg in segments)
+        ted_length = ted_end - ted_start + 1
+
+        # Calculate overlap
+        overlap_start = max(seed_start, ted_start)
+        overlap_end = min(seed_end, ted_end)
+
+        if overlap_start <= overlap_end:
+            intersection = overlap_end - overlap_start + 1
+
+            # Bidirectional coverage
+            coverage_ted = intersection / seed_length  # SEED covered by TED
+            coverage_seed = intersection / ted_length   # TED within SEED
+
+            # Take minimum for this domain
+            score = min(coverage_ted, coverage_seed)
+            best_score = max(best_score, score)
+
+    return best_score
+
+
+def create_ted_visualization(plddt_scores, curation_dir, ted_cache=None, mean_consistency=None, output_file='ted.png'):
     """
     Create a visualization of TED domains for proteins in the SEED alignment.
 
     Args:
-        plddt_scores: list of dicts with 'accession' and 'mean_plddt'
+        plddt_scores: list of dicts with 'accession', 'mean_plddt', and 'consistency_score'
         curation_dir: path to curation directory
+        ted_cache: dict of cached TED domain data (optional)
+        mean_consistency: mean family consistency score (optional)
         output_file: output filename (default: ted.png)
     """
     try:
@@ -474,7 +531,7 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
     domain_colors = ['#4A79A7', '#F28E2C', '#E15759', '#76B7B2', '#59A14F',
                      '#EDC949', '#AF7AA1', '#FF9DA7', '#9C755F', '#BAB0AB']
 
-    # Fetch TED domain information for each protein
+    # Build protein data for visualization
     proteins_data = []
 
     for score_entry in plddt_scores:
@@ -490,10 +547,16 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
         seed_start = int(region_parts[0])
         seed_end = int(region_parts[1])
 
-        # Fetch TED domains
-        ted_data = fetch_ted_domains(uniprot_acc)
+        # Get TED data from cache or fetch if not cached
+        if ted_cache and uniprot_acc in ted_cache:
+            ted_data = ted_cache[uniprot_acc]
+        else:
+            ted_data = fetch_ted_domains(uniprot_acc)
 
         if ted_data:
+            # Get consistency score from plddt_scores entry (already calculated)
+            consistency_score = score_entry.get('consistency_score', 0.0)
+
             proteins_data.append({
                 'accession': accession,
                 'uniprot_acc': uniprot_acc,
@@ -501,7 +564,8 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
                 'seed_end': seed_end,
                 'protein_length': ted_data['protein_length'],
                 'domains': ted_data['domains'],
-                'mean_plddt': score_entry['mean_plddt']
+                'mean_plddt': score_entry['mean_plddt'],
+                'consistency_score': consistency_score
             })
 
     if not proteins_data:
@@ -511,7 +575,7 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
     # Calculate figure dimensions
     residues_per_line = 1500
     line_height = 60  # pixels per protein line
-    margin_left = 150  # space for labels
+    margin_left = 200  # space for labels (increased for consistency score)
     margin_right = 50
     margin_top = 40
     margin_bottom = 40
@@ -533,6 +597,12 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
     ax.set_ylim(0, fig_height)
     ax.axis('off')
 
+    # Add mean consistency score as title if available
+    if mean_consistency is not None:
+        ax.text(fig_width / 2, fig_height - 15,
+               f"Mean Family TED Consistency Score: {mean_consistency:.2f}",
+               ha='center', va='top', fontsize=11, weight='bold')
+
     # Draw proteins
     current_y = fig_height - margin_top - line_height / 2
 
@@ -546,7 +616,7 @@ def create_ted_visualization(plddt_scores, curation_dir, output_file='ted.png'):
 
             # Draw label on first line only
             if line_idx == 0:
-                label = f"{protein['accession']} ({protein['mean_plddt']:.2f})"
+                label = f"{protein['accession']} ({protein['mean_plddt']:.2f}) [{protein['consistency_score']:.2f}]"
                 ax.text(margin_left - 10, current_y, label,
                        ha='right', va='center', fontsize=9, family='monospace')
 
@@ -830,6 +900,9 @@ def main():
             # Collect all pLDDT scores for output file
             plddt_scores = []
 
+            # Cache protein lengths from downloaded models
+            protein_length_cache = {}
+
             # Process each sequence
             for uniprot_acc, start, end, alignment_seq in sequences:
                 print(f"\nProcessing {uniprot_acc} ({start}-{end})...")
@@ -844,6 +917,9 @@ def main():
                 if not verify_sequence_match(alignment_seq, structure_seq, start, end, verbose=True):
                     print(f"Warning: Sequence mismatch for {uniprot_acc}. Skipping.")
                     continue
+
+                # Cache protein length for later use
+                protein_length_cache[uniprot_acc] = len(structure_seq)
 
                 # Calculate mean pLDDT (only for the alignment region)
                 mean_plddt, num_residues = calculate_mean_plddt(cif_file, start, end, verbose=True)
@@ -866,18 +942,73 @@ def main():
 
             # Write pLDDT scores to file, sorted by highest score first
             if plddt_scores:
+                # Fetch TED domains once and cache them
+                print("\nFetching TED domain data...")
+                ted_cache = {}
+                for entry in plddt_scores:
+                    accession = entry['accession']
+                    if '/' in accession:
+                        parts = accession.split('/')
+                        uniprot_acc = parts[0]
+
+                        # Fetch TED domains only once per protein (with protein length cache)
+                        if uniprot_acc not in ted_cache:
+                            ted_data = fetch_ted_domains(uniprot_acc, protein_length_cache)
+                            ted_cache[uniprot_acc] = ted_data
+                            if ted_data and ted_data.get('domains'):
+                                print(f"  {uniprot_acc}: found {len(ted_data['domains'])} TED domain(s)")
+                            else:
+                                print(f"  {uniprot_acc}: no TED domains found")
+
+                # Calculate consistency scores for each entry
+                print("Calculating TED consistency scores...")
+                consistency_scores = []
+                for entry in plddt_scores:
+                    accession = entry['accession']
+                    if '/' in accession:
+                        parts = accession.split('/')
+                        uniprot_acc = parts[0]
+                        region_parts = parts[1].split('-')
+                        seed_start = int(region_parts[0])
+                        seed_end = int(region_parts[1])
+
+                        # Use cached TED data
+                        ted_data = ted_cache.get(uniprot_acc)
+                        if ted_data:
+                            consistency_score = calculate_ted_consistency_score(
+                                seed_start, seed_end, ted_data['domains']
+                            )
+                            entry['consistency_score'] = consistency_score
+                            consistency_scores.append(consistency_score)
+                            print(f"  {accession}: consistency score = {consistency_score:.2f}")
+                        else:
+                            entry['consistency_score'] = 0.0
+                            print(f"  {accession}: no TED data, score = 0.00")
+                    else:
+                        entry['consistency_score'] = 0.0
+
+                # Calculate mean family consistency score
+                if consistency_scores:
+                    mean_consistency = sum(consistency_scores) / len(consistency_scores)
+                    print(f"\nMean family TED consistency score: {mean_consistency:.2f}")
+                else:
+                    mean_consistency = 0.0
+                    print(f"\nMean family TED consistency score: 0.00 (no TED data available)")
+
                 plddt_file = os.path.join(args.curation_dir, 'pLDDT')
                 plddt_scores.sort(key=lambda x: x['mean_plddt'], reverse=True)
 
                 with open(plddt_file, 'w') as f:
+                    # Write header with mean consistency score
+                    f.write(f"# Mean family TED consistency score: {mean_consistency:.2f}\n")
                     for entry in plddt_scores:
-                        f.write(f"{entry['mean_plddt']:.2f}\t{entry['accession']}\n")
+                        f.write(f"{entry['mean_plddt']:.2f}\t{entry['accession']}\t{entry['consistency_score']:.2f}\n")
 
-                print(f"\nWrote pLDDT scores for {len(plddt_scores)} sequences to {plddt_file}")
+                print(f"Wrote pLDDT scores for {len(plddt_scores)} sequences to {plddt_file}")
 
-                # Create TED domain visualization
+                # Create TED domain visualization (reusing cached TED data)
                 print("\nCreating TED domain visualization...")
-                create_ted_visualization(plddt_scores, args.curation_dir)
+                create_ted_visualization(plddt_scores, args.curation_dir, ted_cache, mean_consistency)
 
             print(f"\nBest model: {best_info[0]} ({best_info[1]}-{best_info[2]}) "
                   f"with mean pLDDT {best_plddt:.2f}")
