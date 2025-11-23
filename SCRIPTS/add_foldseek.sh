@@ -1,1 +1,1 @@
-shuf triage | awk '{system("add_foldseek.py --force "$1)}'
+shuf triage | awk '{system("search_pfam_structure.py "$1)}'
