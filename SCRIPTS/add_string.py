@@ -340,25 +340,20 @@ def parse_protein_aliases(aliases_file: str, string_ids: Set[str]) -> Dict[str, 
     return string_to_uniprot
 
 
-def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG, verbose: bool = True) -> List[Tuple[str, int, int, str, str]]:
+def load_pfama_id_mapping(config_file: str = DEFAULT_MYSQL_CONFIG) -> Dict[str, str]:
     """
-    Query pfam_live database for Pfam domains in a UniProt sequence.
+    Load pfamA_acc -> pfamA_id mapping into memory.
 
     Args:
-        uniprot_acc: UniProt accession
         config_file: Path to MySQL config file
-        verbose: If True, print error messages
 
     Returns:
-        List of tuples: (pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id)
+        Dictionary mapping pfamA_acc to pfamA_id
     """
     config_file = os.path.expanduser(config_file)
 
     try:
-        # Use mysql command line tool via subprocess - more reliable than mysql.connector
-        # Join with pfamA table to get pfamA_id
-        # Filter for in_full = 1 to only get domains from full sequences
-        query = f"SELECT r.pfamseq_acc, r.seq_start, r.seq_end, r.pfamA_acc, a.pfamA_id FROM pfamA_reg_full_significant r JOIN pfamA a ON r.pfamA_acc = a.pfamA_acc WHERE r.pfamseq_acc = '{uniprot_acc}' AND r.in_full = 1"
+        query = "SELECT pfamA_acc, pfamA_id FROM pfamA"
 
         cmd = [
             'mysql',
@@ -375,44 +370,141 @@ def query_pfam_domains(uniprot_acc: str, config_file: str = DEFAULT_MYSQL_CONFIG
             cmd,
             capture_output=True,
             text=True,
-            timeout=30
+            timeout=60
         )
 
         if result.returncode != 0:
-            if verbose:
-                print(f"\n         ERROR: mysql returned code {result.returncode}")
-                if result.stderr:
-                    print(f"         {result.stderr}")
-            return []
+            print(f"WARNING: Failed to load pfamA mapping, will use JOINs instead")
+            return {}
 
         # Parse output
-        results = []
+        mapping = {}
         for line in result.stdout.strip().split('\n'):
             if line:
                 parts = line.split('\t')
-                if len(parts) >= 5:
+                if len(parts) >= 2:
+                    mapping[parts[0]] = parts[1]
+
+        return mapping
+
+    except Exception as e:
+        print(f"WARNING: Failed to load pfamA mapping: {e}")
+        return {}
+
+
+def batch_query_pfam_domains(uniprot_accs: Set[str], config_file: str = DEFAULT_MYSQL_CONFIG,
+                             pfama_mapping: Optional[Dict[str, str]] = None) -> Dict[str, List[Tuple[str, int, int, str, str]]]:
+    """
+    Query pfam_live database for Pfam domains for multiple UniProt sequences at once.
+
+    Args:
+        uniprot_accs: Set of UniProt accessions to query
+        config_file: Path to MySQL config file
+        pfama_mapping: Optional pre-loaded pfamA_acc -> pfamA_id mapping
+
+    Returns:
+        Dictionary mapping uniprot_acc to list of tuples: (pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id)
+    """
+    if not uniprot_accs:
+        return {}
+
+    config_file = os.path.expanduser(config_file)
+
+    # Build IN clause with proper escaping
+    acc_list = "','".join(uniprot_accs)
+
+    try:
+        # Query without JOIN if we have the mapping cached
+        if pfama_mapping:
+            query = f"SELECT r.pfamseq_acc, r.seq_start, r.seq_end, r.pfamA_acc FROM pfamA_reg_full_significant r WHERE r.pfamseq_acc IN ('{acc_list}') AND r.in_full = 1"
+        else:
+            query = f"SELECT r.pfamseq_acc, r.seq_start, r.seq_end, r.pfamA_acc, a.pfamA_id FROM pfamA_reg_full_significant r JOIN pfamA a ON r.pfamA_acc = a.pfamA_acc WHERE r.pfamseq_acc IN ('{acc_list}') AND r.in_full = 1"
+
+        cmd = [
+            'mysql',
+            f'--defaults-file={config_file}',
+            'pfam_live',
+            '--quick',
+            '--silent',
+            '--skip-column-names',
+            '-e',
+            query
+        ]
+
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            timeout=300  # Longer timeout for batch query
+        )
+
+        if result.returncode != 0:
+            print(f"\n         ERROR: mysql returned code {result.returncode}")
+            if result.stderr:
+                print(f"         {result.stderr}")
+            return {}
+
+        # Parse output and group by uniprot_acc
+        results = defaultdict(list)
+        for line in result.stdout.strip().split('\n'):
+            if line:
+                parts = line.split('\t')
+                if pfama_mapping and len(parts) >= 4:
+                    pfamseq_acc = parts[0]
+                    seq_start = int(parts[1])
+                    seq_end = int(parts[2])
+                    pfamA_acc = parts[3]
+                    pfamA_id = pfama_mapping.get(pfamA_acc, pfamA_acc)  # Fallback to acc if not in mapping
+                    results[pfamseq_acc].append((pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id))
+                elif not pfama_mapping and len(parts) >= 5:
                     pfamseq_acc = parts[0]
                     seq_start = int(parts[1])
                     seq_end = int(parts[2])
                     pfamA_acc = parts[3]
                     pfamA_id = parts[4]
-                    results.append((pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id))
+                    results[pfamseq_acc].append((pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id))
 
-        return results
+        return dict(results)
 
     except subprocess.TimeoutExpired:
-        if verbose:
-            print(f"\n         ERROR: Query timeout for {uniprot_acc}")
-        return []
+        print(f"\n         ERROR: Batch query timeout")
+        return {}
     except Exception as e:
-        if verbose:
-            print(f"\n         ERROR querying database for {uniprot_acc}: {e}")
-        return []
+        print(f"\n         ERROR in batch query: {e}")
+        return {}
+
+
+def should_skip_analysis(pfam_dir: str, force: bool = False) -> bool:
+    """
+    Check if analysis should be skipped because STRING file is already up-to-date.
+
+    Args:
+        pfam_dir: Path to Pfam family directory
+        force: If True, never skip (always re-run)
+
+    Returns:
+        True if analysis should be skipped, False otherwise
+    """
+    if force:
+        return False
+
+    string_file = os.path.join(pfam_dir, 'STRING')
+    seq_info_file = os.path.join(pfam_dir, 'seq_info')
+
+    # Skip if STRING file exists and is newer than seq_info
+    if os.path.exists(string_file) and os.path.exists(seq_info_file):
+        string_mtime = os.path.getmtime(string_file)
+        seq_info_mtime = os.path.getmtime(seq_info_file)
+
+        if string_mtime > seq_info_mtime:
+            return True
+
+    return False
 
 
 def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int = 400,
                      network_depth: int = 1, mysql_config: str = DEFAULT_MYSQL_CONFIG,
-                     debug_limit: Optional[int] = None, auto_download: bool = True) -> Dict:
+                     debug_limit: Optional[int] = None, auto_download: bool = True, force: bool = False) -> Dict:
     """
     Main analysis function to process STRING networks for a Pfam family.
 
@@ -424,10 +516,16 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
         mysql_config: Path to MySQL config file
         debug_limit: If set, only process first N networks
         auto_download: Whether to auto-download missing STRING files
+        force: If True, re-run even if STRING file is up-to-date
 
     Returns:
         Dictionary with analysis results
     """
+    # Check if we should skip this analysis
+    if should_skip_analysis(pfam_dir, force):
+        print(f"STRING file is up-to-date for {pfam_dir}, skipping analysis (use --force to override)")
+        return None
+
     results = {
         'pfam_domains': defaultdict(lambda: {'networks': set(), 'proteins': defaultdict(set), 'pfamA_id': None}),
         'proteins_without_domains': set(),
@@ -459,6 +557,12 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
 
     if debug_limit:
         print(f"   DEBUG MODE: Processing only first {debug_limit} networks")
+
+    # Load pfamA_acc -> pfamA_id mapping once for efficiency
+    print("\n   Loading pfamA mappings...")
+    pfama_mapping = load_pfama_id_mapping(mysql_config)
+    if pfama_mapping:
+        print(f"   Loaded {len(pfama_mapping)} pfamA mappings")
 
     # Process each species
     networks_processed = 0
@@ -515,8 +619,18 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
         print("   Mapping to UniProt...")
         string_to_uniprot = parse_protein_aliases(aliases_file, all_network_proteins)
 
+        # Collect all unique UniProt accessions for this species
+        all_uniprot_accs = set()
+        for string_id_set in string_to_uniprot.values():
+            all_uniprot_accs.update(string_id_set)
+
+        # Batch query Pfam domains for all UniProt accessions at once
+        print(f"   Querying Pfam domains for {len(all_uniprot_accs)} UniProt accessions...")
+        domain_cache = batch_query_pfam_domains(all_uniprot_accs, mysql_config, pfama_mapping)
+        print(f"   Found domains for {len(domain_cache)} proteins")
+
         # Analyze each query protein's network
-        print(f"\n3. Analyzing Pfam domains for query proteins...")
+        print(f"\n3. Processing networks for species {taxid}...")
         for query_protein in query_proteins_this_species:
             if query_protein not in networks:
                 continue
@@ -533,8 +647,6 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
             else:
                 network_partners = expand_network_depth(networks, query_protein, network_depth,
                                                        links_file, score_threshold)
-
-            print(f"   {query_protein}: {len(network_partners)} partners (depth={network_depth})")
 
             results['total_networks'] += 1
             networks_processed += 1
@@ -556,25 +668,26 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
 
                 # For each UniProt accession
                 for uniprot_acc in uniprot_accs:
-                    # Query Pfam domains
-                    print(f"       Querying Pfam domains for {uniprot_acc}...", end='')
-                    domains = query_pfam_domains(uniprot_acc, mysql_config)
+                    # Look up domains from cache
+                    domains = domain_cache.get(uniprot_acc, [])
 
                     if domains:
-                        print(f" found {len(domains)} domain(s)")
                         pfam_domains_found += len(domains)
                         for pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id in domains:
                             results['pfam_domains'][pfamA_acc]['networks'].add(network_id)
                             results['pfam_domains'][pfamA_acc]['proteins'][partner_string_id].add(uniprot_acc)
                             results['pfam_domains'][pfamA_acc]['pfamA_id'] = pfamA_id
                     else:
-                        print(f" no domains")
                         # No Pfam domains - record this UniProt accession
                         results['proteins_without_domains'].add(uniprot_acc)
                         proteins_without_domains += 1
 
-            print(f"     {partners_with_uniprot}/{len(network_partners)} have UniProt mappings")
-            print(f"     Found {pfam_domains_found} Pfam domains, {proteins_without_domains} proteins without domains")
+            # Print summary for this network
+            if networks_processed % 10 == 0:
+                print(f"   Processed {networks_processed} networks...")
+
+        # Print species summary
+        print(f"   Species {taxid} complete: {networks_processed} networks processed")
 
     return results
 
@@ -796,6 +909,12 @@ def main():
         help='Output file for report (default: print to console only)'
     )
 
+    parser.add_argument(
+        '--force',
+        action='store_true',
+        help='Force re-analysis even if STRING file is up-to-date'
+    )
+
     args = parser.parse_args()
 
     # Validate Pfam directory
@@ -839,14 +958,14 @@ def main():
         args.network_depth,
         args.mysql_config,
         args.debug_limit,
-        not args.no_download
+        not args.no_download,
+        args.force
     )
 
-    # Write detailed results file
-    write_detailed_results(results, args.pfam_dir)
-
-    # Print report
-    print_report(results, args.min_frequency, args.output)
+    # Write detailed results file and report (if analysis was not skipped)
+    if results is not None:
+        write_detailed_results(results, args.pfam_dir)
+        print_report(results, args.min_frequency, args.output)
 
 
 if __name__ == '__main__':
