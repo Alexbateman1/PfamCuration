@@ -43,6 +43,9 @@ Required packages:
 
 # With version number
 ./reorient_af.py P12345.2
+
+# Use more samples for better optimization (slower but more thorough)
+./reorient_af.py P12345 --n-samples 5000
 ```
 
 ### Output Files
@@ -54,14 +57,17 @@ The script generates two files:
 
 ## Algorithm
 
-The script uses **PCA (Principal Component Analysis)** to find the optimal viewing orientation:
+The script uses **rotation sampling with 2D overlap minimization** to find the optimal viewing orientation:
 
-1. Calculate the center of mass for each TED domain
-2. Perform PCA on the domain centers
-3. Rotate the structure to align the first two principal components with the XY viewing plane
-4. This maximizes the 2D spread of domains, minimizing visual occlusion
+1. Extract C-alpha atoms for each TED domain
+2. Sample 1000 viewing angles using Fibonacci sphere sampling for uniform coverage
+3. For each angle:
+   - Rotate the structure
+   - Project C-alphas to 2D (XY plane)
+   - Calculate bounding box overlap between domain pairs
+4. Select the rotation with minimal overlap
 
-This is a simple, mathematically elegant solution that works well for most protein structures with multiple domains.
+The algorithm uses only C-alpha atoms for calculations (much faster), but rotates all atoms for the output structure. The visualization also shows only the C-alpha backbone trace.
 
 ## TED Domain Color Scheme
 

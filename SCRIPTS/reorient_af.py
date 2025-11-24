@@ -22,9 +22,9 @@ Dependencies:
     Install with: pip install -r reorient_af_requirements.txt
 
 Algorithm:
-    The rotation is calculated using PCA (Principal Component Analysis) on the
-    domain centers of mass. This finds the orientation where domains are maximally
-    spread out in 2D space, minimizing visual occlusion when viewing the structure.
+    The rotation is calculated by sampling many viewing angles and selecting the
+    one that minimizes 2D overlap between domain bounding boxes. Only C-alpha
+    atoms are used for calculations, though all atoms are included in the output.
 
 TED Domain Colors (from TED database):
     Domain 01: #4A79A7 (blue)
@@ -144,14 +144,14 @@ def fetch_ted_domains(uniprot_acc):
 
 def parse_cif_structure(cif_file):
     """
-    Parse CIF file and extract atom coordinates and residue information.
+    Parse CIF file and extract C-alpha and all atom coordinates.
 
     Args:
         cif_file: Path to CIF file
 
     Returns:
-        dict with 'coords' (Nx3 numpy array), 'residues' (list of residue numbers),
-        'atoms' (list of atom records), 'structure' (BioPython structure object)
+        dict with 'ca_coords' (Nx3 numpy array of C-alphas), 'ca_residues' (residue IDs),
+        'all_atoms_data' (list of all atom records), 'structure' (BioPython structure object)
     """
     from Bio.PDB import MMCIFParser
 
@@ -161,46 +161,51 @@ def parse_cif_structure(cif_file):
     # Get the first chain
     chain = next(structure.get_chains())
 
-    coords = []
-    residues = []
-    atoms_data = []
+    ca_coords = []
+    ca_residues = []
+    all_atoms_data = []
 
     for residue in chain.get_residues():
         res_id = residue.get_id()[1]
+
+        # Extract C-alpha
+        if 'CA' in residue:
+            ca_atom = residue['CA']
+            ca_coords.append(ca_atom.get_coord())
+            ca_residues.append(res_id)
+
+        # Store all atoms for output
         for atom in residue.get_atoms():
-            coord = atom.get_coord()
-            coords.append(coord)
-            residues.append(res_id)
-            atoms_data.append({
+            all_atoms_data.append({
                 'residue': residue,
                 'atom': atom,
                 'res_id': res_id,
-                'coord': coord
+                'coord': atom.get_coord().copy()
             })
 
     return {
-        'coords': np.array(coords),
-        'residues': np.array(residues),
-        'atoms_data': atoms_data,
+        'ca_coords': np.array(ca_coords),
+        'ca_residues': np.array(ca_residues),
+        'all_atoms_data': all_atoms_data,
         'structure': structure
     }
 
 
-def calculate_domain_centers(structure_data, ted_domains):
+def get_domain_ca_coords(structure_data, ted_domains):
     """
-    Calculate the center of mass for each TED domain.
+    Extract C-alpha coordinates for each TED domain.
 
     Args:
         structure_data: Dict from parse_cif_structure
         ted_domains: List of TED domain dicts
 
     Returns:
-        numpy array of shape (n_domains, 3) with domain centers
+        list of numpy arrays, one per domain with C-alpha coordinates
     """
-    coords = structure_data['coords']
-    residues = structure_data['residues']
+    ca_coords = structure_data['ca_coords']
+    ca_residues = structure_data['ca_residues']
 
-    domain_centers = []
+    domain_ca_coords = []
 
     for domain in ted_domains:
         domain_coords = []
@@ -209,66 +214,164 @@ def calculate_domain_centers(structure_data, ted_domains):
             start = segment['start']
             end = segment['end']
 
-            # Find all atoms in this segment
-            mask = (residues >= start) & (residues <= end)
-            segment_coords = coords[mask]
+            # Find all C-alphas in this segment
+            mask = (ca_residues >= start) & (ca_residues <= end)
+            segment_coords = ca_coords[mask]
 
             if len(segment_coords) > 0:
                 domain_coords.append(segment_coords)
 
         if domain_coords:
-            # Concatenate all segment coordinates for this domain
             all_domain_coords = np.vstack(domain_coords)
-            # Calculate center of mass (simple average)
-            center = np.mean(all_domain_coords, axis=0)
-            domain_centers.append(center)
+            domain_ca_coords.append(all_domain_coords)
         else:
-            print(f"Warning: No coordinates found for domain {domain['ted_id']}")
-            domain_centers.append(np.array([0, 0, 0]))
+            print(f"Warning: No C-alpha coordinates found for domain {domain['ted_id']}")
+            domain_ca_coords.append(np.array([]))
 
-    return np.array(domain_centers)
+    return domain_ca_coords
 
 
-def find_optimal_rotation(domain_centers):
+def rotation_matrix_from_angles(theta, phi, psi):
     """
-    Find rotation matrix that maximizes 2D spread of domain centers.
-
-    Uses PCA to find the principal components, then rotates to align
-    the first two principal components with the XY plane for optimal viewing.
+    Create a rotation matrix from Euler angles.
 
     Args:
-        domain_centers: numpy array of shape (n_domains, 3)
+        theta: Rotation around X axis (radians)
+        phi: Rotation around Y axis (radians)
+        psi: Rotation around Z axis (radians)
 
     Returns:
         3x3 rotation matrix
     """
-    if len(domain_centers) < 2:
+    # Rotation around X
+    Rx = np.array([
+        [1, 0, 0],
+        [0, np.cos(theta), -np.sin(theta)],
+        [0, np.sin(theta), np.cos(theta)]
+    ])
+
+    # Rotation around Y
+    Ry = np.array([
+        [np.cos(phi), 0, np.sin(phi)],
+        [0, 1, 0],
+        [-np.sin(phi), 0, np.cos(phi)]
+    ])
+
+    # Rotation around Z
+    Rz = np.array([
+        [np.cos(psi), -np.sin(psi), 0],
+        [np.sin(psi), np.cos(psi), 0],
+        [0, 0, 1]
+    ])
+
+    return Rz @ Ry @ Rx
+
+
+def calculate_2d_overlap_score(domain_ca_coords, rotation_matrix):
+    """
+    Calculate a score for 2D overlap after applying rotation and projecting to XY plane.
+    Lower score means less overlap.
+
+    Args:
+        domain_ca_coords: List of numpy arrays (one per domain)
+        rotation_matrix: 3x3 rotation matrix
+
+    Returns:
+        float: overlap score (lower is better)
+    """
+    if len(domain_ca_coords) < 2:
+        return 0.0
+
+    # Rotate all domain coordinates
+    rotated_domains = []
+    for coords in domain_ca_coords:
+        if len(coords) > 0:
+            rotated = coords @ rotation_matrix.T
+            # Project to 2D (XY plane)
+            rotated_2d = rotated[:, :2]
+            rotated_domains.append(rotated_2d)
+
+    if len(rotated_domains) < 2:
+        return 0.0
+
+    # Calculate pairwise overlap using bounding box overlap
+    total_overlap = 0.0
+    num_pairs = 0
+
+    for i in range(len(rotated_domains)):
+        for j in range(i + 1, len(rotated_domains)):
+            coords_i = rotated_domains[i]
+            coords_j = rotated_domains[j]
+
+            # Get bounding boxes
+            min_i = np.min(coords_i, axis=0)
+            max_i = np.max(coords_i, axis=0)
+            min_j = np.min(coords_j, axis=0)
+            max_j = np.max(coords_j, axis=0)
+
+            # Calculate overlap in each dimension
+            overlap_x = max(0, min(max_i[0], max_j[0]) - max(min_i[0], min_j[0]))
+            overlap_y = max(0, min(max_i[1], max_j[1]) - max(min_i[1], min_j[1]))
+
+            # Overlap area
+            overlap_area = overlap_x * overlap_y
+
+            # Normalize by the smaller domain's bounding box area
+            area_i = (max_i[0] - min_i[0]) * (max_i[1] - min_i[1])
+            area_j = (max_j[0] - min_j[0]) * (max_j[1] - min_j[1])
+            min_area = min(area_i, area_j)
+
+            if min_area > 0:
+                normalized_overlap = overlap_area / min_area
+                total_overlap += normalized_overlap
+                num_pairs += 1
+
+    if num_pairs > 0:
+        return total_overlap / num_pairs
+    return 0.0
+
+
+def find_optimal_rotation(domain_ca_coords, n_samples=1000):
+    """
+    Find rotation matrix that minimizes 2D overlap by sampling viewing angles.
+
+    Args:
+        domain_ca_coords: List of numpy arrays (one per domain)
+        n_samples: Number of random rotations to try
+
+    Returns:
+        3x3 rotation matrix
+    """
+    if len(domain_ca_coords) < 2:
         print("Warning: Less than 2 domains, using identity rotation")
         return np.eye(3)
 
-    # Center the domain centers
-    centered = domain_centers - np.mean(domain_centers, axis=0)
+    print(f"Sampling {n_samples} viewing angles to find optimal orientation...")
 
-    # Perform PCA
-    cov_matrix = np.cov(centered.T)
-    eigenvalues, eigenvectors = np.linalg.eigh(cov_matrix)
+    best_rotation = np.eye(3)
+    best_score = float('inf')
 
-    # Sort by eigenvalues (descending)
-    idx = eigenvalues.argsort()[::-1]
-    eigenvectors = eigenvectors[:, idx]
+    # Sample random rotations using Fibonacci sphere for good coverage
+    golden_ratio = (1 + np.sqrt(5)) / 2
 
-    # The rotation matrix aligns the principal components with X, Y, Z axes
-    # We want the two largest spread directions (PC1 and PC2) to be in the XY plane
-    rotation_matrix = eigenvectors.T
+    for i in range(n_samples):
+        # Generate rotation using Fibonacci spiral on sphere
+        theta = 2 * np.pi * i / golden_ratio
+        phi = np.arccos(1 - 2 * (i + 0.5) / n_samples)
+        psi = np.random.uniform(0, 2 * np.pi)
 
-    # Ensure proper rotation matrix (det = 1, not -1)
-    if np.linalg.det(rotation_matrix) < 0:
-        rotation_matrix[:, 2] *= -1
+        rotation = rotation_matrix_from_angles(theta, phi, psi)
+        score = calculate_2d_overlap_score(domain_ca_coords, rotation)
 
-    print(f"Optimal rotation found using PCA")
-    print(f"Eigenvalues (variance along PCs): {eigenvalues[idx]}")
+        if score < best_score:
+            best_score = score
+            best_rotation = rotation
 
-    return rotation_matrix
+        if (i + 1) % 200 == 0:
+            print(f"  Tested {i + 1}/{n_samples} rotations... (best overlap score: {best_score:.4f})")
+
+    print(f"Optimal rotation found with overlap score: {best_score:.4f}")
+    return best_rotation
 
 
 def apply_rotation_to_structure(structure_data, rotation_matrix):
@@ -282,15 +385,14 @@ def apply_rotation_to_structure(structure_data, rotation_matrix):
     Returns:
         Updated structure_data with rotated coordinates
     """
-    # Rotate coordinates
-    rotated_coords = structure_data['coords'] @ rotation_matrix.T
+    # Rotate C-alpha coordinates
+    structure_data['ca_coords'] = structure_data['ca_coords'] @ rotation_matrix.T
 
-    # Update atom coordinates in BioPython structure
-    for i, atom_data in enumerate(structure_data['atoms_data']):
-        atom_data['atom'].set_coord(rotated_coords[i])
-        atom_data['coord'] = rotated_coords[i]
-
-    structure_data['coords'] = rotated_coords
+    # Rotate all atom coordinates
+    for atom_data in structure_data['all_atoms_data']:
+        rotated_coord = atom_data['coord'] @ rotation_matrix.T
+        atom_data['atom'].set_coord(rotated_coord)
+        atom_data['coord'] = rotated_coord
 
     return structure_data
 
@@ -334,7 +436,7 @@ def save_structure_with_annotations(structure_data, ted_domains, output_file):
 
 def create_3d_visualization(structure_data, ted_domains, output_file='ted3d.png'):
     """
-    Create a 3D visualization of the structure with colored TED domains.
+    Create a 3D visualization of the C-alpha backbone with colored TED domains.
 
     Args:
         structure_data: Dict from parse_cif_structure (with rotated coords)
@@ -348,60 +450,86 @@ def create_3d_visualization(structure_data, ted_domains, output_file='ted3d.png'
         print("Error: matplotlib not available, skipping visualization")
         return
 
-    coords = structure_data['coords']
-    residues = structure_data['residues']
+    ca_coords = structure_data['ca_coords']
+    ca_residues = structure_data['ca_residues']
 
-    # Create figure
-    fig = plt.figure(figsize=(12, 10))
+    # Create figure with white background
+    fig = plt.figure(figsize=(14, 12), facecolor='white')
     ax = fig.add_subplot(111, projection='3d')
+    ax.set_facecolor('white')
 
-    # Plot backbone in grey
-    ax.scatter(coords[:, 0], coords[:, 1], coords[:, 2],
-              c='lightgrey', s=1, alpha=0.3, label='Backbone')
+    # Create a mapping of residue to domain index
+    residue_to_domain = {}
+    for domain_idx, domain in enumerate(ted_domains):
+        for segment in domain['segments']:
+            for res in range(segment['start'], segment['end'] + 1):
+                residue_to_domain[res] = domain_idx
 
-    # Plot each TED domain with its color
+    # Draw the C-alpha backbone as connected lines, colored by domain
+    for i in range(len(ca_coords) - 1):
+        res_current = ca_residues[i]
+        res_next = ca_residues[i + 1]
+
+        # Determine color for this segment
+        domain_idx = residue_to_domain.get(res_current, -1)
+
+        if domain_idx >= 0:
+            color = TED_COLORS[domain_idx % len(TED_COLORS)]
+            linewidth = 3.0
+            alpha = 0.9
+        else:
+            color = 'lightgray'
+            linewidth = 1.5
+            alpha = 0.5
+
+        # Draw line segment
+        ax.plot([ca_coords[i, 0], ca_coords[i + 1, 0]],
+                [ca_coords[i, 1], ca_coords[i + 1, 1]],
+                [ca_coords[i, 2], ca_coords[i + 1, 2]],
+                color=color, linewidth=linewidth, alpha=alpha)
+
+    # Add legend
+    legend_elements = []
     for i, domain in enumerate(ted_domains):
         color = TED_COLORS[i % len(TED_COLORS)]
         ted_label = domain['ted_id'].split('_')[-1] if '_' in domain['ted_id'] else domain['ted_id']
+        legend_elements.append(plt.Line2D([0], [0], color=color, linewidth=3, label=ted_label))
 
-        domain_coords = []
+    if legend_elements:
+        ax.legend(handles=legend_elements, loc='upper right', fontsize=11, framealpha=0.9)
 
-        for segment in domain['segments']:
-            start = segment['start']
-            end = segment['end']
+    # Set title
+    ax.set_title('AlphaFold Structure - C-alpha Backbone with TED Domains',
+                 fontsize=14, weight='bold', pad=20)
 
-            # Find all atoms in this segment
-            mask = (residues >= start) & (residues <= end)
-            segment_coords = coords[mask]
+    # Remove axis labels and ticks for cleaner look
+    ax.set_xticks([])
+    ax.set_yticks([])
+    ax.set_zticks([])
+    ax.set_xlabel('')
+    ax.set_ylabel('')
+    ax.set_zlabel('')
 
-            if len(segment_coords) > 0:
-                domain_coords.append(segment_coords)
+    # Make grid less prominent
+    ax.grid(False)
+    ax.xaxis.pane.fill = False
+    ax.yaxis.pane.fill = False
+    ax.zaxis.pane.fill = False
+    ax.xaxis.pane.set_edgecolor('none')
+    ax.yaxis.pane.set_edgecolor('none')
+    ax.zaxis.pane.set_edgecolor('none')
 
-        if domain_coords:
-            all_domain_coords = np.vstack(domain_coords)
-            ax.scatter(all_domain_coords[:, 0], all_domain_coords[:, 1], all_domain_coords[:, 2],
-                      c=color, s=20, alpha=0.8, label=f'{ted_label}')
-
-    # Set labels and title
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
-    ax.set_zlabel('Z')
-    ax.set_title('AlphaFold Structure with TED Domains', fontsize=14, weight='bold')
-
-    # Add legend
-    ax.legend(loc='upper right', fontsize=10)
-
-    # Set viewing angle for best separation
+    # Set viewing angle (looking down Z-axis since we optimized for XY projection)
     ax.view_init(elev=20, azim=45)
 
     # Equal aspect ratio
-    max_range = np.array([coords[:, 0].max()-coords[:, 0].min(),
-                          coords[:, 1].max()-coords[:, 1].min(),
-                          coords[:, 2].max()-coords[:, 2].min()]).max() / 2.0
+    max_range = np.array([ca_coords[:, 0].max()-ca_coords[:, 0].min(),
+                          ca_coords[:, 1].max()-ca_coords[:, 1].min(),
+                          ca_coords[:, 2].max()-ca_coords[:, 2].min()]).max() / 2.0
 
-    mid_x = (coords[:, 0].max()+coords[:, 0].min()) * 0.5
-    mid_y = (coords[:, 1].max()+coords[:, 1].min()) * 0.5
-    mid_z = (coords[:, 2].max()+coords[:, 2].min()) * 0.5
+    mid_x = (ca_coords[:, 0].max()+ca_coords[:, 0].min()) * 0.5
+    mid_y = (ca_coords[:, 1].max()+ca_coords[:, 1].min()) * 0.5
+    mid_z = (ca_coords[:, 2].max()+ca_coords[:, 2].min()) * 0.5
 
     ax.set_xlim(mid_x - max_range, mid_x + max_range)
     ax.set_ylim(mid_y - max_range, mid_y + max_range)
@@ -409,7 +537,7 @@ def create_3d_visualization(structure_data, ted_domains, output_file='ted3d.png'
 
     # Save figure
     plt.tight_layout()
-    plt.savefig(output_file, dpi=150, bbox_inches='tight')
+    plt.savefig(output_file, dpi=150, bbox_inches='tight', facecolor='white')
     plt.close()
 
     print(f"Saved 3D visualization to: {output_file}")
@@ -432,6 +560,12 @@ def main():
         '--output-png',
         default='ted3d.png',
         help='Output PNG file name (default: ted3d.png)'
+    )
+    parser.add_argument(
+        '--n-samples',
+        type=int,
+        default=1000,
+        help='Number of viewing angles to sample (default: 1000)'
     )
 
     args = parser.parse_args()
@@ -456,20 +590,21 @@ def main():
         sys.exit(1)
     print()
 
-    # Step 3: Parse structure
-    print("[3/6] Parsing structure...")
+    # Step 3: Parse structure (extract C-alphas)
+    print("[3/6] Parsing structure and extracting C-alpha atoms...")
     structure_data = parse_cif_structure(cif_file)
-    print(f"Parsed {len(structure_data['coords'])} atoms")
+    print(f"Extracted {len(structure_data['ca_coords'])} C-alpha atoms")
+    print(f"Total atoms in structure: {len(structure_data['all_atoms_data'])}")
     print()
 
-    # Step 4: Calculate optimal rotation
-    print("[4/6] Calculating optimal rotation...")
-    domain_centers = calculate_domain_centers(structure_data, ted_domains)
-    rotation_matrix = find_optimal_rotation(domain_centers)
+    # Step 4: Calculate optimal rotation using C-alphas only
+    print("[4/6] Finding optimal rotation to minimize domain overlap...")
+    domain_ca_coords = get_domain_ca_coords(structure_data, ted_domains)
+    rotation_matrix = find_optimal_rotation(domain_ca_coords, n_samples=args.n_samples)
     print()
 
-    # Step 5: Apply rotation
-    print("[5/6] Applying rotation to structure...")
+    # Step 5: Apply rotation to ALL atoms
+    print("[5/6] Applying rotation to entire structure...")
     structure_data = apply_rotation_to_structure(structure_data, rotation_matrix)
     print()
 
