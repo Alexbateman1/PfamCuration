@@ -119,39 +119,57 @@ class CurationPipeline:
     
     def wait_for_jobs(self, timeout: int = 3600):
         """
-        Wait for all user jobs to complete by monitoring squeue
-        
+        Wait for pfbuild jobs to complete by monitoring squeue
+        Only waits for running pfbuild jobs, ignoring other user jobs
+
         Args:
             timeout: Maximum time to wait in seconds (default 1 hour)
         """
-        print("Waiting for jobs to complete...")
+        print("Waiting for pfbuild jobs to complete...")
         start_time = time.time()
-        
+
         while True:
             try:
-                # Check for any running jobs from this user
+                # Check for running pfbuild jobs from this user
+                # Format: JOBID PARTITION NAME USER ST TIME NODES NODELIST
                 result = subprocess.run(
-                    ['squeue', '--me', '--noheader'],
+                    ['squeue', '--me', '--noheader', '--format=%i %T %j'],
                     capture_output=True,
                     text=True,
                     check=True
                 )
-                
+
                 if not result.stdout.strip():
-                    print("✓ All jobs completed")
+                    print("✓ All pfbuild jobs completed")
                     return True
-                
-                # Count running jobs
-                job_count = len([line for line in result.stdout.strip().split('\n') if line])
-                print(f"  {job_count} job(s) still running...", end='\r')
-                
+
+                # Count only RUNNING pfbuild jobs (ignore pending, completing, etc.)
+                pfbuild_jobs = []
+                for line in result.stdout.strip().split('\n'):
+                    if line:
+                        fields = line.split()
+                        if len(fields) >= 3:
+                            job_id = fields[0]
+                            state = fields[1]
+                            job_name = fields[2]
+                            # Only count running pfbuild jobs
+                            if state == 'RUNNING' and 'pfbuild' in job_name.lower():
+                                pfbuild_jobs.append(job_id)
+
+                if not pfbuild_jobs:
+                    print("✓ All pfbuild jobs completed")
+                    return True
+
+                print(f"  {len(pfbuild_jobs)} pfbuild job(s) still running...", end='\r')
+
                 # Check timeout
                 if time.time() - start_time > timeout:
                     print(f"\n⚠ Timeout reached after {timeout}s")
+                    print(f"   Remaining jobs: {', '.join(pfbuild_jobs)}")
                     return False
-                
+
                 time.sleep(30)  # Check every 30 seconds
-                
+
             except subprocess.CalledProcessError as e:
                 print(f"\n⚠ Error checking job status: {e}", file=sys.stderr)
                 return False

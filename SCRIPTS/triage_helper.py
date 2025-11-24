@@ -516,7 +516,21 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, skip_to_pfne
         else:
             print("Note: TED file not found", file=sys.stderr)
         print("--- End of TED domain information ---", file=sys.stderr)
-        
+
+        # Check for STRING file and output to STDERR
+        string_file = Path('STRING')
+        if string_file.exists() and string_file.stat().st_size > 0:
+            print("\n--- STRING protein interaction network (copy to Claude) ---", file=sys.stderr)
+            with open(string_file, 'r') as f:
+                lines = f.readlines()
+                # Truncate if too long
+                if len(lines) > 100:
+                    print(''.join(lines[:100]), file=sys.stderr)
+                    print(f"... (truncated - showing first 100 of {len(lines)} lines)", file=sys.stderr)
+                else:
+                    print(''.join(lines), file=sys.stderr)
+            print("--- End of STRING protein interaction network ---", file=sys.stderr)
+
         # Check for foldseek file and output to STDERR if it has more than header line
         foldseek_file = Path('foldseek')
         if foldseek_file.exists():
@@ -814,7 +828,20 @@ def collect_directory_info(dir_name, start_dir):
     else:
         info_sections.append("Note: TED file not found")
     info_sections.append("--- End of TED domain information ---")
-    
+
+    # STRING protein interaction network
+    string_file = Path('STRING')
+    if string_file.exists() and string_file.stat().st_size > 0:
+        info_sections.append("\n--- STRING protein interaction network (copy to Claude) ---")
+        with open(string_file, 'r') as f:
+            lines = f.readlines()
+            if len(lines) > 100:
+                info_sections.append(''.join(lines[:100]))
+                info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
+            else:
+                info_sections.append(''.join(lines))
+        info_sections.append("--- End of STRING protein interaction network ---")
+
     # Foldseek results
     foldseek_file = Path('foldseek')
     if foldseek_file.exists():
