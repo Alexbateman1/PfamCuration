@@ -158,6 +158,63 @@ def fetch_seed_file(pfam_acc, work_dir):
         return None
 
 
+def fetch_align_file(pfam_acc, work_dir):
+    """
+    Fetch ALIGN file for a Pfam family directly from SVN repository.
+    Used as fallback when SEED has no AlphaFold models.
+
+    Args:
+        pfam_acc: Pfam accession (e.g., 'PF00001')
+        work_dir: Working directory where ALIGN file will be saved
+
+    Returns:
+        Path to ALIGN file, or None if fetch failed
+    """
+    family_dir = Path(work_dir) / pfam_acc
+    align_path = family_dir / 'ALIGN'
+
+    # Check if already exists
+    if align_path.exists():
+        print(f"  Family {pfam_acc} ALIGN file already exists")
+        return str(align_path)
+
+    # Create family directory if needed
+    family_dir.mkdir(parents=True, exist_ok=True)
+
+    # Fetch ALIGN file directly from SVN
+    svn_url = f"https://xfam-svn-hl.ebi.ac.uk/svn/pfam/trunk/Data/Families/{pfam_acc}/ALIGN"
+
+    try:
+        result = subprocess.run(
+            ['svn', 'cat', svn_url],
+            capture_output=True,
+            text=True,
+            timeout=60  # ALIGN files can be larger, so longer timeout
+        )
+
+        if result.returncode != 0:
+            print(f"  Warning: SVN fetch of ALIGN failed for {pfam_acc}")
+            print(f"    stderr: {result.stderr}")
+            return None
+
+        # Write ALIGN file
+        with open(align_path, 'w') as f:
+            f.write(result.stdout)
+
+        print(f"  Fetched ALIGN file from SVN: {align_path}")
+        return str(align_path)
+
+    except subprocess.TimeoutExpired:
+        print(f"  Warning: SVN fetch of ALIGN timed out for {pfam_acc}")
+        return None
+    except FileNotFoundError:
+        print(f"  Error: svn command not found. Please ensure it's in your PATH")
+        return None
+    except Exception as e:
+        print(f"  Warning: Error fetching ALIGN for {pfam_acc}: {e}")
+        return None
+
+
 def parse_seed_alignment(seed_file, max_sequences=20):
     """
     Parse a Pfam SEED alignment file and extract UniProt accessions with regions.
@@ -384,8 +441,19 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
     sequences = parse_seed_alignment(seed_file, max_sequences=20)
     print(f"Found {len(sequences)} sequences in SEED")
 
+    # Track whether we've tried ALIGN
+    align_file = None
+
+    # If no sequences in SEED, try ALIGN as fallback
     if not sequences:
-        print(f"No sequences found in SEED for {pfam_acc}")
+        print(f"No sequences found in SEED for {pfam_acc}, trying ALIGN file...")
+        align_file = fetch_align_file(pfam_acc, work_dir)
+        if align_file:
+            sequences = parse_seed_alignment(align_file, max_sequences=20)
+            print(f"Found {len(sequences)} sequences in ALIGN")
+
+    if not sequences:
+        print(f"No sequences found in SEED or ALIGN for {pfam_acc}")
         return None
 
     # Find best model
@@ -415,6 +483,37 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
             best_plddt = mean_plddt
             best_model = cif_file
             best_info = (uniprot_acc, start, end)
+
+    # If still no valid models after trying SEED sequences, try ALIGN as fallback
+    if not best_model and not align_file:
+        print(f"No AlphaFold models found from SEED sequences, trying ALIGN file...")
+        align_file = fetch_align_file(pfam_acc, work_dir)
+        if align_file:
+            sequences = parse_seed_alignment(align_file, max_sequences=20)
+            print(f"Found {len(sequences)} sequences in ALIGN")
+
+            for uniprot_acc, start, end, alignment_seq in sequences:
+                print(f"\n  Processing {uniprot_acc}/{start}-{end}...")
+
+                # Download AlphaFold model
+                cif_file = download_alphafold_model(uniprot_acc, tmp_dir)
+                if not cif_file:
+                    continue
+
+                # Verify sequence match
+                structure_seq = get_sequence_from_cif(cif_file)
+                if not verify_sequence_match(alignment_seq, structure_seq, start, end):
+                    print(f"  Warning: Sequence mismatch, skipping")
+                    continue
+
+                # Calculate mean pLDDT
+                mean_plddt = calculate_mean_plddt(cif_file, start, end)
+                print(f"  Mean pLDDT: {mean_plddt:.2f}")
+
+                if mean_plddt > best_plddt:
+                    best_plddt = mean_plddt
+                    best_model = cif_file
+                    best_info = (uniprot_acc, start, end)
 
     if not best_model:
         print(f"No valid models found for {pfam_acc}")
