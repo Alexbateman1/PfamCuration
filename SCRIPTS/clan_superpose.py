@@ -5,13 +5,15 @@ Create structural superposition of AlphaFold models for a Pfam clan.
 This script:
 1. Gets list of Pfam families in a clan from the database
 2. For each family:
-   - Reads the SEED alignment
-   - Downloads AlphaFold models for sequences (up to 20)
+   - Reads the SEED alignment (or ALIGN if needed)
+   - Downloads structure models for sequences (up to 20 successful):
+     * First tries AlphaFold models
+     * Falls back to BFVD database for phage proteins
    - Extracts domain regions and calculates mean pLDDT
    - Selects the best model (highest pLDDT)
    - Saves as PFXXXXX.pdb
 3. Orders domains by mean pLDDT
-4. Uses the highest scoring domain as reference
+4. Uses the highest scoring domain as reference (or user-specified)
 5. Superposes all other structures using TM-align
 6. Creates a combined PDB file with all superposed structures
 """
@@ -272,7 +274,34 @@ def download_alphafold_model(uniprot_acc, output_dir):
         urllib.request.urlretrieve(url, output_file)
         return output_file
     except Exception as e:
-        print(f"  Warning: Failed to download {uniprot_acc}: {e}")
+        print(f"  Warning: Failed to download AlphaFold for {uniprot_acc}: {e}")
+        return None
+
+
+def download_bfvd_model(uniprot_acc, output_dir):
+    """
+    Download BFVD PDB model for a given UniProt accession (for phage proteins).
+
+    Args:
+        uniprot_acc: UniProt accession (may include version like "A0A2Z4HFS2.1")
+        output_dir: directory to save the file
+
+    Returns:
+        str: path to downloaded PDB file, or None if failed
+    """
+    import urllib.request
+
+    # Strip version number from accession
+    base_acc = uniprot_acc.split('.')[0]
+
+    url = f"https://bfvd.steineggerlab.workers.dev/pdb/{base_acc}.pdb"
+    output_file = os.path.join(output_dir, f"{base_acc}_bfvd.pdb")
+
+    try:
+        urllib.request.urlretrieve(url, output_file)
+        return output_file
+    except Exception as e:
+        print(f"  Warning: Failed to download BFVD for {uniprot_acc}: {e}")
         return None
 
 
@@ -287,6 +316,37 @@ def get_sequence_from_cif(cif_file):
 
     parser = MMCIFParser(QUIET=True)
     structure = parser.get_structure('protein', cif_file)
+
+    # Get the first chain
+    chain = next(structure.get_chains())
+
+    # Extract sequence
+    aa_map = {
+        'ALA': 'A', 'CYS': 'C', 'ASP': 'D', 'GLU': 'E', 'PHE': 'F',
+        'GLY': 'G', 'HIS': 'H', 'ILE': 'I', 'LYS': 'K', 'LEU': 'L',
+        'MET': 'M', 'ASN': 'N', 'PRO': 'P', 'GLN': 'Q', 'ARG': 'R',
+        'SER': 'S', 'THR': 'T', 'VAL': 'V', 'TRP': 'W', 'TYR': 'Y'
+    }
+
+    sequence = []
+    for residue in chain.get_residues():
+        if residue.get_resname() in aa_map:
+            sequence.append(aa_map[residue.get_resname()])
+
+    return ''.join(sequence)
+
+
+def get_sequence_from_pdb(pdb_file):
+    """
+    Extract the protein sequence from a PDB file.
+
+    Returns:
+        str: amino acid sequence
+    """
+    from Bio.PDB import PDBParser
+
+    parser = PDBParser(QUIET=True)
+    structure = parser.get_structure('protein', pdb_file)
 
     # Get the first chain
     chain = next(structure.get_chains())
@@ -323,6 +383,39 @@ def calculate_mean_plddt(cif_file, start, end):
 
     parser = MMCIFParser(QUIET=True)
     structure = parser.get_structure('protein', cif_file)
+
+    chain = next(structure.get_chains())
+
+    plddt_scores = []
+    for residue in chain.get_residues():
+        res_id = residue.get_id()[1]
+        if start <= res_id <= end:
+            # pLDDT is stored in the B-factor field
+            for atom in residue.get_atoms():
+                plddt_scores.append(atom.get_bfactor())
+                break  # Only need one atom per residue
+
+    if plddt_scores:
+        return sum(plddt_scores) / len(plddt_scores)
+    return 0.0
+
+
+def calculate_mean_plddt_pdb(pdb_file, start, end):
+    """
+    Calculate mean pLDDT score for a specific region in a PDB structure.
+
+    Args:
+        pdb_file: path to PDB file
+        start: start residue position (1-indexed)
+        end: end residue position (1-indexed)
+
+    Returns:
+        float: mean pLDDT score
+    """
+    from Bio.PDB import PDBParser
+
+    parser = PDBParser(QUIET=True)
+    structure = parser.get_structure('protein', pdb_file)
 
     chain = next(structure.get_chains())
 
@@ -383,6 +476,37 @@ def chop_structure_to_pdb(input_cif, output_pdb, start, end):
 
     parser = MMCIFParser(QUIET=True)
     structure = parser.get_structure('protein', input_cif)
+
+    io = PDBIO()
+    io.set_structure(structure)
+    io.save(output_pdb, RegionSelect(start, end))
+
+
+def chop_pdb_to_pdb(input_pdb, output_pdb, start, end):
+    """
+    Chop a PDB structure to keep only residues in the specified region and save as PDB.
+
+    Args:
+        input_pdb: input PDB file path
+        output_pdb: output PDB file path
+        start: start residue (1-indexed)
+        end: end residue (1-indexed)
+    """
+    from Bio.PDB import PDBParser, PDBIO, Select
+
+    class RegionSelect(Select):
+        """Select only residues within a specific region."""
+
+        def __init__(self, start, end):
+            self.start = start
+            self.end = end
+
+        def accept_residue(self, residue):
+            res_id = residue.get_id()[1]
+            return self.start <= res_id <= self.end
+
+    parser = PDBParser(QUIET=True)
+    structure = parser.get_structure('protein', input_pdb)
 
     io = PDBIO()
     io.set_structure(structure)
@@ -467,19 +591,34 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
         sequences_tried += 1
         print(f"\n  Processing {uniprot_acc}/{start}-{end} (tried {sequences_tried}, successful {successful_models})...")
 
-        # Download AlphaFold model
-        cif_file = download_alphafold_model(uniprot_acc, tmp_dir)
-        if not cif_file:
+        # Try AlphaFold model first
+        structure_file = download_alphafold_model(uniprot_acc, tmp_dir)
+        is_pdb = False
+
+        if not structure_file:
+            # Try BFVD as fallback for phage proteins
+            print(f"  AlphaFold not available, trying BFVD...")
+            structure_file = download_bfvd_model(uniprot_acc, tmp_dir)
+            is_pdb = True
+
+        if not structure_file:
             continue
 
         # Verify sequence match
-        structure_seq = get_sequence_from_cif(cif_file)
+        if is_pdb:
+            structure_seq = get_sequence_from_pdb(structure_file)
+        else:
+            structure_seq = get_sequence_from_cif(structure_file)
+
         if not verify_sequence_match(alignment_seq, structure_seq, start, end):
             print(f"  Warning: Sequence mismatch, skipping")
             continue
 
         # Calculate mean pLDDT
-        mean_plddt = calculate_mean_plddt(cif_file, start, end)
+        if is_pdb:
+            mean_plddt = calculate_mean_plddt_pdb(structure_file, start, end)
+        else:
+            mean_plddt = calculate_mean_plddt(structure_file, start, end)
         print(f"  Mean pLDDT: {mean_plddt:.2f}")
 
         # Count this as a successful model
@@ -487,8 +626,8 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
 
         if mean_plddt > best_plddt:
             best_plddt = mean_plddt
-            best_model = cif_file
-            best_info = (uniprot_acc, start, end)
+            best_model = structure_file
+            best_info = (uniprot_acc, start, end, is_pdb)
 
         # Stop if we've successfully processed enough models
         if successful_models >= max_successful:
@@ -508,19 +647,34 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
                 sequences_tried += 1
                 print(f"\n  Processing {uniprot_acc}/{start}-{end} (tried {sequences_tried}, successful {successful_models})...")
 
-                # Download AlphaFold model
-                cif_file = download_alphafold_model(uniprot_acc, tmp_dir)
-                if not cif_file:
+                # Try AlphaFold model first
+                structure_file = download_alphafold_model(uniprot_acc, tmp_dir)
+                is_pdb = False
+
+                if not structure_file:
+                    # Try BFVD as fallback for phage proteins
+                    print(f"  AlphaFold not available, trying BFVD...")
+                    structure_file = download_bfvd_model(uniprot_acc, tmp_dir)
+                    is_pdb = True
+
+                if not structure_file:
                     continue
 
                 # Verify sequence match
-                structure_seq = get_sequence_from_cif(cif_file)
+                if is_pdb:
+                    structure_seq = get_sequence_from_pdb(structure_file)
+                else:
+                    structure_seq = get_sequence_from_cif(structure_file)
+
                 if not verify_sequence_match(alignment_seq, structure_seq, start, end):
                     print(f"  Warning: Sequence mismatch, skipping")
                     continue
 
                 # Calculate mean pLDDT
-                mean_plddt = calculate_mean_plddt(cif_file, start, end)
+                if is_pdb:
+                    mean_plddt = calculate_mean_plddt_pdb(structure_file, start, end)
+                else:
+                    mean_plddt = calculate_mean_plddt(structure_file, start, end)
                 print(f"  Mean pLDDT: {mean_plddt:.2f}")
 
                 # Count this as a successful model
@@ -528,8 +682,8 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
 
                 if mean_plddt > best_plddt:
                     best_plddt = mean_plddt
-                    best_model = cif_file
-                    best_info = (uniprot_acc, start, end)
+                    best_model = structure_file
+                    best_info = (uniprot_acc, start, end, is_pdb)
 
                 # Stop if we've successfully processed enough models
                 if successful_models >= max_successful:
@@ -540,12 +694,16 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
         print(f"No valid models found for {pfam_acc} after trying {sequences_tried} sequences")
         return None
 
-    print(f"\nBest model: {best_info[0]}/{best_info[1]}-{best_info[2]} "
+    uniprot_acc, start, end, is_pdb = best_info
+    print(f"\nBest model: {uniprot_acc}/{start}-{end} "
           f"with mean pLDDT {best_plddt:.2f}")
 
-    # Save as PDB
+    # Save as PDB (chop to domain region)
     output_pdb = os.path.join(output_dir, f"{pfam_acc}.pdb")
-    chop_structure_to_pdb(best_model, output_pdb, best_info[1], best_info[2])
+    if is_pdb:
+        chop_pdb_to_pdb(best_model, output_pdb, start, end)
+    else:
+        chop_structure_to_pdb(best_model, output_pdb, start, end)
     print(f"Saved domain structure to {output_pdb}")
 
     # Save pLDDT score to a file for future reference
