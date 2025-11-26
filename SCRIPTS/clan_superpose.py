@@ -278,13 +278,47 @@ def download_alphafold_model(uniprot_acc, output_dir):
         return None
 
 
-def download_bfvd_model(uniprot_acc, output_dir):
+def load_bfvd_mapping(mapping_file):
+    """
+    Load BFVD cluster mapping file that maps UniProt accessions to cluster representatives.
+
+    Args:
+        mapping_file: Path to TSV file with format: representative,member
+
+    Returns:
+        dict: Mapping from member accession to representative accession
+    """
+    mapping = {}
+    try:
+        with open(mapping_file, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                parts = line.split(',')
+                if len(parts) == 2:
+                    representative, member = parts
+                    mapping[member] = representative
+        print(f"Loaded {len(mapping)} BFVD cluster mappings from {mapping_file}")
+        return mapping
+    except FileNotFoundError:
+        print(f"Warning: BFVD mapping file not found: {mapping_file}")
+        return {}
+    except Exception as e:
+        print(f"Warning: Error loading BFVD mapping file: {e}")
+        return {}
+
+
+def download_bfvd_model(uniprot_acc, output_dir, bfvd_mapping=None, bfvd_cache=None):
     """
     Download BFVD PDB model for a given UniProt accession (for phage proteins).
+    Uses cluster representative if available in mapping.
 
     Args:
         uniprot_acc: UniProt accession (may include version like "A0A2Z4HFS2.1")
         output_dir: directory to save the file
+        bfvd_mapping: Optional dict mapping member accessions to cluster representatives
+        bfvd_cache: Optional dict caching already downloaded representatives
 
     Returns:
         str: path to downloaded PDB file, or None if failed
@@ -294,14 +328,39 @@ def download_bfvd_model(uniprot_acc, output_dir):
     # Strip version number from accession
     base_acc = uniprot_acc.split('.')[0]
 
-    url = f"https://bfvd.steineggerlab.workers.dev/pdb/{base_acc}.pdb"
-    output_file = os.path.join(output_dir, f"{base_acc}_bfvd.pdb")
+    # Look up cluster representative if mapping is available
+    target_acc = base_acc
+    if bfvd_mapping and base_acc in bfvd_mapping:
+        target_acc = bfvd_mapping[base_acc]
+        print(f"  Mapped {base_acc} to cluster representative {target_acc}")
+
+    # Check cache first to avoid re-downloading same representative
+    if bfvd_cache is not None:
+        if target_acc in bfvd_cache:
+            cached_file = bfvd_cache[target_acc]
+            if cached_file and os.path.exists(cached_file):
+                print(f"  Using cached BFVD structure for {target_acc}")
+                return cached_file
+
+    url = f"https://bfvd.steineggerlab.workers.dev/pdb/{target_acc}.pdb"
+    output_file = os.path.join(output_dir, f"{target_acc}_bfvd.pdb")
+
+    # Check if already downloaded on disk
+    if os.path.exists(output_file):
+        print(f"  BFVD structure already exists: {output_file}")
+        if bfvd_cache is not None:
+            bfvd_cache[target_acc] = output_file
+        return output_file
 
     try:
         urllib.request.urlretrieve(url, output_file)
+        if bfvd_cache is not None:
+            bfvd_cache[target_acc] = output_file
         return output_file
     except Exception as e:
-        print(f"  Warning: Failed to download BFVD for {uniprot_acc}: {e}")
+        print(f"  Warning: Failed to download BFVD for {uniprot_acc} (tried {target_acc}): {e}")
+        if bfvd_cache is not None:
+            bfvd_cache[target_acc] = None
         return None
 
 
@@ -513,7 +572,7 @@ def chop_pdb_to_pdb(input_pdb, output_pdb, start, end):
     io.save(output_pdb, RegionSelect(start, end))
 
 
-def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
+def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mapping=None, bfvd_cache=None):
     """
     Process a single Pfam family to get the best AlphaFold domain structure.
 
@@ -523,6 +582,8 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
         work_dir: Working directory where families will be checked out
         output_dir: Directory to save output PDB files
         tmp_dir: Temporary directory for downloads
+        bfvd_mapping: Optional dict mapping UniProt accessions to BFVD cluster representatives
+        bfvd_cache: Optional dict caching already downloaded BFVD structures
 
     Returns:
         dict with 'pfam_acc', 'pfam_id', 'pdb_file', 'mean_plddt', or None if failed
@@ -598,7 +659,7 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
         if not structure_file:
             # Try BFVD as fallback for phage proteins
             print(f"  AlphaFold not available, trying BFVD...")
-            structure_file = download_bfvd_model(uniprot_acc, tmp_dir)
+            structure_file = download_bfvd_model(uniprot_acc, tmp_dir, bfvd_mapping, bfvd_cache)
             is_pdb = True
 
         if not structure_file:
@@ -654,7 +715,7 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
                 if not structure_file:
                     # Try BFVD as fallback for phage proteins
                     print(f"  AlphaFold not available, trying BFVD...")
-                    structure_file = download_bfvd_model(uniprot_acc, tmp_dir)
+                    structure_file = download_bfvd_model(uniprot_acc, tmp_dir, bfvd_mapping, bfvd_cache)
                     is_pdb = True
 
                 if not structure_file:
@@ -1092,6 +1153,11 @@ def main():
         default='~/.my.cnf',
         help='Path to MySQL config file (default: ~/.my.cnf)'
     )
+    parser.add_argument(
+        '--bfvd-mapping',
+        default='/nfs/production/agb/pfam/data/BFVD/uniref30_2302_virus-rep_mem.tsv',
+        help='Path to BFVD cluster mapping file (default: /nfs/production/agb/pfam/data/BFVD/uniref30_2302_virus-rep_mem.tsv)'
+    )
 
     args = parser.parse_args()
 
@@ -1113,6 +1179,11 @@ def main():
     print("\nConnecting to Pfam database...")
     connection = connect_to_pfam_db(args.config)
 
+    # Load BFVD cluster mapping if available
+    print("\nLoading BFVD cluster mapping...")
+    bfvd_mapping = load_bfvd_mapping(args.bfvd_mapping)
+    bfvd_cache = {}  # Cache to avoid re-downloading same representatives
+
     # Get clan families
     families = get_clan_families(args.clan_acc, connection)
 
@@ -1125,7 +1196,7 @@ def main():
 
     with tempfile.TemporaryDirectory() as tmp_dir:
         for pfam_acc, pfam_id, description in families:
-            result = process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir)
+            result = process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mapping, bfvd_cache)
             if result:
                 family_results.append(result)
 
