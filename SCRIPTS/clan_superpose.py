@@ -437,32 +437,35 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
     if not seed_file:
         return None
 
-    # Parse SEED
-    sequences = parse_seed_alignment(seed_file, max_sequences=20)
+    # Parse SEED (get up to 100 sequences max)
+    sequences = parse_seed_alignment(seed_file, max_sequences=100)
     print(f"Found {len(sequences)} sequences in SEED")
-
-    # Track whether we've tried ALIGN
-    align_file = None
 
     # If no sequences in SEED, try ALIGN as fallback
     if not sequences:
         print(f"No sequences found in SEED for {pfam_acc}, trying ALIGN file...")
         align_file = fetch_align_file(pfam_acc, work_dir)
         if align_file:
-            sequences = parse_seed_alignment(align_file, max_sequences=20)
+            sequences = parse_seed_alignment(align_file, max_sequences=100)
             print(f"Found {len(sequences)} sequences in ALIGN")
 
     if not sequences:
         print(f"No sequences found in SEED or ALIGN for {pfam_acc}")
         return None
 
-    # Find best model
+    # Find best model by trying sequences until we get 20 successful models
+    # or we've tried all available sequences (up to 100 max)
     best_model = None
     best_plddt = 0
     best_info = None
 
+    successful_models = 0
+    max_successful = 20
+    sequences_tried = 0
+
     for uniprot_acc, start, end, alignment_seq in sequences:
-        print(f"\n  Processing {uniprot_acc}/{start}-{end}...")
+        sequences_tried += 1
+        print(f"\n  Processing {uniprot_acc}/{start}-{end} (tried {sequences_tried}, successful {successful_models})...")
 
         # Download AlphaFold model
         cif_file = download_alphafold_model(uniprot_acc, tmp_dir)
@@ -479,21 +482,31 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
         mean_plddt = calculate_mean_plddt(cif_file, start, end)
         print(f"  Mean pLDDT: {mean_plddt:.2f}")
 
+        # Count this as a successful model
+        successful_models += 1
+
         if mean_plddt > best_plddt:
             best_plddt = mean_plddt
             best_model = cif_file
             best_info = (uniprot_acc, start, end)
 
-    # If still no valid models after trying SEED sequences, try ALIGN as fallback
-    if not best_model and not align_file:
+        # Stop if we've successfully processed enough models
+        if successful_models >= max_successful:
+            print(f"  Reached {max_successful} successful models, stopping search")
+            break
+
+    # If still no valid models after trying SEED, try ALIGN as fallback
+    if not best_model:
         print(f"No AlphaFold models found from SEED sequences, trying ALIGN file...")
         align_file = fetch_align_file(pfam_acc, work_dir)
         if align_file:
-            sequences = parse_seed_alignment(align_file, max_sequences=20)
-            print(f"Found {len(sequences)} sequences in ALIGN")
+            # Get up to 100 sequences from ALIGN
+            align_sequences = parse_seed_alignment(align_file, max_sequences=100)
+            print(f"Found {len(align_sequences)} sequences in ALIGN")
 
-            for uniprot_acc, start, end, alignment_seq in sequences:
-                print(f"\n  Processing {uniprot_acc}/{start}-{end}...")
+            for uniprot_acc, start, end, alignment_seq in align_sequences:
+                sequences_tried += 1
+                print(f"\n  Processing {uniprot_acc}/{start}-{end} (tried {sequences_tried}, successful {successful_models})...")
 
                 # Download AlphaFold model
                 cif_file = download_alphafold_model(uniprot_acc, tmp_dir)
@@ -510,13 +523,21 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir):
                 mean_plddt = calculate_mean_plddt(cif_file, start, end)
                 print(f"  Mean pLDDT: {mean_plddt:.2f}")
 
+                # Count this as a successful model
+                successful_models += 1
+
                 if mean_plddt > best_plddt:
                     best_plddt = mean_plddt
                     best_model = cif_file
                     best_info = (uniprot_acc, start, end)
 
+                # Stop if we've successfully processed enough models
+                if successful_models >= max_successful:
+                    print(f"  Reached {max_successful} successful models, stopping search")
+                    break
+
     if not best_model:
-        print(f"No valid models found for {pfam_acc}")
+        print(f"No valid models found for {pfam_acc} after trying {sequences_tried} sequences")
         return None
 
     print(f"\nBest model: {best_info[0]}/{best_info[1]}-{best_info[2]} "
