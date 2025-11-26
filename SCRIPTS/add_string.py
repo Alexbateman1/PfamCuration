@@ -527,7 +527,7 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
         return None
 
     results = {
-        'pfam_domains': defaultdict(lambda: {'networks': set(), 'proteins': defaultdict(set), 'pfamA_id': None}),
+        'pfam_domains': defaultdict(lambda: {'networks': set(), 'proteins': defaultdict(set), 'network_proteins': defaultdict(set), 'pfamA_id': None}),
         'proteins_without_domains': set(),
         'total_networks': 0,
         'total_proteins': 0,
@@ -676,6 +676,7 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
                         for pfamseq_acc, seq_start, seq_end, pfamA_acc, pfamA_id in domains:
                             results['pfam_domains'][pfamA_acc]['networks'].add(network_id)
                             results['pfam_domains'][pfamA_acc]['proteins'][partner_string_id].add(uniprot_acc)
+                            results['pfam_domains'][pfamA_acc]['network_proteins'][network_id].add(uniprot_acc)
                             results['pfam_domains'][pfamA_acc]['pfamA_id'] = pfamA_id
                     else:
                         # No Pfam domains - record this UniProt accession
@@ -690,6 +691,56 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
         print(f"   Species {taxid} complete: {networks_processed} networks processed")
 
     return results
+
+
+def write_tsv_output(results: Dict, pfam_dir: str):
+    """
+    Write TSV file with Pfam accessions as rows and species/networks as columns.
+    Cells contain UniProt accessions for proteins, making it easy to identify
+    potential interacting protein pairs for AlphaFold modeling.
+
+    Args:
+        results: Results dictionary from analyze_networks()
+        pfam_dir: Path to Pfam family directory
+    """
+    output_file = os.path.join(pfam_dir, 'STRING.csv')
+
+    # Collect all unique networks and sort them
+    all_networks = set()
+    for domain_data in results['pfam_domains'].values():
+        all_networks.update(domain_data['networks'])
+
+    all_networks = sorted(all_networks)
+
+    if not all_networks:
+        print(f"  No networks found, skipping TSV output")
+        return
+
+    # Sort Pfam domains by network count (most frequent first)
+    pfam_sorted = sorted(results['pfam_domains'].items(),
+                         key=lambda x: len(x[1]['networks']),
+                         reverse=True)
+
+    with open(output_file, 'w') as f:
+        # Write header row with network IDs as columns
+        header = ['Pfam_Acc', 'Pfam_ID'] + all_networks
+        f.write('\t'.join(header) + '\n')
+
+        # Write data rows
+        for pfam_acc, domain_data in pfam_sorted:
+            pfam_id = domain_data['pfamA_id'] or ''
+            row = [pfam_acc, pfam_id]
+
+            # For each network, get the UniProt accessions
+            for network_id in all_networks:
+                uniprot_accs = domain_data['network_proteins'].get(network_id, set())
+                # Join multiple accessions with semicolon
+                cell_value = ';'.join(sorted(uniprot_accs)) if uniprot_accs else ''
+                row.append(cell_value)
+
+            f.write('\t'.join(row) + '\n')
+
+    print(f"\n  TSV output written to: {output_file}")
 
 
 def write_detailed_results(results: Dict, pfam_dir: str):
@@ -965,6 +1016,7 @@ def main():
     # Write detailed results file and report (if analysis was not skipped)
     if results is not None:
         write_detailed_results(results, args.pfam_dir)
+        write_tsv_output(results, args.pfam_dir)
         print_report(results, args.min_frequency, args.output)
 
 
