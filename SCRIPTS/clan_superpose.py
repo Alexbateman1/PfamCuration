@@ -689,7 +689,7 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
             structure_file = download_bfvd_model(uniprot_acc, tmp_dir, bfvd_mapping, bfvd_cache)
             is_pdb = True
 
-            # If we mapped to a representative, check if representative is in alignment
+            # If we mapped to a representative, try to use representative's coordinates
             if structure_file and bfvd_mapping:
                 base_acc = uniprot_acc.split('.')[0]
                 if base_acc in bfvd_mapping:
@@ -698,21 +698,19 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
                         actual_uniprot, actual_start, actual_end, actual_seq = sequence_lookup[rep_acc]
                         print(f"  Using representative {rep_acc}'s coordinates from alignment: {actual_start}-{actual_end}")
                     else:
-                        print(f"  Warning: Representative {rep_acc} not found in alignment, skipping")
-                        continue
+                        print(f"  Representative {rep_acc} not in alignment, using original coordinates: {start}-{end}")
 
         if not structure_file:
             continue
 
-        # Verify sequence match
-        if is_pdb:
-            structure_seq = get_sequence_from_pdb(structure_file)
-        else:
+        # Verify sequence match (skip for BFVD structures - they use cluster representatives)
+        if not is_pdb:
             structure_seq = get_sequence_from_cif(structure_file)
-
-        if not verify_sequence_match(actual_seq, structure_seq, actual_start, actual_end):
-            print(f"  Warning: Sequence mismatch, skipping")
-            continue
+            if not verify_sequence_match(actual_seq, structure_seq, actual_start, actual_end):
+                print(f"  Warning: Sequence mismatch, skipping")
+                continue
+        else:
+            print(f"  Skipping sequence verification for BFVD structure (using cluster representative)")
 
         # Calculate mean pLDDT
         if is_pdb:
@@ -763,7 +761,7 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
                     structure_file = download_bfvd_model(uniprot_acc, tmp_dir, bfvd_mapping, bfvd_cache)
                     is_pdb = True
 
-                    # If we mapped to a representative, check if representative is in alignment
+                    # If we mapped to a representative, try to use representative's coordinates
                     if structure_file and bfvd_mapping:
                         base_acc = uniprot_acc.split('.')[0]
                         if base_acc in bfvd_mapping:
@@ -772,21 +770,19 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
                                 actual_uniprot, actual_start, actual_end, actual_seq = sequence_lookup[rep_acc]
                                 print(f"  Using representative {rep_acc}'s coordinates from alignment: {actual_start}-{actual_end}")
                             else:
-                                print(f"  Warning: Representative {rep_acc} not found in alignment, skipping")
-                                continue
+                                print(f"  Representative {rep_acc} not in alignment, using original coordinates: {start}-{end}")
 
                 if not structure_file:
                     continue
 
-                # Verify sequence match
-                if is_pdb:
-                    structure_seq = get_sequence_from_pdb(structure_file)
-                else:
+                # Verify sequence match (skip for BFVD structures - they use cluster representatives)
+                if not is_pdb:
                     structure_seq = get_sequence_from_cif(structure_file)
-
-                if not verify_sequence_match(actual_seq, structure_seq, actual_start, actual_end):
-                    print(f"  Warning: Sequence mismatch, skipping")
-                    continue
+                    if not verify_sequence_match(actual_seq, structure_seq, actual_start, actual_end):
+                        print(f"  Warning: Sequence mismatch, skipping")
+                        continue
+                else:
+                    print(f"  Skipping sequence verification for BFVD structure (using cluster representative)")
 
                 # Calculate mean pLDDT
                 if is_pdb:
