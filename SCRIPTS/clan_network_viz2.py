@@ -34,7 +34,7 @@ class ClanNetworkVisualizer:
         self.connection = None
 
         # Hardcoded file paths for comparison methods
-        self.foldseek_file = '/nfs/production/agb/interpro/users/typhaine/interpro-pfam-curation-tools/pfam_add_clan_search/results/foldseek_all.out'
+        self.foldseek_file = '/nfs/production/agb/pfam/data/all_vs_all/clan_search/foldseek_all.out'
         self.hhsearch_file = '/nfs/production/agb/pfam/users/agb/HHsearch2/query_results/all_results.tsv'
         self.reseek_file = '/nfs/production/agb/pfam/data/all_vs_all/reseek/all_results.tsv'
         self.scoop_file = '/nfs/production/agb/pfam/data/all_vs_all/SCOOP/sump.E100.output'
