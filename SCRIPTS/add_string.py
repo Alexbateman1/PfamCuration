@@ -38,6 +38,34 @@ DEFAULT_MYSQL_CONFIG = "~/.my.cnf"
 STRING_DOWNLOAD_BASE_URL = "https://stringdb-downloads.org/download"
 
 
+def parse_desc_file(pfam_dir: str) -> Tuple[str, str]:
+    """
+    Parse DESC file to get Pfam accession and ID.
+
+    Args:
+        pfam_dir: Path to Pfam family directory
+
+    Returns:
+        Tuple of (pfamA_acc, pfamA_id), using placeholders if not found
+    """
+    desc_path = os.path.join(pfam_dir, 'DESC')
+    pfam_acc = 'PFXXXXX'
+    pfam_id = 'Unknown'
+
+    if not os.path.exists(desc_path):
+        return pfam_acc, pfam_id
+
+    with open(desc_path, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith('AC   '):
+                pfam_acc = line[5:].rstrip('.')
+            elif line.startswith('ID   '):
+                pfam_id = line[5:]
+
+    return pfam_acc, pfam_id
+
+
 def parse_seq_info_for_string_ids(seq_info_path: str) -> List[Tuple[str, str]]:
     """
     Parse seq_info file to extract STRING identifiers.
@@ -531,8 +559,14 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
         'proteins_without_domains': set(),
         'total_networks': 0,
         'total_proteins': 0,
-        'query_proteins': []
+        'query_proteins': [],
+        'query_protein_uniprot': {},  # network_id -> set of UniProt accessions
+        'query_pfam_acc': None,
+        'query_pfam_id': None
     }
+
+    # Get query family info from DESC file
+    results['query_pfam_acc'], results['query_pfam_id'] = parse_desc_file(pfam_dir)
 
     # Get seq_info path
     seq_info_path = os.path.join(pfam_dir, 'seq_info')
@@ -615,9 +649,14 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
 
         print(f"   Total network partners across all query proteins: {len(all_network_proteins):,}")
 
-        # Get UniProt mappings
+        # Get UniProt mappings for network partners
         print("   Mapping to UniProt...")
         string_to_uniprot = parse_protein_aliases(aliases_file, all_network_proteins)
+
+        # Also get UniProt mappings for query proteins themselves
+        query_to_uniprot = parse_protein_aliases(aliases_file, query_proteins_this_species)
+        for query_protein, uniprot_accs in query_to_uniprot.items():
+            results['query_protein_uniprot'][query_protein] = uniprot_accs
 
         # Collect all unique UniProt accessions for this species
         all_uniprot_accs = set()
@@ -693,11 +732,13 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
     return results
 
 
-def write_tsv_output(results: Dict, pfam_dir: str):
+def write_csv_output(results: Dict, pfam_dir: str):
     """
-    Write TSV file with Pfam accessions as rows and species/networks as columns.
+    Write CSV file with Pfam accessions as rows and species/networks as columns.
     Cells contain UniProt accessions for proteins, making it easy to identify
     potential interacting protein pairs for AlphaFold modeling.
+
+    The first data row contains the query family (the family being analyzed).
 
     Args:
         results: Results dictionary from analyze_networks()
@@ -713,7 +754,7 @@ def write_tsv_output(results: Dict, pfam_dir: str):
     all_networks = sorted(all_networks)
 
     if not all_networks:
-        print(f"  No networks found, skipping TSV output")
+        print(f"  No networks found, skipping CSV output")
         return
 
     # Sort Pfam domains by network count (most frequent first)
@@ -724,9 +765,17 @@ def write_tsv_output(results: Dict, pfam_dir: str):
     with open(output_file, 'w') as f:
         # Write header row with network IDs as columns
         header = ['Pfam_Acc', 'Pfam_ID'] + all_networks
-        f.write('\t'.join(header) + '\n')
+        f.write(','.join(header) + '\n')
 
-        # Write data rows
+        # Write query family as first data row
+        query_row = [results['query_pfam_acc'], results['query_pfam_id']]
+        for network_id in all_networks:
+            uniprot_accs = results['query_protein_uniprot'].get(network_id, set())
+            cell_value = ';'.join(sorted(uniprot_accs)) if uniprot_accs else ''
+            query_row.append(cell_value)
+        f.write(','.join(query_row) + '\n')
+
+        # Write other Pfam domain rows
         for pfam_acc, domain_data in pfam_sorted:
             pfam_id = domain_data['pfamA_id'] or ''
             row = [pfam_acc, pfam_id]
@@ -738,9 +787,9 @@ def write_tsv_output(results: Dict, pfam_dir: str):
                 cell_value = ';'.join(sorted(uniprot_accs)) if uniprot_accs else ''
                 row.append(cell_value)
 
-            f.write('\t'.join(row) + '\n')
+            f.write(','.join(row) + '\n')
 
-    print(f"\n  TSV output written to: {output_file}")
+    print(f"\n  CSV output written to: {output_file}")
 
 
 def write_detailed_results(results: Dict, pfam_dir: str):
@@ -1016,7 +1065,7 @@ def main():
     # Write detailed results file and report (if analysis was not skipped)
     if results is not None:
         write_detailed_results(results, args.pfam_dir)
-        write_tsv_output(results, args.pfam_dir)
+        write_csv_output(results, args.pfam_dir)
         print_report(results, args.min_frequency, args.output)
 
 
