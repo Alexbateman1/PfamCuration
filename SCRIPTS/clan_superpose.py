@@ -223,7 +223,7 @@ def parse_seed_alignment(seed_file, max_sequences=20):
 
     Args:
         seed_file: Path to SEED file
-        max_sequences: Maximum number of sequences to process
+        max_sequences: Maximum number of sequences to process (None = all)
 
     Returns:
         list of tuples: (uniprot_acc, start, end, sequence)
@@ -245,10 +245,29 @@ def parse_seed_alignment(seed_file, max_sequences=20):
                 sequence = match.group(4).replace('.', '').replace('-', '')
                 sequences.append((uniprot_acc, start, end, sequence))
 
-                if len(sequences) >= max_sequences:
+                if max_sequences and len(sequences) >= max_sequences:
                     break
 
     return sequences
+
+
+def build_sequence_lookup(sequences):
+    """
+    Build a lookup dict from sequences list for quick access by accession.
+
+    Args:
+        sequences: List of tuples (uniprot_acc, start, end, sequence)
+
+    Returns:
+        dict: Mapping from base accession (without version) to (uniprot_acc, start, end, sequence)
+    """
+    lookup = {}
+    for uniprot_acc, start, end, sequence in sequences:
+        base_acc = uniprot_acc.split('.')[0]
+        # Store first occurrence (in case of duplicates)
+        if base_acc not in lookup:
+            lookup[base_acc] = (uniprot_acc, start, end, sequence)
+    return lookup
 
 
 def download_alphafold_model(uniprot_acc, output_dir):
@@ -622,9 +641,11 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
     if not seed_file:
         return None
 
-    # Parse SEED (get up to 100 sequences max)
+    # Parse SEED (get up to 100 sequences for processing, but parse all for lookup)
     sequences = parse_seed_alignment(seed_file, max_sequences=100)
-    print(f"Found {len(sequences)} sequences in SEED")
+    all_sequences = parse_seed_alignment(seed_file, max_sequences=None)
+    sequence_lookup = build_sequence_lookup(all_sequences)
+    print(f"Found {len(sequences)} sequences in SEED (first 100), {len(all_sequences)} total for lookup")
 
     # If no sequences in SEED, try ALIGN as fallback
     if not sequences:
@@ -632,7 +653,9 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
         align_file = fetch_align_file(pfam_acc, work_dir)
         if align_file:
             sequences = parse_seed_alignment(align_file, max_sequences=100)
-            print(f"Found {len(sequences)} sequences in ALIGN")
+            all_sequences = parse_seed_alignment(align_file, max_sequences=None)
+            sequence_lookup = build_sequence_lookup(all_sequences)
+            print(f"Found {len(sequences)} sequences in ALIGN (first 100), {len(all_sequences)} total for lookup")
 
     if not sequences:
         print(f"No sequences found in SEED or ALIGN for {pfam_acc}")
@@ -655,12 +678,28 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
         # Try AlphaFold model first
         structure_file = download_alphafold_model(uniprot_acc, tmp_dir)
         is_pdb = False
+        actual_uniprot = uniprot_acc
+        actual_start = start
+        actual_end = end
+        actual_seq = alignment_seq
 
         if not structure_file:
             # Try BFVD as fallback for phage proteins
             print(f"  AlphaFold not available, trying BFVD...")
             structure_file = download_bfvd_model(uniprot_acc, tmp_dir, bfvd_mapping, bfvd_cache)
             is_pdb = True
+
+            # If we mapped to a representative, check if representative is in alignment
+            if structure_file and bfvd_mapping:
+                base_acc = uniprot_acc.split('.')[0]
+                if base_acc in bfvd_mapping:
+                    rep_acc = bfvd_mapping[base_acc]
+                    if rep_acc in sequence_lookup:
+                        actual_uniprot, actual_start, actual_end, actual_seq = sequence_lookup[rep_acc]
+                        print(f"  Using representative {rep_acc}'s coordinates from alignment: {actual_start}-{actual_end}")
+                    else:
+                        print(f"  Warning: Representative {rep_acc} not found in alignment, skipping")
+                        continue
 
         if not structure_file:
             continue
@@ -671,15 +710,15 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
         else:
             structure_seq = get_sequence_from_cif(structure_file)
 
-        if not verify_sequence_match(alignment_seq, structure_seq, start, end):
+        if not verify_sequence_match(actual_seq, structure_seq, actual_start, actual_end):
             print(f"  Warning: Sequence mismatch, skipping")
             continue
 
         # Calculate mean pLDDT
         if is_pdb:
-            mean_plddt = calculate_mean_plddt_pdb(structure_file, start, end)
+            mean_plddt = calculate_mean_plddt_pdb(structure_file, actual_start, actual_end)
         else:
-            mean_plddt = calculate_mean_plddt(structure_file, start, end)
+            mean_plddt = calculate_mean_plddt(structure_file, actual_start, actual_end)
         print(f"  Mean pLDDT: {mean_plddt:.2f}")
 
         # Count this as a successful model
@@ -688,7 +727,7 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
         if mean_plddt > best_plddt:
             best_plddt = mean_plddt
             best_model = structure_file
-            best_info = (uniprot_acc, start, end, is_pdb)
+            best_info = (actual_uniprot, actual_start, actual_end, is_pdb)
 
         # Stop if we've successfully processed enough models
         if successful_models >= max_successful:
@@ -700,9 +739,11 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
         print(f"No AlphaFold models found from SEED sequences, trying ALIGN file...")
         align_file = fetch_align_file(pfam_acc, work_dir)
         if align_file:
-            # Get up to 100 sequences from ALIGN
+            # Get up to 100 sequences from ALIGN, parse all for lookup
             align_sequences = parse_seed_alignment(align_file, max_sequences=100)
-            print(f"Found {len(align_sequences)} sequences in ALIGN")
+            all_align_sequences = parse_seed_alignment(align_file, max_sequences=None)
+            sequence_lookup = build_sequence_lookup(all_align_sequences)
+            print(f"Found {len(align_sequences)} sequences in ALIGN (first 100), {len(all_align_sequences)} total for lookup")
 
             for uniprot_acc, start, end, alignment_seq in align_sequences:
                 sequences_tried += 1
@@ -711,12 +752,28 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
                 # Try AlphaFold model first
                 structure_file = download_alphafold_model(uniprot_acc, tmp_dir)
                 is_pdb = False
+                actual_uniprot = uniprot_acc
+                actual_start = start
+                actual_end = end
+                actual_seq = alignment_seq
 
                 if not structure_file:
                     # Try BFVD as fallback for phage proteins
                     print(f"  AlphaFold not available, trying BFVD...")
                     structure_file = download_bfvd_model(uniprot_acc, tmp_dir, bfvd_mapping, bfvd_cache)
                     is_pdb = True
+
+                    # If we mapped to a representative, check if representative is in alignment
+                    if structure_file and bfvd_mapping:
+                        base_acc = uniprot_acc.split('.')[0]
+                        if base_acc in bfvd_mapping:
+                            rep_acc = bfvd_mapping[base_acc]
+                            if rep_acc in sequence_lookup:
+                                actual_uniprot, actual_start, actual_end, actual_seq = sequence_lookup[rep_acc]
+                                print(f"  Using representative {rep_acc}'s coordinates from alignment: {actual_start}-{actual_end}")
+                            else:
+                                print(f"  Warning: Representative {rep_acc} not found in alignment, skipping")
+                                continue
 
                 if not structure_file:
                     continue
@@ -727,15 +784,15 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
                 else:
                     structure_seq = get_sequence_from_cif(structure_file)
 
-                if not verify_sequence_match(alignment_seq, structure_seq, start, end):
+                if not verify_sequence_match(actual_seq, structure_seq, actual_start, actual_end):
                     print(f"  Warning: Sequence mismatch, skipping")
                     continue
 
                 # Calculate mean pLDDT
                 if is_pdb:
-                    mean_plddt = calculate_mean_plddt_pdb(structure_file, start, end)
+                    mean_plddt = calculate_mean_plddt_pdb(structure_file, actual_start, actual_end)
                 else:
-                    mean_plddt = calculate_mean_plddt(structure_file, start, end)
+                    mean_plddt = calculate_mean_plddt(structure_file, actual_start, actual_end)
                 print(f"  Mean pLDDT: {mean_plddt:.2f}")
 
                 # Count this as a successful model
@@ -744,7 +801,7 @@ def process_family(pfam_acc, pfam_id, work_dir, output_dir, tmp_dir, bfvd_mappin
                 if mean_plddt > best_plddt:
                     best_plddt = mean_plddt
                     best_model = structure_file
-                    best_info = (uniprot_acc, start, end, is_pdb)
+                    best_info = (actual_uniprot, actual_start, actual_end, is_pdb)
 
                 # Stop if we've successfully processed enough models
                 if successful_models >= max_successful:
