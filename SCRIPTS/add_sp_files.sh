@@ -1,5 +1,5 @@
 current_dir=$(pwd)
-awk '{
+awk '$5<0.2{
     system("cd "$1" && \
     if [ -e sp ]; then \
         echo \"Skipping "$1": sp file already exists\"; \
