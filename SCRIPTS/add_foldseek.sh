@@ -1,1 +1,1 @@
-shuf triage | awk '$5<0.2{system("add_foldseek.py "$1)}'
+shuf triage | grep Iterate | awk '$5>0.8 && $4>9{system("add_foldseek.py "$1)}'

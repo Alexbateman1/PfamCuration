@@ -1,1 +1,1 @@
-shuf triage | awk '$5<0.2{system("species_summary_new.pl "$1";")}' 
+shuf triage | awk '$5>0.8{system("species_summary_new.pl "$1";")}' 
