@@ -47,6 +47,9 @@ import urllib.request
 import numpy as np
 from pathlib import Path
 
+# Import local TED module
+from ted_local import TEDLocal
+
 
 # TED domain color scheme (official TED database colors)
 TED_COLORS = [
@@ -82,60 +85,32 @@ def fetch_alphafold_model(uniprot_acc, output_file='alphafold_model.cif'):
         sys.exit(1)
 
 
-def fetch_ted_domains(uniprot_acc):
+def fetch_ted_domains(uniprot_acc, ted_db_path=None):
     """
-    Fetch TED domain information from TED API.
+    Fetch TED domain information from local database.
 
     Args:
         uniprot_acc: UniProt accession (may include version)
+        ted_db_path: Optional path to TED SQLite database
 
     Returns:
         list of dicts with 'ted_id', 'segments' (each segment has 'start', 'end')
     """
-    # Strip version number for TED API
-    base_acc = uniprot_acc.split('.')[0]
-
-    url = f"https://ted.cathdb.info/api/v1/uniprot/summary/{base_acc}?skip=0&limit=100"
-
-    print(f"Fetching TED domains from: {url}")
+    print(f"Fetching TED domains from local database...")
 
     try:
-        with urllib.request.urlopen(url, timeout=30) as response:
-            data = json.loads(response.read().decode())
+        ted = TEDLocal(ted_db_path)
+        domains = ted.get_domains(uniprot_acc)
 
-            if not data or 'data' not in data:
-                print(f"Warning: No TED domain data found for {uniprot_acc}")
-                return []
+        if not domains:
+            print(f"Warning: No TED domain data found for {uniprot_acc}")
+            return []
 
-            domains = []
+        print(f"Found {len(domains)} TED domains")
+        for i, domain in enumerate(domains):
+            print(f"  Domain {i+1}: {domain['ted_id']} with {len(domain['segments'])} segment(s)")
 
-            for domain in data.get('data', []):
-                ted_id = domain.get('ted_id', '')
-                chopping = domain.get('chopping', '')
-
-                if not chopping:
-                    continue
-
-                # Parse chopping format: "1-100" or "1-100_150-200"
-                segments = []
-                for segment in chopping.split('_'):
-                    if '-' in segment:
-                        start, end = segment.split('-')
-                        segments.append({
-                            'start': int(start),
-                            'end': int(end)
-                        })
-
-                domains.append({
-                    'ted_id': ted_id,
-                    'segments': segments
-                })
-
-            print(f"Found {len(domains)} TED domains")
-            for i, domain in enumerate(domains):
-                print(f"  Domain {i+1}: {domain['ted_id']} with {len(domain['segments'])} segment(s)")
-
-            return domains
+        return domains
 
     except Exception as e:
         print(f"Error: Failed to fetch TED domains: {e}")

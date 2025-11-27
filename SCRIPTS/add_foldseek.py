@@ -18,6 +18,9 @@ import os
 import sys
 import re
 
+# Import local TED module
+from ted_local import TEDLocal
+
 
 def parse_seed_alignment(seed_file):
     """
@@ -71,59 +74,41 @@ def parse_desc_ted_reference(desc_file):
     return None
 
 
-def get_ted_domain_coordinates(uniprot_acc, ted_id):
+def get_ted_domain_coordinates(uniprot_acc, ted_id, ted_db_path=None):
     """
-    Fetch coordinates for a specific TED domain.
+    Fetch coordinates for a specific TED domain from local database.
 
     Args:
         uniprot_acc: UniProt accession (e.g., "A0A0H3PIP6")
         ted_id: Internal TED identifier like "A0A0H3PIP6_TED01"
                 (only the suffix like "TED01" is used for matching)
+        ted_db_path: Optional path to TED SQLite database
 
     Returns:
         tuple: (start, end) coordinates, or None if not found
     """
-    import urllib.request
-    import json
-
-    # Strip version number for TED API (API only accepts base accession)
-    base_acc = uniprot_acc.split('.')[0]
-
-    # Call TED API with ONLY the UniProt accession
-    url = f"https://ted.cathdb.info/api/v1/uniprot/summary/{base_acc}?skip=0&limit=100"
-
     try:
-        with urllib.request.urlopen(url, timeout=30) as response:
-            data = json.loads(response.read().decode())
+        ted = TEDLocal(ted_db_path)
+        domains = ted.get_domains(uniprot_acc)
 
-            if not data or 'data' not in data:
-                return None
-
-            # Extract just the TED suffix (e.g., "TED01" from "A0A0H3PIP6_TED01")
-            # This suffix is used to find the right domain from the API response
-            ted_suffix = ted_id.split('_')[-1] if '_' in ted_id else ted_id
-
-            # Loop through ALL domains returned by the API
-            for domain in data.get('data', []):
-                api_ted_id = domain.get('ted_id', '')
-
-                # Match domains where the API ted_id ends with our TED suffix
-                # e.g., "AF-A0A0H3PIP6-F1-model_v4_TED01" matches suffix "TED01"
-                if api_ted_id.endswith(ted_suffix):
-                    chopping = domain.get('chopping', '')
-                    if chopping:
-                        # Parse chopping format: "1-100" or "1-100_150-200"
-                        segments = []
-                        for segment in chopping.split('_'):
-                            if '-' in segment:
-                                start, end = segment.split('-')
-                                segments.append((int(start), int(end)))
-
-                        if segments:
-                            # Return first start and last end
-                            return (min(s[0] for s in segments), max(s[1] for s in segments))
-
+        if not domains:
             return None
+
+        # Extract just the TED suffix (e.g., "TED01" from "A0A0H3PIP6_TED01")
+        ted_suffix = ted_id.split('_')[-1] if '_' in ted_id else ted_id
+
+        # Loop through domains to find matching suffix
+        for domain in domains:
+            api_ted_id = domain.get('ted_id', '')
+
+            # Match domains where the ted_id ends with our TED suffix
+            if api_ted_id.endswith(ted_suffix):
+                segments = domain.get('segments', [])
+                if segments:
+                    # Return first start and last end
+                    return (min(s['start'] for s in segments), max(s['end'] for s in segments))
+
+        return None
 
     except Exception as e:
         print(f"Warning: Failed to fetch TED domain coordinates: {e}")
@@ -466,76 +451,60 @@ def run_foldseek_search(query_cif, database_path, output_file, tmp_dir):
     return foldseek_output
 
 
-def fetch_ted_domains(uniprot_acc, protein_length_cache=None):
+def fetch_ted_domains(uniprot_acc, protein_length_cache=None, ted_db_path=None):
     """
-    Fetch TED domain information from TED API.
+    Fetch TED domain information from local database.
 
     Args:
         uniprot_acc: UniProt accession (may include version)
         protein_length_cache: dict of {uniprot_acc: length} to avoid re-downloading
+        ted_db_path: Optional path to TED SQLite database
 
     Returns:
         dict with 'protein_length' and 'domains' list, or None if failed
     """
-    import urllib.request
-    import json
     import tempfile
 
-    # Strip version number for TED API
+    # Strip version number
     base_acc = uniprot_acc.split('.')[0]
 
-    url = f"https://ted.cathdb.info/api/v1/uniprot/summary/{base_acc}?skip=0&limit=100"
-
     try:
-        with urllib.request.urlopen(url, timeout=30) as response:
-            data = json.loads(response.read().decode())
+        ted = TEDLocal(ted_db_path)
+        ted_domains = ted.get_domains(base_acc)
 
-            if not data or 'data' not in data:
-                return None
+        if not ted_domains:
+            return None
 
-            # Try to get protein length from API response
-            protein_length = data.get('protein_length') or data.get('sequence_length') or data.get('uniprot_length')
+        # Local database doesn't have protein length, check cache or download
+        protein_length = 0
+        if protein_length_cache and uniprot_acc in protein_length_cache:
+            protein_length = protein_length_cache[uniprot_acc]
+        else:
+            # Download AlphaFold model to get sequence length
+            with tempfile.TemporaryDirectory() as tmp_dir:
+                cif_file = download_alphafold_model(base_acc, tmp_dir)
+                if cif_file:
+                    sequence = get_sequence_from_cif(cif_file)
+                    protein_length = len(sequence)
 
-            # If not in API, check cache first before downloading
-            if not protein_length:
-                if protein_length_cache and uniprot_acc in protein_length_cache:
-                    protein_length = protein_length_cache[uniprot_acc]
-                else:
-                    # Last resort: download AlphaFold model to get sequence length
-                    with tempfile.TemporaryDirectory() as tmp_dir:
-                        cif_file = download_alphafold_model(base_acc, tmp_dir)
-                        if cif_file:
-                            sequence = get_sequence_from_cif(cif_file)
-                            protein_length = len(sequence)
+        domains = []
 
-            domains = []
+        for domain in ted_domains:
+            ted_id = domain.get('ted_id', '')
+            segments = domain.get('segments', [])
 
-            for domain in data.get('data', []):
-                ted_id = domain.get('ted_id', '')
-                chopping = domain.get('chopping', '')
+            if not segments:
+                continue
 
-                if not chopping:
-                    continue
+            domains.append({
+                'ted_id': ted_id,
+                'segments': segments
+            })
 
-                # Parse chopping format: "1-100" or "1-100_150-200"
-                segments = []
-                for segment in chopping.split('_'):
-                    if '-' in segment:
-                        start, end = segment.split('-')
-                        segments.append({
-                            'start': int(start),
-                            'end': int(end)
-                        })
-
-                domains.append({
-                    'ted_id': ted_id,
-                    'segments': segments
-                })
-
-            return {
-                'protein_length': protein_length if protein_length else 0,
-                'domains': domains
-            }
+        return {
+            'protein_length': protein_length if protein_length else 0,
+            'domains': domains
+        }
 
     except Exception as e:
         print(f"Warning: Failed to fetch TED domains for {uniprot_acc}: {e}")

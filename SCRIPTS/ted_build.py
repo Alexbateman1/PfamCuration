@@ -2,6 +2,7 @@
 """
 Script to create Pfam curation directories from TED domains
 Features:
+- Uses local TED database for fast domain lookups
 - Downloads TED domain PDB files
 - Skips domains with >50% overlap with Pfam domains
 """
@@ -15,14 +16,17 @@ from pathlib import Path
 import requests
 from typing import Dict, List, Tuple, Optional
 
+# Import local TED module
+from ted_local import TEDLocal
+
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(
-        description='Fetches domain information from TED API, creates directories for each domain, '
+        description='Creates Pfam curation directories from TED domains using local database, '
                     'downloads PDB files.'
     )
     parser.add_argument('uniprot_acc', help='UniProt accession')
-    parser.add_argument('--afdb-swissprot', action='store_true', 
+    parser.add_argument('--afdb-swissprot', action='store_true',
                         help='Include afdb-swissprot in FoldSeek search')
     parser.add_argument('--afdb-proteome', action='store_true',
                         help='Include afdb-proteome in FoldSeek search')
@@ -30,7 +34,9 @@ def parse_arguments():
                         help='Include afdb50 in FoldSeek search')
     parser.add_argument('--bfvd', action='store_true',
                         help='Include BFVD in FoldSeek search')
-    
+    parser.add_argument('--ted-db', default=None,
+                        help='Path to TED SQLite database (uses default if not specified)')
+
     return parser.parse_args()
 
 def download_ted_pdb(ted_id: str, output_file: str) -> bool:
@@ -88,21 +94,28 @@ def check_overlap_with_pfam(ted_start: int, ted_end: int,
     
     return {'overlaps': False}
 
-def fetch_ted_domains(uniprot_acc: str) -> Dict:
-    """Fetch TED domains from API"""
-    ted_api_url = f"https://ted.cathdb.info/api/v1/uniprot/summary/{uniprot_acc}?skip=0&limit=100"
-    
-    print("Fetching TED domains...")
-    
+def fetch_ted_domains(uniprot_acc: str, ted_db_path: str = None) -> Dict:
+    """Fetch TED domains from local database"""
+    print("Fetching TED domains from local database...")
+
     try:
-        response = requests.get(ted_api_url, timeout=30)
-        response.raise_for_status()
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        print(f"Error: Failed to fetch domain information from TED for {uniprot_acc}: {e}")
-        sys.exit(1)
-    except json.JSONDecodeError:
-        print(f"Error: Failed to parse domain information for {uniprot_acc}.")
+        ted = TEDLocal(ted_db_path)
+        domains = ted.get_domains(uniprot_acc)
+
+        # Convert to the format expected by the rest of the code
+        data = []
+        for domain in domains:
+            data.append({
+                'ted_id': domain['ted_id'],
+                'chopping': domain['chopping']
+            })
+
+        return {
+            'count': len(data),
+            'data': data
+        }
+    except FileNotFoundError as e:
+        print(f"Error: {e}")
         sys.exit(1)
 
 def fetch_pfam_domains(uniprot_acc: str) -> List[Dict]:
@@ -175,8 +188,8 @@ def main():
 
     print(f"Fetching domain information for UniProt accession: {uniprot_acc}")
 
-    # Fetch TED domains
-    domain_data = fetch_ted_domains(uniprot_acc)
+    # Fetch TED domains from local database
+    domain_data = fetch_ted_domains(uniprot_acc, args.ted_db)
 
     # Extract domain count
     domain_count = domain_data.get('count', 0)
