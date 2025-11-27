@@ -60,9 +60,9 @@ def parse_arguments():
         help='Mean domains output file name (default: TED_NUM)'
     )
     parser.add_argument(
-        '--ted-data',
+        '--ted-db',
         default=None,
-        help='Path to local TED data file (uses default if not specified)'
+        help='Path to TED SQLite database (uses default if not specified)'
     )
 
     return parser.parse_args()
@@ -187,7 +187,7 @@ def main():
         print("Loading TED domain data...", file=sys.stderr)
 
     try:
-        ted = TEDLocal(args.ted_data)
+        ted = TEDLocal(args.ted_db)
     except FileNotFoundError as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
