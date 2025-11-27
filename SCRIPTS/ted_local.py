@@ -200,11 +200,15 @@ def create_index(tsv_path: str = None, db_path: str = None, verbose: bool = True
     """
     Create SQLite index from the TED TSV file.
 
+    Memory-optimized: uses small batches and streaming to avoid OOM errors.
+
     Args:
         tsv_path: Path to the gzipped TSV file
         db_path: Path for the output SQLite database
         verbose: Print progress information
     """
+    import gc
+
     tsv_path = tsv_path or DEFAULT_TED_TSV_PATH
     db_path = db_path or DEFAULT_TED_DB_PATH
 
@@ -221,11 +225,17 @@ def create_index(tsv_path: str = None, db_path: str = None, verbose: bool = True
     if os.path.exists(db_path):
         os.remove(db_path)
 
-    # Create database and table
+    # Create database and table with optimized settings for bulk insert
     conn = sqlite3.connect(db_path)
+
+    # Optimize SQLite for bulk loading (much faster, uses less memory)
+    conn.execute("PRAGMA synchronous = OFF")
+    conn.execute("PRAGMA journal_mode = OFF")
+    conn.execute("PRAGMA cache_size = 10000")
+    conn.execute("PRAGMA temp_store = MEMORY")
+
     conn.execute("""
         CREATE TABLE domains (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
             uniprot_acc TEXT NOT NULL,
             ted_id TEXT NOT NULL,
             ted_suffix TEXT NOT NULL,
@@ -234,63 +244,68 @@ def create_index(tsv_path: str = None, db_path: str = None, verbose: bool = True
         )
     """)
 
-    # Pattern to extract UniProt accession from ted_id
-    # Format: AF-A0A000-F1-model_v4_TED01 -> A0A000
-    acc_pattern = re.compile(r'^AF-([A-Z0-9]+)-F\d+-')
-
-    # Read and insert data
+    # Read and insert data using a generator to minimize memory
     if verbose:
         print("  Reading TSV file and inserting records...")
 
     record_count = 0
+    batch_size = 10000  # Smaller batches to reduce memory usage
+
+    def record_generator():
+        """Generator that yields records one at a time to minimize memory."""
+        # Pattern to extract UniProt accession from ted_id
+        acc_pattern = re.compile(r'^AF-([A-Z0-9]+)-F\d+-')
+
+        if tsv_path.endswith('.gz'):
+            open_func = gzip.open
+            mode = 'rt'
+        else:
+            open_func = open
+            mode = 'r'
+
+        with open_func(tsv_path, mode) as f:
+            for line in f:
+                line = line.rstrip('\n\r')
+                if not line:
+                    continue
+
+                parts = line.split('\t')
+                if len(parts) < 2:
+                    continue
+
+                ted_id = parts[0]
+                chopping = parts[1]
+                consensus_level = parts[2] if len(parts) > 2 else 'unknown'
+
+                # Extract UniProt accession
+                match = acc_pattern.match(ted_id)
+                if not match:
+                    continue
+
+                uniprot_acc = match.group(1)
+
+                # Extract TED suffix (e.g., TED01)
+                ted_suffix = ted_id.split('_')[-1] if '_' in ted_id else ted_id
+
+                yield (uniprot_acc, ted_id, ted_suffix, chopping, consensus_level)
+
+    # Process in small batches
     batch = []
-    batch_size = 100000
+    for record in record_generator():
+        batch.append(record)
+        record_count += 1
 
-    if tsv_path.endswith('.gz'):
-        open_func = gzip.open
-        mode = 'rt'
-    else:
-        open_func = open
-        mode = 'r'
+        if len(batch) >= batch_size:
+            conn.executemany(
+                "INSERT INTO domains (uniprot_acc, ted_id, ted_suffix, chopping, consensus_level) "
+                "VALUES (?, ?, ?, ?, ?)",
+                batch
+            )
+            batch.clear()  # Clear list in-place (more memory efficient than batch = [])
 
-    with open_func(tsv_path, mode) as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-
-            parts = line.split('\t')
-            if len(parts) < 2:
-                continue
-
-            ted_id = parts[0]
-            chopping = parts[1]
-            consensus_level = parts[2] if len(parts) > 2 else 'unknown'
-
-            # Extract UniProt accession
-            match = acc_pattern.match(ted_id)
-            if not match:
-                continue
-
-            uniprot_acc = match.group(1)
-
-            # Extract TED suffix (e.g., TED01)
-            ted_suffix = ted_id.split('_')[-1] if '_' in ted_id else ted_id
-
-            batch.append((uniprot_acc, ted_id, ted_suffix, chopping, consensus_level))
-            record_count += 1
-
-            # Insert in batches for performance
-            if len(batch) >= batch_size:
-                conn.executemany(
-                    "INSERT INTO domains (uniprot_acc, ted_id, ted_suffix, chopping, consensus_level) "
-                    "VALUES (?, ?, ?, ?, ?)",
-                    batch
-                )
-                conn.commit()
-                if verbose:
-                    print(f"    Processed {record_count:,} records...")
-                batch = []
+            if verbose and record_count % 1000000 == 0:
+                print(f"    Processed {record_count:,} records...")
+                gc.collect()  # Force garbage collection periodically
 
     # Insert remaining records
     if batch:
@@ -299,10 +314,14 @@ def create_index(tsv_path: str = None, db_path: str = None, verbose: bool = True
             "VALUES (?, ?, ?, ?, ?)",
             batch
         )
-        conn.commit()
+        batch.clear()
+
+    conn.commit()
+    gc.collect()
 
     if verbose:
-        print(f"  Creating index on uniprot_acc...")
+        print(f"  Processed {record_count:,} records total")
+        print(f"  Creating index on uniprot_acc (this may take a minute)...")
 
     # Create index for fast lookups
     conn.execute("CREATE INDEX idx_uniprot_acc ON domains (uniprot_acc)")
