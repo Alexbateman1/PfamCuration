@@ -1,5 +1,5 @@
 current_dir=$(pwd)
-awk '$5>0.8{
+shuf triage | awk '$5>0.8{
     system("cd "$1" && \
     if [ -e sp ]; then \
         echo \"Skipping "$1": sp file already exists\"; \
@@ -14,4 +14,4 @@ awk '$5>0.8{
         fi; \
     fi && \
     cd '"$current_dir"'")
-}' triage
+}'
