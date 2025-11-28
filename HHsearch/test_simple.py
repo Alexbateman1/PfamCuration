@@ -118,7 +118,7 @@ if __name__ == "__main__":
         print("")
         print("Example:")
         print("  python3 test_simple.py PF00001 \\")
-        print("    /nfs/production/agb/pfam/users/agb/HHsearch/DATA/SEED \\")
+        print("    /nfs/production/agb/pfam/data/all_vs_all/HHsearch/DATA/SEED \\")
         print("    /tmp/test_hhsearch")
         sys.exit(1)
 

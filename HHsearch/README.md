@@ -306,8 +306,8 @@ Work directory:
 HHSEARCH_PIPELINE/
 ├── .progress/                  # Progress markers
 ├── DATA/
-│   ├── SEED/                  # SEED alignments
-│   └── HMM/                   # HMMER HMMs (not used)
+│   ├── Families/              # SVN working copy (nested structure)
+│   └── SEED/                  # Flat SEED directory (synced from Families/)
 ├── RESULTS/
 │   ├── A3M/                   # A3M alignments
 │   ├── hhsuite_db/            # HH-suite database

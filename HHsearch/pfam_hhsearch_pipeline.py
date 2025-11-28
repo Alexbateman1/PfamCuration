@@ -97,7 +97,6 @@ class PfamHHsearchPipeline:
             logging.info("Cleaning up old result files...")
             hhsearch_runner = HHsearchRunner(
                 seed_dir=self.data_dir / "SEED",
-                hmm_dir=self.data_dir / "HMM",
                 results_dir=self.results_dir,
                 e_value_threshold=self.e_value_threshold
             )
@@ -187,11 +186,10 @@ class PfamHHsearchPipeline:
         # Save extraction manifest
         manifest_file = self.work_dir / 'extraction_manifest.tsv'
         with open(manifest_file, 'w') as f:
-            f.write("family_id\tseed_path\thmm_path\tseed_exists\thmm_exists\n")
-            for family_id, (seed_path, hmm_path) in results.items():
-                seed_exists = seed_path is not None and seed_path.exists()
-                hmm_exists = hmm_path is not None and hmm_path.exists()
-                f.write(f"{family_id}\t{seed_path}\t{hmm_path}\t{seed_exists}\t{hmm_exists}\n")
+            f.write("family_id\tseed_path\tseed_exists\n")
+            for family_id, (seed_path, _) in results.items():
+                seed_exists = seed_path is not None and Path(seed_path).exists()
+                f.write(f"{family_id}\t{seed_path}\t{seed_exists}\n")
 
         logging.info(f"Extraction complete: {len(results)} families")
         self.mark_step_complete('extraction')
@@ -371,7 +369,6 @@ class PfamHHsearchPipeline:
         svn_manager = SVNManager(self.svn_url, self.data_dir)
         hhsearch_runner = HHsearchRunner(
             seed_dir=self.data_dir / "SEED",
-            hmm_dir=self.data_dir / "HMM",
             results_dir=self.results_dir,
             e_value_threshold=self.e_value_threshold
         )

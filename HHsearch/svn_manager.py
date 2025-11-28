@@ -1,63 +1,156 @@
 #!/usr/bin/env python3
 """
-Simple SVN manager for extracting Pfam SEED alignments and HMMs from SVN repository.
+SVN manager for Pfam SEED alignments using checkout/update workflow.
+
+This module handles SVN operations for extracting and updating SEED alignments
+from the Pfam SVN repository. It uses svn checkout/update for efficient
+incremental updates rather than individual file exports.
 """
 
 import subprocess
-import os
 import logging
+import shutil
 from pathlib import Path
 
-class SVNManager:
-    """Manages SVN operations for Pfam family extraction."""
 
-    def __init__(self, repo_url, output_dir):
+class SVNManager:
+    """Manages SVN operations for Pfam SEED extraction."""
+
+    def __init__(self, repo_url, data_dir):
         """
         Initialize SVN manager.
 
         Args:
-            repo_url: Base SVN repository URL
-            output_dir: Base directory for extracted files
+            repo_url: Base SVN repository URL (e.g., https://xfam-svn-hl.ebi.ac.uk/svn/pfam/)
+            data_dir: Base directory for data files
         """
         self.repo_url = repo_url.rstrip('/')
-        self.output_dir = Path(output_dir)
+        self.data_dir = Path(data_dir)
         self.families_url = f"{self.repo_url}/trunk/Data/Families"
 
-        # Create output directories
-        self.seed_dir = self.output_dir / "SEED"
-        self.hmm_dir = self.output_dir / "HMM"
+        # SVN working copy directory (contains nested family directories)
+        self.checkout_dir = self.data_dir / "Families"
+
+        # Flat SEED directory for pipeline compatibility
+        # Files are named PF00001_SEED, PF00002_SEED, etc.
+        self.seed_dir = self.data_dir / "SEED"
         self.seed_dir.mkdir(parents=True, exist_ok=True)
-        self.hmm_dir.mkdir(parents=True, exist_ok=True)
 
         logging.info(f"SVN Manager initialized: {self.families_url}")
-        logging.info(f"Output directory: {self.output_dir}")
+        logging.info(f"Checkout directory: {self.checkout_dir}")
+        logging.info(f"SEED directory: {self.seed_dir}")
+
+    def is_checked_out(self):
+        """Check if SVN working copy exists."""
+        return (self.checkout_dir / ".svn").exists()
+
+    def checkout(self):
+        """
+        Perform initial SVN checkout of the Families directory.
+
+        Note: This checks out the entire Families directory structure including
+        files we don't use (HMM, DESC, etc.). This is a one-time cost and enables
+        efficient incremental updates via 'svn update'.
+        """
+        logging.info(f"Performing initial checkout from {self.families_url}...")
+        logging.info("This may take several hours for the initial checkout...")
+
+        self.checkout_dir.parent.mkdir(parents=True, exist_ok=True)
+
+        cmd = f"svn checkout {self.families_url} {self.checkout_dir}"
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+
+        if result.returncode != 0:
+            logging.error(f"Checkout failed: {result.stderr}")
+            raise RuntimeError(f"SVN checkout failed: {result.stderr}")
+
+        logging.info("Checkout complete")
+        return result.stdout
+
+    def update(self):
+        """
+        Update existing SVN working copy.
+
+        Returns:
+            SVN update output showing what changed
+        """
+        if not self.is_checked_out():
+            raise RuntimeError("No checkout exists. Run checkout() first.")
+
+        logging.info("Updating SVN working copy...")
+        cmd = f"svn update {self.checkout_dir}"
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+
+        if result.returncode != 0:
+            logging.error(f"Update failed: {result.stderr}")
+            raise RuntimeError(f"SVN update failed: {result.stderr}")
+
+        logging.info("Update complete")
+
+        # Log summary of changes
+        if result.stdout:
+            lines = result.stdout.strip().split('\n')
+            updated = [l for l in lines if l.startswith('U ')]
+            added = [l for l in lines if l.startswith('A ')]
+            deleted = [l for l in lines if l.startswith('D ')]
+            if updated or added or deleted:
+                logging.info(f"SVN changes: {len(added)} added, {len(updated)} updated, {len(deleted)} deleted")
+
+        return result.stdout
+
+    def checkout_or_update(self):
+        """
+        Checkout if no working copy exists, otherwise update.
+
+        Returns:
+            SVN command output
+        """
+        if self.is_checked_out():
+            return self.update()
+        else:
+            return self.checkout()
 
     def get_current_revision(self):
         """Get current SVN revision number."""
-        try:
+        if self.is_checked_out():
+            cmd = f"svn info {self.checkout_dir} --show-item revision"
+        else:
             cmd = f"svn info {self.families_url} --show-item revision"
-            result = subprocess.run(cmd, shell=True, check=True,
-                                  capture_output=True, text=True)
-            revision = result.stdout.strip()
-            logging.info(f"Current SVN revision: {revision}")
-            return revision
-        except subprocess.CalledProcessError as e:
-            logging.error(f"Failed to get SVN revision: {e}")
-            raise
+
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+
+        if result.returncode != 0:
+            logging.error(f"Failed to get revision: {result.stderr}")
+            raise RuntimeError(f"Failed to get SVN revision: {result.stderr}")
+
+        revision = result.stdout.strip()
+        logging.info(f"Current SVN revision: {revision}")
+        return revision
 
     def list_all_families(self):
-        """List all family IDs in the repository."""
-        try:
+        """
+        List all family IDs.
+
+        Returns:
+            Sorted list of family IDs (e.g., ['PF00001', 'PF00002', ...])
+        """
+        if self.is_checked_out():
+            # List from local checkout (fast)
+            families = [d.name for d in self.checkout_dir.iterdir()
+                       if d.is_dir() and d.name.startswith('PF') and not d.name.startswith('.')]
+        else:
+            # List from SVN server (slower, requires network)
             cmd = f"svn list {self.families_url}"
-            result = subprocess.run(cmd, shell=True, check=True,
-                                  capture_output=True, text=True)
+            result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
+
+            if result.returncode != 0:
+                raise RuntimeError(f"Failed to list families: {result.stderr}")
+
             families = [line.strip('/') for line in result.stdout.strip().split('\n')
                        if line.strip() and line.startswith('PF')]
-            logging.info(f"Found {len(families)} families in SVN")
-            return sorted(families)
-        except subprocess.CalledProcessError as e:
-            logging.error(f"Failed to list families: {e}")
-            raise
+
+        logging.info(f"Found {len(families)} families")
+        return sorted(families)
 
     def get_changed_families(self, last_revision, current_revision):
         """
@@ -70,181 +163,150 @@ class SVNManager:
         Returns:
             List of changed family IDs
         """
-        try:
-            cmd = f"svn log -r {last_revision}:{current_revision} --verbose {self.families_url}"
-            result = subprocess.run(cmd, shell=True, check=True,
-                                  capture_output=True, text=True)
+        cmd = f"svn log -r {last_revision}:{current_revision} -v {self.families_url}"
+        result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
-            # Parse log output to find changed families
-            changed_families = set()
-            for line in result.stdout.split('\n'):
-                if 'trunk/Data/Families/PF' in line:
-                    # Extract family ID from path like: /trunk/Data/Families/PF00001/SEED
-                    parts = line.split('trunk/Data/Families/')
-                    if len(parts) > 1:
-                        family = parts[1].split('/')[0]
-                        if family.startswith('PF'):
-                            changed_families.add(family)
+        if result.returncode != 0:
+            logging.error(f"Failed to get SVN log: {result.stderr}")
+            raise RuntimeError(f"Failed to get SVN log: {result.stderr}")
 
-            logging.info(f"Found {len(changed_families)} changed families between r{last_revision} and r{current_revision}")
-            return sorted(changed_families)
-        except subprocess.CalledProcessError as e:
-            logging.error(f"Failed to get changed families: {e}")
-            raise
+        changed = set()
+        for line in result.stdout.split('\n'):
+            if '/trunk/Data/Families/PF' in line:
+                parts = line.split('/trunk/Data/Families/')
+                if len(parts) > 1:
+                    family = parts[1].split('/')[0]
+                    if family.startswith('PF'):
+                        changed.add(family)
 
-    def extract_seed(self, family_id):
+        logging.info(f"Found {len(changed)} changed families between r{last_revision} and r{current_revision}")
+        return sorted(changed)
+
+    def sync_seeds(self, families=None):
         """
-        Extract SEED alignment for a family.
+        Sync SEED files from SVN checkout to flat SEED directory.
+
+        This copies SEED files from the nested SVN structure (Families/PF00001/SEED)
+        to the flat structure expected by the pipeline (SEED/PF00001_SEED).
 
         Args:
-            family_id: Pfam family ID (e.g., PF00001)
+            families: List of families to sync (if None, sync all)
 
         Returns:
-            Path to extracted SEED file
+            Dictionary mapping family_id to seed_path
         """
-        seed_url = f"{self.families_url}/{family_id}/SEED"
-        seed_path = self.seed_dir / f"{family_id}_SEED"
+        if not self.is_checked_out():
+            raise RuntimeError("No checkout exists. Run checkout_or_update() first.")
 
-        try:
-            cmd = f"svn export --force {seed_url} {seed_path}"
-            subprocess.run(cmd, shell=True, check=True, capture_output=True)
-            logging.debug(f"Extracted SEED for {family_id}")
-            return seed_path
-        except subprocess.CalledProcessError as e:
-            logging.warning(f"Failed to extract SEED for {family_id}: {e}")
-            return None
+        if families is None:
+            families = self.list_all_families()
 
-    def extract_hmm(self, family_id):
-        """
-        Extract HMM profile for a family.
+        logging.info(f"Syncing {len(families)} SEED files to flat directory...")
 
-        Args:
-            family_id: Pfam family ID (e.g., PF00001)
-
-        Returns:
-            Path to extracted HMM file
-        """
-        hmm_url = f"{self.families_url}/{family_id}/HMM"
-        hmm_path = self.hmm_dir / f"{family_id}.hmm"
-
-        try:
-            cmd = f"svn export --force {hmm_url} {hmm_path}"
-            subprocess.run(cmd, shell=True, check=True, capture_output=True)
-            logging.debug(f"Extracted HMM for {family_id}")
-            return hmm_path
-        except subprocess.CalledProcessError as e:
-            logging.warning(f"Failed to extract HMM for {family_id}: {e}")
-            return None
-
-    def extract_family(self, family_id):
-        """
-        Extract both SEED and HMM for a family.
-
-        Args:
-            family_id: Pfam family ID (e.g., PF00001)
-
-        Returns:
-            Tuple of (seed_path, hmm_path)
-        """
-        seed_path = self.extract_seed(family_id)
-        hmm_path = self.extract_hmm(family_id)
-        return (seed_path, hmm_path)
-
-    def incremental_export_all_families(self, families):
-        """
-        Export families one at a time directly to final location.
-        Fully resumable - downloads directly to destination, skips existing files.
-
-        Args:
-            families: List of family IDs to extract
-
-        Returns:
-            Dictionary mapping family_id to (seed_path, hmm_path)
-        """
         results = {}
-        total = len(families)
+        synced = 0
+        skipped = 0
+        missing = 0
 
-        # Check what's already been extracted
-        existing_seeds = {f.stem.replace('_SEED', '') for f in self.seed_dir.glob("PF*_SEED")}
-        existing_hmms = {f.stem for f in self.hmm_dir.glob("PF*.hmm")}
-        already_extracted = existing_seeds & existing_hmms  # Both must exist
+        for i, family_id in enumerate(families, 1):
+            src = self.checkout_dir / family_id / "SEED"
+            dst = self.seed_dir / f"{family_id}_SEED"
 
-        to_download = [f for f in families if f not in already_extracted]
+            if not src.exists():
+                missing += 1
+                results[family_id] = None
+                continue
 
-        logging.info(f"Found {len(already_extracted)} families already extracted")
-        logging.info(f"Need to download {len(to_download)} families")
+            # Copy if destination doesn't exist or source is newer
+            if not dst.exists():
+                shutil.copy2(src, dst)
+                synced += 1
+            elif src.stat().st_mtime > dst.stat().st_mtime:
+                shutil.copy2(src, dst)
+                synced += 1
+            else:
+                skipped += 1
 
-        # Add already extracted to results
-        for family_id in already_extracted:
-            seed_path = self.seed_dir / f"{family_id}_SEED"
-            hmm_path = self.hmm_dir / f"{family_id}.hmm"
-            results[family_id] = (seed_path, hmm_path)
+            results[family_id] = dst
 
-        # Download remaining families directly to final location
-        for i, family_id in enumerate(to_download, 1):
-            try:
-                seed_path, hmm_path = self.extract_family(family_id)
-                results[family_id] = (seed_path, hmm_path)
+            if i % 2000 == 0:
+                logging.info(f"Progress: {i}/{len(families)} processed")
 
-                if i % 100 == 0:
-                    remaining = len(to_download) - i
-                    logging.info(f"Progress: {i}/{len(to_download)} downloaded, {remaining} remaining, "
-                               f"{len(already_extracted) + i}/{total} total complete")
-
-            except Exception as e:
-                logging.error(f"Failed to extract {family_id}: {e}")
-                results[family_id] = (None, None)
-
-        logging.info(f"Extraction complete: {len(results)} families total, "
-                    f"{len(already_extracted)} were cached, {len(to_download)} downloaded")
-
+        logging.info(f"Sync complete: {synced} copied, {skipped} up-to-date, {missing} missing SEED files")
         return results
 
     def extract_all_families(self, families=None):
         """
-        Extract SEED and HMM files for all families.
-        Fully resumable - downloads directly to destination, skips existing files.
+        Main entry point: checkout/update SVN and sync SEED files.
+
+        This method:
+        1. Performs SVN checkout (first run) or update (subsequent runs)
+        2. Syncs SEED files from nested SVN structure to flat directory
 
         Args:
-            families: List of family IDs to extract (if None, extracts all)
+            families: List of families to process (if None, process all)
 
         Returns:
-            Dictionary mapping family_id to (seed_path, hmm_path)
+            Dictionary mapping family_id to (seed_path, None)
+            Note: Second element is None for backwards compatibility
+                  (previously was hmm_path, now removed)
         """
-        if families is None:
-            families = self.list_all_families()
+        # Checkout or update SVN
+        self.checkout_or_update()
 
-        logging.info(f"Extracting {len(families)} families (resumable mode)...")
+        # Sync SEED files to flat directory
+        seed_results = self.sync_seeds(families)
 
-        # Use incremental approach - downloads directly to final location
-        # and is fully resumable if interrupted
-        results = self.incremental_export_all_families(families)
+        # Return in format compatible with existing pipeline
+        # (family_id -> (seed_path, hmm_path)) where hmm_path is now always None
+        return {fam: (path, None) for fam, path in seed_results.items()}
 
-        return results
+    def get_seed_path(self, family_id):
+        """
+        Get path to SEED file for a family.
+
+        Args:
+            family_id: Pfam family ID (e.g., PF00001)
+
+        Returns:
+            Path to SEED file in flat directory, or None if not found
+        """
+        seed_path = self.seed_dir / f"{family_id}_SEED"
+        if seed_path.exists():
+            return seed_path
+        return None
 
 
 if __name__ == "__main__":
     # Test the SVN manager
-    logging.basicConfig(level=logging.INFO,
-                       format='%(asctime)s - %(levelname)s - %(message)s')
+    import sys
+
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s'
+    )
 
     repo_url = "https://xfam-svn-hl.ebi.ac.uk/svn/pfam/"
-    output_dir = "./test_output"
+    data_dir = "./test_svn_checkout"
 
-    manager = SVNManager(repo_url, output_dir)
+    manager = SVNManager(repo_url, data_dir)
 
-    # Test getting revision
-    revision = manager.get_current_revision()
-    print(f"Current revision: {revision}")
+    # Test getting revision (doesn't require checkout)
+    try:
+        revision = manager.get_current_revision()
+        print(f"Current SVN revision: {revision}")
+    except Exception as e:
+        print(f"Failed to get revision: {e}")
+        sys.exit(1)
 
-    # Test listing families (first 10)
-    families = manager.list_all_families()[:10]
-    print(f"First 10 families: {families}")
+    # Test listing families (from server if no checkout)
+    print("\nListing first 10 families from SVN server...")
+    try:
+        families = manager.list_all_families()[:10]
+        print(f"First 10 families: {families}")
+    except Exception as e:
+        print(f"Failed to list families: {e}")
 
-    # Test extracting one family
-    if families:
-        test_family = families[0]
-        print(f"\nTesting extraction of {test_family}...")
-        seed_path, hmm_path = manager.extract_family(test_family)
-        print(f"SEED: {seed_path}")
-        print(f"HMM: {hmm_path}")
+    print("\nTo test checkout/update, run:")
+    print(f"  python3 {__file__} --checkout")
+    print("\nNote: Full checkout takes several hours for ~20k families")

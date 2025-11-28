@@ -13,18 +13,16 @@ import re
 class HHsearchRunner:
     """Manages HHsearch searches and result parsing."""
 
-    def __init__(self, seed_dir, hmm_dir, results_dir, e_value_threshold=1.0):
+    def __init__(self, seed_dir, results_dir, e_value_threshold=1.0):
         """
         Initialize HHsearch runner.
 
         Args:
             seed_dir: Directory containing SEED alignment files
-            hmm_dir: Directory containing HMM files (not used but kept for compatibility)
             results_dir: Directory for HHsearch results
             e_value_threshold: E-value cutoff for significant hits (default: 1.0)
         """
         self.seed_dir = Path(seed_dir)
-        self.hmm_dir = Path(hmm_dir)
         self.results_dir = Path(results_dir)
         self.e_value_threshold = e_value_threshold
 
@@ -507,7 +505,7 @@ while read FAMILY_ID; do
     # Parse results
     python3 -c "
 from hhsearch_runner import HHsearchRunner
-runner = HHsearchRunner('{self.seed_dir}', '{self.hmm_dir}', '{self.results_dir}', {self.e_value_threshold})
+runner = HHsearchRunner('{self.seed_dir}', '{self.results_dir}', {self.e_value_threshold})
 hits = runner.parse_hhr('$HHR_FILE')
 parsed_file = '{self.parsed_dir}/${{FAMILY_ID}}_hits.tsv'
 runner.save_hits('$FAMILY_ID', hits, parsed_file)
