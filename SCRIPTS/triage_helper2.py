@@ -471,7 +471,7 @@ def edit_seed_alignment(seed_file):
                 print("Warning: pad_ends may have failed", file=sys.stderr)
 
 
-def check_overlap(curation_dir):
+def check_overlap(curation_dir, quiet=True):
     """
     Check overlaps for a curation directory.
 
@@ -481,19 +481,26 @@ def check_overlap(curation_dir):
     When curation_dir is '.', we're already in the family directory,
     so we need to run from parent directory.
 
+    Args:
+        curation_dir: Directory to check
+        quiet: If True, suppress pqc-overlap-rdb output (default True)
+
     Returns: (has_overlaps, overlap_content)
     """
     curation_path = Path(curation_dir).resolve()
+
+    # Build command with output suppression if quiet
+    redirect = " > /dev/null 2>&1" if quiet else ""
 
     if curation_dir == '.':
         # We're in the family directory, run from parent
         parent_dir = str(curation_path.parent)
         family_name = curation_path.name
-        run_command(f"pqc-overlap-rdb -no_sigP {family_name}", cwd=parent_dir, wait=True)
+        run_command(f"pqc-overlap-rdb -no_sigP {family_name}{redirect}", cwd=parent_dir, wait=True)
         overlap_file = curation_path / 'overlap'
     else:
         # Run from current directory targeting the specified directory
-        run_command(f"pqc-overlap-rdb -no_sigP {curation_dir}", wait=True)
+        run_command(f"pqc-overlap-rdb -no_sigP {curation_dir}{redirect}", wait=True)
         overlap_file = Path(curation_dir) / 'overlap'
 
     # Check if overlap file exists and has content
@@ -782,12 +789,12 @@ def resolve_overlap(entry, start_dir, se_prefix=None, use_nano=False):
             if confirm in ['y', 'yes']:
                 if add_clan_to_desc('.', clan_to_join):
                     # Re-run overlap check with -compete flag for clan members
-                    # Need to run from parent directory
+                    # Need to run from parent directory, suppress stdout/stderr
                     print("\nRe-checking overlaps (with clan membership)...")
                     curation_path = Path('.').resolve()
                     parent_dir = str(curation_path.parent)
                     family_name = curation_path.name
-                    run_command(f"pqc-overlap-rdb -no_sigP -compete {family_name}",
+                    run_command(f"pqc-overlap-rdb -no_sigP -compete {family_name} > /dev/null 2>&1",
                                cwd=parent_dir, wait=True)
 
                     overlap_file = Path('overlap')
@@ -795,7 +802,9 @@ def resolve_overlap(entry, start_dir, se_prefix=None, use_nano=False):
                         with open(overlap_file, 'r') as f:
                             overlap_content = f.read()
                         print("Overlaps remaining (non-clan):")
+                        print("-" * 40)
                         print(overlap_content)
+                        print("-" * 40)
                     else:
                         print("All overlaps resolved (clan overlaps are now allowed)!")
                         os.chdir(start_dir)
