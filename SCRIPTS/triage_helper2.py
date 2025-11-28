@@ -307,7 +307,7 @@ def check_desc_for_clan(dir_path):
 
 
 def add_clan_to_desc(dir_path, clan_accession):
-    """Add a CL line to DESC file after the AC line."""
+    """Add a CL line to DESC file after the TP line."""
     desc_path = Path(dir_path) / 'DESC'
     if not desc_path.exists():
         print(f"Error: DESC file not found in {dir_path}", file=sys.stderr)
@@ -332,7 +332,8 @@ def add_clan_to_desc(dir_path, clan_accession):
         if line.startswith('CL '):
             continue  # Remove existing CL line
         new_lines.append(line)
-        if line.startswith('AC ') and not cl_inserted:
+        # Insert CL after TP line
+        if not cl_inserted and line.startswith('TP '):
             new_lines.append(f"CL   {clan_accession}\n")
             cl_inserted = True
 
