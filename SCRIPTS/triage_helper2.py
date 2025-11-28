@@ -71,11 +71,15 @@ def parse_overlap_info(overlap_details):
     Format: "[CLAN:]FAMILY COUNT(SIZE)" e.g. "CL0351:CHCH 1050(8242)" or "Flavoprotein 2(21413)"
     """
     overlaps = []
+    debug = os.environ.get('DEBUG_TRIAGE', '')
+
     for detail in overlap_details:
         detail = detail.strip() if detail else ""
         if not detail or detail == '----' or detail == 'NA':
             continue
-        match = re.match(r'^(?:(CL\d+):)?(\S+)\s+(\d+)\((\d+)\)$', detail)
+
+        # More flexible regex to handle whitespace variations
+        match = re.match(r'^(?:(CL\d+):)?(\S+)\s+(\d+)\((\d+)\)\s*$', detail)
         if match:
             overlaps.append({
                 'family': match.group(2),
@@ -84,6 +88,9 @@ def parse_overlap_info(overlap_details):
                 'pfam_size': int(match.group(4)),
                 'raw': detail
             })
+        elif debug:
+            print(f"[DEBUG] parse_overlap_info: no match for '{detail}'", file=sys.stderr)
+
     return overlaps
 
 
@@ -166,6 +173,12 @@ def parse_triage_file(triage_file, sp_only=False, min_seed=1, max_overlap_fracti
             overlap_info = parse_overlap_info(overlap_details)
             overlap_fraction = overlaps / total_seqs if total_seqs > 0 else 0
 
+            debug = os.environ.get('DEBUG_TRIAGE', '')
+            if debug and overlaps > 0:
+                print(f"[DEBUG] Parsing {dir_name}: parts count={len(parts)}, "
+                      f"overlap_details={overlap_details}, overlap_info={len(overlap_info)} parsed",
+                      file=sys.stderr)
+
             entry = {
                 'dir': dir_name,
                 'total_seqs': total_seqs,
@@ -217,9 +230,16 @@ def parse_triage_file(triage_file, sp_only=False, min_seed=1, max_overlap_fracti
             if e['depth'] > best['depth'] and e['overlaps'] > 0:
                 if debug:
                     print(f"[DEBUG] Checking {e['dir']}: overlap_fraction={e['overlap_fraction']:.4f}, "
-                          f"max={max_overlap_fraction}", file=sys.stderr)
+                          f"max={max_overlap_fraction}, overlap_info_count={len(e['overlap_info'])}", file=sys.stderr)
 
                 if e['overlap_fraction'] <= max_overlap_fraction:
+                    # Check if we have overlap info to work with
+                    if not e['overlap_info']:
+                        if debug:
+                            print(f"[DEBUG]   No overlap_info parsed - cannot determine eligibility", file=sys.stderr)
+                        deeper_warnings.append(f"{e['dir']}: Overlap info not parsed")
+                        continue
+
                     eligible, reason, clan = check_resolution_eligibility(e['overlap_info'])
                     if debug:
                         print(f"[DEBUG]   eligible={eligible}, reason={reason}", file=sys.stderr)
