@@ -607,12 +607,12 @@ def try_resolve_overlaps(entry, start_dir):
             confirm = input(f"Proceed? [y/n]: ").strip().lower()
             if confirm in ['y', 'yes']:
                 if add_clan_to_desc('.', clan_to_join):
-                    # Re-check with -compete flag
-                    print("Re-checking overlaps with clan membership...")
+                    # Re-check overlaps after adding clan
+                    print("Re-checking overlaps after adding clan membership...")
                     curation_path = Path('.').resolve()
                     parent_dir = str(curation_path.parent)
                     family_name = curation_path.name
-                    run_command(f"pqc-overlap-rdb -no_sigP -compete {family_name} > /dev/null 2>&1",
+                    run_command(f"pqc-overlap-rdb -no_sigP {family_name} > /dev/null 2>&1",
                                cwd=parent_dir, wait=True)
 
                     overlap_file = Path('overlap')
