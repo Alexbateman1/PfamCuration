@@ -876,13 +876,16 @@ def write_detailed_results(results: Dict, pfam_dir: str):
                                key=lambda x: len(x[1]['networks']),
                                reverse=True)
 
-            f.write(f"{'Pfam Domain':<25} {'Networks':<12} {'Proteins':<12} {'Frequency':<12}\n")
+            f.write(f"{'Pfam Domain':<25} {'Networks':<10} {'Proteins':<10} {'Frequency':<10} {'Wilson LB':<10}\n")
             f.write("-" * 80 + "\n")
 
+            total_networks = results['total_networks']
             for domain, data in pfam_sorted:
-                network_freq = len(data['networks']) / results['total_networks'] if results['total_networks'] > 0 else 0
+                network_count = len(data['networks'])
+                network_freq = network_count / total_networks if total_networks > 0 else 0
+                wilson_lb = wilson_score_lower_bound(network_count, total_networks)
                 domain_display = f"{domain} ({data['pfamA_id']})" if data['pfamA_id'] else domain
-                f.write(f"{domain_display:<25} {len(data['networks']):<12} {len(data['proteins']):<12} {network_freq:>6.1%}\n")
+                f.write(f"{domain_display:<25} {network_count:<10} {len(data['proteins']):<10} {network_freq:>6.1%}    {wilson_lb:>6.1%}\n")
 
             f.write(f"\nTotal unique Pfam domains: {len(results['pfam_domains'])}\n\n")
 
@@ -922,7 +925,8 @@ def write_detailed_results(results: Dict, pfam_dir: str):
     print(f"\n  Detailed results written to: {output_file}")
 
 
-def write_compact_results(results: Dict, pfam_dir: str, min_frequency: float = 0.3, min_networks: int = 5):
+def write_compact_results(results: Dict, pfam_dir: str, min_frequency: float = 0.3,
+                          min_networks: int = 5, wilson_threshold: float = 0.5):
     """
     Write compact STRING output with Wilson score for LLM consumption.
 
@@ -933,6 +937,7 @@ def write_compact_results(results: Dict, pfam_dir: str, min_frequency: float = 0
         pfam_dir: Path to Pfam family directory
         min_frequency: Minimum raw frequency threshold
         min_networks: Minimum networks a domain must appear in
+        wilson_threshold: Minimum Wilson score lower bound threshold
     """
     output_file = os.path.join(pfam_dir, 'STRING')
     total_networks = results['total_networks']
@@ -947,8 +952,8 @@ def write_compact_results(results: Dict, pfam_dir: str, min_frequency: float = 0
         raw_freq = network_count / total_networks if total_networks > 0 else 0
         wilson_lb = wilson_score_lower_bound(network_count, total_networks)
 
-        # Include if meets frequency threshold
-        if raw_freq >= min_frequency:
+        # Include if meets frequency and Wilson thresholds
+        if raw_freq >= min_frequency and wilson_lb >= wilson_threshold:
             significant_domains.append({
                 'pfam_acc': pfam_acc,
                 'pfam_id': data['pfamA_id'] or pfam_acc,
@@ -963,7 +968,7 @@ def write_compact_results(results: Dict, pfam_dir: str, min_frequency: float = 0
     with open(output_file, 'w') as f:
         # Write header line explaining the data
         f.write(f"# STRING network domains for {results['query_pfam_acc']}/{results['query_pfam_id']}\n")
-        f.write(f"# Analyzed {total_networks} networks, showing domains in >={min_networks} networks with frequency >={min_frequency:.0%}\n")
+        f.write(f"# Analyzed {total_networks} networks, showing domains in >={min_networks} networks with Wilson >={wilson_threshold:.0%}\n")
         f.write(f"# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound\n")
 
         if significant_domains:
@@ -1019,6 +1024,13 @@ def main():
         type=int,
         default=5,
         help='Minimum number of networks required for analysis (default: 5). Skips analysis if fewer networks available.'
+    )
+
+    parser.add_argument(
+        '--wilson-threshold',
+        type=float,
+        default=0.5,
+        help='Minimum Wilson score lower bound (0.0-1.0) to report domain (default: 0.5)'
     )
 
     parser.add_argument(
@@ -1103,7 +1115,7 @@ def main():
     if results is not None:
         write_detailed_results(results, args.pfam_dir)
         write_csv_output(results, args.pfam_dir)
-        write_compact_results(results, args.pfam_dir, args.min_frequency, args.min_networks)
+        write_compact_results(results, args.pfam_dir, args.min_frequency, args.min_networks, args.wilson_threshold)
 
 
 if __name__ == '__main__':
