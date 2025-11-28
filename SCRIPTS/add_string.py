@@ -21,6 +21,7 @@ Example:
 
 import argparse
 import gzip
+import math
 import os
 import re
 import subprocess
@@ -36,6 +37,39 @@ import urllib.error
 DEFAULT_STRING_DATA_DIR = "/nfs/production/agb/pfam/data/STRING"
 DEFAULT_MYSQL_CONFIG = "~/.my.cnf"
 STRING_DOWNLOAD_BASE_URL = "https://stringdb-downloads.org/download"
+
+
+def wilson_score_lower_bound(successes: int, total: int, confidence: float = 0.95) -> float:
+    """
+    Calculate the lower bound of the Wilson score confidence interval.
+
+    This provides a more meaningful measure than raw frequency for small samples.
+    For example, 1/1 (100%) has a lower bound of ~2.5%, while 15/20 (75%) has ~53%.
+
+    Args:
+        successes: Number of successes (networks where domain was found)
+        total: Total number of trials (total networks)
+        confidence: Confidence level (default 0.95 for 95% CI)
+
+    Returns:
+        Lower bound of the Wilson score confidence interval (0.0 to 1.0)
+    """
+    if total == 0:
+        return 0.0
+
+    # Z-score for the confidence level (1.96 for 95%)
+    z = 1.96 if confidence == 0.95 else 1.645 if confidence == 0.90 else 1.96
+
+    p_hat = successes / total
+    n = total
+
+    # Wilson score interval formula
+    denominator = 1 + z * z / n
+    centre = p_hat + z * z / (2 * n)
+    spread = z * math.sqrt((p_hat * (1 - p_hat) + z * z / (4 * n)) / n)
+
+    lower_bound = (centre - spread) / denominator
+    return max(0.0, lower_bound)
 
 
 def parse_desc_file(pfam_dir: str) -> Tuple[str, str]:
@@ -532,7 +566,8 @@ def should_skip_analysis(pfam_dir: str, force: bool = False) -> bool:
 
 def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int = 400,
                      network_depth: int = 1, mysql_config: str = DEFAULT_MYSQL_CONFIG,
-                     debug_limit: Optional[int] = None, auto_download: bool = True, force: bool = False) -> Dict:
+                     debug_limit: Optional[int] = None, auto_download: bool = True, force: bool = False,
+                     min_networks: int = 5) -> Dict:
     """
     Main analysis function to process STRING networks for a Pfam family.
 
@@ -545,9 +580,10 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
         debug_limit: If set, only process first N networks
         auto_download: Whether to auto-download missing STRING files
         force: If True, re-run even if STRING file is up-to-date
+        min_networks: Minimum number of networks required for analysis
 
     Returns:
-        Dictionary with analysis results
+        Dictionary with analysis results, or None if skipped/insufficient data
     """
     # Check if we should skip this analysis
     if should_skip_analysis(pfam_dir, force):
@@ -580,6 +616,17 @@ def analyze_networks(pfam_dir: str, string_data_dir: str, score_threshold: int =
         return results
 
     print(f"   Found {len(string_ids)} STRING identifiers")
+
+    # Early exit if insufficient networks for meaningful analysis
+    if len(string_ids) < min_networks:
+        print(f"   Insufficient networks ({len(string_ids)} < {min_networks} minimum)")
+        print(f"   Skipping detailed analysis - results would not be statistically meaningful")
+        # Write minimal STRING file noting insufficient data
+        output_file = os.path.join(pfam_dir, 'STRING')
+        with open(output_file, 'w') as f:
+            f.write(f"# STRING network analysis skipped: only {len(string_ids)} networks (minimum {min_networks} required)\n")
+        return None
+
     results['query_proteins'] = string_ids
 
     # Group by taxonomy ID
@@ -800,13 +847,14 @@ def write_detailed_results(results: Dict, pfam_dir: str):
         results: Results dictionary from analyze_networks()
         pfam_dir: Path to Pfam family directory
     """
-    # Write to STRING file in pfam_dir
-    output_file = os.path.join(pfam_dir, 'STRING')
+    # Write to STRING.all file in pfam_dir (verbose output)
+    output_file = os.path.join(pfam_dir, 'STRING.all')
 
-    # Remove old STRING directory if it exists
-    if os.path.isdir(output_file):
+    # Remove old STRING directory if it exists (legacy cleanup)
+    old_string_dir = os.path.join(pfam_dir, 'STRING')
+    if os.path.isdir(old_string_dir):
         import shutil
-        shutil.rmtree(output_file)
+        shutil.rmtree(old_string_dir)
 
     with open(output_file, 'w') as f:
         f.write("=" * 80 + "\n")
@@ -874,71 +922,57 @@ def write_detailed_results(results: Dict, pfam_dir: str):
     print(f"\n  Detailed results written to: {output_file}")
 
 
-def print_report(results: Dict, min_frequency: float = 0.3, output_file: Optional[str] = None):
+def write_compact_results(results: Dict, pfam_dir: str, min_frequency: float = 0.3, min_networks: int = 5):
     """
-    Print analysis report.
+    Write compact STRING output with Wilson score for LLM consumption.
+
+    Only includes domains meeting minimum network and Wilson score thresholds.
 
     Args:
         results: Results dictionary from analyze_networks()
-        min_frequency: Minimum frequency threshold (0-1) to report
-        output_file: Optional file to write report to
+        pfam_dir: Path to Pfam family directory
+        min_frequency: Minimum raw frequency threshold
+        min_networks: Minimum networks a domain must appear in
     """
-    output = []
+    output_file = os.path.join(pfam_dir, 'STRING')
+    total_networks = results['total_networks']
 
-    output.append("=" * 80)
-    output.append("STRING Network Analysis Report")
-    output.append("=" * 80)
-    output.append("")
+    # Collect significant domains
+    significant_domains = []
+    for pfam_acc, data in results['pfam_domains'].items():
+        network_count = len(data['networks'])
+        if network_count < min_networks:
+            continue
 
-    output.append(f"Query proteins: {len(results['query_proteins'])}")
-    output.append(f"Total networks analyzed: {results['total_networks']}")
-    output.append(f"Total network proteins: {results['total_proteins']}")
-    output.append(f"Reporting frequency threshold: {min_frequency:.1%}")
-    output.append("")
+        raw_freq = network_count / total_networks if total_networks > 0 else 0
+        wilson_lb = wilson_score_lower_bound(network_count, total_networks)
 
-    # Pfam domains
-    output.append("=" * 80)
-    output.append("Pfam Domain Enrichment")
-    output.append("=" * 80)
-    output.append("")
+        # Include if meets frequency threshold
+        if raw_freq >= min_frequency:
+            significant_domains.append({
+                'pfam_acc': pfam_acc,
+                'pfam_id': data['pfamA_id'] or pfam_acc,
+                'networks': network_count,
+                'frequency': raw_freq,
+                'wilson_lb': wilson_lb
+            })
 
-    # Filter by frequency threshold and sort by network count
-    pfam_data = []
-    for domain, data in results['pfam_domains'].items():
-        network_freq = len(data['networks']) / results['total_networks'] if results['total_networks'] > 0 else 0
-        if network_freq >= min_frequency:
-            pfam_data.append((domain, data['pfamA_id'], data['networks'], data['proteins'], network_freq))
+    # Sort by Wilson lower bound (most significant first)
+    significant_domains.sort(key=lambda x: x['wilson_lb'], reverse=True)
 
-    pfam_data.sort(key=lambda x: len(x[2]), reverse=True)
+    with open(output_file, 'w') as f:
+        # Write header line explaining the data
+        f.write(f"# STRING network domains for {results['query_pfam_acc']}/{results['query_pfam_id']}\n")
+        f.write(f"# Analyzed {total_networks} networks, showing domains in >={min_networks} networks with frequency >={min_frequency:.0%}\n")
+        f.write(f"# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound\n")
 
-    if pfam_data:
-        output.append(f"{'Pfam Domain':<25} {'Networks':<12} {'Proteins':<12} {'Frequency':<12}")
-        output.append("-" * 80)
+        if significant_domains:
+            for domain in significant_domains:
+                f.write(f"{domain['pfam_acc']}\t{domain['pfam_id']}\t{domain['networks']}\t{domain['frequency']:.2f}\t{domain['wilson_lb']:.2f}\n")
+        else:
+            f.write("# No domains met significance thresholds\n")
 
-        for domain, pfam_id, networks, proteins, freq in pfam_data:
-            domain_display = f"{domain} ({pfam_id})" if pfam_id else domain
-            output.append(f"{domain_display:<25} {len(networks):<12} {len(proteins):<12} {freq:>6.1%}")
-    else:
-        output.append(f"No Pfam domains found above {min_frequency:.1%} frequency threshold.")
-
-    output.append("")
-    output.append("=" * 80)
-    output.append(f"Proteins Without Pfam Domains: {len(results['proteins_without_domains'])}")
-    output.append("=" * 80)
-    output.append("")
-    output.append("(See detailed results file for full list)")
-    output.append("")
-    output.append("=" * 80)
-
-    # Print to console
-    report = "\n".join(output)
-    print(report)
-
-    # Write to file if requested
-    if output_file:
-        with open(output_file, 'w') as f:
-            f.write(report)
-        print(f"\nReport written to: {output_file}")
+    print(f"  Compact results written to: {output_file}")
 
 
 def main():
@@ -981,6 +1015,13 @@ def main():
     )
 
     parser.add_argument(
+        '--min-networks',
+        type=int,
+        default=5,
+        help='Minimum number of networks required for analysis (default: 5). Skips analysis if fewer networks available.'
+    )
+
+    parser.add_argument(
         '--mysql-config',
         default=DEFAULT_MYSQL_CONFIG,
         help=f'Path to MySQL config file (default: {DEFAULT_MYSQL_CONFIG})'
@@ -1002,11 +1043,6 @@ def main():
         '--debug-limit',
         type=int,
         help='Debug mode: only process first N networks (for testing)'
-    )
-
-    parser.add_argument(
-        '--output',
-        help='Output file for report (default: print to console only)'
     )
 
     parser.add_argument(
@@ -1059,14 +1095,15 @@ def main():
         args.mysql_config,
         args.debug_limit,
         not args.no_download,
-        args.force
+        args.force,
+        args.min_networks
     )
 
-    # Write detailed results file and report (if analysis was not skipped)
+    # Write output files (if analysis was not skipped)
     if results is not None:
         write_detailed_results(results, args.pfam_dir)
         write_csv_output(results, args.pfam_dir)
-        print_report(results, args.min_frequency, args.output)
+        write_compact_results(results, args.pfam_dir, args.min_frequency, args.min_networks)
 
 
 if __name__ == '__main__':
