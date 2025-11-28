@@ -72,6 +72,7 @@ def parse_overlap_info(overlap_details):
     """
     overlaps = []
     for detail in overlap_details:
+        detail = detail.strip() if detail else ""
         if not detail or detail == '----' or detail == 'NA':
             continue
         match = re.match(r'^(?:(CL\d+):)?(\S+)\s+(\d+)\((\d+)\)$', detail)
@@ -138,14 +139,20 @@ def parse_triage_file(triage_file, sp_only=False, min_seed=1, max_overlap_fracti
             if not line:
                 continue
 
-            parts = line.split('\t')
+            # Split and strip each field to handle any whitespace issues
+            parts = [p.strip() for p in line.split('\t')]
             if len(parts) < 5:
                 continue
 
             dir_name = parts[0]
-            total_seqs = int(parts[1]) if parts[1].isdigit() else 0
-            overlaps = int(parts[2]) if parts[2].isdigit() else 0
-            non_overlap_seqs = int(parts[3]) if parts[3].isdigit() else 0
+
+            # Parse numeric fields safely
+            try:
+                total_seqs = int(parts[1]) if parts[1].isdigit() else 0
+                overlaps = int(parts[2]) if parts[2].isdigit() else 0
+                non_overlap_seqs = int(parts[3]) if parts[3].isdigit() else 0
+            except (ValueError, IndexError):
+                continue
 
             swissprot_count = 0
             if len(parts) > 7 and parts[7].isdigit():
@@ -175,8 +182,15 @@ def parse_triage_file(triage_file, sp_only=False, min_seed=1, max_overlap_fracti
             root_groups[root].append(entry)
 
     best_dirs = []
+    debug = os.environ.get('DEBUG_TRIAGE', '')
 
     for root, entries in root_groups.items():
+        if debug:
+            print(f"[DEBUG] Processing root: {root}", file=sys.stderr)
+            for e in entries:
+                print(f"[DEBUG]   {e['dir']}: depth={e['depth']}, overlaps={e['overlaps']}, "
+                      f"total={e['total_seqs']}, overlap_info={e['overlap_info']}", file=sys.stderr)
+
         # Find non-overlapping directories
         non_overlap = [e for e in entries if e['overlaps'] == 0]
 
@@ -192,14 +206,24 @@ def parse_triage_file(triage_file, sp_only=False, min_seed=1, max_overlap_fracti
         best = max(non_overlap, key=lambda x: (x['total_seqs'], x.get('seed_count', 0), x['depth']))
         best['root'] = root
 
+        if debug:
+            print(f"[DEBUG] Best non-overlapping: {best['dir']} (depth={best['depth']})", file=sys.stderr)
+
         # Find deeper versions with small, resolvable overlaps
         deeper_resolvable = []
         deeper_warnings = []
 
         for e in entries:
             if e['depth'] > best['depth'] and e['overlaps'] > 0:
+                if debug:
+                    print(f"[DEBUG] Checking {e['dir']}: overlap_fraction={e['overlap_fraction']:.4f}, "
+                          f"max={max_overlap_fraction}", file=sys.stderr)
+
                 if e['overlap_fraction'] <= max_overlap_fraction:
                     eligible, reason, clan = check_resolution_eligibility(e['overlap_info'])
+                    if debug:
+                        print(f"[DEBUG]   eligible={eligible}, reason={reason}", file=sys.stderr)
+
                     if eligible:
                         e['seed_count'] = count_seed_sequences(e['dir'])
                         e['resolution_reason'] = reason
@@ -210,6 +234,10 @@ def parse_triage_file(triage_file, sp_only=False, min_seed=1, max_overlap_fracti
                 else:
                     overlap_summary = ' '.join(e['overlap_details'])
                     deeper_warnings.append(f"{e['dir']}: {overlap_summary}")
+
+        if debug:
+            print(f"[DEBUG] deeper_resolvable: {[e['dir'] for e in deeper_resolvable]}", file=sys.stderr)
+            print(f"[DEBUG] deeper_warnings: {deeper_warnings}", file=sys.stderr)
 
         best['deeper_resolvable'] = deeper_resolvable
         best['deeper_overlaps'] = deeper_warnings
