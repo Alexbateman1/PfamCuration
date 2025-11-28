@@ -562,6 +562,38 @@ def calculate_ted_consistency_score(seed_start, seed_end, ted_domains):
     return best_score
 
 
+def run_webshot(uniprot_acc, curation_dir, output_file='ted_web.png'):
+    """
+    Capture a screenshot of the TED website protein page.
+
+    Args:
+        uniprot_acc: UniProt accession (may include version like "P12345.2")
+        curation_dir: path to curation directory
+        output_file: output filename (default: ted_web.png)
+    """
+    import subprocess
+
+    # Strip version number from accession
+    base_acc = uniprot_acc.split('.')[0]
+
+    url = f"https://ted.cathdb.info/uniprot/{base_acc}"
+    output_path = os.path.join(curation_dir, output_file)
+
+    print(f"\nCapturing TED website screenshot for {base_acc}...")
+    cmd = ['webshot', url, output_path]
+
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            print(f"Warning: webshot failed: {result.stderr}")
+        else:
+            print(f"Created TED website screenshot: {output_path}")
+    except FileNotFoundError:
+        print("Warning: webshot command not found, skipping TED website screenshot")
+    except Exception as e:
+        print(f"Warning: Failed to capture TED website screenshot: {e}")
+
+
 def create_ted_visualization(plddt_scores, curation_dir, ted_cache=None, mean_consistency=None, output_file='ted.png'):
     """
     Create a visualization of TED domains for proteins in the SEED alignment.
@@ -1082,6 +1114,9 @@ def main():
                 # Create TED domain visualization (reusing cached TED data)
                 print("\nCreating TED domain visualization...")
                 create_ted_visualization(plddt_scores, args.curation_dir, ted_cache, mean_consistency)
+
+                # Capture TED website screenshot for best model
+                run_webshot(best_info[0], args.curation_dir)
 
             print(f"\nBest model: {best_info[0]} ({best_info[1]}-{best_info[2]}) "
                   f"with mean pLDDT {best_plddt:.2f}")
