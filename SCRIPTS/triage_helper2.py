@@ -395,6 +395,87 @@ def check_overlap_quiet(curation_dir):
     return True, content
 
 
+def get_pfam_accession(family_name, curation_dir):
+    """
+    Extract Pfam accession (PF#####) from overlap file for a family name.
+
+    Args:
+        family_name: Short name of the Pfam family (e.g., 'TF_AP-2')
+        curation_dir: Path to the curation directory containing overlap file
+
+    Returns:
+        Pfam accession (e.g., 'PF03299') or None if not found
+    """
+    # If it already looks like an accession, return it
+    if re.match(r'^PF\d{5}$', family_name):
+        return family_name
+
+    # Parse the overlap file to find the accession
+    overlap_file = Path(curation_dir) / 'overlap'
+    if overlap_file.exists():
+        with open(overlap_file, 'r') as f:
+            for line in f:
+                # Look for pattern like "TF_AP-2 PF03299" in the overlap line
+                match = re.search(rf'{re.escape(family_name)}\s+(PF\d{{5}})', line)
+                if match:
+                    return match.group(1)
+
+    return None
+
+
+def raise_pfam_threshold(family_name, curation_dir, threshold):
+    """
+    Raise the gathering threshold in an existing Pfam family.
+
+    This checks out the Pfam family, runs pfmake with the new threshold,
+    and checks it back in.
+
+    Args:
+        family_name: Short name of the Pfam family
+        curation_dir: Path to the curation directory
+        threshold: New threshold value
+
+    Returns:
+        True if successful, False otherwise
+    """
+    # Get Pfam accession
+    pfam_acc = get_pfam_accession(family_name, curation_dir)
+    if not pfam_acc:
+        print(f"Error: Could not determine Pfam accession for {family_name}", file=sys.stderr)
+        return False
+
+    print(f"\nRaising threshold for {family_name} ({pfam_acc})")
+
+    # Check out the Pfam family
+    pfam_dir = Path(curation_dir) / pfam_acc
+    if not pfam_dir.exists():
+        print(f"Checking out {pfam_acc}...")
+        success = run_command(f"pfco {pfam_acc}", cwd=curation_dir, wait=True)
+        if not success:
+            print(f"Error: Failed to check out {pfam_acc}", file=sys.stderr)
+            return False
+
+    # Run pfmake with new threshold
+    print(f"Running pfmake -t {threshold} in {pfam_acc}...")
+    success = run_command(f"pfmake -t {threshold}", cwd=str(pfam_dir), wait=True)
+    if not success:
+        print(f"Error: pfmake failed", file=sys.stderr)
+        return False
+
+    # Check in the family
+    print(f"Checking in {pfam_acc} with new threshold...")
+    success = run_command(
+        f"pfci -m 'Raised threshold to {threshold} to resolve overlaps' {pfam_acc}",
+        cwd=curation_dir, wait=True
+    )
+    if not success:
+        print(f"Error: pfci failed", file=sys.stderr)
+        return False
+
+    print(f"Successfully raised threshold for {pfam_acc}")
+    return True
+
+
 def try_resolve_overlaps(entry, start_dir):
     """
     Attempt to resolve overlaps for a deeper directory.
@@ -442,13 +523,19 @@ def try_resolve_overlaps(entry, start_dir):
         print(f"... ({len(lines) - 20} more lines)")
     print("-" * 40)
 
+    # Get the overlapping family name for option 3 (raise Pfam threshold)
+    overlap_families = entry.get('overlap_info', [])
+    pfam_family_name = overlap_families[0]['family'] if overlap_families else None
+
     # Resolution menu
     while True:
         print("\nOverlap resolution options:")
         print("  1 - Edit SEED (remove overlapping sequences)")
-        print("  2 - Raise gathering threshold")
+        print("  2 - Raise threshold in this curation directory")
+        if pfam_family_name:
+            print(f"  3 - Raise threshold in Pfam family ({pfam_family_name})")
         if clan_to_join:
-            print(f"  3 - Join clan {clan_to_join}")
+            print(f"  4 - Join clan {clan_to_join}")
         print("  s - Skip (use non-overlapping version instead)")
         print("  i - Move to IGNORE")
 
@@ -467,7 +554,7 @@ def try_resolve_overlaps(entry, start_dir):
             return False
 
         elif choice == '2':
-            threshold = input("New threshold value: ").strip()
+            threshold = input("New threshold value for curation directory: ").strip()
             if threshold:
                 try:
                     float(threshold)
@@ -490,7 +577,30 @@ def try_resolve_overlaps(entry, start_dir):
                 except ValueError:
                     print("Invalid threshold")
 
-        elif choice == '3' and clan_to_join:
+        elif choice == '3' and pfam_family_name:
+            threshold = input(f"New threshold value for {pfam_family_name}: ").strip()
+            if threshold:
+                try:
+                    float(threshold)
+                    current_dir = os.getcwd()
+                    if raise_pfam_threshold(pfam_family_name, current_dir, threshold):
+                        print("Re-checking overlaps...")
+                        has_overlaps, overlap_content = check_overlap_quiet('.')
+                        if not has_overlaps:
+                            print("All overlaps resolved!")
+                            os.chdir(start_dir)
+                            return True
+                        else:
+                            print(f"Overlaps still present:")
+                            lines = overlap_content.strip().split('\n')
+                            for line in lines[:10]:
+                                print(f"  {line}")
+                            if len(lines) > 10:
+                                print(f"  ... ({len(lines) - 10} more)")
+                except ValueError:
+                    print("Invalid threshold")
+
+        elif choice == '4' and clan_to_join:
             print(f"\nJoining clan {clan_to_join}...")
             print("Note: Overlaps with clan members will be allowed.")
 
