@@ -537,6 +537,7 @@ def try_resolve_overlaps(entry, start_dir):
             print(f"  3 - Raise threshold in Pfam family ({pfam_family_name})")
         if clan_to_join:
             print(f"  4 - Join clan {clan_to_join}")
+        print("  5 - Add ED lines (exclude overlapping sequences)")
         print("  s - Skip (use non-overlapping version instead)")
         print("  i - Move to IGNORE")
 
@@ -626,6 +627,31 @@ def try_resolve_overlaps(entry, start_dir):
                         print("All overlaps resolved (clan overlaps now allowed)!")
                         os.chdir(start_dir)
                         return True
+
+        elif choice == '5':
+            # Add ED lines to exclude overlapping sequences
+            print("\nAdding ED lines to exclude overlapping sequences...")
+            print("Running add_ED.pl...")
+            success = run_command("add_ED.pl", wait=True)
+            if success:
+                print("Running pfmake...")
+                run_command("pfmake", wait=True)
+
+                print("Re-checking overlaps...")
+                has_overlaps, overlap_content = check_overlap_quiet('.')
+                if not has_overlaps:
+                    print("All overlaps resolved!")
+                    os.chdir(start_dir)
+                    return True
+                else:
+                    print(f"Overlaps still present:")
+                    lines = overlap_content.strip().split('\n')
+                    for line in lines[:10]:
+                        print(f"  {line}")
+                    if len(lines) > 10:
+                        print(f"  ... ({len(lines) - 10} more)")
+            else:
+                print("add_ED.pl failed", file=sys.stderr)
 
         elif choice == 's':
             print("Skipping - will use non-overlapping version")
