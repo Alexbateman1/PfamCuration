@@ -313,7 +313,7 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, skip_to_pfne
         ted_png = Path('ted.png')
         if ted_png.exists():
             print("\nDisplaying ted.png...")
-            run_command("display ted.png", wait=False)
+            run_command("imgcat ted.png", wait=False)
 
         # Launch belvu for SEED review
         print("\nLaunching belvu for SEED alignment review...")
