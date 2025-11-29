@@ -1,0 +1,18 @@
+ID   NarH_FeS
+DE   Nitrate reductase beta subunit iron-sulphur domain
+AU   Bateman A;0000-0002-6982-4660
+SE   UniProtKB:P19318
+GA   27.00 27.00;
+TC   27.00 41.40;
+NC   24.50 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an iron-sulphur domain found in the beta
+CC   subunit of respiratory nitrate reductase (NarH/NarY), found in
+CC   bacteria. The beta chain is an electron transfer unit containing
+CC   four cysteine clusters involved in the formation of iron-sulphur
+CC   centres. Electrons are transferred from the gamma chain to the
+CC   molybdenum cofactor of the alpha subunit. The enzyme allows
+CC   bacteria to use nitrate as an electron acceptor during anaerobic
+CC   growth.
