@@ -1,0 +1,14 @@
+# HHsearch Weekly Pipeline - runs every Sunday at 4pm (16:00)
+#
+# Scrontab format: minute hour day month weekday command
+# Weekday: 0=Sunday, 1=Monday, ..., 6=Saturday
+#
+# SLURM directives can be added with #SCRON comments:
+#SCRON --partition=standard
+#SCRON --time=24:00:00
+#SCRON --mem=8G
+#SCRON --job-name=hhsearch_weekly
+#SCRON --output=/nfs/production/agb/pfam/data/all_vs_all/HHsearch/logs/scron_%j.out
+#SCRON --error=/nfs/production/agb/pfam/data/all_vs_all/HHsearch/logs/scron_%j.err
+
+0 16 * * 0 /path/to/PfamCuration/HHsearch/run_weekly_hhsearch.sh
