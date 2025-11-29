@@ -1,0 +1,244 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MBIA_ECOLI              Reviewed;         161 AA.
+AC   P28697; A0A385XLV8; Q2MCH8;
+DE   RecName: Full=Uncharacterized protein MbiA {ECO:0000305};
+DE   AltName: Full=Modifier of biofilm {ECO:0000250|UniProtKB:Q8XA70};
+GN   Name=mbiA {ECO:0000250|UniProtKB:Q8XA70};
+GN   Synonyms=htgA {ECO:0000303|PubMed:8400364}, htpY
+GN   {ECO:0000303|PubMed:8478327}; OrderedLocusNames=b0012, JW5001;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND INDUCTION.
+RX   PubMed=8400364; DOI=10.3109/10425179309020832;
+RA   James R., Dean D.O., Debbage J.;
+RT   "Five open reading frames upstream of the dnaK gene of E. coli.";
+RL   DNA Seq. 3:327-332(1993).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND INDUCTION.
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=8478327; DOI=10.1128/jb.175.9.2613-2624.1993;
+RA   Missiakas D., Georgopoulos C., Raina S.;
+RT   "The Escherichia coli heat shock gene htpY: mutational analysis, cloning,
+RT   sequencing, and transcriptional regulation.";
+RL   J. Bacteriol. 175:2613-2624(1993).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12;
+RX   PubMed=1630901; DOI=10.1093/nar/20.13.3305;
+RA   Yura T., Mori H., Nagai H., Nagata T., Ishihama A., Fujita N., Isono K.,
+RA   Mizobuchi K., Nakata A.;
+RT   "Systematic sequencing of the Escherichia coli genome: analysis of the
+RT   0-2.4 min region.";
+RL   Nucleic Acids Res. 20:3305-3308(1992).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [6]
+RP   INDUCTION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=16818608; DOI=10.1101/gad.1428206;
+RA   Nonaka G., Blankschien M., Herman C., Gross C.A., Rhodius V.A.;
+RT   "Regulon and promoter analysis of the E. coli heat-shock factor, sigma32,
+RT   reveals a multifaceted cellular response to heat stress.";
+RL   Genes Dev. 20:1776-1789(2006).
+RN   [7]
+RP   OVERLAP WITH YAAW.
+RX   PubMed=18226237; DOI=10.1186/1471-2148-8-31;
+RA   Delaye L., Deluna A., Lazcano A., Becerra A.;
+RT   "The origin of a novel gene through overprinting in Escherichia coli.";
+RL   BMC Evol. Biol. 8:31-31(2008).
+CC   -!- INDUCTION: Was originally thought to be involved in heat shock response
+CC       (PubMed:8400364, PubMed:8478327), however it was later shown not to be
+CC       induced by sigma-32 (rpoH) (PubMed:16818608).
+CC       {ECO:0000269|PubMed:16818608, ECO:0000269|PubMed:8400364,
+CC       ECO:0000269|PubMed:8478327}.
+CC   -!- CAUTION: This gene is encoded entirely within the yaaW gene on the
+CC       opposite strand (PubMed:18226237). Disruptions of one gene are also
+CC       usually disruptions in the other. {ECO:0000305,
+CC       ECO:0000305|PubMed:18226237}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA23992.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=AAA23993.1; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; X67700; CAA47932.1; -; Genomic_DNA.
+DR   EMBL; L03720; AAA23992.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; L03720; AAA23993.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; U00096; AYC08161.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76028.1; -; Genomic_DNA.
+DR   PIR; A40623; A40623.
+DR   AlphaFoldDB; P28697; -.
+DR   FunCoup; P28697; 336.
+DR   EnsemblBacteria; AYC08161; AYC08161; b0012.
+DR   KEGG; ecj:JW5001; -.
+DR   EchoBASE; EB4305; -.
+DR   HOGENOM; CLU_1537672_0_0_6; -.
+DR   InParanoid; P28697; -.
+DR   BioCyc; EcoCyc:EG11509-MONOMER; -.
+DR   PRO; PR:P28697; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   2: Evidence at transcript level;
+KW   Reference proteome.
+FT   CHAIN           1..161
+FT                   /note="Uncharacterized protein MbiA"
+FT                   /id="PRO_0000169847"
+SQ   SEQUENCE   161 AA;  17637 MW;  EFB80E462DD4F1D8 CRC64;
+//
+ID   MBIA_ECO57              Reviewed;         171 AA.
+AC   Q8XA70; Q7AHU6;
+DE   RecName: Full=Uncharacterized protein MbiA {ECO:0000305};
+DE   AltName: Full=Modifier of biofilm {ECO:0000303|PubMed:24111745};
+GN   Name=mbiA {ECO:0000303|PubMed:24111745};
+GN   Synonyms=htgA {ECO:0000312|EMBL:AAG54312.1};
+GN   OrderedLocusNames=ECs0011 {ECO:0000312|EMBL:BAB33435.1}, Z0012
+GN   {ECO:0000312|EMBL:AAG54312.1};
+OS   Escherichia coli O157:H7.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=11206551; DOI=10.1038/35054089;
+RA   Perna N.T., Plunkett G. III, Burland V., Mau B., Glasner J.D., Rose D.J.,
+RA   Mayhew G.F., Evans P.S., Gregor J., Kirkpatrick H.A., Posfai G.,
+RA   Hackett J., Klink S., Boutin A., Shao Y., Miller L., Grotbeck E.J.,
+RA   Davis N.W., Lim A., Dimalanta E.T., Potamousis K., Apodaca J.,
+RA   Anantharaman T.S., Lin J., Yen G., Schwartz D.C., Welch R.A.,
+RA   Blattner F.R.;
+RT   "Genome sequence of enterohaemorrhagic Escherichia coli O157:H7.";
+RL   Nature 409:529-533(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=11258796; DOI=10.1093/dnares/8.1.11;
+RA   Hayashi T., Makino K., Ohnishi M., Kurokawa K., Ishii K., Yokoyama K.,
+RA   Han C.-G., Ohtsubo E., Nakayama K., Murata T., Tanaka M., Tobe T., Iida T.,
+RA   Takami H., Honda T., Sasakawa C., Ogasawara N., Yasunaga T., Kuhara S.,
+RA   Shiba T., Hattori M., Shinagawa H.;
+RT   "Complete genome sequence of enterohemorrhagic Escherichia coli O157:H7 and
+RT   genomic comparison with a laboratory strain K-12.";
+RL   DNA Res. 8:11-22(2001).
+RN   [3]
+RP   DISRUPTION PHENOTYPE.
+RX   PubMed=24111745; DOI=10.1111/1574-6968.12288;
+RA   Fellner L., Bechtel N., Witting M.A., Simon S., Schmitt-Kopplin P.,
+RA   Keim D., Scherer S., Neuhaus K.;
+RT   "Phenotype of htgA (mbiA), a recently evolved orphan gene of Escherichia
+RT   coli and Shigella, completely overlapping in antisense to yaaW.";
+RL   FEMS Microbiol. Lett. 350:57-64(2014).
+CC   -!- DISRUPTION PHENOTYPE: Strand-specific deletion mutant, which disrupts
+CC       only mbiA, shows no difference in growth compared with wild-type strain
+CC       at 37 degrees Celsius or after heat shock. Biofilm formation is
+CC       increased at 37 degrees Celsius. {ECO:0000269|PubMed:24111745}.
+CC   -!- CAUTION: This gene is encoded entirely within the yaaW gene on the
+CC       opposite strand. Disruptions of one gene are also usually disruptions
+CC       in the other. {ECO:0000250|UniProtKB:P28697}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAG54312.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=BAB33435.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; AE005174; AAG54312.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; BA000007; BAB33435.1; ALT_INIT; Genomic_DNA.
+DR   PIR; D85481; D85481.
+DR   PIR; D90630; D90630.
+DR   AlphaFoldDB; Q8XA70; -.
+DR   STRING; 155864.Z0012; -.
+DR   KEGG; ece:Z0012; -.
+DR   HOGENOM; CLU_1537672_0_0_6; -.
+DR   Proteomes; UP000000558; Chromosome.
+DR   Proteomes; UP000002519; Chromosome.
+PE   3: Inferred from homology;
+KW   Reference proteome.
+FT   CHAIN           1..171
+FT                   /note="Uncharacterized protein MbiA"
+FT                   /id="PRO_0000440621"
+SQ   SEQUENCE   171 AA;  18959 MW;  0D8719B3C372F800 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Note: species file not found
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1S3RN03	UNCHARACTERIZED PROTEIN L     32.9    0.00027   9  10.3  47.9
+	Iterate                   	   340	   379	     8.9
+	Iterate                   	    58	    96	     8.8
+	Iterate                   	   199	   237	     8.7
+	Iterate                   	   105	   145	     6.3
+	Iterate                   	   432	   473	     6.2
+	Iterate                   	   247	   285	     6.1
+	Iterate                   	   291	   331	     5.9
+	Iterate                   	   385	   426	     5.9
+	Iterate                   	     8	    49	     5.8
+
+A0A1S3RPG6	UNCHARACTERIZED PROTEIN L     37.5    9.8e-06   7   7.7  28.8
+	Iterate                   	   340	   386	     9.5
+	Iterate                   	    58	    96	     9.2
+	Iterate                   	   198	   238	     9.1
+	Iterate                   	   105	   145	     6.7
+	Iterate                   	   247	   285	     6.5
+	Iterate                   	   291	   332	     6.3
+	Iterate                   	     8	    49	     6.2
+
+A0A8S4PLM0	UNCHARACTERIZED PROTEIN {     44.3    7.1e-08  13  12.1  39.2
+	Iterate                   	   149	   178	     9.5
+	Iterate                   	   111	   143	     7.6
+	Iterate                   	   209	   240	     7.6
+	Iterate                   	   233	   262	     7.5
+	Iterate                   	    53	    91	     7.3
+	Iterate                   	   173	   198	     7.2
+	Iterate                   	   273	   298	     7.2
+	Iterate                   	   293	   318	     7.2
+	Iterate                   	   312	   336	     6.5
+	Iterate                   	    88	   119	     5.0
+	Iterate                   	   252	   280	     4.7
+	Iterate                   	   193	   220	     4.6
+	Iterate                   	    31	    58	     3.1
+
+P28697	UNCHARACTERIZED PROTEIN MBIA {E    158.8    1.3e-43   1   2.5  26.9
+	Iterate                   	     2	    75	   158.8
+
+Q8XA70	UNCHARACTERIZED PROTEIN MBIA {E    156.5      7e-43   1   2.8  27.1
+	Iterate                   	     2	    75	   156.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P28697.3	AF-P28697-F1-model_v4_TED01:2-75	1	AF-P28697-F1-model_v4_TED01	2-75	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P28697_TED01/Iterate
+GA   27.00 27.00;
+TC   28.50 156.50;
+NC   24.50 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

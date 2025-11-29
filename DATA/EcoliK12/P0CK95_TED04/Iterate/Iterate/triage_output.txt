@@ -1,0 +1,518 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   ACFD_VIBCH              Reviewed;        1520 AA.
+AC   P0C6F0; Q53270; Q56593; Q56615; Q56616; Q56617; Q57522; Q9KTQ4;
+DE   RecName: Full=Accessory colonization factor AcfD;
+DE   Flags: Precursor;
+GN   Name=acfD; OrderedLocusNames=VC_0845;
+OS   Vibrio cholerae serotype O1 (strain ATCC 39315 / El Tor Inaba N16961).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales;
+OC   Vibrionaceae; Vibrio.
+OX   NCBI_TaxID=243277;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 39315 / El Tor Inaba N16961;
+RX   PubMed=11179381; DOI=10.1128/iai.69.3.1947-1952.2001;
+RA   Karaolis D.K.R., Lan R., Kaper J.B., Reeves P.R.;
+RT   "Comparison of Vibrio cholerae pathogenicity islands in sixth and seventh
+RT   pandemic strains.";
+RL   Infect. Immun. 69:1947-1952(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 39315 / El Tor Inaba N16961;
+RX   PubMed=10952301; DOI=10.1038/35020000;
+RA   Heidelberg J.F., Eisen J.A., Nelson W.C., Clayton R.A., Gwinn M.L.,
+RA   Dodson R.J., Haft D.H., Hickey E.K., Peterson J.D., Umayam L.A., Gill S.R.,
+RA   Nelson K.E., Read T.D., Tettelin H., Richardson D.L., Ermolaeva M.D.,
+RA   Vamathevan J.J., Bass S., Qin H., Dragoi I., Sellers P., McDonald L.A.,
+RA   Utterback T.R., Fleischmann R.D., Nierman W.C., White O., Salzberg S.L.,
+RA   Smith H.O., Colwell R.R., Mekalanos J.J., Venter J.C., Fraser C.M.;
+RT   "DNA sequence of both chromosomes of the cholera pathogen Vibrio
+RT   cholerae.";
+RL   Nature 406:477-483(2000).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-53.
+RX   PubMed=1644747; DOI=10.1128/jb.174.16.5211-5218.1992;
+RA   Parsot C., Mekalanos J.J.;
+RT   "Structural analysis of the acfA and acfD genes of Vibrio cholerae: effects
+RT   of DNA topology and transcriptional activators on expression.";
+RL   J. Bacteriol. 174:5211-5218(1992).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+DR   EMBL; AF325734; AAK20802.1; -; Genomic_DNA.
+DR   EMBL; AE003852; AAF94008.1; -; Genomic_DNA.
+DR   EMBL; S41756; AAB22796.1; -; Genomic_DNA.
+DR   PIR; A42962; A42962.
+DR   PIR; B82274; B82274.
+DR   RefSeq; NP_230493.1; NC_002505.1.
+DR   RefSeq; WP_000702220.1; NZ_LT906614.1.
+DR   AlphaFoldDB; P0C6F0; -.
+DR   STRING; 243277.VC_0845; -.
+DR   MEROPS; M98.001; -.
+DR   EnsemblBacteria; AAF94008; AAF94008; VC_0845.
+DR   KEGG; vch:VC_0845; -.
+DR   PATRIC; fig|243277.26.peg.805; -.
+DR   eggNOG; COG3064; Bacteria.
+DR   HOGENOM; CLU_006312_0_0_6; -.
+DR   Proteomes; UP000000584; Chromosome 1.
+DR   GO; GO:0005886; C:plasma membrane; IBA:GO_Central.
+DR   GO; GO:0044325; F:transmembrane transporter binding; IBA:GO_Central.
+DR   Gene3D; 3.40.390.80; Peptidase M60, enhancin-like domain 2; 1.
+DR   Gene3D; 1.10.390.30; Peptidase M60, enhancin-like domain 3; 1.
+DR   InterPro; IPR025385; DUF4092.
+DR   InterPro; IPR035423; M60-like_N.
+DR   InterPro; IPR042279; Pep_M60_3.
+DR   InterPro; IPR031161; Peptidase_M60_dom.
+DR   InterPro; IPR051244; TCAF.
+DR   NCBIfam; NF037974; SslE_AcfD_Zn_LP; 1.
+DR   PANTHER; PTHR15730; EXPERIMENTAL AUTOIMMUNE PROSTATITIS ANTIGEN 2-RELATED; 1.
+DR   PANTHER; PTHR15730:SF5; SI:CH211-210B2.2-RELATED; 1.
+DR   Pfam; PF13322; DUF4092; 1.
+DR   Pfam; PF17291; M60-like_N; 1.
+DR   Pfam; PF13402; Peptidase_M60; 1.
+DR   SMART; SM01276; M60-like; 1.
+DR   PROSITE; PS51723; PEPTIDASE_M60; 1.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal; Virulence.
+FT   SIGNAL          1..16
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           17..1520
+FT                   /note="Accessory colonization factor AcfD"
+FT                   /id="PRO_0000020620"
+FT   DOMAIN          1085..1388
+FT                   /note="Peptidase M60"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01060"
+FT   LIPID           17
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           17
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CONFLICT        52..53
+FT                   /note="PD -> RI (in Ref. 3; AAB22796)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   1520 AA;  167832 MW;  0C6982ACAE83DB4A CRC64;
+//
+ID   ACFD_ECOLI              Reviewed;        1520 AA.
+AC   P0CK95; Q2M9M2; Q46837; Q46838; Q6BF58;
+DE   RecName: Full=Putative lipoprotein AcfD homolog;
+DE   Flags: Precursor;
+GN   Name=yghJ; OrderedLocusNames=b4466, JW5925; ORFNames=ECK2968;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   SEQUENCE REVISION.
+RX   PubMed=16397293; DOI=10.1093/nar/gkj405;
+RA   Riley M., Abe T., Arnaud M.B., Berlyn M.K.B., Blattner F.R.,
+RA   Chaudhuri R.R., Glasner J.D., Horiuchi T., Keseler I.M., Kosuge T.,
+RA   Mori H., Perna N.T., Plunkett G. III, Rudd K.E., Serres M.H., Thomas G.H.,
+RA   Thomson N.R., Wishart D., Wanner B.L.;
+RT   "Escherichia coli K-12: a cooperatively developed annotation snapshot
+RT   -- 2005.";
+RL   Nucleic Acids Res. 34:1-9(2006).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1321-1520.
+RC   STRAIN=O15:H- / 83/39 / ETEC;
+RA   Tauschek M., Gorrell R.J., Strugnell R.A., Robins-Browne R.M.;
+RT   "Identification of a type II protein secretory pathway required for the
+RT   secretion of heat-labile enterotoxin by enterotoxigenic Escherichia coli.";
+RL   Submitted (SEP-2001) to the EMBL/GenBank/DDBJ databases.
+CC   -!- FUNCTION: Involved in a type II secretion system (T2SS, formerly
+CC       general secretion pathway, GSP) for the export of folded proteins
+CC       across the outer membrane. {ECO:0000305}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+CC   -!- MISCELLANEOUS: In many other E.coli strains this gene is part of a type
+CC       II secretion system, but in MG1655 the locus is missing a number of
+CC       genes. {ECO:0000305}.
+CC   -!- SIMILARITY: To V.cholerae AcfD (VC_0845). {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA69140.1; Type=Frameshift; Evidence={ECO:0000305};
+CC       Sequence=AAA69141.1; Type=Frameshift; Evidence={ECO:0000305};
+DR   EMBL; U28377; AAA69141.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; U28377; AAA69140.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; U00096; AAT48156.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE77034.1; -; Genomic_DNA.
+DR   EMBL; AF426313; AAL60194.1; -; Genomic_DNA.
+DR   RefSeq; YP_026189.1; NC_000913.3.
+DR   AlphaFoldDB; P0CK95; -.
+DR   BioGRID; 4262979; 17.
+DR   FunCoup; P0CK95; 10.
+DR   STRING; 511145.b4466; -.
+DR   MEROPS; M98.001; -.
+DR   jPOST; P0CK95; -.
+DR   PaxDb; 511145-b4466; -.
+DR   EnsemblBacteria; AAT48156; AAT48156; b4466.
+DR   GeneID; 2847716; -.
+DR   KEGG; ecj:JW5925; -.
+DR   KEGG; eco:b4466; -.
+DR   KEGG; ecoc:C3026_16265; -.
+DR   PATRIC; fig|1411691.4.peg.3758; -.
+DR   eggNOG; COG3064; Bacteria.
+DR   HOGENOM; CLU_006312_0_0_6; -.
+DR   InParanoid; P0CK95; -.
+DR   OMA; VMGNARY; -.
+DR   OrthoDB; 9122461at2; -.
+DR   BioCyc; EcoCyc:G7541-MONOMER; -.
+DR   PRO; PR:P0CK95; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IBA:GO_Central.
+DR   GO; GO:0044325; F:transmembrane transporter binding; IBA:GO_Central.
+DR   Gene3D; 2.60.120.1250; Peptidase M60, enhancin-like domain 1; 1.
+DR   Gene3D; 3.40.390.80; Peptidase M60, enhancin-like domain 2; 1.
+DR   Gene3D; 1.10.390.30; Peptidase M60, enhancin-like domain 3; 1.
+DR   InterPro; IPR025385; DUF4092.
+DR   InterPro; IPR035423; M60-like_N.
+DR   InterPro; IPR042279; Pep_M60_3.
+DR   InterPro; IPR031161; Peptidase_M60_dom.
+DR   InterPro; IPR051244; TCAF.
+DR   NCBIfam; NF037973; metallo_SslE; 1.
+DR   NCBIfam; NF037974; SslE_AcfD_Zn_LP; 1.
+DR   PANTHER; PTHR15730; EXPERIMENTAL AUTOIMMUNE PROSTATITIS ANTIGEN 2-RELATED; 1.
+DR   PANTHER; PTHR15730:SF5; SI:CH211-210B2.2-RELATED; 1.
+DR   Pfam; PF13322; DUF4092; 1.
+DR   Pfam; PF17291; M60-like_N; 1.
+DR   Pfam; PF13402; Peptidase_M60; 1.
+DR   SMART; SM01276; M60-like; 1.
+DR   PROSITE; PS51723; PEPTIDASE_M60; 1.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Lipoprotein; Membrane; Palmitate;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           24..1520
+FT                   /note="Putative lipoprotein AcfD homolog"
+FT                   /id="PRO_0000020619"
+FT   DOMAIN          1081..1381
+FT                   /note="Peptidase M60"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01060"
+FT   REGION          22..107
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          226..247
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          1498..1520
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        31..42
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        51..77
+FT                   /note="Pro residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        97..107
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        234..247
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   LIPID           24
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           24
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   VARIANT         1358
+FT                   /note="N -> G (in strain: O15:H- / 83/39 /ETEC)"
+FT   VARIANT         1392..1402
+FT                   /note="DGTPLPEFYSE -> EGELPKFFSD (in strain: O15:H- / 83/39
+FT                   / ETEC)"
+FT   VARIANT         1423..1428
+FT                   /note="EVSNDK -> DVGDKT (in strain: O15:H- / 83/39 / ETEC)"
+FT   VARIANT         1498
+FT                   /note="D -> K (in strain: O15:H- / 83/39 /ETEC)"
+FT   VARIANT         1511
+FT                   /note="Q -> K (in strain: O15:H- / 83/39 /ETEC)"
+FT   VARIANT         1519
+FT                   /note="A -> V (in strain: O15:H- / 83/39 /ETEC)"
+SQ   SEQUENCE   1520 AA;  167246 MW;  C835E4953471A7B3 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Escherichia.
+5	6	Vibrio.
+4	6	Photobacterium.
+7	5	Enterobacteriaceae
+10	5	Vibrionaceae
+7	4	Enterobacterales
+3	4	Alteromonadales
+10	4	Vibrionales
+21	3	Gammaproteobacteria
+21	2	Pseudomonadota
+21	1	Pseudomonadati
+21	0	Bacteria
+Total of 21 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A4Y6I7P8	DUF4092 DOMAIN-CONTAINING    151.6    5.2e-41   1   2.1   1.6
+	Iterate                   	   743	   858	   150.3
+	PF13322	DUF4092         	   376	   551	   290.4
+	PF26759	AcfD_helical    	   885	  1019	   232.4
+	PF17291	M60-like_N      	  1042	  1143	    23.3
+	PF13402	Peptidase_M60   	  1147	  1447	   107.1
+
+A0AAU8WU04	ACCESSORY COLONIZATION FA    150.9    8.9e-41   1   1.8   0.4
+	Iterate                   	   753	   877	   149.5
+	PF13322	DUF4092         	   389	   564	   281.8
+	PF26759	AcfD_helical    	   904	  1036	   234.4
+	PF17291	M60-like_N      	  1052	  1161	    26.9
+	PF13402	Peptidase_M60   	  1173	  1458	   119.2
+
+E1SLY3	PEPTIDASE M60 DOMAIN-CONTAINI    148.4    5.4e-40   1   1.5   0.1
+	Iterate                   	   723	   836	   147.4
+	PF13322	DUF4092         	   366	   536	   338.3
+	PF26759	AcfD_helical    	   863	   997	     229
+	PF17291	M60-like_N      	  1018	  1122	      29
+	PF13402	Peptidase_M60   	  1125	  1421	   110.4
+
+P0C6F0	ACCESSORY COLONIZATION FACTOR A    143.7    1.5e-38   1   1.7   0.3
+	Iterate                   	   752	   889	   142.5
+	PF13322	DUF4092         	   392	   566	     339
+	PF26759	AcfD_helical    	   916	  1050	   232.3
+	PF17291	M60-like_N      	  1069	  1176	    30.7
+	PF13402	Peptidase_M60   	  1177	  1471	   117.7
+
+P0CK95	PUTATIVE LIPOPROTEIN ACFD HOMOL    146.0    2.8e-39   1   1.7   0.6
+	Iterate                   	   779	   886	   144.8
+	PF13322	DUF4092         	   417	   585	   318.1
+	PF26759	AcfD_helical    	   913	  1046	   229.2
+	PF17291	M60-like_N      	  1063	  1171	    44.9
+	PF13402	Peptidase_M60   	  1172	  1466	   129.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: E0IW31 (E-value: 1.7e-38, Score: 136.7)
+Mentioned as: E0IW31
+Description: Accessory colonization factor
+Organism: Escherichia coli (strain ATCC 9637 / CCM 2024 / DSM 1116 / LMG 11080 / NBRC 13500 / NCIMB 8666 / NRRL B-766 / W)
+PMID: 35217675
+Source: EuropePMC
+Title: Molecular and cellular insight into Escherichia coli SslE and its role during biofilm maturation
+Journal: NPJ biofilms and microbiomes (2022)
+Snippet: the N-terminal lipidation motif and adjacent disordered region (rSslE; residues 67 to 1497; UniProt ID E0IW31) (Fig. 1a ). This was produced in E. coli BL21 and purified by nickel-affinity and size-exclusion chromatography. Small-angle X-ray scattering (SAXS) coupled with size-exclusion chromatography (SEC-SAXS) was then used to
+
+================================================================================
+Protein: VIMSS7682396 (E-value: 3.8e-38, Score: 135.6)
+Mentioned as: ECO111_3795
+Description: putative lipoprotein AcfD homolog precursor
+Organism: Escherichia coli O111:H- str. 11128
+PMID: 35057017
+Source: EuropePMC
+Title: Oral Immunogenicity of Enterotoxigenic <i>Escherichia coli</i> Outer Membrane Vesicles Encapsulated into Zein Nanoparticles Coated with a Gantrez<sup>®</sup> AN-Mannosamine Polymer Conjugate
+Journal: Pharmaceutics (2022)
+Snippet: subunit 3.20 10 7 Q9XD84 tibA (ETEC_2141) Adhesin/invasin TibA autotransporter 6.72 10 6 C8UFQ7 yghJ (ECO111_3795) Putative lipoprotein AcfD homolog 5.49 10 6 D7GK41 eltA (ETEC1392/75_p1018_006) Heat-labile enterotoxin A chain 4.12 10 6 E3PPC4 cfaB (ETEC_p948_0400) CFA/I fimbrial subunit B (CFA/I antigen) 3.53 10 6 B7UI41
+
+================================================================================
+Protein: VIMSS342968 (E-value: 1.8e-36, Score: 130.3)
+Mentioned as: VPA1376
+Description: conserved hypothetical protein
+Organism: Vibrio parahaemolyticus RIMD 2210633
+PMID: 39173020
+Source: EuropePMC
+Title: Assessment of Vibrionaceae prevalence in seafood from Qidong market and analysis of Vibrio parahaemolyticus strains
+Journal: PloS one (2024)
+Snippet: oxR/new , PGS , orf8 , HU-a , ure , Mtase , v opC (VPA1321), VPA1376, vopQ (VP1680), VP1409, and vipA2 (VPA1035). PCR amplification was conducted under the following conditions [ 9 ]: an initial pre-denaturation step at 95C for 5 min, succeeded by 30 cycles
+
+================================================================================
+Protein: VIMSS342968 (E-value: 1.8e-36, Score: 130.3)
+Mentioned as: VPA1376
+Description: conserved hypothetical protein
+Organism: Vibrio parahaemolyticus RIMD 2210633
+PMID: 36018831
+Source: EuropePMC
+Title: Characterization of Vibrio parahaemolyticus isolated from stool specimens of diarrhea patients in Nantong, Jiangsu, China during 2018-2020
+Journal: PloS one (2022)
+Snippet: trh , ure , Mtase and Vp-PAI genes ( vopP , vscC2 , vopC and VPA1376), as well as the species-specific marker genes tlh and toxR . All the isolates were subjected for screening of pandemic genotype by detecting the presence of PGS sequence (PGS-PCR), toxRS
+
+================================================================================
+Protein: VIMSS342968 (E-value: 1.8e-36, Score: 130.3)
+Mentioned as: VPA1376
+Description: conserved hypothetical protein
+Organism: Vibrio parahaemolyticus RIMD 2210633
+PMID: 33763050
+Source: EuropePMC
+Title: Characterization of Pathogenic <i>Vibrio parahaemolyticus</i> Isolated From Fish Aquaculture of the Southwest Coastal Area of Bangladesh
+Journal: Frontiers in microbiology (2021)
+Snippet: 2006 MTase R TAAGCTCCAAAATCCATACG vopC F CAGAGTTGGTTTCGCAG 579 Caburlotto et al., 2009 vopC R CTGGTACGCCTCTTGGACAG VPA1376 F GCTCTCCTTGGTACCAATCAC 1067 Caburlotto et al., 2009 VPA1376 R CTGGGATCTTGATGTCAAGGT Species Confirmation by VITEK2 All 17 tlh and trh gene-positive V. parahaemolyticus isolates were further confirmed by the VITEK 2
+
+================================================================================
+Protein: Q6M0H6 (E-value: 0.00052, Score: 25.9)
+Mentioned as: Q6M0H6
+Description: Bacterial quinoprotein
+Organism: Methanococcus maripaludis (strain DSM 14266 / JCM 13030 / NBRC 101832 / S2 / LL)
+PMID: 17269933
+Source: EuropePMC
+Title: Degradation of lambda-carrageenan by Pseudoalteromonas carrageenovora lambda-carrageenase: a new family of glycoside hydrolases unrelated to kappa- and iota-carrageenases.
+Journal: The Biochemical journal (2007)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P0C6F0.1	AF-P0C6F0-F1-model_v4_TED07:1350-1515	1	AF-P0C6F0-F1-model_v4_TED07	1350-1515	0
+P0C6F0.1	AF-P0C6F0-F1-model_v4_TED01:56-194	1	AF-P0C6F0-F1-model_v4_TED01	56-194	0
+P0C6F0.1	AF-P0C6F0-F1-model_v4_TED02:241-415	1	AF-P0C6F0-F1-model_v4_TED02	241-415	0
+P0C6F0.1	AF-P0C6F0-F1-model_v4_TED03:424-487_527-728	1	AF-P0C6F0-F1-model_v4_TED03	424-728	0
+P0C6F0.1	AF-P0C6F0-F1-model_v4_TED04:752-759_796-889	1	AF-P0C6F0-F1-model_v4_TED04	752-889	100.0%
+P0C6F0.1	AF-P0C6F0-F1-model_v4_TED05:919-1048	1	AF-P0C6F0-F1-model_v4_TED05	919-1048	0
+P0C6F0.1	AF-P0C6F0-F1-model_v4_TED06:1060-1223_1260-1302	1	AF-P0C6F0-F1-model_v4_TED06	1060-1302	0
+P0CK95.1	AF-P0CK95-F1-model_v4_TED01:91-141_148-262	1	AF-P0CK95-F1-model_v4_TED01	91-262	0
+P0CK95.1	AF-P0CK95-F1-model_v4_TED02:268-427	1	AF-P0CK95-F1-model_v4_TED02	268-427	0
+P0CK95.1	AF-P0CK95-F1-model_v4_TED03:449-506_546-752	1	AF-P0CK95-F1-model_v4_TED03	449-752	0
+P0CK95.1	AF-P0CK95-F1-model_v4_TED04:779-886	1	AF-P0CK95-F1-model_v4_TED04	779-886	100.0%
+P0CK95.1	AF-P0CK95-F1-model_v4_TED05:915-1044	1	AF-P0CK95-F1-model_v4_TED05	915-1044	0
+P0CK95.1	AF-P0CK95-F1-model_v4_TED06:1311-1520	1	AF-P0CK95-F1-model_v4_TED06	1311-1520	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 6
+Total networks analyzed: 6
+Total network proteins: 94
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF00704 (Glyco_hydro_18)  4            10            66.7%
+PF02839 (CBM_5_12)        4            7             66.7%
+PF06496 (DUF1097)         4            4             66.7%
+PF11932 (DUF3450)         4            5             66.7%
+PF16549 (T2SSS_2)         4            4             66.7%
+PF00478 (IMPDH)           3            3             50.0%
+PF00117 (GATase)          3            3             50.0%
+PF00958 (GMP_synt_C)      3            3             50.0%
+PF02540 (NAD_synthase)    3            3             50.0%
+PF07722 (Peptidase_C26)   3            3             50.0%
+PF06610 (AlaE)            3            3             50.0%
+PF00196 (GerE)            3            3             50.0%
+PF17874 (TPR_MalT)        3            3             50.0%
+PF25873 (WHD_MalT)        3            3             50.0%
+PF10678 (DUF2492)         3            3             50.0%
+PF17963 (Big_9)           2            2             33.3%
+PF01522 (Polysacc_deac_1) 2            2             33.3%
+PF02635 (DsrE)            2            2             33.3%
+PF14600 (CBM_5_12_2)      2            2             33.3%
+PF17957 (Big_7)           2            4             33.3%
+PF06483 (ChiC)            2            3             33.3%
+PF00571 (CBS)             2            2             33.3%
+PF01070 (FMN_dh)          2            2             33.3%
+PF08329 (ChitinaseA_N)    2            2             33.3%
+PF18911 (PKD_4)           2            2             33.3%
+PF22352 (K319L-like_PKD)  2            2             33.3%
+PF03067 (LPMO_10)         1            1             16.7%
+PF18416 (GbpA_2)          1            1             16.7%
+PF21868 (GbpA_D3)         1            2             16.7%
+PF00728 (Glyco_hydro_20)  1            2             16.7%
+PF02838 (Glyco_hydro_20b) 1            2             16.7%
+PF03173 (CHB_HEX)         1            1             16.7%
+PF03174 (CHB_HEX_C)       1            1             16.7%
+PF06165 (GH94_b-supersand) 1            1             16.7%
+PF17167 (Glyco_hydro_94)  1            1             16.7%
+PF02656 (DUF202)          1            1             16.7%
+PF07940 (Hepar_II_III_C)  1            1             16.7%
+PF16332 (DSE-like_N)      1            1             16.7%
+PF16403 (Bact_surface_Ig-like) 1            1             16.7%
+PF00933 (Glyco_hydro_3)   1            1             16.7%
+PF21152 (YgjK_N)          1            1             16.7%
+PF22422 (MGH1-like_GH)    1            1             16.7%
+PF07221 (GlcNAc_2-epim)   1            1             16.7%
+PF11230 (YjjI-like)       1            1             16.7%
+PF01206 (TusA)            1            1             16.7%
+PF13528 (Glyco_trans_1_3) 1            1             16.7%
+PF12128 (DUF3584)         1            1             16.7%
+PF00890 (FAD_binding_2)   1            1             16.7%
+PF01134 (GIDA)            1            1             16.7%
+PF01266 (DAO)             1            1             16.7%
+PF01494 (FAD_binding_3)   1            1             16.7%
+PF07992 (Pyr_redox_2)     1            1             16.7%
+PF12831 (FAD_oxidored)    1            1             16.7%
+PF13450 (NAD_binding_8)   1            1             16.7%
+PF26311 (ETF-QO_FixC_C)   1            1             16.7%
+PF28007 (MksF)            1            1             16.7%
+PF04266 (ASCH)            1            1             16.7%
+PF02463 (SMC_N)           1            1             16.7%
+PF13175 (AAA_15)          1            1             16.7%
+PF13304 (AAA_21)          1            1             16.7%
+PF13476 (AAA_23)          1            1             16.7%
+PF02515 (CoA_transf_3)    1            1             16.7%
+PF04143 (Sulf_transp)     1            1             16.7%
+PF00392 (GntR)            1            1             16.7%
+PF07729 (FCD)             1            1             16.7%
+PF13360 (PQQ_2)           1            1             16.7%
+PF21783 (YNCE)            1            1             16.7%
+PF00092 (VWA)             1            1             16.7%
+PF12034 (YfbK_C)          1            1             16.7%
+PF12450 (vWF_A)           1            1             16.7%
+PF13519 (VWA_2)           1            1             16.7%
+PF13768 (VWA_3)           1            1             16.7%
+PF05025 (RbsD_FucU)       1            1             16.7%
+PF02525 (Flavodoxin_2)    1            3             16.7%
+PF03358 (FMN_red)         1            2             16.7%
+PF05134 (T2SSL)           1            1             16.7%
+PF12693 (GspL_C)          1            1             16.7%
+PF28903 (GspL_M)          1            1             16.7%
+PF00455 (DeoRC)           1            1             16.7%
+PF08220 (HTH_DeoR)        1            1             16.7%
+PF00669 (Flagellin_N)     1            1             16.7%
+PF00700 (Flagellin_C)     1            1             16.7%
+PF08884 (Flagellin_D3)    1            1             16.7%
+PF21504 (FLIC_barrel)     1            1             16.7%
+PF01478 (Peptidase_A24)   1            1             16.7%
+PF06750 (A24_N_bact)      1            1             16.7%
+
+... (truncated - showing first 100 of 830 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0CK95_TED04/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.50 91.30;
+NC   25.90 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

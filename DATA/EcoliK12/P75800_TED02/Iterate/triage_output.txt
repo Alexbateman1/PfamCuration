@@ -1,0 +1,218 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PDEI_ECOLI              Reviewed;         782 AA.
+AC   P75800;
+DE   RecName: Full=Probable cyclic di-GMP phosphodiesterase PdeI {ECO:0000305};
+DE            EC=3.1.4.52 {ECO:0000250|UniProtKB:P21514};
+GN   Name=pdeI {ECO:0000303|PubMed:26148715}; Synonyms=yliE;
+GN   OrderedLocusNames=b0833, JW0817;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=8905232; DOI=10.1093/dnares/3.3.137;
+RA   Oshima T., Aiba H., Baba T., Fujita K., Hayashi K., Honjo A., Ikemoto K.,
+RA   Inada T., Itoh T., Kajihara M., Kanai K., Kashimoto K., Kimura S.,
+RA   Kitagawa M., Makino K., Masuda S., Miki T., Mizobuchi K., Mori H.,
+RA   Motomura K., Nakamura Y., Nashimoto H., Nishio Y., Saito N., Sampei G.,
+RA   Seki Y., Tagami H., Takemoto K., Wada C., Yamamoto Y., Yano M.,
+RA   Horiuchi T.;
+RT   "A 718-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 12.7-28.0 min region on the linkage map.";
+RL   DNA Res. 3:137-155(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   FUNCTION IN BIOFILM FORMATION.
+RC   STRAIN=K12 / AB400;
+RX   PubMed=19460094; DOI=10.1111/j.1365-2958.2009.06739.x;
+RA   Boehm A., Steiner S., Zaehringer F., Casanova A., Hamburger F., Ritz D.,
+RA   Keck W., Ackermann M., Schirmer T., Jenal U.;
+RT   "Second messenger signalling governs Escherichia coli biofilm induction
+RT   upon ribosomal stress.";
+RL   Mol. Microbiol. 72:1500-1516(2009).
+RN   [5]
+RP   DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=20303158; DOI=10.1016/j.cell.2010.01.018;
+RA   Boehm A., Kaiser M., Li H., Spangler C., Kasper C.A., Ackermann M.,
+RA   Kaever V., Sourjik V., Roth V., Jenal U.;
+RT   "Second messenger-mediated adjustment of bacterial swimming velocity.";
+RL   Cell 141:107-116(2010).
+RN   [6]
+RP   NOMENCLATURE.
+RX   PubMed=26148715; DOI=10.1128/jb.00424-15;
+RA   Hengge R., Galperin M.Y., Ghigo J.M., Gomelsky M., Green J., Hughes K.T.,
+RA   Jenal U., Landini P.;
+RT   "Systematic nomenclature for GGDEF and EAL domain-containing cyclic di-GMP
+RT   turnover proteins of Escherichia coli.";
+RL   J. Bacteriol. 198:7-11(2015).
+CC   -!- FUNCTION: Phosphodiesterase (PDE) that catalyzes the hydrolysis of
+CC       cyclic-di-GMP (c-di-GMP) to 5'-pGpG (By similarity). Overexpression
+CC       reduces biofilm formation. Cyclic-di-GMP is a second messenger which
+CC       controls cell surface-associated traits in bacteria (PubMed:19460094).
+CC       {ECO:0000250|UniProtKB:P21514, ECO:0000269|PubMed:19460094}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=3',3'-c-di-GMP + H2O = 5'-phosphoguanylyl(3'->5')guanosine +
+CC         H(+); Xref=Rhea:RHEA:24902, ChEBI:CHEBI:15377, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:58754, ChEBI:CHEBI:58805; EC=3.1.4.52;
+CC         Evidence={ECO:0000250|UniProtKB:P21514};
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000255}.
+CC   -!- DISRUPTION PHENOTYPE: Cells lacking this gene have a weak reduction in
+CC       swarm size. {ECO:0000269|PubMed:20303158}.
+DR   EMBL; U00096; AAC73920.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA35528.1; -; Genomic_DNA.
+DR   PIR; A64821; A64821.
+DR   RefSeq; NP_415354.1; NC_000913.3.
+DR   RefSeq; WP_001360263.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P75800; -.
+DR   SMR; P75800; -.
+DR   BioGRID; 4259986; 11.
+DR   FunCoup; P75800; 2.
+DR   STRING; 511145.b0833; -.
+DR   jPOST; P75800; -.
+DR   PaxDb; 511145-b0833; -.
+DR   EnsemblBacteria; AAC73920; AAC73920; b0833.
+DR   GeneID; 945462; -.
+DR   KEGG; ecj:JW0817; -.
+DR   KEGG; eco:b0833; -.
+DR   KEGG; ecoc:C3026_05220; -.
+DR   PATRIC; fig|1411691.4.peg.1445; -.
+DR   EchoBASE; EB3249; -.
+DR   eggNOG; COG2200; Bacteria.
+DR   HOGENOM; CLU_000445_78_2_6; -.
+DR   InParanoid; P75800; -.
+DR   OMA; RFYEMNP; -.
+DR   OrthoDB; 6635966at2; -.
+DR   PhylomeDB; P75800; -.
+DR   BioCyc; EcoCyc:G6433-MONOMER; -.
+DR   PRO; PR:P75800; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IBA:GO_Central.
+DR   GO; GO:0071111; F:cyclic-guanylate-specific phosphodiesterase activity; IGI:EcoCyc.
+DR   GO; GO:1900190; P:regulation of single-species biofilm formation; IBA:GO_Central.
+DR   CDD; cd01948; EAL; 1.
+DR   FunFam; 3.20.20.450:FF:000013; Membrane-anchored cyclic-di-GMP phosphodiesterase; 1.
+DR   Gene3D; 3.20.20.450; EAL domain; 1.
+DR   InterPro; IPR033418; CHASE9.
+DR   InterPro; IPR050706; Cyclic-di-GMP_PDE-like.
+DR   InterPro; IPR001633; EAL_dom.
+DR   InterPro; IPR035919; EAL_sf.
+DR   PANTHER; PTHR33121:SF81; CYCLIC DI-GMP PHOSPHODIESTERASE PDEB-RELATED; 1.
+DR   PANTHER; PTHR33121; CYCLIC DI-GMP PHOSPHODIESTERASE PDEF; 1.
+DR   Pfam; PF17153; CHASE9; 1.
+DR   Pfam; PF00563; EAL; 1.
+DR   SMART; SM00052; EAL; 1.
+DR   SUPFAM; SSF141868; EAL domain-like; 1.
+DR   PROSITE; PS50883; EAL; 1.
+PE   1: Evidence at protein level;
+KW   c-di-GMP; Cell membrane; Hydrolase; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN           1..782
+FT                   /note="Probable cyclic di-GMP phosphodiesterase PdeI"
+FT                   /id="PRO_0000168729"
+FT   TRANSMEM        12..32
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        286..306
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          527..781
+FT                   /note="EAL"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00074"
+SQ   SEQUENCE   782 AA;  90049 MW;  608DFB0068611DFB CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+8	6	Escherichia.
+8	5	Enterobacteriaceae
+8	4	Enterobacterales
+8	3	Gammaproteobacteria
+8	2	Pseudomonadota
+8	1	Pseudomonadati
+8	0	Bacteria
+Total of 8 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A7ZJQ0	CYCLIC DIGUANYLATE PHOSPHODIE    311.0    3.7e-90   1   1.9   5.7
+	Iterate                   	   382	   516	   310.7
+	PF17153	CHASE9          	    35	   150	   260.6
+	PF00563	EAL             	   531	   767	   234.4
+
+B7LCB6	YLIE PROTEIN {ECO:0000313|EMB    311.0    3.7e-90   1   1.9   5.7
+	Iterate                   	   382	   516	   310.7
+	PF17153	CHASE9          	    35	   150	   260.6
+	PF00563	EAL             	   531	   767	   234.4
+
+B7MGU0	EAL DOMAIN-CONTAINING PROTEIN    305.2    2.2e-88   1   1.9   5.8
+	Iterate                   	   382	   516	   305.0
+	PF17153	CHASE9          	    35	   150	   260.6
+	PF00563	EAL             	   531	   767	   233.4
+
+P75800	PROBABLE CYCLIC DI-GMP PHOSPHOD    311.0    3.7e-90   1   1.9   5.7
+	Iterate                   	   382	   516	   310.7
+	PF17153	CHASE9          	    35	   150	   260.6
+	PF00563	EAL             	   531	   767	   234.4
+
+Q8X6V4	MEMBRANE-ANCHORED CYCLIC-DI-G    311.0    3.7e-90   1   1.9   5.7
+	Iterate                   	   382	   516	   310.7
+	PF17153	CHASE9          	    35	   150	   258.4
+	PF00563	EAL             	   531	   767	   233.3
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q8X6V4.1	AF-Q8X6V4-F1-model_v4_TED01:45-279	1	AF-Q8X6V4-F1-model_v4_TED01	45-279	0
+Q8X6V4.1	AF-Q8X6V4-F1-model_v4_TED02:382-516	1	AF-Q8X6V4-F1-model_v4_TED02	382-516	100.0%
+Q8X6V4.1	AF-Q8X6V4-F1-model_v4_TED03:544-758	1	AF-Q8X6V4-F1-model_v4_TED03	544-758	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75800_TED02/Iterate
+GA   27.00 27.00;
+TC   28.00 298.90;
+NC   26.70 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for P75800
+RN   [1]
+RM   19460094
+RT   "Second messenger signalling governs Escherichia coli biofilm induction
+RT   upon ribosomal stress.";
+RA   Boehm A., Steiner S., Zaehringer F., Casanova A., Hamburger F., Ritz D.,
+RA   Keck W., Ackermann M., Schirmer T., Jenal U.;
+RL   Mol. Microbiol. 72:1500-1516(2009).
+
+--- End of Current DESC file ---

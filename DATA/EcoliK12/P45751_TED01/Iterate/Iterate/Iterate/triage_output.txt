@@ -1,0 +1,304 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   HOFO_ECOLI              Reviewed;         146 AA.
+AC   P45751; Q2M758;
+DE   RecName: Full=DNA utilization protein HofO;
+GN   Name=hofO; Synonyms=yrfB; OrderedLocusNames=b3393, JW3356;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [3]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / W3110 / ZK126;
+RX   PubMed=16707682; DOI=10.1128/jb.01974-05;
+RA   Palchevskiy V., Finkel S.E.;
+RT   "Escherichia coli competence gene homologs are essential for competitive
+RT   fitness and the use of DNA as a nutrient.";
+RL   J. Bacteriol. 188:3902-3910(2006).
+CC   -!- FUNCTION: Required for the use of extracellular DNA as a nutrient.
+CC       {ECO:0000269|PubMed:16707682}.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Single-pass
+CC       membrane protein {ECO:0000305}.
+CC   -!- DISRUPTION PHENOTYPE: Mutants are unable to use DNA as a sole carbon
+CC       and energy source and show decreased competitive fitness when
+CC       cocultured with wild-type cells. {ECO:0000269|PubMed:16707682}.
+DR   EMBL; U18997; AAA58190.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC76418.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE77898.1; -; Genomic_DNA.
+DR   PIR; D65134; D65134.
+DR   RefSeq; NP_417852.1; NC_000913.3.
+DR   RefSeq; WP_001055759.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P45751; -.
+DR   SMR; P45751; -.
+DR   BioGRID; 4262484; 9.
+DR   DIP; DIP-12919N; -.
+DR   FunCoup; P45751; 65.
+DR   IntAct; P45751; 4.
+DR   STRING; 511145.b3393; -.
+DR   PaxDb; 511145-b3393; -.
+DR   EnsemblBacteria; AAC76418; AAC76418; b3393.
+DR   GeneID; 947899; -.
+DR   KEGG; ecj:JW3356; -.
+DR   KEGG; eco:b3393; -.
+DR   KEGG; ecoc:C3026_18410; -.
+DR   PATRIC; fig|1411691.4.peg.3337; -.
+DR   EchoBASE; EB2759; -.
+DR   eggNOG; ENOG5032UHA; Bacteria.
+DR   HOGENOM; CLU_117126_0_0_6; -.
+DR   InParanoid; P45751; -.
+DR   OMA; WLARCGM; -.
+DR   OrthoDB; 6564173at2; -.
+DR   PhylomeDB; P45751; -.
+DR   BioCyc; EcoCyc:G7737-MONOMER; -.
+DR   PRO; PR:P45751; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0015976; P:carbon utilization; IMP:EcoCyc.
+DR   GO; GO:0006308; P:DNA catabolic process; IMP:EcoCyc.
+DR   Pfam; PF25319; HofO; 1.
+PE   4: Predicted;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN           1..146
+FT                   /note="DNA utilization protein HofO"
+FT                   /id="PRO_0000169538"
+FT   TRANSMEM        20..37
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   146 AA;  16846 MW;  96548622C7D0374B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	6	Escherichia.
+5	6	Shigella.
+3	6	Salmonella.
+3	6	Citrobacter.
+21	5	Enterobacteriaceae
+21	4	Enterobacterales
+21	3	Gammaproteobacteria
+21	2	Pseudomonadota
+21	1	Pseudomonadati
+21	0	Bacteria
+Total of 21 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A447ULX8	FIMBRIAL PROTEIN HOFO {EC    113.7    1.5e-29   1   1.4   9.2
+	Iterate                   	     3	    71	   113.0
+	PF25319	HofO            	    85	   154	    88.7
+
+A8AQU8	FIMBRIAL PROTEIN HOFO {ECO:00    116.6    1.8e-30   1   1.4   8.3
+	Iterate                   	     3	    71	   115.9
+	PF25319	HofO            	    85	   154	    88.7
+
+B7L4R6	YRFB PROTEIN {ECO:0000313|EMB    111.9    5.2e-29   1   1.4   8.6
+	Iterate                   	     3	    65	   111.2
+	PF25319	HofO            	    75	   144	    88.3
+
+D2TLP5	FIMBRIAL PROTEIN HOFO {ECO:00    118.5    4.8e-31   1   1.3   8.4
+	Iterate                   	     3	    67	   117.9
+	PF25319	HofO            	    81	   150	    80.4
+
+P45751	DNA UTILIZATION PROTEIN HOFO       112.2    4.5e-29   1   1.4   8.7
+	Iterate                   	     3	    65	   111.5
+	PF25319	HofO            	    75	   144	    88.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P45751 (E-value: 1.3e-28, Score: 104.4)
+Mentioned as: P45751
+Description: DNA utilization protein HofO
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - DNA utilization protein HofO
+PMID: 32253839
+Source: EuropePMC
+Title: Comparative transcriptomic analysis of vascular endothelial cells after hypoxia/re-oxygenation induction based on microarray technology.
+
+================================================================================
+Protein: P45751 (E-value: 1.3e-28, Score: 104.4)
+Mentioned as: HOFO_ECOLI
+Description: DNA utilization protein HofO
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - DNA utilization protein HofO
+PMID: 16707682
+Source: SwissProt
+Snippet: FUNCTION: Required for the use of extracellular DNA as a nutrient. {ECO:0000269|PubMed:16707682}._:::_SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Single-pass membrane protein {ECO:0000305}._:::_DISRUPTION PHENOTYPE: Mutants are unable to use DNA as a sole carbon and energy source and show decreased competitive fitness when cocultured with wild-type cells. {ECO:0000269|PubMed:16707682}.
+
+================================================================================
+Protein: VIMSS75724 (E-value: 7.2e-28, Score: 102.0)
+Mentioned as: Z4747
+Description: orf, hypothetical protein
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 1452360
+Source: EuropePMC
+Title: Clonal and antigenic analysis of serogroup A Neisseria meningitidis with particular reference to epidemiological features of epidemic meningitis in the People's Republic of China
+Journal: Infection and immunity (1992)
+Snippet: Z4115, Z4736, Z4737, Z4738, Z4739, Z4740, Z4744, Z4745, Z4747, Z4748, Z4749, Z4750 Z4752, Z4061 Z4755 Z4049, Z4741 Z4068 Z4072 Z4022 Z4107 Z4108 Z4023 Z4105,
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A8AQU8.1	AF-A8AQU8-F1-model_v4_TED01:16-80	1	AF-A8AQU8-F1-model_v4_TED01	16-80	81.2%
+A8AQU8.1	AF-A8AQU8-F1-model_v4_TED02:88-153	1	AF-A8AQU8-F1-model_v4_TED02	88-153	0
+D2TLP5.1	AF-D2TLP5-F1-model_v4_TED01:2-73	1	AF-D2TLP5-F1-model_v4_TED01	2-73	100.0%
+D2TLP5.1	AF-D2TLP5-F1-model_v4_TED02:80-149	1	AF-D2TLP5-F1-model_v4_TED02	80-149	0
+P45751.1	AF-P45751-F1-model_v4_TED02:78-142	1	AF-P45751-F1-model_v4_TED02	78-142	0
+P45751.1	AF-P45751-F1-model_v4_TED01:3-65	1	AF-P45751-F1-model_v4_TED01	3-65	100.0%
+Q8ZLK0.1	AF-Q8ZLK0-F1-model_v4_TED01:1-74	1	AF-Q8ZLK0-F1-model_v4_TED01	1-74	100.0%
+Q8ZLK0.1	AF-Q8ZLK0-F1-model_v4_TED02:86-151	1	AF-Q8ZLK0-F1-model_v4_TED02	86-151	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 9
+Total networks analyzed: 9
+Total network proteins: 54
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF10748 (HofP)            9            9            100.0%
+PF05137 (PilN)            9            9            100.0%
+PF00905 (Transpeptidase)  8            8             88.9%
+PF00912 (Transgly)        8            8             88.9%
+PF17092 (PCB_OB)          8            8             88.9%
+PF29195 (PBP_1A_C)        8            8             88.9%
+PF00263 (Secretin)        8            8             88.9%
+PF03958 (Secretin_N)      8            8             88.9%
+PF01202 (SKI)             6            6             66.7%
+PF13238 (AAA_18)          6            6             66.7%
+PF13671 (AAA_33)          6            6             66.7%
+PF00437 (T2SSE)           1            1             11.1%
+PF05157 (MshEN)           1            1             11.1%
+PF07963 (N_methyl)        1            1             11.1%
+PF27121 (PpdB)            1            1             11.1%
+PF01761 (DHQ_synthase)    1            1             11.1%
+PF13685 (Fe-ADH_2)        1            1             11.1%
+PF24621 (DHQS_C)          1            1             11.1%
+
+Total unique Pfam domains: 18
+
+
+Detailed Pfam Domain Breakdown:
+--------------------------------------------------------------------------------
+
+PF10748 (HofP):
+  Found in 9 network(s):
+    - Q8X817 (155864.Z4746)
+    - A0A0H2VD39 (199310.c4162)
+    - A8AQU7 (290338.CKO_04815)
+    - Q32AK3 (300267.SDY_3687)
+    - B2U3J8 (344609.SbBS512_E3769)
+    - A9MMD6 (41514.SARI_04126)
+    - P45750 (511145.b3392)
+    - D2TLP6 (637910.ROD_44311)
+    - Q8ZLK1 (99287.STM3489)
+  Total proteins: 9
+
+PF05137 (PilN):
+  Found in 9 network(s):
+    - Q8X813 (155864.Z4748)
+    - A0A0H2VBT5 (199310.c4164)
+    - A8AQU9 (290338.CKO_04817)
+    - Q32AK5 (300267.SDY_3685)
+    - B2U3K0 (344609.SbBS512_E3771)
+    - A9MMD4 (41514.SARI_04124)
+    - P64634 (511145.b3394)
+    - D2TLP4 (637910.ROD_44291)
+    - Q8ZLJ9 (99287.STM3491)
+  Total proteins: 9
+
+PF00905 (Transpeptidase):
+  Found in 8 network(s):
+    - Q8X809 (155864.Z4750)
+    - A0A0H2VBJ1 (199310.c4166)
+    - A8AQV1 (290338.CKO_04819)
+    - Q32AK8 (300267.SDY_3682)
+    - B2U3K2 (344609.SbBS512_E3773)
+    - P02918 (511145.b3396)
+    - D2TLP2 (637910.ROD_44271)
+    - Q8ZLJ7 (99287.STM3493)
+  Total proteins: 8
+
+PF00912 (Transgly):
+  Found in 8 network(s):
+    - Q8X809 (155864.Z4750)
+    - A0A0H2VBJ1 (199310.c4166)
+    - A8AQV1 (290338.CKO_04819)
+    - Q32AK8 (300267.SDY_3682)
+    - B2U3K2 (344609.SbBS512_E3773)
+    - P02918 (511145.b3396)
+    - D2TLP2 (637910.ROD_44271)
+    - Q8ZLJ7 (99287.STM3493)
+  Total proteins: 8
+
+PF17092 (PCB_OB):
+  Found in 8 network(s):
+    - Q8X809 (155864.Z4750)
+    - A0A0H2VBJ1 (199310.c4166)
+    - A8AQV1 (290338.CKO_04819)
+    - Q32AK8 (300267.SDY_3682)
+    - B2U3K2 (344609.SbBS512_E3773)
+    - P02918 (511145.b3396)
+    - D2TLP2 (637910.ROD_44271)
+    - Q8ZLJ7 (99287.STM3493)
+  Total proteins: 8
+
+... (truncated - showing first 100 of 241 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P45751_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.20 27.30;
+NC   25.80 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P45751
+RN   [1]
+RM   16707682
+RT   "Escherichia coli competence gene homologs are essential for competitive
+RT   fitness and the use of DNA as a nutrient.";
+RA   Palchevskiy V., Finkel S.E.;
+RL   J. Bacteriol. 188:3902-3910(2006).
+
+--- End of Current DESC file ---

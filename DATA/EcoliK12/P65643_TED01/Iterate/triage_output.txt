@@ -1,0 +1,842 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   EUTT_ECOLI              Reviewed;         267 AA.
+AC   P65643; P76554; Q2MAI9;
+DE   RecName: Full=Corrinoid adenosyltransferase EutT {ECO:0000305};
+DE            EC=2.5.1.154 {ECO:0000250|UniProtKB:Q9ZFV4};
+DE   AltName: Full=ATP:co(I)rrinoid adenosyltransferase;
+DE            Short=ACAT;
+DE   AltName: Full=Cob(II)alamin adenosyltransferase EutT;
+DE   AltName: Full=Ethanolamine utilization cobalamin adenosyltransferase;
+DE   AltName: Full=Ethanolamine utilization corrinoid adenosyltransferase;
+DE   AltName: Full=EutT adenosyltransferase {ECO:0000250|UniProtKB:Q9ZFV4};
+GN   Name=eutT; Synonyms=ypfB; OrderedLocusNames=b2459, JW2443;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- FUNCTION: Converts cyanocobalamin (CN-B12) to adenosylcobalamin
+CC       (AdoCbl), the inducer of the eut operon. Is not active on cobinamide
+CC       nor other intermediates in the adenosylcobalamin synthetic pathway.
+CC       Allows full induction of the eut operon.
+CC       {ECO:0000250|UniProtKB:Q9ZFV4}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=2 cob(II)alamin + reduced [electron-transfer flavoprotein] + 2
+CC         ATP + 2 H2O = 2 adenosylcob(III)alamin + oxidized [electron-transfer
+CC         flavoprotein] + 2 phosphate + 2 diphosphate + 3 H(+);
+CC         Xref=Rhea:RHEA:66828, Rhea:RHEA-COMP:10685, Rhea:RHEA-COMP:10686,
+CC         ChEBI:CHEBI:15377, ChEBI:CHEBI:15378, ChEBI:CHEBI:16304,
+CC         ChEBI:CHEBI:18408, ChEBI:CHEBI:30616, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:43474, ChEBI:CHEBI:57692, ChEBI:CHEBI:58307;
+CC         EC=2.5.1.154; Evidence={ECO:0000250|UniProtKB:Q9ZFV4};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=2 cob(II)inamide + reduced [electron-transfer flavoprotein] +
+CC         2 ATP + 2 H2O = 2 adenosylcob(III)inamide + oxidized [electron-
+CC         transfer flavoprotein] + 2 phosphate + 2 diphosphate + 3 H(+);
+CC         Xref=Rhea:RHEA:66824, Rhea:RHEA-COMP:10685, Rhea:RHEA-COMP:10686,
+CC         ChEBI:CHEBI:2480, ChEBI:CHEBI:15377, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:33019, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:57692, ChEBI:CHEBI:58307, ChEBI:CHEBI:141013;
+CC         EC=2.5.1.154; Evidence={ECO:0000250|UniProtKB:Q9ZFV4};
+CC   -!- COFACTOR:
+CC       Name=a divalent metal cation; Xref=ChEBI:CHEBI:60240;
+CC         Evidence={ECO:0000250|UniProtKB:Q9ZFV4};
+CC       Note=Binds 1 divalent metal cation ion per homodimer with both subunits
+CC       providing Cys ligands; Fe(2+) gives most activity and is possibly the
+CC       physiological cofactor. {ECO:0000250|UniProtKB:Q9ZFV4};
+CC   -!- PATHWAY: Amine and polyamine degradation; ethanolamine degradation.
+CC   -!- SUBUNIT: Homodimer. {ECO:0000250|UniProtKB:Q9ZFV4}.
+CC   -!- SUBCELLULAR LOCATION: Bacterial microcompartment {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the Cob(I)alamin adenosyltransferase family.
+CC       EutT subfamily. {ECO:0000305}.
+CC   -!- CAUTION: In strain MG1655 the eut operon is interrupted by the CPZ-55
+CC       prophage, encoding 9 genes situated between eutA and eutB, which are
+CC       translated in the other direction. CPZ-55 may prevent expression of the
+CC       eut operon in strain MG1655. Strain W3110 does not have this prophage
+CC       element and should be able to express the operon.
+CC       {ECO:0000305|PubMed:9278503}.
+DR   EMBL; U00096; AAC75512.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76717.1; -; Genomic_DNA.
+DR   PIR; B65021; B65021.
+DR   RefSeq; NP_416954.1; NC_000913.3.
+DR   RefSeq; WP_000651298.1; NZ_STEB01000051.1.
+DR   AlphaFoldDB; P65643; -.
+DR   SMR; P65643; -.
+DR   BioGRID; 4260919; 10.
+DR   DIP; DIP-9543N; -.
+DR   FunCoup; P65643; 195.
+DR   IntAct; P65643; 7.
+DR   STRING; 511145.b2459; -.
+DR   PaxDb; 511145-b2459; -.
+DR   EnsemblBacteria; AAC75512; AAC75512; b2459.
+DR   GeneID; 75204269; -.
+DR   GeneID; 946939; -.
+DR   KEGG; ecj:JW2443; -.
+DR   KEGG; eco:b2459; -.
+DR   KEGG; ecoc:C3026_13645; -.
+DR   PATRIC; fig|1411691.4.peg.4281; -.
+DR   EchoBASE; EB3941; -.
+DR   eggNOG; COG4812; Bacteria.
+DR   HOGENOM; CLU_093470_1_0_6; -.
+DR   InParanoid; P65643; -.
+DR   OMA; ACCELCH; -.
+DR   OrthoDB; 306726at2; -.
+DR   PhylomeDB; P65643; -.
+DR   BioCyc; EcoCyc:G7289-MONOMER; -.
+DR   UniPathway; UPA00560; -.
+DR   PRO; PR:P65643; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0031469; C:bacterial microcompartment; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0008817; F:corrinoid adenosyltransferase activity; IEA:InterPro.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009236; P:cobalamin biosynthetic process; IEA:InterPro.
+DR   GO; GO:0046336; P:ethanolamine catabolic process; IEA:UniProtKB-UniPathway.
+DR   Gene3D; 1.20.1200.10; Cobalamin adenosyltransferase-like; 1.
+DR   InterPro; IPR009194; AdoTrfase_EutT.
+DR   InterPro; IPR016030; CblAdoTrfase-like.
+DR   InterPro; IPR036451; CblAdoTrfase-like_sf.
+DR   NCBIfam; NF011595; PRK15020.1; 1.
+DR   Pfam; PF01923; Cob_adeno_trans; 1.
+DR   PIRSF; PIRSF012294; ATR_EutT; 1.
+DR   SUPFAM; SSF89028; Cobalamin adenosyltransferase-like; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Bacterial microcompartment; Metal-binding; Nucleotide-binding;
+KW   Reference proteome; Transferase.
+FT   CHAIN           1..267
+FT                   /note="Corrinoid adenosyltransferase EutT"
+FT                   /id="PRO_0000087100"
+FT   BINDING         80
+FT                   /ligand="a divalent metal cation"
+FT                   /ligand_id="ChEBI:CHEBI:60240"
+FT                   /ligand_note="ligand shared between homodimeric partners"
+FT                   /evidence="ECO:0000250|UniProtKB:Q9ZFV4"
+FT   BINDING         83
+FT                   /ligand="a divalent metal cation"
+FT                   /ligand_id="ChEBI:CHEBI:60240"
+FT                   /ligand_note="ligand shared between homodimeric partners"
+FT                   /evidence="ECO:0000250|UniProtKB:Q9ZFV4"
+SQ   SEQUENCE   267 AA;  30172 MW;  E51EDAB528B4FA76 CRC64;
+//
+ID   EUTT_ECOL6              Reviewed;         267 AA.
+AC   P65644; P76554;
+DE   RecName: Full=Corrinoid adenosyltransferase EutT {ECO:0000305};
+DE            EC=2.5.1.154 {ECO:0000250|UniProtKB:Q9ZFV4};
+DE   AltName: Full=ATP:co(I)rrinoid adenosyltransferase;
+DE            Short=ACAT;
+DE   AltName: Full=Cob(II)alamin adenosyltransferase EutT;
+DE   AltName: Full=Ethanolamine utilization cobalamin adenosyltransferase;
+DE   AltName: Full=Ethanolamine utilization corrinoid adenosyltransferase;
+DE   AltName: Full=EutT adenosyltransferase {ECO:0000250|UniProtKB:Q9ZFV4};
+GN   Name=eutT; OrderedLocusNames=c2984;
+OS   Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=199310;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CFT073 / ATCC 700928 / UPEC;
+RX   PubMed=12471157; DOI=10.1073/pnas.252529799;
+RA   Welch R.A., Burland V., Plunkett G. III, Redford P., Roesch P., Rasko D.,
+RA   Buckles E.L., Liou S.-R., Boutin A., Hackett J., Stroud D., Mayhew G.F.,
+RA   Rose D.J., Zhou S., Schwartz D.C., Perna N.T., Mobley H.L.T.,
+RA   Donnenberg M.S., Blattner F.R.;
+RT   "Extensive mosaic structure revealed by the complete genome sequence of
+RT   uropathogenic Escherichia coli.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:17020-17024(2002).
+CC   -!- FUNCTION: Converts cyanocobalamin (CN-B12) to adenosylcobalamin
+CC       (AdoCbl), the inducer of the eut operon. Is not active on cobinamide
+CC       nor other intermediates in the adenosylcobalamin synthetic pathway.
+CC       Allows full induction of the eut operon.
+CC       {ECO:0000250|UniProtKB:Q9ZFV4}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=2 cob(II)alamin + reduced [electron-transfer flavoprotein] + 2
+CC         ATP + 2 H2O = 2 adenosylcob(III)alamin + oxidized [electron-transfer
+CC         flavoprotein] + 2 phosphate + 2 diphosphate + 3 H(+);
+CC         Xref=Rhea:RHEA:66828, Rhea:RHEA-COMP:10685, Rhea:RHEA-COMP:10686,
+CC         ChEBI:CHEBI:15377, ChEBI:CHEBI:15378, ChEBI:CHEBI:16304,
+CC         ChEBI:CHEBI:18408, ChEBI:CHEBI:30616, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:43474, ChEBI:CHEBI:57692, ChEBI:CHEBI:58307;
+CC         EC=2.5.1.154; Evidence={ECO:0000250|UniProtKB:Q9ZFV4};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=2 cob(II)inamide + reduced [electron-transfer flavoprotein] +
+CC         2 ATP + 2 H2O = 2 adenosylcob(III)inamide + oxidized [electron-
+CC         transfer flavoprotein] + 2 phosphate + 2 diphosphate + 3 H(+);
+CC         Xref=Rhea:RHEA:66824, Rhea:RHEA-COMP:10685, Rhea:RHEA-COMP:10686,
+CC         ChEBI:CHEBI:2480, ChEBI:CHEBI:15377, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:33019, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:57692, ChEBI:CHEBI:58307, ChEBI:CHEBI:141013;
+CC         EC=2.5.1.154; Evidence={ECO:0000250|UniProtKB:Q9ZFV4};
+CC   -!- COFACTOR:
+CC       Name=a divalent metal cation; Xref=ChEBI:CHEBI:60240;
+CC         Evidence={ECO:0000250|UniProtKB:Q9ZFV4};
+CC       Note=Binds 1 divalent metal cation ion per homodimer with both subunits
+CC       providing Cys ligands; Fe(2+) gives most activity and is possibly the
+CC       physiological cofactor. {ECO:0000250|UniProtKB:Q9ZFV4};
+CC   -!- PATHWAY: Amine and polyamine degradation; ethanolamine degradation.
+CC   -!- SUBUNIT: Homodimer. {ECO:0000250|UniProtKB:Q9ZFV4}.
+CC   -!- SUBCELLULAR LOCATION: Bacterial microcompartment {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the Cob(I)alamin adenosyltransferase family.
+CC       EutT subfamily. {ECO:0000305}.
+DR   EMBL; AE014075; AAN81434.1; -; Genomic_DNA.
+DR   RefSeq; WP_000651298.1; NZ_CP051263.1.
+DR   AlphaFoldDB; P65644; -.
+DR   SMR; P65644; -.
+DR   STRING; 199310.c2984; -.
+DR   GeneID; 75204269; -.
+DR   KEGG; ecc:c2984; -.
+DR   eggNOG; COG4812; Bacteria.
+DR   HOGENOM; CLU_093470_1_0_6; -.
+DR   BioCyc; ECOL199310:C2984-MONOMER; -.
+DR   UniPathway; UPA00560; -.
+DR   Proteomes; UP000001410; Chromosome.
+DR   GO; GO:0031469; C:bacterial microcompartment; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0008817; F:corrinoid adenosyltransferase activity; IEA:InterPro.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009236; P:cobalamin biosynthetic process; IEA:InterPro.
+DR   GO; GO:0046336; P:ethanolamine catabolic process; IEA:UniProtKB-UniPathway.
+DR   Gene3D; 1.20.1200.10; Cobalamin adenosyltransferase-like; 1.
+DR   InterPro; IPR009194; AdoTrfase_EutT.
+DR   InterPro; IPR016030; CblAdoTrfase-like.
+DR   InterPro; IPR036451; CblAdoTrfase-like_sf.
+DR   NCBIfam; NF011595; PRK15020.1; 1.
+DR   Pfam; PF01923; Cob_adeno_trans; 1.
+DR   PIRSF; PIRSF012294; ATR_EutT; 1.
+DR   SUPFAM; SSF89028; Cobalamin adenosyltransferase-like; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Bacterial microcompartment; Metal-binding; Nucleotide-binding;
+KW   Reference proteome; Transferase.
+FT   CHAIN           1..267
+FT                   /note="Corrinoid adenosyltransferase EutT"
+FT                   /id="PRO_0000087099"
+FT   BINDING         80
+FT                   /ligand="a divalent metal cation"
+FT                   /ligand_id="ChEBI:CHEBI:60240"
+FT                   /ligand_note="ligand shared between homodimeric partners"
+FT                   /evidence="ECO:0000250|UniProtKB:Q9ZFV4"
+FT   BINDING         83
+FT                   /ligand="a divalent metal cation"
+FT                   /ligand_id="ChEBI:CHEBI:60240"
+FT                   /ligand_note="ligand shared between homodimeric partners"
+FT                   /evidence="ECO:0000250|UniProtKB:Q9ZFV4"
+SQ   SEQUENCE   267 AA;  30172 MW;  E51EDAB528B4FA76 CRC64;
+//
+ID   EUTT_SALTY              Reviewed;         267 AA.
+AC   Q9ZFV4;
+DE   RecName: Full=Corrinoid adenosyltransferase EutT {ECO:0000305};
+DE            EC=2.5.1.154 {ECO:0000269|PubMed:16636051};
+DE   AltName: Full=ATP:co(I)rrinoid adenosyltransferase {ECO:0000303|PubMed:16636051};
+DE            Short=ACAT {ECO:0000303|PubMed:24336938};
+DE   AltName: Full=Cob(II)alamin adenosyltransferase EutT {ECO:0000303|PubMed:15516577};
+DE   AltName: Full=Ethanolamine utilization cobalamin adenosyltransferase;
+DE   AltName: Full=Ethanolamine utilization corrinoid adenosyltransferase;
+DE   AltName: Full=EutT adenosyltransferase {ECO:0000303|PubMed:15516577};
+GN   Name=eutT {ECO:0000303|PubMed:10464203}; OrderedLocusNames=STM2467;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND DISRUPTION PHENOTYPE.
+RC   STRAIN=LT2;
+RX   PubMed=10464203; DOI=10.1128/jb.181.17.5317-5329.1999;
+RA   Kofoid E.C., Rappleye C.A., Stojiljkovic I., Roth J.R.;
+RT   "The 17-gene ethanolamine (eut) operon of Salmonella typhimurium encodes
+RT   five homologues of carboxysome shell proteins.";
+RL   J. Bacteriol. 181:5317-5329(1999).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+RN   [3]
+RP   FUNCTION, PATHWAY, OPERON, AND INDUCTION BY ETHANOLAMINE AND COBALAMIN.
+RC   STRAIN=LT2;
+RX   PubMed=3045078; DOI=10.1128/jb.170.9.3855-3863.1988;
+RA   Roof D.M., Roth J.R.;
+RT   "Ethanolamine utilization in Salmonella typhimurium.";
+RL   J. Bacteriol. 170:3855-3863(1988).
+RN   [4]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=LT2;
+RX   PubMed=15516577; DOI=10.1128/jb.186.22.7635-7644.2004;
+RA   Sheppard D.E., Penrod J.T., Bobik T., Kofoid E., Roth J.R.;
+RT   "Evidence that a B12-adenosyl transferase is encoded within the
+RT   ethanolamine operon of Salmonella enterica.";
+RL   J. Bacteriol. 186:7635-7644(2004).
+RN   [5]
+RP   DISRUPTION PHENOTYPE.
+RC   STRAIN=LT2;
+RX   PubMed=16585748; DOI=10.1128/jb.188.8.2865-2874.2006;
+RA   Penrod J.T., Roth J.R.;
+RT   "Conserving a volatile metabolite: a role for carboxysome-like organelles
+RT   in Salmonella enterica.";
+RL   J. Bacteriol. 188:2865-2874(2006).
+RN   [6]
+RP   FUNCTION, CATALYTIC ACTIVITY, SUBSTRATE SPECIFICITY, COFACTOR,
+RP   BIOPHYSICOCHEMICAL PROPERTIES, AND MUTAGENESIS OF CYS-79; CYS-80 AND
+RP   CYS-83.
+RC   STRAIN=LT2;
+RX   PubMed=16636051; DOI=10.1074/jbc.m603069200;
+RA   Buan N.R., Escalante-Semerena J.C.;
+RT   "Purification and initial biochemical characterization of ATP:Cob(I)alamin
+RT   adenosyltransferase (EutT) enzyme of Salmonella enterica.";
+RL   J. Biol. Chem. 281:16971-16977(2006).
+RN   [7]
+RP   FUNCTION, COFACTOR, SUBUNIT, AND MUTAGENESIS OF HIS-67; HIS-75; CYS-79;
+RP   CYS-80 AND CYS-83.
+RC   STRAIN=LT2;
+RX   PubMed=24336938; DOI=10.1128/jb.01304-13;
+RA   Moore T.C., Mera P.E., Escalante-Semerena J.C.;
+RT   "The EutT enzyme of Salmonella enterica is a unique ATP:Cob(I)alamin
+RT   adenosyltransferase metalloprotein that requires ferrous ions for maximal
+RT   activity.";
+RL   J. Bacteriol. 196:903-910(2014).
+RN   [8]
+RP   COFACTOR, AND MUTAGENESIS OF HIS-67; HIS-75; CYS-79; CYS-80 AND CYS-83.
+RC   STRAIN=LT2;
+RX   PubMed=28045498; DOI=10.1021/acs.biochem.6b00750;
+RA   Pallares I.G., Moore T.C., Escalante-Semerena J.C., Brunold T.C.;
+RT   "Spectroscopic Studies of the EutT Adenosyltransferase from Salmonella
+RT   enterica: Evidence of a Tetrahedrally Coordinated Divalent Transition Metal
+RT   Cofactor with Cysteine Ligation.";
+RL   Biochemistry 56:364-375(2017).
+RN   [9]
+RP   FUNCTION.
+RC   STRAIN=SL1344;
+RX   PubMed=29531136; DOI=10.1128/iai.00172-18;
+RA   Anderson C.J., Satkovich J., Koeseoglu V.K., Agaisse H., Kendall M.M.;
+RT   "The Ethanolamine Permease EutH Promotes Vacuole Adaptation of Salmonella
+RT   enterica and Listeria monocytogenes during Macrophage Infection.";
+RL   Infect. Immun. 86:0-0(2018).
+CC   -!- FUNCTION: Converts cyanocobalamin (CN-B12) to adenosylcobalamin
+CC       (AdoCbl), the inducer of the eut operon (PubMed:15516577,
+CC       PubMed:16636051, PubMed:24336938). Is not active on cobinamide nor
+CC       other intermediates in the adenosylcobalamin synthetic pathway. Allows
+CC       full induction of the eut operon (PubMed:15516577). Can use ADP, CTP
+CC       and dATP in place of ATP, and cobinamide in place of cobalamin, none
+CC       are as efficiently used as ATP and cobalamin (PubMed:16636051).
+CC       {ECO:0000269|PubMed:15516577, ECO:0000269|PubMed:16636051,
+CC       ECO:0000269|PubMed:24336938}.
+CC   -!- FUNCTION: Expression of the eut operon allows this bacteria to use
+CC       ethanolamine (EA) as a carbon, nitrogen and energy source. It relies on
+CC       cobalamin (vitamin B12) both as a cofactor for the ethanolamine
+CC       ammonia-lyase (EAL) activity and to induce the operon (PubMed:3045078).
+CC       EA enhances bacterial survival in macrophages in a concentration-
+CC       dependent manner, suggesting it is an important nutrient during
+CC       infection (PubMed:29531136). {ECO:0000269|PubMed:29531136,
+CC       ECO:0000269|PubMed:3045078}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=2 cob(II)alamin + reduced [electron-transfer flavoprotein] + 2
+CC         ATP + 2 H2O = 2 adenosylcob(III)alamin + oxidized [electron-transfer
+CC         flavoprotein] + 2 phosphate + 2 diphosphate + 3 H(+);
+CC         Xref=Rhea:RHEA:66828, Rhea:RHEA-COMP:10685, Rhea:RHEA-COMP:10686,
+CC         ChEBI:CHEBI:15377, ChEBI:CHEBI:15378, ChEBI:CHEBI:16304,
+CC         ChEBI:CHEBI:18408, ChEBI:CHEBI:30616, ChEBI:CHEBI:33019,
+CC         ChEBI:CHEBI:43474, ChEBI:CHEBI:57692, ChEBI:CHEBI:58307;
+CC         EC=2.5.1.154; Evidence={ECO:0000269|PubMed:16636051};
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=2 cob(II)inamide + reduced [electron-transfer flavoprotein] +
+CC         2 ATP + 2 H2O = 2 adenosylcob(III)inamide + oxidized [electron-
+CC         transfer flavoprotein] + 2 phosphate + 2 diphosphate + 3 H(+);
+CC         Xref=Rhea:RHEA:66824, Rhea:RHEA-COMP:10685, Rhea:RHEA-COMP:10686,
+CC         ChEBI:CHEBI:2480, ChEBI:CHEBI:15377, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:30616, ChEBI:CHEBI:33019, ChEBI:CHEBI:43474,
+CC         ChEBI:CHEBI:57692, ChEBI:CHEBI:58307, ChEBI:CHEBI:141013;
+CC         EC=2.5.1.154; Evidence={ECO:0000269|PubMed:16636051};
+CC   -!- COFACTOR:
+CC       Name=a divalent metal cation; Xref=ChEBI:CHEBI:60240;
+CC         Evidence={ECO:0000269|PubMed:16636051, ECO:0000269|PubMed:24336938,
+CC         ECO:0000269|PubMed:28045498};
+CC       Note=Binds 1 divalent metal cation ion per homodimer with both subunits
+CC       providing Cys ligands; Fe(2+) gives most activity and is possibly the
+CC       physiological cofactor, followed by Zn(2+) and Co(2+) (PubMed:24336938,
+CC       PubMed:28045498). Activity stimulated by Mn(2+) (PubMed:16636051).
+CC       {ECO:0000269|PubMed:16636051, ECO:0000269|PubMed:24336938,
+CC       ECO:0000269|PubMed:28045498};
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=10 uM for ATP {ECO:0000269|PubMed:16636051};
+CC         KM=4.1 uM for cob(I)alamin {ECO:0000269|PubMed:16636051};
+CC         Note=kcat is 0.03 sec(-1). {ECO:0000269|PubMed:16636051};
+CC       pH dependence:
+CC         Optimum pH is 7.0. {ECO:0000269|PubMed:16636051};
+CC   -!- PATHWAY: Amine and polyamine degradation; ethanolamine degradation.
+CC       {ECO:0000269|PubMed:3045078}.
+CC   -!- SUBUNIT: Homodimer. {ECO:0000269|PubMed:24336938}.
+CC   -!- SUBCELLULAR LOCATION: Bacterial microcompartment {ECO:0000305}.
+CC   -!- INDUCTION: Part of the 17-gene eut operon transcribed from a single
+CC       promoter, induced by ethanolamine and adenosylcobalamin (AdoCbl,
+CC       vitamin B12). {ECO:0000269|PubMed:3045078}.
+CC   -!- DISRUPTION PHENOTYPE: A quadruple eutP-eutQ-eutT-eutD deletion is not
+CC       impaired for aerobic growth on ethanolamine (EA) supplemented with
+CC       cobalamin (vitamin B12) (PubMed:10464203). Can grow on EA as sole
+CC       carbon source when AdoB12 is supplied; double cobA-eutT mutants do not
+CC       grow with CN-B12 as a nitrogen source (PubMed:15516577). A non-polar
+CC       deletion mutant grows on EA from pH 5.5 to pH 8.0, but does not grow at
+CC       pH 8.5, no change in acetaldehyde release on EA plus vitamin B12
+CC       (PubMed:16585748). {ECO:0000269|PubMed:10464203,
+CC       ECO:0000269|PubMed:15516577, ECO:0000269|PubMed:16585748}.
+CC   -!- SIMILARITY: Belongs to the Cob(I)alamin adenosyltransferase family.
+CC       EutT subfamily. {ECO:0000305}.
+DR   EMBL; AF093749; AAC78114.1; -; Genomic_DNA.
+DR   EMBL; AE006468; AAL21361.1; -; Genomic_DNA.
+DR   RefSeq; NP_461402.1; NC_003197.2.
+DR   RefSeq; WP_000997656.1; NC_003197.2.
+DR   AlphaFoldDB; Q9ZFV4; -.
+DR   SMR; Q9ZFV4; -.
+DR   STRING; 99287.STM2467; -.
+DR   PaxDb; 99287-STM2467; -.
+DR   GeneID; 1253989; -.
+DR   KEGG; stm:STM2467; -.
+DR   PATRIC; fig|99287.12.peg.2605; -.
+DR   HOGENOM; CLU_093470_1_0_6; -.
+DR   OMA; ACCELCH; -.
+DR   PhylomeDB; Q9ZFV4; -.
+DR   BioCyc; MetaCyc:STM2467-MONOMER; -.
+DR   BioCyc; SENT99287:STM2467-MONOMER; -.
+DR   UniPathway; UPA00560; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0031469; C:bacterial microcompartment; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0008817; F:corrinoid adenosyltransferase activity; IEA:InterPro.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009236; P:cobalamin biosynthetic process; IEA:InterPro.
+DR   GO; GO:0046336; P:ethanolamine catabolic process; IEA:UniProtKB-UniPathway.
+DR   Gene3D; 1.20.1200.10; Cobalamin adenosyltransferase-like; 1.
+DR   InterPro; IPR009194; AdoTrfase_EutT.
+DR   InterPro; IPR016030; CblAdoTrfase-like.
+DR   InterPro; IPR036451; CblAdoTrfase-like_sf.
+DR   NCBIfam; NF011595; PRK15020.1; 1.
+DR   Pfam; PF01923; Cob_adeno_trans; 1.
+DR   PIRSF; PIRSF012294; ATR_EutT; 1.
+DR   SUPFAM; SSF89028; Cobalamin adenosyltransferase-like; 1.
+PE   1: Evidence at protein level;
+KW   ATP-binding; Bacterial microcompartment; Iron; Metal-binding;
+KW   Nucleotide-binding; Reference proteome; Transferase.
+FT   CHAIN           1..267
+FT                   /note="Corrinoid adenosyltransferase EutT"
+FT                   /id="PRO_0000087101"
+FT   BINDING         80
+FT                   /ligand="a divalent metal cation"
+FT                   /ligand_id="ChEBI:CHEBI:60240"
+FT                   /ligand_note="ligand shared between homodimeric partners"
+FT                   /evidence="ECO:0000305|PubMed:16636051,
+FT                   ECO:0000305|PubMed:24336938, ECO:0000305|PubMed:28045498"
+FT   BINDING         83
+FT                   /ligand="a divalent metal cation"
+FT                   /ligand_id="ChEBI:CHEBI:60240"
+FT                   /ligand_note="ligand shared between homodimeric partners"
+FT                   /evidence="ECO:0000305|PubMed:16636051,
+FT                   ECO:0000305|PubMed:24336938, ECO:0000305|PubMed:28045498"
+FT   MUTAGEN         67
+FT                   /note="H->A: Reduces metal content of enzyme, does not
+FT                   complement deletion. No binding of Co(2+)."
+FT                   /evidence="ECO:0000269|PubMed:24336938,
+FT                   ECO:0000269|PubMed:28045498"
+FT   MUTAGEN         75
+FT                   /note="H->A: No effect in vivo or in vitro. No binding of
+FT                   Co(2+)."
+FT                   /evidence="ECO:0000269|PubMed:24336938,
+FT                   ECO:0000269|PubMed:28045498"
+FT   MUTAGEN         79
+FT                   /note="C->A: Does not complement deletion, 20% activity in
+FT                   vitro. Reduces metal content of enzyme, complements a
+FT                   deletion."
+FT                   /evidence="ECO:0000269|PubMed:16636051,
+FT                   ECO:0000269|PubMed:24336938, ECO:0000269|PubMed:28045498"
+FT   MUTAGEN         80
+FT                   /note="C->A: Does not complement deletion, 0.6% activity in
+FT                   vitro. No metal cofactor."
+FT                   /evidence="ECO:0000269|PubMed:16636051,
+FT                   ECO:0000269|PubMed:24336938, ECO:0000269|PubMed:28045498"
+FT   MUTAGEN         83
+FT                   /note="C->A: Does not complement deletion, 1.2% activity in
+FT                   vitro. No metal cofactor."
+FT                   /evidence="ECO:0000269|PubMed:16636051,
+FT                   ECO:0000269|PubMed:24336938, ECO:0000269|PubMed:28045498"
+SQ   SEQUENCE   267 AA;  30239 MW;  9502A28FDB4DC9E4 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+19	5	Enterobacteriaceae
+11	5	Clostridiaceae
+22	4	Enterobacterales
+18	4	Eubacteriales
+34	3	Gammaproteobacteria
+28	3	Clostridia
+20	3	Bacilli
+49	2	Bacillota
+41	2	Pseudomonadota
+56	1	Bacillati
+43	1	Pseudomonadati
+100	0	Bacteria
+Total of 100 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+B7MHV1	COBALAMIN ADENOSYLTRANSFERASE    156.5    6.6e-43   1   1.4   0.9
+	Iterate                   	     3	    64	   155.7
+	PF01923	Cob_adeno_trans 	    87	   248	    52.1
+
+P65643	CORRINOID ADENOSYLTRANSFERASE E    156.4    6.7e-43   1   1.4   0.9
+	Iterate                   	     3	    64	   155.7
+	PF01923	Cob_adeno_trans 	    87	   248	    50.1
+
+P65644	CORRINOID ADENOSYLTRANSFERASE E    156.4    6.7e-43   1   1.4   0.9
+	Iterate                   	     3	    64	   155.7
+	PF01923	Cob_adeno_trans 	    87	   248	    50.1
+
+Q8XBG2	COBALAMIN ADENOSYLTRANSFERASE    156.6    5.8e-43   1   1.4   0.9
+	Iterate                   	     3	    64	   155.9
+	PF01923	Cob_adeno_trans 	   145	   224	    34.4
+
+Q9ZFV4	CORRINOID ADENOSYLTRANSFERASE E    134.7      4e-36   1   1.5   0.6
+	Iterate                   	     3	    64	   133.8
+	PF01923	Cob_adeno_trans 	    88	   248	    54.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS74803 (E-value: 6.3e-29, Score: 105.0)
+Mentioned as: Z3715
+Description: orf, hypothetical protein
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 30352567
+Source: EuropePMC
+Title: Transcriptomic analysis reveals specific metabolic pathways of enterohemorrhagic Escherichia coli O157:H7 in bovine digestive contents
+Journal: BMC genomics (2018)
+Snippet: NDE 2.78 5.41E-04 Z3394 z3394 MFS transporter NDE 2.75 9.22E-03 2.42 2.39E-02 4.54 3.92 4.73E-03 Z3715 z3715 Ethanolamine utilization cobalamin adenosyltransferase NDE NDE 3.94 1.25E-03 NDE 6.32E-05 4.28 4.33E-11 Z4207 z4207 Xanthine dehydrogenase iron-sulfur-binding subunit NDE NDE 2.86 2.14E-06 NDE 2.15 1.85E-04 Z4464 z4464 L-serine dehydratase
+
+================================================================================
+Protein: VIMSS74803 (E-value: 6.3e-29, Score: 105.0)
+Mentioned as: Z3715
+Description: orf, hypothetical protein
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 24887187
+Source: EuropePMC
+Title: The gluconeogenesis pathway is involved in maintenance of enterohaemorrhagic Escherichia coli O157:H7 in bovine intestinal content
+Journal: PloS one (2014)
+Snippet: Ethanolamine utilization (unknown function) 8.67 1.4E-05 Z3718 eutS Carboxysome structural protein (ethanolamine utilization) 4.97 6.9E-04 Z3715 eutT Cobalamin adenosyltransferase (ethanolamine ammonia lyase) 9.54 4.6E-06 Urea Z4281 speB Agmatinase 2.14 3.1E-03 Z1582 ureA Urease structural subunit A 3.21 6.1E-04 Z1583 ureB Urease b subunit 2.38 2.5E-03 Z1581
+
+================================================================================
+Protein: VIMSS304748 (E-value: 7.3e-29, Score: 104.8)
+Mentioned as: c2984
+Description: Ethanolamine utilization cobalamin adenosyltransferase
+Organism: Escherichia coli CFT073
+PMID: 40504685
+Source: EuropePMC
+Title: Flagellar switch inverted repeats impact heterogeneity in flagellar gene expression and thus C. difficile RT027/MLST1 virulence
+Journal: Cell reports (2025)
+
+================================================================================
+Protein: VIMSS149783 (E-value: 1e-27, Score: 101.2)
+Mentioned as: STM2467
+Description: putative cobalamin adenosyltransferase, ethanolamine utilization
+Organism: Salmonella typhimurium LT2
+PMID: 24185856
+Source: EuropePMC
+Title: Narrow-host-range bacteriophages that infect Rhizobium etli associate with distinct genomic types
+Journal: Applied and environmental microbiology (2014)
+
+================================================================================
+Protein: VIMSS149783 (E-value: 1e-27, Score: 101.2)
+Mentioned as: STM2467
+Description: putative cobalamin adenosyltransferase, ethanolamine utilization
+Organism: Salmonella typhimurium LT2
+PMID: 23922391
+Source: EuropePMC
+Title: Elucidation of the anaerobic pathway for the corrin component of cobalamin (vitamin B12)
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2013)
+
+================================================================================
+Protein: VIMSS149783 (E-value: 1e-27, Score: 101.2)
+Mentioned as: STM2467
+Description: putative cobalamin adenosyltransferase, ethanolamine utilization
+Organism: Salmonella typhimurium LT2
+PMID: 19020055
+Source: EuropePMC
+Title: Association of diarrheagenic Escherichia coli Pathotypes with infection and diarrhea among Mexican children and association of atypical Enteropathogenic E. coli with acute diarrhea
+Journal: Journal of clinical microbiology (2009)
+
+================================================================================
+Protein: VIMSS5797221 (E-value: 1e-27, Score: 101.2)
+Mentioned as: SEN2447
+Description: putative cobalamin adenosyltransferase
+Organism: Salmonella enterica subsp. enterica serovar Enteritidis str. P125109
+PMID: 33361201
+Source: EuropePMC
+Title: Salmonella enterica Serovars Dublin and Enteritidis Comparative Proteomics Reveals Differential Expression of Proteins Involved in Stress Resistance, Virulence, and Anaerobic Metabolism
+Journal: Infection and immunity (2021)
+
+================================================================================
+Protein: VIMSS5797221 (E-value: 1e-27, Score: 101.2)
+Mentioned as: SEN2447
+Description: putative cobalamin adenosyltransferase
+Organism: Salmonella enterica subsp. enterica serovar Enteritidis str. P125109
+PMID: 25297333
+Source: EuropePMC
+Title: Development of a new molecular subtyping tool for Salmonella enterica serovar Enteritidis based on single nucleotide polymorphism genotyping using PCR
+Journal: Journal of clinical microbiology (2014)
+Snippet: SEN0844 IGS SEN1595 SEN1626 SEN1906 IGS SEN2264 SEN2396 SEN2447 IGS SEN2716 SEN3225 SEN3302 SEN3678 SEN3737 SEN3761 SEN3930 SEN3953 SEN4107 IGS Hypothetical ABC
+
+================================================================================
+Protein: VIMSS27330 (E-value: 4.6e-05, Score: 28.6)
+Mentioned as: jhp0476
+Description: cag island protein
+Organism: Helicobacter pylori J99
+PMID: 27940463
+Source: EuropePMC
+Title: Characterization of the Cag pathogenicity island in Helicobacter pylori from naturally infected rhesus macaques
+Journal: FEMS microbiology letters (2016)
+Snippet: JHP0469 JHP0470 JHP0471 JHP0472 JHP0472 JHP0474 JHP0475 JHP0476 JHP0477 JHP0478 JHP0479 JHP0480 JHP0481 JHP0482 JHP0483 JHP0484 JHP0485 JHP0486 JHP0487 JHP0488
+
+================================================================================
+Protein: VIMSS27330 (E-value: 4.6e-05, Score: 28.6)
+Mentioned as: jhp0476
+Description: cag island protein
+Organism: Helicobacter pylori J99
+PMID: 19237517
+
+... (truncated - showing first 100 of 127 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A097R1H8.1	AF-A0A097R1H8-F1-model_v4_TED01:4-72	1	AF-A0A097R1H8-F1-model_v4_TED01	4-72	98.5%
+A0A097R1H8.1	AF-A0A097R1H8-F1-model_v4_TED02:83-111	1	AF-A0A097R1H8-F1-model_v4_TED02	83-111	0
+A0A097R1H8.1	AF-A0A097R1H8-F1-model_v4_TED03:114-279	1	AF-A0A097R1H8-F1-model_v4_TED03	114-279	0
+A0A0C5WRH1.1	AF-A0A0C5WRH1-F1-model_v4_TED01:10-75	1	AF-A0A0C5WRH1-F1-model_v4_TED01	10-75	90.0%
+A0A0C5WRH1.1	AF-A0A0C5WRH1-F1-model_v4_TED02:84-114	1	AF-A0A0C5WRH1-F1-model_v4_TED02	84-114	0
+A0A0C5WRH1.1	AF-A0A0C5WRH1-F1-model_v4_TED03:116-272	1	AF-A0A0C5WRH1-F1-model_v4_TED03	116-272	0
+A0A0F7JSR8.1	AF-A0A0F7JSR8-F1-model_v4_TED01:5-70	1	AF-A0A0F7JSR8-F1-model_v4_TED01	5-70	97.0%
+A0A0F7JSR8.1	AF-A0A0F7JSR8-F1-model_v4_TED02:80-110	1	AF-A0A0F7JSR8-F1-model_v4_TED02	80-110	0
+A0A0F7JSR8.1	AF-A0A0F7JSR8-F1-model_v4_TED03:112-274	1	AF-A0A0F7JSR8-F1-model_v4_TED03	112-274	0
+A0A2T3N1G2.1	AF-A0A2T3N1G2-F1-model_v4_TED01:10-83	1	AF-A0A2T3N1G2-F1-model_v4_TED01	10-83	91.0%
+A0A2T3N1G2.1	AF-A0A2T3N1G2-F1-model_v4_TED02:92-122	1	AF-A0A2T3N1G2-F1-model_v4_TED02	92-122	0
+A0A2T3N1G2.1	AF-A0A2T3N1G2-F1-model_v4_TED03:124-288	1	AF-A0A2T3N1G2-F1-model_v4_TED03	124-288	0
+A0A2U2ACG8.1	AF-A0A2U2ACG8-F1-model_v4_TED01:5-83	1	AF-A0A2U2ACG8-F1-model_v4_TED01	5-83	97.5%
+A0A2U2ACG8.1	AF-A0A2U2ACG8-F1-model_v4_TED02:94-123	1	AF-A0A2U2ACG8-F1-model_v4_TED02	94-123	0
+A0A2U2ACG8.1	AF-A0A2U2ACG8-F1-model_v4_TED03:125-290	1	AF-A0A2U2ACG8-F1-model_v4_TED03	125-290	0
+A0A366WP01.1	AF-A0A366WP01-F1-model_v4_TED01:5-56	1	AF-A0A366WP01-F1-model_v4_TED01	5-56	78.8%
+A0A366WP01.1	AF-A0A366WP01-F1-model_v4_TED02:74-109	1	AF-A0A366WP01-F1-model_v4_TED02	74-109	0
+A0A366WP01.1	AF-A0A366WP01-F1-model_v4_TED03:112-265	1	AF-A0A366WP01-F1-model_v4_TED03	112-265	0
+A0A3S8ZVM2.1	AF-A0A3S8ZVM2-F1-model_v4_TED01:4-71	1	AF-A0A3S8ZVM2-F1-model_v4_TED01	4-71	98.5%
+A0A3S8ZVM2.1	AF-A0A3S8ZVM2-F1-model_v4_TED02:81-110	1	AF-A0A3S8ZVM2-F1-model_v4_TED02	81-110	0
+A0A3S8ZVM2.1	AF-A0A3S8ZVM2-F1-model_v4_TED03:112-263	1	AF-A0A3S8ZVM2-F1-model_v4_TED03	112-263	0
+A0A4S4AIV5.1	AF-A0A4S4AIV5-F1-model_v4_TED01:5-76	1	AF-A0A4S4AIV5-F1-model_v4_TED01	5-76	97.2%
+A0A4S4AIV5.1	AF-A0A4S4AIV5-F1-model_v4_TED02:86-115	1	AF-A0A4S4AIV5-F1-model_v4_TED02	86-115	0
+A0A4S4AIV5.1	AF-A0A4S4AIV5-F1-model_v4_TED03:118-269	1	AF-A0A4S4AIV5-F1-model_v4_TED03	118-269	0
+A0A4U1BQX3.1	AF-A0A4U1BQX3-F1-model_v4_TED01:10-77	1	AF-A0A4U1BQX3-F1-model_v4_TED01	10-77	90.3%
+A0A4U1BQX3.1	AF-A0A4U1BQX3-F1-model_v4_TED02:106-281	1	AF-A0A4U1BQX3-F1-model_v4_TED02	106-281	0
+A0A545TVX7.1	AF-A0A545TVX7-F1-model_v4_TED01:5-57	1	AF-A0A545TVX7-F1-model_v4_TED01	5-57	84.1%
+A0A545TVX7.1	AF-A0A545TVX7-F1-model_v4_TED02:77-107	1	AF-A0A545TVX7-F1-model_v4_TED02	77-107	0
+A0A545TVX7.1	AF-A0A545TVX7-F1-model_v4_TED03:109-260	1	AF-A0A545TVX7-F1-model_v4_TED03	109-260	0
+A0A5S9R0C5.1	AF-A0A5S9R0C5-F1-model_v4_TED01:23-85	1	AF-A0A5S9R0C5-F1-model_v4_TED01	23-85	75.3%
+A0A5S9R0C5.1	AF-A0A5S9R0C5-F1-model_v4_TED02:95-125	1	AF-A0A5S9R0C5-F1-model_v4_TED02	95-125	0
+A0A5S9R0C5.1	AF-A0A5S9R0C5-F1-model_v4_TED03:127-283	1	AF-A0A5S9R0C5-F1-model_v4_TED03	127-283	0
+A0A6H1U9J9.1	AF-A0A6H1U9J9-F1-model_v4_TED01:2-77	1	AF-A0A6H1U9J9-F1-model_v4_TED01	2-77	100.0%
+A0A6H1U9J9.1	AF-A0A6H1U9J9-F1-model_v4_TED02:81-111	1	AF-A0A6H1U9J9-F1-model_v4_TED02	81-111	0
+A0A6H1U9J9.1	AF-A0A6H1U9J9-F1-model_v4_TED03:113-277	1	AF-A0A6H1U9J9-F1-model_v4_TED03	113-277	0
+A0A7Y4FJV6.1	AF-A0A7Y4FJV6-F1-model_v4_TED01:5-68	1	AF-A0A7Y4FJV6-F1-model_v4_TED01	5-68	96.8%
+A0A7Y4FJV6.1	AF-A0A7Y4FJV6-F1-model_v4_TED02:77-107	1	AF-A0A7Y4FJV6-F1-model_v4_TED02	77-107	0
+A0A7Y4FJV6.1	AF-A0A7Y4FJV6-F1-model_v4_TED03:109-268	1	AF-A0A7Y4FJV6-F1-model_v4_TED03	109-268	0
+K6XNP9.1	AF-K6XNP9-F1-model_v4_TED01:5-70	1	AF-K6XNP9-F1-model_v4_TED01	5-70	97.0%
+K6XNP9.1	AF-K6XNP9-F1-model_v4_TED02:80-109	1	AF-K6XNP9-F1-model_v4_TED02	80-109	0
+K6XNP9.1	AF-K6XNP9-F1-model_v4_TED03:112-263	1	AF-K6XNP9-F1-model_v4_TED03	112-263	0
+N6YF02.1	AF-N6YF02-F1-model_v4_TED01:4-78	1	AF-N6YF02-F1-model_v4_TED01	4-78	98.6%
+N6YF02.1	AF-N6YF02-F1-model_v4_TED02:88-119	1	AF-N6YF02-F1-model_v4_TED02	88-119	0
+N6YF02.1	AF-N6YF02-F1-model_v4_TED03:120-282	1	AF-N6YF02-F1-model_v4_TED03	120-282	0
+Q8XBG2.1	AF-Q8XBG2-F1-model_v4_TED01:3-64	1	AF-Q8XBG2-F1-model_v4_TED01	3-64	100.0%
+Q8XBG2.1	AF-Q8XBG2-F1-model_v4_TED02:76-105	1	AF-Q8XBG2-F1-model_v4_TED02	76-105	0
+Q8XBG2.1	AF-Q8XBG2-F1-model_v4_TED03:107-240	1	AF-Q8XBG2-F1-model_v4_TED03	107-240	0
+R4YLC6.1	AF-R4YLC6-F1-model_v4_TED01:2-63_84-95	1	AF-R4YLC6-F1-model_v4_TED01	2-95	100.0%
+R4YLC6.1	AF-R4YLC6-F1-model_v4_TED02:98-127	1	AF-R4YLC6-F1-model_v4_TED02	98-127	0
+R4YLC6.1	AF-R4YLC6-F1-model_v4_TED03:130-292	1	AF-R4YLC6-F1-model_v4_TED03	130-292	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 35
+Total networks analyzed: 35
+Total network proteins: 861
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF03319 (EutN_CcmL)       35           46           100.0%
+PF00936 (BMC)             35           180          100.0%
+PF06249 (EutQ)            32           40            91.4%
+PF10662 (PduV-EutP)       31           42            88.6%
+PF00171 (Aldedh)          30           39            85.7%
+PF14450 (FtsA)            29           32            82.9%
+PF05899 (Cupin_3)         29           34            82.9%
+PF11104 (PilM_2)          27           30            77.1%
+PF05985 (EutC)            25           29            71.4%
+PF06751 (EutB)            24           28            68.6%
+PF06277 (EutA)            23           24            65.7%
+PF06130 (PTAC)            21           26            60.0%
+PF04346 (EutH)            21           24            60.0%
+PF02572 (CobA_CobO_BtuR)  20           23            57.1%
+PF06723 (MreB_Mbl)        18           22            51.4%
+PF00012 (HSP70)           16           19            45.7%
+PF02654 (CobS)            16           17            45.7%
+PF00465 (Fe-ADH)          16           17            45.7%
+PF01923 (Cob_adeno_trans) 15           18            42.9%
+PF25137 (ADH_Fe_C)        15           16            42.9%
+PF01512 (Complex1_51K)    14           15            40.0%
+PF13375 (RnfC_N)          14           15            40.0%
+PF13534 (Fer4_17)         14           15            40.0%
+PF01515 (PTA_PTB)         14           31            40.0%
+PF13685 (Fe-ADH_2)        14           14            40.0%
+PF04055 (Radical_SAM)     13           13            37.1%
+PF07883 (Cupin_2)         13           13            37.1%
+PF12833 (HTH_18)          12           15            34.3%
+PF13500 (AAA_26)          12           13            34.3%
+PF13187 (Fer4_9)          11           11            31.4%
+PF13237 (Fer4_10)         11           11            31.4%
+PF01228 (Gly_radical)     11           12            31.4%
+PF02901 (PFL-like)        11           12            31.4%
+PF00165 (HTH_AraC)        11           12            31.4%
+PF07085 (DRTGG)           11           11            31.4%
+PF13353 (Fer4_12)         10           10            28.6%
+PF16365 (EutK_C)          10           10            28.6%
+PF12557 (Co_AT_N)         10           10            28.6%
+PF10531 (SLBB)            9            9             25.7%
+PF03928 (HbpS-like)       9            11            25.7%
+PF00037 (Fer4)            8            8             22.9%
+PF10707 (YrbL-PhoP_reg)   8            8             22.9%
+PF02311 (AraC_binding)    8            8             22.9%
+PF22678 (Cytochrom_c_NrfB-like) 7            7             20.0%
+PF03916 (NrfD)            7            7             20.0%
+PF12838 (Fer4_7)          6            6             17.1%
+PF00072 (Response_reg)    6            7             17.1%
+PF00390 (malic)           6            6             17.1%
+PF03949 (Malic_M)         6            6             17.1%
+PF13435 (Cytochrome_C554) 6            6             17.1%
+PF08238 (Sel1)            6            6             17.1%
+PF01926 (MMR_HSR1)        5            5             14.3%
+PF02518 (HATPase_c)       5            6             14.3%
+PF00795 (CN_hydrolase)    5            5             14.3%
+PF23914 (TPR_CcmH_CycH)   5            5             14.3%
+PF02706 (Wzz)             5            5             14.3%
+PF00258 (Flavodoxin_1)    5            5             14.3%
+PF12724 (Flavodoxin_5)    5            5             14.3%
+PF03861 (ANTAR)           4            5             11.4%
+PF07536 (HWE_HK)          4            5             11.4%
+PF07568 (HisKA_2)         4            5             11.4%
+PF12282 (GAF_PdtaS)       4            5             11.4%
+PF13581 (HATPase_c_2)     4            5             11.4%
+PF12641 (Flavodoxin_3)    4            4             11.4%
+PF00892 (EamA)            3            3              8.6%
+PF01636 (APH)             3            3              8.6%
+PF06977 (SdiA-regulated)  3            3              8.6%
+PF02283 (CobU)            3            3              8.6%
+PF00376 (MerR)            3            3              8.6%
+PF06445 (GyrI-like)       3            3              8.6%
+PF13411 (MerR_1)          3            3              8.6%
+PF01633 (Choline_kinase)  2            2              5.7%
+PF02413 (Caudo_TAP)       2            3              5.7%
+PF28596 (Caudo_TAP_N)     2            3              5.7%
+PF01656 (CbiA)            2            2              5.7%
+PF07685 (GATase_3)        2            2              5.7%
+PF07484 (Collar)          2            5              5.7%
+PF00534 (Glycos_transf_1) 2            2              5.7%
+PF13439 (Glyco_transf_4)  2            2              5.7%
+PF13692 (Glyco_trans_1_4) 2            2              5.7%
+PF03406 (Phage_fiber_2)   2            3              5.7%
+PF10114 (PocR)            2            2              5.7%
+PF00990 (GGDEF)           2            2              5.7%
+PF17155 (GAPES1)          2            2              5.7%
+PF01501 (Glyco_transf_8)  2            3              5.7%
+PF08437 (Glyco_transf_8C) 2            3              5.7%
+
+... (truncated - showing first 100 of 2055 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P65643_TED01/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for Q9ZFV4
+RN   [1]
+RM   3045078
+RT   "Ethanolamine utilization in Salmonella typhimurium.";
+RA   Roof D.M., Roth J.R.;
+RL   J. Bacteriol. 170:3855-3863(1988).
+RC   Function description for Q9ZFV4
+RN   [2]
+RM   15516577
+RT   "Evidence that a B12-adenosyl transferase is encoded within the
+RT   ethanolamine operon of Salmonella enterica.";
+RA   Sheppard D.E., Penrod J.T., Bobik T., Kofoid E., Roth J.R.;
+RL   J. Bacteriol. 186:7635-7644(2004).
+RC   Function description for Q9ZFV4
+RN   [3]
+RM   16636051
+RT   "Purification and initial biochemical characterization of ATP:Cob(I)alamin
+RT   adenosyltransferase (EutT) enzyme of Salmonella enterica.";
+RA   Buan N.R., Escalante-Semerena J.C.;
+RL   J. Biol. Chem. 281:16971-16977(2006).
+RC   Function description for Q9ZFV4
+RN   [4]
+RM   24336938
+RT   "The EutT enzyme of Salmonella enterica is a unique ATP:Cob(I)alamin
+RT   adenosyltransferase metalloprotein that requires ferrous ions for maximal
+RT   activity.";
+RA   Moore T.C., Mera P.E., Escalante-Semerena J.C.;
+RL   J. Bacteriol. 196:903-910(2014).
+RC   Function description for Q9ZFV4
+RN   [5]
+RM   29531136
+RT   "The Ethanolamine Permease EutH Promotes Vacuole Adaptation of Salmonella
+RT   enterica and Listeria monocytogenes during Macrophage Infection.";
+RA   Anderson C.J., Satkovich J., Koeseoglu V.K., Agaisse H., Kendall M.M.;
+RL   Infect. Immun. 86:0-0(2018).
+
+--- End of Current DESC file ---

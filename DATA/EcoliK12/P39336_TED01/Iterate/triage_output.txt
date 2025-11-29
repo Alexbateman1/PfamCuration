@@ -1,0 +1,153 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YJGL_ECOLI              Reviewed;         604 AA.
+AC   P39336; Q2M656;
+DE   RecName: Full=Uncharacterized protein YjgL;
+GN   Name=yjgL; OrderedLocusNames=b4253, JW5757;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=7610040; DOI=10.1093/nar/23.12.2105;
+RA   Burland V.D., Plunkett G. III, Sofia H.J., Daniels D.L., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome VI: DNA sequence of the region
+RT   from 92.8 through 100 minutes.";
+RL   Nucleic Acids Res. 23:2105-2119(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- INTERACTION:
+CC       P39336; P00956: ileS; NbExp=3; IntAct=EBI-549937, EBI-552928;
+CC       P39336; P0ADZ0: rplW; NbExp=2; IntAct=EBI-549937, EBI-542264;
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA97149.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U14003; AAA97149.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; U00096; AAC77210.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE78250.1; -; Genomic_DNA.
+DR   PIR; S56478; S56478.
+DR   RefSeq; NP_418674.2; NC_000913.3.
+DR   RefSeq; WP_000036434.1; NZ_JACEFS010000014.1.
+DR   AlphaFoldDB; P39336; -.
+DR   BioGRID; 4261802; 40.
+DR   BioGRID; 853063; 5.
+DR   DIP; DIP-12607N; -.
+DR   FunCoup; P39336; 33.
+DR   IntAct; P39336; 8.
+DR   STRING; 511145.b4253; -.
+DR   jPOST; P39336; -.
+DR   PaxDb; 511145-b4253; -.
+DR   EnsemblBacteria; AAC77210; AAC77210; b4253.
+DR   GeneID; 948776; -.
+DR   KEGG; ecj:JW5757; -.
+DR   KEGG; eco:b4253; -.
+DR   KEGG; ecoc:C3026_22945; -.
+DR   PATRIC; fig|511145.12.peg.4383; -.
+DR   EchoBASE; EB2421; -.
+DR   eggNOG; ENOG5031KKI; Bacteria.
+DR   HOGENOM; CLU_027787_1_0_6; -.
+DR   InParanoid; P39336; -.
+DR   OMA; IMNFVMN; -.
+DR   OrthoDB; 9987340at2; -.
+DR   BioCyc; EcoCyc:G7884-MONOMER; -.
+DR   PRO; PR:P39336; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   Gene3D; 1.25.40.300; Putative secreted effector protein; 1.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..604
+FT                   /note="Uncharacterized protein YjgL"
+FT                   /id="PRO_0000169767"
+FT   REGION          239..259
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   604 AA;  69578 MW;  7D4BD8F656E03250 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+3	5	Enterobacteriaceae
+3	4	Enterobacterales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3JIU0	SOPA-CENTRAL-DOMAIN-LIKE     239.1    3.1e-68   1   1.8   0.7
+	Iterate                   	    39	   161	   237.6
+
+A0A0S7BPE6	UNCHARACTERIZED PROTEIN {     34.9    5.5e-05   4   4.0   0.0
+	Iterate                   	    14	    47	     9.0
+	Iterate                   	    61	    94	     9.0
+	Iterate                   	   108	   141	     9.0
+	Iterate                   	   155	   191	     2.5
+
+A0A6P3ZSL9	RECEPTOR-LIKE PROTEIN 12      27.1      0.015   2   2.7   0.1
+	Iterate                   	   405	   514	    14.0
+	Iterate                   	   943	  1048	     9.9
+	PF08263	LRRNT_2         	    23	    72	    22.5
+	PF00560	LRR_1           	   139	   161	    11.6
+	PF00560	LRR_1           	   345	   367	    12.2
+	PF13855	LRR_8           	   519	   579	    28.1
+	PF00560	LRR_1           	   520	   542	    14.4
+	PF00560	LRR_1           	   544	   566	    15.4
+	PF00560	LRR_1           	   668	   690	    12.7
+	PF00560	LRR_1           	   860	   882	    16.1
+	PF13855	LRR_8           	  1053	  1113	    28.1
+	PF00560	LRR_1           	  1054	  1076	    14.4
+	PF00560	LRR_1           	  1078	  1100	    15.4
+
+B7MLQ8	DNA-BINDING PROTEIN {ECO:0008    223.9    1.7e-63   1   1.5   0.7
+	Iterate                   	    39	   161	   223.0
+
+P39336	UNCHARACTERIZED PROTEIN YJGL       282.8      9e-82   1   1.6   0.6
+	Iterate                   	    39	   161	   281.7
+	PF13981	SopA            	   341	   399	      31
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P39336.2	AF-P39336-F1-model_v4_TED02:164-201_271-358	1	AF-P39336-F1-model_v4_TED02	164-358	0
+P39336.2	AF-P39336-F1-model_v4_TED01:39-161	1	AF-P39336-F1-model_v4_TED01	39-161	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P39336_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 223.00;
+NC   26.60 18.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

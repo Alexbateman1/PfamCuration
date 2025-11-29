@@ -1,0 +1,760 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   T1M_SALTY               Reviewed;         529 AA.
+AC   P40813; Q6LAL9;
+DE   RecName: Full=Type I restriction enzyme StySJI methylase subunit;
+DE            Short=M protein;
+DE            EC=2.1.1.72 {ECO:0000250|UniProtKB:P08957};
+DE   AltName: Full=Type I methyltransferase M.StySJI {ECO:0000303|PubMed:12654995};
+DE            Short=M.StySJI {ECO:0000303|PubMed:12654995};
+DE   AltName: Full=Type I restriction and modification system SB {ECO:0000303|PubMed:2838725};
+GN   Name=hsdM {ECO:0000303|PubMed:2838725}; Synonyms=hsdT;
+GN   OrderedLocusNames=STM4525;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=LT2;
+RX   PubMed=1409708; DOI=10.1073/pnas.89.20.9836;
+RA   Sharp P.M., Kelleher J.E., Daniel A.S., Cowan G.M., Murray N.E.;
+RT   "Roles of selection and recombination in the evolution of type I
+RT   restriction-modification systems in enterobacteria.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 89:9836-9840(1992).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 455-529.
+RC   STRAIN=LT2;
+RX   PubMed=2838725; DOI=10.1111/j.1365-2958.1987.tb00521.x;
+RA   Gann A.A.F., Campbell A.J.B., Collins J.F., Coulson A.F.W., Murray N.E.;
+RT   "Reassortment of DNA recognition domains and the evolution of new
+RT   specificities.";
+RL   Mol. Microbiol. 1:13-22(1987).
+RN   [4]
+RP   NOMENCLATURE, AND SUBTYPE.
+RX   PubMed=12654995; DOI=10.1093/nar/gkg274;
+RA   Roberts R.J., Belfort M., Bestor T., Bhagwat A.S., Bickle T.A.,
+RA   Bitinaite J., Blumenthal R.M., Degtyarev S.K., Dryden D.T., Dybvig K.,
+RA   Firman K., Gromova E.S., Gumport R.I., Halford S.E., Hattman S.,
+RA   Heitman J., Hornby D.P., Janulaitis A., Jeltsch A., Josephsen J., Kiss A.,
+RA   Klaenhammer T.R., Kobayashi I., Kong H., Krueger D.H., Lacks S.,
+RA   Marinus M.G., Miyahara M., Morgan R.D., Murray N.E., Nagaraja V.,
+RA   Piekarowicz A., Pingoud A., Raleigh E., Rao D.N., Reich N., Repin V.E.,
+RA   Selker E.U., Shaw P.C., Stein D.C., Stoddard B.L., Szybalski W.,
+RA   Trautner T.A., Van Etten J.L., Vitor J.M., Wilson G.G., Xu S.Y.;
+RT   "A nomenclature for restriction enzymes, DNA methyltransferases, homing
+RT   endonucleases and their genes.";
+RL   Nucleic Acids Res. 31:1805-1812(2003).
+CC   -!- FUNCTION: The subtype gamma methyltransferase (M) subunit of a type I
+CC       restriction enzyme. The M and S subunits together form a
+CC       methyltransferase (MTase) that methylates two adenine residues of the
+CC       sequence 5'-GAGN(6)GTRC-3'. In the presence of the R subunit the
+CC       complex can also act as an endonuclease, binding to the same target
+CC       sequence but cutting the DNA some distance from this site. Whether the
+CC       DNA is cut or modified depends on the methylation state of the target
+CC       sequence. When the target site is unmodified, the DNA is cut. When the
+CC       target site is hemimethylated, the complex acts as a maintenance MTase
+CC       modifying the DNA so that both strands become methylated. After
+CC       locating a non-methylated recognition site, the enzyme complex serves
+CC       as a molecular motor that translocates DNA in an ATP-dependent manner
+CC       until a collision occurs that triggers cleavage.
+CC       {ECO:0000250|UniProtKB:P08957, ECO:0000303|PubMed:12654995}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a 2'-deoxyadenosine in DNA + S-adenosyl-L-methionine = an
+CC         N(6)-methyl-2'-deoxyadenosine in DNA + S-adenosyl-L-homocysteine +
+CC         H(+); Xref=Rhea:RHEA:15197, Rhea:RHEA-COMP:12418, Rhea:RHEA-
+CC         COMP:12419, ChEBI:CHEBI:15378, ChEBI:CHEBI:57856, ChEBI:CHEBI:59789,
+CC         ChEBI:CHEBI:90615, ChEBI:CHEBI:90616; EC=2.1.1.72;
+CC         Evidence={ECO:0000250|UniProtKB:P08957};
+CC   -!- SUBUNIT: The type I restriction/modification system is composed of
+CC       three polypeptides R, M and S; the restriction enzyme has stoichiometry
+CC       R(2)M(2)S(1) while the methyltransferase is M(2)S(1).
+CC       {ECO:0000250|UniProtKB:P08957}.
+CC   -!- MISCELLANEOUS: Type I restriction and modification enzymes are complex,
+CC       multifunctional systems which require ATP, S-adenosyl methionine and
+CC       Mg(2+) as cofactors and, in addition to their endonucleolytic and
+CC       methylase activities, are potent DNA-dependent ATPases.
+CC       {ECO:0000250|UniProtKB:P08957}.
+CC   -!- SIMILARITY: Belongs to the N(4)/N(6)-methyltransferase family.
+CC       {ECO:0000305}.
+DR   EMBL; L02506; AAA19429.1; -; Unassigned_DNA.
+DR   EMBL; AE006468; AAL23343.1; -; Genomic_DNA.
+DR   EMBL; Y00524; CAA68579.1; -; Genomic_DNA.
+DR   RefSeq; NP_463384.1; NC_003197.2.
+DR   RefSeq; WP_001063190.1; NC_003197.2.
+DR   AlphaFoldDB; P40813; -.
+DR   SMR; P40813; -.
+DR   STRING; 99287.STM4525; -.
+DR   PaxDb; 99287-STM4525; -.
+DR   GeneID; 1256051; -.
+DR   KEGG; stm:STM4525; -.
+DR   PATRIC; fig|99287.12.peg.4768; -.
+DR   HOGENOM; CLU_018284_2_0_6; -.
+DR   PhylomeDB; P40813; -.
+DR   BioCyc; SENT99287:STM4525-MONOMER; -.
+DR   PRO; PR:P40813; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0003677; F:DNA binding; IEA:UniProtKB-KW.
+DR   GO; GO:0008170; F:N-methyltransferase activity; IEA:InterPro.
+DR   GO; GO:0009007; F:site-specific DNA-methyltransferase (adenine-specific) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0009307; P:DNA restriction-modification system; IEA:UniProtKB-KW.
+DR   GO; GO:0032259; P:methylation; IEA:UniProtKB-KW.
+DR   FunFam; 1.20.1260.30:FF:000001; Type I restriction enzyme StySJI M protein; 1.
+DR   FunFam; 3.40.50.150:FF:000284; Type I restriction enzyme StySJI M protein; 1.
+DR   Gene3D; 1.20.1260.30; -; 1.
+DR   Gene3D; 3.40.50.150; Vaccinia Virus protein VP39; 1.
+DR   InterPro; IPR022749; D12N6_MeTrfase_N.
+DR   InterPro; IPR051537; DNA_Adenine_Mtase.
+DR   InterPro; IPR003356; DNA_methylase_A-5.
+DR   InterPro; IPR002052; DNA_methylase_N6_adenine_CS.
+DR   InterPro; IPR029063; SAM-dependent_MTases_sf.
+DR   InterPro; IPR038333; T1MK-like_N_sf.
+DR   PANTHER; PTHR42933; SLR6095 PROTEIN; 1.
+DR   PANTHER; PTHR42933:SF4; TYPE I RESTRICTION ENZYME ECOKI METHYLASE SUBUNIT; 1.
+DR   Pfam; PF12161; HsdM_N; 1.
+DR   Pfam; PF02384; N6_Mtase; 1.
+DR   PRINTS; PR00507; N12N6MTFRASE.
+DR   SUPFAM; SSF53335; S-adenosyl-L-methionine-dependent methyltransferases; 1.
+DR   PROSITE; PS00092; N6_MTASE; 1.
+PE   3: Inferred from homology;
+KW   DNA-binding; Methyltransferase; Reference proteome; Restriction system;
+KW   S-adenosyl-L-methionine; Transferase.
+FT   CHAIN           1..529
+FT                   /note="Type I restriction enzyme StySJI methylase subunit"
+FT                   /id="PRO_0000088026"
+FT   REGION          405..444
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        407..418
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   BINDING         148..153
+FT                   /ligand="S-adenosyl-L-methionine"
+FT                   /ligand_id="ChEBI:CHEBI:59789"
+FT                   /evidence="ECO:0000250|UniProtKB:Q89Z59"
+FT   BINDING         178..180
+FT                   /ligand="S-adenosyl-L-methionine"
+FT                   /ligand_id="ChEBI:CHEBI:59789"
+FT                   /evidence="ECO:0000250|UniProtKB:Q89Z59"
+FT   BINDING         216
+FT                   /ligand="S-adenosyl-L-methionine"
+FT                   /ligand_id="ChEBI:CHEBI:59789"
+FT                   /evidence="ECO:0000250|UniProtKB:Q89Z59"
+SQ   SEQUENCE   529 AA;  59311 MW;  D5EF542069B8A88A CRC64;
+//
+ID   T1MK_ECOLI              Reviewed;         529 AA.
+AC   P08957; Q2M5W7;
+DE   RecName: Full=Type I restriction enzyme EcoKI methylase subunit {ECO:0000305};
+DE            Short=M protein;
+DE            EC=2.1.1.72 {ECO:0000269|PubMed:8514761};
+DE   AltName: Full=Type I methyltransferase M.EcoKI {ECO:0000303|PubMed:12654995};
+DE            Short=M.EcoKI {ECO:0000303|PubMed:12654995};
+GN   Name=hsdM {ECO:0000303|PubMed:6255295}; Synonyms=hsm;
+GN   OrderedLocusNames=b4349, JW4312;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=K12;
+RX   PubMed=3323532; DOI=10.1016/0022-2836(87)90303-2;
+RA   Loenen W.A.M., Daniel A.S., Braymer H.D., Murray N.E.;
+RT   "Organization and sequence of the hsd genes of Escherichia coli K-12.";
+RL   J. Mol. Biol. 198:159-170(1987).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=7610040; DOI=10.1093/nar/23.12.2105;
+RA   Burland V.D., Plunkett G. III, Sofia H.J., Daniels D.L., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome VI: DNA sequence of the region
+RT   from 92.8 through 100 minutes.";
+RL   Nucleic Acids Res. 23:2105-2119(1995).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [5]
+RP   PROTEIN SEQUENCE OF 1-5, FUNCTION, CATALYTIC ACTIVITY, AND SUBUNIT.
+RC   STRAIN=K12;
+RX   PubMed=8514761; DOI=10.1016/s0021-9258(19)38641-7;
+RA   Dryden D.T., Cooper L.P., Murray N.E.;
+RT   "Purification and characterization of the methyltransferase from the type 1
+RT   restriction and modification system of Escherichia coli K12.";
+RL   J. Biol. Chem. 268:13228-13236(1993).
+RN   [6]
+RP   FUNCTION.
+RC   STRAIN=K12;
+RX   PubMed=4868368; DOI=10.1038/2171110a0;
+RA   Meselson M., Yuan R.;
+RT   "DNA restriction enzyme from E. coli.";
+RL   Nature 217:1110-1114(1968).
+RN   [7]
+RP   FUNCTION, SUBUNIT, AND OPERON STRUCTURE.
+RC   STRAIN=K12;
+RX   PubMed=6255295; DOI=10.1007/bf00267350;
+RA   Sain B., Murray N.E.;
+RT   "The hsd (host specificity) genes of E. coli K 12.";
+RL   Mol. Gen. Genet. 180:35-46(1980).
+RN   [8]
+RP   FUNCTION, AND SUBUNIT.
+RC   STRAIN=K12;
+RX   PubMed=9033396; DOI=10.1021/bi9619435;
+RA   Dryden D.T., Cooper L.P., Thorpe P.H., Byron O.;
+RT   "The in vitro assembly of the EcoKI type I DNA restriction/modification
+RT   enzyme and its in vivo implications.";
+RL   Biochemistry 36:1065-1076(1997).
+RN   [9]
+RP   IDENTIFICATION BY 2D-GEL.
+RX   PubMed=9298644; DOI=10.1002/elps.1150180805;
+RA   VanBogelen R.A., Abshire K.Z., Moldover B., Olson E.R., Neidhardt F.C.;
+RT   "Escherichia coli proteome analysis using the gene-protein database.";
+RL   Electrophoresis 18:1243-1251(1997).
+RN   [10]
+RP   INTERACTION WITH ESCHERICHIA PHAGE T7 PROTEIN OCR (MICROBIAL INFECTION).
+RC   STRAIN=K12;
+RX   PubMed=12235377; DOI=10.1093/nar/gkf518;
+RA   Atanasiu C., Su T.J., Sturrock S.S., Dryden D.T.;
+RT   "Interaction of the ocr gene 0.3 protein of bacteriophage T7 with EcoKI
+RT   restriction/modification enzyme.";
+RL   Nucleic Acids Res. 30:3936-3944(2002).
+RN   [11]
+RP   NOMENCLATURE, AND SUBTYPE.
+RX   PubMed=12654995; DOI=10.1093/nar/gkg274;
+RA   Roberts R.J., Belfort M., Bestor T., Bhagwat A.S., Bickle T.A.,
+RA   Bitinaite J., Blumenthal R.M., Degtyarev S.K., Dryden D.T., Dybvig K.,
+RA   Firman K., Gromova E.S., Gumport R.I., Halford S.E., Hattman S.,
+RA   Heitman J., Hornby D.P., Janulaitis A., Jeltsch A., Josephsen J., Kiss A.,
+RA   Klaenhammer T.R., Kobayashi I., Kong H., Krueger D.H., Lacks S.,
+RA   Marinus M.G., Miyahara M., Morgan R.D., Murray N.E., Nagaraja V.,
+RA   Piekarowicz A., Pingoud A., Raleigh E., Rao D.N., Reich N., Repin V.E.,
+RA   Selker E.U., Shaw P.C., Stein D.C., Stoddard B.L., Szybalski W.,
+RA   Trautner T.A., Van Etten J.L., Vitor J.M., Wilson G.G., Xu S.Y.;
+RT   "A nomenclature for restriction enzymes, DNA methyltransferases, homing
+RT   endonucleases and their genes.";
+RL   Nucleic Acids Res. 31:1805-1812(2003).
+RN   [12] {ECO:0007744|PDB:2AR0}
+RP   X-RAY CRYSTALLOGRAPHY (2.80 ANGSTROMS) OF 2-527.
+RA   Rajashankar K.R., Kniewel R., Lima C.D.;
+RT   "Crystal structure of Type I restriction enzyme EcoKI M protein
+RT   (EC 2.1.1.72) (M.EcoKI).";
+RL   Submitted (AUG-2005) to the PDB data bank.
+RN   [13] {ECO:0007744|PDB:2Y7C, ECO:0007744|PDB:2Y7H}
+RP   STRUCTURE BY ELECTRON MICROSCOPY (18.00 ANGSTROMS) IN COMPLEX WITH
+RP   SPECIFICITY SUBUNIT AND ESCHERICHIA PHAGE T7 PROTEIN OCR, AND INTERACTION
+RP   WITH ESCHERICHIA PHAGE T7 PROTEIN OCR (MICROBIAL INFECTION).
+RX   PubMed=19074193; DOI=10.1093/nar/gkn988;
+RA   Kennaway C.K., Obarska-Kosinska A., White J.H., Tuszynska I., Cooper L.P.,
+RA   Bujnicki J.M., Trinick J., Dryden D.T.;
+RT   "The structure of M.EcoKI Type I DNA methyltransferase with a DNA mimic
+RT   antirestriction protein.";
+RL   Nucleic Acids Res. 37:762-770(2009).
+CC   -!- FUNCTION: The subtype gamma methyltransferase (M) subunit of a type I
+CC       restriction enzyme. The M and S subunits together form a
+CC       methyltransferase (MTase) that methylates A-2 on the top and A-3 on the
+CC       bottom strand of the sequence 5'-AACN(6)GTGC-3'. In the presence of the
+CC       R subunit the complex can also act as an endonuclease, binding to the
+CC       same target sequence but cutting the DNA some distance from this site.
+CC       Whether the DNA is cut or modified depends on the methylation state of
+CC       the target sequence. When the target site is unmodified, the DNA is
+CC       cut. When the target site is hemimethylated, the complex acts as a
+CC       maintenance MTase modifying the DNA so that both strands become
+CC       methylated. After locating a non-methylated recognition site, the
+CC       enzyme complex serves as a molecular motor that translocates DNA in an
+CC       ATP-dependent manner until a collision occurs that triggers cleavage.
+CC       {ECO:0000269|PubMed:4868368, ECO:0000269|PubMed:6255295,
+CC       ECO:0000269|PubMed:8514761, ECO:0000269|PubMed:9033396}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=a 2'-deoxyadenosine in DNA + S-adenosyl-L-methionine = an
+CC         N(6)-methyl-2'-deoxyadenosine in DNA + S-adenosyl-L-homocysteine +
+CC         H(+); Xref=Rhea:RHEA:15197, Rhea:RHEA-COMP:12418, Rhea:RHEA-
+CC         COMP:12419, ChEBI:CHEBI:15378, ChEBI:CHEBI:57856, ChEBI:CHEBI:59789,
+CC         ChEBI:CHEBI:90615, ChEBI:CHEBI:90616; EC=2.1.1.72;
+CC         Evidence={ECO:0000269|PubMed:8514761};
+CC   -!- SUBUNIT: The type I restriction/modification system is composed of
+CC       three polypeptides R, M and S (PubMed:6255295). The restriction enzyme
+CC       has stoichiometry R(2)M(2)S(1) (PubMed:9033396). The methyltransferase
+CC       is composed of M(2)S(1) (PubMed:19074193, PubMed:8514761,
+CC       PubMed:9033396). {ECO:0000269|PubMed:19074193,
+CC       ECO:0000269|PubMed:6255295, ECO:0000269|PubMed:8514761,
+CC       ECO:0000269|PubMed:9033396}.
+CC   -!- SUBUNIT: (Microbial infection) Interacts with Escherichia phage T7
+CC       protein Ocr; this interaction leads to the inhibition of the
+CC       methyltransferase restriction enzyme M.EcoKI composed of M(2)S(1).
+CC       {ECO:0000269|PubMed:12235377, ECO:0000269|PubMed:19074193}.
+CC   -!- INTERACTION:
+CC       P08957; P12295: ung; NbExp=3; IntAct=EBI-878571, EBI-559403;
+CC   -!- INDUCTION: Encoded in the hsd locus, in the order hsdR-hsdM-hsdS. There
+CC       is a promoter upstream of hsdR and another between hsdR and hsdM
+CC       (PubMed:6255295). This probably allows expression of the methylase
+CC       enzyme before the restriction-specific subunit (Probable).
+CC       {ECO:0000269|PubMed:6255295, ECO:0000305|PubMed:6255295}.
+CC   -!- MISCELLANEOUS: Type I restriction and modification enzymes are complex,
+CC       multifunctional systems which require ATP, S-adenosyl methionine and
+CC       Mg(2+) as cofactors and, in addition to their endonucleolytic and
+CC       methylase activities, are potent DNA-dependent ATPases.
+CC   -!- SIMILARITY: Belongs to the N(4)/N(6)-methyltransferase family.
+CC       {ECO:0000305}.
+DR   EMBL; X06545; CAA29792.1; -; Genomic_DNA.
+DR   EMBL; U14003; AAA97246.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC77305.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE78339.1; -; Genomic_DNA.
+DR   PIR; B30375; XYECHM.
+DR   RefSeq; NP_418769.1; NC_000913.3.
+DR   RefSeq; WP_001063204.1; NZ_LN832404.1.
+DR   PDB; 2AR0; X-ray; 2.80 A; A/B=2-527.
+DR   PDB; 2Y7C; EM; 18.00 A; B/C=1-529.
+DR   PDB; 2Y7H; EM; 18.00 A; B/C=1-529.
+DR   PDBsum; 2AR0; -.
+DR   PDBsum; 2Y7C; -.
+DR   PDBsum; 2Y7H; -.
+DR   AlphaFoldDB; P08957; -.
+DR   SMR; P08957; -.
+DR   BioGRID; 4262768; 113.
+DR   ComplexPortal; CPX-5628; Type I restriction-modification EcoKI complex.
+DR   DIP; DIP-9943N; -.
+DR   FunCoup; P08957; 350.
+DR   IntAct; P08957; 15.
+DR   STRING; 511145.b4349; -.
+DR   REBASE; 13379; M.EcoW3110ORF4339P.
+DR   REBASE; 152630; M1.Ret561ORF1035P.
+DR   REBASE; 152641; M.Rsp1341ORF1035P.
+DR   REBASE; 152653; M.Rsp113ORF1037P.
+DR   REBASE; 152691; M.Rph931ORF1047P.
+DR   REBASE; 152704; M.Rph831ORF1044P.
+DR   REBASE; 152714; M.Rsp741ORF1035P.
+DR   REBASE; 152736; M.Rsp871ORF1035P.
+DR   REBASE; 156146; M.BamRD77ORF2498P.
+DR   REBASE; 204159; M.Bli1441ORF2992P.
+DR   REBASE; 204719; M.Bsu333ORF2986P.
+DR   REBASE; 205029; M.Bve72ORF2738P.
+DR   REBASE; 205122; M.Bve1413ORF3003P.
+DR   REBASE; 3387; M.EcoKI.
+DR   REBASE; 441884; M.EcoBL21FORF4361P.
+DR   jPOST; P08957; -.
+DR   PaxDb; 511145-b4349; -.
+DR   EnsemblBacteria; AAC77305; AAC77305; b4349.
+DR   GeneID; 948872; -.
+DR   KEGG; ecj:JW4312; -.
+DR   KEGG; eco:b4349; -.
+DR   KEGG; ecoc:C3026_23495; -.
+DR   PATRIC; fig|1411691.4.peg.2337; -.
+DR   EchoBASE; EB0453; -.
+DR   eggNOG; COG0286; Bacteria.
+DR   HOGENOM; CLU_018284_2_0_6; -.
+DR   InParanoid; P08957; -.
+DR   OMA; GTFGFMI; -.
+DR   OrthoDB; 9784823at2; -.
+DR   PhylomeDB; P08957; -.
+DR   BioCyc; EcoCyc:EG10458-MONOMER; -.
+DR   BioCyc; MetaCyc:EG10458-MONOMER; -.
+DR   BRENDA; 3.1.21.3; 2165.
+DR   EvolutionaryTrace; P08957; -.
+DR   PRO; PR:P08957; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005829; C:cytosol; IDA:EcoCyc.
+DR   GO; GO:0019812; C:type I site-specific deoxyribonuclease complex; IPI:ComplexPortal.
+DR   GO; GO:0003677; F:DNA binding; IEA:UniProtKB-KW.
+DR   GO; GO:0008170; F:N-methyltransferase activity; IMP:EcoliWiki.
+DR   GO; GO:0009007; F:site-specific DNA-methyltransferase (adenine-specific) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0009307; P:DNA restriction-modification system; IDA:ComplexPortal.
+DR   GO; GO:0032259; P:methylation; IEA:UniProtKB-KW.
+DR   FunFam; 3.40.50.150:FF:000284; Type I restriction enzyme StySJI M protein; 1.
+DR   Gene3D; 1.20.1260.30; -; 1.
+DR   Gene3D; 3.40.50.150; Vaccinia Virus protein VP39; 1.
+DR   InterPro; IPR022749; D12N6_MeTrfase_N.
+DR   InterPro; IPR051537; DNA_Adenine_Mtase.
+DR   InterPro; IPR003356; DNA_methylase_A-5.
+DR   InterPro; IPR002052; DNA_methylase_N6_adenine_CS.
+DR   InterPro; IPR029063; SAM-dependent_MTases_sf.
+DR   InterPro; IPR038333; T1MK-like_N_sf.
+DR   PANTHER; PTHR42933; SLR6095 PROTEIN; 1.
+DR   PANTHER; PTHR42933:SF4; TYPE I RESTRICTION ENZYME ECOKI METHYLASE SUBUNIT; 1.
+DR   Pfam; PF12161; HsdM_N; 1.
+DR   Pfam; PF02384; N6_Mtase; 1.
+DR   PRINTS; PR00507; N12N6MTFRASE.
+DR   SUPFAM; SSF53335; S-adenosyl-L-methionine-dependent methyltransferases; 1.
+DR   PROSITE; PS00092; N6_MTASE; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Direct protein sequencing; DNA-binding;
+KW   Host-virus interaction; Methyltransferase; Reference proteome;
+KW   Restriction system; S-adenosyl-L-methionine; Transferase.
+FT   CHAIN           1..529
+FT                   /note="Type I restriction enzyme EcoKI methylase subunit"
+FT                   /id="PRO_0000088022"
+FT   BINDING         148..153
+FT                   /ligand="S-adenosyl-L-methionine"
+FT                   /ligand_id="ChEBI:CHEBI:59789"
+FT                   /evidence="ECO:0000250|UniProtKB:Q89Z59"
+FT   BINDING         178..180
+FT                   /ligand="S-adenosyl-L-methionine"
+FT                   /ligand_id="ChEBI:CHEBI:59789"
+FT                   /evidence="ECO:0000250|UniProtKB:Q89Z59"
+FT   BINDING         216
+FT                   /ligand="S-adenosyl-L-methionine"
+FT                   /ligand_id="ChEBI:CHEBI:59789"
+FT                   /evidence="ECO:0000250|UniProtKB:Q89Z59"
+FT   HELIX           5..18
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   TURN            19..21
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           27..43
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           46..49
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           56..60
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           64..78
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          80..82
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           84..90
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           100..111
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           153..163
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          171..173
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   TURN            177..179
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           180..190
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   TURN            191..198
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           201..209
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          211..217
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           219..230
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   TURN            231..233
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           238..240
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          242..247
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           252..255
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          260..265
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           288..299
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          300..311
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           312..316
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           320..331
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          332..339
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          345..347
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          352..360
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          374..379
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          388..391
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           395..397
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           399..405
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          427..429
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           433..435
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           442..444
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          446..451
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           452..457
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   STRAND          459..461
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           482..505
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+FT   HELIX           511..521
+FT                   /evidence="ECO:0007829|PDB:2AR0"
+SQ   SEQUENCE   529 AA;  59307 MW;  D41C02203747C965 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Pseudomonas.
+5	5	Enterobacteriaceae
+4	5	Pseudomonadaceae
+6	4	Enterobacterales
+4	4	Pseudomonadales
+3	4	Burkholderiales
+4	3	Betaproteobacteria
+17	3	Gammaproteobacteria
+21	2	Pseudomonadota
+23	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A5S9N5Y9	SITE-SPECIFIC DNA-METHYLT     82.1    1.3e-19   1   1.9   5.8
+	Iterate                   	   485	   528	    81.2
+	PF12161	HsdM_N          	     6	   123	    31.9
+	PF02384	N6_Mtase        	   131	   454	   263.7
+	PF01170	UPF0020         	   162	   345	    26.9
+	PF07669	Eco57I          	   178	   355	    30.7
+
+I2JJ29	SITE-SPECIFIC DNA-METHYLTRANS     82.1    1.3e-19   1   2.0   7.8
+	Iterate                   	   486	   529	    82.1
+	PF12161	HsdM_N          	     6	   123	    32.6
+	PF02384	N6_Mtase        	   131	   453	   259.8
+	PF01170	UPF0020         	   162	   346	    24.6
+	PF07669	Eco57I          	   188	   355	    30.2
+
+P08957	TYPE I RESTRICTION ENZYME ECOKI     77.9    2.4e-18   1   1.6  10.3
+	Iterate                   	   479	   522	    76.9
+	PF12161	HsdM_N          	     6	   110	    27.7
+	PF02384	N6_Mtase        	   122	   450	   316.9
+
+P40813	TYPE I RESTRICTION ENZYME STYSJI     80.3    4.6e-19   1   1.9   8.9
+	Iterate                   	   479	   522	    80.3
+	PF12161	HsdM_N          	     6	   110	      29
+	PF02384	N6_Mtase        	   122	   450	   321.5
+
+R4YQQ0	SITE-SPECIFIC DNA-METHYLTRANS     81.2    2.4e-19   1   1.5   5.6
+	Iterate                   	   490	   533	    80.2
+	PF12161	HsdM_N          	     6	   123	    33.2
+	PF02384	N6_Mtase        	   131	   459	   252.1
+	PF07669	Eco57I          	   189	   359	    28.8
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A081NJA9.1	AF-A0A081NJA9-F1-model_v4_TED01:4-154	1	AF-A0A081NJA9-F1-model_v4_TED01	4-154	0
+A0A081NJA9.1	AF-A0A081NJA9-F1-model_v4_TED02:323-494	1	AF-A0A081NJA9-F1-model_v4_TED02	323-494	0
+A0A081NJA9.1	AF-A0A081NJA9-F1-model_v4_TED03:503-543	1	AF-A0A081NJA9-F1-model_v4_TED03	503-543	90.9%
+A0A0L7SYA9.1	AF-A0A0L7SYA9-F1-model_v4_TED01:4-150	1	AF-A0A0L7SYA9-F1-model_v4_TED01	4-150	0
+A0A0L7SYA9.1	AF-A0A0L7SYA9-F1-model_v4_TED02:161-471	1	AF-A0A0L7SYA9-F1-model_v4_TED02	161-471	0
+A0A0L7SYA9.1	AF-A0A0L7SYA9-F1-model_v4_TED03:494-531	1	AF-A0A0L7SYA9-F1-model_v4_TED03	494-531	86.4%
+A0A109D9T3.1	AF-A0A109D9T3-F1-model_v4_TED01:4-137	1	AF-A0A109D9T3-F1-model_v4_TED01	4-137	0
+A0A109D9T3.1	AF-A0A109D9T3-F1-model_v4_TED02:147-461	1	AF-A0A109D9T3-F1-model_v4_TED02	147-461	0
+A0A109D9T3.1	AF-A0A109D9T3-F1-model_v4_TED03:484-521	1	AF-A0A109D9T3-F1-model_v4_TED03	484-521	86.4%
+A0A160N126.1	AF-A0A160N126-F1-model_v4_TED01:4-137	1	AF-A0A160N126-F1-model_v4_TED01	4-137	0
+A0A160N126.1	AF-A0A160N126-F1-model_v4_TED02:147-436	1	AF-A0A160N126-F1-model_v4_TED02	147-436	0
+A0A1U9NF85.1	AF-A0A1U9NF85-F1-model_v4_TED01:4-131	1	AF-A0A1U9NF85-F1-model_v4_TED01	4-131	0
+A0A1U9NF85.1	AF-A0A1U9NF85-F1-model_v4_TED02:153-371	1	AF-A0A1U9NF85-F1-model_v4_TED02	153-371	0
+A0A1U9NF85.1	AF-A0A1U9NF85-F1-model_v4_TED03:500-538	1	AF-A0A1U9NF85-F1-model_v4_TED03	500-538	88.6%
+A0A2N5X130.1	AF-A0A2N5X130-F1-model_v4_TED01:4-140	1	AF-A0A2N5X130-F1-model_v4_TED01	4-140	0
+A0A2N5X130.1	AF-A0A2N5X130-F1-model_v4_TED02:147-437	1	AF-A0A2N5X130-F1-model_v4_TED02	147-437	0
+A0A2N5X130.1	AF-A0A2N5X130-F1-model_v4_TED03:460-502	1	AF-A0A2N5X130-F1-model_v4_TED03	460-502	90.9%
+A0A4Y4F1W3.1	AF-A0A4Y4F1W3-F1-model_v4_TED01:4-140	1	AF-A0A4Y4F1W3-F1-model_v4_TED01	4-140	0
+A0A4Y4F1W3.1	AF-A0A4Y4F1W3-F1-model_v4_TED02:147-372	1	AF-A0A4Y4F1W3-F1-model_v4_TED02	147-372	0
+A0A4Y4F1W3.1	AF-A0A4Y4F1W3-F1-model_v4_TED03:492-526	1	AF-A0A4Y4F1W3-F1-model_v4_TED03	492-526	79.5%
+A0A562S7E7.1	AF-A0A562S7E7-F1-model_v4_TED01:4-141	1	AF-A0A562S7E7-F1-model_v4_TED01	4-141	0
+A0A562S7E7.1	AF-A0A562S7E7-F1-model_v4_TED02:151-265	1	AF-A0A562S7E7-F1-model_v4_TED02	151-265	0
+A0A562S7E7.1	AF-A0A562S7E7-F1-model_v4_TED03:282-470	1	AF-A0A562S7E7-F1-model_v4_TED03	282-470	0
+A0A562S7E7.1	AF-A0A562S7E7-F1-model_v4_TED04:479-521	1	AF-A0A562S7E7-F1-model_v4_TED04	479-521	90.9%
+A0A5C6QYX5.1	AF-A0A5C6QYX5-F1-model_v4_TED01:4-137	1	AF-A0A5C6QYX5-F1-model_v4_TED01	4-137	0
+A0A5C6QYX5.1	AF-A0A5C6QYX5-F1-model_v4_TED02:154-432	1	AF-A0A5C6QYX5-F1-model_v4_TED02	154-432	0
+A0A5C6QYX5.1	AF-A0A5C6QYX5-F1-model_v4_TED03:487-529	1	AF-A0A5C6QYX5-F1-model_v4_TED03	487-529	90.9%
+A0A6P1M8P1.1	AF-A0A6P1M8P1-F1-model_v4_TED01:4-136	1	AF-A0A6P1M8P1-F1-model_v4_TED01	4-136	0
+A0A6P1M8P1.1	AF-A0A6P1M8P1-F1-model_v4_TED02:140-453	1	AF-A0A6P1M8P1-F1-model_v4_TED02	140-453	0
+A0A7X3GYV7.1	AF-A0A7X3GYV7-F1-model_v4_TED01:4-149	1	AF-A0A7X3GYV7-F1-model_v4_TED01	4-149	0
+A0A7X3GYV7.1	AF-A0A7X3GYV7-F1-model_v4_TED02:159-471	1	AF-A0A7X3GYV7-F1-model_v4_TED02	159-471	0
+A0A7X3GYV7.1	AF-A0A7X3GYV7-F1-model_v4_TED03:494-536	1	AF-A0A7X3GYV7-F1-model_v4_TED03	494-536	90.9%
+A4VH88.1	AF-A4VH88-F1-model_v4_TED01:4-137	1	AF-A4VH88-F1-model_v4_TED01	4-137	0
+A4VH88.1	AF-A4VH88-F1-model_v4_TED02:165-387_432-440	1	AF-A4VH88-F1-model_v4_TED02	165-440	0
+A4VH88.1	AF-A4VH88-F1-model_v4_TED03:463-505	1	AF-A4VH88-F1-model_v4_TED03	463-505	90.9%
+I2JJ29.1	AF-I2JJ29-F1-model_v4_TED01:4-150	1	AF-I2JJ29-F1-model_v4_TED01	4-150	0
+I2JJ29.1	AF-I2JJ29-F1-model_v4_TED02:160-477	1	AF-I2JJ29-F1-model_v4_TED02	160-477	0
+I2JJ29.1	AF-I2JJ29-F1-model_v4_TED03:490-530	1	AF-I2JJ29-F1-model_v4_TED03	490-530	90.9%
+N8X378.1	AF-N8X378-F1-model_v4_TED01:4-141	1	AF-N8X378-F1-model_v4_TED01	4-141	0
+N8X378.1	AF-N8X378-F1-model_v4_TED02:170-190_241-422_429-448	1	AF-N8X378-F1-model_v4_TED02	170-448	0
+N8X378.1	AF-N8X378-F1-model_v4_TED03:471-513	1	AF-N8X378-F1-model_v4_TED03	471-513	90.9%
+P40813.1	AF-P40813-F1-model_v4_TED01:2-139	1	AF-P40813-F1-model_v4_TED01	2-139	0
+P40813.1	AF-P40813-F1-model_v4_TED02:146-406_428-468	1	AF-P40813-F1-model_v4_TED02	146-468	0
+P40813.1	AF-P40813-F1-model_v4_TED03:481-524	1	AF-P40813-F1-model_v4_TED03	481-524	95.5%
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 12
+Total networks analyzed: 12
+Total network proteins: 206
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF01420 (Methylase_S)     12           23           100.0%
+PF04851 (ResIII)          12           32           100.0%
+PF18766 (SWI2_SNF2)       12           23           100.0%
+PF00271 (Helicase_C)      11           19            91.7%
+PF00270 (DEAD)            11           20            91.7%
+PF08463 (EcoEI_R_C)       10           12            83.3%
+PF30170 (T1RK_2nd)        10           10            83.3%
+PF13175 (AAA_15)          8            11            66.7%
+PF04313 (HSDR_N)          8            13            66.7%
+PF13304 (AAA_21)          8            10            66.7%
+PF12344 (UvrB)            7            7             58.3%
+PF17757 (UvrB_inter)      7            7             58.3%
+PF27431 (UvrB_3rd)        7            7             58.3%
+PF22679 (T1R_D3-like)     7            12            58.3%
+PF02151 (UVR)             6            7             50.0%
+PF04471 (Mrr_cat)         6            7             50.0%
+PF20469 (OLD-like_TOPRIM) 6            7             50.0%
+PF11398 (DUF2813)         5            6             41.7%
+PF14338 (Mrr_N)           4            4             33.3%
+PF22722 (NA-iREase1)      4            4             33.3%
+PF00117 (GATase)          4            4             33.3%
+PF00958 (GMP_synt_C)      4            4             33.3%
+PF02540 (NAD_synthase)    4            4             33.3%
+PF07722 (Peptidase_C26)   4            4             33.3%
+PF01757 (Acyl_transf_3)   4            4             33.3%
+PF11867 (T1RH-like_C)     4            4             33.3%
+PF00571 (CBS)             4            6             33.3%
+PF01380 (SIS)             4            4             33.3%
+PF03054 (tRNA_Me_trans)   3            3             25.0%
+PF13310 (Virulence_RhuM)  3            4             25.0%
+PF02384 (N6_Mtase)        3            3             25.0%
+PF13086 (AAA_11)          3            3             25.0%
+PF13087 (AAA_12)          3            3             25.0%
+PF00005 (ABC_tran)        2            2             16.7%
+PF06568 (YjiS-like)       2            2             16.7%
+PF10117 (McrBC)           2            2             16.7%
+PF00145 (DNA_methylase)   2            2             16.7%
+PF18284 (DNA_meth_N)      2            2             16.7%
+PF08845 (SymE_toxin)      2            2             16.7%
+PF00702 (Hydrolase)       2            2             16.7%
+PF08282 (Hydrolase_3)     2            2             16.7%
+PF12710 (HAD)             2            2             16.7%
+PF18429 (DUF5609)         2            2             16.7%
+PF07728 (AAA_5)           2            2             16.7%
+PF28529 (McrB_lid)        2            2             16.7%
+PF02492 (cobW)            2            2             16.7%
+PF07683 (CobW_C)          2            2             16.7%
+PF00171 (Aldedh)          2            2             16.7%
+PF01713 (Smr)             2            2             16.7%
+PF01555 (N6_N4_Mtase)     2            3             16.7%
+PF19040 (SGNH)            2            2             16.7%
+PF28530 (DUF8426)         2            2             16.7%
+PF07669 (Eco57I)          2            2             16.7%
+PF20473 (MmeI_Mtase)      2            3             16.7%
+PF00717 (Peptidase_S24)   2            2             16.7%
+PF02661 (Fic)             2            3             16.7%
+PF03646 (FlaG)            2            2             16.7%
+PF01850 (PIN)             2            2             16.7%
+PF01047 (MarR)            2            2             16.7%
+PF25212 (HVO_A0114)       2            2             16.7%
+PF13555 (AAA_29)          2            2             16.7%
+PF13476 (AAA_23)          2            3             16.7%
+PF07751 (Abi_2)           2            2             16.7%
+PF13643 (DUF4145)         2            2             16.7%
+PF00478 (IMPDH)           2            2             16.7%
+PF00589 (Phage_integrase) 1            2              8.3%
+PF02899 (Phage_int_SAM_1) 1            2              8.3%
+PF00633 (HHH)             1            1              8.3%
+PF01541 (GIY-YIG)         1            1              8.3%
+PF08459 (UvrC_RNaseH_dom) 1            1              8.3%
+PF14520 (HHH_5)           1            2              8.3%
+PF22920 (UvrC_RNaseH)     1            1              8.3%
+PF27096 (UvrC_M)          1            2              8.3%
+PF30054 (GIY-YIG_UvrC)    1            2              8.3%
+PF02075 (RuvC)            1            1              8.3%
+PF17755 (UvrA_DNA-bind)   1            1              8.3%
+PF17760 (UvrA_inter)      1            1              8.3%
+PF01330 (RuvA_N)          1            1              8.3%
+PF07499 (RuvA_C)          1            1              8.3%
+PF01844 (HNH)             1            1              8.3%
+PF00164 (Ribosom_S12_S23) 1            1              8.3%
+PF00004 (AAA)             1            2              8.3%
+PF05491 (WHD_RuvB)        1            1              8.3%
+PF05496 (RuvB_N)          1            1              8.3%
+PF17864 (AAA_lid_4)       1            1              8.3%
+PF00154 (RecA_N)          1            1              8.3%
+
+... (truncated - showing first 100 of 1586 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P08957_TED03/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P08957
+RN   [1]
+RM   8514761
+RT   "Purification and characterization of the methyltransferase from the type 1
+RT   restriction and modification system of Escherichia coli K12.";
+RA   Dryden D.T., Cooper L.P., Murray N.E.;
+RL   J. Biol. Chem. 268:13228-13236(1993).
+RC   Function description for P08957
+RN   [2]
+RM   4868368
+RT   "DNA restriction enzyme from E. coli.";
+RA   Meselson M., Yuan R.;
+RL   Nature 217:1110-1114(1968).
+RC   Function description for P08957
+RN   [3]
+RM   6255295
+RT   "The hsd (host specificity) genes of E. coli K 12.";
+RA   Sain B., Murray N.E.;
+RL   Mol. Gen. Genet. 180:35-46(1980).
+RC   Function description for P08957
+RN   [4]
+RM   9033396
+RT   "The in vitro assembly of the EcoKI type I DNA restriction/modification
+RT   enzyme and its in vivo implications.";
+RA   Dryden D.T., Cooper L.P., Thorpe P.H., Byron O.;
+RL   Biochemistry 36:1065-1076(1997).
+RC   Paper describing PDB structure 2y7c
+RN   [5]
+RM   19074193
+RT   The structure of M.EcoKI Type I DNA methyltransferase with a DNA
+RT   mimic  antirestriction protein.
+RA   Kennaway CK, Obarska-Kosinska A, White JH, Tuszynska I, Cooper LP,
+RA   Bujnicki JM, Trinick J, Dryden DT;
+RL   Nucleic Acids Res. 2009;37:762-770.
+
+--- End of Current DESC file ---

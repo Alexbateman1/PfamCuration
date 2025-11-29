@@ -1,0 +1,131 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YJGX_ECOLI              Reviewed;         119 AA.
+AC   P39349; P39350;
+DE   RecName: Full=Putative phosphoethanolamine transferase YjgX;
+DE            EC=2.7.-.-;
+GN   Name=yjgX; OrderedLocusNames=b4575; ORFNames=b4275/b4276/b4560;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=7610040; DOI=10.1093/nar/23.12.2105;
+RA   Burland V.D., Plunkett G. III, Sofia H.J., Daniels D.L., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome VI: DNA sequence of the region
+RT   from 92.8 through 100 minutes.";
+RL   Nucleic Acids Res. 23:2105-2119(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Multi-pass
+CC       membrane protein {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the phosphoethanolamine transferase family.
+CC       {ECO:0000305}.
+CC   -!- CAUTION: Could be the product of a pseudogene, it is missing both the
+CC       N- the C-terminus compared to orthologs. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA97172.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U14003; AAA97172.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   PIR; S56500; S56500.
+DR   PIR; S56501; S56501.
+DR   AlphaFoldDB; P39349; -.
+DR   FunCoup; P39349; 2.
+DR   EchoBASE; EB2431; -.
+DR   InParanoid; P39349; -.
+DR   PhylomeDB; P39349; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016740; F:transferase activity; IEA:UniProtKB-KW.
+PE   5: Uncertain;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Transferase; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..119
+FT                   /note="Putative phosphoethanolamine transferase YjgX"
+FT                   /id="PRO_0000036215"
+FT   TRANSMEM        5..25
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        94..114
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   119 AA;  13956 MW;  6518C3728DD2289F CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Escherichia.
+3	5	Enterobacteriaceae
+3	4	Enterobacterales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2Z398	PHOSPHOETHANOLAMINE TRANS    146.4      1e-39   1   2.1   4.0
+	Iterate                   	   106	   183	   146.1
+	PF00884	Sulfatase       	   192	   455	   127.2
+
+A0A1S3P855	UNCHARACTERIZED PROTEIN L     37.9    7.2e-06  11   7.7   4.9
+	Iterate                   	   215	   261	     6.1
+	Iterate                   	   259	   310	     5.1
+	Iterate                   	    29	    89	     4.9
+	Iterate                   	    13	    65	     4.4
+	Iterate                   	   171	   224	     4.4
+	Iterate                   	    61	   110	     4.3
+	Iterate                   	   127	   177	     4.3
+	Iterate                   	   149	   197	     4.3
+	Iterate                   	   106	   153	     4.2
+	Iterate                   	    82	   128	     4.1
+	Iterate                   	   239	   282	     4.0
+
+A0A8S3Q3J0	UNCHARACTERIZED PROTEIN {     53.6    8.7e-11   4  12.9   0.4
+	Iterate                   	   241	   283	     5.0
+	Iterate                   	   501	   541	     4.8
+	Iterate                   	   638	   674	     3.3
+	Iterate                   	   424	   464	     3.2
+
+B7LCX8	PUTATIVE MEMBRANE-ASSOCIATED,    155.0      2e-42   1   2.1   4.5
+	Iterate                   	   106	   183	   154.8
+	PF00884	Sulfatase       	   192	   455	   124.9
+
+P39349	PUTATIVE PHOSPHOETHANOLAMINE TR    191.5    8.4e-54   1   1.4   3.0
+	Iterate                   	     6	    83	   191.5
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P39349.3	AF-P39349-F1-model_v4_TED01:6-83	1	AF-P39349-F1-model_v4_TED01	6-83	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P39349_TED01/Iterate
+GA   27.00 27.00;
+TC   27.20 146.10;
+NC   26.90 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

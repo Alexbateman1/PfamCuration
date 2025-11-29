@@ -1,0 +1,402 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YABI_ECOLI              Reviewed;         254 AA.
+AC   P30149; P75634;
+DE   RecName: Full=Inner membrane protein YabI;
+GN   Name=yabI; OrderedLocusNames=b0065, JW5005;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12;
+RX   PubMed=1630901; DOI=10.1093/nar/20.13.3305;
+RA   Yura T., Mori H., Nagai H., Nagata T., Ishihama A., Fujita N., Isono K.,
+RA   Mizobuchi K., Nakata A.;
+RT   "Systematic sequencing of the Escherichia coli genome: analysis of the
+RT   0-2.4 min region.";
+RL   Nucleic Acids Res. 20:3305-3308(1992).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   TOPOLOGY [LARGE SCALE ANALYSIS].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=15919996; DOI=10.1126/science.1109730;
+RA   Daley D.O., Rapp M., Granseth E., Melen K., Drew D., von Heijne G.;
+RT   "Global topology analysis of the Escherichia coli inner membrane
+RT   proteome.";
+RL   Science 308:1321-1323(2005).
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane; Multi-pass membrane protein.
+CC   -!- SIMILARITY: Belongs to the DedA family. {ECO:0000305}.
+DR   EMBL; U00096; AAC73176.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAB96634.2; -; Genomic_DNA.
+DR   PIR; A64728; A64728.
+DR   RefSeq; NP_414607.1; NC_000913.3.
+DR   RefSeq; WP_001148390.1; NZ_STEB01000010.1.
+DR   AlphaFoldDB; P30149; -.
+DR   BioGRID; 4259728; 225.
+DR   FunCoup; P30149; 6.
+DR   STRING; 511145.b0065; -.
+DR   PaxDb; 511145-b0065; -.
+DR   EnsemblBacteria; AAC73176; AAC73176; b0065.
+DR   GeneID; 944783; -.
+DR   KEGG; ecj:JW5005; -.
+DR   KEGG; eco:b0065; -.
+DR   PATRIC; fig|1411691.4.peg.2217; -.
+DR   EchoBASE; EB1531; -.
+DR   eggNOG; COG0586; Bacteria.
+DR   HOGENOM; CLU_044208_3_2_6; -.
+DR   InParanoid; P30149; -.
+DR   OMA; LMPVYRH; -.
+DR   OrthoDB; 9780918at2; -.
+DR   PhylomeDB; P30149; -.
+DR   BioCyc; EcoCyc:EG11571-MONOMER; -.
+DR   PRO; PR:P30149; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IDA:EcoCyc.
+DR   GO; GO:0043093; P:FtsZ-dependent cytokinesis; IGI:EcoCyc.
+DR   GO; GO:0010212; P:response to ionizing radiation; IMP:EcoCyc.
+DR   InterPro; IPR032818; DedA-like.
+DR   InterPro; IPR032816; VTT_dom.
+DR   PANTHER; PTHR30353; INNER MEMBRANE PROTEIN DEDA-RELATED; 1.
+DR   PANTHER; PTHR30353:SF15; INNER MEMBRANE PROTEIN YABI; 1.
+DR   Pfam; PF09335; VTT_dom; 1.
+PE   1: Evidence at protein level;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN           1..254
+FT                   /note="Inner membrane protein YabI"
+FT                   /id="PRO_0000161410"
+FT   TOPO_DOM        1..7
+FT                   /note="Periplasmic"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        8..28
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        29..49
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        50..58
+FT                   /note="Periplasmic"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        59..79
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        80..144
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        145..165
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        166..178
+FT                   /note="Periplasmic"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        179..199
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        200..215
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        216..236
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        237..254
+FT                   /note="Periplasmic"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   254 AA;  28244 MW;  ACE6BA969AE462FD CRC64;
+//
+ID   Y139_BUCAI              Reviewed;         256 AA.
+AC   P57239;
+DE   RecName: Full=Uncharacterized membrane protein BU139;
+GN   OrderedLocusNames=BU139;
+OS   Buchnera aphidicola subsp. Acyrthosiphon pisum (strain APS) (Acyrthosiphon
+OS   pisum symbiotic bacterium).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Erwiniaceae; Buchnera.
+OX   NCBI_TaxID=107806;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=APS;
+RX   PubMed=10993077; DOI=10.1038/35024074;
+RA   Shigenobu S., Watanabe H., Hattori M., Sakaki Y., Ishikawa H.;
+RT   "Genome sequence of the endocellular bacterial symbiont of aphids Buchnera
+RT   sp. APS.";
+RL   Nature 407:81-86(2000).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+CC   -!- SIMILARITY: Belongs to the DedA family. {ECO:0000305}.
+DR   EMBL; BA000003; BAB12857.1; -; Genomic_DNA.
+DR   RefSeq; NP_239971.1; NC_002528.1.
+DR   RefSeq; WP_009874095.1; NZ_AP036055.1.
+DR   AlphaFoldDB; P57239; -.
+DR   STRING; 563178.BUAP5A_137; -.
+DR   EnsemblBacteria; BAB12857; BAB12857; BAB12857.
+DR   KEGG; buc:BU139; -.
+DR   PATRIC; fig|107806.10.peg.148; -.
+DR   eggNOG; COG0586; Bacteria.
+DR   HOGENOM; CLU_044208_3_2_6; -.
+DR   BioCyc; BAPH107806:GBZJ-138-MONOMER; -.
+DR   Proteomes; UP000001806; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   InterPro; IPR032818; DedA-like.
+DR   InterPro; IPR032816; VTT_dom.
+DR   PANTHER; PTHR30353; INNER MEMBRANE PROTEIN DEDA-RELATED; 1.
+DR   PANTHER; PTHR30353:SF15; INNER MEMBRANE PROTEIN YABI; 1.
+DR   Pfam; PF09335; VTT_dom; 1.
+PE   3: Inferred from homology;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..256
+FT                   /note="Uncharacterized membrane protein BU139"
+FT                   /id="PRO_0000161424"
+FT   TRANSMEM        6..26
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        29..49
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        61..81
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        145..165
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        175..195
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        218..238
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   256 AA;  29266 MW;  81D3A815D8747803 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+46	5	Enterobacteriaceae
+20	5	Erwiniaceae
+14	5	Yersiniaceae
+99	4	Enterobacterales
+100	3	Gammaproteobacteria
+100	2	Pseudomonadota
+100	1	Pseudomonadati
+100	0	Bacteria
+Total of 100 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2V418	VTT DOMAIN-CONTAINING PRO    190.8    1.6e-53   2   2.5   8.4
+	P30149_TED02              	   170	   254	   190.8
+	PF09335	VTT_dom         	    36	   161	    71.4
+
+A0A0H2YWG7	INTEGRAL MEMBRANE PROTEIN    190.8    1.6e-53   2   2.6   8.4
+	P30149_TED02              	   170	   254	   190.8
+	PF09335	VTT_dom         	    36	   161	    70.9
+
+B7MAJ0	VTT DOMAIN-CONTAINING PROTEIN    190.8    1.6e-53   2   2.6   8.4
+	P30149_TED02              	   170	   254	   190.8
+	PF09335	VTT_dom         	    36	   161	    70.9
+
+P30149	INNER MEMBRANE PROTEIN YABI        190.8    1.6e-53   1   2.6   8.4
+	P30149_TED02              	   170	   254	   190.8
+	PF09335	VTT_dom         	    36	   161	    69.9
+
+P57239	UNCHARACTERIZED MEMBRANE PROTEI     37.1    1.5e-05   1   2.2   4.8
+	P30149_TED02              	   170	   254	    37.1
+	PF09335	VTT_dom         	    36	   161	      71
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS14211 (E-value: 1.4e-55, Score: 190.8)
+Mentioned as: b0065
+Description: conserved inner membrane protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 25085490
+Source: EuropePMC
+Title: Combinatorial strategies for improving multiple-stress resistance in industrially relevant Escherichia coli strains
+Journal: Applied and environmental microbiology (2014)
+Snippet: b3784 b3785 b3787 b0676 b3786 b2188 b3912 b3794 b1857 b4484 b0065 b2784 b3920 b4233 rfe wzzE rffD nagC rffE yejM cpxR ECW_m4081 rffM znuA cpxP yabI relA yiiQ
+
+================================================================================
+Protein: VIMSS14211 (E-value: 1.4e-55, Score: 190.8)
+Mentioned as: b0065
+Description: conserved inner membrane protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 19763168
+Source: EuropePMC
+Title: Global analysis of extracytoplasmic stress signaling in Escherichia coli
+Journal: PLoS genetics (2009)
+Snippet: unknown function, periplasmic -; 3.5; 1.6; 2.7 ( 3.6 ); 2.5; -; 2.0 yabI K b0065 Conserved inner membrane protein 3.4 yfeY Re K Rh yfeX K Rh b2432-1 Predicted outer membrane lipoprotein YfeY 3.3; - yhbC nusA infB rbfA truB rpsO K b3165-70 tRNA pseudouridine
+
+================================================================================
+Protein: VIMSS362740 (E-value: 1.4e-55, Score: 190.8)
+Mentioned as: S0062
+Description: hypothetical protein
+Organism: Shigella flexneri 2a str. 2457T
+PMID: 11292750
+Source: EuropePMC
+Title: Complete DNA sequence and analysis of the large virulence plasmid of Shigella flexneri
+Journal: Infection and immunity (2001)
+Snippet: similar S0002 S0003 S0005 S0006 S0007 S0011 S0016 S0030 S0031 S0062 485 1176 3272 4441 4742 6793 11662 18654 20037 44909 949 2042 3526 3470 4344 7110 11084
+
+================================================================================
+Protein: VIMSS91538 (E-value: 3.7e-55, Score: 189.5)
+Mentioned as: ECs0069
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 19346340
+Source: EuropePMC
+Title: Gene expression induced in Escherichia coli O157:H7 upon exposure to model apple juice
+Journal: Applied and environmental microbiology (2009)
+Snippet: 0.77 0.99 1.03 1.19 1.03 Hypothetical or unknown function ECs0069 ECs0191 ECs0202 yabI yaeO yaeD 1.07 1.18 1.15 1.18 1.66 2.49 1.06 2.23 1.03 2.38 1.62 2.38
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P30149.2	AF-P30149-F1-model_v4_TED01:1-167	1	AF-P30149-F1-model_v4_TED01	1-167	0
+P30149.2	AF-P30149-F1-model_v4_TED02:170-254	1	AF-P30149-F1-model_v4_TED02	170-254	100.0%
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 46
+Total networks analyzed: 46
+Total network proteins: 256
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF09335 (VTT_dom)         38           79            82.6%
+PF00165 (HTH_AraC)        18           18            39.1%
+PF02311 (AraC_binding)    18           18            39.1%
+PF12833 (HTH_18)          18           18            39.1%
+PF00037 (Fer4)            16           16            34.8%
+PF01855 (POR_N)           16           16            34.8%
+PF10371 (EKR)             16           16            34.8%
+PF12838 (Fer4_7)          16           16            34.8%
+PF13183 (Fer4_8)          16           16            34.8%
+PF13237 (Fer4_10)         16           16            34.8%
+PF13484 (Fer4_16)         16           16            34.8%
+PF17147 (PFOR_II)         16           16            34.8%
+PF01558 (POR)             16           16            34.8%
+PF13187 (Fer4_9)          15           15            32.6%
+PF11762 (Arabinose_Iso_C) 14           14            30.4%
+PF24856 (AraA_central)    14           14            30.4%
+PF02610 (AraA_N)          14           14            30.4%
+PF02775 (TPP_enzyme_C)    10           10            21.7%
+PF00136 (DNA_pol_B)       9            9             19.6%
+PF03104 (DNA_pol_B_exo1)  9            9             19.6%
+PF21474 (DNApolII_N)      9            9             19.6%
+PF22587 (DNApolII_insertion) 9            9             19.6%
+PF00460 (Flg_bb_rod)      9            12            19.6%
+PF06429 (Flg_bbr_C)       9            12            19.6%
+PF12837 (Fer4_6)          7            7             15.2%
+PF02782 (FGGY_C)          6            6             13.0%
+PF00005 (ABC_tran)        6            9             13.0%
+PF13534 (Fer4_17)         5            5             10.9%
+PF00329 (Complex1_30kDa)  4            4              8.7%
+PF00346 (Complex1_49kDa)  4            4              8.7%
+PF02653 (BPD_transp_2)    3            6              6.5%
+PF02687 (FtsX)            3            3              6.5%
+PF12704 (MacB_PCD)        3            3              6.5%
+PF01547 (SBP_bac_1)       3            3              6.5%
+PF13343 (SBP_bac_6)       3            3              6.5%
+PF13531 (SBP_bac_11)      3            3              6.5%
+PF10692 (DUF2498)         3            3              6.5%
+PF12399 (BCA_ABC_TP_C)    2            2              4.3%
+PF01094 (ANF_receptor)    2            2              4.3%
+PF13458 (Peripla_BP_6)    2            2              4.3%
+PF03319 (EutN_CcmL)       2            2              4.3%
+PF01513 (NAD_kinase)      2            2              4.3%
+PF20143 (NAD_kinase_C)    2            2              4.3%
+PF00146 (NADHdh)          2            2              4.3%
+PF01512 (Complex1_51K)    2            2              4.3%
+PF10589 (NADH_4Fe-4S)     2            2              4.3%
+PF00361 (Proton_antipo_M) 2            6              4.3%
+PF00662 (Proton_antipo_N) 2            2              4.3%
+PF00420 (Oxidored_q2)     2            2              4.3%
+PF00111 (Fer2)            2            2              4.3%
+PF00384 (Molybdopterin)   2            2              4.3%
+PF04879 (Molybdop_Fe4S4)  2            2              4.3%
+PF10588 (NADH-G_4Fe-4S_3) 2            2              4.3%
+PF13510 (Fer2_4)          2            2              4.3%
+PF22117 (Fer4_Nqo3)       2            2              4.3%
+PF00499 (Oxidored_q3)     2            2              4.3%
+PF00890 (FAD_binding_2)   2            2              4.3%
+PF01134 (GIDA)            2            2              4.3%
+PF02910 (Succ_DH_flav_C)  2            2              4.3%
+PF07037 (YfeC-like)       2            2              4.3%
+PF12728 (HTH_17)          2            2              4.3%
+PF07690 (MFS_1)           2            2              4.3%
+PF00795 (CN_hydrolase)    2            2              4.3%
+PF03741 (TerC)            2            4              4.3%
+PF03960 (ArsC)            2            2              4.3%
+PF03471 (CorC_HlyC)       2            3              4.3%
+PF04361 (DUF494)          2            2              4.3%
+PF01729 (QRPTase_C)       1            1              2.2%
+PF02749 (QRPTase_N)       1            1              2.2%
+PF00595 (PDZ)             1            1              2.2%
+PF03572 (Peptidase_S41)   1            1              2.2%
+PF11818 (DUF3340)         1            1              2.2%
+PF17804 (TSP_NTD)         1            1              2.2%
+PF00072 (Response_reg)    1            1              2.2%
+PF00158 (Sigma54_activat) 1            1              2.2%
+PF02954 (HTH_8)           1            1              2.2%
+PF07724 (AAA_2)           1            1              2.2%
+PF07728 (AAA_5)           1            1              2.2%
+PF14532 (Sigma54_activ_2) 1            1              2.2%
+PF25601 (AAA_lid_14)      1            1              2.2%
+PF01058 (Oxidored_q6)     1            1              2.2%
+PF01257 (2Fe-2S_thioredx) 1            1              2.2%
+PF01568 (Molydop_binding) 1            1              2.2%
+PF00507 (Oxidored_q4)     1            1              2.2%
+PF01471 (PG_binding_1)    1            1              2.2%
+PF11860 (Muramidase)      1            1              2.2%
+
+... (truncated - showing first 100 of 1301 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P30149_TED02
+GA   27.00 27.00;
+TC   27.50 36.40;
+NC   26.30 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

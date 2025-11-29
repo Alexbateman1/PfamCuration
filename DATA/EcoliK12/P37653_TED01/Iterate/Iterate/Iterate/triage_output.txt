@@ -1,0 +1,1067 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   BCSA_SALTY              Reviewed;         874 AA.
+AC   Q93IN2;
+DE   RecName: Full=Cellulose synthase catalytic subunit [UDP-forming];
+DE            EC=2.4.1.12;
+GN   Name=bcsA; OrderedLocusNames=STM3619;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 14028 / SGSG 2980 / CDC 6516-60 / NCTC 12023;
+RX   PubMed=11260463; DOI=10.1046/j.1365-2958.2001.02337.x;
+RA   Zogaj X., Nimtz M., Rohde M., Bokranz W., Roemling U.;
+RT   "The multicellular morphotypes of Salmonella typhimurium and Escherichia
+RT   coli produce cellulose as the second component of the extracellular
+RT   matrix.";
+RL   Mol. Microbiol. 39:1452-1463(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=LT2;
+RX   PubMed=11929533; DOI=10.1046/j.1365-2958.2002.02802.x;
+RA   Solano C., Garcia B., Valle J., Berasain C., Ghigo J.-M., Gamazo C.,
+RA   Lasa I.;
+RT   "Genetic analysis of Salmonella enteritidis biofilm formation: critical
+RT   role of cellulose.";
+RL   Mol. Microbiol. 43:793-808(2002).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+CC   -!- FUNCTION: Catalytic subunit of cellulose synthase. It polymerizes
+CC       uridine 5'-diphosphate glucose to cellulose, which is produced as an
+CC       extracellular component for mechanical and chemical protection at the
+CC       onset of the stationary phase, when the cells exhibit multicellular
+CC       behavior (rdar morphotype). Coexpression of cellulose and thin
+CC       aggregative fimbriae leads to a hydrophobic network with tightly packed
+CC       cells embedded in a highly inert matrix.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=[(1->4)-beta-D-glucosyl](n) + UDP-alpha-D-glucose = [(1->4)-
+CC         beta-D-glucosyl](n+1) + UDP + H(+); Xref=Rhea:RHEA:19929, Rhea:RHEA-
+CC         COMP:10033, Rhea:RHEA-COMP:10034, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:18246, ChEBI:CHEBI:58223, ChEBI:CHEBI:58885; EC=2.4.1.12;
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420; Evidence={ECO:0000250};
+CC   -!- ACTIVITY REGULATION: Activated by bis-(3'-5') cyclic diguanylic acid
+CC       (c-di-GMP). {ECO:0000250}.
+CC   -!- PATHWAY: Glycan metabolism; bacterial cellulose biosynthesis.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Multi-pass
+CC       membrane protein {ECO:0000305}.
+CC   -!- DOMAIN: There are two conserved domains in the globular part of the
+CC       protein: the N-terminal domain (domain A) contains the conserved DXD
+CC       motif and is possibly involved in catalysis and substrate binding. The
+CC       C-terminal domain (domain B) contains the QXXRW motif and is present
+CC       only in processive glycosyl transferases. It could be involved in the
+CC       processivity function of the enzyme, possibly required for holding the
+CC       growing glycan chain in the active site.
+CC   -!- SIMILARITY: Belongs to the glycosyltransferase 2 family. {ECO:0000305}.
+DR   EMBL; AJ315770; CAC44015.1; -; Genomic_DNA.
+DR   EMBL; AE006468; AAL22479.1; -; Genomic_DNA.
+DR   EMBL; AJ315148; CAC86199.1; -; Genomic_DNA.
+DR   RefSeq; WP_001275340.1; NC_003197.2.
+DR   AlphaFoldDB; Q93IN2; -.
+DR   SMR; Q93IN2; -.
+DR   STRING; 99287.STM3619; -.
+DR   CAZy; GT2; Glycosyltransferase Family 2.
+DR   PaxDb; 99287-STM3619; -.
+DR   KEGG; stm:STM3619; -.
+DR   PATRIC; fig|99287.12.peg.3825; -.
+DR   HOGENOM; CLU_011907_5_0_6; -.
+DR   OMA; AWYIARP; -.
+DR   PhylomeDB; Q93IN2; -.
+DR   BioCyc; SENT99287:STM3619-MONOMER; -.
+DR   UniPathway; UPA00694; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IBA:GO_Central.
+DR   GO; GO:0016760; F:cellulose synthase (UDP-forming) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0035438; F:cyclic-di-GMP binding; IEA:InterPro.
+DR   GO; GO:0016758; F:hexosyltransferase activity; IBA:GO_Central.
+DR   GO; GO:0030244; P:cellulose biosynthetic process; IEA:UniProtKB-KW.
+DR   GO; GO:0006011; P:UDP-alpha-D-glucose metabolic process; IEA:InterPro.
+DR   CDD; cd06421; CESA_CelA_like; 1.
+DR   FunFam; 2.40.10.220:FF:000001; Cellulose synthase catalytic subunit [UDP-forming]; 1.
+DR   FunFam; 3.90.550.10:FF:000061; Cellulose synthase catalytic subunit [UDP-forming]; 1.
+DR   Gene3D; 2.40.10.220; predicted glycosyltransferase like domains; 1.
+DR   Gene3D; 3.90.550.10; Spore Coat Polysaccharide Biosynthesis Protein SpsA, Chain A; 1.
+DR   InterPro; IPR003919; Cell_synth_A.
+DR   InterPro; IPR001173; Glyco_trans_2-like.
+DR   InterPro; IPR050321; Glycosyltr_2/OpgH_subfam.
+DR   InterPro; IPR029044; Nucleotide-diphossugar_trans.
+DR   InterPro; IPR009875; PilZ_domain.
+DR   NCBIfam; TIGR03030; CelA; 1.
+DR   NCBIfam; NF008558; PRK11498.1; 1.
+DR   PANTHER; PTHR43867; CELLULOSE SYNTHASE CATALYTIC SUBUNIT A [UDP-FORMING]; 1.
+DR   PANTHER; PTHR43867:SF2; CELLULOSE SYNTHASE CATALYTIC SUBUNIT A [UDP-FORMING]; 1.
+DR   Pfam; PF00535; Glycos_transf_2; 1.
+DR   Pfam; PF07238; PilZ; 1.
+DR   PRINTS; PR01439; CELLSNTHASEA.
+DR   SUPFAM; SSF53448; Nucleotide-diphospho-sugar transferases; 1.
+DR   SUPFAM; SSF141371; PilZ domain-like; 1.
+PE   3: Inferred from homology;
+KW   c-di-GMP; Cell inner membrane; Cell membrane; Cellulose biosynthesis;
+KW   Glycosyltransferase; Membrane; Reference proteome; Transferase;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN           1..874
+FT                   /note="Cellulose synthase catalytic subunit [UDP-forming]"
+FT                   /id="PRO_0000059270"
+FT   TRANSMEM        30..50
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        151..171
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        173..193
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        230..250
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        525..545
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        547..567
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        592..612
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        634..654
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        668..688
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        833..853
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          694..790
+FT                   /note="PilZ"
+FT   REGION          271..364
+FT                   /note="Catalytic subdomain A"
+FT   REGION          441..501
+FT                   /note="Catalytic subdomain B"
+FT   ACT_SITE        313
+FT                   /evidence="ECO:0000255"
+FT   ACT_SITE        457
+FT                   /evidence="ECO:0000255"
+FT   BINDING         360
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         362
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   874 AA;  100044 MW;  4C9421B58606310A CRC64;
+//
+ID   BCSA_ECOLI              Reviewed;         872 AA.
+AC   P37653; P37654; P76712; P76713; Q2M7J5; Q8RSS7;
+DE   RecName: Full=Cellulose synthase catalytic subunit [UDP-forming];
+DE            EC=2.4.1.12;
+GN   Name=bcsA; Synonyms=yhjO, yhjP; OrderedLocusNames=b3533, JW5665;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=8041620; DOI=10.1093/nar/22.13.2576;
+RA   Sofia H.J., Burland V., Daniels D.L., Plunkett G. III, Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome. V. DNA sequence of the region
+RT   from 76.0 to 81.5 minutes.";
+RL   Nucleic Acids Res. 22:2576-2586(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA], AND SEQUENCE REVISION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   CHARACTERIZATION.
+RC   STRAIN=ECOR 10, ECOR 12, and TOB1;
+RX   PubMed=11260463; DOI=10.1046/j.1365-2958.2001.02337.x;
+RA   Zogaj X., Nimtz M., Rohde M., Bokranz W., Roemling U.;
+RT   "The multicellular morphotypes of Salmonella typhimurium and Escherichia
+RT   coli produce cellulose as the second component of the extracellular
+RT   matrix.";
+RL   Mol. Microbiol. 39:1452-1463(2001).
+RN   [5]
+RP   FUNCTION, INDUCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / W3110 / AR3110;
+RX   PubMed=24097954; DOI=10.1128/jb.00946-13;
+RA   Serra D.O., Richter A.M., Hengge R.;
+RT   "Cellulose as an architectural element in spatially structured Escherichia
+RT   coli biofilms.";
+RL   J. Bacteriol. 195:5540-5554(2013).
+CC   -!- FUNCTION: Catalytic subunit of cellulose synthase. It polymerizes
+CC       uridine 5'-diphosphate glucose to cellulose, which is produced as an
+CC       extracellular component for mechanical and chemical protection at the
+CC       onset of the stationary phase, when the cells exhibit multicellular
+CC       behavior (rdar morphotype). Coexpression of cellulose and thin
+CC       aggregative fimbriae (curli fimbrae or fibers) leads to a hydrophobic
+CC       network with tightly packed cells embedded in a highly inert matrix
+CC       that confers cohesion, elasticity and tissue-like properties to
+CC       colonies (PubMed:24097954). {ECO:0000269|PubMed:11260463,
+CC       ECO:0000269|PubMed:24097954}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=[(1->4)-beta-D-glucosyl](n) + UDP-alpha-D-glucose = [(1->4)-
+CC         beta-D-glucosyl](n+1) + UDP + H(+); Xref=Rhea:RHEA:19929, Rhea:RHEA-
+CC         COMP:10033, Rhea:RHEA-COMP:10034, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:18246, ChEBI:CHEBI:58223, ChEBI:CHEBI:58885; EC=2.4.1.12;
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420; Evidence={ECO:0000250};
+CC   -!- ACTIVITY REGULATION: Activated by bis-(3'-5') cyclic diguanylic acid
+CC       (c-di-GMP).
+CC   -!- PATHWAY: Glycan metabolism; bacterial cellulose biosynthesis.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Multi-pass
+CC       membrane protein {ECO:0000305}.
+CC   -!- INDUCTION: Part of the yhjR-bcsQABZC operon. Expressed at low levels in
+CC       mid-log phase, expression increases as cells enter stationary phase,
+CC       the increase in stationary phase is dependent on rpoS
+CC       (PubMed:24097954). Expression is higher at 28 than 37 degrees Celsius
+CC       (at protein level) (PubMed:24097954). {ECO:0000269|PubMed:24097954}.
+CC   -!- DOMAIN: There are two conserved domains in the globular part of the
+CC       protein: the N-terminal domain (domain A) contains the conserved DXD
+CC       motif and is possibly involved in catalysis and substrate binding. The
+CC       C-terminal domain (domain B) contains the QXXRW motif and is present
+CC       only in processive glycosyl transferases. It could be involved in the
+CC       processivity function of the enzyme, possibly required for holding the
+CC       growing glycan chain in the active site.
+CC   -!- DISRUPTION PHENOTYPE: When disrupted in a cellulose-synthesizing strain
+CC       (a strain K12 / W3110 derivative called AR3110 with a restored,
+CC       functional bcsQ gene), cellulose is no longer made and the rdar
+CC       morphotype is lost (PubMed:24097954). {ECO:0000269|PubMed:24097954}.
+CC   -!- MISCELLANEOUS: The genes bscA, bcsB, bcsZ and bcsC are constitutively
+CC       transcribed but cellulose synthesis occurs only when DgcC, a putative
+CC       transmembrane protein regulated by CsgD, is expressed. Cellulose
+CC       production is abolished in E.coli K12 / MG1655 and W3110 due to a
+CC       premature stop codon in bcsQ (PubMed:24097954).
+CC       {ECO:0000305|PubMed:24097954}.
+CC   -!- SIMILARITY: Belongs to the glycosyltransferase 2 family. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAB18510.1; Type=Frameshift; Evidence={ECO:0000305};
+CC       Sequence=AAB18511.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=AAB18511.1; Type=Frameshift; Evidence={ECO:0000305};
+DR   EMBL; U00039; AAB18510.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; U00039; AAB18511.1; ALT_SEQ; Genomic_DNA.
+DR   EMBL; U00096; AAC76558.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE77761.1; -; Genomic_DNA.
+DR   PIR; H65151; H65151.
+DR   PIR; S47754; S47754.
+DR   PIR; S47755; S47755.
+DR   RefSeq; NP_417990.4; NC_000913.3.
+DR   RefSeq; WP_000025892.1; NZ_SSZK01000039.1.
+DR   PDB; 7LBY; EM; 4.20 A; A=2-872.
+DR   PDB; 9B8V; EM; 4.00 A; E=2-872.
+DR   PDB; 9FMV; EM; 3.43 A; A=1-872.
+DR   PDB; 9FMZ; EM; 3.60 A; A=1-872.
+DR   PDB; 9FNN; EM; 2.85 A; A=1-872.
+DR   PDB; 9FP0; EM; 3.37 A; A=1-872.
+DR   PDBsum; 7LBY; -.
+DR   PDBsum; 9B8V; -.
+DR   PDBsum; 9FMV; -.
+DR   PDBsum; 9FMZ; -.
+DR   PDBsum; 9FNN; -.
+DR   PDBsum; 9FP0; -.
+DR   AlphaFoldDB; P37653; -.
+DR   EMDB; EMD-23267; -.
+DR   EMDB; EMD-44359; -.
+DR   SMR; P37653; -.
+DR   BioGRID; 4260855; 268.
+DR   BioGRID; 852361; 1.
+DR   DIP; DIP-12387N; -.
+DR   FunCoup; P37653; 210.
+DR   IntAct; P37653; 4.
+DR   STRING; 511145.b3533; -.
+DR   CAZy; GT2; Glycosyltransferase Family 2.
+DR   TCDB; 4.D.3.1.6; the glycan glucosyl transferase (opgh) family.
+DR   PaxDb; 511145-b3533; -.
+DR   EnsemblBacteria; AAC76558; AAC76558; b3533.
+DR   GeneID; 75173723; -.
+DR   GeneID; 948053; -.
+DR   KEGG; ecj:JW5665; -.
+DR   KEGG; eco:b3533; -.
+DR   KEGG; ecoc:C3026_19140; -.
+DR   PATRIC; fig|511145.12.peg.3644; -.
+DR   EchoBASE; EB2169; -.
+DR   eggNOG; COG1215; Bacteria.
+DR   HOGENOM; CLU_011907_5_0_6; -.
+DR   InParanoid; P37653; -.
+DR   OMA; AWYIARP; -.
+DR   OrthoDB; 9806824at2; -.
+DR   PhylomeDB; P37653; -.
+DR   BioCyc; EcoCyc:EG12260-MONOMER; -.
+DR   BioCyc; MetaCyc:EG12260-MONOMER; -.
+DR   UniPathway; UPA00694; -.
+DR   PRO; PR:P37653; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IDA:EcoCyc.
+DR   GO; GO:0016760; F:cellulose synthase (UDP-forming) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0035438; F:cyclic-di-GMP binding; IEA:InterPro.
+DR   GO; GO:0016758; F:hexosyltransferase activity; IBA:GO_Central.
+DR   GO; GO:0090540; P:bacterial cellulose biosynthetic process; IMP:EcoCyc.
+DR   GO; GO:0006011; P:UDP-alpha-D-glucose metabolic process; IEA:InterPro.
+DR   CDD; cd06421; CESA_CelA_like; 1.
+DR   FunFam; 2.40.10.220:FF:000001; Cellulose synthase catalytic subunit [UDP-forming]; 1.
+DR   FunFam; 3.90.550.10:FF:000061; Cellulose synthase catalytic subunit [UDP-forming]; 1.
+DR   Gene3D; 2.40.10.220; predicted glycosyltransferase like domains; 1.
+DR   Gene3D; 3.90.550.10; Spore Coat Polysaccharide Biosynthesis Protein SpsA, Chain A; 1.
+DR   InterPro; IPR003919; Cell_synth_A.
+DR   InterPro; IPR001173; Glyco_trans_2-like.
+DR   InterPro; IPR050321; Glycosyltr_2/OpgH_subfam.
+DR   InterPro; IPR029044; Nucleotide-diphossugar_trans.
+DR   InterPro; IPR009875; PilZ_domain.
+DR   NCBIfam; TIGR03030; CelA; 1.
+DR   NCBIfam; NF008558; PRK11498.1; 1.
+DR   PANTHER; PTHR43867; CELLULOSE SYNTHASE CATALYTIC SUBUNIT A [UDP-FORMING]; 1.
+DR   PANTHER; PTHR43867:SF2; CELLULOSE SYNTHASE CATALYTIC SUBUNIT A [UDP-FORMING]; 1.
+DR   Pfam; PF00535; Glycos_transf_2; 1.
+DR   Pfam; PF07238; PilZ; 1.
+DR   PRINTS; PR01439; CELLSNTHASEA.
+DR   SUPFAM; SSF53448; Nucleotide-diphospho-sugar transferases; 1.
+DR   SUPFAM; SSF141371; PilZ domain-like; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; c-di-GMP; Cell inner membrane; Cell membrane;
+KW   Cellulose biosynthesis; Glycosyltransferase; Membrane; Reference proteome;
+KW   Transferase; Transmembrane; Transmembrane helix.
+FT   CHAIN           1..872
+FT                   /note="Cellulose synthase catalytic subunit [UDP-forming]"
+FT                   /id="PRO_0000059267"
+FT   TRANSMEM        30..50
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        151..171
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        173..193
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        230..250
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        525..545
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        547..567
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        592..612
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        640..660
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        668..688
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        833..853
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          694..790
+FT                   /note="PilZ"
+FT   REGION          271..364
+FT                   /note="Catalytic subdomain A"
+FT   REGION          441..501
+FT                   /note="Catalytic subdomain B"
+FT   ACT_SITE        313
+FT                   /evidence="ECO:0000255"
+FT   ACT_SITE        457
+FT                   /evidence="ECO:0000255"
+FT   BINDING         360
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         362
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0000255"
+FT   HELIX           2..8
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           11..26
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           31..47
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           53..60
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           62..65
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           78..91
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           106..133
+FT                   /evidence="ECO:0007829|PDB:9FP0"
+FT   HELIX           145..167
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           173..191
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           197..220
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          224..226
+FT                   /evidence="ECO:0007829|PDB:9FMV"
+FT   HELIX           228..253
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           269..271
+FT                   /evidence="ECO:0007829|PDB:9FP0"
+FT   STRAND          275..283
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           286..297
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          299..301
+FT                   /evidence="ECO:0007829|PDB:9FP0"
+FT   HELIX           303..305
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          306..314
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           317..326
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          329..331
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           339..350
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          354..358
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           369..373
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           376..378
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          381..387
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           397..402
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          405..408
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           411..413
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   TURN            414..418
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           419..425
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          433..439
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           440..445
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          452..454
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           456..466
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          470..473
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          479..481
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           487..507
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          512..515
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           518..529
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           530..532
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           534..541
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           544..549
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           559..580
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   TURN            581..584
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           590..610
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          626..628
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           633..659
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   TURN            662..665
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           666..688
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          701..710
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          716..725
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          728..732
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          744..751
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          754..766
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   STRAND          769..774
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           779..788
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           795..801
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           808..826
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+FT   HELIX           833..851
+FT                   /evidence="ECO:0007829|PDB:9FNN"
+SQ   SEQUENCE   872 AA;  99785 MW;  14326B8A2EB228F7 CRC64;
+//
+ID   BCSA_ECO57              Reviewed;         872 AA.
+AC   Q8X5L7;
+DE   RecName: Full=Cellulose synthase catalytic subunit [UDP-forming];
+DE            EC=2.4.1.12;
+GN   Name=bcsA; OrderedLocusNames=Z4948, ECs4413;
+OS   Escherichia coli O157:H7.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=11206551; DOI=10.1038/35054089;
+RA   Perna N.T., Plunkett G. III, Burland V., Mau B., Glasner J.D., Rose D.J.,
+RA   Mayhew G.F., Evans P.S., Gregor J., Kirkpatrick H.A., Posfai G.,
+RA   Hackett J., Klink S., Boutin A., Shao Y., Miller L., Grotbeck E.J.,
+RA   Davis N.W., Lim A., Dimalanta E.T., Potamousis K., Apodaca J.,
+RA   Anantharaman T.S., Lin J., Yen G., Schwartz D.C., Welch R.A.,
+RA   Blattner F.R.;
+RT   "Genome sequence of enterohaemorrhagic Escherichia coli O157:H7.";
+RL   Nature 409:529-533(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=11258796; DOI=10.1093/dnares/8.1.11;
+RA   Hayashi T., Makino K., Ohnishi M., Kurokawa K., Ishii K., Yokoyama K.,
+RA   Han C.-G., Ohtsubo E., Nakayama K., Murata T., Tanaka M., Tobe T., Iida T.,
+RA   Takami H., Honda T., Sasakawa C., Ogasawara N., Yasunaga T., Kuhara S.,
+RA   Shiba T., Hattori M., Shinagawa H.;
+RT   "Complete genome sequence of enterohemorrhagic Escherichia coli O157:H7 and
+RT   genomic comparison with a laboratory strain K-12.";
+RL   DNA Res. 8:11-22(2001).
+CC   -!- FUNCTION: Catalytic subunit of cellulose synthase. It polymerizes
+CC       uridine 5'-diphosphate glucose to cellulose, which is produced as an
+CC       extracellular component for mechanical and chemical protection at the
+CC       onset of the stationary phase, when the cells exhibit multicellular
+CC       behavior (rdar morphotype). Coexpression of cellulose and thin
+CC       aggregative fimbriae leads to a hydrophobic network with tightly packed
+CC       cells embedded in a highly inert matrix (By similarity). {ECO:0000250}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=[(1->4)-beta-D-glucosyl](n) + UDP-alpha-D-glucose = [(1->4)-
+CC         beta-D-glucosyl](n+1) + UDP + H(+); Xref=Rhea:RHEA:19929, Rhea:RHEA-
+CC         COMP:10033, Rhea:RHEA-COMP:10034, ChEBI:CHEBI:15378,
+CC         ChEBI:CHEBI:18246, ChEBI:CHEBI:58223, ChEBI:CHEBI:58885; EC=2.4.1.12;
+CC   -!- COFACTOR:
+CC       Name=Mg(2+); Xref=ChEBI:CHEBI:18420; Evidence={ECO:0000250};
+CC   -!- ACTIVITY REGULATION: Activated by bis-(3'-5') cyclic diguanylic acid
+CC       (c-di-GMP). {ECO:0000250}.
+CC   -!- PATHWAY: Glycan metabolism; bacterial cellulose biosynthesis.
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Multi-pass
+CC       membrane protein {ECO:0000305}.
+CC   -!- DOMAIN: There are two conserved domains in the globular part of the
+CC       protein: the N-terminal domain (domain A) contains the conserved DXD
+CC       motif and is possibly involved in catalysis and substrate binding. The
+CC       C-terminal domain (domain B) contains the QXXRW motif and is present
+CC       only in processive glycosyl transferases. It could be involved in the
+CC       processivity function of the enzyme, possibly required for holding the
+CC       growing glycan chain in the active site.
+CC   -!- SIMILARITY: Belongs to the glycosyltransferase 2 family. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAG58675.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; AE005174; AAG58675.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; BA000007; BAB37836.2; -; Genomic_DNA.
+DR   PIR; E91180; E91180.
+DR   PIR; G86026; G86026.
+DR   RefSeq; NP_312440.2; NC_002695.1.
+DR   RefSeq; WP_000025873.1; NZ_VOAI01000004.1.
+DR   AlphaFoldDB; Q8X5L7; -.
+DR   SMR; Q8X5L7; -.
+DR   STRING; 155864.Z4948; -.
+DR   GeneID; 915726; -.
+DR   KEGG; ece:Z4948; -.
+DR   KEGG; ecs:ECs_4413; -.
+DR   PATRIC; fig|386585.9.peg.4614; -.
+DR   eggNOG; COG1215; Bacteria.
+DR   HOGENOM; CLU_011907_5_0_6; -.
+DR   OMA; AWYIARP; -.
+DR   UniPathway; UPA00694; -.
+DR   Proteomes; UP000000558; Chromosome.
+DR   Proteomes; UP000002519; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0016760; F:cellulose synthase (UDP-forming) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0035438; F:cyclic-di-GMP binding; IEA:InterPro.
+DR   GO; GO:0030244; P:cellulose biosynthetic process; IEA:UniProtKB-KW.
+DR   GO; GO:0006011; P:UDP-alpha-D-glucose metabolic process; IEA:InterPro.
+DR   CDD; cd06421; CESA_CelA_like; 1.
+DR   FunFam; 2.40.10.220:FF:000001; Cellulose synthase catalytic subunit [UDP-forming]; 1.
+DR   FunFam; 3.90.550.10:FF:000061; Cellulose synthase catalytic subunit [UDP-forming]; 1.
+DR   Gene3D; 2.40.10.220; predicted glycosyltransferase like domains; 1.
+DR   Gene3D; 3.90.550.10; Spore Coat Polysaccharide Biosynthesis Protein SpsA, Chain A; 1.
+DR   InterPro; IPR003919; Cell_synth_A.
+DR   InterPro; IPR001173; Glyco_trans_2-like.
+DR   InterPro; IPR050321; Glycosyltr_2/OpgH_subfam.
+DR   InterPro; IPR029044; Nucleotide-diphossugar_trans.
+DR   InterPro; IPR009875; PilZ_domain.
+DR   NCBIfam; TIGR03030; CelA; 1.
+DR   NCBIfam; NF008558; PRK11498.1; 1.
+DR   PANTHER; PTHR43867; CELLULOSE SYNTHASE CATALYTIC SUBUNIT A [UDP-FORMING]; 1.
+DR   PANTHER; PTHR43867:SF2; CELLULOSE SYNTHASE CATALYTIC SUBUNIT A [UDP-FORMING]; 1.
+DR   Pfam; PF00535; Glycos_transf_2; 1.
+DR   Pfam; PF07238; PilZ; 1.
+DR   PRINTS; PR01439; CELLSNTHASEA.
+DR   SUPFAM; SSF53448; Nucleotide-diphospho-sugar transferases; 1.
+DR   SUPFAM; SSF141371; PilZ domain-like; 1.
+PE   3: Inferred from homology;
+KW   c-di-GMP; Cell inner membrane; Cell membrane; Cellulose biosynthesis;
+KW   Glycosyltransferase; Membrane; Reference proteome; Transferase;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN           1..872
+FT                   /note="Cellulose synthase catalytic subunit [UDP-forming]"
+FT                   /id="PRO_0000059268"
+FT   TRANSMEM        30..50
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        151..171
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        173..193
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        230..250
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        525..545
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        547..567
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        592..612
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        640..660
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        668..688
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        833..853
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   DOMAIN          694..790
+FT                   /note="PilZ"
+FT   REGION          271..364
+FT                   /note="Catalytic subdomain A"
+FT   REGION          441..501
+FT                   /note="Catalytic subdomain B"
+FT   ACT_SITE        313
+FT                   /evidence="ECO:0000255"
+FT   ACT_SITE        457
+FT                   /evidence="ECO:0000255"
+FT   BINDING         360
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         362
+FT                   /ligand="substrate"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   872 AA;  99710 MW;  F3F1A24A2B713FBA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	7	Klebsiella
+5	6	Klebsiella/Raoultella group
+5	6	Escherichia.
+6	5	Pseudomonadaceae
+19	5	Enterobacteriaceae
+6	4	Pseudomonadales
+27	4	Enterobacterales
+44	3	Gammaproteobacteria
+47	2	Pseudomonadota
+47	1	Pseudomonadati
+47	0	Bacteria
+Total of 47 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3CR46	CELLULOSE SYNTHASE CATALY    125.0    6.6e-33   1   2.7   3.5
+	Iterate                   	     1	    89	   125.0
+	PF13641	Glyco_tranf_2_3 	   273	   500	      63
+	PF00535	Glycos_transf_2 	   276	   447	    84.1
+	PF13506	Glyco_transf_21 	   318	   586	    31.4
+	PF13632	Glyco_trans_2_3 	   355	   568	    65.7
+	PF03552	Cellulose_synt  	   434	   686	    47.4
+	PF07238	PilZ            	   694	   791	    55.8
+
+A0A4Z0P7U4	UDP-FORMING CELLULOSE SYN    125.4      5e-33   1   2.5   2.4
+	Iterate                   	     1	    89	   125.4
+
+P37653	CELLULOSE SYNTHASE CATALYTIC SU    123.8    1.6e-32   1   2.5   2.5
+	Iterate                   	     1	    89	   123.8
+	PF13641	Glyco_tranf_2_3 	   273	   500	    63.7
+	PF00535	Glycos_transf_2 	   276	   447	    84.4
+	PF13506	Glyco_transf_21 	   320	   589	    34.8
+	PF13632	Glyco_trans_2_3 	   355	   570	    66.5
+	PF03552	Cellulose_synt  	   442	   686	    47.4
+	PF07238	PilZ            	   694	   791	    54.4
+
+Q8X5L7	CELLULOSE SYNTHASE CATALYTIC SU    123.8    1.6e-32   1   2.5   2.5
+	Iterate                   	     1	    89	   123.8
+	PF13641	Glyco_tranf_2_3 	   273	   500	    65.1
+	PF00535	Glycos_transf_2 	   276	   447	      86
+	PF13506	Glyco_transf_21 	   320	   589	    34.9
+	PF13632	Glyco_trans_2_3 	   355	   570	      68
+	PF03552	Cellulose_synt  	   443	   683	    47.4
+	PF07238	PilZ            	   694	   791	    54.4
+
+Q93IN2	CELLULOSE SYNTHASE CATALYTIC SU    122.9    2.9e-32   1   2.7   2.0
+	Iterate                   	     1	    89	   122.9
+	PF13641	Glyco_tranf_2_3 	   273	   500	    65.3
+	PF00535	Glycos_transf_2 	   276	   447	    83.9
+	PF13506	Glyco_transf_21 	   323	   585	    36.4
+	PF13632	Glyco_trans_2_3 	   355	   567	    67.8
+	PF03552	Cellulose_synt  	   441	   687	    46.8
+	PF07238	PilZ            	   694	   791	    55.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: Q93IN2 (E-value: 1.1e-35, Score: 127.4)
+Mentioned as: Q93IN2
+Description: Cellulose synthase catalytic subunit [UDP-forming]
+Organism: Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720)
+PMID: 12819107
+Source: EuropePMC
+Title: Production of cellulose and curli fimbriae by members of the family Enterobacteriaceae isolated from the human gastrointestinal tract
+Journal: Infection and immunity (2003)
+Snippet: E. coli K-12 (P37653) and serotype Typhimurium ATCC14028 (Q93IN2) were taken from the Swiss Prot database. BcsA from P. putida (http://www.tigr.org) and K.
+
+================================================================================
+Protein: VIMSS17594 (E-value: 1.1e-35, Score: 127.3)
+Mentioned as: b3533
+Description: putative cellulose synthase
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 17765265
+Source: EuropePMC
+Title: Structure and function of the Escherichia coli protein YmgB: a protein critical for biofilm formation and acid-resistance
+Journal: Journal of molecular biology (2007)
+Snippet: 2529 14 ymgG b1172 2157 28 yhjQ b3534 2099 28 bcsA b3533 2099 28 rrsA b3851 2029 68 ileT b3852 2029 68 Structure and Function of the Escherichia coli Protein
+
+================================================================================
+Protein: VIMSS3411012 (E-value: 4.8e-34, Score: 122.1)
+Mentioned as: ESA_04204
+Description: hypothetical protein
+Organism: Enterobacter sakazakii ATCC BAA-894
+PMID: 20118366
+Source: EuropePMC
+Title: Genes involved in Cronobacter sakazakii biofilm formation
+Journal: Applied and environmental microbiology (2010)
+Snippet: protein (Cronobacter sakazakii)d YP_001440 220.1 ESA_04204 (5550385) bcsA (yhjO) Cellulose synthase catalytic subunit (Cronobacter sakazakii BAA-894)b
+
+================================================================================
+Protein: VIMSS2079441 (E-value: 3.5e-28, Score: 103.3)
+Mentioned as: YE4074
+Description: UDP-forming cellulose synthase 1 catalytic subunit
+Organism: Yersinia enterocolitica subsp. enterocolitica 8081
+PMID: 18221513
+Source: EuropePMC
+Title: Comparative analysis of the Photorhabdus luminescens and the Yersinia enterocolitica genomes: uncovering candidate genes involved in insect pathogenicity
+Journal: BMC genomics (2008)
+Snippet: Furthermore, two proteins with PilZ domain exist in Y. enterocolitica , namely YE3197 and BcsA (YE4074), a putative cellulose synthase. Cellulose synthesis in bacteria has been identified to be important for the protection from chemical or mechanical stress by forming a hydrophobic extracellular matrix [ 60
+
+================================================================================
+Protein: VIMSS218315 (E-value: 1.8e-15, Score: 62.6)
+Mentioned as: PP_2635
+Description: cellulose synthase, putative
+Organism: Pseudomonas putida KT2440
+PMID: 24912454
+Source: EuropePMC
+Title: Colony morphology and transcriptome profiling of Pseudomonas putida KT2440 and its mutants deficient in alginate or all EPS synthesis under controlled matric potentials
+Journal: MicrobiologyOpen (2014)
+Snippet: algD GDP-mannose 6-dehydrogenase 3.26 N/A N/A Bcs operon PP_2634 Cellulose synthase, putative 0.10 0.03 N/A PP_2635 Cellulose synthase, putative 0.13 0.08 N/A PP_2636 Cellulose synthase, putative 0.01 0.01 N/A PP_2637 Endo-1,4-beta- d -glucanase 0.21 0.02 N/A PP_2638 Cellulose synthase operon C protein, putative 0.02 0.10 N/A
+
+================================================================================
+Protein: VIMSS517889 (E-value: 1.4e-06, Score: 34.1)
+Mentioned as: CV2678
+Description: cellulose synthase, subunit A
+Organism: Chromobacterium violaceum ATCC 12472
+PMID: 14500782
+Source: EuropePMC
+Title: The complete genome sequence of Chromobacterium violaceum reveals remarkable and exploitable bacterial adaptability
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2003)
+Snippet: related to cellulose biosynthesis (CV2675, CV2677, and CV2678) that also might represent a valuable commodity, because bacterial cellulose differs from that
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A071LXC7.1	AF-A0A071LXC7-F1-model_v4_TED01:2-93	1	AF-A0A071LXC7-F1-model_v4_TED01	2-93	98.9%
+A0A071LXC7.1	AF-A0A071LXC7-F1-model_v4_TED02:273-532	1	AF-A0A071LXC7-F1-model_v4_TED02	273-532	0
+A0A071LXC7.1	AF-A0A071LXC7-F1-model_v4_TED04:703-789	1	AF-A0A071LXC7-F1-model_v4_TED04	703-789	0
+A0A071LXC7.1	AF-A0A071LXC7-F1-model_v4_TED03:633-694_813-851	1	AF-A0A071LXC7-F1-model_v4_TED03	633-851	0
+A0A084A583.1	AF-A0A084A583-F1-model_v4_TED01:4-93	1	AF-A0A084A583-F1-model_v4_TED01	4-93	96.6%
+A0A084A583.1	AF-A0A084A583-F1-model_v4_TED02:271-485	1	AF-A0A084A583-F1-model_v4_TED02	271-485	0
+A0A084A583.1	AF-A0A084A583-F1-model_v4_TED03:703-791	1	AF-A0A084A583-F1-model_v4_TED03	703-791	0
+A0A085GD91.1	AF-A0A085GD91-F1-model_v4_TED01:1-93	1	AF-A0A085GD91-F1-model_v4_TED01	1-93	100.0%
+A0A085GD91.1	AF-A0A085GD91-F1-model_v4_TED02:273-482	1	AF-A0A085GD91-F1-model_v4_TED02	273-482	0
+A0A085GD91.1	AF-A0A085GD91-F1-model_v4_TED03:699-786	1	AF-A0A085GD91-F1-model_v4_TED03	699-786	0
+A0A085GD91.1	AF-A0A085GD91-F1-model_v4_TED04:806-848	1	AF-A0A085GD91-F1-model_v4_TED04	806-848	0
+A0A089Q4W4.1	AF-A0A089Q4W4-F1-model_v4_TED01:2-88	1	AF-A0A089Q4W4-F1-model_v4_TED01	2-88	97.8%
+A0A089Q4W4.1	AF-A0A089Q4W4-F1-model_v4_TED02:168-255_485-691_807-831	1	AF-A0A089Q4W4-F1-model_v4_TED02	168-831	0
+A0A089Q4W4.1	AF-A0A089Q4W4-F1-model_v4_TED03:269-483	1	AF-A0A089Q4W4-F1-model_v4_TED03	269-483	0
+A0A089Q4W4.1	AF-A0A089Q4W4-F1-model_v4_TED04:701-797	1	AF-A0A089Q4W4-F1-model_v4_TED04	701-797	0
+A0A090V4C1.1	AF-A0A090V4C1-F1-model_v4_TED01:5-91	1	AF-A0A090V4C1-F1-model_v4_TED01	5-91	95.5%
+A0A090V4C1.1	AF-A0A090V4C1-F1-model_v4_TED03:270-484	1	AF-A0A090V4C1-F1-model_v4_TED03	270-484	0
+A0A090V4C1.1	AF-A0A090V4C1-F1-model_v4_TED04:702-776	1	AF-A0A090V4C1-F1-model_v4_TED04	702-776	0
+A0A090V4C1.1	AF-A0A090V4C1-F1-model_v4_TED02:143-171	1	AF-A0A090V4C1-F1-model_v4_TED02	143-171	0
+A0A097R7G8.1	AF-A0A097R7G8-F1-model_v4_TED01:2-92	1	AF-A0A097R7G8-F1-model_v4_TED01	2-92	98.9%
+A0A097R7G8.1	AF-A0A097R7G8-F1-model_v4_TED02:168-254_531-614	1	AF-A0A097R7G8-F1-model_v4_TED02	168-614	0
+A0A097R7G8.1	AF-A0A097R7G8-F1-model_v4_TED03:268-488_500-512	1	AF-A0A097R7G8-F1-model_v4_TED03	268-512	0
+A0A097R7G8.1	AF-A0A097R7G8-F1-model_v4_TED04:625-696_807-849	1	AF-A0A097R7G8-F1-model_v4_TED04	625-849	0
+A0A097R7G8.1	AF-A0A097R7G8-F1-model_v4_TED05:700-787	1	AF-A0A097R7G8-F1-model_v4_TED05	700-787	0
+A0A098G881.1	AF-A0A098G881-F1-model_v4_TED01:2-93	1	AF-A0A098G881-F1-model_v4_TED01	2-93	98.9%
+A0A098G881.1	AF-A0A098G881-F1-model_v4_TED02:161-255_511-694_810-829	1	AF-A0A098G881-F1-model_v4_TED02	161-829	0
+A0A098G881.1	AF-A0A098G881-F1-model_v4_TED03:269-483	1	AF-A0A098G881-F1-model_v4_TED03	269-483	0
+A0A098G881.1	AF-A0A098G881-F1-model_v4_TED04:701-788	1	AF-A0A098G881-F1-model_v4_TED04	701-788	0
+A0A098G8N5.1	AF-A0A098G8N5-F1-model_v4_TED01:2-102	1	AF-A0A098G8N5-F1-model_v4_TED01	2-102	100.0%
+A0A098G8N5.1	AF-A0A098G8N5-F1-model_v4_TED02:282-492	1	AF-A0A098G8N5-F1-model_v4_TED02	282-492	0
+A0A098G8N5.1	AF-A0A098G8N5-F1-model_v4_TED03:711-812	1	AF-A0A098G8N5-F1-model_v4_TED03	711-812	0
+A0A098G8N5.1	AF-A0A098G8N5-F1-model_v4_TED04:818-861	1	AF-A0A098G8N5-F1-model_v4_TED04	818-861	0
+A0A0F5VDC9.1	AF-A0A0F5VDC9-F1-model_v4_TED01:3-77	1	AF-A0A0F5VDC9-F1-model_v4_TED01	3-77	82.4%
+A0A0F5VDC9.1	AF-A0A0F5VDC9-F1-model_v4_TED02:279-495	1	AF-A0A0F5VDC9-F1-model_v4_TED02	279-495	0
+A0A0F5VDC9.1	AF-A0A0F5VDC9-F1-model_v4_TED03:711-814	1	AF-A0A0F5VDC9-F1-model_v4_TED03	711-814	0
+A0A0G4JSQ9.1	AF-A0A0G4JSQ9-F1-model_v4_TED01:2-90	1	AF-A0A0G4JSQ9-F1-model_v4_TED01	2-90	98.9%
+A0A0G4JSQ9.1	AF-A0A0G4JSQ9-F1-model_v4_TED02:174-259_493-616	1	AF-A0A0G4JSQ9-F1-model_v4_TED02	174-616	0
+A0A0G4JSQ9.1	AF-A0A0G4JSQ9-F1-model_v4_TED03:273-487	1	AF-A0A0G4JSQ9-F1-model_v4_TED03	273-487	0
+A0A0G4JSQ9.1	AF-A0A0G4JSQ9-F1-model_v4_TED04:705-780	1	AF-A0A0G4JSQ9-F1-model_v4_TED04	705-780	0
+A0A0H3DXA6.1	AF-A0A0H3DXA6-F1-model_v4_TED01:1-85_825-855	1	AF-A0A0H3DXA6-F1-model_v4_TED01	1-855	100.0%
+A0A0H3DXA6.1	AF-A0A0H3DXA6-F1-model_v4_TED02:260-475	1	AF-A0A0H3DXA6-F1-model_v4_TED02	260-475	0
+A0A0H3DXA6.1	AF-A0A0H3DXA6-F1-model_v4_TED03:692-780	1	AF-A0A0H3DXA6-F1-model_v4_TED03	692-780	0
+A0A0J1HA52.1	AF-A0A0J1HA52-F1-model_v4_TED01:3-78	1	AF-A0A0J1HA52-F1-model_v4_TED01	3-78	83.5%
+A0A0J1HA52.1	AF-A0A0J1HA52-F1-model_v4_TED02:282-496	1	AF-A0A0J1HA52-F1-model_v4_TED02	282-496	0
+A0A0J1HA52.1	AF-A0A0J1HA52-F1-model_v4_TED03:711-802	1	AF-A0A0J1HA52-F1-model_v4_TED03	711-802	0
+A0A0J5PQ05.1	AF-A0A0J5PQ05-F1-model_v4_TED01:12-92	1	AF-A0A0J5PQ05-F1-model_v4_TED01	12-92	87.6%
+A0A0J5PQ05.1	AF-A0A0J5PQ05-F1-model_v4_TED02:273-485	1	AF-A0A0J5PQ05-F1-model_v4_TED02	273-485	0
+A0A0J5PQ05.1	AF-A0A0J5PQ05-F1-model_v4_TED04:701-788	1	AF-A0A0J5PQ05-F1-model_v4_TED04	701-788	0
+A0A0J5PQ05.1	AF-A0A0J5PQ05-F1-model_v4_TED03:630-694_818-826	1	AF-A0A0J5PQ05-F1-model_v4_TED03	630-826	0
+A0A0L0GZS6.1	AF-A0A0L0GZS6-F1-model_v4_TED01:12-91	1	AF-A0A0L0GZS6-F1-model_v4_TED01	12-91	87.6%
+A0A0L0GZS6.1	AF-A0A0L0GZS6-F1-model_v4_TED02:274-486	1	AF-A0A0L0GZS6-F1-model_v4_TED02	274-486	0
+A0A0L0GZS6.1	AF-A0A0L0GZS6-F1-model_v4_TED03:702-789	1	AF-A0A0L0GZS6-F1-model_v4_TED03	702-789	0
+A0A1C4BZI7.1	AF-A0A1C4BZI7-F1-model_v4_TED01:2-93	1	AF-A0A1C4BZI7-F1-model_v4_TED01	2-93	98.9%
+A0A1C4BZI7.1	AF-A0A1C4BZI7-F1-model_v4_TED02:171-257_489-613	1	AF-A0A1C4BZI7-F1-model_v4_TED02	171-613	0
+A0A1C4BZI7.1	AF-A0A1C4BZI7-F1-model_v4_TED03:275-486	1	AF-A0A1C4BZI7-F1-model_v4_TED03	275-486	0
+A0A1C4BZI7.1	AF-A0A1C4BZI7-F1-model_v4_TED04:702-789	1	AF-A0A1C4BZI7-F1-model_v4_TED04	702-789	0
+A0A1E5E4J2.1	AF-A0A1E5E4J2-F1-model_v4_TED01:6-92	1	AF-A0A1E5E4J2-F1-model_v4_TED01	6-92	94.4%
+A0A1E5E4J2.1	AF-A0A1E5E4J2-F1-model_v4_TED03:177-267_498-707	1	AF-A0A1E5E4J2-F1-model_v4_TED03	177-707	0
+A0A1E5E4J2.1	AF-A0A1E5E4J2-F1-model_v4_TED04:284-495	1	AF-A0A1E5E4J2-F1-model_v4_TED04	284-495	0
+A0A1E5E4J2.1	AF-A0A1E5E4J2-F1-model_v4_TED05:713-800	1	AF-A0A1E5E4J2-F1-model_v4_TED05	713-800	0
+A0A1E5E4J2.1	AF-A0A1E5E4J2-F1-model_v4_TED02:99-138	1	AF-A0A1E5E4J2-F1-model_v4_TED02	99-138	0
+A0A1H2EGA9.1	AF-A0A1H2EGA9-F1-model_v4_TED01:5-91	1	AF-A0A1H2EGA9-F1-model_v4_TED01	5-91	95.2%
+A0A1H2EGA9.1	AF-A0A1H2EGA9-F1-model_v4_TED02:165-251_516-687_803-827	1	AF-A0A1H2EGA9-F1-model_v4_TED02	165-827	0
+A0A1H2EGA9.1	AF-A0A1H2EGA9-F1-model_v4_TED03:270-479	1	AF-A0A1H2EGA9-F1-model_v4_TED03	270-479	0
+A0A1H2EGA9.1	AF-A0A1H2EGA9-F1-model_v4_TED04:697-771	1	AF-A0A1H2EGA9-F1-model_v4_TED04	697-771	0
+A0A1Q9H1E4.1	AF-A0A1Q9H1E4-F1-model_v4_TED01:2-89	1	AF-A0A1Q9H1E4-F1-model_v4_TED01	2-89	94.4%
+A0A1Q9H1E4.1	AF-A0A1Q9H1E4-F1-model_v4_TED02:276-397_439-490	1	AF-A0A1Q9H1E4-F1-model_v4_TED02	276-490	0
+A0A1Q9H1E4.1	AF-A0A1Q9H1E4-F1-model_v4_TED03:708-798	1	AF-A0A1Q9H1E4-F1-model_v4_TED03	708-798	0
+A0A1S8CF54.1	AF-A0A1S8CF54-F1-model_v4_TED01:17-93	1	AF-A0A1S8CF54-F1-model_v4_TED01	17-93	82.0%
+A0A1S8CF54.1	AF-A0A1S8CF54-F1-model_v4_TED02:99-136	1	AF-A0A1S8CF54-F1-model_v4_TED02	99-136	0
+A0A1S8CF54.1	AF-A0A1S8CF54-F1-model_v4_TED03:268-484	1	AF-A0A1S8CF54-F1-model_v4_TED03	268-484	0
+A0A1S8CF54.1	AF-A0A1S8CF54-F1-model_v4_TED04:700-787	1	AF-A0A1S8CF54-F1-model_v4_TED04	700-787	0
+A0A240A9K4.1	AF-A0A240A9K4-F1-model_v4_TED01:2-92	1	AF-A0A240A9K4-F1-model_v4_TED01	2-92	98.9%
+A0A240A9K4.1	AF-A0A240A9K4-F1-model_v4_TED02:268-482	1	AF-A0A240A9K4-F1-model_v4_TED02	268-482	0
+A0A240A9K4.1	AF-A0A240A9K4-F1-model_v4_TED03:700-787	1	AF-A0A240A9K4-F1-model_v4_TED03	700-787	0
+A0A248KFM5.1	AF-A0A248KFM5-F1-model_v4_TED01:2-92	1	AF-A0A248KFM5-F1-model_v4_TED01	2-92	98.9%
+A0A248KFM5.1	AF-A0A248KFM5-F1-model_v4_TED02:273-484	1	AF-A0A248KFM5-F1-model_v4_TED02	273-484	0
+A0A248KFM5.1	AF-A0A248KFM5-F1-model_v4_TED03:702-789	1	AF-A0A248KFM5-F1-model_v4_TED03	702-789	0
+A0A250B152.1	AF-A0A250B152-F1-model_v4_TED01:2-93	1	AF-A0A250B152-F1-model_v4_TED01	2-93	98.9%
+A0A250B152.1	AF-A0A250B152-F1-model_v4_TED02:272-484	1	AF-A0A250B152-F1-model_v4_TED02	272-484	0
+A0A250B152.1	AF-A0A250B152-F1-model_v4_TED03:700-787	1	AF-A0A250B152-F1-model_v4_TED03	700-787	0
+A0A2C6DCP0.1	AF-A0A2C6DCP0-F1-model_v4_TED01:282-495	1	AF-A0A2C6DCP0-F1-model_v4_TED01	282-495	0
+A0A2C6DCP0.1	AF-A0A2C6DCP0-F1-model_v4_TED02:710-806	1	AF-A0A2C6DCP0-F1-model_v4_TED02	710-806	0
+A0A2P5TPK4.1	AF-A0A2P5TPK4-F1-model_v4_TED01:2-77	1	AF-A0A2P5TPK4-F1-model_v4_TED01	2-77	90.5%
+A0A2P5TPK4.1	AF-A0A2P5TPK4-F1-model_v4_TED02:257-473	1	AF-A0A2P5TPK4-F1-model_v4_TED02	257-473	0
+A0A2P5TPK4.1	AF-A0A2P5TPK4-F1-model_v4_TED03:689-764	1	AF-A0A2P5TPK4-F1-model_v4_TED03	689-764	0
+A0A2S7UZN0.1	AF-A0A2S7UZN0-F1-model_v4_TED01:16-88	1	AF-A0A2S7UZN0-F1-model_v4_TED01	16-88	81.9%
+A0A2S7UZN0.1	AF-A0A2S7UZN0-F1-model_v4_TED02:163-249_526-605_618-684	1	AF-A0A2S7UZN0-F1-model_v4_TED02	163-684	0
+A0A2S7UZN0.1	AF-A0A2S7UZN0-F1-model_v4_TED03:266-479	1	AF-A0A2S7UZN0-F1-model_v4_TED03	266-479	0
+A0A2S7UZN0.1	AF-A0A2S7UZN0-F1-model_v4_TED04:694-784	1	AF-A0A2S7UZN0-F1-model_v4_TED04	694-784	0
+A0A2X4U3M0.1	AF-A0A2X4U3M0-F1-model_v4_TED02:278-501	1	AF-A0A2X4U3M0-F1-model_v4_TED02	278-501	0
+A0A2X4U3M0.1	AF-A0A2X4U3M0-F1-model_v4_TED03:710-797	1	AF-A0A2X4U3M0-F1-model_v4_TED03	710-797	0
+A0A2X4U3M0.1	AF-A0A2X4U3M0-F1-model_v4_TED01:15-79	1	AF-A0A2X4U3M0-F1-model_v4_TED01	15-79	73.0%
+A0A2Y9TYX4.1	AF-A0A2Y9TYX4-F1-model_v4_TED01:2-95	1	AF-A0A2Y9TYX4-F1-model_v4_TED01	2-95	100.0%
+A0A2Y9TYX4.1	AF-A0A2Y9TYX4-F1-model_v4_TED03:166-264_542-705	1	AF-A0A2Y9TYX4-F1-model_v4_TED03	166-705	0
+A0A2Y9TYX4.1	AF-A0A2Y9TYX4-F1-model_v4_TED04:278-492	1	AF-A0A2Y9TYX4-F1-model_v4_TED04	278-492	0
+A0A2Y9TYX4.1	AF-A0A2Y9TYX4-F1-model_v4_TED05:710-784	1	AF-A0A2Y9TYX4-F1-model_v4_TED05	710-784	0
+A0A2Y9TYX4.1	AF-A0A2Y9TYX4-F1-model_v4_TED02:117-151	1	AF-A0A2Y9TYX4-F1-model_v4_TED02	117-151	0
+A0A370QU71.1	AF-A0A370QU71-F1-model_v4_TED01:2-76	1	AF-A0A370QU71-F1-model_v4_TED01	2-76	84.3%
+
+... (truncated - showing first 100 of 180 lines)
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 23
+Total networks analyzed: 23
+Total network proteins: 1066
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF03170 (CBM_BcsB_1st)    23           32           100.0%
+PF29164 (FD_BcsB_1st)     23           32           100.0%
+PF29166 (FD_BcsB_2nd)     23           31           100.0%
+PF29167 (CBM_BcsB_2nd)    23           31           100.0%
+PF00483 (NTP_transferase) 22           63            95.7%
+PF00072 (Response_reg)    22           68            95.7%
+PF00512 (HisKA)           22           62            95.7%
+PF02518 (HATPase_c)       22           62            95.7%
+PF00990 (GGDEF)           22           141           95.7%
+PF11658 (CBP_BcsG)        22           22            95.7%
+PF29399 (BcsG_N)          22           22            95.7%
+PF08448 (PAS_4)           22           67            95.7%
+PF00989 (PAS)             22           71            95.7%
+PF01270 (Glyco_hydro_8)   22           25            95.7%
+PF02481 (DNA_processg_A)  22           25            95.7%
+PF17782 (WHD_DprA)        22           21            95.7%
+PF01522 (Polysacc_deac_1) 21           56            91.3%
+PF01627 (Hpt)             21           56            91.3%
+PF00563 (EAL)             21           102           91.3%
+PF05420 (BCSC_C)          21           28            91.3%
+PF13426 (PAS_9)           20           64            87.0%
+PF13432 (TPR_16)          20           28            87.0%
+PF04002 (RadC)            20           27            87.0%
+PF20582 (UPF0758_N)       20           19            87.0%
+PF06564 (CBP_BcsQ)        20           25            87.0%
+PF13188 (PAS_8)           19           45            82.6%
+PF14559 (TPR_19)          19           29            82.6%
+PF29871 (REC_BcsE)        18           17            78.3%
+PF29872 (BcsE_C)          18           17            78.3%
+PF00476 (DNA_pol_A)       18           17            78.3%
+PF01367 (5_3_exonuc)      18           17            78.3%
+PF01612 (DNA_pol_A_exo1)  18           17            78.3%
+PF02739 (5_3_exonuc_N)    18           17            78.3%
+PF22619 (DNA_polI_exo1)   18           17            78.3%
+PF00672 (HAMP)            17           24            73.9%
+PF18415 (HKR_ArcB_TM)     17           17            73.9%
+PF10945 (CBP_BcsR)        17           17            73.9%
+PF10995 (BcsE_N)          17           16            73.9%
+PF25317 (SAM_SMF)         17           17            73.9%
+PF13614 (AAA_31)          17           21            73.9%
+PF09984 (sCache_4)        16           16            69.6%
+PF01370 (Epimerase)       16           28            69.6%
+PF02719 (Polysacc_synt_2) 16           23            69.6%
+PF08447 (PAS_3)           15           31            65.2%
+PF01656 (CbiA)            15           20            65.2%
+PF01073 (3Beta_HSD)       15           24            65.2%
+PF16363 (GDP_Man_Dehyd)   15           26            65.2%
+PF00984 (UDPG_MGDP_dh)    15           15            65.2%
+PF03721 (UDPG_MGDP_dh_N)  15           15            65.2%
+PF03720 (UDPG_MGDP_dh_C)  15           15            65.2%
+PF11120 (CBP_BcsF)        13           13            56.5%
+PF24894 (Hexapep_GlmU)    13           13            56.5%
+PF00982 (Glyco_transf_20) 13           13            56.5%
+PF13176 (TPR_7)           13           13            56.5%
+PF13181 (TPR_8)           13           16            56.5%
+PF12804 (NTP_transf_3)    13           23            56.5%
+PF00535 (Glycos_transf_2) 13           14            56.5%
+PF04321 (RmlD_sub_bind)   13           20            56.5%
+PF17154 (GAPES3)          12           12            52.2%
+PF07719 (TPR_2)           12           13            52.2%
+PF14581 (SseB_C)          12           12            52.2%
+PF07238 (PilZ)            11           13            47.8%
+PF02397 (Bac_transf)      11           12            47.8%
+PF01590 (GAF)             11           17            47.8%
+PF07179 (SseB)            11           11            47.8%
+PF05231 (MASE1)           10           17            43.5%
+PF17157 (GAPES4)          10           10            43.5%
+PF13727 (CoA_binding_3)   10           11            43.5%
+PF02878 (PGM_PMM_I)       10           10            43.5%
+PF02879 (PGM_PMM_II)      10           10            43.5%
+PF02880 (PGM_PMM_III)     10           10            43.5%
+PF13185 (GAF_2)           10           15            43.5%
+PF00408 (PGM_PMM_IV)      9            9             39.1%
+PF13641 (Glyco_tranf_2_3) 9            10            39.1%
+PF00106 (adh_short)       9            8             39.1%
+PF12792 (CSS-motif)       8            9             34.8%
+PF02706 (Wzz)             8            9             34.8%
+PF13807 (GNVR)            8            9             34.8%
+PF23607 (WZC_N)           8            9             34.8%
+PF00933 (Glyco_hydro_3)   8            9             34.8%
+PF05230 (MASE2)           8            8             34.8%
+PF00501 (AMP-binding)     8            10            34.8%
+PF07993 (NAD_binding_4)   8            13            34.8%
+PF13632 (Glyco_trans_2_3) 8            8             34.8%
+PF13460 (NAD_binding_10)  8            7             34.8%
+PF08238 (Sel1)            8            10            34.8%
+
+... (truncated - showing first 100 of 5120 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P37653_TED01
+GA   27.00 27.00;
+TC   27.10 29.00;
+NC   25.20 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P37653
+RN   [1]
+RM   11260463
+RT   "The multicellular morphotypes of Salmonella typhimurium and
+RT   Escherichia coli produce cellulose as the second component of the
+RT   extracellular matrix.";
+RA   Zogaj X., Nimtz M., Rohde M., Bokranz W., Roemling U.;
+RL   Mol. Microbiol. 39:1452-1463(2001).
+RC   Function description for P37653
+RN   [2]
+RM   24097954
+RT   "Cellulose as an architectural element in spatially structured
+RT   Escherichia coli biofilms.";
+RA   Serra D.O., Richter A.M., Hengge R.;
+RL   J. Bacteriol. 195:5540-5554(2013).
+RC   Paper describing PDB structure 7lby
+RN   [3]
+RM   33712813
+RT   Molecular organization of the E. coli cellulose synthase
+RT   macrocomplex.
+RA   Acheson JF, Ho R, Goularte NF, Cegelski L, Zimmer J;
+RL   Nat Struct Mol Biol. 2021;28:310-318.
+RC   Paper describing PDB structure 9b8v
+RN   [4]
+RM   39242554
+RT   Insights into phosphoethanolamine cellulose synthesis and secretion
+RT   across the  Gram-negative cell envelope.
+RA   Verma P, Ho R, Chambers SA, Cegelski L, Zimmer J;
+RL   Nat Commun. 2024;15:7798.
+RC   Paper describing PDB structure 9fmv
+RN   [5]
+RM   39394223
+RT   Structural basis for synthase activation and cellulose modification
+RT   in the E.   coli Type II Bcs secretion system.
+RA   Anso I, Zouhir S, Sana TG, Krasteva PV;
+RL   Nat Commun. 2024;15:8799.
+
+--- End of Current DESC file ---

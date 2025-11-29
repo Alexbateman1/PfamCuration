@@ -1,0 +1,451 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YQEI_ECOLI              Reviewed;         269 AA.
+AC   Q46942; Q2M9Z0;
+DE   RecName: Full=Uncharacterized protein YqeI;
+GN   Name=yqeI; OrderedLocusNames=b2847, JW2815;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- SIMILARITY: To V.cholerae cholera toxin transcriptional activator
+CC       (ToxR). {ECO:0000305}.
+DR   EMBL; U29581; AAB40494.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC75886.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76916.1; -; Genomic_DNA.
+DR   PIR; H65067; H65067.
+DR   RefSeq; NP_417324.1; NC_000913.3.
+DR   RefSeq; WP_001300710.1; NZ_LN832404.1.
+DR   AlphaFoldDB; Q46942; -.
+DR   SMR; Q46942; -.
+DR   BioGRID; 4261700; 81.
+DR   BioGRID; 851654; 1.
+DR   DIP; DIP-12856N; -.
+DR   FunCoup; Q46942; 28.
+DR   IntAct; Q46942; 3.
+DR   STRING; 511145.b2847; -.
+DR   PaxDb; 511145-b2847; -.
+DR   EnsemblBacteria; AAC75886; AAC75886; b2847.
+DR   GeneID; 947327; -.
+DR   KEGG; ecj:JW2815; -.
+DR   KEGG; eco:b2847; -.
+DR   KEGG; ecoc:C3026_15630; -.
+DR   PATRIC; fig|1411691.4.peg.3886; -.
+DR   EchoBASE; EB2903; -.
+DR   eggNOG; COG3710; Bacteria.
+DR   HOGENOM; CLU_075545_0_1_6; -.
+DR   InParanoid; Q46942; -.
+DR   OMA; ANCLSHY; -.
+DR   OrthoDB; 7003224at2; -.
+DR   PhylomeDB; Q46942; -.
+DR   BioCyc; EcoCyc:G7467-MONOMER; -.
+DR   PHI-base; PHI:10944; -.
+DR   PRO; PR:Q46942; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0003677; F:DNA binding; IEA:UniProtKB-KW.
+DR   GO; GO:0000160; P:phosphorelay signal transduction system; IEA:InterPro.
+DR   GO; GO:0006355; P:regulation of DNA-templated transcription; IEA:InterPro.
+DR   Gene3D; 1.10.10.10; Winged helix-like DNA-binding domain superfamily/Winged helix DNA-binding domain; 1.
+DR   InterPro; IPR001867; OmpR/PhoB-type_DNA-bd.
+DR   InterPro; IPR016032; Sig_transdc_resp-reg_C-effctor.
+DR   InterPro; IPR036388; WH-like_DNA-bd_sf.
+DR   Pfam; PF00486; Trans_reg_C; 1.
+DR   SMART; SM00862; Trans_reg_C; 1.
+DR   SUPFAM; SSF46894; C-terminal effector domain of the bipartite response regulators; 1.
+DR   PROSITE; PS51755; OMPR_PHOB; 1.
+PE   4: Predicted;
+KW   DNA-binding; Reference proteome; Transcription; Transcription regulation.
+FT   CHAIN           1..269
+FT                   /note="Uncharacterized protein YqeI"
+FT                   /id="PRO_0000169347"
+FT   DNA_BIND        3..105
+FT                   /note="OmpR/PhoB-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01091"
+SQ   SEQUENCE   269 AA;  30850 MW;  2E027292E3B3E3CC CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Jejubacter.
+3	6	Kosakonia.
+3	5	Erwiniaceae
+3	5	Budviciaceae
+16	5	Enterobacteriaceae
+24	4	Enterobacterales
+24	3	Gammaproteobacteria
+24	2	Pseudomonadota
+24	1	Pseudomonadati
+24	0	Bacteria
+Total of 25 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3CNX7	OMPR/PHOB-TYPE DOMAIN-CON    110.5    1.5e-28   1   1.4   0.6
+	Iterate                   	   188	   266	   109.7
+	PF00486	Trans_reg_C     	    25	   103	    37.4
+
+A0A0L0GWE6	OMPR/PHOB-TYPE DOMAIN-CON    104.6    1.1e-26   1   1.4   2.1
+	Iterate                   	   191	   269	   103.7
+	PF00486	Trans_reg_C     	    25	   103	      37
+
+A0A0L0GXR8	OMPR/PHOB-TYPE DOMAIN-CON    106.0    3.7e-27   1   1.3   0.4
+	Iterate                   	   193	   271	   105.3
+	PF00486	Trans_reg_C     	    25	   103	    36.4
+
+H9L4A6	TRANSCRIPTIONAL REGULATORY PR    106.5    2.7e-27   1   1.6   0.1
+	Iterate                   	   201	   279	   105.3
+	PF00486	Trans_reg_C     	    56	   134	      48
+
+Q46942	UNCHARACTERIZED PROTEIN YQEI        95.2    9.1e-24   1   1.4   0.5
+	Iterate                   	   185	   263	    94.4
+	PF00486	Trans_reg_C     	    25	   103	      37
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS1937804 (E-value: 3.8e-20, Score: 77.1)
+Mentioned as: STM3759.S
+Description: putative transcriptional regulator
+Organism: Salmonella typhimurium LT2
+PMID: 23505508
+Source: EuropePMC
+Title: Virulence gene profiling and pathogenicity characterization of non-typhoidal Salmonella accounted for invasive disease in humans
+Journal: PloS one (2013)
+Snippet: STM3757 + + + + + + + + + + + + + marT STM3759.S + + + + + + + + + + + + + mgtC STM3764 + + + + + + + + + + + + + STM3780 +
+
+================================================================================
+Protein: VIMSS902065 (E-value: 4.2e-20, Score: 77.0)
+Mentioned as: SC3680
+Description: putative transcriptional regulatory protein
+Organism: Salmonella enterica subsp. enterica serovar Choleraesuis str. SC-B67
+PMID: 20126447
+Source: EuropePMC
+Title: The type III secretion effector NleE inhibits NF-kappaB activation
+Journal: PLoS pathogens (2010)
+Snippet: HeLa cells were either uninfected (N/I) or infected with a strain deleted of nleE IE6 (SC3680) (see Fig. 2A ), complemented or not complemented with plasmids expressing NleE IE2 or NleE IE6 (indicated as E2 and E6, respectively). After 3h, cells were washed, treated with TNF
+
+================================================================================
+Protein: VIMSS16928 (E-value: 1.4e-18, Score: 72.1)
+Mentioned as: b2847
+Description: predicted transcriptional regulator
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 20222947
+Source: EuropePMC
+Title: Depletion of the non-coding regulatory 6S RNA in E. coli causes a surprising reduction in the expression of the translation machinery
+Journal: BMC genomics (2010)
+Snippet: osmE 1.90 transcriptional activator b2597 yfiA 1.85 cold shock protein associated with 30S ribosomal subunit b2847 yqeI 1.78 predicted transcriptional regulator b3361 fic 1.71 stationary-phase protein, cell division b2707 srlR 1.69 transcriptional repressor b3555 yiaG 1.67 predicted transcriptional regulator b3556 cspA 1.66 major cold shock protein
+
+================================================================================
+Protein: VIMSS16928 (E-value: 1.4e-18, Score: 72.1)
+Mentioned as: b2847
+Description: predicted transcriptional regulator
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 19435425
+Source: EuropePMC
+Title: Remaining flexible in old alliances: functional plasticity in constrained mutualisms
+Journal: DNA and cell biology (2009)
+Snippet: - - yjeA b4155 - - - BU582 - Bbp528 yqeI b2847 Bpen401 Bfl390 WGLp467 - - - yrbA b3190 Bpen046 Bfl045 WGLp328 BU385 BUsg372 Bbp348 zur b4046 Bpen026 Bfl026 - -
+
+================================================================================
+Protein: VIMSS95173 (E-value: 1.6e-18, Score: 72.0)
+Mentioned as: ECs3704
+Description: putative sensory transducer
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 24641581
+Source: EuropePMC
+Title: Escherichia coli type III secretion system 2: a new kind of T3SS?
+Journal: Veterinary research (2014)
+Snippet: ETT2 ORFs Gene in Sakai strain Length (bp) Homologs * Putative function ECs3703 693 yqeH ECs3704 810 yqeI Sensory transducer ECs3705 480 yqeJ ECs3706 438 yqeK ECs3707 492 ygeF ECs3708 492 ygeG , sicA Chaperone ECs3709 1377 ygeH Transcriptional regulator ECs3710 219 B2853 ECs3711 402 B2854,
+
+================================================================================
+Protein: VIMSS95173 (E-value: 1.6e-18, Score: 72.0)
+Mentioned as: ECs3704
+Description: putative sensory transducer
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 15150243
+Source: EuropePMC
+Title: The ETT2 gene cluster, encoding a second type III secretion system from Escherichia coli, is present in the majority of strains but has undergone widespread mutational attrition
+Journal: Journal of bacteriology (2004)
+Snippet: at the protein level over a 190-amino-acid stretch), yqeI (ECs3704) is homologous to marT (41% identity at the protein level over a 101-amino-acid stretch), and
+
+================================================================================
+Protein: VIMSS92743 (E-value: 1.3e-14, Score: 59.4)
+Mentioned as: ECs1274
+Description: putative transcriptional regulator
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 31752303
+Source: EuropePMC
+Title: Pre-Harvest Survival and Post-Harvest Chlorine Tolerance of Enterohemorrhagic <i>Escherichia coli</i> on Lettuce
+Journal: Toxins (2019)
+Snippet: protein EspY 1.7 4.2 2.5 ECs0865 ybhM BAX Inhibitor-1 family inner membrane protein 4.6 5.1 ECs1274 grvA Transcriptional regulator 1.8 3.9 2.1 ECs1388 pchD Putative transcriptional regulator 3.7 3.9 ECs1417 csgD Transcriptional regulator CsgD 4.5 3.3 ECs1438 bssS biofilm regulator 3.4 4.2 ECs1490 bhsA multiple stress
+
+================================================================================
+Protein: VIMSS92743 (E-value: 1.3e-14, Score: 59.4)
+Mentioned as: ECs1274
+Description: putative transcriptional regulator
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 17711596
+Source: EuropePMC
+Title: Extensive genomic diversity and selective conservation of virulence-determinants in enterohemorrhagic Escherichia coli strains of O157 and non-O157 serotypes
+Journal: Genome biology (2007)
+Snippet: [6] [6] ECs2974 Sp15 Absent Stx1A - - - - 6 (7) [6] [6] Regulators ECs1274 s-loop71 Absent GrvA - - - - [8] 0 0 0 ECs1388 SpLE1 Absent PchD + - - + 4 (7) 2 2 ECs1588 Sp7 Absent PchE - - -
+
+================================================================================
+Protein: VIMSS92743 (E-value: 1.3e-14, Score: 59.4)
+Mentioned as: ECs1274
+Description: putative transcriptional regulator
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 17054788
+Source: EuropePMC
+Title: inGeno--an integrated genome and ortholog viewer for improved genome to genome comparisons
+Journal: BMC bioinformatics (2006)
+Snippet: the strain-specific island of E. coli O157:H7 Locus Annotation ECs1272 Rtn-like protein ECs1273 FidL-like protein ECs1274 putative transcriptional regulator ECs1275 putative oxidoreductase ECs1276 putative chaperone protein ECs1277 putative outer membrane protein ECs1278 putative outer membrane usher protein ECs1279 putative chaperone protein ECs1280 putative major pilin protein
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A014PTD9.1	AF-A0A014PTD9-F1-model_v4_TED01:5-111	1	AF-A0A014PTD9-F1-model_v4_TED01	5-111	0
+A0A014PTD9.1	AF-A0A014PTD9-F1-model_v4_TED02:200-271	1	AF-A0A014PTD9-F1-model_v4_TED02	200-271	94.7%
+A0A083ZYJ4.1	AF-A0A083ZYJ4-F1-model_v4_TED01:3-113	1	AF-A0A083ZYJ4-F1-model_v4_TED01	3-113	0
+A0A083ZYJ4.1	AF-A0A083ZYJ4-F1-model_v4_TED02:182-253	1	AF-A0A083ZYJ4-F1-model_v4_TED02	182-253	95.9%
+A0A085FYX9.1	AF-A0A085FYX9-F1-model_v4_TED01:6-111	1	AF-A0A085FYX9-F1-model_v4_TED01	6-111	0
+A0A085FYX9.1	AF-A0A085FYX9-F1-model_v4_TED02:223-297	1	AF-A0A085FYX9-F1-model_v4_TED02	223-297	96.1%
+A0A085G3L3.1	AF-A0A085G3L3-F1-model_v4_TED01:8-118	1	AF-A0A085G3L3-F1-model_v4_TED01	8-118	0
+A0A085G3L3.1	AF-A0A085G3L3-F1-model_v4_TED02:190-264	1	AF-A0A085G3L3-F1-model_v4_TED02	190-264	97.4%
+A0A085GA37.1	AF-A0A085GA37-F1-model_v4_TED01:4-115	1	AF-A0A085GA37-F1-model_v4_TED01	4-115	0
+A0A085GA37.1	AF-A0A085GA37-F1-model_v4_TED02:180-262	1	AF-A0A085GA37-F1-model_v4_TED02	180-262	97.4%
+A0A085U5G9.1	AF-A0A085U5G9-F1-model_v4_TED01:5-113	1	AF-A0A085U5G9-F1-model_v4_TED01	5-113	0
+A0A085U5G9.1	AF-A0A085U5G9-F1-model_v4_TED02:226-300	1	AF-A0A085U5G9-F1-model_v4_TED02	226-300	84.9%
+A0A0A8VCH5.1	AF-A0A0A8VCH5-F1-model_v4_TED01:3-113	1	AF-A0A0A8VCH5-F1-model_v4_TED01	3-113	0
+A0A0A8VCH5.1	AF-A0A0A8VCH5-F1-model_v4_TED02:176-253	1	AF-A0A0A8VCH5-F1-model_v4_TED02	176-253	97.5%
+A0A0C2NKD5.1	AF-A0A0C2NKD5-F1-model_v4_TED01:3-113	1	AF-A0A0C2NKD5-F1-model_v4_TED01	3-113	0
+A0A0C2NKD5.1	AF-A0A0C2NKD5-F1-model_v4_TED02:193-270	1	AF-A0A0C2NKD5-F1-model_v4_TED02	193-270	96.2%
+A0A0H3CCX4.1	AF-A0A0H3CCX4-F1-model_v4_TED01:3-116	1	AF-A0A0H3CCX4-F1-model_v4_TED01	3-116	0
+A0A0H3CCX4.1	AF-A0A0H3CCX4-F1-model_v4_TED02:184-261	1	AF-A0A0H3CCX4-F1-model_v4_TED02	184-261	100.0%
+A0A0H3CNX7.1	AF-A0A0H3CNX7-F1-model_v4_TED01:1-111	1	AF-A0A0H3CNX7-F1-model_v4_TED01	1-111	0
+A0A0H3CNX7.1	AF-A0A0H3CNX7-F1-model_v4_TED02:190-266	1	AF-A0A0H3CNX7-F1-model_v4_TED02	190-266	97.5%
+A0A0H3FKN3.1	AF-A0A0H3FKN3-F1-model_v4_TED01:7-119	1	AF-A0A0H3FKN3-F1-model_v4_TED01	7-119	0
+A0A0H3FKN3.1	AF-A0A0H3FKN3-F1-model_v4_TED02:191-265	1	AF-A0A0H3FKN3-F1-model_v4_TED02	191-265	97.4%
+A0A0L0GWE6.1	AF-A0A0L0GWE6-F1-model_v4_TED01:3-113	1	AF-A0A0L0GWE6-F1-model_v4_TED01	3-113	0
+A0A0L0GWE6.1	AF-A0A0L0GWE6-F1-model_v4_TED02:193-271	1	AF-A0A0L0GWE6-F1-model_v4_TED02	193-271	97.5%
+A0A0L0GXR8.1	AF-A0A0L0GXR8-F1-model_v4_TED01:3-113	1	AF-A0A0L0GXR8-F1-model_v4_TED01	3-113	0
+A0A0L0GXR8.1	AF-A0A0L0GXR8-F1-model_v4_TED02:195-272	1	AF-A0A0L0GXR8-F1-model_v4_TED02	195-272	97.5%
+A0A1C4D6H0.1	AF-A0A1C4D6H0-F1-model_v4_TED01:6-41	1	AF-A0A1C4D6H0-F1-model_v4_TED01	6-41	0
+A0A1C4D6H0.1	AF-A0A1C4D6H0-F1-model_v4_TED02:144-222	1	AF-A0A1C4D6H0-F1-model_v4_TED02	144-222	97.5%
+A0A1C4DQC9.1	AF-A0A1C4DQC9-F1-model_v4_TED01:3-109	1	AF-A0A1C4DQC9-F1-model_v4_TED01	3-109	0
+A0A1C4DQC9.1	AF-A0A1C4DQC9-F1-model_v4_TED02:175-253	1	AF-A0A1C4DQC9-F1-model_v4_TED02	175-253	100.0%
+A0A1S8CFY8.1	AF-A0A1S8CFY8-F1-model_v4_TED01:10-120	1	AF-A0A1S8CFY8-F1-model_v4_TED01	10-120	0
+A0A1S8CFY8.1	AF-A0A1S8CFY8-F1-model_v4_TED02:190-263	1	AF-A0A1S8CFY8-F1-model_v4_TED02	190-263	97.3%
+A0A370QRB9.1	AF-A0A370QRB9-F1-model_v4_TED01:4-114	1	AF-A0A370QRB9-F1-model_v4_TED01	4-114	0
+A0A370QRB9.1	AF-A0A370QRB9-F1-model_v4_TED02:184-274	1	AF-A0A370QRB9-F1-model_v4_TED02	184-274	100.0%
+A0A443IAC9.1	AF-A0A443IAC9-F1-model_v4_TED01:5-115	1	AF-A0A443IAC9-F1-model_v4_TED01	5-115	0
+A0A443IAC9.1	AF-A0A443IAC9-F1-model_v4_TED02:190-265	1	AF-A0A443IAC9-F1-model_v4_TED02	190-265	97.4%
+A0A443IE72.1	AF-A0A443IE72-F1-model_v4_TED01:3-116	1	AF-A0A443IE72-F1-model_v4_TED01	3-116	0
+A0A443IE72.1	AF-A0A443IE72-F1-model_v4_TED02:236-311	1	AF-A0A443IE72-F1-model_v4_TED02	236-311	97.4%
+A0A484WUH0.1	AF-A0A484WUH0-F1-model_v4_TED01:5-114	1	AF-A0A484WUH0-F1-model_v4_TED01	5-114	0
+A0A484WUH0.1	AF-A0A484WUH0-F1-model_v4_TED02:190-267	1	AF-A0A484WUH0-F1-model_v4_TED02	190-267	100.0%
+A0A484XPR2.1	AF-A0A484XPR2-F1-model_v4_TED01:5-117	1	AF-A0A484XPR2-F1-model_v4_TED01	5-117	0
+A0A484XPR2.1	AF-A0A484XPR2-F1-model_v4_TED02:185-259	1	AF-A0A484XPR2-F1-model_v4_TED02	185-259	96.1%
+A0A4P8YFH5.1	AF-A0A4P8YFH5-F1-model_v4_TED01:5-114	1	AF-A0A4P8YFH5-F1-model_v4_TED01	5-114	0
+A0A4P8YFH5.1	AF-A0A4P8YFH5-F1-model_v4_TED02:208-283	1	AF-A0A4P8YFH5-F1-model_v4_TED02	208-283	97.4%
+A0A4P8YN14.1	AF-A0A4P8YN14-F1-model_v4_TED01:4-115	1	AF-A0A4P8YN14-F1-model_v4_TED01	4-115	0
+A0A4P8YN14.1	AF-A0A4P8YN14-F1-model_v4_TED02:180-257	1	AF-A0A4P8YN14-F1-model_v4_TED02	180-257	100.0%
+A0A4U9D0A8.1	AF-A0A4U9D0A8-F1-model_v4_TED01:4-115	1	AF-A0A4U9D0A8-F1-model_v4_TED01	4-115	0
+A0A4U9D0A8.1	AF-A0A4U9D0A8-F1-model_v4_TED02:188-263	1	AF-A0A4U9D0A8-F1-model_v4_TED02	188-263	97.4%
+A0A4U9D7H6.1	AF-A0A4U9D7H6-F1-model_v4_TED01:2-128	1	AF-A0A4U9D7H6-F1-model_v4_TED01	2-128	0
+A0A4U9D7H6.1	AF-A0A4U9D7H6-F1-model_v4_TED02:232-308	1	AF-A0A4U9D7H6-F1-model_v4_TED02	232-308	97.4%
+A0A4V1G867.1	AF-A0A4V1G867-F1-model_v4_TED01:10-116	1	AF-A0A4V1G867-F1-model_v4_TED01	10-116	0
+A0A4V1G867.1	AF-A0A4V1G867-F1-model_v4_TED02:213-291	1	AF-A0A4V1G867-F1-model_v4_TED02	213-291	97.5%
+A0A542BK21.1	AF-A0A542BK21-F1-model_v4_TED01:10-118	1	AF-A0A542BK21-F1-model_v4_TED01	10-118	0
+A0A542BK21.1	AF-A0A542BK21-F1-model_v4_TED02:187-259	1	AF-A0A542BK21-F1-model_v4_TED02	187-259	96.1%
+A0A542D7F2.1	AF-A0A542D7F2-F1-model_v4_TED01:4-113	1	AF-A0A542D7F2-F1-model_v4_TED01	4-113	0
+A0A542D7F2.1	AF-A0A542D7F2-F1-model_v4_TED02:182-261	1	AF-A0A542D7F2-F1-model_v4_TED02	182-261	100.0%
+A0A5M7QN88.1	AF-A0A5M7QN88-F1-model_v4_TED01:4-115	1	AF-A0A5M7QN88-F1-model_v4_TED01	4-115	0
+A0A5M7QN88.1	AF-A0A5M7QN88-F1-model_v4_TED02:207-285	1	AF-A0A5M7QN88-F1-model_v4_TED02	207-285	100.0%
+A0A5R9LLW4.1	AF-A0A5R9LLW4-F1-model_v4_TED01:4-113	1	AF-A0A5R9LLW4-F1-model_v4_TED01	4-113	0
+A0A5R9LLW4.1	AF-A0A5R9LLW4-F1-model_v4_TED02:175-254	1	AF-A0A5R9LLW4-F1-model_v4_TED02	175-254	100.0%
+A0A6D1SBR9.1	AF-A0A6D1SBR9-F1-model_v4_TED01:3-116	1	AF-A0A6D1SBR9-F1-model_v4_TED01	3-116	0
+A0A6D1SBR9.1	AF-A0A6D1SBR9-F1-model_v4_TED02:219-294	1	AF-A0A6D1SBR9-F1-model_v4_TED02	219-294	97.4%
+A0A6M8UI51.1	AF-A0A6M8UI51-F1-model_v4_TED01:3-65	1	AF-A0A6M8UI51-F1-model_v4_TED01	3-65	0
+A0A6M8UI51.1	AF-A0A6M8UI51-F1-model_v4_TED03:187-262	1	AF-A0A6M8UI51-F1-model_v4_TED03	187-262	97.4%
+A0A6M8UI51.1	AF-A0A6M8UI51-F1-model_v4_TED02:146-182	1	AF-A0A6M8UI51-F1-model_v4_TED02	146-182	0
+A0A6M8UN59.1	AF-A0A6M8UN59-F1-model_v4_TED01:8-118	1	AF-A0A6M8UN59-F1-model_v4_TED01	8-118	0
+A0A6M8UN59.1	AF-A0A6M8UN59-F1-model_v4_TED02:194-271	1	AF-A0A6M8UN59-F1-model_v4_TED02	194-271	100.0%
+A0A7Z8ZEW3.1	AF-A0A7Z8ZEW3-F1-model_v4_TED01:3-115	1	AF-A0A7Z8ZEW3-F1-model_v4_TED01	3-115	0
+A0A7Z8ZEW3.1	AF-A0A7Z8ZEW3-F1-model_v4_TED02:218-292	1	AF-A0A7Z8ZEW3-F1-model_v4_TED02	218-292	97.4%
+A0A7Z9CTH6.1	AF-A0A7Z9CTH6-F1-model_v4_TED01:10-118	1	AF-A0A7Z9CTH6-F1-model_v4_TED01	10-118	0
+A0A7Z9CTH6.1	AF-A0A7Z9CTH6-F1-model_v4_TED02:229-299	1	AF-A0A7Z9CTH6-F1-model_v4_TED02	229-299	95.9%
+A0A807LFB9.1	AF-A0A807LFB9-F1-model_v4_TED01:3-113	1	AF-A0A807LFB9-F1-model_v4_TED01	3-113	0
+A0A807LFB9.1	AF-A0A807LFB9-F1-model_v4_TED02:206-283	1	AF-A0A807LFB9-F1-model_v4_TED02	206-283	96.2%
+B2VGK3.1	AF-B2VGK3-F1-model_v4_TED01:9-120	1	AF-B2VGK3-F1-model_v4_TED01	9-120	0
+B2VGK3.1	AF-B2VGK3-F1-model_v4_TED02:221-296	1	AF-B2VGK3-F1-model_v4_TED02	221-296	96.2%
+B2VJM5.1	AF-B2VJM5-F1-model_v4_TED01:6-40	1	AF-B2VJM5-F1-model_v4_TED01	6-40	0
+B2VJM5.1	AF-B2VJM5-F1-model_v4_TED02:138-213	1	AF-B2VJM5-F1-model_v4_TED02	138-213	100.0%
+D2TJK6.1	AF-D2TJK6-F1-model_v4_TED01:13-84	1	AF-D2TJK6-F1-model_v4_TED01	13-84	0
+D2TJK6.1	AF-D2TJK6-F1-model_v4_TED02:179-256	1	AF-D2TJK6-F1-model_v4_TED02	179-256	96.2%
+D4E084.1	AF-D4E084-F1-model_v4_TED01:3-115	1	AF-D4E084-F1-model_v4_TED01	3-115	0
+D4E084.1	AF-D4E084-F1-model_v4_TED02:186-259	1	AF-D4E084-F1-model_v4_TED02	186-259	98.7%
+D4E1P4.1	AF-D4E1P4-F1-model_v4_TED01:2-114	1	AF-D4E1P4-F1-model_v4_TED01	2-114	0
+D4E1P4.1	AF-D4E1P4-F1-model_v4_TED02:191-266	1	AF-D4E1P4-F1-model_v4_TED02	191-266	100.0%
+D4GDS5.1	AF-D4GDS5-F1-model_v4_TED01:12-118	1	AF-D4GDS5-F1-model_v4_TED01	12-118	0
+D4GDS5.1	AF-D4GDS5-F1-model_v4_TED02:224-299	1	AF-D4GDS5-F1-model_v4_TED02	224-299	100.0%
+D8MR48.1	AF-D8MR48-F1-model_v4_TED01:4-116	1	AF-D8MR48-F1-model_v4_TED01	4-116	0
+D8MR48.1	AF-D8MR48-F1-model_v4_TED02:201-278	1	AF-D8MR48-F1-model_v4_TED02	201-278	96.2%
+E3GCT8.1	AF-E3GCT8-F1-model_v4_TED01:3-116	1	AF-E3GCT8-F1-model_v4_TED01	3-116	0
+E3GCT8.1	AF-E3GCT8-F1-model_v4_TED02:172-248	1	AF-E3GCT8-F1-model_v4_TED02	172-248	100.0%
+E3GD53.1	AF-E3GD53-F1-model_v4_TED01:3-113	1	AF-E3GD53-F1-model_v4_TED01	3-113	0
+E3GD53.1	AF-E3GD53-F1-model_v4_TED02:197-275	1	AF-E3GD53-F1-model_v4_TED02	197-275	97.5%
+H9L4A6.1	AF-H9L4A6-F1-model_v4_TED01:31-151	1	AF-H9L4A6-F1-model_v4_TED01	31-151	0
+H9L4A6.1	AF-H9L4A6-F1-model_v4_TED02:202-279	1	AF-H9L4A6-F1-model_v4_TED02	202-279	98.7%
+I2BD89.1	AF-I2BD89-F1-model_v4_TED01:5-120	1	AF-I2BD89-F1-model_v4_TED01	5-120	0
+I2BD89.1	AF-I2BD89-F1-model_v4_TED02:185-258	1	AF-I2BD89-F1-model_v4_TED02	185-258	97.3%
+Q46942.1	AF-Q46942-F1-model_v4_TED01:1-111	1	AF-Q46942-F1-model_v4_TED01	1-111	0
+Q46942.1	AF-Q46942-F1-model_v4_TED02:185-263	1	AF-Q46942-F1-model_v4_TED02	185-263	100.0%
+Q8XAQ6.1	AF-Q8XAQ6-F1-model_v4_TED01:1-112	1	AF-Q8XAQ6-F1-model_v4_TED01	1-112	0
+Q8XAQ6.1	AF-Q8XAQ6-F1-model_v4_TED02:189-267	1	AF-Q8XAQ6-F1-model_v4_TED02	189-267	100.0%
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 10
+Total networks analyzed: 10
+Total network proteins: 147
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF27292 (YqeJ_C)          9            10            90.0%
+PF00590 (TP_methylase)    5            6             50.0%
+PF10414 (CysG_dimeriser)  5            7             50.0%
+PF13241 (NAD_binding_7)   5            7             50.0%
+PF14824 (Sirohm_synth_M)  5            7             50.0%
+PF00267 (Porin_1)         4            5             40.0%
+PF13609 (Porin_4)         4            3             40.0%
+PF07947 (YhhN)            4            3             40.0%
+PF10928 (DUF2810)         4            3             40.0%
+PF00486 (Trans_reg_C)     3            3             30.0%
+PF07017 (PagP)            3            2             30.0%
+PF07191 (Zn_ribbon_6)     3            2             30.0%
+PF02413 (Caudo_TAP)       3            3             30.0%
+PF28596 (Caudo_TAP_N)     3            3             30.0%
+PF07720 (TPR_3)           2            3             20.0%
+PF00419 (Fimbrial)        2            2             20.0%
+PF08238 (Sel1)            2            1             20.0%
+PF07338 (YdgH_BhsA-like)  2            2             20.0%
+PF00359 (PTS_EIIA_2)      2            1             20.0%
+PF08279 (HTH_11)          2            1             20.0%
+PF08755 (YccV-like)       2            2             20.0%
+PF06316 (Ail_Lom)         2            2             20.0%
+PF13505 (OMP_b-brl)       2            2             20.0%
+PF10769 (DUF2594)         2            2             20.0%
+PF00324 (AA_permease)     2            3             20.0%
+PF13520 (AA_permease_2)   2            3             20.0%
+PF27348 (EcpR_N)          1            1             10.0%
+PF06560 (GPI)             1            1             10.0%
+PF01261 (AP_endonuc_2)    1            1             10.0%
+PF07445 (PriC)            1            1             10.0%
+PF09864 (MliC)            1            1             10.0%
+PF13454 (NAD_binding_9)   1            1             10.0%
+PF30338 (YdhS_M)          1            1             10.0%
+PF00892 (EamA)            1            1             10.0%
+PF00893 (Multi_Drug_Res)  1            1             10.0%
+PF02611 (CDH)             1            1             10.0%
+PF00196 (GerE)            1            1             10.0%
+PF03472 (Autoind_bind)    1            1             10.0%
+PF03211 (Pectate_lyase)   1            1             10.0%
+PF00263 (Secretin)        1            1             10.0%
+PF03958 (Secretin_N)      1            1             10.0%
+PF23536 (TraK_C)          1            1             10.0%
+PF16970 (FimA)            1            1             10.0%
+PF04829 (PT-VENN)         1            1             10.0%
+PF14436 (EndoU_bacteria)  1            1             10.0%
+PF21726 (DUF6862)         1            1             10.0%
+PF13036 (LpoB)            1            1             10.0%
+PF01052 (FliMN_C)         1            1             10.0%
+PF27361 (HrcQa_N)         1            1             10.0%
+PF07332 (Phage_holin_3_6) 1            1             10.0%
+PF12805 (FUSC-like)       1            1             10.0%
+PF13515 (FUSC_2)          1            1             10.0%
+PF12833 (HTH_18)          1            1             10.0%
+PF01337 (Barstar)         1            1             10.0%
+PF13721 (SecD-TM1)        1            1             10.0%
+PF13980 (UPF0370)         1            1             10.0%
+PF07869 (DUF1656)         1            1             10.0%
+PF00563 (EAL)             1            1             10.0%
+PF12792 (CSS-motif)       1            1             10.0%
+PF22036 (MoaF_like)       1            1             10.0%
+PF00990 (GGDEF)           1            1             10.0%
+PF11563 (Protoglobin)     1            1             10.0%
+PF21118 (DosC_2nd)        1            1             10.0%
+PF07007 (LprI)            1            1             10.0%
+PF03916 (NrfD)            1            1             10.0%
+PF18352 (Gp138_N)         1            1             10.0%
+PF03212 (Pertactin)       1            20            10.0%
+PF03797 (Autotransporter) 1            27            10.0%
+PF18883 (AC_1)            1            29            10.0%
+PF12951 (PATR)            1            9             10.0%
+PF13018 (ESPR)            1            11            10.0%
+PF27417 (BigA_3rd)        1            2             10.0%
+PF06004 (DUF903)          1            1             10.0%
+PF06790 (UPF0259)         1            1             10.0%
+PF01569 (PAP2)            1            1             10.0%
+PF14378 (PAP2_3)          1            1             10.0%
+PF04728 (LPP)             1            1             10.0%
+PF06440 (DNA_pol3_theta)  1            1             10.0%
+PF29514 (E217_gp31_C)     1            1             10.0%
+PF11863 (E217_gp31_N)     1            1             10.0%
+PF07305 (DUF1454)         1            1             10.0%
+PF13435 (Cytochrome_C554) 1            1             10.0%
+PF22678 (Cytochrom_c_NrfB-like) 1            1             10.0%
+PF02602 (HEM4)            1            1             10.0%
+PF16168 (AIDA)            1            1             10.0%
+PF00440 (TetR_N)          1            1             10.0%
+
+... (truncated - showing first 100 of 746 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q46942_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   29.90 29.10;
+NC   24.50 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

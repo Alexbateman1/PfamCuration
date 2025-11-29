@@ -1,0 +1,360 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   STFR_ECOLI              Reviewed;        1120 AA.
+AC   P76072; P77560;
+DE   RecName: Full=Prophage side tail fiber protein homolog StfR {ECO:0000305};
+DE   AltName: Full=Side tail fiber protein homolog from lambdoid prophage Rac;
+GN   Name=stfR; Synonyms=ynaB; OrderedLocusNames=b1372, JW1366;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9097039; DOI=10.1093/dnares/3.6.363;
+RA   Aiba H., Baba T., Fujita K., Hayashi K., Inada T., Isono K., Itoh T.,
+RA   Kasai H., Kashimoto K., Kimura S., Kitakawa M., Kitagawa M., Makino K.,
+RA   Miki T., Mizobuchi K., Mori H., Mori T., Motomura K., Nakade S.,
+RA   Nakamura Y., Nashimoto H., Nishio Y., Oshima T., Saito N., Sampei G.,
+RA   Seki Y., Sivasundaram S., Tagami H., Takeda J., Takemoto K., Takeuchi Y.,
+RA   Wada C., Yamamoto Y., Horiuchi T.;
+RT   "A 570-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 28.0-40.1 min region on the linkage map.";
+RL   DNA Res. 3:363-377(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- SIMILARITY: Belongs to the tail fiber family. {ECO:0000305}.
+DR   EMBL; U00096; AAC74454.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA14966.1; -; Genomic_DNA.
+DR   PIR; G64887; G64887.
+DR   RefSeq; NP_415890.2; NC_000913.3.
+DR   RefSeq; WP_000279097.1; NZ_JACEFP010000076.1.
+DR   AlphaFoldDB; P76072; -.
+DR   SMR; P76072; -.
+DR   BioGRID; 4260171; 152.
+DR   BioGRID; 849592; 2.
+DR   DIP; DIP-10932N; -.
+DR   FunCoup; P76072; 261.
+DR   IntAct; P76072; 17.
+DR   STRING; 511145.b1372; -.
+DR   PaxDb; 511145-b1372; -.
+DR   EnsemblBacteria; AAC74454; AAC74454; b1372.
+DR   GeneID; 945207; -.
+DR   KEGG; ecj:JW1366; -.
+DR   KEGG; eco:b1372; -.
+DR   PATRIC; fig|511145.12.peg.1433; -.
+DR   EchoBASE; EB3152; -.
+DR   eggNOG; COG5301; Bacteria.
+DR   HOGENOM; CLU_008928_4_2_6; -.
+DR   InParanoid; P76072; -.
+DR   OMA; TECINAR; -.
+DR   OrthoDB; 9810174at2; -.
+DR   BioCyc; EcoCyc:G6695-MONOMER; -.
+DR   PRO; PR:P76072; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005198; F:structural molecule activity; IEA:InterPro.
+DR   Gene3D; 2.60.40.1120; Carboxypeptidase-like, regulatory domain; 1.
+DR   Gene3D; 3.90.1340.10; Phage tail collar domain; 1.
+DR   InterPro; IPR008969; CarboxyPept-like_regulatory.
+DR   InterPro; IPR048390; Gp34_trimer.
+DR   InterPro; IPR005003; Phage_lambda_Stf-r1.
+DR   InterPro; IPR011083; Phage_tail_collar_dom.
+DR   InterPro; IPR037053; Phage_tail_collar_dom_sf.
+DR   InterPro; IPR051934; Phage_Tail_Fiber_Structural.
+DR   InterPro; IPR013609; Stf-like_N.
+DR   PANTHER; PTHR35191; PROPHAGE SIDE TAIL FIBER PROTEIN HOMOLOG STFQ-RELATED; 1.
+DR   PANTHER; PTHR35191:SF1; PROPHAGE SIDE TAIL FIBER PROTEIN HOMOLOG STFQ-RELATED; 1.
+DR   Pfam; PF07484; Collar; 1.
+DR   Pfam; PF21446; Gp34_trimer; 1.
+DR   Pfam; PF03335; Phage_fiber; 6.
+DR   Pfam; PF08400; phage_tail_N; 1.
+DR   SUPFAM; SSF49464; Carboxypeptidase regulatory domain-like; 1.
+DR   SUPFAM; SSF88874; Receptor-binding domain of short tail fibre protein gp12; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Repeat.
+FT   CHAIN           1..1120
+FT                   /note="Prophage side tail fiber protein homolog StfR"
+FT                   /id="PRO_0000077743"
+FT   REGION          129..154
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          221..442
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          960..1021
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        221..239
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        248..395
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        402..442
+FT                   /note="Low complexity"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        985..1021
+FT                   /note="Polar residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   1120 AA;  113780 MW;  542E59D71EE795B4 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	7	Tequintavirus.
+2	6	Vequintavirus
+2	6	Markadamsvirinae
+2	6	Escherichia.
+3	5	Demerecviridae
+2	5	Vequintavirinae
+2	5	Straboviridae
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+12	4	Caudoviricetes
+2	3	Gammaproteobacteria
+13	3	Uroviricota
+2	2	Pseudomonadota
+13	2	Heunggongvirae
+2	1	Pseudomonadati
+13	1	Duplodnaviria
+3	0	Bacteria
+13	0	Viruses
+Total of 16 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2U3CV61	UNCHARACTERIZED PROTEIN {    242.6    1.1e-68   1   1.7   0.4
+	Iterate                   	   275	   447	   241.3
+	PF03406	Phage_fiber_2   	   115	   156	    59.2
+	PF21446	Gp34_trimer     	   418	   517	    64.9
+	PF12604	gp37_C          	   623	   712	    29.4
+	PF07484	Collar          	   711	   758	    41.7
+
+A0A653FQS1	PHAGE TAIL FIBER PROTEIN     414.5   1.9e-121   1   2.1   4.1
+	Iterate                   	   516	   692	   412.6
+	PF08400	phage_tail_N    	     1	   134	   236.8
+	PF21446	Gp34_trimer     	   692	   762	    53.7
+	PF07484	Collar          	   907	   954	    42.2
+	PF03335	Phage_fiber     	   970	   983	    11.3
+	PF03335	Phage_fiber     	  1002	  1015	    13.8
+	PF03335	Phage_fiber     	  1017	  1029	     6.5
+	PF03335	Phage_fiber     	  1052	  1065	    10.9
+	PF03335	Phage_fiber     	  1067	  1079	     9.7
+	PF03335	Phage_fiber     	  1075	  1088	     9.1
+
+A0A653FUF9	PHAGE TAIL FIBER PROTEIN     417.3   2.6e-122   1   1.2   4.1
+	Iterate                   	    61	   237	   416.8
+	PF03406	Phage_fiber_2   	     7	    48	      73
+
+A7ZKR1	PUTATIVE PHAGE TAIL DOMAIN PR    414.7   1.6e-121   1   2.3   4.1
+	Iterate                   	   516	   692	   412.5
+	PF08400	phage_tail_N    	     1	   134	     239
+	PF21446	Gp34_trimer     	   692	   762	    53.6
+	PF07484	Collar          	   907	   954	    44.4
+	PF03335	Phage_fiber     	   970	   983	    11.3
+	PF03335	Phage_fiber     	  1002	  1015	    14.4
+	PF03335	Phage_fiber     	  1072	  1085	    13.1
+	PF03335	Phage_fiber     	  1087	  1099	     8.3
+	PF03335	Phage_fiber     	  1095	  1108	     9.1
+
+P76072	PROPHAGE SIDE TAIL FIBER PROTEI    414.6   1.7e-121   1   2.2   4.1
+	Iterate                   	   516	   692	   412.6
+	PF08400	phage_tail_N    	     1	   134	   239.7
+	PF21446	Gp34_trimer     	   692	   762	    53.7
+	PF07484	Collar          	   907	   954	    43.3
+	PF03335	Phage_fiber     	   970	   983	    11.3
+	PF03335	Phage_fiber     	  1002	  1015	    14.1
+	PF03335	Phage_fiber     	  1016	  1026	     9.1
+	PF03335	Phage_fiber     	  1055	  1068	    12.1
+	PF03335	Phage_fiber     	  1070	  1082	     9.7
+	PF03335	Phage_fiber     	  1078	  1091	     9.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P76072 (E-value: 6.8e-92, Score: 311.2)
+Mentioned as: P76072
+Description: Prophage side tail fiber protein homolog StfR
+Organism: Escherichia coli (strain K12)
+PMID: 35023908
+Source: EuropePMC
+Title: Functional Prediction of Biological Profile During Eutrophication in Marine Environment
+Journal: Bioinformatics and biology insights (2022)
+Snippet: initiation of replication SoxR P0ACS2 DNA-binding transcriptional dual regulator Sqr P0AC41 Sulfide: quinone reductase StfR P76072 Rac prophage; putative tail fiber protein Suc P0AGE9 Succinyl-CoA synthetase SucA P0AFG3 2-Oxoglutarate dehydrogenase E1 component SulA P0AFZ5 Suppressor of ion; inhibitor of cell division and FtsZ ring formation on
+
+================================================================================
+Protein: P76072 (E-value: 6.8e-92, Score: 311.2)
+Mentioned as: P76072
+Description: Prophage side tail fiber protein homolog StfR
+Organism: Escherichia coli (strain K12)
+PMID: 22701585
+Source: EuropePMC
+Title: Collagen-like proteins in pathogenic E. coli strains
+Journal: PloS one (2012)
+Snippet: of many E. coli strains, including the laboratory reference strain K12 (protein stfR/ynaB, accession code P76072). Other than their consistent presence in prophage tail fibre proteins, little is known about the structure and function of the PfN and Pf2 domains. Some sequence similarity between PfN and
+
+================================================================================
+Protein: A7ZKR1 (E-value: 7e-91, Score: 307.9)
+Mentioned as: A7ZKR1
+Description: Putative phage tail domain protein
+Organism: Escherichia coli O139:H28 (strain E24377A / ETEC)
+PMID: 33619446
+Source: EuropePMC
+Title: An integrative docking and simulation-based approach towards the development of epitope-based vaccine against enterotoxigenic <i>Escherichia coli</i>
+Journal: Network modeling and analysis in health informatics and bioinformatics (2021)
+Snippet: further study and a total of 9 selected proteins are A7ZKX4, A7ZU80, A7ZJC8, A7ZK46, A7ZHN2, A7ZKR1, A7ZVJ1, A7ZRC0 and A7ZKE5(Table 1 ). Table 1 Allergen prediction, adhesion probability and vaxiJen prediction of selected proteins to find out the best epitopes with good scores S.no Uniprot Id
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2U3CV61.1	AF-A0A2U3CV61-F1-model_v4_TED01:168-198	1	AF-A0A2U3CV61-F1-model_v4_TED01	168-198	0
+A0A2U3CV61.1	AF-A0A2U3CV61-F1-model_v4_TED02:211-259	1	AF-A0A2U3CV61-F1-model_v4_TED02	211-259	0
+A0A2U3CV61.1	AF-A0A2U3CV61-F1-model_v4_TED03:265-290	1	AF-A0A2U3CV61-F1-model_v4_TED03	265-290	9.2%
+A0A2U3CV61.1	AF-A0A2U3CV61-F1-model_v4_TED04:293-448	1	AF-A0A2U3CV61-F1-model_v4_TED04	293-448	89.6%
+A0A2U3CV61.1	AF-A0A2U3CV61-F1-model_v4_TED05:476-526	1	AF-A0A2U3CV61-F1-model_v4_TED05	476-526	0
+A0A2U3CV61.1	AF-A0A2U3CV61-F1-model_v4_TED06:602-696	1	AF-A0A2U3CV61-F1-model_v4_TED06	602-696	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 1
+Total networks analyzed: 1
+Total network proteins: 40
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF17263 (DUF5329)         1            1            100.0%
+PF00239 (Resolvase)       1            1            100.0%
+PF02796 (HTH_7)           1            1            100.0%
+PF07012 (Curlin_rpt)      1            1            100.0%
+PF02311 (AraC_binding)    1            1            100.0%
+PF07883 (Cupin_2)         1            1            100.0%
+PF12833 (HTH_18)          1            2            100.0%
+PF08238 (Sel1)            1            1            100.0%
+PF07151 (DUF1391)         1            1            100.0%
+PF00589 (Phage_integrase) 1            4            100.0%
+PF12167 (Arm-DNA-bind_2)  1            1            100.0%
+PF01381 (HTH_3)           1            1            100.0%
+PF14549 (P22_Cro)         1            1            100.0%
+PF15943 (YdaS_toxin)      1            1            100.0%
+PF05899 (Cupin_3)         1            1            100.0%
+PF06249 (EutQ)            1            1            100.0%
+PF00577 (Usher)           1            1            100.0%
+PF13953 (PapC_C)          1            1            100.0%
+PF13954 (PapC_N)          1            1            100.0%
+PF10707 (YrbL-PhoP_reg)   1            1            100.0%
+PF00308 (Bac_DnaA)        1            1            100.0%
+PF01695 (IstB_IS21)       1            1            100.0%
+PF02413 (Caudo_TAP)       1            1            100.0%
+PF28596 (Caudo_TAP_N)     1            1            100.0%
+PF03916 (NrfD)            1            1            100.0%
+PF00990 (GGDEF)           1            1            100.0%
+PF17155 (GAPES1)          1            1            100.0%
+PF03848 (TehB)            1            1            100.0%
+PF08241 (Methyltransf_11) 1            1            100.0%
+PF08242 (Methyltransf_12) 1            1            100.0%
+PF26334 (Gtf3_N)          1            1            100.0%
+PF26337 (Gtf3_C)          1            1            100.0%
+PF07690 (MFS_1)           1            1            100.0%
+PF04809 (HupH_C)          1            1            100.0%
+PF09003 (Arm-DNA-bind_1)  1            1            100.0%
+PF00126 (HTH_1)           1            1            100.0%
+PF03466 (LysR_substrate)  1            1            100.0%
+PF27158 (DjlB_C_2nd)      1            1            100.0%
+PF30223 (DjlC_C)          1            1            100.0%
+PF00486 (Trans_reg_C)     1            1            100.0%
+PF18500 (CadC_C1)         1            1            100.0%
+PF29986 (CadC_C)          1            1            100.0%
+PF04012 (PspA_IM30)       1            1            100.0%
+PF00701 (DHDPS)           1            1            100.0%
+PF00072 (Response_reg)    1            1            100.0%
+PF00512 (HisKA)           1            1            100.0%
+PF00672 (HAMP)            1            1            100.0%
+PF01627 (Hpt)             1            1            100.0%
+PF02518 (HATPase_c)       1            1            100.0%
+PF21689 (TorS_sensor_domain) 1            1            100.0%
+PF00370 (FGGY_N)          1            1            100.0%
+PF02782 (FGGY_C)          1            1            100.0%
+PF06154 (CbeA_antitoxin)  1            1            100.0%
+PF03974 (Ecotin)          1            1            100.0%
+PF06755 (CbtA_toxin)      1            1            100.0%
+PF23914 (TPR_CcmH_CycH)   1            1            100.0%
+PF13435 (Cytochrome_C554) 1            1            100.0%
+PF22678 (Cytochrom_c_NrfB-like) 1            1            100.0%
+PF13356 (Arm-DNA-bind_3)  1            1            100.0%
+PF22022 (Phage_int_M)     1            1            100.0%
+PF01923 (Cob_adeno_trans) 1            1            100.0%
+PF00717 (Peptidase_S24)   1            1            100.0%
+PF00860 (Xan_ur_permease) 1            1            100.0%
+PF21882 (Gp53-like_C)     1            1            100.0%
+PF00165 (HTH_AraC)        1            1            100.0%
+
+Total unique Pfam domains: 65
+
+
+Detailed Pfam Domain Breakdown:
+--------------------------------------------------------------------------------
+
+PF17263 (DUF5329):
+  Found in 1 network(s):
+    - Q47702 (511145.b2419)
+  Total proteins: 1
+
+PF00239 (Resolvase):
+  Found in 1 network(s):
+    - P0ADI0 (511145.b1374)
+  Total proteins: 1
+
+PF02796 (HTH_7):
+  Found in 1 network(s):
+    - P0ADI0 (511145.b1374)
+  Total proteins: 1
+
+... (truncated - showing first 100 of 464 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76072_TED03/Iterate
+GA   27.00 27.00;
+TC   28.00 63.40;
+NC   25.00 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,331 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   HYFA_ECOLI              Reviewed;         205 AA.
+AC   P23481; P76565;
+DE   RecName: Full=Hydrogenase-4 component A;
+DE            EC=1.-.-.-;
+GN   Name=hyfA {ECO:0000303|PubMed:9387241}; Synonyms=yffE;
+GN   OrderedLocusNames=b2481, JW2466;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=K12;
+RX   PubMed=2016588; DOI=10.1099/00221287-137-2-361;
+RA   Andrews S.C., Harrison P.M., Guest J.R.;
+RT   "A molecular analysis of the 53.3 minute region of the Escherichia coli
+RT   linkage map.";
+RL   J. Gen. Microbiol. 137:361-367(1991).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9205837; DOI=10.1093/dnares/4.2.91;
+RA   Yamamoto Y., Aiba H., Baba T., Hayashi K., Inada T., Isono K., Itoh T.,
+RA   Kimura S., Kitagawa M., Makino K., Miki T., Mitsuhashi N., Mizobuchi K.,
+RA   Mori H., Nakade S., Nakamura Y., Nashimoto H., Oshima T., Oyama S.,
+RA   Saito N., Sampei G., Satoh Y., Sivasundaram S., Tagami H., Takahashi H.,
+RA   Takeda J., Takemoto K., Uehara K., Wada C., Yamagata S., Horiuchi T.;
+RT   "Construction of a contiguous 874-kb sequence of the Escherichia coli-K12
+RT   genome corresponding to 50.0-68.8 min on the linkage map and analysis of
+RT   its sequence features.";
+RL   DNA Res. 4:91-113(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [5]
+RP   POSSIBLE FUNCTION.
+RX   PubMed=9387241; DOI=10.1099/00221287-143-11-3633;
+RA   Andrews S.C., Berks B.C., McClay J., Ambler A., Quail M.A., Golby P.,
+RA   Guest J.R.;
+RT   "A 12-cistron Escherichia coli operon (hyf) encoding a putative proton-
+RT   translocating formate hydrogenlyase system.";
+RL   Microbiology 143:3633-3647(1997).
+RN   [6]
+RP   INDUCTION, AND OPERON.
+RC   STRAIN=K12 / MC4100 / ATCC 35695 / DSM 6574;
+RX   PubMed=12426353; DOI=10.1128/jb.184.23.6642-6653.2002;
+RA   Skibinski D.A., Golby P., Chang Y.S., Sargent F., Hoffman R., Harper R.,
+RA   Guest J.R., Attwood M.M., Berks B.C., Andrews S.C.;
+RT   "Regulation of the hydrogenase-4 operon of Escherichia coli by the
+RT   sigma(54)-dependent transcriptional activators FhlA and HyfR.";
+RL   J. Bacteriol. 184:6642-6653(2002).
+RN   [7]
+RP   INDUCTION.
+RC   STRAIN=K12;
+RX   PubMed=14702328; DOI=10.1128/jb.186.2.580-587.2004;
+RA   Self W.T., Hasona A., Shanmugam K.T.;
+RT   "Expression and regulation of a silent operon, hyf, coding for hydrogenase
+RT   4 isoenzyme in Escherichia coli.";
+RL   J. Bacteriol. 186:580-587(2004).
+CC   -!- FUNCTION: Probable electron transfer protein for hydrogenase 4.
+CC       {ECO:0000305|PubMed:9387241}.
+CC   -!- COFACTOR:
+CC       Name=[4Fe-4S] cluster; Xref=ChEBI:CHEBI:49883; Evidence={ECO:0000250};
+CC       Note=Binds 4 [4Fe-4S] clusters. {ECO:0000250};
+CC   -!- INDUCTION: Most efficiently induced by formate during post-exponential
+CC       growth at low external pH (pH 6.5) in the absence of respiratory
+CC       electron acceptors O(2+), NO(3-) or trimethylamine-N-oxide, i.e. under
+CC       anaerobic control (PubMed:12426353, PubMed:14702328). Transcription is
+CC       activated by FhlA and HyfR, inhibited by HycA, part of the sigma-54
+CC       (rpoN) regulon (PubMed:12426353). Subject to catabolite repression
+CC       (PubMed:14702328). First member of a 10 gene operon (hyfABCDEFGHIJ); it
+CC       is not clear if the 2 following genes (hydR-focB) are also in the
+CC       operon (PubMed:12426353). {ECO:0000269|PubMed:12426353,
+CC       ECO:0000269|PubMed:14702328}.
+DR   EMBL; M63654; AAB88563.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC75534.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA16359.1; -; Genomic_DNA.
+DR   PIR; H65023; H65023.
+DR   RefSeq; NP_416976.4; NC_000913.3.
+DR   RefSeq; WP_001336048.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P23481; -.
+DR   SMR; P23481; -.
+DR   BioGRID; 4259199; 16.
+DR   DIP; DIP-9983N; -.
+DR   FunCoup; P23481; 105.
+DR   IntAct; P23481; 3.
+DR   STRING; 511145.b2481; -.
+DR   TCDB; 3.D.1.9.1; the h+ or na+-translocating nadh dehydrogenase (ndh) family.
+DR   PaxDb; 511145-b2481; -.
+DR   EnsemblBacteria; AAC75534; AAC75534; b2481.
+DR   GeneID; 946959; -.
+DR   KEGG; ecj:JW2466; -.
+DR   KEGG; eco:b2481; -.
+DR   KEGG; ecoc:C3026_13770; -.
+DR   PATRIC; fig|1411691.4.peg.4258; -.
+DR   EchoBASE; EB1139; -.
+DR   eggNOG; COG1142; Bacteria.
+DR   HOGENOM; CLU_043374_3_0_6; -.
+DR   InParanoid; P23481; -.
+DR   OMA; ENAPCAH; -.
+DR   OrthoDB; 9779457at2; -.
+DR   PhylomeDB; P23481; -.
+DR   BioCyc; EcoCyc:MONOMER0-152; -.
+DR   PRO; PR:P23481; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0051539; F:4 iron, 4 sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0016491; F:oxidoreductase activity; IEA:UniProtKB-KW.
+DR   CDD; cd10554; HycB_like; 1.
+DR   Gene3D; 3.30.70.20; -; 2.
+DR   InterPro; IPR017896; 4Fe4S_Fe-S-bd.
+DR   InterPro; IPR017900; 4Fe4S_Fe_S_CS.
+DR   InterPro; IPR050294; RnfB_subfamily.
+DR   PANTHER; PTHR42859:SF16; FORMATE HYDROGENLYASE SUBUNIT 2-RELATED; 1.
+DR   PANTHER; PTHR42859; OXIDOREDUCTASE; 1.
+DR   Pfam; PF00037; Fer4; 1.
+DR   Pfam; PF12800; Fer4_4; 1.
+DR   SUPFAM; SSF54862; 4Fe-4S ferredoxins; 1.
+DR   PROSITE; PS00198; 4FE4S_FER_1; 1.
+DR   PROSITE; PS51379; 4FE4S_FER_2; 4.
+PE   2: Evidence at transcript level;
+KW   4Fe-4S; Electron transport; Iron; Iron-sulfur; Metal-binding;
+KW   Oxidoreductase; Reference proteome; Repeat; Transport.
+FT   CHAIN           1..205
+FT                   /note="Hydrogenase-4 component A"
+FT                   /id="PRO_0000159267"
+FT   DOMAIN          2..31
+FT                   /note="4Fe-4S ferredoxin-type 1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   DOMAIN          41..72
+FT                   /note="4Fe-4S ferredoxin-type 2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   DOMAIN          73..102
+FT                   /note="4Fe-4S ferredoxin-type 3"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   DOMAIN          140..172
+FT                   /note="4Fe-4S ferredoxin-type 4"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         12
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         15
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         18
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         22
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         51
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         54
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         59
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         63
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="4"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         82
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="4"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         85
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="4"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         88
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="4"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         92
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         146
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         149
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         158
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         162
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250"
+SQ   SEQUENCE   205 AA;  22154 MW;  C06ED8FB0617B46B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Note: species file not found
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0A6ZWW7	HYDROGENASE-4 COMPONENT A     88.8    5.9e-22   1   1.4   2.3
+	Iterate                   	   185	   218	    88.1
+	PF12800	Fer4_4          	    22	    38	    12.8
+	PF13247	Fer4_11         	    55	   119	      29
+	PF25160	LdpA_Fe-S-bd    	    61	   116	    30.6
+	PF12837	Fer4_6          	    88	   110	    28.5
+	PF00037	Fer4            	    88	   111	    35.9
+	PF12800	Fer4_4          	    92	   108	    18.8
+	PF13187	Fer4_9          	    94	   180	    27.8
+	PF12798	Fer4_3          	    95	   109	    17.2
+
+B2TXQ7	HYDROGENASE-4 COMPONENT A {EC     87.2    1.9e-21   1   1.3   1.3
+	Iterate                   	   172	   205	    86.5
+	PF13247	Fer4_11         	    42	   106	    28.7
+	PF25160	LdpA_Fe-S-bd    	    48	   103	    30.7
+	PF12838	Fer4_7          	    50	    96	      27
+	PF00037	Fer4            	    75	    98	      36
+	PF12837	Fer4_6          	    75	    97	    28.6
+	PF13187	Fer4_9          	    81	   167	      28
+	PF12798	Fer4_3          	    82	    96	    17.3
+
+P23481	HYDROGENASE-4 COMPONENT A EC=1.     91.7    7.3e-23   1   1.4   2.3
+	Iterate                   	   172	   205	    91.0
+	PF12800	Fer4_4          	     9	    25	    12.9
+	PF13247	Fer4_11         	    42	   111	    28.7
+	PF25160	LdpA_Fe-S-bd    	    48	   103	    30.7
+	PF12838	Fer4_7          	    50	    96	      27
+	PF00037	Fer4            	    75	    98	      36
+	PF12837	Fer4_6          	    75	    97	    28.6
+	PF12800	Fer4_4          	    79	    95	    18.9
+	PF13187	Fer4_9          	    81	   167	    28.7
+	PF12798	Fer4_3          	    82	    96	    17.3
+
+Q32D84	HYDROGENASE 4 FE-S SUBUNIT {E     88.8    5.9e-22   1   1.4   2.3
+	Iterate                   	   185	   218	    88.1
+	PF12800	Fer4_4          	    22	    38	    12.8
+	PF13247	Fer4_11         	    55	   119	      29
+	PF25160	LdpA_Fe-S-bd    	    61	   116	    30.6
+	PF12837	Fer4_6          	    88	   110	    28.5
+	PF00037	Fer4            	    88	   111	    35.9
+	PF12800	Fer4_4          	    92	   108	    18.8
+	PF13187	Fer4_9          	    94	   180	    27.8
+	PF12798	Fer4_3          	    95	   109	    17.2
+
+Q3YZ71	HYDROGENASE 4 FE-S SUBUNIT {E     88.8      6e-22   1   1.4   2.3
+	Iterate                   	   185	   218	    88.1
+	PF12800	Fer4_4          	    22	    38	    12.8
+	PF13247	Fer4_11         	    55	   119	      29
+	PF25160	LdpA_Fe-S-bd    	    61	   116	    30.6
+	PF12837	Fer4_6          	    88	   110	    28.5
+	PF00037	Fer4            	    88	   111	    35.9
+	PF12800	Fer4_4          	    92	   108	    18.8
+	PF13187	Fer4_9          	    94	   180	    28.3
+	PF12798	Fer4_3          	    95	   109	    17.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P23481.1	AF-P23481-F1-model_v4_TED01:3-105_131-170	1	AF-P23481-F1-model_v4_TED01	3-170	0
+P23481.1	AF-P23481-F1-model_v4_TED02:172-205	1	AF-P23481-F1-model_v4_TED02	172-205	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P23481_TED02/Iterate
+GA   27.00 27.00;
+TC   27.00 82.20;
+NC   24.90 22.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for P23481
+RN   [1]
+RM   9387241
+RT   "A 12-cistron Escherichia coli operon (hyf) encoding a putative proton-
+RT   translocating formate hydrogenlyase system.";
+RA   Andrews S.C., Berks B.C., McClay J., Ambler A., Quail M.A., Golby P.,
+RA   Guest J.R.;
+RL   Microbiology 143:3633-3647(1997).
+
+--- End of Current DESC file ---

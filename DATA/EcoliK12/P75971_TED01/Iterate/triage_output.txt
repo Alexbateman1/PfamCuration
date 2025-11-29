@@ -1,0 +1,149 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YMFH_ECOLI              Reviewed;         103 AA.
+AC   P75971; A0A385XM66; Q2MBH9;
+DE   RecName: Full=Putative protein YmfH;
+GN   Name=ymfH; OrderedLocusNames=b1142, JW1128;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000305}; Multi-pass
+CC       membrane protein {ECO:0000305}.
+CC   -!- MISCELLANEOUS: Encoded in the E14 prophage. {ECO:0000305}.
+CC   -!- CAUTION: Could be the product of a pseudogene. {ECO:0000305}.
+DR   EMBL; U00096; AYC08191.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76377.1; -; Genomic_DNA.
+DR   PIR; C64859; C64859.
+DR   AlphaFoldDB; P75971; -.
+DR   BioGRID; 4259573; 6.
+DR   FunCoup; P75971; 4.
+DR   IntAct; P75971; 2.
+DR   EnsemblBacteria; AYC08191; AYC08191; b1142.
+DR   KEGG; ecj:JW1128; -.
+DR   HOGENOM; CLU_2011767_0_0_6; -.
+DR   InParanoid; P75971; -.
+DR   BioCyc; EcoCyc:G6586-MONOMER; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+PE   5: Uncertain;
+KW   Cell inner membrane; Cell membrane; Membrane; Reference proteome;
+KW   Transmembrane; Transmembrane helix.
+FT   CHAIN           1..103
+FT                   /note="Putative protein YmfH"
+FT                   /id="PRO_0000169842"
+FT   TRANSMEM        42..62
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        73..93
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   REGION          1..34
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        10..20
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   103 AA;  10963 MW;  9DB7025D43BD5966 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Glaedevirus
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	4	Caudoviricetes
+1	3	Uroviricota
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	2	Heunggongvirae
+1	1	Pseudomonadati
+1	1	Duplodnaviria
+1	0	Viruses
+1	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A8C5LLE1	UNCHARACTERIZED PROTEIN {     27.1      0.014   0  11.9   5.1
+
+A0AAD8BJE8	UNCHARACTERIZED PROTEIN {     41.3    4.4e-07  13  13.0  35.8
+	Iterate                   	    57	    73	     4.7
+	Iterate                   	   183	   199	     4.7
+	Iterate                   	     5	    19	     4.3
+	Iterate                   	    23	    37	     4.3
+	Iterate                   	    41	    55	     4.3
+	Iterate                   	    77	    91	     4.3
+	Iterate                   	    95	   109	     4.3
+	Iterate                   	   113	   127	     4.3
+	Iterate                   	   131	   145	     4.3
+	Iterate                   	   149	   163	     4.3
+	Iterate                   	   203	   217	     4.3
+	Iterate                   	   221	   235	     4.3
+	Iterate                   	   239	   253	     4.3
+
+A0AAF0BK34	UNCHARACTERIZED PROTEIN {     33.7    0.00011   1   1.2   0.3
+	Iterate                   	    22	    49	    33.3
+
+A8DVI3	UNCHARACTERIZED PROTEIN {ECO:     36.6    1.4e-05  13  24.3  99.6
+	Iterate                   	   319	   334	     4.9
+	Iterate                   	   399	   414	     4.9
+	Iterate                   	   479	   494	     4.9
+	Iterate                   	    40	    54	     4.8
+	Iterate                   	   120	   134	     4.8
+	Iterate                   	   140	   154	     4.8
+	Iterate                   	   160	   174	     4.8
+	Iterate                   	   200	   214	     4.8
+	Iterate                   	   220	   234	     4.8
+	Iterate                   	   240	   254	     4.8
+	Iterate                   	   380	   394	     4.8
+	Iterate                   	   460	   474	     4.8
+	Iterate                   	    60	    74	     4.6
+
+P75971	PUTATIVE PROTEIN YMFH               75.8    5.6e-18   1   1.6   1.9
+	Iterate                   	    75	   103	    74.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P75971.1	AF-P75971-F1-model_v4_TED01:75-103	1	AF-P75971-F1-model_v4_TED01	75-103	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P75971_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 33.30;
+NC   24.00 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,475 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   ABPB_ECOLI              Reviewed;         729 AA.
+AC   P52126; Q2MAE4;
+DE   RecName: Full=Anti-bacteriophage protein B {ECO:0000303|PubMed:25224971};
+DE   AltName: Full=Probable helicase AbpB {ECO:0000305};
+GN   Name=abpB {ECO:0000303|PubMed:25224971}; Synonyms=yfjK;
+GN   OrderedLocusNames=b2627, JW2608;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [3]
+RP   FUNCTION IN ANTIVIRAL DEFENSE, INTERACTION WITH ABPA, SUBUNIT, AND
+RP   DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 /MH1;
+RX   PubMed=25224971; DOI=10.1266/ggs.89.51;
+RA   Yasui R., Washizaki A., Furihata Y., Yonesaki T., Otsuka Y.;
+RT   "AbpA and AbpB provide anti-phage activity in Escherichia coli.";
+RL   Genes Genet. Syst. 89:51-60(2014).
+RN   [4]
+RP   FUNCTION IN RADIATION RESISTANCE, DISRUPTION PHENOTYPE, AND MUTAGENESIS OF
+RP   ALA-152.
+RC   STRAIN=K12;
+RX   PubMed=24596148; DOI=10.7554/elife.01322;
+RA   Byrne R.T., Klingele A.J., Cabot E.L., Schackwitz W.S., Martin J.A.,
+RA   Martin J., Wang Z., Wood E.A., Pennacchio C., Pennacchio L.A., Perna N.T.,
+RA   Battista J.R., Cox M.M.;
+RT   "Evolution of extreme resistance to ionizing radiation via genetic
+RT   adaptation of DNA repair.";
+RL   Elife 3:e01322-e01322(2014).
+CC   -!- FUNCTION: Part of an antiviral system composed of AbpA and AbpB; when
+CC       both are expressed from a plasmid they confer resistance to phages T2,
+CC       T4, T7 and lambda but not RB32 or RB69. Resistance is temperature
+CC       dependent, it can be seen at 30 degrees Celsius but not at 37 or 42
+CC       degrees Celsius. The system impairs phage but not bacterial DNA
+CC       synthesis (shown for T4, T7 and lambda). Partially suppressed by
+CC       mutations in T4 gene 41, a replicative helicase.
+CC       {ECO:0000269|PubMed:25224971}.
+CC   -!- FUNCTION: Deletion or mutations in this gene were selected in directed
+CC       evolution experiments for resistance to intense ionizing radiation
+CC       (3000 Gy). {ECO:0000269|PubMed:24596148}.
+CC   -!- SUBUNIT: Interacts with AbpB. {ECO:0000269|PubMed:25224971}.
+CC   -!- DISRUPTION PHENOTYPE: About 20% increase in T4 progeny; the phenotype
+CC       is the same in a double abpA-abpB deletion (PubMed:25224971). 10-fold
+CC       increased survival following 3000 Gy ionizing radiation
+CC       (PubMed:24596148). {ECO:0000269|PubMed:24596148,
+CC       ECO:0000269|PubMed:25224971}.
+CC   -!- MISCELLANEOUS: Part of prophage CP4-57. {ECO:0000269|PubMed:9278503}.
+CC   -!- SIMILARITY: Belongs to the helicase family. {ECO:0000305}.
+DR   EMBL; U36840; AAA79796.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC75675.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76762.1; -; Genomic_DNA.
+DR   PIR; T08639; T08639.
+DR   RefSeq; NP_417116.1; NC_000913.3.
+DR   RefSeq; WP_000136402.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P52126; -.
+DR   SMR; P52126; -.
+DR   BioGRID; 4260623; 89.
+DR   BioGRID; 851446; 3.
+DR   DIP; DIP-12076N; -.
+DR   FunCoup; P52126; 23.
+DR   IntAct; P52126; 23.
+DR   STRING; 511145.b2627; -.
+DR   PaxDb; 511145-b2627; -.
+DR   EnsemblBacteria; AAC75675; AAC75675; b2627.
+DR   GeneID; 947111; -.
+DR   KEGG; ecj:JW2608; -.
+DR   KEGG; eco:b2627; -.
+DR   KEGG; ecoc:C3026_14535; -.
+DR   PATRIC; fig|511145.12.peg.2722; -.
+DR   EchoBASE; EB2989; -.
+DR   eggNOG; COG1204; Bacteria.
+DR   HOGENOM; CLU_025497_0_0_6; -.
+DR   InParanoid; P52126; -.
+DR   OMA; GAQFYML; -.
+DR   OrthoDB; 9815222at2; -.
+DR   BioCyc; EcoCyc:G7362-MONOMER; -.
+DR   PRO; PR:P52126; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0004386; F:helicase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0016787; F:hydrolase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0003676; F:nucleic acid binding; IEA:InterPro.
+DR   GO; GO:0051607; P:defense response to virus; IMP:EcoCyc.
+DR   GO; GO:0010212; P:response to ionizing radiation; IMP:EcoCyc.
+DR   Gene3D; 3.40.50.300; P-loop containing nucleotide triphosphate hydrolases; 2.
+DR   InterPro; IPR011545; DEAD/DEAH_box_helicase_dom.
+DR   InterPro; IPR014001; Helicase_ATP-bd.
+DR   InterPro; IPR001650; Helicase_C-like.
+DR   InterPro; IPR027417; P-loop_NTPase.
+DR   InterPro; IPR050699; RNA-DNA_Helicase.
+DR   PANTHER; PTHR12131; ATP-DEPENDENT RNA AND DNA HELICASE; 1.
+DR   PANTHER; PTHR12131:SF1; ATP-DEPENDENT RNA HELICASE SUPV3L1, MITOCHONDRIAL-RELATED; 1.
+DR   Pfam; PF00270; DEAD; 1.
+DR   Pfam; PF00271; Helicase_C; 1.
+DR   SMART; SM00487; DEXDc; 1.
+DR   SMART; SM00490; HELICc; 1.
+DR   SUPFAM; SSF52540; P-loop containing nucleoside triphosphate hydrolases; 2.
+DR   PROSITE; PS51192; HELICASE_ATP_BIND_1; 1.
+DR   PROSITE; PS51194; HELICASE_CTER; 1.
+PE   1: Evidence at protein level;
+KW   Antiviral defense; ATP-binding; Helicase; Hydrolase; Nucleotide-binding;
+KW   Reference proteome; Stress response.
+FT   CHAIN           1..729
+FT                   /note="Anti-bacteriophage protein B"
+FT                   /id="PRO_0000169276"
+FT   DOMAIN          109..271
+FT                   /note="Helicase ATP-binding"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00541"
+FT   DOMAIN          297..472
+FT                   /note="Helicase C-terminal"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00542"
+FT   BINDING         122..129
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00541"
+FT   MUTAGEN         152
+FT                   /note="A->D: 100-fold increased survival following 3000 Gy
+FT                   ionizing radiation."
+FT                   /evidence="ECO:0000269|PubMed:24596148"
+SQ   SEQUENCE   729 AA;  83062 MW;  CB65BCD1B36FBFAF CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+11	4	Flavobacteriales
+17	3	Alphaproteobacteria
+15	3	Gammaproteobacteria
+13	3	Actinomycetes
+11	3	Flavobacteriia
+38	2	Pseudomonadota
+25	2	Bacteroidota
+13	2	Actinomycetota
+11	2	Bacillota
+75	1	Pseudomonadati
+24	1	Bacillati
+100	0	Bacteria
+Total of 100 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0Q5Z7V5	HELICASE {ECO:0008006|GOO     80.9    2.8e-19   1   1.5   0.0
+	Iterate                   	     1	    86	    80.0
+	PF00270	DEAD            	   104	   247	    48.8
+	PF00271	Helicase_C      	   337	   430	    30.5
+
+A0A7W9BLZ6	DEAD/DEAH BOX HELICASE {E     75.6    1.3e-17   1   1.6   0.1
+	Iterate                   	     1	    87	    74.5
+	PF00270	DEAD            	   105	   234	    48.2
+	PF00271	Helicase_C      	   289	   431	    33.1
+
+C1D7V9	SUPERFAMILY II HELICASE {ECO:     77.0    4.7e-18   1   2.4   0.0
+	Iterate                   	     1	    87	    73.7
+	PF00270	DEAD            	   105	   239	      48
+	PF00271	Helicase_C      	   330	   430	      30
+
+K0C3P8	HELICASE CONSERVED DOMAIN PRO     75.9      1e-17   1   1.7   0.3
+	Iterate                   	     1	    82	    74.7
+	PF00270	DEAD            	   100	   229	    33.2
+	PF00271	Helicase_C      	   278	   420	    25.1
+
+P52126	ANTI-BACTERIOPHAGE PROTEIN B {E     63.7    6.5e-14   1   2.0   0.3
+	Iterate                   	     1	    85	    62.2
+	PF00270	DEAD            	   102	   223	    31.6
+	PF00271	Helicase_C      	   349	   433	    24.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P52126 (E-value: 1.5e-14, Score: 59.1)
+Mentioned as: P52126
+Description: Anti-bacteriophage protein B
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Anti-bacteriophage protein B; Probable helicase AbpB
+PMID: 37882551
+Source: EuropePMC
+Title: Phage single-stranded DNA-binding protein or host DNA damage triggers the activation of the AbpAB phage defense system
+Journal: mSphere (2023)
+Snippet: and AbpB structure prediction and alignment Three-dimensional AbpA (UniProt ID: P52127) and AbpB (UniProt ID: P52126) model structures were obtained from the AlphaFold Protein Structure Database ( https://alphafold.ebi.ac.uk/ ) ( 36 , 37 ). AbpA and AbpB structural homologs were searched on the Dali server using
+
+================================================================================
+Protein: P52126 (E-value: 1.5e-14, Score: 59.1)
+Mentioned as: P52126
+Description: Anti-bacteriophage protein B
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Anti-bacteriophage protein B; Probable helicase AbpB
+PMID: 10496905
+Source: EuropePMC
+Title: Common and specific characteristics of the high-pathogenicity island of Yersinia enterocolitica
+Journal: Infection and immunity (1999)
+Snippet: ISLAND VOL. 67, 1999 5269 hypothetical proteins YfjK (P52126) and YfjL (P52127) clustered in the alpA-gabD region of the E. coli K-12 chromosome. ORF21
+
+================================================================================
+Protein: P52126 (E-value: 1.5e-14, Score: 59.1)
+Mentioned as: ABPB_ECOLI
+Description: Anti-bacteriophage protein B
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Anti-bacteriophage protein B; Probable helicase AbpB
+PMID: 9278503
+Source: SwissProt
+Snippet: FUNCTION: Part of an antiviral system composed of AbpA and AbpB; when both are expressed from a plasmid they confer resistance to phages T2, T4, T7 and lambda but not RB32 or RB69. Resistance is temperature dependent, it can be seen at 30 degrees Celsius but not at 37 or 42 degrees Celsius. The system impairs phage but not bacterial DNA synthesis (shown for T4, T7 and lambda). Partially suppressed by mutations in T4 gene 41, a replicative helicase. {ECO:0000269|PubMed:25224971}._:::_FUNCTION: De...
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A081BFF5.1	AF-A0A081BFF5-F1-model_v4_TED02:83-252	1	AF-A0A081BFF5-F1-model_v4_TED02	83-252	0
+A0A081BFF5.1	AF-A0A081BFF5-F1-model_v4_TED03:255-423	1	AF-A0A081BFF5-F1-model_v4_TED03	255-423	0
+A0A081BFF5.1	AF-A0A081BFF5-F1-model_v4_TED01:5-76	1	AF-A0A081BFF5-F1-model_v4_TED01	5-76	95.5%
+A0A098R1W9.1	AF-A0A098R1W9-F1-model_v4_TED02:88-247	1	AF-A0A098R1W9-F1-model_v4_TED02	88-247	0
+A0A098R1W9.1	AF-A0A098R1W9-F1-model_v4_TED03:254-422	1	AF-A0A098R1W9-F1-model_v4_TED03	254-422	0
+A0A098R1W9.1	AF-A0A098R1W9-F1-model_v4_TED04:485-620	1	AF-A0A098R1W9-F1-model_v4_TED04	485-620	0
+A0A098R1W9.1	AF-A0A098R1W9-F1-model_v4_TED05:625-693	1	AF-A0A098R1W9-F1-model_v4_TED05	625-693	0
+A0A098R1W9.1	AF-A0A098R1W9-F1-model_v4_TED01:2-76	1	AF-A0A098R1W9-F1-model_v4_TED01	2-76	98.5%
+A0A0A0M8T0.1	AF-A0A0A0M8T0-F1-model_v4_TED01:2-63	1	AF-A0A0A0M8T0-F1-model_v4_TED01	2-63	91.2%
+A0A0A0M8T0.1	AF-A0A0A0M8T0-F1-model_v4_TED02:78-248	1	AF-A0A0A0M8T0-F1-model_v4_TED02	78-248	0
+A0A0A0M8T0.1	AF-A0A0A0M8T0-F1-model_v4_TED03:255-433	1	AF-A0A0A0M8T0-F1-model_v4_TED03	255-433	0
+A0A0A0M8T0.1	AF-A0A0A0M8T0-F1-model_v4_TED04:455-619	1	AF-A0A0A0M8T0-F1-model_v4_TED04	455-619	0
+A0A0A0M8T0.1	AF-A0A0A0M8T0-F1-model_v4_TED05:624-698	1	AF-A0A0A0M8T0-F1-model_v4_TED05	624-698	0
+A0A0B3BSP9.1	AF-A0A0B3BSP9-F1-model_v4_TED02:107-270	1	AF-A0A0B3BSP9-F1-model_v4_TED02	107-270	0
+A0A0B3BSP9.1	AF-A0A0B3BSP9-F1-model_v4_TED03:284-441	1	AF-A0A0B3BSP9-F1-model_v4_TED03	284-441	0
+A0A0B3BSP9.1	AF-A0A0B3BSP9-F1-model_v4_TED04:460-490	1	AF-A0A0B3BSP9-F1-model_v4_TED04	460-490	0
+A0A0B3BSP9.1	AF-A0A0B3BSP9-F1-model_v4_TED05:494-648	1	AF-A0A0B3BSP9-F1-model_v4_TED05	494-648	0
+A0A0B3BSP9.1	AF-A0A0B3BSP9-F1-model_v4_TED01:4-94	1	AF-A0A0B3BSP9-F1-model_v4_TED01	4-94	96.6%
+A0A0B3BSP9.1	AF-A0A0B3BSP9-F1-model_v4_TED06:653-714	1	AF-A0A0B3BSP9-F1-model_v4_TED06	653-714	0
+A0A0N7KBJ0.1	AF-A0A0N7KBJ0-F1-model_v4_TED02:89-252	1	AF-A0A0N7KBJ0-F1-model_v4_TED02	89-252	0
+A0A0N7KBJ0.1	AF-A0A0N7KBJ0-F1-model_v4_TED03:259-425	1	AF-A0A0N7KBJ0-F1-model_v4_TED03	259-425	0
+A0A0N7KBJ0.1	AF-A0A0N7KBJ0-F1-model_v4_TED04:491-614	1	AF-A0A0N7KBJ0-F1-model_v4_TED04	491-614	0
+A0A0N7KBJ0.1	AF-A0A0N7KBJ0-F1-model_v4_TED05:626-689	1	AF-A0A0N7KBJ0-F1-model_v4_TED05	626-689	0
+A0A0N7KBJ0.1	AF-A0A0N7KBJ0-F1-model_v4_TED01:4-81	1	AF-A0A0N7KBJ0-F1-model_v4_TED01	4-81	95.8%
+A0A0Q5Q8H2.1	AF-A0A0Q5Q8H2-F1-model_v4_TED02:104-265	1	AF-A0A0Q5Q8H2-F1-model_v4_TED02	104-265	0
+A0A0Q5Q8H2.1	AF-A0A0Q5Q8H2-F1-model_v4_TED03:272-459	1	AF-A0A0Q5Q8H2-F1-model_v4_TED03	272-459	0
+A0A0Q5Q8H2.1	AF-A0A0Q5Q8H2-F1-model_v4_TED04:508-692	1	AF-A0A0Q5Q8H2-F1-model_v4_TED04	508-692	0
+A0A0Q5Q8H2.1	AF-A0A0Q5Q8H2-F1-model_v4_TED01:2-93	1	AF-A0A0Q5Q8H2-F1-model_v4_TED01	2-93	98.8%
+A0A0Q5Q8H2.1	AF-A0A0Q5Q8H2-F1-model_v4_TED05:698-756	1	AF-A0A0Q5Q8H2-F1-model_v4_TED05	698-756	0
+A0A0Q5Z7V5.1	AF-A0A0Q5Z7V5-F1-model_v4_TED02:102-268	1	AF-A0A0Q5Z7V5-F1-model_v4_TED02	102-268	0
+A0A0Q5Z7V5.1	AF-A0A0Q5Z7V5-F1-model_v4_TED03:275-440	1	AF-A0A0Q5Z7V5-F1-model_v4_TED03	275-440	0
+A0A0Q5Z7V5.1	AF-A0A0Q5Z7V5-F1-model_v4_TED04:491-650	1	AF-A0A0Q5Z7V5-F1-model_v4_TED04	491-650	0
+A0A0Q5Z7V5.1	AF-A0A0Q5Z7V5-F1-model_v4_TED01:4-70	1	AF-A0A0Q5Z7V5-F1-model_v4_TED01	4-70	77.9%
+A0A0Q5Z7V5.1	AF-A0A0Q5Z7V5-F1-model_v4_TED05:655-720	1	AF-A0A0Q5Z7V5-F1-model_v4_TED05	655-720	0
+A0A0Q9IAK8.1	AF-A0A0Q9IAK8-F1-model_v4_TED02:103-268	1	AF-A0A0Q9IAK8-F1-model_v4_TED02	103-268	0
+A0A0Q9IAK8.1	AF-A0A0Q9IAK8-F1-model_v4_TED03:274-438	1	AF-A0A0Q9IAK8-F1-model_v4_TED03	274-438	0
+A0A0Q9IAK8.1	AF-A0A0Q9IAK8-F1-model_v4_TED04:501-647	1	AF-A0A0Q9IAK8-F1-model_v4_TED04	501-647	0
+A0A0Q9IAK8.1	AF-A0A0Q9IAK8-F1-model_v4_TED01:4-95	1	AF-A0A0Q9IAK8-F1-model_v4_TED01	4-95	96.6%
+A0A0Q9IAK8.1	AF-A0A0Q9IAK8-F1-model_v4_TED05:652-711	1	AF-A0A0Q9IAK8-F1-model_v4_TED05	652-711	0
+A0A0V7Z0G1.1	AF-A0A0V7Z0G1-F1-model_v4_TED01:4-94	1	AF-A0A0V7Z0G1-F1-model_v4_TED01	4-94	96.5%
+A0A0V7Z0G1.1	AF-A0A0V7Z0G1-F1-model_v4_TED02:104-269	1	AF-A0A0V7Z0G1-F1-model_v4_TED02	104-269	0
+A0A0V7Z0G1.1	AF-A0A0V7Z0G1-F1-model_v4_TED03:280-441	1	AF-A0A0V7Z0G1-F1-model_v4_TED03	280-441	0
+A0A0V7Z0G1.1	AF-A0A0V7Z0G1-F1-model_v4_TED04:492-651	1	AF-A0A0V7Z0G1-F1-model_v4_TED04	492-651	0
+A0A0V7Z0G1.1	AF-A0A0V7Z0G1-F1-model_v4_TED05:656-720	1	AF-A0A0V7Z0G1-F1-model_v4_TED05	656-720	0
+A0A133PU59.1	AF-A0A133PU59-F1-model_v4_TED02:87-250	1	AF-A0A133PU59-F1-model_v4_TED02	87-250	0
+A0A133PU59.1	AF-A0A133PU59-F1-model_v4_TED03:257-439	1	AF-A0A133PU59-F1-model_v4_TED03	257-439	0
+A0A133PU59.1	AF-A0A133PU59-F1-model_v4_TED04:447-622	1	AF-A0A133PU59-F1-model_v4_TED04	447-622	0
+A0A133PU59.1	AF-A0A133PU59-F1-model_v4_TED01:3-77	1	AF-A0A133PU59-F1-model_v4_TED01	3-77	98.6%
+A0A133PU59.1	AF-A0A133PU59-F1-model_v4_TED05:627-696	1	AF-A0A133PU59-F1-model_v4_TED05	627-696	0
+A0A172ZLP5.1	AF-A0A172ZLP5-F1-model_v4_TED01:4-102	1	AF-A0A172ZLP5-F1-model_v4_TED01	4-102	96.8%
+A0A172ZLP5.1	AF-A0A172ZLP5-F1-model_v4_TED02:114-275	1	AF-A0A172ZLP5-F1-model_v4_TED02	114-275	0
+A0A172ZLP5.1	AF-A0A172ZLP5-F1-model_v4_TED03:282-462	1	AF-A0A172ZLP5-F1-model_v4_TED03	282-462	0
+A0A172ZLP5.1	AF-A0A172ZLP5-F1-model_v4_TED04:511-676	1	AF-A0A172ZLP5-F1-model_v4_TED04	511-676	0
+A0A172ZLP5.1	AF-A0A172ZLP5-F1-model_v4_TED05:681-737	1	AF-A0A172ZLP5-F1-model_v4_TED05	681-737	0
+A0A1C7P9W4.1	AF-A0A1C7P9W4-F1-model_v4_TED02:85-252	1	AF-A0A1C7P9W4-F1-model_v4_TED02	85-252	0
+A0A1C7P9W4.1	AF-A0A1C7P9W4-F1-model_v4_TED03:260-428	1	AF-A0A1C7P9W4-F1-model_v4_TED03	260-428	0
+A0A1C7P9W4.1	AF-A0A1C7P9W4-F1-model_v4_TED04:515-624	1	AF-A0A1C7P9W4-F1-model_v4_TED04	515-624	0
+A0A1C7P9W4.1	AF-A0A1C7P9W4-F1-model_v4_TED05:629-704	1	AF-A0A1C7P9W4-F1-model_v4_TED05	629-704	0
+A0A1C7P9W4.1	AF-A0A1C7P9W4-F1-model_v4_TED01:5-74	1	AF-A0A1C7P9W4-F1-model_v4_TED01	5-74	94.1%
+A0A1E2RWW1.1	AF-A0A1E2RWW1-F1-model_v4_TED01:4-93	1	AF-A0A1E2RWW1-F1-model_v4_TED01	4-93	96.5%
+A0A1E2RWW1.1	AF-A0A1E2RWW1-F1-model_v4_TED02:105-264	1	AF-A0A1E2RWW1-F1-model_v4_TED02	105-264	0
+A0A1E2RWW1.1	AF-A0A1E2RWW1-F1-model_v4_TED03:271-434	1	AF-A0A1E2RWW1-F1-model_v4_TED03	271-434	0
+A0A1E2RWW1.1	AF-A0A1E2RWW1-F1-model_v4_TED04:469-693	1	AF-A0A1E2RWW1-F1-model_v4_TED04	469-693	0
+A0A1H6BUD0.1	AF-A0A1H6BUD0-F1-model_v4_TED01:10-80	1	AF-A0A1H6BUD0-F1-model_v4_TED01	10-80	80.7%
+A0A1H6BUD0.1	AF-A0A1H6BUD0-F1-model_v4_TED02:108-267	1	AF-A0A1H6BUD0-F1-model_v4_TED02	108-267	0
+A0A1H6BUD0.1	AF-A0A1H6BUD0-F1-model_v4_TED03:274-438	1	AF-A0A1H6BUD0-F1-model_v4_TED03	274-438	0
+A0A1H6BUD0.1	AF-A0A1H6BUD0-F1-model_v4_TED04:488-647	1	AF-A0A1H6BUD0-F1-model_v4_TED04	488-647	0
+A0A1H6BUD0.1	AF-A0A1H6BUD0-F1-model_v4_TED05:652-709	1	AF-A0A1H6BUD0-F1-model_v4_TED05	652-709	0
+A0A1H6KHX7.1	AF-A0A1H6KHX7-F1-model_v4_TED02:82-246	1	AF-A0A1H6KHX7-F1-model_v4_TED02	82-246	0
+A0A1H6KHX7.1	AF-A0A1H6KHX7-F1-model_v4_TED03:254-439	1	AF-A0A1H6KHX7-F1-model_v4_TED03	254-439	0
+A0A1H6KHX7.1	AF-A0A1H6KHX7-F1-model_v4_TED04:516-619	1	AF-A0A1H6KHX7-F1-model_v4_TED04	516-619	0
+A0A1H6KHX7.1	AF-A0A1H6KHX7-F1-model_v4_TED05:635-704	1	AF-A0A1H6KHX7-F1-model_v4_TED05	635-704	0
+A0A1H6KHX7.1	AF-A0A1H6KHX7-F1-model_v4_TED01:4-72	1	AF-A0A1H6KHX7-F1-model_v4_TED01	4-72	95.5%
+A0A1H7LJ72.1	AF-A0A1H7LJ72-F1-model_v4_TED02:84-247	1	AF-A0A1H7LJ72-F1-model_v4_TED02	84-247	0
+A0A1H7LJ72.1	AF-A0A1H7LJ72-F1-model_v4_TED03:254-425	1	AF-A0A1H7LJ72-F1-model_v4_TED03	254-425	0
+A0A1H7LJ72.1	AF-A0A1H7LJ72-F1-model_v4_TED04:515-622	1	AF-A0A1H7LJ72-F1-model_v4_TED04	515-622	0
+A0A1H7LJ72.1	AF-A0A1H7LJ72-F1-model_v4_TED05:627-697	1	AF-A0A1H7LJ72-F1-model_v4_TED05	627-697	0
+A0A1H7LJ72.1	AF-A0A1H7LJ72-F1-model_v4_TED01:4-73	1	AF-A0A1H7LJ72-F1-model_v4_TED01	4-73	95.5%
+A0A1H7URE5.1	AF-A0A1H7URE5-F1-model_v4_TED02:89-249	1	AF-A0A1H7URE5-F1-model_v4_TED02	89-249	0
+A0A1H7URE5.1	AF-A0A1H7URE5-F1-model_v4_TED03:256-434	1	AF-A0A1H7URE5-F1-model_v4_TED03	256-434	0
+A0A1H7URE5.1	AF-A0A1H7URE5-F1-model_v4_TED04:444-491_493-621	1	AF-A0A1H7URE5-F1-model_v4_TED04	444-621	0
+A0A1H7URE5.1	AF-A0A1H7URE5-F1-model_v4_TED05:626-695	1	AF-A0A1H7URE5-F1-model_v4_TED05	626-695	0
+A0A1H7URE5.1	AF-A0A1H7URE5-F1-model_v4_TED01:2-78	1	AF-A0A1H7URE5-F1-model_v4_TED01	2-78	98.6%
+A0A1I1DB79.1	AF-A0A1I1DB79-F1-model_v4_TED02:86-249	1	AF-A0A1I1DB79-F1-model_v4_TED02	86-249	0
+A0A1I1DB79.1	AF-A0A1I1DB79-F1-model_v4_TED03:256-426	1	AF-A0A1I1DB79-F1-model_v4_TED03	256-426	0
+A0A1I1DB79.1	AF-A0A1I1DB79-F1-model_v4_TED04:491-624	1	AF-A0A1I1DB79-F1-model_v4_TED04	491-624	0
+A0A1I1DB79.1	AF-A0A1I1DB79-F1-model_v4_TED05:629-697	1	AF-A0A1I1DB79-F1-model_v4_TED05	629-697	0
+A0A1I1DB79.1	AF-A0A1I1DB79-F1-model_v4_TED01:2-78	1	AF-A0A1I1DB79-F1-model_v4_TED01	2-78	98.6%
+A0A1I4M268.1	AF-A0A1I4M268-F1-model_v4_TED02:104-263	1	AF-A0A1I4M268-F1-model_v4_TED02	104-263	0
+A0A1I4M268.1	AF-A0A1I4M268-F1-model_v4_TED03:270-332_341-434	1	AF-A0A1I4M268-F1-model_v4_TED03	270-434	0
+A0A1I4M268.1	AF-A0A1I4M268-F1-model_v4_TED04:495-636	1	AF-A0A1I4M268-F1-model_v4_TED04	495-636	0
+A0A1I4M268.1	AF-A0A1I4M268-F1-model_v4_TED01:2-90	1	AF-A0A1I4M268-F1-model_v4_TED01	2-90	98.8%
+A0A1I4M268.1	AF-A0A1I4M268-F1-model_v4_TED05:649-712	1	AF-A0A1I4M268-F1-model_v4_TED05	649-712	0
+A0A1L8QP92.1	AF-A0A1L8QP92-F1-model_v4_TED02:102-263	1	AF-A0A1L8QP92-F1-model_v4_TED02	102-263	0
+A0A1L8QP92.1	AF-A0A1L8QP92-F1-model_v4_TED03:270-448	1	AF-A0A1L8QP92-F1-model_v4_TED03	270-448	0
+A0A1L8QP92.1	AF-A0A1L8QP92-F1-model_v4_TED01:6-90	1	AF-A0A1L8QP92-F1-model_v4_TED01	6-90	94.0%
+A0A1L8QP92.1	AF-A0A1L8QP92-F1-model_v4_TED04:666-726	1	AF-A0A1L8QP92-F1-model_v4_TED04	666-726	0
+A0A1Q8ZRG8.1	AF-A0A1Q8ZRG8-F1-model_v4_TED02:82-246	1	AF-A0A1Q8ZRG8-F1-model_v4_TED02	82-246	0
+A0A1Q8ZRG8.1	AF-A0A1Q8ZRG8-F1-model_v4_TED03:254-433	1	AF-A0A1Q8ZRG8-F1-model_v4_TED03	254-433	0
+
+... (truncated - showing first 100 of 333 lines)
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 40
+Total networks analyzed: 40
+Total network proteins: 605
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF00009 (GTP_EFTU)        40           60           100.0%
+PF00679 (EFG_C)           40           61           100.0%
+PF03144 (GTP_EFTU_D2)     40           50           100.0%
+PF03764 (EFG_IV)          40           60           100.0%
+PF14492 (EFG_III)         40           58           100.0%
+PF22042 (EF-G_D2)         40           57           100.0%
+PF00270 (DEAD)            39           165           97.5%
+PF00271 (Helicase_C)      39           171           97.5%
+PF04851 (ResIII)          39           134           97.5%
+PF08878 (HamA)            39           39            97.5%
+PF00160 (Pro_isomerase)   38           74            95.0%
+PF00155 (Aminotran_1_2)   35           77            87.5%
+PF03880 (DbpA)            30           45            75.0%
+PF01119 (DNA_mis_repair)  16           16            40.0%
+PF08676 (MutL_C)          16           16            40.0%
+PF13589 (HATPase_c_3)     16           17            40.0%
+PF02518 (HATPase_c)       15           16            37.5%
+PF04408 (WHD_HA2)         14           14            35.0%
+PF08482 (HrpB_C)          12           12            30.0%
+PF01509 (TruB_N)          12           12            30.0%
+PF21010 (HA2_C)           10           10            25.0%
+PF16198 (TruB_C_2)        10           10            25.0%
+PF25399 (DeaD_dimer)      10           10            25.0%
+PF07717 (OB_NTP_bind)     9            9             22.5%
+PF00254 (FKBP_C)          9            17            22.5%
+PF00076 (RRM_1)           9            10            22.5%
+PF00266 (Aminotran_5)     9            9             22.5%
+PF11898 (DUF3418)         8            8             20.0%
+PF01926 (MMR_HSR1)        8            10            20.0%
+PF28538 (Helicase_helical) 8            12            20.0%
+PF14130 (Cap4_nuclease)   7            7             17.5%
+PF01053 (Cys_Met_Meta_PP) 7            7             17.5%
+PF02222 (ATP-grasp)       5            5             12.5%
+PF02786 (CPSase_L_D2)     5            5             12.5%
+PF01248 (Ribosomal_L7Ae)  5            8             12.5%
+PF01212 (Beta_elim_lyase) 4            4             10.0%
+PF00289 (Biotin_carb_N)   4            4             10.0%
+PF02655 (ATP-grasp_3)     4            4             10.0%
+PF02785 (Biotin_carb_C)   4            4             10.0%
+PF07478 (Dala_Dala_lig_C) 4            4             10.0%
+PF24473 (CON_HrpB)        4            4             10.0%
+PF01041 (DegT_DnrJ_EryC1) 4            5             10.0%
+PF12007 (DUF3501)         3            3              7.5%
+PF00476 (DNA_pol_A)       3            3              7.5%
+PF01367 (5_3_exonuc)      3            3              7.5%
+PF01612 (DNA_pol_A_exo1)  3            3              7.5%
+PF02739 (5_3_exonuc_N)    3            3              7.5%
+PF01381 (HTH_3)           3            3              7.5%
+PF13443 (HTH_26)          3            3              7.5%
+PF09157 (TruB-C_2)        3            3              7.5%
+PF00176 (SNF2-rel_dom)    3            5              7.5%
+PF22619 (DNA_polI_exo1)   2            2              5.0%
+PF13535 (ATP-grasp_4)     2            2              5.0%
+PF01555 (N6_N4_Mtase)     2            2              5.0%
+PF00012 (HSP70)           2            2              5.0%
+PF06723 (MreB_Mbl)        2            2              5.0%
+PF18962 (Por_Secre_tail)  2            3              5.0%
+PF13091 (PLDc_2)          2            2              5.0%
+PF11202 (StiP)            2            2              5.0%
+PF15608 (PELOTA_1)        2            2              5.0%
+PF22527 (DEXQc_Suv3)      2            2              5.0%
+PF02384 (N6_Mtase)        2            2              5.0%
+PF07669 (Eco57I)          2            2              5.0%
+PF00117 (GATase)          2            2              5.0%
+PF00958 (GMP_synt_C)      2            2              5.0%
+PF02540 (NAD_synthase)    2            2              5.0%
+PF03054 (tRNA_Me_trans)   2            2              5.0%
+PF07722 (Peptidase_C26)   2            2              5.0%
+PF00154 (RecA_N)          2            2              5.0%
+PF06745 (ATPase)          2            2              5.0%
+PF08423 (Rad51)           2            2              5.0%
+PF21096 (RecA_C)          2            2              5.0%
+PF27531 (MT3502_N)        2            2              5.0%
+PF00044 (Gp_dh_N)         2            2              5.0%
+PF02800 (Gp_dh_C)         2            2              5.0%
+PF01420 (Methylase_S)     2            2              5.0%
+PF08463 (EcoEI_R_C)       2            2              5.0%
+PF18766 (SWI2_SNF2)       2            2              5.0%
+PF30170 (T1RK_2nd)        2            2              5.0%
+PF12728 (HTH_17)          1            1              2.5%
+PF05840 (Phage_GPA)       1            1              2.5%
+PF23343 (REP_ORF2-G2P)    1            1              2.5%
+PF07607 (DUF1570)         1            1              2.5%
+PF13516 (LRR_6)           1            1              2.5%
+PF00872 (Transposase_mut) 1            1              2.5%
+PF02311 (AraC_binding)    1            1              2.5%
+
+... (truncated - showing first 100 of 2666 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Who RU
+SE   Where did the seed come from
+GA   27.00 27.00;
+TC   27.90 28.80;
+NC   26.90 23.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P52126
+RN   [1]
+RM   25224971
+RT   "AbpA and AbpB provide anti-phage activity in Escherichia coli.";
+RA   Yasui R., Washizaki A., Furihata Y., Yonesaki T., Otsuka Y.;
+RL   Genes Genet. Syst. 89:51-60(2014).
+RC   Function description for P52126
+RN   [2]
+RM   24596148
+RT   "Evolution of extreme resistance to ionizing radiation via genetic
+RT   adaptation of DNA repair.";
+RA   Byrne R.T., Klingele A.J., Cabot E.L., Schackwitz W.S., Martin J.A.,
+RA   Martin J., Wang Z., Wood E.A., Pennacchio C., Pennacchio L.A., Perna N.T.,
+RA   Battista J.R., Cox M.M.;
+RL   Elife 3:e01322-e01322(2014).
+RC   Paper describing PDB structure 8zue
+RN   [3]
+RM   40097437
+RT   Bacterial Hachiman complex executes DNA cleavage for antiphage
+RT   defense.
+RA   Cui Y, Dai Z, Ouyang Y, Fu C, Wang Y, Chen X, Yang K, Zheng S, Wang
+RA   W, Tao P, Guan Z, Zou T;
+RL   Nat Commun. 2025;16:2604.
+
+--- End of Current DESC file ---

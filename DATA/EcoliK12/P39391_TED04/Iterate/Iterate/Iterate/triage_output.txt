@@ -1,0 +1,351 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YJIT_ECOLI              Reviewed;         521 AA.
+AC   P39391; A0A385XNK3; Q2M5X2;
+DE   RecName: Full=Protein YjiT;
+GN   Name=yjiT; OrderedLocusNames=b4342, JW5787;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=7610040; DOI=10.1093/nar/23.12.2105;
+RA   Burland V.D., Plunkett G. III, Sofia H.J., Daniels D.L., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome VI: DNA sequence of the region
+RT   from 92.8 through 100 minutes.";
+RL   Nucleic Acids Res. 23:2105-2119(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- MISCELLANEOUS: May be missing up to 600 C-terminal residues compared to
+CC       orthologs. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AYC08262.1; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=BAE78334.1; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U14003; AAA97238.1; -; Genomic_DNA.
+DR   EMBL; U00096; AYC08262.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; AP009048; BAE78334.1; ALT_INIT; Genomic_DNA.
+DR   PIR; S56567; S56567.
+DR   AlphaFoldDB; P39391; -.
+DR   BioGRID; 4262762; 7.
+DR   FunCoup; P39391; 13.
+DR   IntAct; P39391; 15.
+DR   EnsemblBacteria; AYC08262; AYC08262; b4342.
+DR   KEGG; ecj:JW5787; -.
+DR   KEGG; ecoc:C3026_23465; -.
+DR   EchoBASE; EB2468; -.
+DR   eggNOG; COG1196; Bacteria.
+DR   HOGENOM; CLU_009762_2_1_6; -.
+DR   InParanoid; P39391; -.
+DR   BioCyc; EcoCyc:G7938-MONOMER; -.
+DR   PRO; PR:P39391; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   InterPro; IPR047879; YjiT.
+DR   NCBIfam; NF038336; YjiT_fam; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..521
+FT                   /note="Protein YjiT"
+FT                   /id="PRO_0000169797"
+SQ   SEQUENCE   521 AA;  58553 MW;  BD1F8487D81C40E5 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Pseudomonas.
+2	6	Acinetobacter.
+3	5	Enterobacteriaceae
+2	5	Pseudomonadaceae
+2	5	Moraxellaceae
+3	4	Pseudomonadales
+3	4	Enterobacterales
+2	4	Oceanospirillales
+2	4	Moraxellales
+12	3	Gammaproteobacteria
+13	2	Pseudomonadota
+13	1	Pseudomonadati
+13	0	Bacteria
+Total of 13 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0J5L0I3	UNCHARACTERIZED PROTEIN {    106.0    3.8e-27   1   1.6   0.0
+	Iterate                   	   383	   456	   105.0
+	PF27201	YjiT_N          	     2	   141	   160.5
+	PF27205	YjiT_2nd        	   148	   265	   111.4
+
+A0A2V1GXG8	UNCHARACTERIZED PROTEIN {    114.1    1.1e-29   1   2.2   0.3
+	Iterate                   	   366	   442	   112.1
+	PF27201	YjiT_N          	     1	   124	   127.8
+	PF27205	YjiT_2nd        	   131	   249	   106.4
+
+I2BDC2	UNCHARACTERIZED PROTEIN {ECO:    106.7    2.4e-27   1   1.7   0.0
+	Iterate                   	   383	   456	   105.5
+	PF27201	YjiT_N          	     2	   141	   158.3
+	PF27205	YjiT_2nd        	   148	   265	   114.1
+
+N2IWE6	UNCHARACTERIZED PROTEIN {ECO:    109.2    3.9e-28   1   1.6   0.2
+	Iterate                   	   384	   461	   108.1
+	PF27201	YjiT_N          	     4	   142	   145.5
+	PF27205	YjiT_2nd        	   149	   267	   116.2
+
+P39391	PROTEIN YJIT                       107.6    1.2e-27   1   1.6   0.0
+	Iterate                   	   399	   472	   106.5
+	PF27201	YjiT_N          	    16	   157	   161.9
+	PF27205	YjiT_2nd        	   164	   281	     108
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS156147 (E-value: 6.7e-21, Score: 79.5)
+Mentioned as: STY4851
+Description: conserved hypothetical protein
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 15774890
+Source: EuropePMC
+Title: Analysis of the hypervariable region of the Salmonella enterica genome associated with tRNA(leuX)
+Journal: Journal of bacteriology (2005)
+Snippet: transposase STY4848 and the helicase-containing region (STY4849 and STY4851) are present. (b) Circularized ST46 phage DNA was detected by PCR with genomic DNA
+
+================================================================================
+Protein: VIMSS156147 (E-value: 6.7e-21, Score: 79.5)
+Mentioned as: STY4851
+Description: conserved hypothetical protein
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 15960802
+Source: EuropePMC
+Title: The rarity of gene shuffling in conserved genes
+Journal: Genome biology (2005)
+Snippet: via a domain exchange between Salmonella genes STY4850 (annotated as a DEAD-box helicase-related protein) and STY4851 (hypothetical protein). The numbers in the recombinant gene box are amino-acid positions in the protein product, indicating the portion of the protein derived from each of its 'parental' proteins. Figure
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0G3G7T2.1	AF-A0A0G3G7T2-F1-model_v4_TED01:2-135	1	AF-A0A0G3G7T2-F1-model_v4_TED01	2-135	0
+A0A0G3G7T2.1	AF-A0A0G3G7T2-F1-model_v4_TED02:140-261	1	AF-A0A0G3G7T2-F1-model_v4_TED02	140-261	0
+A0A0G3G7T2.1	AF-A0A0G3G7T2-F1-model_v4_TED03:266-364	1	AF-A0A0G3G7T2-F1-model_v4_TED03	266-364	0
+A0A0G3G7T2.1	AF-A0A0G3G7T2-F1-model_v4_TED04:377-460	1	AF-A0A0G3G7T2-F1-model_v4_TED04	377-460	100.0%
+A0A0G3G7T2.1	AF-A0A0G3G7T2-F1-model_v4_TED05:463-541	1	AF-A0A0G3G7T2-F1-model_v4_TED05	463-541	0
+A0A0G3G7T2.1	AF-A0A0G3G7T2-F1-model_v4_TED06:546-620	1	AF-A0A0G3G7T2-F1-model_v4_TED06	546-620	0
+A0A0G3G7T2.1	AF-A0A0G3G7T2-F1-model_v4_TED07:635-729	1	AF-A0A0G3G7T2-F1-model_v4_TED07	635-729	0
+A0A0G3G7T2.1	AF-A0A0G3G7T2-F1-model_v4_TED08:733-817	1	AF-A0A0G3G7T2-F1-model_v4_TED08	733-817	0
+A0A0G3G7T2.1	AF-A0A0G3G7T2-F1-model_v4_TED09:833-980	1	AF-A0A0G3G7T2-F1-model_v4_TED09	833-980	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED01:4-141	1	AF-A0A0J5L0I3-F1-model_v4_TED01	4-141	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED02:147-262	1	AF-A0A0J5L0I3-F1-model_v4_TED02	147-262	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED03:268-376	1	AF-A0A0J5L0I3-F1-model_v4_TED03	268-376	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED04:379-462	1	AF-A0A0J5L0I3-F1-model_v4_TED04	379-462	100.0%
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED06:549-620	1	AF-A0A0J5L0I3-F1-model_v4_TED06	549-620	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED09:841-977	1	AF-A0A0J5L0I3-F1-model_v4_TED09	841-977	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED10:986-1104	1	AF-A0A0J5L0I3-F1-model_v4_TED10	986-1104	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED05:466-542	1	AF-A0A0J5L0I3-F1-model_v4_TED05	466-542	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED07:626-731	1	AF-A0A0J5L0I3-F1-model_v4_TED07	626-731	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED08:735-818	1	AF-A0A0J5L0I3-F1-model_v4_TED08	735-818	0
+A0A2V1GXG8.1	AF-A0A2V1GXG8-F1-model_v4_TED01:2-124	1	AF-A0A2V1GXG8-F1-model_v4_TED01	2-124	0
+A0A2V1GXG8.1	AF-A0A2V1GXG8-F1-model_v4_TED02:129-251	1	AF-A0A2V1GXG8-F1-model_v4_TED02	129-251	0
+A0A2V1GXG8.1	AF-A0A2V1GXG8-F1-model_v4_TED03:360-449	1	AF-A0A2V1GXG8-F1-model_v4_TED03	360-449	100.0%
+A0A2V1GXG8.1	AF-A0A2V1GXG8-F1-model_v4_TED04:453-460_470-528	1	AF-A0A2V1GXG8-F1-model_v4_TED04	453-528	0
+A0A2V1GXG8.1	AF-A0A2V1GXG8-F1-model_v4_TED05:616-721	1	AF-A0A2V1GXG8-F1-model_v4_TED05	616-721	0
+A0A2V1GXG8.1	AF-A0A2V1GXG8-F1-model_v4_TED06:725-808	1	AF-A0A2V1GXG8-F1-model_v4_TED06	725-808	0
+A0A2V1GXG8.1	AF-A0A2V1GXG8-F1-model_v4_TED07:824-969	1	AF-A0A2V1GXG8-F1-model_v4_TED07	824-969	0
+A0A2V1GXG8.1	AF-A0A2V1GXG8-F1-model_v4_TED08:974-1092	1	AF-A0A2V1GXG8-F1-model_v4_TED08	974-1092	0
+A0A3F2V683.1	AF-A0A3F2V683-F1-model_v4_TED01:12-140	1	AF-A0A3F2V683-F1-model_v4_TED01	12-140	0
+A0A3F2V683.1	AF-A0A3F2V683-F1-model_v4_TED02:146-266	1	AF-A0A3F2V683-F1-model_v4_TED02	146-266	0
+A0A3F2V683.1	AF-A0A3F2V683-F1-model_v4_TED03:271-375	1	AF-A0A3F2V683-F1-model_v4_TED03	271-375	0
+A0A3F2V683.1	AF-A0A3F2V683-F1-model_v4_TED04:376-462	1	AF-A0A3F2V683-F1-model_v4_TED04	376-462	100.0%
+A0A3F2V683.1	AF-A0A3F2V683-F1-model_v4_TED05:466-482_497-543	1	AF-A0A3F2V683-F1-model_v4_TED05	466-543	0
+A0A3F2V683.1	AF-A0A3F2V683-F1-model_v4_TED06:627-731	1	AF-A0A3F2V683-F1-model_v4_TED06	627-731	0
+A0A3F2V683.1	AF-A0A3F2V683-F1-model_v4_TED07:737-818	1	AF-A0A3F2V683-F1-model_v4_TED07	737-818	0
+A0A3F2V683.1	AF-A0A3F2V683-F1-model_v4_TED08:841-978	1	AF-A0A3F2V683-F1-model_v4_TED08	841-978	0
+A0A3F2V683.1	AF-A0A3F2V683-F1-model_v4_TED09:988-1101	1	AF-A0A3F2V683-F1-model_v4_TED09	988-1101	0
+A0A3N4AK55.1	AF-A0A3N4AK55-F1-model_v4_TED01:6-140	1	AF-A0A3N4AK55-F1-model_v4_TED01	6-140	0
+A0A3N4AK55.1	AF-A0A3N4AK55-F1-model_v4_TED02:145-267	1	AF-A0A3N4AK55-F1-model_v4_TED02	145-267	0
+A0A3N4AK55.1	AF-A0A3N4AK55-F1-model_v4_TED03:272-368	1	AF-A0A3N4AK55-F1-model_v4_TED03	272-368	0
+A0A3N4AK55.1	AF-A0A3N4AK55-F1-model_v4_TED04:381-456	1	AF-A0A3N4AK55-F1-model_v4_TED04	381-456	100.0%
+A0A3N4AK55.1	AF-A0A3N4AK55-F1-model_v4_TED05:467-544	1	AF-A0A3N4AK55-F1-model_v4_TED05	467-544	0
+A0A3N4AK55.1	AF-A0A3N4AK55-F1-model_v4_TED06:628-733	1	AF-A0A3N4AK55-F1-model_v4_TED06	628-733	0
+A0A3N4AK55.1	AF-A0A3N4AK55-F1-model_v4_TED07:738-818	1	AF-A0A3N4AK55-F1-model_v4_TED07	738-818	0
+A0A3N4AK55.1	AF-A0A3N4AK55-F1-model_v4_TED08:849-978	1	AF-A0A3N4AK55-F1-model_v4_TED08	849-978	0
+A0A3N4AK55.1	AF-A0A3N4AK55-F1-model_v4_TED09:983-1106	1	AF-A0A3N4AK55-F1-model_v4_TED09	983-1106	0
+A0A4S5BSR0.1	AF-A0A4S5BSR0-F1-model_v4_TED01:9-87	1	AF-A0A4S5BSR0-F1-model_v4_TED01	9-87	0
+A0A4S5BSR0.1	AF-A0A4S5BSR0-F1-model_v4_TED02:97-222	1	AF-A0A4S5BSR0-F1-model_v4_TED02	97-222	0
+A0A4S5BSR0.1	AF-A0A4S5BSR0-F1-model_v4_TED03:224-329	1	AF-A0A4S5BSR0-F1-model_v4_TED03	224-329	0
+A0A4S5BSR0.1	AF-A0A4S5BSR0-F1-model_v4_TED04:331-425	1	AF-A0A4S5BSR0-F1-model_v4_TED04	331-425	100.0%
+A0A4S5BSR0.1	AF-A0A4S5BSR0-F1-model_v4_TED05:437-499	1	AF-A0A4S5BSR0-F1-model_v4_TED05	437-499	0
+A0A4S5BSR0.1	AF-A0A4S5BSR0-F1-model_v4_TED06:585-690	1	AF-A0A4S5BSR0-F1-model_v4_TED06	585-690	0
+A0A4S5BSR0.1	AF-A0A4S5BSR0-F1-model_v4_TED07:694-711_718-777	1	AF-A0A4S5BSR0-F1-model_v4_TED07	694-777	0
+A0A4S5BSR0.1	AF-A0A4S5BSR0-F1-model_v4_TED09:948-1074	1	AF-A0A4S5BSR0-F1-model_v4_TED09	948-1074	0
+A0A4S5BSR0.1	AF-A0A4S5BSR0-F1-model_v4_TED08:789-942	1	AF-A0A4S5BSR0-F1-model_v4_TED08	789-942	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED01:4-141	1	AF-I2BDC2-F1-model_v4_TED01	4-141	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED02:145-265	1	AF-I2BDC2-F1-model_v4_TED02	145-265	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED03:273-370	1	AF-I2BDC2-F1-model_v4_TED03	273-370	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED04:383-456	1	AF-I2BDC2-F1-model_v4_TED04	383-456	100.0%
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED05:469-622	1	AF-I2BDC2-F1-model_v4_TED05	469-622	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED06:626-731	1	AF-I2BDC2-F1-model_v4_TED06	626-731	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED07:739-818	1	AF-I2BDC2-F1-model_v4_TED07	739-818	0
+N2IWE6.1	AF-N2IWE6-F1-model_v4_TED01:5-142	1	AF-N2IWE6-F1-model_v4_TED01	5-142	0
+N2IWE6.1	AF-N2IWE6-F1-model_v4_TED02:147-267	1	AF-N2IWE6-F1-model_v4_TED02	147-267	0
+N2IWE6.1	AF-N2IWE6-F1-model_v4_TED03:269-376	1	AF-N2IWE6-F1-model_v4_TED03	269-376	0
+N2IWE6.1	AF-N2IWE6-F1-model_v4_TED04:378-467	1	AF-N2IWE6-F1-model_v4_TED04	378-467	100.0%
+N2IWE6.1	AF-N2IWE6-F1-model_v4_TED05:633-738	1	AF-N2IWE6-F1-model_v4_TED05	633-738	0
+N2IWE6.1	AF-N2IWE6-F1-model_v4_TED07:841-985	1	AF-N2IWE6-F1-model_v4_TED07	841-985	0
+N2IWE6.1	AF-N2IWE6-F1-model_v4_TED08:995-1107	1	AF-N2IWE6-F1-model_v4_TED08	995-1107	0
+N2IWE6.1	AF-N2IWE6-F1-model_v4_TED06:746-825	1	AF-N2IWE6-F1-model_v4_TED06	746-825	0
+N8XFD3.1	AF-N8XFD3-F1-model_v4_TED01:2-143	1	AF-N8XFD3-F1-model_v4_TED01	2-143	0
+N8XFD3.1	AF-N8XFD3-F1-model_v4_TED02:147-270	1	AF-N8XFD3-F1-model_v4_TED02	147-270	0
+N8XFD3.1	AF-N8XFD3-F1-model_v4_TED03:272-379	1	AF-N8XFD3-F1-model_v4_TED03	272-379	0
+N8XFD3.1	AF-N8XFD3-F1-model_v4_TED04:381-466	1	AF-N8XFD3-F1-model_v4_TED04	381-466	100.0%
+N8XFD3.1	AF-N8XFD3-F1-model_v4_TED05:471-549	1	AF-N8XFD3-F1-model_v4_TED05	471-549	0
+N8XFD3.1	AF-N8XFD3-F1-model_v4_TED06:554-636	1	AF-N8XFD3-F1-model_v4_TED06	554-636	0
+N8XFD3.1	AF-N8XFD3-F1-model_v4_TED07:641-750	1	AF-N8XFD3-F1-model_v4_TED07	641-750	0
+N8XFD3.1	AF-N8XFD3-F1-model_v4_TED09:858-996	1	AF-N8XFD3-F1-model_v4_TED09	858-996	0
+N8XFD3.1	AF-N8XFD3-F1-model_v4_TED08:761-835	1	AF-N8XFD3-F1-model_v4_TED08	761-835	0
+P39391.1	AF-P39391-F1-model_v4_TED01:20-157	1	AF-P39391-F1-model_v4_TED01	20-157	0
+P39391.1	AF-P39391-F1-model_v4_TED02:164-282	1	AF-P39391-F1-model_v4_TED02	164-282	0
+P39391.1	AF-P39391-F1-model_v4_TED03:308-386	1	AF-P39391-F1-model_v4_TED03	308-386	0
+P39391.1	AF-P39391-F1-model_v4_TED04:399-472	1	AF-P39391-F1-model_v4_TED04	399-472	100.0%
+P39391.1	AF-P39391-F1-model_v4_TED05:479-521	1	AF-P39391-F1-model_v4_TED05	479-521	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 3
+Total networks analyzed: 3
+Total network proteins: 25
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF00270 (DEAD)            2            3             66.7%
+PF00271 (Helicase_C)      2            3             66.7%
+PF04851 (ResIII)          2            3             66.7%
+PF09369 (MZB)             2            2             66.7%
+PF27116 (YjiV_N)          2            2             66.7%
+PF08849 (BrxA)            1            1             33.3%
+PF07693 (KAP_NTPase)      1            1             33.3%
+PF25791 (WHD_BREX_BrxC)   1            1             33.3%
+PF25792 (BREX_BrxC_helical) 1            1             33.3%
+PF25796 (BREX_BrxC_4th)   1            1             33.3%
+PF19557 (BrxC-PglY_N)     1            1             33.3%
+PF21621 (MPI_cupin_dom)   1            1             33.3%
+PF08747 (BrxB)            1            1             33.3%
+PF08665 (PglZ)            1            1             33.3%
+PF10941 (DUF2620)         1            1             33.3%
+PF02384 (N6_Mtase)        1            1             33.3%
+PF12161 (HsdM_N)          1            1             33.3%
+PF00486 (Trans_reg_C)     1            1             33.3%
+PF18500 (CadC_C1)         1            1             33.3%
+PF29986 (CadC_C)          1            1             33.3%
+PF04829 (PT-VENN)         1            3             33.3%
+PF10797 (YhfT)            1            1             33.3%
+PF05119 (Terminase_4)     1            1             33.3%
+PF00593 (TonB_dep_Rec_b-barrel) 1            1             33.3%
+PF07715 (Plug)            1            1             33.3%
+PF01420 (Methylase_S)     1            1             33.3%
+PF08463 (EcoEI_R_C)       1            1             33.3%
+PF18766 (SWI2_SNF2)       1            1             33.3%
+PF30170 (T1RK_2nd)        1            1             33.3%
+PF00892 (EamA)            1            1             33.3%
+
+Total unique Pfam domains: 30
+
+
+Detailed Pfam Domain Breakdown:
+--------------------------------------------------------------------------------
+
+PF00270 (DEAD):
+  Found in 2 network(s):
+    - X7E8J1 (1122207.MUS1_09490)
+    - I2BDC6 (630626.EBL_c34740)
+    - I2BDC9 (630626.EBL_c34770)
+  Total proteins: 3
+
+PF00271 (Helicase_C):
+  Found in 2 network(s):
+    - X7E8J1 (1122207.MUS1_09490)
+    - I2BDC6 (630626.EBL_c34740)
+    - I2BDC9 (630626.EBL_c34770)
+  Total proteins: 3
+
+PF04851 (ResIII):
+  Found in 2 network(s):
+    - X7E8J1 (1122207.MUS1_09490)
+    - I2BDC6 (630626.EBL_c34740)
+    - I2BDC9 (630626.EBL_c34770)
+  Total proteins: 3
+
+PF09369 (MZB):
+  Found in 2 network(s):
+    - X7E8J1 (1122207.MUS1_09490)
+    - I2BDC6 (630626.EBL_c34740)
+  Total proteins: 2
+
+PF27116 (YjiV_N):
+  Found in 2 network(s):
+    - X7E8J1 (1122207.MUS1_09490)
+    - I2BDC6 (630626.EBL_c34740)
+  Total proteins: 2
+
+PF08849 (BrxA):
+  Found in 1 network(s):
+    - X7E3E9 (1122207.MUS1_06310)
+  Total proteins: 1
+
+PF07693 (KAP_NTPase):
+  Found in 1 network(s):
+    - X7E3E7 (1122207.MUS1_06300)
+  Total proteins: 1
+
+PF25791 (WHD_BREX_BrxC):
+  Found in 1 network(s):
+    - X7E3E7 (1122207.MUS1_06300)
+  Total proteins: 1
+
+PF25792 (BREX_BrxC_helical):
+
+... (truncated - showing first 100 of 232 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P39391_TED04/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 32.30;
+NC   26.60 25.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

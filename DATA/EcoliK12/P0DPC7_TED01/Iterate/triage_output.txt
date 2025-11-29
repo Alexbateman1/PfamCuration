@@ -1,0 +1,135 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   RSED_ECOLI              Reviewed;          51 AA.
+AC   P0DPC7; A0A385XJM9;
+DE   RecName: Full=rpoE leader peptide;
+GN   Name=rseD {ECO:0000303|PubMed:28924029};
+GN   Synonyms=orf51 {ECO:0000303|PubMed:28924029}; OrderedLocusNames=b4725;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   IDENTIFICATION, AND FUNCTION.
+RC   STRAIN=K12 / CF7789;
+RX   PubMed=28924029; DOI=10.1128/jb.00484-17;
+RA   Yakhnin H., Aichele R., Ades S.E., Romeo T., Babitzke P.;
+RT   "Circuitry linking the global Csr and sigma(E)-dependent cell envelope
+RT   stress response systems.";
+RL   J. Bacteriol. 0:0-0(2017).
+CC   -!- FUNCTION: A short protein whose stop codon overlaps with the start
+CC       codon of downstream rpoE; a premature stop codon at position 12 results
+CC       in decreased expression of ECF sigma factor RpoE, thus they are
+CC       translationally coupled (PubMed:28924029).
+CC       {ECO:0000269|PubMed:28924029}.
+DR   EMBL; U00096; AYC08234.1; -; Genomic_DNA.
+DR   RefSeq; WP_001303621.1; NZ_STEB01000011.1.
+DR   AlphaFoldDB; P0DPC7; -.
+DR   FunCoup; P0DPC7; 5.
+DR   EnsemblBacteria; AYC08234; AYC08234; b4725.
+DR   GeneID; 93774517; -.
+DR   KEGG; ecoc:C3026_14255; -.
+DR   InParanoid; P0DPC7; -.
+DR   BioCyc; EcoCyc:MONOMER0-4396; -.
+DR   PRO; PR:P0DPC7; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0006417; P:regulation of translation; IEA:UniProtKB-KW.
+DR   InterPro; IPR049933; RseD.
+DR   NCBIfam; NF033697; leader_RseD; 1.
+PE   4: Predicted;
+KW   Leader peptide; Reference proteome; Translation regulation.
+FT   CHAIN           1..51
+FT                   /note="rpoE leader peptide"
+FT                   /id="PRO_0000442645"
+SQ   SEQUENCE   51 AA;  6229 MW;  03D82A766AF46F4C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Tenebrionibacter.
+1	7	Klebsiella
+2	6	Escherichia.
+1	6	Tenebrionibacter/Tenebrionicolagroup
+1	6	Klebsiella/Raoultella group
+1	6	Jejubacter.
+1	6	Cedecea.
+6	5	Enterobacteriaceae
+6	4	Enterobacterales
+6	3	Gammaproteobacteria
+6	2	Pseudomonadota
+6	1	Pseudomonadati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A089RIM1	UNCHARACTERIZED PROTEIN {     45.0      5e-08   1   1.3   0.1
+	Iterate                   	    41	    86	    44.3
+
+A0A0H3ELC4	RPOE LEADER PEPTIDE RSED     135.2    3.3e-36   1   1.0   8.8
+	Iterate                   	     1	    51	   135.1
+
+A0A6J0CFE4	NON-SPECIFIC SERINE/THREO     45.6    3.1e-08  10  12.1  20.4
+	Iterate                   	   497	   518	     7.1
+	Iterate                   	   525	   547	     7.0
+	Iterate                   	   799	   823	     7.0
+	Iterate                   	   580	   604	     6.6
+	Iterate                   	   662	   685	     5.5
+	Iterate                   	   690	   713	     4.8
+	Iterate                   	   772	   794	     2.3
+	Iterate                   	   718	   739	     1.7
+	Iterate                   	   635	   655	     1.5
+	Iterate                   	   608	   630	     1.2
+	PF07714	PK_Tyr_Ser-Thr  	    19	   265	   139.8
+	PF00069	Pkinase         	    19	   267	   239.5
+	PF03109	ABC1            	    49	   176	    25.7
+	PF14531	Kinase-like     	    51	   255	    34.4
+
+A0A8K0V3W7	RPOE LEADER PEPTIDE RSED      35.2    5.3e-05   1   1.0   0.1
+	Iterate                   	     1	    43	    35.2
+
+P0DPC7	RPOE LEADER PEPTIDE                135.2    3.3e-36   1   1.0   8.8
+	Iterate                   	     1	    51	   135.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A089RIM1.1	AF-A0A089RIM1-F1-model_v4_TED01:57-86	1	AF-A0A089RIM1-F1-model_v4_TED01	57-86	34.9%
+P0DPC7.1	AF-P0DPC7-F1-model_v4_TED01:1-51	1	AF-P0DPC7-F1-model_v4_TED01	1-51	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DPC7_TED01/Iterate
+GA   27.00 27.00;
+TC   28.30 30.90;
+NC   25.90 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P0DPC7
+RN   [1]
+RM   28924029
+RT   "Circuitry linking the global Csr and sigma(E)-dependent cell envelope
+RT   stress response systems.";
+RA   Yakhnin H., Aichele R., Ades S.E., Romeo T., Babitzke P.;
+RL   J. Bacteriol. 0:0-0(2017).
+
+--- End of Current DESC file ---

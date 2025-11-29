@@ -1,0 +1,1262 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   NARY_ECOLI              Reviewed;         514 AA.
+AC   P19318; P78267;
+DE   RecName: Full=Respiratory nitrate reductase 2 beta chain;
+DE            EC=1.7.5.1;
+GN   Name=narY; OrderedLocusNames=b1467, JW1462;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND PROTEIN SEQUENCE OF 1-18.
+RX   PubMed=2233673; DOI=10.1007/bf00283030;
+RA   Blasco F., Iobbi C., Ratouchniak J., Bonnefoy V., Chippaux M.;
+RT   "Nitrate reductases of Escherichia coli: sequence of the second nitrate
+RT   reductase and comparison with that encoded by the narGHJI operon.";
+RL   Mol. Gen. Genet. 222:104-111(1990).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9097039; DOI=10.1093/dnares/3.6.363;
+RA   Aiba H., Baba T., Fujita K., Hayashi K., Inada T., Isono K., Itoh T.,
+RA   Kasai H., Kashimoto K., Kimura S., Kitakawa M., Kitagawa M., Makino K.,
+RA   Miki T., Mizobuchi K., Mori H., Mori T., Motomura K., Nakade S.,
+RA   Nakamura Y., Nashimoto H., Nishio Y., Oshima T., Saito N., Sampei G.,
+RA   Seki Y., Sivasundaram S., Tagami H., Takeda J., Takemoto K., Takeuchi Y.,
+RA   Wada C., Yamamoto Y., Horiuchi T.;
+RT   "A 570-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 28.0-40.1 min region on the linkage map.";
+RL   DNA Res. 3:363-377(1996).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- FUNCTION: This is a second nitrate reductase enzyme which can
+CC       substitute for the NRA enzyme and allows E.coli to use nitrate as an
+CC       electron acceptor during anaerobic growth. The beta chain is an
+CC       electron transfer unit containing four cysteine clusters involved in
+CC       the formation of iron-sulfur centers. Electrons are transferred from
+CC       the gamma chain to the molybdenum cofactor of the alpha subunit.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=nitrate + a quinol = a quinone + nitrite + H2O;
+CC         Xref=Rhea:RHEA:56144, ChEBI:CHEBI:15377, ChEBI:CHEBI:16301,
+CC         ChEBI:CHEBI:17632, ChEBI:CHEBI:24646, ChEBI:CHEBI:132124; EC=1.7.5.1;
+CC   -!- COFACTOR:
+CC       Name=[4Fe-4S] cluster; Xref=ChEBI:CHEBI:49883; Evidence={ECO:0000250};
+CC       Note=Binds 3 [4Fe-4S] clusters per subunit. {ECO:0000250};
+CC   -!- COFACTOR:
+CC       Name=[3Fe-4S] cluster; Xref=ChEBI:CHEBI:21137; Evidence={ECO:0000250};
+CC       Note=Binds 1 [3Fe-4S] cluster per subunit. {ECO:0000250};
+CC   -!- SUBUNIT: Dimer of heterotrimers each composed of an alpha, a beta and a
+CC       gamma chain. Alpha and beta are catalytic chains; gamma chains are
+CC       involved in binding the enzyme complex to the cytoplasmic membrane.
+CC   -!- INTERACTION:
+CC       P19318; P42593: fadH; NbExp=3; IntAct=EBI-555059, EBI-561933;
+CC       P19318; P09152: narG; NbExp=5; IntAct=EBI-555059, EBI-547248;
+CC       P19318; P11349: narH; NbExp=3; IntAct=EBI-555059, EBI-555067;
+CC       P19318; P19317: narW; NbExp=4; IntAct=EBI-555059, EBI-555088;
+CC       P19318; P04825: pepN; NbExp=3; IntAct=EBI-555059, EBI-545385;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Peripheral membrane protein.
+DR   EMBL; X17110; CAA34965.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC74549.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA15104.1; -; Genomic_DNA.
+DR   PIR; F64899; F64899.
+DR   RefSeq; NP_415984.1; NC_000913.3.
+DR   AlphaFoldDB; P19318; -.
+DR   SMR; P19318; -.
+DR   BioGRID; 4262894; 21.
+DR   BioGRID; 850395; 5.
+DR   ComplexPortal; CPX-5581; Nitrate reductase Z complex.
+DR   DIP; DIP-10323N; -.
+DR   FunCoup; P19318; 247.
+DR   IntAct; P19318; 14.
+DR   STRING; 511145.b1467; -.
+DR   TCDB; 5.A.3.1.2; the prokaryotic molybdopterin-containing oxidoreductase (pmo) family.
+DR   jPOST; P19318; -.
+DR   PaxDb; 511145-b1467; -.
+DR   EnsemblBacteria; AAC74549; AAC74549; b1467.
+DR   GeneID; 946034; -.
+DR   KEGG; ecj:JW1462; -.
+DR   KEGG; eco:b1467; -.
+DR   KEGG; ecoc:C3026_08515; -.
+DR   PATRIC; fig|1411691.4.peg.801; -.
+DR   EchoBASE; EB0641; -.
+DR   eggNOG; COG1140; Bacteria.
+DR   HOGENOM; CLU_043374_5_2_6; -.
+DR   InParanoid; P19318; -.
+DR   OMA; MAMRVYM; -.
+DR   OrthoDB; 9779457at2; -.
+DR   PhylomeDB; P19318; -.
+DR   BioCyc; EcoCyc:NARY-MONOMER; -.
+DR   BioCyc; MetaCyc:NARY-MONOMER; -.
+DR   PHI-base; PHI:10517; -.
+DR   PRO; PR:P19318; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0016020; C:membrane; IDA:ComplexPortal.
+DR   GO; GO:0009325; C:nitrate reductase complex; IDA:EcoCyc.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0051538; F:3 iron, 4 sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0051539; F:4 iron, 4 sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009055; F:electron transfer activity; ISM:EcoCyc.
+DR   GO; GO:0051536; F:iron-sulfur cluster binding; ISM:EcoCyc.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0160182; F:nitrate reductase (quinone) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0008940; F:nitrate reductase activity; IDA:EcoCyc.
+DR   GO; GO:0019645; P:anaerobic electron transport chain; IDA:EcoCyc.
+DR   GO; GO:0009061; P:anaerobic respiration; IDA:EcoCyc.
+DR   GO; GO:0006974; P:DNA damage response; IEP:EcoliWiki.
+DR   GO; GO:0042128; P:nitrate assimilation; IEA:UniProtKB-KW.
+DR   GO; GO:0042126; P:nitrate metabolic process; NAS:ComplexPortal.
+DR   CDD; cd10557; NarH_beta-like; 1.
+DR   FunFam; 3.30.70.20:FF:000005; Respiratory nitrate reductase beta subunit; 1.
+DR   FunFam; 3.30.70.20:FF:000008; Respiratory nitrate reductase beta subunit; 1.
+DR   FunFam; 3.30.70.20:FF:000010; Respiratory nitrate reductase beta subunit; 1.
+DR   FunFam; 1.10.3650.10:FF:000001; Respiratory nitrate reductase subunit beta; 1.
+DR   Gene3D; 3.30.70.20; -; 3.
+DR   Gene3D; 1.10.3650.10; nitrate reductase domain like; 1.
+DR   InterPro; IPR017896; 4Fe4S_Fe-S-bd.
+DR   InterPro; IPR029263; Nitr_red_bet_C.
+DR   InterPro; IPR038262; Nitr_red_bet_C_sf.
+DR   InterPro; IPR006547; NO3_Rdtase_bsu.
+DR   NCBIfam; TIGR01660; narH; 1.
+DR   PANTHER; PTHR43518; NITRATE REDUCTASE BETA SUBUNIT; 1.
+DR   PANTHER; PTHR43518:SF3; RESPIRATORY NITRATE REDUCTASE 2 BETA CHAIN; 1.
+DR   Pfam; PF13247; Fer4_11; 1.
+DR   Pfam; PF14711; Nitr_red_bet_C; 1.
+DR   SUPFAM; SSF54862; 4Fe-4S ferredoxins; 1.
+DR   PROSITE; PS51379; 4FE4S_FER_2; 3.
+PE   1: Evidence at protein level;
+KW   3Fe-4S; 4Fe-4S; Cell membrane; Direct protein sequencing;
+KW   Electron transport; Iron; Iron-sulfur; Membrane; Metal-binding;
+KW   Nitrate assimilation; Oxidoreductase; Reference proteome; Repeat;
+KW   Transport.
+FT   CHAIN           1..514
+FT                   /note="Respiratory nitrate reductase 2 beta chain"
+FT                   /id="PRO_0000096734"
+FT   DOMAIN          7..35
+FT                   /note="4Fe-4S ferredoxin-type 1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   DOMAIN          174..205
+FT                   /note="4Fe-4S ferredoxin-type 2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   DOMAIN          207..236
+FT                   /note="4Fe-4S ferredoxin-type 3"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         16
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         19
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         22
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         26
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         183
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         186
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         191
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         195
+FT                   /ligand="[3Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21137"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         216
+FT                   /ligand="[3Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21137"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         222
+FT                   /ligand="[3Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21137"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         226
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         243
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         246
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         258
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250"
+FT   BINDING         262
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250"
+FT   CONFLICT        325..326
+FT                   /note="QR -> HG (in Ref. 1; CAA34965)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   514 AA;  58558 MW;  82D997DB093CD818 CRC64;
+//
+ID   NARH_SHIFL              Reviewed;         512 AA.
+AC   Q83RN5;
+DE   RecName: Full=Respiratory nitrate reductase 1 beta chain;
+DE            EC=1.7.5.1;
+GN   Name=narH; OrderedLocusNames=SF1228, S1312;
+OS   Shigella flexneri.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Shigella.
+OX   NCBI_TaxID=623;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=301 / Serotype 2a;
+RX   PubMed=12384590; DOI=10.1093/nar/gkf566;
+RA   Jin Q., Yuan Z., Xu J., Wang Y., Shen Y., Lu W., Wang J., Liu H., Yang J.,
+RA   Yang F., Zhang X., Zhang J., Yang G., Wu H., Qu D., Dong J., Sun L.,
+RA   Xue Y., Zhao A., Gao Y., Zhu J., Kan B., Ding K., Chen S., Cheng H.,
+RA   Yao Z., He B., Chen R., Ma D., Qiang B., Wen Y., Hou Y., Yu J.;
+RT   "Genome sequence of Shigella flexneri 2a: insights into pathogenicity
+RT   through comparison with genomes of Escherichia coli K12 and O157.";
+RL   Nucleic Acids Res. 30:4432-4441(2002).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700930 / 2457T / Serotype 2a;
+RX   PubMed=12704152; DOI=10.1128/iai.71.5.2775-2786.2003;
+RA   Wei J., Goldberg M.B., Burland V., Venkatesan M.M., Deng W., Fournier G.,
+RA   Mayhew G.F., Plunkett G. III, Rose D.J., Darling A., Mau B., Perna N.T.,
+RA   Payne S.M., Runyen-Janecky L.J., Zhou S., Schwartz D.C., Blattner F.R.;
+RT   "Complete genome sequence and comparative genomics of Shigella flexneri
+RT   serotype 2a strain 2457T.";
+RL   Infect. Immun. 71:2775-2786(2003).
+CC   -!- FUNCTION: The nitrate reductase enzyme complex allows S.flexneri to use
+CC       nitrate as an electron acceptor during anaerobic growth. The beta chain
+CC       is an electron transfer unit containing four cysteine clusters involved
+CC       in the formation of iron-sulfur centers. Electrons are transferred from
+CC       the gamma chain to the molybdenum cofactor of the alpha subunit.
+CC       {ECO:0000250}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=nitrate + a quinol = a quinone + nitrite + H2O;
+CC         Xref=Rhea:RHEA:56144, ChEBI:CHEBI:15377, ChEBI:CHEBI:16301,
+CC         ChEBI:CHEBI:17632, ChEBI:CHEBI:24646, ChEBI:CHEBI:132124; EC=1.7.5.1;
+CC   -!- COFACTOR:
+CC       Name=[4Fe-4S] cluster; Xref=ChEBI:CHEBI:49883;
+CC         Evidence={ECO:0000250|UniProtKB:P11349};
+CC       Note=Binds 3 [4Fe-4S] clusters per subunit.
+CC       {ECO:0000250|UniProtKB:P11349};
+CC   -!- COFACTOR:
+CC       Name=[3Fe-4S] cluster; Xref=ChEBI:CHEBI:21137;
+CC         Evidence={ECO:0000250|UniProtKB:P11349};
+CC       Note=Binds 1 [3Fe-4S] cluster per subunit.
+CC       {ECO:0000250|UniProtKB:P11349};
+CC   -!- SUBUNIT: Dimer of heterotrimers each composed of an alpha, a beta and a
+CC       gamma chain. Alpha and beta are catalytic chains; gamma chains are
+CC       involved in binding the enzyme complex to the cytoplasmic membrane (By
+CC       similarity). {ECO:0000250|UniProtKB:P11349}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000250}; Peripheral membrane
+CC       protein {ECO:0000250}.
+DR   EMBL; AE005674; AAN42841.1; -; Genomic_DNA.
+DR   EMBL; AE014073; AAP16727.1; -; Genomic_DNA.
+DR   RefSeq; NP_707134.1; NC_004337.2.
+DR   RefSeq; WP_000702649.1; NZ_CP123365.1.
+DR   AlphaFoldDB; Q83RN5; -.
+DR   SMR; Q83RN5; -.
+DR   STRING; 198214.SF1228; -.
+DR   PaxDb; 198214-SF1228; -.
+DR   GeneID; 1024183; -.
+DR   KEGG; sfl:SF1228; -.
+DR   KEGG; sfx:S1312; -.
+DR   PATRIC; fig|198214.7.peg.1447; -.
+DR   HOGENOM; CLU_043374_5_2_6; -.
+DR   Proteomes; UP000001006; Chromosome.
+DR   Proteomes; UP000002673; Chromosome.
+DR   GO; GO:0009325; C:nitrate reductase complex; IEA:InterPro.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0051538; F:3 iron, 4 sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0051539; F:4 iron, 4 sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009055; F:electron transfer activity; IEA:TreeGrafter.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0160182; F:nitrate reductase (quinone) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0009061; P:anaerobic respiration; IEA:TreeGrafter.
+DR   GO; GO:0042128; P:nitrate assimilation; IEA:UniProtKB-KW.
+DR   CDD; cd10557; NarH_beta-like; 1.
+DR   FunFam; 3.30.70.20:FF:000005; Respiratory nitrate reductase beta subunit; 1.
+DR   FunFam; 3.30.70.20:FF:000008; Respiratory nitrate reductase beta subunit; 1.
+DR   FunFam; 3.30.70.20:FF:000010; Respiratory nitrate reductase beta subunit; 1.
+DR   FunFam; 1.10.3650.10:FF:000001; Respiratory nitrate reductase subunit beta; 1.
+DR   Gene3D; 3.30.70.20; -; 3.
+DR   Gene3D; 1.10.3650.10; nitrate reductase domain like; 1.
+DR   InterPro; IPR017896; 4Fe4S_Fe-S-bd.
+DR   InterPro; IPR029263; Nitr_red_bet_C.
+DR   InterPro; IPR038262; Nitr_red_bet_C_sf.
+DR   InterPro; IPR006547; NO3_Rdtase_bsu.
+DR   NCBIfam; TIGR01660; narH; 1.
+DR   PANTHER; PTHR43518; NITRATE REDUCTASE BETA SUBUNIT; 1.
+DR   PANTHER; PTHR43518:SF1; RESPIRATORY NITRATE REDUCTASE 1 BETA CHAIN; 1.
+DR   Pfam; PF13247; Fer4_11; 1.
+DR   Pfam; PF14711; Nitr_red_bet_C; 1.
+DR   SUPFAM; SSF54862; 4Fe-4S ferredoxins; 1.
+DR   PROSITE; PS51379; 4FE4S_FER_2; 3.
+PE   3: Inferred from homology;
+KW   3Fe-4S; 4Fe-4S; Cell membrane; Electron transport; Iron; Iron-sulfur;
+KW   Membrane; Metal-binding; Nitrate assimilation; Oxidoreductase;
+KW   Reference proteome; Repeat; Transport.
+FT   CHAIN           1..512
+FT                   /note="Respiratory nitrate reductase 1 beta chain"
+FT                   /id="PRO_0000096721"
+FT   DOMAIN          7..35
+FT                   /note="4Fe-4S ferredoxin-type 1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   DOMAIN          175..206
+FT                   /note="4Fe-4S ferredoxin-type 2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   DOMAIN          208..237
+FT                   /note="4Fe-4S ferredoxin-type 3"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         16
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         19
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         22
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         26
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         184
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         187
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         192
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         196
+FT                   /ligand="[3Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21137"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         217
+FT                   /ligand="[3Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21137"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         223
+FT                   /ligand="[3Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21137"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         227
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         244
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         247
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         259
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   BINDING         263
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000250|UniProtKB:P11349"
+FT   CONFLICT        402
+FT                   /note="I -> V (in Ref. 2; AAP16727)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   512 AA;  58080 MW;  F8AC747E1C0973DB CRC64;
+//
+ID   NARH_ECOLI              Reviewed;         512 AA.
+AC   P11349;
+DE   RecName: Full=Respiratory nitrate reductase 1 beta chain;
+DE            EC=1.7.5.1;
+DE   AltName: Full=Nitrate reductase A subunit beta;
+DE   AltName: Full=Quinol-nitrate oxidoreductase subunit beta;
+GN   Name=narH; OrderedLocusNames=b1225, JW1216;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=K12 / TG1;
+RX   PubMed=2674654; DOI=10.1007/bf00331275;
+RA   Blasco F., Iobbi C., Giordano G., Chippaux M., Bonnefoy V.;
+RT   "Nitrate reductase of Escherichia coli: completion of the nucleotide
+RT   sequence of the nar operon and reassessment of the role of the alpha and
+RT   beta subunits in iron binding and electron transfer.";
+RL   Mol. Gen. Genet. 218:249-256(1989).
+RN   [2]
+RP   SEQUENCE REVISION TO 398-417.
+RC   STRAIN=K12 / TG1;
+RA   Blasco F.;
+RL   Submitted (JUL-1991) to the EMBL/GenBank/DDBJ databases.
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=8905232; DOI=10.1093/dnares/3.3.137;
+RA   Oshima T., Aiba H., Baba T., Fujita K., Hayashi K., Honjo A., Ikemoto K.,
+RA   Inada T., Itoh T., Kajihara M., Kanai K., Kashimoto K., Kimura S.,
+RA   Kitagawa M., Makino K., Masuda S., Miki T., Mizobuchi K., Mori H.,
+RA   Motomura K., Nakamura Y., Nashimoto H., Nishio Y., Saito N., Sampei G.,
+RA   Seki Y., Tagami H., Takemoto K., Wada C., Yamamoto Y., Yano M.,
+RA   Horiuchi T.;
+RT   "A 718-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 12.7-28.0 min region on the linkage map.";
+RL   DNA Res. 3:137-155(1996).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [6]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 365-512.
+RX   PubMed=2832376; DOI=10.1128/jb.170.4.1721-1729.1988;
+RA   Sodergren E.J., Demoss J.A.;
+RT   "narI region of the Escherichia coli nitrate reductase (nar) operon
+RT   contains two genes.";
+RL   J. Bacteriol. 170:1721-1729(1988).
+RN   [7]
+RP   PROTEIN SEQUENCE OF 1-10.
+RX   PubMed=3053688; DOI=10.1016/s0021-9258(18)37572-0;
+RA   Sodergren E.J., Hsu P.Y., Demoss J.A.;
+RT   "Roles of the narJ and narI gene products in the expression of nitrate
+RT   reductase in Escherichia coli.";
+RL   J. Biol. Chem. 263:16156-16162(1988).
+RN   [8]
+RP   EPR SPECTROSCOPY OF IRON-SULFUR CLUSTERS.
+RX   PubMed=1321049; DOI=10.1111/j.1432-1033.1992.tb17020.x;
+RA   Guigliarelli B., Asso M., More C., Augier V., Blasco F., Pommier J.,
+RA   Giordano G., Bertrand P.;
+RT   "EPR and redox characterization of iron-sulfur centers in nitrate
+RT   reductases A and Z from Escherichia coli. Evidence for a high-potential and
+RT   a low-potential class and their relevance in the electron-transfer
+RT   mechanism.";
+RL   Eur. J. Biochem. 207:61-68(1992).
+RN   [9]
+RP   MUTAGENESIS OF CYSTEINE RESIDUES, AND EPR SPECTROSCOPY OF IRON-SULFUR
+RP   CLUSTERS.
+RX   PubMed=8383531; DOI=10.1021/bi00059a018;
+RA   Augier V., Guigliarelli B., Asso M., Bertrand P., Frixon C., Giordano G.,
+RA   Chippaux M., Blasco F.;
+RT   "Site-directed mutagenesis of conserved cysteine residues within the beta
+RT   subunit of Escherichia coli nitrate reductase. Physiological, biochemical,
+RT   and EPR characterization of the mutated enzymes.";
+RL   Biochemistry 32:2013-2023(1993).
+RN   [10]
+RP   MUTAGENESIS OF CYSTEINE RESIDUES, AND EPR SPECTROSCOPY OF IRON-SULFUR
+RP   CLUSTERS.
+RX   PubMed=8388253; DOI=10.1021/bi00070a018;
+RA   Augier V., Asso M., Guigliarelli B., More C., Bertrand P., Santini C.-L.,
+RA   Blasco F., Chippaux M., Giordano G.;
+RT   "Removal of the high-potential [4Fe-4S] center of the beta-subunit from
+RT   Escherichia coli nitrate reductase. Physiological, biochemical, and EPR
+RT   characterization of site-directed mutated enzymes.";
+RL   Biochemistry 32:5099-5108(1993).
+RN   [11]
+RP   MUTAGENESIS OF CYSTEINE RESIDUES, AND EPR SPECTROSCOPY OF IRON-SULFUR
+RP   CLUSTERS.
+RX   PubMed=8664273; DOI=10.1021/bi952459p;
+RA   Guigliarelli B., Magalon A., Asso M., Bertrand P., Frixon C., Giordano G.,
+RA   Blasco F.;
+RT   "Complete coordination of the four Fe-S centers of the beta subunit from
+RT   Escherichia coli nitrate reductase. Physiological, biochemical, and EPR
+RT   characterization of site-directed mutants lacking the highest or lowest
+RT   potential [4Fe-4S] clusters.";
+RL   Biochemistry 35:4828-4836(1996).
+RN   [12]
+RP   EPR SPECTROSCOPY, AND REDOX POTENTIOMETRY OF IRON-SULFUR CLUSTERS.
+RX   PubMed=9516445; DOI=10.1074/jbc.273.13.7462;
+RA   Rothery R.A., Magalon A., Giordano G., Guigliarelli B., Blasco F.,
+RA   Weiner J.H.;
+RT   "The molybdenum cofactor of Escherichia coli nitrate reductase A (NarGHI).
+RT   Effect of a mobAB mutation and interactions with [Fe-S] clusters.";
+RL   J. Biol. Chem. 273:7462-7469(1998).
+RN   [13]
+RP   X-RAY CRYSTALLOGRAPHY (1.90 ANGSTROMS) IN COMPLEX WITH IRON-SULFUR (3FE-4S)
+RP   AND IRON-SULFUR (4FE-4S), COFACTOR, AND SUBUNIT.
+RX   PubMed=12910261; DOI=10.1038/nsb969;
+RA   Bertero M.G., Rothery R.A., Palak M., Hou C., Lim D., Blasco F.,
+RA   Weiner J.H., Strynadka N.C.J.;
+RT   "Insights into the respiratory electron transfer pathway from the structure
+RT   of nitrate reductase A.";
+RL   Nat. Struct. Biol. 10:681-687(2003).
+RN   [14]
+RP   X-RAY CRYSTALLOGRAPHY (2.20 ANGSTROMS) IN COMPLEX WITH IRON-SULFUR (3FE-4S)
+RP   AND IRON-SULFUR (4FE-4S), AND COFACTOR.
+RX   PubMed=14725769; DOI=10.1016/j.str.2003.11.020;
+RA   Jormakka M., Richardson D., Byrne B., Iwata S.;
+RT   "Architecture of NarGH reveals a structural classification of Mo-bisMGD
+RT   enzymes.";
+RL   Structure 12:95-104(2004).
+CC   -!- FUNCTION: The nitrate reductase enzyme complex allows E.coli to use
+CC       nitrate as an electron acceptor during anaerobic growth. The beta chain
+CC       is an electron transfer unit containing four cysteine clusters involved
+CC       in the formation of iron-sulfur centers. Electrons are transferred from
+CC       the gamma chain to the molybdenum cofactor of the alpha subunit.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=nitrate + a quinol = a quinone + nitrite + H2O;
+CC         Xref=Rhea:RHEA:56144, ChEBI:CHEBI:15377, ChEBI:CHEBI:16301,
+CC         ChEBI:CHEBI:17632, ChEBI:CHEBI:24646, ChEBI:CHEBI:132124; EC=1.7.5.1;
+CC   -!- COFACTOR:
+CC       Name=[4Fe-4S] cluster; Xref=ChEBI:CHEBI:49883;
+CC         Evidence={ECO:0000269|PubMed:12910261, ECO:0000269|PubMed:14725769};
+CC       Note=Binds 3 [4Fe-4S] clusters per subunit.
+CC       {ECO:0000269|PubMed:12910261, ECO:0000269|PubMed:14725769};
+CC   -!- COFACTOR:
+CC       Name=[3Fe-4S] cluster; Xref=ChEBI:CHEBI:21137;
+CC         Evidence={ECO:0000269|PubMed:12910261, ECO:0000269|PubMed:14725769};
+CC       Note=Binds 1 [3Fe-4S] cluster per subunit.
+CC       {ECO:0000269|PubMed:12910261, ECO:0000269|PubMed:14725769};
+CC   -!- SUBUNIT: Dimer of heterotrimers each composed of an alpha, a beta and a
+CC       gamma chain. Alpha and beta are catalytic chains; gamma chains are
+CC       involved in binding the enzyme complex to the cytoplasmic membrane.
+CC       {ECO:0000269|PubMed:12910261}.
+CC   -!- INTERACTION:
+CC       P11349; P42593: fadH; NbExp=3; IntAct=EBI-555067, EBI-561933;
+CC       P11349; P09152: narG; NbExp=13; IntAct=EBI-555067, EBI-547248;
+CC       P11349; P19317: narW; NbExp=3; IntAct=EBI-555067, EBI-555088;
+CC       P11349; P19318: narY; NbExp=3; IntAct=EBI-555067, EBI-555059;
+CC       P11349; P19319: narZ; NbExp=6; IntAct=EBI-555067, EBI-547262;
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Peripheral membrane protein.
+CC   -!- INDUCTION: By nitrate.
+DR   EMBL; M20147; AAA24195.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC74309.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA36095.1; -; Genomic_DNA.
+DR   EMBL; X16181; CAA34304.1; -; Genomic_DNA.
+DR   PIR; F64869; RDECNB.
+DR   RefSeq; NP_415743.1; NC_000913.3.
+DR   RefSeq; WP_000702650.1; NZ_STEB01000023.1.
+DR   PDB; 1Q16; X-ray; 1.90 A; B=1-512.
+DR   PDB; 1R27; X-ray; 2.00 A; B/D=1-512.
+DR   PDB; 1SIW; X-ray; 2.20 A; B=1-512.
+DR   PDB; 1Y4Z; X-ray; 2.00 A; B=1-512.
+DR   PDB; 1Y5I; X-ray; 1.90 A; B=1-512.
+DR   PDB; 1Y5L; X-ray; 2.50 A; B=1-512.
+DR   PDB; 1Y5N; X-ray; 2.50 A; B=1-512.
+DR   PDB; 3EGW; X-ray; 1.90 A; B=1-509.
+DR   PDB; 3IR5; X-ray; 2.30 A; B=1-512.
+DR   PDB; 3IR6; X-ray; 2.80 A; B=1-512.
+DR   PDB; 3IR7; X-ray; 2.50 A; B=1-512.
+DR   PDBsum; 1Q16; -.
+DR   PDBsum; 1R27; -.
+DR   PDBsum; 1SIW; -.
+DR   PDBsum; 1Y4Z; -.
+DR   PDBsum; 1Y5I; -.
+DR   PDBsum; 1Y5L; -.
+DR   PDBsum; 1Y5N; -.
+DR   PDBsum; 3EGW; -.
+DR   PDBsum; 3IR5; -.
+DR   PDBsum; 3IR6; -.
+DR   PDBsum; 3IR7; -.
+DR   AlphaFoldDB; P11349; -.
+DR   SMR; P11349; -.
+DR   BioGRID; 4262231; 34.
+DR   BioGRID; 850147; 6.
+DR   ComplexPortal; CPX-1974; Nitrate reductase A complex.
+DR   DIP; DIP-10312N; -.
+DR   FunCoup; P11349; 233.
+DR   IntAct; P11349; 15.
+DR   STRING; 511145.b1225; -.
+DR   DrugBank; DB07349; (1S)-2-{[{[(2S)-2,3-DIHYDROXYPROPYL]OXY}(HYDROXY)PHOSPHORYL]OXY}-1-[(PENTANOYLOXY)METHYL]ETHYL OCTANOATE.
+DR   DrugBank; DB04464; N-Formylmethionine.
+DR   TCDB; 5.A.3.1.1; the prokaryotic molybdopterin-containing oxidoreductase (pmo) family.
+DR   jPOST; P11349; -.
+DR   PaxDb; 511145-b1225; -.
+DR   EnsemblBacteria; AAC74309; AAC74309; b1225.
+DR   GeneID; 75057227; -.
+DR   GeneID; 945780; -.
+DR   KEGG; ecj:JW1216; -.
+DR   KEGG; eco:b1225; -.
+DR   KEGG; ecoc:C3026_07205; -.
+DR   PATRIC; fig|1411691.4.peg.1056; -.
+DR   EchoBASE; EB0633; -.
+DR   eggNOG; COG1140; Bacteria.
+DR   HOGENOM; CLU_043374_5_2_6; -.
+DR   InParanoid; P11349; -.
+DR   OMA; KVYFNWQ; -.
+DR   OrthoDB; 9779457at2; -.
+DR   PhylomeDB; P11349; -.
+DR   BioCyc; EcoCyc:NARH-MONOMER; -.
+DR   BioCyc; MetaCyc:NARH-MONOMER; -.
+DR   BRENDA; 1.7.5.1; 2026.
+DR   EvolutionaryTrace; P11349; -.
+DR   PHI-base; PHI:10513; -.
+DR   PRO; PR:P11349; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0016020; C:membrane; IDA:ComplexPortal.
+DR   GO; GO:0044799; C:NarGHI complex; IDA:EcoCyc.
+DR   GO; GO:0051538; F:3 iron, 4 sulfur cluster binding; IDA:EcoCyc.
+DR   GO; GO:0051539; F:4 iron, 4 sulfur cluster binding; IDA:EcoCyc.
+DR   GO; GO:0009055; F:electron transfer activity; IDA:EcoCyc.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0160182; F:nitrate reductase (quinone) activity; IEA:UniProtKB-EC.
+DR   GO; GO:0008940; F:nitrate reductase activity; IMP:EcoCyc.
+DR   GO; GO:0019645; P:anaerobic electron transport chain; IDA:ComplexPortal.
+DR   GO; GO:0009061; P:anaerobic respiration; IEP:EcoCyc.
+DR   GO; GO:0042128; P:nitrate assimilation; IEA:UniProtKB-KW.
+DR   GO; GO:0042126; P:nitrate metabolic process; IDA:ComplexPortal.
+DR   CDD; cd10557; NarH_beta-like; 1.
+DR   FunFam; 3.30.70.20:FF:000005; Respiratory nitrate reductase beta subunit; 1.
+DR   FunFam; 3.30.70.20:FF:000008; Respiratory nitrate reductase beta subunit; 1.
+DR   FunFam; 3.30.70.20:FF:000010; Respiratory nitrate reductase beta subunit; 1.
+DR   FunFam; 1.10.3650.10:FF:000001; Respiratory nitrate reductase subunit beta; 1.
+DR   Gene3D; 3.30.70.20; -; 3.
+DR   Gene3D; 1.10.3650.10; nitrate reductase domain like; 1.
+DR   InterPro; IPR017896; 4Fe4S_Fe-S-bd.
+DR   InterPro; IPR029263; Nitr_red_bet_C.
+DR   InterPro; IPR038262; Nitr_red_bet_C_sf.
+DR   InterPro; IPR006547; NO3_Rdtase_bsu.
+DR   NCBIfam; TIGR01660; narH; 1.
+DR   PANTHER; PTHR43518; NITRATE REDUCTASE BETA SUBUNIT; 1.
+DR   PANTHER; PTHR43518:SF1; RESPIRATORY NITRATE REDUCTASE 1 BETA CHAIN; 1.
+DR   Pfam; PF13247; Fer4_11; 1.
+DR   Pfam; PF14711; Nitr_red_bet_C; 1.
+DR   SUPFAM; SSF54862; 4Fe-4S ferredoxins; 1.
+DR   PROSITE; PS51379; 4FE4S_FER_2; 3.
+PE   1: Evidence at protein level;
+KW   3D-structure; 3Fe-4S; 4Fe-4S; Cell membrane; Direct protein sequencing;
+KW   Electron transport; Iron; Iron-sulfur; Membrane; Metal-binding;
+KW   Nitrate assimilation; Oxidoreductase; Reference proteome; Repeat;
+KW   Transport.
+FT   CHAIN           1..512
+FT                   /note="Respiratory nitrate reductase 1 beta chain"
+FT                   /id="PRO_0000096720"
+FT   DOMAIN          7..35
+FT                   /note="4Fe-4S ferredoxin-type 1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   DOMAIN          175..206
+FT                   /note="4Fe-4S ferredoxin-type 2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   DOMAIN          208..237
+FT                   /note="4Fe-4S ferredoxin-type 3"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         16
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         19
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         22
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         26
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         184
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         187
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         192
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         196
+FT                   /ligand="[3Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21137"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         217
+FT                   /ligand="[3Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21137"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         223
+FT                   /ligand="[3Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:21137"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         227
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="3"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         244
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         247
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         259
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="2"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   BINDING         263
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /ligand_label="1"
+FT                   /evidence="ECO:0000269|PubMed:12910261,
+FT                   ECO:0000269|PubMed:14725769"
+FT   CONFLICT        398..417
+FT                   /note="DTKPVLRALKRMLAMRHYKR -> EYQTGTARTETYAGDASLQT (in
+FT                   Ref. 6; AAA24195)"
+FT                   /evidence="ECO:0000305"
+FT   STRAND          3..12
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   TURN            13..15
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           21..30
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          41..49
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   TURN            51..57
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           59..62
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          65..68
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          74..76
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           81..85
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   TURN            86..89
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           97..100
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          104..106
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           109..113
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          126..128
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   TURN            129..131
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   TURN            142..148
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           152..155
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           159..161
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           167..170
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           172..174
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          178..182
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           191..194
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          201..204
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   TURN            205..207
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          210..212
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   TURN            214..216
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           223..226
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          232..235
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   TURN            236..239
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          240..243
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           248..251
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   TURN            252..254
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           258..261
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          268..276
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           277..279
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           280..284
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           289..291
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           292..297
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           306..314
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           319..325
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           329..334
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          341..343
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           345..347
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          352..356
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          366..368
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           380..382
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   STRAND          383..385
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           387..394
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           399..420
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           428..432
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           437..447
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           452..455
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   TURN            463..466
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+FT   HELIX           469..475
+FT                   /evidence="ECO:0007829|PDB:1Q16"
+SQ   SEQUENCE   512 AA;  58066 MW;  2E7719C8D078BAEA CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Escherichia.
+6	6	Shigella.
+5	6	Klebsiella/Raoultella group
+6	5	Erwiniaceae
+29	5	Enterobacteriaceae
+45	4	Enterobacterales
+48	3	Gammaproteobacteria
+48	2	Pseudomonadota
+48	1	Pseudomonadati
+48	0	Bacteria
+Total of 49 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A097R4X7	NITRATE REDUCTASE (QUINON     78.7    8.9e-19   1   1.5   1.5
+	Iterate                   	   478	   511	    77.8
+	PF13247	Fer4_11         	   174	   272	   122.7
+	PF13237	Fer4_10         	   175	   227	      34
+	PF12838	Fer4_7          	   182	   230	    28.5
+	PF14711	Nitr_red_bet_C  	   358	   436	   101.2
+
+A0A250B6V6	NITRATE REDUCTASE (QUINON     79.0    6.9e-19   1   1.6   1.4
+	Iterate                   	   478	   511	    78.0
+	PF13247	Fer4_11         	   174	   272	   123.6
+	PF13237	Fer4_10         	   175	   227	    34.3
+	PF12838	Fer4_7          	   182	   230	    28.7
+	PF14711	Nitr_red_bet_C  	   358	   436	   102.2
+
+P11349	RESPIRATORY NITRATE REDUCTASE 1     77.9    1.6e-18   1   1.6   0.5
+	Iterate                   	   479	   512	    76.9
+	PF13247	Fer4_11         	   175	   273	   125.5
+	PF13237	Fer4_10         	   176	   228	    34.6
+	PF12838	Fer4_7          	   183	   231	      30
+	PF14711	Nitr_red_bet_C  	   359	   437	   106.3
+
+P19318	RESPIRATORY NITRATE REDUCTASE 2     68.2    1.6e-15   1   1.6   2.3
+	Iterate                   	   479	   513	    67.1
+	PF13247	Fer4_11         	   174	   272	   125.1
+	PF13237	Fer4_10         	   175	   227	    35.1
+	PF12838	Fer4_7          	   182	   230	      30
+	PF14711	Nitr_red_bet_C  	   358	   437	     102
+
+Q83RN5	RESPIRATORY NITRATE REDUCTASE 1     77.9    1.6e-18   1   1.6   0.5
+	Iterate                   	   479	   512	    76.9
+	PF13247	Fer4_11         	   175	   273	   125.5
+	PF13237	Fer4_10         	   176	   228	    34.6
+	PF12838	Fer4_7          	   183	   231	      30
+	PF14711	Nitr_red_bet_C  	   359	   437	   105.8
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P11349 (E-value: 2e-20, Score: 77.3)
+Mentioned as: P11349
+Description: Respiratory nitrate reductase 1 beta chain
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Respiratory nitrate reductase 1 beta chain; Nitrate reductase A subunit beta; Quinol-nitrate oxidoreductase subunit beta; EC 1.7.5.1
+  BRENDA:  - nitrate reductase (quinone) (EC 1.7.5.1)
+  TCDB:  - NarH aka B1225, component of Anaerobic, respiratory, membrane-bound nitrate reductase, NarGHI. Two protons are consumed in the cytoplasm while two protons are released in the periplasm, contributing to the pmf
+PMID: 36525747
+Source: EuropePMC
+Title: Biodistribution of <sup>89</sup>Zr-DFO-labeled avian pathogenic Escherichia coli outer membrane vesicles by PET imaging in chickens
+Journal: Poultry science (2023)
+Snippet: transport and metabolism Cell membrane 314 P09152 NARG Energy production and conversion Cell membrane 315 P11349 NARH Energy production and conversion Cell membrane Cell inner membrane 316 P0ABA0 ATPF Energy production and conversion Cell inner membrane 317 P0ADZ7 YAJC Intracellular trafficking, secretion, and vesicular transport Cell
+
+================================================================================
+Protein: P11349 (E-value: 2e-20, Score: 77.3)
+Mentioned as: P11349
+Description: Respiratory nitrate reductase 1 beta chain
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Respiratory nitrate reductase 1 beta chain; Nitrate reductase A subunit beta; Quinol-nitrate oxidoreductase subunit beta; EC 1.7.5.1
+  BRENDA:  - nitrate reductase (quinone) (EC 1.7.5.1)
+  TCDB:  - NarH aka B1225, component of Anaerobic, respiratory, membrane-bound nitrate reductase, NarGHI. Two protons are consumed in the cytoplasm while two protons are released in the periplasm, contributing to the pmf
+PMID: 32596098
+Source: EuropePMC
+Title: Transcriptomic analysis of multi-drug resistant <i>Escherichia coli</i> K-12 strain in response to <i>Lavandula angustifolia</i> essential oil
+Journal: 3 Biotech (2020)
+Snippet: Down-regulation Up-regulation 13 14 15 16 P38489 P19926 P11349 P11350 nfsB agp narH narI 2 1 1 1 Up-regulation Down-regulation Down-regulation Down-regulation
+
+================================================================================
+Protein: P11349 (E-value: 2e-20, Score: 77.3)
+Mentioned as: P11349
+Description: Respiratory nitrate reductase 1 beta chain
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Respiratory nitrate reductase 1 beta chain; Nitrate reductase A subunit beta; Quinol-nitrate oxidoreductase subunit beta; EC 1.7.5.1
+  BRENDA:  - nitrate reductase (quinone) (EC 1.7.5.1)
+  TCDB:  - NarH aka B1225, component of Anaerobic, respiratory, membrane-bound nitrate reductase, NarGHI. Two protons are consumed in the cytoplasm while two protons are released in the periplasm, contributing to the pmf
+PMID: 31532062
+Source: EuropePMC
+Title: Combinatorial modulation of initial codons for improved zeaxanthin synthetic pathway efficiency in Escherichia coli
+Journal: MicrobiologyOpen (2019)
+Snippet: Fructosebisphosphate aldolase class 2 OS= Escherichia coli 33.73338241 24.5125 7 359 39.123 5.86 1.581 26.53024399 P11349 Respiratory nitrate reductase 1 beta chain OS= Escherichia coli 29.23611516 9.375 4 512 58.029 6.77 0.311 20.04963112 sp 007 CrtY 86.47902161 45.0777 16 386 43.604 8 3.962 63.83823073 P0A794 Pyridoxine
+
+================================================================================
+Protein: VIMSS303473 (E-value: 2e-20, Score: 77.3)
+Mentioned as: c1686
+Description: Respiratory nitrate reductase 1 beta chain
+Organism: Escherichia coli CFT073
+PMID: 16714589
+Source: EuropePMC
+Title: Global gene expression profiling of the asymptomatic bacteriuria Escherichia coli strain 83972 in the human urinary tract
+Journal: Infection and immunity (2006)
+Snippet: growth in both MOPS and in vitro urinea Gene Code c1686 b1476 b1226 b1796 b4209 b1223 ECs5443 b1797 Z2001 b1541 Z0893 b1227 b1225 b4013 b2941 b2552 c4141 b1475
+
+================================================================================
+Protein: VIMSS73265 (E-value: 2e-20, Score: 77.3)
+Mentioned as: Z2002
+Description: nitrate reductase 1, beta subunit
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 30352567
+Source: EuropePMC
+Title: Transcriptomic analysis reveals specific metabolic pathways of enterohemorrhagic Escherichia coli O157:H7 in bovine digestive contents
+Journal: BMC genomics (2018)
+Snippet: 2.15 6.29E-03 Z2001 narG Nitrate reductase ( subunit) NDE NDE 4.50 1.93E-23 NDE 4.97 1.46E-28 Z2002 narH Nitrate reductase ( subunit) NDE NDE 2.97 2.34E-15 NDE 3.36 1.58E-19 Z2004 narI Nitrate reductase ( subunit) NDE NDE 2.95 8.43E-11 NDE 3.30 2.02E-13 Z2003 narJ Nitrate reductase molybdenum
+
+================================================================================
+Protein: VIMSS7642840 (E-value: 2e-20, Score: 77.3)
+Mentioned as: ECO26_1741
+Description: nitrate reductase 1, beta subunit
+Organism: Escherichia coli O26:H11 str. 11368
+PMID: 24105689
+Source: EuropePMC
+Title: Evolution of enterohemorrhagic escherichia coli O26 based on single-nucleotide polymorphisms
+Journal: Genome biology and evolution (2013)
+Snippet: C T b Nonsynonymous (Ala Val) 89.17 ECO26_1687 minD (1) 1652262 A G Synonymous 100.00 ECO26_1741 narH (1) 1711223 T C b Nonsynonymous (Val Ala) 89.17 ECO26_1835 yciK (1) 1787173 T C Nonsynonymous (Met Thr) 100.00 ECO26_1890 ycjF (1) 1844594 G A b Nonsynonymous (Gly Asp)
+
+================================================================================
+Protein: VIMSS3408329 (E-value: 2.7e-20, Score: 77.0)
+Mentioned as: ESA_01521
+Description: hypothetical protein
+Organism: Enterobacter sakazakii ATCC BAA-894
+PMID: 21239552
+Source: EuropePMC
+Title: Comprehensive approaches to molecular biomarker discovery for detection and identification of Cronobacter spp. (Enterobacter sakazakii) and Salmonella spp
+Journal: Applied and environmental microbiology (2011)
+Snippet: ESA_01309 ESA_01354 ESA_01355 ESA_01386 ESA_01520 ESA_01521 ESA_01552 ESA_01884 ESA_01974 ESA_01976 ESA_02086 ESA_02216 156532640 ABU77466.1 ESA_02217 156532687
+
+================================================================================
+Protein: VIMSS3349309 (E-value: 3e-20, Score: 76.8)
+Mentioned as: SARI_01191
+Description: hypothetical protein
+Organism: Salmonella enterica subsp. arizonae serovar 62:z4,z23:--
+PMID: 26799565
+Source: EuropePMC
+Title: Core Proteomic Analysis of Unique Metabolic Pathways of Salmonella enterica for the Identification of Potential Drug Targets
+Journal: PloS one (2016)
+Snippet: 67 spq NC_010102 4kqr_B 539 43.4 538362430 BN855_18930 67 senb NC_022241 4kqr_B 539 43.4 161503126 SARI_01191 98 ses NC_010067 3ir7_B 511 92.8 161613745 SPAB_01470 98 spq NC_010102 3ir7_B 511 93.2 161613976 SPAB_01714 98 spq NC_010102 3ir7_B 506 80.2 378984138 STMDT12_C15970 98 sem NC_016860 3ir7_B 506 80.0
+
+================================================================================
+Protein: VIMSS5796023 (E-value: 6.4e-20, Score: 75.7)
+Mentioned as: SEN1276
+
+... (truncated - showing first 100 of 119 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0C2MKV8.1	AF-A0A0C2MKV8-F1-model_v4_TED01:3-94_132-438	1	AF-A0A0C2MKV8-F1-model_v4_TED01	3-438	0
+A0A0C2MKV8.1	AF-A0A0C2MKV8-F1-model_v4_TED02:545-671	1	AF-A0A0C2MKV8-F1-model_v4_TED02	545-671	0
+A0A0F0VRU2.1	AF-A0A0F0VRU2-F1-model_v4_TED01:2-96_147-467	1	AF-A0A0F0VRU2-F1-model_v4_TED01	2-467	0
+A0A0L7T891.1	AF-A0A0L7T891-F1-model_v4_TED01:16-102_139-245	1	AF-A0A0L7T891-F1-model_v4_TED01	16-245	0
+A0A0N0IB84.1	AF-A0A0N0IB84-F1-model_v4_TED01:2-104_114-475	1	AF-A0A0N0IB84-F1-model_v4_TED01	2-475	0
+A0A0Q2SGJ8.1	AF-A0A0Q2SGJ8-F1-model_v4_TED01:2-103_129-466	1	AF-A0A0Q2SGJ8-F1-model_v4_TED01	2-466	0
+A0A0Q2SGJ8.1	AF-A0A0Q2SGJ8-F1-model_v4_TED02:470-512	1	AF-A0A0Q2SGJ8-F1-model_v4_TED02	470-512	100.0%
+A0A1B7JW45.1	AF-A0A1B7JW45-F1-model_v4_TED01:2-100_149-357_455-476	1	AF-A0A1B7JW45-F1-model_v4_TED01	2-476	0
+A0A1X0WGP0.1	AF-A0A1X0WGP0-F1-model_v4_TED01:2-100_148-357	1	AF-A0A1X0WGP0-F1-model_v4_TED01	2-357	0
+A0A250B6V6.1	AF-A0A250B6V6-F1-model_v4_TED01:2-98_158-465	1	AF-A0A250B6V6-F1-model_v4_TED01	2-465	0
+A0A250B6V6.1	AF-A0A250B6V6-F1-model_v4_TED02:467-514	1	AF-A0A250B6V6-F1-model_v4_TED02	467-514	100.0%
+A0A2I0FUF2.1	AF-A0A2I0FUF2-F1-model_v4_TED01:2-98_138-468	1	AF-A0A2I0FUF2-F1-model_v4_TED01	2-468	0
+A0A2I5T7N6.1	AF-A0A2I5T7N6-F1-model_v4_TED01:467-514	1	AF-A0A2I5T7N6-F1-model_v4_TED01	467-514	100.0%
+A0A427KDL7.1	AF-A0A427KDL7-F1-model_v4_TED01:2-104_141-469	1	AF-A0A427KDL7-F1-model_v4_TED01	2-469	0
+A0A495RJ16.1	AF-A0A495RJ16-F1-model_v4_TED01:2-104_132-465	1	AF-A0A495RJ16-F1-model_v4_TED01	2-465	0
+A0A495RJ16.1	AF-A0A495RJ16-F1-model_v4_TED02:467-512	1	AF-A0A495RJ16-F1-model_v4_TED02	467-512	100.0%
+A0A4P8YPD9.1	AF-A0A4P8YPD9-F1-model_v4_TED01:14-97_150-252	1	AF-A0A4P8YPD9-F1-model_v4_TED01	14-252	0
+A0A4P8YPD9.1	AF-A0A4P8YPD9-F1-model_v4_TED02:474-501	1	AF-A0A4P8YPD9-F1-model_v4_TED02	474-501	70.6%
+A0A4R1N6Y1.1	AF-A0A4R1N6Y1-F1-model_v4_TED01:16-104_139-251	1	AF-A0A4R1N6Y1-F1-model_v4_TED01	16-251	0
+A0A4R1N6Y1.1	AF-A0A4R1N6Y1-F1-model_v4_TED02:258-455	1	AF-A0A4R1N6Y1-F1-model_v4_TED02	258-455	0
+A0A6M8UH24.1	AF-A0A6M8UH24-F1-model_v4_TED01:2-48_164-466	1	AF-A0A6M8UH24-F1-model_v4_TED01	2-466	0
+A0A6M8UH24.1	AF-A0A6M8UH24-F1-model_v4_TED02:478-509	1	AF-A0A6M8UH24-F1-model_v4_TED02	478-509	94.1%
+A0A845SLK2.1	AF-A0A845SLK2-F1-model_v4_TED01:2-94_147-470	1	AF-A0A845SLK2-F1-model_v4_TED01	2-470	0
+I2B981.1	AF-I2B981-F1-model_v4_TED01:468-516	1	AF-I2B981-F1-model_v4_TED01	468-516	100.0%
+P11349.3	AF-P11349-F1-model_v4_TED01:479-512	1	AF-P11349-F1-model_v4_TED01	479-512	100.0%
+P19318.2	AF-P19318-F1-model_v4_TED01:102-138	1	AF-P19318-F1-model_v4_TED01	102-138	0
+P19318.2	AF-P19318-F1-model_v4_TED02:355-454	1	AF-P19318-F1-model_v4_TED02	355-454	0
+P19318.2	AF-P19318-F1-model_v4_TED03:467-514	1	AF-P19318-F1-model_v4_TED03	467-514	100.0%
+W0HT07.1	AF-W0HT07-F1-model_v4_TED01:2-99_142-465	1	AF-W0HT07-F1-model_v4_TED01	2-465	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 22
+Total networks analyzed: 22
+Total network proteins: 789
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF13806 (Rieske_2)        22           28           100.0%
+PF00384 (Molybdopterin)   22           101          100.0%
+PF01568 (Molydop_binding) 22           97           100.0%
+PF00590 (TP_methylase)    22           34           100.0%
+PF10414 (CysG_dimeriser)  22           29           100.0%
+PF13241 (NAD_binding_7)   22           29           100.0%
+PF03460 (NIR_SIR_ferr)    22           33           100.0%
+PF07992 (Pyr_redox_2)     21           58            95.5%
+PF00070 (Pyr_redox)       21           38            95.5%
+PF02613 (Nitrate_red_del) 21           27            95.5%
+PF02665 (Nitrate_red_gam) 21           27            95.5%
+PF07690 (MFS_1)           21           66            95.5%
+PF04324 (Fer2_BFD)        21           33            95.5%
+PF14824 (Sirohm_synth_M)  21           26            95.5%
+PF01077 (NIR_SIR)         21           32            95.5%
+PF18267 (Rubredoxin_C)    21           23            95.5%
+PF14710 (Nitr_red_alph_N) 20           25            90.9%
+PF04879 (Molybdop_Fe4S4)  19           48            86.4%
+PF00724 (Oxidored_FMN)    19           35            86.4%
+PF13450 (NAD_binding_8)   19           30            86.4%
+PF28599 (NarG_dom_V)      19           24            86.4%
+PF13738 (Pyr_redox_3)     19           20            86.4%
+PF06463 (Mob_synth_C)     18           17            81.8%
+PF04055 (Radical_SAM)     17           17            77.3%
+PF12838 (Fer4_7)          15           38            68.2%
+PF00890 (FAD_binding_2)   15           15            68.2%
+PF13353 (Fer4_12)         15           15            68.2%
+PF13237 (Fer4_10)         15           33            68.2%
+PF13247 (Fer4_11)         14           25            63.6%
+PF01136 (Peptidase_U32)   14           14            63.6%
+PF00037 (Fer4)            12           26            54.5%
+PF03892 (NapB)            11           9             50.0%
+PF00994 (MoCF_biosynth)   10           10            45.5%
+PF03453 (MoeA_N)          10           10            45.5%
+PF03454 (MoeA_C)          10           10            45.5%
+PF02518 (HATPase_c)       10           11            45.5%
+PF12800 (Fer4_4)          10           11            45.5%
+PF13187 (Fer4_9)          10           12            45.5%
+PF01494 (FAD_binding_3)   10           12            45.5%
+PF14691 (Fer4_20)         10           14            45.5%
+PF02335 (Cytochrom_C552)  9            7             40.9%
+PF14711 (Nitr_red_bet_C)  9            9             40.9%
+PF12837 (Fer4_6)          9            10            40.9%
+PF01257 (2Fe-2S_thioredx) 8            6             36.4%
+PF00361 (Proton_antipo_M) 8            11            36.4%
+PF00146 (NADHdh)          8            6             36.4%
+PF00672 (HAMP)            8            8             36.4%
+PF07730 (HisKA_3)         8            8             36.4%
+PF13675 (PilJ)            8            8             36.4%
+PF00329 (Complex1_30kDa)  8            7             36.4%
+PF00346 (Complex1_49kDa)  8            7             36.4%
+PF01266 (DAO)             8            7             36.4%
+PF12831 (FAD_oxidored)    8            8             36.4%
+PF01306 (LacY_symp)       8            15            36.4%
+PF12832 (MFS_1_like)      8            16            36.4%
+PF01433 (Peptidase_M1)    7            6             31.8%
+PF11940 (DUF3458)         7            6             31.8%
+PF17432 (DUF3458_C)       7            6             31.8%
+PF17900 (Peptidase_M1_N)  7            6             31.8%
+PF01292 (Ni_hydr_CYTB)    7            8             31.8%
+PF00034 (Cytochrom_C)     7            44            31.8%
+PF13442 (Cytochrome_CBB3) 7            45            31.8%
+PF00072 (Response_reg)    6            7             27.3%
+PF00420 (Oxidored_q2)     6            4             27.3%
+PF00507 (Oxidored_q4)     6            4             27.3%
+PF00355 (Rieske)          6            5             27.3%
+PF09163 (Form-deh_trans)  6            7             27.3%
+PF18364 (Molybdopterin_N) 6            12            27.3%
+PF06481 (COX_ARM)         6            6             27.3%
+PF02597 (ThiS)            6            6             27.3%
+PF00111 (Fer2)            5            3             22.7%
+PF10588 (NADH-G_4Fe-4S_3) 5            3             22.7%
+PF13510 (Fer2_4)          5            3             22.7%
+PF22117 (Fer4_Nqo3)       5            3             22.7%
+PF01058 (Oxidored_q6)     5            3             22.7%
+PF01512 (Complex1_51K)    5            4             22.7%
+PF10589 (NADH_4Fe-4S)     5            3             22.7%
+PF00499 (Oxidored_q3)     5            3             22.7%
+PF00116 (COX2)            5            5             22.7%
+PF07731 (Cu-oxidase_2)    5            10            22.7%
+PF07732 (Cu-oxidase_3)    5            10            22.7%
+PF00528 (BPD_transp_1)    5            5             22.7%
+PF13379 (NMT1_2)          5            5             22.7%
+PF02754 (CCG)             4            2             18.2%
+PF13183 (Fer4_8)          4            3             18.2%
+PF13534 (Fer4_17)         4            3             18.2%
+
+... (truncated - showing first 100 of 2805 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P11349_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 35.50;
+NC   26.60 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 1q16
+RN   [1]
+RM   12910261
+RT   Insights into the respiratory electron transfer pathway from the
+RT   structure of  nitrate reductase A.
+RA   Bertero MG, Rothery RA, Palak M, Hou C, Lim D, Blasco F, Weiner JH,
+RA   Strynadka NC;
+RL   Nat Struct Biol. 2003;10:681-687.
+RC   Paper describing PDB structure 1r27
+RN   [2]
+RM   14725769
+RT   Architecture of NarGH reveals a structural classification of
+RT   Mo-bisMGD enzymes.
+RA   Jormakka M, Richardson D, Byrne B, Iwata S;
+RL   Structure. 2004;12:95-104.
+RC   Paper describing PDB structure 1siw
+RN   [3]
+RM   15122898
+RT   The catalytic subunit of Escherichia coli nitrate reductase A
+RT   contains a novel  [4Fe-4S] cluster with a high-spin ground state.
+RA   Rothery RA, Bertero MG, Cammack R, Palak M, Blasco F, Strynadka NC,
+RA   Weiner JH;
+RL   Biochemistry. 2004;43:5324-5333.
+RC   Paper describing PDB structure 1y4z
+RN   [4]
+RM   15615728
+RT   Structural and biochemical characterization of a quinol binding site
+RT   of  Escherichia coli nitrate reductase A.
+RA   Bertero MG, Rothery RA, Boroumand N, Palak M, Blasco F, Ginet N,
+RA   Weiner JH, Strynadka NC;
+RL   J Biol Chem. 2005;280:14836-14843.
+RC   Paper describing PDB structure 3ir5
+RN   [5]
+RM   20053990
+RT   Protein crystallography reveals a role for the FS0 cluster of
+RT   Escherichia coli  nitrate reductase A (NarGHI) in enzyme maturation.
+RA   Rothery RA, Bertero MG, Spreter T, Bouromand N, Strynadka NC, Weiner
+RA   JH;
+RL   J Biol Chem. 2010;285:8801-8807.
+
+--- End of Current DESC file ---

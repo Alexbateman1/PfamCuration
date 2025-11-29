@@ -1,0 +1,111 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YCGY_ECOLI              Reviewed;         146 AA.
+AC   P76012; Q2MBG5;
+DE   RecName: Full=Uncharacterized protein YcgY;
+GN   Name=ycgY; OrderedLocusNames=b1196, JW1185;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+DR   EMBL; U00096; AAC74280.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76391.1; -; Genomic_DNA.
+DR   PIR; A64866; A64866.
+DR   RefSeq; NP_415714.1; NC_000913.3.
+DR   RefSeq; WP_000615067.1; NZ_STEB01000023.1.
+DR   AlphaFoldDB; P76012; -.
+DR   SMR; P76012; -.
+DR   BioGRID; 4260953; 20.
+DR   FunCoup; P76012; 221.
+DR   IntAct; P76012; 10.
+DR   STRING; 511145.b1196; -.
+DR   PaxDb; 511145-b1196; -.
+DR   EnsemblBacteria; AAC74280; AAC74280; b1196.
+DR   GeneID; 75203309; -.
+DR   GeneID; 945761; -.
+DR   KEGG; ecj:JW1185; -.
+DR   KEGG; eco:b1196; -.
+DR   KEGG; ecoc:C3026_07035; -.
+DR   PATRIC; fig|511145.12.peg.1242; -.
+DR   EchoBASE; EB4023; -.
+DR   eggNOG; ENOG5033XM0; Bacteria.
+DR   HOGENOM; CLU_2023203_0_0_6; -.
+DR   InParanoid; P76012; -.
+DR   OMA; QRRCKSP; -.
+DR   BioCyc; EcoCyc:G6625-MONOMER; -.
+DR   PRO; PR:P76012; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..146
+FT                   /note="Uncharacterized protein YcgY"
+FT                   /id="PRO_0000168860"
+SQ   SEQUENCE   146 AA;  16695 MW;  BE866B2FF1C51A20 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Note: species file not found
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0AAE1B4G4	UNCHARACTERIZED PROTEIN {     26.5      0.032   6   6.0   4.1
+	Iterate                   	    69	   117	     7.0
+	Iterate                   	    33	    72	     3.9
+	Iterate                   	   111	   144	     3.4
+	Iterate                   	   173	   198	     3.3
+	Iterate                   	   136	   177	     3.0
+	Iterate                   	     6	    42	     2.8
+
+A7ZKW8	UNCHARACTERIZED PROTEIN {ECO:    195.7      5e-55   1   1.2   0.5
+	Iterate                   	    54	   137	   195.2
+
+B2TZU1	UNCHARACTERIZED PROTEIN {ECO:    195.7    4.8e-55   1   1.2   0.4
+	Iterate                   	    54	   137	   195.2
+
+B7LGV6	YCGY PROTEIN {ECO:0000313|EMB    203.6    1.6e-57   1   1.2   0.4
+	Iterate                   	    54	   137	   203.1
+
+P76012	UNCHARACTERIZED PROTEIN YCGY       203.6    1.6e-57   1   1.2   0.4
+	Iterate                   	    54	   137	   203.1
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76012_TED02/Iterate
+GA   27.00 27.00;
+TC   195.70 195.20;
+NC   26.50 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,496 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   CRFC_ECOLI              Reviewed;         742 AA.
+AC   P0DM85; P16694; Q2M6J5;
+DE   RecName: Full=Clamp-binding protein CrfC;
+DE   AltName: Full=Clamp-binding sister replication fork colocalization protein;
+GN   Name=crfC; Synonyms=yjdA; OrderedLocusNames=b4109, JW4070;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=7610040; DOI=10.1093/nar/23.12.2105;
+RA   Burland V.D., Plunkett G. III, Sofia H.J., Daniels D.L., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome VI: DNA sequence of the region
+RT   from 92.8 through 100 minutes.";
+RL   Nucleic Acids Res. 23:2105-2119(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   FUNCTION, LACK OF GTPASE, INTERACTION WITH DNAN, SUBUNIT, SUBCELLULAR
+RP   LOCATION, DISRUPTION PHENOTYPE, AND MUTAGENESIS OF GLN-23; GLN-41 AND
+RP   GLN-734.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=23994470; DOI=10.1016/j.celrep.2013.07.040;
+RA   Ozaki S., Matsuda Y., Keyamura K., Kawakami H., Noguchi Y., Kasho K.,
+RA   Nagata K., Masuda T., Sakiyama Y., Katayama T.;
+RT   "A replicase clamp-binding dynamin-like protein promotes colocalization of
+RT   nascent DNA strands and equipartitioning of chromosomes in E. coli.";
+RL   Cell Rep. 4:985-995(2013).
+CC   -!- FUNCTION: Important for the colocalization of sister nascent DNA
+CC       strands after replication fork passage during DNA replication, and for
+CC       positioning and subsequent partitioning of sister chromosomes. Does not
+CC       have GTPase activity on its own. {ECO:0000269|PubMed:23994470}.
+CC   -!- SUBUNIT: Forms homooligomers. Binds to the beta sliding clamp
+CC       processivity factor (DnaN) in the presence and absence of DNA, may bind
+CC       to the clamp itself as homodimers or trimers. Homooligomers may be able
+CC       to bind more than 1 clamp complex. {ECO:0000269|PubMed:23994470}.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000269|PubMed:23994470}.
+CC       Note=About half the protein co-localizes with beta sliding clamp (DnaN)
+CC       at midcell, the rest without clamp in quarter-cell positions when
+CC       chromosomes are condensed during DNA replication.
+CC   -!- DISRUPTION PHENOTYPE: A small proportion of anucleate cells, disrupts
+CC       nucleoid positioning, leads to premature separation of sister
+CC       replication forks. {ECO:0000269|PubMed:23994470}.
+CC   -!- SIMILARITY: Belongs to the TRAFAC class dynamin-like GTPase
+CC       superfamily. Dynamin/Fzo/YdjA family. {ECO:0000255|PROSITE-
+CC       ProRule:PRU01055}.
+DR   EMBL; U14003; AAA97008.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC77070.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE78111.1; -; Genomic_DNA.
+DR   PIR; S56337; S56337.
+DR   RefSeq; NP_418533.1; NC_000913.3.
+DR   RefSeq; WP_000288603.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P0DM85; -.
+DR   BioGRID; 4263087; 19.
+DR   BioGRID; 852912; 2.
+DR   FunCoup; P0DM85; 50.
+DR   IntAct; P0DM85; 13.
+DR   STRING; 511145.b4109; -.
+DR   PaxDb; 511145-b4109; -.
+DR   EnsemblBacteria; AAC77070; AAC77070; b4109.
+DR   GeneID; 948620; -.
+DR   KEGG; ecj:JW4070; -.
+DR   KEGG; eco:b4109; -.
+DR   KEGG; ecoc:C3026_22200; -.
+DR   PATRIC; fig|511145.12.peg.4240; -.
+DR   EchoBASE; EB1195; -.
+DR   eggNOG; COG0699; Bacteria.
+DR   HOGENOM; CLU_011600_2_0_6; -.
+DR   InParanoid; P0DM85; -.
+DR   OMA; QRWVQDF; -.
+DR   OrthoDB; 6565187at2; -.
+DR   BioCyc; EcoCyc:EG11210-MONOMER; -.
+DR   PRO; PR:P0DM85; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0043590; C:bacterial nucleoid; IDA:EcoCyc.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005525; F:GTP binding; IEA:InterPro.
+DR   GO; GO:0003924; F:GTPase activity; IDA:EcoCyc.
+DR   GO; GO:0043022; F:ribosome binding; IBA:GO_Central.
+DR   GO; GO:0007059; P:chromosome segregation; IMP:EcoCyc.
+DR   GO; GO:0006260; P:DNA replication; IEA:UniProtKB-KW.
+DR   GO; GO:1900231; P:regulation of single-species biofilm formation on inanimate substrate; IMP:EcoCyc.
+DR   CDD; cd00882; Ras_like_GTPase; 1.
+DR   Gene3D; 3.40.50.300; P-loop containing nucleotide triphosphate hydrolases; 1.
+DR   InterPro; IPR045063; Dynamin_N.
+DR   InterPro; IPR030381; G_DYNAMIN_dom.
+DR   InterPro; IPR027417; P-loop_NTPase.
+DR   NCBIfam; NF007368; PRK09866.1; 1.
+DR   PANTHER; PTHR43834; GTPASE DER; 1.
+DR   PANTHER; PTHR43834:SF6; GTPASE DER; 1.
+DR   Pfam; PF00350; Dynamin_N; 1.
+DR   SUPFAM; SSF52540; P-loop containing nucleoside triphosphate hydrolases; 1.
+DR   PROSITE; PS51718; G_DYNAMIN_2; 1.
+PE   1: Evidence at protein level;
+KW   Chromosome partition; Coiled coil; Cytoplasm; DNA replication;
+KW   Reference proteome.
+FT   CHAIN           1..742
+FT                   /note="Clamp-binding protein CrfC"
+FT                   /id="PRO_0000169728"
+FT   DOMAIN          66..402
+FT                   /note="Dynamin-type G"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01055"
+FT   REGION          41..45
+FT                   /note="Clamp-binding consensus"
+FT   REGION          76..83
+FT                   /note="G1 motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01055"
+FT   REGION          102..104
+FT                   /note="G2 motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01055"
+FT   REGION          236..239
+FT                   /note="G3 motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01055"
+FT   REGION          297..300
+FT                   /note="G4 motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01055"
+FT   REGION          331..334
+FT                   /note="G5 motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01055"
+FT   COILED          440..472
+FT                   /evidence="ECO:0000255"
+FT   MUTAGEN         23
+FT                   /note="Q->A: Interacts with beta sliding clamp."
+FT                   /evidence="ECO:0000269|PubMed:23994470"
+FT   MUTAGEN         41
+FT                   /note="Q->A: No longer interacts with beta sliding clamp,
+FT                   pattern of CrfC foci changes."
+FT                   /evidence="ECO:0000269|PubMed:23994470"
+FT   MUTAGEN         734
+FT                   /note="Q->A: Interacts with beta sliding clamp."
+FT                   /evidence="ECO:0000269|PubMed:23994470"
+SQ   SEQUENCE   742 AA;  84371 MW;  8A7008FC16A026B3 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+16	6	Escherichia.
+36	5	Enterobacteriaceae
+38	4	Enterobacterales
+39	3	Gammaproteobacteria
+45	2	Pseudomonadota
+45	1	Pseudomonadati
+50	0	Bacteria
+Total of 52 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A3S4J545	PREDICTED GTPASE {ECO:000    104.8    1.1e-26   1   1.7   3.6
+	Iterate                   	   345	   403	   103.7
+	PF00350	Dynamin_N       	    80	   306	    66.8
+
+A0AAD8L1S8	CELL DIVISION PROTEIN {EC    106.2    3.9e-27   9  27.6   0.0
+	Iterate                   	   395	   427	     4.8
+	Iterate                   	   619	   651	     4.8
+	Iterate                   	   843	   875	     4.8
+	Iterate                   	    42	    77	     3.6
+	Iterate                   	  1068	  1101	     3.6
+	Iterate                   	  1264	  1298	     3.6
+	Iterate                   	     9	    40	     3.5
+	Iterate                   	   295	   327	     3.0
+	Iterate                   	  1164	  1196	     3.0
+
+A0AAD8L4N9	CELL DIVISION PROTEIN {EC    109.5    3.8e-28  11  29.2   0.7
+	Iterate                   	   106	   141	     3.6
+	Iterate                   	   581	   615	     3.5
+	Iterate                   	   831	   865	     3.5
+	Iterate                   	   993	  1027	     3.5
+	Iterate                   	  1356	  1390	     3.5
+	Iterate                   	   335	   366	     3.4
+	Iterate                   	   459	   490	     3.4
+	Iterate                   	   709	   740	     3.4
+	Iterate                   	   871	   902	     3.4
+	Iterate                   	  1168	  1199	     3.4
+	Iterate                   	   231	   264	     2.9
+
+A8AMX2	DYNAMIN-TYPE G DOMAIN-CONTAIN    104.9      1e-26   1   1.7   3.4
+	Iterate                   	   345	   403	   103.7
+	PF00350	Dynamin_N       	    80	   306	    66.8
+
+P0DM85	CLAMP-BINDING PROTEIN CRFC         100.3    2.8e-25   1   1.7   3.7
+	Iterate                   	   337	   395	    99.1
+	PF00350	Dynamin_N       	    72	   298	    65.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS76534 (E-value: 4.6e-26, Score: 96.1)
+Mentioned as: Z5711
+Description: putative vimentin
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 28274217
+Source: EuropePMC
+Title: Disruption of rcsB by a duplicated sequence in a curli-producing Escherichia coli O157:H7 results in differential gene expression in relation to biofilm formation, stress responses and metabolism
+Journal: BMC microbiology (2017)
+Snippet: yiiF Z5432 Unknown +1.52 0.04 yjcO Z5677 Unknown +1.28 0.04 Z5694 Unknown 12.64 6.7E-09 yjdA Z5711 Putative DNA replication function +2.23 6.4E-06 yjcJ Z5712 Unknown +2.79 9.4E-05 yjfN Z5795 Unknown 2.58 8.0E-04 a Gene group/gene designations were selected from RAST Server [ 44 ] b Gene
+
+================================================================================
+Protein: VIMSS18137 (E-value: 2.8e-25, Score: 93.6)
+Mentioned as: b4109
+Description: conserved protein with nucleoside triphosphate hydrolase domain
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 19502395
+Source: EuropePMC
+Title: Sxy induces a CRP-S regulon in Escherichia coli
+Journal: Journal of bacteriology (2009)
+Snippet: 82 83 84 85 86 b2820 b1439 b0443 b1015 b2752 b2778 b4109 b3988 recB ydcR ybaW putP cysD ygcG yjdA rpoC 7.65 12.84 73.00 0.24 0.22 0.21 0.14 0.06 Site or
+
+================================================================================
+Protein: VIMSS18137 (E-value: 2.8e-25, Score: 93.6)
+Mentioned as: b4109
+Description: conserved protein with nucleoside triphosphate hydrolase domain
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 17576668
+Source: EuropePMC
+Title: Adaptation in bacterial flagellar and motility systems: from regulon members to 'foraging'-like behavior in E. coli
+Journal: Nucleic acids research (2007)
+Snippet: b Qin prophage Unknown 28.4 c 8.2 d b1194 b1194 Putative regulator Unknown 17.5 3.3 b4109 yjdA Conserved hypothetical protein Not classified 12.3 5.3 b3525 yhjH Conserved protein Unknown 9.6 1.9 b1760 ynjH Conserved hypothetical protein Unknown 6.9 7.9 b1742 ydjR Conserved hypothetical protein Unknown 4.7
+
+================================================================================
+Protein: VIMSS18137 (E-value: 2.8e-25, Score: 93.6)
+Mentioned as: b4109
+Description: conserved protein with nucleoside triphosphate hydrolase domain
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 16204189
+Source: EuropePMC
+Title: Parallel adaptive evolution cultures of Escherichia coli lead to convergent growth phenotypes with different gene expression states
+Journal: Genome research (2005)
+Snippet: p=1- i=0 Glycerol b0329, b1266, b1678, b1934, b2302, b3021, b4109, proM, alaX, murA, prfC, psiF, rpsV, motA, fbaB, ptsN, kdpE, flgC, flgK, narX, cheB, cheW,
+
+================================================================================
+Protein: VIMSS365788 (E-value: 6.5e-25, Score: 92.4)
+Mentioned as: S3616
+Description: putative vimentin
+Organism: Shigella flexneri 2a str. 2457T
+PMID: 18055596
+Source: EuropePMC
+Title: Regulation of the yjjQ-bglJ operon, encoding LuxR-type transcription factors, and the divergent yjjP gene by H-NS and LeuO
+Journal: Journal of bacteriology (2008)
+Snippet: S3598 S3600 S3602 S3604 S3606 S3608 S3610 S3612 S3614 S3616 S3618 S3620 S3622 S3631 S3633 S3635 S3637 S3638 S3641 S3642 S3645 S3646 S3663 S3665 S3667 S3669
+
+================================================================================
+Protein: VIMSS92866 (E-value: 4.1e-21, Score: 80.2)
+Mentioned as: ECs1397
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 19346340
+Source: EuropePMC
+Title: Gene expression induced in Escherichia coli O157:H7 upon exposure to model apple juice
+Journal: Applied and environmental microbiology (2009)
+Snippet: ECs1198 ECs1243 ECs1246 ECs1293 ECs1318 ECs1342 ECs1350 ECs1397 ECs1438 ECs1441 ECs1488 ECs1490 ECs1576 ECs1588 ECs1593 ECs1612 ECs1654 ECs1655 ECs1691 ECs1760
+
+================================================================================
+Protein: VIMSS72539 (E-value: 4.1e-21, Score: 80.2)
+Mentioned as: Z1212
+Description: unknown
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 29054868
+Source: EuropePMC
+Title: Conditional Function of Autoaggregative Protein Cah and Common <i>cah</i> Mutations in Shiga Toxin-Producing Escherichia coli
+Journal: Applied and environmental microbiology (2018)
+Snippet: EDL933-Cah) and the other immediately downstream of cah in Z1212 (aa 210 to 217) (Fig. 2A, SS17). This deletion eliminated an 843-bp DNA fragment that includes
+
+================================================================================
+Protein: VIMSS302113 (E-value: 4.3e-19, Score: 73.8)
+Mentioned as: c0286
+Description: Conserved hypothetical protein
+Organism: Escherichia coli CFT073
+PMID: 31907180
+Source: EuropePMC
+Title: Forging New Antibiotic Combinations under Iron-Limiting Conditions
+Journal: Antimicrobial agents and chemotherapy (2020)
+
+================================================================================
+Protein: VIMSS302113 (E-value: 4.3e-19, Score: 73.8)
+Mentioned as: c0286
+Description: Conserved hypothetical protein
+Organism: Escherichia coli CFT073
+PMID: 26282415
+Source: EuropePMC
+Title: Effects of selection pressure and genetic association on the relationship between antibiotic resistance and virulence in Escherichia coli
+Journal: Antimicrobial agents and chemotherapy (2015)
+Snippet: tspE4.C2 Resistance genes tetA tetB qnrB intl1 Others iucD, c0286, c0311, c1600, c3389, capII, cnf1, fyuA, hly, iha, iroN, ompT, prs, s3187, sfa, usp 29 30 30
+
+================================================================================
+Protein: VIMSS302113 (E-value: 4.3e-19, Score: 73.8)
+
+... (truncated - showing first 100 of 120 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A071MCT6.1	AF-A0A071MCT6-F1-model_v4_TED01:2-73_425-451_749-780	1	AF-A0A071MCT6-F1-model_v4_TED01	2-780	100.0%
+A0A071MCT6.1	AF-A0A071MCT6-F1-model_v4_TED02:131-208	1	AF-A0A071MCT6-F1-model_v4_TED02	131-208	0
+A0A071MCT6.1	AF-A0A071MCT6-F1-model_v4_TED03:344-402	1	AF-A0A071MCT6-F1-model_v4_TED03	344-402	96.6%
+A0A071MCT6.1	AF-A0A071MCT6-F1-model_v4_TED04:454-644_673-739	1	AF-A0A071MCT6-F1-model_v4_TED04	454-739	0
+A0A085GLV3.1	AF-A0A085GLV3-F1-model_v4_TED01:2-34_45-69_424-454_749-788	1	AF-A0A085GLV3-F1-model_v4_TED01	2-788	100.0%
+A0A085GLV3.1	AF-A0A085GLV3-F1-model_v4_TED02:77-307_316-342	1	AF-A0A085GLV3-F1-model_v4_TED02	77-342	0
+A0A085GLV3.1	AF-A0A085GLV3-F1-model_v4_TED03:345-406	1	AF-A0A085GLV3-F1-model_v4_TED03	345-406	100.0%
+A0A085GLV3.1	AF-A0A085GLV3-F1-model_v4_TED04:459-636_688-737	1	AF-A0A085GLV3-F1-model_v4_TED04	459-737	0
+A0A090VPJ2.1	AF-A0A090VPJ2-F1-model_v4_TED01:38-433	1	AF-A0A090VPJ2-F1-model_v4_TED01	38-433	100.0%
+A0A090VPJ2.1	AF-A0A090VPJ2-F1-model_v4_TED02:457-738	1	AF-A0A090VPJ2-F1-model_v4_TED02	457-738	0
+A0A0H2V4C4.1	AF-A0A0H2V4C4-F1-model_v4_TED01:22-27_35-140	1	AF-A0A0H2V4C4-F1-model_v4_TED01	22-140	0
+A0A0H2V4C4.1	AF-A0A0H2V4C4-F1-model_v4_TED02:144-200	1	AF-A0A0H2V4C4-F1-model_v4_TED02	144-200	98.2%
+A0A0H2V4C4.1	AF-A0A0H2V4C4-F1-model_v4_TED04:272-331_363-456_500-540	1	AF-A0A0H2V4C4-F1-model_v4_TED04	272-540	0
+A0A0H2V4C4.1	AF-A0A0H2V4C4-F1-model_v4_TED03:221-250_578-602	1	AF-A0A0H2V4C4-F1-model_v4_TED03	221-602	0
+A0A154BW00.1	AF-A0A154BW00-F1-model_v4_TED01:69-121_221-345_413-435	1	AF-A0A154BW00-F1-model_v4_TED01	69-435	100.0%
+A0A154BW00.1	AF-A0A154BW00-F1-model_v4_TED02:125-213	1	AF-A0A154BW00-F1-model_v4_TED02	125-213	0
+A0A154BW00.1	AF-A0A154BW00-F1-model_v4_TED03:347-407	1	AF-A0A154BW00-F1-model_v4_TED03	347-407	100.0%
+A0A154BW00.1	AF-A0A154BW00-F1-model_v4_TED04:457-642_685-746	1	AF-A0A154BW00-F1-model_v4_TED04	457-746	0
+A0A1H7CQ34.1	AF-A0A1H7CQ34-F1-model_v4_TED01:334-396	1	AF-A0A1H7CQ34-F1-model_v4_TED01	334-396	100.0%
+A0A1I0EKB3.1	AF-A0A1I0EKB3-F1-model_v4_TED01:126-212	1	AF-A0A1I0EKB3-F1-model_v4_TED01	126-212	0
+A0A1I0EKB3.1	AF-A0A1I0EKB3-F1-model_v4_TED02:461-531_561-650_699-747	1	AF-A0A1I0EKB3-F1-model_v4_TED02	461-747	0
+A0A1I7HK49.1	AF-A0A1I7HK49-F1-model_v4_TED01:93-218	1	AF-A0A1I7HK49-F1-model_v4_TED01	93-218	0
+A0A1I7HK49.1	AF-A0A1I7HK49-F1-model_v4_TED02:337-396	1	AF-A0A1I7HK49-F1-model_v4_TED02	337-396	100.0%
+A0A1I7HK49.1	AF-A0A1I7HK49-F1-model_v4_TED03:466-521_562-622_653-731	1	AF-A0A1I7HK49-F1-model_v4_TED03	466-731	0
+A0A1S8CD87.1	AF-A0A1S8CD87-F1-model_v4_TED01:94-213	1	AF-A0A1S8CD87-F1-model_v4_TED01	94-213	0
+A0A1S8CD87.1	AF-A0A1S8CD87-F1-model_v4_TED02:440-513_566-653_701-767	1	AF-A0A1S8CD87-F1-model_v4_TED02	440-767	0
+A0A2C6DLX1.1	AF-A0A2C6DLX1-F1-model_v4_TED01:56-424	1	AF-A0A2C6DLX1-F1-model_v4_TED01	56-424	100.0%
+A0A2C6DLX1.1	AF-A0A2C6DLX1-F1-model_v4_TED02:481-513_566-667_704-747	1	AF-A0A2C6DLX1-F1-model_v4_TED02	481-747	0
+A0A2L0PP27.2	AF-A0A2L0PP27-F1-model_v4_TED01:458-531_607-685_737-795	1	AF-A0A2L0PP27-F1-model_v4_TED01	458-795	0
+A0A376BNC0.1	AF-A0A376BNC0-F1-model_v4_TED01:5-61_420-452_774-802	1	AF-A0A376BNC0-F1-model_v4_TED01	5-802	100.0%
+A0A376BNC0.1	AF-A0A376BNC0-F1-model_v4_TED02:346-404	1	AF-A0A376BNC0-F1-model_v4_TED02	346-404	96.7%
+A0A376BNC0.1	AF-A0A376BNC0-F1-model_v4_TED03:467-535_548-664_714-759	1	AF-A0A376BNC0-F1-model_v4_TED03	467-759	0
+A0A3S4J545.1	AF-A0A3S4J545-F1-model_v4_TED01:132-223	1	AF-A0A3S4J545-F1-model_v4_TED01	132-223	0
+A0A3S4J545.1	AF-A0A3S4J545-F1-model_v4_TED02:458-742	1	AF-A0A3S4J545-F1-model_v4_TED02	458-742	0
+A0A848M275.1	AF-A0A848M275-F1-model_v4_TED01:125-210	1	AF-A0A848M275-F1-model_v4_TED01	125-210	0
+A0A848M275.1	AF-A0A848M275-F1-model_v4_TED02:464-518_537-629_637-646_691-741	1	AF-A0A848M275-F1-model_v4_TED02	464-741	0
+A0A848M275.1	AF-A0A848M275-F1-model_v4_TED03:655-690	1	AF-A0A848M275-F1-model_v4_TED03	655-690	0
+A0A856MP48.1	AF-A0A856MP48-F1-model_v4_TED01:478-547_597-652_683-696_744-787	1	AF-A0A856MP48-F1-model_v4_TED01	478-787	0
+A7MPJ1.1	AF-A7MPJ1-F1-model_v4_TED01:457-528_537-642_669-745	1	AF-A7MPJ1-F1-model_v4_TED01	457-745	0
+B7UP34.1	AF-B7UP34-F1-model_v4_TED02:337-396	1	AF-B7UP34-F1-model_v4_TED02	337-396	100.0%
+B7UP34.1	AF-B7UP34-F1-model_v4_TED03:450-517_551-654_689-750	1	AF-B7UP34-F1-model_v4_TED03	450-750	0
+B7UP34.1	AF-B7UP34-F1-model_v4_TED01:1-66_428-443_758-794	1	AF-B7UP34-F1-model_v4_TED01	1-794	100.0%
+H5UZ44.1	AF-H5UZ44-F1-model_v4_TED01:2-100_241-343_407-454_758-789	1	AF-H5UZ44-F1-model_v4_TED01	2-789	100.0%
+H5UZ44.1	AF-H5UZ44-F1-model_v4_TED02:124-227	1	AF-H5UZ44-F1-model_v4_TED02	124-227	0
+H5UZ44.1	AF-H5UZ44-F1-model_v4_TED03:458-525_569-638_685-745	1	AF-H5UZ44-F1-model_v4_TED03	458-745	0
+P0DM85.1	AF-P0DM85-F1-model_v4_TED01:93-218	1	AF-P0DM85-F1-model_v4_TED01	93-218	0
+P0DM85.1	AF-P0DM85-F1-model_v4_TED02:337-395	1	AF-P0DM85-F1-model_v4_TED02	337-395	100.0%
+P0DM85.1	AF-P0DM85-F1-model_v4_TED03:447-599_611-620_638-699	1	AF-P0DM85-F1-model_v4_TED03	447-699	0
+V9HMB2.1	AF-V9HMB2-F1-model_v4_TED01:99-241	1	AF-V9HMB2-F1-model_v4_TED01	99-241	0
+V9HMB2.1	AF-V9HMB2-F1-model_v4_TED02:353-410	1	AF-V9HMB2-F1-model_v4_TED02	353-410	93.3%
+V9HMB2.1	AF-V9HMB2-F1-model_v4_TED03:475-538_558-763	1	AF-V9HMB2-F1-model_v4_TED03	475-763	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 23
+Total networks analyzed: 23
+Total network proteins: 825
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF13990 (YjcZ)            19           19            82.6%
+PF01435 (Peptidase_M48)   17           40            73.9%
+PF04230 (PS_pyruv_trans)  13           10            56.5%
+PF00534 (Glycos_transf_1) 13           21            56.5%
+PF13439 (Glyco_transf_4)  13           16            56.5%
+PF13692 (Glyco_trans_1_4) 13           22            56.5%
+PF20706 (GT4-conflict)    13           16            56.5%
+PF01926 (MMR_HSR1)        13           17            56.5%
+PF18836 (B_solenoid_ydck) 13           10            56.5%
+PF00990 (GGDEF)           12           14            52.2%
+PF00270 (DEAD)            12           23            52.2%
+PF00271 (Helicase_C)      12           25            52.2%
+PF00411 (Ribosomal_S11)   12           12            52.2%
+PF05962 (HutD)            11           10            47.8%
+PF10688 (Imp-YgjV)        11           8             47.8%
+PF00563 (EAL)             11           13            47.8%
+PF05231 (MASE1)           11           10            47.8%
+PF01943 (Polysacc_synt)   11           9             47.8%
+PF13440 (Polysacc_synt_3) 11           9             47.8%
+PF00989 (PAS)             11           10            47.8%
+PF08447 (PAS_3)           11           10            47.8%
+PF08448 (PAS_4)           11           10            47.8%
+PF13426 (PAS_9)           11           10            47.8%
+PF00293 (NUDIX)           11           10            47.8%
+PF07690 (MFS_1)           11           11            47.8%
+PF00334 (NDK)             11           11            47.8%
+PF00535 (Glycos_transf_2) 10           19            43.5%
+PF01095 (Pectinesterase)  10           10            43.5%
+PF13188 (PAS_8)           10           9             43.5%
+PF13524 (Glyco_trans_1_2) 10           7             43.5%
+PF00175 (NAD_binding_1)   10           11            43.5%
+PF07717 (OB_NTP_bind)     10           10            43.5%
+PF11898 (DUF3418)         10           10            43.5%
+PF21010 (HA2_C)           10           10            43.5%
+PF12796 (Ank_2)           10           19            43.5%
+PF00196 (GerE)            10           11            43.5%
+PF00578 (AhpC-TSA)        9            15            39.1%
+PF08534 (Redoxin)         9            15            39.1%
+PF00258 (Flavodoxin_1)    9            10            39.1%
+PF01361 (Tautomerase)     9            8             39.1%
+PF00023 (Ank)             9            15            39.1%
+PF13637 (Ank_4)           9            14            39.1%
+PF01694 (Rhomboid)        9            11            39.1%
+PF01734 (Patatin)         9            9             39.1%
+PF00667 (FAD_binding_1)   8            8             34.8%
+PF04408 (WHD_HA2)         8            9             34.8%
+PF00004 (AAA)             8            12            34.8%
+PF04851 (ResIII)          7            8             30.4%
+PF03400 (DDE_Tnp_IS1)     7            5             30.4%
+PF00445 (Ribonuclease_T2) 7            7             30.4%
+PF03230 (Antirestrict)    7            10            30.4%
+PF12122 (Rhomboid_N)      7            7             30.4%
+PF01791 (DeoC)            7            6             30.4%
+PF01306 (LacY_symp)       7            5             30.4%
+PF12832 (MFS_1_like)      7            5             30.4%
+PF13606 (Ank_3)           7            9             30.4%
+PF08482 (HrpB_C)          7            7             30.4%
+PF13280 (WYL)             7            6             30.4%
+PF01380 (SIS)             6            5             26.1%
+PF29298 (APHB_HrpA)       6            6             26.1%
+PF07012 (Curlin_rpt)      6            6             26.1%
+PF24473 (CON_HrpB)        6            6             26.1%
+PF00012 (HSP70)           6            16            26.1%
+PF00085 (Thioredoxin)     6            9             26.1%
+PF13905 (Thioredoxin_8)   6            10            26.1%
+PF00756 (Esterase)        5            3             21.7%
+PF02922 (CBM_48)          5            3             21.7%
+PF01261 (AP_endonuc_2)    5            5             21.7%
+PF04389 (Peptidase_M28)   5            5             21.7%
+PF14559 (TPR_19)          5            5             21.7%
+PF00512 (HisKA)           5            5             21.7%
+PF02518 (HATPase_c)       5            5             21.7%
+PF07728 (AAA_5)           5            5             21.7%
+PF06723 (MreB_Mbl)        5            10            21.7%
+PF00176 (SNF2-rel_dom)    5            5             21.7%
+PF02421 (FeoB_N)          5            6             21.7%
+PF05987 (DUF898)          4            3             17.4%
+PF00083 (Sugar_tr)        4            5             17.4%
+PF13098 (Thioredoxin_2)   4            6             17.4%
+PF05130 (FlgN)            4            4             17.4%
+PF03797 (Autotransporter) 4            7             17.4%
+PF13432 (TPR_16)          4            5             17.4%
+PF00874 (PRD)             4            4             17.4%
+PF13857 (Ank_5)           4            7             17.4%
+PF01103 (Omp85)           4            4             17.4%
+PF07244 (POTRA)           4            4             17.4%
+
+... (truncated - showing first 100 of 3556 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P0DM85_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.50 60.00;
+NC   25.00 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RC   Function description for P0DM85
+RN   [1]
+RM   23994470
+RT   "A replicase clamp-binding dynamin-like protein promotes colocalization of
+RT   nascent DNA strands and equipartitioning of chromosomes in E. coli.";
+RA   Ozaki S., Matsuda Y., Keyamura K., Kawakami H., Noguchi Y., Kasho K.,
+RA   Nagata K., Masuda T., Sakiyama Y., Katayama T.;
+RL   Cell Rep. 4:985-995(2013).
+
+--- End of Current DESC file ---

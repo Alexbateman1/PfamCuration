@@ -1,0 +1,576 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   PGAA_ECOLI              Reviewed;         807 AA.
+AC   P69434; P75907;
+DE   RecName: Full=Poly-beta-1,6-N-acetyl-D-glucosamine export protein;
+DE            Short=PGA export protein;
+DE            Short=Poly-beta-1,6-GlcNAc export protein;
+DE   Flags: Precursor;
+GN   Name=pgaA; Synonyms=ycdS; OrderedLocusNames=b1024, JW1010;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=8905232; DOI=10.1093/dnares/3.3.137;
+RA   Oshima T., Aiba H., Baba T., Fujita K., Hayashi K., Honjo A., Ikemoto K.,
+RA   Inada T., Itoh T., Kajihara M., Kanai K., Kashimoto K., Kimura S.,
+RA   Kitagawa M., Makino K., Masuda S., Miki T., Mizobuchi K., Mori H.,
+RA   Motomura K., Nakamura Y., Nashimoto H., Nishio Y., Saito N., Sampei G.,
+RA   Seki Y., Tagami H., Takemoto K., Wada C., Yamamoto Y., Yano M.,
+RA   Horiuchi T.;
+RT   "A 718-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 12.7-28.0 min region on the linkage map.";
+RL   DNA Res. 3:137-155(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   ROLE IN THE SYNTHESIS OF A BIOFILM POLYSACCHARIDE, OPERON STRUCTURE, AND
+RP   DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=15090514; DOI=10.1128/jb.186.9.2724-2734.2004;
+RA   Wang X., Preston J.F. III, Romeo T.;
+RT   "The pgaABCD locus of Escherichia coli promotes the synthesis of a
+RT   polysaccharide adhesin required for biofilm formation.";
+RL   J. Bacteriol. 186:2724-2734(2004).
+RN   [5]
+RP   FUNCTION IN PGA EXPORT, DOMAIN, SUBCELLULAR LOCATION, AND DISRUPTION
+RP   PHENOTYPE.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=18359807; DOI=10.1128/jb.01920-07;
+RA   Itoh Y., Rice J.D., Goller C., Pannuri A., Taylor J., Meisner J.,
+RA   Beveridge T.J., Preston J.F. III, Romeo T.;
+RT   "Roles of pgaABCD genes in synthesis, modification, and export of the
+RT   Escherichia coli biofilm adhesin poly-beta-1,6-N-acetyl-D-glucosamine.";
+RL   J. Bacteriol. 190:3670-3680(2008).
+RN   [6]
+RP   ROLE IN BIOFILM FORMATION, AND INDUCTION.
+RC   STRAIN=K12 / MG1655 / AB400;
+RX   PubMed=19460094; DOI=10.1111/j.1365-2958.2009.06739.x;
+RA   Boehm A., Steiner S., Zaehringer F., Casanova A., Hamburger F., Ritz D.,
+RA   Keck W., Ackermann M., Schirmer T., Jenal U.;
+RT   "Second messenger signalling governs Escherichia coli biofilm induction
+RT   upon ribosomal stress.";
+RL   Mol. Microbiol. 72:1500-1516(2009).
+CC   -!- FUNCTION: Exports the biofilm adhesin polysaccharide poly-beta-1,6-N-
+CC       acetyl-D-glucosamine (PGA) across the outer membrane. The PGA
+CC       transported seems to be partially N-deacetylated since N-deacetylation
+CC       of PGA by PgaB is needed for PGA export through the PgaA porin.
+CC   -!- FUNCTION: Required for the synthesis of the beta-1,6-GlcNAc
+CC       polysaccharide (PGA or poly-GlcNAc) that seems to serve as a biofilm
+CC       adhesin.
+CC   -!- SUBCELLULAR LOCATION: Cell outer membrane
+CC       {ECO:0000305|PubMed:18359807}; Multi-pass membrane protein
+CC       {ECO:0000305|PubMed:18359807}.
+CC   -!- INDUCTION: Levels of this protein are negatively controlled by the
+CC       second messenger ppGpp (at protein level) at a post-transcriptional
+CC       level. Increased levels of c-di-GMP lead to decreased levels of PgaA.
+CC       {ECO:0000269|PubMed:19460094}.
+CC   -!- DOMAIN: Contains a predicted C-terminal beta-barrel porin domain and a
+CC       N-terminal periplasmic superhelical domain containing tetratricopeptide
+CC       repeats, which may mediate protein-protein interactions, perhaps with
+CC       PgaB. {ECO:0000269|PubMed:18359807}.
+CC   -!- DISRUPTION PHENOTYPE: Deletion of pgaA does not prevent PGA synthesis
+CC       but does block its export. The synthesized PGA is retained in the
+CC       periplasm and accumulates at the cell poles. Disruption of the pga
+CC       operon causes severe and persistent defects in the biofilm formation
+CC       process. {ECO:0000269|PubMed:15090514, ECO:0000269|PubMed:18359807}.
+DR   EMBL; U00096; AAC74109.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA35806.1; -; Genomic_DNA.
+DR   PIR; F64844; F64844.
+DR   RefSeq; NP_415543.1; NC_000913.3.
+DR   RefSeq; WP_000287458.1; NZ_SSZK01000002.1.
+DR   PDB; 4Y25; X-ray; 2.82 A; A=511-807.
+DR   PDB; 7T8N; X-ray; 2.85 A; AAA/BBB=220-367.
+DR   PDBsum; 4Y25; -.
+DR   PDBsum; 7T8N; -.
+DR   AlphaFoldDB; P69434; -.
+DR   SMR; P69434; -.
+DR   BioGRID; 4263226; 123.
+DR   FunCoup; P69434; 160.
+DR   IntAct; P69434; 1.
+DR   STRING; 511145.b1024; -.
+DR   TCDB; 1.B.55.1.1; the poly acetyl glucosamine porin (pgaa) family.
+DR   PaxDb; 511145-b1024; -.
+DR   EnsemblBacteria; AAC74109; AAC74109; b1024.
+DR   GeneID; 945596; -.
+DR   KEGG; ecj:JW1010; -.
+DR   KEGG; eco:b1024; -.
+DR   KEGG; ecoc:C3026_06225; -.
+DR   PATRIC; fig|1411691.4.peg.1245; -.
+DR   EchoBASE; EB3625; -.
+DR   eggNOG; COG0457; Bacteria.
+DR   HOGENOM; CLU_018289_0_0_6; -.
+DR   InParanoid; P69434; -.
+DR   OMA; WDKRPYD; -.
+DR   OrthoDB; 5405060at2; -.
+DR   BioCyc; EcoCyc:G6531-MONOMER; -.
+DR   BioCyc; MetaCyc:G6531-MONOMER; -.
+DR   BRENDA; 3.1.1.58; 2026.
+DR   PRO; PR:P69434; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0009279; C:cell outer membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:1901515; F:poly-beta-1,6-N-acetyl-D-glucosamine transmembrane transporter activity; IEA:InterPro.
+DR   GO; GO:0015159; F:polysaccharide transmembrane transporter activity; IDA:EcoCyc.
+DR   GO; GO:0015774; P:polysaccharide transport; IDA:EcoCyc.
+DR   GO; GO:0044010; P:single-species biofilm formation; IMP:EcoCyc.
+DR   FunFam; 1.25.40.10:FF:000337; Poly-beta-1,6 N-acetyl-D-glucosamine export porin PgaA; 1.
+DR   Gene3D; 1.25.40.10; Tetratricopeptide repeat domain; 2.
+DR   InterPro; IPR023870; PGA_export_porin_PgaA.
+DR   InterPro; IPR049003; PgaA_barrel.
+DR   InterPro; IPR011990; TPR-like_helical_dom_sf.
+DR   InterPro; IPR019734; TPR_rpt.
+DR   NCBIfam; TIGR03939; PGA_TPR_OMP; 1.
+DR   NCBIfam; NF007468; PRK10049.1; 1.
+DR   Pfam; PF21197; PgaA_barrel; 1.
+DR   SMART; SM00028; TPR; 1.
+DR   SUPFAM; SSF48452; TPR-like; 2.
+DR   PROSITE; PS50005; TPR; 1.
+DR   PROSITE; PS50293; TPR_REGION; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Cell outer membrane; Membrane; Reference proteome; Repeat;
+KW   Signal; TPR repeat; Transmembrane; Transmembrane beta strand; Transport.
+FT   SIGNAL          1..26
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           27..807
+FT                   /note="Poly-beta-1,6-N-acetyl-D-glucosamine export protein"
+FT                   /id="PRO_0000035694"
+FT   REPEAT          98..131
+FT                   /note="TPR 1"
+FT   REPEAT          165..198
+FT                   /note="TPR 2"
+FT   REPEAT          279..311
+FT                   /note="TPR 3"
+FT   STRAND          518..530
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          540..547
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          551..565
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          574..586
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          589..599
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          604..617
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          620..629
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   HELIX           638..640
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          644..670
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          675..689
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          691..697
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          700..705
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          717..723
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          725..735
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          738..753
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   TURN            754..756
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          757..772
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   TURN            773..775
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+FT   STRAND          776..807
+FT                   /evidence="ECO:0007829|PDB:4Y25"
+SQ   SEQUENCE   807 AA;  92207 MW;  B20067C3D41723FD CRC64;
+//
+ID   PGAA_ECO57              Reviewed;         807 AA.
+AC   P69435; P75907;
+DE   RecName: Full=Poly-beta-1,6-N-acetyl-D-glucosamine export protein;
+DE            Short=PGA export protein;
+DE            Short=Poly-beta-1,6-GlcNAc export protein;
+DE   Flags: Precursor;
+GN   Name=pgaA; OrderedLocusNames=Z1526, ECs1270;
+OS   Escherichia coli O157:H7.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=11206551; DOI=10.1038/35054089;
+RA   Perna N.T., Plunkett G. III, Burland V., Mau B., Glasner J.D., Rose D.J.,
+RA   Mayhew G.F., Evans P.S., Gregor J., Kirkpatrick H.A., Posfai G.,
+RA   Hackett J., Klink S., Boutin A., Shao Y., Miller L., Grotbeck E.J.,
+RA   Davis N.W., Lim A., Dimalanta E.T., Potamousis K., Apodaca J.,
+RA   Anantharaman T.S., Lin J., Yen G., Schwartz D.C., Welch R.A.,
+RA   Blattner F.R.;
+RT   "Genome sequence of enterohaemorrhagic Escherichia coli O157:H7.";
+RL   Nature 409:529-533(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=11258796; DOI=10.1093/dnares/8.1.11;
+RA   Hayashi T., Makino K., Ohnishi M., Kurokawa K., Ishii K., Yokoyama K.,
+RA   Han C.-G., Ohtsubo E., Nakayama K., Murata T., Tanaka M., Tobe T., Iida T.,
+RA   Takami H., Honda T., Sasakawa C., Ogasawara N., Yasunaga T., Kuhara S.,
+RA   Shiba T., Hattori M., Shinagawa H.;
+RT   "Complete genome sequence of enterohemorrhagic Escherichia coli O157:H7 and
+RT   genomic comparison with a laboratory strain K-12.";
+RL   DNA Res. 8:11-22(2001).
+CC   -!- FUNCTION: Exports the biofilm adhesin polysaccharide poly-beta-1,6-N-
+CC       acetyl-D-glucosamine (PGA) across the outer membrane. The PGA
+CC       transported seems to be partially N-deacetylated since N-deacetylation
+CC       of PGA by PgaB is needed for PGA export through the PgaA porin (By
+CC       similarity). {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Cell outer membrane {ECO:0000250}; Multi-pass
+CC       membrane protein {ECO:0000250}.
+CC   -!- DOMAIN: Contains a predicted C-terminal beta-barrel porin domain and a
+CC       N-terminal periplasmic superhelical domain containing tetratricopeptide
+CC       repeats, which may mediate protein-protein interactions, perhaps with
+CC       PgaB. {ECO:0000250}.
+DR   EMBL; AE005174; AAG55642.1; -; Genomic_DNA.
+DR   EMBL; BA000007; BAB34693.1; -; Genomic_DNA.
+DR   PIR; F90787; F90787.
+DR   RefSeq; NP_309297.1; NC_002695.1.
+DR   RefSeq; WP_000287458.1; NZ_VOAI01000026.1.
+DR   AlphaFoldDB; P69435; -.
+DR   SMR; P69435; -.
+DR   STRING; 155864.Z1526; -.
+DR   GeneID; 912850; -.
+DR   KEGG; ece:Z1526; -.
+DR   KEGG; ecs:ECs_1270; -.
+DR   PATRIC; fig|386585.9.peg.1378; -.
+DR   eggNOG; COG0457; Bacteria.
+DR   HOGENOM; CLU_018289_0_0_6; -.
+DR   OMA; WDKRPYD; -.
+DR   Proteomes; UP000000558; Chromosome.
+DR   Proteomes; UP000002519; Chromosome.
+DR   GO; GO:0009279; C:cell outer membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:1901515; F:poly-beta-1,6-N-acetyl-D-glucosamine transmembrane transporter activity; IEA:InterPro.
+DR   FunFam; 1.25.40.10:FF:000337; Poly-beta-1,6 N-acetyl-D-glucosamine export porin PgaA; 1.
+DR   Gene3D; 1.25.40.10; Tetratricopeptide repeat domain; 2.
+DR   InterPro; IPR023870; PGA_export_porin_PgaA.
+DR   InterPro; IPR049003; PgaA_barrel.
+DR   InterPro; IPR011990; TPR-like_helical_dom_sf.
+DR   InterPro; IPR019734; TPR_rpt.
+DR   NCBIfam; TIGR03939; PGA_TPR_OMP; 1.
+DR   NCBIfam; NF007468; PRK10049.1; 1.
+DR   Pfam; PF21197; PgaA_barrel; 1.
+DR   SMART; SM00028; TPR; 1.
+DR   SUPFAM; SSF48452; TPR-like; 2.
+DR   PROSITE; PS50005; TPR; 1.
+DR   PROSITE; PS50293; TPR_REGION; 1.
+PE   3: Inferred from homology;
+KW   Cell outer membrane; Membrane; Reference proteome; Repeat; Signal;
+KW   TPR repeat; Transmembrane; Transmembrane beta strand; Transport.
+FT   SIGNAL          1..26
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           27..807
+FT                   /note="Poly-beta-1,6-N-acetyl-D-glucosamine export protein"
+FT                   /id="PRO_0000035695"
+FT   REPEAT          98..131
+FT                   /note="TPR 1"
+FT   REPEAT          165..198
+FT                   /note="TPR 2"
+FT   REPEAT          279..311
+FT                   /note="TPR 3"
+SQ   SEQUENCE   807 AA;  92207 MW;  B20067C3D41723FD CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+8	5	Pseudomonadaceae
+20	5	Enterobacteriaceae
+19	5	Alcaligenaceae
+9	4	Pseudomonadales
+29	4	Enterobacterales
+29	4	Burkholderiales
+40	3	Gammaproteobacteria
+29	3	Betaproteobacteria
+70	2	Pseudomonadota
+71	1	Pseudomonadati
+71	0	Bacteria
+Total of 72 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3EFK8	OUTER MEMBRANE PROTEIN PG    226.3    3.1e-64   1   2.5   2.7
+	P69434_TED01              	   221	   326	   226.3
+	PF21197	PgaA_barrel     	   514	   807	   459.1
+
+A7ZKC9	POLY-BETA-1,6-N-ACETYL-D-GLUC    240.1    1.5e-68   1   2.5   1.6
+	P69434_TED01              	   221	   326	   240.1
+	PF21197	PgaA_barrel     	   514	   807	   460.3
+
+B7LFD4	POLY-BETA-1,6-N-ACETYL-D-GLUC    240.1    1.5e-68   1   2.4   1.6
+	P69434_TED01              	   221	   326	   240.1
+	PF21197	PgaA_barrel     	   514	   807	   454.9
+
+P69434	POLY-BETA-1,6-N-ACETYL-D-GLUCOS    240.1    1.5e-68   1   2.4   1.6
+	P69434_TED01              	   221	   326	   240.1
+	PF21197	PgaA_barrel     	   514	   807	   460.3
+
+P69435	POLY-BETA-1,6-N-ACETYL-D-GLUCOS    240.1    1.5e-68   1   2.4   1.6
+	P69434_TED01              	   221	   326	   240.1
+	PF21197	PgaA_barrel     	   514	   807	   460.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P69434 (E-value: 1.3e-70, Score: 240.1)
+Mentioned as: P69434
+Description: Poly-beta-1,6-N-acetyl-D-glucosamine export protein
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Poly-beta-1,6-N-acetyl-D-glucosamine export protein; PGA export protein; Poly-beta-1,6-GlcNAc export protein
+  BRENDA:  - N-acetylgalactosaminoglycan deacetylase (EC 3.1.1.58)
+  TCDB:  - The &beta;-barrel porin with a superhelical domain containing tetratricopeptide repeats, PgaA or YcdS; exports (deacetylated) poly &beta;-1,6-N-acetyl glucosamine (PGA), a biofilm adhesin that may also play a role in immune evasion
+PMID: 30265295
+Source: EuropePMC
+Title: The Origin of Mitochondria-Specific Outer Membrane β-Barrels from an Ancestral Bacterial Fragment.
+Journal: Genome biology and evolution (2018)
+Snippet: . UK4 FapF (UniprotKB: C4IN73) and E scherichia coli BcsC (UniprotKB: P37650) and PgaA (UniprotKB: P69434). In order to identify these barrel regions, we searched for reference structures for these sequences on the PDB70 and SCOPe databases (as of May 2018) with HHpred, without scoring for
+
+================================================================================
+Protein: P69434 (E-value: 1.3e-70, Score: 240.1)
+Mentioned as: PGAA_ECOLI
+Description: Poly-beta-1,6-N-acetyl-D-glucosamine export protein
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Poly-beta-1,6-N-acetyl-D-glucosamine export protein; PGA export protein; Poly-beta-1,6-GlcNAc export protein
+  BRENDA:  - N-acetylgalactosaminoglycan deacetylase (EC 3.1.1.58)
+  TCDB:  - The &beta;-barrel porin with a superhelical domain containing tetratricopeptide repeats, PgaA or YcdS; exports (deacetylated) poly &beta;-1,6-N-acetyl glucosamine (PGA), a biofilm adhesin that may also play a role in immune evasion
+PMID: 15090514
+Source: SwissProt
+Snippet: FUNCTION: Exports the biofilm adhesin polysaccharide poly-beta-1,6-N- acetyl-D-glucosamine (PGA) across the outer membrane. The PGA transported seems to be partially N-deacetylated since N-deacetylation of PGA by PgaB is needed for PGA export through the PgaA porin._:::_FUNCTION: Required for the synthesis of the beta-1,6-GlcNAc polysaccharide (PGA or poly-GlcNAc) that seems to serve as a biofilm adhesin._:::_SUBCELLULAR LOCATION: Cell outer membrane {ECO:0000305|PubMed:18359807}; Multi-pass mem...
+
+================================================================================
+Protein: P69434 (E-value: 1.3e-70, Score: 240.1)
+Mentioned as: PGAA_ECOLI
+Description: Poly-beta-1,6-N-acetyl-D-glucosamine export protein
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Poly-beta-1,6-N-acetyl-D-glucosamine export protein; PGA export protein; Poly-beta-1,6-GlcNAc export protein
+  BRENDA:  - N-acetylgalactosaminoglycan deacetylase (EC 3.1.1.58)
+  TCDB:  - The &beta;-barrel porin with a superhelical domain containing tetratricopeptide repeats, PgaA or YcdS; exports (deacetylated) poly &beta;-1,6-N-acetyl glucosamine (PGA), a biofilm adhesin that may also play a role in immune evasion
+PMID: 18359807
+Source: SwissProt
+Snippet: FUNCTION: Exports the biofilm adhesin polysaccharide poly-beta-1,6-N- acetyl-D-glucosamine (PGA) across the outer membrane. The PGA transported seems to be partially N-deacetylated since N-deacetylation of PGA by PgaB is needed for PGA export through the PgaA porin._:::_FUNCTION: Required for the synthesis of the beta-1,6-GlcNAc polysaccharide (PGA or poly-GlcNAc) that seems to serve as a biofilm adhesin._:::_SUBCELLULAR LOCATION: Cell outer membrane {ECO:0000305|PubMed:18359807}; Multi-pass mem...
+
+================================================================================
+Protein: VIMSS72823 (E-value: 1.3e-70, Score: 240.1)
+Mentioned as: Z1526
+Description: putative outer membrane protein
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 19709428
+Source: EuropePMC
+Title: Two distinct groups of porcine enteropathogenic Escherichia coli strains of serogroup O45 are revealed by comparative genomic hybridization and virulence gene microarray
+Journal: BMC genomics (2009)
+Snippet: in Group I strains, with the exception of REPEC strain E22 which possessed the gene Z1526 (ECs1270). These results were confirmed by PCR using primers designed for each gene (data not shown). Discussion In this study, we investigated the genetic relationships among PEPEC strains of serogroup
+
+================================================================================
+Protein: VIMSS145345 (E-value: 5.1e-21, Score: 80.8)
+Mentioned as: YPO1951
+Description: haemin storage system, HmsH protein
+Organism: Yersinia pestis CO92
+PMID: 19289506
+Source: EuropePMC
+Title: Molecular Darwinian evolution of virulence in Yersinia pestis
+Journal: Infection and immunity (2009)
+
+================================================================================
+Protein: VIMSS5722138 (E-value: 5.1e-21, Score: 80.7)
+Mentioned as: YPK_2241
+Description: TPR repeat-containing protein
+Organism: Yersinia pseudotuberculosis YPIII
+PMID: 35351893
+Source: EuropePMC
+Title: Cpx-signalling facilitates Hms-dependent biofilm formation by Yersinia pseudotuberculosis
+Journal: NPJ biofilms and microbiomes (2022)
+Snippet: pseudotuberculosis YPIII are, YPK_4133 ( cpxA ), YPK_4132 ( cpxR ), YPK_4131 ( cpxP ), YPK_2241 ( hmsH ),YPK_3638 ( hmsT ), YPK_0094 ( hmsP ), YPK_3615 ( hmsC ), YPK_2238 ( hmsS ), YPK_1182 ( rpoE ), YPK_1090 ( nlpE ), YPK_1551 ( ackA ),
+
+================================================================================
+Protein: VIMSS679697 (E-value: 5.5e-21, Score: 80.7)
+Mentioned as: YP_1695
+Description: outer membrane protein
+Organism: Yersinia pestis biovar Medievalis str. 91001
+PMID: 29610260
+Source: EuropePMC
+Title: Protein Acetylation Mediated by YfiQ and CobB Is Involved in the Virulence and Stress Response of Yersinia pestis
+Journal: Infection and immunity (2018)
+Snippet: genes YP_1290 YP_1289 YP_1291 YP_1288 YP_1698 YP_1697 YP_1695 YP_1696 YP_1764 YP_0141 YP_2160 YP_pPCP08 YP_0910 Acetylation Regulates Stress Response of Y.
+
+================================================================================
+Protein: VIMSS3384991 (E-value: 4.1e-17, Score: 68.2)
+Mentioned as: KPN_04514
+Description: hypothetical protein
+Organism: Klebsiella pneumoniae subsp. pneumoniae MGH 78578
+PMID: 32390954
+Source: EuropePMC
+Title: Iron Limitation in <i>Klebsiella pneumoniae</i> Defines New Roles for Lon Protease in Homeostasis and Degradation by Quantitative Proteomics
+Journal: Frontiers in microbiology (2020)
+Snippet: A6TJ41 cmlA2 Chloramphenicol acetyltransferase Novel 6.65 A6TFY9 ibpB Small heat shock protein Known 3.62 A6TH35 KPN_04514 Uncharacterized Novel 1.91 FIGURE 5 Defining candidate degradation products of Lon protease in K. pneumoniae . (A) Principal component analysis; clustering based on strain. (B) Volcano plot depicting all proteins
+
+================================================================================
+Protein: VIMSS257685 (E-value: 7.9e-05, Score: 28.7)
+Mentioned as: XAC1813
+Description: HmsH protein
+Organism: Xanthomonas axonopodis pv. citri str. 306
+PMID: 30654743
+Source: EuropePMC
+Title: Diffusible signal factor (DSF)-mediated quorum sensing modulates expression of diverse traits in Xanthomonas citri and responses of citrus plants to promote disease
+
+... (truncated - showing first 100 of 103 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P69434.1	AF-P69434-F1-model_v4_TED01:221-326	1	AF-P69434-F1-model_v4_TED01	221-326	100.0%
+P69434.1	AF-P69434-F1-model_v4_TED02:527-805	1	AF-P69434-F1-model_v4_TED02	527-805	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 23
+Total networks analyzed: 23
+Total network proteins: 1027
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF00535 (Glycos_transf_2) 22           34            95.7%
+PF13632 (Glyco_trans_2_3) 22           31            95.7%
+PF13641 (Glyco_tranf_2_3) 22           32            95.7%
+PF13506 (Glyco_transf_21) 22           31            95.7%
+PF01522 (Polysacc_deac_1) 22           23            95.7%
+PF14883 (GHL13)           22           23            95.7%
+PF13994 (PgaD)            19           19            82.6%
+PF00345 (PapD_N)          13           29            56.5%
+PF00990 (GGDEF)           12           27            52.2%
+PF02753 (PapD_C)          12           28            52.2%
+PF10111 (Glyco_tranf_2_2) 12           12            52.2%
+PF02518 (HATPase_c)       11           35            47.8%
+PF00072 (Response_reg)    11           32            47.8%
+PF00512 (HisKA)           11           27            47.8%
+PF00989 (PAS)             11           17            47.8%
+PF08448 (PAS_4)           11           15            47.8%
+PF00577 (Usher)           11           26            47.8%
+PF13953 (PapC_C)          11           26            47.8%
+PF13954 (PapC_N)          11           25            47.8%
+PF00196 (GerE)            9            34            39.1%
+PF01627 (Hpt)             8            16            34.8%
+PF00672 (HAMP)            8            11            34.8%
+PF03797 (Autotransporter) 8            15            34.8%
+PF12951 (PATR)            8            9             34.8%
+PF00419 (Fimbrial)        8            23            34.8%
+PF13181 (TPR_8)           7            8             30.4%
+PF13432 (TPR_16)          7            7             30.4%
+PF14559 (TPR_19)          7            9             30.4%
+PF00334 (NDK)             7            7             30.4%
+PF13188 (PAS_8)           7            10            30.4%
+PF13426 (PAS_9)           7            12            30.4%
+PF00006 (ATP-synt_ab)     7            9             30.4%
+PF07715 (Plug)            7            8             30.4%
+PF03142 (Chitin_synth_2)  7            7             30.4%
+PF18415 (HKR_ArcB_TM)     6            6             26.1%
+PF18269 (T3SS_ATPase_C)   6            8             26.1%
+PF00925 (GTP_cyclohydro2) 6            6             26.1%
+PF00926 (DHBP_synthase)   6            6             26.1%
+PF00126 (HTH_1)           6            6             26.1%
+PF13689 (DUF4154)         6            6             26.1%
+PF00486 (Trans_reg_C)     6            7             26.1%
+PF01551 (Peptidase_M23)   6            7             26.1%
+PF00361 (Proton_antipo_M) 5            5             21.7%
+PF00183 (HSP90)           5            5             21.7%
+PF13589 (HATPase_c_3)     5            5             21.7%
+PF01411 (tRNA-synt_2c)    5            5             21.7%
+PF02272 (DHHA1)           5            5             21.7%
+PF07973 (tRNA_SAD)        5            5             21.7%
+PF00226 (DnaJ)            5            7             21.7%
+PF00684 (DnaJ_CXXCXGXG)   5            5             21.7%
+PF01556 (DnaJ_C)          5            7             21.7%
+PF27439 (DnaJ_C_2)        5            5             21.7%
+PF05420 (BCSC_C)          5            5             21.7%
+PF00543 (P-II)            5            10            21.7%
+PF00575 (S1)              5            5             21.7%
+PF09371 (Tex_N)           5            5             21.7%
+PF12836 (HHH_3)           5            5             21.7%
+PF14635 (HHH_7)           5            5             21.7%
+PF17674 (HHH_9)           5            5             21.7%
+PF22706 (Tex_central_region) 5            5             21.7%
+PF16921 (Tex_YqgF)        5            5             21.7%
+PF01000 (RNA_pol_A_bac)   5            5             21.7%
+PF01193 (RNA_pol_L)       5            5             21.7%
+PF03118 (RNA_pol_A_CTD)   5            5             21.7%
+PF00562 (RNA_pol_Rpb2_6)  5            5             21.7%
+PF04560 (RNA_pol_Rpb2_7)  5            5             21.7%
+PF04561 (RNA_pol_Rpb2_2)  5            5             21.7%
+PF04563 (RNA_pol_Rpb2_1)  5            5             21.7%
+PF04565 (RNA_pol_Rpb2_3)  5            5             21.7%
+PF10385 (RNA_pol_Rpb2_45) 5            5             21.7%
+PF00012 (HSP70)           5            15            21.7%
+PF00027 (cNMP_binding)    5            11            21.7%
+PF13545 (HTH_Crp_2)       5            11            21.7%
+PF00176 (SNF2-rel_dom)    5            5             21.7%
+PF00270 (DEAD)            5            7             21.7%
+PF00271 (Helicase_C)      5            7             21.7%
+PF04851 (ResIII)          5            6             21.7%
+PF12137 (RapA_C)          5            5             21.7%
+PF18337 (Tudor_RapA)      5            5             21.7%
+PF00325 (Crp)             5            10            21.7%
+PF01192 (RNA_pol_Rpb6)    5            5             21.7%
+PF06723 (MreB_Mbl)        5            12            21.7%
+PF00593 (TonB_dep_Rec_b-barrel) 5            6             21.7%
+PF00924 (MS_channel_2nd)  5            5             21.7%
+PF21082 (MS_channel_3rd)  5            5             21.7%
+PF03466 (LysR_substrate)  5            5             21.7%
+
+... (truncated - showing first 100 of 5632 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P69434_TED01
+GA   27.00 27.00;
+TC   28.60 27.70;
+NC   26.90 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for P69434
+RN   [1]
+RM   18359807
+RT   "Roles of pgaABCD genes in synthesis, modification, and export of the
+RT   Escherichia coli biofilm adhesin poly-beta-1,6-N-acetyl-D-glucosamine.";
+RA   Itoh Y., Rice J.D., Goller C., Pannuri A., Taylor J., Meisner J.,
+RA   Beveridge T.J., Preston J.F. III, Romeo T.;
+RL   J. Bacteriol. 190:3670-3680(2008).
+
+--- End of Current DESC file ---

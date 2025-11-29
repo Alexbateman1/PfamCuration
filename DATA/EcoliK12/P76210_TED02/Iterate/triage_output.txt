@@ -1,0 +1,125 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YDJO_ECOLI              Reviewed;         267 AA.
+AC   P76210; Q2MB44;
+DE   RecName: Full=Uncharacterized protein YdjO;
+GN   Name=ydjO; OrderedLocusNames=b1730, JW1719;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=BAE76512.1; Type=Erroneous initiation; Evidence={ECO:0000305};
+DR   EMBL; U00096; AAC74800.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76512.1; ALT_INIT; Genomic_DNA.
+DR   PIR; B64932; B64932.
+DR   RefSeq; NP_416244.2; NC_000913.3.
+DR   RefSeq; WP_001310874.1; NZ_SSZK01000001.1.
+DR   AlphaFoldDB; P76210; -.
+DR   BioGRID; 4259135; 115.
+DR   FunCoup; P76210; 4.
+DR   IntAct; P76210; 1.
+DR   STRING; 511145.b1730; -.
+DR   PaxDb; 511145-b1730; -.
+DR   EnsemblBacteria; AAC74800; AAC74800; b1730.
+DR   GeneID; 946237; -.
+DR   KEGG; ecj:JW1719; -.
+DR   KEGG; eco:b1730; -.
+DR   KEGG; ecoc:C3026_09890; -.
+DR   PATRIC; fig|511145.12.peg.1801; -.
+DR   EchoBASE; EB3747; -.
+DR   eggNOG; ENOG5033PDX; Bacteria.
+DR   HOGENOM; CLU_090955_0_0_6; -.
+DR   InParanoid; P76210; -.
+DR   BioCyc; EcoCyc:G6935-MONOMER; -.
+DR   PRO; PR:P76210; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..267
+FT                   /note="Uncharacterized protein YdjO"
+FT                   /id="PRO_0000169005"
+SQ   SEQUENCE   267 AA;  30160 MW;  078E9F86999376F0 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Escherichia.
+1	6	Shigella.
+3	5	Enterobacteriaceae
+3	4	Enterobacterales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H2UZF0	UNCHARACTERIZED PROTEIN {    106.8    1.9e-27   1   1.9   3.8
+	Iterate                   	   128	   171	   106.8
+
+A0A4Y2HLI2	UNCHARACTERIZED PROTEIN {     30.3     0.0015   4   4.8   0.3
+	Iterate                   	    51	    70	     7.7
+	Iterate                   	    14	    34	     6.2
+	Iterate                   	    33	    52	     6.1
+	Iterate                   	    68	    89	     4.4
+
+A0AAD7Y8I7	UNCHARACTERIZED PROTEIN {     36.3      2e-05   5   5.7   4.5
+	Iterate                   	   779	   821	    11.2
+	Iterate                   	   302	   344	     5.5
+	Iterate                   	   425	   467	     5.5
+	Iterate                   	   572	   614	     5.5
+	Iterate                   	   677	   718	     5.5
+
+P76210	UNCHARACTERIZED PROTEIN YDJO       118.0    5.9e-31   1   1.7   3.6
+	Iterate                   	   124	   167	   116.7
+
+Q8XE14	UNCHARACTERIZED PROTEIN {ECO:    113.0    2.1e-29   1   1.7   4.0
+	Iterate                   	   124	   167	   111.7
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76210.2	AF-P76210-F1-model_v4_TED01:2-117	1	AF-P76210-F1-model_v4_TED01	2-117	0
+P76210.2	AF-P76210-F1-model_v4_TED02:124-167	1	AF-P76210-F1-model_v4_TED02	124-167	100.0%
+P76210.2	AF-P76210-F1-model_v4_TED03:174-257	1	AF-P76210-F1-model_v4_TED03	174-257	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76210_TED02/Iterate
+GA   27.00 27.00;
+TC   27.20 106.80;
+NC   26.30 17.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

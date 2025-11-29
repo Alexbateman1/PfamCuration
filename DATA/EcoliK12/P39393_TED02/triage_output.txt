@@ -1,0 +1,328 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YJIV_ECOLI              Reviewed;         906 AA.
+AC   P39393; P27301; P39392; Q6BEW7;
+DE   RecName: Full=Putative uncharacterized protein YjiV;
+GN   Name=yjiV; Synonyms=mcrD; OrderedLocusNames=b4486;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=7610040; DOI=10.1093/nar/23.12.2105;
+RA   Burland V.D., Plunkett G. III, Sofia H.J., Daniels D.L., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome VI: DNA sequence of the region
+RT   from 92.8 through 100 minutes.";
+RL   Nucleic Acids Res. 23:2105-2119(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA], AND SEQUENCE REVISION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   SEQUENCE REVISION.
+RX   PubMed=16397293; DOI=10.1093/nar/gkj405;
+RA   Riley M., Abe T., Arnaud M.B., Berlyn M.K.B., Blattner F.R.,
+RA   Chaudhuri R.R., Glasner J.D., Horiuchi T., Keseler I.M., Kosuge T.,
+RA   Mori H., Perna N.T., Plunkett G. III, Rudd K.E., Serres M.H., Thomas G.H.,
+RA   Thomson N.R., Wishart D., Wanner B.L.;
+RT   "Escherichia coli K-12: a cooperatively developed annotation snapshot
+RT   -- 2005.";
+RL   Nucleic Acids Res. 34:1-9(2006).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 624-906.
+RC   STRAIN=K12;
+RA   Zheng L., Braymer H.D.;
+RT   "Nucleotide sequence of the DNA region immediately downstream of the E.
+RT   coli McrB genes.";
+RL   Submitted (SEP-1990) to the EMBL/GenBank/DDBJ databases.
+CC   -!- CAUTION: A portion of this ORF was originally annotated as mcrD, and
+CC       reported to inhibit mcrE restriction. {ECO:0000305}.
+CC   -!- CAUTION: Could be the product of a pseudogene. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA97239.1; Type=Frameshift; Evidence={ECO:0000305};
+CC       Sequence=AAA97240.1; Type=Frameshift; Evidence={ECO:0000305};
+CC       Sequence=AAA97241.1; Type=Frameshift; Evidence={ECO:0000305};
+CC       Sequence=CAA39195.1; Type=Frameshift; Evidence={ECO:0000305};
+DR   EMBL; U14003; AAA97239.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; U14003; AAA97240.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; U14003; AAA97241.1; ALT_FRAME; Genomic_DNA.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; X55662; CAA39195.1; ALT_FRAME; Genomic_DNA.
+DR   PIR; A65249; A65249.
+DR   PIR; S56569; S56569.
+DR   PIR; S56570; S56570.
+DR   AlphaFoldDB; P39393; -.
+DR   FunCoup; P39393; 1.
+DR   jPOST; P39393; -.
+DR   KEGG; ecoc:C3026_23470; -.
+DR   PATRIC; fig|83333.103.peg.676; -.
+DR   EchoBASE; EB2469; -.
+DR   InParanoid; P39393; -.
+DR   OrthoDB; 9815222at2; -.
+DR   Proteomes; UP000000625; Chromosome.
+PE   5: Uncertain;
+KW   Reference proteome.
+FT   CHAIN           1..906
+FT                   /note="Putative uncharacterized protein YjiV"
+FT                   /id="PRO_0000169798"
+SQ   SEQUENCE   906 AA;  103403 MW;  5155D7A9C59639C6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+13	4	Rhodobacterales
+38	3	Gammaproteobacteria
+32	3	Alphaproteobacteria
+13	3	Betaproteobacteria
+84	2	Pseudomonadota
+94	1	Pseudomonadati
+94	0	Bacteria
+Total of 95 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0J5M3B2	DEAD/DEAH BOX HELICASE {E    337.8    7.9e-98   1   1.4   0.5
+	P39393_TED02              	  1897	  2102	   337.0
+	PF04851	ResIII          	   100	   302	    24.8
+	PF00270	DEAD            	   104	   312	    80.1
+	PF27116	YjiV_N          	   474	   610	    88.6
+	PF00271	Helicase_C      	  1059	  1145	    44.1
+	PF09369	MZB             	  1621	  1702	    31.6
+
+A0A3N4AKA1	DEAD/DEAH BOX HELICASE {E    189.9    1.5e-52   1   1.5   0.1
+	P39393_TED02              	  1907	  2112	   188.9
+	PF00270	DEAD            	   103	   310	    78.5
+	PF27116	YjiV_N          	   474	   614	    72.5
+	PF00271	Helicase_C      	  1060	  1150	    44.6
+	PF09369	MZB             	  1628	  1709	    37.3
+
+D4DXS9	DEAD/DEAH BOX HELICASE {ECO:0    356.9   1.2e-103   1   1.4   3.0
+	P39393_TED02              	  1876	  2081	   356.1
+	PF00270	DEAD            	    80	   287	    79.1
+	PF27116	YjiV_N          	   451	   589	    80.2
+	PF00271	Helicase_C      	  1040	  1124	    43.9
+	PF09369	MZB             	  1600	  1681	    34.4
+
+I2BDC6	PUTATIVE HELICASE RELATED PRO    398.0     3e-116   1   1.4   1.0
+	P39393_TED02              	  1898	  2103	   397.3
+	PF04851	ResIII          	    98	   300	    24.6
+	PF00270	DEAD            	   104	   312	    79.1
+	PF27116	YjiV_N          	   473	   611	    82.4
+	PF00271	Helicase_C      	  1063	  1146	    44.3
+	PF09369	MZB             	  1622	  1703	    36.6
+
+P39393	PUTATIVE UNCHARACTERIZED PROTEI    490.5   1.4e-144   1   1.3   1.4
+	P39393_TED02              	   698	   903	   489.9
+	PF27116	YjiV_N          	     1	   139	    84.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P39393 (E-value: 1.3e-146, Score: 490.5)
+Mentioned as: P39393
+Description: Putative uncharacterized protein YjiV
+Organism: Escherichia coli (strain K12)
+PMID: 33324810
+Source: EuropePMC
+Title: Antimicrobial Mechanism and Identification of the Proteins Mediated by Extracts from <i>Asphaltum punjabianum</i> and <i>Myrtus communis</i>
+Journal: ACS omega (2020)
+Snippet: name MASCOT ID ANOVA p -value fold T1/C EXP T1/C fold T2/C EXP T2/C 1 P39393 putative uncharacterized protein YjiV YJIV_ECOLI 0.01 N.S. 2.03 DOWN 2 P27248 aminomethyltransferase GCST_ECOLI 0.047 N.S. 1.5 DOWN 3 P0A9L3 FKBP-type 22kDa peptidyl-prolylcistrans isomerase FKBB_ECOLI 0.006 N.S. 1.77 DOWN 4 Q2M7M3
+
+================================================================================
+Protein: VIMSS156145 (E-value: 1.6e-98, Score: 333.4)
+Mentioned as: STY4849
+Description: helicase related protein
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 18524964
+Source: EuropePMC
+Title: Salmonella serovar identification using PCR-based detection of gene presence and absence
+Journal: Journal of clinical microbiology (2008)
+Snippet: STY1049, STY2077, STY2364, STY3088, STY3688, STY4412, STY4414, STY4706, STY4849, STM0716, STY0346; control 16SrRNA gene B 146-gene real-time PCR set All ORFs of
+
+================================================================================
+Protein: VIMSS156145 (E-value: 1.6e-98, Score: 333.4)
+Mentioned as: STY4849
+Description: helicase related protein
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 15774890
+Source: EuropePMC
+Title: Analysis of the hypervariable region of the Salmonella enterica genome associated with tRNA(leuX)
+Journal: Journal of bacteriology (2005)
+Snippet: genes resembling Salmonella serovar Typhi CT18 STY4832 and STY4849) were not closed in this way. Microarray analysis of genomic DNA. The design and construction
+
+================================================================================
+Protein: VIMSS76710 (E-value: 1.2e-15, Score: 62.8)
+Mentioned as: Z5898
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 38357901
+Source: EuropePMC
+Title: Genomic island-encoded regulatory proteins in enterohemorrhagic <i>Escherichia coli</i> O157:H7
+Journal: Virulence (2024)
+Snippet: at the promoter region of the class II flagellar gene fliA . [ 35 ] Z5898 OI-172 Z5898 regulates motility and promotes flagellum formation via fliC expression induction by increasing fliC promoter activity. [ 12 ] GrlR OI-148 (LEE PAI) GrlR indirectly activate flagellar synthesis and
+
+================================================================================
+Protein: VIMSS76710 (E-value: 1.2e-15, Score: 62.8)
+Mentioned as: Z5898
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 38412313
+Source: EuropePMC
+Title: Structural insights into the N-terminal APHB domain of HrpA: mediating canonical and i-motif recognition
+Journal: Nucleic acids research (2024)
+Snippet: counterparts remain comparatively less explored ( 22 ). Yet, bacterial DEAH/RHA helicases like HrpA, HrpBand Z5898 are associated with critical roles in bacterial virulence and host infection ( 23 ). HrpA, in particular, is involved in endonucleolytic cleavage of specific transcripts in Escherichia coli and has
+
+================================================================================
+Protein: VIMSS76710 (E-value: 1.2e-15, Score: 62.8)
+Mentioned as: Z5898
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 35971812
+Source: EuropePMC
+Title: Regulation of flagellar motility and biosynthesis in enterohemorrhagic <i>Escherichia coli</i> O157:H7
+Journal: Gut microbes (2022)
+Snippet: flagellar operons, including regulatory, structural, chemotaxis, and motor genes, and stimulates EHEC O157:H7 motility. 30 Z5898 OI-172-encoded Z5898 promotes fliC expression at the transcriptional level by increasing the fliC promoter activity. 31 Hha Hha upregulates EHEC O157:H7 motility and flagellar biosynthesis directly by binding to the
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P39393.3	AF-P39393-F1-model_v4_TED01:1-139	1	AF-P39393-F1-model_v4_TED01	1-139	0
+P39393.3	AF-P39393-F1-model_v4_TED02:698-903	1	AF-P39393-F1-model_v4_TED02	698-903	100.0%
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 29
+Total networks analyzed: 29
+Total network proteins: 285
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF27205 (YjiT_2nd)        28           28            96.6%
+PF27201 (YjiT_N)          26           26            89.7%
+PF04851 (ResIII)          13           17            44.8%
+PF06745 (ATPase)          12           14            41.4%
+PF13481 (AAA_25)          12           12            41.4%
+PF00271 (Helicase_C)      12           17            41.4%
+PF05362 (Lon_C)           11           11            37.9%
+PF18073 (Zn_ribbon_LapB)  11           11            37.9%
+PF23442 (DUF7125)         11           11            37.9%
+PF27096 (UvrC_M)          11           12            37.9%
+PF00270 (DEAD)            11           15            37.9%
+PF01149 (Fapy_DNA_glyco)  11           13            37.9%
+PF06827 (zf-FPG_IleRS)    11           12            37.9%
+PF06831 (H2TH)            11           13            37.9%
+PF01256 (Carb_kinase)     9            9             31.0%
+PF03853 (YjeF_N)          9            9             31.0%
+PF30054 (GIY-YIG_UvrC)    9            11            31.0%
+PF13541 (ChlI)            8            8             27.6%
+PF18766 (SWI2_SNF2)       8            8             27.6%
+PF02384 (N6_Mtase)        7            7             24.1%
+PF01541 (GIY-YIG)         7            9             24.1%
+PF08463 (EcoEI_R_C)       7            7             24.1%
+PF29791 (YjiT_3rd)        6            6             20.7%
+PF02151 (UVR)             6            6             20.7%
+PF08459 (UvrC_RNaseH_dom) 6            6             20.7%
+PF14520 (HHH_5)           6            6             20.7%
+PF22920 (UvrC_RNaseH)     6            6             20.7%
+PF13245 (AAA_19)          6            8             20.7%
+PF12161 (HsdM_N)          5            5             17.2%
+PF03796 (DnaB_C)          5            5             17.2%
+PF30170 (T1RK_2nd)        5            5             17.2%
+PF00580 (UvrD-helicase)   5            5             17.2%
+PF13361 (UvrD_C)          5            5             17.2%
+PF27115 (Cho_C)           5            6             17.2%
+PF00929 (RNase_T)         5            6             17.2%
+PF07669 (Eco57I)          4            4             13.8%
+PF07728 (AAA_5)           4            4             13.8%
+PF04313 (HSDR_N)          4            4             13.8%
+PF00154 (RecA_N)          4            5             13.8%
+PF08423 (Rad51)           4            4             13.8%
+PF21096 (RecA_C)          4            4             13.8%
+PF15611 (EH_Signature)    4            4             13.8%
+PF00176 (SNF2-rel_dom)    4            4             13.8%
+PF13401 (AAA_22)          4            4             13.8%
+PF13604 (AAA_30)          3            3             10.3%
+PF14267 (DUF4357)         3            3             10.3%
+PF03235 (GmrSD_N)         3            3             10.3%
+PF01131 (Topoisom_bac)    3            3             10.3%
+PF01396 (Zn_ribbon_Top1)  3            3             10.3%
+PF01751 (Toprim)          3            3             10.3%
+PF13368 (Toprim_C_rpt)    3            3             10.3%
+PF01170 (UPF0020)         2            2              6.9%
+PF05127 (NAT10_TcmA_helicase) 2            2              6.9%
+PF08351 (TmcA_N)          2            2              6.9%
+PF13718 (GNAT_acetyltr_2) 2            2              6.9%
+PF13086 (AAA_11)          2            2              6.9%
+PF13087 (AAA_12)          2            2              6.9%
+PF27531 (MT3502_N)        2            2              6.9%
+PF00149 (Metallophos)     2            2              6.9%
+PF28529 (McrB_lid)        2            2              6.9%
+PF10117 (McrBC)           2            2              6.9%
+PF00691 (OmpA)            2            2              6.9%
+PF01420 (Methylase_S)     2            2              6.9%
+PF09369 (MZB)             2            2              6.9%
+PF13558 (SbcC_Walker_B)   2            2              6.9%
+PF25791 (WHD_BREX_BrxC)   2            2              6.9%
+PF25792 (BREX_BrxC_helical) 2            2              6.9%
+PF25796 (BREX_BrxC_4th)   2            2              6.9%
+PF19557 (BrxC-PglY_N)     2            2              6.9%
+PF09827 (CRISPR_Cas2)     2            2              6.9%
+PF00999 (Na_H_Exchanger)  2            2              6.9%
+PF02254 (TrkA_N)          2            2              6.9%
+PF01555 (N6_N4_Mtase)     2            2              6.9%
+PF27116 (YjiV_N)          2            2              6.9%
+PF13482 (RNase_H_2)       1            1              3.4%
+PF13672 (PP2C_2)          1            1              3.4%
+PF06293 (Kdo)             1            1              3.4%
+PF00069 (Pkinase)         1            1              3.4%
+PF07714 (PK_Tyr_Ser-Thr)  1            1              3.4%
+PF30087 (DUF8606)         1            1              3.4%
+PF00092 (VWA)             1            1              3.4%
+PF13519 (VWA_2)           1            1              3.4%
+PF00165 (HTH_AraC)        1            1              3.4%
+PF12833 (HTH_18)          1            1              3.4%
+PF15970 (HicB-like_2)     1            1              3.4%
+PF17482 (Phage_sheath_1C) 1            1              3.4%
+
+... (truncated - showing first 100 of 1880 lines)
+--- End of STRING protein interaction network ---
+
+--- Foldseek structural matches (copy to Claude) ---
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+P39393_TED02	query_model	PF16565	MIT_C	CL0479	PF16565_A0A7M7H4T1_1_res90-231	0.17	137	92	0	1.000	4.20e-05	120.0
+
+--- End of Foldseek structural matches ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P39393_TED02
+GA   27.00 27.00;
+TC   27.40 27.10;
+NC   26.90 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

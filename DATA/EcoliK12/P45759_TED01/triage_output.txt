@@ -1,0 +1,46 @@
+--- sp.seq_info content (copy to Claude) ---
+Note: sp.seq_info file not found
+Current directory: /nfs/production/agb/pfam/curation/agb/EcoliK12/P45759_TED01
+Potential protein accession for UniProt search: P45759
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	7	Klebsiella
+4	6	Escherichia.
+1	6	Klebsiella/Raoultella group
+5	5	Enterobacteriaceae
+5	4	Enterobacterales
+5	3	Gammaproteobacteria
+5	2	Pseudomonadota
+5	1	Pseudomonadati
+5	0	Bacteria
+Total of 5 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Note: arch file not found
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P45759.1	AF-P45759-F1-model_v4_TED01:10-70	1	AF-P45759-F1-model_v4_TED01	10-70	100.0%
+P45759.1	AF-P45759-F1-model_v4_TED02:85-212	1	AF-P45759-F1-model_v4_TED02	85-212	0
+P45759.1	AF-P45759-F1-model_v4_TED03:220-487	1	AF-P45759-F1-model_v4_TED03	220-487	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P45759_TED01
+GA   27.00 27.00;
+TC   27.10 28.30;
+NC   24.20 22.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,553 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   MCRA_ECOLI              Reviewed;         277 AA.
+AC   P24200;
+DE   RecName: Full=Type IV methyl-directed restriction enzyme EcoKMcrA {ECO:0000303|PubMed:12654995};
+DE            Short=EcoKMcrA {ECO:0000303|PubMed:12654995};
+DE            EC=3.1.21.-;
+DE   AltName: Full=5-methylcytosine-specific restriction enzyme A;
+GN   Name=mcrA {ECO:0000303|PubMed:1938927}; Synonyms=rglA;
+GN   OrderedLocusNames=b1159, JW1145;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=1938927; DOI=10.1128/jb.173.22.7368-7373.1991;
+RA   Hiom K.J., Sedgwick S.G.;
+RT   "Cloning and structural characterization of the mcrA locus of Escherichia
+RT   coli.";
+RL   J. Bacteriol. 173:7368-7373(1991).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   DOI=10.1007/BF02703150;
+RA   Ramalingam R., Prasad R., Shivapriya R., Dharmalingam K.;
+RT   "Molecular cloning and sequencing of mcrA locus and identification of McrA
+RT   protein in Escherichia coli.";
+RL   J. Biosci. 17:217-232(1992).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=8905232; DOI=10.1093/dnares/3.3.137;
+RA   Oshima T., Aiba H., Baba T., Fujita K., Hayashi K., Honjo A., Ikemoto K.,
+RA   Inada T., Itoh T., Kajihara M., Kanai K., Kashimoto K., Kimura S.,
+RA   Kitagawa M., Makino K., Masuda S., Miki T., Mizobuchi K., Mori H.,
+RA   Motomura K., Nakamura Y., Nashimoto H., Nishio Y., Saito N., Sampei G.,
+RA   Seki Y., Tagami H., Takemoto K., Wada C., Yamamoto Y., Yano M.,
+RA   Horiuchi T.;
+RT   "A 718-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 12.7-28.0 min region on the linkage map.";
+RL   DNA Res. 3:137-155(1996).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [6]
+RP   NOMENCLATURE.
+RX   PubMed=12654995; DOI=10.1093/nar/gkg274;
+RA   Roberts R.J., Belfort M., Bestor T., Bhagwat A.S., Bickle T.A.,
+RA   Bitinaite J., Blumenthal R.M., Degtyarev S.K., Dryden D.T., Dybvig K.,
+RA   Firman K., Gromova E.S., Gumport R.I., Halford S.E., Hattman S.,
+RA   Heitman J., Hornby D.P., Janulaitis A., Jeltsch A., Josephsen J., Kiss A.,
+RA   Klaenhammer T.R., Kobayashi I., Kong H., Krueger D.H., Lacks S.,
+RA   Marinus M.G., Miyahara M., Morgan R.D., Murray N.E., Nagaraja V.,
+RA   Piekarowicz A., Pingoud A., Raleigh E., Rao D.N., Reich N., Repin V.E.,
+RA   Selker E.U., Shaw P.C., Stein D.C., Stoddard B.L., Szybalski W.,
+RA   Trautner T.A., Van Etten J.L., Vitor J.M., Wilson G.G., Xu S.Y.;
+RT   "A nomenclature for restriction enzymes, DNA methyltransferases, homing
+RT   endonucleases and their genes.";
+RL   Nucleic Acids Res. 31:1805-1812(2003).
+CC   -!- FUNCTION: Restriction of 5-methyl and 5-hydroxymethylcytosines at the
+CC       specific DNA sequence 5'-C(me)CGG-3'.
+CC   -!- MISCELLANEOUS: Encoded by the SOS-inducible cryptic lambdoid prophage
+CC       e14 (PubMed:16738553, PubMed:1938927, PubMed:9278503, Ref.2). UV
+CC       treatment leads to prophage excision and reduced levels of McrA
+CC       (PubMed:1938927, Ref.2). {ECO:0000269|PubMed:16738553,
+CC       ECO:0000269|PubMed:1938927, ECO:0000269|PubMed:9278503,
+CC       ECO:0000269|Ref.2}.
+DR   EMBL; M76667; AAA68481.1; -; Genomic_DNA.
+DR   EMBL; Z19104; CAA79520.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC74243.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA35995.1; -; Genomic_DNA.
+DR   PIR; A41424; A41424.
+DR   RefSeq; NP_415677.1; NC_000913.3.
+DR   RefSeq; WP_000557907.1; NZ_CP064683.1.
+DR   PDB; 6GHC; X-ray; 2.85 A; A/B=1-277.
+DR   PDB; 6R64; X-ray; 2.64 A; A/B=1-143.
+DR   PDB; 6T21; X-ray; 2.07 A; A/B=1-143.
+DR   PDB; 6T22; X-ray; 2.21 A; A/B=1-143.
+DR   PDBsum; 6GHC; -.
+DR   PDBsum; 6R64; -.
+DR   PDBsum; 6T21; -.
+DR   PDBsum; 6T22; -.
+DR   AlphaFoldDB; P24200; -.
+DR   SASBDB; P24200; -.
+DR   SMR; P24200; -.
+DR   BioGRID; 4262863; 150.
+DR   FunCoup; P24200; 7.
+DR   IntAct; P24200; 3.
+DR   STRING; 511145.b1159; -.
+DR   REBASE; 13372; EcoW3110McrAP.
+DR   REBASE; 155511; VscVS05ORF515P.
+DR   REBASE; 2832; EcoKMcrA.
+DR   PaxDb; 511145-b1159; -.
+DR   EnsemblBacteria; AAC74243; AAC74243; b1159.
+DR   GeneID; 945727; -.
+DR   KEGG; ecj:JW1145; -.
+DR   KEGG; eco:b1159; -.
+DR   PATRIC; fig|511145.12.peg.1200; -.
+DR   EchoBASE; EB0568; -.
+DR   eggNOG; COG1403; Bacteria.
+DR   HOGENOM; CLU_1003791_0_0_6; -.
+DR   InParanoid; P24200; -.
+DR   BioCyc; EcoCyc:EG10573-MONOMER; -.
+DR   BioCyc; MetaCyc:EG10573-MONOMER; -.
+DR   PRO; PR:P24200; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0004519; F:endonuclease activity; IEA:UniProtKB-KW.
+DR   GO; GO:0008327; F:methyl-CpG binding; IDA:EcoliWiki.
+DR   GO; GO:0008270; F:zinc ion binding; IEA:InterPro.
+DR   GO; GO:0009307; P:DNA restriction-modification system; IEA:UniProtKB-KW.
+DR   CDD; cd00085; HNHc; 1.
+DR   Gene3D; 1.10.30.50; -; 1.
+DR   InterPro; IPR002711; HNH.
+DR   InterPro; IPR003615; HNH_nuc.
+DR   InterPro; IPR052892; NA-targeting_endonuclease.
+DR   PANTHER; PTHR33877; SLL1193 PROTEIN; 1.
+DR   PANTHER; PTHR33877:SF1; TYPE IV METHYL-DIRECTED RESTRICTION ENZYME ECOKMCRA; 1.
+DR   Pfam; PF01844; HNH; 1.
+DR   SMART; SM00507; HNHc; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Endonuclease; Hydrolase; Nuclease; Reference proteome;
+KW   Restriction system.
+FT   CHAIN           1..277
+FT                   /note="Type IV methyl-directed restriction enzyme EcoKMcrA"
+FT                   /id="PRO_0000077380"
+FT   DOMAIN          207..257
+FT                   /note="HNH"
+FT   STRAND          1..4
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   STRAND          10..20
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   STRAND          23..28
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   TURN            34..39
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   HELIX           40..53
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   STRAND          58..63
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   HELIX           66..71
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   HELIX           75..78
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   STRAND          79..84
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   HELIX           93..102
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   HELIX           103..106
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   STRAND          109..112
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   STRAND          124..127
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   HELIX           134..142
+FT                   /evidence="ECO:0007829|PDB:6T21"
+FT   HELIX           145..148
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   HELIX           155..167
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   STRAND          176..178
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   STRAND          181..189
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   HELIX           193..203
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   STRAND          208..210
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   STRAND          215..218
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   TURN            219..221
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   STRAND          226..231
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   TURN            233..236
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   HELIX           241..243
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   STRAND          244..247
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   HELIX           249..257
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+FT   HELIX           261..271
+FT                   /evidence="ECO:0007829|PDB:6GHC"
+SQ   SEQUENCE   277 AA;  31390 MW;  E5F2627DFFDEC402 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	6	Actinokineospora.
+7	5	Pseudonocardiaceae
+7	4	Pseudonocardiales
+4	4	Rhodobacterales
+3	4	Streptosporangiales
+5	3	Alphaproteobacteria
+13	3	Actinomycetes
+9	2	Pseudomonadota
+13	2	Actinomycetota
+14	1	Bacillati
+11	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0F7M2I8	HNH ENDONUCLEASE {ECO:000    211.6    3.9e-59   1   1.2   0.4
+	Iterate                   	     1	   180	   211.1
+	PF13391	HNH_2           	   202	   251	    53.2
+
+A0A0P0UQ01	HNH NUCLEASE DOMAIN-CONTA    225.1    2.9e-63   1   1.2   2.3
+	Iterate                   	     1	   177	   224.7
+	PF13391	HNH_2           	   199	   248	    46.5
+
+A0A483ANA7	HNH NUCLEASE DOMAIN-CONTA    229.2    1.5e-64   1   1.1   0.4
+	Iterate                   	     1	   178	   228.9
+	PF13391	HNH_2           	   200	   249	    45.1
+
+A0A917LT66	HNH NUCLEASE DOMAIN-CONTA    219.3    1.7e-61   1   1.2   0.3
+	Iterate                   	     1	   180	   218.8
+	PF13391	HNH_2           	   202	   251	      52
+
+P24200	TYPE IV METHYL-DIRECTED RESTRIC    133.1    4.9e-35   1   1.2   0.0
+	Iterate                   	     1	   165	   132.7
+	PF01844	HNH             	   207	   258	    54.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS15281 (E-value: 1.1e-26, Score: 99.1)
+Mentioned as: b1159
+Description: e14 prophage; 5-methylcytosine-specific restriction endonuclease B
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 36855185
+Source: EuropePMC
+Title: About the dark corners in the gene function space of Escherichia coli remaining without illumination by scientific literature
+Journal: Biology direct (2023)
+Snippet: ( sfmH /GF_11601), b0555 ( rrrD /GF_380), b0557 ( borD /GF_2868), b0565 ( ompT /GF_499), b1159 ( mcrA /GF_8991), b1182 ( hlyE /GF_773), b1554 ( rrrQ /GF_155), b1563 ( relE /GF_500), b1617 ( uidA /GF_3547), b1923 ( fliC /GF_4133), b2000 ( flu /GF_24343), b2027 ( wzzB
+
+================================================================================
+Protein: VIMSS15281 (E-value: 1.1e-26, Score: 99.1)
+Mentioned as: b1159
+Description: e14 prophage; 5-methylcytosine-specific restriction endonuclease B
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 18245285
+Source: EuropePMC
+Title: The complete genome sequence of Escherichia coli DH10B: insights into the biology of a laboratory workhorse
+Journal: Journal of bacteriology (2008)
+Snippet: mcrA galU 80dlacZM15 Deletion Wild type Insertion b1159 b1236 b0340-b0349 recA1 relA1 Missense IS2 disruption b2699 b2784 endA1 Tn10.10d Missense Inversion
+
+================================================================================
+Protein: VIMSS15281 (E-value: 1.1e-26, Score: 99.1)
+Mentioned as: b1159
+Description: e14 prophage; 5-methylcytosine-specific restriction endonuclease B
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 18344336
+Source: EuropePMC
+Title: The R1 conjugative plasmid increases Escherichia coli biofilm formation through an envelope stress response
+Journal: Applied and environmental microbiology (2008)
+Snippet: transcription. In MG1655, 23 e-14 prophage genes (b1137 to b1159) were induced 3- to 104-fold by the addition of R1drd19; we also identified CP 4-6 prophage
+
+================================================================================
+Protein: VIMSS1206338 (E-value: 0.00043, Score: 25.7)
+Mentioned as: SYNW0953
+Description: swmB, motility related
+Organism: Synechococcus sp. WH 8102
+PMID: 23966990
+Source: EuropePMC
+Title: Impact of DNA damaging agents on genome-wide transcriptional profiles in two marine Synechococcus species
+Journal: Frontiers in microbiology (2013)
+Snippet: SYNW0961 also contains a majority of genes strongly upregulated by MC stress [one exception being SYNW0953 encoding a giant 1.2MDa motility-related protein (Strom et al., 2012 )] and to a lesser extent EB stress (most show significant upregulation, but falling below the 2 fold cutoff), however,
+
+================================================================================
+Protein: VIMSS1206338 (E-value: 0.00043, Score: 25.7)
+Mentioned as: SYNW0953
+Description: swmB, motility related
+Organism: Synechococcus sp. WH 8102
+PMID: 16597977
+Source: EuropePMC
+Title: A suppression subtractive hybridization approach reveals niche-specific genes that may be involved in predator avoidance in marine Synechococcus isolates
+Journal: Applied and environmental microbiology (2006)
+Snippet: 18/22 27/27 31/33 35/35 27/47 NP_897046 SYNW0953 NP_897906 NP_896923 NP_896473 NP_897910 NP_898252 NP_897657 NP_897323 NP_896178 NP_897304 NP_898249 NP_896194
+
+================================================================================
+Protein: VIMSS1206338 (E-value: 0.00043, Score: 25.7)
+Mentioned as: SYNW0953
+Description: swmB, motility related
+Organism: Synechococcus sp. WH 8102
+PMID: 15968055
+Source: EuropePMC
+Title: Transposon mutagenesis in a marine synechococcus strain: isolation of swimming motility mutants
+Journal: Journal of bacteriology (2005)
+Snippet: SYNW0088 SYNW0088 SYNW0088 SYNW0192 SYNW0193 SYNW0193 SYNW0193 SYNW0193 SYNW0953 SYNW0953 SYNW0957 SYNW0960 } Nonmotile 3-4 C10-3 B7-3 B5-2 B1-4 B3-10 B8-5 B6-4
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0H5CZ21.1	AF-A0A0H5CZ21-F1-model_v4_TED01:17-158	1	AF-A0A0H5CZ21-F1-model_v4_TED01	17-158	90.1%
+A0A0H5CZ21.1	AF-A0A0H5CZ21-F1-model_v4_TED02:206-284	1	AF-A0A0H5CZ21-F1-model_v4_TED02	206-284	0
+A0A0N9I1V5.1	AF-A0A0N9I1V5-F1-model_v4_TED01:4-141	1	AF-A0A0N9I1V5-F1-model_v4_TED01	4-141	97.2%
+A0A0N9I1V5.1	AF-A0A0N9I1V5-F1-model_v4_TED02:152-330	1	AF-A0A0N9I1V5-F1-model_v4_TED02	152-330	0
+A0A0N9I1V5.1	AF-A0A0N9I1V5-F1-model_v4_TED03:341-424	1	AF-A0A0N9I1V5-F1-model_v4_TED03	341-424	0
+A0A0P0UQ01.1	AF-A0A0P0UQ01-F1-model_v4_TED01:3-35_42-145	1	AF-A0A0P0UQ01-F1-model_v4_TED01	3-145	80.8%
+A0A0P0UQ01.1	AF-A0A0P0UQ01-F1-model_v4_TED02:177-290	1	AF-A0A0P0UQ01-F1-model_v4_TED02	177-290	0.6%
+A0A0Q5PGX9.1	AF-A0A0Q5PGX9-F1-model_v4_TED01:3-142	1	AF-A0A0Q5PGX9-F1-model_v4_TED01	3-142	100.0%
+A0A0Q5PGX9.1	AF-A0A0Q5PGX9-F1-model_v4_TED02:155-241	1	AF-A0A0Q5PGX9-F1-model_v4_TED02	155-241	0
+A0A0Q5PGX9.1	AF-A0A0Q5PGX9-F1-model_v4_TED03:272-350	1	AF-A0A0Q5PGX9-F1-model_v4_TED03	272-350	0
+A0A1B9SK91.1	AF-A0A1B9SK91-F1-model_v4_TED01:5-127	1	AF-A0A1B9SK91-F1-model_v4_TED01	5-127	99.2%
+A0A1B9SK91.1	AF-A0A1B9SK91-F1-model_v4_TED02:137-232	1	AF-A0A1B9SK91-F1-model_v4_TED02	137-232	0
+A0A1B9SK91.1	AF-A0A1B9SK91-F1-model_v4_TED03:271-351	1	AF-A0A1B9SK91-F1-model_v4_TED03	271-351	0
+A0A1M5ICL8.1	AF-A0A1M5ICL8-F1-model_v4_TED01:3-146	1	AF-A0A1M5ICL8-F1-model_v4_TED01	3-146	98.0%
+A0A1M5ICL8.1	AF-A0A1M5ICL8-F1-model_v4_TED02:163-341	1	AF-A0A1M5ICL8-F1-model_v4_TED02	163-341	0
+A0A1M5ICL8.1	AF-A0A1M5ICL8-F1-model_v4_TED03:349-435	1	AF-A0A1M5ICL8-F1-model_v4_TED03	349-435	0
+A0A1N7PH71.1	AF-A0A1N7PH71-F1-model_v4_TED02:159-249	1	AF-A0A1N7PH71-F1-model_v4_TED02	159-249	0
+A0A1N7PH71.1	AF-A0A1N7PH71-F1-model_v4_TED03:289-368	1	AF-A0A1N7PH71-F1-model_v4_TED03	289-368	0
+A0A1N7PH71.1	AF-A0A1N7PH71-F1-model_v4_TED01:3-152	1	AF-A0A1N7PH71-F1-model_v4_TED01	3-152	100.0%
+A0A1Y5RC88.1	AF-A0A1Y5RC88-F1-model_v4_TED01:3-143	1	AF-A0A1Y5RC88-F1-model_v4_TED01	3-143	100.0%
+A0A1Y5RC88.1	AF-A0A1Y5RC88-F1-model_v4_TED02:156-258	1	AF-A0A1Y5RC88-F1-model_v4_TED02	156-258	0
+A0A1Y5RC88.1	AF-A0A1Y5RC88-F1-model_v4_TED03:280-355	1	AF-A0A1Y5RC88-F1-model_v4_TED03	280-355	0
+A0A1Y5U030.1	AF-A0A1Y5U030-F1-model_v4_TED01:17-161	1	AF-A0A1Y5U030-F1-model_v4_TED01	17-161	90.2%
+A0A1Y5U030.1	AF-A0A1Y5U030-F1-model_v4_TED02:214-292	1	AF-A0A1Y5U030-F1-model_v4_TED02	214-292	0
+A0A2T6K5X2.1	AF-A0A2T6K5X2-F1-model_v4_TED01:3-152	1	AF-A0A2T6K5X2-F1-model_v4_TED01	3-152	100.0%
+A0A2T6K5X2.1	AF-A0A2T6K5X2-F1-model_v4_TED02:158-244	1	AF-A0A2T6K5X2-F1-model_v4_TED02	158-244	0
+A0A2T6K5X2.1	AF-A0A2T6K5X2-F1-model_v4_TED03:276-360	1	AF-A0A2T6K5X2-F1-model_v4_TED03	276-360	0
+A0A3A4KUT9.1	AF-A0A3A4KUT9-F1-model_v4_TED01:3-113_121-156	1	AF-A0A3A4KUT9-F1-model_v4_TED01	3-156	98.7%
+A0A3A4KUT9.1	AF-A0A3A4KUT9-F1-model_v4_TED02:209-304	1	AF-A0A3A4KUT9-F1-model_v4_TED02	209-304	0
+A0A3N4UH13.1	AF-A0A3N4UH13-F1-model_v4_TED01:3-140	1	AF-A0A3N4UH13-F1-model_v4_TED01	3-140	98.6%
+A0A3N4UH13.1	AF-A0A3N4UH13-F1-model_v4_TED02:179-261	1	AF-A0A3N4UH13-F1-model_v4_TED02	179-261	0
+A0A418NSQ0.1	AF-A0A418NSQ0-F1-model_v4_TED01:3-130	1	AF-A0A418NSQ0-F1-model_v4_TED01	3-130	99.2%
+A0A418NSQ0.1	AF-A0A418NSQ0-F1-model_v4_TED02:142-233	1	AF-A0A418NSQ0-F1-model_v4_TED02	142-233	0
+A0A418NSQ0.1	AF-A0A418NSQ0-F1-model_v4_TED03:278-360	1	AF-A0A418NSQ0-F1-model_v4_TED03	278-360	0
+A0A419HI49.1	AF-A0A419HI49-F1-model_v4_TED01:8-155	1	AF-A0A419HI49-F1-model_v4_TED01	8-155	98.7%
+A0A419HI49.1	AF-A0A419HI49-F1-model_v4_TED02:196-341	1	AF-A0A419HI49-F1-model_v4_TED02	196-341	0
+A0A419HI49.1	AF-A0A419HI49-F1-model_v4_TED03:358-444	1	AF-A0A419HI49-F1-model_v4_TED03	358-444	0
+A0A438MH73.1	AF-A0A438MH73-F1-model_v4_TED01:16-150	1	AF-A0A438MH73-F1-model_v4_TED01	16-150	89.4%
+A0A438MH73.1	AF-A0A438MH73-F1-model_v4_TED02:178-294	1	AF-A0A438MH73-F1-model_v4_TED02	178-294	0
+A0A483ANA7.1	AF-A0A483ANA7-F1-model_v4_TED01:3-150	1	AF-A0A483ANA7-F1-model_v4_TED01	3-150	83.1%
+A0A483ANA7.1	AF-A0A483ANA7-F1-model_v4_TED02:182-291	1	AF-A0A483ANA7-F1-model_v4_TED02	182-291	0
+A0A494TJ57.1	AF-A0A494TJ57-F1-model_v4_TED01:3-139	1	AF-A0A494TJ57-F1-model_v4_TED01	3-139	99.3%
+A0A494TJ57.1	AF-A0A494TJ57-F1-model_v4_TED02:147-325	1	AF-A0A494TJ57-F1-model_v4_TED02	147-325	0
+A0A494TJ57.1	AF-A0A494TJ57-F1-model_v4_TED03:342-454	1	AF-A0A494TJ57-F1-model_v4_TED03	342-454	0
+A0A4Q2KGL2.1	AF-A0A4Q2KGL2-F1-model_v4_TED01:37-167	1	AF-A0A4Q2KGL2-F1-model_v4_TED01	37-167	100.0%
+A0A4Q2KGL2.1	AF-A0A4Q2KGL2-F1-model_v4_TED02:183-270	1	AF-A0A4Q2KGL2-F1-model_v4_TED02	183-270	0
+A0A4Q2KGL2.1	AF-A0A4Q2KGL2-F1-model_v4_TED03:318-401	1	AF-A0A4Q2KGL2-F1-model_v4_TED03	318-401	0
+A0A4R3ETK8.1	AF-A0A4R3ETK8-F1-model_v4_TED01:48-174	1	AF-A0A4R3ETK8-F1-model_v4_TED01	48-174	100.0%
+A0A4R3ETK8.1	AF-A0A4R3ETK8-F1-model_v4_TED02:181-268	1	AF-A0A4R3ETK8-F1-model_v4_TED02	181-268	0
+A0A4R3ETK8.1	AF-A0A4R3ETK8-F1-model_v4_TED03:280-395	1	AF-A0A4R3ETK8-F1-model_v4_TED03	280-395	0
+A0A4R5AHI7.1	AF-A0A4R5AHI7-F1-model_v4_TED01:3-36_45-116_126-153	1	AF-A0A4R5AHI7-F1-model_v4_TED01	3-153	98.1%
+A0A4R5AHI7.1	AF-A0A4R5AHI7-F1-model_v4_TED02:196-360	1	AF-A0A4R5AHI7-F1-model_v4_TED02	196-360	0
+A0A4R5AHI7.1	AF-A0A4R5AHI7-F1-model_v4_TED03:387-478_488-512	1	AF-A0A4R5AHI7-F1-model_v4_TED03	387-512	0
+A0A5E7XU88.1	AF-A0A5E7XU88-F1-model_v4_TED01:5-140	1	AF-A0A5E7XU88-F1-model_v4_TED01	5-140	100.0%
+A0A5E7XU88.1	AF-A0A5E7XU88-F1-model_v4_TED02:150-237	1	AF-A0A5E7XU88-F1-model_v4_TED02	150-237	0
+A0A5E7XU88.1	AF-A0A5E7XU88-F1-model_v4_TED03:281-357	1	AF-A0A5E7XU88-F1-model_v4_TED03	281-357	0
+A0A5M3WE56.1	AF-A0A5M3WE56-F1-model_v4_TED01:5-142	1	AF-A0A5M3WE56-F1-model_v4_TED01	5-142	96.5%
+A0A5M3WE56.1	AF-A0A5M3WE56-F1-model_v4_TED02:175-340	1	AF-A0A5M3WE56-F1-model_v4_TED02	175-340	0
+A0A5M3WE56.1	AF-A0A5M3WE56-F1-model_v4_TED03:383-493	1	AF-A0A5M3WE56-F1-model_v4_TED03	383-493	0
+A0A6A8AK23.1	AF-A0A6A8AK23-F1-model_v4_TED01:3-123	1	AF-A0A6A8AK23-F1-model_v4_TED01	3-123	97.6%
+A0A6A8AK23.1	AF-A0A6A8AK23-F1-model_v4_TED02:136-223	1	AF-A0A6A8AK23-F1-model_v4_TED02	136-223	0
+A0A6A8AK23.1	AF-A0A6A8AK23-F1-model_v4_TED03:257-350	1	AF-A0A6A8AK23-F1-model_v4_TED03	257-350	0
+A0A6I4T8M9.1	AF-A0A6I4T8M9-F1-model_v4_TED01:3-140	1	AF-A0A6I4T8M9-F1-model_v4_TED01	3-140	99.3%
+A0A6I4T8M9.1	AF-A0A6I4T8M9-F1-model_v4_TED02:153-240	1	AF-A0A6I4T8M9-F1-model_v4_TED02	153-240	0
+A0A6I4T8M9.1	AF-A0A6I4T8M9-F1-model_v4_TED03:289-371	1	AF-A0A6I4T8M9-F1-model_v4_TED03	289-371	0
+A0A6J5FLN1.1	AF-A0A6J5FLN1-F1-model_v4_TED01:5-154	1	AF-A0A6J5FLN1-F1-model_v4_TED01	5-154	100.0%
+A0A6J5FLN1.1	AF-A0A6J5FLN1-F1-model_v4_TED02:156-245	1	AF-A0A6J5FLN1-F1-model_v4_TED02	156-245	0
+A0A6J5FLN1.1	AF-A0A6J5FLN1-F1-model_v4_TED03:280-362	1	AF-A0A6J5FLN1-F1-model_v4_TED03	280-362	0
+A0A6N6JG36.1	AF-A0A6N6JG36-F1-model_v4_TED01:17-155	1	AF-A0A6N6JG36-F1-model_v4_TED01	17-155	90.2%
+A0A6N6JG36.1	AF-A0A6N6JG36-F1-model_v4_TED02:214-292	1	AF-A0A6N6JG36-F1-model_v4_TED02	214-292	0
+A0A7I7QPG4.1	AF-A0A7I7QPG4-F1-model_v4_TED01:28-155	1	AF-A0A7I7QPG4-F1-model_v4_TED01	28-155	85.3%
+A0A7K0BLU1.1	AF-A0A7K0BLU1-F1-model_v4_TED01:3-37_45-116_125-156	1	AF-A0A7K0BLU1-F1-model_v4_TED01	3-156	98.7%
+A0A7K0BLU1.1	AF-A0A7K0BLU1-F1-model_v4_TED02:181-254_267-349	1	AF-A0A7K0BLU1-F1-model_v4_TED02	181-349	0
+A0A7K0BLU1.1	AF-A0A7K0BLU1-F1-model_v4_TED03:381-490	1	AF-A0A7K0BLU1-F1-model_v4_TED03	381-490	0
+A0A7W6CHY6.1	AF-A0A7W6CHY6-F1-model_v4_TED01:4-145	1	AF-A0A7W6CHY6-F1-model_v4_TED01	4-145	100.0%
+A0A7W6CHY6.1	AF-A0A7W6CHY6-F1-model_v4_TED02:166-256	1	AF-A0A7W6CHY6-F1-model_v4_TED02	166-256	0
+A0A7W6CHY6.1	AF-A0A7W6CHY6-F1-model_v4_TED03:310-390	1	AF-A0A7W6CHY6-F1-model_v4_TED03	310-390	0
+A0A7W6DEW8.1	AF-A0A7W6DEW8-F1-model_v4_TED01:3-125	1	AF-A0A7W6DEW8-F1-model_v4_TED01	3-125	98.4%
+A0A7W6DEW8.1	AF-A0A7W6DEW8-F1-model_v4_TED02:136-231	1	AF-A0A7W6DEW8-F1-model_v4_TED02	136-231	0
+A0A7W6DEW8.1	AF-A0A7W6DEW8-F1-model_v4_TED03:270-350	1	AF-A0A7W6DEW8-F1-model_v4_TED03	270-350	0
+A0A7W8Z374.1	AF-A0A7W8Z374-F1-model_v4_TED01:16-35_43-151	1	AF-A0A7W8Z374-F1-model_v4_TED01	16-151	89.5%
+A0A7W8Z374.1	AF-A0A7W8Z374-F1-model_v4_TED02:198-315	1	AF-A0A7W8Z374-F1-model_v4_TED02	198-315	0
+A0A7W9BVI0.1	AF-A0A7W9BVI0-F1-model_v4_TED01:3-152	1	AF-A0A7W9BVI0-F1-model_v4_TED01	3-152	100.0%
+A0A7W9BVI0.1	AF-A0A7W9BVI0-F1-model_v4_TED02:157-286	1	AF-A0A7W9BVI0-F1-model_v4_TED02	157-286	0
+A0A850GAX0.1	AF-A0A850GAX0-F1-model_v4_TED01:4-116_127-157	1	AF-A0A850GAX0-F1-model_v4_TED01	4-157	99.3%
+A0A850GAX0.1	AF-A0A850GAX0-F1-model_v4_TED02:200-321	1	AF-A0A850GAX0-F1-model_v4_TED02	200-321	0
+A6GKM6.1	AF-A6GKM6-F1-model_v4_TED01:15-106_119-127	1	AF-A6GKM6-F1-model_v4_TED01	15-127	72.4%
+A6GKM6.1	AF-A6GKM6-F1-model_v4_TED02:145-150_180-299	1	AF-A6GKM6-F1-model_v4_TED02	145-299	7.7%
+B2JEA1.1	AF-B2JEA1-F1-model_v4_TED01:67-212	1	AF-B2JEA1-F1-model_v4_TED01	67-212	100.0%
+B2JEA1.1	AF-B2JEA1-F1-model_v4_TED02:225-312	1	AF-B2JEA1-F1-model_v4_TED02	225-312	0
+B2JEA1.1	AF-B2JEA1-F1-model_v4_TED03:335-429	1	AF-B2JEA1-F1-model_v4_TED03	335-429	0
+C6WB77.1	AF-C6WB77-F1-model_v4_TED01:3-34_43-113_121-150	1	AF-C6WB77-F1-model_v4_TED01	3-150	98.0%
+C6WB77.1	AF-C6WB77-F1-model_v4_TED02:176-311	1	AF-C6WB77-F1-model_v4_TED02	176-311	0
+C6WB77.1	AF-C6WB77-F1-model_v4_TED03:328-446	1	AF-C6WB77-F1-model_v4_TED03	328-446	0
+G2IK00.1	AF-G2IK00-F1-model_v4_TED01:3-152	1	AF-G2IK00-F1-model_v4_TED01	3-152	100.0%
+G2IK00.1	AF-G2IK00-F1-model_v4_TED02:157-243	1	AF-G2IK00-F1-model_v4_TED02	157-243	0
+G2IK00.1	AF-G2IK00-F1-model_v4_TED03:295-361	1	AF-G2IK00-F1-model_v4_TED03	295-361	0
+I0LAP3.1	AF-I0LAP3-F1-model_v4_TED01:25-136_143-174	1	AF-I0LAP3-F1-model_v4_TED01	25-174	99.3%
+I0LAP3.1	AF-I0LAP3-F1-model_v4_TED02:214-334	1	AF-I0LAP3-F1-model_v4_TED02	214-334	0
+
+... (truncated - showing first 100 of 109 lines)
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 9
+Total networks analyzed: 9
+Total network proteins: 265
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF08241 (Methyltransf_11) 5            5             55.6%
+PF08242 (Methyltransf_12) 5            5             55.6%
+PF13649 (Methyltransf_25) 4            4             44.4%
+PF01420 (Methylase_S)     3            4             33.3%
+PF02575 (YbaB_DNA_bd)     3            4             33.3%
+PF13560 (HTH_31)          3            5             33.3%
+PF01935 (DUF87)           3            4             33.3%
+PF13489 (Methyltransf_23) 3            3             33.3%
+PF01381 (HTH_3)           3            6             33.3%
+PF12102 (MrcB_N)          2            2             22.2%
+PF00717 (Peptidase_S24)   2            2             22.2%
+PF00580 (UvrD-helicase)   2            2             22.2%
+PF00239 (Resolvase)       2            3             22.2%
+PF07690 (MFS_1)           2            3             22.2%
+PF02384 (N6_Mtase)        2            3             22.2%
+PF00270 (DEAD)            2            4             22.2%
+PF00271 (Helicase_C)      2            6             22.2%
+PF04851 (ResIII)          2            6             22.2%
+PF18766 (SWI2_SNF2)       2            3             22.2%
+PF10117 (McrBC)           2            2             22.2%
+PF04471 (Mrr_cat)         2            2             22.2%
+PF22722 (NA-iREase1)      2            2             22.2%
+PF13476 (AAA_23)          2            2             22.2%
+PF00823 (PPE)             2            2             22.2%
+PF10633 (NPCBM_assoc)     2            2             22.2%
+PF00400 (WD40)            2            2             22.2%
+PF00801 (PKD)             2            2             22.2%
+PF18911 (PKD_4)           2            2             22.2%
+PF01435 (Peptidase_M48)   2            2             22.2%
+PF00583 (Acetyltransf_1)  2            2             22.2%
+PF13508 (Acetyltransf_7)  2            2             22.2%
+PF17210 (SdrD_B)          2            2             22.2%
+PF01656 (CbiA)            2            2             22.2%
+PF05729 (NACHT)           2            3             22.2%
+PF22733 (NNH1)            2            2             22.2%
+PF00004 (AAA)             1            1             11.1%
+PF01078 (Mg_chelatase)    1            1             11.1%
+PF07728 (AAA_5)           1            1             11.1%
+PF28529 (McrB_lid)        1            1             11.1%
+PF12705 (PDDEXK_1)        1            1             11.1%
+PF13361 (UvrD_C)          1            1             11.1%
+PF00703 (Glyco_hydro_2)   1            1             11.1%
+PF02836 (Glyco_hydro_2_C) 1            1             11.1%
+PF02837 (Glyco_hydro_2_N) 1            1             11.1%
+PF02929 (Bgal_small_N)    1            1             11.1%
+PF16353 (LacZ_4)          1            1             11.1%
+PF02413 (Caudo_TAP)       1            2             11.1%
+PF28596 (Caudo_TAP_N)     1            1             11.1%
+PF10781 (DSRB)            1            1             11.1%
+PF02796 (HTH_7)           1            1             11.1%
+PF10463 (Peptidase_U49)   1            1             11.1%
+PF00483 (NTP_transferase) 1            1             11.1%
+PF00083 (Sugar_tr)        1            1             11.1%
+PF00185 (OTCace)          1            1             11.1%
+PF02729 (OTCace_N)        1            1             11.1%
+PF00817 (IMS)             1            1             11.1%
+PF11798 (IMS_HHH)         1            1             11.1%
+PF11799 (IMS_C)           1            1             11.1%
+PF13438 (DUF4113)         1            1             11.1%
+PF12161 (HsdM_N)          1            1             11.1%
+PF08463 (EcoEI_R_C)       1            1             11.1%
+PF30170 (T1RK_2nd)        1            1             11.1%
+PF03352 (Adenine_glyco)   1            1             11.1%
+PF00633 (HHH)             1            1             11.1%
+PF01541 (GIY-YIG)         1            1             11.1%
+PF02151 (UVR)             1            1             11.1%
+PF08459 (UvrC_RNaseH_dom) 1            1             11.1%
+PF14520 (HHH_5)           1            1             11.1%
+PF22920 (UvrC_RNaseH)     1            1             11.1%
+PF27096 (UvrC_M)          1            1             11.1%
+PF30054 (GIY-YIG_UvrC)    1            1             11.1%
+PF01278 (Omptin)          1            1             11.1%
+PF00245 (Alk_phosphatase) 1            1             11.1%
+PF01676 (Metalloenzyme)   1            1             11.1%
+PF00593 (TonB_dep_Rec_b-barrel) 1            1             11.1%
+PF07715 (Plug)            1            1             11.1%
+PF00171 (Aldedh)          1            1             11.1%
+PF02624 (YcaO)            1            1             11.1%
+PF18381 (YcaO_C)          1            1             11.1%
+PF02075 (RuvC)            1            1             11.1%
+PF00202 (Aminotran_3)     1            1             11.1%
+PF00164 (Ribosom_S12_S23) 1            1             11.1%
+PF03848 (TehB)            1            1             11.1%
+PF00288 (GHMP_kinases_N)  1            1             11.1%
+PF08544 (GHMP_kinases_C)  1            1             11.1%
+PF10509 (GalKase_gal_bdg) 1            1             11.1%
+
+... (truncated - showing first 100 of 1753 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P24200_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   38.90 40.90;
+NC   25.40 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 6ghc
+RN   [1]
+RM   30107581
+RT   Activity and structure of EcoKMcrA.
+RA   Czapinska H, Kowalska M, Zagorskaite E, Manakova E, Slyvka A, Xu SY,
+RA   Siksnys V, Sasnauskas G, Bochtler M;
+RL   Nucleic Acids Res. 2018;46:9829-9841.
+RC   Paper describing PDB structure 6r64
+RN   [2]
+RM   31724709
+RT   Crystal structure of the EcoKMcrA N-terminal domain (NEco):
+RT   recognition of  modified cytosine bases without flipping.
+RA   Slyvka A, Zagorskaite E, Czapinska H, Sasnauskas G, Bochtler M;
+RL   Nucleic Acids Res. 2019;47:11943-11955.
+
+--- End of Current DESC file ---

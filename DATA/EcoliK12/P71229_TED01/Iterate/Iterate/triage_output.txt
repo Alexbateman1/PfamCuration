@@ -1,0 +1,442 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   HYFR_ECOLI              Reviewed;         670 AA.
+AC   P71229; P76567; P76976; P76977;
+DE   RecName: Full=DNA-binding transcriptional activator HyfR;
+DE   AltName: Full=Hydrogenase-4 transcriptional activator {ECO:0000303|PubMed:12426353};
+GN   Name=hyfR {ECO:0000303|PubMed:9387241};
+GN   OrderedLocusNames=b2491, JW2476;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], POSSIBLE FUNCTION, AND MOTIF.
+RC   STRAIN=K12;
+RX   PubMed=9387241; DOI=10.1099/00221287-143-11-3633;
+RA   Andrews S.C., Berks B.C., McClay J., Ambler A., Quail M.A., Golby P.,
+RA   Guest J.R.;
+RT   "A 12-cistron Escherichia coli operon (hyf) encoding a putative proton-
+RT   translocating formate hydrogenlyase system.";
+RL   Microbiology 143:3633-3647(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9205837; DOI=10.1093/dnares/4.2.91;
+RA   Yamamoto Y., Aiba H., Baba T., Hayashi K., Inada T., Isono K., Itoh T.,
+RA   Kimura S., Kitagawa M., Makino K., Miki T., Mitsuhashi N., Mizobuchi K.,
+RA   Mori H., Nakade S., Nakamura Y., Nashimoto H., Oshima T., Oyama S.,
+RA   Saito N., Sampei G., Satoh Y., Sivasundaram S., Tagami H., Takahashi H.,
+RA   Takeda J., Takemoto K., Uehara K., Wada C., Yamagata S., Horiuchi T.;
+RT   "Construction of a contiguous 874-kb sequence of the Escherichia coli-K12
+RT   genome corresponding to 50.0-68.8 min on the linkage map and analysis of
+RT   its sequence features.";
+RL   DNA Res. 4:91-113(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [5]
+RP   FUNCTION, DNA-BINDING, INDUCTION, OPERON, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / MC4100 / ATCC 35695 / DSM 6574;
+RX   PubMed=12426353; DOI=10.1128/jb.184.23.6642-6653.2002;
+RA   Skibinski D.A., Golby P., Chang Y.S., Sargent F., Hoffman R., Harper R.,
+RA   Guest J.R., Attwood M.M., Berks B.C., Andrews S.C.;
+RT   "Regulation of the hydrogenase-4 operon of Escherichia coli by the
+RT   sigma(54)-dependent transcriptional activators FhlA and HyfR.";
+RL   J. Bacteriol. 184:6642-6653(2002).
+RN   [6]
+RP   FUNCTION.
+RC   STRAIN=K12;
+RX   PubMed=14702328; DOI=10.1128/jb.186.2.580-587.2004;
+RA   Self W.T., Hasona A., Shanmugam K.T.;
+RT   "Expression and regulation of a silent operon, hyf, coding for hydrogenase
+RT   4 isoenzyme in Escherichia coli.";
+RL   J. Bacteriol. 186:580-587(2004).
+CC   -!- FUNCTION: A transcriptional activator of its own operon; when
+CC       overexpressed operon expression is strongly enhanced by low pH (under
+CC       pH 6.0), strongly inhibited by O(2) but only weakly stimulated by
+CC       fumarate (PubMed:12426353, PubMed:14702328). Expression in situ is very
+CC       weak (PubMed:12426353, PubMed:14702328). {ECO:0000269|PubMed:12426353,
+CC       ECO:0000269|PubMed:14702328, ECO:0000305|PubMed:9387241}.
+CC   -!- INDUCTION: Induced during anaerobic growth in the presence of formate;
+CC       part of a hyfR-focB transcript, it is not clear where the hyfR promoter
+CC       is located, nor if the upstream operon (hyfABCDEFGHIJ) includes these
+CC       last 2 genes. {ECO:0000269|PubMed:12426353}.
+CC   -!- DOMAIN: A Cys-rich motif in the N-terminus (residues 207-221) may bind
+CC       a metal cofactor or iron-sulfur cluster and be responsible for sensing
+CC       redox or other signals. {ECO:0000305|PubMed:9387241}.
+CC   -!- DISRUPTION PHENOTYPE: No effect on expression of the hyf operon.
+CC       {ECO:0000269|PubMed:12426353}.
+DR   EMBL; M63654; AAB88573.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC75544.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA16380.2; -; Genomic_DNA.
+DR   PIR; B65025; B65025.
+DR   RefSeq; NP_416986.4; NC_000913.3.
+DR   RefSeq; WP_001251544.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P71229; -.
+DR   SMR; P71229; -.
+DR   BioGRID; 4261431; 107.
+DR   BioGRID; 853163; 2.
+DR   DIP; DIP-9993N; -.
+DR   FunCoup; P71229; 362.
+DR   IntAct; P71229; 13.
+DR   STRING; 511145.b2491; -.
+DR   PaxDb; 511145-b2491; -.
+DR   EnsemblBacteria; AAC75544; AAC75544; b2491.
+DR   GeneID; 948886; -.
+DR   KEGG; ecj:JW2476; -.
+DR   KEGG; eco:b2491; -.
+DR   KEGG; ecoc:C3026_13820; -.
+DR   PATRIC; fig|1411691.4.peg.4248; -.
+DR   EchoBASE; EB3971; -.
+DR   eggNOG; COG3604; Bacteria.
+DR   InParanoid; P71229; -.
+DR   OMA; HCACLPH; -.
+DR   OrthoDB; 9804019at2; -.
+DR   PhylomeDB; P71229; -.
+DR   BioCyc; EcoCyc:G7308-MONOMER; -.
+DR   PRO; PR:P71229; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0032993; C:protein-DNA complex; IBA:GO_Central.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0016887; F:ATP hydrolysis activity; IEA:InterPro.
+DR   GO; GO:0000987; F:cis-regulatory region sequence-specific DNA binding; IBA:GO_Central.
+DR   GO; GO:0003677; F:DNA binding; IDA:EcoliWiki.
+DR   GO; GO:0001216; F:DNA-binding transcription activator activity; IBA:GO_Central.
+DR   GO; GO:0006352; P:DNA-templated transcription initiation; IMP:EcoliWiki.
+DR   GO; GO:0000160; P:phosphorelay signal transduction system; IEA:UniProtKB-KW.
+DR   GO; GO:0045893; P:positive regulation of DNA-templated transcription; IBA:GO_Central.
+DR   GO; GO:2000142; P:regulation of DNA-templated transcription initiation; IMP:EcoCyc.
+DR   CDD; cd00009; AAA; 1.
+DR   FunFam; 1.10.8.60:FF:000014; DNA-binding transcriptional regulator NtrC; 1.
+DR   FunFam; 3.40.50.300:FF:000006; DNA-binding transcriptional regulator NtrC; 1.
+DR   Gene3D; 1.10.8.60; -; 1.
+DR   Gene3D; 3.30.450.40; -; 1.
+DR   Gene3D; 1.10.10.60; Homeodomain-like; 1.
+DR   Gene3D; 3.40.50.300; P-loop containing nucleotide triphosphate hydrolases; 1.
+DR   InterPro; IPR003593; AAA+_ATPase.
+DR   InterPro; IPR003018; GAF.
+DR   InterPro; IPR029016; GAF-like_dom_sf.
+DR   InterPro; IPR009057; Homeodomain-like_sf.
+DR   InterPro; IPR027417; P-loop_NTPase.
+DR   InterPro; IPR002078; Sigma_54_int.
+DR   InterPro; IPR025662; Sigma_54_int_dom_ATP-bd_1.
+DR   InterPro; IPR025943; Sigma_54_int_dom_ATP-bd_2.
+DR   InterPro; IPR025944; Sigma_54_int_dom_CS.
+DR   PANTHER; PTHR32071:SF123; DNA-BINDING TRANSCRIPTIONAL ACTIVATOR HYFR-RELATED; 1.
+DR   PANTHER; PTHR32071; TRANSCRIPTIONAL REGULATORY PROTEIN; 1.
+DR   Pfam; PF01590; GAF; 1.
+DR   Pfam; PF00158; Sigma54_activat; 1.
+DR   SMART; SM00382; AAA; 1.
+DR   SMART; SM00065; GAF; 1.
+DR   SUPFAM; SSF55781; GAF domain-like; 1.
+DR   SUPFAM; SSF46689; Homeodomain-like; 1.
+DR   SUPFAM; SSF52540; P-loop containing nucleoside triphosphate hydrolases; 1.
+DR   PROSITE; PS00675; SIGMA54_INTERACT_1; 1.
+DR   PROSITE; PS00676; SIGMA54_INTERACT_2; 1.
+DR   PROSITE; PS00688; SIGMA54_INTERACT_3; 1.
+DR   PROSITE; PS50045; SIGMA54_INTERACT_4; 1.
+PE   1: Evidence at protein level;
+KW   Activator; ATP-binding; DNA-binding; Nucleotide-binding;
+KW   Reference proteome; Transcription; Transcription regulation;
+KW   Two-component regulatory system.
+FT   CHAIN           1..670
+FT                   /note="DNA-binding transcriptional activator HyfR"
+FT                   /id="PRO_0000081299"
+FT   DOMAIN          169..311
+FT                   /note="GAF"
+FT   DOMAIN          347..576
+FT                   /note="Sigma-54 factor interaction"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00193"
+FT   DNA_BIND        641..660
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000250"
+FT   MOTIF           207..221
+FT                   /note="Cys-rich segment, might bind a metal cluster"
+FT                   /evidence="ECO:0000305|PubMed:9387241"
+FT   BINDING         375..382
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00193"
+FT   BINDING         438..447
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00193"
+SQ   SEQUENCE   670 AA;  75305 MW;  0EA738D2D6BA96B6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Escherichia.
+3	6	Shigella.
+9	5	Enterobacteriaceae
+2	5	Hafniaceae
+11	4	Enterobacterales
+11	3	Gammaproteobacteria
+11	2	Pseudomonadota
+11	1	Pseudomonadati
+11	0	Bacteria
+Total of 11 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0A6ZX92	HYDROGENASE-4 TRANSCRIPTI    223.7    2.2e-63   1   1.2   0.0
+	Iterate                   	    17	   141	   223.3
+
+A0A0H3JMR0	TRANSCRIPTIONAL ACTIVATOR    223.1    3.6e-63   1   1.6   0.0
+	Iterate                   	    16	   140	   222.0
+	PF13185	GAF_2           	   167	   312	    43.9
+	PF01590	GAF             	   169	   311	    51.1
+	PF00158	Sigma54_activat 	   347	   514	   250.6
+	PF14532	Sigma54_activ_2 	   348	   518	    64.3
+	PF07728	AAA_5           	   370	   502	    29.8
+	PF25601	AAA_lid_14      	   519	   593	    81.1
+
+A0A5R9LHY5	SIGMA-54-DEPENDENT FIS FA    228.6    7.2e-65   1   1.6   0.0
+	Iterate                   	    16	   140	   227.5
+	PF13185	GAF_2           	   167	   312	    37.6
+	PF13492	GAF_3           	   169	   313	    28.5
+	PF01590	GAF             	   169	   311	      41
+	PF00158	Sigma54_activat 	   347	   514	   248.6
+	PF14532	Sigma54_activ_2 	   348	   518	    63.2
+	PF07728	AAA_5           	   370	   504	    29.1
+	PF25601	AAA_lid_14      	   519	   596	    83.3
+
+A7ZPT4	FORMATE HYDROGENLYASE TRANSCR    221.7    9.7e-63   1   1.6   0.0
+	Iterate                   	    16	   140	   220.6
+	PF13185	GAF_2           	   167	   312	    40.7
+	PF01590	GAF             	   169	   311	      47
+	PF00158	Sigma54_activat 	   347	   514	   251.2
+	PF14532	Sigma54_activ_2 	   348	   518	    65.1
+	PF07728	AAA_5           	   370	   504	    29.8
+	PF00004	AAA             	   371	   513	    21.3
+	PF25601	AAA_lid_14      	   519	   593	    81.1
+
+P71229	DNA-BINDING TRANSCRIPTIONAL ACT    223.3      3e-63   1   1.6   0.0
+	Iterate                   	    16	   140	   222.2
+	PF13185	GAF_2           	   167	   312	    44.6
+	PF01590	GAF             	   169	   311	    48.9
+	PF00158	Sigma54_activat 	   347	   514	   250.6
+	PF14532	Sigma54_activ_2 	   348	   518	    64.3
+	PF07728	AAA_5           	   370	   502	    29.8
+	PF25601	AAA_lid_14      	   519	   593	    81.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS16590 (E-value: 2.7e-65, Score: 223.3)
+Mentioned as: b2491
+Description: putative 2-component regulator, interaction with sigma 54
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 19763168
+Source: EuropePMC
+Title: Global analysis of extracytoplasmic stress signaling in Escherichia coli
+Journal: PLoS genetics (2009)
+Snippet: Tol-Pal cell envelope complex/envelope integrity 1.8 ( 1.2 ); 8.2; -; - hyfABCDEFGHIJ hyfR focB b2491 HyfR transcriptional activator/controls the expression of genes responsible for the proton-translocating formate hydrogenase system and for formate transport under anaerobic condition -; -; -; -; -; -; -; -; -;-
+
+================================================================================
+Protein: VIMSS16590 (E-value: 2.7e-65, Score: 223.3)
+Mentioned as: b2491
+Description: putative 2-component regulator, interaction with sigma 54
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 15175305
+Source: EuropePMC
+Title: Extensive genomic diversity in pathogenic Escherichia coli and Shigella Strains revealed by comparative genomic hybridization microarray
+Journal: Journal of bacteriology (2004)
+Snippet: (b1296 to b1302) and JW2466 to JW2476 (b2481 to b2491). The former region included genes encoding a putative amino acid permease (JW1289, b1296, ycjJ) and
+
+================================================================================
+Protein: VIMSS16590 (E-value: 2.7e-65, Score: 223.3)
+Mentioned as: b2491
+Description: putative 2-component regulator, interaction with sigma 54
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 12704152
+Source: EuropePMC
+Title: Complete genome sequence and comparative genomics of Shigella flexneri serotype 2a strain 2457T
+Journal: Infection and immunity (2003)
+Snippet: b4187 b2070 b2372 b3837 b1377 b2074 b2337 b0900 b2118 b2491 b4227 b4365 b0535 b0663 b0135 b0938 b1031 b1502 b1835 b2108 b2333 b2335 b4364 b1948 b2259 b0808
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A097R350.1	AF-A0A097R350-F1-model_v4_TED01:21-142	1	AF-A0A097R350-F1-model_v4_TED01	21-142	98.4%
+A0A097R350.1	AF-A0A097R350-F1-model_v4_TED02:169-321	1	AF-A0A097R350-F1-model_v4_TED02	169-321	0
+A0A097R350.1	AF-A0A097R350-F1-model_v4_TED03:347-520	1	AF-A0A097R350-F1-model_v4_TED03	347-520	0
+A0A097R350.1	AF-A0A097R350-F1-model_v4_TED04:523-593	1	AF-A0A097R350-F1-model_v4_TED04	523-593	0
+A0A097R350.1	AF-A0A097R350-F1-model_v4_TED05:621-670	1	AF-A0A097R350-F1-model_v4_TED05	621-670	0
+A0A5R9LHY5.1	AF-A0A5R9LHY5-F1-model_v4_TED01:18-143	1	AF-A0A5R9LHY5-F1-model_v4_TED01	18-143	98.4%
+A0A5R9LHY5.1	AF-A0A5R9LHY5-F1-model_v4_TED02:168-319	1	AF-A0A5R9LHY5-F1-model_v4_TED02	168-319	0
+A0A5R9LHY5.1	AF-A0A5R9LHY5-F1-model_v4_TED03:353-421_432-517	1	AF-A0A5R9LHY5-F1-model_v4_TED03	353-517	0
+A0A5R9LHY5.1	AF-A0A5R9LHY5-F1-model_v4_TED04:521-584	1	AF-A0A5R9LHY5-F1-model_v4_TED04	521-584	0
+A0A5R9LHY5.1	AF-A0A5R9LHY5-F1-model_v4_TED05:621-663	1	AF-A0A5R9LHY5-F1-model_v4_TED05	621-663	0
+P71229.1	AF-P71229-F1-model_v4_TED01:16-140	1	AF-P71229-F1-model_v4_TED01	16-140	100.0%
+P71229.1	AF-P71229-F1-model_v4_TED02:167-317	1	AF-P71229-F1-model_v4_TED02	167-317	0
+P71229.1	AF-P71229-F1-model_v4_TED03:342-421_430-515	1	AF-P71229-F1-model_v4_TED03	342-515	0
+P71229.1	AF-P71229-F1-model_v4_TED04:518-589	1	AF-P71229-F1-model_v4_TED04	518-589	0
+P71229.1	AF-P71229-F1-model_v4_TED05:619-667	1	AF-P71229-F1-model_v4_TED05	619-667	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 2
+Total networks analyzed: 2
+Total network proteins: 34
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF00361 (Proton_antipo_M) 2            6            100.0%
+PF00662 (Proton_antipo_N) 2            4            100.0%
+PF00072 (Response_reg)    2            3            100.0%
+PF00512 (HisKA)           2            2            100.0%
+PF00989 (PAS)             2            2            100.0%
+PF01627 (Hpt)             2            2            100.0%
+PF02518 (HATPase_c)       2            2            100.0%
+PF08448 (PAS_4)           2            2            100.0%
+PF18415 (HKR_ArcB_TM)     2            2            100.0%
+PF00037 (Fer4)            2            4            100.0%
+PF12798 (Fer4_3)          2            2            100.0%
+PF12800 (Fer4_4)          2            2            100.0%
+PF12837 (Fer4_6)          2            2            100.0%
+PF12838 (Fer4_7)          2            4            100.0%
+PF13187 (Fer4_9)          2            4            100.0%
+PF13247 (Fer4_11)         2            2            100.0%
+PF25160 (LdpA_Fe-S-bd)    2            2            100.0%
+PF00329 (Complex1_30kDa)  2            3            100.0%
+PF00346 (Complex1_49kDa)  2            3            100.0%
+PF00374 (NiFeSe_Hases)    2            3            100.0%
+PF07450 (HycH)            2            2            100.0%
+PF00420 (Oxidored_q2)     2            2            100.0%
+PF00309 (Sigma54_AID)     2            2            100.0%
+PF04552 (Sigma54_DBD)     2            2            100.0%
+PF04963 (Sigma54_CBD)     2            2            100.0%
+PF01058 (Oxidored_q6)     2            2            100.0%
+PF01226 (Form_Nir_trans)  2            2            100.0%
+PF00146 (NADHdh)          2            2            100.0%
+PF00384 (Molybdopterin)   1            1             50.0%
+PF01568 (Molydop_binding) 1            1             50.0%
+PF04879 (Molybdop_Fe4S4)  1            1             50.0%
+PF10076 (Phage_Mu_Gp48)   1            1             50.0%
+PF01642 (MM_CoA_mutase)   1            1             50.0%
+PF02310 (B12-binding)     1            1             50.0%
+PF02413 (Caudo_TAP)       1            1             50.0%
+PF00158 (Sigma54_activat) 1            1             50.0%
+PF07728 (AAA_5)           1            1             50.0%
+PF14532 (Sigma54_activ_2) 1            1             50.0%
+PF25601 (AAA_lid_14)      1            1             50.0%
+PF00042 (Globin)          1            1             50.0%
+PF00175 (NAD_binding_1)   1            1             50.0%
+PF00970 (FAD_binding_6)   1            1             50.0%
+
+Total unique Pfam domains: 42
+
+
+Detailed Pfam Domain Breakdown:
+--------------------------------------------------------------------------------
+
+PF00361 (Proton_antipo_M):
+  Found in 2 network(s):
+    - A0A0H3JG29 (155864.Z3742)
+    - Q8X5B8 (155864.Z3744)
+    - A0A0H3JMQ7 (155864.Z3746)
+    - P23482 (511145.b2482)
+    - P77416 (511145.b2484)
+    - P77437 (511145.b2486)
+  Total proteins: 6
+
+PF00662 (Proton_antipo_N):
+  Found in 2 network(s):
+    - Q8X5B8 (155864.Z3744)
+    - A0A0H3JMQ7 (155864.Z3746)
+    - P77416 (511145.b2484)
+    - P77437 (511145.b2486)
+  Total proteins: 4
+
+PF00072 (Response_reg):
+  Found in 2 network(s):
+    - P58363 (155864.Z4574)
+    - P0AFU4 (511145.b2554)
+    - P0AEC3 (511145.b3210)
+  Total proteins: 3
+
+PF00512 (HisKA):
+  Found in 2 network(s):
+    - P58363 (155864.Z4574)
+    - P0AEC3 (511145.b3210)
+  Total proteins: 2
+
+PF00989 (PAS):
+  Found in 2 network(s):
+    - P58363 (155864.Z4574)
+    - P0AEC3 (511145.b3210)
+  Total proteins: 2
+
+
+... (truncated - showing first 100 of 354 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P71229_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.00 31.70;
+NC   26.20 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P71229
+RN   [1]
+RM   9387241
+RT   "A 12-cistron Escherichia coli operon (hyf) encoding a putative proton-
+RT   translocating formate hydrogenlyase system.";
+RA   Andrews S.C., Berks B.C., McClay J., Ambler A., Quail M.A., Golby P.,
+RA   Guest J.R.;
+RL   Microbiology 143:3633-3647(1997).
+RC   Function description for P71229
+RN   [2]
+RM   12426353
+RT   "Regulation of the hydrogenase-4 operon of Escherichia coli by the
+RT   sigma(54)-dependent transcriptional activators FhlA and HyfR.";
+RA   Skibinski D.A., Golby P., Chang Y.S., Sargent F., Hoffman R., Harper R.,
+RA   Guest J.R., Attwood M.M., Berks B.C., Andrews S.C.;
+RL   J. Bacteriol. 184:6642-6653(2002).
+RC   Function description for P71229
+RN   [3]
+RM   14702328
+RT   "Expression and regulation of a silent operon, hyf, coding for hydrogenase
+RT   4 isoenzyme in Escherichia coli.";
+RA   Self W.T., Hasona A., Shanmugam K.T.;
+RL   J. Bacteriol. 186:580-587(2004).
+
+--- End of Current DESC file ---

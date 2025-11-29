@@ -1,0 +1,35 @@
+--- sp.seq_info content (copy to Claude) ---
+Note: sp.seq_info file not found
+Current directory: /nfs/production/agb/pfam/curation/agb/EcoliK12/P52123_TED02
+Potential protein accession for UniProt search: P52123
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Note: species file not found
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Note: arch file not found
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P52123.1	AF-P52123-F1-model_v4_TED02:93-117	1	AF-P52123-F1-model_v4_TED02	93-117	100.0%
+P52123.1	AF-P52123-F1-model_v4_TED03:241-309	1	AF-P52123-F1-model_v4_TED03	241-309	0
+P52123.1	AF-P52123-F1-model_v4_TED01:27-85_120-205	1	AF-P52123-F1-model_v4_TED01	27-205	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P52123_TED02
+GA   27.00 27.00;
+TC   27.60 67.60;
+NC   26.50 18.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

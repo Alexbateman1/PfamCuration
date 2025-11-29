@@ -1,0 +1,609 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   ECPD_ECOL6              Reviewed;         547 AA.
+AC   Q8FKL3;
+DE   RecName: Full=Fimbria adhesin EcpD;
+DE   Flags: Precursor;
+GN   Name=ecpD; Synonyms=yagW; OrderedLocusNames=c0401;
+OS   Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=199310;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CFT073 / ATCC 700928 / UPEC;
+RX   PubMed=12471157; DOI=10.1073/pnas.252529799;
+RA   Welch R.A., Burland V., Plunkett G. III, Redford P., Roesch P., Rasko D.,
+RA   Buckles E.L., Liou S.-R., Boutin A., Hackett J., Stroud D., Mayhew G.F.,
+RA   Rose D.J., Zhou S., Schwartz D.C., Perna N.T., Mobley H.L.T.,
+RA   Donnenberg M.S., Blattner F.R.;
+RT   "Extensive mosaic structure revealed by the complete genome sequence of
+RT   uropathogenic Escherichia coli.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:17020-17024(2002).
+RN   [2]
+RP   X-RAY CRYSTALLOGRAPHY (2.1 ANGSTROMS) OF 21-37, AND INTERACTION WITH ECPA.
+RC   STRAIN=CFT073 / ATCC 700928 / UPEC;
+RX   PubMed=22355107; DOI=10.1073/pnas.1106733109;
+RA   Garnett J.A., Martinez-Santos V.I., Saldana Z., Pape T., Hawthorne W.,
+RA   Chan J., Simpson P.J., Cota E., Puente J.L., Giron J.A., Matthews S.;
+RT   "Structural insights into the biogenesis and biofilm formation by the
+RT   Escherichia coli common pilus.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:3950-3955(2012).
+CC   -!- FUNCTION: Part of the ecpRABCDE operon, which encodes the E.coli common
+CC       pilus (ECP). ECP is found in both commensal and pathogenic strains and
+CC       plays a dual role in early-stage biofilm development and host cell
+CC       recognition. Tip pilus adhesin, which is required for assembly of EcpA
+CC       into fibers (By similarity). {ECO:0000250}.
+CC   -!- SUBUNIT: Forms polymers (By similarity). Interacts with EcpA.
+CC       {ECO:0000250, ECO:0000269|PubMed:22355107}.
+CC   -!- SUBCELLULAR LOCATION: Fimbrium {ECO:0000250}.
+CC   -!- INDUCTION: Negatively regulated by H-NS. Positively regulated by IHF
+CC       and EcpR (By similarity). {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the EcpD/MatE family. {ECO:0000305}.
+DR   EMBL; AE014075; AAN78882.1; -; Genomic_DNA.
+DR   RefSeq; WP_001265646.1; NZ_CP051263.1.
+DR   PDB; 3QS3; X-ray; 2.10 A; A/B/C/D/E/F/G/H/I/J/K/L=21-37.
+DR   PDBsum; 3QS3; -.
+DR   AlphaFoldDB; Q8FKL3; -.
+DR   SMR; Q8FKL3; -.
+DR   STRING; 199310.c0401; -.
+DR   KEGG; ecc:c0401; -.
+DR   eggNOG; ENOG502Z8ZC; Bacteria.
+DR   HOGENOM; CLU_039494_0_0_6; -.
+DR   BioCyc; ECOL199310:C0401-MONOMER; -.
+DR   EvolutionaryTrace; Q8FKL3; -.
+DR   Proteomes; UP000001410; Chromosome.
+DR   GO; GO:0009289; C:pilus; IEA:UniProtKB-SubCell.
+PE   1: Evidence at protein level;
+KW   3D-structure; Fimbrium; Reference proteome; Signal.
+FT   SIGNAL          1..20
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           21..547
+FT                   /note="Fimbria adhesin EcpD"
+FT                   /id="PRO_0000429537"
+FT   STRAND          22..37
+FT                   /evidence="ECO:0007829|PDB:3QS3"
+SQ   SEQUENCE   547 AA;  59934 MW;  7FF1EFA911BC5CF0 CRC64;
+//
+ID   ECPD_ECOLI              Reviewed;         547 AA.
+AC   P77694; Q2MCD2;
+DE   RecName: Full=Fimbria adhesin EcpD;
+DE   Flags: Precursor;
+GN   Name=ecpD; Synonyms=matE, yagW; OrderedLocusNames=b0290, JW0284;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RA   Chung E., Allen E., Araujo R., Aparicio A.M., Davis K., Duncan M.,
+RA   Federspiel N., Hyman R., Kalman S., Komp C., Kurdi O., Lew H., Lin D.,
+RA   Namath A., Oefner P., Roberts D., Schramm S., Davis R.W.;
+RT   "Sequence of minutes 4-25 of Escherichia coli.";
+RL   Submitted (JAN-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   EXPRESSION.
+RC   STRAIN=K12;
+RX   PubMed=20522494; DOI=10.1099/mic.0.039610-0;
+RA   Lehti T.A., Bauchart P., Heikkinen J., Hacker J., Korhonen T.K.,
+RA   Dobrindt U., Westerlund-Wikstrom B.;
+RT   "Mat fimbriae promote biofilm formation by meningitis-associated
+RT   Escherichia coli.";
+RL   Microbiology 156:2408-2417(2010).
+CC   -!- FUNCTION: Part of the ecpRABCDE operon, which encodes the E.coli common
+CC       pilus (ECP). ECP is found in both commensal and pathogenic strains and
+CC       plays a dual role in early-stage biofilm development and host cell
+CC       recognition. Tip pilus adhesin, which is required for assembly of EcpA
+CC       into fibers (By similarity). {ECO:0000250}.
+CC   -!- SUBUNIT: Forms polymers. Interacts with EcpA. {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Fimbrium {ECO:0000250}.
+CC   -!- INDUCTION: Negatively regulated by H-NS. Positively regulated by IHF
+CC       and EcpR (By similarity). {ECO:0000250}.
+CC   -!- MISCELLANEOUS: Not expressed under classical laboratory conditions, but
+CC       is functional when constitutively expressed.
+CC       {ECO:0000305|PubMed:20522494}.
+CC   -!- SIMILARITY: Belongs to the EcpD/MatE family. {ECO:0000305}.
+DR   EMBL; U73857; AAB18019.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC73393.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76074.1; -; Genomic_DNA.
+DR   PIR; B64755; B64755.
+DR   RefSeq; NP_414824.1; NC_000913.3.
+DR   RefSeq; WP_001310578.1; NZ_SSZK01000048.1.
+DR   AlphaFoldDB; P77694; -.
+DR   BioGRID; 4261569; 15.
+DR   DIP; DIP-11249N; -.
+DR   FunCoup; P77694; 75.
+DR   IntAct; P77694; 4.
+DR   STRING; 511145.b0290; -.
+DR   PaxDb; 511145-b0290; -.
+DR   EnsemblBacteria; AAC73393; AAC73393; b0290.
+DR   GeneID; 947349; -.
+DR   KEGG; ecj:JW0284; -.
+DR   KEGG; eco:b0290; -.
+DR   KEGG; ecoc:C3026_01415; -.
+DR   KEGG; ecoc:C3026_24045; -.
+DR   PATRIC; fig|1411691.4.peg.1988; -.
+DR   EchoBASE; EB3332; -.
+DR   eggNOG; ENOG502Z8ZC; Bacteria.
+DR   HOGENOM; CLU_039494_0_0_6; -.
+DR   InParanoid; P77694; -.
+DR   OMA; VEATWRN; -.
+DR   OrthoDB; 6490804at2; -.
+DR   BioCyc; EcoCyc:G6161-MONOMER; -.
+DR   PRO; PR:P77694; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0009289; C:pilus; IEA:UniProtKB-SubCell.
+PE   3: Inferred from homology;
+KW   Fimbrium; Reference proteome; Signal.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           24..547
+FT                   /note="Fimbria adhesin EcpD"
+FT                   /id="PRO_0000168565"
+SQ   SEQUENCE   547 AA;  59997 MW;  DF6467ECDC8785E3 CRC64;
+//
+ID   ECPD_ECO57              Reviewed;         547 AA.
+AC   Q8X4N4; Q7AHC3;
+DE   RecName: Full=Fimbria adhesin EcpD;
+DE   Flags: Precursor;
+GN   Name=ecpD; Synonyms=yagW; OrderedLocusNames=Z0357, ECs0320;
+OS   Escherichia coli O157:H7.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=11258796; DOI=10.1093/dnares/8.1.11;
+RA   Hayashi T., Makino K., Ohnishi M., Kurokawa K., Ishii K., Yokoyama K.,
+RA   Han C.-G., Ohtsubo E., Nakayama K., Murata T., Tanaka M., Tobe T., Iida T.,
+RA   Takami H., Honda T., Sasakawa C., Ogasawara N., Yasunaga T., Kuhara S.,
+RA   Shiba T., Hattori M., Shinagawa H.;
+RT   "Complete genome sequence of enterohemorrhagic Escherichia coli O157:H7 and
+RT   genomic comparison with a laboratory strain K-12.";
+RL   DNA Res. 8:11-22(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=11206551; DOI=10.1038/35054089;
+RA   Perna N.T., Plunkett G. III, Burland V., Mau B., Glasner J.D., Rose D.J.,
+RA   Mayhew G.F., Evans P.S., Gregor J., Kirkpatrick H.A., Posfai G.,
+RA   Hackett J., Klink S., Boutin A., Shao Y., Miller L., Grotbeck E.J.,
+RA   Davis N.W., Lim A., Dimalanta E.T., Potamousis K., Apodaca J.,
+RA   Anantharaman T.S., Lin J., Yen G., Schwartz D.C., Welch R.A.,
+RA   Blattner F.R.;
+RT   "Genome sequence of enterohaemorrhagic Escherichia coli O157:H7.";
+RL   Nature 409:529-533(2001).
+RN   [3]
+RP   INDUCTION.
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=22797761; DOI=10.1128/jb.00915-12;
+RA   Martinez-Santos V.I., Medrano-Lopez A., Saldana Z., Giron J.A.,
+RA   Puente J.L.;
+RT   "Transcriptional regulation of the ecp operon by EcpR, IHF, and H-NS in
+RT   attaching and effacing Escherichia coli.";
+RL   J. Bacteriol. 194:5020-5033(2012).
+CC   -!- FUNCTION: Part of the ecpRABCDE operon, which encodes the E.coli common
+CC       pilus (ECP). ECP is found in both commensal and pathogenic strains and
+CC       plays a dual role in early-stage biofilm development and host cell
+CC       recognition. Tip pilus adhesin, which is required for assembly of EcpA
+CC       into fibers (By similarity). {ECO:0000250}.
+CC   -!- SUBUNIT: Forms polymers. Interacts with EcpA. {ECO:0000250}.
+CC   -!- SUBCELLULAR LOCATION: Fimbrium {ECO:0000250}.
+CC   -!- INDUCTION: Negatively regulated by H-NS. Positively regulated by IHF
+CC       and EcpR. {ECO:0000269|PubMed:22797761}.
+CC   -!- SIMILARITY: Belongs to the EcpD/MatE family. {ECO:0000305}.
+DR   EMBL; AE005174; AAG54615.1; -; Genomic_DNA.
+DR   EMBL; BA000007; BAB33743.1; -; Genomic_DNA.
+DR   PIR; C85519; C85519.
+DR   PIR; H90668; H90668.
+DR   RefSeq; NP_308347.1; NC_002695.1.
+DR   RefSeq; WP_001265657.1; NZ_VOAI01000033.1.
+DR   AlphaFoldDB; Q8X4N4; -.
+DR   STRING; 155864.Z0357; -.
+DR   GeneID; 914419; -.
+DR   KEGG; ece:Z0357; -.
+DR   KEGG; ecs:ECs_0320; -.
+DR   PATRIC; fig|386585.9.peg.414; -.
+DR   eggNOG; ENOG502Z8ZC; Bacteria.
+DR   HOGENOM; CLU_039494_0_0_6; -.
+DR   OMA; VEATWRN; -.
+DR   Proteomes; UP000000558; Chromosome.
+DR   Proteomes; UP000002519; Chromosome.
+DR   GO; GO:0009289; C:pilus; IEA:UniProtKB-SubCell.
+PE   2: Evidence at transcript level;
+KW   Fimbrium; Receptor; Reference proteome; Signal.
+FT   SIGNAL          1..23
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           24..547
+FT                   /note="Fimbria adhesin EcpD"
+FT                   /id="PRO_0000429535"
+SQ   SEQUENCE   547 AA;  60007 MW;  C38EB4EDE4E8C08E CRC64;
+//
+ID   ECPD_ECO27              Reviewed;         547 AA.
+AC   B7UJD8;
+DE   RecName: Full=Fimbria adhesin EcpD;
+DE   Flags: Precursor;
+GN   Name=ecpD; OrderedLocusNames=E2348C_0246;
+OS   Escherichia coli O127:H6 (strain E2348/69 / EPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=574521;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=E2348/69 / EPEC;
+RX   PubMed=18952797; DOI=10.1128/jb.01238-08;
+RA   Iguchi A., Thomson N.R., Ogura Y., Saunders D., Ooka T., Henderson I.R.,
+RA   Harris D., Asadulghani M., Kurokawa K., Dean P., Kenny B., Quail M.A.,
+RA   Thurston S., Dougan G., Hayashi T., Parkhill J., Frankel G.;
+RT   "Complete genome sequence and comparative genome analysis of
+RT   enteropathogenic Escherichia coli O127:H6 strain E2348/69.";
+RL   J. Bacteriol. 191:347-354(2009).
+RN   [2]
+RP   INDUCTION.
+RC   STRAIN=E2348/69 / EPEC;
+RX   PubMed=22797761; DOI=10.1128/jb.00915-12;
+RA   Martinez-Santos V.I., Medrano-Lopez A., Saldana Z., Giron J.A.,
+RA   Puente J.L.;
+RT   "Transcriptional regulation of the ecp operon by EcpR, IHF, and H-NS in
+RT   attaching and effacing Escherichia coli.";
+RL   J. Bacteriol. 194:5020-5033(2012).
+RN   [3]
+RP   FUNCTION, SUBUNIT, INTERACTION WITH ECPA, AND SUBCELLULAR LOCATION.
+RC   STRAIN=E2348/69 / EPEC;
+RX   PubMed=22355107; DOI=10.1073/pnas.1106733109;
+RA   Garnett J.A., Martinez-Santos V.I., Saldana Z., Pape T., Hawthorne W.,
+RA   Chan J., Simpson P.J., Cota E., Puente J.L., Giron J.A., Matthews S.;
+RT   "Structural insights into the biogenesis and biofilm formation by the
+RT   Escherichia coli common pilus.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:3950-3955(2012).
+CC   -!- FUNCTION: Part of the ecpRABCDE operon, which encodes the E.coli common
+CC       pilus (ECP). ECP is found in both commensal and pathogenic strains and
+CC       plays a dual role in early-stage biofilm development and host cell
+CC       recognition. Tip pilus adhesin, which is required for assembly of EcpA
+CC       into fibers. {ECO:0000269|PubMed:22355107}.
+CC   -!- SUBUNIT: Forms polymers. Interacts with EcpA.
+CC       {ECO:0000269|PubMed:22355107}.
+CC   -!- SUBCELLULAR LOCATION: Fimbrium {ECO:0000269|PubMed:22355107}.
+CC       Note=Polymerized EcpD is normally incorporated within the tip of ECP,
+CC       but it can also form functional fimbria independent of EcpA.
+CC   -!- INDUCTION: Negatively regulated by H-NS. Positively regulated by IHF
+CC       and EcpR. {ECO:0000269|PubMed:22797761}.
+CC   -!- SIMILARITY: Belongs to the EcpD/MatE family. {ECO:0000305}.
+DR   EMBL; FM180568; CAS07794.1; -; Genomic_DNA.
+DR   RefSeq; WP_001265644.1; NC_011601.1.
+DR   AlphaFoldDB; B7UJD8; -.
+DR   KEGG; ecg:E2348C_0246; -.
+DR   HOGENOM; CLU_039494_0_0_6; -.
+DR   Proteomes; UP000008205; Chromosome.
+DR   GO; GO:0009289; C:pilus; IEA:UniProtKB-SubCell.
+PE   1: Evidence at protein level;
+KW   Fimbrium; Reference proteome; Signal.
+FT   SIGNAL          1..20
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           21..547
+FT                   /note="Fimbria adhesin EcpD"
+FT                   /id="PRO_0000429534"
+SQ   SEQUENCE   547 AA;  59948 MW;  DF9554EBCA9C5CF4 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+3	7	Klebsiella
+7	6	Escherichia.
+4	6	Klebsiella/Raoultella group
+3	5	Yersiniaceae
+3	5	Morganellaceae
+15	5	Enterobacteriaceae
+22	4	Enterobacterales
+25	3	Gammaproteobacteria
+25	2	Pseudomonadota
+25	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3EDX5	FIMBRIAL ADHESIN ECPD {EC    353.3   4.9e-103   1   1.5   8.6
+	Iterate                   	   223	   375	   352.4
+	PF27328	EcpD_C          	   381	   541	   221.1
+
+B7UJD8	FIMBRIA ADHESIN ECPD               353.3   4.8e-103   1   1.5   8.6
+	Iterate                   	   223	   375	   352.4
+	PF27328	EcpD_C          	   381	   541	   218.7
+
+P77694	FIMBRIA ADHESIN ECPD               353.4   4.7e-103   1   1.6   8.6
+	Iterate                   	   223	   375	   352.4
+	PF27328	EcpD_C          	   381	   541	   221.1
+
+Q8FKL3	FIMBRIA ADHESIN ECPD               353.3   4.9e-103   1   1.5   8.6
+	Iterate                   	   223	   375	   352.4
+	PF27328	EcpD_C          	   381	   541	   221.1
+
+Q8X4N4	FIMBRIA ADHESIN ECPD               350.2   4.6e-102   1   1.5   8.8
+	Iterate                   	   223	   375	   349.3
+	PF27328	EcpD_C          	   381	   541	   221.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS10400059 (E-value: 1.1e-58, Score: 202.8)
+Mentioned as: ROD_29231
+Description: putative fimbrial protein
+Organism: Citrobacter rodentium ICC168
+PMID: 19897651
+Source: EuropePMC
+Title: The Citrobacter rodentium genome sequence reveals convergent evolution with human pathogenic Escherichia coli
+Journal: Journal of bacteriology (2010)
+Snippet: missing in EPEC and EHEC. No orthologues of ROD_29231 or ROD_29241. Chaperone-usher fimbrial operons have been grouped into clades and subclades according to
+
+================================================================================
+Protein: VIMSS14428 (E-value: 1.7e-58, Score: 202.2)
+Mentioned as: b0290
+Description: predicted receptor
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 11244066
+Source: EuropePMC
+Title: Global impact of sdiA amplification revealed by comprehensive gene expression profiling of Escherichia coli
+Journal: Journal of bacteriology (2001)
+Snippet: b0290............................................................................................... b1194...............................................................................................
+
+================================================================================
+Protein: VIMSS302221 (E-value: 1.8e-58, Score: 202.1)
+Mentioned as: c0401
+Description: Hypothetical protein yagW
+Organism: Escherichia coli CFT073
+PMID: 32237079
+Source: EuropePMC
+Title: Autonomous aggregation suppression by acidic residues explains why chaperones favour basic residues
+Journal: The EMBO journal (2020)
+
+================================================================================
+Protein: VIMSS91789 (E-value: 2.4e-58, Score: 201.7)
+Mentioned as: ECs0320
+Description: putative receptor
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 22469031
+Source: EuropePMC
+Title: Identification of intermediate in evolutionary model of enterohemorrhagic Escherichia coli O157
+Journal: Emerging infectious diseases (2012)
+Snippet: of O157:H7 Strains Previously determined SNP patterns T/G/T/A or G/T/C/C at Sakai genome positions 337,933 (ECs0320, putative receptor), 1,460,599 (ECs1414, curli production assembly/transport component), 2,370,797 (ECs2397, transport system permease protein), and 5,404,166 (ECs5279, fimH locus) have been shown to be cluster specific ( 12 ). On
+
+================================================================================
+Protein: VIMSS5785104 (E-value: 1.9e-50, Score: 176.1)
+Mentioned as: PMI2998
+Description: fimbrial protein
+Organism: Proteus mirabilis HI4320
+PMID: 37111395
+Source: EuropePMC
+Title: Role of Bacterial Surface Components in the Pathogenicity of <i>Proteus mirabilis</i> in a Murine Model of Catheter-Associated Urinary Tract Infection
+Journal: Pathogens (Basel, Switzerland) (2023)
+Snippet: and functions as an inhibitor of motility when attachment is indicated [ 13 ]. Fim14C (PMI2998) is the major pilin subunit of a putative chaperone usher fimbrial operon, and fim8F (PMI1464) is part of another putative chaperone usher fimbrial operon [ 14 , 15 ]. PMI3191
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A095TUC0.1	AF-A0A095TUC0-F1-model_v4_TED01:23-215	1	AF-A0A095TUC0-F1-model_v4_TED01	23-215	0
+A0A095TUC0.1	AF-A0A095TUC0-F1-model_v4_TED02:218-373	1	AF-A0A095TUC0-F1-model_v4_TED02	218-373	100.0%
+A0A095TUC0.1	AF-A0A095TUC0-F1-model_v4_TED03:378-538	1	AF-A0A095TUC0-F1-model_v4_TED03	378-538	0
+A0A0C2MVI6.1	AF-A0A0C2MVI6-F1-model_v4_TED01:3-131	1	AF-A0A0C2MVI6-F1-model_v4_TED01	3-131	0
+A0A0C2MVI6.1	AF-A0A0C2MVI6-F1-model_v4_TED03:297-454	1	AF-A0A0C2MVI6-F1-model_v4_TED03	297-454	0
+A0A0C2MVI6.1	AF-A0A0C2MVI6-F1-model_v4_TED02:135-293	1	AF-A0A0C2MVI6-F1-model_v4_TED02	135-293	100.0%
+A0A0H3CP18.1	AF-A0A0H3CP18-F1-model_v4_TED01:27-211	1	AF-A0A0H3CP18-F1-model_v4_TED01	27-211	0
+A0A0H3CP18.1	AF-A0A0H3CP18-F1-model_v4_TED02:215-369	1	AF-A0A0H3CP18-F1-model_v4_TED02	215-369	100.0%
+A0A0H3CP18.1	AF-A0A0H3CP18-F1-model_v4_TED03:373-531	1	AF-A0A0H3CP18-F1-model_v4_TED03	373-531	0
+A0A0H3EDX5.1	AF-A0A0H3EDX5-F1-model_v4_TED01:25-218	1	AF-A0A0H3EDX5-F1-model_v4_TED01	25-218	0
+A0A0H3EDX5.1	AF-A0A0H3EDX5-F1-model_v4_TED02:223-265_279-358_369-377	1	AF-A0A0H3EDX5-F1-model_v4_TED02	223-377	100.0%
+A0A0H3EDX5.1	AF-A0A0H3EDX5-F1-model_v4_TED03:382-541	1	AF-A0A0H3EDX5-F1-model_v4_TED03	382-541	0
+A0A0H3GKZ1.1	AF-A0A0H3GKZ1-F1-model_v4_TED01:27-212	1	AF-A0A0H3GKZ1-F1-model_v4_TED01	27-212	0
+A0A0H3GKZ1.1	AF-A0A0H3GKZ1-F1-model_v4_TED02:215-369	1	AF-A0A0H3GKZ1-F1-model_v4_TED02	215-369	100.0%
+A0A0H3GKZ1.1	AF-A0A0H3GKZ1-F1-model_v4_TED03:375-532	1	AF-A0A0H3GKZ1-F1-model_v4_TED03	375-532	0
+A0A198GD70.1	AF-A0A198GD70-F1-model_v4_TED01:23-207	1	AF-A0A198GD70-F1-model_v4_TED01	23-207	0
+A0A198GD70.1	AF-A0A198GD70-F1-model_v4_TED02:211-370	1	AF-A0A198GD70-F1-model_v4_TED02	211-370	99.4%
+A0A198GD70.1	AF-A0A198GD70-F1-model_v4_TED03:374-532	1	AF-A0A198GD70-F1-model_v4_TED03	374-532	0
+A0A1C4D6T9.1	AF-A0A1C4D6T9-F1-model_v4_TED01:3-114	1	AF-A0A1C4D6T9-F1-model_v4_TED01	3-114	0
+A0A1C4D6T9.1	AF-A0A1C4D6T9-F1-model_v4_TED03:282-442	1	AF-A0A1C4D6T9-F1-model_v4_TED03	282-442	0
+A0A1C4D6T9.1	AF-A0A1C4D6T9-F1-model_v4_TED02:118-279	1	AF-A0A1C4D6T9-F1-model_v4_TED02	118-279	100.0%
+A0A241VNL4.1	AF-A0A241VNL4-F1-model_v4_TED01:32-214	1	AF-A0A241VNL4-F1-model_v4_TED01	32-214	0
+A0A241VNL4.1	AF-A0A241VNL4-F1-model_v4_TED03:391-547	1	AF-A0A241VNL4-F1-model_v4_TED03	391-547	0
+A0A241VNL4.1	AF-A0A241VNL4-F1-model_v4_TED02:217-387	1	AF-A0A241VNL4-F1-model_v4_TED02	217-387	100.0%
+A0A241VW75.1	AF-A0A241VW75-F1-model_v4_TED01:32-213	1	AF-A0A241VW75-F1-model_v4_TED01	32-213	0
+A0A241VW75.1	AF-A0A241VW75-F1-model_v4_TED02:217-386	1	AF-A0A241VW75-F1-model_v4_TED02	217-386	100.0%
+A0A241VW75.1	AF-A0A241VW75-F1-model_v4_TED03:390-552	1	AF-A0A241VW75-F1-model_v4_TED03	390-552	0
+A0A250B622.1	AF-A0A250B622-F1-model_v4_TED01:27-211	1	AF-A0A250B622-F1-model_v4_TED01	27-211	0
+A0A250B622.1	AF-A0A250B622-F1-model_v4_TED02:217-256_268-349_357-369	1	AF-A0A250B622-F1-model_v4_TED02	217-369	98.0%
+A0A250B622.1	AF-A0A250B622-F1-model_v4_TED03:374-531	1	AF-A0A250B622-F1-model_v4_TED03	374-531	0
+A0A2I0FYI8.1	AF-A0A2I0FYI8-F1-model_v4_TED01:23-209	1	AF-A0A2I0FYI8-F1-model_v4_TED01	23-209	0
+A0A2I0FYI8.1	AF-A0A2I0FYI8-F1-model_v4_TED02:212-367	1	AF-A0A2I0FYI8-F1-model_v4_TED02	212-367	100.0%
+A0A2I0FYI8.1	AF-A0A2I0FYI8-F1-model_v4_TED03:370-530	1	AF-A0A2I0FYI8-F1-model_v4_TED03	370-530	0
+A0A370QEH0.1	AF-A0A370QEH0-F1-model_v4_TED01:28-211	1	AF-A0A370QEH0-F1-model_v4_TED01	28-211	0
+A0A370QEH0.1	AF-A0A370QEH0-F1-model_v4_TED02:215-370	1	AF-A0A370QEH0-F1-model_v4_TED02	215-370	99.3%
+A0A370QEH0.1	AF-A0A370QEH0-F1-model_v4_TED03:374-531	1	AF-A0A370QEH0-F1-model_v4_TED03	374-531	0
+A0A559T2Q7.1	AF-A0A559T2Q7-F1-model_v4_TED01:24-204	1	AF-A0A559T2Q7-F1-model_v4_TED01	24-204	0
+A0A559T2Q7.1	AF-A0A559T2Q7-F1-model_v4_TED02:206-361	1	AF-A0A559T2Q7-F1-model_v4_TED02	206-361	100.0%
+A0A559T2Q7.1	AF-A0A559T2Q7-F1-model_v4_TED03:365-524	1	AF-A0A559T2Q7-F1-model_v4_TED03	365-524	0
+A0A5J6WVE7.1	AF-A0A5J6WVE7-F1-model_v4_TED01:26-212	1	AF-A0A5J6WVE7-F1-model_v4_TED01	26-212	0
+A0A5J6WVE7.1	AF-A0A5J6WVE7-F1-model_v4_TED02:215-370	1	AF-A0A5J6WVE7-F1-model_v4_TED02	215-370	100.0%
+A0A5J6WVE7.1	AF-A0A5J6WVE7-F1-model_v4_TED03:374-538	1	AF-A0A5J6WVE7-F1-model_v4_TED03	374-538	0
+A0A6M8UIV1.1	AF-A0A6M8UIV1-F1-model_v4_TED01:27-220	1	AF-A0A6M8UIV1-F1-model_v4_TED01	27-220	0
+A0A6M8UIV1.1	AF-A0A6M8UIV1-F1-model_v4_TED02:224-267_274-378	1	AF-A0A6M8UIV1-F1-model_v4_TED02	224-378	99.3%
+A0A6M8UIV1.1	AF-A0A6M8UIV1-F1-model_v4_TED03:383-543	1	AF-A0A6M8UIV1-F1-model_v4_TED03	383-543	0
+A0A807LFG5.1	AF-A0A807LFG5-F1-model_v4_TED01:27-220	1	AF-A0A807LFG5-F1-model_v4_TED01	27-220	0
+A0A807LFG5.1	AF-A0A807LFG5-F1-model_v4_TED02:223-378	1	AF-A0A807LFG5-F1-model_v4_TED02	223-378	100.0%
+A0A807LFG5.1	AF-A0A807LFG5-F1-model_v4_TED03:385-543	1	AF-A0A807LFG5-F1-model_v4_TED03	385-543	0
+A0KED7.1	AF-A0KED7-F1-model_v4_TED01:27-211	1	AF-A0KED7-F1-model_v4_TED01	27-211	0
+A0KED7.1	AF-A0KED7-F1-model_v4_TED02:214-368	1	AF-A0KED7-F1-model_v4_TED02	214-368	100.0%
+A0KED7.1	AF-A0KED7-F1-model_v4_TED03:373-537	1	AF-A0KED7-F1-model_v4_TED03	373-537	0
+B4F009.1	AF-B4F009-F1-model_v4_TED01:27-207	1	AF-B4F009-F1-model_v4_TED01	27-207	0
+B4F009.1	AF-B4F009-F1-model_v4_TED03:371-529	1	AF-B4F009-F1-model_v4_TED03	371-529	0
+B4F009.1	AF-B4F009-F1-model_v4_TED02:210-366	1	AF-B4F009-F1-model_v4_TED02	210-366	100.0%
+D2TJM4.1	AF-D2TJM4-F1-model_v4_TED01:29-213	1	AF-D2TJM4-F1-model_v4_TED01	29-213	0
+D2TJM4.1	AF-D2TJM4-F1-model_v4_TED02:216-371	1	AF-D2TJM4-F1-model_v4_TED02	216-371	100.0%
+D2TJM4.1	AF-D2TJM4-F1-model_v4_TED03:375-533	1	AF-D2TJM4-F1-model_v4_TED03	375-533	0
+N8ZN32.1	AF-N8ZN32-F1-model_v4_TED01:31-209	1	AF-N8ZN32-F1-model_v4_TED01	31-209	0
+N8ZN32.1	AF-N8ZN32-F1-model_v4_TED02:213-371	1	AF-N8ZN32-F1-model_v4_TED02	213-371	100.0%
+N8ZN32.1	AF-N8ZN32-F1-model_v4_TED03:375-531	1	AF-N8ZN32-F1-model_v4_TED03	375-531	0
+S3MQ93.1	AF-S3MQ93-F1-model_v4_TED01:32-215	1	AF-S3MQ93-F1-model_v4_TED01	32-215	0
+S3MQ93.1	AF-S3MQ93-F1-model_v4_TED02:217-383	1	AF-S3MQ93-F1-model_v4_TED02	217-383	100.0%
+S3MQ93.1	AF-S3MQ93-F1-model_v4_TED03:387-546	1	AF-S3MQ93-F1-model_v4_TED03	387-546	0
+S3NTT9.1	AF-S3NTT9-F1-model_v4_TED01:32-214	1	AF-S3NTT9-F1-model_v4_TED01	32-214	0
+S3NTT9.1	AF-S3NTT9-F1-model_v4_TED02:217-379	1	AF-S3NTT9-F1-model_v4_TED02	217-379	100.0%
+S3NTT9.1	AF-S3NTT9-F1-model_v4_TED03:383-541	1	AF-S3NTT9-F1-model_v4_TED03	383-541	0
+W0LAL9.1	AF-W0LAL9-F1-model_v4_TED01:29-220	1	AF-W0LAL9-F1-model_v4_TED01	29-220	0
+W0LAL9.1	AF-W0LAL9-F1-model_v4_TED02:223-382	1	AF-W0LAL9-F1-model_v4_TED02	223-382	100.0%
+W0LAL9.1	AF-W0LAL9-F1-model_v4_TED03:386-544	1	AF-W0LAL9-F1-model_v4_TED03	386-544	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 9
+Total networks analyzed: 9
+Total network proteins: 69
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF18649 (EcpB_C)          9            11           100.0%
+PF16449 (MatB)            9            9            100.0%
+PF15976 (CooC_C)          9            9            100.0%
+PF16967 (TcfC)            9            9            100.0%
+PF00196 (GerE)            4            4             44.4%
+PF27348 (EcpR_N)          4            4             44.4%
+PF07690 (MFS_1)           3            5             33.3%
+PF00392 (GntR)            3            3             33.3%
+PF07729 (FCD)             3            3             33.3%
+PF00857 (Isochorismatase) 2            2             22.2%
+PF03692 (CxxCxxCC)        2            2             22.2%
+PF01713 (Smr)             2            2             22.2%
+PF00106 (adh_short)       1            1             11.1%
+PF08659 (KR)              1            1             11.1%
+PF13561 (adh_short_C2)    1            1             11.1%
+PF05977 (MFS_3)           1            1             11.1%
+PF00005 (ABC_tran)        1            1             11.1%
+PF00550 (PP-binding)      1            1             11.1%
+PF11356 (T2SSC)           1            1             11.1%
+PF01032 (FecCD)           1            1             11.1%
+PF05134 (T2SSL)           1            1             11.1%
+PF12693 (GspL_C)          1            1             11.1%
+PF28903 (GspL_M)          1            1             11.1%
+PF00593 (TonB_dep_Rec_b-barrel) 1            1             11.1%
+PF07715 (Plug)            1            1             11.1%
+PF01124 (MAPEG)           1            1             11.1%
+PF00300 (His_Phos_1)      1            1             11.1%
+PF00691 (OmpA)            1            1             11.1%
+PF11245 (DUF2544)         1            1             11.1%
+PF00270 (DEAD)            1            1             11.1%
+PF00271 (Helicase_C)      1            1             11.1%
+PF04851 (ResIII)          1            1             11.1%
+PF18766 (SWI2_SNF2)       1            1             11.1%
+PF29401 (RadD_C)          1            1             11.1%
+PF29404 (RadD_Zn_ribbon)  1            1             11.1%
+PF00345 (PapD_N)          1            1             11.1%
+PF00486 (Trans_reg_C)     1            1             11.1%
+PF15941 (FidL_like)       1            1             11.1%
+
+Total unique Pfam domains: 38
+
+
+Detailed Pfam Domain Breakdown:
+--------------------------------------------------------------------------------
+
+PF18649 (EcpB_C):
+  Found in 9 network(s):
+    - A0A0H3GN88 (1125630.KPHS_10280)
+    - A0A198GBC3 (1354337.M983_0966)
+    - W0LG19 (1441930.Z042_15590)
+    - Q8X6I2 (155864.Z0359)
+    - Q8CWC0 (199310.c0403)
+    - A0KED9 (380703.AHA_0061)
+    - P77188 (511145.b0292)
+    - S3MQ80 (632955.GCA_000829675_02448)
+    - S3MU30 (632955.GCA_000829675_02451)
+    - A0A0H3CNK8 (716541.ECL_03396)
+    - A0A0H3CM25 (716541.ECL_03399)
+  Total proteins: 11
+
+PF16449 (MatB):
+  Found in 9 network(s):
+    - A0A0H3GIV9 (1125630.KPHS_10270)
+    - A0A198GET3 (1354337.M983_0965)
+    - W0LAY9 (1441930.Z042_15595)
+    - P0AAA4 (155864.Z0360)
+    - Q8CWB9 (199310.c0404)
+    - A0KEE0 (380703.AHA_0062)
+    - P0AAA3 (511145.b0293)
+    - S3N722 (632955.GCA_000829675_02452)
+    - A0A0H3CMW3 (716541.ECL_03400)
+  Total proteins: 9
+
+PF15976 (CooC_C):
+  Found in 9 network(s):
+    - A0A0H3GNU9 (1125630.KPHS_10290)
+    - A0A198GCB4 (1354337.M983_0967)
+    - W0LER7 (1441930.Z042_15585)
+    - Q8X6I4 (155864.Z0358)
+    - Q8CWC1 (199310.c0402)
+    - A0KED8 (380703.AHA_0060)
+    - P77802 (511145.b0291)
+    - S3MR54 (632955.GCA_000829675_02450)
+    - A0A0H3CQX3 (716541.ECL_03398)
+  Total proteins: 9
+
+
+... (truncated - showing first 100 of 361 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P77694_TED02/Iterate
+GA   27.00 27.00;
+TC   27.10 155.90;
+NC   26.20 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for B7UJD8
+RN   [1]
+RM   22355107
+RT   "Structural insights into the biogenesis and biofilm formation by the
+RT   Escherichia coli common pilus.";
+RA   Garnett J.A., Martinez-Santos V.I., Saldana Z., Pape T., Hawthorne W.,
+RA   Chan J., Simpson P.J., Cota E., Puente J.L., Giron J.A., Matthews S.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 109:3950-3955(2012).
+
+--- End of Current DESC file ---

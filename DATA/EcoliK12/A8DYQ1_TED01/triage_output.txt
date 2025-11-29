@@ -1,0 +1,42 @@
+--- sp.seq_info content (copy to Claude) ---
+Note: sp.seq_info file not found
+Current directory: /nfs/production/agb/pfam/curation/agb/EcoliK12/A8DYQ1_TED01
+Potential protein accession for UniProt search: A8DYQ1
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Escherichia.
+1	5	Enterobacteriaceae
+1	4	Enterobacterales
+1	3	Gammaproteobacteria
+1	2	Pseudomonadota
+1	1	Pseudomonadati
+1	0	Bacteria
+Total of 1 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Note: arch file not found
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A8DYQ1.1	AF-A8DYQ1-F1-model_v4_TED01:1-41	1	AF-A8DYQ1-F1-model_v4_TED01	1-41	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A8DYQ1_TED01
+GA   27.00 27.00;
+TC   109.20 109.10;
+NC   20.50 17.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,376 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   RACR_ECOLI              Reviewed;         158 AA.
+AC   P76062; Q2MBE5;
+DE   RecName: Full=DNA-binding transcriptional repressor RacR {ECO:0000305};
+DE   AltName: Full=Prophage repressor RacR {ECO:0000305};
+DE   AltName: Full=Rac prophage repressor;
+GN   Name=racR; Synonyms=ydaR; OrderedLocusNames=b1356, JW1351;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [3]
+RP   FUNCTION, DNA-BINDING, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=29205228; DOI=10.1128/msphere.00392-17;
+RA   Krishnamurthi R., Ghosh S., Khedkar S., Seshasayee A.S.N.;
+RT   "Repression of YdaS Toxin Is Mediated by Transcriptional Repressor RacR in
+RT   the Cryptic rac Prophage of Escherichia coli K-12.";
+RL   MSphere 2:0-0(2017).
+RN   [4]
+RP   FUNCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12;
+RX   PubMed=29205229; DOI=10.1128/msphere.00483-17;
+RA   Bindal G., Krishnamurthi R., Seshasayee A.S.N., Rath D.;
+RT   "CRISPR-Cas-Mediated Gene Silencing Reveals RacR To Be a Negative Regulator
+RT   of YdaS and YdaT Toxins in Escherichia coli K-12.";
+RL   MSphere 2:0-0(2017).
+RN   [5]
+RP   FUNCTION, SUBUNIT, AND DOMAIN.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=38153127; DOI=10.1093/nar/gkad1234;
+RA   Gucwa K., Wons E., Wisniewska A., Jakalski M., Dubiak Z., Kozlowski L.P.,
+RA   Mruk I.;
+RT   "Lethal perturbation of an Escherichia coli regulatory network is triggered
+RT   by a restriction-modification system's regulator and can be mitigated by
+RT   excision of the cryptic prophage Rac.";
+RL   Nucleic Acids Res. 52:2942-2960(2024).
+CC   -!- FUNCTION: Transcriptional regulator that represses the expression of
+CC       ydaS and ydaT under normal physiological conditions (PubMed:29205228,
+CC       PubMed:29205229). It binds to its own upstream sequence and represses
+CC       the adjacent and divergently coded ydaS-ydaT operon (PubMed:29205228).
+CC       RacR-mediated down-regulation of ydaS and ydaT may be critical for cell
+CC       survival (PubMed:29205229). RacR ensures that the prophage DNA is
+CC       maintained in the genome (PubMed:38153127). When the expression of the
+CC       racR gene is reduced, the prophage Rac is excised from the genome,
+CC       possibly to counteract the lethal toxicity of YdaT (PubMed:38153127).
+CC       {ECO:0000269|PubMed:29205228, ECO:0000269|PubMed:29205229,
+CC       ECO:0000269|PubMed:38153127}.
+CC   -!- SUBUNIT: Homooctamer. {ECO:0000269|PubMed:38153127}.
+CC   -!- DOMAIN: Contains a DNA-binding N-terminal domain (NTD) and a C-terminal
+CC       domain that facilitates oligomerization. {ECO:0000269|PubMed:38153127}.
+CC   -!- DISRUPTION PHENOTYPE: Deletion of the gene is lethal, except when the
+CC       adjacent ydaS gene and the common intergenic region between racR and
+CC       ydaS are also deleted, or when both ydaS and ydaT genes are also
+CC       deleted (PubMed:29205228). Down-regulation of the gene leads to up-
+CC       regulation of the adjacent ydaS-ydaT operon (PubMed:29205229). RacR
+CC       silencing causes striking morphological changes in cells, significant
+CC       growth arrest and cell death (PubMed:29205229). RacR silencing does not
+CC       affect biofilm formation (PubMed:29205229).
+CC       {ECO:0000269|PubMed:29205228, ECO:0000269|PubMed:29205229}.
+CC   -!- MISCELLANEOUS: Encoded in the Rac prophage region.
+CC       {ECO:0000269|PubMed:29205228, ECO:0000269|PubMed:29205229}.
+DR   EMBL; U00096; AAC74438.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76411.1; -; Genomic_DNA.
+DR   PIR; G64885; G64885.
+DR   RefSeq; NP_415874.1; NC_000913.3.
+DR   RefSeq; WP_000948459.1; NZ_JACEFS010000049.1.
+DR   AlphaFoldDB; P76062; -.
+DR   BioGRID; 4261627; 12.
+DR   FunCoup; P76062; 233.
+DR   IntAct; P76062; 12.
+DR   STRING; 511145.b1356; -.
+DR   jPOST; P76062; -.
+DR   PaxDb; 511145-b1356; -.
+DR   EnsemblBacteria; AAC74438; AAC74438; b1356.
+DR   GeneID; 86946548; -.
+DR   GeneID; 945899; -.
+DR   KEGG; ecj:JW1351; -.
+DR   KEGG; eco:b1356; -.
+DR   KEGG; ecoc:C3026_07935; -.
+DR   PATRIC; fig|1411691.4.peg.920; -.
+DR   EchoBASE; EB3143; -.
+DR   eggNOG; ENOG5031T0C; Bacteria.
+DR   HOGENOM; CLU_1666297_0_0_6; -.
+DR   InParanoid; P76062; -.
+DR   OMA; RCTHDEH; -.
+DR   OrthoDB; 9791537at2; -.
+DR   BioCyc; EcoCyc:G6680-MONOMER; -.
+DR   PRO; PR:P76062; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0003677; F:DNA binding; IEA:UniProtKB-KW.
+DR   GO; GO:0001217; F:DNA-binding transcription repressor activity; IDA:EcoCyc.
+DR   GO; GO:2000143; P:negative regulation of DNA-templated transcription initiation; IEP:EcoCyc.
+PE   1: Evidence at protein level;
+KW   DNA-binding; Reference proteome; Repressor; Transcription;
+KW   Transcription regulation.
+FT   CHAIN           1..158
+FT                   /note="DNA-binding transcriptional repressor RacR"
+FT                   /id="PRO_0000097148"
+SQ   SEQUENCE   158 AA;  17663 MW;  110E900ED3847DDF CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+1	4	Caudoviricetes.
+2	3	Gammaproteobacteria
+1	3	Uroviricota
+2	2	Pseudomonadota
+1	2	Heunggongvirae
+2	1	Pseudomonadati
+1	1	Duplodnaviria
+2	0	Bacteria
+1	0	Viruses
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A1B8A870	HETEROKARYON INCOMPATIBIL     58.8    1.7e-12   2  17.7   0.0
+	Iterate                   	   637	   664	     3.4
+	Iterate                   	   909	   936	     3.4
+	PF06985	HET             	    81	   240	     130
+	PF12796	Ank_2           	   586	   666	    47.7
+	PF00023	Ank             	   600	   633	    17.1
+	PF12796	Ank_2           	   605	   699	    71.5
+	PF13637	Ank_4           	   607	   655	    26.7
+	PF13606	Ank_3           	   634	   664	    19.6
+	PF00023	Ank             	   634	   667	      30
+	PF13637	Ank_4           	   639	   689	    40.9
+	PF13857	Ank_5           	   653	   707	    30.9
+	PF00023	Ank             	   668	   701	    26.1
+	PF12796	Ank_2           	   692	   768	    55.4
+	PF00023	Ank             	   702	   735	    24.1
+	PF13637	Ank_4           	   707	   757	    40.2
+	PF13857	Ank_5           	   722	   778	      28
+	PF00023	Ank             	   736	   769	    28.7
+	PF13637	Ank_4           	   741	   791	    39.6
+	PF13857	Ank_5           	   755	   809	    27.5
+	PF12796	Ank_2           	   760	   836	    46.3
+	PF00023	Ank             	   770	   803	    20.4
+	PF00023	Ank             	   804	   837	    22.6
+	PF12796	Ank_2           	   809	   904	    70.9
+	PF13637	Ank_4           	   809	   859	    34.6
+	PF13606	Ank_3           	   838	   868	    17.7
+	PF00023	Ank             	   838	   871	      28
+	PF13637	Ank_4           	   843	   893	    37.8
+	PF00023	Ank             	   872	   905	    24.5
+	PF13637	Ank_4           	   877	   927	      34
+	PF12796	Ank_2           	   895	   972	    53.6
+	PF00023	Ank             	   907	   939	    25.5
+	PF13637	Ank_4           	   911	   961	    40.9
+	PF13857	Ank_5           	   925	   979	    30.9
+	PF00023	Ank             	   940	   973	    26.6
+	PF13637	Ank_4           	   946	   995	    31.7
+	PF12796	Ank_2           	   963	  1040	    54.9
+	PF13606	Ank_3           	   974	  1004	    17.7
+	PF00023	Ank             	   974	  1007	      28
+	PF13637	Ank_4           	   979	  1021	    29.2
+	PF00023	Ank             	  1008	  1041	    23.7
+	PF13637	Ank_4           	  1013	  1063	    38.5
+	PF12796	Ank_2           	  1032	  1112	      55
+	PF00023	Ank             	  1042	  1079	    21.9
+	PF13637	Ank_4           	  1047	  1101	    31.5
+	PF13606	Ank_3           	  1080	  1110	    17.9
+	PF00023	Ank             	  1080	  1113	      25
+	PF13637	Ank_4           	  1085	  1135	    38.8
+	PF12796	Ank_2           	  1104	  1180	    57.5
+	PF13606	Ank_3           	  1114	  1144	    17.8
+	PF00023	Ank             	  1114	  1147	    24.9
+	PF13637	Ank_4           	  1119	  1169	    33.4
+	PF00023	Ank             	  1148	  1181	    22.6
+	PF13637	Ank_4           	  1153	  1204	    29.7
+	PF12796	Ank_2           	  1172	  1250	    53.5
+	PF13606	Ank_3           	  1183	  1212	    17.2
+	PF00023	Ank             	  1183	  1216	    23.3
+	PF13637	Ank_4           	  1188	  1239	    30.8
+	PF13606	Ank_3           	  1218	  1247	    17.2
+	PF00023	Ank             	  1218	  1251	    23.3
+	PF13637	Ank_4           	  1223	  1274	    30.9
+	PF12796	Ank_2           	  1242	  1323	    53.7
+	PF00023	Ank             	  1253	  1290	    21.9
+	PF13637	Ank_4           	  1258	  1312	    30.9
+	PF13606	Ank_3           	  1291	  1321	    18.2
+	PF00023	Ank             	  1291	  1324	    25.8
+	PF13637	Ank_4           	  1296	  1338	    25.3
+	PF12796	Ank_2           	  1315	  1390	    56.9
+	PF13606	Ank_3           	  1325	  1354	    18.7
+	PF00023	Ank             	  1325	  1357	    27.2
+	PF13637	Ank_4           	  1330	  1372	    23.4
+	PF13606	Ank_3           	  1359	  1388	    23.3
+	PF00023	Ank             	  1359	  1391	    30.9
+	PF13637	Ank_4           	  1364	  1414	    25.8
+	PF12796	Ank_2           	  1389	  1457	    49.4
+	PF00023	Ank             	  1393	  1425	    21.1
+	PF13857	Ank_5           	  1413	  1468	      27
+	PF13606	Ank_3           	  1426	  1455	    19.5
+	PF00023	Ank             	  1426	  1458	    28.1
+	PF12796	Ank_2           	  1455	  1524	    51.8
+	PF13606	Ank_3           	  1460	  1489	    20.9
+	PF00023	Ank             	  1460	  1492	    28.3
+	PF13637	Ank_4           	  1465	  1514	    31.5
+	PF13606	Ank_3           	  1493	  1522	    18.6
+	PF00023	Ank             	  1493	  1525	      23
+	PF00023	Ank             	  1531	  1559	    15.3
+	PF12796	Ank_2           	  1532	  1625	    77.5
+	PF13857	Ank_5           	  1547	  1602	    31.7
+	PF13606	Ank_3           	  1561	  1590	    19.4
+	PF00023	Ank             	  1561	  1593	    26.6
+	PF13637	Ank_4           	  1566	  1615	    35.3
+	PF13606	Ank_3           	  1594	  1623	    20.5
+	PF00023	Ank             	  1594	  1626	    29.3
+	PF13857	Ank_5           	  1613	  1668	    27.7
+	PF12796	Ank_2           	  1622	  1691	    52.4
+	PF00023	Ank             	  1627	  1659	    23.4
+	PF13637	Ank_4           	  1632	  1669	    24.7
+	PF13857	Ank_5           	  1647	  1701	    30.4
+	PF13606	Ank_3           	  1660	  1689	    19.3
+	PF00023	Ank             	  1660	  1692	    26.4
+	PF13637	Ank_4           	  1665	  1702	    24.7
+	PF13857	Ank_5           	  1680	  1734	    30.4
+	PF12796	Ank_2           	  1688	  1757	    50.7
+	PF13606	Ank_3           	  1693	  1722	    19.3
+	PF00023	Ank             	  1693	  1725	    26.4
+	PF13637	Ank_4           	  1698	  1739	    28.9
+	PF13857	Ank_5           	  1712	  1767	    29.6
+	PF13606	Ank_3           	  1726	  1755	    21.2
+	PF00023	Ank             	  1726	  1758	    24.8
+	PF13637	Ank_4           	  1731	  1780	      37
+	PF12796	Ank_2           	  1754	  1824	    55.2
+	PF00023	Ank             	  1759	  1792	    23.8
+	PF13637	Ank_4           	  1766	  1814	    31.9
+	PF13857	Ank_5           	  1779	  1831	    27.9
+	PF13606	Ank_3           	  1793	  1822	      23
+	PF00023	Ank             	  1793	  1825	    30.3
+	PF13637	Ank_4           	  1798	  1837	    28.4
+	PF12796	Ank_2           	  1822	  1889	      44
+	PF00023	Ank             	  1826	  1857	    19.3
+	PF13637	Ank_4           	  1832	  1873	    25.5
+	PF13857	Ank_5           	  1845	  1896	    27.8
+	PF00023	Ank             	  1858	  1890	    24.3
+	PF12796	Ank_2           	  1887	  1956	    57.9
+	PF13606	Ank_3           	  1891	  1920	    19.2
+	PF00023	Ank             	  1891	  1923	      28
+	PF13606	Ank_3           	  1925	  1954	    22.5
+	PF00023	Ank             	  1925	  1957	    32.3
+	PF12796	Ank_2           	  1930	  2023	    80.7
+	PF13637	Ank_4           	  1930	  1979	    44.5
+	PF00023	Ank             	  1958	  1991	    22.5
+	PF13637	Ank_4           	  1966	  2013	    32.3
+	PF13857	Ank_5           	  1977	  2032	    27.3
+	PF13606	Ank_3           	  1992	  2021	    21.7
+	PF00023	Ank             	  1992	  2024	    29.3
+	PF13637	Ank_4           	  1997	  2047	      37
+	PF12796	Ank_2           	  2022	  2091	    59.6
+	PF13606	Ank_3           	  2026	  2055	    23.1
+	PF00023	Ank             	  2026	  2058	      29
+	PF13637	Ank_4           	  2031	  2069	    22.7
+	PF13606	Ank_3           	  2060	  2089	    22.5
+	PF00023	Ank             	  2060	  2092	    32.3
+	PF13637	Ank_4           	  2065	  2114	    44.5
+	PF12796	Ank_2           	  2085	  2158	      59
+	PF00023	Ank             	  2093	  2126	    22.5
+	PF13637	Ank_4           	  2101	  2148	    32.3
+	PF13857	Ank_5           	  2112	  2166	    27.2
+	PF13606	Ank_3           	  2127	  2156	    21.7
+	PF00023	Ank             	  2127	  2159	    29.3
+	PF13637	Ank_4           	  2132	  2174	    32.8
+	PF13606	Ank_3           	  2161	  2190	    23.1
+	PF00023	Ank             	  2161	  2193	      29
+	PF12796	Ank_2           	  2166	  2259	    80.4
+	PF13637	Ank_4           	  2166	  2216	    42.6
+	PF13606	Ank_3           	  2195	  2224	    23.7
+	PF00023	Ank             	  2195	  2227	    32.7
+	PF13857	Ank_5           	  2214	  2266	    27.5
+	PF00023	Ank             	  2228	  2260	    26.1
+	PF12796	Ank_2           	  2233	  2325	    75.7
+	PF13637	Ank_4           	  2233	  2282	    43.6
+	PF13606	Ank_3           	  2261	  2290	    19.3
+	PF00023	Ank             	  2261	  2293	    26.9
+	PF13637	Ank_4           	  2267	  2307	    26.5
+	PF00023	Ank             	  2294	  2326	    24.3
+	PF13637	Ank_4           	  2299	  2336	    24.7
+	PF12796	Ank_2           	  2322	  2391	    56.1
+	PF13606	Ank_3           	  2327	  2356	    21.2
+	PF00023	Ank             	  2327	  2359	    30.8
+	PF13637	Ank_4           	  2332	  2369	    24.4
+	PF13857	Ank_5           	  2346	  2399	    27.3
+	PF00023	Ank             	  2360	  2392	    23.4
+	PF13637	Ank_4           	  2365	  2406	    28.5
+	PF12796	Ank_2           	  2386	  2456	    49.5
+	PF13606	Ank_3           	  2393	  2422	    20.9
+	PF00023	Ank             	  2393	  2425	    29.4
+	PF13637	Ank_4           	  2398	  2446	    24.8
+	PF00023	Ank             	  2426	  2457	    17.9
+
+A0A9E7J665	RAC PROPHAGE REPRESSOR {E     91.2    1.1e-22   1   1.6   0.7
+	Iterate                   	    89	   122	    90.1
+
+A0AAD7YTM0	ENHANCER OF MRNA-DECAPPIN     56.8    7.5e-12   0  15.0   0.1
+	PF16529	Ge1_WD40        	    47	   378	   383.5
+	PF00400	WD40            	   231	   264	    19.8
+
+P76062	DNA-BINDING TRANSCRIPTIONAL REP     91.1    1.2e-22   1   1.6   0.7
+	Iterate                   	    89	   122	    90.1
+
+Q8X8C5	PHAGE REPRESSOR {ECO:0000313|     78.2    1.4e-18   1   1.6   0.1
+	Iterate                   	    89	   122	    77.2
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76062_TED02/Iterate
+GA   27.00 27.00;
+TC   27.60 77.20;
+NC   25.60 18.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for P76062
+RN   [1]
+RM   29205228
+RT   "Repression of YdaS Toxin Is Mediated by Transcriptional Repressor RacR in
+RT   the Cryptic rac Prophage of Escherichia coli K-12.";
+RA   Krishnamurthi R., Ghosh S., Khedkar S., Seshasayee A.S.N.;
+RL   MSphere 2:0-0(2017).
+RC   Function description for P76062
+RN   [2]
+RM   29205229
+RT   "CRISPR-Cas-Mediated Gene Silencing Reveals RacR To Be a Negative Regulator
+RT   of YdaS and YdaT Toxins in Escherichia coli K-12.";
+RA   Bindal G., Krishnamurthi R., Seshasayee A.S.N., Rath D.;
+RL   MSphere 2:0-0(2017).
+RC   Function description for P76062
+RN   [3]
+RM   38153127
+RT   "Lethal perturbation of an Escherichia coli regulatory network is triggered
+RT   by a restriction-modification system's regulator and can be mitigated by
+RT   excision of the cryptic prophage Rac.";
+RA   Gucwa K., Wons E., Wisniewska A., Jakalski M., Dubiak Z., Kozlowski L.P.,
+RA   Mruk I.;
+RL   Nucleic Acids Res. 52:2942-2960(2024).
+
+--- End of Current DESC file ---

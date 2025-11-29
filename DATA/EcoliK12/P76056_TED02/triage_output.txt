@@ -1,0 +1,496 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   INTQ_ECOLI              Reviewed;         398 AA.
+AC   P76168; Q2MB81;
+DE   RecName: Full=Putative defective protein IntQ {ECO:0000305};
+DE   AltName: Full=Putative lambdoid prophage Qin defective integrase;
+GN   Name=intQ; OrderedLocusNames=b1579, JW1571;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- FUNCTION: Integrase is necessary for integration of the phage into the
+CC       host genome by site-specific recombination. In conjunction with
+CC       excisionase, integrase is also necessary for excision of the prophage
+CC       from the host genome (By similarity). {ECO:0000250}.
+CC   -!- INTERACTION:
+CC       P76168; P04994: xseA; NbExp=3; IntAct=EBI-559711, EBI-559703;
+CC   -!- SIMILARITY: Belongs to the 'phage' integrase family. {ECO:0000305}.
+CC   -!- CAUTION: May not be functional, the original sequence is interrupted by
+CC       an IS2 element. {ECO:0000305}.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; BAE76475.1; -; Genomic_DNA.
+DR   PIR; E64913; E64913.
+DR   AlphaFoldDB; P76168; -.
+DR   SMR; P76168; -.
+DR   BioGRID; 4260817; 27.
+DR   DIP; DIP-10039N; -.
+DR   FunCoup; P76168; 59.
+DR   IntAct; P76168; 6.
+DR   KEGG; ecj:JW1571; -.
+DR   eggNOG; COG0582; Bacteria.
+DR   HOGENOM; CLU_027562_8_1_6; -.
+DR   InParanoid; P76168; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0003677; F:DNA binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009009; F:site-specific recombinase activity; IBA:GO_Central.
+DR   GO; GO:0007059; P:chromosome segregation; IBA:GO_Central.
+DR   GO; GO:0006310; P:DNA recombination; IBA:GO_Central.
+DR   GO; GO:0075713; P:establishment of integrated proviral latency; IEA:UniProtKB-KW.
+DR   GO; GO:0046718; P:symbiont entry into host cell; IEA:UniProtKB-KW.
+DR   GO; GO:0044826; P:viral genome integration into host DNA; IEA:UniProtKB-KW.
+DR   CDD; cd01189; INT_ICEBs1_C_like; 1.
+DR   Gene3D; 1.10.150.130; -; 1.
+DR   Gene3D; 1.10.443.10; Intergrase catalytic core; 1.
+DR   InterPro; IPR044068; CB.
+DR   InterPro; IPR011010; DNA_brk_join_enz.
+DR   InterPro; IPR013762; Integrase-like_cat_sf.
+DR   InterPro; IPR002104; Integrase_catalytic.
+DR   InterPro; IPR010998; Integrase_recombinase_N.
+DR   InterPro; IPR022000; Min27-like_integrase_DNA_bind.
+DR   InterPro; IPR050090; Tyrosine_recombinase_XerCD.
+DR   PANTHER; PTHR30349; PHAGE INTEGRASE-RELATED; 1.
+DR   PANTHER; PTHR30349:SF36; PROPHAGE INTEGRASE INTR-RELATED; 1.
+DR   Pfam; PF12167; Arm-DNA-bind_2; 1.
+DR   Pfam; PF00589; Phage_integrase; 1.
+DR   SUPFAM; SSF56349; DNA breaking-rejoining enzymes; 1.
+DR   PROSITE; PS51900; CB; 1.
+DR   PROSITE; PS51898; TYR_RECOMBINASE; 1.
+PE   1: Evidence at protein level;
+KW   DNA integration; DNA recombination; DNA-binding; Reference proteome;
+KW   Viral genome integration; Virus entry into host cell.
+FT   CHAIN           1..398
+FT                   /note="Putative defective protein IntQ"
+FT                   /id="PRO_0000197516"
+FT   DOMAIN          51..146
+FT                   /note="Core-binding (CB)"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01248"
+FT   DOMAIN          167..378
+FT                   /note="Tyr recombinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   ACT_SITE        202
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   ACT_SITE        236
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   ACT_SITE        331
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   ACT_SITE        354
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   ACT_SITE        364
+FT                   /note="O-(3'-phospho-DNA)-tyrosine intermediate"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   CONFLICT        274
+FT                   /note="F -> L (in Ref. 2; BAE76475)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   398 AA;  45262 MW;  D9A24416922D80CF CRC64;
+//
+ID   INTR_ECOLI              Reviewed;         411 AA.
+AC   P76056; Q2MBE8;
+DE   RecName: Full=Prophage integrase IntR {ECO:0000305};
+DE   AltName: Full=Putative lambdoid prophage Rac integrase;
+GN   Name=intR; Synonyms=ydaP; OrderedLocusNames=b1345, JW1339;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- FUNCTION: Integrase is necessary for integration of the phage into the
+CC       host genome by site-specific recombination. In conjunction with
+CC       excisionase, integrase is also necessary for excision of the prophage
+CC       from the host genome (By similarity). {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the 'phage' integrase family. {ECO:0000305}.
+DR   EMBL; U00096; AAC74427.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76408.1; -; Genomic_DNA.
+DR   PIR; D64884; D64884.
+DR   RefSeq; NP_415861.1; NC_000913.3.
+DR   RefSeq; WP_000040852.1; NZ_JACEFS010000049.1.
+DR   AlphaFoldDB; P76056; -.
+DR   SMR; P76056; -.
+DR   BioGRID; 4261947; 15.
+DR   FunCoup; P76056; 100.
+DR   IntAct; P76056; 6.
+DR   STRING; 511145.b1345; -.
+DR   PaxDb; 511145-b1345; -.
+DR   EnsemblBacteria; AAC74427; AAC74427; b1345.
+DR   GeneID; 946976; -.
+DR   KEGG; ecj:JW1339; -.
+DR   KEGG; eco:b1345; -.
+DR   PATRIC; fig|1411691.4.peg.931; -.
+DR   EchoBASE; EB3141; -.
+DR   eggNOG; COG0582; Bacteria.
+DR   HOGENOM; CLU_027562_8_1_6; -.
+DR   InParanoid; P76056; -.
+DR   OMA; GIRCREV; -.
+DR   OrthoDB; 5391994at2; -.
+DR   PhylomeDB; P76056; -.
+DR   BioCyc; EcoCyc:G6676-MONOMER; -.
+DR   PRO; PR:P76056; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0003677; F:DNA binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009009; F:site-specific recombinase activity; IBA:GO_Central.
+DR   GO; GO:0007059; P:chromosome segregation; IBA:GO_Central.
+DR   GO; GO:0006310; P:DNA recombination; IBA:GO_Central.
+DR   GO; GO:0075713; P:establishment of integrated proviral latency; IEA:UniProtKB-KW.
+DR   GO; GO:0046718; P:symbiont entry into host cell; IEA:UniProtKB-KW.
+DR   GO; GO:0044826; P:viral genome integration into host DNA; IEA:UniProtKB-KW.
+DR   CDD; cd01189; INT_ICEBs1_C_like; 1.
+DR   Gene3D; 1.10.150.130; -; 1.
+DR   Gene3D; 1.10.443.10; Intergrase catalytic core; 1.
+DR   InterPro; IPR044068; CB.
+DR   InterPro; IPR011010; DNA_brk_join_enz.
+DR   InterPro; IPR013762; Integrase-like_cat_sf.
+DR   InterPro; IPR002104; Integrase_catalytic.
+DR   InterPro; IPR010998; Integrase_recombinase_N.
+DR   InterPro; IPR022000; Min27-like_integrase_DNA_bind.
+DR   InterPro; IPR050090; Tyrosine_recombinase_XerCD.
+DR   PANTHER; PTHR30349; PHAGE INTEGRASE-RELATED; 1.
+DR   PANTHER; PTHR30349:SF36; PROPHAGE INTEGRASE INTR-RELATED; 1.
+DR   Pfam; PF12167; Arm-DNA-bind_2; 1.
+DR   Pfam; PF00589; Phage_integrase; 1.
+DR   SUPFAM; SSF56349; DNA breaking-rejoining enzymes; 1.
+DR   PROSITE; PS51900; CB; 1.
+DR   PROSITE; PS51898; TYR_RECOMBINASE; 1.
+PE   3: Inferred from homology;
+KW   DNA integration; DNA recombination; DNA-binding; Reference proteome;
+KW   Viral genome integration; Virus entry into host cell.
+FT   CHAIN           1..411
+FT                   /note="Prophage integrase IntR"
+FT                   /id="PRO_0000197517"
+FT   DOMAIN          81..176
+FT                   /note="Core-binding (CB)"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01248"
+FT   DOMAIN          197..404
+FT                   /note="Tyr recombinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   ACT_SITE        231
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   ACT_SITE        266
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   ACT_SITE        358
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   ACT_SITE        381
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+FT   ACT_SITE        391
+FT                   /note="O-(3'-phospho-DNA)-tyrosine intermediate"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU01246"
+SQ   SEQUENCE   411 AA;  47539 MW;  E14B91630E0EF9A5 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+6	6	Escherichia.
+3	6	Traversvirus
+4	5	Sepvirinae
+13	5	Enterobacteriaceae
+9	4	Caudoviricetes
+15	4	Enterobacterales
+9	3	Uroviricota
+16	3	Gammaproteobacteria
+9	2	Heunggongvirae
+16	2	Pseudomonadota
+9	1	Duplodnaviria
+16	1	Pseudomonadati
+9	0	Viruses
+16	0	Bacteria
+Total of 25 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0U2JGI6	INTEGRASE {ECO:0000256|AR    218.5    4.3e-62   1   1.7   1.9
+	P76056_TED02              	    82	   177	   217.1
+	PF12167	Arm-DNA-bind_2  	     5	    69	    91.6
+	PF00589	Phage_integrase 	   201	   393	    81.5
+
+A0A9E7IBS0	INTEGRASE {ECO:0000256|AR    218.5    4.3e-62   1   1.7   1.9
+	P76056_TED02              	    82	   177	   217.1
+	PF12167	Arm-DNA-bind_2  	     5	    69	    91.6
+	PF00589	Phage_integrase 	   201	   393	      82
+
+P76056	PROPHAGE INTEGRASE INTR {ECO:00    218.5    4.2e-62   1   1.8   1.9
+	P76056_TED02              	    82	   177	   217.1
+	PF12167	Arm-DNA-bind_2  	     5	    69	    91.2
+	PF00589	Phage_integrase 	   201	   393	    80.3
+
+P76168	PUTATIVE DEFECTIVE PROTEIN INTQ     31.1     0.0012   1   1.5   0.2
+	P76056_TED02              	    52	   147	    30.1
+	PF12167	Arm-DNA-bind_2  	     7	    39	    24.3
+	PF00589	Phage_integrase 	   171	   370	    65.5
+
+Q8X8Q6	INTEGRASE {ECO:0000313|EMBL:B    218.5    4.3e-62   1   1.7   1.9
+	P76056_TED02              	    82	   177	   217.1
+	PF12167	Arm-DNA-bind_2  	     5	    69	    91.6
+	PF00589	Phage_integrase 	   201	   393	      82
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS15465 (E-value: 3.7e-64, Score: 218.5)
+Mentioned as: b1345
+Description: Rac prophage; integrase
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 36541797
+Source: EuropePMC
+Title: Medium-Chain-Length Fatty Acid Catabolism in Cupriavidus necator H16: Transcriptome Sequencing Reveals Differences from Long-Chain-Length Fatty Acid β-Oxidation and Involvement of Several Homologous Genes
+Journal: Applied and environmental microbiology (2023)
+
+================================================================================
+Protein: VIMSS15465 (E-value: 3.7e-64, Score: 218.5)
+Mentioned as: b1345
+Description: Rac prophage; integrase
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 17506902
+Source: EuropePMC
+Title: Genome evolution in major Escherichia coli O157:H7 lineages
+Journal: BMC genomics (2007)
+Snippet: ECs1814 (Z6021) NleH1-2 homolog of Shigella OspG 100% 100% 0% Sp10 ECs1929 (Z2415) putative integrase; b1345 100% 0% 0% Sp10 ECs1930 (Z2414) 3 hypothetical protein; ydaQ 100% 0% 8% Sp10 ECs1931 (Z2413) 3 hypothetical protein; ydaC 100% 0% 8% Sp10 ECs1932 (Z2412) restriction alleviation and modification
+
+================================================================================
+Protein: VIMSS15465 (E-value: 3.7e-64, Score: 218.5)
+Mentioned as: b1345
+Description: Rac prophage; integrase
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 16936033
+Source: EuropePMC
+Title: Selective promoter recognition by chlamydial sigma28 holoenzyme
+Journal: Journal of bacteriology (2006)
+Snippet: translation inhibitor galE-galT-galK-galM galK 6.012 Galactokinase b1345-ydaQ b1345 4.902 Putative transposase ompF ompF 4.735 Outer membrane protein araC araC
+
+================================================================================
+Protein: VIMSS148361 (E-value: 9.3e-11, Score: 47.3)
+Mentioned as: STM1005
+Description: Gifsy-2 prophage; integrase
+Organism: Salmonella typhimurium LT2
+PMID: 34544129
+Source: EuropePMC
+Title: Genome archaeology of two laboratory Salmonella enterica enterica sv Typhimurium
+Journal: G3 (Bethesda, Md.) (2021)
+Snippet: LT2 prophages located between 2,728,977 and 2,776,819 (STM2584 to STM2636) and between 1,098,231 and 1,143,702 (STM1005 to STM1056), respectively. These two related prophages are patchily similar to each other; while overall DNA identity is 44.1%, this 42kb region is interspersed with highly divergent segments and unrelated
+
+================================================================================
+Protein: VIMSS148361 (E-value: 9.3e-11, Score: 47.3)
+Mentioned as: STM1005
+Description: Gifsy-2 prophage; integrase
+Organism: Salmonella typhimurium LT2
+PMID: 31586051
+Source: EuropePMC
+Title: Efficient inter-species conjugative transfer of a CRISPR nuclease for targeted bacterial killing
+Journal: Nature communications (2019)
+Snippet: per minute). Conjugations were performed with (filled circles) or without (filled diamonds) sgRNA targeting the STM1005 locus cloned into pNuc- cis and pNuc- trans . Both plasmids encoded the TevSpCas9 nuclease. Data are plotted on a log10 as boxplots with data points from independent biological replicates.
+
+================================================================================
+Protein: VIMSS148361 (E-value: 9.3e-11, Score: 47.3)
+Mentioned as: STM1005
+Description: Gifsy-2 prophage; integrase
+Organism: Salmonella typhimurium LT2
+PMID: 25369209
+Source: EuropePMC
+Title: Identification of novel factors involved in modulating motility of Salmonella enterica serotype typhimurium
+Journal: PloS one (2014)
+Snippet: Transcription tctD invF, STM2912, STM3696, STM4417, arcA STM0859, ydiP, torR, STM4315 Replication, recombination and repair STM1005 STM1861 Translation, ribosomal structure and biogenesis valS STM1552 Posttranslational modification, protein turnover, chaperones STM2743, sspA Energy production and conversion STM0762, STM0858 Cell cycle control, cell division, chromosome partitioning STM2594 Defense
+
+================================================================================
+Protein: VIMSS347016 (E-value: 1e-10, Score: 47.2)
+Mentioned as: t1929
+Description: integrase
+Organism: Salmonella enterica subsp. enterica serovar Typhi Ty2
+PMID: 13032530
+Source: EuropePMC
+Title: Benign form of acute osteitis of the spine in young children
+Journal: British medical journal (1953)
+
+================================================================================
+Protein: VIMSS148250 (E-value: 9.1e-09, Score: 40.9)
+Mentioned as: STM0893
+Description: Fels-1 prophage; putative integrase
+Organism: Salmonella typhimurium LT2
+PMID: 33822792
+Source: EuropePMC
+Title: Population structure, case clusters, and genetic lesions associated with Canadian Salmonella 4,[5],12:i:- isolates
+Journal: PloS one (2021)
+Snippet: instead of being completely absent. U.S. clone isolates have lost the entire Fels-1 prophage from STM0893 to STM0929 (Cluster II in Soyer et al., 2009 [ 7 ]), leaving STM0892 adjacent to STM0930 (see closed genome PNCS015054, GenBank accession no. CP037877). Fels-1 is absent in U.S.
+
+================================================================================
+Protein: VIMSS148250 (E-value: 9.1e-09, Score: 40.9)
+Mentioned as: STM0893
+Description: Fels-1 prophage; putative integrase
+Organism: Salmonella typhimurium LT2
+PMID: 21544191
+Source: EuropePMC
+Title: MassCode liquid arrays as a tool for multiplexed high-throughput genetic profiling
+Journal: PloS one (2011)
+Snippet: GAG AAG AT Probe 446 TTT GTT TAC CTC GCT CAC GCT CTA 146/28 Typhimurium STM0893 F 394 CAG CGT TTC TTT ATT AGG AG 220 R P TGG GTT TTG TGG AAT GTA Probe 450 ACG GGC AGC AAA CTG AAA TAA TCC 196/24 Agona
+
+================================================================================
+Protein: VIMSS148250 (E-value: 9.1e-09, Score: 40.9)
+Mentioned as: STM0893
+
+... (truncated - showing first 100 of 185 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76056.1	AF-P76056-F1-model_v4_TED01:7-73	1	AF-P76056-F1-model_v4_TED01	7-73	0
+P76056.1	AF-P76056-F1-model_v4_TED02:82-177	1	AF-P76056-F1-model_v4_TED02	82-177	100.0%
+P76056.1	AF-P76056-F1-model_v4_TED03:206-351	1	AF-P76056-F1-model_v4_TED03	206-351	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 9
+Total networks analyzed: 9
+Total network proteins: 179
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF06806 (DUF1233)         9            8            100.0%
+PF00270 (DEAD)            6            5             66.7%
+PF00271 (Helicase_C)      6            5             66.7%
+PF04851 (ResIII)          6            5             66.7%
+PF00884 (Sulfatase)       6            5             66.7%
+PF06630 (Exonuc_VIII)     4            4             44.4%
+PF29401 (RadD_C)          4            3             44.4%
+PF29404 (RadD_Zn_ribbon)  4            3             44.4%
+PF00589 (Phage_integrase) 3            9             33.3%
+PF13356 (Arm-DNA-bind_3)  3            5             33.3%
+PF22022 (Phage_int_M)     3            4             33.3%
+PF11398 (DUF2813)         3            3             33.3%
+PF20469 (OLD-like_TOPRIM) 3            3             33.3%
+PF18836 (B_solenoid_ydck) 3            3             33.3%
+PF18766 (SWI2_SNF2)       3            2             33.3%
+PF00156 (Pribosyltran)    3            3             33.3%
+PF06316 (Ail_Lom)         3            3             33.3%
+PF13505 (OMP_b-brl)       3            3             33.3%
+PF06791 (TMP_2)           3            3             33.3%
+PF09718 (Tape_meas_lam_C) 3            2             33.3%
+PF01171 (ATP_bind_3)      2            2             22.2%
+PF03837 (RecT)            2            2             22.2%
+PF12684 (DUF3799)         2            2             22.2%
+PF00419 (Fimbrial)        2            3             22.2%
+PF14659 (Phage_int_SAM_3) 2            2             22.2%
+PF01381 (HTH_3)           2            2             22.2%
+PF00239 (Resolvase)       2            2             22.2%
+PF02796 (HTH_7)           2            2             22.2%
+PF13175 (AAA_15)          2            2             22.2%
+PF01817 (CM_2)            2            2             22.2%
+PF02153 (PDH_N)           2            2             22.2%
+PF20463 (PDH_C)           2            2             22.2%
+PF02518 (HATPase_c)       2            2             22.2%
+PF08273 (Zn_Ribbon_Prim)  2            2             22.2%
+PF13362 (Toprim_3)        2            2             22.2%
+PF03483 (B3_4)            2            2             22.2%
+PF06820 (Phage_fiber_C)   2            1             22.2%
+PF06301 (Lambda_Kil)      2            1             22.2%
+PF06141 (Phage_tail_U)    2            1             22.2%
+PF05930 (Phage_AlpA)      1            1             11.1%
+PF08798 (CRISPR_assoc)    1            1             11.1%
+PF00154 (RecA_N)          1            1             11.1%
+PF06745 (ATPase)          1            1             11.1%
+PF08423 (Rad51)           1            1             11.1%
+PF21096 (RecA_C)          1            1             11.1%
+PF27531 (MT3502_N)        1            1             11.1%
+PF01124 (MAPEG)           1            1             11.1%
+PF00703 (Glyco_hydro_2)   1            1             11.1%
+PF02836 (Glyco_hydro_2_C) 1            1             11.1%
+PF02837 (Glyco_hydro_2_N) 1            1             11.1%
+PF02929 (Bgal_small_N)    1            1             11.1%
+PF16353 (LacZ_4)          1            1             11.1%
+PF09707 (Cas_Cas2CT1978)  1            1             11.1%
+PF02075 (RuvC)            1            1             11.1%
+PF14354 (Lar_restr_allev) 1            1             11.1%
+PF00164 (Ribosom_S12_S23) 1            1             11.1%
+PF09344 (Cas_CT1975)      1            1             11.1%
+PF14549 (P22_Cro)         1            1             11.1%
+PF15943 (YdaS_toxin)      1            1             11.1%
+PF03335 (Phage_fiber)     1            1             11.1%
+PF07484 (Collar)          1            1             11.1%
+PF08400 (phage_tail_N)    1            1             11.1%
+PF21446 (Gp34_trimer)     1            1             11.1%
+PF00083 (Sugar_tr)        1            1             11.1%
+PF07690 (MFS_1)           1            1             11.1%
+PF07151 (DUF1391)         1            1             11.1%
+PF00308 (Bac_DnaA)        1            1             11.1%
+PF01695 (IstB_IS21)       1            1             11.1%
+PF02899 (Phage_int_SAM_1) 1            2             11.1%
+PF27398 (KilR)            1            1             11.1%
+PF02415 (Chlam_PMP)       1            1             11.1%
+PF03797 (Autotransporter) 1            1             11.1%
+PF12951 (PATR)            1            1             11.1%
+PF18883 (AC_1)            1            1             11.1%
+PF00075 (RNase_H)         1            1             11.1%
+PF06688 (DUF1187)         1            1             11.1%
+PF18019 (Cas3_HD)         1            1             11.1%
+PF22590 (Cas3-like_C_2)   1            1             11.1%
+PF09003 (Arm-DNA-bind_1)  1            1             11.1%
+PF01904 (DUF72)           1            1             11.1%
+PF09704 (Cas_Cas5d)       1            1             11.1%
+PF00959 (Phage_lysozyme)  1            1             11.1%
+PF13269 (DUF4060)         1            1             11.1%
+PF00072 (Response_reg)    1            1             11.1%
+PF00486 (Trans_reg_C)     1            1             11.1%
+PF08918 (PhoQ_Sensor)     1            1             11.1%
+
+... (truncated - showing first 100 of 1271 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76056_TED02
+GA   27.00 27.00;
+TC   29.60 28.80;
+NC   26.30 24.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

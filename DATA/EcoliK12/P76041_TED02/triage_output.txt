@@ -1,0 +1,391 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   GGAP_ECOLI              Reviewed;         559 AA.
+AC   P76041; P78149; P78151;
+DE   RecName: Full=Glucosylglycerate phosphorylase {ECO:0000303|PubMed:28754708};
+DE            Short=GGa phosphorylase {ECO:0000303|PubMed:28754708};
+DE            Short=GGaP {ECO:0000303|PubMed:28754708};
+DE            EC=2.4.1.352 {ECO:0000269|PubMed:28754708, ECO:0000269|PubMed:29684280};
+GN   Name=ycjM; Synonyms=ggaP; OrderedLocusNames=b1309, JW1302;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9097039; DOI=10.1093/dnares/3.6.363;
+RA   Aiba H., Baba T., Fujita K., Hayashi K., Inada T., Isono K., Itoh T.,
+RA   Kasai H., Kashimoto K., Kimura S., Kitakawa M., Kitagawa M., Makino K.,
+RA   Miki T., Mizobuchi K., Mori H., Mori T., Motomura K., Nakade S.,
+RA   Nakamura Y., Nashimoto H., Nishio Y., Oshima T., Saito N., Sampei G.,
+RA   Seki Y., Sivasundaram S., Tagami H., Takeda J., Takemoto K., Takeuchi Y.,
+RA   Wada C., Yamamoto Y., Horiuchi T.;
+RT   "A 570-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 28.0-40.1 min region on the linkage map.";
+RL   DNA Res. 3:363-377(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   FUNCTION, CATALYTIC ACTIVITY, SUBSTRATE SPECIFICITY, AND BIOPHYSICOCHEMICAL
+RP   PROPERTIES.
+RX   PubMed=28754708; DOI=10.1128/aem.01434-17;
+RA   Franceus J., Pinel D., Desmet T.;
+RT   "Glucosylglycerate phosphorylase, an enzyme with novel specificity involved
+RT   in compatible solute metabolism.";
+RL   Appl. Environ. Microbiol. 83:0-0(2017).
+RN   [5]
+RP   FUNCTION, CATALYTIC ACTIVITY, SUBSTRATE SPECIFICITY, BIOPHYSICOCHEMICAL
+RP   PROPERTIES, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / BW25113, and K12 / MG1655 / ATCC 47076;
+RX   PubMed=29684280; DOI=10.1021/acs.biochem.8b00392;
+RA   Mukherjee K., Narindoshvili T., Raushel F.M.;
+RT   "Discovery of a kojibiose phosphorylase in Escherichia coli K-12.";
+RL   Biochemistry 57:2857-2867(2018).
+CC   -!- FUNCTION: Catalyzes the reversible phosphorolysis of glucosylglycerate
+CC       into alpha-D-glucose 1-phosphate (Glc1P) and D-glycerate (also called
+CC       (R)-glycerate) (PubMed:28754708, PubMed:29684280). May be a regulator
+CC       of intracellular levels of glucosylglycerate, a compatible solute that
+CC       primarily protects organisms facing salt stress and very specific
+CC       nutritional constraints (PubMed:28754708). Cannot catalyze the
+CC       phosphorolysis of sucrose (PubMed:28754708). Does not act on other
+CC       sugars such as alpha-D-galactose 1-phosphate, alpha-D-mannose 1-
+CC       phosphate or beta-D-glucose 1-phosphate; in vitro D-erythronate can
+CC       substitute for D-glycerate with a much lower efficiency
+CC       (PubMed:29684280). {ECO:0000269|PubMed:28754708,
+CC       ECO:0000269|PubMed:29684280}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=(2R)-2-O-(alpha-D-glucopyranosyl)-glycerate + phosphate = (R)-
+CC         glycerate + alpha-D-glucose 1-phosphate; Xref=Rhea:RHEA:55268,
+CC         ChEBI:CHEBI:16659, ChEBI:CHEBI:43474, ChEBI:CHEBI:58601,
+CC         ChEBI:CHEBI:62510; EC=2.4.1.352;
+CC         Evidence={ECO:0000269|PubMed:28754708, ECO:0000269|PubMed:29684280};
+CC   -!- BIOPHYSICOCHEMICAL PROPERTIES:
+CC       Kinetic parameters:
+CC         KM=3.4 mM for D-glycerate (at pH 6.5 and 30 degrees Celsius)
+CC         {ECO:0000269|PubMed:28754708};
+CC         KM=69 uM for 2-O-(alpha-D-glucopyranosyl)-D-glycerate (at pH 6.5 and
+CC         30 degrees Celsius) {ECO:0000269|PubMed:29684280};
+CC         KM=2.2 mM for phosphate (at pH 6.5 and 30 degrees Celsius)
+CC         {ECO:0000269|PubMed:29684280};
+CC         KM=9.4 mM for alpha-D-glucose 1-phosphate (at pH 6.5 and 30 degrees
+CC         Celsius) {ECO:0000269|PubMed:29684280};
+CC         KM=4.4 mM for D-glycerate (at pH 6.5 and 30 degrees Celsius)
+CC         {ECO:0000269|PubMed:29684280};
+CC         Note=kcat is 2.2 sec(-1) for phosphorolysis of
+CC         2-O-(alpha-D-glucopyranosyl)-D-glycerate, kcat is 325 sec(-1) for
+CC         glyceration of alpha-D-glucose 1-phosphate.
+CC         {ECO:0000269|PubMed:29684280};
+CC   -!- DISRUPTION PHENOTYPE: No visible phenotype when grown on glucose.
+CC       {ECO:0000269|PubMed:29684280}.
+CC   -!- SIMILARITY: Belongs to the glycosyl hydrolase 13 family.
+CC       Glucosylglycerate phosphorylase subfamily. {ECO:0000305}.
+DR   EMBL; U00096; AAC74391.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA14886.1; -; Genomic_DNA.
+DR   PIR; H64879; H64879.
+DR   RefSeq; NP_415825.4; NC_000913.3.
+DR   RefSeq; WP_000810499.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P76041; -.
+DR   SMR; P76041; -.
+DR   BioGRID; 4263230; 13.
+DR   FunCoup; P76041; 39.
+DR   IntAct; P76041; 2.
+DR   STRING; 511145.b1309; -.
+DR   CAZy; GH13; Glycoside Hydrolase Family 13.
+DR   PaxDb; 511145-b1309; -.
+DR   EnsemblBacteria; AAC74391; AAC74391; b1309.
+DR   GeneID; 945659; -.
+DR   KEGG; ecj:JW1302; -.
+DR   KEGG; eco:b1309; -.
+DR   KEGG; ecoc:C3026_07675; -.
+DR   PATRIC; fig|1411691.4.peg.970; -.
+DR   EchoBASE; EB3669; -.
+DR   eggNOG; COG0366; Bacteria.
+DR   HOGENOM; CLU_021358_0_0_6; -.
+DR   InParanoid; P76041; -.
+DR   OMA; ISWWSAM; -.
+DR   OrthoDB; 9805159at2; -.
+DR   PhylomeDB; P76041; -.
+DR   BioCyc; EcoCyc:G6647-MONOMER; -.
+DR   BioCyc; MetaCyc:G6647-MONOMER; -.
+DR   BRENDA; 2.4.1.352; 2026.
+DR   SABIO-RK; P76041; -.
+DR   PRO; PR:P76041; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0110068; F:glucosylglycerate phosphorylase activity; IDA:EcoCyc.
+DR   GO; GO:0005975; P:carbohydrate metabolic process; IEA:InterPro.
+DR   CDD; cd11356; AmyAc_Sucrose_phosphorylase-like_1; 1.
+DR   Gene3D; 3.20.20.80; Glycosidases; 1.
+DR   Gene3D; 3.90.400.10; Oligo-1,6-glucosidase, Domain 2; 1.
+DR   InterPro; IPR033746; GGa_phosphorylase.
+DR   InterPro; IPR006047; Glyco_hydro_13_cat_dom.
+DR   InterPro; IPR017853; Glycoside_hydrolase_SF.
+DR   InterPro; IPR045857; O16G_dom_2.
+DR   InterPro; IPR016377; Sucrose_GGa_phosphorylase-rel.
+DR   PANTHER; PTHR38784; SUCROSE PHOSPHORYLASE; 1.
+DR   PANTHER; PTHR38784:SF1; SUCROSE PHOSPHORYLASE; 1.
+DR   Pfam; PF00128; Alpha-amylase; 1.
+DR   PIRSF; PIRSF003059; Sucrose_phosphorylase; 1.
+DR   SMART; SM00642; Aamy; 1.
+DR   SUPFAM; SSF51445; (Trans)glycosidases; 1.
+PE   1: Evidence at protein level;
+KW   Carbohydrate metabolism; Glycosyltransferase; Reference proteome;
+KW   Transferase.
+FT   CHAIN           1..559
+FT                   /note="Glucosylglycerate phosphorylase"
+FT                   /id="PRO_0000072299"
+FT   ACT_SITE        229
+FT                   /note="Nucleophile"
+FT                   /evidence="ECO:0000250|UniProtKB:A0ZZH6"
+SQ   SEQUENCE   559 AA;  64186 MW;  C05B71B0E0E369C2 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	7	Enterobactercloacae complex.
+8	6	Escherichia.
+2	6	Salmonella.
+2	6	Enterobacter
+17	5	Enterobacteriaceae
+17	4	Enterobacterales
+18	3	Gammaproteobacteria
+18	2	Pseudomonadota
+18	1	Pseudomonadati
+18	0	Bacteria
+Total of 18 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A7ZLD7	ALPHA AMYLASE FAMILY PROTEIN     162.5    8.7e-45   1   1.5   3.4
+	P76041_TED02              	   491	   557	   161.6
+	PF00128	Alpha-amylase   	    75	   341	    76.1
+
+B2U0L0	SUCROSE PHOSPHORYLASE {ECO:00    165.8    8.1e-46   1   1.4   3.4
+	P76041_TED02              	    67	   133	   165.1
+
+B7L573	YCJM PROTEIN {ECO:0000313|EMB    162.5    8.7e-45   1   1.5   3.4
+	P76041_TED02              	   491	   557	   161.6
+	PF00128	Alpha-amylase   	    75	   341	    76.1
+
+B7MLY4	GLUCOSYLTRANSFERASE {ECO:0000    145.4    1.9e-39   1   1.6   2.0
+	P76041_TED02              	   491	   557	   144.3
+	PF00128	Alpha-amylase   	    75	   341	    78.4
+
+P76041	GLUCOSYLGLYCERATE PHOSPHORYLASE    166.9    3.6e-46   1   1.5   3.0
+	P76041_TED02              	   491	   557	   166.0
+	PF00128	Alpha-amylase   	    75	   341	    76.1
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS15429 (E-value: 3.2e-48, Score: 166.9)
+Mentioned as: b1309
+Description: putative polysaccharide hydrolase
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 28445510
+Source: EuropePMC
+Title: Whole genome re-sequencing to identify suppressor mutations of mutant and foreign Escherichia coli FtsZ
+Journal: PloS one (2017)
+Snippet: component of the ABC superfamily Q363Stop b1234 JW1235 A 1373590 T ycjM predicted glucosyltransferase Q554L b1309 JW1302 C 1966148 G flhA predicted flagellar export pore protein R206P b1879 JW1868 C 2005401 T fliC flagellar filament structural protein E115K b1923 JW1908 C 2045659 A serU tRNA-Ser b1975
+
+================================================================================
+Protein: VIMSS15429 (E-value: 3.2e-48, Score: 166.9)
+Mentioned as: b1309
+Description: putative polysaccharide hydrolase
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 9829956
+Source: EuropePMC
+Title: Sequence analysis of Tn10 insertion sites in a collection of Escherichia coli strains used for genetic mapping and strain construction
+Journal: Journal of bacteriology (1998)
+Snippet: b0940 yccE yceG b1160 fadR ig, kdsA-cha oppC trpC b1309 ydaH recT b1377 trg yddE ig, b1695-b1696 b1754 b1785 ig, b1820-b1821 eda uvrC b1972 ig, yeeF-b2015 gatZ
+
+================================================================================
+Protein: VIMSS15429 (E-value: 3.2e-48, Score: 166.9)
+Mentioned as: b1309
+Description: putative polysaccharide hydrolase
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 9721282
+Source: EuropePMC
+Title: Biochemistry and regulation of a novel Escherichia coli K-12 porin protein, OmpG, which produces unusually large channels
+Journal: Journal of bacteriology (1998)
+Snippet: encompassing ompG and the psp operon. Ten uncharacterized genes (b1309 to 1317 and orf1) are present between ompG and the psp operon. These 10 ORFs as well
+
+================================================================================
+Protein: VIMSS3625290 (E-value: 3.6e-05, Score: 29.0)
+Mentioned as: Ent638_2165
+Description: alpha amylase, catalytic region
+Organism: Enterobacter sp. 638
+PMID: 25607953
+Source: EuropePMC
+Title: Transcriptional responses to sucrose mimic the plant-associated life style of the plant growth promoting endophyte Enterobacter sp. 638
+Journal: PloS one (2015)
+Snippet: For cultures growing on sucrose, the expression of a putative sucrose phosphorylase gene (EC 2.4.1.7, Ent638_2165, ycjM ) was up-regulated 76 fold after 12 hours compared to 6 hours, pointing towards phosphorolysis as the preferred pathway for sucrose metabolism over hydrolysis by the scrKYAB operon during
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76041.2	AF-P76041-F1-model_v4_TED01:49-136_199-490	1	AF-P76041-F1-model_v4_TED01	49-490	0
+P76041.2	AF-P76041-F1-model_v4_TED02:491-557	1	AF-P76041-F1-model_v4_TED02	491-557	100.0%
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 6
+Total networks analyzed: 6
+Total network proteins: 184
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF00128 (Alpha-amylase)   6            14           100.0%
+PF02922 (CBM_48)          6            11           100.0%
+PF18390 (GlgX_C)          6            6            100.0%
+PF00358 (PTS_EIIA_1)      6            8            100.0%
+PF00367 (PTS_EIIB)        6            35           100.0%
+PF02378 (PTS_EIIC)        6            34           100.0%
+PF05116 (S6PP)            6            6            100.0%
+PF08282 (Hydrolase_3)     6            6            100.0%
+PF00702 (Hydrolase)       6            7            100.0%
+PF13419 (HAD_2)           6            7            100.0%
+PF01547 (SBP_bac_1)       5            9             83.3%
+PF13416 (SBP_bac_8)       5            9             83.3%
+PF01408 (GFO_IDH_MocA)    5            5             83.3%
+PF02894 (GFO_IDH_MocA_C)  5            5             83.3%
+PF22725 (GFO_IDH_MocA_C3) 5            5             83.3%
+PF00528 (BPD_transp_1)    5            10            83.3%
+PF03632 (Glyco_hydro_65m) 5            5             83.3%
+PF03633 (Glyco_hydro_65C) 5            5             83.3%
+PF03636 (Glyco_hydro_65N) 5            5             83.3%
+PF00107 (ADH_zinc_N)      5            5             83.3%
+PF01261 (AP_endonuc_2)    5            5             83.3%
+PF03447 (NAD_binding_3)   4            4             66.7%
+PF00534 (Glycos_transf_1) 4            4             66.7%
+PF08323 (Glyco_transf_5)  4            4             66.7%
+PF13439 (Glyco_transf_4)  4            4             66.7%
+PF13692 (Glyco_trans_1_4) 4            4             66.7%
+PF00310 (GATase_2)        4            4             66.7%
+PF01645 (Glu_synthase)    4            4             66.7%
+PF04898 (Glu_syn_central) 4            4             66.7%
+PF01493 (GXGXG)           4            4             66.7%
+PF09381 (Porin_OmpG)      3            3             50.0%
+PF00356 (LacI)            3            3             50.0%
+PF00532 (Peripla_BP_1)    3            3             50.0%
+PF13377 (Peripla_BP_3)    3            3             50.0%
+PF00324 (AA_permease)     3            15            50.0%
+PF13520 (AA_permease_2)   3            15            50.0%
+PF00480 (ROK)             3            3             50.0%
+PF02685 (Glucokinase)     3            3             50.0%
+PF09584 (Phageshock_PspD) 3            3             50.0%
+PF04024 (PspC)            3            3             50.0%
+PF00408 (PGM_PMM_IV)      3            4             50.0%
+PF02878 (PGM_PMM_I)       3            4             50.0%
+PF02879 (PGM_PMM_II)      3            4             50.0%
+PF02880 (PGM_PMM_III)     3            4             50.0%
+PF06667 (PspB)            3            3             50.0%
+PF08402 (TOBE_2)          3            3             50.0%
+PF00005 (ABC_tran)        3            3             50.0%
+PF17912 (OB_MalK)         3            3             50.0%
+PF04338 (DUF481)          2            2             33.3%
+PF13407 (Peripla_BP_4)    2            2             33.3%
+PF00581 (Rhodanese)       2            2             33.3%
+PF02806 (Alpha-amylase_C) 2            2             33.3%
+PF22019 (GlgB_N)          2            2             33.3%
+PF13242 (Hydrolase_like)  2            2             33.3%
+PF00343 (Phosphorylase)   2            4             33.3%
+PF00483 (NTP_transferase) 2            6             33.3%
+PF24894 (Hexapep_GlmU)    2            2             33.3%
+PF02446 (Glyco_hydro_77)  2            2             33.3%
+PF21226 (MalQ_N)          2            2             33.3%
+PF08238 (Sel1)            1            1             16.7%
+PF06889 (DUF1266)         1            1             16.7%
+PF07720 (TPR_3)           1            1             16.7%
+PF01292 (Ni_hydr_CYTB)    1            1             16.7%
+PF03459 (TOBE)            1            1             16.7%
+PF13579 (Glyco_trans_4_4) 1            1             16.7%
+PF02358 (Trehalose_PPase) 1            1             16.7%
+PF12804 (NTP_transf_3)    1            1             16.7%
+PF03215 (Rad17)           1            1             16.7%
+PF03372 (Exo_endo_phos)   1            1             16.7%
+PF00294 (PfkB)            1            1             16.7%
+PF00982 (Glyco_transf_20) 1            1             16.7%
+PF00251 (Glyco_hydro_32N) 1            1             16.7%
+PF08244 (Glyco_hydro_32C) 1            1             16.7%
+PF01073 (3Beta_HSD)       1            1             16.7%
+PF01370 (Epimerase)       1            1             16.7%
+PF02719 (Polysacc_synt_2) 1            1             16.7%
+PF04321 (RmlD_sub_bind)   1            1             16.7%
+PF16363 (GDP_Man_Dehyd)   1            1             16.7%
+PF07715 (Plug)            1            1             16.7%
+PF09972 (DUF2207)         1            1             16.7%
+PF05130 (FlgN)            1            1             16.7%
+PF06097 (DUF945)          1            1             16.7%
+PF04230 (PS_pyruv_trans)  1            1             16.7%
+PF05638 (T6SS_HCP)        1            1             16.7%
+PF07748 (Glyco_hydro_38C) 1            1             16.7%
+PF17677 (Glyco_hydro38C2) 1            1             16.7%
+
+... (truncated - showing first 100 of 856 lines)
+--- End of STRING protein interaction network ---
+
+--- Foldseek structural matches (copy to Claude) ---
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+P76041_TED02	query_model	PF25839	Apionate_lact_C	CL0369	PF25839_A0A2M9HIQ6_1_res625-686	0.30	60	41	0	1.000	2.79e-04	189.0
+
+--- End of Foldseek structural matches ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76041_TED02
+GA   27.00 27.00;
+TC   27.30 27.00;
+NC   26.00 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RC   Function description for P76041
+RN   [1]
+RM   28754708
+RT   "Glucosylglycerate phosphorylase, an enzyme with novel specificity involved
+RT   in compatible solute metabolism.";
+RA   Franceus J., Pinel D., Desmet T.;
+RL   Appl. Environ. Microbiol. 83:0-0(2017).
+RC   Function description for P76041
+RN   [2]
+RM   29684280
+RT   "Discovery of a kojibiose phosphorylase in Escherichia coli K-12.";
+RA   Mukherjee K., Narindoshvili T., Raushel F.M.;
+RL   Biochemistry 57:2857-2867(2018).
+
+--- End of Current DESC file ---

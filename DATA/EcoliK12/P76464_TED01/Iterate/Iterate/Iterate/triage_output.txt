@@ -1,0 +1,599 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   A2MG_RALN1              Reviewed;        1582 AA.
+AC   Q8XV02;
+DE   RecName: Full=Alpha-2-macroglobulin {ECO:0000250|UniProtKB:P76578};
+DE   Flags: Precursor;
+GN   OrderedLocusNames=RSc3030; ORFNames=RS04727;
+OS   Ralstonia nicotianae (strain ATCC BAA-1114 / GMI1000) (Ralstonia
+OS   solanacearum).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria;
+OC   Burkholderiales; Burkholderiaceae; Ralstonia;
+OC   Ralstonia solanacearum species complex.
+OX   NCBI_TaxID=267608;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC BAA-1114 / GMI1000;
+RX   PubMed=11823852; DOI=10.1038/415497a;
+RA   Salanoubat M., Genin S., Artiguenave F., Gouzy J., Mangenot S., Arlat M.,
+RA   Billault A., Brottier P., Camus J.-C., Cattolico L., Chandler M.,
+RA   Choisne N., Claudel-Renard C., Cunnac S., Demange N., Gaspin C., Lavie M.,
+RA   Moisan A., Robert C., Saurin W., Schiex T., Siguier P., Thebault P.,
+RA   Whalen M., Wincker P., Levy M., Weissenbach J., Boucher C.A.;
+RT   "Genome sequence of the plant pathogen Ralstonia solanacearum.";
+RL   Nature 415:497-502(2002).
+CC   -!- FUNCTION: Protects the bacterial cell from host peptidases.
+CC       {ECO:0000250|UniProtKB:P76578}.
+CC   -!- SIMILARITY: Belongs to the protease inhibitor I39 (alpha-2-
+CC       macroglobulin) family. Bacterial alpha-2-macroglobulin subfamily.
+CC       {ECO:0000305}.
+DR   EMBL; AL646052; CAD16739.1; -; Genomic_DNA.
+DR   AlphaFoldDB; Q8XV02; -.
+DR   SMR; Q8XV02; -.
+DR   STRING; 267608.RSc3030; -.
+DR   MEROPS; I39.008; -.
+DR   EnsemblBacteria; CAD16739; CAD16739; RSc3030.
+DR   KEGG; rso:RSc3030; -.
+DR   eggNOG; COG2373; Bacteria.
+DR   HOGENOM; CLU_004561_0_0_4; -.
+DR   Proteomes; UP000001436; Chromosome.
+DR   GO; GO:0004866; F:endopeptidase inhibitor activity; IEA:InterPro.
+DR   Gene3D; 1.50.10.20; -; 1.
+DR   Gene3D; 2.60.40.1930; -; 1.
+DR   Gene3D; 2.60.40.10; Immunoglobulins; 1.
+DR   InterPro; IPR011625; A2M_N_BRD.
+DR   InterPro; IPR047565; Alpha-macroglob_thiol-ester_cl.
+DR   InterPro; IPR013783; Ig-like_fold.
+DR   InterPro; IPR001599; Macroglobln_a2.
+DR   InterPro; IPR002890; MG2.
+DR   InterPro; IPR008930; Terpenoid_cyclase/PrenylTrfase.
+DR   InterPro; IPR051802; YfhM-like.
+DR   PANTHER; PTHR40094; ALPHA-2-MACROGLOBULIN HOMOLOG; 1.
+DR   PANTHER; PTHR40094:SF1; UBIQUITIN DOMAIN-CONTAINING PROTEIN; 1.
+DR   Pfam; PF00207; A2M; 1.
+DR   Pfam; PF07703; A2M_BRD; 1.
+DR   Pfam; PF01835; MG2; 1.
+DR   SMART; SM01360; A2M; 1.
+DR   SMART; SM01359; A2M_N_2; 1.
+DR   SMART; SM01419; Thiol-ester_cl; 1.
+DR   SUPFAM; SSF48239; Terpenoid cyclases/Protein prenyltransferases; 1.
+PE   3: Inferred from homology;
+KW   Protease inhibitor; Reference proteome; Signal; Thioester bond.
+FT   SIGNAL          1..15
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           16..1582
+FT                   /note="Alpha-2-macroglobulin"
+FT                   /id="PRO_0000036243"
+FT   CROSSLNK        1080..1083
+FT                   /note="Isoglutamyl cysteine thioester (Cys-Gln)"
+FT                   /evidence="ECO:0000250|UniProtKB:P76578"
+SQ   SEQUENCE   1582 AA;  170091 MW;  8683D148F5AE3C2A CRC64;
+//
+ID   A2MGH_ECO57             Reviewed;        1534 AA.
+AC   Q8XE35;
+DE   RecName: Full=Alpha-2-macroglobulin homolog {ECO:0000305};
+DE   Flags: Precursor;
+GN   Name=yfaS; OrderedLocusNames=Z3481, ECs3111;
+OS   Escherichia coli O157:H7.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=11206551; DOI=10.1038/35054089;
+RA   Perna N.T., Plunkett G. III, Burland V., Mau B., Glasner J.D., Rose D.J.,
+RA   Mayhew G.F., Evans P.S., Gregor J., Kirkpatrick H.A., Posfai G.,
+RA   Hackett J., Klink S., Boutin A., Shao Y., Miller L., Grotbeck E.J.,
+RA   Davis N.W., Lim A., Dimalanta E.T., Potamousis K., Apodaca J.,
+RA   Anantharaman T.S., Lin J., Yen G., Schwartz D.C., Welch R.A.,
+RA   Blattner F.R.;
+RT   "Genome sequence of enterohaemorrhagic Escherichia coli O157:H7.";
+RL   Nature 409:529-533(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=11258796; DOI=10.1093/dnares/8.1.11;
+RA   Hayashi T., Makino K., Ohnishi M., Kurokawa K., Ishii K., Yokoyama K.,
+RA   Han C.-G., Ohtsubo E., Nakayama K., Murata T., Tanaka M., Tobe T., Iida T.,
+RA   Takami H., Honda T., Sasakawa C., Ogasawara N., Yasunaga T., Kuhara S.,
+RA   Shiba T., Hattori M., Shinagawa H.;
+RT   "Complete genome sequence of enterohemorrhagic Escherichia coli O157:H7 and
+RT   genomic comparison with a laboratory strain K-12.";
+RL   DNA Res. 8:11-22(2001).
+CC   -!- SIMILARITY: Belongs to the protease inhibitor I39 (alpha-2-
+CC       macroglobulin) family. Bacterial alpha-2-macroglobulin subfamily.
+CC       {ECO:0000305}.
+CC   -!- CAUTION: Lacks the conserved thioester bond that is characteristic of
+CC       the alpha-2-macroglobulins. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=BAB36534.2; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; AE005174; AAG57357.1; -; Genomic_DNA.
+DR   EMBL; BA000007; BAB36534.2; ALT_INIT; Genomic_DNA.
+DR   PIR; A85862; A85862.
+DR   PIR; G91017; G91017.
+DR   RefSeq; NP_311138.1; NC_002695.1.
+DR   AlphaFoldDB; Q8XE35; -.
+DR   SMR; Q8XE35; -.
+DR   STRING; 155864.Z3481; -.
+DR   MEROPS; I39.008; -.
+DR   GeneID; 916819; -.
+DR   KEGG; ece:Z3481; -.
+DR   KEGG; ecs:ECs_3111; -.
+DR   PATRIC; fig|386585.9.peg.3245; -.
+DR   eggNOG; COG2373; Bacteria.
+DR   HOGENOM; CLU_004561_0_0_6; -.
+DR   OMA; YAYYADW; -.
+DR   Proteomes; UP000000558; Chromosome.
+DR   Proteomes; UP000002519; Chromosome.
+DR   GO; GO:0004866; F:endopeptidase inhibitor activity; IEA:InterPro.
+DR   CDD; cd00146; PKD; 1.
+DR   Gene3D; 2.60.40.1930; -; 1.
+DR   Gene3D; 2.60.40.10; Immunoglobulins; 1.
+DR   InterPro; IPR011625; A2M_N_BRD.
+DR   InterPro; IPR013783; Ig-like_fold.
+DR   InterPro; IPR001599; Macroglobln_a2.
+DR   InterPro; IPR002890; MG2.
+DR   InterPro; IPR008930; Terpenoid_cyclase/PrenylTrfase.
+DR   InterPro; IPR051802; YfhM-like.
+DR   PANTHER; PTHR40094; ALPHA-2-MACROGLOBULIN HOMOLOG; 1.
+DR   PANTHER; PTHR40094:SF1; UBIQUITIN DOMAIN-CONTAINING PROTEIN; 1.
+DR   Pfam; PF00207; A2M; 1.
+DR   Pfam; PF07703; A2M_BRD; 1.
+DR   Pfam; PF01835; MG2; 1.
+DR   SMART; SM01360; A2M; 1.
+DR   SMART; SM01359; A2M_N_2; 1.
+DR   SUPFAM; SSF48239; Terpenoid cyclases/Protein prenyltransferases; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..38
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           39..1534
+FT                   /note="Alpha-2-macroglobulin homolog"
+FT                   /id="PRO_0000036240"
+SQ   SEQUENCE   1534 AA;  169893 MW;  E326FD052770F1A3 CRC64;
+//
+ID   A2MGH_ECOLI             Reviewed;        1367 AA.
+AC   P76464; P76465;
+DE   RecName: Full=Putative alpha-2-macroglobulin homolog {ECO:0000305};
+DE   Flags: Precursor;
+GN   Name=yfaS; Synonyms=yfaR; OrderedLocusNames=b4500, JW2221/JW2222;
+GN   ORFNames=b2227/b2228;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9205837; DOI=10.1093/dnares/4.2.91;
+RA   Yamamoto Y., Aiba H., Baba T., Hayashi K., Inada T., Isono K., Itoh T.,
+RA   Kimura S., Kitagawa M., Makino K., Miki T., Mitsuhashi N., Mizobuchi K.,
+RA   Mori H., Nakade S., Nakamura Y., Nashimoto H., Oshima T., Oyama S.,
+RA   Saito N., Sampei G., Satoh Y., Sivasundaram S., Tagami H., Takahashi H.,
+RA   Takeda J., Takemoto K., Uehara K., Wada C., Yamagata S., Horiuchi T.;
+RT   "Construction of a contiguous 874-kb sequence of the Escherichia coli-K12
+RT   genome corresponding to 50.0-68.8 min on the linkage map and analysis of
+RT   its sequence features.";
+RL   DNA Res. 4:91-113(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- SIMILARITY: Belongs to the protease inhibitor I39 (alpha-2-
+CC       macroglobulin) family. Bacterial alpha-2-macroglobulin subfamily.
+CC       {ECO:0000305}.
+CC   -!- CAUTION: Could be the product of a pseudogene, it is missing the C-
+CC       terminus compared to orthologs. {ECO:0000305}.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   AlphaFoldDB; P76464; -.
+DR   SMR; P76464; -.
+DR   DIP; DIP-11951N; -.
+DR   FunCoup; P76464; 108.
+DR   IntAct; P76464; 25.
+DR   EchoBASE; EB3834; -.
+DR   InParanoid; P76464; -.
+DR   PhylomeDB; P76464; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0004866; F:endopeptidase inhibitor activity; IEA:InterPro.
+DR   CDD; cd00146; PKD; 1.
+DR   Gene3D; 2.60.40.1930; -; 1.
+DR   Gene3D; 2.60.40.10; Immunoglobulins; 1.
+DR   InterPro; IPR011625; A2M_N_BRD.
+DR   InterPro; IPR013783; Ig-like_fold.
+DR   InterPro; IPR001599; Macroglobln_a2.
+DR   InterPro; IPR002890; MG2.
+DR   InterPro; IPR008930; Terpenoid_cyclase/PrenylTrfase.
+DR   InterPro; IPR051802; YfhM-like.
+DR   PANTHER; PTHR40094; ALPHA-2-MACROGLOBULIN HOMOLOG; 1.
+DR   PANTHER; PTHR40094:SF1; UBIQUITIN DOMAIN-CONTAINING PROTEIN; 1.
+DR   Pfam; PF00207; A2M; 1.
+DR   Pfam; PF07703; A2M_BRD; 1.
+DR   Pfam; PF01835; MG2; 1.
+DR   SMART; SM01360; A2M; 1.
+DR   SMART; SM01359; A2M_N_2; 1.
+DR   SUPFAM; SSF48239; Terpenoid cyclases/Protein prenyltransferases; 1.
+PE   5: Uncertain;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..38
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           39..1367
+FT                   /note="Putative alpha-2-macroglobulin homolog"
+FT                   /id="PRO_0000036239"
+SQ   SEQUENCE   1367 AA;  151114 MW;  41ED70F6A73271DB CRC64;
+//
+ID   A2MGH_PSEAE             Reviewed;        1516 AA.
+AC   Q9HVT2;
+DE   RecName: Full=Alpha-2-macroglobulin homolog {ECO:0000305};
+DE   Flags: Precursor;
+GN   OrderedLocusNames=PA4489;
+OS   Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+OS   14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pseudomonadales; Pseudomonadaceae; Pseudomonas.
+OX   NCBI_TaxID=208964;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=10984043; DOI=10.1038/35023079;
+RA   Stover C.K., Pham X.-Q.T., Erwin A.L., Mizoguchi S.D., Warrener P.,
+RA   Hickey M.J., Brinkman F.S.L., Hufnagle W.O., Kowalik D.J., Lagrou M.,
+RA   Garber R.L., Goltry L., Tolentino E., Westbrock-Wadman S., Yuan Y.,
+RA   Brody L.L., Coulter S.N., Folger K.R., Kas A., Larbig K., Lim R.M.,
+RA   Smith K.A., Spencer D.H., Wong G.K.-S., Wu Z., Paulsen I.T., Reizer J.,
+RA   Saier M.H. Jr., Hancock R.E.W., Lory S., Olson M.V.;
+RT   "Complete genome sequence of Pseudomonas aeruginosa PAO1, an opportunistic
+RT   pathogen.";
+RL   Nature 406:959-964(2000).
+CC   -!- SIMILARITY: Belongs to the protease inhibitor I39 (alpha-2-
+CC       macroglobulin) family. Bacterial alpha-2-macroglobulin subfamily.
+CC       {ECO:0000305}.
+CC   -!- CAUTION: Lacks the conserved thioester bond that is characteristic of
+CC       the alpha-2-macroglobulins. {ECO:0000305}.
+DR   EMBL; AE004091; AAG07877.1; -; Genomic_DNA.
+DR   PIR; F83085; F83085.
+DR   RefSeq; NP_253179.1; NC_002516.2.
+DR   AlphaFoldDB; Q9HVT2; -.
+DR   SMR; Q9HVT2; -.
+DR   FunCoup; Q9HVT2; 72.
+DR   STRING; 208964.PA4489; -.
+DR   PaxDb; 208964-PA4489; -.
+DR   DNASU; 881072; -.
+DR   GeneID; 881072; -.
+DR   KEGG; pae:PA4489; -.
+DR   PATRIC; fig|208964.12.peg.4699; -.
+DR   PseudoCAP; PA4489; -.
+DR   HOGENOM; CLU_004561_0_0_6; -.
+DR   InParanoid; Q9HVT2; -.
+DR   OrthoDB; 9767116at2; -.
+DR   PhylomeDB; Q9HVT2; -.
+DR   BioCyc; PAER208964:G1FZ6-4578-MONOMER; -.
+DR   Proteomes; UP000002438; Chromosome.
+DR   GO; GO:0004866; F:endopeptidase inhibitor activity; IEA:InterPro.
+DR   Gene3D; 1.50.10.20; -; 1.
+DR   Gene3D; 2.20.130.20; -; 1.
+DR   Gene3D; 2.60.40.1930; -; 1.
+DR   InterPro; IPR011625; A2M_N_BRD.
+DR   InterPro; IPR047565; Alpha-macroglob_thiol-ester_cl.
+DR   InterPro; IPR001599; Macroglobln_a2.
+DR   InterPro; IPR002890; MG2.
+DR   InterPro; IPR008930; Terpenoid_cyclase/PrenylTrfase.
+DR   InterPro; IPR051802; YfhM-like.
+DR   PANTHER; PTHR40094; ALPHA-2-MACROGLOBULIN HOMOLOG; 1.
+DR   PANTHER; PTHR40094:SF1; UBIQUITIN DOMAIN-CONTAINING PROTEIN; 1.
+DR   Pfam; PF00207; A2M; 1.
+DR   Pfam; PF07703; A2M_BRD; 1.
+DR   Pfam; PF01835; MG2; 1.
+DR   SMART; SM01360; A2M; 1.
+DR   SMART; SM01359; A2M_N_2; 1.
+DR   SMART; SM01419; Thiol-ester_cl; 1.
+DR   SUPFAM; SSF48239; Terpenoid cyclases/Protein prenyltransferases; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..26
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           27..1516
+FT                   /note="Alpha-2-macroglobulin homolog"
+FT                   /id="PRO_0000036242"
+SQ   SEQUENCE   1516 AA;  167429 MW;  FDCED1561D62C18C CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+13	6	Pseudomonas.
+13	6	Paraburkholderia.
+21	5	Burkholderiaceae
+13	5	Pseudomonadaceae
+12	5	Enterobacteriaceae
+10	5	Oxalobacteraceae
+38	4	Burkholderiales
+17	4	Enterobacterales
+13	4	Pseudomonadales
+46	3	Betaproteobacteria
+32	3	Gammaproteobacteria
+79	2	Pseudomonadota
+13	2	Acidobacteriota
+93	1	Pseudomonadati
+94	0	Bacteria
+Total of 95 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A562RN33	ALPHA-2-MACROGLOBULIN FAM    309.0    6.6e-89   1   1.5   0.0
+	Iterate                   	    34	   232	   308.1
+	PF01835	MG2             	   320	   416	    65.5
+	PF07703	A2M_BRD         	   638	   784	    63.5
+	PF00207	A2M             	   849	   939	    60.4
+
+P76464	PUTATIVE ALPHA-2-MACROGLOBULIN    289.2    7.9e-83   1   1.7   0.0
+	Iterate                   	    58	   256	   288.0
+	PF01835	MG2             	   344	   440	    68.4
+	PF07703	A2M_BRD         	   660	   806	    63.6
+	PF00207	A2M             	   871	   960	    44.8
+
+Q8XE35	ALPHA-2-MACROGLOBULIN HOMOLOG     287.9    1.9e-82   1   1.7   0.0
+	Iterate                   	    58	   256	   286.7
+	PF01835	MG2             	   344	   440	    68.4
+	PF07703	A2M_BRD         	   660	   806	    63.4
+	PF00207	A2M             	   871	   960	    44.9
+
+Q8XV02	ALPHA-2-MACROGLOBULIN {ECO:0000    289.8    5.2e-83   1   1.5   0.0
+	Iterate                   	    48	   245	   288.9
+	PF01835	MG2             	   333	   429	    61.4
+	PF07703	A2M_BRD         	   658	   804	    55.1
+	PF00207	A2M             	   871	   964	    46.6
+
+Q9HVT2	ALPHA-2-MACROGLOBULIN HOMOLOG     292.8    5.9e-84   1   1.4   0.0
+	Iterate                   	    46	   244	   292.1
+	PF01835	MG2             	   332	   428	      72
+	PF07703	A2M_BRD         	   646	   792	    57.1
+	PF00207	A2M             	   857	   947	    77.2
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS60939 (E-value: 5.9e-82, Score: 279.6)
+Mentioned as: PA4489
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 38547304
+Source: EuropePMC
+Title: Characterization of a hemolytic and antibiotic-resistant Pseudomonas aeruginosa strain S3 pathogenic to fish isolated from Mahananda River in India
+Journal: PloS one (2024)
+Snippet: membrane proton/drug antiporter (RND type) = >TriC of TriABC-OpmH system 15595356 P . aeruginosa PAO1 PA4489 UPF0192 protein YfaS 15599685 P . aeruginosa relA Inactive (p)ppGpp 3-pyrophosphohydrolase domain / GTP pyrophosphokinase (EC 2.7.6.5), (p)ppGpp synthetase I 15596131 P . aeruginosa PAO1 wbpX Mannosyltransferase 15600642 P .
+
+================================================================================
+Protein: VIMSS60939 (E-value: 5.9e-82, Score: 279.6)
+Mentioned as: PA4489
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 35355602
+Source: EuropePMC
+Title: A Shaving Proteomic Approach to Unveil Surface Proteins Modulation of Multi-Drug Resistant <i>Pseudomonas aeruginosa</i> Strains Isolated From Cystic Fibrosis Patients
+Journal: Frontiers in medicine (2022)
+Snippet: pstS Phosphate-binding protein PstS Extracellular/periplasmic 0.01 Q9I2V8 PA1784 Alginate_lyase2 domain-containing protein OuterMembrane 0.01 0.01 Q9HVT2 PA4489 Alpha-2-macroglobulin homolog 100 Q9HU38 PA5146 AsmA domain-containing protein 0.117 Q9I787 PA0045 Curli production assembly/transport component CsgG 0.01 O33407 estA Esterase EstA 100 P42512 fptA Fe(3+)-pyochelin receptor 100 Q9HW32 icmP Insulin-cleaving
+
+================================================================================
+Protein: VIMSS60939 (E-value: 5.9e-82, Score: 279.6)
+Mentioned as: PA4489
+Description: hypothetical protein
+Organism: Pseudomonas aeruginosa PAO1
+PMID: 29323132
+Source: EuropePMC
+Title: Assembly of an atypical α-macroglobulin complex from Pseudomonas aeruginosa
+Journal: Scientific reports (2018)
+Snippet: Internal deletion in PA4490 ( magC) in PA01 This work PA01 magD Internal deletion in PA4489 ( magD ) in PA01 Robert-Genthon et al . 15 PA01 magE Internal deletion in PA4488 ( magE ) in PA01 This work PA01 magF Internal deletion in PA4487 (
+
+================================================================================
+Protein: P76464 (E-value: 1.4e-81, Score: 278.4)
+Mentioned as: P76464
+Description: Putative alpha-2-macroglobulin homolog
+Organism: Escherichia coli (strain K12)
+PMID: 15186489
+Source: EuropePMC
+Title: Bacterial alpha2-macroglobulins: colonization factors acquired by horizontal gene transfer from the metazoan genome?
+Journal: Genome biology (2004)
+Snippet: homologs, some lacking the CxEQ. For example, E. coli has a second divergent homolog, YfaS (P76464). It is noteworthy that not a single instance of an archaeal 2 M sequence could be found. Thus 2 M-like sequences are restricted to eubacteria and metazoans. No function has
+
+================================================================================
+Protein: VIMSS171307 (E-value: 9.1e-81, Score: 275.8)
+Mentioned as: RSc3030
+Description: PUTATIVE SIGNAL PEPTIDE PROTEIN
+Organism: Ralstonia solanacearum GMI1000
+PMID: 28373879
+Source: EuropePMC
+Title: Transcriptomes of <i>Ralstonia solanacearum</i> during Root Colonization of <i>Solanum commersonii</i>
+Journal: Frontiers in plant science (2017)
+Snippet: protein RSUY_RS05940 RSUY_12170 RSc2238 1.775776 hypothetical protein RSUY_RS04990 RSUY_10170 RSc0799 1.56204 hypothetical protein RSUY_RS02135 RSUY_04410 RSc3030 2.05111 hypothetical protein RSUY_RS20585 RSUY_42270 2.22451 membrane protein RSUY_RS14980 RSUY_30600 RSc0211 2.4077 membrane protein RSUY_RS17045 RSUY_34880 RSp0420 2.58002 membrane protein RSUY_RS15175 RSUY_31000 RSc0146 2.83465 hypothetical protein PUTATIVE VIRULENCE GENES AND
+
+================================================================================
+Protein: VIMSS3407117 (E-value: 5.2e-78, Score: 266.8)
+Mentioned as: ESA_00308
+Description: hypothetical protein
+Organism: Enterobacter sakazakii ATCC BAA-894
+PMID: 21239552
+Source: EuropePMC
+Title: Comprehensive approaches to molecular biomarker discovery for detection and identification of Cronobacter spp. (Enterobacter sakazakii) and Salmonella spp
+Journal: Applied and environmental microbiology (2011)
+Snippet: and the alpha-2macroglobulin family region ESA_00308) Hypothetical protein (ESA_00611, ESA_00612, ESA_00615, ESA_00616, and ESA_00618) Hypothetical protein
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2R7S2P9.1	AF-A0A2R7S2P9-F1-model_v4_TED01:41-103_161-188_199-236	1	AF-A0A2R7S2P9-F1-model_v4_TED01	41-236	99.5%
+A0A2R7S2P9.1	AF-A0A2R7S2P9-F1-model_v4_TED02:238-317	1	AF-A0A2R7S2P9-F1-model_v4_TED02	238-317	0
+A0A2R7S2P9.1	AF-A0A2R7S2P9-F1-model_v4_TED03:326-411	1	AF-A0A2R7S2P9-F1-model_v4_TED03	326-411	0
+A0A7R9AHE2.1	AF-A0A7R9AHE2-F1-model_v4_TED01:150-226	1	AF-A0A7R9AHE2-F1-model_v4_TED01	150-226	0
+A0A7R9AHE2.1	AF-A0A7R9AHE2-F1-model_v4_TED02:235-332	1	AF-A0A7R9AHE2-F1-model_v4_TED02	235-332	0
+A0A7R9AHE2.1	AF-A0A7R9AHE2-F1-model_v4_TED03:341-450	1	AF-A0A7R9AHE2-F1-model_v4_TED03	341-450	0
+A0A7R9AHE2.1	AF-A0A7R9AHE2-F1-model_v4_TED04:822-914	1	AF-A0A7R9AHE2-F1-model_v4_TED04	822-914	0
+A0A7R9AHE2.1	AF-A0A7R9AHE2-F1-model_v4_TED05:965-1192	1	AF-A0A7R9AHE2-F1-model_v4_TED05	965-1192	0
+P76464.3	AF-P76464-F1-model_v4_TED01:58-125_179-205_222-256	1	AF-P76464-F1-model_v4_TED01	58-256	100.0%
+P76464.3	AF-P76464-F1-model_v4_TED02:259-335	1	AF-P76464-F1-model_v4_TED02	259-335	0
+P76464.3	AF-P76464-F1-model_v4_TED03:459-559	1	AF-P76464-F1-model_v4_TED03	459-559	0
+P76464.3	AF-P76464-F1-model_v4_TED04:563-651	1	AF-P76464-F1-model_v4_TED04	563-651	0
+P76464.3	AF-P76464-F1-model_v4_TED05:653-757	1	AF-P76464-F1-model_v4_TED05	653-757	0
+P76464.3	AF-P76464-F1-model_v4_TED06:926-1014	1	AF-P76464-F1-model_v4_TED06	926-1014	0
+P76464.3	AF-P76464-F1-model_v4_TED07:1021-1050_1322-1367	1	AF-P76464-F1-model_v4_TED07	1021-1367	0
+Q8XV02.1	AF-Q8XV02-F1-model_v4_TED01:46-113_167-196_208-244	1	AF-Q8XV02-F1-model_v4_TED01	46-244	99.5%
+Q8XV02.1	AF-Q8XV02-F1-model_v4_TED03:333-426	1	AF-Q8XV02-F1-model_v4_TED03	333-426	0
+Q8XV02.1	AF-Q8XV02-F1-model_v4_TED04:439-548	1	AF-Q8XV02-F1-model_v4_TED04	439-548	0
+Q8XV02.1	AF-Q8XV02-F1-model_v4_TED05:561-741	1	AF-Q8XV02-F1-model_v4_TED05	561-741	0
+Q8XV02.1	AF-Q8XV02-F1-model_v4_TED06:760-823_863-925	1	AF-Q8XV02-F1-model_v4_TED06	760-925	0
+Q8XV02.1	AF-Q8XV02-F1-model_v4_TED07:930-1022	1	AF-Q8XV02-F1-model_v4_TED07	930-1022	0
+Q8XV02.1	AF-Q8XV02-F1-model_v4_TED08:1028-1061_1342-1394	1	AF-Q8XV02-F1-model_v4_TED08	1028-1394	0
+Q8XV02.1	AF-Q8XV02-F1-model_v4_TED09:1399-1419_1437-1582	1	AF-Q8XV02-F1-model_v4_TED09	1399-1582	0
+Q8XV02.1	AF-Q8XV02-F1-model_v4_TED02:250-314	1	AF-Q8XV02-F1-model_v4_TED02	250-314	0
+Q9HVT2.1	AF-Q9HVT2-F1-model_v4_TED01:44-113_167-243	1	AF-Q9HVT2-F1-model_v4_TED01	44-243	99.5%
+Q9HVT2.1	AF-Q9HVT2-F1-model_v4_TED02:114-166	1	AF-Q9HVT2-F1-model_v4_TED02	114-166	26.6%
+Q9HVT2.1	AF-Q9HVT2-F1-model_v4_TED03:245-323	1	AF-Q9HVT2-F1-model_v4_TED03	245-323	0
+Q9HVT2.1	AF-Q9HVT2-F1-model_v4_TED04:332-432_745-810_847-908	1	AF-Q9HVT2-F1-model_v4_TED04	332-908	0
+Q9HVT2.1	AF-Q9HVT2-F1-model_v4_TED05:448-548	1	AF-Q9HVT2-F1-model_v4_TED05	448-548	0
+Q9HVT2.1	AF-Q9HVT2-F1-model_v4_TED06:554-741	1	AF-Q9HVT2-F1-model_v4_TED06	554-741	0
+Q9HVT2.1	AF-Q9HVT2-F1-model_v4_TED07:912-1001	1	AF-Q9HVT2-F1-model_v4_TED07	912-1001	0
+Q9HVT2.1	AF-Q9HVT2-F1-model_v4_TED08:1004-1035_1305-1359	1	AF-Q9HVT2-F1-model_v4_TED08	1004-1359	0
+Q9HVT2.1	AF-Q9HVT2-F1-model_v4_TED09:1363-1516	1	AF-Q9HVT2-F1-model_v4_TED09	1363-1516	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 32
+Total networks analyzed: 32
+Total network proteins: 1219
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF06672 (DUF1175)         32           33           100.0%
+PF09906 (DUF2135)         28           44            87.5%
+PF09909 (DUF2138)         27           27            84.4%
+PF10062 (DUF2300)         25           25            78.1%
+PF08486 (SpoIID)          24           24            75.0%
+PF03477 (ATP-cone)        24           24            75.0%
+PF22811 (Zn_ribbon_NrdR)  23           23            71.9%
+PF00246 (Peptidase_M14)   20           31            62.5%
+PF02518 (HATPase_c)       19           31            59.4%
+PF13163 (DUF3999)         18           18            56.2%
+PF00512 (HisKA)           16           21            50.0%
+PF10101 (DUF2339)         14           14            43.8%
+PF18027 (Pepdidase_M14_N) 12           13            37.5%
+PF13649 (Methyltransf_25) 11           16            34.4%
+PF00856 (SET)             11           18            34.4%
+PF09867 (TagF_N)          10           12            31.2%
+PF00072 (Response_reg)    10           13            31.2%
+PF08241 (Methyltransf_11) 10           13            31.2%
+PF13515 (FUSC_2)          10           12            31.2%
+PF14258 (DUF4350)         9            9             28.1%
+PF00593 (TonB_dep_Rec_b-barrel) 9            11            28.1%
+PF01209 (Ubie_methyltran) 9            9             28.1%
+PF13489 (Methyltransf_23) 9            11            28.1%
+PF13847 (Methyltransf_31) 9            11            28.1%
+PF01553 (Acyltransferase) 8            8             25.0%
+PF00532 (Peripla_BP_1)    8            9             25.0%
+PF13407 (Peripla_BP_4)    8            9             25.0%
+PF14559 (TPR_19)          8            8             25.0%
+PF13018 (ESPR)            8            12            25.0%
+PF12697 (Abhydrolase_6)   8            9             25.0%
+PF08242 (Methyltransf_12) 8            10            25.0%
+PF13091 (PLDc_2)          8            8             25.0%
+PF04632 (FUSC)            8            10            25.0%
+PF03895 (YadA_anchor)     7            10            21.9%
+PF05658 (YadA_head)       7            11            21.9%
+PF05662 (YadA_stalk)      7            11            21.9%
+PF00782 (DSPc)            7            7             21.9%
+PF00561 (Abhydrolase_1)   7            9             21.9%
+PF21419 (RoxA-like_Cyt-c) 7            8             21.9%
+PF07859 (Abhydrolase_3)   7            34            21.9%
+PF20434 (BD-FAE)          7            33            21.9%
+PF05860 (TPS)             6            16            18.8%
+PF08448 (PAS_4)           6            7             18.8%
+PF01381 (HTH_3)           6            7             18.8%
+PF13450 (NAD_binding_8)   6            7             18.8%
+PF00102 (Y_phosphatase)   6            6             18.8%
+PF00012 (HSP70)           5            13            15.6%
+PF13432 (TPR_16)          5            5             15.6%
+PF03797 (Autotransporter) 5            5             15.6%
+PF00497 (SBP_bac_3)       5            6             15.6%
+PF07715 (Plug)            5            7             15.6%
+PF13181 (TPR_8)           5            5             15.6%
+PF13620 (CarboxypepD_reg) 5            10            15.6%
+PF00890 (FAD_binding_2)   5            5             15.6%
+PF12146 (Hydrolase_4)     5            5             15.6%
+PF06812 (ImpA_N)          5            5             15.6%
+PF16989 (T6SS_VasJ)       5            5             15.6%
+PF03372 (Exo_endo_phos)   5            5             15.6%
+PF00498 (FHA)             5            5             15.6%
+PF13519 (VWA_2)           5            5             15.6%
+PF01145 (Band_7)          5            7             15.6%
+PF00027 (cNMP_binding)    5            5             15.6%
+PF00924 (MS_channel_2nd)  5            6             15.6%
+PF00135 (COesterase)      5            14            15.6%
+PF25183 (OMP_b-brl_4)     5            10            15.6%
+PF13609 (Porin_4)         5            9             15.6%
+PF25023 (TEN_YD-shell)    4            9             12.5%
+PF00089 (Trypsin)         4            7             12.5%
+PF06723 (MreB_Mbl)        4            8             12.5%
+PF00204 (DNA_gyraseB)     4            6             12.5%
+PF00986 (DNA_gyraseB_C)   4            6             12.5%
+PF01751 (Toprim)          4            6             12.5%
+PF10670 (DUF4198)         4            4             12.5%
+PF00691 (OmpA)            4            4             12.5%
+PF09850 (DotU)            4            4             12.5%
+PF07963 (N_methyl)        4            6             12.5%
+PF17963 (Big_9)           4            5             12.5%
+PF01593 (Amino_oxidase)   4            4             12.5%
+PF12147 (Methyltransf_20) 4            4             12.5%
+PF02498 (Bro-N)           4            11            12.5%
+PF13490 (zf-HC2)          4            4             12.5%
+PF00353 (HemolysinCabind) 4            6             12.5%
+PF09980 (DUF2214)         4            4             12.5%
+PF11340 (DUF3142)         4            4             12.5%
+PF28772 (DUF8456)         4            4             12.5%
+PF07719 (TPR_2)           4            4             12.5%
+
+... (truncated - showing first 100 of 5203 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Who RU
+SE   Where did the seed come from
+GA   27.00 27.00;
+TC   29.80 28.80;
+NC   26.50 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

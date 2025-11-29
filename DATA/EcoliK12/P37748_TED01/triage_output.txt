@@ -1,0 +1,33 @@
+--- sp.seq_info content (copy to Claude) ---
+Note: sp.seq_info file not found
+Current directory: /nfs/production/agb/pfam/curation/agb/EcoliK12/P37748_TED01
+Potential protein accession for UniProt search: P37748
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Note: species file not found
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+Note: arch file not found
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P37748.1	AF-P37748-F1-model_v4_TED01:94-313_331-388	1	AF-P37748-F1-model_v4_TED01	94-388	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P37748_TED01
+GA   27.00 27.00;
+TC   34.10 34.10;
+NC   23.80 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

@@ -1,0 +1,137 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YGEQ_ECOLI              Reviewed;         264 AA.
+AC   Q46797; A0A385XJM3; Q2M9X6;
+DE   RecName: Full=Uncharacterized lipoprotein YgeQ;
+DE   Flags: Precursor;
+GN   Name=ygeQ; OrderedLocusNames=b2863, JW5461;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303, ECO:0000305}; Lipid-anchor {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}.
+CC   -!- MISCELLANEOUS: May be missing up to 250 C-terminal residues compared to
+CC       orthologs. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA83045.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U28375; AAA83045.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; U00096; AYC08239.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76930.1; -; Genomic_DNA.
+DR   PIR; H65069; H65069.
+DR   RefSeq; WP_000676919.1; NZ_LN832404.1.
+DR   AlphaFoldDB; Q46797; -.
+DR   BioGRID; 4263036; 187.
+DR   DIP; DIP-12155N; -.
+DR   FunCoup; Q46797; 9.
+DR   IntAct; Q46797; 1.
+DR   EnsemblBacteria; AYC08239; AYC08239; b2863.
+DR   KEGG; ecj:JW5461; -.
+DR   KEGG; ecoc:C3026_15710; -.
+DR   EchoBASE; EB2859; -.
+DR   eggNOG; COG3387; Bacteria.
+DR   HOGENOM; CLU_045369_1_0_6; -.
+DR   InParanoid; Q46797; -.
+DR   BioCyc; EcoCyc:G7483-MONOMER; -.
+DR   PRO; PR:Q46797; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005975; P:carbohydrate metabolic process; IEA:InterPro.
+DR   Gene3D; 1.50.10.10; -; 1.
+DR   InterPro; IPR008928; 6-hairpin_glycosidase_sf.
+DR   InterPro; IPR012341; 6hp_glycosidase-like_sf.
+DR   SUPFAM; SSF48208; Six-hairpin glycosidases; 1.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   3: Inferred from homology;
+KW   Cell inner membrane; Cell membrane; Lipoprotein; Membrane; Palmitate;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..16
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           17..264
+FT                   /note="Uncharacterized lipoprotein YgeQ"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT                   /id="PRO_0000169343"
+FT   LIPID           17
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           17
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   264 AA;  29513 MW;  61C5F581CA93322B CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+4	6	Escherichia.
+2	6	Shigella.
+6	5	Enterobacteriaceae
+6	4	Enterobacterales
+6	3	Gammaproteobacteria
+6	2	Pseudomonadota
+6	1	Pseudomonadati
+6	0	Bacteria
+Total of 6 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A2S4MZZ8	LIPOPROTEIN {ECO:0008006|     80.4    2.1e-19   1   1.6   2.0
+	Iterate                   	    49	    80	    79.4
+
+B7LF50	UNCHARACTERIZED PROTEIN {ECO:     82.4    4.7e-20   1   1.6   2.4
+	Iterate                   	    49	    80	    81.4
+
+Q3YY05	GH15-LIKE DOMAIN-CONTAINING P     82.9    3.3e-20   1   1.8   2.4
+	Iterate                   	    49	    80	    81.6
+	PF00723	Glyco_hydro_15  	    93	   438	      26
+
+Q46797	UNCHARACTERIZED LIPOPROTEIN YGE     83.8    1.8e-20   1   1.6   2.4
+	Iterate                   	    35	    66	    82.7
+
+Q8X6C9	LIPOPROTEIN {ECO:0008006|GOOG     84.5    1.1e-20   1   1.6   2.4
+	Iterate                   	    35	    66	    83.4
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+Q8X6C9.2	AF-Q8X6C9-F1-model_v4_TED01:1-72	1	AF-Q8X6C9-F1-model_v4_TED01	1-72	100.0%
+Q8X6C9.2	AF-Q8X6C9-F1-model_v4_TED02:92-175	1	AF-Q8X6C9-F1-model_v4_TED02	92-175	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:Q46797_TED01/Iterate
+GA   27.00 27.00;
+TC   27.30 76.20;
+NC   26.00 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

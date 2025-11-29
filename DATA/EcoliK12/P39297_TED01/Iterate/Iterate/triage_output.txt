@@ -1,0 +1,374 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   BSMA_ECOLI              Reviewed;         109 AA.
+AC   P39297; Q2M6B6;
+DE   RecName: Full=Lipoprotein BsmA;
+DE   AltName: Full=Biofilm stress and motility protein;
+DE   Flags: Precursor;
+GN   Name=bsmA; Synonyms=yjfO; OrderedLocusNames=b4189, JW5743;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=7610040; DOI=10.1093/nar/23.12.2105;
+RA   Burland V.D., Plunkett G. III, Sofia H.J., Daniels D.L., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome VI: DNA sequence of the region
+RT   from 92.8 through 100 minutes.";
+RL   Nucleic Acids Res. 23:2105-2119(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   FUNCTION, INDUCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=19833773; DOI=10.1099/mic.0.031468-0;
+RA   Weber M.M., French C.L., Barnes M.B., Siegele D.A., McLean R.J.;
+RT   "A previously uncharacterized gene, yjfO (bsmA), influences Escherichia
+RT   coli biofilm formation and stress response.";
+RL   Microbiology 156:139-147(2010).
+CC   -!- FUNCTION: Involved in protection of biofilms against oxidative stress.
+CC       {ECO:0000269|PubMed:19833773}.
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000255|PROSITE-
+CC       ProRule:PRU00303}; Lipid-anchor {ECO:0000255|PROSITE-ProRule:PRU00303}.
+CC   -!- INDUCTION: Up-regulated in biofilms. {ECO:0000269|PubMed:19833773}.
+CC   -!- DISRUPTION PHENOTYPE: Mutant exhibits reduced microcolony formation and
+CC       greatly enhanced flagellar motility. Biofilms from the mutant strain
+CC       are less able to resist acid and peroxide stresses.
+CC       {ECO:0000269|PubMed:19833773}.
+CC   -!- SIMILARITY: Belongs to the BhsA/McbA family. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAA97085.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U14003; AAA97085.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; U00096; AAC77146.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE78190.1; -; Genomic_DNA.
+DR   PIR; S56414; S56414.
+DR   RefSeq; NP_418610.4; NC_000913.3.
+DR   RefSeq; WP_000254633.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P39297; -.
+DR   SMR; P39297; -.
+DR   BioGRID; 4263355; 10.
+DR   FunCoup; P39297; 92.
+DR   STRING; 511145.b4189; -.
+DR   PaxDb; 511145-b4189; -.
+DR   DNASU; 948708; -.
+DR   EnsemblBacteria; AAC77146; AAC77146; b4189.
+DR   GeneID; 948708; -.
+DR   KEGG; ecj:JW5743; -.
+DR   KEGG; eco:b4189; -.
+DR   KEGG; ecoc:C3026_22630; -.
+DR   PATRIC; fig|1411691.4.peg.2512; -.
+DR   EchoBASE; EB2382; -.
+DR   eggNOG; COG3650; Bacteria.
+DR   HOGENOM; CLU_144052_1_0_6; -.
+DR   InParanoid; P39297; -.
+DR   OMA; DYYVIIM; -.
+DR   OrthoDB; 6415092at2; -.
+DR   PhylomeDB; P39297; -.
+DR   BioCyc; EcoCyc:G7852-MONOMER; -.
+DR   PRO; PR:P39297; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0006974; P:DNA damage response; IEP:EcoliWiki.
+DR   GO; GO:0006950; P:response to stress; IBA:GO_Central.
+DR   GO; GO:0044010; P:single-species biofilm formation; IEP:EcoCyc.
+DR   FunFam; 3.30.1660.10:FF:000002; Hypothetical lipoprotein yjfO; 1.
+DR   Gene3D; 3.30.1660.10; Flavin-binding protein dodecin; 1.
+DR   InterPro; IPR051096; BhsA/McbA_stress_biofilm_assoc.
+DR   InterPro; IPR025543; Dodecin-like.
+DR   InterPro; IPR036275; YdgH-like_sf.
+DR   InterPro; IPR010854; YdgH/BhsA/McbA-like_dom.
+DR   NCBIfam; NF011433; PRK14864.1; 1.
+DR   PANTHER; PTHR34156:SF11; LIPOPROTEIN BSMA; 1.
+DR   PANTHER; PTHR34156; OUTER MEMBRANE PROTEIN-RELATED-RELATED; 1.
+DR   Pfam; PF07338; YdgH_BhsA-like; 1.
+DR   SUPFAM; SSF159871; YdgH-like; 1.
+DR   PROSITE; PS51257; PROKAR_LIPOPROTEIN; 1.
+PE   2: Evidence at transcript level;
+KW   Cell membrane; Lipoprotein; Membrane; Palmitate; Reference proteome;
+KW   Signal; Stress response.
+FT   SIGNAL          1..24
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   CHAIN           25..109
+FT                   /note="Lipoprotein BsmA"
+FT                   /id="PRO_0000018058"
+FT   LIPID           25
+FT                   /note="N-palmitoyl cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+FT   LIPID           25
+FT                   /note="S-diacylglycerol cysteine"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00303"
+SQ   SEQUENCE   109 AA;  12038 MW;  EBF2229815CEDEDE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Escherichia.
+3	6	Shigella.
+22	5	Enterobacteriaceae
+22	4	Enterobacterales
+24	3	Gammaproteobacteria
+24	2	Pseudomonadota
+24	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0AAD8BBS9	UNCHARACTERIZED PROTEIN {    112.9    2.2e-29  17  20.8  30.0
+	Iterate                   	   254	   267	     7.9
+	Iterate                   	   135	   149	     5.9
+	Iterate                   	    16	    29	     5.7
+	Iterate                   	    33	    46	     5.7
+	Iterate                   	    84	    97	     5.7
+	Iterate                   	   118	   131	     5.7
+	Iterate                   	   152	   165	     5.7
+	Iterate                   	   169	   182	     5.7
+	Iterate                   	   203	   216	     5.7
+	Iterate                   	   220	   233	     5.7
+	Iterate                   	   237	   250	     5.7
+	Iterate                   	   271	   284	     5.7
+	Iterate                   	   288	   301	     5.7
+	Iterate                   	   322	   335	     5.7
+	Iterate                   	   339	   352	     5.7
+	Iterate                   	   188	   199	     5.4
+	Iterate                   	   101	   114	     4.8
+
+A8AML4	YDGH/BHSA/MCBA-LIKE DOMAIN-CO     73.1    6.3e-17   1   1.3   4.4
+	Iterate                   	     1	    30	    72.4
+	PF07338	YdgH_BhsA-like  	    53	   108	    55.1
+
+A9MFM5	YDGH/BHSA/MCBA-LIKE DOMAIN-CO     69.5    8.4e-16   1   1.3   5.7
+	Iterate                   	     1	    30	    68.8
+	PF07338	YdgH_BhsA-like  	    53	   108	    55.8
+
+D2TN20	LIPOPROTEIN {ECO:0000313|EMBL     70.6    3.8e-16   1   1.4   6.7
+	Iterate                   	     1	    30	    69.9
+	PF07338	YdgH_BhsA-like  	    53	   108	    57.2
+
+P39297	LIPOPROTEIN BSMA                    68.5    1.7e-15   1   1.3   4.4
+	Iterate                   	     1	    30	    67.9
+	PF07338	YdgH_BhsA-like  	    53	   108	    57.7
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS5798949 (E-value: 1.3e-16, Score: 65.5)
+Mentioned as: SEN4145
+Description: hypothetical protein
+Organism: Salmonella enterica subsp. enterica serovar Enteritidis str. P125109
+PMID: 37219927
+Source: EuropePMC
+Title: Genome-wide fitness analysis identifies genes required for <i>in vitro</i> growth and macrophage infection by African and global epidemic pathovariants of <i>Salmonella enterica</i> Enteritidis
+Journal: Microbial genomics (2023)
+Snippet: yjfI Conserved hypothetical protein D7795_04792 SEN4136 P125109_04696 STMMW_43141 STM4370 1.59 yjfO Putative exported protein D7795_04801 SEN4145 P125109_04705 STMMW_43231 STM4379 1.24 pepA Cytosol aminopeptidase D7795_04888 SEN4230 P125109_04792 STMMW_44231 STM4477 1.03 repA2 CDO50996.1 D7795_05036 SEN_p0018 P125109_04939 SLT-BT0121 PSLT023 1.97 pefB CDO50994.1 D7795_05038 SEN_p0016 P125109_04941 SLT-BT0111 PSLT019 1.30 traY
+
+================================================================================
+Protein: VIMSS2057132 (E-value: 2.2e-15, Score: 61.5)
+Mentioned as: ECs5165
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 29875739
+Source: EuropePMC
+Title: Influence of Glucose Availability and CRP Acetylation on the Genome-Wide Transcriptional Response of <i>Escherichia coli</i>: Assessment by an Optimized Factorial Microarray Analysis
+Journal: Frontiers in microbiology (2018)
+Snippet: as significant classes a set of four genes that codify periplasmic proteins with dodecin-like structure (ECs5165, ECs0884, ECs5164, ECs5175; FDR = 2.1 10 2 ) and another set of five genes which codify enzymes involved in L-arginine degradation ( astA [arginine N-succinyltransferase], astB [N-succinylarginine dihydrolase], astC
+
+================================================================================
+Protein: VIMSS2057132 (E-value: 2.2e-15, Score: 61.5)
+Mentioned as: ECs5165
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 27462311
+Source: EuropePMC
+Title: Whole-Transcriptome Analysis of Verocytotoxigenic Escherichia coli O157:H7 (Sakai) Suggests Plant-Species-Specific Metabolic Responses on Exposure to Spinach and Lettuce Extracts
+Journal: Frontiers in microbiology (2016)
+Snippet: NS NS 4.87 ECs4976 x x Galactidol-1-phosphatol dehydrogenase, Citrobacter rodentium (92) NS NS NS 7.13 ECs5165 Biofilm stress and motility protein A, Shigella flexneri Shi06HN006 (99) -6.01 60.15 NS -7.03 Homologs in E. coli K-12 strain MG1655 and O157:H7 isolate EDL933 are indicated by or x
+
+================================================================================
+Protein: VIMSS2057132 (E-value: 2.2e-15, Score: 61.5)
+Mentioned as: ECs5165
+Description: hypothetical protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 21398637
+Source: EuropePMC
+Title: In vitro transcription profiling of the σS subunit of bacterial RNA polymerase: re-definition of the σS regulon and identification of σS-specific promoter sequence elements
+Journal: Nucleic acids research (2011)
+Snippet: yddM ) N.A. 1.71 c0703 Unknown, annotated in CFT073 (antisense of citF ) N.A. 1.74 ECs5165 yjfO (biofilm-related protein) in O157:H7 SAKAI N.A. 1.86 IG1903284_1903567-r Intergenic region downstream of yobD , transcribed in opposite direction N.A. 1.87 IG3358642_3358810-f Intergenic region downstream of gltD N.A. 1.89 IG2190243_2190534-r
+
+================================================================================
+Protein: VIMSS1238544 (E-value: 3.2e-15, Score: 61.0)
+Mentioned as: UTI89_C4789
+Description: hypothetical protein
+Organism: Escherichia coli UTI89
+PMID: 36589237
+Source: EuropePMC
+Title: Plasmid <i>parB</i> contributes to uropathogenic <i>Escherichia coli</i> colonization <i>in vivo</i> by acting on biofilm formation and global gene regulation
+Journal: Frontiers in molecular biosciences (2022)
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0L0AXC6.1	AF-A0A0L0AXC6-F1-model_v4_TED01:25-103	1	AF-A0A0L0AXC6-F1-model_v4_TED01	25-103	0
+A0A1C3ZW29.1	AF-A0A1C3ZW29-F1-model_v4_TED01:44-109	1	AF-A0A1C3ZW29-F1-model_v4_TED01	44-109	0
+A0A248KKB5.1	AF-A0A248KKB5-F1-model_v4_TED01:31-109	1	AF-A0A248KKB5-F1-model_v4_TED01	31-109	0
+A0A5R9LPS9.1	AF-A0A5R9LPS9-F1-model_v4_TED01:33-110	1	AF-A0A5R9LPS9-F1-model_v4_TED01	33-110	0
+A0A7M2V7N2.1	AF-A0A7M2V7N2-F1-model_v4_TED01:33-109	1	AF-A0A7M2V7N2-F1-model_v4_TED01	33-109	0
+A8AML4.1	AF-A8AML4-F1-model_v4_TED01:44-109	1	AF-A8AML4-F1-model_v4_TED01	44-109	0
+D2TN20.1	AF-D2TN20-F1-model_v4_TED01:44-109	1	AF-D2TN20-F1-model_v4_TED01	44-109	0
+P39297.2	AF-P39297-F1-model_v4_TED02:42-107	1	AF-P39297-F1-model_v4_TED02	42-107	0
+P39297.2	AF-P39297-F1-model_v4_TED01:1-30	1	AF-P39297-F1-model_v4_TED01	1-30	100.0%
+Q8ZK92.1	AF-Q8ZK92-F1-model_v4_TED02:32-109	1	AF-Q8ZK92-F1-model_v4_TED02	32-109	0
+Q8ZK92.1	AF-Q8ZK92-F1-model_v4_TED01:1-30	1	AF-Q8ZK92-F1-model_v4_TED01	1-30	100.0%
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 11
+Total networks analyzed: 11
+Total network proteins: 87
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF07338 (YdgH_BhsA-like)  10           23            90.9%
+PF00326 (Peptidase_S9)    9            9             81.8%
+PF00561 (Abhydrolase_1)   9            9             81.8%
+PF12146 (Hydrolase_4)     9            9             81.8%
+PF12697 (Abhydrolase_6)   8            8             72.7%
+PF01738 (DLH)             6            6             54.5%
+PF03403 (PAF-AH_p_II)     3            3             27.3%
+PF00756 (Esterase)        3            3             27.3%
+PF10736 (DUF2527)         2            2             18.2%
+PF10733 (DUF2525)         2            2             18.2%
+PF01408 (GFO_IDH_MocA)    2            2             18.2%
+PF22725 (GFO_IDH_MocA_C3) 2            2             18.2%
+PF10762 (DUF2583)         2            2             18.2%
+PF01258 (zf-dskA_traR)    2            2             18.2%
+PF04293 (SpoVR)           2            2             18.2%
+PF24755 (SpoVR_C)         2            2             18.2%
+PF01522 (Polysacc_deac_1) 1            1              9.1%
+PF14883 (GHL13)           1            1              9.1%
+PF04536 (TPM_phosphatase) 1            1              9.1%
+PF04284 (DUF441)          1            1              9.1%
+PF12804 (NTP_transf_3)    1            1              9.1%
+PF05532 (CsbD)            1            1              9.1%
+PF06649 (DUF1161)         1            1              9.1%
+PF13991 (BssS)            1            1              9.1%
+PF10799 (YliH)            1            1              9.1%
+PF00015 (MCPsignal)       1            1              9.1%
+PF00672 (HAMP)            1            1              9.1%
+PF17201 (Cache_3-Cache_2) 1            1              9.1%
+PF17202 (sCache_3_3)      1            1              9.1%
+PF01906 (YbjQ_1)          1            1              9.1%
+PF00392 (GntR)            1            1              9.1%
+PF07729 (FCD)             1            1              9.1%
+PF01232 (Mannitol_dh)     1            1              9.1%
+PF08125 (Mannitol_dh_C)   1            1              9.1%
+PF00005 (ABC_tran)        1            1              9.1%
+PF00037 (Fer4)            1            1              9.1%
+PF01855 (POR_N)           1            1              9.1%
+PF10371 (EKR)             1            1              9.1%
+PF12838 (Fer4_7)          1            1              9.1%
+PF13183 (Fer4_8)          1            1              9.1%
+PF13187 (Fer4_9)          1            1              9.1%
+PF13237 (Fer4_10)         1            1              9.1%
+PF13484 (Fer4_16)         1            1              9.1%
+PF13534 (Fer4_17)         1            1              9.1%
+PF17147 (PFOR_II)         1            1              9.1%
+PF01558 (POR)             1            1              9.1%
+PF00072 (Response_reg)    1            1              9.1%
+PF00158 (Sigma54_activat) 1            1              9.1%
+PF02954 (HTH_8)           1            1              9.1%
+PF07724 (AAA_2)           1            1              9.1%
+PF07728 (AAA_5)           1            1              9.1%
+PF14532 (Sigma54_activ_2) 1            1              9.1%
+PF25601 (AAA_lid_14)      1            1              9.1%
+PF01734 (Patatin)         1            1              9.1%
+PF07690 (MFS_1)           1            1              9.1%
+PF00440 (TetR_N)          1            1              9.1%
+PF17940 (TetR_C_31)       1            1              9.1%
+PF00127 (Copper-bind)     1            1              9.1%
+PF05048 (NosD)            1            1              9.1%
+PF07602 (DUF1565)         1            1              9.1%
+PF13229 (Beta_helix)      1            1              9.1%
+PF00117 (GATase)          1            1              9.1%
+PF07722 (Peptidase_C26)   1            1              9.1%
+PF02239 (Cytochrom_D1)    1            3              9.1%
+PF13442 (Cytochrome_CBB3) 1            6              9.1%
+PF09459 (EB_dh)           1            1              9.1%
+PF00115 (COX1)            1            1              9.1%
+PF00034 (Cytochrom_C)     1            6              9.1%
+PF13404 (HTH_AsnC-type)   1            1              9.1%
+PF17805 (AsnC_trans_reg2) 1            3              9.1%
+PF22451 (NirdL-like_HTH)  1            3              9.1%
+PF04055 (Radical_SAM)     1            1              9.1%
+PF13353 (Fer4_12)         1            1              9.1%
+PF00116 (COX2)            1            1              9.1%
+PF18764 (nos_propeller)   1            1              9.1%
+PF18793 (nos_propeller_2) 1            1              9.1%
+PF04052 (TolB_N)          1            1              9.1%
+PF07676 (PD40)            1            1              9.1%
+PF12679 (ABC2_membrane_2) 1            1              9.1%
+PF12730 (ABC2_membrane_4) 1            1              9.1%
+PF13346 (ABC2_membrane_5) 1            1              9.1%
+PF10920 (DUF2705)         1            1              9.1%
+PF14715 (FixP_N)          1            1              9.1%
+PF03150 (CCP_MauG)        1            1              9.1%
+PF01136 (Peptidase_U32)   1            1              9.1%
+PF04205 (FMN_bind)        1            1              9.1%
+
+... (truncated - showing first 100 of 694 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P39297_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.30 27.60;
+NC   26.10 25.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for P39297
+RN   [1]
+RM   19833773
+RT   "A previously uncharacterized gene, yjfO (bsmA), influences Escherichia
+RT   coli biofilm formation and stress response.";
+RA   Weber M.M., French C.L., Barnes M.B., Siegele D.A., McLean R.J.;
+RL   Microbiology 156:139-147(2010).
+
+--- End of Current DESC file ---

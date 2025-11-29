@@ -1,0 +1,517 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   HPRS_ECOLI              Reviewed;         452 AA.
+AC   P76339;
+DE   RecName: Full=Sensor histidine kinase HprS {ECO:0000305};
+DE            EC=2.7.13.3 {ECO:0000305|PubMed:15522865};
+DE   AltName: Full=Hydrogen peroxide response sensor {ECO:0000303|PubMed:27983483};
+GN   Name=hprS {ECO:0000303|PubMed:27983483}; Synonyms=yedV;
+GN   OrderedLocusNames=b1968, JW1951;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9097040; DOI=10.1093/dnares/3.6.379;
+RA   Itoh T., Aiba H., Baba T., Fujita K., Hayashi K., Inada T., Isono K.,
+RA   Kasai H., Kimura S., Kitakawa M., Kitagawa M., Makino K., Miki T.,
+RA   Mizobuchi K., Mori H., Mori T., Motomura K., Nakade S., Nakamura Y.,
+RA   Nashimoto H., Nishio Y., Oshima T., Saito N., Sampei G., Seki Y.,
+RA   Sivasundaram S., Tagami H., Takeda J., Takemoto K., Wada C., Yamamoto Y.,
+RA   Horiuchi T.;
+RT   "A 460-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 40.1-50.0 min region on the linkage map.";
+RL   DNA Res. 3:379-392(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   FUNCTION, AUTOPHOSPHORYLATION, AND CATALYTIC ACTIVITY.
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=15522865; DOI=10.1074/jbc.m410104200;
+RA   Yamamoto K., Hirao K., Oshima T., Aiba H., Utsumi R., Ishihama A.;
+RT   "Functional characterization in vitro of all two-component signal
+RT   transduction systems from Escherichia coli.";
+RL   J. Biol. Chem. 280:1448-1456(2005).
+RN   [5]
+RP   TOPOLOGY [LARGE SCALE ANALYSIS], AND SUBCELLULAR LOCATION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=15919996; DOI=10.1126/science.1109730;
+RA   Daley D.O., Rapp M., Granseth E., Melen K., Drew D., von Heijne G.;
+RT   "Global topology analysis of the Escherichia coli inner membrane
+RT   proteome.";
+RL   Science 308:1321-1323(2005).
+RN   [6]
+RP   FUNCTION, AND INTERPLAY BETWEEN HPRSR AND CUSSR.
+RX   PubMed=25568260; DOI=10.1099/mic.0.000026;
+RA   Urano H., Umezawa Y., Yamamoto K., Ishihama A., Ogasawara H.;
+RT   "Cooperative regulation of the common target genes between H(2)O(2)-sensing
+RT   YedVW and Cu2+-sensing CusSR in Escherichia coli.";
+RL   Microbiology 161:729-738(2015).
+RN   [7]
+RP   FUNCTION, INTERPLAY BETWEEN HPRSR AND CUSSR, AND MUTAGENESIS OF CYS-165;
+RP   CYS-333 AND CYS-338.
+RX   PubMed=27983483; DOI=10.1099/mic.0.000410;
+RA   Urano H., Yoshida M., Ogawa A., Yamamoto K., Ishihama A., Ogasawara H.;
+RT   "Cross-regulation between two common ancestral response regulators, HprR
+RT   and CusR, in Escherichia coli.";
+RL   Microbiology 163:243-252(2017).
+CC   -!- FUNCTION: Member of a two-component regulatory system HprR/HprS
+CC       involved in response to hydrogen peroxide (PubMed:25568260,
+CC       PubMed:27983483). Senses H(2)O(2), maybe via the redox state of the
+CC       membrane (PubMed:27983483). Activates HprR by phosphorylation
+CC       (PubMed:15522865). Can also phosphorylate CusR (PubMed:15522865).
+CC       {ECO:0000269|PubMed:15522865, ECO:0000269|PubMed:25568260,
+CC       ECO:0000269|PubMed:27983483}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=ATP + protein L-histidine = ADP + protein N-phospho-L-
+CC         histidine.; EC=2.7.13.3; Evidence={ECO:0000305|PubMed:15522865};
+CC   -!- INTERACTION:
+CC       P76339; Q46896: ygbT; NbExp=3; IntAct=EBI-554869, EBI-1130209;
+CC   -!- SUBCELLULAR LOCATION: Cell inner membrane
+CC       {ECO:0000269|PubMed:15919996}; Multi-pass membrane protein
+CC       {ECO:0000255}.
+CC   -!- PTM: Autophosphorylated. {ECO:0000269|PubMed:15522865}.
+CC   -!- MISCELLANEOUS: HprSR and CusSR form a unique regulation system, where
+CC       both two-component systems recognize and regulate the same set of
+CC       genes, but under different environmental conditions. HprSR plays a role
+CC       in H(2)O(2) response regulation, while CusSR plays a role in Cu(2+)
+CC       response regulation. {ECO:0000269|PubMed:25568260,
+CC       ECO:0000269|PubMed:27983483}.
+DR   EMBL; U00096; AAC75034.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA15795.1; -; Genomic_DNA.
+DR   PIR; D64961; D64961.
+DR   RefSeq; NP_416477.1; NC_000913.3.
+DR   RefSeq; WP_000826792.1; NZ_LN832404.1.
+DR   PDB; 9EPN; X-ray; 1.70 A; A/B=178-452.
+DR   PDBsum; 9EPN; -.
+DR   AlphaFoldDB; P76339; -.
+DR   SMR; P76339; -.
+DR   BioGRID; 4259161; 18.
+DR   BioGRID; 850838; 1.
+DR   DIP; DIP-11852N; -.
+DR   FunCoup; P76339; 26.
+DR   IntAct; P76339; 4.
+DR   STRING; 511145.b1968; -.
+DR   PaxDb; 511145-b1968; -.
+DR   EnsemblBacteria; AAC75034; AAC75034; b1968.
+DR   GeneID; 946487; -.
+DR   KEGG; ecj:JW1951; -.
+DR   KEGG; eco:b1968; -.
+DR   KEGG; ecoc:C3026_11120; -.
+DR   PATRIC; fig|1411691.4.peg.282; -.
+DR   EchoBASE; EB3797; -.
+DR   eggNOG; COG2205; Bacteria.
+DR   HOGENOM; CLU_000445_89_6_6; -.
+DR   InParanoid; P76339; -.
+DR   OMA; KSHIHIT; -.
+DR   OrthoDB; 9809766at2; -.
+DR   PhylomeDB; P76339; -.
+DR   BioCyc; EcoCyc:G7056-MONOMER; -.
+DR   BioCyc; MetaCyc:G7056-MONOMER; -.
+DR   PRO; PR:P76339; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; ISM:EcoCyc.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0000155; F:phosphorelay sensor kinase activity; IEA:InterPro.
+DR   GO; GO:0004672; F:protein kinase activity; IDA:EcoCyc.
+DR   GO; GO:0016772; F:transferase activity, transferring phosphorus-containing groups; IDA:EcoCyc.
+DR   GO; GO:0006974; P:DNA damage response; IEP:EcoCyc.
+DR   GO; GO:0000160; P:phosphorelay signal transduction system; IBA:GO_Central.
+DR   GO; GO:0046688; P:response to copper ion; IEP:EcoCyc.
+DR   GO; GO:1901530; P:response to hypochlorite; IDA:EcoCyc.
+DR   CDD; cd16923; HATPase_VanS-like; 1.
+DR   CDD; cd00082; HisKA; 1.
+DR   FunFam; 3.30.565.10:FF:000074; Sensor protein; 1.
+DR   Gene3D; 1.10.287.130; -; 1.
+DR   Gene3D; 6.10.340.10; -; 1.
+DR   Gene3D; 3.30.565.10; Histidine kinase-like ATPase, C-terminal domain; 1.
+DR   InterPro; IPR006290; CztS_silS_copS.
+DR   InterPro; IPR003660; HAMP_dom.
+DR   InterPro; IPR036890; HATPase_C_sf.
+DR   InterPro; IPR005467; His_kinase_dom.
+DR   InterPro; IPR003661; HisK_dim/P_dom.
+DR   InterPro; IPR036097; HisK_dim/P_sf.
+DR   InterPro; IPR004358; Sig_transdc_His_kin-like_C.
+DR   InterPro; IPR050428; TCS_sensor_his_kinase.
+DR   NCBIfam; TIGR01386; cztS_silS_copS; 1.
+DR   PANTHER; PTHR45436:SF3; SENSOR HISTIDINE KINASE HPRS; 1.
+DR   PANTHER; PTHR45436; SENSOR HISTIDINE KINASE YKOH; 1.
+DR   Pfam; PF02518; HATPase_c; 1.
+DR   Pfam; PF00512; HisKA; 1.
+DR   PRINTS; PR00344; BCTRLSENSOR.
+DR   SMART; SM00387; HATPase_c; 1.
+DR   SMART; SM00388; HisKA; 1.
+DR   SUPFAM; SSF55874; ATPase domain of HSP90 chaperone/DNA topoisomerase II/histidine kinase; 1.
+DR   SUPFAM; SSF47384; Homodimeric domain of signal transducing histidine kinase; 1.
+DR   PROSITE; PS50885; HAMP; 1.
+DR   PROSITE; PS50109; HIS_KIN; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; ATP-binding; Cell inner membrane; Cell membrane; Kinase;
+KW   Membrane; Nucleotide-binding; Phosphoprotein; Reference proteome;
+KW   Transferase; Transmembrane; Transmembrane helix;
+KW   Two-component regulatory system.
+FT   CHAIN           1..452
+FT                   /note="Sensor histidine kinase HprS"
+FT                   /id="PRO_0000074914"
+FT   TOPO_DOM        1..9
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000305"
+FT   TRANSMEM        10..30
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        31..158
+FT                   /note="Periplasmic"
+FT                   /evidence="ECO:0000305"
+FT   TRANSMEM        159..179
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TOPO_DOM        180..452
+FT                   /note="Cytoplasmic"
+FT                   /evidence="ECO:0000269|PubMed:15919996"
+FT   DOMAIN          181..234
+FT                   /note="HAMP"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00102"
+FT   DOMAIN          242..452
+FT                   /note="Histidine kinase"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00107"
+FT   SITE            165
+FT                   /note="Essential for the response to H(2)O(2)"
+FT                   /evidence="ECO:0000269|PubMed:27983483"
+FT   MOD_RES         245
+FT                   /note="Phosphohistidine; by autocatalysis"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00107"
+FT   MUTAGEN         165
+FT                   /note="C->A: Loss of H(2)O(2)-dependent transcription of
+FT                   hiuH."
+FT                   /evidence="ECO:0000269|PubMed:27983483"
+FT   MUTAGEN         333
+FT                   /note="C->A: No change in activity."
+FT                   /evidence="ECO:0000269|PubMed:27983483"
+FT   MUTAGEN         338
+FT                   /note="C->A: No change in activity."
+FT                   /evidence="ECO:0000269|PubMed:27983483"
+SQ   SEQUENCE   452 AA;  50850 MW;  172A6410C3CEBE8A CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+9	6	Escherichia.
+23	5	Enterobacteriaceae
+6	4	Burkholderiales
+33	4	Enterobacterales
+9	3	Betaproteobacteria
+37	3	Gammaproteobacteria
+46	2	Pseudomonadota
+46	1	Pseudomonadati
+46	0	Bacteria
+Total of 46 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A7ZN89	SENSOR PROTEIN {ECO:0000256|R    337.7    3.5e-98   1   1.4   6.1
+	P76339_TED01              	     5	   156	   337.0
+	PF00512	HisKA           	   235	   301	    42.9
+	PF02518	HATPase_c       	   344	   452	    63.4
+
+B2TWL7	SENSOR PROTEIN {ECO:0000256|R    339.2    1.2e-98   1   1.4   5.2
+	P76339_TED01              	     5	   156	   338.4
+	PF00512	HisKA           	   235	   301	    42.9
+	PF02518	HATPase_c       	   344	   452	    63.4
+
+B7L8Y5	SENSOR PROTEIN {ECO:0000256|R    341.2    2.9e-99   1   1.4   5.6
+	P76339_TED01              	     5	   156	   340.5
+	PF00512	HisKA           	   235	   301	    42.9
+	PF02518	HATPase_c       	   344	   452	    64.4
+
+B7USX8	SENSOR PROTEIN {ECO:0000256|R    336.6    7.8e-98   1   1.4   4.9
+	P76339_TED01              	     5	   156	   335.9
+	PF00512	HisKA           	   235	   301	    42.9
+	PF02518	HATPase_c       	   344	   452	    64.6
+
+P76339	SENSOR HISTIDINE KINASE HPRS {E    341.2    2.9e-99   1   1.4   5.6
+	P76339_TED01              	     5	   156	   340.5
+	PF00512	HisKA           	   235	   301	    42.9
+	PF02518	HATPase_c       	   344	   452	    64.4
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: P76339 (E-value: 2.6e-101, Score: 341.2)
+Mentioned as: P76339
+Description: Sensor histidine kinase HprS
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Sensor histidine kinase HprS; Hydrogen peroxide response sensor; EC 2.7.13.3
+PMID: 36551410
+Source: EuropePMC
+Title: New Insights into the Mechanism of Antibacterial Action of Synthetic Peptide <i>Mo</i>-CBP<sub>3</sub>-PepI against <i>Klebsiella pneumoniae</i>
+Journal: Antibiotics (Basel, Switzerland) (2022)
+Snippet: 0.273 Phosphate acyltransferase P75232 Mycoplasma pneumoniae (strain ATCC 29342/M129) Cytoplasm 3.096 Sensor histidine kinase HprS P76339 Escherichia coli (strain K12) Plasma membrane 0.213 Unknown Probable cytosol aminopeptidase P75206 Mycoplasma pneumoniae (strain ATCC 29342/M129) Cytoplasm 2.097 Putative acetyltransferase MPN_114 P75448 Mycoplasma pneumoniae (strain ATCC 29342/M129) Unknown 1.703
+
+================================================================================
+Protein: P76339 (E-value: 2.6e-101, Score: 341.2)
+Mentioned as: HPRS_ECOLI
+Description: Sensor histidine kinase HprS
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Sensor histidine kinase HprS; Hydrogen peroxide response sensor; EC 2.7.13.3
+PMID: 15522865
+Source: SwissProt
+Snippet: FUNCTION: Member of a two-component regulatory system HprR/HprS involved in response to hydrogen peroxide (PubMed:25568260, PubMed:27983483). Senses H(2)O(2), maybe via the redox state of the membrane (PubMed:27983483). Activates HprR by phosphorylation (PubMed:15522865). Can also phosphorylate CusR (PubMed:15522865). {ECO:0000269|PubMed:15522865, ECO:0000269|PubMed:25568260, ECO:0000269|PubMed:27983483}._:::_CATALYTIC ACTIVITY: Reaction=ATP + protein L-histidine = ADP + protein N-phospho-L- his...
+
+================================================================================
+Protein: P76339 (E-value: 2.6e-101, Score: 341.2)
+Mentioned as: HPRS_ECOLI
+Description: Sensor histidine kinase HprS
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - Sensor histidine kinase HprS; Hydrogen peroxide response sensor; EC 2.7.13.3
+PMID: 15919996
+Source: SwissProt
+Snippet: FUNCTION: Member of a two-component regulatory system HprR/HprS involved in response to hydrogen peroxide (PubMed:25568260, PubMed:27983483). Senses H(2)O(2), maybe via the redox state of the membrane (PubMed:27983483). Activates HprR by phosphorylation (PubMed:15522865). Can also phosphorylate CusR (PubMed:15522865). {ECO:0000269|PubMed:15522865, ECO:0000269|PubMed:25568260, ECO:0000269|PubMed:27983483}._:::_CATALYTIC ACTIVITY: Reaction=ATP + protein L-histidine = ADP + protein N-phospho-L- his...
+
+================================================================================
+Protein: VIMSS94175 (E-value: 1.4e-99, Score: 335.6)
+Mentioned as: ECs2706
+Description: putative 2-component sensor protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 19346340
+Source: EuropePMC
+Title: Gene expression induced in Escherichia coli O157:H7 upon exposure to model apple juice
+Journal: Applied and environmental microbiology (2009)
+Snippet: ECs1199 ECs1250 ECs1489 ECs1557 ECs1682 ECs1880 ECs2445 ECs2706 ECs2783 ECs2784 ECs2988 ECs2993 ECs3014 ECs3058 ECs3136 ECs3260 ECs3427 ECs3668 ECs3911 ECs4310
+
+================================================================================
+Protein: VIMSS287167 (E-value: 2.1e-97, Score: 328.5)
+Mentioned as: SF2015
+Description: putative 2-component sensor protein
+Organism: Shigella flexneri 2a str. 301
+PMID: 36474907
+Source: EuropePMC
+Title: Association of CRISPR-Cas System with the Antibiotic Resistance and Virulence Genes in Nosocomial Isolates of <i>Enterococcus</i>
+Journal: Infection and drug resistance (2022)
+Snippet: the Jiangsu Commission of Health (H2018073), and the Subject of Lianyungang Science and Technology Bureau (SF2015). Introduction Enterococci are a group of facultative anaerobic Gram-positive opportunistic pathogens. 1 Enterococcus faecium and Enterococcus faecalis are the dominant species of enterococci. 2 One of the most prominent features
+
+================================================================================
+Protein: VIMSS287167 (E-value: 2.1e-97, Score: 328.5)
+Mentioned as: SF2015
+Description: putative 2-component sensor protein
+Organism: Shigella flexneri 2a str. 301
+PMID: 34898261
+Source: EuropePMC
+Title: HprSR Is a Reactive Chlorine Species-Sensing, Two-Component System in Escherichia coli
+Journal: Journal of bacteriology (2022)
+
+================================================================================
+Protein: VIMSS287167 (E-value: 2.1e-97, Score: 328.5)
+Mentioned as: SF2015
+Description: putative 2-component sensor protein
+Organism: Shigella flexneri 2a str. 301
+PMID: 34513725
+Source: EuropePMC
+Title: <i>Aeromonas sobria</i> Induces Proinflammatory Cytokines Production in Mouse Macrophages <i>via</i> Activating NLRP3 Inflammasome Signaling Pathways
+Journal: Frontiers in cellular and infection microbiology (2021)
+Snippet: scientific research project in Jiangsu Province (BRA2019248), the Subject of Lianyungang Science and Technology Bureau (SF2015), and the Priority Academic Program Development of Jiangsu Higher Education Institutions of China for financial support. They had no role in study design, data collection and analysis, decision to publish,
+
+================================================================================
+Protein: VIMSS152819 (E-value: 1.9e-41, Score: 146.9)
+Mentioned as: STY1127
+Description: histidine kinase
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 32413972
+Source: EuropePMC
+Title: New Roles for Two-Component System Response Regulators of <i>Salmonella enterica</i> Serovar Typhi during Host Cell Interactions
+Journal: Microorganisms (2020)
+Snippet: required for virulence in mice [ 46 ], and in invasion [ 47 ] CopS (STY1127) CopR (STY1128) Uncharacterized a CpxA (STY3813) CpxR (STY3812) Membrane stress (AMR and metal resistance) [ 48 , 49 , 50 , 51 , 52 ]; SPI-1 repression [ 53 ,
+
+================================================================================
+Protein: VIMSS899309 (E-value: 2.1e-41, Score: 146.7)
+Mentioned as: SC1045
+Description: Copper resistance; histidine kinase
+Organism: Salmonella enterica subsp. enterica serovar Choleraesuis str. SC-B67
+PMID: 2558955
+Source: EuropePMC
+Title: Use of pulsed field gel electrophoresis and transposon mutagenesis to estimate the minimal number of genes required for motility in Caulobacter crescentus
+Journal: Genetics (1989)
+Snippet: ( f l ~ - 1 6 6 )SC1042 , (pa601), SC1043 (flu-616), SC1045 (flu-169), SC1049 (fluN616), SC1052 (flb0172), SC1054 ( f l ~ - 1 7 3 )SC1060 , ( f l ~ - 1 7 6
+
+================================================================================
+Protein: VIMSS899309 (E-value: 2.1e-41, Score: 146.7)
+Mentioned as: SC1045
+
+... (truncated - showing first 100 of 108 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P76339.1	AF-P76339-F1-model_v4_TED01:5-156	1	AF-P76339-F1-model_v4_TED01	5-156	100.0%
+P76339.1	AF-P76339-F1-model_v4_TED03:307-448	1	AF-P76339-F1-model_v4_TED03	307-448	0
+P76339.1	AF-P76339-F1-model_v4_TED02:214-298	1	AF-P76339-F1-model_v4_TED02	214-298	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 15
+Total networks analyzed: 15
+Total network proteins: 907
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF00072 (Response_reg)    15           422          100.0%
+PF00486 (Trans_reg_C)     15           235          100.0%
+PF00512 (HisKA)           15           160          100.0%
+PF00672 (HAMP)            15           61           100.0%
+PF01627 (Hpt)             15           54           100.0%
+PF02518 (HATPase_c)       15           190          100.0%
+PF00989 (PAS)             15           79           100.0%
+PF08448 (PAS_4)           15           73           100.0%
+PF09984 (sCache_4)        12           12            80.0%
+PF00990 (GGDEF)           12           55            80.0%
+PF13188 (PAS_8)           12           52            80.0%
+PF18415 (HKR_ArcB_TM)     12           12            80.0%
+PF00563 (EAL)             11           35            73.3%
+PF08447 (PAS_3)           11           52            73.3%
+PF13426 (PAS_9)           11           61            73.3%
+PF03814 (KdpA)            11           11            73.3%
+PF00576 (Transthyretin)   11           11            73.3%
+PF00122 (E1-E2_ATPase)    11           11            73.3%
+PF00702 (Hydrolase)       11           11            73.3%
+PF08282 (Hydrolase_3)     10           10            66.7%
+PF02669 (KdpC)            10           10            66.7%
+PF05231 (MASE1)           9            10            60.0%
+PF00196 (GerE)            9            23            60.0%
+PF29282 (Cache_BaeS_N)    9            9             60.0%
+PF26769 (HAMP_PhoQ)       8            16            53.3%
+PF09456 (RcsC)            8            8             53.3%
+PF00037 (Fer4)            8            9             53.3%
+PF01855 (POR_N)           8            8             53.3%
+PF10371 (EKR)             8            8             53.3%
+PF12838 (Fer4_7)          8            9             53.3%
+PF13183 (Fer4_8)          8            8             53.3%
+PF13187 (Fer4_9)          8            9             53.3%
+PF13237 (Fer4_10)         8            9             53.3%
+PF13484 (Fer4_16)         8            8             53.3%
+PF17147 (PFOR_II)         8            8             53.3%
+PF01558 (POR)             8            8             53.3%
+PF11808 (PhoR)            8            8             53.3%
+PF00497 (SBP_bac_3)       6            6             40.0%
+PF01584 (CheW)            6            12            40.0%
+PF00359 (PTS_EIIA_2)      5            6             33.3%
+PF21689 (TorS_sensor_domain) 5            5             33.3%
+PF01278 (Omptin)          4            5             26.7%
+PF01794 (Ferric_reduct)   4            4             26.7%
+PF13534 (Fer4_17)         4            4             26.7%
+PF00174 (Oxidored_molyb)  4            4             26.7%
+PF27158 (DjlB_C_2nd)      4            5             26.7%
+PF30223 (DjlC_C)          4            5             26.7%
+PF07731 (Cu-oxidase_2)    4            4             26.7%
+PF07732 (Cu-oxidase_3)    4            4             26.7%
+PF00015 (MCPsignal)       4            14            26.7%
+PF01339 (CheB_methylest)  4            4             26.7%
+PF04545 (Sigma70_r4)      4            5             26.7%
+PF08281 (Sigma70_r4_2)    4            5             26.7%
+PF00364 (Biotin_lipoyl)   4            11            26.7%
+PF02743 (dCache_1)        4            4             26.7%
+PF00198 (2-oxoacid_dh)    4            9             26.7%
+PF02817 (E3_binding)      4            8             26.7%
+PF08400 (phage_tail_N)    3            3             20.0%
+PF09972 (DUF2207)         3            3             20.0%
+PF21085 (CusS)            3            3             20.0%
+PF00381 (PTS-HPr)         3            5             20.0%
+PF14559 (TPR_19)          3            3             20.0%
+PF10263 (SprT-like)       3            3             20.0%
+PF17283 (Zn_ribbon_SprT)  3            3             20.0%
+PF13687 (DUF4153)         3            3             20.0%
+PF07730 (HisKA_3)         3            6             20.0%
+PF01134 (GIDA)            3            3             20.0%
+PF02852 (Pyr_redox_dim)   3            5             20.0%
+PF07992 (Pyr_redox_2)     3            5             20.0%
+PF12831 (FAD_oxidored)    3            4             20.0%
+PF00070 (Pyr_redox)       3            5             20.0%
+PF01590 (GAF)             3            17            20.0%
+PF13185 (GAF_2)           3            20            20.0%
+PF00501 (AMP-binding)     3            4             20.0%
+PF00550 (PP-binding)      3            4             20.0%
+PF13193 (AMP-binding_C)   3            4             20.0%
+PF00069 (Pkinase)         3            4             20.0%
+PF00890 (FAD_binding_2)   3            4             20.0%
+PF00156 (Pribosyltran)    3            3             20.0%
+PF13793 (Pribosyltran_N)  3            3             20.0%
+PF14572 (Pribosyl_synth)  3            3             20.0%
+PF13581 (HATPase_c_2)     3            4             20.0%
+PF13407 (Peripla_BP_4)    3            43            20.0%
+PF08521 (2CSK_N)          3            6             20.0%
+PF02954 (HTH_8)           3            7             20.0%
+PF00532 (Peripla_BP_1)    3            33            20.0%
+
+... (truncated - showing first 100 of 4332 lines)
+--- End of STRING protein interaction network ---
+
+--- Foldseek structural matches (copy to Claude) ---
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+P76339_TED01	query_model	PF21085	CusS	CL0183	PF21085_A0A1I4KQE7_1_res4-165	0.14	158	128	0	1.000	4.54e-05	163.0
+
+--- End of Foldseek structural matches ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P76339_TED01
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RC   Function description for P76339
+RN   [1]
+RM   15522865
+RT   "Functional characterization in vitro of all two-component signal
+RT   transduction systems from Escherichia coli.";
+RA   Yamamoto K., Hirao K., Oshima T., Aiba H., Utsumi R., Ishihama A.;
+RL   J. Biol. Chem. 280:1448-1456(2005).
+RC   Function description for P76339
+RN   [2]
+RM   25568260
+RT   "Cooperative regulation of the common target genes between H(2)O(2)-sensing
+RT   YedVW and Cu2+-sensing CusSR in Escherichia coli.";
+RA   Urano H., Umezawa Y., Yamamoto K., Ishihama A., Ogasawara H.;
+RL   Microbiology 161:729-738(2015).
+RC   Function description for P76339
+RN   [3]
+RM   27983483
+RT   "Cross-regulation between two common ancestral response regulators, HprR
+RT   and CusR, in Escherichia coli.";
+RA   Urano H., Yoshida M., Ogawa A., Yamamoto K., Ishihama A., Ogasawara H.;
+RL   Microbiology 163:243-252(2017).
+
+--- End of Current DESC file ---

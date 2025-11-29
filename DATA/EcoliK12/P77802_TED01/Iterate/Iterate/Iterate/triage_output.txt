@@ -1,0 +1,610 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   ECPC_ECOLI              Reviewed;         841 AA.
+AC   P77802; Q2MCD1;
+DE   RecName: Full=Probable outer membrane usher protein EcpC;
+DE   Flags: Precursor;
+GN   Name=ecpC; Synonyms=matD, yagX; OrderedLocusNames=b0291, JW0285;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RA   Chung E., Allen E., Araujo R., Aparicio A.M., Davis K., Duncan M.,
+RA   Federspiel N., Hyman R., Kalman S., Komp C., Kurdi O., Lew H., Lin D.,
+RA   Namath A., Oefner P., Roberts D., Schramm S., Davis R.W.;
+RT   "Sequence of minutes 4-25 of Escherichia coli.";
+RL   Submitted (JAN-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   EXPRESSION.
+RC   STRAIN=K12;
+RX   PubMed=20522494; DOI=10.1099/mic.0.039610-0;
+RA   Lehti T.A., Bauchart P., Heikkinen J., Hacker J., Korhonen T.K.,
+RA   Dobrindt U., Westerlund-Wikstrom B.;
+RT   "Mat fimbriae promote biofilm formation by meningitis-associated
+RT   Escherichia coli.";
+RL   Microbiology 156:2408-2417(2010).
+CC   -!- FUNCTION: Part of the ecpRABCDE operon, which encodes the E.coli common
+CC       pilus (ECP). ECP is found in both commensal and pathogenic strains and
+CC       plays a dual role in early-stage biofilm development and host cell
+CC       recognition (By similarity). {ECO:0000250}.
+CC   -!- INTERACTION:
+CC       P77802; P76594: patZ; NbExp=4; IntAct=EBI-561348, EBI-557388;
+CC   -!- INDUCTION: Negatively regulated by H-NS. Positively regulated by IHF
+CC       and EcpR (By similarity). {ECO:0000250}.
+CC   -!- MISCELLANEOUS: Not expressed under classical laboratory conditions, but
+CC       is functional when constitutively expressed.
+CC       {ECO:0000305|PubMed:20522494}.
+CC   -!- SIMILARITY: Belongs to the EcpC/MatD family. {ECO:0000305}.
+DR   EMBL; U73857; AAB18020.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC73394.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE76075.1; -; Genomic_DNA.
+DR   PIR; C64755; C64755.
+DR   RefSeq; NP_414825.1; NC_000913.3.
+DR   RefSeq; WP_001131096.1; NZ_SSZK01000048.1.
+DR   AlphaFoldDB; P77802; -.
+DR   BioGRID; 4259790; 217.
+DR   BioGRID; 851922; 1.
+DR   DIP; DIP-11250N; -.
+DR   FunCoup; P77802; 115.
+DR   IntAct; P77802; 2.
+DR   STRING; 511145.b0291; -.
+DR   PaxDb; 511145-b0291; -.
+DR   EnsemblBacteria; AAC73394; AAC73394; b0291.
+DR   GeneID; 947606; -.
+DR   KEGG; ecj:JW0285; -.
+DR   KEGG; eco:b0291; -.
+DR   KEGG; ecoc:C3026_01420; -.
+DR   KEGG; ecoc:C3026_24050; -.
+DR   PATRIC; fig|1411691.4.peg.1987; -.
+DR   EchoBASE; EB3333; -.
+DR   eggNOG; COG3188; Bacteria.
+DR   HOGENOM; CLU_017537_0_0_6; -.
+DR   InParanoid; P77802; -.
+DR   OMA; IYGASWG; -.
+DR   OrthoDB; 6730090at2; -.
+DR   BioCyc; EcoCyc:G6162-MONOMER; -.
+DR   PRO; PR:P77802; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   InterPro; IPR008969; CarboxyPept-like_regulatory.
+DR   InterPro; IPR031917; Pilus_assem_C.
+DR   InterPro; IPR032636; Pilus_assem_E-set-like_dom.
+DR   Pfam; PF15976; CooC_C; 1.
+DR   Pfam; PF16967; TcfC; 1.
+DR   SUPFAM; SSF49464; Carboxypeptidase regulatory domain-like; 1.
+PE   1: Evidence at protein level;
+KW   Fimbrium biogenesis; Reference proteome; Signal; Transport.
+FT   SIGNAL          1..29
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           30..841
+FT                   /note="Probable outer membrane usher protein EcpC"
+FT                   /id="PRO_0000013788"
+SQ   SEQUENCE   841 AA;  91229 MW;  D2016BB0ACD726AC CRC64;
+//
+ID   ECPC_ECOL6              Reviewed;         841 AA.
+AC   Q8CWC1;
+DE   RecName: Full=Probable outer membrane usher protein EcpC;
+DE   Flags: Precursor;
+GN   Name=ecpC; Synonyms=yagX; OrderedLocusNames=c0402;
+OS   Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=199310;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CFT073 / ATCC 700928 / UPEC;
+RX   PubMed=12471157; DOI=10.1073/pnas.252529799;
+RA   Welch R.A., Burland V., Plunkett G. III, Redford P., Roesch P., Rasko D.,
+RA   Buckles E.L., Liou S.-R., Boutin A., Hackett J., Stroud D., Mayhew G.F.,
+RA   Rose D.J., Zhou S., Schwartz D.C., Perna N.T., Mobley H.L.T.,
+RA   Donnenberg M.S., Blattner F.R.;
+RT   "Extensive mosaic structure revealed by the complete genome sequence of
+RT   uropathogenic Escherichia coli.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:17020-17024(2002).
+CC   -!- FUNCTION: Part of the ecpRABCDE operon, which encodes the E.coli common
+CC       pilus (ECP). ECP is found in both commensal and pathogenic strains and
+CC       plays a dual role in early-stage biofilm development and host cell
+CC       recognition (By similarity). {ECO:0000250}.
+CC   -!- INDUCTION: Negatively regulated by H-NS. Positively regulated by IHF
+CC       and EcpR (By similarity). {ECO:0000250}.
+CC   -!- SIMILARITY: Belongs to the EcpC/MatD family. {ECO:0000305}.
+DR   EMBL; AE014075; AAN78883.1; -; Genomic_DNA.
+DR   RefSeq; WP_001131117.1; NZ_CP051263.1.
+DR   AlphaFoldDB; Q8CWC1; -.
+DR   STRING; 199310.c0402; -.
+DR   KEGG; ecc:c0402; -.
+DR   eggNOG; COG3188; Bacteria.
+DR   HOGENOM; CLU_017537_0_0_6; -.
+DR   BioCyc; ECOL199310:C0402-MONOMER; -.
+DR   Proteomes; UP000001410; Chromosome.
+DR   InterPro; IPR008969; CarboxyPept-like_regulatory.
+DR   InterPro; IPR031917; Pilus_assem_C.
+DR   InterPro; IPR032636; Pilus_assem_E-set-like_dom.
+DR   Pfam; PF15976; CooC_C; 1.
+DR   Pfam; PF16967; TcfC; 1.
+DR   SUPFAM; SSF49464; Carboxypeptidase regulatory domain-like; 1.
+PE   3: Inferred from homology;
+KW   Fimbrium biogenesis; Reference proteome; Signal; Transport.
+FT   SIGNAL          1..29
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           30..841
+FT                   /note="Probable outer membrane usher protein EcpC"
+FT                   /id="PRO_0000429533"
+SQ   SEQUENCE   841 AA;  91262 MW;  A92E97BA8448F713 CRC64;
+//
+ID   ECPC_ECO57              Reviewed;         841 AA.
+AC   Q8X6I4; Q7AHC2;
+DE   RecName: Full=Probable outer membrane usher protein EcpC;
+DE   Flags: Precursor;
+GN   Name=ecpC; Synonyms=yagX; OrderedLocusNames=Z0358, ECs0321;
+OS   Escherichia coli O157:H7.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=11258796; DOI=10.1093/dnares/8.1.11;
+RA   Hayashi T., Makino K., Ohnishi M., Kurokawa K., Ishii K., Yokoyama K.,
+RA   Han C.-G., Ohtsubo E., Nakayama K., Murata T., Tanaka M., Tobe T., Iida T.,
+RA   Takami H., Honda T., Sasakawa C., Ogasawara N., Yasunaga T., Kuhara S.,
+RA   Shiba T., Hattori M., Shinagawa H.;
+RT   "Complete genome sequence of enterohemorrhagic Escherichia coli O157:H7 and
+RT   genomic comparison with a laboratory strain K-12.";
+RL   DNA Res. 8:11-22(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=11206551; DOI=10.1038/35054089;
+RA   Perna N.T., Plunkett G. III, Burland V., Mau B., Glasner J.D., Rose D.J.,
+RA   Mayhew G.F., Evans P.S., Gregor J., Kirkpatrick H.A., Posfai G.,
+RA   Hackett J., Klink S., Boutin A., Shao Y., Miller L., Grotbeck E.J.,
+RA   Davis N.W., Lim A., Dimalanta E.T., Potamousis K., Apodaca J.,
+RA   Anantharaman T.S., Lin J., Yen G., Schwartz D.C., Welch R.A.,
+RA   Blattner F.R.;
+RT   "Genome sequence of enterohaemorrhagic Escherichia coli O157:H7.";
+RL   Nature 409:529-533(2001).
+RN   [3]
+RP   INDUCTION.
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=22797761; DOI=10.1128/jb.00915-12;
+RA   Martinez-Santos V.I., Medrano-Lopez A., Saldana Z., Giron J.A.,
+RA   Puente J.L.;
+RT   "Transcriptional regulation of the ecp operon by EcpR, IHF, and H-NS in
+RT   attaching and effacing Escherichia coli.";
+RL   J. Bacteriol. 194:5020-5033(2012).
+CC   -!- FUNCTION: Part of the ecpRABCDE operon, which encodes the E.coli common
+CC       pilus (ECP). ECP is found in both commensal and pathogenic strains and
+CC       plays a dual role in early-stage biofilm development and host cell
+CC       recognition (By similarity). {ECO:0000250}.
+CC   -!- INDUCTION: Negatively regulated by H-NS. Positively regulated by IHF
+CC       and EcpR. {ECO:0000269|PubMed:22797761}.
+CC   -!- SIMILARITY: Belongs to the EcpC/MatD family. {ECO:0000305}.
+DR   EMBL; AE005174; AAG54616.1; -; Genomic_DNA.
+DR   EMBL; BA000007; BAB33744.1; -; Genomic_DNA.
+DR   PIR; A90669; A90669.
+DR   PIR; D85519; D85519.
+DR   RefSeq; NP_308348.1; NC_002695.1.
+DR   RefSeq; WP_001131063.1; NZ_SEKU01000045.1.
+DR   AlphaFoldDB; Q8X6I4; -.
+DR   SMR; Q8X6I4; -.
+DR   STRING; 155864.Z0358; -.
+DR   GeneID; 914420; -.
+DR   KEGG; ece:Z0358; -.
+DR   KEGG; ecs:ECs_0321; -.
+DR   PATRIC; fig|386585.9.peg.415; -.
+DR   eggNOG; COG3188; Bacteria.
+DR   HOGENOM; CLU_017537_0_0_6; -.
+DR   OMA; IYGASWG; -.
+DR   Proteomes; UP000000558; Chromosome.
+DR   Proteomes; UP000002519; Chromosome.
+DR   InterPro; IPR008969; CarboxyPept-like_regulatory.
+DR   InterPro; IPR031917; Pilus_assem_C.
+DR   InterPro; IPR032636; Pilus_assem_E-set-like_dom.
+DR   Pfam; PF15976; CooC_C; 1.
+DR   Pfam; PF16967; TcfC; 1.
+DR   SUPFAM; SSF49464; Carboxypeptidase regulatory domain-like; 1.
+PE   2: Evidence at transcript level;
+KW   Fimbrium biogenesis; Reference proteome; Signal; Transport.
+FT   SIGNAL          1..29
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           30..841
+FT                   /note="Probable outer membrane usher protein EcpC"
+FT                   /id="PRO_0000429531"
+SQ   SEQUENCE   841 AA;  91227 MW;  DCCB0ACA1CB821E5 CRC64;
+//
+ID   ECPC_ECO27              Reviewed;         841 AA.
+AC   B7UJD9;
+DE   RecName: Full=Probable outer membrane usher protein EcpC;
+DE   Flags: Precursor;
+GN   Name=ecpC; OrderedLocusNames=E2348C_0247;
+OS   Escherichia coli O127:H6 (strain E2348/69 / EPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=574521;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=E2348/69 / EPEC;
+RX   PubMed=18952797; DOI=10.1128/jb.01238-08;
+RA   Iguchi A., Thomson N.R., Ogura Y., Saunders D., Ooka T., Henderson I.R.,
+RA   Harris D., Asadulghani M., Kurokawa K., Dean P., Kenny B., Quail M.A.,
+RA   Thurston S., Dougan G., Hayashi T., Parkhill J., Frankel G.;
+RT   "Complete genome sequence and comparative genome analysis of
+RT   enteropathogenic Escherichia coli O127:H6 strain E2348/69.";
+RL   J. Bacteriol. 191:347-354(2009).
+RN   [2]
+RP   INDUCTION.
+RC   STRAIN=E2348/69 / EPEC;
+RX   PubMed=22797761; DOI=10.1128/jb.00915-12;
+RA   Martinez-Santos V.I., Medrano-Lopez A., Saldana Z., Giron J.A.,
+RA   Puente J.L.;
+RT   "Transcriptional regulation of the ecp operon by EcpR, IHF, and H-NS in
+RT   attaching and effacing Escherichia coli.";
+RL   J. Bacteriol. 194:5020-5033(2012).
+CC   -!- FUNCTION: Part of the ecpRABCDE operon, which encodes the E.coli common
+CC       pilus (ECP). ECP is found in both commensal and pathogenic strains and
+CC       plays a dual role in early-stage biofilm development and host cell
+CC       recognition (By similarity). {ECO:0000250}.
+CC   -!- INDUCTION: Negatively regulated by H-NS. Positively regulated by IHF
+CC       and EcpR. {ECO:0000269|PubMed:22797761}.
+CC   -!- SIMILARITY: Belongs to the EcpC/MatD family. {ECO:0000305}.
+DR   EMBL; FM180568; CAS07795.1; -; Genomic_DNA.
+DR   RefSeq; WP_001131110.1; NC_011601.1.
+DR   AlphaFoldDB; B7UJD9; -.
+DR   KEGG; ecg:E2348C_0247; -.
+DR   HOGENOM; CLU_017537_0_0_6; -.
+DR   Proteomes; UP000008205; Chromosome.
+DR   InterPro; IPR008969; CarboxyPept-like_regulatory.
+DR   InterPro; IPR031917; Pilus_assem_C.
+DR   InterPro; IPR032636; Pilus_assem_E-set-like_dom.
+DR   Pfam; PF15976; CooC_C; 1.
+DR   Pfam; PF16967; TcfC; 1.
+DR   SUPFAM; SSF49464; Carboxypeptidase regulatory domain-like; 1.
+PE   2: Evidence at transcript level;
+KW   Fimbrium biogenesis; Reference proteome; Signal; Transport.
+FT   SIGNAL          1..29
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           30..841
+FT                   /note="Probable outer membrane usher protein EcpC"
+FT                   /id="PRO_0000429530"
+SQ   SEQUENCE   841 AA;  91365 MW;  44B629BA30F32359 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+5	7	Klebsiella
+6	6	Escherichia.
+5	6	Klebsiella/Raoultella group
+4	5	Yersiniaceae
+15	5	Enterobacteriaceae
+22	4	Enterobacterales
+24	3	Gammaproteobacteria
+24	2	Pseudomonadota
+24	1	Pseudomonadati
+24	0	Bacteria
+Total of 25 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A5R9L898	OUTER MEMBRANE USHER PROT    135.4    4.9e-36   1   1.5   3.0
+	Iterate                   	    43	   152	   134.5
+	PF16967	TcfC            	   283	   350	    66.5
+	PF15976	CooC_C          	   732	   824	    69.2
+
+B7UJD9	PROBABLE OUTER MEMBRANE USHER P    133.2    2.3e-35   1   1.5   0.6
+	Iterate                   	    43	   152	   132.4
+	PF16967	TcfC            	   283	   350	    66.5
+	PF15976	CooC_C          	   732	   824	      73
+
+P77802	PROBABLE OUTER MEMBRANE USHER P    133.1    2.5e-35   1   1.4   0.6
+	Iterate                   	    43	   152	   132.3
+	PF16967	TcfC            	   283	   350	    66.5
+	PF15976	CooC_C          	   732	   824	      73
+
+Q8CWC1	PROBABLE OUTER MEMBRANE USHER P    133.4    1.9e-35   1   1.4   0.5
+	Iterate                   	    43	   152	   132.7
+	PF16967	TcfC            	   283	   350	    66.5
+	PF15976	CooC_C          	   732	   824	      73
+
+Q8X6I4	PROBABLE OUTER MEMBRANE USHER P    133.1    2.5e-35   1   1.4   0.6
+	Iterate                   	    43	   152	   132.3
+	PF16967	TcfC            	   283	   350	    66.5
+	PF15976	CooC_C          	   732	   824	      73
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS14429 (E-value: 9.7e-38, Score: 134.2)
+Mentioned as: b0291
+Description: predicted aromatic compound dioxygenase
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 11133948
+Source: EuropePMC
+Title: High-density microarray-mediated gene expression profiling of Escherichia coli
+Journal: Journal of bacteriology (2001)
+Snippet: sdhC, selB, tdcA, tnaL, b0177, b0250, b0269, b0271, b0291, b0322, b0574, b1437, b1595, b1824, b1978, b2067, b2086, b2088, b2097, b2270, b2292, b2630, b2641,
+
+================================================================================
+Protein: VIMSS2031867 (E-value: 1.6e-29, Score: 107.7)
+Mentioned as: AHA_0060
+Description: hypothetical protein
+Organism: Aeromonas hydrophila subsp. hydrophila ATCC 7966
+PMID: 39687168
+Source: EuropePMC
+Title: A novel in-silico approach to design a multiepitope peptide as a vaccine candidate for <i>Aeromonas</i> <i>hydrophila</i>
+Journal: Heliyon (2024)
+Snippet: PF01569. AHA_3523 Conserved hypothetical protein; match to protein family HMM PF06476. AHA_3295 Conserved hypothetical protein. AHA_0060 Conserved hypothetical protein. AHA_1021 match to protein family HMM PF00419. AHA_0524 match to protein family HMM PF00419. AHA_0519 3.8 In Silico Immune Simulation The immune response generated by the C-ImmSim
+
+================================================================================
+Protein: VIMSS2031867 (E-value: 1.6e-29, Score: 107.7)
+Mentioned as: AHA_0060
+Description: hypothetical protein
+Organism: Aeromonas hydrophila subsp. hydrophila ATCC 7966
+PMID: 24795370
+Source: EuropePMC
+Title: Functional genomic characterization of virulence factors from necrotizing fasciitis-causing strains of Aeromonas hydrophila
+Journal: Applied and environmental microbiology (2014)
+Snippet: Surface appendages and features CFA/I ( C/U) fimbriae, AHA_0060 CFA/I ( C/U) fimbriae, AHA_1021 P ( C/U) fimbriae, AHA_0521 Phage-encoded P ( C/U) fimbriae
+
+================================================================================
+Protein: VIMSS2031867 (E-value: 1.6e-29, Score: 107.7)
+Mentioned as: AHA_0060
+Description: hypothetical protein
+Organism: Aeromonas hydrophila subsp. hydrophila ATCC 7966
+PMID: 23611906
+Source: EuropePMC
+Title: Characterization of Aeromonas hydrophila wound pathotypes by comparative genomic and functional analyses of virulence genes
+Journal: mBio (2013)
+Snippet: + + + + Nitrate-nitrite reductase + + + + Appendages CFA/I ( C/U) fimbriae, AHA_0060 + + + + + + CFA/I ( C/U) fimbriae, AHA_1021 + + + + P ( C/U) fimbriae, AHA_0521 + + + + + + Tap type IV pilus
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A095TTW4.1	AF-A0A095TTW4-F1-model_v4_TED01:31-145	1	AF-A0A095TTW4-F1-model_v4_TED01	31-145	99.1%
+A0A095TTW4.1	AF-A0A095TTW4-F1-model_v4_TED02:276-345	1	AF-A0A095TTW4-F1-model_v4_TED02	276-345	0
+A0A095TTW4.1	AF-A0A095TTW4-F1-model_v4_TED03:741-819	1	AF-A0A095TTW4-F1-model_v4_TED03	741-819	0
+A0A0H3CEF4.1	AF-A0A0H3CEF4-F1-model_v4_TED01:31-61_72-147	1	AF-A0A0H3CEF4-F1-model_v4_TED01	31-147	92.4%
+A0A0H3CEF4.1	AF-A0A0H3CEF4-F1-model_v4_TED02:284-352	1	AF-A0A0H3CEF4-F1-model_v4_TED02	284-352	0
+A0A0H3CEF4.1	AF-A0A0H3CEF4-F1-model_v4_TED03:763-845	1	AF-A0A0H3CEF4-F1-model_v4_TED03	763-845	0
+A0A0H3CQX3.1	AF-A0A0H3CQX3-F1-model_v4_TED01:26-141	1	AF-A0A0H3CQX3-F1-model_v4_TED01	26-141	98.2%
+A0A0H3CQX3.1	AF-A0A0H3CQX3-F1-model_v4_TED02:150-186_576-739	1	AF-A0A0H3CQX3-F1-model_v4_TED02	150-739	0
+A0A0H3CQX3.1	AF-A0A0H3CQX3-F1-model_v4_TED03:275-340	1	AF-A0A0H3CQX3-F1-model_v4_TED03	275-340	0
+A0A0H3CQX3.1	AF-A0A0H3CQX3-F1-model_v4_TED04:745-822	1	AF-A0A0H3CQX3-F1-model_v4_TED04	745-822	0
+A0A0H3FI74.1	AF-A0A0H3FI74-F1-model_v4_TED01:34-149	1	AF-A0A0H3FI74-F1-model_v4_TED01	34-149	100.0%
+A0A0H3FI74.1	AF-A0A0H3FI74-F1-model_v4_TED02:279-348	1	AF-A0A0H3FI74-F1-model_v4_TED02	279-348	0
+A0A0H3FI74.1	AF-A0A0H3FI74-F1-model_v4_TED03:752-828	1	AF-A0A0H3FI74-F1-model_v4_TED03	752-828	0
+A0A0H3FRS1.1	AF-A0A0H3FRS1-F1-model_v4_TED01:40-151	1	AF-A0A0H3FRS1-F1-model_v4_TED01	40-151	99.1%
+A0A0H3FRS1.1	AF-A0A0H3FRS1-F1-model_v4_TED02:282-351	1	AF-A0A0H3FRS1-F1-model_v4_TED02	282-351	0
+A0A0H3FRS1.1	AF-A0A0H3FRS1-F1-model_v4_TED03:648-746	1	AF-A0A0H3FRS1-F1-model_v4_TED03	648-746	0
+A0A0H3FRS1.1	AF-A0A0H3FRS1-F1-model_v4_TED04:748-835	1	AF-A0A0H3FRS1-F1-model_v4_TED04	748-835	0
+A0A0H3GTF7.1	AF-A0A0H3GTF7-F1-model_v4_TED01:32-147	1	AF-A0A0H3GTF7-F1-model_v4_TED01	32-147	98.2%
+A0A0H3GTF7.1	AF-A0A0H3GTF7-F1-model_v4_TED02:156-233_617-747	1	AF-A0A0H3GTF7-F1-model_v4_TED02	156-747	0
+A0A0H3GTF7.1	AF-A0A0H3GTF7-F1-model_v4_TED03:278-347	1	AF-A0A0H3GTF7-F1-model_v4_TED03	278-347	0
+A0A0H3GTF7.1	AF-A0A0H3GTF7-F1-model_v4_TED04:752-828	1	AF-A0A0H3GTF7-F1-model_v4_TED04	752-828	0
+A0A0J6NQ77.1	AF-A0A0J6NQ77-F1-model_v4_TED01:4-138	1	AF-A0A0J6NQ77-F1-model_v4_TED01	4-138	99.1%
+A0A0J6NQ77.1	AF-A0A0J6NQ77-F1-model_v4_TED02:270-339	1	AF-A0A0J6NQ77-F1-model_v4_TED02	270-339	0
+A0A0J6NQ77.1	AF-A0A0J6NQ77-F1-model_v4_TED03:635-728	1	AF-A0A0J6NQ77-F1-model_v4_TED03	635-728	0
+A0A0J6NQ77.1	AF-A0A0J6NQ77-F1-model_v4_TED04:730-806	1	AF-A0A0J6NQ77-F1-model_v4_TED04	730-806	0
+A0A0N0Z8Y2.1	AF-A0A0N0Z8Y2-F1-model_v4_TED01:28-143	1	AF-A0A0N0Z8Y2-F1-model_v4_TED01	28-143	98.2%
+A0A0N0Z8Y2.1	AF-A0A0N0Z8Y2-F1-model_v4_TED02:157-223_561-740	1	AF-A0A0N0Z8Y2-F1-model_v4_TED02	157-740	0
+A0A0N0Z8Y2.1	AF-A0A0N0Z8Y2-F1-model_v4_TED03:275-344	1	AF-A0A0N0Z8Y2-F1-model_v4_TED03	275-344	0
+A0A0N0Z8Y2.1	AF-A0A0N0Z8Y2-F1-model_v4_TED05:746-825	1	AF-A0A0N0Z8Y2-F1-model_v4_TED05	746-825	0
+A0A0N0Z8Y2.1	AF-A0A0N0Z8Y2-F1-model_v4_TED04:478-541	1	AF-A0A0N0Z8Y2-F1-model_v4_TED04	478-541	0
+A0A198GCB4.1	AF-A0A198GCB4-F1-model_v4_TED01:28-141	1	AF-A0A198GCB4-F1-model_v4_TED01	28-141	96.4%
+A0A198GCB4.1	AF-A0A198GCB4-F1-model_v4_TED02:279-344	1	AF-A0A198GCB4-F1-model_v4_TED02	279-344	0
+A0A198GCB4.1	AF-A0A198GCB4-F1-model_v4_TED03:647-744	1	AF-A0A198GCB4-F1-model_v4_TED03	647-744	0
+A0A198GCB4.1	AF-A0A198GCB4-F1-model_v4_TED04:746-825	1	AF-A0A198GCB4-F1-model_v4_TED04	746-825	0
+A0A1B7JP87.1	AF-A0A1B7JP87-F1-model_v4_TED01:28-143	1	AF-A0A1B7JP87-F1-model_v4_TED01	28-143	98.2%
+A0A1B7JP87.1	AF-A0A1B7JP87-F1-model_v4_TED02:275-344	1	AF-A0A1B7JP87-F1-model_v4_TED02	275-344	0
+A0A1B7JP87.1	AF-A0A1B7JP87-F1-model_v4_TED03:648-744	1	AF-A0A1B7JP87-F1-model_v4_TED03	648-744	0
+A0A1B7JP87.1	AF-A0A1B7JP87-F1-model_v4_TED04:746-825	1	AF-A0A1B7JP87-F1-model_v4_TED04	746-825	0
+A0A1C4D6G2.1	AF-A0A1C4D6G2-F1-model_v4_TED01:38-148	1	AF-A0A1C4D6G2-F1-model_v4_TED01	38-148	99.1%
+A0A1C4D6G2.1	AF-A0A1C4D6G2-F1-model_v4_TED02:279-348	1	AF-A0A1C4D6G2-F1-model_v4_TED02	279-348	0
+A0A1C4D6G2.1	AF-A0A1C4D6G2-F1-model_v4_TED03:646-745	1	AF-A0A1C4D6G2-F1-model_v4_TED03	646-745	0
+A0A1C4D6G2.1	AF-A0A1C4D6G2-F1-model_v4_TED04:748-822	1	AF-A0A1C4D6G2-F1-model_v4_TED04	748-822	0
+A0A1S1HTA6.1	AF-A0A1S1HTA6-F1-model_v4_TED01:28-143	1	AF-A0A1S1HTA6-F1-model_v4_TED01	28-143	98.2%
+A0A1S1HTA6.1	AF-A0A1S1HTA6-F1-model_v4_TED02:279-344	1	AF-A0A1S1HTA6-F1-model_v4_TED02	279-344	0
+A0A1S1HTA6.1	AF-A0A1S1HTA6-F1-model_v4_TED03:646-744	1	AF-A0A1S1HTA6-F1-model_v4_TED03	646-744	0
+A0A1S1HTA6.1	AF-A0A1S1HTA6-F1-model_v4_TED04:745-825	1	AF-A0A1S1HTA6-F1-model_v4_TED04	745-825	0
+A0A241VW58.1	AF-A0A241VW58-F1-model_v4_TED01:30-146	1	AF-A0A241VW58-F1-model_v4_TED01	30-146	99.1%
+A0A241VW58.1	AF-A0A241VW58-F1-model_v4_TED02:153-186_610-636_649-739	1	AF-A0A241VW58-F1-model_v4_TED02	153-739	0
+A0A241VW58.1	AF-A0A241VW58-F1-model_v4_TED03:276-344	1	AF-A0A241VW58-F1-model_v4_TED03	276-344	0
+A0A241VW58.1	AF-A0A241VW58-F1-model_v4_TED04:477-538_545-581	1	AF-A0A241VW58-F1-model_v4_TED04	477-581	0
+A0A241VW58.1	AF-A0A241VW58-F1-model_v4_TED05:745-823	1	AF-A0A241VW58-F1-model_v4_TED05	745-823	0
+A0A250B688.1	AF-A0A250B688-F1-model_v4_TED01:32-143	1	AF-A0A250B688-F1-model_v4_TED01	32-143	94.6%
+A0A250B688.1	AF-A0A250B688-F1-model_v4_TED02:278-347	1	AF-A0A250B688-F1-model_v4_TED02	278-347	0
+A0A250B688.1	AF-A0A250B688-F1-model_v4_TED03:752-831	1	AF-A0A250B688-F1-model_v4_TED03	752-831	0
+A0A2I0FYY9.1	AF-A0A2I0FYY9-F1-model_v4_TED01:34-148	1	AF-A0A2I0FYY9-F1-model_v4_TED01	34-148	99.1%
+A0A2I0FYY9.1	AF-A0A2I0FYY9-F1-model_v4_TED02:279-348	1	AF-A0A2I0FYY9-F1-model_v4_TED02	279-348	0
+A0A2I0FYY9.1	AF-A0A2I0FYY9-F1-model_v4_TED03:740-815	1	AF-A0A2I0FYY9-F1-model_v4_TED03	740-815	0
+A0A370QEG4.1	AF-A0A370QEG4-F1-model_v4_TED01:32-146	1	AF-A0A370QEG4-F1-model_v4_TED01	32-146	98.2%
+A0A370QEG4.1	AF-A0A370QEG4-F1-model_v4_TED02:277-346	1	AF-A0A370QEG4-F1-model_v4_TED02	277-346	0
+A0A370QEG4.1	AF-A0A370QEG4-F1-model_v4_TED03:651-748	1	AF-A0A370QEG4-F1-model_v4_TED03	651-748	0
+A0A370QEG4.1	AF-A0A370QEG4-F1-model_v4_TED04:749-825	1	AF-A0A370QEG4-F1-model_v4_TED04	749-825	0
+A0A3S8ZP04.1	AF-A0A3S8ZP04-F1-model_v4_TED01:94-199	1	AF-A0A3S8ZP04-F1-model_v4_TED01	94-199	98.1%
+A0A3S8ZP04.1	AF-A0A3S8ZP04-F1-model_v4_TED02:214-284_638-644_655-786	1	AF-A0A3S8ZP04-F1-model_v4_TED02	214-786	0
+A0A3S8ZP04.1	AF-A0A3S8ZP04-F1-model_v4_TED03:288-328_402-516	1	AF-A0A3S8ZP04-F1-model_v4_TED03	288-516	0
+A0A3S8ZP04.1	AF-A0A3S8ZP04-F1-model_v4_TED04:330-398	1	AF-A0A3S8ZP04-F1-model_v4_TED04	330-398	0
+A0A3S8ZP04.1	AF-A0A3S8ZP04-F1-model_v4_TED05:792-877	1	AF-A0A3S8ZP04-F1-model_v4_TED05	792-877	0
+A0A484WTG9.1	AF-A0A484WTG9-F1-model_v4_TED01:29-60_72-148	1	AF-A0A484WTG9-F1-model_v4_TED01	29-148	94.1%
+A0A484WTG9.1	AF-A0A484WTG9-F1-model_v4_TED02:173-271	1	AF-A0A484WTG9-F1-model_v4_TED02	173-271	0
+A0A4P8YGC6.1	AF-A0A4P8YGC6-F1-model_v4_TED01:30-151	1	AF-A0A4P8YGC6-F1-model_v4_TED01	30-151	98.3%
+A0A4P8YGC6.1	AF-A0A4P8YGC6-F1-model_v4_TED02:282-351	1	AF-A0A4P8YGC6-F1-model_v4_TED02	282-351	0
+A0A4P8YGC6.1	AF-A0A4P8YGC6-F1-model_v4_TED03:362-591	1	AF-A0A4P8YGC6-F1-model_v4_TED03	362-591	0
+A0A4P8YGC6.1	AF-A0A4P8YGC6-F1-model_v4_TED04:761-844	1	AF-A0A4P8YGC6-F1-model_v4_TED04	761-844	0
+A0A542BJ56.1	AF-A0A542BJ56-F1-model_v4_TED01:34-149	1	AF-A0A542BJ56-F1-model_v4_TED01	34-149	100.0%
+A0A542BJ56.1	AF-A0A542BJ56-F1-model_v4_TED02:279-348	1	AF-A0A542BJ56-F1-model_v4_TED02	279-348	0
+A0A542BJ56.1	AF-A0A542BJ56-F1-model_v4_TED03:755-830	1	AF-A0A542BJ56-F1-model_v4_TED03	755-830	0
+A0A559SZJ0.1	AF-A0A559SZJ0-F1-model_v4_TED01:41-153	1	AF-A0A559SZJ0-F1-model_v4_TED01	41-153	99.1%
+A0A559SZJ0.1	AF-A0A559SZJ0-F1-model_v4_TED02:284-353	1	AF-A0A559SZJ0-F1-model_v4_TED02	284-353	0
+A0A559SZJ0.1	AF-A0A559SZJ0-F1-model_v4_TED03:650-748	1	AF-A0A559SZJ0-F1-model_v4_TED03	650-748	0
+A0A559SZJ0.1	AF-A0A559SZJ0-F1-model_v4_TED04:750-825	1	AF-A0A559SZJ0-F1-model_v4_TED04	750-825	0
+A0A5J6WQE7.1	AF-A0A5J6WQE7-F1-model_v4_TED01:25-142	1	AF-A0A5J6WQE7-F1-model_v4_TED01	25-142	98.2%
+A0A5J6WQE7.1	AF-A0A5J6WQE7-F1-model_v4_TED02:162-199_568-722	1	AF-A0A5J6WQE7-F1-model_v4_TED02	162-722	0
+A0A5J6WQE7.1	AF-A0A5J6WQE7-F1-model_v4_TED04:727-801	1	AF-A0A5J6WQE7-F1-model_v4_TED04	727-801	0
+A0A5J6WQE7.1	AF-A0A5J6WQE7-F1-model_v4_TED03:281-343	1	AF-A0A5J6WQE7-F1-model_v4_TED03	281-343	0
+A0A5R9L898.1	AF-A0A5R9L898-F1-model_v4_TED01:37-151	1	AF-A0A5R9L898-F1-model_v4_TED01	37-151	99.1%
+A0A5R9L898.1	AF-A0A5R9L898-F1-model_v4_TED02:282-351	1	AF-A0A5R9L898-F1-model_v4_TED02	282-351	0
+A0A5R9L898.1	AF-A0A5R9L898-F1-model_v4_TED03:747-823	1	AF-A0A5R9L898-F1-model_v4_TED03	747-823	0
+A0A6M8UM31.1	AF-A0A6M8UM31-F1-model_v4_TED01:38-154	1	AF-A0A6M8UM31-F1-model_v4_TED01	38-154	100.0%
+A0A6M8UM31.1	AF-A0A6M8UM31-F1-model_v4_TED02:282-351	1	AF-A0A6M8UM31-F1-model_v4_TED02	282-351	0
+A0A6M8UM31.1	AF-A0A6M8UM31-F1-model_v4_TED03:658-746	1	AF-A0A6M8UM31-F1-model_v4_TED03	658-746	0
+A0A6M8UM31.1	AF-A0A6M8UM31-F1-model_v4_TED04:747-823	1	AF-A0A6M8UM31-F1-model_v4_TED04	747-823	0
+A0A7Z9CUV3.1	AF-A0A7Z9CUV3-F1-model_v4_TED01:37-154	1	AF-A0A7Z9CUV3-F1-model_v4_TED01	37-154	100.0%
+A0A7Z9CUV3.1	AF-A0A7Z9CUV3-F1-model_v4_TED02:165-190_576-743	1	AF-A0A7Z9CUV3-F1-model_v4_TED02	165-743	0
+A0A7Z9CUV3.1	AF-A0A7Z9CUV3-F1-model_v4_TED03:284-351	1	AF-A0A7Z9CUV3-F1-model_v4_TED03	284-351	0
+A0A7Z9CUV3.1	AF-A0A7Z9CUV3-F1-model_v4_TED05:748-824	1	AF-A0A7Z9CUV3-F1-model_v4_TED05	748-824	0
+A0A7Z9CUV3.1	AF-A0A7Z9CUV3-F1-model_v4_TED04:495-501_509-574	1	AF-A0A7Z9CUV3-F1-model_v4_TED04	495-574	0
+A0A807LJ06.1	AF-A0A807LJ06-F1-model_v4_TED01:42-151	1	AF-A0A807LJ06-F1-model_v4_TED01	42-151	98.2%
+A0A807LJ06.1	AF-A0A807LJ06-F1-model_v4_TED02:168-202_600-746	1	AF-A0A807LJ06-F1-model_v4_TED02	168-746	0
+A0A807LJ06.1	AF-A0A807LJ06-F1-model_v4_TED03:283-352	1	AF-A0A807LJ06-F1-model_v4_TED03	283-352	0
+A0A807LJ06.1	AF-A0A807LJ06-F1-model_v4_TED04:751-827	1	AF-A0A807LJ06-F1-model_v4_TED04	751-827	0
+
+... (truncated - showing first 100 of 130 lines)
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 6
+Total networks analyzed: 6
+Total network proteins: 118
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF00345 (PapD_N)          6            25           100.0%
+PF01197 (Ribosomal_L31)   6            11           100.0%
+PF16449 (MatB)            6            6            100.0%
+PF18649 (EcpB_C)          6            7            100.0%
+PF27328 (EcpD_C)          6            6            100.0%
+PF29735 (EcpD_N)          6            6            100.0%
+PF29737 (EcpD_mid)        6            6            100.0%
+PF00677 (Lum_binding)     6            6            100.0%
+PF02753 (PapD_C)          5            20            83.3%
+PF00419 (Fimbrial)        4            5             66.7%
+PF00196 (GerE)            4            4             66.7%
+PF27348 (EcpR_N)          4            4             66.7%
+PF00460 (Flg_bb_rod)      4            5             66.7%
+PF00444 (Ribosomal_L36)   4            4             66.7%
+PF04204 (HTS)             4            4             66.7%
+PF03611 (EIIC-GAT)        3            6             50.0%
+PF02653 (BPD_transp_2)    3            3             50.0%
+PF03692 (CxxCxxCC)        2            2             33.3%
+PF01052 (FliMN_C)         2            2             33.3%
+PF13433 (Peripla_BP_5)    2            2             33.3%
+PF13458 (Peripla_BP_6)    2            2             33.3%
+PF01077 (NIR_SIR)         2            2             33.3%
+PF03460 (NIR_SIR_ferr)    2            2             33.3%
+PF07992 (Pyr_redox_2)     2            2             33.3%
+PF13806 (Rieske_2)        2            2             33.3%
+PF18267 (Rubredoxin_C)    2            2             33.3%
+PF00070 (Pyr_redox)       2            2             33.3%
+PF01029 (NusB)            1            1             16.7%
+PF01189 (Methyltr_RsmB-F) 1            1             16.7%
+PF01728 (FtsJ)            1            1             16.7%
+PF13847 (Methyltransf_31) 1            1             16.7%
+PF22458 (RsmF-B_ferredox) 1            1             16.7%
+PF00550 (PP-binding)      1            1             16.7%
+PF00857 (Isochorismatase) 1            1             16.7%
+PF00583 (Acetyltransf_1)  1            1             16.7%
+PF13302 (Acetyltransf_3)  1            1             16.7%
+PF13380 (CoA_binding_2)   1            1             16.7%
+PF13549 (ATP-grasp_5)     1            1             16.7%
+PF13607 (Succ_CoA_lig)    1            1             16.7%
+PF01118 (Semialdhyde_dh)  1            1             16.7%
+PF02774 (Semialdhyde_dhC) 1            1             16.7%
+PF00391 (PEP-utilizers)   1            1             16.7%
+PF01326 (PPDK_N)          1            1             16.7%
+PF02896 (PEP-utilizers_C) 1            1             16.7%
+PF00563 (EAL)             1            1             16.7%
+PF04324 (Fer2_BFD)        1            1             16.7%
+PF13738 (Pyr_redox_3)     1            1             16.7%
+PF04956 (TrbC)            1            1             16.7%
+
+Total unique Pfam domains: 48
+
+
+Detailed Pfam Domain Breakdown:
+--------------------------------------------------------------------------------
+
+PF00345 (PapD_N):
+  Found in 6 network(s):
+    - A0A0H3GGZ6 (1125630.KPHS_03120)
+    - A0A0H3GLA1 (1125630.KPHS_03880)
+    - A0A0H3GT77 (1125630.KPHS_13010)
+    - A0A0H3GNA0 (1125630.KPHS_26070)
+    - A0A0H3H2G9 (1125630.KPHS_43460)
+    - A0A0H3GST7 (1125630.KPHS_43570)
+    - W0LF25 (1441930.Z042_15575)
+    - Q8XCT5 (155864.Z0688)
+    - A0A0H3JF06 (155864.Z2201)
+    - Q8X5C2 (155864.Z5914)
+    - P62610 (199310.c1241)
+    - P59590 (199310.c5395)
+    - P77249 (511145.b0531)
+    - P31697 (511145.b4316)
+    - D2TK18 (637910.ROD_03661)
+    - D2TTU8 (637910.ROD_11771)
+    - D2TLZ5 (637910.ROD_18171)
+    - D2TMX9 (637910.ROD_19361)
+    - D2TQP9 (637910.ROD_22331)
+    - D2THT9 (637910.ROD_27791)
+    - D2TJL5 (637910.ROD_29141)
+    - D2TJN6 (637910.ROD_29371)
+    - D2TQS6 (637910.ROD_34991)
+    - D2TIR5 (637910.ROD_41271)
+    - D2TTN1 (637910.ROD_50621)
+  Total proteins: 25
+
+PF01197 (Ribosomal_L31):
+  Found in 6 network(s):
+
+... (truncated - showing first 100 of 495 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P77802_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.60 54.40;
+NC   25.20 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

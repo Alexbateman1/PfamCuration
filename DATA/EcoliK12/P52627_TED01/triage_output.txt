@@ -1,0 +1,481 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   FLIZ_ECOLI              Reviewed;         183 AA.
+AC   P52627; P76317;
+DE   RecName: Full=Regulator of sigma S factor FliZ;
+GN   Name=fliZ; Synonyms=yedH; OrderedLocusNames=b1921, JW1906;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=K12 / RP437;
+RX   PubMed=8550423; DOI=10.1128/jb.178.1.24-34.1996;
+RA   Mytelka D.S., Chamberlin M.J.;
+RT   "Escherichia coli fliAZY operon.";
+RL   J. Bacteriol. 178:24-34(1996).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=9097040; DOI=10.1093/dnares/3.6.379;
+RA   Itoh T., Aiba H., Baba T., Fujita K., Hayashi K., Inada T., Isono K.,
+RA   Kasai H., Kimura S., Kitakawa M., Kitagawa M., Makino K., Miki T.,
+RA   Mizobuchi K., Mori H., Mori T., Motomura K., Nakade S., Nakamura Y.,
+RA   Nashimoto H., Nishio Y., Oshima T., Saito N., Sampei G., Seki Y.,
+RA   Sivasundaram S., Tagami H., Takeda J., Takemoto K., Wada C., Yamamoto Y.,
+RA   Horiuchi T.;
+RT   "A 460-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 40.1-50.0 min region on the linkage map.";
+RL   DNA Res. 3:379-392(1996).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-11.
+RC   STRAIN=K12;
+RX   PubMed=7590326; DOI=10.1016/0378-1119(95)00480-t;
+RA   Liu X., Matsumura P.;
+RT   "An alternative sigma factor controls transcription of flagellar class-III
+RT   operons in Escherichia coli: gene sequence, overproduction, purification
+RT   and characterization.";
+RL   Gene 164:81-84(1995).
+RN   [6]
+RP   FUNCTION, INDUCTION, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12 / MC4100 / ATCC 35695 / DSM 6574, and K12 / W3110 / ATCC
+RC   27325 / DSM 5911;
+RX   PubMed=18765794; DOI=10.1101/gad.475808;
+RA   Pesavento C., Becker G., Sommerfeldt N., Possling A., Tschowri N.,
+RA   Mehlis A., Hengge R.;
+RT   "Inverse regulatory coordination of motility and curli-mediated adhesion in
+RT   Escherichia coli.";
+RL   Genes Dev. 22:2434-2446(2008).
+CC   -!- FUNCTION: During the post-exponential growth phase transiently
+CC       interferes with RpoS (sigma S) activity without affecting expression of
+CC       RpoS itself. It is probably not an anti-sigma factor as its
+CC       overexpression is detrimental in rapidly growing cells where there is
+CC       almost no sigma S factor. There is a strong overlap between Crl-
+CC       activated genes and FliZ-down-regulated genes. FliZ acts as a timing
+CC       device for expression of the genes for the adhesive curli fimbriae by
+CC       indirectly decreasing expression of the curli regulator CsgD.
+CC       {ECO:0000269|PubMed:18765794}.
+CC   -!- INDUCTION: Induced in early post-exponential phase, its expression
+CC       decreases again at OD578 2-2.5. {ECO:0000269|PubMed:18765794}.
+CC   -!- DISRUPTION PHENOTYPE: Not required for motility, disruption leads to
+CC       derepression of the adhesive curli fimbriae genes.
+CC       {ECO:0000269|PubMed:18765794}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AAC43544.1; Type=Erroneous initiation; Note=Extended N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U18539; AAC43544.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; U00096; AAC74988.2; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA15741.1; -; Genomic_DNA.
+DR   EMBL; L36677; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   PIR; F64955; F64955.
+DR   RefSeq; NP_416431.2; NC_000913.3.
+DR   RefSeq; WP_001350518.1; NZ_LN832404.1.
+DR   AlphaFoldDB; P52627; -.
+DR   BioGRID; 4263070; 108.
+DR   BioGRID; 851174; 1.
+DR   FunCoup; P52627; 35.
+DR   IntAct; P52627; 7.
+DR   STRING; 511145.b1921; -.
+DR   PaxDb; 511145-b1921; -.
+DR   EnsemblBacteria; AAC74988; AAC74988; b1921.
+DR   GeneID; 946833; -.
+DR   KEGG; ecj:JW1906; -.
+DR   KEGG; eco:b1921; -.
+DR   KEGG; ecoc:C3026_10900; -.
+DR   PATRIC; fig|1411691.4.peg.328; -.
+DR   EchoBASE; EB1331; -.
+DR   eggNOG; ENOG502Z9YQ; Bacteria.
+DR   HOGENOM; CLU_132109_0_0_6; -.
+DR   InParanoid; P52627; -.
+DR   OMA; GDLHCKE; -.
+DR   OrthoDB; 6503944at2; -.
+DR   PhylomeDB; P52627; -.
+DR   BioCyc; EcoCyc:EG11356-MONOMER; -.
+DR   PRO; PR:P52627; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0001046; F:core promoter sequence-specific DNA binding; IDA:EcoCyc.
+DR   GO; GO:0016989; F:sigma factor antagonist activity; IMP:EcoCyc.
+DR   GO; GO:0015074; P:DNA integration; IEA:InterPro.
+DR   GO; GO:1902021; P:regulation of bacterial-type flagellum-dependent cell motility; IMP:EcoCyc.
+DR   InterPro; IPR022523; Flagellar_regulator_FliZ.
+DR   InterPro; IPR004107; Integrase_SAM-like_N.
+DR   NCBIfam; TIGR03823; FliZ; 1.
+DR   Pfam; PF02899; Phage_int_SAM_1; 1.
+PE   2: Evidence at transcript level;
+KW   Reference proteome.
+FT   CHAIN           1..183
+FT                   /note="Regulator of sigma S factor FliZ"
+FT                   /id="PRO_0000087288"
+SQ   SEQUENCE   183 AA;  21658 MW;  CBFF9A95BDDC4711 CRC64;
+//
+ID   FLIZ_SALTY              Reviewed;         183 AA.
+AC   P0A210; P52628; Q9S1C1;
+DE   RecName: Full=Protein FliZ;
+GN   Name=fliZ; OrderedLocusNames=STM1955;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=KK1004;
+RX   PubMed=10411266; DOI=10.1099/13500872-145-6-1389;
+RA   Ikebe T., Iyoda S., Kutsukake K.;
+RT   "Structure and expression of the fliA operon of Salmonella typhimurium.";
+RL   Microbiology 145:1389-1396(1999).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-50.
+RX   PubMed=2196428; DOI=10.1007/bf00261713;
+RA   Ohnishi K., Kutsukake K., Suzuki H., Iino T.;
+RT   "Gene fliA encodes an alternative sigma factor specific for flagellar
+RT   operons in Salmonella typhimurium.";
+RL   Mol. Gen. Genet. 221:139-147(1990).
+RN   [4]
+RP   IDENTIFICATION.
+RA   Rudd K.E.;
+RL   Unpublished observations (JUN-1996).
+CC   -!- FUNCTION: May regulate sigma factor activity.
+DR   EMBL; AB010947; BAA36398.1; -; Genomic_DNA.
+DR   EMBL; AE006468; AAL20867.1; -; Genomic_DNA.
+DR   EMBL; D00497; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   RefSeq; NP_460908.1; NC_003197.2.
+DR   RefSeq; WP_000218080.1; NC_003197.2.
+DR   AlphaFoldDB; P0A210; -.
+DR   STRING; 99287.STM1955; -.
+DR   PaxDb; 99287-STM1955; -.
+DR   GeneID; 1253476; -.
+DR   KEGG; stm:STM1955; -.
+DR   PATRIC; fig|99287.12.peg.2070; -.
+DR   HOGENOM; CLU_132109_0_0_6; -.
+DR   OMA; GDLHCKE; -.
+DR   PhylomeDB; P0A210; -.
+DR   BioCyc; SENT99287:STM1955-MONOMER; -.
+DR   PHI-base; PHI:9178; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0003677; F:DNA binding; IEA:InterPro.
+DR   GO; GO:0015074; P:DNA integration; IEA:InterPro.
+DR   InterPro; IPR022523; Flagellar_regulator_FliZ.
+DR   InterPro; IPR004107; Integrase_SAM-like_N.
+DR   NCBIfam; TIGR03823; FliZ; 1.
+DR   Pfam; PF02899; Phage_int_SAM_1; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..183
+FT                   /note="Protein FliZ"
+FT                   /id="PRO_0000087290"
+SQ   SEQUENCE   183 AA;  21688 MW;  CDF971B81B665642 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+36	5	Enterobacteriaceae
+17	5	Morganellaceae
+17	5	Erwiniaceae
+12	5	Yersiniaceae
+97	4	Enterobacterales
+99	3	Gammaproteobacteria
+99	2	Pseudomonadota
+99	1	Pseudomonadati
+99	0	Bacteria
+Total of 100 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0A6ZQG1	FLAGELLAR BIOSYNTHETIC PR    173.9    2.3e-48   1   1.5   3.5
+	P52627_TED01              	    23	    91	   173.0
+	PF29625	FliZ_N          	    22	    78	   103.9
+	PF02899	Phage_int_SAM_1 	   101	   178	    52.1
+
+A7ZN46	FLIZ PROTEIN {ECO:0000313|EMB    174.3    1.7e-48   1   1.5   3.5
+	P52627_TED01              	    11	    79	   173.4
+	PF29625	FliZ_N          	    10	    66	   104.3
+	PF02899	Phage_int_SAM_1 	    89	   166	    52.5
+
+P0A210	PROTEIN FLIZ                       142.0    2.1e-38   1   1.7   4.4
+	P52627_TED01              	    11	    79	   140.9
+	PF29625	FliZ_N          	    10	    66	   108.2
+	PF02899	Phage_int_SAM_1 	    89	   167	    63.8
+
+P52627	REGULATOR OF SIGMA S FACTOR FLI    174.2    1.8e-48   1   1.5   3.5
+	P52627_TED01              	    11	    79	   173.2
+	PF29625	FliZ_N          	    10	    66	   104.1
+	PF02899	Phage_int_SAM_1 	    89	   166	    52.3
+
+Q8XBC3	FLAGELLAR BIOSYNTHESIS PROTEI    174.1      2e-48   1   1.5   3.5
+	P52627_TED01              	    11	    79	   173.2
+	PF29625	FliZ_N          	    10	    66	   104.1
+	PF02899	Phage_int_SAM_1 	    89	   166	    52.3
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS16035 (E-value: 1.6e-50, Score: 174.2)
+Mentioned as: b1921
+Description: orf, hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 36586294
+Source: EuropePMC
+Title: The two-component system histidine kinase EnvZ contributes to Avian pathogenic Escherichia coli pathogenicity by regulating biofilm formation and stress responses
+Journal: Poultry science (2023)
+Snippet: Flagellar b1892 flhD Flagellar transcriptional activator FlhD 1.9 b1891 flhC Flagellar transcriptional activator FlhC 1.3 b1921 fliZ Regulator of sigma S factor FliZ 1.27 b1940 fliH Flagellar assembly protein FliH 1.26 b1922 fliA RNA polymerase sigma 28 (sigma F) factor for flagellar operon FliA 1.19 LPS
+
+================================================================================
+Protein: VIMSS16035 (E-value: 1.6e-50, Score: 174.2)
+Mentioned as: b1921
+Description: orf, hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 36973666
+Source: EuropePMC
+Title: Whole-genome sequencing analysis of two heat-evolved Escherichia coli strains
+Journal: BMC genomics (2023)
+Snippet: b1730 protein YdjO I 175/267 ynjI b1762 DUF1266 domain-containing protein YnjI I 310/346 fliZ * b1921 DNA-binding transcriptional regulator FliZ I 12/183 yedP b1955 putative mannosyl-3-phosphoglycerate phosphatase I 105/271 gatA b2094 galactitol-specific PTS enzyme IIA component I 69/150 < -rbfA- / < -infB- b3167/ b3168 30S
+
+================================================================================
+Protein: VIMSS16035 (E-value: 1.6e-50, Score: 174.2)
+Mentioned as: b1921
+Description: orf, hypothetical protein
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 36537814
+Source: EuropePMC
+Title: Disrupting the ArcA Regulatory Network Amplifies the Fitness Cost of Tetracycline Resistance in Escherichia coli
+Journal: mSystems (2023)
+Snippet: PurR b1658 Increased Basal 31 10 10 Rob b4396 Increased Basal 22 8 7 FliZ b1921 Increased Basal 20 6 6 CytR b3934 Increased Adaptive 13 0 8 OmpR b3405 Increased Both 13 4 6 TorR b0995 Decreased Basal 12 3 4 MalT b3418 Decreased Adaptive
+
+================================================================================
+Protein: VIMSS74174 (E-value: 2e-50, Score: 173.9)
+Mentioned as: Z3011
+Description: orf, hypothetical protein
+Organism: Escherichia coli O157:H7 EDL933
+PMID: 28274217
+Source: EuropePMC
+Title: Disruption of rcsB by a duplicated sequence in a curli-producing Escherichia coli O157:H7 results in differential gene expression in relation to biofilm formation, stress responses and metabolism
+Journal: BMC microbiology (2017)
+Snippet: flhC Z2945 Transcriptional activator FlhC +2.55 9.0E-04 flhD Z2946 Transcriptional activator FlhD +2.58 0.01 fliZ Z3011 Flagellar biosynthesis protein FliZ +1.57 0.05 fliC Z3013 Flagellin +2.54 2.4E-07 fliD Z3014 Flagellar capping protein +2.88 1.8E-07 yfiR Z3897 Periplasmic protein +1.55 0.03 Regulators ykgK Z0361 Negative regulator of
+
+================================================================================
+Protein: VIMSS364474 (E-value: 9.1e-49, Score: 168.6)
+Mentioned as: S2060
+Description: putative regulator of FliA
+Organism: Shigella flexneri 2a str. 2457T
+PMID: 36196987
+Source: EuropePMC
+Title: Striving for sustainable biosynthesis: discovery, diversification, and production of antimicrobial drugs in Escherichia coli
+Journal: Biochemical Society transactions (2022)
+Snippet: (Car) BL21(DE3) 54.117.4 carCBADE Antibacterial ( E. coli BL21, autotoxicity) [ 65 ] 2,5-diketo-piperazines Bicyclomycin S2060 for PACE experiments 0.6 bcmABCDEFG Antibacterial; not altered here [ 34 ] Terpenoids Limonene, -pinene, -pinene, bisabolene BL21 Star (DE3) lysate 610 ** Antibacterial; not altered here [ 52 ]
+
+================================================================================
+Protein: VIMSS364474 (E-value: 9.1e-49, Score: 168.6)
+Mentioned as: S2060
+Description: putative regulator of FliA
+Organism: Shigella flexneri 2a str. 2457T
+PMID: 7012128
+Source: EuropePMC
+Title: R-factor cointegrate formation in Salmonella typhimurium bacteriophage type 201 strains
+Journal: Journal of bacteriology (1981)
+Snippet: typhimurium S. typhimurium S2050 S. typhimurium S2057 S. typhimurium S2060 S. typhimurium BB1 E. coli BB4 E. coli BB53 S. typhimurium BB67 S. typhimurium BB69
+
+================================================================================
+Protein: VIMSS549441 (E-value: 1.7e-24, Score: 90.8)
+Mentioned as: plu1956
+Description: FliZ protein
+Organism: Photorhabdus luminescens subsp. laumondii TTO1
+PMID: 21131515
+Source: EuropePMC
+Title: Transcriptional analysis of a Photorhabdus sp. variant reveals transcriptional control of phenotypic variation and multifactorial pathogenicity in insects
+Journal: Applied and environmental microbiology (2011)
+Snippet: plu0157 plu0183 plu0183 plu1537 plu1537 plu1752 plu1752 plu1956 plu1956 plu1991 plu1991 plu2442 plu2442 plu3506 plu3506 plu4092 plu4092 plu4546 plu4546 plu1537
+
+================================================================================
+Protein: VIMSS10478079 (E-value: 2e-24, Score: 90.6)
+Mentioned as: EAM_2064
+Description: regulator of sigma-F
+Organism: Erwinia amylovora ATCC 49946
+PMID: 31138749
+Source: EuropePMC
+Title: The Leucine-Responsive Regulatory Protein Lrp Participates in Virulence Regulation Downstream of Small RNA ArcZ in Erwinia amylovora
+Journal: mBio (2019)
+Snippet: factor EAM_1328 lrp (4) 1439784 Leucine-responsive regulatory protein, global transcription factor EAM_1800 1939771 Phage protein EAM_2064 fliZ 2218479 Putative regulator of sigma-F (sigma 28) EAM_2652 2890719 Hypothetical protein in type 3 secretion system cluster II a Corr no., correlation number refers to identifying number shown in
+
+================================================================================
+Protein: VIMSS5783686 (E-value: 4.2e-24, Score: 89.6)
+Mentioned as: PMI1617
+Description: FliZ protein
+Organism: Proteus mirabilis HI4320
+PMID: 25847961
+Source: EuropePMC
+Title: Transcriptional analysis of the MrpJ network: modulation of diverse virulence-associated genes and direct regulation of mrp fimbrial and flhDC flagellar operons in Proteus mirabilis
+Journal: Infection and immunity (2015)
+Snippet: PMI1634 PMI1629 PMI1623 PMI1469 PMI3460 PMI3115 PMI1633 PMI1669 PMI1617 PMI1655 flhA fliL flgH fliF fliN fliJ fliE fliT fim8A PMI1640 PMI1621 fliP flaD; fliD
+
+================================================================================
+
+... (truncated - showing first 100 of 154 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+P52627.1	AF-P52627-F1-model_v4_TED01:11-79	1	AF-P52627-F1-model_v4_TED01	11-79	100.0%
+P52627.1	AF-P52627-F1-model_v4_TED02:88-170	1	AF-P52627-F1-model_v4_TED02	88-170	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 48
+Total networks analyzed: 48
+Total network proteins: 1911
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF00460 (Flg_bb_rod)      45           250           93.8%
+PF06429 (Flg_bbr_C)       45           200           93.8%
+PF01052 (FliMN_C)         45           123           93.8%
+PF22692 (LlgE_F_G_D1)     44           103           91.7%
+PF16973 (FliN_N)          44           47            91.7%
+PF03963 (FlgD)            44           52            91.7%
+PF13861 (FLgD_tudor)      44           49            91.7%
+PF08666 (SAF)             44           51            91.7%
+PF13144 (ChapFlgA)        44           52            91.7%
+PF02561 (FliS)            44           52            91.7%
+PF02107 (FlgH)            44           51            91.7%
+PF05130 (FlgN)            44           52            91.7%
+PF04316 (FlgM)            44           46            91.7%
+PF13860 (FlgD_ig)         43           50            89.6%
+PF07195 (FliD_C)          43           53            89.6%
+PF01584 (CheW)            43           121           89.6%
+PF07559 (FlgE_D2)         43           50            89.6%
+PF03748 (FliL)            43           52            89.6%
+PF00669 (Flagellin_N)     43           119           89.6%
+PF04539 (Sigma70_r3)      43           54            89.6%
+PF04542 (Sigma70_r2)      43           57            89.6%
+PF04545 (Sigma70_r4)      43           57            89.6%
+PF08281 (Sigma70_r4_2)    43           50            89.6%
+PF02465 (FliD_N)          42           52            87.5%
+PF02154 (FliM)            42           45            87.5%
+PF01627 (Hpt)             42           76            87.5%
+PF02518 (HATPase_c)       42           76            87.5%
+PF02895 (H-kinase_dim)    42           46            87.5%
+PF09078 (CheY-binding)    42           45            87.5%
+PF01739 (CheR)            42           46            87.5%
+PF01618 (MotA_ExbB)       42           50            87.5%
+PF20560 (MotA_N)          42           50            87.5%
+PF04347 (FliO)            42           45            87.5%
+PF21158 (flgK_1st_1)      42           45            87.5%
+PF22638 (FlgK_D1)         42           50            87.5%
+PF02050 (FliJ)            40           43            83.3%
+PF00700 (Flagellin_C)     40           69            83.3%
+PF03705 (CheR_N)          40           43            83.3%
+PF00691 (OmpA)            39           69            81.2%
+PF00072 (Response_reg)    37           74            77.1%
+PF13677 (MotB_plug)       35           43            72.9%
+PF00291 (PALP)            34           34            70.8%
+PF07317 (PilZN)           33           34            68.8%
+PF07238 (PilZ)            32           35            66.7%
+PF05400 (FliT)            31           31            64.6%
+PF01706 (FliG_C)          31           36            64.6%
+PF14841 (FliG_M)          31           36            64.6%
+PF14842 (FliG_N)          31           36            64.6%
+PF00672 (HAMP)            31           43            64.6%
+PF00512 (HisKA)           30           31            62.5%
+PF09984 (sCache_4)        30           30            62.5%
+PF17656 (ChapFlgA_N)      26           27            54.2%
+PF00497 (SBP_bac_3)       26           30            54.2%
+PF10613 (Lig_chan-Glu_bd) 26           26            54.2%
+PF09850 (DotU)            18           23            37.5%
+PF28396 (SepQ_C)          18           20            37.5%
+PF01313 (Bac_export_3)    12           13            25.0%
+PF08345 (YscJ_FliF_C)     12           13            25.0%
+PF01514 (YscJ_FliF)       12           13            25.0%
+PF29189 (FliF_N)          12           13            25.0%
+PF02119 (FlgI)            11           13            22.9%
+PF11453 (DUF2950)         10           10            20.8%
+PF07196 (Flagellin_IN)    10           11            20.8%
+PF27361 (HrcQa_N)         10           10            20.8%
+PF05247 (FlhD)            9            9             18.8%
+PF00528 (BPD_transp_1)    8            9             16.7%
+PF27117 (FliB_C)          8            8             16.7%
+PF04344 (CheZ)            7            7             14.6%
+PF26304 (FliMN_C_rel)     6            6             12.5%
+PF00015 (MCPsignal)       6            13            12.5%
+PF02203 (TarH)            6            12            12.5%
+PF05280 (FlhC)            6            6             12.5%
+PF18947 (HAMP_2)          6            6             12.5%
+PF08241 (Methyltransf_11) 6            6             12.5%
+PF00563 (EAL)             5            8             10.4%
+PF13391 (HNH_2)           5            5             10.4%
+PF12445 (FliC)            4            4              8.3%
+PF26294 (SpaO_N)          3            3              6.2%
+PF00165 (HTH_AraC)        3            4              6.2%
+PF12833 (HTH_18)          3            7              6.2%
+PF00140 (Sigma70_r1_2)    3            3              6.2%
+PF08884 (Flagellin_D3)    3            4              6.2%
+PF00196 (GerE)            3            4              6.2%
+PF01339 (CheB_methylest)  3            3              6.2%
+PF00771 (FHIPEP)          3            3              6.2%
+PF13304 (AAA_21)          2            2              4.2%
+
+... (truncated - showing first 100 of 5048 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P52627_TED01
+GA   27.00 27.00;
+TC   28.80 27.00;
+NC   26.80 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RC   Function description for P52627
+RN   [1]
+RM   18765794
+RT   "Inverse regulatory coordination of motility and curli-mediated adhesion in
+RT   Escherichia coli.";
+RA   Pesavento C., Becker G., Sommerfeldt N., Possling A., Tschowri N.,
+RA   Mehlis A., Hengge R.;
+RL   Genes Dev. 22:2434-2446(2008).
+
+--- End of Current DESC file ---

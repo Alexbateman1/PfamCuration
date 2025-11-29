@@ -1,0 +1,162 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YJIT_ECOLI              Reviewed;         521 AA.
+AC   P39391; A0A385XNK3; Q2M5X2;
+DE   RecName: Full=Protein YjiT;
+GN   Name=yjiT; OrderedLocusNames=b4342, JW5787;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=7610040; DOI=10.1093/nar/23.12.2105;
+RA   Burland V.D., Plunkett G. III, Sofia H.J., Daniels D.L., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome VI: DNA sequence of the region
+RT   from 92.8 through 100 minutes.";
+RL   Nucleic Acids Res. 23:2105-2119(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- MISCELLANEOUS: May be missing up to 600 C-terminal residues compared to
+CC       orthologs. {ECO:0000305}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=AYC08262.1; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+CC       Sequence=BAE78334.1; Type=Erroneous initiation; Note=Truncated N-terminus.; Evidence={ECO:0000305};
+DR   EMBL; U14003; AAA97238.1; -; Genomic_DNA.
+DR   EMBL; U00096; AYC08262.1; ALT_INIT; Genomic_DNA.
+DR   EMBL; AP009048; BAE78334.1; ALT_INIT; Genomic_DNA.
+DR   PIR; S56567; S56567.
+DR   AlphaFoldDB; P39391; -.
+DR   BioGRID; 4262762; 7.
+DR   FunCoup; P39391; 13.
+DR   IntAct; P39391; 15.
+DR   EnsemblBacteria; AYC08262; AYC08262; b4342.
+DR   KEGG; ecj:JW5787; -.
+DR   KEGG; ecoc:C3026_23465; -.
+DR   EchoBASE; EB2468; -.
+DR   eggNOG; COG1196; Bacteria.
+DR   HOGENOM; CLU_009762_2_1_6; -.
+DR   InParanoid; P39391; -.
+DR   BioCyc; EcoCyc:G7938-MONOMER; -.
+DR   PRO; PR:P39391; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   InterPro; IPR047879; YjiT.
+DR   NCBIfam; NF038336; YjiT_fam; 1.
+PE   4: Predicted;
+KW   Reference proteome.
+FT   CHAIN           1..521
+FT                   /note="Protein YjiT"
+FT                   /id="PRO_0000169797"
+SQ   SEQUENCE   521 AA;  58553 MW;  BD1F8487D81C40E5 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+1	6	Shimwellia.
+1	6	Pluralibacter.
+1	6	Escherichia.
+3	5	Enterobacteriaceae
+3	4	Enterobacterales
+3	3	Gammaproteobacteria
+3	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0J5L0I3	UNCHARACTERIZED PROTEIN {     41.7    2.7e-07   1   1.6   0.0
+	Iterate                   	   463	   512	    40.6
+	PF27201	YjiT_N          	     2	   141	   160.5
+	PF27205	YjiT_2nd        	   148	   265	   111.4
+
+A0A8S3Q6Y0	SFXN5 {ECO:0000313|EMBL:C     60.2    4.6e-13  10  11.2   4.4
+	Iterate                   	   285	   307	     5.4
+	Iterate                   	    22	    40	     5.0
+	Iterate                   	    41	    59	     5.0
+	Iterate                   	    79	    97	     5.0
+	Iterate                   	    98	   116	     4.9
+	Iterate                   	    60	    78	     4.7
+	Iterate                   	   117	   136	     4.7
+	Iterate                   	     4	    21	     4.5
+	Iterate                   	   137	   154	     4.5
+	Iterate                   	   267	   288	     2.3
+	PF03820	SFXNs           	   285	   581	   236.6
+
+A0AAE0Y848	VWFD DOMAIN-CONTAINING PR     42.1    2.1e-07   7  10.5  11.4
+	Iterate                   	   316	   341	     7.5
+	Iterate                   	   485	   510	     7.5
+	Iterate                   	   384	   409	     5.7
+	Iterate                   	   243	   270	     3.1
+	Iterate                   	   347	   374	     3.1
+	Iterate                   	   280	   305	     2.9
+	Iterate                   	   516	   543	     2.9
+
+I2BDC2	UNCHARACTERIZED PROTEIN {ECO:    116.8    9.9e-31   1   1.6   0.1
+	Iterate                   	   463	   512	   115.8
+	PF27201	YjiT_N          	     2	   141	   158.3
+	PF27205	YjiT_2nd        	   148	   265	   114.1
+
+P39391	PROTEIN YJIT                        92.9    2.8e-23   1   1.7   0.2
+	Iterate                   	   479	   521	    91.8
+	PF27201	YjiT_N          	    16	   157	   161.9
+	PF27205	YjiT_2nd        	   164	   281	     108
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED01:4-141	1	AF-A0A0J5L0I3-F1-model_v4_TED01	4-141	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED02:147-262	1	AF-A0A0J5L0I3-F1-model_v4_TED02	147-262	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED03:268-376	1	AF-A0A0J5L0I3-F1-model_v4_TED03	268-376	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED04:379-462	1	AF-A0A0J5L0I3-F1-model_v4_TED04	379-462	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED06:549-620	1	AF-A0A0J5L0I3-F1-model_v4_TED06	549-620	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED09:841-977	1	AF-A0A0J5L0I3-F1-model_v4_TED09	841-977	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED10:986-1104	1	AF-A0A0J5L0I3-F1-model_v4_TED10	986-1104	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED05:466-542	1	AF-A0A0J5L0I3-F1-model_v4_TED05	466-542	94.0%
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED07:626-731	1	AF-A0A0J5L0I3-F1-model_v4_TED07	626-731	0
+A0A0J5L0I3.1	AF-A0A0J5L0I3-F1-model_v4_TED08:735-818	1	AF-A0A0J5L0I3-F1-model_v4_TED08	735-818	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED01:4-141	1	AF-I2BDC2-F1-model_v4_TED01	4-141	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED02:145-265	1	AF-I2BDC2-F1-model_v4_TED02	145-265	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED03:273-370	1	AF-I2BDC2-F1-model_v4_TED03	273-370	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED04:383-456	1	AF-I2BDC2-F1-model_v4_TED04	383-456	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED05:469-622	1	AF-I2BDC2-F1-model_v4_TED05	469-622	88.0%
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED06:626-731	1	AF-I2BDC2-F1-model_v4_TED06	626-731	0
+I2BDC2.1	AF-I2BDC2-F1-model_v4_TED07:739-818	1	AF-I2BDC2-F1-model_v4_TED07	739-818	0
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P39391_TED05/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 39.70;
+NC   26.80 21.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

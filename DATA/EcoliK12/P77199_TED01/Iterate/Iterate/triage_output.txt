@@ -1,0 +1,455 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YAIT_SALTY              Reviewed;         978 AA.
+AC   Q8ZRF8;
+DE   RecName: Full=Uncharacterized protein YaiT;
+DE   Flags: Precursor;
+GN   Name=yaiT; OrderedLocusNames=STM0373;
+OS   Salmonella typhimurium (strain LT2 / SGSC1412 / ATCC 700720).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Salmonella.
+OX   NCBI_TaxID=99287;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=LT2 / SGSC1412 / ATCC 700720;
+RX   PubMed=11677609; DOI=10.1038/35101614;
+RA   McClelland M., Sanderson K.E., Spieth J., Clifton S.W., Latreille P.,
+RA   Courtney L., Porwollik S., Ali J., Dante M., Du F., Hou S., Layman D.,
+RA   Leonard S., Nguyen C., Scott K., Holmes A., Grewal N., Mulvaney E.,
+RA   Ryan E., Sun H., Florea L., Miller W., Stoneking T., Nhan M., Waterston R.,
+RA   Wilson R.K.;
+RT   "Complete genome sequence of Salmonella enterica serovar Typhimurium LT2.";
+RL   Nature 413:852-856(2001).
+DR   EMBL; AE006468; AAL19327.1; -; Genomic_DNA.
+DR   RefSeq; WP_000556518.1; NC_003197.2.
+DR   AlphaFoldDB; Q8ZRF8; -.
+DR   SMR; Q8ZRF8; -.
+DR   STRING; 99287.STM0373; -.
+DR   PaxDb; 99287-STM0373; -.
+DR   KEGG; stm:STM0373; -.
+DR   PATRIC; fig|99287.12.peg.396; -.
+DR   HOGENOM; CLU_017493_0_0_6; -.
+DR   OMA; PYADNAM; -.
+DR   PhylomeDB; Q8ZRF8; -.
+DR   BioCyc; SENT99287:STM0373-MONOMER; -.
+DR   Proteomes; UP000001014; Chromosome.
+DR   GO; GO:0019867; C:outer membrane; IEA:InterPro.
+DR   CDD; cd00253; PL_Passenger_AT; 1.
+DR   Gene3D; 2.160.20.20; -; 1.
+DR   Gene3D; 2.40.128.130; Autotransporter beta-domain; 1.
+DR   InterPro; IPR005546; Autotransporte_beta.
+DR   InterPro; IPR036709; Autotransporte_beta_dom_sf.
+DR   InterPro; IPR051551; Autotransporter_adhesion.
+DR   InterPro; IPR012332; Autotransporter_pectin_lyase_C.
+DR   InterPro; IPR006315; OM_autotransptr_brl_dom.
+DR   InterPro; IPR011050; Pectin_lyase_fold/virulence.
+DR   InterPro; IPR003991; Pertactin_virulence_factor.
+DR   NCBIfam; TIGR01414; autotrans_barl; 1.
+DR   PANTHER; PTHR35037:SF2; -; 1.
+DR   PANTHER; PTHR35037; C-TERMINAL REGION OF AIDA-LIKE PROTEIN; 1.
+DR   Pfam; PF03797; Autotransporter; 1.
+DR   PRINTS; PR01484; PRTACTNFAMLY.
+DR   SMART; SM00869; Autotransporter; 1.
+DR   SUPFAM; SSF103515; Autotransporter; 1.
+DR   SUPFAM; SSF51126; Pectin lyase-like; 1.
+DR   PROSITE; PS51208; AUTOTRANSPORTER; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..27
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           28..978
+FT                   /note="Uncharacterized protein YaiT"
+FT                   /id="PRO_0000002712"
+FT   DOMAIN          713..978
+FT                   /note="Autotransporter"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00556"
+SQ   SEQUENCE   978 AA;  105753 MW;  1CEC1C90556DD5DE CRC64;
+//
+ID   YAIT_ECOLI              Reviewed;         968 AA.
+AC   P77199; P71312; P75700; Q2MC51; Q2MC54;
+DE   RecName: Full=Putative uncharacterized protein YaiT;
+DE   Flags: Precursor;
+GN   Name=yaiT; OrderedLocusNames=b4580, JW0362/JW5051;
+GN   ORFNames=b0371, b0374;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RA   Chung E., Allen E., Araujo R., Aparicio A.M., Davis K., Duncan M.,
+RA   Federspiel N., Hyman R., Kalman S., Komp C., Kurdi O., Lew H., Lin D.,
+RA   Namath A., Oefner P., Roberts D., Schramm S., Davis R.W.;
+RT   "Sequence of minutes 4-25 of Escherichia coli.";
+RL   Submitted (JAN-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- CAUTION: Could be the product of a pseudogene. The gene coding for this
+CC       protein is interrupted by a IS3B element between amino acids 486 and
+CC       487. {ECO:0000305}.
+DR   EMBL; U73857; AAB18094.1; ALT_SEQ; Genomic_DNA.
+DR   EMBL; U73857; AAB18097.1; ALT_SEQ; Genomic_DNA.
+DR   EMBL; U00096; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   EMBL; AP009048; BAE76152.1; ALT_SEQ; Genomic_DNA.
+DR   EMBL; AP009048; BAE76155.1; ALT_SEQ; Genomic_DNA.
+DR   PIR; C64765; C64765.
+DR   PIR; F64765; F64765.
+DR   RefSeq; WP_000556441.1; NZ_CP014272.1.
+DR   AlphaFoldDB; P77199; -.
+DR   SMR; P77199; -.
+DR   BioGRID; 4259480; 311.
+DR   BioGRID; 4259820; 219.
+DR   FunCoup; P77199; 65.
+DR   IntAct; P77199; 1.
+DR   KEGG; ecj:JW0362; -.
+DR   KEGG; ecj:JW5051; -.
+DR   KEGG; ecoc:C3026_01800; -.
+DR   EchoBASE; EB3373; -.
+DR   eggNOG; COG3468; Bacteria.
+DR   HOGENOM; CLU_031789_2_1_6; -.
+DR   InParanoid; P77199; -.
+DR   PhylomeDB; P77199; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0019867; C:outer membrane; IEA:InterPro.
+DR   Gene3D; 2.40.128.130; Autotransporter beta-domain; 1.
+DR   InterPro; IPR005546; Autotransporte_beta.
+DR   InterPro; IPR036709; Autotransporte_beta_dom_sf.
+DR   InterPro; IPR051551; Autotransporter_adhesion.
+DR   InterPro; IPR006315; OM_autotransptr_brl_dom.
+DR   InterPro; IPR011050; Pectin_lyase_fold/virulence.
+DR   InterPro; IPR004899; Pertactin_central.
+DR   InterPro; IPR003991; Pertactin_virulence_factor.
+DR   NCBIfam; TIGR01414; autotrans_barl; 1.
+DR   PANTHER; PTHR35037:SF2; -; 1.
+DR   PANTHER; PTHR35037; C-TERMINAL REGION OF AIDA-LIKE PROTEIN; 1.
+DR   Pfam; PF03797; Autotransporter; 1.
+DR   Pfam; PF03212; Pertactin; 1.
+DR   PRINTS; PR01484; PRTACTNFAMLY.
+DR   SMART; SM00869; Autotransporter; 1.
+DR   SUPFAM; SSF103515; Autotransporter; 1.
+DR   SUPFAM; SSF51126; Pectin lyase-like; 1.
+DR   PROSITE; PS51208; AUTOTRANSPORTER; 1.
+PE   5: Uncertain;
+KW   Reference proteome; Signal.
+FT   SIGNAL          1..27
+FT                   /evidence="ECO:0000255"
+FT   CHAIN           28..968
+FT                   /note="Putative uncharacterized protein YaiT"
+FT                   /id="PRO_0000002711"
+FT   DOMAIN          703..968
+FT                   /note="Autotransporter"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00556"
+SQ   SEQUENCE   968 AA;  104725 MW;  313695AC5ED735FE CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+7	6	Escherichia.
+4	6	Shigella.
+22	5	Enterobacteriaceae
+24	4	Enterobacterales
+25	3	Gammaproteobacteria
+25	2	Pseudomonadota
+25	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0A0H3JCC1	FLAGELLIN STRUCTURAL PROT    570.9   7.5e-168   1   4.6  52.2
+	Iterate                   	    10	   424	   570.9
+	PF03797	Autotransporter 	   722	   959	   158.7
+
+A0A0L0H3N0	MEMBRANE PROTEIN {ECO:000    579.1   2.5e-170   2   3.9  47.9
+	Iterate                   	    10	   424	   579.1
+	Iterate                   	   814	   932	     1.8
+	PF03797	Autotransporter 	   678	   914	   151.7
+
+A0A3S4ID23	OUTER MEMBRANE AUTOTRANSP    572.6   2.3e-168   1   1.0  52.8
+	Iterate                   	    10	   424	   572.4
+
+P77199	PUTATIVE UNCHARACTERIZED PROTEI    496.5   3.1e-145   1   4.4  49.5
+	Iterate                   	    10	   418	   496.5
+	PF03212	Pertactin       	   571	   664	    24.1
+	PF03797	Autotransporter 	   710	   947	   159.2
+
+Q8ZRF8	UNCHARACTERIZED PROTEIN YAIT       472.5   6.2e-138   1   3.7  54.8
+	Iterate                   	    10	   428	   472.5
+	PF03797	Autotransporter 	   720	   957	   155.6
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS10397520 (E-value: 1.3e-171, Score: 576.6)
+Mentioned as: ROD_04151
+Description: putative outer membrane autotransporter
+Organism: Citrobacter rodentium ICC168
+PMID: 22905239
+Source: EuropePMC
+Title: A bioinformatic strategy for the detection, classification and analysis of bacterial autotransporters
+Journal: PloS one (2012)
+Snippet: YP_003365215.1 3.30E-038 none pfam03797 BrkA Cr AT12 ROD_38761 YP_003367314.1 1.30E-032 MisL pfam03797 Recruitment Cr AT13 ROD_04151 YP_003364053.1 1.30E-032 none pfam03797 AIDA-I-like Cr AT14 ROD_15731 YP_003365154.1 4.10E-032 none pfam03797 Recruitment 5 Cr AT15 ROD_02111 YP_003363855.1 1.80E-031 none pfam03797 Recruitment 5 Cr AT16 ROD_03921 YP_003364030.1 1.40E-021 none pfam03797
+
+================================================================================
+Protein: VIMSS5795094 (E-value: 8.6e-164, Score: 550.8)
+Mentioned as: SEN0356
+Description: puative autotransporter/virulence factor
+Organism: Salmonella enterica subsp. enterica serovar Enteritidis str. P125109
+PMID: 22371816
+Source: EuropePMC
+Title: Genomic Comparison of the Closely Related Salmonella enterica Serovars Enteritidis and Dublin
+Journal: The open microbiology journal (2012)
+Snippet: fhuA , ferrichrome iron receptor Sing En2 SEN0281 NO safA , fimbrial subunit Sing En3 SEN0356 SGAL putative autotransporter Sing En4 SEN1515 CT18, TY2, LT2, DT104, SL1344, SBG, SPA, SGAL Ni/Fe-hydrogenase 1 b-type cytochrome subunit HyaC2 Sing En5 SEN1539 CT18, TY2, LT2, DT104, SL1344, SBG, SPA,
+
+================================================================================
+Protein: VIMSS302295 (E-value: 1.2e-147, Score: 497.6)
+Mentioned as: c0478
+Description: Putative structural protein
+Organism: Escherichia coli CFT073
+PMID: 21930758
+Source: EuropePMC
+Title: Molecular characterization of UpaB and UpaC, two new autotransporter proteins of uropathogenic Escherichia coli CFT073
+Journal: Infection and immunity (2012)
+Snippet: related AT adhesins from CFT073: UpaB (c0426) and UpaC (c0478). PCR screening revealed that the upaB and upaC AT-encoding genes are common in E. coli. The upaB
+
+================================================================================
+Protein: VIMSS5577496 (E-value: 2.9e-144, Score: 486.5)
+Mentioned as: ECSE_0393
+Description: putative autotransporter
+Organism: Escherichia coli SE11
+PMID: 18931093
+Source: EuropePMC
+Title: Complete genome sequence and comparative analysis of the wild-type commensal Escherichia coli strain SE11 isolated from a healthy adult
+Journal: DNA research : an international journal for rapid publication of reports on genes and genomes (2008)
+Snippet: (CTF073, UTI89 and 536) possess only four autotransporter genes homologous to four intact genes (ECSE_0327, ECSE_0393, ECSE_2494 and ECSE_3884) in SE11. Absence of orthologs of three genes (ECSE_1215, ECSE_1251 and ECSE_1600) is common in the three strains (CTF073, UTI89 and 536) belonging to phylogenetic group B2,
+
+================================================================================
+Protein: VIMSS152195 (E-value: 3e-141, Score: 476.6)
+Mentioned as: STY0405
+Description: puative autotransporter/virulence factor
+Organism: Salmonella enterica subsp. enterica serovar Typhi str. CT18
+PMID: 16926408
+Source: EuropePMC
+Title: Identification of in vivo-induced bacterial protein antigens during human infection with Salmonella enterica serovar Typhi
+Journal: Infection and immunity (2006)
+Snippet: STY0520 STY1373 STY1374 STY1375 Other pathogenesis functions STY0405 STY1878 Heavy metal transport resistance STY2755 pHCM1.153 STY0909 Other transport and
+
+================================================================================
+Protein: VIMSS147749 (E-value: 5.1e-136, Score: 459.4)
+Mentioned as: STM0373
+Description: flagellar protein; similar to 3rd module of ATP-binding components of transporters
+Organism: Salmonella typhimurium LT2
+PMID: 35521218
+Source: EuropePMC
+Title: Transcriptomic Responses of <i>Salmonella enterica</i> Serovars Enteritidis in Sodium Hypochlorite
+Journal: Frontiers in cellular and infection microbiology (2022)
+Snippet: STM2172 yohG 1.6 multidrug resistance outer membrane protein MdtQ STM0570 apeE 1.2 outer membrane esterase STM0373 yaiU 1.1 autotransporter outer membrane beta-barrel domain-containing protein STM0196 stfC 2.0 fimbrial biogenesis outer membrane usher protein STM1460 ydgK 1.4 Inner membrane protein ydgK STM1571 yddG 2.4 inner membrane protein
+
+================================================================================
+Protein: A7ZIB8 (E-value: 6.9e-131, Score: 442.5)
+Mentioned as: A7ZIB8
+Description: Outer membrane autotransporter
+Organism: Escherichia coli O139:H28 (strain E24377A / ETEC)
+PMID: 22163060
+Source: EuropePMC
+Title: Directed evaluation of enterotoxigenic Escherichia coli autotransporter proteins as putative vaccine candidates
+Journal: PLoS neglected tropical diseases (2011)
+Snippet: similar to pAT H10407 459 CBI99932.1 E3PFJ1 pAT 917 - - - E24377A 2943 YP_001461547.1 A7ZIB8 pAT 922 82 87 1337 B7A 1772 ZP_03028580.1 B3HCJ6 pAT 962 75 83 1330 MG1655 379 AAB18097.1 na pAT 465 98 99 908 HS 407 YP_001457207.1 A7ZX20 pAT 465 93
+
+================================================================================
+Protein: VIMSS905155 (E-value: 2.6e-125, Score: 424.1)
+Mentioned as: SPA2350
+Description: putative flagellin structural protein
+Organism: Salmonella enterica subsp. enterica serovar Paratyphi A str. ATCC 9150
+PMID: 18794283
+Source: EuropePMC
+Title: Identification of Salmonella enterica serovar Dublin-specific sequences by subtractive hybridization and analysis of their role in intestinal colonization and systemic translocation in cattle
+Journal: Infection and immunity (2008)
+Snippet: of the S. enterica serovar Paratyphi A gene product, SPA2350. Although the N-terminal region of this protein is unusual, the C terminus is highly conserved in a
+
+
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A097R4T1.1	AF-A0A097R4T1-F1-model_v4_TED01:618-917	1	AF-A0A097R4T1-F1-model_v4_TED01	618-917	0
+A0A0H2YW40.1	AF-A0A0H2YW40-F1-model_v4_TED01:736-859_872-907_923-993	1	AF-A0A0H2YW40-F1-model_v4_TED01	736-993	0
+A0A0H3JCC1.1	AF-A0A0H3JCC1-F1-model_v4_TED01:10-159_178-194	1	AF-A0A0H3JCC1-F1-model_v4_TED01	10-194	44.6%
+A0A0H3JCC1.1	AF-A0A0H3JCC1-F1-model_v4_TED02:530-592_601-679	1	AF-A0A0H3JCC1-F1-model_v4_TED02	530-679	0
+A0A0H3JCC1.1	AF-A0A0H3JCC1-F1-model_v4_TED03:681-978	1	AF-A0A0H3JCC1-F1-model_v4_TED03	681-978	0
+A0A0J5P1J7.1	AF-A0A0J5P1J7-F1-model_v4_TED01:177-246_259-419	1	AF-A0A0J5P1J7-F1-model_v4_TED01	177-419	57.7%
+A0A0J5P1J7.1	AF-A0A0J5P1J7-F1-model_v4_TED02:443-643	1	AF-A0A0J5P1J7-F1-model_v4_TED02	443-643	0
+A0A0J5P1J7.1	AF-A0A0J5P1J7-F1-model_v4_TED03:682-805_819-852_876-942	1	AF-A0A0J5P1J7-F1-model_v4_TED03	682-942	0
+A0A0L0ALB6.1	AF-A0A0L0ALB6-F1-model_v4_TED01:71-182_217-221	1	AF-A0A0L0ALB6-F1-model_v4_TED01	71-221	36.9%
+A0A0L0ALB6.1	AF-A0A0L0ALB6-F1-model_v4_TED02:551-591_613-681	1	AF-A0A0L0ALB6-F1-model_v4_TED02	551-681	0
+A0A0L0ALB6.1	AF-A0A0L0ALB6-F1-model_v4_TED03:721-979	1	AF-A0A0L0ALB6-F1-model_v4_TED03	721-979	0
+A0A0L0H3N0.1	AF-A0A0L0H3N0-F1-model_v4_TED01:37-121_139-173	1	AF-A0A0L0H3N0-F1-model_v4_TED01	37-173	33.0%
+A0A0L0H3N0.1	AF-A0A0L0H3N0-F1-model_v4_TED02:176-208_215-243_261-326_336-394	1	AF-A0A0L0H3N0-F1-model_v4_TED02	176-394	52.8%
+A0A0L0H3N0.1	AF-A0A0L0H3N0-F1-model_v4_TED03:520-636	1	AF-A0A0L0H3N0-F1-model_v4_TED03	520-636	0
+A0A0L0H3N0.1	AF-A0A0L0H3N0-F1-model_v4_TED04:639-675_690-697_711-935	1	AF-A0A0L0H3N0-F1-model_v4_TED04	639-935	0
+A0A2N5EP33.1	AF-A0A2N5EP33-F1-model_v4_TED01:50-115_127-336_371-392	1	AF-A0A2N5EP33-F1-model_v4_TED01	50-392	89.4%
+A0A2N5EP33.1	AF-A0A2N5EP33-F1-model_v4_TED02:604-685_709-724_732-896	1	AF-A0A2N5EP33-F1-model_v4_TED02	604-896	0
+A0A484XKY1.1	AF-A0A484XKY1-F1-model_v4_TED01:23-114_129-168	1	AF-A0A484XKY1-F1-model_v4_TED01	23-168	36.4%
+A0A484XKY1.1	AF-A0A484XKY1-F1-model_v4_TED02:170-203_212-242_262-411	1	AF-A0A484XKY1-F1-model_v4_TED02	170-411	60.1%
+A0A484XKY1.1	AF-A0A484XKY1-F1-model_v4_TED03:506-625	1	AF-A0A484XKY1-F1-model_v4_TED03	506-625	0
+A0A484XKY1.1	AF-A0A484XKY1-F1-model_v4_TED04:638-924	1	AF-A0A484XKY1-F1-model_v4_TED04	638-924	0
+A0A7M2V8X7.1	AF-A0A7M2V8X7-F1-model_v4_TED01:31-69_86-122_137-179_187-260_268-278_285-357	1	AF-A0A7M2V8X7-F1-model_v4_TED01	31-357	82.2%
+A0A7M2V8X7.1	AF-A0A7M2V8X7-F1-model_v4_TED02:515-562_575-647	1	AF-A0A7M2V8X7-F1-model_v4_TED02	515-647	0
+A0A7M2V8X7.1	AF-A0A7M2V8X7-F1-model_v4_TED03:649-946	1	AF-A0A7M2V8X7-F1-model_v4_TED03	649-946	0
+A0A7Z8ZF83.1	AF-A0A7Z8ZF83-F1-model_v4_TED01:538-597_614-628_641-684	1	AF-A0A7Z8ZF83-F1-model_v4_TED01	538-684	0
+A0A7Z8ZF83.1	AF-A0A7Z8ZF83-F1-model_v4_TED02:686-983	1	AF-A0A7Z8ZF83-F1-model_v4_TED02	686-983	0
+A7MLU3.1	AF-A7MLU3-F1-model_v4_TED01:665-923	1	AF-A7MLU3-F1-model_v4_TED01	665-923	0
+B7L524.1	AF-B7L524-F1-model_v4_TED01:29-125_134-139_155-192	1	AF-B7L524-F1-model_v4_TED01	29-192	40.8%
+B7L524.1	AF-B7L524-F1-model_v4_TED02:208-247_265-423	1	AF-B7L524-F1-model_v4_TED02	208-423	50.7%
+B7L524.1	AF-B7L524-F1-model_v4_TED03:663-960	1	AF-B7L524-F1-model_v4_TED03	663-960	0
+H2IU37.1	AF-H2IU37-F1-model_v4_TED01:17-220	1	AF-H2IU37-F1-model_v4_TED01	17-220	54.1%
+H2IU37.1	AF-H2IU37-F1-model_v4_TED02:610-896	1	AF-H2IU37-F1-model_v4_TED02	610-896	0
+L0M6B8.1	AF-L0M6B8-F1-model_v4_TED01:30-222_233-285	1	AF-L0M6B8-F1-model_v4_TED01	30-285	62.0%
+L0M6B8.1	AF-L0M6B8-F1-model_v4_TED02:527-673	1	AF-L0M6B8-F1-model_v4_TED02	527-673	0
+L0M6B8.1	AF-L0M6B8-F1-model_v4_TED03:675-971	1	AF-L0M6B8-F1-model_v4_TED03	675-971	0
+P77199.2	AF-P77199-F1-model_v4_TED01:10-367_402-418	1	AF-P77199-F1-model_v4_TED01	10-418	100.0%
+P77199.2	AF-P77199-F1-model_v4_TED02:540-667	1	AF-P77199-F1-model_v4_TED02	540-667	0
+P77199.2	AF-P77199-F1-model_v4_TED03:669-966	1	AF-P77199-F1-model_v4_TED03	669-966	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 9
+Total networks analyzed: 9
+Total network proteins: 412
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF15977 (HTH_46)          8            8             88.9%
+PF01095 (Pectinesterase)  8            8             88.9%
+PF04230 (PS_pyruv_trans)  7            7             77.8%
+PF00534 (Glycos_transf_1) 7            10            77.8%
+PF13439 (Glyco_transf_4)  7            9             77.8%
+PF13692 (Glyco_trans_1_4) 7            10            77.8%
+PF00884 (Sulfatase)       7            8             77.8%
+PF00535 (Glycos_transf_2) 7            13            77.8%
+PF00196 (GerE)            7            10            77.8%
+PF06251 (Caps_syn_GfcC_C) 7            7             77.8%
+PF20616 (Caps_syn_GfcC_N) 7            7             77.8%
+PF18836 (B_solenoid_ydck) 7            7             77.8%
+PF06366 (FlhE)            7            7             77.8%
+PF05036 (SPOR)            6            6             66.7%
+PF07520 (SrfB)            6            6             66.7%
+PF10139 (Virul_Fac)       6            6             66.7%
+PF01791 (DeoC)            6            6             66.7%
+PF01943 (Polysacc_synt)   6            6             66.7%
+PF13440 (Polysacc_synt_3) 6            6             66.7%
+PF16966 (Porin_8)         6            6             66.7%
+PF07361 (Cytochrom_B562)  6            6             66.7%
+PF11102 (YjbF)            6            6             66.7%
+PF04657 (DMT_YdcZ)        6            6             66.7%
+PF03797 (Autotransporter) 6            14            66.7%
+PF03824 (NicO)            5            6             55.6%
+PF00563 (EAL)             5            6             55.6%
+PF00989 (PAS)             5            5             55.6%
+PF00990 (GGDEF)           5            5             55.6%
+PF05231 (MASE1)           5            5             55.6%
+PF08447 (PAS_3)           5            5             55.6%
+PF08448 (PAS_4)           5            5             55.6%
+PF13426 (PAS_9)           5            5             55.6%
+PF00440 (TetR_N)          5            8             55.6%
+PF20706 (GT4-conflict)    5            7             55.6%
+PF05987 (DUF898)          5            5             55.6%
+PF10614 (CsgF)            5            5             55.6%
+PF14189 (DUF4312)         5            5             55.6%
+PF02706 (Wzz)             5            5             55.6%
+PF13188 (PAS_8)           4            4             44.4%
+PF06904 (Extensin-like_C) 4            4             44.4%
+PF02368 (Big_2)           4            4             44.4%
+PF16461 (Phage_TTP_12)    4            4             44.4%
+PF00165 (HTH_AraC)        4            5             44.4%
+PF12833 (HTH_18)          4            5             44.4%
+PF07238 (PilZ)            4            4             44.4%
+PF07317 (PilZN)           4            4             44.4%
+PF18883 (AC_1)            4            9             44.4%
+PF06004 (DUF903)          4            4             44.4%
+PF10627 (CsgE)            4            4             44.4%
+PF26358 (EcdD_BsdD_detox) 4            4             44.4%
+PF04976 (DmsC)            3            3             33.3%
+PF02311 (AraC_binding)    3            3             33.3%
+PF01832 (Glucosaminidase) 3            3             33.3%
+PF16154 (DUF4862)         3            3             33.3%
+PF13729 (TraF_2)          3            3             33.3%
+PF06560 (GPI)             3            3             33.3%
+PF07012 (Curlin_rpt)      3            3             33.3%
+PF06674 (DUF1176)         3            3             33.3%
+PF10101 (DUF2339)         3            3             33.3%
+PF05876 (GpA_ATPase)      2            3             22.2%
+PF20454 (GpA_nuclease)    2            3             22.2%
+PF02597 (ThiS)            2            2             22.2%
+PF00574 (CLP_protease)    2            3             22.2%
+PF25209 (Phage_capsid_4)  2            3             22.2%
+PF05136 (Phage_portal_2)  2            3             22.2%
+PF10114 (PocR)            2            2             22.2%
+PF00288 (GHMP_kinases_N)  2            2             22.2%
+PF02264 (LamB)            2            2             22.2%
+PF17936 (Big_6)           2            2             22.2%
+PF17963 (Big_9)           2            2             22.2%
+PF19077 (Big_13)          2            2             22.2%
+PF22783 (BapA_N)          2            2             22.2%
+PF00419 (Fimbrial)        2            2             22.2%
+PF05067 (Mn_catalase)     2            3             22.2%
+PF12951 (PATR)            2            2             22.2%
+PF00356 (LacI)            2            2             22.2%
+PF13377 (Peripla_BP_3)    2            2             22.2%
+PF11924 (IAT_beta)        2            2             22.2%
+PF13524 (Glyco_trans_1_2) 2            2             22.2%
+PF06805 (Lambda_tail_I)   2            4             22.2%
+PF03895 (YadA_anchor)     2            2             22.2%
+PF05658 (YadA_head)       2            2             22.2%
+PF05662 (YadA_stalk)      2            2             22.2%
+PF13018 (ESPR)            2            4             22.2%
+PF00445 (Ribonuclease_T2) 2            2             22.2%
+PF26363 (Phospholipase-like) 2            2             22.2%
+
+... (truncated - showing first 100 of 1608 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:P77199_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   32.40 32.40;
+NC   21.70 21.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

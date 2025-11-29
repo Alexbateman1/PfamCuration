@@ -1,0 +1,143 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   YQCG_ECOLI              Reviewed;          46 AA.
+AC   C1P612;
+DE   RecName: Full=Uncharacterized protein YqcG;
+GN   Name=yqcG; OrderedLocusNames=b4682, JW2748.1;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [3]
+RP   IDENTIFICATION, AND INDUCTION.
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=19121005; DOI=10.1111/j.1365-2958.2008.06495.x;
+RA   Hemm M.R., Paul B.J., Schneider T.D., Storz G., Rudd K.E.;
+RT   "Small membrane proteins found by comparative genomics and ribosome binding
+RT   site models.";
+RL   Mol. Microbiol. 70:1487-1501(2008).
+CC   -!- INDUCTION: In exponential phase (at protein level).
+CC       {ECO:0000269|PubMed:19121005}.
+DR   EMBL; U00096; ACO60004.1; -; Genomic_DNA.
+DR   EMBL; AP009048; -; NOT_ANNOTATED_CDS; Genomic_DNA.
+DR   RefSeq; WP_001288228.1; NZ_LN832404.1.
+DR   RefSeq; YP_002791252.1; NC_000913.3.
+DR   AlphaFoldDB; C1P612; -.
+DR   STRING; 511145.b4682; -.
+DR   PaxDb; 511145-b4682; -.
+DR   EnsemblBacteria; ACO60004; ACO60004; b4682.
+DR   GeneID; 7751618; -.
+DR   KEGG; eco:b4682; -.
+DR   KEGG; ecoc:C3026_15255; -.
+DR   PATRIC; fig|511145.12.peg.2877; -.
+DR   InParanoid; C1P612; -.
+DR   BioCyc; EcoCyc:MONOMER0-2882; -.
+DR   PRO; PR:C1P612; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0036460; P:cellular response to cell envelope stress; IMP:EcoCyc.
+PE   1: Evidence at protein level;
+KW   Reference proteome.
+FT   CHAIN           1..46
+FT                   /note="Uncharacterized protein YqcG"
+FT                   /id="PRO_0000381988"
+SQ   SEQUENCE   46 AA;  5383 MW;  BD92E9F508D92CA6 CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+2	6	Escherichia.
+2	5	Enterobacteriaceae
+2	4	Enterobacterales
+2	3	Gammaproteobacteria
+2	2	Pseudomonadota
+2	1	Pseudomonadati
+2	0	Bacteria
+Total of 2 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+A0AA89CCJ3	C1Q DOMAIN-CONTAINING PRO     64.0    3.7e-14  13  13.8  11.5
+	Iterate                   	    72	    88	     6.2
+	Iterate                   	    96	   112	     6.2
+	Iterate                   	   120	   136	     6.2
+	Iterate                   	   216	   232	     6.2
+	Iterate                   	   144	   160	     2.8
+	Iterate                   	   168	   184	     2.8
+	Iterate                   	   192	   208	     2.8
+	Iterate                   	   240	   256	     2.8
+	Iterate                   	   264	   280	     2.8
+	Iterate                   	   288	   304	     2.8
+	Iterate                   	   312	   328	     2.8
+	Iterate                   	   336	   352	     2.8
+	Iterate                   	   360	   376	     2.8
+	PF00386	C1q             	     1	    91	    44.8
+
+A0AAD1STL7	UNCHARACTERIZED PROTEIN {     33.6    0.00013   5  11.7   6.7
+	Iterate                   	    56	    85	     3.8
+	Iterate                   	   426	   453	     2.6
+	Iterate                   	    99	   127	     2.2
+	Iterate                   	   268	   295	     2.1
+	Iterate                   	   290	   316	     1.8
+
+A7ZQM0	SMALL PROTEIN INVOLVED IN THE     80.0    3.3e-19   1   1.1   7.4
+	Iterate                   	    14	    46	    79.7
+
+C1P612	UNCHARACTERIZED PROTEIN YQCG        85.0    8.7e-21   1   1.1   8.2
+	Iterate                   	    14	    46	    84.7
+
+T1ID52	UNCHARACTERIZED PROTEIN {ECO:     49.5    1.4e-09  11  10.8   0.5
+	Iterate                   	     2	    25	     3.6
+	Iterate                   	    27	    48	     2.9
+	Iterate                   	    50	    71	     2.9
+	Iterate                   	    73	    94	     2.9
+	Iterate                   	    96	   117	     2.9
+	Iterate                   	   119	   140	     2.9
+	Iterate                   	   142	   163	     2.9
+	Iterate                   	   165	   186	     2.9
+	Iterate                   	   188	   209	     2.9
+	Iterate                   	   211	   232	     2.9
+	Iterate                   	   234	   255	     2.9
+
+
+--- End of Domain architectures ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+C1P612.1	AF-C1P612-F1-model_v4_TED01:14-46	1	AF-C1P612-F1-model_v4_TED01	14-46	100.0%
+
+--- End of TED domain information ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:C1P612_TED01/Iterate
+GA   27.00 27.00;
+TC   32.80 79.70;
+NC   23.00 19.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End of Current DESC file ---

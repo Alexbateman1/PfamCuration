@@ -1,0 +1,1120 @@
+--- sp.seq_info content (copy to Claude) ---
+ID   GADX_SHIFL              Reviewed;         274 AA.
+AC   Q83PR0; Q7BYZ7;
+DE   RecName: Full=HTH-type transcriptional regulator GadX;
+GN   Name=gadX; OrderedLocusNames=SF3595, S4172;
+OS   Shigella flexneri.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Shigella.
+OX   NCBI_TaxID=623;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=301 / Serotype 2a;
+RX   PubMed=12384590; DOI=10.1093/nar/gkf566;
+RA   Jin Q., Yuan Z., Xu J., Wang Y., Shen Y., Lu W., Wang J., Liu H., Yang J.,
+RA   Yang F., Zhang X., Zhang J., Yang G., Wu H., Qu D., Dong J., Sun L.,
+RA   Xue Y., Zhao A., Gao Y., Zhu J., Kan B., Ding K., Chen S., Cheng H.,
+RA   Yao Z., He B., Chen R., Ma D., Qiang B., Wen Y., Hou Y., Yu J.;
+RT   "Genome sequence of Shigella flexneri 2a: insights into pathogenicity
+RT   through comparison with genomes of Escherichia coli K12 and O157.";
+RL   Nucleic Acids Res. 30:4432-4441(2002).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 700930 / 2457T / Serotype 2a;
+RX   PubMed=12704152; DOI=10.1128/iai.71.5.2775-2786.2003;
+RA   Wei J., Goldberg M.B., Burland V., Venkatesan M.M., Deng W., Fournier G.,
+RA   Mayhew G.F., Plunkett G. III, Rose D.J., Darling A., Mau B., Perna N.T.,
+RA   Payne S.M., Runyen-Janecky L.J., Zhou S., Schwartz D.C., Blattner F.R.;
+RT   "Complete genome sequence and comparative genomics of Shigella flexneri
+RT   serotype 2a strain 2457T.";
+RL   Infect. Immun. 71:2775-2786(2003).
+CC   -!- FUNCTION: Positively regulates the expression of about fifteen genes
+CC       involved in acid resistance such as gadA, gadB and gadC. Depending on
+CC       the conditions (growth phase and medium), can repress gadW (By
+CC       similarity). {ECO:0000250}.
+CC   -!- SUBUNIT: Homodimer. {ECO:0000250}.
+CC   -!- INDUCTION: Expression can be activated by RpoS and repressed by CRP, H-
+CC       NS and GadW, depending on the conditions. {ECO:0000250}.
+DR   EMBL; AE005674; AAN45046.1; -; Genomic_DNA.
+DR   EMBL; AE014073; AAP19141.1; -; Genomic_DNA.
+DR   RefSeq; WP_001191070.1; NZ_WPGW01000173.1.
+DR   AlphaFoldDB; Q83PR0; -.
+DR   SMR; Q83PR0; -.
+DR   STRING; 198214.SF3595; -.
+DR   PaxDb; 198214-SF3595; -.
+DR   KEGG; sfl:SF3595; -.
+DR   KEGG; sfx:S4172; -.
+DR   PATRIC; fig|198214.7.peg.4244; -.
+DR   HOGENOM; CLU_091292_0_0_6; -.
+DR   Proteomes; UP000001006; Chromosome.
+DR   Proteomes; UP000002673; Chromosome.
+DR   GO; GO:0005829; C:cytosol; IEA:TreeGrafter.
+DR   GO; GO:0003700; F:DNA-binding transcription factor activity; IEA:InterPro.
+DR   GO; GO:0000976; F:transcription cis-regulatory region binding; IEA:TreeGrafter.
+DR   FunFam; 1.10.10.60:FF:000267; HTH-type transcriptional regulator GadX; 1.
+DR   Gene3D; 1.10.10.60; Homeodomain-like; 1.
+DR   InterPro; IPR009057; Homeodomain-like_sf.
+DR   InterPro; IPR018060; HTH_AraC.
+DR   InterPro; IPR018062; HTH_AraC-typ_CS.
+DR   InterPro; IPR020449; Tscrpt_reg_AraC-type_HTH.
+DR   NCBIfam; NF007432; PRK09978.1; 1.
+DR   PANTHER; PTHR47894; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   PANTHER; PTHR47894:SF4; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   Pfam; PF12833; HTH_18; 1.
+DR   PRINTS; PR00032; HTHARAC.
+DR   SMART; SM00342; HTH_ARAC; 1.
+DR   SUPFAM; SSF46689; Homeodomain-like; 1.
+DR   PROSITE; PS00041; HTH_ARAC_FAMILY_1; 1.
+DR   PROSITE; PS01124; HTH_ARAC_FAMILY_2; 1.
+PE   3: Inferred from homology;
+KW   Activator; DNA-binding; Reference proteome; Repressor; Transcription;
+KW   Transcription regulation.
+FT   CHAIN           1..274
+FT                   /note="HTH-type transcriptional regulator GadX"
+FT                   /id="PRO_0000194522"
+FT   DOMAIN          145..242
+FT                   /note="HTH araC/xylS-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        162..183
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        209..232
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+SQ   SEQUENCE   274 AA;  31452 MW;  76EAB1A51C62476F CRC64;
+//
+ID   GADX_ECOLI              Reviewed;         274 AA.
+AC   P37639; Q2M7H8;
+DE   RecName: Full=HTH-type transcriptional regulator GadX;
+GN   Name=gadX; Synonyms=yhiX; OrderedLocusNames=b3516, JW3484;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=8041620; DOI=10.1093/nar/22.13.2576;
+RA   Sofia H.J., Burland V., Daniels D.L., Plunkett G. III, Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome. V. DNA sequence of the region
+RT   from 76.0 to 81.5 minutes.";
+RL   Nucleic Acids Res. 22:2576-2586(1994).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [4]
+RP   FUNCTION, AND GENE NAME.
+RC   STRAIN=FB8, and K12 / MG1655 / ATCC 47076;
+RX   PubMed=11298273; DOI=10.1046/j.1365-2958.2001.02358.x;
+RA   Hommais F., Krin E., Laurent-Winter C., Soutourina O., Malpertuy A.,
+RA   Le Caer J.-P., Danchin A., Bertin P.;
+RT   "Large-scale monitoring of pleiotropic regulation of gene expression by the
+RT   prokaryotic nucleoid-associated protein, H-NS.";
+RL   Mol. Microbiol. 40:20-36(2001).
+RN   [5]
+RP   FUNCTION, AND INDUCTION.
+RC   STRAIN=ATCC 11246;
+RX   PubMed=11976288; DOI=10.1128/jb.184.10.2603-2613.2002;
+RA   Tramonti A., Visca P., De Canio M., Falconi M., De Biase D.;
+RT   "Functional characterization and regulation of gadX, a gene encoding an
+RT   AraC/XylS-like transcriptional activator of the Escherichia coli glutamic
+RT   acid decarboxylase system.";
+RL   J. Bacteriol. 184:2603-2613(2002).
+RN   [6]
+RP   FUNCTION, INDUCTION, AND SUBUNIT.
+RC   STRAIN=K12;
+RX   PubMed=12446650; DOI=10.1128/jb.184.24.7001-7012.2002;
+RA   Ma Z., Richard H., Tucker D.L., Conway T., Foster J.W.;
+RT   "Collaborative regulation of Escherichia coli glutamate-dependent acid
+RT   resistance by two AraC-like regulators, GadX and GadW (YhiW).";
+RL   J. Bacteriol. 184:7001-7012(2002).
+RN   [7]
+RP   FUNCTION, AND INDUCTION.
+RC   STRAIN=K12;
+RX   PubMed=12730179; DOI=10.1128/jb.185.10.3190-3201.2003;
+RA   Tucker D.L., Tucker N., Ma Z., Foster J.W., Miranda R.L., Cohen P.S.,
+RA   Conway T.;
+RT   "Genes of the GadX-GadW regulon in Escherichia coli.";
+RL   J. Bacteriol. 185:3190-3201(2003).
+RN   [8]
+RP   FUNCTION.
+RX   PubMed=14617649; DOI=10.1128/jb.185.23.6852-6859.2003;
+RA   Ma Z., Richard H., Foster J.W.;
+RT   "pH-dependent modulation of cyclic AMP levels and GadW-dependent repression
+RT   of RpoS affect synthesis of the GadX regulator and Escherichia coli acid
+RT   resistance.";
+RL   J. Bacteriol. 185:6852-6859(2003).
+RN   [9]
+RP   FUNCTION.
+RC   STRAIN=FB8;
+RX   PubMed=14702398; DOI=10.1099/mic.0.26659-0;
+RA   Hommais F., Krin E., Coppee J.-Y., Lacroix C., Yeramian E., Danchin A.,
+RA   Bertin P.;
+RT   "GadE (YhiE): a novel activator involved in the response to acid
+RT   environment in Escherichia coli.";
+RL   Microbiology 150:61-72(2004).
+CC   -!- FUNCTION: Positively regulates the expression of about fifteen genes
+CC       involved in acid resistance such as gadA, gadB and gadC. Depending on
+CC       the conditions (growth phase and medium), can repress gadW.
+CC       {ECO:0000269|PubMed:11298273, ECO:0000269|PubMed:11976288,
+CC       ECO:0000269|PubMed:12446650, ECO:0000269|PubMed:12730179,
+CC       ECO:0000269|PubMed:14617649, ECO:0000269|PubMed:14702398}.
+CC   -!- SUBUNIT: Homodimer. {ECO:0000269|PubMed:12446650}.
+CC   -!- INDUCTION: Expression can be activated by RpoS and repressed by CRP, H-
+CC       NS and GadW, depending on the conditions. {ECO:0000269|PubMed:11976288,
+CC       ECO:0000269|PubMed:12446650, ECO:0000269|PubMed:12730179}.
+CC   -!- MISCELLANEOUS: GadX and GadW are part of a complex system required for
+CC       acid resistance via the regulation of gadA and gadBC. Many of the
+CC       described circuits use mutants missing one of the network components.
+CC       In the wild-type situation, however, many of the scenarios are not
+CC       easily observed.
+DR   EMBL; U00039; AAB18492.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC76541.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE77778.1; -; Genomic_DNA.
+DR   PIR; S47736; S47736.
+DR   RefSeq; NP_417973.1; NC_000913.3.
+DR   RefSeq; WP_001191059.1; NZ_SSZK01000042.1.
+DR   PDB; 3MKL; X-ray; 2.15 A; A/B=137-255.
+DR   PDBsum; 3MKL; -.
+DR   AlphaFoldDB; P37639; -.
+DR   SMR; P37639; -.
+DR   BioGRID; 4262524; 93.
+DR   FunCoup; P37639; 95.
+DR   IntAct; P37639; 6.
+DR   STRING; 511145.b3516; -.
+DR   CARD; ARO:3000508; gadX; ARO:0010000; antibiotic efflux.
+DR   jPOST; P37639; -.
+DR   PaxDb; 511145-b3516; -.
+DR   EnsemblBacteria; AAC76541; AAC76541; b3516.
+DR   GeneID; 948028; -.
+DR   KEGG; ecj:JW3484; -.
+DR   KEGG; eco:b3516; -.
+DR   KEGG; ecoc:C3026_19050; -.
+DR   PATRIC; fig|1411691.4.peg.3202; -.
+DR   EchoBASE; EB2154; -.
+DR   eggNOG; COG2207; Bacteria.
+DR   HOGENOM; CLU_091292_0_0_6; -.
+DR   InParanoid; P37639; -.
+DR   OMA; NIANDWS; -.
+DR   OrthoDB; 1050625at2; -.
+DR   PhylomeDB; P37639; -.
+DR   BioCyc; EcoCyc:EG12243-MONOMER; -.
+DR   EvolutionaryTrace; P37639; -.
+DR   PRO; PR:P37639; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0000987; F:cis-regulatory region sequence-specific DNA binding; IDA:EcoCyc.
+DR   GO; GO:0001216; F:DNA-binding transcription activator activity; IMP:EcoCyc.
+DR   GO; GO:0003700; F:DNA-binding transcription factor activity; IBA:GO_Central.
+DR   GO; GO:0042803; F:protein homodimerization activity; IDA:EcoCyc.
+DR   GO; GO:0000976; F:transcription cis-regulatory region binding; IBA:GO_Central.
+DR   GO; GO:0006974; P:DNA damage response; IEP:EcoliWiki.
+DR   GO; GO:0006351; P:DNA-templated transcription; IDA:EcoCyc.
+DR   GO; GO:0045893; P:positive regulation of DNA-templated transcription; IMP:EcoCyc.
+DR   FunFam; 1.10.10.60:FF:000267; HTH-type transcriptional regulator GadX; 1.
+DR   Gene3D; 1.10.10.60; Homeodomain-like; 1.
+DR   InterPro; IPR009057; Homeodomain-like_sf.
+DR   InterPro; IPR018060; HTH_AraC.
+DR   InterPro; IPR018062; HTH_AraC-typ_CS.
+DR   InterPro; IPR020449; Tscrpt_reg_AraC-type_HTH.
+DR   NCBIfam; NF007432; PRK09978.1; 1.
+DR   PANTHER; PTHR47894; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   PANTHER; PTHR47894:SF4; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   Pfam; PF12833; HTH_18; 1.
+DR   PRINTS; PR00032; HTHARAC.
+DR   SMART; SM00342; HTH_ARAC; 1.
+DR   SUPFAM; SSF46689; Homeodomain-like; 1.
+DR   PROSITE; PS00041; HTH_ARAC_FAMILY_1; 1.
+DR   PROSITE; PS01124; HTH_ARAC_FAMILY_2; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Activator; DNA-binding; Reference proteome; Repressor;
+KW   Transcription; Transcription regulation.
+FT   CHAIN           1..274
+FT                   /note="HTH-type transcriptional regulator GadX"
+FT                   /id="PRO_0000194518"
+FT   DOMAIN          145..242
+FT                   /note="HTH araC/xylS-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        162..183
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        209..232
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   HELIX           143..152
+FT                   /evidence="ECO:0007829|PDB:3MKL"
+FT   HELIX           161..167
+FT                   /evidence="ECO:0007829|PDB:3MKL"
+FT   HELIX           172..181
+FT                   /evidence="ECO:0007829|PDB:3MKL"
+FT   HELIX           186..202
+FT                   /evidence="ECO:0007829|PDB:3MKL"
+FT   HELIX           209..215
+FT                   /evidence="ECO:0007829|PDB:3MKL"
+FT   HELIX           221..232
+FT                   /evidence="ECO:0007829|PDB:3MKL"
+FT   HELIX           236..242
+FT                   /evidence="ECO:0007829|PDB:3MKL"
+SQ   SEQUENCE   274 AA;  31563 MW;  C5B742F296436DC8 CRC64;
+//
+ID   GADX_ECO57              Reviewed;         274 AA.
+AC   P58230;
+DE   RecName: Full=HTH-type transcriptional regulator GadX;
+GN   Name=gadX; OrderedLocusNames=Z4929, ECs4396;
+OS   Escherichia coli O157:H7.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83334;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / EDL933 / ATCC 700927 / EHEC;
+RX   PubMed=11206551; DOI=10.1038/35054089;
+RA   Perna N.T., Plunkett G. III, Burland V., Mau B., Glasner J.D., Rose D.J.,
+RA   Mayhew G.F., Evans P.S., Gregor J., Kirkpatrick H.A., Posfai G.,
+RA   Hackett J., Klink S., Boutin A., Shao Y., Miller L., Grotbeck E.J.,
+RA   Davis N.W., Lim A., Dimalanta E.T., Potamousis K., Apodaca J.,
+RA   Anantharaman T.S., Lin J., Yen G., Schwartz D.C., Welch R.A.,
+RA   Blattner F.R.;
+RT   "Genome sequence of enterohaemorrhagic Escherichia coli O157:H7.";
+RL   Nature 409:529-533(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=O157:H7 / Sakai / RIMD 0509952 / EHEC;
+RX   PubMed=11258796; DOI=10.1093/dnares/8.1.11;
+RA   Hayashi T., Makino K., Ohnishi M., Kurokawa K., Ishii K., Yokoyama K.,
+RA   Han C.-G., Ohtsubo E., Nakayama K., Murata T., Tanaka M., Tobe T., Iida T.,
+RA   Takami H., Honda T., Sasakawa C., Ogasawara N., Yasunaga T., Kuhara S.,
+RA   Shiba T., Hattori M., Shinagawa H.;
+RT   "Complete genome sequence of enterohemorrhagic Escherichia coli O157:H7 and
+RT   genomic comparison with a laboratory strain K-12.";
+RL   DNA Res. 8:11-22(2001).
+CC   -!- FUNCTION: Positively regulates the expression of about fifteen genes
+CC       involved in acid resistance such as gadA, gadB and gadC. Depending on
+CC       the conditions (growth phase and medium), can repress gadW (By
+CC       similarity). {ECO:0000250}.
+CC   -!- SUBUNIT: Homodimer. {ECO:0000250}.
+CC   -!- INDUCTION: Expression can be activated by RpoS and repressed by CRP, H-
+CC       NS and GadW, depending on the conditions. {ECO:0000250}.
+DR   EMBL; AE005174; AAG58657.1; -; Genomic_DNA.
+DR   EMBL; BA000007; BAB37819.1; -; Genomic_DNA.
+DR   PIR; D91178; D91178.
+DR   PIR; E86024; E86024.
+DR   RefSeq; NP_312423.1; NC_002695.1.
+DR   RefSeq; WP_001191074.1; NZ_VOAI01000004.1.
+DR   AlphaFoldDB; P58230; -.
+DR   SMR; P58230; -.
+DR   STRING; 155864.Z4929; -.
+DR   GeneID; 915747; -.
+DR   KEGG; ece:Z4929; -.
+DR   KEGG; ecs:ECs_4396; -.
+DR   PATRIC; fig|386585.9.peg.4595; -.
+DR   eggNOG; COG2207; Bacteria.
+DR   HOGENOM; CLU_091292_0_0_6; -.
+DR   OMA; NIANDWS; -.
+DR   Proteomes; UP000000558; Chromosome.
+DR   Proteomes; UP000002519; Chromosome.
+DR   GO; GO:0005829; C:cytosol; IEA:TreeGrafter.
+DR   GO; GO:0003700; F:DNA-binding transcription factor activity; IEA:InterPro.
+DR   GO; GO:0000976; F:transcription cis-regulatory region binding; IEA:TreeGrafter.
+DR   FunFam; 1.10.10.60:FF:000267; HTH-type transcriptional regulator GadX; 1.
+DR   Gene3D; 1.10.10.60; Homeodomain-like; 1.
+DR   InterPro; IPR009057; Homeodomain-like_sf.
+DR   InterPro; IPR018060; HTH_AraC.
+DR   InterPro; IPR018062; HTH_AraC-typ_CS.
+DR   InterPro; IPR020449; Tscrpt_reg_AraC-type_HTH.
+DR   NCBIfam; NF007432; PRK09978.1; 1.
+DR   PANTHER; PTHR47894; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   PANTHER; PTHR47894:SF4; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   Pfam; PF12833; HTH_18; 1.
+DR   PRINTS; PR00032; HTHARAC.
+DR   SMART; SM00342; HTH_ARAC; 1.
+DR   SUPFAM; SSF46689; Homeodomain-like; 1.
+DR   PROSITE; PS00041; HTH_ARAC_FAMILY_1; 1.
+DR   PROSITE; PS01124; HTH_ARAC_FAMILY_2; 1.
+PE   3: Inferred from homology;
+KW   Activator; DNA-binding; Reference proteome; Repressor; Transcription;
+KW   Transcription regulation.
+FT   CHAIN           1..274
+FT                   /note="HTH-type transcriptional regulator GadX"
+FT                   /id="PRO_0000194520"
+FT   DOMAIN          145..242
+FT                   /note="HTH araC/xylS-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        162..183
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        209..232
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+SQ   SEQUENCE   274 AA;  31372 MW;  1C2A626CE6886CDD CRC64;
+//
+ID   ENVY_ECOLI              Reviewed;         253 AA.
+AC   P10805; P77778;
+DE   RecName: Full=Porin thermoregulatory protein EnvY;
+GN   Name=envY; OrderedLocusNames=b0566, JW0555;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RX   PubMed=2536924; DOI=10.1093/nar/17.2.800;
+RA   Lundrigan M.D., Friedrich M.J., Kadner R.J.;
+RT   "Nucleotide sequence of the Escherichia coli porin thermoregulatory gene
+RT   envY.";
+RL   Nucleic Acids Res. 17:800-800(1989).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=8905232; DOI=10.1093/dnares/3.3.137;
+RA   Oshima T., Aiba H., Baba T., Fujita K., Hayashi K., Honjo A., Ikemoto K.,
+RA   Inada T., Itoh T., Kajihara M., Kanai K., Kashimoto K., Kimura S.,
+RA   Kitagawa M., Makino K., Masuda S., Miki T., Mizobuchi K., Mori H.,
+RA   Motomura K., Nakamura Y., Nashimoto H., Nishio Y., Saito N., Sampei G.,
+RA   Seki Y., Tagami H., Takemoto K., Wada C., Yamamoto Y., Yano M.,
+RA   Horiuchi T.;
+RT   "A 718-kb DNA sequence of the Escherichia coli K-12 genome corresponding to
+RT   the 12.7-28.0 min region on the linkage map.";
+RL   DNA Res. 3:137-155(1996).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RA   Chung E., Allen E., Araujo R., Aparicio A.M., Davis K., Duncan M.,
+RA   Federspiel N., Hyman R., Kalman S., Komp C., Kurdi O., Lew H., Lin D.,
+RA   Namath A., Oefner P., Roberts D., Schramm S., Davis R.W.;
+RT   "Sequence of minutes 4-25 of Escherichia coli.";
+RL   Submitted (JAN-1997) to the EMBL/GenBank/DDBJ databases.
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [5]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+CC   -!- FUNCTION: Influences the temperature-dependent expression of several
+CC       E.coli envelope proteins, most notably the porins OmpF and OmpC and the
+CC       lambda receptor, LamB.
+DR   EMBL; X13548; CAA31900.1; -; Genomic_DNA.
+DR   EMBL; U82598; AAB40763.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC73667.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAA35200.1; -; Genomic_DNA.
+DR   PIR; D64789; D64789.
+DR   RefSeq; NP_415098.1; NC_000913.3.
+DR   RefSeq; WP_001177471.1; NZ_SSZK01000024.1.
+DR   AlphaFoldDB; P10805; -.
+DR   SMR; P10805; -.
+DR   BioGRID; 4262188; 87.
+DR   FunCoup; P10805; 40.
+DR   IntAct; P10805; 14.
+DR   STRING; 511145.b0566; -.
+DR   PaxDb; 511145-b0566; -.
+DR   EnsemblBacteria; AAC73667; AAC73667; b0566.
+DR   GeneID; 949114; -.
+DR   KEGG; ecj:JW0555; -.
+DR   KEGG; eco:b0566; -.
+DR   KEGG; ecoc:C3026_02810; -.
+DR   PATRIC; fig|1411691.4.peg.1708; -.
+DR   EchoBASE; EB0264; -.
+DR   eggNOG; COG2207; Bacteria.
+DR   HOGENOM; CLU_000445_81_4_6; -.
+DR   InParanoid; P10805; -.
+DR   OMA; HISMEVI; -.
+DR   OrthoDB; 9816344at2; -.
+DR   PhylomeDB; P10805; -.
+DR   BioCyc; EcoCyc:PD00969; -.
+DR   PRO; PR:P10805; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0016020; C:membrane; IDA:EcoCyc.
+DR   GO; GO:0003700; F:DNA-binding transcription factor activity; IEA:InterPro.
+DR   GO; GO:0043565; F:sequence-specific DNA binding; IEA:InterPro.
+DR   GO; GO:0009266; P:response to temperature stimulus; IDA:EcoCyc.
+DR   Gene3D; 1.10.10.60; Homeodomain-like; 1.
+DR   InterPro; IPR009057; Homeodomain-like_sf.
+DR   InterPro; IPR018060; HTH_AraC.
+DR   InterPro; IPR018062; HTH_AraC-typ_CS.
+DR   InterPro; IPR020449; Tscrpt_reg_AraC-type_HTH.
+DR   PANTHER; PTHR47894; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   PANTHER; PTHR47894:SF4; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   Pfam; PF12833; HTH_18; 1.
+DR   PRINTS; PR00032; HTHARAC.
+DR   SMART; SM00342; HTH_ARAC; 1.
+DR   SUPFAM; SSF46689; Homeodomain-like; 1.
+DR   PROSITE; PS00041; HTH_ARAC_FAMILY_1; 1.
+DR   PROSITE; PS01124; HTH_ARAC_FAMILY_2; 1.
+PE   4: Predicted;
+KW   Activator; DNA-binding; Reference proteome; Transcription;
+KW   Transcription regulation.
+FT   CHAIN           1..253
+FT                   /note="Porin thermoregulatory protein EnvY"
+FT                   /id="PRO_0000194508"
+FT   DOMAIN          149..246
+FT                   /note="HTH araC/xylS-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        166..187
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        213..236
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   CONFLICT        61
+FT                   /note="N -> NR (in Ref. 1; CAA31900)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        93
+FT                   /note="Missing (in Ref. 1; CAA31900)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        99
+FT                   /note="R -> P (in Ref. 1; CAA31900)"
+FT                   /evidence="ECO:0000305"
+FT   CONFLICT        150
+FT                   /note="S -> T (in Ref. 1; CAA31900)"
+FT                   /evidence="ECO:0000305"
+SQ   SEQUENCE   253 AA;  29019 MW;  8FB1554CC5C4238E CRC64;
+//
+ID   GADX_ECOL6              Reviewed;         274 AA.
+AC   Q8FCI6;
+DE   RecName: Full=HTH-type transcriptional regulator GadX;
+GN   Name=gadX; OrderedLocusNames=c4327;
+OS   Escherichia coli O6:H1 (strain CFT073 / ATCC 700928 / UPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=199310;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=CFT073 / ATCC 700928 / UPEC;
+RX   PubMed=12471157; DOI=10.1073/pnas.252529799;
+RA   Welch R.A., Burland V., Plunkett G. III, Redford P., Roesch P., Rasko D.,
+RA   Buckles E.L., Liou S.-R., Boutin A., Hackett J., Stroud D., Mayhew G.F.,
+RA   Rose D.J., Zhou S., Schwartz D.C., Perna N.T., Mobley H.L.T.,
+RA   Donnenberg M.S., Blattner F.R.;
+RT   "Extensive mosaic structure revealed by the complete genome sequence of
+RT   uropathogenic Escherichia coli.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 99:17020-17024(2002).
+CC   -!- FUNCTION: Positively regulates the expression of about fifteen genes
+CC       involved in acid resistance such as gadA, gadB and gadC. Depending on
+CC       the conditions (growth phase and medium), can repress gadW (By
+CC       similarity). {ECO:0000250}.
+CC   -!- SUBUNIT: Homodimer. {ECO:0000250}.
+CC   -!- INDUCTION: Expression can be activated by RpoS and repressed by CRP, H-
+CC       NS and GadW, depending on the conditions. {ECO:0000250}.
+DR   EMBL; AE014075; AAN82763.1; -; Genomic_DNA.
+DR   RefSeq; WP_001182743.1; NZ_CP051263.1.
+DR   AlphaFoldDB; Q8FCI6; -.
+DR   SMR; Q8FCI6; -.
+DR   STRING; 199310.c4327; -.
+DR   KEGG; ecc:c4327; -.
+DR   eggNOG; COG2207; Bacteria.
+DR   HOGENOM; CLU_091292_0_0_6; -.
+DR   BioCyc; ECOL199310:C4327-MONOMER; -.
+DR   Proteomes; UP000001410; Chromosome.
+DR   GO; GO:0005829; C:cytosol; IEA:TreeGrafter.
+DR   GO; GO:0003700; F:DNA-binding transcription factor activity; IEA:InterPro.
+DR   GO; GO:0000976; F:transcription cis-regulatory region binding; IEA:TreeGrafter.
+DR   Gene3D; 1.10.10.60; Homeodomain-like; 1.
+DR   InterPro; IPR009057; Homeodomain-like_sf.
+DR   InterPro; IPR018060; HTH_AraC.
+DR   InterPro; IPR018062; HTH_AraC-typ_CS.
+DR   InterPro; IPR020449; Tscrpt_reg_AraC-type_HTH.
+DR   NCBIfam; NF007432; PRK09978.1; 1.
+DR   PANTHER; PTHR47894; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   PANTHER; PTHR47894:SF4; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   Pfam; PF12833; HTH_18; 1.
+DR   PRINTS; PR00032; HTHARAC.
+DR   SMART; SM00342; HTH_ARAC; 1.
+DR   SUPFAM; SSF46689; Homeodomain-like; 1.
+DR   PROSITE; PS00041; HTH_ARAC_FAMILY_1; 1.
+DR   PROSITE; PS01124; HTH_ARAC_FAMILY_2; 1.
+PE   3: Inferred from homology;
+KW   Activator; DNA-binding; Reference proteome; Repressor; Transcription;
+KW   Transcription regulation.
+FT   CHAIN           1..274
+FT                   /note="HTH-type transcriptional regulator GadX"
+FT                   /id="PRO_0000194521"
+FT   DOMAIN          145..242
+FT                   /note="HTH araC/xylS-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        162..183
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        209..232
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+SQ   SEQUENCE   274 AA;  31306 MW;  0944880015520A64 CRC64;
+//
+ID   GADX_ECO27              Reviewed;         274 AA.
+AC   Q9EYV5; B7UL69;
+DE   RecName: Full=HTH-type transcriptional regulator GadX;
+GN   Name=gadX; OrderedLocusNames=E2348C_3758;
+OS   Escherichia coli O127:H6 (strain E2348/69 / EPEC).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=574521;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA], AND FUNCTION.
+RX   PubMed=11555293; DOI=10.1046/j.1365-2958.2001.02570.x;
+RA   Shin S., Castanie-Cornet M.-P., Foster J.W., Crawford J.A., Brinkley C.,
+RA   Kaper J.B.;
+RT   "An activator of glutamate decarboxylase genes regulates the expression of
+RT   enteropathogenic Escherichia coli virulence genes through control of the
+RT   plasmid-encoded regulator, Per.";
+RL   Mol. Microbiol. 41:1133-1150(2001).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=E2348/69 / EPEC;
+RX   PubMed=18952797; DOI=10.1128/jb.01238-08;
+RA   Iguchi A., Thomson N.R., Ogura Y., Saunders D., Ooka T., Henderson I.R.,
+RA   Harris D., Asadulghani M., Kurokawa K., Dean P., Kenny B., Quail M.A.,
+RA   Thurston S., Dougan G., Hayashi T., Parkhill J., Frankel G.;
+RT   "Complete genome sequence and comparative genome analysis of
+RT   enteropathogenic Escherichia coli O127:H6 strain E2348/69.";
+RL   J. Bacteriol. 191:347-354(2009).
+CC   -!- FUNCTION: Positively regulates the expression of about fifteen genes
+CC       involved in acid resistance such as gadA, gadB and gadC. Depending on
+CC       the conditions (growth phase and medium), can repress gadW (By
+CC       similarity). Negatively regulates perA expression in acidic conditions
+CC       and positively regulates it in alkaline conditions. {ECO:0000250,
+CC       ECO:0000269|PubMed:11555293}.
+CC   -!- SUBUNIT: Homodimer. {ECO:0000250}.
+CC   -!- INDUCTION: Expression can be activated by RpoS and repressed by CRP, H-
+CC       NS and GadW, depending on the conditions. {ECO:0000250}.
+DR   EMBL; AF311305; AAG42472.1; -; Genomic_DNA.
+DR   EMBL; FM180568; CAS11306.1; -; Genomic_DNA.
+DR   RefSeq; WP_001182739.1; NC_011601.1.
+DR   AlphaFoldDB; Q9EYV5; -.
+DR   SMR; Q9EYV5; -.
+DR   KEGG; ecg:E2348C_3758; -.
+DR   HOGENOM; CLU_091292_0_0_6; -.
+DR   Proteomes; UP000008205; Chromosome.
+DR   GO; GO:0005829; C:cytosol; IEA:TreeGrafter.
+DR   GO; GO:0003700; F:DNA-binding transcription factor activity; IEA:InterPro.
+DR   GO; GO:0000976; F:transcription cis-regulatory region binding; IEA:TreeGrafter.
+DR   Gene3D; 1.10.10.60; Homeodomain-like; 1.
+DR   InterPro; IPR009057; Homeodomain-like_sf.
+DR   InterPro; IPR018060; HTH_AraC.
+DR   InterPro; IPR018062; HTH_AraC-typ_CS.
+DR   InterPro; IPR020449; Tscrpt_reg_AraC-type_HTH.
+DR   NCBIfam; NF007432; PRK09978.1; 1.
+DR   PANTHER; PTHR47894; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   PANTHER; PTHR47894:SF4; HTH-TYPE TRANSCRIPTIONAL REGULATOR GADX; 1.
+DR   Pfam; PF12833; HTH_18; 1.
+DR   PRINTS; PR00032; HTHARAC.
+DR   SMART; SM00342; HTH_ARAC; 1.
+DR   SUPFAM; SSF46689; Homeodomain-like; 1.
+DR   PROSITE; PS00041; HTH_ARAC_FAMILY_1; 1.
+DR   PROSITE; PS01124; HTH_ARAC_FAMILY_2; 1.
+PE   3: Inferred from homology;
+KW   Activator; DNA-binding; Reference proteome; Repressor; Transcription;
+KW   Transcription regulation; Virulence.
+FT   CHAIN           1..274
+FT                   /note="HTH-type transcriptional regulator GadX"
+FT                   /id="PRO_0000194519"
+FT   DOMAIN          145..242
+FT                   /note="HTH araC/xylS-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        162..183
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        209..232
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+SQ   SEQUENCE   274 AA;  31289 MW;  1495ACED6B8FC18F CRC64;
+//
+ID   ADIY_ECOLI              Reviewed;         253 AA.
+AC   P33234; Q2M6I8;
+DE   RecName: Full=HTH-type transcriptional regulator AdiY;
+GN   Name=adiY; OrderedLocusNames=b4116, JW4077;
+OS   Escherichia coli (strain K12).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Enterobacterales; Enterobacteriaceae; Escherichia.
+OX   NCBI_TaxID=83333;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=K12;
+RA   Stim K.P., Bennett G.N.;
+RL   Submitted (OCT-1993) to the EMBL/GenBank/DDBJ databases.
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=7610040; DOI=10.1093/nar/23.12.2105;
+RA   Burland V.D., Plunkett G. III, Sofia H.J., Daniels D.L., Blattner F.R.;
+RT   "Analysis of the Escherichia coli genome VI: DNA sequence of the region
+RT   from 92.8 through 100 minutes.";
+RL   Nucleic Acids Res. 23:2105-2119(1995).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / MG1655 / ATCC 47076;
+RX   PubMed=9278503; DOI=10.1126/science.277.5331.1453;
+RA   Blattner F.R., Plunkett G. III, Bloch C.A., Perna N.T., Burland V.,
+RA   Riley M., Collado-Vides J., Glasner J.D., Rode C.K., Mayhew G.F.,
+RA   Gregor J., Davis N.W., Kirkpatrick H.A., Goeden M.A., Rose D.J., Mau B.,
+RA   Shao Y.;
+RT   "The complete genome sequence of Escherichia coli K-12.";
+RL   Science 277:1453-1462(1997).
+RN   [4]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=K12 / W3110 / ATCC 27325 / DSM 5911;
+RX   PubMed=16738553; DOI=10.1038/msb4100049;
+RA   Hayashi K., Morooka N., Yamamoto Y., Fujita K., Isono K., Choi S.,
+RA   Ohtsubo E., Baba T., Wanner B.L., Mori H., Horiuchi T.;
+RT   "Highly accurate genome sequences of Escherichia coli K-12 strains MG1655
+RT   and W3110.";
+RL   Mol. Syst. Biol. 2:E1-E5(2006).
+RN   [5]
+RP   INDUCTION, OPERON, AND DISRUPTION PHENOTYPE.
+RC   STRAIN=K12;
+RX   PubMed=12867448; DOI=10.1128/jb.185.15.4402-4409.2003;
+RA   Gong S., Richard H., Foster J.W.;
+RT   "YjdE (AdiC) is the arginine:agmatine antiporter essential for arginine-
+RT   dependent acid resistance in Escherichia coli.";
+RL   J. Bacteriol. 185:4402-4409(2003).
+CC   -!- INDUCTION: By acidic conditions. Forms an operon with upstream adiA but
+CC       not downstream adiC. {ECO:0000269|PubMed:12867448}.
+CC   -!- DISRUPTION PHENOTYPE: No change in arginine-dependent acid resistance.
+CC       {ECO:0000269|PubMed:12867448}.
+DR   EMBL; U02384; AAB18143.1; -; Unassigned_DNA.
+DR   EMBL; U14003; AAA97016.1; -; Genomic_DNA.
+DR   EMBL; U00096; AAC77077.1; -; Genomic_DNA.
+DR   EMBL; AP009048; BAE78118.1; -; Genomic_DNA.
+DR   PIR; S56345; S56345.
+DR   RefSeq; NP_418540.1; NC_000913.3.
+DR   RefSeq; WP_001217060.1; NZ_SSZK01000018.1.
+DR   AlphaFoldDB; P33234; -.
+DR   SMR; P33234; -.
+DR   BioGRID; 4263080; 62.
+DR   FunCoup; P33234; 20.
+DR   IntAct; P33234; 2.
+DR   STRING; 511145.b4116; -.
+DR   PaxDb; 511145-b4116; -.
+DR   EnsemblBacteria; AAC77077; AAC77077; b4116.
+DR   GeneID; 948627; -.
+DR   KEGG; ecj:JW4077; -.
+DR   KEGG; eco:b4116; -.
+DR   KEGG; ecoc:C3026_22240; -.
+DR   PATRIC; fig|1411691.4.peg.2584; -.
+DR   EchoBASE; EB1909; -.
+DR   eggNOG; COG2207; Bacteria.
+DR   HOGENOM; CLU_000445_81_4_6; -.
+DR   InParanoid; P33234; -.
+DR   OMA; MIIRATQ; -.
+DR   OrthoDB; 9816344at2; -.
+DR   PhylomeDB; P33234; -.
+DR   BioCyc; EcoCyc:EG11966-MONOMER; -.
+DR   PRO; PR:P33234; -.
+DR   Proteomes; UP000000625; Chromosome.
+DR   GO; GO:0003700; F:DNA-binding transcription factor activity; IDA:EcoCyc.
+DR   GO; GO:0043565; F:sequence-specific DNA binding; IEA:InterPro.
+DR   GO; GO:0045893; P:positive regulation of DNA-templated transcription; IDA:EcoCyc.
+DR   FunFam; 1.10.10.60:FF:000123; HTH-type transcriptional regulator AdiY; 1.
+DR   Gene3D; 1.10.10.60; Homeodomain-like; 1.
+DR   InterPro; IPR009057; Homeodomain-like_sf.
+DR   InterPro; IPR018060; HTH_AraC.
+DR   InterPro; IPR018062; HTH_AraC-typ_CS.
+DR   InterPro; IPR020449; Tscrpt_reg_AraC-type_HTH.
+DR   PANTHER; PTHR43280; ARAC-FAMILY TRANSCRIPTIONAL REGULATOR; 1.
+DR   PANTHER; PTHR43280:SF20; HTH-TYPE TRANSCRIPTIONAL REGULATOR ADIY-RELATED; 1.
+DR   Pfam; PF12833; HTH_18; 1.
+DR   PRINTS; PR00032; HTHARAC.
+DR   SMART; SM00342; HTH_ARAC; 1.
+DR   SUPFAM; SSF46689; Homeodomain-like; 1.
+DR   PROSITE; PS00041; HTH_ARAC_FAMILY_1; 1.
+DR   PROSITE; PS01124; HTH_ARAC_FAMILY_2; 1.
+PE   2: Evidence at transcript level;
+KW   DNA-binding; Reference proteome; Transcription; Transcription regulation.
+FT   CHAIN           1..253
+FT                   /note="HTH-type transcriptional regulator AdiY"
+FT                   /id="PRO_0000194495"
+FT   DOMAIN          149..246
+FT                   /note="HTH araC/xylS-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        166..187
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+FT   DNA_BIND        213..236
+FT                   /note="H-T-H motif"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00593"
+SQ   SEQUENCE   253 AA;  29007 MW;  6A7DE2B06E60389E CRC64;
+//
+
+--- End of sp.seq_info ---
+
+--- species summary (copy to Claude) ---
+Number  Rank    Taxon
+22	6	Escherichia.
+13	6	Shigella.
+43	5	Enterobacteriaceae
+46	4	Enterobacterales
+46	3	Gammaproteobacteria
+46	2	Pseudomonadota
+46	1	Pseudomonadati
+46	0	Bacteria
+Total of 46 proteins found
+
+--- End of species summary ---
+
+--- Domain architectures (copy to Claude) ---
+P10805	PORIN THERMOREGULATORY PROTEIN     209.8    6.3e-59   1   1.4   3.4
+	Iterate                   	     4	   142	   209.0
+	PF12833	HTH_18          	   168	   246	    57.8
+	PF00165	HTH_AraC        	   206	   245	    41.9
+
+P33234	HTH-TYPE TRANSCRIPTIONAL REGULA    223.0    5.4e-63   1   1.4   0.8
+	Iterate                   	     4	   142	   222.3
+	PF00165	HTH_AraC        	   155	   195	    26.6
+	PF12833	HTH_18          	   168	   246	    54.1
+	PF00165	HTH_AraC        	   205	   245	    33.8
+
+P37639	HTH-TYPE TRANSCRIPTIONAL REGULA    139.2    4.1e-37   1   1.7   0.8
+	Iterate                   	     3	   138	   139.2
+	PF12833	HTH_18          	   164	   242	    64.2
+	PF00165	HTH_AraC        	   202	   241	    46.8
+
+P58230	HTH-TYPE TRANSCRIPTIONAL REGULA    136.3    3.1e-36   1   1.7   0.7
+	Iterate                   	     3	   138	   136.3
+	PF12833	HTH_18          	   164	   242	    64.2
+	PF00165	HTH_AraC        	   202	   241	    46.8
+
+Q83PR0	HTH-TYPE TRANSCRIPTIONAL REGULA    136.3    3.2e-36   1   1.7   0.7
+	Iterate                   	     3	   138	   136.3
+	PF12833	HTH_18          	   164	   242	    64.2
+	PF00165	HTH_AraC        	   202	   241	    46.8
+
+Q8FCI6	HTH-TYPE TRANSCRIPTIONAL REGULA    131.8      8e-35   1   1.7   1.4
+	Iterate                   	     3	   138	   131.4
+	PF00165	HTH_AraC        	   151	   191	    30.3
+	PF12833	HTH_18          	   164	   242	    65.1
+	PF00165	HTH_AraC        	   204	   241	    44.5
+
+Q9EYV5	HTH-TYPE TRANSCRIPTIONAL REGULA    131.9      7e-35   1   1.7   1.2
+	Iterate                   	     3	   138	   131.5
+	PF00165	HTH_AraC        	   151	   191	    30.3
+	PF12833	HTH_18          	   164	   242	    65.1
+	PF00165	HTH_AraC        	   204	   241	    44.5
+
+
+--- End of Domain architectures ---
+
+--- PaperBLAST literature results (copy to Claude) ---
+================================================================================
+Protein: VIMSS96567 (E-value: 1.7e-64, Score: 221.2)
+Mentioned as: ECs5098
+Description: putative ARAC-type regulatory protein
+Organism: Escherichia coli O157:H7 str. Sakai
+PMID: 19346340
+Source: EuropePMC
+Title: Gene expression induced in Escherichia coli O157:H7 upon exposure to model apple juice
+Journal: Applied and environmental microbiology (2009)
+Snippet: ECs2914 ECs3151 ECs3669 ECs3860 ECs4321 ECs4493 ECs4666 ECs4884 ECs5011 ECs5098 ECs5188 ECs5350 lpxC yceK hslJ mdtJ ydhA yeaY rcsA wcaF O157 yfbB ygdI O157 dcrB
+
+================================================================================
+Protein: VIMSS151541 (E-value: 1.1e-62, Score: 215.3)
+Mentioned as: STM4295
+Description: transcriptional activator of adiA (AraC/XylS family)
+Organism: Salmonella typhimurium LT2
+PMID: 32044996
+Source: EuropePMC
+Title: Selection-Driven Gene Inactivation in Salmonella
+Journal: Genome biology and evolution (2020)
+Snippet: bcsA icc STM1488 mlc Biofilm formation STM2191 galS STM4295 adiY STM4507 STM2557 cadC STM2330 uxuR Repressors of sugar utilization Acid resistance lrhA
+
+================================================================================
+Protein: VIMSS151541 (E-value: 1.1e-62, Score: 215.3)
+Mentioned as: STM4295
+Description: transcriptional activator of adiA (AraC/XylS family)
+Organism: Salmonella typhimurium LT2
+PMID: 20686510
+Source: EuropePMC
+Title: Salmonella transcriptional signature in Tetrahymena phagosomes and role of acid tolerance in passage through the protist
+Journal: The ISME journal (2011)
+Snippet: ompW 5.15 9.01 9.99 9.31 11.67 Acid stress STM4295 STM4296 adiY adiA 4.12 6.20 6.81 5.71 Function P-type ATPase, high-affinity potassium transport system,
+
+================================================================================
+Protein: VIMSS14702 (E-value: 7.9e-61, Score: 209.3)
+Mentioned as: b0566
+Description: DNA-binding transcriptional activator of porin biosynthesis
+Organism: Escherichia coli str. K-12 substr. MG1655
+PMID: 35185820
+Source: EuropePMC
+Title: Antimicrobial Resistance Dynamics in Chilean <i>Shigella sonnei</i> Strains Within Two Decades: Role of <i>Shigella</i> Resistance Locus Pathogenicity Island and Class 1 and Class 2 Integrons
+Journal: Frontiers in microbiology (2021)
+Snippet: + + + ST-152 IIIa + + + + + c + + + B b0566 GCF_019732275.1 Metropolitana 2005 + R S S R R R R S S + ST-152 IIIa + + + + + C c0725 GCF_019732245.1 Antofagasta 2008 + R S R
+
+================================================================================
+Protein: P37639 (E-value: 3.6e-39, Score: 139.2)
+Mentioned as: P37639
+Description: HTH-type transcriptional regulator GadX
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - HTH-type transcriptional regulator GadX
+PMID: 37713396
+Source: EuropePMC
+Title: Toward Single Bacterium Proteomics
+Journal: Journal of the American Society for Mass Spectrometry (2023)
+Snippet: P31456 [2233] [K].LAGKMQVIALDK.[K] 1761.07 587.69 +3 89.87 4 228.5 25.00% HTH-type transcriptional regulator GadX gadX P37639 [243250] [R].SAQRLSNR.[D] 1161.65 581.33 +2 30.74 2 191.41 12.50% ribomal silencing factor RsfS rsfS P0AAT6 [113] [-].MQGKALQDFVIDK.[I] 1952.09 651.36 +3 45.44 1 185.02 6.25% 573 uncharacterized protein YbcK ybcK P77698
+
+================================================================================
+Protein: P37639 (E-value: 3.6e-39, Score: 139.2)
+Mentioned as: GADX_ECOLI
+Description: HTH-type transcriptional regulator GadX
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - HTH-type transcriptional regulator GadX
+PMID: 11298273
+Source: SwissProt
+Snippet: FUNCTION: Positively regulates the expression of about fifteen genes involved in acid resistance such as gadA, gadB and gadC. Depending on the conditions (growth phase and medium), can repress gadW. {ECO:0000269|PubMed:11298273, ECO:0000269|PubMed:11976288, ECO:0000269|PubMed:12446650, ECO:0000269|PubMed:12730179, ECO:0000269|PubMed:14617649, ECO:0000269|PubMed:14702398}._:::_SUBUNIT: Homodimer. {ECO:0000269|PubMed:12446650}._:::_INDUCTION: Expression can be activated by RpoS and repressed by CR...
+
+================================================================================
+Protein: P37639 (E-value: 3.6e-39, Score: 139.2)
+Mentioned as: GADX_ECOLI
+Description: HTH-type transcriptional regulator GadX
+Organism: Escherichia coli (strain K12)
+  SwissProt:  - HTH-type transcriptional regulator GadX
+PMID: 11976288
+Source: SwissProt
+Snippet: FUNCTION: Positively regulates the expression of about fifteen genes involved in acid resistance such as gadA, gadB and gadC. Depending on the conditions (growth phase and medium), can repress gadW. {ECO:0000269|PubMed:11298273, ECO:0000269|PubMed:11976288, ECO:0000269|PubMed:12446650, ECO:0000269|PubMed:12730179, ECO:0000269|PubMed:14617649, ECO:0000269|PubMed:14702398}._:::_SUBUNIT: Homodimer. {ECO:0000269|PubMed:12446650}._:::_INDUCTION: Expression can be activated by RpoS and repressed by CR...
+
+================================================================================
+Protein: VIMSS366269 (E-value: 2.7e-38, Score: 136.3)
+Mentioned as: S4172
+Description: putative ARAC-type regulatory protein
+Organism: Shigella flexneri 2a str. 2457T
+PMID: 40559609
+Source: EuropePMC
+Title: Deploying Metagenomics to Characterize Microbial Pathogens During Outbreak of Acute Febrile Illness Among Children in Tanzania
+Journal: Pathogens (Basel, Switzerland) (2025)
+
+================================================================================
+Protein: VIMSS366269 (E-value: 2.7e-38, Score: 136.3)
+Mentioned as: S4172
+Description: putative ARAC-type regulatory protein
+Organism: Shigella flexneri 2a str. 2457T
+PMID: 34694904
+Source: EuropePMC
+Title: The <i>hdeD</i> Gene Represses the Expression of Flagellum Biosynthesis via LrhA in <i>Escherichia coli</i> K-12
+Journal: Journal of bacteriology (2022)
+
+================================================================================
+Protein: VIMSS1237803 (E-value: 6.2e-37, Score: 131.9)
+Mentioned as: UTI89_C4048
+Description: Transcriptional regulator GadX
+
+... (truncated - showing first 100 of 107 lines)
+--- End of PaperBLAST literature results ---
+
+--- TED domain information (copy to Claude) ---
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A097R7H9.1	AF-A0A097R7H9-F1-model_v4_TED01:3-144	1	AF-A0A097R7H9-F1-model_v4_TED01	3-144	100.0%
+A0A097R7H9.1	AF-A0A097R7H9-F1-model_v4_TED02:148-250	1	AF-A0A097R7H9-F1-model_v4_TED02	148-250	0
+A0A0H3DUK4.1	AF-A0A0H3DUK4-F1-model_v4_TED01:6-143	1	AF-A0A0H3DUK4-F1-model_v4_TED01	6-143	98.6%
+A0A0H3DUK4.1	AF-A0A0H3DUK4-F1-model_v4_TED02:146-248	1	AF-A0A0H3DUK4-F1-model_v4_TED02	146-248	0
+A9MGH0.1	AF-A9MGH0-F1-model_v4_TED01:1-142	1	AF-A9MGH0-F1-model_v4_TED01	1-142	100.0%
+A9MGH0.1	AF-A9MGH0-F1-model_v4_TED02:146-246	1	AF-A9MGH0-F1-model_v4_TED02	146-246	0
+E3G1K1.1	AF-E3G1K1-F1-model_v4_TED01:3-144	1	AF-E3G1K1-F1-model_v4_TED01	3-144	100.0%
+E3G1K1.1	AF-E3G1K1-F1-model_v4_TED02:148-253	1	AF-E3G1K1-F1-model_v4_TED02	148-253	0
+E3G1K6.1	AF-E3G1K6-F1-model_v4_TED01:3-144	1	AF-E3G1K6-F1-model_v4_TED01	3-144	100.0%
+E3G1K6.1	AF-E3G1K6-F1-model_v4_TED02:149-251	1	AF-E3G1K6-F1-model_v4_TED02	149-251	0
+P10805.2	AF-P10805-F1-model_v4_TED02:146-250	1	AF-P10805-F1-model_v4_TED02	146-250	0
+P10805.2	AF-P10805-F1-model_v4_TED01:1-142	1	AF-P10805-F1-model_v4_TED01	1-142	100.0%
+P33234.1	AF-P33234-F1-model_v4_TED01:1-142	1	AF-P33234-F1-model_v4_TED01	1-142	100.0%
+P33234.1	AF-P33234-F1-model_v4_TED02:146-251	1	AF-P33234-F1-model_v4_TED02	146-251	0
+P37639.1	AF-P37639-F1-model_v4_TED01:7-138	1	AF-P37639-F1-model_v4_TED01	7-138	97.1%
+P37639.1	AF-P37639-F1-model_v4_TED02:142-245	1	AF-P37639-F1-model_v4_TED02	142-245	0
+
+--- End of TED domain information ---
+
+--- STRING protein interaction network (copy to Claude) ---
+================================================================================
+STRING Network Analysis - Detailed Results (ALL findings)
+================================================================================
+
+Query proteins: 17
+Total networks analyzed: 17
+Total network proteins: 456
+
+================================================================================
+ALL Pfam Domains Found (no frequency filter)
+================================================================================
+
+Pfam Domain               Networks     Proteins     Frequency   
+--------------------------------------------------------------------------------
+PF00165 (HTH_AraC)        17           61           100.0%
+PF12833 (HTH_18)          17           72           100.0%
+PF02311 (AraC_binding)    14           28            82.4%
+PF07883 (Cupin_2)         14           15            82.4%
+PF00324 (AA_permease)     13           15            76.5%
+PF13520 (AA_permease_2)   13           15            76.5%
+PF00196 (GerE)            9            15            52.9%
+PF02518 (HATPase_c)       8            8             47.1%
+PF00282 (Pyridoxal_deC)   7            9             41.2%
+PF00072 (Response_reg)    7            11            41.2%
+PF27264 (YdhW_C)          7            3             41.2%
+PF27195 (YdhT_N)          7            3             41.2%
+PF00512 (HisKA)           7            7             41.2%
+PF10707 (YrbL-PhoP_reg)   7            7             41.2%
+PF02952 (Fucose_iso_C)    7            6             41.2%
+PF01276 (OKR_DC_1)        7            7             41.2%
+PF03709 (OKR_DC_1_N)      7            7             41.2%
+PF03711 (OKR_DC_1_C)      7            7             41.2%
+PF00370 (FGGY_N)          7            6             41.2%
+PF02782 (FGGY_C)          7            6             41.2%
+PF06411 (HdeA)            6            10            35.3%
+PF03729 (DUF308)          6            5             35.3%
+PF13687 (DUF4153)         6            5             35.3%
+PF03629 (SASA)            6            6             35.3%
+PF00884 (Sulfatase)       6            7             35.3%
+PF05025 (RbsD_FucU)       6            6             35.3%
+PF09829 (DUF2057)         6            5             35.3%
+PF07881 (Fucose_iso_N1)   6            5             35.3%
+PF07882 (Fucose_iso_N2)   6            5             35.3%
+PF03222 (Trp_Tyr_perm)    6            6             35.3%
+PF00497 (SBP_bac_3)       5            5             29.4%
+PF02706 (Wzz)             5            6             29.4%
+PF00795 (CN_hydrolase)    5            4             29.4%
+PF11939 (NiFe-hyd_HybE)   5            5             29.4%
+PF12852 (Cupin_6)         5            3             29.4%
+PF03527 (RHS)             4            6             23.5%
+PF05593 (RHS_repeat)      4            7             23.5%
+PF20148 (DUF6531)         4            7             23.5%
+PF25023 (TEN_YD-shell)    4            7             23.5%
+PF08410 (DUF1737)         4            5             23.5%
+PF20350 (DUF6645)         4            5             23.5%
+PF00359 (PTS_EIIA_2)      4            4             23.5%
+PF00391 (PEP-utilizers)   4            4             23.5%
+PF02896 (PEP-utilizers_C) 4            4             23.5%
+PF05524 (PEP-utilisers_N) 4            4             23.5%
+PF06251 (Caps_syn_GfcC_C) 4            4             23.5%
+PF20616 (Caps_syn_GfcC_N) 4            4             23.5%
+PF03927 (NapD)            4            4             23.5%
+PF00140 (Sigma70_r1_2)    3            4             17.6%
+PF04539 (Sigma70_r3)      3            4             17.6%
+PF04542 (Sigma70_r2)      3            4             17.6%
+PF04545 (Sigma70_r4)      3            4             17.6%
+PF13407 (Peripla_BP_4)    3            2             17.6%
+PF00381 (PTS-HPr)         3            3             17.6%
+PF01501 (Glyco_transf_8)  3            3             17.6%
+PF08437 (Glyco_transf_8C) 3            3             17.6%
+PF07449 (HyaE)            3            3             17.6%
+PF05175 (MTS)             3            3             17.6%
+PF08242 (Methyltransf_12) 3            3             17.6%
+PF13649 (Methyltransf_25) 3            3             17.6%
+PF13847 (Methyltransf_31) 3            3             17.6%
+PF02056 (Glyco_hydro_4)   3            3             17.6%
+PF11975 (Glyco_hydro_4C)  3            3             17.6%
+PF03843 (Slp)             3            3             17.6%
+PF00027 (cNMP_binding)    3            3             17.6%
+PF13545 (HTH_Crp_2)       3            3             17.6%
+PF00419 (Fimbrial)        2            4             11.8%
+PF08974 (DUF1877)         2            2             11.8%
+PF28880 (T2SSM_N)         2            2             11.8%
+PF04612 (T2SSM)           2            2             11.8%
+PF01627 (Hpt)             2            2             11.8%
+PF01547 (SBP_bac_1)       2            2             11.8%
+PF13343 (SBP_bac_6)       2            2             11.8%
+PF13416 (SBP_bac_8)       2            2             11.8%
+PF13531 (SBP_bac_11)      2            2             11.8%
+PF00265 (TK)              2            2             11.8%
+PF03313 (SDH_alpha)       2            2             11.8%
+PF03315 (SDH_beta)        2            2             11.8%
+PF01479 (S4)              2            2             11.8%
+PF28601 (HSP15_C)         2            2             11.8%
+PF01750 (HycI)            2            2             11.8%
+PF06325 (PrmA)            2            2             11.8%
+PF26049 (RLMG_N)          2            2             11.8%
+PF00126 (HTH_1)           2            2             11.8%
+PF03466 (LysR_substrate)  2            3             11.8%
+PF06445 (GyrI-like)       2            2             11.8%
+
+... (truncated - showing first 100 of 1888 lines)
+--- End of STRING protein interaction network ---
+
+--- Current DESC file (copy to Claude) ---
+ID   ShortName
+DE   Family description
+AU   Who RU
+SE   Where did the seed come from
+GA   27.00 27.00;
+TC   30.10 30.50;
+NC   26.00 25.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+RC   Function description for Q9EYV5
+RN   [1]
+RM   11555293
+RT   "An activator of glutamate decarboxylase genes regulates the expression of
+RT   enteropathogenic Escherichia coli virulence genes through control of the
+RT   plasmid-encoded regulator, Per.";
+RA   Shin S., Castanie-Cornet M.-P., Foster J.W., Crawford J.A., Brinkley C.,
+RA   Kaper J.B.;
+RL   Mol. Microbiol. 41:1133-1150(2001).
+RC   Function description for P37639
+RN   [2]
+RM   11298273
+RT   "Large-scale monitoring of pleiotropic regulation of gene expression by the
+RT   prokaryotic nucleoid-associated protein, H-NS.";
+RA   Hommais F., Krin E., Laurent-Winter C., Soutourina O., Malpertuy A.,
+RA   Le Caer J.-P., Danchin A., Bertin P.;
+RL   Mol. Microbiol. 40:20-36(2001).
+RC   Function description for P37639
+RN   [3]
+RM   11976288
+RT   "Functional characterization and regulation of gadX, a gene encoding an
+RT   AraC/XylS-like transcriptional activator of the Escherichia coli glutamic
+RT   acid decarboxylase system.";
+RA   Tramonti A., Visca P., De Canio M., Falconi M., De Biase D.;
+RL   J. Bacteriol. 184:2603-2613(2002).
+RC   Function description for P37639
+RN   [4]
+RM   12446650
+RT   "Collaborative regulation of Escherichia coli glutamate-dependent acid
+RT   resistance by two AraC-like regulators, GadX and GadW (YhiW).";
+RA   Ma Z., Richard H., Tucker D.L., Conway T., Foster J.W.;
+RL   J. Bacteriol. 184:7001-7012(2002).
+RC   Function description for P37639
+RN   [5]
+RM   12730179
+RT   "Genes of the GadX-GadW regulon in Escherichia coli.";
+RA   Tucker D.L., Tucker N., Ma Z., Foster J.W., Miranda R.L., Cohen P.S.,
+RA   Conway T.;
+RL   J. Bacteriol. 185:3190-3201(2003).
+RC   Function description for P37639
+RN   [6]
+RM   14617649
+RT   "pH-dependent modulation of cyclic AMP levels and GadW-dependent repression
+RT   of RpoS affect synthesis of the GadX regulator and Escherichia coli acid
+RT   resistance.";
+RA   Ma Z., Richard H., Foster J.W.;
+RL   J. Bacteriol. 185:6852-6859(2003).
+RC   Function description for P37639
+RN   [7]
+RM   14702398
+RT   "GadE (YhiE): a novel activator involved in the response to acid
+RT   environment in Escherichia coli.";
+RA   Hommais F., Krin E., Coppee J.-Y., Lacroix C., Yeramian E., Danchin A.,
+RA   Bertin P.;
+RL   Microbiology 150:61-72(2004).
+
+--- End of Current DESC file ---
