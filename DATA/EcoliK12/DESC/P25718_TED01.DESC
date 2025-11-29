@@ -1,0 +1,13 @@
+ID   Alpha-amyl
+DE   Periplasmic alpha-amylase family
+AU   Bateman A;0000-0002-6982-4660
+SE   UniProtKB:P25718
+GA   27.00 27.00;
+TC   27.00 41.40;
+NC   24.50 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents periplasmic alpha-amylase, found in bacteria.
+CC   This enzyme hydrolyses alpha-1,4-glucosidic linkages in starch and
+CC   related polysaccharides, releasing glucose units.

@@ -1,0 +1,14 @@
+ID   PdeR_N
+DE   Cyclic di-GMP phosphodiesterase PdeR N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   UniProtKB:P77334
+GA   27.00 27.00;
+TC   27.00 41.40;
+NC   24.50 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal domain of cyclic di-GMP
+CC   phosphodiesterase PdeR, found in bacteria. This enzyme hydrolyses
+CC   bis-(3'-5') cyclic diguanylic acid (c-di-GMP), a bacterial second
+CC   messenger involved in biofilm formation and motility regulation.

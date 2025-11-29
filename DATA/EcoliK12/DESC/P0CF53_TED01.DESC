@@ -1,0 +1,13 @@
+ID   InsD_IS2_5
+DE   Transposase InsD for insertion element IS2 variant 5
+AU   Bateman A;0000-0002-6982-4660
+SE   UniProtKB:P0CF53
+GA   27.00 27.00;
+TC   27.00 41.40;
+NC   24.50 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents transposase InsD, found in insertion element
+CC   IS2 variants in bacteria. This enzyme catalyses transposition of
+CC   the IS2 mobile genetic element.
