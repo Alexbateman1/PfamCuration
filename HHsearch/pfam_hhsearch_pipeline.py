@@ -453,32 +453,95 @@ class PfamHHsearchPipeline:
 
             return all_hits
 
+    def build_sequence_to_family_map(self):
+        """
+        Build mapping from sequence IDs to Pfam families by reading A3M files.
+
+        Returns:
+            Dictionary mapping sequence IDs to Pfam family IDs
+        """
+        seq_to_family = {}
+        a3m_dir = self.results_dir / "A3M"
+
+        a3m_files = list(a3m_dir.glob("PF*.a3m"))
+        logging.info(f"Building sequence-to-family map from {len(a3m_files)} A3M files...")
+
+        for i, a3m_file in enumerate(a3m_files, 1):
+            if i % 2000 == 0:
+                logging.info(f"  Progress: {i}/{len(a3m_files)} A3M files processed")
+
+            family_id = a3m_file.stem  # PF00001.a3m -> PF00001
+
+            try:
+                with open(a3m_file, 'r') as f:
+                    for line in f:
+                        line = line.strip()
+                        if line.startswith('>'):
+                            # Extract sequence ID (remove '>')
+                            seq_id = line[1:]
+                            seq_to_family[seq_id] = family_id
+                            # Also map without /start-end if present
+                            if '/' in seq_id:
+                                base_id = seq_id.split('/')[0]
+                                seq_to_family[base_id] = family_id
+            except Exception as e:
+                logging.warning(f"Failed to read {a3m_file}: {e}")
+
+        logging.info(f"Mapped {len(seq_to_family)} sequences to {len(a3m_files)} families")
+        return seq_to_family
+
     def run_aggregation(self):
-        """Step 5: Aggregate results into summary files."""
+        """Step 5: Aggregate results into summary files with Pfam family mapping."""
         if self.is_step_complete('aggregation'):
             logging.info("Aggregation already complete, skipping...")
             return
 
         logging.info("=== Step 5: Result Aggregation ===")
 
-        # Aggregate all parsed hits into single file
+        # Build sequence-to-family mapping for Pfam lookups
+        seq_to_family = self.build_sequence_to_family_map()
+
+        # Aggregate all parsed hits into single file with Pfam mapping
         parsed_dir = self.results_dir / "PARSED"
         all_hits_file = self.summary_dir / "hhsearch_all_vs_all.tsv"
 
         hit_count = 0
+        mapped_count = 0
+        unmapped_count = 0
+
         with open(all_hits_file, 'w') as outf:
-            # Write header
-            outf.write("query_family\ttarget_family\tprobability\te_value\tp_value\t"
+            # Write header with target_pfam_family column
+            outf.write("query_family\ttarget_family\ttarget_pfam_family\tprobability\te_value\tp_value\t"
                       "score\tss\tcols\tquery_range\ttemplate_range\ttemplate_length\n")
 
             # Aggregate all hit files
             for hit_file in sorted(parsed_dir.glob("PF*_hits.tsv")):
                 with open(hit_file, 'r') as inf:
                     lines = inf.readlines()[1:]  # Skip header
-                    outf.writelines(lines)
-                    hit_count += len(lines)
+
+                    for line in lines:
+                        parts = line.strip().split('\t')
+                        if len(parts) < 2:
+                            continue
+
+                        target_seq = parts[1]
+
+                        # Look up Pfam family for target sequence
+                        seq_id = target_seq.split('/')[0] if '/' in target_seq else target_seq
+                        target_pfam = seq_to_family.get(target_seq, seq_to_family.get(seq_id, 'UNKNOWN'))
+
+                        if target_pfam != 'UNKNOWN':
+                            mapped_count += 1
+                        else:
+                            unmapped_count += 1
+
+                        # Insert target_pfam_family after target_family
+                        new_parts = [parts[0], parts[1], target_pfam] + parts[2:]
+                        outf.write('\t'.join(new_parts) + '\n')
+                        hit_count += 1
 
         logging.info(f"Aggregated {hit_count} hits into {all_hits_file}")
+        logging.info(f"Pfam mapping: {mapped_count} mapped, {unmapped_count} unmapped")
 
         # Generate statistics
         self.generate_statistics(all_hits_file)
@@ -494,19 +557,22 @@ class PfamHHsearchPipeline:
         high_conf_hits = []
 
         # Parse all hits
+        # Column indices (with target_pfam_family at index 2):
+        # 0: query_family, 1: target_family, 2: target_pfam_family,
+        # 3: probability, 4: e_value, 5: p_value, 6: score, ...
         with open(all_hits_file, 'r') as f:
             lines = f.readlines()[1:]  # Skip header
 
             for line in lines:
                 parts = line.strip().split('\t')
-                if len(parts) < 11:
+                if len(parts) < 12:  # Now 12 columns with target_pfam_family
                     continue
 
                 query = parts[0]
-                target = parts[1]
-                probability = float(parts[2])
-                e_value = float(parts[3])
-                score = float(parts[5])
+                target_pfam = parts[2]  # Use Pfam family ID, not sequence ID
+                probability = float(parts[3])
+                e_value = float(parts[4])
+                score = float(parts[6])
 
                 # Update family statistics
                 if query not in family_stats:
@@ -520,7 +586,7 @@ class PfamHHsearchPipeline:
                 family_stats[query]['num_hits'] += 1
                 if e_value < family_stats[query]['best_e_value']:
                     family_stats[query]['best_e_value'] = e_value
-                    family_stats[query]['best_target'] = target
+                    family_stats[query]['best_target'] = target_pfam
                     family_stats[query]['best_score'] = score
 
                 # Collect high confidence hits (e.g., e-value < 1e-10)
@@ -538,7 +604,7 @@ class PfamHHsearchPipeline:
 
         # Write high confidence overlaps
         with open(high_conf_file, 'w') as f:
-            f.write("query_family\ttarget_family\tprobability\te_value\tp_value\t"
+            f.write("query_family\ttarget_family\ttarget_pfam_family\tprobability\te_value\tp_value\t"
                    "score\tss\tcols\tquery_range\ttemplate_range\ttemplate_length\n")
             f.writelines(high_conf_hits)
 
