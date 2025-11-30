@@ -943,69 +943,84 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=
             pfnew_log = Path(start_dir) / "PFNEWLOG"
             current_cwd = os.getcwd()
 
+            # Capture all paths needed by child BEFORE fork
+            # Use absolute paths to avoid issues after parent changes directories
+            curation_dir = str(Path(current_cwd) / last_dir)
+            root_dir_abs = str(Path(start_dir) / root_dir)
+            done_dir_path = str(Path(start_dir) / "DONE")
+
             pid = os.fork()
             if pid == 0:
                 # Child process - run pfmake then pfnew and log output
                 try:
+                    # Create DONE directory if needed (child does this now)
+                    done_dir = Path(done_dir_path)
+                    if not done_dir.exists():
+                        done_dir.mkdir()
+
                     with open(pfnew_log, 'a') as log_file:
                         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                         log_file.write(f"\n{'='*60}\n")
                         log_file.write(f"[{timestamp}] Processing: {last_dir}\n")
-                        log_file.write(f"Directory: {current_cwd}/{last_dir}\n")
+                        log_file.write(f"Directory: {curation_dir}\n")
+                        log_file.write(f"Command: {cmd}\n")
                         log_file.write(f"{'='*60}\n")
                         log_file.flush()
 
                         # Run pfmake first to fix any TC/NC line issues
-                        log_file.write(f"\nRunning pfmake in {last_dir}...\n")
+                        log_file.write(f"\nRunning pfmake in {curation_dir}...\n")
                         log_file.flush()
                         pfmake_result = subprocess.run(
-                            "pfmake", shell=True, cwd=f"{current_cwd}/{last_dir}",
+                            "pfmake", shell=True, cwd=curation_dir,
                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
                         )
-                        log_file.write(pfmake_result.stdout if pfmake_result.stdout else "")
+                        log_file.write(pfmake_result.stdout if pfmake_result.stdout else "(no output)\n")
                         if pfmake_result.returncode != 0:
                             log_file.write(f"\n*** WARNING: pfmake returned {pfmake_result.returncode} ***\n")
                         else:
                             log_file.write(f"pfmake completed successfully\n")
                         log_file.flush()
 
-                        # Now run pfnew
-                        log_file.write(f"\nRunning: {cmd}\n")
+                        # Now run pfnew from the parent directory
+                        log_file.write(f"\nRunning: {cmd} (from {current_cwd})\n")
                         log_file.flush()
                         result = subprocess.run(
                             cmd, shell=True, cwd=current_cwd,
                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
                         )
 
-                        log_file.write(result.stdout if result.stdout else "")
+                        # Write ALL output from pfnew
+                        log_file.write("\n--- pfnew output start ---\n")
+                        log_file.write(result.stdout if result.stdout else "(no output)\n")
+                        log_file.write("--- pfnew output end ---\n")
                         log_file.write(f"\nReturn code: {result.returncode}\n")
 
                         if result.returncode != 0:
                             log_file.write(f"\n*** WARNING: pfnew FAILED for {last_dir} ***\n")
-                            log_file.write(f"*** Check the output above for error details ***\n")
+                            log_file.write(f"*** Directory NOT moved to DONE - please check and fix ***\n")
                         else:
                             log_file.write(f"\nSUCCESS: {last_dir} added to Pfam\n")
+                            # Move to DONE on success
+                            try:
+                                shutil.move(root_dir_abs, str(done_dir / root_dir))
+                                log_file.write(f"Moved {root_dir} to DONE/\n")
+                            except Exception as move_err:
+                                log_file.write(f"Warning: Could not move to DONE: {move_err}\n")
 
                         log_file.flush()
                 except Exception as e:
                     with open(pfnew_log, 'a') as log_file:
                         log_file.write(f"\n*** ERROR running pfmake/pfnew: {e} ***\n")
+                        import traceback
+                        log_file.write(traceback.format_exc())
                 os._exit(0)
             else:
                 # Parent process - continue without waiting
+                # DO NOT move directory here - child will do it after pfnew completes
                 print(f"pfnew started in background (pid {pid})")
                 print(f"Output will be logged to: {pfnew_log}")
-
-                # Move to DONE directory (assuming success - check PFNEWLOG for failures)
+                print(f"Directory will be moved to DONE/ after pfnew completes successfully")
                 os.chdir(start_dir)
-                done_dir = Path("DONE")
-                if not done_dir.exists():
-                    done_dir.mkdir()
-                try:
-                    shutil.move(root_dir, str(done_dir / root_dir))
-                    print(f"Moved {root_dir} to DONE/")
-                except Exception as e:
-                    print(f"Warning: Could not move to DONE: {e}", file=sys.stderr)
                 return True
 
         print("Please enter y, n, e, d, or i")
