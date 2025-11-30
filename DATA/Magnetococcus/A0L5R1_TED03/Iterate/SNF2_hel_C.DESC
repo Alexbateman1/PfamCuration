@@ -1,0 +1,24 @@
+ID   SNF2_hel_C
+DE   SNF2 family helicase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5R1_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain (approximately 150-165
+CC   residues) found in SNF2/RAD54 family helicases. These ATP-dependent
+CC   DNA helicases are involved in chromatin remodelling, DNA repair, and
+CC   recombination processes. The domain typically occurs at
+CC   approximately residues 500-655 in multi-domain proteins that contain
+CC   SNF2_N (Pfam:PF00176), ResIII (Pfam:PF04851) and Helicase_C
+CC   (Pfam:PF00271) domains. The family is widely distributed across
+CC   bacteria, with representatives in Pseudomonadota (Alphaproteobacteria),
+CC   Bacillota, Actinomycetota (Actinomycetes) and Bacteroidota. Some
+CC   members are associated with CRISPR-Cas systems and mobile genetic
+CC   elements. STRING analysis suggests functional association with DNA
+CC   polymerases, RNA polymerase subunits, recombination proteins (RecA),
+CC   and DNA repair enzymes. The domain may contribute to DNA-binding or
+CC   protein-protein interactions during helicase function.

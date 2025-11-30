@@ -1,0 +1,23 @@
+ID   Plasmid_rep_C
+DE   Plasmid replication protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L9C8_TED04
+GA   27.00 27.00;
+TC   27.50 28.80;
+NC   26.90 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain (approximately 90-95
+CC   residues) found in plasmid and phage replication proteins. Members
+CC   include proteins annotated as TOPRIM domain-containing proteins and
+CC   plasmid/phage replicative DNA helicases. The domain is typically
+CC   found at the extreme C-terminus (approximately residues 610-705) of
+CC   multi-domain proteins that contain AAA_25 (Pfam:PF13481) ATPase
+CC   domains and TOPRIM (Pfam:PF01751, Pfam:PF13362) domains. The family
+CC   is found in Pseudomonadota (particularly Alphaproteobacteria and
+CC   Betaproteobacteria), with members in Magnetococcales
+CC   (Magnetococcaceae). This domain may function in DNA replication or
+CC   plasmid maintenance processes. The proteins appear to be associated
+CC   with mobile genetic elements including plasmids and temperate
+CC   bacteriophages.
