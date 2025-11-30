@@ -1,0 +1,27 @@
+ID   Mtase_TRD_1
+DE   Type III methyltransferase target recognition domain 1
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5R5_TED03
+GA   27.00 27.00;
+TC   27.30 28.00;
+NC   24.00 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a target recognition domain (approximately
+CC   110-130 residues) found in Type III restriction-modification system
+CC   DNA methyltransferases. This domain is typically located at
+CC   approximately residues 10-122 or 516-628 in multi-domain proteins
+CC   that contain N6 adenine-specific DNA methyltransferase domains
+CC   (Pfam:PF01555). Type III restriction-modification systems are
+CC   bacterial defence mechanisms that recognise asymmetric DNA sequences
+CC   and methylate adenine residues to protect host DNA from restriction
+CC   endonuclease cleavage. The target recognition domain is responsible
+CC   for sequence-specific DNA binding. Foldseek analysis suggests
+CC   structural similarity to the Type III restriction-modification
+CC   system EcoP15I C-terminal domain (Pfam:PF18273). The family is
+CC   broadly distributed across bacteria, particularly in Pseudomonadota
+CC   (Gammaproteobacteria, Betaproteobacteria, Alphaproteobacteria,
+CC   Burkholderiales) and Bacteroidota. STRING analysis shows strong
+CC   functional association with Type III restriction enzymes (ResIII,
+CC   RE_endonuc), DEAD-box helicases and SNF2-family helicases.

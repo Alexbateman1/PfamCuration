@@ -1,0 +1,27 @@
+ID   Mtase_TRD_C
+DE   Type III methyltransferase target recognition domain C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5R5_TED03
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.70 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal region (approximately 115-125
+CC   residues) of the target recognition domain found in Type III
+CC   restriction-modification system DNA methyltransferases. This region
+CC   is typically located at approximately residues 507-625, following
+CC   the N6 adenine-specific DNA methyltransferase domain (Pfam:PF01555).
+CC   Type III restriction-modification systems protect bacteria from
+CC   foreign DNA by methylating specific DNA sequences. The target
+CC   recognition domain is responsible for recognising and binding to
+CC   specific DNA sequences prior to methylation. The family is broadly
+CC   distributed across bacteria, particularly in Pseudomonadota
+CC   (Gammaproteobacteria, Betaproteobacteria, Alphaproteobacteria,
+CC   Burkholderiales) and Bacteroidota. STRING analysis indicates strong
+CC   functional association with Type III restriction enzymes (ResIII,
+CC   Pfam:PF04851; RE_endonuc, Pfam:PF19778), DEAD-box helicases
+CC   (Pfam:PF00270) and helicase C-terminal domains (Pfam:PF00271),
+CC   reflecting the modular organisation of Type III restriction-
+CC   modification systems.
