@@ -1,0 +1,28 @@
+ID   pGpG_PDE
+DE   pGpG-specific phosphodiesterase
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBV8_TED01
+GA   27.00 27.00;
+TC   27.60 41.80;
+NC   26.70 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   35074425
+RT   A pGpG-specific phosphodiesterase regulates cyclic di-GMP signaling
+RT   in Vibrio cholerae.
+RA   Huynh TN., Noriega CE., Stewart V., Woodward JJ.;
+RL   J. Biol. Chem. 2022;298:101653.
+CC   This entry represents a pGpG-specific phosphodiesterase domain
+CC   (approximately 120-125 residues) found in exopolyphosphatase-related
+CC   proteins. These enzymes specifically hydrolyse pGpG
+CC   (5'-phosphoguanylyl-3',5'-guanosine) to GMP, functioning in cyclic
+CC   di-GMP signalling networks [1]. In Vibrio cholerae, VCA0593 possesses
+CC   an RNase_T-like domain and is responsible for pGpG degradation. pGpG
+CC   is a linear dinucleotide product of cyclic di-GMP degradation that
+CC   acts as a signalling molecule. The family is exclusively bacterial,
+CC   distributed across Pseudomonadota (particularly Gammaproteobacteria,
+CC   Betaproteobacteria and Alphaproteobacteria), Bacillota and
+CC   Actinomycetota. These phosphodiesterases play important roles in
+CC   regulating biofilm formation and bacterial virulence.

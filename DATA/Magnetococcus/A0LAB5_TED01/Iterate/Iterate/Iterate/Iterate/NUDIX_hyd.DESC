@@ -1,0 +1,28 @@
+ID   NUDIX_hyd
+DE   NUDIX hydrolase domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LAB5_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   26049160
+RT   Identification and characterization of Arabidopsis AtNUDX9 as a
+RT   GDP-d-mannose pyrophosphohydrolase: its involvement in root growth
+RT   inhibition in response to ammonium.
+RA   Ge Y., Cai S., Shen X., Li Q., Gao C., Jiang W., Dai T., Xu Z., Xu Q.;
+RL   J. Exp. Bot. 2015;66:3891-3908.
+CC   This entry represents a NUDIX hydrolase domain (approximately 70-85
+CC   residues) found in nucleoside diphosphate linked moiety X-type
+CC   hydrolases. These enzymes catalyse the hydrolysis of nucleoside
+CC   diphosphate derivatives, including various dinucleoside
+CC   polyphosphates, nucleotide sugars and RNA caps. In Arabidopsis
+CC   thaliana, AtNUDX9 functions as a GDP-d-mannose pyrophosphohydrolase,
+CC   hydrolysing GDP-d-mannose to GMP and mannose 1-phosphate [1]. The
+CC   family is widely distributed across Viridiplantae (particularly
+CC   rosids and asterids), with representatives in Metazoa and Bacteria.
+CC   The NUDIX motif typically contains a conserved REXXEE sequence that
+CC   is essential for catalytic activity.

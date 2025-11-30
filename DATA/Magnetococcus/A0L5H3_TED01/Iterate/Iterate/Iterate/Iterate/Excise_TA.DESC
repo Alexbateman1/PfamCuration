@@ -1,0 +1,28 @@
+ID   Excise_TA
+DE   Excisionase domain in toxin-antitoxin systems
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5H3_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   32513960
+RT   Chromosomal toxin-antitoxin systems in Pseudomonas putida are
+RT   rather selfish than beneficial.
+RA   Alonso JC., Espinosa M., Canosa I., Muñoz-Adelantado E., Sanjuán J.;
+RL   Sci. Rep. 2020;10:9065.
+CC   This entry represents an excisionase-like DNA-binding domain
+CC   (approximately 55-70 residues) found in toxin-antitoxin (TA) system
+CC   components. This domain typically precedes a helix-turn-helix domain
+CC   (Pfam:PF12728, HTH_17) and is often associated with mobile genetic
+CC   elements including integrative and conjugative elements (ICEs) and
+CC   prophages [1]. In toxin-antitoxin systems, these proteins may
+CC   function as transcriptional regulators controlling TA operon
+CC   expression. The family is exclusively bacterial, widely distributed
+CC   in Pseudomonadota (particularly Burkholderiales,
+CC   Gammaproteobacteria, Betaproteobacteria and Alphaproteobacteria),
+CC   Actinomycetota and Bacteroidota. Functional studies suggest roles in
+CC   chromosome maintenance and regulation of mobile element dynamics.
