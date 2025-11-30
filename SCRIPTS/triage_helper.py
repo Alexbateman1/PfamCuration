@@ -55,15 +55,22 @@ def count_seed_sequences(dir_path):
                 count += 1
     return count
 
-def parse_triage_file(triage_file, sp_only=False, min_seed=1):
+def count_align_sequences(dir_path):
+    """Count sequences in ALIGN file for a directory"""
+    align_path = Path(dir_path) / 'ALIGN'
+    return count_sequences(str(align_path))
+
+
+def parse_triage_file(triage_file, sp_only=False, min_seed=1, min_align=0):
     """Parse triage file and identify best directories to work on
-    
+
     Args:
         triage_file: Path to triage file
         sp_only: If True, only include families with SwissProt proteins
         min_seed: Minimum number of sequences required in SEED (default 1)
+        min_align: Minimum number of sequences required in ALIGN (default 0, no filtering)
     """
-    
+
     # Group by root directory
     root_groups = defaultdict(list)
     
@@ -140,8 +147,12 @@ def parse_triage_file(triage_file, sp_only=False, min_seed=1):
                 deeper_overlaps.append(f"{e['dir']}: {overlap_info}")
         
         best['deeper_overlaps'] = deeper_overlaps
+
+        # Count ALIGN sequences for min_align filtering
+        best['align_count'] = count_align_sequences(best['dir'])
+
         best_dirs.append(best)
-    
+
     # Filter by minimum SEED sequences if requested
     if min_seed > 1:
         before_count = len(best_dirs)
@@ -149,6 +160,14 @@ def parse_triage_file(triage_file, sp_only=False, min_seed=1):
         after_count = len(best_dirs)
         if before_count > after_count:
             print(f"[FILTER] Removed {before_count - after_count} families with fewer than {min_seed} SEED sequences", file=sys.stderr)
+
+    # Filter by minimum ALIGN sequences if requested
+    if min_align > 0:
+        before_count = len(best_dirs)
+        best_dirs = [entry for entry in best_dirs if entry.get('align_count', 0) >= min_align]
+        after_count = len(best_dirs)
+        if before_count > after_count:
+            print(f"[FILTER] Removed {before_count - after_count} families with fewer than {min_align} ALIGN sequences", file=sys.stderr)
     
     # Sort by number of sequences (largest first)
     best_dirs.sort(key=lambda x: x['total_seqs'], reverse=True)
@@ -955,129 +974,64 @@ def create_manifest_bundle(directories, output_tarball='triage_bundle.tar.gz'):
 
 
 def main():
-    # Check for --create-manifest mode
-    if '--create-manifest' in sys.argv:
-        # In manifest mode, first argument should be triage file
-        if len(sys.argv) < 3:
-            print("Error: --create-manifest requires a triage file", file=sys.stderr)
-            print("Usage: python triage_helper.py --create-manifest <triage_file> [-sp] [--min-seed N]", file=sys.stderr)
-            sys.exit(1)
-        
-        triage_file = sys.argv[2]  # First arg after --create-manifest
-        
-        if not os.path.exists(triage_file):
-            print(f"Error: Triage file '{triage_file}' not found", file=sys.stderr)
-            sys.exit(1)
-        
-        # Check for -sp option in manifest mode
-        sp_only = '-sp' in sys.argv
-        if sp_only:
-            print("Only including families with SwissProt proteins", file=sys.stderr)
-        
-        # Check for --min-seed option
-        min_seed = 1
-        if '--min-seed' in sys.argv:
-            try:
-                seed_index = sys.argv.index('--min-seed')
-                if seed_index + 1 < len(sys.argv):
-                    min_seed = int(sys.argv[seed_index + 1])
-                    print(f"Minimum SEED sequences: {min_seed}", file=sys.stderr)
-                else:
-                    print("Error: --min-seed requires a number", file=sys.stderr)
-                    sys.exit(1)
-            except ValueError:
-                print("Error: --min-seed requires a valid number", file=sys.stderr)
-                sys.exit(1)
-        
-        print(f"Processing {triage_file} to identify best directories...", file=sys.stderr)
-        
-        # Use same selection logic as normal mode
-        best_dirs = parse_triage_file(triage_file, sp_only, min_seed)
-        
-        if not best_dirs:
-            print("\nNo suitable families found for manifest creation", file=sys.stderr)
-            return
-        
-        print(f"Found {len(best_dirs)} families to include in manifest", file=sys.stderr)
-        
-        # Extract directory names from best_dirs
-        directories = [entry['dir'] for entry in best_dirs]
-        
-        create_manifest_bundle(directories)
-        return
-    
-    if len(sys.argv) < 2:
-        print("Usage: python triage_helper.py <triage_file> [-s SE_PREFIX] [-nano] [-sp] [--min-seed N]", file=sys.stderr)
-        print("   OR: python triage_helper.py --create-manifest <triage_file> [-sp] [--min-seed N]", file=sys.stderr)
-        print("", file=sys.stderr)
-        print("Normal mode options:", file=sys.stderr)
-        print("  -s SE_PREFIX  Optional: Update SE line in DESC with this prefix", file=sys.stderr)
-        print("  -nano         Optional: Use nano instead of emacs for editing", file=sys.stderr)
-        print("  -sp           Optional: Only process families with SwissProt proteins", file=sys.stderr)
-        print("  --min-seed N  Optional: Only process families with at least N sequences in SEED (default: 1)", file=sys.stderr)
-        print("", file=sys.stderr)
-        print("Manifest mode:", file=sys.stderr)
-        print("  --create-manifest <triage_file> [-sp] [--min-seed N]  Create self-contained bundle for best families", file=sys.stderr)
-        print("                                                        Uses same selection logic as normal mode", file=sys.stderr)
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Pfam Triage Curation Helper Script",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python triage_helper.py triage -s TED
+  python triage_helper.py triage --manifest
+  python triage_helper.py triage -sp --min-align 10
+        """
+    )
+
+    parser.add_argument('triage_file', help='Path to triage file')
+    parser.add_argument('-s', '--se-prefix', type=str,
+                       help='Update SE line in DESC with this prefix')
+    parser.add_argument('-nano', action='store_true',
+                       help='Use nano instead of emacs')
+    parser.add_argument('-sp', action='store_true',
+                       help='Only process families with SwissProt proteins')
+    parser.add_argument('--min-seed', type=int, default=1,
+                       help='Minimum SEED sequences (default: 1)')
+    parser.add_argument('--min-align', type=int, default=0,
+                       help='Minimum ALIGN sequences (default: 0, no filtering)')
+    parser.add_argument('--manifest', action='store_true',
+                       help='Create manifest bundle for batch processing instead of interactive curation')
+
+    args = parser.parse_args()
+
+    if not os.path.exists(args.triage_file):
+        print(f"Error: Triage file '{args.triage_file}' not found", file=sys.stderr)
         sys.exit(1)
-    
-    triage_file = sys.argv[1]
-    
-    # Check for -s option
-    se_prefix = None
-    if '-s' in sys.argv:
-        s_index = sys.argv.index('-s')
-        if s_index + 1 < len(sys.argv) and not sys.argv[s_index + 1].startswith('-'):
-            se_prefix = sys.argv[s_index + 1]
-            print(f"Will update SE lines with prefix: {se_prefix}", file=sys.stderr)
-        else:
-            print("Error: -s option requires a prefix string", file=sys.stderr)
-            sys.exit(1)
-    
-    # Check for -nano option
-    use_nano = '-nano' in sys.argv
-    if use_nano:
-        print("Using nano for editing DESC files", file=sys.stderr)
-    
-    # Check for -sp option
-    sp_only = '-sp' in sys.argv
-    if sp_only:
+
+    print(f"Processing {args.triage_file}...", file=sys.stderr)
+    if args.sp:
         print("Only processing families with SwissProt proteins", file=sys.stderr)
-    
-    # Check for --min-seed option
-    min_seed = 1
-    if '--min-seed' in sys.argv:
-        try:
-            seed_index = sys.argv.index('--min-seed')
-            if seed_index + 1 < len(sys.argv):
-                min_seed = int(sys.argv[seed_index + 1])
-                print(f"Minimum SEED sequences: {min_seed}", file=sys.stderr)
-            else:
-                print("Error: --min-seed requires a number", file=sys.stderr)
-                sys.exit(1)
-        except ValueError:
-            print("Error: --min-seed requires a valid number", file=sys.stderr)
-            sys.exit(1)
-    
-    if not os.path.exists(triage_file):
-        print(f"Error: Triage file '{triage_file}' not found", file=sys.stderr)
-        sys.exit(1)
-    
-    print(f"Processing {triage_file}...", file=sys.stderr)
-    
+    if args.min_align > 0:
+        print(f"Minimum ALIGN sequences: {args.min_align}", file=sys.stderr)
+
     # Get list of families to review
-    best_dirs = parse_triage_file(triage_file, sp_only, min_seed)
-    
+    best_dirs = parse_triage_file(args.triage_file, args.sp, args.min_seed, args.min_align)
+
     if not best_dirs:
         print("\nNo suitable families found for curation", file=sys.stderr)
         return
-    
+
     print(f"\nFound {len(best_dirs)} families to potentially curate", file=sys.stderr)
-    
-    if sp_only:
+
+    # Handle manifest mode
+    if args.manifest:
+        directories = [entry['dir'] for entry in best_dirs]
+        create_manifest_bundle(directories)
+        return
+
+    if args.sp:
         total_sp = sum(e['swissprot_count'] for e in best_dirs)
         print(f"Total SwissProt proteins in selected families: {total_sp}", file=sys.stderr)
-    
+
     # Report on protein grouping
     protein_counts = defaultdict(int)
     for entry in best_dirs:
@@ -1089,7 +1043,7 @@ def main():
         else:
             protein_acc = root
         protein_counts[protein_acc] += 1
-    
+
     multi_domain_proteins = {p: c for p, c in protein_counts.items() if c > 1}
     if multi_domain_proteins:
         print(f"Found {len(multi_domain_proteins)} proteins with multiple domains:", file=sys.stderr)
@@ -1097,17 +1051,17 @@ def main():
             print(f"  {protein}: {count} domains", file=sys.stderr)
         if len(multi_domain_proteins) > 5:
             print(f"  ... and {len(multi_domain_proteins) - 5} more", file=sys.stderr)
-    
+
     # Store starting directory
     start_dir = os.getcwd()
-    
+
     # Process each family
     families_added = 0
     for i, entry in enumerate(best_dirs, 1):
         print(f"\n[{i}/{len(best_dirs)}]", file=sys.stderr)
-        if curate_family(entry, start_dir, se_prefix, use_nano):
+        if curate_family(entry, start_dir, args.se_prefix, args.nano):
             families_added += 1
-    
+
     print(f"\n{'='*60}")
     print(f"Complete! Added {families_added} families to Pfam")
     if families_added > 0:

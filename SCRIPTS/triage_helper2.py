@@ -22,6 +22,7 @@ import os
 import subprocess
 import shutil
 import re
+import json
 from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
@@ -130,13 +131,20 @@ def check_resolution_eligibility(overlap_info_list):
     return False, f"Families in different clans", None
 
 
-def parse_triage_file(triage_file, sp_only=False, min_seed=1, max_overlap_fraction=0.05):
+def parse_triage_file(triage_file, sp_only=False, min_seed=1, min_align=0, max_overlap_fraction=0.05):
     """
     Parse triage file and identify best directories to work on.
 
     For each root directory, identifies:
     - The best non-overlapping version (primary choice)
     - Any deeper versions with small, resolvable overlaps (optional alternative)
+
+    Args:
+        triage_file: Path to triage file
+        sp_only: If True, only include families with SwissProt proteins
+        min_seed: Minimum number of sequences required in SEED (default 1)
+        min_align: Minimum number of sequences required in ALIGN (default 0, no filtering)
+        max_overlap_fraction: Maximum overlap fraction for resolution (default 0.05)
     """
     root_groups = defaultdict(list)
 
@@ -262,8 +270,14 @@ def parse_triage_file(triage_file, sp_only=False, min_seed=1, max_overlap_fracti
         best['deeper_resolvable'] = deeper_resolvable
         best['deeper_overlaps'] = deeper_warnings
 
-        # Filter by minimum SEED
+        # Count ALIGN sequences for min_align filtering
+        best['align_count'] = count_align_sequences(best['dir'])
+
+        # Filter by minimum SEED and minimum ALIGN
         if best.get('seed_count', 0) >= min_seed:
+            if min_align > 0 and best.get('align_count', 0) < min_align:
+                print(f"[SKIP] {root}: ALIGN has only {best.get('align_count', 0)} sequences (min: {min_align})", file=sys.stderr)
+                continue
             best_dirs.append(best)
 
     # Sort by total sequences (largest first), then group by protein
@@ -918,11 +932,49 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=
             else:
                 cmd = f"pfnew {last_dir}"
 
-            print(f"Running: {cmd}")
-            success = run_command(cmd, wait=True)
+            print(f"Forking pfnew: {cmd}")
 
-            if success:
-                print(f"Successfully added {last_dir} to Pfam")
+            # Fork the pfnew process to run in background
+            pfnew_log = Path(start_dir) / "PFNEWLOG"
+            current_cwd = os.getcwd()
+
+            pid = os.fork()
+            if pid == 0:
+                # Child process - run pfnew and log output
+                try:
+                    with open(pfnew_log, 'a') as log_file:
+                        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                        log_file.write(f"\n{'='*60}\n")
+                        log_file.write(f"[{timestamp}] Running: {cmd}\n")
+                        log_file.write(f"Directory: {current_cwd}/{last_dir}\n")
+                        log_file.write(f"{'='*60}\n")
+                        log_file.flush()
+
+                        result = subprocess.run(
+                            cmd, shell=True, cwd=current_cwd,
+                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
+                        )
+
+                        log_file.write(result.stdout if result.stdout else "")
+                        log_file.write(f"\nReturn code: {result.returncode}\n")
+
+                        if result.returncode != 0:
+                            log_file.write(f"\n*** WARNING: pfnew FAILED for {last_dir} ***\n")
+                            log_file.write(f"*** Check the output above for error details ***\n")
+                        else:
+                            log_file.write(f"\nSUCCESS: {last_dir} added to Pfam\n")
+
+                        log_file.flush()
+                except Exception as e:
+                    with open(pfnew_log, 'a') as log_file:
+                        log_file.write(f"\n*** ERROR running pfnew: {e} ***\n")
+                os._exit(0)
+            else:
+                # Parent process - continue without waiting
+                print(f"pfnew started in background (pid {pid})")
+                print(f"Output will be logged to: {pfnew_log}")
+
+                # Move to DONE directory (assuming success - check PFNEWLOG for failures)
                 os.chdir(start_dir)
                 done_dir = Path("DONE")
                 if not done_dir.exists():
@@ -933,33 +985,6 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=
                 except Exception as e:
                     print(f"Warning: Could not move to DONE: {e}", file=sys.stderr)
                 return True
-            else:
-                print(f"\nERROR: pfnew failed", file=sys.stderr)
-                while True:
-                    resp = input("(c=continue/o=OVERLAP/i=IGNORE): ").strip().lower()
-                    if resp in ['c', 'o', 'i']:
-                        break
-
-                os.chdir(start_dir)
-                if resp == 'o':
-                    overlap_dir = Path("OVERLAP")
-                    if not overlap_dir.exists():
-                        overlap_dir.mkdir()
-                    try:
-                        shutil.move(root_dir, str(overlap_dir / root_dir))
-                        print(f"Moved {root_dir} to OVERLAP/")
-                    except Exception as e:
-                        print(f"Warning: {e}", file=sys.stderr)
-                elif resp == 'i':
-                    ignore_dir = Path("IGNORE")
-                    if not ignore_dir.exists():
-                        ignore_dir.mkdir()
-                    try:
-                        shutil.move(root_dir, str(ignore_dir / root_dir))
-                        print(f"Moved {root_dir} to IGNORE/")
-                    except Exception as e:
-                        print(f"Warning: {e}", file=sys.stderr)
-                return False
 
         print("Please enter y, n, e, d, or i")
 
@@ -1059,6 +1084,209 @@ def display_info_files(dir_path):
     print("--- End DESC ---", file=sys.stderr)
 
 
+def count_align_sequences(dir_path):
+    """Count sequences in ALIGN file for a directory"""
+    align_path = Path(dir_path) / 'ALIGN'
+    return count_sequences(str(align_path))
+
+
+def collect_directory_info(dir_name, start_dir):
+    """Collect all information for a directory without interactive curation"""
+
+    # Change to start directory
+    os.chdir(start_dir)
+
+    if not Path(dir_name).exists():
+        return None, f"Directory {dir_name} not found"
+
+    os.chdir(dir_name)
+
+    # Collect all the information
+    info_sections = []
+
+    # sp.seq_info content
+    sp_file = Path('sp.seq_info')
+    if sp_file.exists():
+        info_sections.append("--- sp.seq_info content (copy to Claude) ---")
+        with open(sp_file, 'r') as f:
+            info_sections.append(f.read())
+        info_sections.append("--- End of sp.seq_info ---")
+    else:
+        info_sections.append("--- sp.seq_info content (copy to Claude) ---")
+        info_sections.append("Note: sp.seq_info file not found")
+        # Extract potential protein accession
+        current_path = os.getcwd()
+        info_sections.append(f"Current directory: {current_path}")
+        if '_TED' in dir_name:
+            protein_acc = dir_name.split('_TED')[0]
+            info_sections.append(f"Potential protein accession for UniProt search: {protein_acc}")
+        info_sections.append("--- End of sp.seq_info ---")
+
+    # species summary
+    info_sections.append("\n--- species summary (copy to Claude) ---")
+    species_file = Path('species')
+    if species_file.exists():
+        with open(species_file, 'r') as f:
+            info_sections.append(f.read())
+    else:
+        info_sections.append("Note: species file not found")
+    info_sections.append("--- End of species summary ---")
+
+    # Domain architectures
+    info_sections.append("\n--- Domain architectures (copy to Claude) ---")
+    arch_file = Path('arch')
+    if arch_file.exists():
+        with open(arch_file, 'r') as f:
+            info_sections.append(f.read())
+    else:
+        info_sections.append("Note: arch file not found")
+    info_sections.append("--- End of Domain architectures ---")
+
+    # PaperBLAST literature results
+    paperblast_file = Path('paperblast')
+    if paperblast_file.exists() and paperblast_file.stat().st_size > 0:
+        info_sections.append("\n--- PaperBLAST literature results (copy to Claude) ---")
+        with open(paperblast_file, 'r') as f:
+            lines = f.readlines()
+            if len(lines) > 100:
+                info_sections.append(''.join(lines[:100]))
+                info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
+            else:
+                info_sections.append(''.join(lines))
+        info_sections.append("--- End of PaperBLAST literature results ---")
+
+    # TED domain information
+    info_sections.append("\n--- TED domain information (copy to Claude) ---")
+    ted_file = Path('TED')
+    if ted_file.exists():
+        with open(ted_file, 'r') as f:
+            lines = f.readlines()
+            if len(lines) > 100:
+                info_sections.append(''.join(lines[:100]))
+                info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
+            else:
+                info_sections.append(''.join(lines))
+    else:
+        info_sections.append("Note: TED file not found")
+    info_sections.append("--- End of TED domain information ---")
+
+    # STRING protein interaction network
+    string_file = Path('STRING')
+    if string_file.exists() and string_file.stat().st_size > 0:
+        info_sections.append("\n--- STRING protein interaction network (copy to Claude) ---")
+        with open(string_file, 'r') as f:
+            lines = f.readlines()
+            if len(lines) > 100:
+                info_sections.append(''.join(lines[:100]))
+                info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
+            else:
+                info_sections.append(''.join(lines))
+        info_sections.append("--- End of STRING protein interaction network ---")
+
+    # Foldseek results
+    foldseek_file = Path('foldseek')
+    if foldseek_file.exists():
+        with open(foldseek_file, 'r') as f:
+            lines = f.readlines()
+            # Only include if more than header line
+            if len(lines) > 1:
+                info_sections.append("\n--- Foldseek structural matches (copy to Claude) ---")
+                if len(lines) > 100:
+                    info_sections.append(''.join(lines[:100]))
+                    info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
+                else:
+                    info_sections.append(''.join(lines))
+                info_sections.append("--- End of Foldseek structural matches ---")
+
+    # Current DESC file
+    info_sections.append("\n--- Current DESC file (copy to Claude) ---")
+    desc_file = Path('DESC')
+    if desc_file.exists():
+        with open(desc_file, 'r') as f:
+            info_sections.append(f.read())
+    else:
+        info_sections.append("Note: DESC file not found")
+    info_sections.append("--- End of Current DESC file ---")
+
+    # Return to start directory
+    os.chdir(start_dir)
+
+    return '\n'.join(info_sections), None
+
+
+def create_manifest_bundle(directories, output_tarball='triage_bundle.tar.gz'):
+    """Create a self-contained bundle for batch DESC generation"""
+
+    start_dir = os.getcwd()
+    bundle_dir = 'pfam_batch'
+
+    # Create bundle directory
+    if Path(bundle_dir).exists():
+        shutil.rmtree(bundle_dir)
+    Path(bundle_dir).mkdir()
+
+    manifest = {
+        'output_dir': 'desc_output',
+        'families': []
+    }
+
+    print(f"Creating manifest bundle for {len(directories)} families...", file=sys.stderr)
+
+    for dir_name in directories:
+        print(f"Processing {dir_name}...", file=sys.stderr)
+
+        # Collect information
+        info_content, error = collect_directory_info(dir_name, start_dir)
+
+        if error:
+            print(f"  Error: {error}", file=sys.stderr)
+            continue
+
+        # Create family directory in bundle
+        family_dir = Path(bundle_dir) / dir_name
+        family_dir.mkdir(parents=True, exist_ok=True)
+
+        # Write triage output
+        triage_output_file = family_dir / 'triage_output.txt'
+        with open(triage_output_file, 'w') as f:
+            f.write(info_content)
+
+        # Add to manifest with relative path
+        manifest['families'].append({
+            'family_id': dir_name,
+            'triage_file': f"{dir_name}/triage_output.txt"
+        })
+
+        print(f"  Collected information", file=sys.stderr)
+
+    # Write manifest
+    manifest_file = Path(bundle_dir) / 'manifest.json'
+    with open(manifest_file, 'w') as f:
+        json.dump(manifest, f, indent=2)
+
+    print(f"\nCreated manifest with {len(manifest['families'])} families", file=sys.stderr)
+
+    # Create tarball
+    print(f"Creating tarball {output_tarball}...", file=sys.stderr)
+
+    # Use tar to create archive with relative paths
+    tar_cmd = f"tar -czf {output_tarball} -C {bundle_dir} ."
+    if run_command(tar_cmd, wait=True):
+        print(f"Created {output_tarball}", file=sys.stderr)
+
+        # Show tarball contents for verification
+        print(f"\nTarball contents:", file=sys.stderr)
+        run_command(f"tar -tzf {output_tarball} | head -20", wait=True)
+
+        # Clean up bundle directory
+        shutil.rmtree(bundle_dir)
+        print(f"\nBundle creation complete!", file=sys.stderr)
+        print(f"Transfer {output_tarball} to your laptop and extract with:", file=sys.stderr)
+        print(f"  tar -xzf {output_tarball}", file=sys.stderr)
+    else:
+        print(f"Error creating tarball", file=sys.stderr)
+
+
 def main():
     import argparse
 
@@ -1089,8 +1317,12 @@ Example:
                        help='Only process families with SwissProt proteins')
     parser.add_argument('--min-seed', type=int, default=1,
                        help='Minimum SEED sequences (default: 1)')
+    parser.add_argument('--min-align', type=int, default=0,
+                       help='Minimum ALIGN sequences (default: 0, no filtering)')
     parser.add_argument('--max-overlap', type=float, default=0.05,
                        help='Max overlap fraction for resolution (default: 0.05)')
+    parser.add_argument('--manifest', action='store_true',
+                       help='Create manifest bundle for batch processing instead of interactive curation')
 
     args = parser.parse_args()
 
@@ -1101,11 +1333,14 @@ Example:
     print(f"Processing {args.triage_file}...", file=sys.stderr)
     if args.sp:
         print("Only processing families with SwissProt proteins", file=sys.stderr)
+    if args.min_align > 0:
+        print(f"Minimum ALIGN sequences: {args.min_align}", file=sys.stderr)
 
     best_dirs = parse_triage_file(
         args.triage_file,
         sp_only=args.sp,
         min_seed=args.min_seed,
+        min_align=args.min_align,
         max_overlap_fraction=args.max_overlap
     )
 
@@ -1114,6 +1349,12 @@ Example:
         return
 
     print(f"\nFound {len(best_dirs)} families to potentially curate", file=sys.stderr)
+
+    # Handle manifest mode
+    if args.manifest:
+        directories = [entry['dir'] for entry in best_dirs]
+        create_manifest_bundle(directories)
+        return
 
     # Count families with resolvable deeper overlaps
     with_deeper = sum(1 for d in best_dirs if d.get('deeper_resolvable'))
