@@ -1,0 +1,30 @@
+ID   SNF2_mt_C
+DE   SNF2-related mitochondrial helicase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBC0_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27611590
+RT   Pfh1 Is an Accessory Replicative Helicase that Interacts with the
+RT   Replisome to Facilitate Fork Progression and Preserve Genome
+RT   Integrity.
+RA   Sabouri N., McDonald KR., Webb CJ., Cristea IM., Zakian VA.;
+RL   PLoS Genet. 2016;12:e1006238.
+CC   This entry represents a C-terminal domain (approximately 125-155
+CC   residues) found in putative mitochondrial ATP-dependent helicases.
+CC   This domain follows the SNF2/SWI2 helicase domains (Pfam:PF04851,
+CC   Pfam:PF00270, Pfam:PF18766, Pfam:PF00271), typically at residues
+CC   420-560. In Schizosaccharomyces pombe, the protein Irc3
+CC   (SPBC11C11.11c) is a putative mitochondrial helicase that may
+CC   function in mitochondrial DNA metabolism or genome maintenance [1].
+CC   The family is found exclusively in fungi, particularly Ascomycota
+CC   (Pezizomycotina), including Sordariomycetes (Hypocreomycetidae),
+CC   Eurotiomycetes and Dothideomycetes. The specific biochemical function
+CC   of this C-terminal domain remains to be determined, but it may
+CC   contribute to mitochondrial targeting or regulation of helicase
+CC   activity.
