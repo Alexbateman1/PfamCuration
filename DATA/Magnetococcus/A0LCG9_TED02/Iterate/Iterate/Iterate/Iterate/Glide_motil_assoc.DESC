@@ -1,0 +1,21 @@
+ID   Glide_motil_assoc
+DE   Gliding motility-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LCG9_TED02
+GA   27.00 27.00;
+TC   27.00 28.10;
+NC   26.90 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain (approximately 124-163 residues,
+CC   positions 237-400) associated with gliding motility proteins in
+CC   bacteria. The family frequently co-occurs with DUF4178 domains
+CC   (Pfam:PF13785) and SprB repeat domains (Pfam:PF13573). SprB is a
+CC   large cell-surface adhesin protein required for gliding motility in
+CC   Flavobacterium and related bacteria. The family is found in diverse
+CC   bacteria including Pseudomonadota (Alphaproteobacteria including
+CC   Roseobacteraceae), Bacteroidota (Flavobacteriia including
+CC   Flavobacteriales and Flavobacterium) and Cyanobacteriota
+CC   (Cyanophyceae). This domain shows structural similarity to
+CC   fibronectin type III domains.

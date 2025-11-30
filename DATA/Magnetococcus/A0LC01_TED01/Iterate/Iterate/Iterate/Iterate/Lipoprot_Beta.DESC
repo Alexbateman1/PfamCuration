@@ -1,0 +1,19 @@
+ID   Lipoprot_Beta
+DE   Lipoprotein in Betaproteobacteria
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LC01_TED01
+GA   27.00 27.00;
+TC   31.10 31.10;
+NC   26.60 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised lipoprotein domain
+CC   (approximately 181-190 residues, positions 50-231) found in
+CC   Betaproteobacteria and Gammaproteobacteria. The family is
+CC   particularly prevalent in Burkholderiales (Alcaligenaceae and
+CC   Comamonadaceae), Rhodocyclales, Oceanospirillales and
+CC   Nitrosomonadales. Lipoproteins are typically anchored to bacterial
+CC   membranes by lipid modifications and often function in nutrient
+CC   acquisition, cell adhesion, or pathogenesis. The specific function
+CC   of this lipoprotein domain remains to be determined.

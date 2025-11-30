@@ -1,0 +1,26 @@
+ID   DAC_sensor
+DE   DAC domain in sensor proteins
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L9L3_TED02
+GA   27.00 27.00;
+TC   27.30 27.00;
+NC   25.00 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a DAC (diadenylate cyclase) domain
+CC   (approximately 199-220 residues, positions 153-401) found in sensor
+CC   proteins. DAC domains catalyse the synthesis of cyclic di-AMP
+CC   (c-di-AMP), a bacterial second messenger involved in cell wall
+CC   homeostasis, potassium transport, DNA damage response, and biofilm
+CC   formation. The family is found in Bacteroidota (Sphingobacteriia
+CC   including Sphingobacteriales and Pedobacter, Cytophagia including
+CC   Cytophagales and Mucilaginibacter) and Planctomycetota. These
+CC   proteins typically function as sensor domains that regulate c-di-AMP
+CC   production in response to environmental stimuli.
+RN   [1]
+RM   37022175
+RT   All DACs in a Row: Domain Architectures of Bacterial and Archaeal
+RT   Diadenylate Cyclases.
+RA   Manikandan K, Sabareesh V, Singh N, Saigal K, Mechold U, Sinha KM;
+RL   J Bacteriol 2023;205:e0045722.
