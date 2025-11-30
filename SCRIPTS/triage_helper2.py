@@ -1214,8 +1214,15 @@ def collect_directory_info(dir_name, start_dir):
     return '\n'.join(info_sections), None
 
 
-def create_manifest_bundle(directories, output_tarball='triage_bundle.tar.gz'):
-    """Create a self-contained bundle for batch DESC generation"""
+def create_manifest_bundle(directories, manifest_entries=None, output_tarball='triage_bundle.tar.gz'):
+    """Create a self-contained bundle for batch DESC generation
+
+    Args:
+        directories: List of directory paths to include
+        manifest_entries: Optional list of dicts with metadata for each directory
+                         (type, root, total_seqs, overlaps, etc.)
+        output_tarball: Name of output tarball file
+    """
 
     start_dir = os.getcwd()
     bundle_dir = 'pfam_batch'
@@ -1225,15 +1232,23 @@ def create_manifest_bundle(directories, output_tarball='triage_bundle.tar.gz'):
         shutil.rmtree(bundle_dir)
     Path(bundle_dir).mkdir()
 
+    # Build lookup for manifest entries if provided
+    entry_lookup = {}
+    if manifest_entries:
+        for entry in manifest_entries:
+            entry_lookup[entry['dir']] = entry
+
     manifest = {
         'output_dir': 'desc_output',
         'families': []
     }
 
-    print(f"Creating manifest bundle for {len(directories)} families...", file=sys.stderr)
+    print(f"Creating manifest bundle for {len(directories)} directories...", file=sys.stderr)
 
     for dir_name in directories:
-        print(f"Processing {dir_name}...", file=sys.stderr)
+        entry_meta = entry_lookup.get(dir_name, {})
+        entry_type = entry_meta.get('type', 'unknown')
+        print(f"Processing {dir_name} ({entry_type})...", file=sys.stderr)
 
         # Collect information
         info_content, error = collect_directory_info(dir_name, start_dir)
@@ -1251,11 +1266,23 @@ def create_manifest_bundle(directories, output_tarball='triage_bundle.tar.gz'):
         with open(triage_output_file, 'w') as f:
             f.write(info_content)
 
-        # Add to manifest with relative path
-        manifest['families'].append({
+        # Add to manifest with relative path and metadata
+        family_entry = {
             'family_id': dir_name,
             'triage_file': f"{dir_name}/triage_output.txt"
-        })
+        }
+
+        # Include metadata if available
+        if entry_meta:
+            family_entry['type'] = entry_meta.get('type', 'unknown')
+            family_entry['root'] = entry_meta.get('root', '')
+            family_entry['total_seqs'] = entry_meta.get('total_seqs', 0)
+            if entry_meta.get('type') == 'deeper_with_overlaps':
+                family_entry['overlaps'] = entry_meta.get('overlaps', 0)
+                family_entry['overlap_fraction'] = entry_meta.get('overlap_fraction', 0)
+                family_entry['resolution_reason'] = entry_meta.get('resolution_reason', '')
+
+        manifest['families'].append(family_entry)
 
         print(f"  Collected information", file=sys.stderr)
 
@@ -1352,8 +1379,29 @@ Example:
 
     # Handle manifest mode
     if args.manifest:
-        directories = [entry['dir'] for entry in best_dirs]
-        create_manifest_bundle(directories)
+        # Include both non-overlapping and deeper resolvable directories
+        manifest_entries = []
+        for entry in best_dirs:
+            # Add the non-overlapping directory
+            manifest_entries.append({
+                'dir': entry['dir'],
+                'type': 'non_overlapping',
+                'root': entry['root'],
+                'total_seqs': entry['total_seqs']
+            })
+            # Add any deeper resolvable directories
+            for deeper in entry.get('deeper_resolvable', []):
+                manifest_entries.append({
+                    'dir': deeper['dir'],
+                    'type': 'deeper_with_overlaps',
+                    'root': entry['root'],
+                    'total_seqs': deeper['total_seqs'],
+                    'overlaps': deeper['overlaps'],
+                    'overlap_fraction': deeper['overlap_fraction'],
+                    'resolution_reason': deeper.get('resolution_reason', '')
+                })
+        directories = [e['dir'] for e in manifest_entries]
+        create_manifest_bundle(directories, manifest_entries)
         return
 
     # Count families with resolvable deeper overlaps
