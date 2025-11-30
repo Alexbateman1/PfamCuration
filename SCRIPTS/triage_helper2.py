@@ -945,16 +945,33 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=
 
             pid = os.fork()
             if pid == 0:
-                # Child process - run pfnew and log output
+                # Child process - run pfmake then pfnew and log output
                 try:
                     with open(pfnew_log, 'a') as log_file:
                         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                         log_file.write(f"\n{'='*60}\n")
-                        log_file.write(f"[{timestamp}] Running: {cmd}\n")
+                        log_file.write(f"[{timestamp}] Processing: {last_dir}\n")
                         log_file.write(f"Directory: {current_cwd}/{last_dir}\n")
                         log_file.write(f"{'='*60}\n")
                         log_file.flush()
 
+                        # Run pfmake first to fix any TC/NC line issues
+                        log_file.write(f"\nRunning pfmake in {last_dir}...\n")
+                        log_file.flush()
+                        pfmake_result = subprocess.run(
+                            "pfmake", shell=True, cwd=f"{current_cwd}/{last_dir}",
+                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
+                        )
+                        log_file.write(pfmake_result.stdout if pfmake_result.stdout else "")
+                        if pfmake_result.returncode != 0:
+                            log_file.write(f"\n*** WARNING: pfmake returned {pfmake_result.returncode} ***\n")
+                        else:
+                            log_file.write(f"pfmake completed successfully\n")
+                        log_file.flush()
+
+                        # Now run pfnew
+                        log_file.write(f"\nRunning: {cmd}\n")
+                        log_file.flush()
                         result = subprocess.run(
                             cmd, shell=True, cwd=current_cwd,
                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True
@@ -972,7 +989,7 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=
                         log_file.flush()
                 except Exception as e:
                     with open(pfnew_log, 'a') as log_file:
-                        log_file.write(f"\n*** ERROR running pfnew: {e} ***\n")
+                        log_file.write(f"\n*** ERROR running pfmake/pfnew: {e} ***\n")
                 os._exit(0)
             else:
                 # Parent process - continue without waiting
