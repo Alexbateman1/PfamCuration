@@ -1,0 +1,105 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LAZ0_TED03/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.40 30.60;
+NC   26.20 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+6	6	Parashewanella.
+5	6	Magnetococcus.
+6	5	Shewanellaceae
+5	5	Magnetococcaceae
+2	5	Saccharospirillaceae
+2	5	Chromatiaceae
+6	4	Alteromonadales
+5	4	Magnetococcales
+3	4	Chromatiales
+2	4	Oceanospirillales
+5	3	Magnetococcia
+12	3	Gammaproteobacteria
+18	2	Pseudomonadota
+18	1	Pseudomonadati
+18	0	Bacteria
+Total of 18 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1D3RN12	UNCHARACTERIZED PROTEIN {    103.8      2e-26   1   1.1   1.2
+	Iterate                   	    17	    77	   103.5
+
+A0A1I4V0K4	DDE SUPERFAMILY ENDONUCLE    102.5    5.2e-26   1   1.7   0.4
+	Iterate                   	   445	   505	   101.3
+	PF13546	DDE_5           	    71	   322	   100.2
+	PF01609	DDE_Tnp_1       	   211	   427	    38.4
+
+A0A1Z5HCH1	TRANSPOSASE {ECO:0008006|    105.0    8.7e-27   1   1.2   0.8
+	Iterate                   	    42	   102	   104.6
+
+A0A3L8PY68	TRANSPOSASE {ECO:0000313|     95.1      1e-23   1   1.1   0.4
+	Iterate                   	     3	    63	    94.9
+
+G4T3L8	TRANSPOSASE {ECO:0008006|GOOG     97.1    2.5e-24   1   1.2   0.9
+	Iterate                   	    31	    92	    96.7
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1D3RN12.1	AF-A0A1D3RN12-F1-model_v4_TED01:22-85	1	AF-A0A1D3RN12-F1-model_v4_TED01	22-85	91.8%
+A0A1I4V0K4.1	AF-A0A1I4V0K4-F1-model_v4_TED01:23-50_443-514	1	AF-A0A1I4V0K4-F1-model_v4_TED01	23-514	100.0%
+A0A1I4V0K4.1	AF-A0A1I4V0K4-F1-model_v4_TED02:123-437	1	AF-A0A1I4V0K4-F1-model_v4_TED02	123-437	0
+A0A1P8UGJ6.1	AF-A0A1P8UGJ6-F1-model_v4_TED01:28-78	1	AF-A0A1P8UGJ6-F1-model_v4_TED01	28-78	83.6%
+A0A1Z5HCH1.1	AF-A0A1Z5HCH1-F1-model_v4_TED01:2-35	1	AF-A0A1Z5HCH1-F1-model_v4_TED01	2-35	0
+A0A1Z5HCH1.1	AF-A0A1Z5HCH1-F1-model_v4_TED02:37-111	1	AF-A0A1Z5HCH1-F1-model_v4_TED02	37-111	100.0%
+A0A3L8PY68.1	AF-A0A3L8PY68-F1-model_v4_TED01:2-75	1	AF-A0A3L8PY68-F1-model_v4_TED01	2-75	100.0%
+A0A5C6QAU5.1	AF-A0A5C6QAU5-F1-model_v4_TED01:63-344	1	AF-A0A5C6QAU5-F1-model_v4_TED01	63-344	0
+A0A5C6QAU5.1	AF-A0A5C6QAU5-F1-model_v4_TED02:385-451	1	AF-A0A5C6QAU5-F1-model_v4_TED02	385-451	95.1%
+A0L3K2.1	AF-A0L3K2-F1-model_v4_TED01:16-103	1	AF-A0L3K2-F1-model_v4_TED01	16-103	0
+A0L3K2.1	AF-A0L3K2-F1-model_v4_TED02:107-407	1	AF-A0L3K2-F1-model_v4_TED02	107-407	0
+G4T3L8.1	AF-G4T3L8-F1-model_v4_TED01:2-100	1	AF-G4T3L8-F1-model_v4_TED01	2-100	100.0%
+H8Z8Q7.1	AF-H8Z8Q7-F1-model_v4_TED01:26-98_423-438_447-495	1	AF-H8Z8Q7-F1-model_v4_TED01	26-495	100.0%
+H8Z8Q7.1	AF-H8Z8Q7-F1-model_v4_TED02:104-337_345-418	1	AF-H8Z8Q7-F1-model_v4_TED02	104-418	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 7 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

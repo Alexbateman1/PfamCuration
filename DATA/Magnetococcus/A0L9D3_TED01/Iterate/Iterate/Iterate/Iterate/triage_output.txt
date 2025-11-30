@@ -1,0 +1,317 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L9D3_TED01/Iterate/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 27.50;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+26	5	Lactobacillaceae
+32	4	Caudoviricetes
+29	4	Lactobacillales
+43	3	Bacilli
+32	3	Uroviricota
+25	3	Clostridia
+72	2	Bacillota
+32	2	Heunggongvirae
+19	2	Pseudomonadota
+87	1	Bacillati
+32	1	Duplodnaviria
+28	1	Pseudomonadati
+33	0	Viruses
+115	0	Bacteria
+Total of 150 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1G6HN09	AP2 DOMAIN-CONTAINING PRO    367.8   4.9e-109   8   8.1  95.7
+	Iterate                   	   326	   381	    57.7
+	Iterate                   	   254	   305	    57.0
+	Iterate                   	   389	   441	    55.2
+	Iterate                   	   198	   249	    54.6
+	Iterate                   	    14	    65	    50.0
+	Iterate                   	    80	   131	    48.1
+	Iterate                   	   452	   502	    47.9
+	Iterate                   	   141	   192	    41.6
+
+A0A3S1CNN6	UNCHARACTERIZED PROTEIN {    218.8    1.6e-62   5   5.2  49.4
+	Iterate                   	    15	    67	    49.7
+	Iterate                   	    84	   137	    48.9
+	Iterate                   	   201	   252	    48.3
+	Iterate                   	   258	   313	    47.8
+	Iterate                   	   144	   195	    47.6
+
+A0A417CJ41	UNCHARACTERIZED PROTEIN {    233.3    4.9e-67   4   4.3  38.0
+	Iterate                   	    71	   126	    68.0
+	Iterate                   	   208	   266	    63.3
+	Iterate                   	   139	   195	    62.9
+	Iterate                   	    10	    61	    57.5
+
+A0A559K5C4	UNCHARACTERIZED PROTEIN {    254.1    1.5e-73   6   6.3  57.9
+	Iterate                   	    85	   139	    53.2
+	Iterate                   	   148	   203	    49.9
+	Iterate                   	   213	   268	    49.2
+	Iterate                   	   334	   384	    49.2
+	Iterate                   	   273	   325	    48.6
+	Iterate                   	    11	    71	    33.8
+
+R9IF16	DUF2726 DOMAIN-CONTAINING PRO    204.7    4.2e-58   4   4.2  38.2
+	Iterate                   	    81	   137	    74.3
+	Iterate                   	   145	   202	    61.1
+	Iterate                   	   215	   274	    46.8
+	Iterate                   	    12	    69	    40.0
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS5916921 (E-value: 6.3e-50, Score: 171.8)
+Mentioned as: cg2004
+Description: hypothetical protein
+Organism: Corynebacterium glutamicum ATCC 13032
+PMID: 26341203
+Source: EuropePMC
+Title: Single-Domain Peptidyl-Prolyl cis/trans Isomerase FkpA from Corynebacterium glutamicum Improves the Biomass Yield at Increased Growth Temperatures
+Journal: Applied and environmental microbiology (2015)
+Snippet: parentheses): cg2962 (5.25), cg2018 (3.32), cg1307 (3.3), cg2004 (3.28), cg2748 (3.18), cg1327 (2.67), cg2381 (2.64), cg0528 (2.58), cg2380 (2.51), cg3368
+
+================================================================================
+Protein: VIMSS5916921 (E-value: 6.3e-50, Score: 171.8)
+Mentioned as: cg2004
+Description: hypothetical protein
+Organism: Corynebacterium glutamicum ATCC 13032
+PMID: 18487330
+Source: EuropePMC
+Title: Population Heterogeneity in Corynebacterium glutamicum ATCC 13032 caused by prophage CGP3
+Journal: Journal of bacteriology (2008)
+Snippet: cg1991 cg1996 cglIM cg1997 cglIR cg1998 cglIIR cg2004 cg2009 cg2024 cg2040 cg2043 cg2064 cg2065 cg2070 cg2071 int2 int2 Annotation Putative acetyltransferase
+
+================================================================================
+Protein: F9USX1 (E-value: 4.7e-19, Score: 73.0)
+Mentioned as: F9USX1
+Description: Alcohol dehydrogenase
+Organism: Lactiplantibacillus plantarum (strain ATCC BAA-793 / NCIMB 8826 / WCFS1)
+PMID: 28446769
+Source: EuropePMC
+Title: Identification of key proteins and pathways in cadmium tolerance of Lactobacillus plantarum strains by proteomic analysis.
+Journal: Scientific reports (2017)
+Snippet: F9URF7 lp_2667; Uncharacterized protein 1.67 F9UQN8 lp_2333; Uncharacterized protein 1.54 F9UN47 lp_1257; Uncharacterized protein 1.54 F9USX1 lp_0158; Uncharacterized protein 1.51 F9UQ59 lp_2112; Uncharacterized protein 1.66 F9UQ60 lp_2113; Uncharacterized protein 4.47 F9UTE8 lp_3250; Uncharacterized protein 3.03 a Category of differently expressed proteins was based on their functions
+
+================================================================================
+Protein: VIMSS158499 (E-value: 3.1e-18, Score: 70.4)
+Mentioned as: lmo2276
+Description: similar to an unknown bacteriophage protein
+Organism: Listeria monocytogenes EGD-e
+PMID: 34612177
+Source: EuropePMC
+Title: Pathogenicity and virulence of <i>Listeria monocytogenes</i>: A trip from environmental to medical microbiology
+Journal: Virulence (2021)
+Snippet: in a reconstituted human gut environment, as well as in mice. Strikingly, mutants defective in lmo2276 disseminate better to liver and spleen, suggesting that Prevotella could enhance intestinal infection. Selective reduction of Prevotella abundance by L. monocytogenes might prevent excessive inflammation, thus allowing the development of
+
+================================================================================
+Protein: VIMSS158499 (E-value: 3.1e-18, Score: 70.4)
+Mentioned as: lmo2276
+Description: similar to an unknown bacteriophage protein
+Organism: Listeria monocytogenes EGD-e
+PMID: 31330827
+Source: EuropePMC
+Title: Comparative Analysis of <i>Listeria monocytogenes</i> Plasmids and Expression Levels of Plasmid-Encoded Genes during Growth under Salt and Acid Stress Conditions
+Journal: Toxins (2019)
+Snippet: formaldehyde dehydrogenase Glycerol dehydrogenase Glycerol kinase Hypothetical lambda repressor-like, DNA-binding Integral membrane protein Lmo0466 protein Lmo2276 protein Membrane proteins related to metalloendopeptidases Mercuric ion reductase Mercuric resistance operon regulatory protein Methyl-accepting chemotaxis protein Multi antimicrobial extrusion (MATE) family transporter Myosin heavy chain, nonmuscle type B Na(+)/H(+)
+
+================================================================================
+Protein: VIMSS158499 (E-value: 3.1e-18, Score: 70.4)
+Mentioned as: lmo2276
+Description: similar to an unknown bacteriophage protein
+Organism: Listeria monocytogenes EGD-e
+PMID: 19478867
+Source: EuropePMC
+Title: In vivo transcriptional profiling of Listeria monocytogenes and mutagenesis identify new virulence factors involved in infection
+Journal: PLoS pathogens (2009)
+Snippet: lmo1083 similar to dTDP-D-glucose 4,6-dehydratase LMOf6854_1136 3,49 lmo1084 lmo1084 similar to DTDP-L-rhamnose synthetase LMOf6854_1137 3,89 lmo2276 lmo2276 similar to an unknown bacteriophage protein LMOf6854_2338 2,72 lmo0150 lmo0150 unknown protein 16,53 lmo0471 lmo0471 unknown protein 3,18 lmo1099 lmo1099 similar to a protein encoded by Tn916 65,42 30,42
+
+================================================================================
+Protein: VIMSS2281226 (E-value: 1.6e-17, Score: 68.1)
+Mentioned as: LMOf6854_2338
+Description: bacteriophage protein
+Organism: Listeria monocytogenes str. 1/2a F6854
+PMID: 21441318
+Source: EuropePMC
+Title: comK prophage junction fragments as markers for Listeria monocytogenes genotypes unique to individual meat and poultry processing plants and a model for rapid niche-specific adaptation, biofilm formation, and persistence
+Journal: Applied and environmental microbiology (2011)
+Snippet: 2000 ECIII isolates. The putative adaptons ORFs gp27 (LMOf6854_2338) and HP3 (LMOf6854_2375) (arrows shaded gray) indicate those comK prophage genes that are
+
+================================================================================
+Protein: VIMSS329952 (E-value: 6.6e-17, Score: 66.1)
+Mentioned as: lp_0862
+Description: unknown
+Organism: Lactobacillus plantarum WCFS1
+PMID: 32832272
+Source: EuropePMC
+Title: Comparative transcriptomic analysis of <i>Lactiplantibacillus plantarum</i> RS66CD biofilm in high-salt conditions and planktonic cells
+Journal: PeerJ (2020)
+Snippet: hydrolases ( Table 4 ). Alcohol dehydrogenase are a group of oxidoreductases which encoded by lp_0862 gene during the stage of formation ( Hu, Pu & Bai, 2019 ). Fatty acids are the main components of cell membrane and participate in the physiological metabolism of bacteria.
+
+================================================================================
+Protein: VIMSS329952 (E-value: 6.6e-17, Score: 66.1)
+Mentioned as: lp_0862
+Description: unknown
+Organism: Lactobacillus plantarum WCFS1
+PMID: 24308641
+Source: EuropePMC
+Title: The genome of the Lactobacillus sanfranciscensis temperate phage EV3
+Journal: BMC research notes (2013)
+Snippet: australiensis DSM 15567 AEE95754.1 6.0E-7 EV3_032 ccgaaa ggaag tgagataa atg 26852-27319 155 Putative uncharacterized protein lp_0862 L. pentosus IG1 FR874854.1 1.0E-22 EV3_033 actaaattata ggaga taaat atg 27380-28120 246 NTP-binding protein L. paracasei subsp. paracasei ATCC 25302 EEI67797.1 5.0E-71 EV3_034 agtttggaagtgatgaaaacg gtg 28068-29459 463 Putative helicase Lactobacilus
+
+================================================================================
+
+... (truncated, 110 total lines)
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A073JY79.1	AF-A0A073JY79-F1-model_v4_TED01:11-65	1	AF-A0A073JY79-F1-model_v4_TED01	11-65	0
+A0A073JY79.1	AF-A0A073JY79-F1-model_v4_TED02:75-119	1	AF-A0A073JY79-F1-model_v4_TED02	75-119	76.9%
+A0A073JY79.1	AF-A0A073JY79-F1-model_v4_TED03:134-198	1	AF-A0A073JY79-F1-model_v4_TED03	134-198	0
+A0A073JY79.1	AF-A0A073JY79-F1-model_v4_TED04:204-319	1	AF-A0A073JY79-F1-model_v4_TED04	204-319	0
+A0A0B3WQG1.1	AF-A0A0B3WQG1-F1-model_v4_TED02:59-108	1	AF-A0A0B3WQG1-F1-model_v4_TED02	59-108	94.3%
+A0A0B3WQG1.1	AF-A0A0B3WQG1-F1-model_v4_TED03:111-175	1	AF-A0A0B3WQG1-F1-model_v4_TED03	111-175	1.9%
+A0A0B3WQG1.1	AF-A0A0B3WQG1-F1-model_v4_TED04:191-326	1	AF-A0A0B3WQG1-F1-model_v4_TED04	191-326	0
+A0A0B3WQG1.1	AF-A0A0B3WQG1-F1-model_v4_TED01:2-52	1	AF-A0A0B3WQG1-F1-model_v4_TED01	2-52	0
+A0A0D0YU19.1	AF-A0A0D0YU19-F1-model_v4_TED01:8-58	1	AF-A0A0D0YU19-F1-model_v4_TED01	8-58	94.4%
+A0A0D0YU19.1	AF-A0A0D0YU19-F1-model_v4_TED02:82-151	1	AF-A0A0D0YU19-F1-model_v4_TED02	82-151	0
+A0A0D0YUS4.1	AF-A0A0D0YUS4-F1-model_v4_TED02:68-115	1	AF-A0A0D0YUS4-F1-model_v4_TED02	68-115	90.6%
+A0A0D0YUS4.1	AF-A0A0D0YUS4-F1-model_v4_TED03:150-209	1	AF-A0A0D0YUS4-F1-model_v4_TED03	150-209	0
+A0A0D0YUS4.1	AF-A0A0D0YUS4-F1-model_v4_TED01:9-49	1	AF-A0A0D0YUS4-F1-model_v4_TED01	9-49	0
+A0A0F0CE28.1	AF-A0A0F0CE28-F1-model_v4_TED01:11-69	1	AF-A0A0F0CE28-F1-model_v4_TED01	11-69	100.0%
+A0A0F0CE28.1	AF-A0A0F0CE28-F1-model_v4_TED02:78-156	1	AF-A0A0F0CE28-F1-model_v4_TED02	78-156	0
+A0A0F0CE28.1	AF-A0A0F0CE28-F1-model_v4_TED03:164-206	1	AF-A0A0F0CE28-F1-model_v4_TED03	164-206	0
+A0A0F0CIJ4.1	AF-A0A0F0CIJ4-F1-model_v4_TED02:63-95	1	AF-A0A0F0CIJ4-F1-model_v4_TED02	63-95	0
+A0A0F0CIJ4.1	AF-A0A0F0CIJ4-F1-model_v4_TED01:8-47	1	AF-A0A0F0CIJ4-F1-model_v4_TED01	8-47	73.5%
+A0A0M2NHZ6.1	AF-A0A0M2NHZ6-F1-model_v4_TED01:8-65	1	AF-A0A0M2NHZ6-F1-model_v4_TED01	8-65	100.0%
+A0A0M2NHZ6.1	AF-A0A0M2NHZ6-F1-model_v4_TED02:74-156	1	AF-A0A0M2NHZ6-F1-model_v4_TED02	74-156	0
+A0A0M2NHZ6.1	AF-A0A0M2NHZ6-F1-model_v4_TED03:161-202	1	AF-A0A0M2NHZ6-F1-model_v4_TED03	161-202	0
+A0A0M4CTU9.1	AF-A0A0M4CTU9-F1-model_v4_TED01:2-65	1	AF-A0A0M4CTU9-F1-model_v4_TED01	2-65	100.0%
+A0A0M4CTU9.1	AF-A0A0M4CTU9-F1-model_v4_TED02:76-161	1	AF-A0A0M4CTU9-F1-model_v4_TED02	76-161	0
+A0A0M8T276.1	AF-A0A0M8T276-F1-model_v4_TED01:15-69	1	AF-A0A0M8T276-F1-model_v4_TED01	15-69	96.5%
+A0A0M8T276.1	AF-A0A0M8T276-F1-model_v4_TED02:86-166	1	AF-A0A0M8T276-F1-model_v4_TED02	86-166	0
+A0A0M8T276.1	AF-A0A0M8T276-F1-model_v4_TED03:172-223	1	AF-A0A0M8T276-F1-model_v4_TED03	172-223	0
+A0A0R1H0L1.1	AF-A0A0R1H0L1-F1-model_v4_TED01:5-66	1	AF-A0A0R1H0L1-F1-model_v4_TED01	5-66	100.0%
+A0A0R1H0L1.1	AF-A0A0R1H0L1-F1-model_v4_TED02:78-148	1	AF-A0A0R1H0L1-F1-model_v4_TED02	78-148	0
+A0A0R1JIJ4.1	AF-A0A0R1JIJ4-F1-model_v4_TED01:10-56	1	AF-A0A0R1JIJ4-F1-model_v4_TED01	10-56	88.7%
+A0A0R1JIJ4.1	AF-A0A0R1JIJ4-F1-model_v4_TED02:57-87	1	AF-A0A0R1JIJ4-F1-model_v4_TED02	57-87	11.3%
+A0A0R1JIJ4.1	AF-A0A0R1JIJ4-F1-model_v4_TED03:91-147	1	AF-A0A0R1JIJ4-F1-model_v4_TED03	91-147	0
+A0A0R1JN68.1	AF-A0A0R1JN68-F1-model_v4_TED01:11-68	1	AF-A0A0R1JN68-F1-model_v4_TED01	11-68	0
+A0A0R1JN68.1	AF-A0A0R1JN68-F1-model_v4_TED02:76-130	1	AF-A0A0R1JN68-F1-model_v4_TED02	76-130	94.4%
+A0A0R1JN68.1	AF-A0A0R1JN68-F1-model_v4_TED03:148-232	1	AF-A0A0R1JN68-F1-model_v4_TED03	148-232	0
+A0A0R1K017.1	AF-A0A0R1K017-F1-model_v4_TED01:20-94	1	AF-A0A0R1K017-F1-model_v4_TED01	20-94	100.0%
+A0A0R1K017.1	AF-A0A0R1K017-F1-model_v4_TED02:98-167	1	AF-A0A0R1K017-F1-model_v4_TED02	98-167	0
+A0A0R1MFI3.1	AF-A0A0R1MFI3-F1-model_v4_TED01:12-64	1	AF-A0A0R1MFI3-F1-model_v4_TED01	12-64	0
+A0A0R1MFI3.1	AF-A0A0R1MFI3-F1-model_v4_TED02:74-128	1	AF-A0A0R1MFI3-F1-model_v4_TED02	74-128	92.6%
+A0A0R1MFI3.1	AF-A0A0R1MFI3-F1-model_v4_TED03:164-224	1	AF-A0A0R1MFI3-F1-model_v4_TED03	164-224	0
+A0A0R1QSE7.1	AF-A0A0R1QSE7-F1-model_v4_TED01:10-59	1	AF-A0A0R1QSE7-F1-model_v4_TED01	10-59	94.3%
+A0A0R1QSE7.1	AF-A0A0R1QSE7-F1-model_v4_TED02:83-162	1	AF-A0A0R1QSE7-F1-model_v4_TED02	83-162	0
+A0A0R1RQ20.1	AF-A0A0R1RQ20-F1-model_v4_TED01:14-62	1	AF-A0A0R1RQ20-F1-model_v4_TED01	14-62	92.5%
+A0A0R1RQ20.1	AF-A0A0R1RQ20-F1-model_v4_TED02:85-155	1	AF-A0A0R1RQ20-F1-model_v4_TED02	85-155	0
+A0A0R1RRN1.1	AF-A0A0R1RRN1-F1-model_v4_TED01:9-69	1	AF-A0A0R1RRN1-F1-model_v4_TED01	9-69	100.0%
+A0A0R1RRN1.1	AF-A0A0R1RRN1-F1-model_v4_TED02:81-150	1	AF-A0A0R1RRN1-F1-model_v4_TED02	81-150	0
+A0A0R1WFP8.1	AF-A0A0R1WFP8-F1-model_v4_TED01:2-65	1	AF-A0A0R1WFP8-F1-model_v4_TED01	2-65	100.0%
+A0A0R1WFP8.1	AF-A0A0R1WFP8-F1-model_v4_TED02:71-145	1	AF-A0A0R1WFP8-F1-model_v4_TED02	71-145	0
+A0A0R2A2C1.1	AF-A0A0R2A2C1-F1-model_v4_TED01:2-78	1	AF-A0A0R2A2C1-F1-model_v4_TED01	2-78	100.0%
+A0A0R2A2C1.1	AF-A0A0R2A2C1-F1-model_v4_TED02:83-151	1	AF-A0A0R2A2C1-F1-model_v4_TED02	83-151	0
+A0A0R2A6E6.1	AF-A0A0R2A6E6-F1-model_v4_TED01:5-70	1	AF-A0A0R2A6E6-F1-model_v4_TED01	5-70	100.0%
+A0A0R2A6E6.1	AF-A0A0R2A6E6-F1-model_v4_TED02:79-147	1	AF-A0A0R2A6E6-F1-model_v4_TED02	79-147	0
+A0A0R2C4N4.1	AF-A0A0R2C4N4-F1-model_v4_TED01:9-74	1	AF-A0A0R2C4N4-F1-model_v4_TED01	9-74	100.0%
+A0A0R2C4N4.1	AF-A0A0R2C4N4-F1-model_v4_TED02:93-187	1	AF-A0A0R2C4N4-F1-model_v4_TED02	93-187	0
+A0A0R2C5V7.1	AF-A0A0R2C5V7-F1-model_v4_TED01:12-88	1	AF-A0A0R2C5V7-F1-model_v4_TED01	12-88	100.0%
+A0A0R2C5V7.1	AF-A0A0R2C5V7-F1-model_v4_TED02:93-167	1	AF-A0A0R2C5V7-F1-model_v4_TED02	93-167	0
+A0A0R2CYB7.1	AF-A0A0R2CYB7-F1-model_v4_TED01:2-70	1	AF-A0A0R2CYB7-F1-model_v4_TED01	2-70	0
+A0A0R2CYB7.1	AF-A0A0R2CYB7-F1-model_v4_TED02:77-129	1	AF-A0A0R2CYB7-F1-model_v4_TED02	77-129	98.1%
+A0A0R2CYB7.1	AF-A0A0R2CYB7-F1-model_v4_TED03:147-223	1	AF-A0A0R2CYB7-F1-model_v4_TED03	147-223	0
+A0A0R2EYS7.1	AF-A0A0R2EYS7-F1-model_v4_TED01:11-58	1	AF-A0A0R2EYS7-F1-model_v4_TED01	11-58	88.9%
+A0A0R2EYS7.1	AF-A0A0R2EYS7-F1-model_v4_TED02:59-98	1	AF-A0A0R2EYS7-F1-model_v4_TED02	59-98	11.1%
+A0A0R2EYS7.1	AF-A0A0R2EYS7-F1-model_v4_TED03:100-153	1	AF-A0A0R2EYS7-F1-model_v4_TED03	100-153	0
+A0A0R2FIQ5.1	AF-A0A0R2FIQ5-F1-model_v4_TED01:11-58	1	AF-A0A0R2FIQ5-F1-model_v4_TED01	11-58	88.9%
+A0A0R2FIQ5.1	AF-A0A0R2FIQ5-F1-model_v4_TED02:99-163	1	AF-A0A0R2FIQ5-F1-model_v4_TED02	99-163	0
+A0A0S3U602.1	AF-A0A0S3U602-F1-model_v4_TED01:2-61	1	AF-A0A0S3U602-F1-model_v4_TED01	2-61	90.6%
+A0A0S3U602.1	AF-A0A0S3U602-F1-model_v4_TED02:77-122	1	AF-A0A0S3U602-F1-model_v4_TED02	77-122	0
+A0A0V8QB59.1	AF-A0A0V8QB59-F1-model_v4_TED01:11-77	1	AF-A0A0V8QB59-F1-model_v4_TED01	11-77	100.0%
+A0A0V8QB59.1	AF-A0A0V8QB59-F1-model_v4_TED02:84-168	1	AF-A0A0V8QB59-F1-model_v4_TED02	84-168	0
+A0A0V8QB59.1	AF-A0A0V8QB59-F1-model_v4_TED03:172-236	1	AF-A0A0V8QB59-F1-model_v4_TED03	172-236	0
+A0A160T390.2	AF-A0A160T390-F1-model_v4_TED01:20-72	1	AF-A0A160T390-F1-model_v4_TED01	20-72	100.0%
+A0A160T390.2	AF-A0A160T390-F1-model_v4_TED02:84-164	1	AF-A0A160T390-F1-model_v4_TED02	84-164	0
+A0A160T390.2	AF-A0A160T390-F1-model_v4_TED03:171-209	1	AF-A0A160T390-F1-model_v4_TED03	171-209	0
+A0A1A6AMG0.1	AF-A0A1A6AMG0-F1-model_v4_TED01:11-61	1	AF-A0A1A6AMG0-F1-model_v4_TED01	11-61	94.4%
+A0A1A6AMG0.1	AF-A0A1A6AMG0-F1-model_v4_TED02:74-157	1	AF-A0A1A6AMG0-F1-model_v4_TED02	74-157	0
+A0A1B2IVR9.1	AF-A0A1B2IVR9-F1-model_v4_TED01:10-70	1	AF-A0A1B2IVR9-F1-model_v4_TED01	10-70	100.0%
+A0A1B2IVR9.1	AF-A0A1B2IVR9-F1-model_v4_TED02:82-160	1	AF-A0A1B2IVR9-F1-model_v4_TED02	82-160	0
+A0A1B2IXK5.1	AF-A0A1B2IXK5-F1-model_v4_TED01:10-56	1	AF-A0A1B2IXK5-F1-model_v4_TED01	10-56	87.0%
+A0A1B2IXK5.1	AF-A0A1B2IXK5-F1-model_v4_TED02:86-154	1	AF-A0A1B2IXK5-F1-model_v4_TED02	86-154	0
+A0A1G6HN09.1	AF-A0A1G6HN09-F1-model_v4_TED01:14-62	1	AF-A0A1G6HN09-F1-model_v4_TED01	14-62	0
+A0A1G6HN09.1	AF-A0A1G6HN09-F1-model_v4_TED04:198-246	1	AF-A0A1G6HN09-F1-model_v4_TED04	198-246	0
+A0A1G6HN09.1	AF-A0A1G6HN09-F1-model_v4_TED05:249-303	1	AF-A0A1G6HN09-F1-model_v4_TED05	249-303	86.2%
+A0A1G6HN09.1	AF-A0A1G6HN09-F1-model_v4_TED06:325-375	1	AF-A0A1G6HN09-F1-model_v4_TED06	325-375	0
+A0A1G6HN09.1	AF-A0A1G6HN09-F1-model_v4_TED07:389-435	1	AF-A0A1G6HN09-F1-model_v4_TED07	389-435	0
+A0A1G6HN09.1	AF-A0A1G6HN09-F1-model_v4_TED08:443-495	1	AF-A0A1G6HN09-F1-model_v4_TED08	443-495	0
+A0A1G6HN09.1	AF-A0A1G6HN09-F1-model_v4_TED02:80-119	1	AF-A0A1G6HN09-F1-model_v4_TED02	80-119	0
+A0A1G6HN09.1	AF-A0A1G6HN09-F1-model_v4_TED03:141-190	1	AF-A0A1G6HN09-F1-model_v4_TED03	141-190	0
+A0A1G6IMD2.1	AF-A0A1G6IMD2-F1-model_v4_TED01:12-66	1	AF-A0A1G6IMD2-F1-model_v4_TED01	12-66	0
+A0A1G6IMD2.1	AF-A0A1G6IMD2-F1-model_v4_TED02:71-124	1	AF-A0A1G6IMD2-F1-model_v4_TED02	71-124	0
+A0A1G6IMD2.1	AF-A0A1G6IMD2-F1-model_v4_TED03:126-171	1	AF-A0A1G6IMD2-F1-model_v4_TED03	126-171	76.9%
+A0A1G6IMD2.1	AF-A0A1G6IMD2-F1-model_v4_TED04:214-258	1	AF-A0A1G6IMD2-F1-model_v4_TED04	214-258	0
+A0A1G7B5S8.1	AF-A0A1G7B5S8-F1-model_v4_TED01:11-61	1	AF-A0A1G7B5S8-F1-model_v4_TED01	11-61	89.5%
+A0A1G7B5S8.1	AF-A0A1G7B5S8-F1-model_v4_TED02:75-150	1	AF-A0A1G7B5S8-F1-model_v4_TED02	75-150	0
+A0A1G7B5S8.1	AF-A0A1G7B5S8-F1-model_v4_TED03:161-199	1	AF-A0A1G7B5S8-F1-model_v4_TED03	161-199	0
+A0A1G9B7T4.1	AF-A0A1G9B7T4-F1-model_v4_TED01:64-126	1	AF-A0A1G9B7T4-F1-model_v4_TED01	64-126	0
+A0A1G9B7T4.1	AF-A0A1G9B7T4-F1-model_v4_TED02:134-190	1	AF-A0A1G9B7T4-F1-model_v4_TED02	134-190	0
+A0A1G9B7T4.1	AF-A0A1G9B7T4-F1-model_v4_TED03:210-258	1	AF-A0A1G9B7T4-F1-model_v4_TED03	210-258	94.2%
+A0A1G9B7T4.1	AF-A0A1G9B7T4-F1-model_v4_TED04:266-354	1	AF-A0A1G9B7T4-F1-model_v4_TED04	266-354	0
+A0A1H3F389.1	AF-A0A1H3F389-F1-model_v4_TED01:11-69	1	AF-A0A1H3F389-F1-model_v4_TED01	11-69	100.0%
+A0A1H3F389.1	AF-A0A1H3F389-F1-model_v4_TED02:72-157	1	AF-A0A1H3F389-F1-model_v4_TED02	72-157	0
+A0A1H3F389.1	AF-A0A1H3F389-F1-model_v4_TED03:163-204	1	AF-A0A1H3F389-F1-model_v4_TED03	163-204	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 50 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

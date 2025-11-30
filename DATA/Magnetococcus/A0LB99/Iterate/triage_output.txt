@@ -1,0 +1,94 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LB99/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   22.30 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+2	7	Ralstoniasolanacearum species complex.
+6	6	Magnetococcus.
+3	6	Magnetofaba.
+2	6	Spartinivicinus.
+2	6	Ralstonia
+9	5	Magnetococcaceae
+2	5	Zooshikellaceae
+2	5	Burkholderiaceae
+9	4	Magnetococcales
+4	4	Burkholderiales
+2	4	Oceanospirillales
+2	4	Nitrosomonadales
+9	3	Magnetococcia
+6	3	Betaproteobacteria
+2	3	Gammaproteobacteria
+17	2	Pseudomonadota
+17	1	Pseudomonadati
+17	0	Bacteria
+Total of 17 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0L789	UNCHARACTERIZED PROTEIN {ECO:    145.9    1.2e-39   1   1.0   0.1
+	Iterate                   	     1	    65	   145.8
+
+A0L9A9	UNCHARACTERIZED PROTEIN {ECO:    155.8      1e-42   1   1.0   0.1
+	Iterate                   	     1	    65	   155.7
+
+A0LAT6	UNCHARACTERIZED PROTEIN {ECO:    151.9    1.7e-41   1   1.0   0.1
+	Iterate                   	     1	    65	   151.8
+
+A0LB99	UNCHARACTERIZED PROTEIN {ECO:    166.6    4.4e-46   1   1.0   0.2
+	Iterate                   	     1	    65	   166.5
+
+A0LBP9	UNCHARACTERIZED PROTEIN {ECO:    130.2    9.8e-35   1   1.0   0.1
+	Iterate                   	     1	    65	   130.1
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Y2K4G4.1	AF-A0A1Y2K4G4-F1-model_v4_TED01:10-35	1	AF-A0A1Y2K4G4-F1-model_v4_TED01	10-35	40.0%
+A0L721.1	AF-A0L721-F1-model_v4_TED01:35-65	1	AF-A0L721-F1-model_v4_TED01	35-65	47.7%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 8 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF11994	DUF3489	7	0.88	0.53
+
+--- End STRING ---

@@ -1,0 +1,327 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L759_TED01/Iterate/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+24	4	Hyphomicrobiales
+21	4	Rhodobacterales
+57	3	Alphaproteobacteria
+36	3	Actinomycetes
+22	3	Gammaproteobacteria
+91	2	Pseudomonadota
+36	2	Actinomycetota
+64	1	Bacillati
+134	1	Pseudomonadati
+199	0	Bacteria
+Total of 200 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+ID   Y4KL_SINFN              Reviewed;         330 AA.
+AC   P55530;
+DE   RecName: Full=Uncharacterized AAA family ATPase y4kL;
+GN   OrderedLocusNames=NGR_a02840; ORFNames=y4kL;
+OS   Sinorhizobium fredii (strain NBRC 101917 / NGR234).
+OG   Plasmid sym pNGR234a.
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Rhizobiaceae; Sinorhizobium/Ensifer group; Sinorhizobium.
+OX   NCBI_TaxID=394;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=9163424; DOI=10.1038/387394a0;
+RA   Freiberg C.A., Fellay R., Bairoch A., Broughton W.J., Rosenthal A.,
+RA   Perret X.;
+RT   "Molecular basis of symbiosis between Rhizobium and legumes.";
+RL   Nature 387:394-401(1997).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=NBRC 101917 / NGR234;
+RX   PubMed=19376903; DOI=10.1128/aem.00515-09;
+RA   Schmeisser C., Liesegang H., Krysciak D., Bakkou N., Le Quere A.,
+RA   Wollherr A., Heinemeyer I., Morgenstern B., Pommerening-Roeser A.,
+RA   Flores M., Palacios R., Brenner S., Gottschalk G., Schmitz R.A.,
+RA   Broughton W.J., Perret X., Strittmatter A.W., Streit W.R.;
+RT   "Rhizobium sp. strain NGR234 possesses a remarkable number of secretion
+RT   systems.";
+RL   Appl. Environ. Microbiol. 75:4035-4045(2009).
+CC   -!- SIMILARITY: Belongs to the AAA ATPase family. {ECO:0000305}.
+DR   EMBL; U00090; AAB91743.1; -; Genomic_DNA.
+DR   RefSeq; NP_443941.1; NC_000914.2.
+DR   RefSeq; WP_010875309.1; NC_000914.2.
+DR   AlphaFoldDB; P55530; -.
+DR   SMR; P55530; -.
+DR   KEGG; rhi:NGR_a02840; -.
+DR   PATRIC; fig|394.7.peg.302; -.
+DR   eggNOG; COG0464; Bacteria.
+DR   HOGENOM; CLU_000688_25_0_5; -.
+DR   OrthoDB; 7438987at2; -.
+DR   Proteomes; UP000001054; Plasmid pNGR234a.
+DR   GO; GO:0005524; F:ATP binding; IEA:UniProtKB-KW.
+DR   GO; GO:0016887; F:ATP hydrolysis activity; IEA:InterPro.
+DR   CDD; cd19481; RecA-like_protease; 1.
+DR   Gene3D; 1.10.8.60; -; 1.
+DR   Gene3D; 3.40.50.300; P-loop containing nucleotide triphosphate hydrolases; 1.
+DR   InterPro; IPR003593; AAA+_ATPase.
+DR   InterPro; IPR050168; AAA_ATPase_domain.
+DR   InterPro; IPR003959; ATPase_AAA_core.
+DR   InterPro; IPR027417; P-loop_NTPase.
+DR   PANTHER; PTHR23077; AAA-FAMILY ATPASE; 1.
+DR   PANTHER; PTHR23077:SF198; ATP-DEPENDENT ZINC METALLOPROTEASE FTSH; 1.
+DR   Pfam; PF00004; AAA; 1.
+DR   SMART; SM00382; AAA; 1.
+DR   SUPFAM; SSF52540; P-loop containing nucleoside triphosphate hydrolases; 1.
+PE   3: Inferred from homology;
+KW   ATP-binding; Nucleotide-binding; Plasmid; Reference proteome.
+FT   CHAIN           1..330
+FT                   /note="Uncharacterized AAA family ATPase y4kL"
+FT                   /id="PRO_0000084781"
+FT   BINDING         125..132
+FT                   /ligand="ATP"
+FT                   /ligand_id="ChEBI:CHEBI:30616"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   330 AA;  37646 MW;  1DE82F63ECB8EECA CRC64;
+//
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A0Q4Y737	ATPASE {ECO:0000313|EMBL:     97.5    1.4e-24   1   3.1   2.9
+	Iterate                   	     3	    58	    97.5
+	PF00004	AAA             	   124	   250	   103.7
+
+A0A254N872	ATPASE {ECO:0000313|EMBL:     98.9    5.1e-25   1   2.5   2.4
+	Iterate                   	     3	    59	    97.5
+	PF00004	AAA             	   124	   250	   100.5
+
+A0A2K8U3D5	ATPASE {ECO:0000313|EMBL:     96.8    2.3e-24   1   2.6   3.4
+	Iterate                   	     3	    58	    96.8
+	PF00004	AAA             	   129	   255	    99.7
+
+A0A2R7SX76	ATPASE {ECO:0000313|EMBL:     98.8    5.2e-25   1   2.1   3.2
+	Iterate                   	     3	    58	    97.4
+	PF00004	AAA             	   124	   224	    76.8
+
+P55530	UNCHARACTERIZED AAA FAMILY ATPA     59.4    1.1e-12   1   2.3   0.2
+	Iterate                   	     3	    57	    59.4
+	PF00004	AAA             	   121	   247	   122.5
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS3417062 (E-value: 8.6e-22, Score: 81.9)
+Mentioned as: Tbd_1692
+Description: putative ATPase
+Organism: Thiobacillus denitrificans
+PMID: 19447904
+Source: EuropePMC
+Title: Novel toxin-antitoxin system composed of serine protease and AAA-ATPase homologues determines the high level of stability and incompatibility of the tumor-inducing plasmid pTiC58
+Journal: Journal of bacteriology (2009)
+Snippet: pRL100035 Sfum_2857 Sfum_2858 Mmc1_1291 Mmc1_1292 Tbd_1692 Tbd_1693 Anae109_4229 Anae109_4230 RHA1_ro11077 RHA1_ro11076 HCH_03415 HCH_03413 Agrobacterium
+
+================================================================================
+Protein: VIMSS2206996 (E-value: 1.5e-21, Score: 81.1)
+Mentioned as: pRL100036
+Description: putative AAA ATPase protein
+Organism: Rhizobium leguminosarum bv. viciae 3841
+PMID: 19376875
+Source: EuropePMC
+Title: Transcriptomic analysis of Rhizobium leguminosarum biovar viciae in symbiosis with host plants Pisum sativum and Vicia cracca
+Journal: Journal of bacteriology (2009)
+Snippet: of this study to determine the precise role of pRL100036 in symbiosis, some AAA ATPases are already known to play an essential role in symbiotic nitrogen
+
+================================================================================
+Protein: VIMSS10188588 (E-value: 4e-21, Score: 79.7)
+Mentioned as: AZL_008150
+Description: AAA ATPase, central domain protein
+Organism: Azospirillum sp. B510
+PMID: 24705077
+Source: EuropePMC
+Title: Genome Sequence of Azospirillum brasilense CBG497 and Comparative Analyses of Azospirillum Core and Accessory Genomes provide Insight into Niche Adaptation
+Journal: Genes (2012)
+Snippet: a region of approximately 20 kb. Only the two ORFs framing B510PP01 ( i.e. , AZL_008150 and AZL_008670) have orthologues in the A. lipoferum 4B genome (respectively, AZOLI_2072 and AZOLI_2071), suggesting that this phage may no longer be present in the latter strain. Blast searches with
+
+================================================================================
+Protein: VIMSS1181468 (E-value: 1.3e-19, Score: 74.9)
+Mentioned as: XCV0612
+Description: ATPase of the AAA+ class
+Organism: Xanthomonas campestris pv. vesicatoria str. 85-10
+PMID: 28814272
+Source: EuropePMC
+Title: Identification of new protein-coding genes with a potential role in the virulence of the plant pathogen Xanthomonas euvesicatoria
+Journal: BMC genomics (2017)
+Snippet: 358 308 0133900 XCV0557 624664..625527 c 281 247 0161114 XCV0564 632247..633056 c 270 144 0003611 XCV0612 693670..694671 334 326 0105852 pheC 736187..737158 c 324 266 0032290 XCV0855 974414..975196 261 260 0059889 XCV0861 983577..986486 968 660 0061379 XCV1116 1247631..1248212 194 193 0034580 raxB 1401839..1404616 926 718 0156885
+
+================================================================================
+Protein: VIMSS1181468 (E-value: 1.3e-19, Score: 74.9)
+Mentioned as: XCV0612
+Description: ATPase of the AAA+ class
+Organism: Xanthomonas campestris pv. vesicatoria str. 85-10
+PMID: 24068933
+Source: EuropePMC
+Title: Small RNA sX13: a multifaceted regulator of virulence in the plant pathogen Xanthomonas
+Journal: PLoS pathogens (2013)
+Snippet: 0.2 0.20.04 0.90.24 Additional genes tested by qRT-PCR XCV0173 putative secreted protein a,b,b,b 1.90.19 0.80.26 XCV0612 ATPase of the AAA+ class a 1.00.06 0.80.26 XCV1533 AsnB2; asparagine synthase b 1.00.04 1.00.17 XCV3232 PilH; type IV pilus response regulator a 2.20.07 1.90.67 XCV3573 putative transcriptional regulator, AraC
+
+================================================================================
+Protein: VIMSS369891 (E-value: 0.00012, Score: 27.0)
+Mentioned as: MGA_0536
+Description: AAA ATPase domain-containing protein
+Organism: Mycoplasma gallisepticum str. R(low)
+PMID: 20123709
+Source: EuropePMC
+Title: Comparative genomic analyses of attenuated strains of Mycoplasma gallisepticum
+Journal: Infection and immunity (2010)
+Snippet: MGA_0508, fructose-specific PTS component CRISPR CRISPR Intergenic, MGA_0536 ATPase and MGA_0537 hsdM Effect on Rhigh codingb Stop; 157-aa truncation T417I
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A011NZH8.1	AF-A0A011NZH8-F1-model_v4_TED02:73-242	1	AF-A0A011NZH8-F1-model_v4_TED02	73-242	0
+A0A011NZH8.1	AF-A0A011NZH8-F1-model_v4_TED03:248-318	1	AF-A0A011NZH8-F1-model_v4_TED03	248-318	0
+A0A011NZH8.1	AF-A0A011NZH8-F1-model_v4_TED01:1-46	1	AF-A0A011NZH8-F1-model_v4_TED01	1-46	77.2%
+A0A059DRN4.1	AF-A0A059DRN4-F1-model_v4_TED01:4-59	1	AF-A0A059DRN4-F1-model_v4_TED01	4-59	98.2%
+A0A059DRN4.1	AF-A0A059DRN4-F1-model_v4_TED02:74-248	1	AF-A0A059DRN4-F1-model_v4_TED02	74-248	0
+A0A059DRN4.1	AF-A0A059DRN4-F1-model_v4_TED03:254-331	1	AF-A0A059DRN4-F1-model_v4_TED03	254-331	0
+A0A098TSU6.1	AF-A0A098TSU6-F1-model_v4_TED01:2-51	1	AF-A0A098TSU6-F1-model_v4_TED01	2-51	80.6%
+A0A098TSU6.1	AF-A0A098TSU6-F1-model_v4_TED02:101-271	1	AF-A0A098TSU6-F1-model_v4_TED02	101-271	0
+A0A098TSU6.1	AF-A0A098TSU6-F1-model_v4_TED03:277-347	1	AF-A0A098TSU6-F1-model_v4_TED03	277-347	0
+A0A099FD22.1	AF-A0A099FD22-F1-model_v4_TED01:5-56	1	AF-A0A099FD22-F1-model_v4_TED01	5-56	91.2%
+A0A099FD22.1	AF-A0A099FD22-F1-model_v4_TED02:77-251	1	AF-A0A099FD22-F1-model_v4_TED02	77-251	0
+A0A099FD22.1	AF-A0A099FD22-F1-model_v4_TED03:257-327	1	AF-A0A099FD22-F1-model_v4_TED03	257-327	0
+A0A0B2C073.1	AF-A0A0B2C073-F1-model_v4_TED01:4-52	1	AF-A0A0B2C073-F1-model_v4_TED01	4-52	77.8%
+A0A0B2C073.1	AF-A0A0B2C073-F1-model_v4_TED02:69-245	1	AF-A0A0B2C073-F1-model_v4_TED02	69-245	0
+A0A0B2C073.1	AF-A0A0B2C073-F1-model_v4_TED03:251-324	1	AF-A0A0B2C073-F1-model_v4_TED03	251-324	0
+A0A0C5WN75.1	AF-A0A0C5WN75-F1-model_v4_TED01:13-56	1	AF-A0A0C5WN75-F1-model_v4_TED01	13-56	74.6%
+A0A0C5WN75.1	AF-A0A0C5WN75-F1-model_v4_TED02:88-257	1	AF-A0A0C5WN75-F1-model_v4_TED02	88-257	0
+A0A0C5WN75.1	AF-A0A0C5WN75-F1-model_v4_TED03:263-333	1	AF-A0A0C5WN75-F1-model_v4_TED03	263-333	0
+A0A0D1XET2.1	AF-A0A0D1XET2-F1-model_v4_TED02:72-251	1	AF-A0A0D1XET2-F1-model_v4_TED02	72-251	0
+A0A0D1XET2.1	AF-A0A0D1XET2-F1-model_v4_TED03:257-332	1	AF-A0A0D1XET2-F1-model_v4_TED03	257-332	0
+A0A0D1XET2.1	AF-A0A0D1XET2-F1-model_v4_TED01:2-67	1	AF-A0A0D1XET2-F1-model_v4_TED01	2-67	100.0%
+A0A0E4C7X6.1	AF-A0A0E4C7X6-F1-model_v4_TED01:5-54	1	AF-A0A0E4C7X6-F1-model_v4_TED01	5-54	90.9%
+A0A0E4C7X6.1	AF-A0A0E4C7X6-F1-model_v4_TED02:70-240	1	AF-A0A0E4C7X6-F1-model_v4_TED02	70-240	0
+A0A0E4C7X6.1	AF-A0A0E4C7X6-F1-model_v4_TED03:245-310	1	AF-A0A0E4C7X6-F1-model_v4_TED03	245-310	0
+A0A0E9M1R4.1	AF-A0A0E9M1R4-F1-model_v4_TED01:2-56	1	AF-A0A0E9M1R4-F1-model_v4_TED01	2-56	94.7%
+A0A0E9M1R4.1	AF-A0A0E9M1R4-F1-model_v4_TED02:65-240	1	AF-A0A0E9M1R4-F1-model_v4_TED02	65-240	0
+A0A0E9M1R4.1	AF-A0A0E9M1R4-F1-model_v4_TED03:246-317	1	AF-A0A0E9M1R4-F1-model_v4_TED03	246-317	0
+A0A0F4Q206.1	AF-A0A0F4Q206-F1-model_v4_TED01:2-63	1	AF-A0A0F4Q206-F1-model_v4_TED01	2-63	100.0%
+A0A0F4Q206.1	AF-A0A0F4Q206-F1-model_v4_TED02:74-248	1	AF-A0A0F4Q206-F1-model_v4_TED02	74-248	0
+A0A0F4Q206.1	AF-A0A0F4Q206-F1-model_v4_TED03:254-332	1	AF-A0A0F4Q206-F1-model_v4_TED03	254-332	0
+A0A0F5LQV0.1	AF-A0A0F5LQV0-F1-model_v4_TED01:4-57	1	AF-A0A0F5LQV0-F1-model_v4_TED01	4-57	94.7%
+A0A0F5LQV0.1	AF-A0A0F5LQV0-F1-model_v4_TED02:74-248	1	AF-A0A0F5LQV0-F1-model_v4_TED02	74-248	0
+A0A0F5LQV0.1	AF-A0A0F5LQV0-F1-model_v4_TED03:254-330	1	AF-A0A0F5LQV0-F1-model_v4_TED03	254-330	0
+A0A0M4DC17.1	AF-A0A0M4DC17-F1-model_v4_TED01:2-56	1	AF-A0A0M4DC17-F1-model_v4_TED01	2-56	100.0%
+A0A0M4DC17.1	AF-A0A0M4DC17-F1-model_v4_TED02:77-247	1	AF-A0A0M4DC17-F1-model_v4_TED02	77-247	0
+A0A0M4DC17.1	AF-A0A0M4DC17-F1-model_v4_TED03:253-327	1	AF-A0A0M4DC17-F1-model_v4_TED03	253-327	0
+A0A0N1ESF0.1	AF-A0A0N1ESF0-F1-model_v4_TED01:3-55	1	AF-A0A0N1ESF0-F1-model_v4_TED01	3-55	89.8%
+A0A0N1ESF0.1	AF-A0A0N1ESF0-F1-model_v4_TED02:75-249	1	AF-A0A0N1ESF0-F1-model_v4_TED02	75-249	0
+A0A0N1ESF0.1	AF-A0A0N1ESF0-F1-model_v4_TED03:255-330	1	AF-A0A0N1ESF0-F1-model_v4_TED03	255-330	0
+A0A0N9HJL6.1	AF-A0A0N9HJL6-F1-model_v4_TED01:2-63	1	AF-A0A0N9HJL6-F1-model_v4_TED01	2-63	100.0%
+A0A0N9HJL6.1	AF-A0A0N9HJL6-F1-model_v4_TED02:79-252	1	AF-A0A0N9HJL6-F1-model_v4_TED02	79-252	0
+A0A0N9HJL6.1	AF-A0A0N9HJL6-F1-model_v4_TED03:258-329	1	AF-A0A0N9HJL6-F1-model_v4_TED03	258-329	0
+A0A0S2TC76.1	AF-A0A0S2TC76-F1-model_v4_TED01:2-52	1	AF-A0A0S2TC76-F1-model_v4_TED01	2-52	80.6%
+A0A0S2TC76.1	AF-A0A0S2TC76-F1-model_v4_TED02:58-248	1	AF-A0A0S2TC76-F1-model_v4_TED02	58-248	11.3%
+A0A0S2TC76.1	AF-A0A0S2TC76-F1-model_v4_TED03:254-330	1	AF-A0A0S2TC76-F1-model_v4_TED03	254-330	0
+A0A0U3DSS5.1	AF-A0A0U3DSS5-F1-model_v4_TED01:2-54	1	AF-A0A0U3DSS5-F1-model_v4_TED01	2-54	91.2%
+A0A0U3DSS5.1	AF-A0A0U3DSS5-F1-model_v4_TED02:73-248	1	AF-A0A0U3DSS5-F1-model_v4_TED02	73-248	0
+A0A0U3DSS5.1	AF-A0A0U3DSS5-F1-model_v4_TED03:254-327	1	AF-A0A0U3DSS5-F1-model_v4_TED03	254-327	0
+A0A0U3FMG3.1	AF-A0A0U3FMG3-F1-model_v4_TED01:4-61	1	AF-A0A0U3FMG3-F1-model_v4_TED01	4-61	98.2%
+A0A0U3FMG3.1	AF-A0A0U3FMG3-F1-model_v4_TED02:73-247	1	AF-A0A0U3FMG3-F1-model_v4_TED02	73-247	0
+A0A0U3FMG3.1	AF-A0A0U3FMG3-F1-model_v4_TED03:253-325	1	AF-A0A0U3FMG3-F1-model_v4_TED03	253-325	0
+A0A0X1SYB6.1	AF-A0A0X1SYB6-F1-model_v4_TED01:3-52	1	AF-A0A0X1SYB6-F1-model_v4_TED01	3-52	83.3%
+A0A0X1SYB6.1	AF-A0A0X1SYB6-F1-model_v4_TED02:81-250	1	AF-A0A0X1SYB6-F1-model_v4_TED02	81-250	0
+A0A0X1SYB6.1	AF-A0A0X1SYB6-F1-model_v4_TED03:256-326	1	AF-A0A0X1SYB6-F1-model_v4_TED03	256-326	0
+A0A157SB92.1	AF-A0A157SB92-F1-model_v4_TED01:2-62	1	AF-A0A157SB92-F1-model_v4_TED01	2-62	100.0%
+A0A157SB92.1	AF-A0A157SB92-F1-model_v4_TED02:75-249	1	AF-A0A157SB92-F1-model_v4_TED02	75-249	0
+A0A157SB92.1	AF-A0A157SB92-F1-model_v4_TED03:255-333	1	AF-A0A157SB92-F1-model_v4_TED03	255-333	0
+A0A166R0H7.1	AF-A0A166R0H7-F1-model_v4_TED01:4-59	1	AF-A0A166R0H7-F1-model_v4_TED01	4-59	98.2%
+A0A166R0H7.1	AF-A0A166R0H7-F1-model_v4_TED02:78-248	1	AF-A0A166R0H7-F1-model_v4_TED02	78-248	0
+A0A166R0H7.1	AF-A0A166R0H7-F1-model_v4_TED03:254-328	1	AF-A0A166R0H7-F1-model_v4_TED03	254-328	0
+A0A177NBH2.1	AF-A0A177NBH2-F1-model_v4_TED01:2-52	1	AF-A0A177NBH2-F1-model_v4_TED01	2-52	87.7%
+A0A177NBH2.1	AF-A0A177NBH2-F1-model_v4_TED02:69-238	1	AF-A0A177NBH2-F1-model_v4_TED02	69-238	0
+A0A177NBH2.1	AF-A0A177NBH2-F1-model_v4_TED03:244-314	1	AF-A0A177NBH2-F1-model_v4_TED03	244-314	0
+A0A1B3NLW0.1	AF-A0A1B3NLW0-F1-model_v4_TED01:4-53	1	AF-A0A1B3NLW0-F1-model_v4_TED01	4-53	87.7%
+A0A1B3NLW0.1	AF-A0A1B3NLW0-F1-model_v4_TED02:81-251	1	AF-A0A1B3NLW0-F1-model_v4_TED02	81-251	0
+A0A1B3NLW0.1	AF-A0A1B3NLW0-F1-model_v4_TED03:257-331	1	AF-A0A1B3NLW0-F1-model_v4_TED03	257-331	0
+A0A1B6Z7E9.1	AF-A0A1B6Z7E9-F1-model_v4_TED01:4-57	1	AF-A0A1B6Z7E9-F1-model_v4_TED01	4-57	94.7%
+A0A1B6Z7E9.1	AF-A0A1B6Z7E9-F1-model_v4_TED02:78-248	1	AF-A0A1B6Z7E9-F1-model_v4_TED02	78-248	0
+A0A1B6Z7E9.1	AF-A0A1B6Z7E9-F1-model_v4_TED03:254-330	1	AF-A0A1B6Z7E9-F1-model_v4_TED03	254-330	0
+A0A1G4X8V4.1	AF-A0A1G4X8V4-F1-model_v4_TED02:90-260	1	AF-A0A1G4X8V4-F1-model_v4_TED02	90-260	0
+A0A1G4X8V4.1	AF-A0A1G4X8V4-F1-model_v4_TED03:265-335	1	AF-A0A1G4X8V4-F1-model_v4_TED03	265-335	0
+A0A1G4X8V4.1	AF-A0A1G4X8V4-F1-model_v4_TED01:3-69	1	AF-A0A1G4X8V4-F1-model_v4_TED01	3-69	100.0%
+A0A1G7GUL9.1	AF-A0A1G7GUL9-F1-model_v4_TED01:3-54	1	AF-A0A1G7GUL9-F1-model_v4_TED01	3-54	92.9%
+A0A1G7GUL9.1	AF-A0A1G7GUL9-F1-model_v4_TED02:73-247	1	AF-A0A1G7GUL9-F1-model_v4_TED02	73-247	0
+A0A1G7GUL9.1	AF-A0A1G7GUL9-F1-model_v4_TED03:253-326	1	AF-A0A1G7GUL9-F1-model_v4_TED03	253-326	0
+A0A1G7YJV4.1	AF-A0A1G7YJV4-F1-model_v4_TED01:4-52	1	AF-A0A1G7YJV4-F1-model_v4_TED01	4-52	77.8%
+A0A1G7YJV4.1	AF-A0A1G7YJV4-F1-model_v4_TED02:71-243	1	AF-A0A1G7YJV4-F1-model_v4_TED02	71-243	0
+A0A1G7YJV4.1	AF-A0A1G7YJV4-F1-model_v4_TED03:249-319	1	AF-A0A1G7YJV4-F1-model_v4_TED03	249-319	0
+A0A1G8H3V1.1	AF-A0A1G8H3V1-F1-model_v4_TED01:5-61	1	AF-A0A1G8H3V1-F1-model_v4_TED01	5-61	96.5%
+A0A1G8H3V1.1	AF-A0A1G8H3V1-F1-model_v4_TED02:81-255	1	AF-A0A1G8H3V1-F1-model_v4_TED02	81-255	0
+A0A1G8H3V1.1	AF-A0A1G8H3V1-F1-model_v4_TED03:261-345	1	AF-A0A1G8H3V1-F1-model_v4_TED03	261-345	0
+A0A1G9XNB2.1	AF-A0A1G9XNB2-F1-model_v4_TED01:2-61	1	AF-A0A1G9XNB2-F1-model_v4_TED01	2-61	100.0%
+A0A1G9XNB2.1	AF-A0A1G9XNB2-F1-model_v4_TED02:76-250	1	AF-A0A1G9XNB2-F1-model_v4_TED02	76-250	0
+A0A1G9XNB2.1	AF-A0A1G9XNB2-F1-model_v4_TED03:256-325	1	AF-A0A1G9XNB2-F1-model_v4_TED03	256-325	0
+A0A1H0RLA1.1	AF-A0A1H0RLA1-F1-model_v4_TED01:4-50	1	AF-A0A1H0RLA1-F1-model_v4_TED01	4-50	75.8%
+A0A1H0RLA1.1	AF-A0A1H0RLA1-F1-model_v4_TED02:68-187_199-241	1	AF-A0A1H0RLA1-F1-model_v4_TED02	68-241	0
+A0A1H0RLA1.1	AF-A0A1H0RLA1-F1-model_v4_TED03:247-319	1	AF-A0A1H0RLA1-F1-model_v4_TED03	247-319	0
+A0A1H0X9Z3.1	AF-A0A1H0X9Z3-F1-model_v4_TED01:2-62	1	AF-A0A1H0X9Z3-F1-model_v4_TED01	2-62	100.0%
+A0A1H0X9Z3.1	AF-A0A1H0X9Z3-F1-model_v4_TED02:72-250	1	AF-A0A1H0X9Z3-F1-model_v4_TED02	72-250	0
+A0A1H0X9Z3.1	AF-A0A1H0X9Z3-F1-model_v4_TED03:256-325	1	AF-A0A1H0X9Z3-F1-model_v4_TED03	256-325	0
+A0A1H3RD96.1	AF-A0A1H3RD96-F1-model_v4_TED01:3-61	1	AF-A0A1H3RD96-F1-model_v4_TED01	3-61	100.0%
+A0A1H3RD96.1	AF-A0A1H3RD96-F1-model_v4_TED02:81-249	1	AF-A0A1H3RD96-F1-model_v4_TED02	81-249	0
+A0A1H3RD96.1	AF-A0A1H3RD96-F1-model_v4_TED03:255-330	1	AF-A0A1H3RD96-F1-model_v4_TED03	255-330	0
+A0A1H7DEC0.1	AF-A0A1H7DEC0-F1-model_v4_TED01:5-57	1	AF-A0A1H7DEC0-F1-model_v4_TED01	5-57	94.6%
+A0A1H7DEC0.1	AF-A0A1H7DEC0-F1-model_v4_TED02:83-253	1	AF-A0A1H7DEC0-F1-model_v4_TED02	83-253	0
+A0A1H7DEC0.1	AF-A0A1H7DEC0-F1-model_v4_TED03:259-337	1	AF-A0A1H7DEC0-F1-model_v4_TED03	259-337	0
+A0A1H8MA47.1	AF-A0A1H8MA47-F1-model_v4_TED01:4-66	1	AF-A0A1H8MA47-F1-model_v4_TED01	4-66	98.2%
+A0A1I0BNN3.1	AF-A0A1I0BNN3-F1-model_v4_TED01:5-60	1	AF-A0A1I0BNN3-F1-model_v4_TED01	5-60	96.5%
+A0A1I0BNN3.1	AF-A0A1I0BNN3-F1-model_v4_TED02:78-252	1	AF-A0A1I0BNN3-F1-model_v4_TED02	78-252	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 50 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF00005	ABC_tran	49	0.98	0.90
+PF00082	Peptidase_S8	44	0.88	0.76
+
+--- End STRING ---

@@ -1,0 +1,292 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LCG9_TED02/Iterate/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 28.10;
+NC   26.90 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+10	6	Flavobacterium.
+11	5	Roseobacteraceae
+10	5	Flavobacteriaceae
+15	4	Rhodobacterales
+10	4	Flavobacteriales
+8	3	Cyanophyceae
+20	3	Alphaproteobacteria
+10	3	Flavobacteriia
+8	2	Cyanobacteriota
+32	2	Pseudomonadota
+21	2	Bacteroidota
+9	1	Bacillati
+65	1	Pseudomonadati
+75	0	Bacteria
+Total of 75 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Foldseek ---
+Structural similarity matches. Can be suggestive of clan lines to add to DESC if results are consistent,
+or adding a CC line noting structural relationship to relevant Pfam families identified.
+
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+Iterate	query_model	PF14273	DUF4360	No_clan	PF14273_R4T7T0_1_res10-190	0.09	169	118	0	1.000	2.46e-04	78.0
+Iterate	query_model	PF24801	FNIII-A_GpJ	CL0202	PF24801_A0A3R9VK01_1_res67-195	0.14	127	108	0	1.000	5.90e-04	92.0
+
+--- End Foldseek ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A199XQ22	DUF4178 DOMAIN-CONTAINING    133.2    2.4e-35   1   1.5   0.5
+	Iterate                   	   237	   362	   132.3
+	PF13785	DUF4178         	    56	   187	    46.2
+
+A0A1G5G7Y4	DUF4178 DOMAIN-CONTAINING    135.3    5.3e-36   1   1.5   1.1
+	Iterate                   	   243	   369	   134.4
+	PF13785	DUF4178         	    59	   193	    35.3
+
+A0A1T5AMS1	GLIDING MOTILITY-ASSOCIAT    146.6    1.7e-39  18  28.9  45.6
+	Iterate                   	  2179	  2232	     8.8
+	PF17963	Big_9           	    62	   168	    27.6
+	PF13573	SprB            	   680	   716	    52.9
+	PF13573	SprB            	   755	   791	    47.5
+	PF13573	SprB            	   833	   869	    42.9
+	PF13573	SprB            	   911	   947	    41.5
+	PF13573	SprB            	   989	  1025	      47
+	PF13573	SprB            	  1067	  1103	    42.4
+	PF13573	SprB            	  1145	  1181	    45.3
+	PF13573	SprB            	  1223	  1259	    48.5
+	PF13573	SprB            	  1301	  1337	      43
+	PF13573	SprB            	  1379	  1415	    48.2
+	PF13573	SprB            	  1454	  1490	    38.9
+	PF13573	SprB            	  1532	  1568	    46.5
+	PF13573	SprB            	  1610	  1646	    48.5
+	PF13573	SprB            	  1688	  1724	      44
+	PF13573	SprB            	  1766	  1802	      44
+	PF13573	SprB            	  1844	  1880	    42.4
+	PF13573	SprB            	  1922	  1958	    45.3
+	PF13573	SprB            	  2000	  2036	    48.2
+	PF13573	SprB            	  2078	  2114	    40.4
+	PF13573	SprB            	  2156	  2192	    44.4
+	PF13573	SprB            	  2234	  2270	    43.9
+	PF13573	SprB            	  2312	  2348	    42.4
+	PF13573	SprB            	  2390	  2426	    45.2
+	PF13573	SprB            	  2468	  2504	    48.2
+	PF13573	SprB            	  2546	  2582	    50.4
+	PF13573	SprB            	  2629	  2659	    37.3
+	PF13573	SprB            	  2699	  2735	    41.9
+	PF13573	SprB            	  2775	  2811	    44.8
+	PF13573	SprB            	  2851	  2887	    47.4
+	PF13573	SprB            	  2927	  2963	    33.6
+	PF13573	SprB            	  3003	  3038	    48.4
+	PF13573	SprB            	  3077	  3111	    21.9
+	PF17892	Cadherin_5      	  3146	  3238	    33.6
+	PF17963	Big_9           	  3149	  3236	    59.3
+	PF13585	CHU_C           	  3370	  3470	    66.4
+
+A0A243SJ63	DUF4178 DOMAIN-CONTAINING    132.3    4.7e-35   1   1.4   0.2
+	Iterate                   	   234	   361	   131.5
+	PF13785	DUF4178         	    54	   184	    50.2
+
+A0A4Z0Q8G5	DUF4178 DOMAIN-CONTAINING    133.9    1.5e-35   1   1.3   0.0
+	Iterate                   	   262	   400	   133.2
+	PF13785	DUF4178         	    66	   207	    46.6
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS659124 (E-value: 5.1e-28, Score: 102.9)
+Mentioned as: LIC10439
+Description: conserved hypothetical protein
+Organism: Leptospira interrogans serovar Copenhageni str. Fiocruz L1-130
+PMID: 18423054
+Source: EuropePMC
+Title: Genome-wide subcellular localization of putative outer membrane and extracellular proteins in Leptospira interrogans serovar Lai genome using bioinformatics approaches
+Journal: BMC genomics (2008)
+Snippet: LA3675 LIC10544 Hypothetical protein/outer membrane protein - 1a0t LA2168 - Hypothetical protein P43153 1a0t LA3809 LIC10439 Hypothetical protein - 1a0t LA1501 LIC12258 Hypothetical protein - 2mpr LA3552 LIC10647 Hypothetical protein/conserved hypothetical protein - 1kmo LA2818 LIC11211 Hypothetical protein/conserved hypothetical protein - 2mpr LA4059 LIC13238 Hypothetical protein/conserved
+
+================================================================================
+Protein: VIMSS1785282 (E-value: 1.6e-22, Score: 85.2)
+Mentioned as: CHU_2225
+Description: CHU large protein; gliding motility-related protein; possible adhesin AidA-related
+Organism: Cytophaga hutchinsonii ATCC 33406
+PMID: 39629027
+Source: EuropePMC
+Title: The type IX secretion system: Insights into its function and connection to glycosylation in <i>Cytophaga hutchinsonii</i>
+Journal: Engineering microbiology (2022)
+Snippet: F. johnsoniae leads to the formation of non-diffusible colonies on agar surfaces [99] , whereas chu_2225, the homologous gene of sprB , does not affect gliding on the surface of the medium in C. hutchinsonii (unpublished data). There are several genes with high homology to chu_2225
+
+================================================================================
+Protein: VIMSS1785282 (E-value: 1.6e-22, Score: 85.2)
+Mentioned as: CHU_2225
+Description: CHU large protein; gliding motility-related protein; possible adhesin AidA-related
+Organism: Cytophaga hutchinsonii ATCC 33406
+PMID: 34745042
+Source: EuropePMC
+Title: Identification of the Type IX Secretion System Component, PorV (CHU_3238), Involved in Secretion and Localization of Proteins in <i>Cytophaga hutchinsonii</i>
+Journal: Frontiers in microbiology (2021)
+Snippet: showed definite gliding defects on soft and hard agar. C. hutchinsonii expresses the SprB homolog (CHU_2225), but it is not necessary for gliding motility (data not shown). It is possible that the gliding mechanisms in the phylum Bacteroidetes are different, and C. hutchinsonii secretes other adhesions
+
+================================================================================
+Protein: VIMSS339899 (E-value: 2.3e-09, Score: 42.7)
+Mentioned as: VP1387
+Description: hypothetical protein
+Organism: Vibrio parahaemolyticus RIMD 2210633
+PMID: 26637607
+Source: EuropePMC
+Title: Genomic Features of Environmental and Clinical Vibrio parahaemolyticus Isolates Lacking Recognized Virulence Factors Are Dissimilar
+Journal: Applied and environmental microbiology (2016)
+Snippet: been found in the pangenome of V. parahaemolyticus. T6SS1 (VP1387 to VP1414) is found on chromosome 1 and is commonly associated with clinical isolates, while
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A011P0P2.1	AF-A0A011P0P2-F1-model_v4_TED01:47-198	1	AF-A0A011P0P2-F1-model_v4_TED01	47-198	0
+A0A011P0P2.1	AF-A0A011P0P2-F1-model_v4_TED02:221-267	1	AF-A0A011P0P2-F1-model_v4_TED02	221-267	0
+A0A011P0P2.1	AF-A0A011P0P2-F1-model_v4_TED03:277-435	1	AF-A0A011P0P2-F1-model_v4_TED03	277-435	0
+A0A011P0P2.1	AF-A0A011P0P2-F1-model_v4_TED04:471-593	1	AF-A0A011P0P2-F1-model_v4_TED04	471-593	94.5%
+A0A017HHR6.1	AF-A0A017HHR6-F1-model_v4_TED01:10-217	1	AF-A0A017HHR6-F1-model_v4_TED01	10-217	0
+A0A017HHR6.1	AF-A0A017HHR6-F1-model_v4_TED03:265-368_377-390	1	AF-A0A017HHR6-F1-model_v4_TED03	265-390	96.1%
+A0A017HHR6.1	AF-A0A017HHR6-F1-model_v4_TED02:238-262_395-416	1	AF-A0A017HHR6-F1-model_v4_TED02	238-416	100.0%
+A0A076HQF6.1	AF-A0A076HQF6-F1-model_v4_TED01:13-236	1	AF-A0A076HQF6-F1-model_v4_TED01	13-236	0
+A0A076HQF6.1	AF-A0A076HQF6-F1-model_v4_TED02:271-283_290-408	1	AF-A0A076HQF6-F1-model_v4_TED02	271-408	95.1%
+A0A080MEN8.1	AF-A0A080MEN8-F1-model_v4_TED01:47-209	1	AF-A0A080MEN8-F1-model_v4_TED01	47-209	0
+A0A080MEN8.1	AF-A0A080MEN8-F1-model_v4_TED02:222-266	1	AF-A0A080MEN8-F1-model_v4_TED02	222-266	0
+A0A080MEN8.1	AF-A0A080MEN8-F1-model_v4_TED03:277-434	1	AF-A0A080MEN8-F1-model_v4_TED03	277-434	0
+A0A080MEN8.1	AF-A0A080MEN8-F1-model_v4_TED04:470-593	1	AF-A0A080MEN8-F1-model_v4_TED04	470-593	94.5%
+A0A085BNE0.1	AF-A0A085BNE0-F1-model_v4_TED01:3-190	1	AF-A0A085BNE0-F1-model_v4_TED01	3-190	0
+A0A085BNE0.1	AF-A0A085BNE0-F1-model_v4_TED02:239-432	1	AF-A0A085BNE0-F1-model_v4_TED02	239-432	94.3%
+A0A085WCJ3.1	AF-A0A085WCJ3-F1-model_v4_TED01:3-199	1	AF-A0A085WCJ3-F1-model_v4_TED01	3-199	0
+A0A085WCJ3.1	AF-A0A085WCJ3-F1-model_v4_TED02:262-415	1	AF-A0A085WCJ3-F1-model_v4_TED02	262-415	0
+A0A085WCJ3.1	AF-A0A085WCJ3-F1-model_v4_TED03:465-594	1	AF-A0A085WCJ3-F1-model_v4_TED03	465-594	94.8%
+A0A098LBN4.1	AF-A0A098LBN4-F1-model_v4_TED01:18-171	1	AF-A0A098LBN4-F1-model_v4_TED01	18-171	0
+A0A098LBN4.1	AF-A0A098LBN4-F1-model_v4_TED02:204-328	1	AF-A0A098LBN4-F1-model_v4_TED02	204-328	96.1%
+A0A0A0EFY4.1	AF-A0A0A0EFY4-F1-model_v4_TED01:9-216	1	AF-A0A0A0EFY4-F1-model_v4_TED01	9-216	0
+A0A0A0EFY4.1	AF-A0A0A0EFY4-F1-model_v4_TED03:265-389	1	AF-A0A0A0EFY4-F1-model_v4_TED03	265-389	96.1%
+A0A0A0EFY4.1	AF-A0A0A0EFY4-F1-model_v4_TED02:233-263_391-431	1	AF-A0A0A0EFY4-F1-model_v4_TED02	233-431	100.0%
+A0A0D1CTD8.1	AF-A0A0D1CTD8-F1-model_v4_TED01:10-219	1	AF-A0A0D1CTD8-F1-model_v4_TED01	10-219	0
+A0A0D1CTD8.1	AF-A0A0D1CTD8-F1-model_v4_TED03:271-386	1	AF-A0A0D1CTD8-F1-model_v4_TED03	271-386	92.7%
+A0A0D1CTD8.1	AF-A0A0D1CTD8-F1-model_v4_TED02:239-266_388-423	1	AF-A0A0D1CTD8-F1-model_v4_TED02	239-423	100.0%
+A0A0F4QGY9.1	AF-A0A0F4QGY9-F1-model_v4_TED01:2-27_152-188_210-237	1	AF-A0A0F4QGY9-F1-model_v4_TED01	2-237	100.0%
+A0A0F4QGY9.1	AF-A0A0F4QGY9-F1-model_v4_TED02:29-150	1	AF-A0A0F4QGY9-F1-model_v4_TED02	29-150	93.1%
+A0A0H4VKP2.1	AF-A0A0H4VKP2-F1-model_v4_TED01:17-213	1	AF-A0A0H4VKP2-F1-model_v4_TED01	17-213	0
+A0A0H4VKP2.1	AF-A0A0H4VKP2-F1-model_v4_TED02:263-397	1	AF-A0A0H4VKP2-F1-model_v4_TED02	263-397	96.4%
+A0A0H5DIX7.1	AF-A0A0H5DIX7-F1-model_v4_TED01:10-233	1	AF-A0A0H5DIX7-F1-model_v4_TED01	10-233	0
+A0A0H5DIX7.1	AF-A0A0H5DIX7-F1-model_v4_TED02:251-271_413-445	1	AF-A0A0H5DIX7-F1-model_v4_TED02	251-445	100.0%
+A0A0H5DIX7.1	AF-A0A0H5DIX7-F1-model_v4_TED03:282-410	1	AF-A0A0H5DIX7-F1-model_v4_TED03	282-410	95.5%
+A0A0L1JNJ0.1	AF-A0A0L1JNJ0-F1-model_v4_TED01:7-214	1	AF-A0A0L1JNJ0-F1-model_v4_TED01	7-214	0
+A0A0L1JNJ0.1	AF-A0A0L1JNJ0-F1-model_v4_TED03:262-393	1	AF-A0A0L1JNJ0-F1-model_v4_TED03	262-393	97.0%
+A0A0L1JNJ0.1	AF-A0A0L1JNJ0-F1-model_v4_TED02:231-260_397-433	1	AF-A0A0L1JNJ0-F1-model_v4_TED02	231-433	100.0%
+A0A0M6YIG3.1	AF-A0A0M6YIG3-F1-model_v4_TED01:8-218	1	AF-A0A0M6YIG3-F1-model_v4_TED01	8-218	0
+A0A0M6YIG3.1	AF-A0A0M6YIG3-F1-model_v4_TED03:270-383	1	AF-A0A0M6YIG3-F1-model_v4_TED03	270-383	92.5%
+A0A0M6YIG3.1	AF-A0A0M6YIG3-F1-model_v4_TED02:238-265_386-423	1	AF-A0A0M6YIG3-F1-model_v4_TED02	238-423	100.0%
+A0A0N7M3H2.1	AF-A0A0N7M3H2-F1-model_v4_TED01:10-215	1	AF-A0A0N7M3H2-F1-model_v4_TED01	10-215	0
+A0A0N7M3H2.1	AF-A0A0N7M3H2-F1-model_v4_TED02:263-371_379-395	1	AF-A0A0N7M3H2-F1-model_v4_TED02	263-395	97.0%
+A0A0P1GKG5.1	AF-A0A0P1GKG5-F1-model_v4_TED01:10-213	1	AF-A0A0P1GKG5-F1-model_v4_TED01	10-213	0
+A0A0P1GKG5.1	AF-A0A0P1GKG5-F1-model_v4_TED02:263-396	1	AF-A0A0P1GKG5-F1-model_v4_TED02	263-396	95.6%
+A0A0Q5V7S1.1	AF-A0A0Q5V7S1-F1-model_v4_TED01:3-195	1	AF-A0A0Q5V7S1-F1-model_v4_TED01	3-195	0
+A0A0Q5V7S1.1	AF-A0A0Q5V7S1-F1-model_v4_TED02:242-364	1	AF-A0A0Q5V7S1-F1-model_v4_TED02	242-364	96.1%
+A0A0Q7ELP7.1	AF-A0A0Q7ELP7-F1-model_v4_TED01:23-45_182-216	1	AF-A0A0Q7ELP7-F1-model_v4_TED01	23-216	100.0%
+A0A0Q7ELP7.1	AF-A0A0Q7ELP7-F1-model_v4_TED02:46-59_72-180	1	AF-A0A0Q7ELP7-F1-model_v4_TED02	46-180	97.8%
+A0A0Q9YPE8.1	AF-A0A0Q9YPE8-F1-model_v4_TED01:3-231	1	AF-A0A0Q9YPE8-F1-model_v4_TED01	3-231	0
+A0A0Q9YPE8.1	AF-A0A0Q9YPE8-F1-model_v4_TED02:237-258_420-447	1	AF-A0A0Q9YPE8-F1-model_v4_TED02	237-447	100.0%
+A0A0Q9YPE8.1	AF-A0A0Q9YPE8-F1-model_v4_TED03:264-414	1	AF-A0A0Q9YPE8-F1-model_v4_TED03	264-414	97.4%
+A0A0T0MB57.1	AF-A0A0T0MB57-F1-model_v4_TED01:3-195	1	AF-A0A0T0MB57-F1-model_v4_TED01	3-195	0
+A0A0T0MB57.1	AF-A0A0T0MB57-F1-model_v4_TED03:244-351_430-443	1	AF-A0A0T0MB57-F1-model_v4_TED03	244-443	94.7%
+A0A0T0MB57.1	AF-A0A0T0MB57-F1-model_v4_TED02:212-241_444-479	1	AF-A0A0T0MB57-F1-model_v4_TED02	212-479	100.0%
+A0A0T0MB57.1	AF-A0A0T0MB57-F1-model_v4_TED04:356-426	1	AF-A0A0T0MB57-F1-model_v4_TED04	356-426	10.5%
+A0A0V7ZXR8.1	AF-A0A0V7ZXR8-F1-model_v4_TED01:41-161_172-182	1	AF-A0A0V7ZXR8-F1-model_v4_TED01	41-182	95.3%
+A0A0V7ZXR8.1	AF-A0A0V7ZXR8-F1-model_v4_TED02:213-343	1	AF-A0A0V7ZXR8-F1-model_v4_TED02	213-343	0
+A0A0W7WPD5.1	AF-A0A0W7WPD5-F1-model_v4_TED01:7-225	1	AF-A0A0W7WPD5-F1-model_v4_TED01	7-225	0
+A0A0W7WPD5.1	AF-A0A0W7WPD5-F1-model_v4_TED02:265-388	1	AF-A0A0W7WPD5-F1-model_v4_TED02	265-388	95.3%
+A0A102D6L3.1	AF-A0A102D6L3-F1-model_v4_TED01:6-200	1	AF-A0A102D6L3-F1-model_v4_TED01	6-200	0
+A0A102D6L3.1	AF-A0A102D6L3-F1-model_v4_TED03:264-372_393-405	1	AF-A0A102D6L3-F1-model_v4_TED03	264-405	94.6%
+A0A102D6L3.1	AF-A0A102D6L3-F1-model_v4_TED02:222-258_407-436	1	AF-A0A102D6L3-F1-model_v4_TED02	222-436	100.0%
+A0A126P792.1	AF-A0A126P792-F1-model_v4_TED01:16-233	1	AF-A0A126P792-F1-model_v4_TED01	16-233	0
+A0A126P792.1	AF-A0A126P792-F1-model_v4_TED02:266-389	1	AF-A0A126P792-F1-model_v4_TED02	266-389	95.3%
+A0A133XDR5.1	AF-A0A133XDR5-F1-model_v4_TED01:4-199	1	AF-A0A133XDR5-F1-model_v4_TED01	4-199	0
+A0A133XDR5.1	AF-A0A133XDR5-F1-model_v4_TED02:218-436	1	AF-A0A133XDR5-F1-model_v4_TED02	218-436	0
+A0A133XDR5.1	AF-A0A133XDR5-F1-model_v4_TED04:475-596	1	AF-A0A133XDR5-F1-model_v4_TED04	475-596	93.0%
+A0A133XDR5.1	AF-A0A133XDR5-F1-model_v4_TED03:439-471_597-630	1	AF-A0A133XDR5-F1-model_v4_TED03	439-630	100.0%
+A0A143BMJ6.1	AF-A0A143BMJ6-F1-model_v4_TED01:15-215	1	AF-A0A143BMJ6-F1-model_v4_TED01	15-215	0
+A0A143BMJ6.1	AF-A0A143BMJ6-F1-model_v4_TED02:237-260_396-423	1	AF-A0A143BMJ6-F1-model_v4_TED02	237-423	100.0%
+A0A143BMJ6.1	AF-A0A143BMJ6-F1-model_v4_TED03:265-391	1	AF-A0A143BMJ6-F1-model_v4_TED03	265-391	96.1%
+A0A143PJB2.1	AF-A0A143PJB2-F1-model_v4_TED01:48-201	1	AF-A0A143PJB2-F1-model_v4_TED01	48-201	0
+A0A143PJB2.1	AF-A0A143PJB2-F1-model_v4_TED02:211-420	1	AF-A0A143PJB2-F1-model_v4_TED02	211-420	0
+A0A143PJB2.1	AF-A0A143PJB2-F1-model_v4_TED04:475-591	1	AF-A0A143PJB2-F1-model_v4_TED04	475-591	92.1%
+A0A143PJB2.1	AF-A0A143PJB2-F1-model_v4_TED03:440-468_597-626	1	AF-A0A143PJB2-F1-model_v4_TED03	440-626	100.0%
+A0A166VCZ0.1	AF-A0A166VCZ0-F1-model_v4_TED01:2-13_155-222	1	AF-A0A166VCZ0-F1-model_v4_TED01	2-222	100.0%
+A0A166VCZ0.1	AF-A0A166VCZ0-F1-model_v4_TED02:26-150	1	AF-A0A166VCZ0-F1-model_v4_TED02	26-150	93.3%
+A0A199XQ22.1	AF-A0A199XQ22-F1-model_v4_TED01:3-195	1	AF-A0A199XQ22-F1-model_v4_TED01	3-195	0
+A0A199XQ22.1	AF-A0A199XQ22-F1-model_v4_TED02:216-238_372-398	1	AF-A0A199XQ22-F1-model_v4_TED02	216-398	100.0%
+A0A199XQ22.1	AF-A0A199XQ22-F1-model_v4_TED03:242-366	1	AF-A0A199XQ22-F1-model_v4_TED03	242-366	96.1%
+A0A1A8XZM8.1	AF-A0A1A8XZM8-F1-model_v4_TED01:3-198	1	AF-A0A1A8XZM8-F1-model_v4_TED01	3-198	0
+A0A1A8XZM8.1	AF-A0A1A8XZM8-F1-model_v4_TED02:277-433	1	AF-A0A1A8XZM8-F1-model_v4_TED02	277-433	0
+A0A1A8XZM8.1	AF-A0A1A8XZM8-F1-model_v4_TED03:470-593	1	AF-A0A1A8XZM8-F1-model_v4_TED03	470-593	94.5%
+A0A1B9E5G5.1	AF-A0A1B9E5G5-F1-model_v4_TED01:3-195	1	AF-A0A1B9E5G5-F1-model_v4_TED01	3-195	0
+A0A1B9E5G5.1	AF-A0A1B9E5G5-F1-model_v4_TED03:245-367	1	AF-A0A1B9E5G5-F1-model_v4_TED03	245-367	94.5%
+A0A1B9E5G5.1	AF-A0A1B9E5G5-F1-model_v4_TED02:217-239_372-400	1	AF-A0A1B9E5G5-F1-model_v4_TED02	217-400	100.0%
+A0A1C4EUS1.1	AF-A0A1C4EUS1-F1-model_v4_TED01:8-212	1	AF-A0A1C4EUS1-F1-model_v4_TED01	8-212	0
+A0A1C4EUS1.1	AF-A0A1C4EUS1-F1-model_v4_TED03:261-385	1	AF-A0A1C4EUS1-F1-model_v4_TED03	261-385	96.1%
+A0A1C4EUS1.1	AF-A0A1C4EUS1-F1-model_v4_TED02:235-257_391-417	1	AF-A0A1C4EUS1-F1-model_v4_TED02	235-417	100.0%
+A0A1D8TRN4.1	AF-A0A1D8TRN4-F1-model_v4_TED01:3-12_196-326	1	AF-A0A1D8TRN4-F1-model_v4_TED01	3-326	100.0%
+A0A1D8TRN4.1	AF-A0A1D8TRN4-F1-model_v4_TED02:39-170	1	AF-A0A1D8TRN4-F1-model_v4_TED02	39-170	95.6%
+A0A1D9P8B4.1	AF-A0A1D9P8B4-F1-model_v4_TED01:3-209	1	AF-A0A1D9P8B4-F1-model_v4_TED01	3-209	0
+A0A1D9P8B4.1	AF-A0A1D9P8B4-F1-model_v4_TED02:211-240_370-407	1	AF-A0A1D9P8B4-F1-model_v4_TED02	211-407	100.0%
+A0A1D9P8B4.1	AF-A0A1D9P8B4-F1-model_v4_TED03:242-365	1	AF-A0A1D9P8B4-F1-model_v4_TED03	242-365	95.3%
+A0A1G5G7Y4.1	AF-A0A1G5G7Y4-F1-model_v4_TED01:3-217	1	AF-A0A1G5G7Y4-F1-model_v4_TED01	3-217	0
+A0A1G5G7Y4.1	AF-A0A1G5G7Y4-F1-model_v4_TED02:250-372	1	AF-A0A1G5G7Y4-F1-model_v4_TED02	250-372	94.5%
+A0A1H6F5V0.1	AF-A0A1H6F5V0-F1-model_v4_TED01:9-226	1	AF-A0A1H6F5V0-F1-model_v4_TED01	9-226	0
+A0A1H6F5V0.1	AF-A0A1H6F5V0-F1-model_v4_TED02:260-377	1	AF-A0A1H6F5V0-F1-model_v4_TED02	260-377	96.6%
+A0A1H7TWL9.1	AF-A0A1H7TWL9-F1-model_v4_TED01:11-187	1	AF-A0A1H7TWL9-F1-model_v4_TED01	11-187	0
+A0A1H7TWL9.1	AF-A0A1H7TWL9-F1-model_v4_TED02:252-403	1	AF-A0A1H7TWL9-F1-model_v4_TED02	252-403	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 26 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF01564	Spermine_synth	26	1.00	0.87
+PF03994	DUF350	22	0.85	0.66
+PF02675	AdoMet_dc	21	0.81	0.62
+PF13450	NAD_binding_8	19	0.73	0.54
+PF13421	Band_7_1	18	0.69	0.50
+
+--- End STRING ---

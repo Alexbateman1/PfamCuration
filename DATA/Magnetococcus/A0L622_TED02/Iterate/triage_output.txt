@@ -1,0 +1,111 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L622_TED02/Iterate
+GA   27.00 27.00;
+TC   27.00 27.90;
+NC   25.90 24.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+9	5	Chromatiaceae
+6	4	Thiotrichales
+15	4	Chromatiales
+6	3	Alphaproteobacteria
+32	3	Gammaproteobacteria
+43	2	Pseudomonadota
+45	1	Pseudomonadati
+45	0	Bacteria
+Total of 45 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1Y2K4L9	PUTATIVE DYNAMIN FAMILY P    104.6      2e-26   1   1.5   0.3
+	Iterate                   	   314	   451	   103.8
+	PF00350	Dynamin_N       	    51	   219	    56.8
+
+A0A930Y178	DYNAMIN FAMILY PROTEIN {E     45.5    3.5e-08   1   1.9   2.8
+	Iterate                   	   321	   455	    43.5
+	PF00350	Dynamin_N       	    58	   226	    54.3
+
+A0A9W7TUN1	DYNAMIN N-TERMINAL DOMAIN     39.1    3.2e-06   1   1.4   0.5
+	Iterate                   	   324	   459	    38.2
+	PF00350	Dynamin_N       	    61	   229	    48.5
+
+A0L622	DYNAMIN N-TERMINAL DOMAIN-CON    311.1    3.5e-90   1   1.4   0.4
+	Iterate                   	   326	   462	   310.3
+	PF00350	Dynamin_N       	    63	   231	    56.6
+
+W4LB35	G DOMAIN-CONTAINING PROTEIN {     38.6    4.8e-06   1   1.7   2.0
+	Iterate                   	   197	   331	    37.1
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1E2UIV1.1	AF-A0A1E2UIV1-F1-model_v4_TED01:59-314	1	AF-A0A1E2UIV1-F1-model_v4_TED01	59-314	0
+A0A1E2UIV1.1	AF-A0A1E2UIV1-F1-model_v4_TED02:319-457	1	AF-A0A1E2UIV1-F1-model_v4_TED02	319-457	100.0%
+A0A1H3VFD3.1	AF-A0A1H3VFD3-F1-model_v4_TED01:4-322	1	AF-A0A1H3VFD3-F1-model_v4_TED01	4-322	0
+A0A1H3VFD3.1	AF-A0A1H3VFD3-F1-model_v4_TED02:323-457	1	AF-A0A1H3VFD3-F1-model_v4_TED02	323-457	100.0%
+A0A1I4F594.1	AF-A0A1I4F594-F1-model_v4_TED01:64-277	1	AF-A0A1I4F594-F1-model_v4_TED01	64-277	0
+A0A1I4F594.1	AF-A0A1I4F594-F1-model_v4_TED02:322-460	1	AF-A0A1I4F594-F1-model_v4_TED02	322-460	100.0%
+A0A1Y2K4L9.1	AF-A0A1Y2K4L9-F1-model_v4_TED01:48-294	1	AF-A0A1Y2K4L9-F1-model_v4_TED01	48-294	0
+A0A656HH16.1	AF-A0A656HH16-F1-model_v4_TED01:60-270	1	AF-A0A656HH16-F1-model_v4_TED01	60-270	0
+A0A656HH16.1	AF-A0A656HH16-F1-model_v4_TED02:322-457	1	AF-A0A656HH16-F1-model_v4_TED02	322-457	100.0%
+A0A7M3MJR0.1	AF-A0A7M3MJR0-F1-model_v4_TED01:58-320	1	AF-A0A7M3MJR0-F1-model_v4_TED01	58-320	0
+A0A7M3MJR0.1	AF-A0A7M3MJR0-F1-model_v4_TED02:321-459	1	AF-A0A7M3MJR0-F1-model_v4_TED02	321-459	100.0%
+A0L622.1	AF-A0L622-F1-model_v4_TED01:63-318	1	AF-A0L622-F1-model_v4_TED01	63-318	0
+A0L622.1	AF-A0L622-F1-model_v4_TED02:326-462	1	AF-A0L622-F1-model_v4_TED02	326-462	100.0%
+W4LB35.1	AF-W4LB35-F1-model_v4_TED01:10-144	1	AF-W4LB35-F1-model_v4_TED01	10-144	0
+W4LB35.1	AF-W4LB35-F1-model_v4_TED02:185-348	1	AF-W4LB35-F1-model_v4_TED02	185-348	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 23 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF01435	Peptidase_M48	22	0.96	0.79
+PF00411	Ribosomal_S11	21	0.91	0.73
+PF00334	NDK	21	0.91	0.73
+PF00270	DEAD	19	0.83	0.63
+PF00271	Helicase_C	19	0.83	0.63
+PF07717	OB_NTP_bind	18	0.78	0.58
+PF11898	DUF3418	18	0.78	0.58
+PF21010	HA2_C	18	0.78	0.58
+PF04408	WHD_HA2	17	0.74	0.54
+PF01656	CbiA	17	0.74	0.54
+PF13614	AAA_31	17	0.74	0.54
+
+--- End STRING ---

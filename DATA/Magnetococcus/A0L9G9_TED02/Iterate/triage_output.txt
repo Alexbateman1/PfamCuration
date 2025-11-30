@@ -1,0 +1,101 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L9G9_TED02/Iterate
+GA   27.00 27.00;
+TC   28.00 27.00;
+NC   24.10 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+3	4	Rhodospirillales
+6	3	Gammaproteobacteria
+6	3	Alphaproteobacteria
+3	3	Planctomycetia
+4	2	Thermodesulfobacteriota
+3	2	Planctomycetota
+14	2	Pseudomonadota
+25	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A2K8L187	UNCHARACTERIZED PROTEIN {    182.9    1.8e-50   2   2.0   0.1
+	Iterate                   	   174	   311	   141.6
+	Iterate                   	    35	   170	    39.6
+
+A0A3S3QVH1	UNCHARACTERIZED PROTEIN {    181.4    5.2e-50   2   2.0   0.4
+	Iterate                   	   164	   301	   157.0
+
+A0L9G9	UNCHARACTERIZED PROTEIN {ECO:    337.6    3.2e-98   2   2.2   2.1
+	Iterate                   	   174	   312	   323.6
+
+B6BK46	UNCHARACTERIZED PROTEIN {ECO:    124.8    1.5e-32   2   2.1   4.9
+	Iterate                   	   163	   299	   109.4
+
+I3CBF8	UNCHARACTERIZED PROTEIN {ECO:    106.0      1e-26   1   2.4   0.9
+	Iterate                   	   170	   312	   102.6
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1V4T2K4.1	AF-A0A1V4T2K4-F1-model_v4_TED02:41-173	1	AF-A0A1V4T2K4-F1-model_v4_TED02	41-173	0
+A0A1V4T2K4.1	AF-A0A1V4T2K4-F1-model_v4_TED03:176-319	1	AF-A0A1V4T2K4-F1-model_v4_TED03	176-319	100.0%
+A0A1V4T2K4.1	AF-A0A1V4T2K4-F1-model_v4_TED04:328-460	1	AF-A0A1V4T2K4-F1-model_v4_TED04	328-460	0
+A0A1V4T2K4.1	AF-A0A1V4T2K4-F1-model_v4_TED05:468-605	1	AF-A0A1V4T2K4-F1-model_v4_TED05	468-605	0
+A0A1V4T2K4.1	AF-A0A1V4T2K4-F1-model_v4_TED01:2-31	1	AF-A0A1V4T2K4-F1-model_v4_TED01	2-31	0
+A0A2K8L187.1	AF-A0A2K8L187-F1-model_v4_TED01:33-172	1	AF-A0A2K8L187-F1-model_v4_TED01	33-172	0
+A0A2K8L187.1	AF-A0A2K8L187-F1-model_v4_TED02:173-311	1	AF-A0A2K8L187-F1-model_v4_TED02	173-311	100.0%
+A0A839ITM7.1	AF-A0A839ITM7-F1-model_v4_TED01:31-174	1	AF-A0A839ITM7-F1-model_v4_TED01	31-174	0
+A0A839ITM7.1	AF-A0A839ITM7-F1-model_v4_TED02:195-318	1	AF-A0A839ITM7-F1-model_v4_TED02	195-318	85.5%
+A0A839ITM7.1	AF-A0A839ITM7-F1-model_v4_TED03:324-463	1	AF-A0A839ITM7-F1-model_v4_TED03	324-463	0
+A0A839ITM7.1	AF-A0A839ITM7-F1-model_v4_TED04:465-612	1	AF-A0A839ITM7-F1-model_v4_TED04	465-612	0
+A0L9G9.1	AF-A0L9G9-F1-model_v4_TED01:34-172	1	AF-A0L9G9-F1-model_v4_TED01	34-172	0
+A0L9G9.1	AF-A0L9G9-F1-model_v4_TED02:174-312	1	AF-A0L9G9-F1-model_v4_TED02	174-312	100.0%
+B6BK46.1	AF-B6BK46-F1-model_v4_TED01:18-161	1	AF-B6BK46-F1-model_v4_TED01	18-161	0
+B6BK46.1	AF-B6BK46-F1-model_v4_TED02:163-302	1	AF-B6BK46-F1-model_v4_TED02	163-302	100.0%
+I3CBF8.1	AF-I3CBF8-F1-model_v4_TED01:27-168	1	AF-I3CBF8-F1-model_v4_TED01	27-168	0
+I3CBF8.1	AF-I3CBF8-F1-model_v4_TED02:170-313	1	AF-I3CBF8-F1-model_v4_TED02	170-313	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 9 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

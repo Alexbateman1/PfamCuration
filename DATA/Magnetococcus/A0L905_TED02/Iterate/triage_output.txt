@@ -1,0 +1,295 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L905_TED02/Iterate
+GA   27.00 27.00;
+TC   27.80 27.50;
+NC   25.00 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+4	6	Moraxella.
+3	6	Desulfovibrio.
+3	6	Acinetobacter.
+9	5	Moraxellaceae
+5	5	Desulfovibrionaceae
+9	4	Moraxellales
+5	4	Desulfovibrionales
+5	3	Desulfovibrionia
+4	3	Stenosarchaea group
+3	3	Alphaproteobacteria
+10	3	Gammaproteobacteria
+5	2	Thermodesulfobacteriota
+4	2	Methanobacteriota
+14	2	Pseudomonadota
+4	1	Methanobacteriati
+21	1	Pseudomonadati
+4	0	Archaea
+21	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Foldseek ---
+Structural similarity matches. Can be suggestive of clan lines to add to DESC if results are consistent,
+or adding a CC line noting structural relationship to relevant Pfam families identified.
+
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+Iterate	query_model	PF12997	DUF3881	No_clan	PF12997_A9KLW9_1_res5-286	0.14	202	154	0	1.000	4.03e-07	215.0
+
+--- End Foldseek ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1G7MAB5	UNCHARACTERIZED PROTEIN {     47.9    5.9e-09   1   1.2   0.0
+	Iterate                   	   155	   327	    47.3
+
+A0A2T6DA04	UNCHARACTERIZED PROTEIN {     48.6    3.6e-09   1   1.3   0.0
+	Iterate                   	   100	   278	    48.0
+
+A0L905	SUPPRESSOR OF FUSED-LIKE DOMA    432.7   5.3e-127   1   1.1   2.5
+	Iterate                   	    90	   275	   432.4
+
+K9XZB0	ACETOACETATE DECARBOXYLASE {E     83.6    6.5e-20   1   1.8   0.0
+	Iterate                   	    92	   275	    81.9
+
+Q21L73	VCBS DOMAIN PROTEIN {ECO:0000    137.9    1.5e-36  29  57.3  90.8
+	Iterate                   	   896	  1015	     5.3
+	PF05345	He_PIG          	   191	   287	    50.9
+	PF17803	Cadherin_4      	   280	   353	    42.6
+	PF17892	Cadherin_5      	   289	   386	   108.3
+	PF17963	Big_9           	   290	   386	    54.7
+	PF17803	Cadherin_4      	   379	   446	    60.1
+	PF17892	Cadherin_5      	   388	   479	    69.5
+	PF17963	Big_9           	   389	   477	    78.1
+	PF17963	Big_9           	   581	   681	    30.1
+	PF17892	Cadherin_5      	   583	   683	    41.5
+	PF17803	Cadherin_4      	   676	   746	      27
+	PF17892	Cadherin_5      	   685	   785	    30.1
+	PF17963	Big_9           	   686	   785	      25
+	PF17892	Cadherin_5      	   787	   887	    34.4
+	PF17963	Big_9           	   788	   887	    27.1
+	PF17892	Cadherin_5      	   889	   990	    32.9
+	PF17963	Big_9           	   890	   990	    24.6
+	PF17803	Cadherin_4      	   983	  1056	    26.5
+	PF17892	Cadherin_5      	   992	  1093	    37.7
+	PF17963	Big_9           	   993	  1093	    29.8
+	PF17892	Cadherin_5      	  1095	  1196	    36.5
+	PF17963	Big_9           	  1096	  1196	    28.4
+	PF17803	Cadherin_4      	  1189	  1263	    25.5
+	PF17892	Cadherin_5      	  1198	  1299	    38.3
+	PF17963	Big_9           	  1199	  1299	    29.9
+	PF17892	Cadherin_5      	  1301	  1402	    34.2
+	PF17963	Big_9           	  1302	  1402	    27.7
+	PF17892	Cadherin_5      	  1404	  1505	    36.5
+	PF17963	Big_9           	  1405	  1505	    27.6
+	PF17803	Cadherin_4      	  1498	  1572	    26.8
+	PF17892	Cadherin_5      	  1507	  1608	    37.2
+	PF17963	Big_9           	  1508	  1608	    30.7
+	PF17803	Cadherin_4      	  1601	  1674	    25.8
+	PF17892	Cadherin_5      	  1610	  1711	    36.7
+	PF17963	Big_9           	  1611	  1711	    28.9
+	PF17803	Cadherin_4      	  1704	  1773	    25.1
+	PF17892	Cadherin_5      	  1713	  1814	    29.6
+	PF17963	Big_9           	  1714	  1813	    25.8
+	PF17892	Cadherin_5      	  1816	  1917	    33.4
+	PF17963	Big_9           	  1817	  1917	    23.6
+	PF17803	Cadherin_4      	  1910	  1979	    27.4
+	PF17892	Cadherin_5      	  1919	  2020	    30.2
+	PF17963	Big_9           	  1920	  2019	    27.5
+	PF17892	Cadherin_5      	  2022	  2123	    31.2
+	PF17892	Cadherin_5      	  2125	  2226	    36.9
+	PF17963	Big_9           	  2126	  2226	      29
+	PF17803	Cadherin_4      	  2219	  2293	    25.3
+	PF17892	Cadherin_5      	  2228	  2329	    36.1
+	PF17963	Big_9           	  2229	  2329	    28.8
+	PF17892	Cadherin_5      	  2331	  2432	    36.5
+	PF17963	Big_9           	  2332	  2432	    28.5
+	PF17803	Cadherin_4      	  2425	  2498	    26.6
+	PF17892	Cadherin_5      	  2434	  2535	    36.1
+	PF17963	Big_9           	  2435	  2535	    30.1
+	PF17803	Cadherin_4      	  2528	  2602	    27.1
+	PF17892	Cadherin_5      	  2537	  2638	    39.6
+	PF17963	Big_9           	  2538	  2636	    29.3
+	PF17892	Cadherin_5      	  2640	  2741	    29.5
+	PF17963	Big_9           	  2641	  2741	    25.5
+	PF17803	Cadherin_4      	  2734	  2808	    27.5
+	PF17892	Cadherin_5      	  2743	  2844	    38.8
+	PF17963	Big_9           	  2744	  2844	    28.9
+	PF17892	Cadherin_5      	  2846	  2947	    35.7
+	PF17963	Big_9           	  2847	  2947	    26.3
+	PF17803	Cadherin_4      	  2940	  3014	    27.5
+	PF17892	Cadherin_5      	  2949	  3050	    39.8
+	PF17963	Big_9           	  2950	  3050	    30.4
+	PF17892	Cadherin_5      	  3052	  3153	    34.4
+	PF17963	Big_9           	  3053	  3153	    26.3
+	PF17892	Cadherin_5      	  3155	  3256	      36
+	PF17963	Big_9           	  3156	  3256	    27.8
+	PF17803	Cadherin_4      	  3249	  3323	    26.7
+	PF17892	Cadherin_5      	  3258	  3359	    34.4
+	PF17963	Big_9           	  3259	  3359	    27.7
+	PF17803	Cadherin_4      	  3352	  3426	    25.1
+	PF17892	Cadherin_5      	  3361	  3462	    35.3
+	PF17963	Big_9           	  3362	  3462	    29.2
+	PF17803	Cadherin_4      	  3455	  3529	    27.5
+	PF17892	Cadherin_5      	  3464	  3565	    38.9
+	PF17963	Big_9           	  3465	  3565	    28.9
+	PF17892	Cadherin_5      	  3567	  3668	    35.2
+	PF17963	Big_9           	  3568	  3668	    28.1
+	PF17803	Cadherin_4      	  3661	  3735	    25.3
+	PF17892	Cadherin_5      	  3670	  3771	    36.2
+	PF17963	Big_9           	  3671	  3771	    28.1
+	PF17892	Cadherin_5      	  3773	  3874	    36.7
+	PF17963	Big_9           	  3774	  3874	    28.6
+	PF17803	Cadherin_4      	  3867	  3941	    27.5
+	PF17892	Cadherin_5      	  3876	  3977	    38.9
+	PF17963	Big_9           	  3877	  3977	    28.9
+	PF17892	Cadherin_5      	  3979	  4080	    35.2
+	PF17963	Big_9           	  3980	  4080	    28.1
+	PF17803	Cadherin_4      	  4073	  4147	    25.3
+	PF17892	Cadherin_5      	  4082	  4183	      36
+	PF17963	Big_9           	  4083	  4181	    27.6
+	PF17892	Cadherin_5      	  4185	  4286	    36.9
+	PF17963	Big_9           	  4186	  4286	      29
+	PF17803	Cadherin_4      	  4279	  4353	    26.3
+	PF17892	Cadherin_5      	  4288	  4389	    35.7
+	PF17963	Big_9           	  4289	  4389	    29.5
+	PF17892	Cadherin_5      	  4391	  4492	    36.5
+	PF17963	Big_9           	  4392	  4492	    28.5
+	PF17803	Cadherin_4      	  4485	  4558	    26.6
+	PF17892	Cadherin_5      	  4494	  4595	    36.1
+	PF17963	Big_9           	  4495	  4595	    30.1
+	PF17892	Cadherin_5      	  4597	  4698	    35.7
+	PF17963	Big_9           	  4598	  4698	    26.3
+	PF17803	Cadherin_4      	  4691	  4765	    27.5
+	PF17892	Cadherin_5      	  4700	  4801	    39.8
+	PF17963	Big_9           	  4701	  4801	    30.4
+	PF17892	Cadherin_5      	  4803	  4904	    35.7
+	PF17963	Big_9           	  4804	  4904	    26.3
+	PF17803	Cadherin_4      	  4897	  4971	    27.5
+	PF17892	Cadherin_5      	  4906	  5007	    39.8
+	PF17963	Big_9           	  4907	  5007	    30.4
+	PF17892	Cadherin_5      	  5009	  5110	    34.4
+	PF17963	Big_9           	  5010	  5110	    26.3
+	PF17892	Cadherin_5      	  5112	  5213	      36
+	PF17963	Big_9           	  5113	  5213	    27.8
+	PF17803	Cadherin_4      	  5206	  5280	    26.7
+	PF17892	Cadherin_5      	  5215	  5316	    34.4
+	PF17963	Big_9           	  5216	  5316	    27.7
+	PF17803	Cadherin_4      	  5309	  5383	    25.1
+	PF17892	Cadherin_5      	  5318	  5419	    35.3
+	PF17963	Big_9           	  5319	  5419	    29.2
+	PF17803	Cadherin_4      	  5412	  5486	    27.5
+	PF17892	Cadherin_5      	  5421	  5522	    38.9
+	PF17963	Big_9           	  5422	  5522	    28.9
+	PF17892	Cadherin_5      	  5524	  5625	    35.2
+	PF17963	Big_9           	  5525	  5625	    28.1
+	PF17803	Cadherin_4      	  5618	  5692	    25.3
+	PF17892	Cadherin_5      	  5627	  5728	    36.2
+	PF17963	Big_9           	  5628	  5728	    28.1
+	PF17892	Cadherin_5      	  5730	  5831	    36.7
+	PF17963	Big_9           	  5731	  5831	    28.6
+	PF17803	Cadherin_4      	  5824	  5898	    26.3
+	PF17892	Cadherin_5      	  5833	  5934	    35.7
+	PF17963	Big_9           	  5834	  5934	    29.5
+	PF17892	Cadherin_5      	  5936	  6037	    35.2
+	PF17963	Big_9           	  5937	  6037	    26.2
+	PF17892	Cadherin_5      	  6039	  6140	    34.1
+	PF17963	Big_9           	  6040	  6138	    25.6
+	PF17892	Cadherin_5      	  6142	  6243	    36.9
+	PF17963	Big_9           	  6143	  6243	      29
+	PF17803	Cadherin_4      	  6236	  6310	    26.3
+	PF17892	Cadherin_5      	  6245	  6346	    35.7
+	PF17963	Big_9           	  6246	  6346	    29.5
+	PF17892	Cadherin_5      	  6348	  6449	    36.7
+	PF17963	Big_9           	  6349	  6449	    28.6
+	PF17803	Cadherin_4      	  6442	  6516	    25.3
+	PF17892	Cadherin_5      	  6451	  6552	    36.1
+	PF17963	Big_9           	  6452	  6552	    28.8
+	PF17803	Cadherin_4      	  6545	  6619	    27.1
+	PF17892	Cadherin_5      	  6554	  6655	    39.6
+	PF17963	Big_9           	  6555	  6653	    29.3
+	PF17892	Cadherin_5      	  6657	  6758	    29.5
+	PF17963	Big_9           	  6658	  6758	    25.5
+	PF17803	Cadherin_4      	  6751	  6825	    27.5
+	PF17892	Cadherin_5      	  6760	  6861	    38.8
+	PF17963	Big_9           	  6761	  6861	    28.9
+	PF17803	Cadherin_4      	  6854	  6928	    26.7
+	PF17892	Cadherin_5      	  6863	  6964	    36.1
+	PF17963	Big_9           	  6864	  6964	    29.7
+	PF17803	Cadherin_4      	  6957	  7031	    27.5
+	PF17892	Cadherin_5      	  6966	  7067	    39.8
+	PF17963	Big_9           	  6967	  7067	    30.4
+	PF17892	Cadherin_5      	  7069	  7170	    34.4
+	PF17963	Big_9           	  7070	  7170	    26.3
+	PF17892	Cadherin_5      	  7172	  7273	      36
+	PF17963	Big_9           	  7173	  7273	    27.8
+	PF17803	Cadherin_4      	  7266	  7340	    26.7
+	PF17892	Cadherin_5      	  7275	  7376	    34.4
+	PF17963	Big_9           	  7276	  7376	    27.7
+	PF17803	Cadherin_4      	  7369	  7443	    25.1
+	PF17892	Cadherin_5      	  7378	  7479	    35.3
+	PF17963	Big_9           	  7379	  7479	    29.2
+	PF17892	Cadherin_5      	  7481	  7582	    34.6
+	PF17963	Big_9           	  7482	  7582	    26.7
+	PF17892	Cadherin_5      	  7584	  7685	    33.2
+	PF17963	Big_9           	  7585	  7685	    24.4
+	PF07691	PA14            	  7767	  7873	    29.1
+	PF17803	Cadherin_4      	  7867	  7934	      38
+	PF17963	Big_9           	  7872	  7965	    62.9
+	PF17892	Cadherin_5      	  7877	  7967	    63.4
+	PF00353	HemolysinCabind 	  8146	  8181	    21.7
+	PF00353	HemolysinCabind 	  8182	  8217	    30.1
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1G7MAB5.1	AF-A0A1G7MAB5-F1-model_v4_TED01:62-206_247-326	1	AF-A0A1G7MAB5-F1-model_v4_TED01	62-326	93.5%
+A0A1G7MAB5.1	AF-A0A1G7MAB5-F1-model_v4_TED02:211-240	1	AF-A0A1G7MAB5-F1-model_v4_TED02	211-240	15.1%
+A0A2T6DA04.1	AF-A0A2T6DA04-F1-model_v4_TED01:4-87	1	AF-A0A2T6DA04-F1-model_v4_TED01	4-87	0
+A0A2T6DA04.1	AF-A0A2T6DA04-F1-model_v4_TED02:89-156_194-275	1	AF-A0A2T6DA04-F1-model_v4_TED02	89-275	97.9%
+A0A2T6DA04.1	AF-A0A2T6DA04-F1-model_v4_TED03:162-193	1	AF-A0A2T6DA04-F1-model_v4_TED03	162-193	17.0%
+A0A7T0JPJ8.1	AF-A0A7T0JPJ8-F1-model_v4_TED01:4-53	1	AF-A0A7T0JPJ8-F1-model_v4_TED01	4-53	0
+A0A7T0JPJ8.1	AF-A0A7T0JPJ8-F1-model_v4_TED02:76-257_265-360	1	AF-A0A7T0JPJ8-F1-model_v4_TED02	76-360	100.0%
+A0L905.1	AF-A0L905-F1-model_v4_TED01:4-85	1	AF-A0L905-F1-model_v4_TED01	4-85	0
+A0L905.1	AF-A0L905-F1-model_v4_TED02:90-154_188-275	1	AF-A0L905-F1-model_v4_TED02	90-275	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 12 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

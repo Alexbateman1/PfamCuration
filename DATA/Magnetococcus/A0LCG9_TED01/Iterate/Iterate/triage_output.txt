@@ -1,0 +1,144 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LCG9_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.40 27.10;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+10	6	Flavobacterium.
+12	5	Roseobacteraceae
+10	5	Flavobacteriaceae
+17	4	Rhodobacterales
+10	4	Flavobacteriales
+22	3	Alphaproteobacteria
+10	3	Flavobacteriia
+8	2	Myxococcota
+32	2	Pseudomonadota
+18	2	Bacteroidota
+8	1	Bacillati
+65	1	Pseudomonadati
+74	0	Bacteria
+Total of 74 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Foldseek ---
+Structural similarity matches. Can be suggestive of clan lines to add to DESC if results are consistent,
+or adding a CC line noting structural relationship to relevant Pfam families identified.
+
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+Iterate	query_model	PF24801	FNIII-A_GpJ	CL0202	PF24801_A0A3R9VK01_1_res67-195	0.14	133	108	0	1.000	5.23e-05	120.0
+Iterate	query_model	PF17065	UPF0669	CL0202	PF17065_Q6DIW0_1_res1-187	0.12	180	145	0	1.000	1.01e-04	110.0
+Iterate	query_model	PF14273	DUF4360	No_clan	PF14273_R4T7T0_1_res10-190	0.10	159	120	0	1.000	1.19e-04	77.0
+Iterate	query_model	PF05475	Chlam_vir	CL0100	PF05475_B0BCM1_1_res119-264	0.12	138	112	0	1.000	1.48e-04	102.0
+Iterate	query_model	PF25883	F28H7_8_C	CL0521	PF25883_A0A0D8Y168_1_res252-378	0.06	124	95	0	1.000	1.95e-04	118.0
+Iterate	query_model	PF23972	DUF7298	CL0202	PF23972_A0A3N5B813_1_res622-788	0.11	143	118	0	1.000	2.43e-04	98.0
+Iterate	query_model	PF15417	DUF4624	No_clan	PF15417_Q186X7_1_res22-153	0.08	125	94	0	1.000	3.77e-04	102.0
+Iterate	query_model	PF01105	EMP24_GP25L	CL0521	PF01105_Q6CWW7_1_res21-207	0.08	156	130	0	1.000	4.44e-04	104.0
+Iterate	query_model	PF16929	Asp2	CL0028	PF16929_Q2FUW4_1_res5-513	0.10	140	118	0	1.000	8.12e-04	96.0
+Iterate	query_model	PF14879	DUF4489	CL0100	PF14879_U5MWG3_1_res42-192	0.09	147	114	0	1.000	8.12e-04	75.0
+Iterate	query_model	PF08005	PHR	No_clan	PF08005_A7RSE5_1_res287-435	0.12	122	94	0	1.000	8.12e-04	66.0
+Iterate	query_model	PF24354	NDNF_N	No_clan	PF24354_A0A091TEM3_1_res1-129	0.08	125	101	0	1.000	8.57e-04	100.0
+
+--- End Foldseek ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A0Q7ELP7	UNCHARACTERIZED PROTEIN {    211.9    2.4e-59   1   1.0   0.0
+	Iterate                   	    27	   205	   211.7
+
+A0A1W2BE31	UNCHARACTERIZED PROTEIN {    218.0    3.2e-61   1   1.0   0.2
+	Iterate                   	    29	   209	   217.7
+
+A0A3N2R3T0	UNCHARACTERIZED PROTEIN {    201.6    3.6e-56   1   1.0   0.0
+	Iterate                   	    14	   181	   201.3
+
+A0A4P6B8Q8	UNCHARACTERIZED PROTEIN {    224.5    3.2e-63   1   1.0   0.0
+	Iterate                   	    16	   190	   224.3
+
+A0A4R5H2N4	DUF4178 DOMAIN-CONTAINING    233.1    7.3e-66   1   1.0   0.0
+	Iterate                   	    17	   194	   232.9
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS659124 (E-value: 4.9e-05, Score: 28.3)
+Mentioned as: LIC10439
+Description: conserved hypothetical protein
+Organism: Leptospira interrogans serovar Copenhageni str. Fiocruz L1-130
+PMID: 18423054
+Source: EuropePMC
+Title: Genome-wide subcellular localization of putative outer membrane and extracellular proteins in Leptospira interrogans serovar Lai genome using bioinformatics approaches
+Journal: BMC genomics (2008)
+Snippet: LA3675 LIC10544 Hypothetical protein/outer membrane protein - 1a0t LA2168 - Hypothetical protein P43153 1a0t LA3809 LIC10439 Hypothetical protein - 1a0t LA1501 LIC12258 Hypothetical protein - 2mpr LA3552 LIC10647 Hypothetical protein/conserved hypothetical protein - 1kmo LA2818 LIC11211 Hypothetical protein/conserved hypothetical protein - 2mpr LA4059 LIC13238 Hypothetical protein/conserved
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A139X1L4.1	AF-A0A139X1L4-F1-model_v4_TED01:4-15_200-329	1	AF-A0A139X1L4-F1-model_v4_TED01	4-329	100.0%
+A0A139X1L4.1	AF-A0A139X1L4-F1-model_v4_TED02:41-172	1	AF-A0A139X1L4-F1-model_v4_TED02	41-172	68.0%
+A0A1Y2K8Y9.1	AF-A0A1Y2K8Y9-F1-model_v4_TED01:37-104_113-145_152-165	1	AF-A0A1Y2K8Y9-F1-model_v4_TED01	37-165	69.7%
+A0A316G7H7.1	AF-A0A316G7H7-F1-model_v4_TED01:7-221	1	AF-A0A316G7H7-F1-model_v4_TED01	7-221	0
+A0A316G7H7.1	AF-A0A316G7H7-F1-model_v4_TED02:265-383	1	AF-A0A316G7H7-F1-model_v4_TED02	265-383	72.1%
+A0A4P6B8Q8.1	AF-A0A4P6B8Q8-F1-model_v4_TED02:35-165	1	AF-A0A4P6B8Q8-F1-model_v4_TED02	35-165	74.9%
+A0A4P6B8Q8.1	AF-A0A4P6B8Q8-F1-model_v4_TED01:10-34_168-198	1	AF-A0A4P6B8Q8-F1-model_v4_TED01	10-198	100.0%
+A0A4R5H2N4.1	AF-A0A4R5H2N4-F1-model_v4_TED02:36-169	1	AF-A0A4R5H2N4-F1-model_v4_TED02	36-169	75.3%
+A0A4R5H2N4.1	AF-A0A4R5H2N4-F1-model_v4_TED01:10-35_172-209	1	AF-A0A4R5H2N4-F1-model_v4_TED01	10-209	100.0%
+A0A563VZX0.1	AF-A0A563VZX0-F1-model_v4_TED01:41-172	1	AF-A0A563VZX0-F1-model_v4_TED01	41-172	68.0%
+A0A563VZX0.1	AF-A0A563VZX0-F1-model_v4_TED02:199-330	1	AF-A0A563VZX0-F1-model_v4_TED02	199-330	6.7%
+B4VLY2.1	AF-B4VLY2-F1-model_v4_TED01:4-14_200-325	1	AF-B4VLY2-F1-model_v4_TED01	4-325	100.0%
+B4VLY2.1	AF-B4VLY2-F1-model_v4_TED02:41-118_130-172	1	AF-B4VLY2-F1-model_v4_TED02	41-172	68.0%
+K9WNL1.1	AF-K9WNL1-F1-model_v4_TED01:3-13_197-326	1	AF-K9WNL1-F1-model_v4_TED01	3-326	100.0%
+K9WNL1.1	AF-K9WNL1-F1-model_v4_TED02:39-170	1	AF-K9WNL1-F1-model_v4_TED02	39-170	68.0%
+K9YDK6.1	AF-K9YDK6-F1-model_v4_TED01:4-15_202-333	1	AF-K9YDK6-F1-model_v4_TED01	4-333	100.0%
+K9YDK6.1	AF-K9YDK6-F1-model_v4_TED02:40-175	1	AF-K9YDK6-F1-model_v4_TED02	40-175	69.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 26 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF01564	Spermine_synth	26	1.00	0.87
+PF03994	DUF350	23	0.88	0.71
+PF02675	AdoMet_dc	21	0.81	0.62
+PF13421	Band_7_1	19	0.73	0.54
+
+--- End STRING ---

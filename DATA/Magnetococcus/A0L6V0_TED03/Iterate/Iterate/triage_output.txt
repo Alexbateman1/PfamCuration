@@ -1,0 +1,175 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L6V0_TED03/Iterate/Iterate
+GA   27.00 27.00;
+TC   34.20 64.00;
+NC   26.40 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+4	6	Methylomonas.
+14	5	Methylococcaceae
+14	4	Methylococcales
+19	3	Gammaproteobacteria
+23	2	Pseudomonadota
+24	1	Pseudomonadati
+24	0	Bacteria
+Total of 24 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1Z4C142	DUF364 DOMAIN-CONTAINING      99.3    5.5e-25   1   2.0   0.9
+	Iterate                   	   255	   315	    97.6
+	PF13938	DUF4213         	     8	    90	    73.7
+	PF04016	DUF364          	   110	   248	   125.2
+
+A0A7T0NYC3	DUF364 DOMAIN-CONTAINING     101.1    1.5e-25   1   1.6   1.0
+	Iterate                   	   257	   317	   100.0
+	PF13938	DUF4213         	     8	    91	    72.7
+	PF04016	DUF364          	   112	   250	     129
+
+A0A975MNJ1	DUF364 DOMAIN-CONTAINING     100.7      2e-25   1   1.7   1.0
+	Iterate                   	   257	   317	    99.8
+	PF13938	DUF4213         	     8	    91	    65.8
+	PF04016	DUF364          	   112	   250	     130
+
+G0A3J5	HEAVY-METAL CHELATION DOMAIN-     99.3    5.4e-25   1   1.7   4.3
+	Iterate                   	   257	   317	    98.1
+	PF13938	DUF4213         	     8	    91	    74.9
+	PF04016	DUF364          	   112	   250	   127.7
+
+Q603H2	HEAVY-METAL CHELATION DOMAIN-    100.6    2.1e-25   1   1.5   1.6
+	Iterate                   	   258	   318	    99.7
+	PF13938	DUF4213         	     8	    88	    64.5
+	PF04016	DUF364          	   111	   251	   136.6
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS764659 (E-value: 7.4e-28, Score: 101.9)
+Mentioned as: MCA2834
+Description: hypothetical protein
+Organism: Methylococcus capsulatus str. Bath
+PMID: 15383840
+Source: EuropePMC
+Title: Genomic insights into methanotrophy: the complete genome sequence of Methylococcus capsulatus (Bath)
+Journal: PLoS biology (2004)
+Snippet: in Archaea) (MCA2867), a putative arsenite transporter (MCA0791), and four conserved hypothetical proteins (MCA0196, MCA0197, MCA2834, and MCA2732). Non-homology-based functional prediction. Phylogenetic profiling ( Pellegrini et al. 1999 ; Eisen et al. 2002 ) and comparative analysis of M. capsulatus (Bath) with the incomplete genome data
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A091AIG8.1	AF-A0A091AIG8-F1-model_v4_TED01:11-74	1	AF-A0A091AIG8-F1-model_v4_TED01	11-74	100.0%
+A0A0C5V9S7.1	AF-A0A0C5V9S7-F1-model_v4_TED01:5-90	1	AF-A0A0C5V9S7-F1-model_v4_TED01	5-90	0
+A0A0C5V9S7.1	AF-A0A0C5V9S7-F1-model_v4_TED02:95-219_239-250	1	AF-A0A0C5V9S7-F1-model_v4_TED02	95-250	0
+A0A0C5V9S7.1	AF-A0A0C5V9S7-F1-model_v4_TED03:255-315	1	AF-A0A0C5V9S7-F1-model_v4_TED03	255-315	100.0%
+A0A126T6U4.1	AF-A0A126T6U4-F1-model_v4_TED01:5-93	1	AF-A0A126T6U4-F1-model_v4_TED01	5-93	0
+A0A126T6U4.1	AF-A0A126T6U4-F1-model_v4_TED02:101-224_243-255	1	AF-A0A126T6U4-F1-model_v4_TED02	101-255	0
+A0A126T6U4.1	AF-A0A126T6U4-F1-model_v4_TED03:256-319	1	AF-A0A126T6U4-F1-model_v4_TED03	256-319	100.0%
+A0A177NXN4.1	AF-A0A177NXN4-F1-model_v4_TED01:6-93	1	AF-A0A177NXN4-F1-model_v4_TED01	6-93	0
+A0A177NXN4.1	AF-A0A177NXN4-F1-model_v4_TED02:101-255	1	AF-A0A177NXN4-F1-model_v4_TED02	101-255	0
+A0A177NXN4.1	AF-A0A177NXN4-F1-model_v4_TED03:263-319	1	AF-A0A177NXN4-F1-model_v4_TED03	263-319	90.2%
+A0A1E2USJ3.1	AF-A0A1E2USJ3-F1-model_v4_TED01:7-93	1	AF-A0A1E2USJ3-F1-model_v4_TED01	7-93	0
+A0A1E2USJ3.1	AF-A0A1E2USJ3-F1-model_v4_TED02:98-256	1	AF-A0A1E2USJ3-F1-model_v4_TED02	98-256	0
+A0A1E2USJ3.1	AF-A0A1E2USJ3-F1-model_v4_TED03:260-318	1	AF-A0A1E2USJ3-F1-model_v4_TED03	260-318	96.7%
+A0A1H4GSZ9.1	AF-A0A1H4GSZ9-F1-model_v4_TED01:4-63	1	AF-A0A1H4GSZ9-F1-model_v4_TED01	4-63	100.0%
+A0A1S1XZR7.1	AF-A0A1S1XZR7-F1-model_v4_TED01:6-93	1	AF-A0A1S1XZR7-F1-model_v4_TED01	6-93	0
+A0A1S1XZR7.1	AF-A0A1S1XZR7-F1-model_v4_TED02:101-225_245-252	1	AF-A0A1S1XZR7-F1-model_v4_TED02	101-252	0
+A0A1S1XZR7.1	AF-A0A1S1XZR7-F1-model_v4_TED03:257-319	1	AF-A0A1S1XZR7-F1-model_v4_TED03	257-319	100.0%
+A0A1V8M1P2.1	AF-A0A1V8M1P2-F1-model_v4_TED01:6-95	1	AF-A0A1V8M1P2-F1-model_v4_TED01	6-95	0
+A0A1V8M1P2.1	AF-A0A1V8M1P2-F1-model_v4_TED02:104-226_248-257	1	AF-A0A1V8M1P2-F1-model_v4_TED02	104-257	0
+A0A1V8M1P2.1	AF-A0A1V8M1P2-F1-model_v4_TED03:260-322	1	AF-A0A1V8M1P2-F1-model_v4_TED03	260-322	100.0%
+A0A1Y2K7B6.1	AF-A0A1Y2K7B6-F1-model_v4_TED01:2-172	1	AF-A0A1Y2K7B6-F1-model_v4_TED01	2-172	0
+A0A1Y2K7B6.1	AF-A0A1Y2K7B6-F1-model_v4_TED02:178-237	1	AF-A0A1Y2K7B6-F1-model_v4_TED02	178-237	98.4%
+A0A1Y6BUW7.1	AF-A0A1Y6BUW7-F1-model_v4_TED01:9-97	1	AF-A0A1Y6BUW7-F1-model_v4_TED01	9-97	0
+A0A1Y6BUW7.1	AF-A0A1Y6BUW7-F1-model_v4_TED02:102-257	1	AF-A0A1Y6BUW7-F1-model_v4_TED02	102-257	0
+A0A1Y6BUW7.1	AF-A0A1Y6BUW7-F1-model_v4_TED03:262-323	1	AF-A0A1Y6BUW7-F1-model_v4_TED03	262-323	100.0%
+A0A1Y6DE74.1	AF-A0A1Y6DE74-F1-model_v4_TED01:4-90	1	AF-A0A1Y6DE74-F1-model_v4_TED01	4-90	0
+A0A1Y6DE74.1	AF-A0A1Y6DE74-F1-model_v4_TED02:98-250	1	AF-A0A1Y6DE74-F1-model_v4_TED02	98-250	0
+A0A1Y6DE74.1	AF-A0A1Y6DE74-F1-model_v4_TED03:255-314	1	AF-A0A1Y6DE74-F1-model_v4_TED03	255-314	100.0%
+A0A1Z4C142.1	AF-A0A1Z4C142-F1-model_v4_TED01:4-92	1	AF-A0A1Z4C142-F1-model_v4_TED01	4-92	0
+A0A1Z4C142.1	AF-A0A1Z4C142-F1-model_v4_TED02:100-221_241-251	1	AF-A0A1Z4C142-F1-model_v4_TED02	100-251	0
+A0A1Z4C142.1	AF-A0A1Z4C142-F1-model_v4_TED03:255-317	1	AF-A0A1Z4C142-F1-model_v4_TED03	255-317	100.0%
+A0A250L3L7.1	AF-A0A250L3L7-F1-model_v4_TED01:6-91	1	AF-A0A250L3L7-F1-model_v4_TED01	6-91	0
+A0A250L3L7.1	AF-A0A250L3L7-F1-model_v4_TED02:98-254	1	AF-A0A250L3L7-F1-model_v4_TED02	98-254	0
+A0A250L3L7.1	AF-A0A250L3L7-F1-model_v4_TED03:258-322	1	AF-A0A250L3L7-F1-model_v4_TED03	258-322	100.0%
+A0A3M8RA43.1	AF-A0A3M8RA43-F1-model_v4_TED01:24-80	1	AF-A0A3M8RA43-F1-model_v4_TED01	24-80	88.5%
+A0A4R1BL79.1	AF-A0A4R1BL79-F1-model_v4_TED02:66-170	1	AF-A0A4R1BL79-F1-model_v4_TED02	66-170	0
+A0A4R1BL79.1	AF-A0A4R1BL79-F1-model_v4_TED01:2-58	1	AF-A0A4R1BL79-F1-model_v4_TED01	2-58	98.2%
+A0A559QLQ5.1	AF-A0A559QLQ5-F1-model_v4_TED01:8-96	1	AF-A0A559QLQ5-F1-model_v4_TED01	8-96	0
+A0A559QLQ5.1	AF-A0A559QLQ5-F1-model_v4_TED02:101-228_239-256	1	AF-A0A559QLQ5-F1-model_v4_TED02	101-256	0
+A0A559QLQ5.1	AF-A0A559QLQ5-F1-model_v4_TED03:261-322	1	AF-A0A559QLQ5-F1-model_v4_TED03	261-322	100.0%
+A0A5Q0BIJ4.1	AF-A0A5Q0BIJ4-F1-model_v4_TED01:6-91	1	AF-A0A5Q0BIJ4-F1-model_v4_TED01	6-91	0
+A0A5Q0BIJ4.1	AF-A0A5Q0BIJ4-F1-model_v4_TED02:99-224_235-253	1	AF-A0A5Q0BIJ4-F1-model_v4_TED02	99-253	0
+A0A5Q0BIJ4.1	AF-A0A5Q0BIJ4-F1-model_v4_TED03:257-316	1	AF-A0A5Q0BIJ4-F1-model_v4_TED03	257-316	98.4%
+A0A656HJR5.1	AF-A0A656HJR5-F1-model_v4_TED01:34-299	1	AF-A0A656HJR5-F1-model_v4_TED01	34-299	0
+A0A656HJR5.1	AF-A0A656HJR5-F1-model_v4_TED02:305-500	1	AF-A0A656HJR5-F1-model_v4_TED02	305-500	0
+A0A656HJR5.1	AF-A0A656HJR5-F1-model_v4_TED03:524-589	1	AF-A0A656HJR5-F1-model_v4_TED03	524-589	100.0%
+A0A7T0NYC3.1	AF-A0A7T0NYC3-F1-model_v4_TED01:6-94	1	AF-A0A7T0NYC3-F1-model_v4_TED01	6-94	0
+A0A7T0NYC3.1	AF-A0A7T0NYC3-F1-model_v4_TED02:101-254	1	AF-A0A7T0NYC3-F1-model_v4_TED02	101-254	0
+A0A7T0NYC3.1	AF-A0A7T0NYC3-F1-model_v4_TED03:256-319	1	AF-A0A7T0NYC3-F1-model_v4_TED03	256-319	100.0%
+A0L6V0.1	AF-A0L6V0-F1-model_v4_TED01:6-94	1	AF-A0L6V0-F1-model_v4_TED01	6-94	0
+A0L6V0.1	AF-A0L6V0-F1-model_v4_TED02:98-255	1	AF-A0L6V0-F1-model_v4_TED02	98-255	0
+A0L6V0.1	AF-A0L6V0-F1-model_v4_TED03:259-284_298-320	1	AF-A0L6V0-F1-model_v4_TED03	259-320	100.0%
+C5BTD5.1	AF-C5BTD5-F1-model_v4_TED01:8-96	1	AF-C5BTD5-F1-model_v4_TED01	8-96	0
+C5BTD5.1	AF-C5BTD5-F1-model_v4_TED02:101-257	1	AF-C5BTD5-F1-model_v4_TED02	101-257	0
+C5BTD5.1	AF-C5BTD5-F1-model_v4_TED03:261-323	1	AF-C5BTD5-F1-model_v4_TED03	261-323	100.0%
+G0A3J5.1	AF-G0A3J5-F1-model_v4_TED01:6-94	1	AF-G0A3J5-F1-model_v4_TED01	6-94	0
+G0A3J5.1	AF-G0A3J5-F1-model_v4_TED02:101-253	1	AF-G0A3J5-F1-model_v4_TED02	101-253	0
+G0A3J5.1	AF-G0A3J5-F1-model_v4_TED03:256-319	1	AF-G0A3J5-F1-model_v4_TED03	256-319	100.0%
+G3IZ51.1	AF-G3IZ51-F1-model_v4_TED01:6-90	1	AF-G3IZ51-F1-model_v4_TED01	6-90	0
+G3IZ51.1	AF-G3IZ51-F1-model_v4_TED02:98-221	1	AF-G3IZ51-F1-model_v4_TED02	98-221	0
+G3IZ51.1	AF-G3IZ51-F1-model_v4_TED03:254-316	1	AF-G3IZ51-F1-model_v4_TED03	254-316	100.0%
+I0INK7.1	AF-I0INK7-F1-model_v4_TED01:3-76	1	AF-I0INK7-F1-model_v4_TED01	3-76	100.0%
+Q603H2.1	AF-Q603H2-F1-model_v4_TED01:6-91	1	AF-Q603H2-F1-model_v4_TED01	6-91	0
+Q603H2.1	AF-Q603H2-F1-model_v4_TED02:99-257	1	AF-Q603H2-F1-model_v4_TED02	99-257	0
+Q603H2.1	AF-Q603H2-F1-model_v4_TED03:263-318	1	AF-Q603H2-F1-model_v4_TED03	263-318	91.8%
+V4JD51.1	AF-V4JD51-F1-model_v4_TED01:121-237	1	AF-V4JD51-F1-model_v4_TED01	121-237	0
+V4JD51.1	AF-V4JD51-F1-model_v4_TED02:271-334	1	AF-V4JD51-F1-model_v4_TED02	271-334	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 15 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

@@ -1,0 +1,131 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L8D3_TED01/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.20 29.30;
+NC   26.30 18.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+2	7	Rhizobium.
+2	6	Rhizobium/Agrobacterium group
+2	6	Perisivirus Pr.
+2	6	Paracoccus.
+2	6	Paraburkholderia.
+3	5	Burkholderiaceae
+2	5	Rhizobiaceae
+2	5	Perisivirus
+2	5	Paracoccaceae
+2	5	Magnetococcaceae
+5	4	Burkholderiales
+4	4	Hyphomicrobiales
+3	4	Rhodobacterales
+3	4	Caudoviricetes
+2	4	Magnetococcales
+9	3	Alphaproteobacteria
+5	3	Betaproteobacteria
+3	3	Uroviricota
+2	3	Magnetococcia
+3	2	Heunggongvirae
+16	2	Pseudomonadota
+3	1	Duplodnaviria
+16	1	Pseudomonadati
+3	0	Viruses
+16	0	Bacteria
+Total of 19 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A0F5JV81	CHROMOSOME PARTITIONING P    103.1    3.5e-26   1   1.3   1.0
+	Iterate                   	    23	    98	   102.5
+
+A0A1H7L225	UNCHARACTERIZED PROTEIN {     97.2    2.5e-24   1   1.4   0.1
+	Iterate                   	    23	    98	    96.4
+
+A0A328AEK6	UNCHARACTERIZED PROTEIN {     96.8    3.2e-24   1   1.3   0.2
+	Iterate                   	    16	    85	    96.2
+
+A0A7T7GTL2	UNCHARACTERIZED PROTEIN {     97.4    2.2e-24   1   1.4   1.9
+	Iterate                   	    19	    87	    96.5
+
+A0AAF0JRF5	UNCHARACTERIZED PROTEIN {     98.8    7.9e-25   1   1.5   0.9
+	Iterate                   	    26	    94	    97.8
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0F5JV81.1	AF-A0A0F5JV81-F1-model_v4_TED01:21-159	1	AF-A0A0F5JV81-F1-model_v4_TED01	21-159	100.0%
+A0A0M4CZY5.1	AF-A0A0M4CZY5-F1-model_v4_TED01:2-97	1	AF-A0A0M4CZY5-F1-model_v4_TED01	2-97	100.0%
+A0A0M4CZY5.1	AF-A0A0M4CZY5-F1-model_v4_TED02:99-181	1	AF-A0A0M4CZY5-F1-model_v4_TED02	99-181	0
+A0A0M4CZY5.1	AF-A0A0M4CZY5-F1-model_v4_TED03:194-245	1	AF-A0A0M4CZY5-F1-model_v4_TED03	194-245	0
+A0A1C2DSH9.1	AF-A0A1C2DSH9-F1-model_v4_TED01:10-87	1	AF-A0A1C2DSH9-F1-model_v4_TED01	10-87	96.3%
+A0A1C2DSH9.1	AF-A0A1C2DSH9-F1-model_v4_TED03:186-241	1	AF-A0A1C2DSH9-F1-model_v4_TED03	186-241	0
+A0A1C2DSH9.1	AF-A0A1C2DSH9-F1-model_v4_TED02:95-178	1	AF-A0A1C2DSH9-F1-model_v4_TED02	95-178	0
+A0A1H7L225.1	AF-A0A1H7L225-F1-model_v4_TED01:2-102	1	AF-A0A1H7L225-F1-model_v4_TED01	2-102	100.0%
+A0A1H7L225.1	AF-A0A1H7L225-F1-model_v4_TED02:107-208	1	AF-A0A1H7L225-F1-model_v4_TED02	107-208	0
+A0A1H8H4S2.1	AF-A0A1H8H4S2-F1-model_v4_TED01:18-102	1	AF-A0A1H8H4S2-F1-model_v4_TED01	18-102	100.0%
+A0A1H8H4S2.1	AF-A0A1H8H4S2-F1-model_v4_TED03:199-231	1	AF-A0A1H8H4S2-F1-model_v4_TED03	199-231	0
+A0A1H8H4S2.1	AF-A0A1H8H4S2-F1-model_v4_TED02:109-195	1	AF-A0A1H8H4S2-F1-model_v4_TED02	109-195	0
+A0A1X7AB34.1	AF-A0A1X7AB34-F1-model_v4_TED01:5-88	1	AF-A0A1X7AB34-F1-model_v4_TED01	5-88	100.0%
+A0A225MTP3.1	AF-A0A225MTP3-F1-model_v4_TED01:14-90	1	AF-A0A225MTP3-F1-model_v4_TED01	14-90	91.7%
+A0A225MTP3.1	AF-A0A225MTP3-F1-model_v4_TED02:101-155	1	AF-A0A225MTP3-F1-model_v4_TED02	101-155	0
+A0A2N8MCV9.1	AF-A0A2N8MCV9-F1-model_v4_TED01:23-93	1	AF-A0A2N8MCV9-F1-model_v4_TED01	23-93	100.0%
+A0A2N8MCV9.1	AF-A0A2N8MCV9-F1-model_v4_TED02:96-177	1	AF-A0A2N8MCV9-F1-model_v4_TED02	96-177	0
+A0A328AEK6.1	AF-A0A328AEK6-F1-model_v4_TED01:16-86	1	AF-A0A328AEK6-F1-model_v4_TED01	16-86	100.0%
+A0A328AEK6.1	AF-A0A328AEK6-F1-model_v4_TED02:88-194	1	AF-A0A328AEK6-F1-model_v4_TED02	88-194	0
+A0A4R1RVS3.1	AF-A0A4R1RVS3-F1-model_v4_TED01:16-96	1	AF-A0A4R1RVS3-F1-model_v4_TED01	16-96	100.0%
+A0A4R1RVS3.1	AF-A0A4R1RVS3-F1-model_v4_TED02:99-190	1	AF-A0A4R1RVS3-F1-model_v4_TED02	99-190	0
+A0A6G6WWH9.1	AF-A0A6G6WWH9-F1-model_v4_TED01:2-91	1	AF-A0A6G6WWH9-F1-model_v4_TED01	2-91	100.0%
+A0A6G6WWH9.1	AF-A0A6G6WWH9-F1-model_v4_TED03:211-247	1	AF-A0A6G6WWH9-F1-model_v4_TED03	211-247	0
+A0A6G6WWH9.1	AF-A0A6G6WWH9-F1-model_v4_TED02:92-166	1	AF-A0A6G6WWH9-F1-model_v4_TED02	92-166	0
+A0A6J5FK10.1	AF-A0A6J5FK10-F1-model_v4_TED01:11-102	1	AF-A0A6J5FK10-F1-model_v4_TED01	11-102	100.0%
+A0A6J5FK10.1	AF-A0A6J5FK10-F1-model_v4_TED02:103-197	1	AF-A0A6J5FK10-F1-model_v4_TED02	103-197	0
+A0A839ZBE5.1	AF-A0A839ZBE5-F1-model_v4_TED01:9-139	1	AF-A0A839ZBE5-F1-model_v4_TED01	9-139	95.0%
+A0A839ZBE5.1	AF-A0A839ZBE5-F1-model_v4_TED02:196-242	1	AF-A0A839ZBE5-F1-model_v4_TED02	196-242	0
+A0A840HXX2.1	AF-A0A840HXX2-F1-model_v4_TED01:10-147	1	AF-A0A840HXX2-F1-model_v4_TED01	10-147	100.0%
+A0A840HXX2.1	AF-A0A840HXX2-F1-model_v4_TED02:191-243	1	AF-A0A840HXX2-F1-model_v4_TED02	191-243	0
+A0L8D3.1	AF-A0L8D3-F1-model_v4_TED02:84-177	1	AF-A0L8D3-F1-model_v4_TED02	84-177	0
+A0L8D3.1	AF-A0L8D3-F1-model_v4_TED01:13-80	1	AF-A0L8D3-F1-model_v4_TED01	13-80	98.6%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 6 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

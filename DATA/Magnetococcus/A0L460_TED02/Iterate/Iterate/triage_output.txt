@@ -1,0 +1,254 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L460_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 27.40;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+12	5	Flavobacteriaceae
+14	4	Rhodobacterales
+14	4	Oceanospirillales
+13	4	Campylobacterales
+12	4	Flavobacteriales
+38	3	Gammaproteobacteria
+15	3	Alphaproteobacteria
+14	3	Betaproteobacteria
+13	3	Epsilonproteobacteria
+12	3	Flavobacteriia
+69	2	Pseudomonadota
+17	2	Bacteroidota
+13	2	Campylobacterota
+100	1	Pseudomonadati
+100	0	Bacteria
+Total of 100 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1H6F734	NA+/PI-COTRANSPORTER {ECO    264.5    3.2e-75   1   1.2   8.5
+	Iterate                   	   343	   560	   264.0
+	PF02690	Na_Pi_cotrans   	    22	   162	   134.7
+	PF02690	Na_Pi_cotrans   	   183	   287	    38.6
+
+A0A1T2L611	SODIUM:PHOSPHATE SYMPORTE    265.6    1.4e-75   1   1.2   4.9
+	Iterate                   	   354	   575	   265.2
+	PF02690	Na_Pi_cotrans   	    33	   173	   134.5
+	PF02690	Na_Pi_cotrans   	   194	   305	    37.1
+
+A0A7U8C4R4	NA+/PI-COTRANSPORTER {ECO    269.0    1.3e-76   1   1.4   6.7
+	Iterate                   	   345	   566	   268.3
+	PF02690	Na_Pi_cotrans   	    24	   164	   135.7
+	PF02690	Na_Pi_cotrans   	   182	   297	    38.5
+
+A0A7Z0VLG1	NA+/PI-COTRANSPORTER {ECO    268.7    1.7e-76   1   1.2   4.8
+	Iterate                   	   354	   577	   268.2
+	PF02690	Na_Pi_cotrans   	    33	   173	     138
+	PF02690	Na_Pi_cotrans   	   195	   298	    35.2
+
+A0A839INK5	NA/PI COTRANSPORTER FAMIL    264.8    2.6e-75   1   1.1   0.8
+	Iterate                   	   355	   578	   264.4
+	PF02690	Na_Pi_cotrans   	    33	   173	   133.5
+	PF02690	Na_Pi_cotrans   	   192	   322	    37.2
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS3607121 (E-value: 1.3e-74, Score: 255.6)
+Mentioned as: Dshi_0543
+Description: Na+/Picotransporter
+Organism: Dinoroseobacter shibae DFL 12
+PMID: 23974024
+Source: EuropePMC
+Title: Transposon mutagenesis identified chromosomal and plasmid genes essential for adaptation of the marine bacterium Dinoroseobacter shibae to anaerobic conditions
+Journal: Journal of bacteriology (2013)
+Snippet: (napA, phaA, and the Na/Pi antiporter gene Dshi_0543) between anaerobically essential and induced genes was found. Interestingly, transposon mutations in genes
+
+================================================================================
+Protein: VIMSS46437 (E-value: 7.5e-60, Score: 207.3)
+Mentioned as: Cj0524
+Description: hypothetical protein Cj0524
+Organism: Campylobacter jejuni subsp. jejuni NCTC 11168
+PMID: 24643543
+Source: EuropePMC
+Title: Phenotypic screening of a targeted mutant library reveals Campylobacter jejuni defenses against oxidative stress
+Journal: Infection and immunity (2014)
+Snippet: cj0148c cj0171 cj0202c cj0253 cj0260c cj0344 cj0416 cj0524 cj0554 cj0741 cj0786 cj0814 cj0819 cj0900c cj0977 cj1159c cj1242 cj1383c mdaB Hypothetical protein
+
+================================================================================
+Protein: VIMSS46437 (E-value: 7.5e-60, Score: 207.3)
+Mentioned as: Cj0524
+Description: hypothetical protein Cj0524
+Organism: Campylobacter jejuni subsp. jejuni NCTC 11168
+PMID: 18809665
+Source: EuropePMC
+Title: Characterization of two Campylobacter jejuni strains for use in volunteer experimental-infection studies
+Journal: Infection and immunity (2008)
+Snippet: a pseudogene in NCTC 11168 (Cj0522, Cj0523, and Cj0524). In C. jejuni, phosphate uptake is controlled by the two-component system PhoS/PhoR, which regulates 12
+
+================================================================================
+Protein: VIMSS46437 (E-value: 7.5e-60, Score: 207.3)
+Mentioned as: Cj0524
+Description: hypothetical protein Cj0524
+Organism: Campylobacter jejuni subsp. jejuni NCTC 11168
+PMID: 17565669
+Source: EuropePMC
+Title: Re-annotation and re-analysis of the Campylobacter jejuni NCTC11168 genome sequence
+Journal: BMC genomics (2007)
+Snippet: complexity associated with pseudogene designation is observed when viewing the CDSs Cj0522 , Cj0523 and Cj0524 within C. jejuni NCTC11168. These three CDSs are represented as one whole CDS on a single frame within C. jejuni RM1221 ( Cje0628 ). The three CDSs are large enough
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: Q0PAZ2
+PMID: 17615063
+Source: IntAct
+Gene ID: Q0PAZ2
+Annotation: [Interaction]
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A076FBQ3.1	AF-A0A076FBQ3-F1-model_v4_TED01:21-332	1	AF-A0A076FBQ3-F1-model_v4_TED01	21-332	0
+A0A076FBQ3.1	AF-A0A076FBQ3-F1-model_v4_TED02:351-585	1	AF-A0A076FBQ3-F1-model_v4_TED02	351-585	100.0%
+A0A0D5YV00.1	AF-A0A0D5YV00-F1-model_v4_TED01:6-329	1	AF-A0A0D5YV00-F1-model_v4_TED01	6-329	0
+A0A0D5YV00.1	AF-A0A0D5YV00-F1-model_v4_TED02:348-592	1	AF-A0A0D5YV00-F1-model_v4_TED02	348-592	100.0%
+A0A0F7JXD2.1	AF-A0A0F7JXD2-F1-model_v4_TED01:24-336	1	AF-A0A0F7JXD2-F1-model_v4_TED01	24-336	0
+A0A0F7JXD2.1	AF-A0A0F7JXD2-F1-model_v4_TED02:357-601	1	AF-A0A0F7JXD2-F1-model_v4_TED02	357-601	98.6%
+A0A1B8J7F0.1	AF-A0A1B8J7F0-F1-model_v4_TED01:2-7_30-335	1	AF-A0A1B8J7F0-F1-model_v4_TED01	2-335	0
+A0A1B8J7F0.1	AF-A0A1B8J7F0-F1-model_v4_TED02:348-515_605-678	1	AF-A0A1B8J7F0-F1-model_v4_TED02	348-678	100.0%
+A0A1B8JAM3.1	AF-A0A1B8JAM3-F1-model_v4_TED02:33-191_201-346	1	AF-A0A1B8JAM3-F1-model_v4_TED02	33-346	0
+A0A1B8JAM3.1	AF-A0A1B8JAM3-F1-model_v4_TED03:365-621	1	AF-A0A1B8JAM3-F1-model_v4_TED03	365-621	99.6%
+A0A1B8JAM3.1	AF-A0A1B8JAM3-F1-model_v4_TED01:2-29	1	AF-A0A1B8JAM3-F1-model_v4_TED01	2-29	0
+A0A1E5Q5R4.1	AF-A0A1E5Q5R4-F1-model_v4_TED01:29-335	1	AF-A0A1E5Q5R4-F1-model_v4_TED01	29-335	0
+A0A1E5Q5R4.1	AF-A0A1E5Q5R4-F1-model_v4_TED02:352-602	1	AF-A0A1E5Q5R4-F1-model_v4_TED02	352-602	100.0%
+A0A1G7DAT5.1	AF-A0A1G7DAT5-F1-model_v4_TED01:2-336	1	AF-A0A1G7DAT5-F1-model_v4_TED01	2-336	0
+A0A1G7DAT5.1	AF-A0A1G7DAT5-F1-model_v4_TED02:355-576	1	AF-A0A1G7DAT5-F1-model_v4_TED02	355-576	98.7%
+A0A1G7LZY1.1	AF-A0A1G7LZY1-F1-model_v4_TED01:23-181_190-337	1	AF-A0A1G7LZY1-F1-model_v4_TED01	23-337	0
+A0A1G7LZY1.1	AF-A0A1G7LZY1-F1-model_v4_TED02:359-591	1	AF-A0A1G7LZY1-F1-model_v4_TED02	359-591	98.2%
+A0A1H1L305.1	AF-A0A1H1L305-F1-model_v4_TED01:6-329	1	AF-A0A1H1L305-F1-model_v4_TED01	6-329	0
+A0A1H1L305.1	AF-A0A1H1L305-F1-model_v4_TED02:354-572	1	AF-A0A1H1L305-F1-model_v4_TED02	354-572	97.3%
+A0A1H1RDS6.1	AF-A0A1H1RDS6-F1-model_v4_TED01:24-336	1	AF-A0A1H1RDS6-F1-model_v4_TED01	24-336	0
+A0A1H1RDS6.1	AF-A0A1H1RDS6-F1-model_v4_TED02:353-576	1	AF-A0A1H1RDS6-F1-model_v4_TED02	353-576	98.7%
+A0A1H2E9N0.1	AF-A0A1H2E9N0-F1-model_v4_TED01:26-336	1	AF-A0A1H2E9N0-F1-model_v4_TED01	26-336	0
+A0A1H2E9N0.1	AF-A0A1H2E9N0-F1-model_v4_TED02:358-589	1	AF-A0A1H2E9N0-F1-model_v4_TED02	358-589	98.7%
+A0A1H2R7R6.1	AF-A0A1H2R7R6-F1-model_v4_TED01:23-336	1	AF-A0A1H2R7R6-F1-model_v4_TED01	23-336	0
+A0A1H2R7R6.1	AF-A0A1H2R7R6-F1-model_v4_TED02:353-576	1	AF-A0A1H2R7R6-F1-model_v4_TED02	353-576	98.7%
+A0A1H6F734.1	AF-A0A1H6F734-F1-model_v4_TED01:12-171_186-325	1	AF-A0A1H6F734-F1-model_v4_TED01	12-325	0
+A0A1H6F734.1	AF-A0A1H6F734-F1-model_v4_TED02:341-586	1	AF-A0A1H6F734-F1-model_v4_TED02	341-586	100.0%
+A0A1H6FC79.1	AF-A0A1H6FC79-F1-model_v4_TED01:8-329	1	AF-A0A1H6FC79-F1-model_v4_TED01	8-329	0
+A0A1H6FC79.1	AF-A0A1H6FC79-F1-model_v4_TED02:348-572	1	AF-A0A1H6FC79-F1-model_v4_TED02	348-572	99.6%
+A0A1H7KQG9.1	AF-A0A1H7KQG9-F1-model_v4_TED01:26-187_202-341	1	AF-A0A1H7KQG9-F1-model_v4_TED01	26-341	0
+A0A1H7KQG9.1	AF-A0A1H7KQG9-F1-model_v4_TED02:357-581	1	AF-A0A1H7KQG9-F1-model_v4_TED02	357-581	100.0%
+A0A1H9A4M0.1	AF-A0A1H9A4M0-F1-model_v4_TED01:23-337	1	AF-A0A1H9A4M0-F1-model_v4_TED01	23-337	0
+A0A1H9A4M0.1	AF-A0A1H9A4M0-F1-model_v4_TED02:354-578	1	AF-A0A1H9A4M0-F1-model_v4_TED02	354-578	99.1%
+A0A1H9CC47.1	AF-A0A1H9CC47-F1-model_v4_TED01:34-185_193-339	1	AF-A0A1H9CC47-F1-model_v4_TED01	34-339	0
+A0A1H9CC47.1	AF-A0A1H9CC47-F1-model_v4_TED02:355-601	1	AF-A0A1H9CC47-F1-model_v4_TED02	355-601	100.0%
+A0A1I0PDY3.1	AF-A0A1I0PDY3-F1-model_v4_TED01:23-336	1	AF-A0A1I0PDY3-F1-model_v4_TED01	23-336	0
+A0A1I0PDY3.1	AF-A0A1I0PDY3-F1-model_v4_TED02:354-578	1	AF-A0A1I0PDY3-F1-model_v4_TED02	354-578	100.0%
+A0A1I4J925.1	AF-A0A1I4J925-F1-model_v4_TED01:4-336	1	AF-A0A1I4J925-F1-model_v4_TED01	4-336	0
+A0A1I4J925.1	AF-A0A1I4J925-F1-model_v4_TED02:352-574	1	AF-A0A1I4J925-F1-model_v4_TED02	352-574	100.0%
+A0A1I4J925.1	AF-A0A1I4J925-F1-model_v4_TED03:576-605	1	AF-A0A1I4J925-F1-model_v4_TED03	576-605	0
+A0A1I5LP44.1	AF-A0A1I5LP44-F1-model_v4_TED01:21-336	1	AF-A0A1I5LP44-F1-model_v4_TED01	21-336	0
+A0A1I5LP44.1	AF-A0A1I5LP44-F1-model_v4_TED02:352-586	1	AF-A0A1I5LP44-F1-model_v4_TED02	352-586	100.0%
+A0A1M6DRJ2.1	AF-A0A1M6DRJ2-F1-model_v4_TED01:13-336	1	AF-A0A1M6DRJ2-F1-model_v4_TED01	13-336	0
+A0A1M6DRJ2.1	AF-A0A1M6DRJ2-F1-model_v4_TED02:355-579	1	AF-A0A1M6DRJ2-F1-model_v4_TED02	355-579	99.1%
+A0A1M6LIJ1.1	AF-A0A1M6LIJ1-F1-model_v4_TED01:2-340	1	AF-A0A1M6LIJ1-F1-model_v4_TED01	2-340	0
+A0A1M6LIJ1.1	AF-A0A1M6LIJ1-F1-model_v4_TED02:361-602	1	AF-A0A1M6LIJ1-F1-model_v4_TED02	361-602	98.7%
+A0A1M6RZ02.1	AF-A0A1M6RZ02-F1-model_v4_TED01:26-336	1	AF-A0A1M6RZ02-F1-model_v4_TED01	26-336	0
+A0A1M6RZ02.1	AF-A0A1M6RZ02-F1-model_v4_TED02:355-576	1	AF-A0A1M6RZ02-F1-model_v4_TED02	355-576	98.7%
+A0A1M6RZ02.1	AF-A0A1M6RZ02-F1-model_v4_TED03:580-607	1	AF-A0A1M6RZ02-F1-model_v4_TED03	580-607	0
+A0A1R1LRV2.1	AF-A0A1R1LRV2-F1-model_v4_TED01:32-336	1	AF-A0A1R1LRV2-F1-model_v4_TED01	32-336	0
+A0A1R1LRV2.1	AF-A0A1R1LRV2-F1-model_v4_TED02:352-600	1	AF-A0A1R1LRV2-F1-model_v4_TED02	352-600	100.0%
+A0A1R3VMR2.1	AF-A0A1R3VMR2-F1-model_v4_TED01:25-335	1	AF-A0A1R3VMR2-F1-model_v4_TED01	25-335	0
+A0A1R3VMR2.1	AF-A0A1R3VMR2-F1-model_v4_TED02:351-604	1	AF-A0A1R3VMR2-F1-model_v4_TED02	351-604	100.0%
+A0A1T1HEE4.1	AF-A0A1T1HEE4-F1-model_v4_TED01:2-181_193-334	1	AF-A0A1T1HEE4-F1-model_v4_TED01	2-334	0
+A0A1T1HEE4.1	AF-A0A1T1HEE4-F1-model_v4_TED02:353-602	1	AF-A0A1T1HEE4-F1-model_v4_TED02	353-602	100.0%
+A0A1T2KSX1.1	AF-A0A1T2KSX1-F1-model_v4_TED01:37-182_194-335	1	AF-A0A1T2KSX1-F1-model_v4_TED01	37-335	0
+A0A1T2KSX1.1	AF-A0A1T2KSX1-F1-model_v4_TED02:352-597	1	AF-A0A1T2KSX1-F1-model_v4_TED02	352-597	100.0%
+A0A1T2L611.1	AF-A0A1T2L611-F1-model_v4_TED01:24-336	1	AF-A0A1T2L611-F1-model_v4_TED01	24-336	0
+A0A1T2L611.1	AF-A0A1T2L611-F1-model_v4_TED02:357-591	1	AF-A0A1T2L611-F1-model_v4_TED02	357-591	98.6%
+A0A1T2L6R7.1	AF-A0A1T2L6R7-F1-model_v4_TED01:350-599	1	AF-A0A1T2L6R7-F1-model_v4_TED01	350-599	100.0%
+A0A1T4R5I8.1	AF-A0A1T4R5I8-F1-model_v4_TED01:21-184_193-336	1	AF-A0A1T4R5I8-F1-model_v4_TED01	21-336	0
+A0A1T4R5I8.1	AF-A0A1T4R5I8-F1-model_v4_TED02:357-600	1	AF-A0A1T4R5I8-F1-model_v4_TED02	357-600	98.6%
+A0A1V8M980.1	AF-A0A1V8M980-F1-model_v4_TED01:24-336	1	AF-A0A1V8M980-F1-model_v4_TED01	24-336	0
+A0A1V8M980.1	AF-A0A1V8M980-F1-model_v4_TED02:352-603	1	AF-A0A1V8M980-F1-model_v4_TED02	352-603	100.0%
+A0A1X6Z889.1	AF-A0A1X6Z889-F1-model_v4_TED01:20-180_191-336	1	AF-A0A1X6Z889-F1-model_v4_TED01	20-336	0
+A0A1X6Z889.1	AF-A0A1X6Z889-F1-model_v4_TED02:352-590	1	AF-A0A1X6Z889-F1-model_v4_TED02	352-590	100.0%
+A0A1X7BW03.1	AF-A0A1X7BW03-F1-model_v4_TED01:2-339	1	AF-A0A1X7BW03-F1-model_v4_TED01	2-339	0
+A0A1X7BW03.1	AF-A0A1X7BW03-F1-model_v4_TED02:355-599	1	AF-A0A1X7BW03-F1-model_v4_TED02	355-599	100.0%
+A0A1X9SRC5.1	AF-A0A1X9SRC5-F1-model_v4_TED01:2-333	1	AF-A0A1X9SRC5-F1-model_v4_TED01	2-333	0
+A0A1X9SRC5.1	AF-A0A1X9SRC5-F1-model_v4_TED02:351-583	1	AF-A0A1X9SRC5-F1-model_v4_TED02	351-583	100.0%
+A0A1Y0IH72.1	AF-A0A1Y0IH72-F1-model_v4_TED01:2-328	1	AF-A0A1Y0IH72-F1-model_v4_TED01	2-328	0
+A0A1Y0IH72.1	AF-A0A1Y0IH72-F1-model_v4_TED02:359-607	1	AF-A0A1Y0IH72-F1-model_v4_TED02	359-607	100.0%
+A0A1Y2K1I5.1	AF-A0A1Y2K1I5-F1-model_v4_TED01:30-336	1	AF-A0A1Y2K1I5-F1-model_v4_TED01	30-336	0
+A0A1Y2K1I5.1	AF-A0A1Y2K1I5-F1-model_v4_TED02:352-603	1	AF-A0A1Y2K1I5-F1-model_v4_TED02	352-603	100.0%
+A0A1Y5TV12.1	AF-A0A1Y5TV12-F1-model_v4_TED01:2-335	1	AF-A0A1Y5TV12-F1-model_v4_TED01	2-335	0
+A0A1Y5TV12.1	AF-A0A1Y5TV12-F1-model_v4_TED02:356-588	1	AF-A0A1Y5TV12-F1-model_v4_TED02	356-588	98.7%
+A0A238IVG8.1	AF-A0A238IVG8-F1-model_v4_TED01:28-185_195-341	1	AF-A0A238IVG8-F1-model_v4_TED01	28-341	0
+A0A238IVG8.1	AF-A0A238IVG8-F1-model_v4_TED02:357-588	1	AF-A0A238IVG8-F1-model_v4_TED02	357-588	100.0%
+A0A238J634.1	AF-A0A238J634-F1-model_v4_TED01:8-182_190-335	1	AF-A0A238J634-F1-model_v4_TED01	8-335	0
+A0A238J634.1	AF-A0A238J634-F1-model_v4_TED02:351-589	1	AF-A0A238J634-F1-model_v4_TED02	351-589	100.0%
+A0A238K6L0.1	AF-A0A238K6L0-F1-model_v4_TED01:22-182_190-335	1	AF-A0A238K6L0-F1-model_v4_TED01	22-335	0
+A0A238K6L0.1	AF-A0A238K6L0-F1-model_v4_TED02:357-587	1	AF-A0A238K6L0-F1-model_v4_TED02	357-587	98.2%
+A0A238KZK2.1	AF-A0A238KZK2-F1-model_v4_TED01:22-335	1	AF-A0A238KZK2-F1-model_v4_TED01	22-335	0
+A0A238KZK2.1	AF-A0A238KZK2-F1-model_v4_TED02:356-593	1	AF-A0A238KZK2-F1-model_v4_TED02	356-593	98.7%
+A0A238W4J4.1	AF-A0A238W4J4-F1-model_v4_TED01:18-345	1	AF-A0A238W4J4-F1-model_v4_TED01	18-345	0
+A0A238W4J4.1	AF-A0A238W4J4-F1-model_v4_TED02:366-586	1	AF-A0A238W4J4-F1-model_v4_TED02	366-586	99.1%
+A0A239IAX8.1	AF-A0A239IAX8-F1-model_v4_TED01:5-335	1	AF-A0A239IAX8-F1-model_v4_TED01	5-335	0
+A0A239IAX8.1	AF-A0A239IAX8-F1-model_v4_TED02:351-597	1	AF-A0A239IAX8-F1-model_v4_TED02	351-597	100.0%
+A0A251X929.1	AF-A0A251X929-F1-model_v4_TED01:2-336	1	AF-A0A251X929-F1-model_v4_TED01	2-336	0
+A0A251X929.1	AF-A0A251X929-F1-model_v4_TED02:352-609	1	AF-A0A251X929-F1-model_v4_TED02	352-609	100.0%
+A0A265V0H4.1	AF-A0A265V0H4-F1-model_v4_TED01:5-336	1	AF-A0A265V0H4-F1-model_v4_TED01	5-336	0
+A0A265V0H4.1	AF-A0A265V0H4-F1-model_v4_TED02:353-577	1	AF-A0A265V0H4-F1-model_v4_TED02	353-577	99.1%
+A0A268U4F3.1	AF-A0A268U4F3-F1-model_v4_TED01:2-342	1	AF-A0A268U4F3-F1-model_v4_TED01	2-342	0
+A0A268U4F3.1	AF-A0A268U4F3-F1-model_v4_TED02:358-579	1	AF-A0A268U4F3-F1-model_v4_TED02	358-579	99.5%
+A0A2A2GRP3.1	AF-A0A2A2GRP3-F1-model_v4_TED01:28-334	1	AF-A0A2A2GRP3-F1-model_v4_TED01	28-334	0
+A0A2A2GRP3.1	AF-A0A2A2GRP3-F1-model_v4_TED02:355-588	1	AF-A0A2A2GRP3-F1-model_v4_TED02	355-588	100.0%
+A0A2I0QZ55.1	AF-A0A2I0QZ55-F1-model_v4_TED01:10-323	1	AF-A0A2I0QZ55-F1-model_v4_TED01	10-323	0
+A0A2I0QZ55.1	AF-A0A2I0QZ55-F1-model_v4_TED02:342-578	1	AF-A0A2I0QZ55-F1-model_v4_TED02	342-578	100.0%
+A0A2I6S3P6.1	AF-A0A2I6S3P6-F1-model_v4_TED01:21-336	1	AF-A0A2I6S3P6-F1-model_v4_TED01	21-336	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 33 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

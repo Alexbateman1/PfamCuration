@@ -1,0 +1,92 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L6D8/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   25.60 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+3	5	Burkholderiaceae
+7	4	Hyphomicrobiales
+5	4	Burkholderiales
+3	4	Caudoviricetes
+5	3	Betaproteobacteria
+3	3	Uroviricota
+11	3	Alphaproteobacteria
+3	2	Heunggongvirae
+18	2	Pseudomonadota
+3	1	Duplodnaviria
+18	1	Pseudomonadati
+3	0	Viruses
+18	0	Bacteria
+Total of 22 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A328A9L0	UNCHARACTERIZED PROTEIN {    344.3    4.5e-99   1   1.0  20.8
+	Iterate                   	     1	   276	   344.2
+
+A0A6J5FKW2	UNCHARACTERIZED PROTEIN {    353.5     7e-102   1   1.0  21.9
+	Iterate                   	     1	   349	   353.4
+
+A0ABF7QJ64	UNCHARACTERIZED PROTEIN {    331.7    3.1e-95   1   1.0  18.2
+	Iterate                   	     1	   360	   331.5
+
+A0L6D8	UNCHARACTERIZED PROTEIN {ECO:    393.0   6.7e-114   1   1.0  17.7
+	Iterate                   	    12	   377	   392.7
+
+Q2KB82	HYPOTHETICAL CONSERVED PROTEI    371.8   1.9e-107   1   1.0  15.9
+	Iterate                   	     1	   345	   371.7
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A6J5FKW2.1	AF-A0A6J5FKW2-F1-model_v4_TED01:142-200	1	AF-A0A6J5FKW2-F1-model_v4_TED01	142-200	17.3%
+A0A6J5FKW2.1	AF-A0A6J5FKW2-F1-model_v4_TED03:247-310	1	AF-A0A6J5FKW2-F1-model_v4_TED03	247-310	18.8%
+A0A6J5FKW2.1	AF-A0A6J5FKW2-F1-model_v4_TED02:201-243	1	AF-A0A6J5FKW2-F1-model_v4_TED02	201-243	12.6%
+Q2KB82.1	AF-Q2KB82-F1-model_v4_TED02:249-306	1	AF-Q2KB82-F1-model_v4_TED02	249-306	17.3%
+Q2KB82.1	AF-Q2KB82-F1-model_v4_TED01:101-135	1	AF-Q2KB82-F1-model_v4_TED01	101-135	10.4%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 7 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

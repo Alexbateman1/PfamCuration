@@ -1,0 +1,107 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L5S8_TED02/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.70 50.70;
+NC   25.10 24.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+2	6	Desulfonema.
+1	6	Magnetococcus.
+2	5	Desulfococcaceae
+1	5	Magnetococcaceae
+2	4	Desulfobacterales
+1	4	Magnetococcales
+2	3	Desulfobacteria
+1	3	Magnetococcia
+2	2	Thermodesulfobacteriota
+1	2	Pseudomonadota
+3	1	Pseudomonadati
+3	0	Bacteria
+Total of 3 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A0M9E649	UNCHARACTERIZED PROTEIN {     67.7      2e-15   1   1.4   7.9
+	Iterate                   	    15	    45	    66.8
+
+A0A0M9E7A5	UNCHARACTERIZED PROTEIN {     63.0    5.8e-14   1   2.1   2.9
+	Iterate                   	   134	   163	    61.0
+
+A0A0N0D072	UNCHARACTERIZED PROTEIN {     64.5    1.9e-14   1   1.5   4.4
+	Iterate                   	   123	   153	    63.5
+
+A0A0N0V1M2	UNCHARACTERIZED PROTEIN {     58.4    1.6e-12   1   1.7   3.8
+	Iterate                   	   115	   145	    57.1
+
+A0L5S8	TRANSCRIPTIONAL REGULATOR, FI     60.9    2.6e-13   1   1.3   0.1
+	Iterate                   	    88	   118	    60.1
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0M9DZ06.1	AF-A0A0M9DZ06-F1-model_v4_TED01:27-71	1	AF-A0A0M9DZ06-F1-model_v4_TED01	27-71	100.0%
+A0A0M9E427.1	AF-A0A0M9E427-F1-model_v4_TED01:8-118	1	AF-A0A0M9E427-F1-model_v4_TED01	8-118	0
+A0A0M9E427.1	AF-A0A0M9E427-F1-model_v4_TED02:120-173	1	AF-A0A0M9E427-F1-model_v4_TED02	120-173	100.0%
+A0A0M9E649.1	AF-A0A0M9E649-F1-model_v4_TED01:10-60	1	AF-A0A0M9E649-F1-model_v4_TED01	10-60	100.0%
+A0A0M9E7A5.1	AF-A0A0M9E7A5-F1-model_v4_TED02:128-179	1	AF-A0A0M9E7A5-F1-model_v4_TED02	128-179	100.0%
+A0A0M9E7A5.1	AF-A0A0M9E7A5-F1-model_v4_TED01:2-126	1	AF-A0A0M9E7A5-F1-model_v4_TED01	2-126	0
+A0A0M9EA63.1	AF-A0A0M9EA63-F1-model_v4_TED01:33-86	1	AF-A0A0M9EA63-F1-model_v4_TED01	33-86	100.0%
+A0A0N0D072.1	AF-A0A0N0D072-F1-model_v4_TED02:119-168	1	AF-A0A0N0D072-F1-model_v4_TED02	119-168	100.0%
+A0A0N0D072.1	AF-A0A0N0D072-F1-model_v4_TED01:7-91	1	AF-A0A0N0D072-F1-model_v4_TED01	7-91	0
+A0A0N0D425.1	AF-A0A0N0D425-F1-model_v4_TED01:2-115	1	AF-A0A0N0D425-F1-model_v4_TED01	2-115	0
+A0A0N0D425.1	AF-A0A0N0D425-F1-model_v4_TED02:123-175	1	AF-A0A0N0D425-F1-model_v4_TED02	123-175	100.0%
+A0A0N0D5N3.1	AF-A0A0N0D5N3-F1-model_v4_TED02:71-114	1	AF-A0A0N0D5N3-F1-model_v4_TED02	71-114	100.0%
+A0A0N0D5N3.1	AF-A0A0N0D5N3-F1-model_v4_TED01:2-60	1	AF-A0A0N0D5N3-F1-model_v4_TED01	2-60	0
+A0A0N0D6Q4.1	AF-A0A0N0D6Q4-F1-model_v4_TED01:9-87	1	AF-A0A0N0D6Q4-F1-model_v4_TED01	9-87	0
+A0A0N0D6Q4.1	AF-A0A0N0D6Q4-F1-model_v4_TED02:229-275	1	AF-A0A0N0D6Q4-F1-model_v4_TED02	229-275	100.0%
+A0A0N0V1M2.1	AF-A0A0N0V1M2-F1-model_v4_TED01:4-94	1	AF-A0A0N0V1M2-F1-model_v4_TED01	4-94	0
+A0A0N0V1M2.1	AF-A0A0N0V1M2-F1-model_v4_TED02:110-162	1	AF-A0A0N0V1M2-F1-model_v4_TED02	110-162	100.0%
+A0A0N0V1P1.1	AF-A0A0N0V1P1-F1-model_v4_TED02:60-117	1	AF-A0A0N0V1P1-F1-model_v4_TED02	60-117	100.0%
+A0A0N0V1P1.1	AF-A0A0N0V1P1-F1-model_v4_TED01:2-59	1	AF-A0A0N0V1P1-F1-model_v4_TED01	2-59	0
+A0L5S8.1	AF-A0L5S8-F1-model_v4_TED02:88-118	1	AF-A0L5S8-F1-model_v4_TED02	88-118	52.5%
+A0L5S8.1	AF-A0L5S8-F1-model_v4_TED05:225-285	1	AF-A0L5S8-F1-model_v4_TED05	225-285	0
+A0L5S8.1	AF-A0L5S8-F1-model_v4_TED01:2-58	1	AF-A0L5S8-F1-model_v4_TED01	2-58	0
+A0L5S8.1	AF-A0L5S8-F1-model_v4_TED03:140-191	1	AF-A0L5S8-F1-model_v4_TED03	140-191	11.9%
+A0L5S8.1	AF-A0L5S8-F1-model_v4_TED04:193-222	1	AF-A0L5S8-F1-model_v4_TED04	193-222	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network analysis skipped: only 1 networks (minimum 5 required)
+
+--- End STRING ---

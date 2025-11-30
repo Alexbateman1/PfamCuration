@@ -1,0 +1,169 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L767_TED03/Iterate
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+6	6	Magnoliopsida
+6	5	Spermatophyta
+6	4	Tracheophyta
+10	4	Hyphomicrobiales
+10	4	Caudoviricetes
+6	3	Embryophyta
+15	3	Alphaproteobacteria
+10	3	Uroviricota
+7	2	Bacillota
+6	2	Streptophyta
+21	2	Pseudomonadota
+10	2	Heunggongvirae
+9	1	Bacillati
+6	1	Viridiplantae
+23	1	Pseudomonadati
+10	1	Duplodnaviria
+7	0	Eukaryota
+32	0	Bacteria
+11	0	Viruses
+Total of 50 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0L767	UNCHARACTERIZED PROTEIN {ECO:    111.4    5.8e-29   1   2.3   5.0
+	Iterate                   	   174	   213	   111.4
+
+A0L9D3	UNCHARACTERIZED PROTEIN {ECO:    100.8    1.2e-25   1   2.5   3.6
+	Iterate                   	   175	   214	   100.8
+
+A0LB07	UNCHARACTERIZED PROTEIN {ECO:     97.5    1.2e-24   1   2.3   3.0
+	Iterate                   	   175	   214	    97.5
+
+A0LBJ6	UNCHARACTERIZED PROTEIN {ECO:    111.4    5.8e-29   1   2.2   5.0
+	Iterate                   	   174	   213	   111.4
+
+R9TAA0	UNCHARACTERIZED PROTEIN {ECO:    101.3      8e-26   7   7.2   0.0
+	Iterate                   	     5	    43	    18.9
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS3225742 (E-value: 2.1e-19, Score: 74.3)
+Mentioned as: NP_061574
+Description: Orf78
+Organism: Pseudomonas phage D3
+PMID: 23408718
+Source: EuropePMC
+Title: Complete genome sequence of bacteriophage VvAW1, which infects Vibrio vulnificus
+Journal: Standards in genomic sciences (2012)
+Snippet: hypothetical protein CPS-53 prophage AEQ15784 47 3.0e -27 25 - hypothetical protein Pseudomonas phage D3 NP_061574 34 3.0e -19 26 - RNA-binding regulator protein COG1551 COG1551 43 6.0e -10 27 - exonuclease pfam00929 cl0219 nr 1.1e -17 28 - hypothetical protein Pseudomonas phage F116 AY625898 40
+
+================================================================================
+Protein: VIMSS340073 (E-value: 1.2e-09, Score: 43.1)
+Mentioned as: VP1561
+Description: bacteriophage f237 ORF8
+Organism: Vibrio parahaemolyticus RIMD 2210633
+PMID: 38014954
+Source: EuropePMC
+Title: Insights into virulence: structure classification of the <i>Vibrio parahaemolyticus</i> RIMD mobilome
+Journal: mSystems (2023)
+Snippet: ). Additional clinical strain-associated proteins are encoded by the filamentous phage f237, whose fragment encoding VP1561 has been used as a genetic marker for pandemic strains ( 60 ), and the IntC1 region ( Fig. 3B ). The IntC1 phage integrase (VP1865) includes a lambda-integrase N-terminal
+
+================================================================================
+Protein: VIMSS340073 (E-value: 1.2e-09, Score: 43.1)
+Mentioned as: VP1561
+Description: bacteriophage f237 ORF8
+Organism: Vibrio parahaemolyticus RIMD 2210633
+PMID: 28099500
+Source: EuropePMC
+Title: Genetic Analysis of Vibrio parahaemolyticus O3:K6 Strains That Have Been Isolated in Mexico Since 1998
+Journal: PloS one (2017)
+Snippet: the O- and K-antigen genes (VP0190-VP0238) and the phage f237 (VP1549-VP1562) with its corresponding ORF8 (VP1561). These elements were 100% similar to the reference sequence. 10.1371/journal.pone.0169722.t003 Table 3 Comparative results between CICESE-170 and RIMD 2210633. RIMD 2210633 CICESE-170 Elements * Location CDS bp %GC * similarity
+
+================================================================================
+Protein: VIMSS340073 (E-value: 1.2e-09, Score: 43.1)
+Mentioned as: VP1561
+Description: bacteriophage f237 ORF8
+Organism: Vibrio parahaemolyticus RIMD 2210633
+PMID: 23696906
+Source: EuropePMC
+Title: Molecular epidemiology and genetic variation of pathogenic Vibrio parahaemolyticus in Peru
+Journal: PLoS neglected tropical diseases (2013)
+Snippet: VP1396 ATAGCACCGCCCAATAGACCTGT HGT3A VP1408 GAGATAACCGCACAACCAAG 1065 62 (1.3 min) VP1409 CTGATCAAAAAACCGAGGCT HGT4 chr1 RIMD 2210633 VP1561 GAGCGCTTCAAAGTGGGGATTAC 1142 62 (1.3 min) Phage f237 VP1563 CTGCCATTGGATTGATAGAAACC HGT5 chr1 RIMD 2210633 VP1796 TGGGCTGAAAACAATAACCTCT 1026 62 (1.3 min) Super Integron VP1798 TGCTGCAGCCAAACTAATACC HGT5A VP1845 TCGATCATAGGCCGCATAACAG 1293 62 (1.3 min)
+
+================================================================================
+Protein: Q84Q84 (E-value: 0.00029, Score: 25.9)
+Mentioned as: Q84Q84
+Description: RNA polymerase sigma factor
+Organism: Oryza sativa subsp. japonica
+PMID: 39747563
+Source: EuropePMC
+Title: iTRAQ-based quantitative proteomic analysis of herbicide stress in Avena ludoviciana Durieu.
+Journal: Scientific reports (2025)
+Snippet: 0.01 0.64 0.03 Q6ZDM1 putative lipase YOR059C 0.97 0.12 - - DEPs involved in transcription Q84Q84 RNA polymerase sigma factor sigB 0.94 0.01 - - A0A0N7KQS6 transcription factor TEOSINTE BRANCHED 0.99 0.16 - - DEPs involved in secondary metabolism Q53KJ5 cyanidin 3-O-rutinoside 5-O-glucosyltransferase-like 0.96 0.24 0.
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0P9ETA3.1	AF-A0A0P9ETA3-F1-model_v4_TED01:11-66	1	AF-A0A0P9ETA3-F1-model_v4_TED01	11-66	0
+A0A0P9ETA3.1	AF-A0A0P9ETA3-F1-model_v4_TED02:78-158	1	AF-A0A0P9ETA3-F1-model_v4_TED02	78-158	0
+A0A0P9ETA3.1	AF-A0A0P9ETA3-F1-model_v4_TED03:164-203	1	AF-A0A0P9ETA3-F1-model_v4_TED03	164-203	100.0%
+A0A1Q9PY55.1	AF-A0A1Q9PY55-F1-model_v4_TED01:10-94	1	AF-A0A1Q9PY55-F1-model_v4_TED01	10-94	0
+A0A1Q9PY55.1	AF-A0A1Q9PY55-F1-model_v4_TED02:97-138	1	AF-A0A1Q9PY55-F1-model_v4_TED02	97-138	100.0%
+A0A4D7B2P0.1	AF-A0A4D7B2P0-F1-model_v4_TED01:14-71	1	AF-A0A4D7B2P0-F1-model_v4_TED01	14-71	0
+A0A4D7B2P0.1	AF-A0A4D7B2P0-F1-model_v4_TED02:81-166	1	AF-A0A4D7B2P0-F1-model_v4_TED02	81-166	0
+A0A4D7B2P0.1	AF-A0A4D7B2P0-F1-model_v4_TED03:172-211	1	AF-A0A4D7B2P0-F1-model_v4_TED03	172-211	100.0%
+A0A6P2EIS4.1	AF-A0A6P2EIS4-F1-model_v4_TED01:6-77	1	AF-A0A6P2EIS4-F1-model_v4_TED01	6-77	0
+A0A6P2EIS4.1	AF-A0A6P2EIS4-F1-model_v4_TED02:90-129	1	AF-A0A6P2EIS4-F1-model_v4_TED02	90-129	100.0%
+A0LBJ6.1	AF-A0LBJ6-F1-model_v4_TED01:2-58	1	AF-A0LBJ6-F1-model_v4_TED01	2-58	0
+A0LBJ6.1	AF-A0LBJ6-F1-model_v4_TED02:80-165	1	AF-A0LBJ6-F1-model_v4_TED02	80-165	0
+A0LBJ6.1	AF-A0LBJ6-F1-model_v4_TED03:172-220	1	AF-A0LBJ6-F1-model_v4_TED03	172-220	100.0%
+R7WRM2.1	AF-R7WRM2-F1-model_v4_TED01:2-72	1	AF-R7WRM2-F1-model_v4_TED01	2-72	0
+R7WRM2.1	AF-R7WRM2-F1-model_v4_TED02:76-133	1	AF-R7WRM2-F1-model_v4_TED02	76-133	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 11 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

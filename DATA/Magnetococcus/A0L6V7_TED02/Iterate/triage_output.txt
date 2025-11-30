@@ -1,0 +1,168 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L6V7_TED02/Iterate
+GA   27.00 27.00;
+TC   27.00 27.50;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+6	5	Chromatiaceae
+5	5	Ectothiorhodospiraceae
+4	4	Thiotrichales
+4	4	Enterobacterales
+13	4	Chromatiales
+5	3	Betaproteobacteria
+30	3	Gammaproteobacteria
+39	2	Pseudomonadota
+39	1	Pseudomonadati
+39	0	Bacteria
+Total of 39 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1Y2K3Q7	PUTATIVE NIFZ FAMILY PROT     50.1    1.3e-09   1   2.1   0.0
+	Iterate                   	    92	   150	    45.9
+	PF04319	NifZ            	     5	    77	   102.3
+
+A0A7Y6YVT1	NITROGEN FIXATION PROTEIN     38.2    6.4e-06   2   2.2   0.2
+	Iterate                   	    89	   146	    26.7
+	PF04319	NifZ            	     2	    74	   108.1
+
+A0AAE1AGL6	UNCHARACTERIZED PROTEIN {     53.9    8.5e-11   9   9.6   1.2
+	Iterate                   	   131	   152	     5.6
+
+A0L6V7	NIFZ FAMILY PROTEIN {ECO:0000    151.5    2.8e-41   1   1.7   0.9
+	Iterate                   	    99	   157	   150.3
+	PF04319	NifZ            	    12	    84	   100.2
+
+C5BTG4	NITROGEN FIXATION PROTEIN NIF     37.8    8.6e-06   2   2.1   0.3
+	Iterate                   	    89	   146	    25.1
+	PF04319	NifZ            	     2	    74	   103.7
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS3559120 (E-value: 1.3e-22, Score: 84.6)
+Mentioned as: PST_1356
+Description: Fe-S cofactor synthesis protein
+Organism: Pseudomonas stutzeri A1501
+PMID: 38747590
+Source: EuropePMC
+Title: Integrated Hfq-interacting RNAome and transcriptomic analysis reveals complex regulatory networks of nitrogen fixation in root-associated <i>Pseudomonas stutzeri</i> A1501
+Journal: mSphere (2024)
+Snippet: Homocitrate synthase 1.58 3.95 E 03 PST_1355 nifW Nitrogenase-stabilizing/protective protein NifW 0.36 2.52 E 04 PST_1356 nifZ Fe-S cofactor synthesis protein 0.69 8.19 E 07 PST_1357 nifM Putative a peptidyl-prolyl cis / trans isomerase 0.02 1.77 E 04 PST_1359 nifF Flavodoxin required for electron transfer to
+
+================================================================================
+Protein: VIMSS3559120 (E-value: 1.3e-22, Score: 84.6)
+Mentioned as: PST_1356
+Description: Fe-S cofactor synthesis protein
+Organism: Pseudomonas stutzeri A1501
+PMID: 25251496
+Source: EuropePMC
+Title: The nitrogen-fixation island insertion site is conserved in diazotrophic Pseudomonas stutzeri and Pseudomonas sp. isolated from distal and close geographical regions
+Journal: PloS one (2014)
+Snippet: in P. azotifigens NFI adjacent to cobS . The NFI gene cluster (PST_1359, PST_1358 PST_1357, PST_1356, PST_1357) adjacent to gshP is conserved in all diazotrophic P. stutzeri strains as well as in P. azotifigens DSM 17556 T ( Figure 1 ). The nitrogen fixation island of
+
+================================================================================
+Protein: VIMSS10462289 (E-value: 1e-08, Score: 40.1)
+Mentioned as: SLGD_00473
+Description: hypothetical membrane protein
+Organism: Staphylococcus lugdunensis HKU09-01
+PMID: 33322541
+Source: EuropePMC
+Title: Role of SrtA in Pathogenicity of <i>Staphylococcus lugdunensis</i>
+Journal: Microorganisms (2020)
+Snippet: 190 21 LPXTG protein, HKU09-01 Cell wall surface anchor family protein, M23590, 196 SLUG_04710 SEVCU139_1680 SLGD_00473 SlsE LPETG 3459 364 Gram-positive signal peptide protein, VCU139, 2988 Hypothetical membrane protein, HKU09-01, 3232 SLUG_04760 SLGD_00478 SlsB LPNTG 277 30.6 Putative uncharacterized protein, HKU09-01 SLUG_22400 SLGD_02322 bca PE SlsG
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Y2K3Q7.1	AF-A0A1Y2K3Q7-F1-model_v4_TED02:84-166	1	AF-A0A1Y2K3Q7-F1-model_v4_TED02	84-166	100.0%
+A0A1Y2K3Q7.1	AF-A0A1Y2K3Q7-F1-model_v4_TED01:13-78	1	AF-A0A1Y2K3Q7-F1-model_v4_TED01	13-78	0
+A0A839T4A3.1	AF-A0A839T4A3-F1-model_v4_TED02:90-146	1	AF-A0A839T4A3-F1-model_v4_TED02	90-146	95.0%
+A0A839T4A3.1	AF-A0A839T4A3-F1-model_v4_TED01:11-76	1	AF-A0A839T4A3-F1-model_v4_TED01	11-76	0
+A0L6V7.1	AF-A0L6V7-F1-model_v4_TED01:20-85	1	AF-A0L6V7-F1-model_v4_TED01	20-85	0
+A0L6V7.1	AF-A0L6V7-F1-model_v4_TED02:99-157	1	AF-A0L6V7-F1-model_v4_TED02	99-157	100.0%
+F9UDE3.1	AF-F9UDE3-F1-model_v4_TED01:10-75	1	AF-F9UDE3-F1-model_v4_TED01	10-75	0
+F9UDE3.1	AF-F9UDE3-F1-model_v4_TED02:89-145	1	AF-F9UDE3-F1-model_v4_TED02	89-145	95.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 19 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF02579	Nitro_FeMo-Co	19	1.00	0.83
+PF00148	Oxidored_nitro	19	1.00	0.83
+PF11844	DUF3364	19	1.00	0.83
+PF00682	HMGL-like	19	1.00	0.83
+PF22617	HCS_D2	19	1.00	0.83
+PF04055	Radical_SAM	19	1.00	0.83
+PF04891	NifQ	19	1.00	0.83
+PF00142	Fer4_NifH	18	0.95	0.75
+PF00037	Fer4	18	0.95	0.75
+PF12837	Fer4_6	17	0.89	0.69
+PF03206	NifW	17	0.89	0.69
+PF01656	CbiA	17	0.89	0.69
+PF13614	AAA_31	17	0.89	0.69
+PF02954	HTH_8	17	0.89	0.69
+PF06988	NifT	17	0.89	0.69
+PF12838	Fer4_7	17	0.89	0.69
+PF13237	Fer4_10	17	0.89	0.69
+PF16844	DIMCO_N	16	0.84	0.62
+PF02374	ArsA_ATPase	16	0.84	0.62
+PF03270	DUF269	16	0.84	0.62
+PF00158	Sigma54_activat	16	0.84	0.62
+PF07728	AAA_5	16	0.84	0.62
+PF13185	GAF_2	16	0.84	0.62
+PF14532	Sigma54_activ_2	16	0.84	0.62
+PF25601	AAA_lid_14	16	0.84	0.62
+PF00639	Rotamase	16	0.84	0.62
+PF13145	Rotamase_2	16	0.84	0.62
+PF13616	Rotamase_3	16	0.84	0.62
+PF13484	Fer4_16	16	0.84	0.62
+PF13183	Fer4_8	16	0.84	0.62
+PF13187	Fer4_9	16	0.84	0.62
+PF00111	Fer2	15	0.79	0.57
+PF01590	GAF	14	0.74	0.51
+PF12800	Fer4_4	14	0.74	0.51
+
+--- End STRING ---

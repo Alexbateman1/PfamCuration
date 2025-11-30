@@ -1,0 +1,112 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LCV6_TED02/Iterate
+GA   27.00 27.00;
+TC   27.80 27.10;
+NC   26.60 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+8	5	Microbacteriaceae
+11	4	Micrococcales
+6	3	Alphaproteobacteria
+21	3	Actinomycetes
+21	2	Actinomycetota
+13	2	Pseudomonadota
+23	1	Bacillati
+16	1	Pseudomonadati
+39	0	Bacteria
+Total of 40 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1Y2JYS2	UNCHARACTERIZED PROTEIN {     60.7    7.6e-13   1   1.6   0.3
+	Iterate                   	   112	   215	    59.6
+
+A0A840G0E3	N-ACETYLTRANSFERASE {ECO:     43.3    1.9e-07   1   1.4   0.1
+	Iterate                   	   142	   249	    42.4
+
+A0A9X3GSH0	N-ACETYLTRANSFERASE DOMAI     43.0    2.4e-07   1   1.3   0.2
+	Iterate                   	   153	   249	    42.2
+
+A0LCV6	N-ACETYLTRANSFERASE DOMAIN-CO    249.3    1.9e-71   1   2.3  11.7
+	Iterate                   	   140	   248	   248.7
+
+H5WNJ4	N-ACETYLTRANSFERASE DOMAIN-CO     44.9    5.9e-08   1   1.3   0.5
+	Iterate                   	   144	   248	    44.2
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS319493 (E-value: 2e-07, Score: 36.7)
+Mentioned as: bll4282
+Description: bll4282
+Organism: Bradyrhizobium japonicum USDA 110
+PMID: 17951393
+Source: EuropePMC
+Title: New target genes controlled by the Bradyrhizobium japonicum two-component regulatory system RegSR
+Journal: Journal of bacteriology (2007)
+Snippet: the indicated conditione Description 21% O2 bll4166 bll4282 bll4391 blr4450 bll4816 blr5025 blr5221 blr5346 bll5475 bll5476 bll5480 hspF bsl5479 blr5556 blr5637
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A172UD93.1	AF-A0A172UD93-F1-model_v4_TED01:6-132_277-283	1	AF-A0A172UD93-F1-model_v4_TED01	6-283	100.0%
+A0A172UD93.1	AF-A0A172UD93-F1-model_v4_TED02:136-259	1	AF-A0A172UD93-F1-model_v4_TED02	136-259	100.0%
+A0A1Y2JYS2.1	AF-A0A1Y2JYS2-F1-model_v4_TED01:3-81	1	AF-A0A1Y2JYS2-F1-model_v4_TED01	3-81	0
+A0A1Y2JYS2.1	AF-A0A1Y2JYS2-F1-model_v4_TED02:84-223	1	AF-A0A1Y2JYS2-F1-model_v4_TED02	84-223	100.0%
+A0A7R7CQK3.1	AF-A0A7R7CQK3-F1-model_v4_TED01:7-135_281-285	1	AF-A0A7R7CQK3-F1-model_v4_TED01	7-285	100.0%
+A0A7R7CQK3.1	AF-A0A7R7CQK3-F1-model_v4_TED02:138-262	1	AF-A0A7R7CQK3-F1-model_v4_TED02	138-262	100.0%
+A0LCV6.1	AF-A0LCV6-F1-model_v4_TED01:4-132_273-279	1	AF-A0LCV6-F1-model_v4_TED01	4-279	100.0%
+A0LCV6.1	AF-A0LCV6-F1-model_v4_TED02:140-248	1	AF-A0LCV6-F1-model_v4_TED02	140-248	100.0%
+A0LCV9.1	AF-A0LCV9-F1-model_v4_TED01:4-131_275-281	1	AF-A0LCV9-F1-model_v4_TED01	4-281	100.0%
+A0LCV9.1	AF-A0LCV9-F1-model_v4_TED02:134-255	1	AF-A0LCV9-F1-model_v4_TED02	134-255	100.0%
+H5WNJ4.1	AF-H5WNJ4-F1-model_v4_TED01:6-132_277-282	1	AF-H5WNJ4-F1-model_v4_TED01	6-282	100.0%
+H5WNJ4.1	AF-H5WNJ4-F1-model_v4_TED02:136-256	1	AF-H5WNJ4-F1-model_v4_TED02	136-256	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 11 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

@@ -1,0 +1,545 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L3V5_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.60 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RC   Paper describing PDB structure 3o0r
+RN   [1]
+RM   21109633
+RT   Structural basis of biological N2O generation by bacterial nitric
+RT   oxide  reductase.
+RA   Hino T, Matsumoto Y, Nagano S, Sugimoto H, Fukumori Y, Murata T,
+RA   Iwata S, Shiro Y;
+RL   Science. 2010;330:1666-1670.
+RC   Paper describing PDB structure 3wfb
+RN   [2]
+RM   24338896
+RT   Structures of reduced and ligand-bound nitric oxide reductase provide
+RT   insights  into functional differences in respiratory enzymes.
+RA   Sato N, Ishii S, Sugimoto H, Hino T, Fukumori Y, Sako Y, Shiro Y,
+RA   Tosha T;
+RL   Proteins. 2014;82:1258-1271.
+RC   Paper describing PDB structure 4xyd
+RN   [3]
+RM   27185533
+RT   Structure of the Membrane-intrinsic Nitric Oxide Reductase from
+RT   Roseobacter  denitrificans.
+RA   Crow A, Matsuda Y, Arata H, Oubrie A;
+RL   Biochemistry. 2016;55:3198-3203.
+RC   Paper describing PDB structure 5guw
+RN   [4]
+RM   28847930
+RT   Dynamics of nitric oxide controlled by protein complex in bacterial
+RT   system.
+RA   Terasaka E, Yamada K, Wang PH, Hosokawa K, Yamagiwa R, Matsumoto K,
+RA   Ishii S, Mori T, Yagi K, Sawai H, Arai H, Sugimoto H, Sugita Y, Shiro
+RA   Y, Tosha T;
+RL   Proc Natl Acad Sci U S A. 2017;114:9888-9893.
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+25	5	Paracoccaceae
+21	5	Roseobacteraceae
+47	4	Rhodobacterales
+18	4	Hyphomicrobiales
+78	3	Alphaproteobacteria
+26	3	Betaproteobacteria
+25	3	Gammaproteobacteria
+16	2	Bacteroidota
+130	2	Pseudomonadota
+150	1	Pseudomonadati
+150	0	Bacteria
+Total of 150 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+ID   NORC_PSEAE              Reviewed;         146 AA.
+AC   Q59646;
+DE   RecName: Full=Nitric oxide reductase subunit C;
+DE   AltName: Full=NOR small subunit;
+DE   AltName: Full=Nitric oxide reductase cytochrome c subunit;
+GN   Name=norC; OrderedLocusNames=PA0523;
+OS   Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+OS   14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pseudomonadales; Pseudomonadaceae; Pseudomonas.
+OX   NCBI_TaxID=208964;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=7711073; DOI=10.1016/0167-4781(95)00018-c;
+RA   Arai H., Igarashi Y., Kodama T.;
+RT   "The structural genes for nitric oxide reductase from Pseudomonas
+RT   aeruginosa.";
+RL   Biochim. Biophys. Acta 1261:279-284(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=10984043; DOI=10.1038/35023079;
+RA   Stover C.K., Pham X.-Q.T., Erwin A.L., Mizoguchi S.D., Warrener P.,
+RA   Hickey M.J., Brinkman F.S.L., Hufnagle W.O., Kowalik D.J., Lagrou M.,
+RA   Garber R.L., Goltry L., Tolentino E., Westbrock-Wadman S., Yuan Y.,
+RA   Brody L.L., Coulter S.N., Folger K.R., Kas A., Larbig K., Lim R.M.,
+RA   Smith K.A., Spencer D.H., Wong G.K.-S., Wu Z., Paulsen I.T., Reizer J.,
+RA   Saier M.H. Jr., Hancock R.E.W., Lory S., Olson M.V.;
+RT   "Complete genome sequence of Pseudomonas aeruginosa PAO1, an opportunistic
+RT   pathogen.";
+RL   Nature 406:959-964(2000).
+CC   -!- FUNCTION: Component of the anaerobic respiratory chain that transforms
+CC       nitrate to dinitrogen (denitrification).
+CC   -!- SUBUNIT: Heterodimer of cytochromes b (large subunit) and c (small
+CC       subunit).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane; Single-pass membrane protein.
+CC       Note=May be attached to the membrane by a signal-anchor.
+CC   -!- INDUCTION: By nitric oxide. {ECO:0000305}.
+DR   EMBL; D38133; BAA07329.1; -; Genomic_DNA.
+DR   EMBL; AE004091; AAG03912.1; -; Genomic_DNA.
+DR   PIR; S53712; S53712.
+DR   RefSeq; NP_249214.1; NC_002516.2.
+DR   RefSeq; WP_003113238.1; NZ_QZGE01000010.1.
+DR   PDB; 3O0R; X-ray; 2.70 A; C=1-146.
+DR   PDB; 3WFB; X-ray; 2.70 A; C=1-146.
+DR   PDB; 3WFC; X-ray; 2.50 A; C=1-146.
+DR   PDB; 3WFD; X-ray; 2.30 A; C=1-146.
+DR   PDB; 3WFE; X-ray; 2.49 A; C=1-146.
+DR   PDB; 5GUW; X-ray; 3.20 A; A/C=1-146.
+DR   PDB; 5GUX; X-ray; 3.30 A; C=1-146.
+DR   PDBsum; 3O0R; -.
+DR   PDBsum; 3WFB; -.
+DR   PDBsum; 3WFC; -.
+DR   PDBsum; 3WFD; -.
+DR   PDBsum; 3WFE; -.
+DR   PDBsum; 5GUW; -.
+DR   PDBsum; 5GUX; -.
+DR   AlphaFoldDB; Q59646; -.
+DR   SMR; Q59646; -.
+DR   STRING; 208964.PA0523; -.
+DR   TCDB; 3.D.4.10.3; the proton-translocating cytochrome oxidase (cox) superfamily.
+DR   PaxDb; 208964-PA0523; -.
+DR   ABCD; Q59646; 1 sequenced antibody.
+DR   DNASU; 882200; -.
+DR   GeneID; 882200; -.
+DR   KEGG; pae:PA0523; -.
+DR   PATRIC; fig|208964.12.peg.553; -.
+DR   PseudoCAP; PA0523; -.
+DR   HOGENOM; CLU_135564_0_0_6; -.
+DR   InParanoid; Q59646; -.
+DR   OrthoDB; 9809720at2; -.
+DR   PhylomeDB; Q59646; -.
+DR   BioCyc; PAER208964:G1FZ6-528-MONOMER; -.
+DR   BRENDA; 1.7.2.5; 5087.
+DR   EvolutionaryTrace; Q59646; -.
+DR   Proteomes; UP000002438; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0009055; F:electron transfer activity; IEA:InterPro.
+DR   GO; GO:0020037; F:heme binding; IEA:InterPro.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   Gene3D; 1.10.760.10; Cytochrome c-like domain; 1.
+DR   InterPro; IPR009056; Cyt_c-like_dom.
+DR   InterPro; IPR036909; Cyt_c-like_dom_sf.
+DR   InterPro; IPR051811; Cytochrome_c550/c551-like.
+DR   PANTHER; PTHR37823; CYTOCHROME C-553-LIKE; 1.
+DR   PANTHER; PTHR37823:SF1; CYTOCHROME C-553-LIKE; 1.
+DR   Pfam; PF00034; Cytochrom_C; 1.
+DR   SUPFAM; SSF46626; Cytochrome c; 1.
+DR   PROSITE; PS51007; CYTC; 1.
+PE   1: Evidence at protein level;
+KW   3D-structure; Cell membrane; Electron transport; Heme; Iron; Membrane;
+KW   Metal-binding; Reference proteome; Respiratory chain; Signal-anchor;
+KW   Transmembrane; Transmembrane helix; Transport.
+FT   INIT_MET        1
+FT                   /note="Removed"
+FT                   /evidence="ECO:0000250"
+FT   CHAIN           2..146
+FT                   /note="Nitric oxide reductase subunit C"
+FT                   /id="PRO_0000108424"
+FT   TRANSMEM        13..29
+FT                   /note="Helical; Signal-anchor"
+FT                   /evidence="ECO:0000255"
+FT   BINDING         61
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00433"
+FT   BINDING         64
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /note="covalent"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00433"
+FT   BINDING         65
+FT                   /ligand="heme c"
+FT                   /ligand_id="ChEBI:CHEBI:61717"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="axial binding residue"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00433"
+FT   HELIX           7..39
+FT                   /evidence="ECO:0007829|PDB:3WFD"
+FT   HELIX           42..44
+FT                   /evidence="ECO:0007829|PDB:3WFD"
+FT   HELIX           47..58
+FT                   /evidence="ECO:0007829|PDB:3WFD"
+FT   HELIX           61..63
+FT                   /evidence="ECO:0007829|PDB:3WFD"
+FT   STRAND          65..67
+FT                   /evidence="ECO:0007829|PDB:3O0R"
+FT   STRAND          73..75
+FT                   /evidence="ECO:0007829|PDB:3WFD"
+FT   HELIX           81..83
+FT                   /evidence="ECO:0007829|PDB:3WFD"
+FT   TURN            84..86
+FT                   /evidence="ECO:0007829|PDB:3WFD"
+FT   HELIX           87..100
+FT                   /evidence="ECO:0007829|PDB:3WFD"
+FT   HELIX           119..132
+FT                   /evidence="ECO:0007829|PDB:3WFD"
+FT   STRAND          141..143
+FT                   /evidence="ECO:0007829|PDB:3WFD"
+SQ   SEQUENCE   146 AA;  16344 MW;  1C0DB7E59431CC98 CRC64;
+//
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A4S3MA70	CYTOCHROME C {ECO:0000313     84.5      1e-20   1   1.0   0.5
+	Iterate                   	     2	    41	    84.5
+
+A0A5C2HLE0	CYTOCHROME C {ECO:0000313     82.9    3.2e-20   1   1.3   0.2
+	Iterate                   	     2	    41	    82.3
+	PF13442	Cytochrome_CBB3 	    47	   127	    27.7
+	PF00034	Cytochrom_C     	    49	   131	      45
+
+A0A7L6ASK0	CYTOCHROME C {ECO:0000313     83.2    2.7e-20   1   1.4   0.1
+	Iterate                   	     2	    41	    82.4
+	PF13442	Cytochrome_CBB3 	    47	   127	    33.1
+	PF00034	Cytochrom_C     	    49	   131	    50.3
+
+A0A8J7K0L4	CYTOCHROME C {ECO:0000313     83.1    2.9e-20   1   1.3   0.6
+	Iterate                   	     2	    41	    82.5
+	PF13442	Cytochrome_CBB3 	    47	   127	    30.8
+	PF00034	Cytochrom_C     	    49	   131	      52
+
+Q59646	NITRIC OXIDE REDUCTASE SUBUNIT      77.8    1.2e-18   1   1.2   1.0
+	Iterate                   	     2	    41	    77.3
+	PF00034	Cytochrom_C     	    49	   133	    50.7
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS368666 (E-value: 2.9e-20, Score: 76.5)
+Mentioned as: NE2003
+Description: nitric oxide reductase, cytochrome c-containing subunit
+Organism: Nitrosomonas europaea ATCC 19718
+PMID: 27016565
+Source: EuropePMC
+Title: Steady-State Growth under Inorganic Carbon Limitation Conditions Increases Energy Consumption for Maintenance and Enhances Nitrous Oxide Production in Nitrosomonas europaea
+Journal: Applied and environmental microbiology (2016)
+Snippet: of NO2 (Table 2). However, expression of norCD (NE2003 and NE2004), N. europaea's only known NO reductase for nitrifier denitrification, was either unchanged or
+
+================================================================================
+Protein: VIMSS368666 (E-value: 2.9e-20, Score: 76.5)
+Mentioned as: NE2003
+Description: nitric oxide reductase, cytochrome c-containing subunit
+Organism: Nitrosomonas europaea ATCC 19718
+PMID: 12700255
+Source: EuropePMC
+Title: Complete genome sequence of the ammonia-oxidizing bacterium and obligate chemolithoautotroph Nitrosomonas europaea
+Journal: Journal of bacteriology (2003)
+Snippet: system is encoded in a nor gene cluster (norCBQD; NE2003, NE2004, NE2005, and NE2006) with an organization similar to that found in Pseudomonas sp. strain G-179
+
+================================================================================
+Protein: VIMSS2025219 (E-value: 1.5e-19, Score: 74.3)
+Mentioned as: RD1_1562
+Description: NorC-like protein
+Organism: Roseobacter denitrificans OCh 114
+PMID: 25658318
+Source: EuropePMC
+Title: Peroxidase activity and involvement in the oxidative stress response of roseobacter denitrificans truncated hemoglobin
+Journal: PloS one (2015)
+Snippet: dehydrogenase (Icd) Reverse: GATGTGCCCAACTCAAGGAT Nitrogen metabolism RD1_1561 Forward: tgaccgtgagatcatcgaaa Nitric oxide reductase (norB) Reverse: aaccatgacaaaggcaaagg RD1_1562 Forward: tttcggtccattcacacaga Nitric oxide reductase (norC) Reverse: tgtcatcacattgcccagtt Catalase and peroxidases RD1_2195 Forward: GCCTGACTTCTTCGTCAACC Bi-functional catalase/peroxidase (katG) Reverse: GAATTTTTCGGCGTTGTCAT RD1_0599 Forward: TCTGCGAAATGAACTTTGGA Glutathione peroxidase (gpo) Reverse: ATTGGTTTTGTCTGCGAACC...
+
+================================================================================
+Protein: VIMSS318425 (E-value: 1.5e-19, Score: 74.2)
+Mentioned as: blr3214
+Description: nitric oxide reductase subunit C
+Organism: Bradyrhizobium japonicum USDA 110
+PMID: 38251894
+Source: EuropePMC
+Title: Soybean-mediated suppression of BjaI/BjaR<sub>1</sub> quorum sensing in <i>Bradyrhizobium diazoefficiens</i> impacts symbiotic nitrogen fixation
+Journal: Applied and environmental microbiology (2024)
+
+================================================================================
+Protein: VIMSS318425 (E-value: 1.5e-19, Score: 74.2)
+Mentioned as: blr3214
+Description: nitric oxide reductase subunit C
+Organism: Bradyrhizobium japonicum USDA 110
+PMID: 31481951
+Source: EuropePMC
+Title: Expanding the Regulon of the <i>Bradyrhizobium diazoefficiens</i> NnrR Transcription Factor: New Insights Into the Denitrification Pathway
+Journal: Frontiers in microbiology (2019)
+Snippet: c oxidase subunit 3 family protein 106 TTGCGTCGGCGCAA blr3212-bsr3213 bsr3213 14.6 7.5 Bdiaspc4_16620 Hypothetical protein blr3214 70.4 81.2 Bdiaspc4_16625 norC Cytochrome c 87 TTGCGCCCTGACAA blr3214-blr3217 blr3215 159.2 71.2 Bdiaspc4_16630 norB Nitric oxide reductase subunit B blr3216 69.9 56.3 Bdiaspc4_16635 norQ CbbQ/NirQ/NorQ/GpvN family protein blr3217 16.8 17.6
+
+================================================================================
+Protein: VIMSS318425 (E-value: 1.5e-19, Score: 74.2)
+Mentioned as: blr3214
+Description: nitric oxide reductase subunit C
+Organism: Bradyrhizobium japonicum USDA 110
+PMID: 24949739
+Source: EuropePMC
+Title: The global response regulator RegR controls expression of denitrification genes in Bradyrhizobium japonicum
+Journal: PloS one (2014)
+Snippet: well as two regulatory genes (bll3466, bll4130). Purified RegR interacted with the promoters of norC (blr3214), nosR (blr0314), a fixK -like gene (bll3466), and bll4130, which encodes a LysR-type regulator. By using fluorescently labeled oligonucleotide extension (FLOE), we were able to identify two transcriptional start sites
+
+================================================================================
+Protein: VIMSS3415913 (E-value: 1e-18, Score: 71.6)
+Mentioned as: Tbd_0562
+Description: nitric-oxide reductase subunit C
+Organism: Thiobacillus denitrificans
+PMID: 24065960
+Source: EuropePMC
+Title: Genome-enabled studies of anaerobic, nitrate-dependent iron oxidation in the chemolithoautotrophic bacterium Thiobacillus denitrificans
+Journal: Frontiers in microbiology (2013)
+Snippet: denitrifying conditions] have known functions associated with denitrification or S-compound oxidation, including nirS (Tbd_0077), norC (Tbd_0562), soxA (Tbd_0564), soxX (Tbd_0567), and dsrJ (Tbd_2476). Further, Tbd_1831 is a cytochrome c 1 subunit of complex III (cytochrome bc 1 -type ubiquinol oxidoreductase). However, other highly expressed, putative c
+
+================================================================================
+Protein: Q59646 (E-value: 2.1e-18, Score: 70.6)
+Mentioned as: Q59646
+Description: Nitric oxide reductase subunit C
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+  BRENDA:  - nitric oxide reductase (cytochrome c) (subunit 1/2) (EC 1.7.2.5)
+  TCDB:  - Nitric oxide reductase subunit C, component of Nitric oxide reductase, NorBC. 3-d structure known (PDB# 3o0R)
+PMID: 40066032
+Source: EuropePMC
+Title: Proteome-wide identification of druggable targets and inhibitors for multidrug-resistant &lt;i&gt;Pseudomonas aeruginosa&lt;/i&gt; using an integrative subtractive proteomics and virtual screening approach
+Journal: Heliyon (2025)
+Snippet: 3772 Q9I093 4854 Q9I5Z4 527 Q59641 1609 Q9HXX9 2691 Q9HUZ6 3773 Q9I094 4855 Q9I5Z6 528 Q59646 1610 Q9HXY3 2692 Q9HV03 3774 Q9I096 4856 Q9I5Z7 529 Q59653 1611 Q9HXY4 2693 Q9HV04 3775 Q9I097 4857 Q9I5Z9 530 Q59654 1612 Q9HXY5 2694 Q9HV05 3776 Q9I098 4858 Q9I600 531 Q60169
+
+================================================================================
+Protein: Q59646 (E-value: 2.1e-18, Score: 70.6)
+Description: Nitric oxide reductase subunit C
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+  BRENDA:  - nitric oxide reductase (cytochrome c) (subunit 1/2) (EC 1.7.2.5)
+  TCDB:  - Nitric oxide reductase subunit C, component of Nitric oxide reductase, NorBC. 3-d structure known (PDB# 3o0R)
+PMID: 23378174
+Source: BRENDA
+
+================================================================================
+Protein: Q59646 (E-value: 2.1e-18, Score: 70.6)
+
+... (truncated, 195 total lines)
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: Q59646
+PMID: 21109633
+Source: PDB
+Gene ID: 3O0R
+Annotation: [Structure]
+
+================================================================================
+Protein: Q59646
+PMID: 22266822
+Source: PDB
+Gene ID: 5GUW
+Annotation: [Structure]
+
+================================================================================
+Protein: Q59646
+PMID: 24338896
+Source: PDB
+Gene ID: 3WFB
+Annotation: [Structure]
+
+================================================================================
+Protein: Q59646
+PMID: 28847930
+Source: PDB
+Gene ID: 5GUW
+Annotation: [Structure]
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A062XS55.1	AF-A0A062XS55-F1-model_v4_TED01:39-126	1	AF-A0A062XS55-F1-model_v4_TED01	39-126	0
+A0A062XS55.1	AF-A0A062XS55-F1-model_v4_TED02:144-236	1	AF-A0A062XS55-F1-model_v4_TED02	144-236	0
+A0A099G750.1	AF-A0A099G750-F1-model_v4_TED02:48-138	1	AF-A0A099G750-F1-model_v4_TED02	48-138	0
+A0A099G750.1	AF-A0A099G750-F1-model_v4_TED01:2-41	1	AF-A0A099G750-F1-model_v4_TED01	2-41	100.0%
+A0A0A0DUG6.1	AF-A0A0A0DUG6-F1-model_v4_TED02:49-134	1	AF-A0A0A0DUG6-F1-model_v4_TED02	49-134	0
+A0A0A0DUG6.1	AF-A0A0A0DUG6-F1-model_v4_TED01:11-45	1	AF-A0A0A0DUG6-F1-model_v4_TED01	11-45	79.1%
+A0A0B0H915.1	AF-A0A0B0H915-F1-model_v4_TED02:42-143	1	AF-A0A0B0H915-F1-model_v4_TED02	42-143	0
+A0A0B0H915.1	AF-A0A0B0H915-F1-model_v4_TED01:2-41	1	AF-A0A0B0H915-F1-model_v4_TED01	2-41	100.0%
+A0A0B5DZM3.1	AF-A0A0B5DZM3-F1-model_v4_TED02:49-139	1	AF-A0A0B5DZM3-F1-model_v4_TED02	49-139	0
+A0A0B5DZM3.1	AF-A0A0B5DZM3-F1-model_v4_TED01:8-40	1	AF-A0A0B5DZM3-F1-model_v4_TED01	8-40	82.5%
+A0A0C1YN45.1	AF-A0A0C1YN45-F1-model_v4_TED02:42-130	1	AF-A0A0C1YN45-F1-model_v4_TED02	42-130	0
+A0A0C1YN45.1	AF-A0A0C1YN45-F1-model_v4_TED01:8-38	1	AF-A0A0C1YN45-F1-model_v4_TED01	8-38	79.5%
+A0A0D7KD78.1	AF-A0A0D7KD78-F1-model_v4_TED02:42-141	1	AF-A0A0D7KD78-F1-model_v4_TED02	42-141	0
+A0A0D7KD78.1	AF-A0A0D7KD78-F1-model_v4_TED01:1-40	1	AF-A0A0D7KD78-F1-model_v4_TED01	1-40	100.0%
+A0A0F7JXR0.1	AF-A0A0F7JXR0-F1-model_v4_TED01:46-148	1	AF-A0A0F7JXR0-F1-model_v4_TED01	46-148	0
+A0A0K6IX61.1	AF-A0A0K6IX61-F1-model_v4_TED02:41-143	1	AF-A0A0K6IX61-F1-model_v4_TED02	41-143	0
+A0A0K6IX61.1	AF-A0A0K6IX61-F1-model_v4_TED01:2-39	1	AF-A0A0K6IX61-F1-model_v4_TED01	2-39	97.4%
+A0A0M1J2F1.1	AF-A0A0M1J2F1-F1-model_v4_TED02:44-132	1	AF-A0A0M1J2F1-F1-model_v4_TED02	44-132	0
+A0A0M1J2F1.1	AF-A0A0M1J2F1-F1-model_v4_TED01:8-37	1	AF-A0A0M1J2F1-F1-model_v4_TED01	8-37	76.9%
+A0A0M2R991.1	AF-A0A0M2R991-F1-model_v4_TED02:45-140	1	AF-A0A0M2R991-F1-model_v4_TED02	45-140	0
+A0A0M2R991.1	AF-A0A0M2R991-F1-model_v4_TED01:2-38	1	AF-A0A0M2R991-F1-model_v4_TED01	2-38	90.2%
+A0A0M3TU81.1	AF-A0A0M3TU81-F1-model_v4_TED02:43-133	1	AF-A0A0M3TU81-F1-model_v4_TED02	43-133	0
+A0A0M3TU81.1	AF-A0A0M3TU81-F1-model_v4_TED01:8-37	1	AF-A0A0M3TU81-F1-model_v4_TED01	8-37	76.9%
+A0A0P6VPQ7.1	AF-A0A0P6VPQ7-F1-model_v4_TED02:49-138	1	AF-A0A0P6VPQ7-F1-model_v4_TED02	49-138	0
+A0A0P6VPQ7.1	AF-A0A0P6VPQ7-F1-model_v4_TED01:2-40	1	AF-A0A0P6VPQ7-F1-model_v4_TED01	2-40	97.5%
+A0A1B4V7Z8.1	AF-A0A1B4V7Z8-F1-model_v4_TED02:49-138	1	AF-A0A1B4V7Z8-F1-model_v4_TED02	49-138	0
+A0A1B4V7Z8.1	AF-A0A1B4V7Z8-F1-model_v4_TED01:10-40	1	AF-A0A1B4V7Z8-F1-model_v4_TED01	10-40	77.5%
+A0A1C6MK76.1	AF-A0A1C6MK76-F1-model_v4_TED02:42-129	1	AF-A0A1C6MK76-F1-model_v4_TED02	42-129	0
+A0A1C6MK76.1	AF-A0A1C6MK76-F1-model_v4_TED01:8-38	1	AF-A0A1C6MK76-F1-model_v4_TED01	8-38	79.5%
+A0A1E5Q2Y2.1	AF-A0A1E5Q2Y2-F1-model_v4_TED02:46-138	1	AF-A0A1E5Q2Y2-F1-model_v4_TED02	46-138	0
+A0A1E5Q2Y2.1	AF-A0A1E5Q2Y2-F1-model_v4_TED01:2-41	1	AF-A0A1E5Q2Y2-F1-model_v4_TED01	2-41	100.0%
+A0A1G5P5S6.1	AF-A0A1G5P5S6-F1-model_v4_TED02:46-138	1	AF-A0A1G5P5S6-F1-model_v4_TED02	46-138	0
+A0A1G5P5S6.1	AF-A0A1G5P5S6-F1-model_v4_TED01:2-40	1	AF-A0A1G5P5S6-F1-model_v4_TED01	2-40	97.5%
+A0A1G5Q9Q5.1	AF-A0A1G5Q9Q5-F1-model_v4_TED02:43-144	1	AF-A0A1G5Q9Q5-F1-model_v4_TED02	43-144	0
+A0A1G5Q9Q5.1	AF-A0A1G5Q9Q5-F1-model_v4_TED01:2-41	1	AF-A0A1G5Q9Q5-F1-model_v4_TED01	2-41	100.0%
+A0A1G5SHF8.1	AF-A0A1G5SHF8-F1-model_v4_TED02:47-138	1	AF-A0A1G5SHF8-F1-model_v4_TED02	47-138	0
+A0A1G5SHF8.1	AF-A0A1G5SHF8-F1-model_v4_TED01:2-40	1	AF-A0A1G5SHF8-F1-model_v4_TED01	2-40	97.5%
+A0A1H6FEZ7.1	AF-A0A1H6FEZ7-F1-model_v4_TED02:43-134	1	AF-A0A1H6FEZ7-F1-model_v4_TED02	43-134	0
+A0A1H6FEZ7.1	AF-A0A1H6FEZ7-F1-model_v4_TED01:8-39	1	AF-A0A1H6FEZ7-F1-model_v4_TED01	8-39	80.0%
+A0A1H7KLR4.1	AF-A0A1H7KLR4-F1-model_v4_TED02:42-146	1	AF-A0A1H7KLR4-F1-model_v4_TED02	42-146	0
+A0A1H7KLR4.1	AF-A0A1H7KLR4-F1-model_v4_TED01:2-41	1	AF-A0A1H7KLR4-F1-model_v4_TED01	2-41	100.0%
+A0A1H8I2V9.1	AF-A0A1H8I2V9-F1-model_v4_TED02:44-130	1	AF-A0A1H8I2V9-F1-model_v4_TED02	44-130	0
+A0A1H8I2V9.1	AF-A0A1H8I2V9-F1-model_v4_TED01:8-38	1	AF-A0A1H8I2V9-F1-model_v4_TED01	8-38	79.5%
+A0A1I0RBQ7.1	AF-A0A1I0RBQ7-F1-model_v4_TED02:49-139	1	AF-A0A1I0RBQ7-F1-model_v4_TED02	49-139	0
+A0A1I0RBQ7.1	AF-A0A1I0RBQ7-F1-model_v4_TED01:2-40	1	AF-A0A1I0RBQ7-F1-model_v4_TED01	2-40	97.5%
+A0A1M7GCA5.1	AF-A0A1M7GCA5-F1-model_v4_TED01:49-139	1	AF-A0A1M7GCA5-F1-model_v4_TED01	49-139	0
+A0A1N6IAG7.1	AF-A0A1N6IAG7-F1-model_v4_TED01:44-138	1	AF-A0A1N6IAG7-F1-model_v4_TED01	44-138	0
+A0A1R3WLB0.1	AF-A0A1R3WLB0-F1-model_v4_TED02:45-150	1	AF-A0A1R3WLB0-F1-model_v4_TED02	45-150	0
+A0A1R3WLB0.1	AF-A0A1R3WLB0-F1-model_v4_TED01:2-40	1	AF-A0A1R3WLB0-F1-model_v4_TED01	2-40	97.5%
+A0A1T1AMZ4.1	AF-A0A1T1AMZ4-F1-model_v4_TED02:49-133	1	AF-A0A1T1AMZ4-F1-model_v4_TED02	49-133	0
+A0A1T1AMZ4.1	AF-A0A1T1AMZ4-F1-model_v4_TED01:8-45	1	AF-A0A1T1AMZ4-F1-model_v4_TED01	8-45	86.0%
+A0A1T2LB81.1	AF-A0A1T2LB81-F1-model_v4_TED02:42-131	1	AF-A0A1T2LB81-F1-model_v4_TED02	42-131	0
+A0A1T2LB81.1	AF-A0A1T2LB81-F1-model_v4_TED01:6-36	1	AF-A0A1T2LB81-F1-model_v4_TED01	6-36	79.5%
+A0A1V0GWQ4.1	AF-A0A1V0GWQ4-F1-model_v4_TED02:46-138	1	AF-A0A1V0GWQ4-F1-model_v4_TED02	46-138	0
+A0A1V0GWQ4.1	AF-A0A1V0GWQ4-F1-model_v4_TED01:2-40	1	AF-A0A1V0GWQ4-F1-model_v4_TED01	2-40	97.5%
+A0A1X6YG45.1	AF-A0A1X6YG45-F1-model_v4_TED02:49-139	1	AF-A0A1X6YG45-F1-model_v4_TED02	49-139	0
+A0A1X6YG45.1	AF-A0A1X6YG45-F1-model_v4_TED01:7-40	1	AF-A0A1X6YG45-F1-model_v4_TED01	7-40	85.0%
+A0A1X6ZYX6.1	AF-A0A1X6ZYX6-F1-model_v4_TED02:49-139	1	AF-A0A1X6ZYX6-F1-model_v4_TED02	49-139	0
+A0A1X6ZYX6.1	AF-A0A1X6ZYX6-F1-model_v4_TED01:2-40	1	AF-A0A1X6ZYX6-F1-model_v4_TED01	2-40	97.5%
+A0A1X7BU16.1	AF-A0A1X7BU16-F1-model_v4_TED02:48-139	1	AF-A0A1X7BU16-F1-model_v4_TED02	48-139	0
+A0A1X7BU16.1	AF-A0A1X7BU16-F1-model_v4_TED01:8-40	1	AF-A0A1X7BU16-F1-model_v4_TED01	8-40	82.5%
+A0A1Y2KYU0.1	AF-A0A1Y2KYU0-F1-model_v4_TED02:49-138	1	AF-A0A1Y2KYU0-F1-model_v4_TED02	49-138	0
+A0A1Y2KYU0.1	AF-A0A1Y2KYU0-F1-model_v4_TED01:8-40	1	AF-A0A1Y2KYU0-F1-model_v4_TED01	8-40	82.5%
+A0A212R8P6.1	AF-A0A212R8P6-F1-model_v4_TED02:47-139	1	AF-A0A212R8P6-F1-model_v4_TED02	47-139	0
+A0A212R8P6.1	AF-A0A212R8P6-F1-model_v4_TED01:2-40	1	AF-A0A212R8P6-F1-model_v4_TED01	2-40	97.5%
+A0A238LAC0.1	AF-A0A238LAC0-F1-model_v4_TED02:49-139	1	AF-A0A238LAC0-F1-model_v4_TED02	49-139	0
+A0A238LAC0.1	AF-A0A238LAC0-F1-model_v4_TED01:9-40	1	AF-A0A238LAC0-F1-model_v4_TED01	9-40	80.0%
+A0A238YRM3.1	AF-A0A238YRM3-F1-model_v4_TED01:2-56	1	AF-A0A238YRM3-F1-model_v4_TED01	2-56	98.2%
+A0A239C1Y3.1	AF-A0A239C1Y3-F1-model_v4_TED02:56-148	1	AF-A0A239C1Y3-F1-model_v4_TED02	56-148	0
+A0A239C1Y3.1	AF-A0A239C1Y3-F1-model_v4_TED01:19-51	1	AF-A0A239C1Y3-F1-model_v4_TED01	19-51	66.0%
+A0A257LGB4.1	AF-A0A257LGB4-F1-model_v4_TED02:46-141	1	AF-A0A257LGB4-F1-model_v4_TED02	46-141	0
+A0A257LGB4.1	AF-A0A257LGB4-F1-model_v4_TED01:2-41	1	AF-A0A257LGB4-F1-model_v4_TED01	2-41	100.0%
+A0A261GN96.1	AF-A0A261GN96-F1-model_v4_TED02:42-146	1	AF-A0A261GN96-F1-model_v4_TED02	42-146	0
+A0A261GN96.1	AF-A0A261GN96-F1-model_v4_TED01:2-41	1	AF-A0A261GN96-F1-model_v4_TED01	2-41	100.0%
+A0A285CWY9.1	AF-A0A285CWY9-F1-model_v4_TED02:44-138	1	AF-A0A285CWY9-F1-model_v4_TED02	44-138	0
+A0A285CWY9.1	AF-A0A285CWY9-F1-model_v4_TED01:2-41	1	AF-A0A285CWY9-F1-model_v4_TED01	2-41	100.0%
+A0A286GJ63.1	AF-A0A286GJ63-F1-model_v4_TED02:48-139	1	AF-A0A286GJ63-F1-model_v4_TED02	48-139	0
+A0A286GJ63.1	AF-A0A286GJ63-F1-model_v4_TED01:2-40	1	AF-A0A286GJ63-F1-model_v4_TED01	2-40	97.5%
+A0A2A4GCN5.1	AF-A0A2A4GCN5-F1-model_v4_TED02:43-134	1	AF-A0A2A4GCN5-F1-model_v4_TED02	43-134	0
+A0A2A4GCN5.1	AF-A0A2A4GCN5-F1-model_v4_TED01:5-33	1	AF-A0A2A4GCN5-F1-model_v4_TED01	5-33	80.6%
+A0A2G4YUT5.1	AF-A0A2G4YUT5-F1-model_v4_TED02:44-139	1	AF-A0A2G4YUT5-F1-model_v4_TED02	44-139	0
+A0A2G4YUT5.1	AF-A0A2G4YUT5-F1-model_v4_TED01:10-40	1	AF-A0A2G4YUT5-F1-model_v4_TED01	10-40	77.5%
+A0A2I6S774.1	AF-A0A2I6S774-F1-model_v4_TED02:43-130	1	AF-A0A2I6S774-F1-model_v4_TED02	43-130	0
+A0A2I6S774.1	AF-A0A2I6S774-F1-model_v4_TED01:8-38	1	AF-A0A2I6S774-F1-model_v4_TED01	8-38	79.5%
+A0A2K9LKG0.1	AF-A0A2K9LKG0-F1-model_v4_TED02:43-144	1	AF-A0A2K9LKG0-F1-model_v4_TED02	43-144	0
+A0A2K9LKG0.1	AF-A0A2K9LKG0-F1-model_v4_TED01:8-41	1	AF-A0A2K9LKG0-F1-model_v4_TED01	8-41	84.6%
+A0A2R5F9K4.1	AF-A0A2R5F9K4-F1-model_v4_TED02:42-141	1	AF-A0A2R5F9K4-F1-model_v4_TED02	42-141	0
+A0A2R5F9K4.1	AF-A0A2R5F9K4-F1-model_v4_TED01:2-41	1	AF-A0A2R5F9K4-F1-model_v4_TED01	2-41	100.0%
+A0A2S2CLC3.1	AF-A0A2S2CLC3-F1-model_v4_TED02:45-138	1	AF-A0A2S2CLC3-F1-model_v4_TED02	45-138	0
+A0A2S2CLC3.1	AF-A0A2S2CLC3-F1-model_v4_TED01:2-40	1	AF-A0A2S2CLC3-F1-model_v4_TED01	2-40	97.5%
+A0A2S6NN04.1	AF-A0A2S6NN04-F1-model_v4_TED02:45-149	1	AF-A0A2S6NN04-F1-model_v4_TED02	45-149	0
+A0A2S6NN04.1	AF-A0A2S6NN04-F1-model_v4_TED01:2-43	1	AF-A0A2S6NN04-F1-model_v4_TED01	2-43	100.0%
+A0A2T4JRL4.1	AF-A0A2T4JRL4-F1-model_v4_TED02:47-140	1	AF-A0A2T4JRL4-F1-model_v4_TED02	47-140	0
+A0A2T4JRL4.1	AF-A0A2T4JRL4-F1-model_v4_TED01:2-39	1	AF-A0A2T4JRL4-F1-model_v4_TED01	2-39	92.7%
+A0A2T7G8E2.1	AF-A0A2T7G8E2-F1-model_v4_TED02:49-139	1	AF-A0A2T7G8E2-F1-model_v4_TED02	49-139	0
+A0A2T7G8E2.1	AF-A0A2T7G8E2-F1-model_v4_TED01:10-40	1	AF-A0A2T7G8E2-F1-model_v4_TED01	10-40	77.5%
+A0A2T7HCY7.1	AF-A0A2T7HCY7-F1-model_v4_TED02:49-139	1	AF-A0A2T7HCY7-F1-model_v4_TED02	49-139	0
+A0A2T7HCY7.1	AF-A0A2T7HCY7-F1-model_v4_TED01:2-40	1	AF-A0A2T7HCY7-F1-model_v4_TED01	2-40	97.5%
+A0A2U3QL21.1	AF-A0A2U3QL21-F1-model_v4_TED01:40-123	1	AF-A0A2U3QL21-F1-model_v4_TED01	40-123	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 50 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF00115	COX1	50	1.00	0.93
+PF00034	Cytochrom_C	49	0.98	0.90
+PF02433	FixO	49	0.98	0.90
+PF07728	AAA_5	49	0.98	0.90
+PF00510	COX3	48	0.96	0.87
+PF08406	CbbQ_C	48	0.96	0.87
+PF00355	Rieske	47	0.94	0.84
+PF13237	Fer4_10	46	0.92	0.81
+PF00032	Cytochrom_B_C	44	0.88	0.76
+PF00033	Cytochrome_B	44	0.88	0.76
+PF13631	Cytochrom_B_N_2	44	0.88	0.76
+PF00116	COX2	44	0.88	0.76
+PF13183	Fer4_8	44	0.88	0.76
+PF02790	COX2_TM	43	0.86	0.74
+PF10399	UCR_Fe-S_N	43	0.86	0.74
+PF13534	Fer4_17	43	0.86	0.74
+PF13442	Cytochrome_CBB3	42	0.84	0.71
+PF00092	VWA	42	0.84	0.71
+PF00009	GTP_EFTU	42	0.84	0.71
+PF03143	GTP_EFTU_D3	41	0.82	0.69
+PF03144	GTP_EFTU_D2	41	0.82	0.69
+PF05545	FixQ	41	0.82	0.69
+PF13085	Fer2_3	41	0.82	0.69
+PF00384	Molybdopterin	40	0.80	0.67
+PF02167	Cytochrom_C1	40	0.80	0.67
+PF12838	Fer4_7	40	0.80	0.67
+PF04314	LpqE-like	39	0.78	0.65
+PF01568	Molydop_binding	39	0.78	0.65
+PF13247	Fer4_11	38	0.76	0.63
+PF04879	Molybdop_Fe4S4	38	0.76	0.63
+PF00037	Fer4	38	0.76	0.63
+PF01565	FAD_binding_4	37	0.74	0.60
+PF02913	FAD-oxidase_C	37	0.74	0.60
+PF05940	NnrS	37	0.74	0.60
+PF12801	Fer4_5	36	0.72	0.58
+PF07732	Cu-oxidase_3	35	0.70	0.56
+PF18764	nos_propeller	34	0.68	0.54
+PF00174	Oxidored_molyb	34	0.68	0.54
+PF05048	NosD	33	0.66	0.52
+PF13229	Beta_helix	33	0.66	0.52
+PF00394	Cu-oxidase	32	0.64	0.50
+PF12679	ABC2_membrane_2	32	0.64	0.50
+PF12837	Fer4_6	32	0.64	0.50
+
+--- End STRING ---

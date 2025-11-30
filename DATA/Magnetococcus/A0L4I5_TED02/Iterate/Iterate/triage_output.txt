@@ -1,0 +1,128 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L4I5_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.80 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+3	4	Eubacteriales
+3	4	Bacillales
+6	3	Clostridia
+3	3	Bacilli
+5	2	Pseudomonadota
+5	2	Bacteroidota
+10	2	Bacillota
+12	1	Bacillati
+11	1	Pseudomonadati
+24	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A074LRU8	RELA/SPOT DOMAIN-CONTAINI     61.4      3e-13   1   1.6   0.0
+	Iterate                   	   226	   338	    60.3
+	PF04607	RelA_SpoT       	    47	   173	    71.4
+
+A0A1Y2K3N9	PUTATIVE RELA/SPOT DOMAIN    194.3    1.7e-54   1   1.6   0.1
+	Iterate                   	   235	   349	   193.2
+	PF04607	RelA_SpoT       	    50	   175	    52.5
+
+A0A4Z0H436	(P)PPGPP SYNTHETASE {ECO:    168.2    2.1e-46   1   2.0   3.1
+	Iterate                   	   225	   341	   166.4
+	PF04607	RelA_SpoT       	    47	   172	    81.3
+
+A0L4I5	RELA/SPOT DOMAIN PROTEIN {ECO    193.2    3.9e-54   1   2.3   1.0
+	Iterate                   	   237	   350	   191.0
+	PF04607	RelA_SpoT       	    50	   176	      64
+
+N0APS6	RELA/SPOT DOMAIN-CONTAINING P     52.6    1.7e-10   1   1.6   0.5
+	Iterate                   	   221	   334	    51.3
+	PF04607	RelA_SpoT       	    43	   168	    80.9
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A074LRU8.1	AF-A0A074LRU8-F1-model_v4_TED01:6-196	1	AF-A0A074LRU8-F1-model_v4_TED01	6-196	0
+A0A074LRU8.1	AF-A0A074LRU8-F1-model_v4_TED02:218-362	1	AF-A0A074LRU8-F1-model_v4_TED02	218-362	100.0%
+A0A0F2J5M4.1	AF-A0A0F2J5M4-F1-model_v4_TED01:2-196	1	AF-A0A0F2J5M4-F1-model_v4_TED01	2-196	0
+A0A0F2J5M4.1	AF-A0A0F2J5M4-F1-model_v4_TED02:218-355	1	AF-A0A0F2J5M4-F1-model_v4_TED02	218-355	100.0%
+A0A0U2YZA3.1	AF-A0A0U2YZA3-F1-model_v4_TED01:2-192	1	AF-A0A0U2YZA3-F1-model_v4_TED01	2-192	0
+A0A0U2YZA3.1	AF-A0A0U2YZA3-F1-model_v4_TED02:222-354	1	AF-A0A0U2YZA3-F1-model_v4_TED02	222-354	100.0%
+A0A177QYD4.1	AF-A0A177QYD4-F1-model_v4_TED01:6-194	1	AF-A0A177QYD4-F1-model_v4_TED01	6-194	0
+A0A177QYD4.1	AF-A0A177QYD4-F1-model_v4_TED02:217-363	1	AF-A0A177QYD4-F1-model_v4_TED02	217-363	100.0%
+A0A1E5E4Y6.1	AF-A0A1E5E4Y6-F1-model_v4_TED01:4-151	1	AF-A0A1E5E4Y6-F1-model_v4_TED01	4-151	0
+A0A1E5E4Y6.1	AF-A0A1E5E4Y6-F1-model_v4_TED02:218-351	1	AF-A0A1E5E4Y6-F1-model_v4_TED02	218-351	100.0%
+A0A1Y2K3N9.1	AF-A0A1Y2K3N9-F1-model_v4_TED01:5-199	1	AF-A0A1Y2K3N9-F1-model_v4_TED01	5-199	0
+A0A1Y2K3N9.1	AF-A0A1Y2K3N9-F1-model_v4_TED02:235-349	1	AF-A0A1Y2K3N9-F1-model_v4_TED02	235-349	100.0%
+A0A263BRB1.1	AF-A0A263BRB1-F1-model_v4_TED01:2-171	1	AF-A0A263BRB1-F1-model_v4_TED01	2-171	0
+A0A263BRB1.1	AF-A0A263BRB1-F1-model_v4_TED02:218-371	1	AF-A0A263BRB1-F1-model_v4_TED02	218-371	100.0%
+A0A2T5H8G3.1	AF-A0A2T5H8G3-F1-model_v4_TED01:2-150	1	AF-A0A2T5H8G3-F1-model_v4_TED01	2-150	0
+A0A2T5H8G3.1	AF-A0A2T5H8G3-F1-model_v4_TED02:217-351	1	AF-A0A2T5H8G3-F1-model_v4_TED02	217-351	100.0%
+A0A367QFX6.1	AF-A0A367QFX6-F1-model_v4_TED01:2-156	1	AF-A0A367QFX6-F1-model_v4_TED01	2-156	0
+A0A367QFX6.1	AF-A0A367QFX6-F1-model_v4_TED02:224-364	1	AF-A0A367QFX6-F1-model_v4_TED02	224-364	100.0%
+A0A4Z0H436.1	AF-A0A4Z0H436-F1-model_v4_TED01:2-157	1	AF-A0A4Z0H436-F1-model_v4_TED01	2-157	0
+A0A4Z0H436.1	AF-A0A4Z0H436-F1-model_v4_TED02:218-361	1	AF-A0A4Z0H436-F1-model_v4_TED02	218-361	100.0%
+A0A7X9M324.1	AF-A0A7X9M324-F1-model_v4_TED01:9-196	1	AF-A0A7X9M324-F1-model_v4_TED01	9-196	0
+A0A7X9M324.1	AF-A0A7X9M324-F1-model_v4_TED02:219-356	1	AF-A0A7X9M324-F1-model_v4_TED02	219-356	100.0%
+A0L4I5.1	AF-A0L4I5-F1-model_v4_TED01:10-195	1	AF-A0L4I5-F1-model_v4_TED01	10-195	0
+A0L4I5.1	AF-A0L4I5-F1-model_v4_TED02:237-350	1	AF-A0L4I5-F1-model_v4_TED02	237-350	100.0%
+N0APS6.1	AF-N0APS6-F1-model_v4_TED01:2-164	1	AF-N0APS6-F1-model_v4_TED01	2-164	0
+N0APS6.1	AF-N0APS6-F1-model_v4_TED02:217-352	1	AF-N0APS6-F1-model_v4_TED02	217-352	100.0%
+Q67NX2.1	AF-Q67NX2-F1-model_v4_TED01:37-199	1	AF-Q67NX2-F1-model_v4_TED01	37-199	0
+Q67NX2.1	AF-Q67NX2-F1-model_v4_TED02:262-399	1	AF-Q67NX2-F1-model_v4_TED02	262-399	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 12 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF01966	HD	11	0.92	0.65
+PF02824	TGS	11	0.92	0.65
+PF04607	RelA_SpoT	11	0.92	0.65
+PF13291	ACT_4	11	0.92	0.65
+PF13328	HD_4	11	0.92	0.65
+PF28438	RelA_RIS	11	0.92	0.65
+PF01134	GIDA	10	0.83	0.55
+PF13932	SAM_GIDA_C	10	0.83	0.55
+PF01926	MMR_HSR1	10	0.83	0.55
+PF02421	FeoB_N	10	0.83	0.55
+PF10396	TrmE_N	10	0.83	0.55
+PF12631	MnmE_helical	10	0.83	0.55
+
+--- End STRING ---

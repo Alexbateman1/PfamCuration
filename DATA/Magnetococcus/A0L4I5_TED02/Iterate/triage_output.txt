@@ -1,0 +1,131 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L4I5_TED02/Iterate
+GA   27.00 27.00;
+TC   27.20 28.90;
+NC   26.50 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+2	6	Desulfosporosinus.
+2	5	Magnetococcaceae
+2	5	Desulfitobacteriaceae
+2	5	Bacillaceae
+4	4	Bacillales
+3	4	Eubacteriales
+2	4	Magnetococcales
+4	3	Bacilli
+3	3	Clostridia
+2	3	Magnetococcia
+7	2	Bacillota
+3	2	Pseudomonadota
+2	2	Bacteroidota
+8	1	Bacillati
+6	1	Pseudomonadati
+14	0	Bacteria
+Total of 14 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A067PY26	MALT-LIKE TPR REGION DOMA     36.5    1.6e-05   7   8.0   9.6
+	Iterate                   	    41	   112	     8.6
+
+A0A1Y2K3N9	PUTATIVE RELA/SPOT DOMAIN    130.7      9e-35   1   1.4   0.1
+	Iterate                   	   235	   349	   130.0
+	PF04607	RelA_SpoT       	    50	   175	    52.5
+
+A0A4Z0H436	(P)PPGPP SYNTHETASE {ECO:     39.2    2.2e-06   1   2.0   0.8
+	Iterate                   	   225	   337	    37.7
+	PF04607	RelA_SpoT       	    47	   172	    81.3
+
+A0A9X0A8X5	CHAT DOMAIN-CONTAINING PR     39.4      2e-06   7  13.1  11.3
+	Iterate                   	   656	   706	     5.3
+	PF13374	TPR_10          	    25	    69	    25.7
+	PF13374	TPR_10          	    70	   114	    19.4
+	PF13374	TPR_10          	   115	   159	    21.4
+	PF13374	TPR_10          	   160	   204	    21.7
+	PF12862	ANAPC5          	   171	   211	       7
+	PF13374	TPR_10          	   205	   249	    18.8
+	PF13374	TPR_10          	   250	   294	    23.5
+	PF13374	TPR_10          	   295	   339	    25.9
+	PF13374	TPR_10          	   340	   384	    20.5
+	PF12862	ANAPC5          	   354	   393	     8.4
+	PF13374	TPR_10          	   385	   429	    18.8
+	PF13374	TPR_10          	   430	   474	    21.1
+	PF13374	TPR_10          	   475	   519	    23.1
+	PF13374	TPR_10          	   520	   564	      18
+	PF13374	TPR_10          	   565	   603	    17.5
+	PF13374	TPR_10          	   610	   654	    27.3
+	PF13374	TPR_10          	   655	   699	      26
+	PF13374	TPR_10          	   730	   774	    19.1
+	PF13374	TPR_10          	   775	   819	      19
+	PF12770	CHAT            	  1091	  1436	   117.1
+
+A0L4I5	RELA/SPOT DOMAIN PROTEIN {ECO    254.6    3.2e-73   1   1.5   0.8
+	Iterate                   	   237	   350	   253.6
+	PF04607	RelA_SpoT       	    50	   176	      64
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Y2K3N9.1	AF-A0A1Y2K3N9-F1-model_v4_TED01:5-199	1	AF-A0A1Y2K3N9-F1-model_v4_TED01	5-199	0
+A0A1Y2K3N9.1	AF-A0A1Y2K3N9-F1-model_v4_TED02:235-349	1	AF-A0A1Y2K3N9-F1-model_v4_TED02	235-349	100.0%
+A0A4Z0H436.1	AF-A0A4Z0H436-F1-model_v4_TED01:2-157	1	AF-A0A4Z0H436-F1-model_v4_TED01	2-157	0
+A0A4Z0H436.1	AF-A0A4Z0H436-F1-model_v4_TED02:218-361	1	AF-A0A4Z0H436-F1-model_v4_TED02	218-361	100.0%
+A0L4I5.1	AF-A0L4I5-F1-model_v4_TED01:10-195	1	AF-A0L4I5-F1-model_v4_TED01	10-195	0
+A0L4I5.1	AF-A0L4I5-F1-model_v4_TED02:237-350	1	AF-A0L4I5-F1-model_v4_TED02	237-350	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 8 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF02824	TGS	8	1.00	0.68
+PF04607	RelA_SpoT	8	1.00	0.68
+PF13291	ACT_4	8	1.00	0.68
+PF13328	HD_4	8	1.00	0.68
+PF19296	RelA_AH	8	1.00	0.68
+PF28438	RelA_RIS	8	1.00	0.68
+PF01926	MMR_HSR1	8	1.00	0.68
+PF02421	FeoB_N	8	1.00	0.68
+PF10396	TrmE_N	8	1.00	0.68
+PF12631	MnmE_helical	8	1.00	0.68
+PF01134	GIDA	8	1.00	0.68
+PF13932	SAM_GIDA_C	8	1.00	0.68
+PF01966	HD	7	0.88	0.53
+
+--- End STRING ---

@@ -1,0 +1,176 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LCA4_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.50 29.20;
+NC   26.70 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+4	4	Oscillatoriophycideae
+3	4	Synergistales
+9	3	Cyanophyceae
+3	3	Synergistia
+3	3	Clostridia
+9	2	Cyanobacteriota
+3	2	Thermodesulfobacteriota
+3	2	Synergistota
+3	2	Pseudomonadota
+3	2	Bacillota
+7	1	Pseudomonadati
+4	1	Thermotogati
+14	1	Bacillati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A0B6WWR1	CRISPR-ASSOCIATED PROTEIN    108.3    7.2e-28   1   1.6   0.4
+	Iterate                   	   210	   271	   107.3
+	PF09651	Cas_APE2256     	    69	   204	   116.1
+
+A0A1B8QD01	CRISPR SYSTEM RING NUCLEA    103.2    2.8e-26   1   1.6   0.1
+	Iterate                   	   139	   200	   102.2
+	PF09651	Cas_APE2256     	     1	   134	   110.8
+
+A0A1Y2K7Y6	CRISPR SYSTEM RING NUCLEA    111.0    1.1e-28   1   1.7   0.0
+	Iterate                   	   208	   271	   109.7
+	PF09651	Cas_APE2256     	    67	   202	    48.5
+
+A0A380MSZ9	UNCHARACTERIZED PROTEIN C     67.2    5.1e-15   1   1.9   0.6
+	Iterate                   	   211	   272	    65.9
+	PF09651	Cas_APE2256     	    67	   205	      99
+
+A0LCA4	CRISPR SYSTEM RING NUCLEASE S    114.3    9.7e-30   1   1.6   0.2
+	Iterate                   	   208	   270	   113.3
+	PF09651	Cas_APE2256     	    67	   202	    45.2
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS1730092 (E-value: 1.9e-20, Score: 77.9)
+Mentioned as: sll7062
+Description: hypothetical protein
+Organism: Synechocystis sp. PCC 6803
+PMID: 36419420
+Source: EuropePMC
+Title: Enzymatic properties of CARF-domain proteins in <i>Synechocystis</i> sp. PCC 6803
+Journal: Frontiers in microbiology (2022)
+Snippet: domain proteins have been identified ( Shah et al., 2019 ). The last ORF ( sll7062 ) in the CRISPR2 effector complex operon [transcriptional unit TU7058 ( Kopf et al., 2014 )] encodes a Csm6 family protein. This Csm6 homolog (hereafter SyCsm6) has an N-terminal CARF
+
+================================================================================
+Protein: VIMSS1730092 (E-value: 1.9e-20, Score: 77.9)
+Mentioned as: sll7062
+Description: hypothetical protein
+Organism: Synechocystis sp. PCC 6803
+PMID: 31604936
+Source: EuropePMC
+Title: Structure and functional implications of WYL domain-containing bacterial DNA damage response regulator PafBC
+Journal: Nature communications (2019)
+Snippet: response-independent transcriptional activator of a cell division inhibitor protein in Caulobacter crescentus 13 (2) Sll7009, Sll7062, Sll7078, transcriptional repressors of CRISPR/Cas system mature crRNA in Synechocystis 6803 14 , (3) PIF1 helicase from Thermotoga elfii 15 and (4) WYL domain-containing proteins stimulating RNA cleavage by Cas13d
+
+================================================================================
+Protein: VIMSS1730092 (E-value: 1.9e-20, Score: 77.9)
+Mentioned as: sll7062
+Description: hypothetical protein
+Organism: Synechocystis sp. PCC 6803
+PMID: 24817877
+Source: EuropePMC
+Title: CARF and WYL domains: ligand-binding regulators of prokaryotic defense systems
+Journal: Frontiers in genetics (2014)
+Snippet: distinct inserts (Figure 3 ). For example, in the group that consists of the SSO1393, sll7062, ST0035, and MA0186 families, there is an -helical bundle inserted immediately after strand-1. Likewise, in the PF1127 family, a -hairpin is inserted after strand-1 and multiple additional inserts are present
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: Q6ZED6
+PMID: 18000013
+Source: IntAct
+Gene ID: Q6ZED6
+Annotation: [Interaction]
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B6WWR1.1	AF-A0A0B6WWR1-F1-model_v4_TED01:5-203	1	AF-A0A0B6WWR1-F1-model_v4_TED01	5-203	0
+A0A0B6WWR1.1	AF-A0A0B6WWR1-F1-model_v4_TED03:278-368	1	AF-A0A0B6WWR1-F1-model_v4_TED03	278-368	0
+A0A0B6WWR1.1	AF-A0A0B6WWR1-F1-model_v4_TED02:208-270	1	AF-A0A0B6WWR1-F1-model_v4_TED02	208-270	98.4%
+A0A1B9F3H5.1	AF-A0A1B9F3H5-F1-model_v4_TED01:3-178	1	AF-A0A1B9F3H5-F1-model_v4_TED01	3-178	0
+A0A1B9F3H5.1	AF-A0A1B9F3H5-F1-model_v4_TED02:245-346	1	AF-A0A1B9F3H5-F1-model_v4_TED02	245-346	1.6%
+A0A1H0FV32.1	AF-A0A1H0FV32-F1-model_v4_TED01:4-201	1	AF-A0A1H0FV32-F1-model_v4_TED01	4-201	0
+A0A1H0FV32.1	AF-A0A1H0FV32-F1-model_v4_TED03:277-364	1	AF-A0A1H0FV32-F1-model_v4_TED03	277-364	0
+A0A1H0FV32.1	AF-A0A1H0FV32-F1-model_v4_TED02:207-268	1	AF-A0A1H0FV32-F1-model_v4_TED02	207-268	100.0%
+A0A1J0AAJ6.1	AF-A0A1J0AAJ6-F1-model_v4_TED01:5-200	1	AF-A0A1J0AAJ6-F1-model_v4_TED01	5-200	0
+A0A1J0AAJ6.1	AF-A0A1J0AAJ6-F1-model_v4_TED02:206-272	1	AF-A0A1J0AAJ6-F1-model_v4_TED02	206-272	100.0%
+A0A1J0AAJ6.1	AF-A0A1J0AAJ6-F1-model_v4_TED03:276-371	1	AF-A0A1J0AAJ6-F1-model_v4_TED03	276-371	0
+A0A1X4G3Q7.1	AF-A0A1X4G3Q7-F1-model_v4_TED01:6-202	1	AF-A0A1X4G3Q7-F1-model_v4_TED01	6-202	0
+A0A1X4G3Q7.1	AF-A0A1X4G3Q7-F1-model_v4_TED02:210-366	1	AF-A0A1X4G3Q7-F1-model_v4_TED02	210-366	98.3%
+A0A1Y2K7Y6.1	AF-A0A1Y2K7Y6-F1-model_v4_TED01:7-201	1	AF-A0A1Y2K7Y6-F1-model_v4_TED01	7-201	0
+A0A1Y2K7Y6.1	AF-A0A1Y2K7Y6-F1-model_v4_TED03:279-371	1	AF-A0A1Y2K7Y6-F1-model_v4_TED03	279-371	0
+A0A1Y2K7Y6.1	AF-A0A1Y2K7Y6-F1-model_v4_TED02:210-271	1	AF-A0A1Y2K7Y6-F1-model_v4_TED02	210-271	96.9%
+A0A3N5AQ61.1	AF-A0A3N5AQ61-F1-model_v4_TED01:4-206	1	AF-A0A3N5AQ61-F1-model_v4_TED01	4-206	0
+A0A3N5AQ61.1	AF-A0A3N5AQ61-F1-model_v4_TED02:217-378	1	AF-A0A3N5AQ61-F1-model_v4_TED02	217-378	95.2%
+A0A5B8NR15.1	AF-A0A5B8NR15-F1-model_v4_TED01:4-201	1	AF-A0A5B8NR15-F1-model_v4_TED01	4-201	0
+A0A5B8NR15.1	AF-A0A5B8NR15-F1-model_v4_TED02:213-270	1	AF-A0A5B8NR15-F1-model_v4_TED02	213-270	93.5%
+A0A5B8NR15.1	AF-A0A5B8NR15-F1-model_v4_TED03:277-294_307-369	1	AF-A0A5B8NR15-F1-model_v4_TED03	277-369	0
+A0A5C2HHD1.1	AF-A0A5C2HHD1-F1-model_v4_TED01:5-203	1	AF-A0A5C2HHD1-F1-model_v4_TED01	5-203	0
+A0A5C2HHD1.1	AF-A0A5C2HHD1-F1-model_v4_TED02:208-272	1	AF-A0A5C2HHD1-F1-model_v4_TED02	208-272	100.0%
+A0A5C2HHD1.1	AF-A0A5C2HHD1-F1-model_v4_TED03:279-370	1	AF-A0A5C2HHD1-F1-model_v4_TED03	279-370	0
+A0LCA4.1	AF-A0LCA4-F1-model_v4_TED01:7-201	1	AF-A0LCA4-F1-model_v4_TED01	7-201	0
+A0LCA4.1	AF-A0LCA4-F1-model_v4_TED03:272-371	1	AF-A0LCA4-F1-model_v4_TED03	272-371	0
+A0LCA4.1	AF-A0LCA4-F1-model_v4_TED02:208-270	1	AF-A0LCA4-F1-model_v4_TED02	208-270	100.0%
+I5B4J9.1	AF-I5B4J9-F1-model_v4_TED01:15-216	1	AF-I5B4J9-F1-model_v4_TED01	15-216	0
+I5B4J9.1	AF-I5B4J9-F1-model_v4_TED02:224-282	1	AF-I5B4J9-F1-model_v4_TED02	224-282	98.3%
+I5B4J9.1	AF-I5B4J9-F1-model_v4_TED03:287-382	1	AF-I5B4J9-F1-model_v4_TED03	287-382	0
+Q1AZE3.1	AF-Q1AZE3-F1-model_v4_TED01:9-207	1	AF-Q1AZE3-F1-model_v4_TED01	9-207	0
+Q1AZE3.1	AF-Q1AZE3-F1-model_v4_TED02:212-275	1	AF-Q1AZE3-F1-model_v4_TED02	212-275	100.0%
+Q1AZE3.1	AF-Q1AZE3-F1-model_v4_TED03:276-373	1	AF-Q1AZE3-F1-model_v4_TED03	276-373	0
+Q6ZED6.1	AF-Q6ZED6-F1-model_v4_TED01:4-199	1	AF-Q6ZED6-F1-model_v4_TED01	4-199	0
+Q6ZED6.1	AF-Q6ZED6-F1-model_v4_TED02:205-268	1	AF-Q6ZED6-F1-model_v4_TED02	205-268	100.0%
+Q6ZED6.1	AF-Q6ZED6-F1-model_v4_TED03:270-371	1	AF-Q6ZED6-F1-model_v4_TED03	270-371	0
+V4JXA9.1	AF-V4JXA9-F1-model_v4_TED01:4-199	1	AF-V4JXA9-F1-model_v4_TED01	4-199	0
+V4JXA9.1	AF-V4JXA9-F1-model_v4_TED02:204-267	1	AF-V4JXA9-F1-model_v4_TED02	204-267	100.0%
+V4JXA9.1	AF-V4JXA9-F1-model_v4_TED03:274-364	1	AF-V4JXA9-F1-model_v4_TED03	274-364	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 10 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

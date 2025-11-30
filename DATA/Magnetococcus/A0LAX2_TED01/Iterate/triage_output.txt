@@ -1,0 +1,251 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LAX2_TED01/Iterate
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   24.30 22.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+9	6	Mucilaginibacter.
+9	5	Chitinophagaceae
+12	5	Sphingobacteriaceae
+10	5	Balneolaceae
+9	4	Chitinophagales
+12	4	Sphingobacteriales
+11	4	Burkholderiales
+10	4	Balneolales
+9	3	Chitinophagia
+13	3	Betaproteobacteria
+12	3	Sphingobacteriia
+12	3	Gammaproteobacteria
+10	3	Balneolia
+34	2	Pseudomonadota
+25	2	Bacteroidota
+10	2	Balneolota
+75	1	Pseudomonadati
+75	0	Bacteria
+Total of 75 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A257CR64	GGDEF DOMAIN-CONTAINING P     94.9    2.6e-23   1   1.2   0.0
+	Iterate                   	     9	   227	    94.2
+	PF00989	PAS             	   245	   353	      23
+	PF00990	GGDEF           	   367	   524	   174.9
+
+A0A5D3YIE1	HISTIDINE KINASE {ECO:000     88.4    2.5e-21   1   1.5   0.6
+	Iterate                   	    11	   233	    87.4
+	PF00989	PAS             	   247	   366	    39.1
+	PF13188	PAS_8           	   247	   316	    22.2
+	PF13426	PAS_9           	   258	   368	    47.3
+	PF08447	PAS_3           	   270	   363	      72
+	PF07568	HisKA_2         	   389	   463	    84.6
+	PF07536	HWE_HK          	   389	   475	    27.4
+	PF13581	HATPase_c_2     	   470	   572	    33.1
+	PF02518	HATPase_c       	   484	   579	    40.8
+
+A0A7X6ICZ7	METHYL-ACCEPTING CHEMOTAX     96.6    7.5e-24   1   1.9   1.4
+	Iterate                   	    18	   243	    95.6
+	PF00672	HAMP            	   237	   289	    40.9
+	PF00015	MCPsignal       	   363	   530	   118.3
+
+A0LAX2	HISTIDINE KINASE {ECO:0000256    505.8   5.4e-149   1   1.7   8.8
+	Iterate                   	    25	   245	   504.5
+	PF00512	HisKA           	   278	   343	    66.9
+	PF02518	HATPase_c       	   390	   502	   106.2
+	PF00072	Response_reg    	   547	   663	    92.3
+
+A0LB23	HISTIDINE KINASE {ECO:0000256    497.9   1.4e-146   1   1.7   8.7
+	Iterate                   	    25	   245	   496.7
+	PF00512	HisKA           	   278	   343	    66.9
+	PF02518	HATPase_c       	   390	   502	   106.2
+	PF00072	Response_reg    	   547	   663	    92.3
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: Q9I580 (E-value: 2.2e-61, Score: 212.2)
+Mentioned as: Q9I580
+Description: EAL domain-containing protein
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+PMID: 40066032
+Source: EuropePMC
+Title: Proteome-wide identification of druggable targets and inhibitors for multidrug-resistant &lt;i&gt;Pseudomonas aeruginosa&lt;/i&gt; using an integrative subtractive proteomics and virtual screening approach
+Journal: Heliyon (2025)
+Snippet: 2514 Q9HTZ8 3596 Q9HZF3 4678 Q9I579 351 Q9I6G4 1433 Q9HVV5 2515 Q9HTZ9 3597 Q9HZF5 4679 Q9I580 352 Q9I6H1 1434 Q9HVV6 2516 Q9HU00 3598 Q9HZF6 4680 Q9I581 353 Q9I6J0 1435 Q9HVV8 2517 Q9HU01 3599 Q9HZF7 4681 Q9I582 354 Q9I6J1 1436 Q9HVV9 2518 Q9HU02 3600 Q9HZG2 4682 Q9I584
+
+================================================================================
+Protein: Q9I580 (E-value: 2.2e-61, Score: 212.2)
+Mentioned as: Q9I580
+Description: EAL domain-containing protein
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+PMID: 32582123
+Source: EuropePMC
+Title: Regulation of Exopolysaccharide Production by ProE, a Cyclic-Di-GMP Phosphodiesterase in <i>Pseudomonas aeruginosa</i> PAO1
+Journal: Frontiers in microbiology (2020)
+Snippet: Sequence alignment of EAL-containing phosphodiesterases. The amino acid sequence of RocR (Q9HX69), ProE (Q9HTQ9), RbdA (Q9I580), BifA (Q9HW35) from P. aeruginosa , TBD1265 (Q3SJE6), TBD1269 (Q3SJE2) from Thiobacillus denitrificans , CV0542 (Q7P0M4), CV2505 (Q7NV41) from Chromobacterium violaceum , SO2039 (Q8EFE2) from Shewanella oneidensis , YahA (P21514)
+
+================================================================================
+Protein: VIMSS217453 (E-value: 5.3e-58, Score: 201.1)
+Mentioned as: PP_1761
+Description: sensory box protein/GGDEF family protein
+Organism: Pseudomonas putida KT2440
+PMID: 23537069
+Source: EuropePMC
+Title: New insights on the reorganization of gene transcription in Pseudomonas putida KT2440 at elevated pressure
+Journal: Microbial cell factories (2013)
+Snippet: 1.6 E-02 -1.56 3.2 E-02 PP_2643 methyl-accepting chemotaxis transducer -6.82 2.9 E-07 -15.45 8.5 E-08 PP_1761 sensory box protein/GGDEF family protein -1.77 1.9 E-03 -1.71 2.8 E-03 PP_1762 conserved hypothetical protein -1.45* 2.9 E-02 -1.54 9.3 E-03 PP_2097 sensory box protein -1.49* 5.0 E-03 -1.52 2.0
+
+================================================================================
+Protein: VIMSS217453 (E-value: 5.3e-58, Score: 201.1)
+Mentioned as: PP1761
+Description: sensory box protein/GGDEF family protein
+Organism: Pseudomonas putida KT2440
+PMID: 16352819
+Source: EuropePMC
+Title: Characterization of the Pseudomonas putida mobile genetic element ISPpu10: an occupant of repetitive extragenic palindromic sequences
+Journal: Journal of bacteriology (2006)
+Snippet: proteins in the databases, reannotation of PP0525 and PP1761 is also suggested (Table 1). These two polypeptides showed extensive similarity to proteins in the
+
+================================================================================
+Protein: VIMSS10489539 (E-value: 1.8e-55, Score: 192.8)
+Mentioned as: Pfl01_4086
+Description: diguanylate cyclase/phosphodiesterase with PAS/PAC sensor(s)
+Organism: Pseudomonas fluorescens Pf0-1
+PMID: 29311282
+Source: EuropePMC
+Title: A Multimodal Strategy Used by a Large c-di-GMP Network
+Journal: Journal of bacteriology (2018)
+Snippet: five dual-domain proteins-- Pfl01_0192, Pfl01_1887, Pfl01_2709, Pfl01_4086, and Pfl01_4876 --were found to increase biofilm formation under these conditions,
+
+================================================================================
+Protein: VIMSS10489539 (E-value: 1.8e-55, Score: 192.8)
+Mentioned as: Pfl01_4086
+Description: diguanylate cyclase/phosphodiesterase with PAS/PAC sensor(s)
+Organism: Pseudomonas fluorescens Pf0-1
+PMID: 26670387
+Source: EuropePMC
+Title: Contribution of Physical Interactions to Signaling Specificity between a Diguanylate Cyclase and Its Effector
+Journal: mBio (2015)
+Snippet: also tested each protein for interaction with other c-di-GMP-related proteins. GcbC showed no interaction with Pfl01_4086, a GGDEF-EAL domain-containing, inner membrane protein with a primary structure resembling LapD. Similarly, LapD showed no interaction with the GGDEF domain-containing protein Pfl01_0190 or the GGDEF-EAL domain-containing protein Pfl01_1887 (
+
+================================================================================
+Protein: VIMSS10489539 (E-value: 1.8e-55, Score: 192.8)
+Mentioned as: Pfl01_4086
+Description: diguanylate cyclase/phosphodiesterase with PAS/PAC sensor(s)
+Organism: Pseudomonas fluorescens Pf0-1
+PMID: 21764921
+Source: EuropePMC
+Title: Systematic analysis of diguanylate cyclases that promote biofilm formation by Pseudomonas fluorescens Pf0-1
+Journal: Journal of bacteriology (2011)
+Snippet: of the WT (P 0.01): Pfl01_0192, Pfl01_1887, Pfl01_2709, Pfl01_4086, and Pfl01_4876. Mutations in four genes caused significant (P 0.01) reductions in biofilm
+
+================================================================================
+Protein: VIMSS7778046 (E-value: 3.3e-55, Score: 192.0)
+Mentioned as: PFLU4308
+Description: putative signalling-related membrane protein
+Organism: Pseudomonas fluorescens SBW25
+PMID: 34351900
+Source: EuropePMC
+Title: Forecasting of phenotypic and genetic outcomes of experimental evolution in Pseudomonas protegens
+Journal: PLoS genetics (2021)
+Snippet: wspF , wspE , awsX , awsR , mwsR PFLU0956, PFLU5698, PFLU1349, PFLU0621 PFLU0183, PFLU4306, PFLU4308 P . protegens Pf-5 Air-liquid interface colonization Pel multiple or uncharacterized PFL_30783095 Wsp, Aws, Mws, PFL_0087 (DgcH) wspF , wspE , awsX , awsR , mwsR PFL_30783095 awsXRO P .
+
+================================================================================
+Protein: VIMSS7778046 (E-value: 3.3e-55, Score: 192.0)
+Mentioned as: PFLU4308
+Description: putative signalling-related membrane protein
+Organism: Pseudomonas fluorescens SBW25
+PMID: 25806684
+Source: EuropePMC
+Title: Experimental evolution reveals hidden diversity in evolutionary pathways
+Journal: eLife (2015)
+Snippet: 7 PFLU1349 deletion, small insertion 2 Promoter capture/gene fusion PFLU0183 deletion 8 PFLU4306 deletion 8 PFLU4308 deletion 1 Intragenic activating PFLU0956 amino acid substitution 1 PFLU3448 amino acid substitution 2 PFLU3571 amino acid substitution 3 PFLU5960 amino acid substitution 2 Double and triple mutants PFLU0458 amino
+
+================================================================================
+
+... (truncated, 187 total lines)
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: Q9I580
+PMID: 22923587
+Source: IntAct
+Gene ID: Q9I580
+Annotation: [Interaction]
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A4R0YGW8.1	AF-A0A4R0YGW8-F1-model_v4_TED02:263-368	1	AF-A0A4R0YGW8-F1-model_v4_TED02	263-368	0
+A0A4R0YGW8.1	AF-A0A4R0YGW8-F1-model_v4_TED03:387-498	1	AF-A0A4R0YGW8-F1-model_v4_TED03	387-498	0
+A0A4R0YGW8.1	AF-A0A4R0YGW8-F1-model_v4_TED04:513-678	1	AF-A0A4R0YGW8-F1-model_v4_TED04	513-678	0
+A0A4R0YGW8.1	AF-A0A4R0YGW8-F1-model_v4_TED05:681-925	1	AF-A0A4R0YGW8-F1-model_v4_TED05	681-925	0
+A0A4R0YGW8.1	AF-A0A4R0YGW8-F1-model_v4_TED01:23-229	1	AF-A0A4R0YGW8-F1-model_v4_TED01	23-229	95.0%
+A0A5E4NWB5.1	AF-A0A5E4NWB5-F1-model_v4_TED02:254-405	1	AF-A0A5E4NWB5-F1-model_v4_TED02	254-405	0
+A0A5E4NWB5.1	AF-A0A5E4NWB5-F1-model_v4_TED03:432-691	1	AF-A0A5E4NWB5-F1-model_v4_TED03	432-691	0
+A0A5E4NWB5.1	AF-A0A5E4NWB5-F1-model_v4_TED01:20-224	1	AF-A0A5E4NWB5-F1-model_v4_TED01	20-224	97.6%
+A0LAX2.1	AF-A0LAX2-F1-model_v4_TED02:350-500	1	AF-A0LAX2-F1-model_v4_TED02	350-500	0
+A0LAX2.1	AF-A0LAX2-F1-model_v4_TED03:547-666	1	AF-A0LAX2-F1-model_v4_TED03	547-666	0
+A0LAX2.1	AF-A0LAX2-F1-model_v4_TED01:25-245	1	AF-A0LAX2-F1-model_v4_TED01	25-245	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 22 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF00989	PAS	22	1.00	0.85
+PF08447	PAS_3	22	1.00	0.85
+PF08448	PAS_4	22	1.00	0.85
+PF13188	PAS_8	22	1.00	0.85
+PF13426	PAS_9	22	1.00	0.85
+PF00072	Response_reg	22	1.00	0.85
+PF00512	HisKA	22	1.00	0.85
+PF02518	HATPase_c	22	1.00	0.85
+PF01590	GAF	21	0.95	0.78
+PF01627	Hpt	21	0.95	0.78
+PF13185	GAF_2	21	0.95	0.78
+PF00672	HAMP	20	0.91	0.72
+PF00563	EAL	17	0.77	0.57
+PF00990	GGDEF	17	0.77	0.57
+PF01339	CheB_methylest	17	0.77	0.57
+PF00486	Trans_reg_C	17	0.77	0.57
+PF01739	CheR	16	0.73	0.52
+PF03924	CHASE	16	0.73	0.52
+PF05227	CHASE3	16	0.73	0.52
+
+--- End STRING ---

@@ -1,0 +1,118 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L4K9_TED02/Iterate
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+6	6	Deinococcus.
+6	5	Deinococcaceae
+6	4	Deinococcales
+3	4	Chromatiales
+6	3	Deinococci
+4	3	Actinomycetes
+10	3	Gammaproteobacteria
+6	2	Deinococcota
+4	2	Actinomycetota
+3	2	Thermodesulfobacteriota
+11	2	Pseudomonadota
+6	1	Thermotogati
+5	1	Bacillati
+14	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Foldseek ---
+Structural similarity matches. Can be suggestive of clan lines to add to DESC if results are consistent,
+or adding a CC line noting structural relationship to relevant Pfam families identified.
+
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+Iterate	query_model	PF22190	TTHA0829-like_ACT	CL0070	PF22190_D7BHM9_1_res139-208	0.25	70	49	0	1.000	1.97e-04	105.0
+Iterate	query_model	PF13065	DUF3928	No_clan	PF13065_A0A073K149_1_res1-95	0.12	89	69	0	1.000	7.99e-04	85.0
+
+--- End Foldseek ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A194AJ42	MULTIDRUG ABC TRANSPORTER     35.3    7.2e-05   1   1.6   0.1
+	Iterate                   	   228	   299	    34.2
+	PF00005	ABC_tran        	    17	   161	   116.5
+	PF13304	AAA_21          	    98	   194	    32.5
+
+A0A1H4GMY4	ABC-2 TYPE TRANSPORT SYST     35.4    6.6e-05   1   1.6   3.4
+	Iterate                   	   221	   300	    34.4
+	PF00005	ABC_tran        	    17	   161	   117.4
+	PF13304	AAA_21          	    97	   194	    33.4
+
+A0A4R2F7M3	ABC-2 TYPE TRANSPORT SYST     39.2    4.3e-06   2   2.5   3.4
+	Iterate                   	   224	   299	    37.8
+	PF00005	ABC_tran        	    17	   161	   116.6
+	PF13304	AAA_21          	    97	   194	      31
+
+A0A6C1B1S3	ABC TRANSPORTER ATP-BINDI     35.6    5.7e-05   1   1.5   0.0
+	Iterate                   	   248	   302	    34.6
+	PF00005	ABC_tran        	    17	   161	   109.5
+	PF13304	AAA_21          	    67	   195	    34.2
+
+A0L4K9	ABC TRANSPORTER RELATED PROTE    182.3    9.3e-51   1   1.5   2.6
+	Iterate                   	   251	   328	   181.4
+	PF00005	ABC_tran        	    46	   190	     112
+	PF13304	AAA_21          	   126	   223	      35
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A4U0ZHE6.1	AF-A0A4U0ZHE6-F1-model_v4_TED01:3-219	1	AF-A0A4U0ZHE6-F1-model_v4_TED01	3-219	0
+A0A4U0ZHE6.1	AF-A0A4U0ZHE6-F1-model_v4_TED02:223-289	1	AF-A0A4U0ZHE6-F1-model_v4_TED02	223-289	84.8%
+A0A6C1B1S3.1	AF-A0A6C1B1S3-F1-model_v4_TED01:3-219	1	AF-A0A6C1B1S3-F1-model_v4_TED01	3-219	0
+A0A6C1B1S3.1	AF-A0A6C1B1S3-F1-model_v4_TED02:223-291	1	AF-A0A6C1B1S3-F1-model_v4_TED02	223-291	85.2%
+A0L4K9.1	AF-A0L4K9-F1-model_v4_TED01:30-248	1	AF-A0L4K9-F1-model_v4_TED01	30-248	0
+A0L4K9.1	AF-A0L4K9-F1-model_v4_TED02:251-328	1	AF-A0L4K9-F1-model_v4_TED02	251-328	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 10 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF00005	ABC_tran	10	1.00	0.72
+PF12679	ABC2_membrane_2	10	1.00	0.72
+PF00664	ABC_membrane	9	0.90	0.60
+PF12698	ABC2_membrane_3	9	0.90	0.60
+
+--- End STRING ---

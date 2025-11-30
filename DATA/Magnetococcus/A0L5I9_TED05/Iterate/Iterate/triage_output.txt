@@ -1,0 +1,137 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L5I9_TED05/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.40 29.60;
+NC   26.90 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+5	6	Sulfurimonas.
+3	6	Methylobacter.
+5	5	Sulfurimonadaceae
+5	5	Methylococcaceae
+2	5	Magnetococcaceae
+6	4	Campylobacterales
+5	4	Methylococcales
+2	4	Magnetococcales
+6	3	Epsilonproteobacteria
+5	3	Gammaproteobacteria
+2	3	Magnetococcia
+7	2	Pseudomonadota
+6	2	Campylobacterota
+13	1	Pseudomonadati
+13	0	Bacteria
+Total of 13 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A126T6P8	SPORE PROTEIN YKVP/CGEB G     77.7      3e-18   4   5.2   6.5
+	Iterate                   	   737	   842	    35.2
+	PF13524	Glyco_trans_1_2 	   471	   610	    38.7
+	PF13524	Glyco_trans_1_2 	  1507	  1653	    63.7
+
+A0A1Y2K3Z6	SPORE PROTEIN YKVP/CGEB G    193.5    3.5e-54   2   3.3   9.7
+	Iterate                   	   640	   748	   186.1
+	PF13432	TPR_16          	    55	   119	      28
+	PF13432	TPR_16          	   536	   598	      20
+	PF13524	Glyco_trans_1_2 	   967	  1104	    35.3
+
+A0L5I9	TETRATRICOPEPTIDE TPR_2 REPEA    212.5    4.3e-60   2   3.4   1.1
+	Iterate                   	   640	   749	   195.3
+	PF14559	TPR_19          	   471	   537	    25.6
+	PF14559	TPR_19          	   505	   572	    36.2
+	PF13428	TPR_14          	   530	   572	    23.5
+	PF13524	Glyco_trans_1_2 	   970	  1102	    38.8
+
+G3IT05	SPORE PROTEIN YKVP/CGEB GLYCO     57.0    8.4e-12   2   3.3   2.3
+	Iterate                   	   119	   231	    44.5
+	PF13524	Glyco_trans_1_2 	   452	   584	    32.9
+	PF13524	Glyco_trans_1_2 	  1134	  1278	      63
+
+G3IT06	SPORE PROTEIN YKVP/CGEB GLYCO     52.5      2e-10   2   2.9   1.6
+	Iterate                   	   119	   231	    39.8
+	PF13524	Glyco_trans_1_2 	   452	   583	    32.6
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A091AFP4.1	AF-A0A091AFP4-F1-model_v4_TED01:9-104	1	AF-A0A091AFP4-F1-model_v4_TED01	9-104	84.2%
+A0A091AFP4.1	AF-A0A091AFP4-F1-model_v4_TED02:121-251	1	AF-A0A091AFP4-F1-model_v4_TED02	121-251	0
+A0A091AFP4.1	AF-A0A091AFP4-F1-model_v4_TED03:270-459	1	AF-A0A091AFP4-F1-model_v4_TED03	270-459	0
+A0A1S1XZJ3.1	AF-A0A1S1XZJ3-F1-model_v4_TED01:13-112	1	AF-A0A1S1XZJ3-F1-model_v4_TED01	13-112	0
+A0A1S1XZJ3.1	AF-A0A1S1XZJ3-F1-model_v4_TED02:118-228	1	AF-A0A1S1XZJ3-F1-model_v4_TED02	118-228	98.2%
+A0A1S1XZJ3.1	AF-A0A1S1XZJ3-F1-model_v4_TED03:233-366	1	AF-A0A1S1XZJ3-F1-model_v4_TED03	233-366	0
+A0A1S1XZJ3.1	AF-A0A1S1XZJ3-F1-model_v4_TED04:388-575	1	AF-A0A1S1XZJ3-F1-model_v4_TED04	388-575	0
+A0A1Y2K3Z6.1	AF-A0A1Y2K3Z6-F1-model_v4_TED01:2-180	1	AF-A0A1Y2K3Z6-F1-model_v4_TED01	2-180	0
+A0A1Y2K3Z6.1	AF-A0A1Y2K3Z6-F1-model_v4_TED02:462-524	1	AF-A0A1Y2K3Z6-F1-model_v4_TED02	462-524	0
+A0A1Y2K3Z6.1	AF-A0A1Y2K3Z6-F1-model_v4_TED03:644-738	1	AF-A0A1Y2K3Z6-F1-model_v4_TED03	644-738	87.2%
+A0A1Y2K3Z6.1	AF-A0A1Y2K3Z6-F1-model_v4_TED04:759-883	1	AF-A0A1Y2K3Z6-F1-model_v4_TED04	759-883	0
+A0A1Y2K3Z6.1	AF-A0A1Y2K3Z6-F1-model_v4_TED05:899-1092	1	AF-A0A1Y2K3Z6-F1-model_v4_TED05	899-1092	0
+A0A2P5NGG0.1	AF-A0A2P5NGG0-F1-model_v4_TED01:2-104	1	AF-A0A2P5NGG0-F1-model_v4_TED01	2-104	0
+A0A2P5NGG0.1	AF-A0A2P5NGG0-F1-model_v4_TED02:108-224	1	AF-A0A2P5NGG0-F1-model_v4_TED02	108-224	100.0%
+A0A2P5NGG0.1	AF-A0A2P5NGG0-F1-model_v4_TED03:227-357	1	AF-A0A2P5NGG0-F1-model_v4_TED03	227-357	0
+A0A2P5NGG0.1	AF-A0A2P5NGG0-F1-model_v4_TED04:378-567	1	AF-A0A2P5NGG0-F1-model_v4_TED04	378-567	0
+A0A2P5NGG0.1	AF-A0A2P5NGG0-F1-model_v4_TED05:601-816	1	AF-A0A2P5NGG0-F1-model_v4_TED05	601-816	0
+A0A2P5NGG0.1	AF-A0A2P5NGG0-F1-model_v4_TED06:836-979	1	AF-A0A2P5NGG0-F1-model_v4_TED06	836-979	0
+A0A2P5NGG0.1	AF-A0A2P5NGG0-F1-model_v4_TED07:999-1249	1	AF-A0A2P5NGG0-F1-model_v4_TED07	999-1249	0
+A0A5P8NY30.1	AF-A0A5P8NY30-F1-model_v4_TED01:6-113	1	AF-A0A5P8NY30-F1-model_v4_TED01	6-113	97.2%
+A0A5P8NY30.1	AF-A0A5P8NY30-F1-model_v4_TED02:123-243_459-470	1	AF-A0A5P8NY30-F1-model_v4_TED02	123-470	0
+A0A5P8NY30.1	AF-A0A5P8NY30-F1-model_v4_TED03:258-455	1	AF-A0A5P8NY30-F1-model_v4_TED03	258-455	0
+A0L5I9.1	AF-A0L5I9-F1-model_v4_TED01:27-180	1	AF-A0L5I9-F1-model_v4_TED01	27-180	0
+A0L5I9.1	AF-A0L5I9-F1-model_v4_TED02:306-378	1	AF-A0L5I9-F1-model_v4_TED02	306-378	0
+A0L5I9.1	AF-A0L5I9-F1-model_v4_TED03:467-546	1	AF-A0L5I9-F1-model_v4_TED03	467-546	0
+A0L5I9.1	AF-A0L5I9-F1-model_v4_TED05:640-749	1	AF-A0L5I9-F1-model_v4_TED05	640-749	100.0%
+A0L5I9.1	AF-A0L5I9-F1-model_v4_TED06:750-885	1	AF-A0L5I9-F1-model_v4_TED06	750-885	0
+A0L5I9.1	AF-A0L5I9-F1-model_v4_TED07:906-1095	1	AF-A0L5I9-F1-model_v4_TED07	906-1095	0
+A0L5I9.1	AF-A0L5I9-F1-model_v4_TED04:561-634	1	AF-A0L5I9-F1-model_v4_TED04	561-634	0
+G3IT82.1	AF-G3IT82-F1-model_v4_TED01:15-115	1	AF-G3IT82-F1-model_v4_TED01	15-115	0
+G3IT82.1	AF-G3IT82-F1-model_v4_TED02:117-232	1	AF-G3IT82-F1-model_v4_TED02	117-232	100.0%
+G3IT82.1	AF-G3IT82-F1-model_v4_TED03:244-366	1	AF-G3IT82-F1-model_v4_TED03	244-366	0
+G3IT82.1	AF-G3IT82-F1-model_v4_TED04:373-575	1	AF-G3IT82-F1-model_v4_TED04	373-575	0
+Q30U67.1	AF-Q30U67-F1-model_v4_TED01:7-111	1	AF-Q30U67-F1-model_v4_TED01	7-111	93.8%
+Q30U67.1	AF-Q30U67-F1-model_v4_TED02:126-247_455-468	1	AF-Q30U67-F1-model_v4_TED02	126-468	0
+Q30U67.1	AF-Q30U67-F1-model_v4_TED03:264-452	1	AF-Q30U67-F1-model_v4_TED03	264-452	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 7 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

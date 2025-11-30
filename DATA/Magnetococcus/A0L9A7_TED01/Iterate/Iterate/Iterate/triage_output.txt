@@ -1,0 +1,170 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L9A7_TED01/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+25	6	Paracoccus.
+60	5	Paracoccaceae
+24	5	Roseobacteraceae
+89	4	Rhodobacterales
+26	4	Hyphomicrobiales
+146	3	Alphaproteobacteria
+174	2	Pseudomonadota
+175	1	Pseudomonadati
+175	0	Bacteria
+Total of 175 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1H8UHE7	GPW PROTEIN {ECO:0008006|     87.6    1.4e-21   1   1.1   2.1
+	Iterate                   	     4	    54	    87.5
+
+A0A2T5BNP2	GPW PROTEIN {ECO:0008006|     86.7    2.6e-21   1   1.1   2.8
+	Iterate                   	     5	    55	    86.5
+
+A0A365U3R4	GPW PROTEIN {ECO:0008006|     86.7    2.6e-21   1   1.1   2.8
+	Iterate                   	     5	    55	    86.5
+
+A0A4R3LXP3	GPW PROTEIN {ECO:0008006|     89.0      5e-22   1   1.1   4.2
+	Iterate                   	     5	    55	    88.8
+
+A0A964X1Y7	PHAGE TAIL PROTEIN {ECO:0     87.9    1.2e-21   1   1.1   4.1
+	Iterate                   	     5	    55	    87.6
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS1174271 (E-value: 1.3e-07, Score: 36.4)
+Mentioned as: Synpcc7942_0732
+Description: conserved hypothetical protein
+Organism: Synechococcus elongatus PCC 7942
+PMID: 32823644
+Source: EuropePMC
+Title: Four New Genes of Cyanobacterium <i>Synechococcus elongatus</i> PCC 7942 Are Responsible for Sensitivity to 2-Nonanone
+Journal: Microorganisms (2020)
+Snippet: different mutant strains were used for identification of the impaired genes ( Synpcc7942_1362, Synpcc7942_0351 , Synpcc7942_0732, Synpcc7942_0726 ) that encode correspondingly: 1) a murein-peptide ligase Mpl that is involved in the biogenesis of cyanobacteria cell wall; 2) a putative ABC transport system substrate-binding proteins MlaD, which
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A099EWL8.1	AF-A0A099EWL8-F1-model_v4_TED01:4-54	1	AF-A0A099EWL8-F1-model_v4_TED01	4-54	98.1%
+A0A0A1W3S8.1	AF-A0A0A1W3S8-F1-model_v4_TED01:5-55	1	AF-A0A0A1W3S8-F1-model_v4_TED01	5-55	98.1%
+A0A0H1R9A1.1	AF-A0A0H1R9A1-F1-model_v4_TED01:5-56	1	AF-A0A0H1R9A1-F1-model_v4_TED01	5-56	100.0%
+A0A0M4M241.1	AF-A0A0M4M241-F1-model_v4_TED01:2-24_40-60	1	AF-A0A0M4M241-F1-model_v4_TED01	2-60	100.0%
+A0A0N8IB75.1	AF-A0A0N8IB75-F1-model_v4_TED01:5-57	1	AF-A0A0N8IB75-F1-model_v4_TED01	5-57	100.0%
+A0A0P0ACU8.1	AF-A0A0P0ACU8-F1-model_v4_TED01:12-63	1	AF-A0A0P0ACU8-F1-model_v4_TED01	12-63	100.0%
+A0A0Q1A232.1	AF-A0A0Q1A232-F1-model_v4_TED01:6-49	1	AF-A0A0Q1A232-F1-model_v4_TED01	6-49	95.7%
+A0A1G4RIP8.1	AF-A0A1G4RIP8-F1-model_v4_TED01:2-57	1	AF-A0A1G4RIP8-F1-model_v4_TED01	2-57	100.0%
+A0A1G9GVJ1.1	AF-A0A1G9GVJ1-F1-model_v4_TED01:4-58	1	AF-A0A1G9GVJ1-F1-model_v4_TED01	4-58	100.0%
+A0A1H5Z9E1.1	AF-A0A1H5Z9E1-F1-model_v4_TED01:5-56	1	AF-A0A1H5Z9E1-F1-model_v4_TED01	5-56	100.0%
+A0A1H8BW86.1	AF-A0A1H8BW86-F1-model_v4_TED01:7-61	1	AF-A0A1H8BW86-F1-model_v4_TED01	7-61	100.0%
+A0A1I2VU61.1	AF-A0A1I2VU61-F1-model_v4_TED01:3-55	1	AF-A0A1I2VU61-F1-model_v4_TED01	3-55	96.4%
+A0A1I3FAP0.1	AF-A0A1I3FAP0-F1-model_v4_TED01:6-56	1	AF-A0A1I3FAP0-F1-model_v4_TED01	6-56	100.0%
+A0A1I3HJB6.1	AF-A0A1I3HJB6-F1-model_v4_TED01:5-56	1	AF-A0A1I3HJB6-F1-model_v4_TED01	5-56	100.0%
+A0A1I3TWJ0.1	AF-A0A1I3TWJ0-F1-model_v4_TED01:5-56	1	AF-A0A1I3TWJ0-F1-model_v4_TED01	5-56	100.0%
+A0A1I5C1U9.1	AF-A0A1I5C1U9-F1-model_v4_TED01:5-58	1	AF-A0A1I5C1U9-F1-model_v4_TED01	5-58	100.0%
+A0A1M6Q0R1.1	AF-A0A1M6Q0R1-F1-model_v4_TED01:5-57	1	AF-A0A1M6Q0R1-F1-model_v4_TED01	5-57	100.0%
+A0A1N6DUA1.1	AF-A0A1N6DUA1-F1-model_v4_TED01:6-53	1	AF-A0A1N6DUA1-F1-model_v4_TED01	6-53	92.3%
+A0A1N7QF80.1	AF-A0A1N7QF80-F1-model_v4_TED01:5-57	1	AF-A0A1N7QF80-F1-model_v4_TED01	5-57	100.0%
+A0A1S1TJV8.1	AF-A0A1S1TJV8-F1-model_v4_TED01:6-57	1	AF-A0A1S1TJV8-F1-model_v4_TED01	6-57	100.0%
+A0A1Y2K583.1	AF-A0A1Y2K583-F1-model_v4_TED01:5-56	1	AF-A0A1Y2K583-F1-model_v4_TED01	5-56	100.0%
+A0A1Y2K9G3.1	AF-A0A1Y2K9G3-F1-model_v4_TED01:33-57	1	AF-A0A1Y2K9G3-F1-model_v4_TED01	33-57	45.1%
+A0A1Y5S9I9.1	AF-A0A1Y5S9I9-F1-model_v4_TED01:5-57	1	AF-A0A1Y5S9I9-F1-model_v4_TED01	5-57	100.0%
+A0A1Y5U2F3.1	AF-A0A1Y5U2F3-F1-model_v4_TED01:5-56	1	AF-A0A1Y5U2F3-F1-model_v4_TED01	5-56	100.0%
+A0A238K2M9.1	AF-A0A238K2M9-F1-model_v4_TED01:4-57	1	AF-A0A238K2M9-F1-model_v4_TED01	4-57	100.0%
+A0A285T2U7.1	AF-A0A285T2U7-F1-model_v4_TED01:5-56	1	AF-A0A285T2U7-F1-model_v4_TED01	5-56	100.0%
+A0A2K9MBN9.1	AF-A0A2K9MBN9-F1-model_v4_TED01:4-65	1	AF-A0A2K9MBN9-F1-model_v4_TED01	4-65	100.0%
+A0A2R8B182.1	AF-A0A2R8B182-F1-model_v4_TED01:6-59	1	AF-A0A2R8B182-F1-model_v4_TED01	6-59	100.0%
+A0A2T0RQS3.1	AF-A0A2T0RQS3-F1-model_v4_TED01:2-55	1	AF-A0A2T0RQS3-F1-model_v4_TED01	2-55	100.0%
+A0A327LEB7.1	AF-A0A327LEB7-F1-model_v4_TED01:4-57	1	AF-A0A327LEB7-F1-model_v4_TED01	4-57	100.0%
+A0A327YAV1.1	AF-A0A327YAV1-F1-model_v4_TED01:24-55	1	AF-A0A327YAV1-F1-model_v4_TED01	24-55	61.5%
+A0A348G5T0.1	AF-A0A348G5T0-F1-model_v4_TED01:5-56	1	AF-A0A348G5T0-F1-model_v4_TED01	5-56	100.0%
+A0A368YSX2.1	AF-A0A368YSX2-F1-model_v4_TED01:6-58	1	AF-A0A368YSX2-F1-model_v4_TED01	6-58	100.0%
+A0A3N2QVS4.1	AF-A0A3N2QVS4-F1-model_v4_TED01:5-57	1	AF-A0A3N2QVS4-F1-model_v4_TED01	5-57	100.0%
+A0A420DNS3.1	AF-A0A420DNS3-F1-model_v4_TED01:4-62	1	AF-A0A420DNS3-F1-model_v4_TED01	4-62	100.0%
+A0A421BQM9.1	AF-A0A421BQM9-F1-model_v4_TED01:6-58	1	AF-A0A421BQM9-F1-model_v4_TED01	6-58	100.0%
+A0A437LGP4.1	AF-A0A437LGP4-F1-model_v4_TED01:5-51	1	AF-A0A437LGP4-F1-model_v4_TED01	5-51	90.4%
+A0A443IVC3.1	AF-A0A443IVC3-F1-model_v4_TED01:5-59	1	AF-A0A443IVC3-F1-model_v4_TED01	5-59	100.0%
+A0A4P8EI29.1	AF-A0A4P8EI29-F1-model_v4_TED01:5-56	1	AF-A0A4P8EI29-F1-model_v4_TED01	5-56	100.0%
+A0A4R2K8L6.1	AF-A0A4R2K8L6-F1-model_v4_TED01:4-56	1	AF-A0A4R2K8L6-F1-model_v4_TED01	4-56	100.0%
+A0A4R3LXP3.1	AF-A0A4R3LXP3-F1-model_v4_TED01:5-56	1	AF-A0A4R3LXP3-F1-model_v4_TED01	5-56	100.0%
+A0A4S2H536.1	AF-A0A4S2H536-F1-model_v4_TED01:2-57	1	AF-A0A4S2H536-F1-model_v4_TED01	2-57	100.0%
+A0A512H6A4.1	AF-A0A512H6A4-F1-model_v4_TED01:4-55	1	AF-A0A512H6A4-F1-model_v4_TED01	4-55	100.0%
+A0A512H905.1	AF-A0A512H905-F1-model_v4_TED01:5-56	1	AF-A0A512H905-F1-model_v4_TED01	5-56	100.0%
+A0A512JIN5.1	AF-A0A512JIN5-F1-model_v4_TED01:2-75	1	AF-A0A512JIN5-F1-model_v4_TED01	2-75	100.0%
+A0A541CKY8.1	AF-A0A541CKY8-F1-model_v4_TED01:4-59	1	AF-A0A541CKY8-F1-model_v4_TED01	4-59	100.0%
+A0A547Q6U6.1	AF-A0A547Q6U6-F1-model_v4_TED01:4-55	1	AF-A0A547Q6U6-F1-model_v4_TED01	4-55	100.0%
+A0A554XB23.1	AF-A0A554XB23-F1-model_v4_TED01:2-53	1	AF-A0A554XB23-F1-model_v4_TED01	2-53	98.0%
+A0A5C8WQF2.1	AF-A0A5C8WQF2-F1-model_v4_TED01:5-56	1	AF-A0A5C8WQF2-F1-model_v4_TED01	5-56	100.0%
+A0A6I5YPC9.1	AF-A0A6I5YPC9-F1-model_v4_TED01:5-26_37-57	1	AF-A0A6I5YPC9-F1-model_v4_TED01	5-57	100.0%
+A0A6I6MNH8.1	AF-A0A6I6MNH8-F1-model_v4_TED01:2-39	1	AF-A0A6I6MNH8-F1-model_v4_TED01	2-39	65.4%
+A0A6L7G8F5.1	AF-A0A6L7G8F5-F1-model_v4_TED01:4-56	1	AF-A0A6L7G8F5-F1-model_v4_TED01	4-56	100.0%
+A0A7D5MUW7.1	AF-A0A7D5MUW7-F1-model_v4_TED01:4-57	1	AF-A0A7D5MUW7-F1-model_v4_TED01	4-57	100.0%
+A0A7D5S1H8.1	AF-A0A7D5S1H8-F1-model_v4_TED01:4-57	1	AF-A0A7D5S1H8-F1-model_v4_TED01	4-57	100.0%
+A0A7U7B0L1.1	AF-A0A7U7B0L1-F1-model_v4_TED01:4-56	1	AF-A0A7U7B0L1-F1-model_v4_TED01	4-56	100.0%
+A0A7W6S2U3.1	AF-A0A7W6S2U3-F1-model_v4_TED01:5-55	1	AF-A0A7W6S2U3-F1-model_v4_TED01	5-55	100.0%
+A0A7X5F691.1	AF-A0A7X5F691-F1-model_v4_TED01:5-56	1	AF-A0A7X5F691-F1-model_v4_TED01	5-56	100.0%
+A0A845B9J8.1	AF-A0A845B9J8-F1-model_v4_TED01:3-58	1	AF-A0A845B9J8-F1-model_v4_TED01	3-58	100.0%
+A0L727.1	AF-A0L727-F1-model_v4_TED01:5-55	1	AF-A0L727-F1-model_v4_TED01	5-55	100.0%
+A6WZU8.1	AF-A6WZU8-F1-model_v4_TED01:4-54	1	AF-A6WZU8-F1-model_v4_TED01	4-54	100.0%
+B8ISB9.1	AF-B8ISB9-F1-model_v4_TED01:6-26_37-67	1	AF-B8ISB9-F1-model_v4_TED01	6-67	100.0%
+D3NVW0.1	AF-D3NVW0-F1-model_v4_TED01:5-56	1	AF-D3NVW0-F1-model_v4_TED01	5-56	100.0%
+D3NWR7.1	AF-D3NWR7-F1-model_v4_TED01:5-56	1	AF-D3NWR7-F1-model_v4_TED01	5-56	100.0%
+D9QI94.1	AF-D9QI94-F1-model_v4_TED01:8-55	1	AF-D9QI94-F1-model_v4_TED01	8-55	88.9%
+E2CHI5.1	AF-E2CHI5-F1-model_v4_TED01:9-60	1	AF-E2CHI5-F1-model_v4_TED01	9-60	100.0%
+E3I858.1	AF-E3I858-F1-model_v4_TED01:6-60	1	AF-E3I858-F1-model_v4_TED01	6-60	100.0%
+S9QFK9.1	AF-S9QFK9-F1-model_v4_TED01:5-57	1	AF-S9QFK9-F1-model_v4_TED01	5-57	100.0%
+V6F0U1.1	AF-V6F0U1-F1-model_v4_TED01:4-54	1	AF-V6F0U1-F1-model_v4_TED01	4-54	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 50 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF05136	Phage_portal_2	46	0.92	0.81
+PF05876	GpA_ATPase	38	0.76	0.63
+PF20454	GpA_nuclease	37	0.74	0.60
+
+--- End STRING ---

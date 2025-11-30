@@ -1,0 +1,188 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L5Q9_TED01/Iterate
+GA   27.00 27.00;
+TC   27.20 31.10;
+NC   26.60 25.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+4	6	Pararhodospirillum.
+3	5	Oceanospirillaceae
+3	5	Novispirillaceae
+11	5	Rhodospirillaceae
+3	4	Oceanospirillales
+16	4	Rhodospirillales
+3	3	Gammaproteobacteria
+16	3	Alphaproteobacteria
+20	2	Pseudomonadota
+20	1	Pseudomonadati
+20	0	Bacteria
+Total of 20 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A143DBU7	PAS DOMAIN-CONTAINING PRO     37.7    8.1e-06   1   1.5   0.0
+	Iterate                   	   117	   233	    36.8
+	PF13188	PAS_8           	   369	   426	    24.3
+	PF00989	PAS             	   372	   481	    33.5
+	PF08448	PAS_4           	   378	   486	    31.9
+	PF13426	PAS_9           	   382	   485	    45.4
+	PF08447	PAS_3           	   394	   480	    27.5
+
+A0A1G7ZVT8	HISTIDINE KINASE {ECO:000     29.0     0.0042   1   1.8   0.1
+	Iterate                   	    93	   208	    27.6
+	PF13188	PAS_8           	   338	   412	    28.5
+	PF00989	PAS             	   344	   395	    28.5
+	PF08448	PAS_4           	   349	   447	    27.1
+	PF00512	HisKA           	   465	   533	    70.8
+	PF02518	HATPase_c       	   578	   690	    98.2
+
+A0A1N7JB40	HISTIDINE KINASE {ECO:000     37.7    8.3e-06   1   2.0   0.4
+	Iterate                   	    99	   210	    35.9
+	PF13188	PAS_8           	   351	   416	    30.7
+	PF00989	PAS             	   352	   462	    39.3
+	PF08448	PAS_4           	   357	   467	    38.5
+	PF13426	PAS_9           	   361	   464	    59.9
+	PF08447	PAS_3           	   373	   459	    47.1
+	PF00512	HisKA           	   625	   693	    44.7
+	PF02518	HATPase_c       	   735	   847	    83.3
+
+A0L5Q9	HISTIDINE KINASE {ECO:0000256    255.5    2.4e-73   1   1.7   0.5
+	Iterate                   	    88	   202	   254.3
+	PF13188	PAS_8           	   339	   405	    29.6
+	PF00989	PAS             	   342	   451	    49.6
+	PF08448	PAS_4           	   347	   457	    32.6
+	PF13426	PAS_9           	   351	   454	    55.5
+	PF08447	PAS_3           	   363	   449	    33.6
+	PF13188	PAS_8           	   463	   527	    29.8
+	PF00989	PAS             	   463	   574	      44
+	PF08448	PAS_4           	   469	   579	    39.4
+	PF13426	PAS_9           	   473	   575	    61.8
+	PF08447	PAS_3           	   485	   570	    53.3
+	PF00512	HisKA           	   597	   662	    68.7
+	PF02518	HATPase_c       	   709	   828	    93.3
+	PF00072	Response_reg    	   981	  1097	    87.8
+
+H6SPS2	PAS:GGDEF {ECO:0000313|EMBL:C     37.3    1.1e-05   1   1.8   0.3
+	Iterate                   	   112	   224	    35.9
+	PF13188	PAS_8           	   360	   425	    23.4
+	PF00989	PAS             	   360	   471	    42.7
+	PF08448	PAS_4           	   366	   476	    33.9
+	PF13426	PAS_9           	   370	   473	    49.7
+	PF00990	GGDEF           	   485	   643	   162.6
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS1103216 (E-value: 3.7e-09, Score: 42.1)
+Mentioned as: amb2291
+Description: Signal transduction histidine kinase
+Organism: Magnetospirillum magneticum AMB-1
+PMID: 39954315
+Source: EuropePMC
+Title: Synergistic mechanism of magneto-optical sensing mediated by magnetic response protein Amb0994 and LOV-like protein Amb2291 in Magnetospirillum magneticum AMB-1
+Journal: Journal of photochemistry and photobiology. B, Biology (2025)
+Snippet: in navigating along magnetic fields, also exhibit light-sensitive behaviors. In Magnetospirillum magneticum AMB-1, the photoreceptor Amb2291 is involved in phototaxis regulation and magnetosome synthesis, particularly under oxidative stress. The magnetoreceptor Amb0994 modulates flagellar activity in response to magnetic field changes. Our study used a magneto-optical system
+
+================================================================================
+Protein: VIMSS1103216 (E-value: 3.7e-09, Score: 42.1)
+Mentioned as: amb2291
+Description: Signal transduction histidine kinase
+Organism: Magnetospirillum magneticum AMB-1
+PMID: 40214419
+Source: EuropePMC
+Title: A magneto-optical microscopic control system for analysis of magnetotaxis and phototaxis sensing in magnetotactic bacteria
+Journal: The Review of scientific instruments (2025)
+
+================================================================================
+Protein: VIMSS1103216 (E-value: 3.7e-09, Score: 42.1)
+Mentioned as: amb2291
+Description: Signal transduction histidine kinase
+Organism: Magnetospirillum magneticum AMB-1
+PMID: 32780289
+Source: EuropePMC
+Title: Light regulation of resistance to oxidative damage and magnetic crystal biogenesis in Magnetospirillum magneticum mediated by a Cys-less LOV-like protein
+Journal: Applied microbiology and biotechnology (2020)
+Snippet: on one of these unusual LOV-like proteins, Amb2291, in Magnetospirillum magneticum. In-frame deletion of amb2291 or site-directive substitution of alanine-399
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0L5Q9.1	AF-A0L5Q9-F1-model_v4_TED01:88-202	1	AF-A0L5Q9-F1-model_v4_TED01	88-202	100.0%
+A0L5Q9.1	AF-A0L5Q9-F1-model_v4_TED02:347-456	1	AF-A0L5Q9-F1-model_v4_TED02	347-456	0
+A0L5Q9.1	AF-A0L5Q9-F1-model_v4_TED03:459-573	1	AF-A0L5Q9-F1-model_v4_TED03	459-573	0
+A0L5Q9.1	AF-A0L5Q9-F1-model_v4_TED04:667-826	1	AF-A0L5Q9-F1-model_v4_TED04	667-826	0
+A0L5Q9.1	AF-A0L5Q9-F1-model_v4_TED05:847-965	1	AF-A0L5Q9-F1-model_v4_TED05	847-965	0
+A0L5Q9.1	AF-A0L5Q9-F1-model_v4_TED06:980-1101	1	AF-A0L5Q9-F1-model_v4_TED06	980-1101	0
+H6SPS2.1	AF-H6SPS2-F1-model_v4_TED01:39-130_223-369	1	AF-H6SPS2-F1-model_v4_TED01	39-369	100.0%
+H6SPS2.1	AF-H6SPS2-F1-model_v4_TED02:370-478	1	AF-H6SPS2-F1-model_v4_TED02	370-478	0
+H6SPS2.1	AF-H6SPS2-F1-model_v4_TED03:487-647	1	AF-H6SPS2-F1-model_v4_TED03	487-647	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 10 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF00072	Response_reg	10	1.00	0.72
+PF00989	PAS	10	1.00	0.72
+PF00990	GGDEF	10	1.00	0.72
+PF08448	PAS_4	10	1.00	0.72
+PF13188	PAS_8	10	1.00	0.72
+PF13426	PAS_9	10	1.00	0.72
+PF00512	HisKA	10	1.00	0.72
+PF01627	Hpt	10	1.00	0.72
+PF02518	HATPase_c	10	1.00	0.72
+PF12860	PAS_7	10	1.00	0.72
+PF01966	HD	10	1.00	0.72
+PF13487	HD_5	10	1.00	0.72
+PF00015	MCPsignal	9	0.90	0.60
+PF00563	EAL	9	0.90	0.60
+PF08447	PAS_3	9	0.90	0.60
+PF00672	HAMP	9	0.90	0.60
+PF03924	CHASE	9	0.90	0.60
+PF00196	GerE	9	0.90	0.60
+PF01584	CheW	9	0.90	0.60
+PF02895	H-kinase_dim	9	0.90	0.60
+PF13581	HATPase_c_2	9	0.90	0.60
+PF01590	GAF	9	0.90	0.60
+
+--- End STRING ---

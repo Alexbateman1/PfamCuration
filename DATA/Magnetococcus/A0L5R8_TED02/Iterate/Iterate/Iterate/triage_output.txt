@@ -1,0 +1,309 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L5R8_TED02/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.40 27.50;
+NC   26.90 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+24	3	Actinomycetes
+23	3	Gammaproteobacteria
+19	3	Clostridia
+19	3	Betaproteobacteria
+18	3	Alphaproteobacteria
+62	2	Pseudomonadota
+39	2	Bacillota
+26	2	Actinomycetota
+19	2	Bacteroidota
+69	1	Bacillati
+100	1	Pseudomonadati
+175	0	Bacteria
+Total of 177 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A0H5SER9	UNCHARACTERIZED PROTEIN {    111.7    6.7e-29   1   2.2   0.4
+	Iterate                   	   296	   380	   111.7
+	PF04851	ResIII          	     7	   257	    55.7
+	PF00270	DEAD            	    76	   261	    29.1
+	PF19778	RE_endonuc      	   875	   982	   124.9
+
+A0A1S6IY54	TYPE III RESTRICTION ENDO    113.1    2.5e-29   1   2.2   0.3
+	Iterate                   	   296	   380	   113.1
+	PF04851	ResIII          	     7	   257	    54.3
+	PF00270	DEAD            	    75	   260	      28
+	PF19778	RE_endonuc      	   873	   980	   124.7
+
+A3DCS6	TYPE III SITE-SPECIFIC DEOXYR    115.7    3.9e-30   1   2.3   0.7
+	Iterate                   	   296	   380	   115.7
+	PF04851	ResIII          	     7	   257	    55.6
+	PF00270	DEAD            	    75	   261	    29.1
+	PF19778	RE_endonuc      	   873	   980	   124.4
+
+G8LUY4	RESTRICTION ENDONUCLEASE {ECO    113.1    2.5e-29   1   2.2   0.3
+	Iterate                   	   296	   380	   113.1
+	PF04851	ResIII          	     7	   257	    54.3
+	PF00270	DEAD            	    75	   260	      28
+	PF19778	RE_endonuc      	   873	   980	   124.7
+
+I5B0E5	RESTRICTION ENDONUCLEASE {ECO    112.4    4.3e-29   1   2.2   1.3
+	Iterate                   	   298	   381	   111.1
+	PF04851	ResIII          	    56	   259	    42.8
+	PF00270	DEAD            	    74	   264	    27.7
+	PF19778	RE_endonuc      	   880	   987	   131.4
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS5163995 (E-value: 2.1e-29, Score: 106.7)
+Mentioned as: Cthe_0518
+Description: type III restriction enzyme, res subunit
+Organism: Clostridium thermocellum ATCC 27405
+PMID: 31342224
+Source: EuropePMC
+Title: Rational development of transformation in Clostridium thermocellum ATCC 27405 via complete methylome analysis and evasion of native restriction-modification systems
+Journal: Journal of industrial microbiology & biotechnology (2019)
+Snippet: encode putative restriction enzymesdo. The genome also encodes one Type III RM system, Cthe_0518-0519, with Cthe_0518 being a predicted restriction enzyme. No apparent Type IV systems are encoded in the genome. Previously, one of these RM systems was shown to be active in cell extracts of
+
+================================================================================
+Protein: VIMSS5623512 (E-value: 2e-17, Score: 68.3)
+Mentioned as: FTM_0875
+Description: type III restriction system endonuclease
+Organism: Francisella tularensis subsp. mediasiatica FSC147
+PMID: 23131096
+Source: EuropePMC
+Title: Whole genome sequencing of the fish pathogen Francisella noatunensis subsp. orientalis Toba04 gives novel insights into Francisella evolution and pathogenecity
+Journal: BMC genomics (2012)
+Snippet: 11 genes are unique and includes a protein involved in the type III restriction-modification system (FTM_0875), part of the defence mechanism against foreign DNA [ 21 ], where as F. tularensis subsp. tularensis has 44 unique genes and all of them hypothetical proteins. The unique proteins
+
+================================================================================
+Protein: VIMSS5925856 (E-value: 7.2e-17, Score: 66.6)
+Mentioned as: BCAL3493
+Description: type III restriction system endonuclease
+Organism: Burkholderia cenocepacia J2315
+PMID: 32669472
+Source: EuropePMC
+Title: DNA Methylation Epigenetically Regulates Gene Expression in Burkholderia cenocepacia and Controls Biofilm Formation, Cell Aggregation, and Motility
+Journal: mSphere (2020)
+Snippet: part of an RM system, together with a restriction enzyme encoded by the neighboring gene BCAL3493. Gene BCAM0992 is located on the second replicon and apparently does not have any adjacent genes coding for restriction enzymes. Instead, BCAM0992 is part of the trp operon that comprises
+
+================================================================================
+Protein: VIMSS6816599 (E-value: 7.5e-17, Score: 66.5)
+Mentioned as: Bcep1808_0037
+Description: type III restriction enzyme, res subunit
+Organism: Burkholderia vietnamiensis G4
+PMID: 32737133
+Source: EuropePMC
+Title: Mapping the Efficacy and Mode of Action of Ethylzingerone [4-(3-Ethoxy-4-Hydroxyphenyl) Butan-2-One] as an Active Agent against &lt;i&gt;Burkholderia&lt;/i&gt; Bacteria
+Journal: Applied and environmental microbiology (2020)
+Snippet: genetic pathways associated with HEPB may be regulated by DNA methylation. The mutation of gene Bcep1808_0037 (mutant 14:C2) ( Table 3 ), which encodes a highly conserved type III methyltransferase orthologous to B. cenocepacia J2315 gene BCAL3494 ( 39 ), resulted in a 2-fold decrease in
+
+================================================================================
+Protein: VIMSS7780540 (E-value: 2.3e-16, Score: 64.9)
+Mentioned as: SSU0642
+Description: type III restriction-modification system, restriction enzyme
+Organism: Streptococcus suis P1/7
+PMID: 21736719
+Source: EuropePMC
+Title: Genetic diversity of Streptococcus suis isolates as determined by comparative genome hybridization
+Journal: BMC microbiology (2011)
+Snippet: transposases RD10 SSU0592 - SSU0600 8.410 52 36.7 Hypothetical proteins, D-alanine transport RD11 SSU0640 - SSU0642 5.514 42 42.5 Type III RM RD12 SSU0651 - SSU0655 7.674 34 (5) 38.8 Type I RM RD13 SSU0661 - SSU0670 10.283 50 40.1 PTS IIABC, formate acetyltransferase, fructose-6-phaphate aldolase,
+
+================================================================================
+Protein: VIMSS1076292 (E-value: 4.4e-16, Score: 64.0)
+Mentioned as: BTH_I0042
+Description: type III restriction-modification system, res subunit
+Organism: Burkholderia thailandensis E264
+PMID: 18310423
+Source: EuropePMC
+Title: Targeted mutagenesis of Burkholderia thailandensis and Burkholderia pseudomallei through natural transformation of PCR fragments
+Journal: Applied and environmental microbiology (2008)
+Snippet: I restriction endonuclease E264 E264 E264 E264 BTH_I0042 mutS (BTH_I1913) mutS (BTH_I1913) Type III restriction endonuclease Mismatch repair protein Mismatch
+
+================================================================================
+Protein: VIMSS346024 (E-value: 2.7e-15, Score: 61.5)
+Mentioned as: t0871
+Description: hypothetical protein
+Organism: Salmonella enterica subsp. enterica serovar Typhi Ty2
+PMID: 22180267
+Source: EuropePMC
+Title: Genotyping of Salmonella enterica serovar Typhi strains isolated from 1959 to 2006 in China and analysis of genetic diversity by genomic microarray
+Journal: Croatian medical journal (2011)
+Snippet: t4354, t4355, t4356, t4357 t0869, t0872, t2948, t2949, t4953 t2647, t2648, t2656, t4521, t4528 t0869, t0871, t2647, t2648 t2647, t2648, t2656, t4518, t4522, t4523, t4525, t4527 Discussion We used MLST to analyze 40 S. Typhi isolates from 5 Chinese provinces and found two novel sequence types,
+
+================================================================================
+Protein: VIMSS346024 (E-value: 2.7e-15, Score: 61.5)
+Mentioned as: t0871
+Description: hypothetical protein
+Organism: Salmonella enterica subsp. enterica serovar Typhi Ty2
+PMID: 19609351
+Source: EuropePMC
+Title: A strand-specific RNA-Seq analysis of the transcriptome of the typhoid bacillus Salmonella typhi
+Journal: PLoS genetics (2009)
+Snippet: Bacillus sp NRRL B-14911; two proteins with similarity to a restriction endonuclease/methylase pair (t0872 and t0871); and a conserved hypothetical protein with a broad phylogenetic range of matches. The last transcribed gene in this region is a putative phage integrase, which is adjacent to a conserved
+
+================================================================================
+Protein: VIMSS346024 (E-value: 2.7e-15, Score: 61.5)
+Mentioned as: t0871
+Description: hypothetical protein
+Organism: Salmonella enterica subsp. enterica serovar Typhi Ty2
+PMID: 12644504
+Source: EuropePMC
+Title: Comparative genomics of Salmonella enterica serovar Typhi strains Ty2 and CT18
+Journal: Journal of bacteriology (2003)
+Snippet: to each strain Strain Ty2 ORF t0869 t0870 t0871 t0872 CT18a a STY0311 STY0312 STY1048 STY1049 STY1050 STY1051 STY1052 STY1053 STY1054 STY1055 STY1056 STY1057
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A060RBM8.1	AF-A0A060RBM8-F1-model_v4_TED01:10-20_92-253	1	AF-A0A060RBM8-F1-model_v4_TED01	10-253	0
+A0A060RBM8.1	AF-A0A060RBM8-F1-model_v4_TED02:294-376	1	AF-A0A060RBM8-F1-model_v4_TED02	294-376	97.6%
+A0A060RBM8.1	AF-A0A060RBM8-F1-model_v4_TED03:381-489_497-599	1	AF-A0A060RBM8-F1-model_v4_TED03	381-599	0
+A0A060RBM8.1	AF-A0A060RBM8-F1-model_v4_TED04:618-691	1	AF-A0A060RBM8-F1-model_v4_TED04	618-691	0
+A0A060RBM8.1	AF-A0A060RBM8-F1-model_v4_TED05:708-736_867-1017	1	AF-A0A060RBM8-F1-model_v4_TED05	708-1017	0
+A0A060RBM8.1	AF-A0A060RBM8-F1-model_v4_TED06:740-758_798-863	1	AF-A0A060RBM8-F1-model_v4_TED06	740-863	0
+A0A066UGV0.1	AF-A0A066UGV0-F1-model_v4_TED01:10-244	1	AF-A0A066UGV0-F1-model_v4_TED01	10-244	0
+A0A066UGV0.1	AF-A0A066UGV0-F1-model_v4_TED02:273-341	1	AF-A0A066UGV0-F1-model_v4_TED02	273-341	86.2%
+A0A066UGV0.1	AF-A0A066UGV0-F1-model_v4_TED03:354-566	1	AF-A0A066UGV0-F1-model_v4_TED03	354-566	0
+A0A066UGV0.1	AF-A0A066UGV0-F1-model_v4_TED04:570-594_719-868	1	AF-A0A066UGV0-F1-model_v4_TED04	570-868	0
+A0A066UGV0.1	AF-A0A066UGV0-F1-model_v4_TED05:599-710	1	AF-A0A066UGV0-F1-model_v4_TED05	599-710	0
+A0A081CA64.1	AF-A0A081CA64-F1-model_v4_TED01:42-267	1	AF-A0A081CA64-F1-model_v4_TED01	42-267	0
+A0A081CA64.1	AF-A0A081CA64-F1-model_v4_TED02:297-376	1	AF-A0A081CA64-F1-model_v4_TED02	297-376	97.6%
+A0A081CA64.1	AF-A0A081CA64-F1-model_v4_TED03:381-602	1	AF-A0A081CA64-F1-model_v4_TED03	381-602	0
+A0A081CA64.1	AF-A0A081CA64-F1-model_v4_TED04:619-634_758-901	1	AF-A0A081CA64-F1-model_v4_TED04	619-901	0
+A0A081CA64.1	AF-A0A081CA64-F1-model_v4_TED05:639-667_684-756	1	AF-A0A081CA64-F1-model_v4_TED05	639-756	0
+A0A081FVM2.1	AF-A0A081FVM2-F1-model_v4_TED01:12-178_185-263	1	AF-A0A081FVM2-F1-model_v4_TED01	12-263	0
+A0A081FVM2.1	AF-A0A081FVM2-F1-model_v4_TED02:282-366	1	AF-A0A081FVM2-F1-model_v4_TED02	282-366	98.8%
+A0A081FVM2.1	AF-A0A081FVM2-F1-model_v4_TED03:370-544	1	AF-A0A081FVM2-F1-model_v4_TED03	370-544	0
+A0A081FVM2.1	AF-A0A081FVM2-F1-model_v4_TED04:610-666	1	AF-A0A081FVM2-F1-model_v4_TED04	610-666	0
+A0A081FVM2.1	AF-A0A081FVM2-F1-model_v4_TED05:693-706_831-974	1	AF-A0A081FVM2-F1-model_v4_TED05	693-974	0
+A0A081FVM2.1	AF-A0A081FVM2-F1-model_v4_TED06:711-823	1	AF-A0A081FVM2-F1-model_v4_TED06	711-823	0
+A0A091FB06.1	AF-A0A091FB06-F1-model_v4_TED01:11-261	1	AF-A0A091FB06-F1-model_v4_TED01	11-261	0
+A0A091FB06.1	AF-A0A091FB06-F1-model_v4_TED02:289-371	1	AF-A0A091FB06-F1-model_v4_TED02	289-371	97.6%
+A0A091FB06.1	AF-A0A091FB06-F1-model_v4_TED03:380-568	1	AF-A0A091FB06-F1-model_v4_TED03	380-568	0
+A0A091FB06.1	AF-A0A091FB06-F1-model_v4_TED04:601-667	1	AF-A0A091FB06-F1-model_v4_TED04	601-667	0
+A0A091FB06.1	AF-A0A091FB06-F1-model_v4_TED05:690-709_828-962	1	AF-A0A091FB06-F1-model_v4_TED05	690-962	0
+A0A091FDX4.1	AF-A0A091FDX4-F1-model_v4_TED01:47-250	1	AF-A0A091FDX4-F1-model_v4_TED01	47-250	0
+A0A091FDX4.1	AF-A0A091FDX4-F1-model_v4_TED02:280-359	1	AF-A0A091FDX4-F1-model_v4_TED02	280-359	97.6%
+A0A091FDX4.1	AF-A0A091FDX4-F1-model_v4_TED03:364-584	1	AF-A0A091FDX4-F1-model_v4_TED03	364-584	0
+A0A091FDX4.1	AF-A0A091FDX4-F1-model_v4_TED04:591-872	1	AF-A0A091FDX4-F1-model_v4_TED04	591-872	0
+A0A096B2D3.1	AF-A0A096B2D3-F1-model_v4_TED02:306-388	1	AF-A0A096B2D3-F1-model_v4_TED02	306-388	98.8%
+A0A096B2D3.1	AF-A0A096B2D3-F1-model_v4_TED01:22-38_55-277	1	AF-A0A096B2D3-F1-model_v4_TED01	22-277	0
+A0A096B2D3.1	AF-A0A096B2D3-F1-model_v4_TED03:394-499_530-634	1	AF-A0A096B2D3-F1-model_v4_TED03	394-634	0
+A0A096B2D3.1	AF-A0A096B2D3-F1-model_v4_TED04:643-719	1	AF-A0A096B2D3-F1-model_v4_TED04	643-719	0
+A0A096B2D3.1	AF-A0A096B2D3-F1-model_v4_TED05:760-790_835-904	1	AF-A0A096B2D3-F1-model_v4_TED05	760-904	0
+A0A096B2D3.1	AF-A0A096B2D3-F1-model_v4_TED06:908-1049	1	AF-A0A096B2D3-F1-model_v4_TED06	908-1049	0
+A0A098C0I5.1	AF-A0A098C0I5-F1-model_v4_TED01:10-23_49-263	1	AF-A0A098C0I5-F1-model_v4_TED01	10-263	0
+A0A098C0I5.1	AF-A0A098C0I5-F1-model_v4_TED02:292-375	1	AF-A0A098C0I5-F1-model_v4_TED02	292-375	98.8%
+A0A098C0I5.1	AF-A0A098C0I5-F1-model_v4_TED03:380-609	1	AF-A0A098C0I5-F1-model_v4_TED03	380-609	0
+A0A098C0I5.1	AF-A0A098C0I5-F1-model_v4_TED04:618-692	1	AF-A0A098C0I5-F1-model_v4_TED04	618-692	0
+A0A098C0I5.1	AF-A0A098C0I5-F1-model_v4_TED05:708-736_867-1012	1	AF-A0A098C0I5-F1-model_v4_TED05	708-1012	0
+A0A098C0I5.1	AF-A0A098C0I5-F1-model_v4_TED06:740-757_800-856	1	AF-A0A098C0I5-F1-model_v4_TED06	740-856	0
+A0A098C1E4.1	AF-A0A098C1E4-F1-model_v4_TED01:10-263	1	AF-A0A098C1E4-F1-model_v4_TED01	10-263	0
+A0A098C1E4.1	AF-A0A098C1E4-F1-model_v4_TED02:292-374	1	AF-A0A098C1E4-F1-model_v4_TED02	292-374	97.6%
+A0A098C1E4.1	AF-A0A098C1E4-F1-model_v4_TED03:379-607	1	AF-A0A098C1E4-F1-model_v4_TED03	379-607	0
+A0A098C1E4.1	AF-A0A098C1E4-F1-model_v4_TED04:618-691	1	AF-A0A098C1E4-F1-model_v4_TED04	618-691	0
+A0A098C1E4.1	AF-A0A098C1E4-F1-model_v4_TED05:707-734_867-1011	1	AF-A0A098C1E4-F1-model_v4_TED05	707-1011	0
+A0A098C1E4.1	AF-A0A098C1E4-F1-model_v4_TED06:739-761_797-862	1	AF-A0A098C1E4-F1-model_v4_TED06	739-862	0
+A0A098EX20.1	AF-A0A098EX20-F1-model_v4_TED01:42-263	1	AF-A0A098EX20-F1-model_v4_TED01	42-263	0
+A0A098EX20.1	AF-A0A098EX20-F1-model_v4_TED02:293-370	1	AF-A0A098EX20-F1-model_v4_TED02	293-370	100.0%
+A0A098EX20.1	AF-A0A098EX20-F1-model_v4_TED03:374-589	1	AF-A0A098EX20-F1-model_v4_TED03	374-589	0
+A0A098EX20.1	AF-A0A098EX20-F1-model_v4_TED04:605-681	1	AF-A0A098EX20-F1-model_v4_TED04	605-681	0
+A0A098EX20.1	AF-A0A098EX20-F1-model_v4_TED05:690-711_840-982	1	AF-A0A098EX20-F1-model_v4_TED05	690-982	0
+A0A098EX20.1	AF-A0A098EX20-F1-model_v4_TED06:717-740_770-834	1	AF-A0A098EX20-F1-model_v4_TED06	717-834	0
+A0A0A0C4Y7.1	AF-A0A0A0C4Y7-F1-model_v4_TED01:18-273	1	AF-A0A0A0C4Y7-F1-model_v4_TED01	18-273	0
+A0A0A0C4Y7.1	AF-A0A0A0C4Y7-F1-model_v4_TED02:303-387	1	AF-A0A0A0C4Y7-F1-model_v4_TED02	303-387	97.6%
+A0A0A0C4Y7.1	AF-A0A0A0C4Y7-F1-model_v4_TED03:395-607	1	AF-A0A0A0C4Y7-F1-model_v4_TED03	395-607	0
+A0A0A0C4Y7.1	AF-A0A0A0C4Y7-F1-model_v4_TED04:623-693	1	AF-A0A0A0C4Y7-F1-model_v4_TED04	623-693	0
+A0A0A0C4Y7.1	AF-A0A0A0C4Y7-F1-model_v4_TED05:712-733_852-991	1	AF-A0A0A0C4Y7-F1-model_v4_TED05	712-991	0
+A0A0A0C4Y7.1	AF-A0A0A0C4Y7-F1-model_v4_TED06:737-836	1	AF-A0A0A0C4Y7-F1-model_v4_TED06	737-836	0
+A0A0B5CMA6.1	AF-A0A0B5CMA6-F1-model_v4_TED01:10-245	1	AF-A0A0B5CMA6-F1-model_v4_TED01	10-245	0
+A0A0B5CMA6.1	AF-A0A0B5CMA6-F1-model_v4_TED02:275-344	1	AF-A0A0B5CMA6-F1-model_v4_TED02	275-344	84.3%
+A0A0B5CMA6.1	AF-A0A0B5CMA6-F1-model_v4_TED03:357-572	1	AF-A0A0B5CMA6-F1-model_v4_TED03	357-572	1.2%
+A0A0B5CMA6.1	AF-A0A0B5CMA6-F1-model_v4_TED04:576-878	1	AF-A0A0B5CMA6-F1-model_v4_TED04	576-878	0
+A0A0B7IW58.1	AF-A0A0B7IW58-F1-model_v4_TED01:10-33_68-279	1	AF-A0A0B7IW58-F1-model_v4_TED01	10-279	0
+A0A0B7IW58.1	AF-A0A0B7IW58-F1-model_v4_TED02:308-389	1	AF-A0A0B7IW58-F1-model_v4_TED02	308-389	98.8%
+A0A0B7IW58.1	AF-A0A0B7IW58-F1-model_v4_TED03:397-480_489-642	1	AF-A0A0B7IW58-F1-model_v4_TED03	397-642	0
+A0A0B7IW58.1	AF-A0A0B7IW58-F1-model_v4_TED04:653-727	1	AF-A0A0B7IW58-F1-model_v4_TED04	653-727	0
+A0A0B7IW58.1	AF-A0A0B7IW58-F1-model_v4_TED05:748-769_898-1041	1	AF-A0A0B7IW58-F1-model_v4_TED05	748-1041	0
+A0A0B7IW58.1	AF-A0A0B7IW58-F1-model_v4_TED06:773-795_830-895	1	AF-A0A0B7IW58-F1-model_v4_TED06	773-895	0
+A0A0B7MNN6.1	AF-A0A0B7MNN6-F1-model_v4_TED01:45-278	1	AF-A0A0B7MNN6-F1-model_v4_TED01	45-278	0
+A0A0B7MNN6.1	AF-A0A0B7MNN6-F1-model_v4_TED02:306-390	1	AF-A0A0B7MNN6-F1-model_v4_TED02	306-390	98.8%
+A0A0B7MNN6.1	AF-A0A0B7MNN6-F1-model_v4_TED03:393-607	1	AF-A0A0B7MNN6-F1-model_v4_TED03	393-607	0
+A0A0B7MNN6.1	AF-A0A0B7MNN6-F1-model_v4_TED04:635-689	1	AF-A0A0B7MNN6-F1-model_v4_TED04	635-689	0
+A0A0B7MNN6.1	AF-A0A0B7MNN6-F1-model_v4_TED05:704-730_850-991	1	AF-A0A0B7MNN6-F1-model_v4_TED05	704-991	0
+A0A0B7MNN6.1	AF-A0A0B7MNN6-F1-model_v4_TED06:734-757_786-847	1	AF-A0A0B7MNN6-F1-model_v4_TED06	734-847	0
+A0A0C5J5T5.1	AF-A0A0C5J5T5-F1-model_v4_TED01:11-38_51-266	1	AF-A0A0C5J5T5-F1-model_v4_TED01	11-266	0
+A0A0C5J5T5.1	AF-A0A0C5J5T5-F1-model_v4_TED02:295-379	1	AF-A0A0C5J5T5-F1-model_v4_TED02	295-379	98.8%
+A0A0C5J5T5.1	AF-A0A0C5J5T5-F1-model_v4_TED03:393-612	1	AF-A0A0C5J5T5-F1-model_v4_TED03	393-612	0
+A0A0C5J5T5.1	AF-A0A0C5J5T5-F1-model_v4_TED04:621-695	1	AF-A0A0C5J5T5-F1-model_v4_TED04	621-695	0
+A0A0C5J5T5.1	AF-A0A0C5J5T5-F1-model_v4_TED05:718-733_869-1017	1	AF-A0A0C5J5T5-F1-model_v4_TED05	718-1017	0
+A0A0D7K8H5.1	AF-A0A0D7K8H5-F1-model_v4_TED01:42-262	1	AF-A0A0D7K8H5-F1-model_v4_TED01	42-262	0
+A0A0D7K8H5.1	AF-A0A0D7K8H5-F1-model_v4_TED02:292-372	1	AF-A0A0D7K8H5-F1-model_v4_TED02	292-372	98.8%
+A0A0D7K8H5.1	AF-A0A0D7K8H5-F1-model_v4_TED03:377-603	1	AF-A0A0D7K8H5-F1-model_v4_TED03	377-603	0
+A0A0D7K8H5.1	AF-A0A0D7K8H5-F1-model_v4_TED04:608-630_767-919	1	AF-A0A0D7K8H5-F1-model_v4_TED04	608-919	0
+A0A0D7K8H5.1	AF-A0A0D7K8H5-F1-model_v4_TED05:639-754	1	AF-A0A0D7K8H5-F1-model_v4_TED05	639-754	0
+A0A0E3W2E4.1	AF-A0A0E3W2E4-F1-model_v4_TED01:10-26_64-281	1	AF-A0A0E3W2E4-F1-model_v4_TED01	10-281	0
+A0A0E3W2E4.1	AF-A0A0E3W2E4-F1-model_v4_TED02:309-392	1	AF-A0A0E3W2E4-F1-model_v4_TED02	309-392	98.8%
+A0A0E3W2E4.1	AF-A0A0E3W2E4-F1-model_v4_TED03:397-623	1	AF-A0A0E3W2E4-F1-model_v4_TED03	397-623	0
+A0A0E3W2E4.1	AF-A0A0E3W2E4-F1-model_v4_TED04:634-709	1	AF-A0A0E3W2E4-F1-model_v4_TED04	634-709	0
+A0A0E3W2E4.1	AF-A0A0E3W2E4-F1-model_v4_TED06:756-779_817-883	1	AF-A0A0E3W2E4-F1-model_v4_TED06	756-883	0
+A0A0E3W2E4.1	AF-A0A0E3W2E4-F1-model_v4_TED05:734-751_886-1034	1	AF-A0A0E3W2E4-F1-model_v4_TED05	734-1034	0
+A0A0F0CPI5.1	AF-A0A0F0CPI5-F1-model_v4_TED01:11-27_51-185_192-275	1	AF-A0A0F0CPI5-F1-model_v4_TED01	11-275	0
+A0A0F0CPI5.1	AF-A0A0F0CPI5-F1-model_v4_TED02:292-374	1	AF-A0A0F0CPI5-F1-model_v4_TED02	292-374	97.6%
+A0A0F0CPI5.1	AF-A0A0F0CPI5-F1-model_v4_TED03:378-460_505-577	1	AF-A0A0F0CPI5-F1-model_v4_TED03	378-577	0
+A0A0F0CPI5.1	AF-A0A0F0CPI5-F1-model_v4_TED04:604-671	1	AF-A0A0F0CPI5-F1-model_v4_TED04	604-671	0
+A0A0F0CPI5.1	AF-A0A0F0CPI5-F1-model_v4_TED05:686-710_840-966	1	AF-A0A0F0CPI5-F1-model_v4_TED05	686-966	0
+A0A0F0CPI5.1	AF-A0A0F0CPI5-F1-model_v4_TED06:712-737_767-831	1	AF-A0A0F0CPI5-F1-model_v4_TED06	712-831	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 50 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF01555	N6_N4_Mtase	46	0.92	0.81
+PF00271	Helicase_C	36	0.72	0.58
+PF04851	ResIII	35	0.70	0.56
+PF00176	SNF2-rel_dom	33	0.66	0.52
+
+--- End STRING ---

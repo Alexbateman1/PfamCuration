@@ -1,0 +1,193 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L8D5_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+5	5	Rhizobiaceae
+4	5	Bacillaceae
+3	5	Roseobacteraceae
+6	4	Hyphomicrobiales
+6	4	Bacillales
+3	4	Rhodobacterales
+6	3	Bacilli
+14	3	Alphaproteobacteria
+7	2	Bacillota
+18	2	Pseudomonadota
+7	1	Bacillati
+18	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Foldseek ---
+Structural similarity matches. Can be suggestive of clan lines to add to DESC if results are consistent,
+or adding a CC line noting structural relationship to relevant Pfam families identified.
+
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+Iterate	query_model	PF11134	Phage_stabilise	CL0186	PF11134_M1SC00_1_res4-472	0.10	506	422	0	1.000	3.56e-15	383.0
+Iterate	query_model	PF25675	Phage_nozzle	CL0186	PF25675_A0A562FN94_1_res1-791	0.09	782	463	0	1.000	1.22e-11	295.0
+Iterate	query_model	PF27702	UCP007778	CL0186	PF27702_Q6BQ52_2_res1-421	0.11	336	292	0	1.000	3.54e-06	135.0
+Iterate	query_model	PF21031	WDR54	CL0186	PF21031_Q9H977_1_res1-334	0.10	336	297	0	1.000	1.02e-05	143.0
+Iterate	query_model	PF20770	PAN2_N	CL0186	PF20770_Q504Q3_3_res58-358	0.09	335	269	0	1.000	1.26e-05	142.0
+Iterate	query_model	PF16756	PALB2_WD40	CL0186	PF16756_H2ZX42_1_res524-867	0.08	361	313	0	1.000	1.40e-05	127.0
+Iterate	query_model	PF24805	EIF3I	CL0186	PF24805_A0A0D2EK08_1_res1-328	0.10	335	284	0	1.000	1.55e-05	125.0
+Iterate	query_model	PF05096	Glu_cyclase_2	CL0186	PF05096_W0A3M6_1_res7-253	0.11	364	214	0	1.000	1.64e-05	96.0
+Iterate	query_model	PF25178	Beta-prop_WDR41	CL0186	PF25178_A0A6P7XD99_1_res1-439	0.11	469	325	0	1.000	1.82e-05	86.0
+Iterate	query_model	PF23726	Beta-prop_RSE1_2nd	CL0186	PF23726_Q7RYR4_2_res463-778	0.10	333	280	0	1.000	2.13e-05	136.0
+Iterate	query_model	PF08168	NOL11_N	CL0186	PF08168_Q8BJW5_1_res1-332	0.12	348	288	0	1.000	2.93e-05	105.0
+Iterate	query_model	PF23743	Beta-prop_BBS7	CL0186	PF23743_A0A383ZBP4_1_res21-319	0.12	252	190	0	1.000	6.82e-05	106.0
+Iterate	query_model	PF23748	Beta-prop_LRRK2	CL0186	PF23748_A0A812AX67_1_res286-635	0.08	223	191	0	1.000	1.29e-04	130.0
+Iterate	query_model	PF24782	WD40_MABP1-WDR62_2nd	CL0186	PF24782_V4BSL8_1_res348-691	0.09	302	215	0	1.000	1.36e-04	99.0
+Iterate	query_model	PF25279	Beta_prop_At2g24240	CL0186	PF25279_A0A2K1WZ43_1_res122-440	0.08	320	285	0	1.000	1.43e-04	84.0
+Iterate	query_model	PF14727	PHTB1_N	CL0186	PF14727_A7STA0_1_res1-358	0.10	318	250	0	1.000	1.51e-04	93.0
+Iterate	query_model	PF24814	WD40_Prp19	CL0186	PF24814_A0A087SDL0_1_res141-425	0.12	314	245	0	1.000	1.77e-04	123.0
+Iterate	query_model	PF25463	DUF7899	CL0186	PF25463_A0A811RD71_1_res1-410	0.09	400	301	0	1.000	1.77e-04	85.0
+Iterate	query_model	PF17005	WD40_like	CL0186	PF17005_S7W9E7_1_res12-317	0.10	309	231	0	1.000	1.86e-04	106.0
+Iterate	query_model	PF24807	WD40_CDC20-Fz	CL0186	PF24807_A0A1X7SX25_1_res24-315	0.09	326	262	0	1.000	2.18e-04	109.0
+Iterate	query_model	PF16472	LRP1-like_beta_prop	CL0186	PF16472_A0A5D0D2G1_1_res7-270	0.12	309	215	0	1.000	2.30e-04	117.0
+Iterate	query_model	PF23383	Beta-prop_IFT140_1st	CL0186	PF23383_A0A444TXI5_1_res2-404	0.10	354	315	0	1.000	2.30e-04	97.0
+Iterate	query_model	PF05131	Pep3_Vps18	CL0186	PF05131_F4IDS7_1_res6-360	0.09	351	302	0	1.000	2.30e-04	94.0
+Iterate	query_model	PF23098	Beta-prop_NOL10_N	CL0186	PF23098_C4LW22_1_res2-369	0.08	333	273	0	1.000	3.70e-04	83.0
+Iterate	query_model	PF20426	NBCH_WD40	CL0186	PF20426_A0A453NF56_1_res305-654	0.08	328	292	0	1.000	4.11e-04	102.0
+Iterate	query_model	PF23341	PEP5_VPS11_N	CL0186	PF23341_F6YU56_2_res6-341	0.10	333	296	0	1.000	4.57e-04	105.0
+Iterate	query_model	PF13854	Kelch_HCF	CL0186	PF13854_A0A2I4CNR6_1_res7-365	0.11	357	295	0	1.000	4.57e-04	83.0
+Iterate	query_model	PF24750	b-prop_At3g26010-like	CL0186	PF24750_Q9LIR3_1_res51-413	0.11	328	244	0	1.000	4.82e-04	69.0
+Iterate	query_model	PF23754	Beta-prop_IP5PC_F	CL0186	PF23754_A0A803M5J9_1_res53-451	0.10	393	288	0	1.000	5.08e-04	85.0
+Iterate	query_model	PF15907	Itfg2	CL0186	PF15907_A0A2K6D9H8_1_res49-386	0.07	332	307	0	1.000	5.36e-04	91.0
+Iterate	query_model	PF15020	Beta-prop_CATSPERD	CL0186	PF15020_H0X3W3_1_res39-366	0.12	329	287	0	1.000	5.65e-04	79.0
+Iterate	query_model	PF23215	WD_LRWD1	CL0186	PF23215_A0A140UHX1_1_res261-648	0.08	357	295	0	1.000	6.62e-04	75.0
+Iterate	query_model	PF23760	Beta-prop_DCAF12	CL0186	PF23760_A0A091DME6_1_res41-423	0.08	374	301	0	1.000	6.98e-04	89.0
+Iterate	query_model	PF15416	DUF4623	CL0186	PF15416_C6XWM6_1_res27-472	0.10	422	312	0	1.000	6.98e-04	77.0
+Iterate	query_model	PF23798	Beta-prop_SPT8	CL0186	PF23798_H2ATP9_1_res116-536	0.09	418	300	0	1.000	7.36e-04	96.0
+Iterate	query_model	PF27482	Beta-prop_YycP	CL0186	PF27482_Q45606_2_res40-384	0.07	285	251	0	1.000	7.36e-04	93.0
+Iterate	query_model	PF25499	Beta-prop_pof12	CL0186	PF25499_O60053_1_res92-440	0.08	341	303	0	1.000	8.18e-04	96.0
+Iterate	query_model	PF23775	Beta-prop_RIG_2nd	CL0186	PF23775_A0A7R8U9S1_1_res519-797	0.10	297	233	0	1.000	9.09e-04	90.0
+Iterate	query_model	PF15492	Nbas_N	CL0186	PF15492_Q5TYW4_1_res79-359	0.09	267	221	0	1.000	9.09e-04	89.0
+Iterate	query_model	PF16529	Ge1_WD40	CL0186	PF16529_E2BKU7_1_res48-379	0.11	306	271	0	1.000	9.09e-04	64.0
+Iterate	query_model	PF24981	Beta-prop_ATRN-LZTR1	CL0186	PF24981_A0A183IZP0_1_res190-469	0.10	265	234	0	1.000	9.58e-04	82.0
+Iterate	query_model	PF14870	PSII_BNR	CL0186	PF14870_B1WVS1_1_res25-326	0.08	334	263	0	1.000	9.58e-04	74.0
+
+--- End Foldseek ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1Y2K994	UNCHARACTERIZED PROTEIN {    407.3   3.6e-118   1   1.0   5.6
+	Iterate                   	     1	   445	   407.1
+
+A0A225MRC1	UNCHARACTERIZED PROTEIN {    310.8    6.7e-89   1   1.0  17.9
+	Iterate                   	     1	   492	   310.5
+
+A0A437LZ66	UNCHARACTERIZED PROTEIN {    343.0    1.1e-98   1   1.0  10.9
+	Iterate                   	     6	   500	   342.7
+
+A0A6J5FKV2	UBIQUITIN-ACTIVATING ENZY    320.0    1.1e-91   2   2.0  13.6
+	Iterate                   	   206	   585	   241.7
+	Iterate                   	    12	   161	    82.7
+
+A0L8D5	UNCHARACTERIZED PROTEIN {ECO:   1186.1          0   1   1.0  14.1
+	Iterate                   	    16	   505	  1185.9
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS7554958 (E-value: 4e-11, Score: 47.5)
+Mentioned as: CLIBASIA_05190
+Description: hypothetical protein
+Organism: Candidatus Liberibacter asiaticus str. psy62
+PMID: 33579681
+Source: EuropePMC
+Title: "<i>Candidatus</i> Liberibacter asiaticus" Secretes Nonclassically Secreted Proteins That Suppress Host Hypersensitive Cell Death and Induce Expression of Plant Pathogenesis-Related Proteins
+Journal: Applied and environmental microbiology (2021)
+
+================================================================================
+Protein: VIMSS4119897 (E-value: 4.6e-10, Score: 43.9)
+Mentioned as: A55_1878
+Description: hypothetical protein
+Organism: Vibrio cholerae 1587
+PMID: 24127837
+Source: EuropePMC
+Title: The Aeromonas salmonicida subsp. salmonicida exoproteome: global analysis, moonlighting proteins and putative antigens for vaccination against furunculosis
+Journal: Proteome science (2013)
+Snippet: of A. salmonicida subsp. salmonicida 01-B526 (IYQ_00957/RdgC, A. veronii AMC35 HMPREF1170_02622 and Vibrio cholerae 1587 A55_1878 homologues) which are predicted to be encoded in the contig two [GenBank: AGVO01000002.1] were also discovered. The majority of proteins detected in SNs and pellets of wt and T3SS mutant
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0B1Q7N5.1	AF-A0A0B1Q7N5-F1-model_v4_TED01:17-61_387-435_459-503	1	AF-A0A0B1Q7N5-F1-model_v4_TED01	17-503	100.0%
+A0A0B1Q7N5.1	AF-A0A0B1Q7N5-F1-model_v4_TED02:63-380	1	AF-A0A0B1Q7N5-F1-model_v4_TED02	63-380	65.3%
+A0A0Q6E4K2.1	AF-A0A0Q6E4K2-F1-model_v4_TED01:15-48_388-506	1	AF-A0A0Q6E4K2-F1-model_v4_TED01	15-506	100.0%
+A0A0Q6E4K2.1	AF-A0A0Q6E4K2-F1-model_v4_TED02:62-379	1	AF-A0A0Q6E4K2-F1-model_v4_TED02	62-379	65.0%
+A0A1H8H584.1	AF-A0A1H8H584-F1-model_v4_TED01:14-61_409-462_482-528	1	AF-A0A1H8H584-F1-model_v4_TED01	14-528	100.0%
+A0A1S1SXJ0.1	AF-A0A1S1SXJ0-F1-model_v4_TED01:26-67_418-541	1	AF-A0A1S1SXJ0-F1-model_v4_TED01	26-541	100.0%
+A0A1X7AAT5.1	AF-A0A1X7AAT5-F1-model_v4_TED01:11-53_382-437_456-505	1	AF-A0A1X7AAT5-F1-model_v4_TED01	11-505	100.0%
+A0A1X7AAT5.1	AF-A0A1X7AAT5-F1-model_v4_TED02:55-372	1	AF-A0A1X7AAT5-F1-model_v4_TED02	55-372	64.2%
+A0A2U2DV02.1	AF-A0A2U2DV02-F1-model_v4_TED01:25-67_410-530	1	AF-A0A2U2DV02-F1-model_v4_TED01	25-530	100.0%
+A0A395LAT5.1	AF-A0A395LAT5-F1-model_v4_TED01:27-69_414-537	1	AF-A0A395LAT5-F1-model_v4_TED01	27-537	100.0%
+A0A395LAT5.1	AF-A0A395LAT5-F1-model_v4_TED02:71-316	1	AF-A0A395LAT5-F1-model_v4_TED02	71-316	48.4%
+A0A437LZ66.1	AF-A0A437LZ66-F1-model_v4_TED01:8-48_389-500	1	AF-A0A437LZ66-F1-model_v4_TED01	8-500	100.0%
+A0A437LZ66.1	AF-A0A437LZ66-F1-model_v4_TED02:51-382	1	AF-A0A437LZ66-F1-model_v4_TED02	51-382	67.3%
+A0A4R1RVF8.1	AF-A0A4R1RVF8-F1-model_v4_TED02:69-344	1	AF-A0A4R1RVF8-F1-model_v4_TED02	69-344	54.0%
+A0A4R1RVF8.1	AF-A0A4R1RVF8-F1-model_v4_TED01:26-64_408-538	1	AF-A0A4R1RVF8-F1-model_v4_TED01	26-538	99.8%
+A0A5B0DXJ9.1	AF-A0A5B0DXJ9-F1-model_v4_TED01:18-60_386-502	1	AF-A0A5B0DXJ9-F1-model_v4_TED01	18-502	99.8%
+A0A5B0DXJ9.1	AF-A0A5B0DXJ9-F1-model_v4_TED02:62-285_355-377	1	AF-A0A5B0DXJ9-F1-model_v4_TED02	62-377	65.0%
+A0A7W6S668.1	AF-A0A7W6S668-F1-model_v4_TED02:71-403	1	AF-A0A7W6S668-F1-model_v4_TED02	71-403	65.3%
+A0A7W6S668.1	AF-A0A7W6S668-F1-model_v4_TED01:27-68_415-472_489-536	1	AF-A0A7W6S668-F1-model_v4_TED01	27-536	100.0%
+A0A840HXT6.1	AF-A0A840HXT6-F1-model_v4_TED01:16-61_514-574_588-635	1	AF-A0A840HXT6-F1-model_v4_TED01	16-635	100.0%
+A0A840HXT6.1	AF-A0A840HXT6-F1-model_v4_TED02:185-261	1	AF-A0A840HXT6-F1-model_v4_TED02	185-261	17.1%
+A0L8D5.1	AF-A0L8D5-F1-model_v4_TED01:16-46_390-505	1	AF-A0L8D5-F1-model_v4_TED01	16-505	100.0%
+A0L8D5.1	AF-A0L8D5-F1-model_v4_TED02:60-385	1	AF-A0L8D5-F1-model_v4_TED02	60-385	66.5%
+L0EVR8.1	AF-L0EVR8-F1-model_v4_TED01:23-64_415-477_484-542	1	AF-L0EVR8-F1-model_v4_TED01	23-542	100.0%
+L0EVW3.1	AF-L0EVW3-F1-model_v4_TED01:22-64_412-533	1	AF-L0EVW3-F1-model_v4_TED01	22-533	100.0%
+L0EVW3.1	AF-L0EVW3-F1-model_v4_TED02:66-338	1	AF-L0EVW3-F1-model_v4_TED02	66-338	53.3%
+U4KBN8.1	AF-U4KBN8-F1-model_v4_TED01:24-53_418-459_491-538	1	AF-U4KBN8-F1-model_v4_TED01	24-538	100.0%
+U4KBN8.1	AF-U4KBN8-F1-model_v4_TED02:67-412	1	AF-U4KBN8-F1-model_v4_TED02	67-412	67.4%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 9 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF24175	SU10_adaptor	8	0.89	0.56
+
+--- End STRING ---

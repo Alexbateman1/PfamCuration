@@ -1,0 +1,288 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L6R7_TED05/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+36	5	Pirellulaceae
+39	4	Pirellulales
+31	4	Burkholderiales
+59	3	Planctomycetia
+43	3	Gammaproteobacteria
+43	3	Alphaproteobacteria
+38	3	Betaproteobacteria
+60	2	Planctomycetota
+126	2	Pseudomonadota
+199	1	Pseudomonadati
+199	0	Bacteria
+Total of 200 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Foldseek ---
+Structural similarity matches. Can be suggestive of clan lines to add to DESC if results are consistent,
+or adding a CC line noting structural relationship to relevant Pfam families identified.
+
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+Iterate	query_model	PF25940	LcnD_C	CL0866	PF25940_A0A4Y9J190_1_res352-441	0.14	104	70	0	1.000	3.50e-05	174.0
+Iterate	query_model	PF25944	Beta-barrel_RND	CL0866	PF25944_P58411_1_res223-303	0.17	104	63	0	1.000	6.46e-05	166.0
+Iterate	query_model	PF26002	Beta-barrel_AprE	CL0866	PF26002_A0A2N4YFA5_1_res317-406	0.18	105	71	0	1.000	1.86e-04	137.0
+Iterate	query_model	PF25963	Beta-barrel_AAEA	CL0866	PF25963_W1NAG4_1_res186-283	0.20	104	77	0	1.000	2.91e-04	134.0
+Iterate	query_model	PF25965	Beta-barrel_ALG44	CL0866	PF25965_Q9HY69_1_res298-376	0.15	105	63	0	1.000	4.54e-04	145.0
+Iterate	query_model	PF25990	Beta-barrel_YknX	CL0866	PF25990_A0A0V8JNK8_1_res215-297	0.15	104	69	0	1.000	5.99e-04	135.0
+
+--- End Foldseek ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1C3JXK6	PEPTIDASE M50 {ECO:000031    138.2    7.6e-37   1   1.8   0.7
+	Iterate                   	   602	   739	   136.8
+	PF02163	Peptidase_M50   	   207	   311	    28.4
+	PF25973	BSH_CzcB        	   472	   598	    30.7
+
+A0A1E2VDP7	HEMOLYSIN D {ECO:0000313|    141.2    8.5e-38   1   1.6   0.1
+	Iterate                   	   591	   716	   140.2
+
+A0A1Y6CP86	PUTATIVE PEPTIDE ZINC MET    142.4    3.7e-38   1   1.7   0.2
+	Iterate                   	   614	   737	   141.2
+	PF02163	Peptidase_M50   	   222	   438	    33.6
+
+A0A3M6QVF6	HLYD FAMILY EFFLUX TRANSP    138.1    7.7e-37   1   1.5   1.5
+	Iterate                   	   601	   740	   137.2
+
+I3TXM4	PEPTIDASE M50 {ECO:0000313|EM    138.9    4.5e-37   1   1.7   0.2
+	Iterate                   	   602	   729	   137.7
+	PF02163	Peptidase_M50   	   210	   298	    30.1
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS5924123 (E-value: 0.0001, Score: 27.9)
+Mentioned as: BCAL1811
+Description: putative efflux system transport protein
+Organism: Burkholderia cenocepacia J2315
+PMID: 21357299
+Source: EuropePMC
+Title: Molecular mechanisms of chlorhexidine tolerance in Burkholderia cenocepacia biofilms
+Journal: Antimicrobial agents and chemotherapy (2011)
+Snippet: BCAM2549 BCAM2550 BCAM2551 2.0 (NS) 1.2 (NS) 9.7 RND-13 BCAL1811 BCAL1812 BCAL1813 4.1 2.0 (NS) 1.0 (NS) RND-16 BCAM1419 BCAM1420 BCAM1421 1.3 (NS) 2.1 2.8 MFS
+
+================================================================================
+Protein: VIMSS5924123 (E-value: 0.0001, Score: 27.9)
+Mentioned as: BCAL1811
+Description: putative efflux system transport protein
+Organism: Burkholderia cenocepacia J2315
+PMID: 20525265
+Source: EuropePMC
+Title: Exploring the HME and HAE1 efflux systems in the genus Burkholderia
+Journal: BMC evolutionary biology (2010)
+Snippet: (BCAM0927, gi:206562782); CDS9 (BCAM1947, gi:206563792); CDS10 (BCAM2551, gi:206564392); CDS11 (BCAM0712, gi:206562572); CDS12 (BCAM0434, gi:206562297); CDS13 (BCAL1811, gi:206560173); CDS14 (BCAS0583, gi:197295426); CDS15 (BCAM1420, gi: 206563272); CDS16 (BCAL2135, gi:206560498). c) CDS1 (BCAS0593, gi:197295434); CDS2 (BCAS0764, gi:197295594); CDS3 (BCAL1676, gi:206560038); CDS4 (BCAL2820, gi:206561157); CDS8 (BCAM0925, gi:206562780); CDS9 (BCAM1945, gi:206563790);
+
+================================================================================
+Protein: VIMSS5924123 (E-value: 0.0001, Score: 27.9)
+Mentioned as: BCAL1811
+Description: putative efflux system transport protein
+Organism: Burkholderia cenocepacia J2315
+PMID: 18931103
+Source: EuropePMC
+Title: The genome of Burkholderia cenocepacia J2315, an epidemic pathogen of cystic fibrosis patients
+Journal: Journal of bacteriology (2009)
+Snippet: BCAL1510 to BCAL1512 BCAL1674 to BCAL1676 BCAL1778 BCAL1811 to BCAL1813 BCAL1907 BCAL2134 to BCAL2136 BCAL2820 to BCAL2822 BCAL2907 BCAL2915 BCAL3259 Unknown
+
+================================================================================
+Protein: VIMSS2197269 (E-value: 0.00023, Score: 26.7)
+Mentioned as: PA14_33770
+Description: putative ABC export system, membrane fusion protein
+Organism: Pseudomonas aeruginosa UCBPP-PA14
+PMID: 30093651
+Source: EuropePMC
+Title: Genome wide identification and experimental validation of Pseudomonas aeruginosa Tat substrates
+Journal: Scientific reports (2018)
+Snippet: MND RR T FLK QAGILAAGL PLLSAAQSLRA* PA14_33740 PA2392 d MTV SRR G F MAGLAL TGAAALPVA* PA14_33770 PA2389 MRRTRS TRR AL L VAVCLS PLIALA* PA14_34510 PA2328 MCLDDPTH SRR DI LK LAALLSAAGAL PLLSSLQARA* PA14_35300 PA2264 MPDDKAVNG RR D FL RK TLTVIPAVTLAGYGVGH AMQTPA* PA14_37100 PA2124 MHQPENPA RR T L
+
+================================================================================
+Protein: Q9I191 (E-value: 0.00023, Score: 26.7)
+Mentioned as: Q9I191
+Description: Pyoverdine export membrane fusion protein PvdR
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+  SwissProt:  - Pyoverdine export membrane fusion protein PvdR
+PMID: 40066032
+Source: EuropePMC
+Title: Proteome-wide identification of druggable targets and inhibitors for multidrug-resistant &lt;i&gt;Pseudomonas aeruginosa&lt;/i&gt; using an integrative subtractive proteomics and virtual screening approach
+Journal: Heliyon (2025)
+Snippet: 3362 Q9HYD9 4444 Q9I318 117 Q9I0F2 1199 Q9HT50 2281 G3XD62 3363 Q9HYE0 4445 Q9I320 119 Q9I191 1200 Q9HT62 2282 G3XD65 3364 Q9HYE1 4446 Q9I323 1201 Q9HT72 2283 G3XD68 3365 Q9HYE2 4447 Q9I325 120 Q9I194 1202 Q9HT75 2284 G3XD69 3366 Q9HYE3 4448 Q9I326 121 Q9I1H3 1203 Q9HT76
+
+================================================================================
+Protein: Q9I191 (E-value: 0.00023, Score: 26.7)
+Mentioned as: PVDR_PSEAE
+Description: Pyoverdine export membrane fusion protein PvdR
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+  SwissProt:  - Pyoverdine export membrane fusion protein PvdR
+PMID: 19906986
+Source: SwissProt
+Snippet: FUNCTION: Part of the tripartite efflux system PvdRT-OpmQ required for the secretion into the extracellular milieu of the siderophore pyoverdine (PVD), which is involved in iron acquisition (PubMed:19906986, PubMed:21035449, PubMed:22187978, PubMed:23766114). This subunit is an adapter protein that stimulates the ATPase activity of PvdT and connects the inner and outer membrane components (By similarity). The system is responsible for export of newly synthesized PVD after the final steps of bios...
+
+================================================================================
+Protein: Q9I191 (E-value: 0.00023, Score: 26.7)
+Mentioned as: PVDR_PSEAE
+Description: Pyoverdine export membrane fusion protein PvdR
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+  SwissProt:  - Pyoverdine export membrane fusion protein PvdR
+PMID: 21035449
+Source: SwissProt
+Snippet: FUNCTION: Part of the tripartite efflux system PvdRT-OpmQ required for the secretion into the extracellular milieu of the siderophore pyoverdine (PVD), which is involved in iron acquisition (PubMed:19906986, PubMed:21035449, PubMed:22187978, PubMed:23766114). This subunit is an adapter protein that stimulates the ATPase activity of PvdT and connects the inner and outer membrane components (By similarity). The system is responsible for export of newly synthesized PVD after the final steps of bios...
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A011QB39.1	AF-A0A011QB39-F1-model_v4_TED02:147-339	1	AF-A0A011QB39-F1-model_v4_TED02	147-339	0
+A0A011QB39.1	AF-A0A011QB39-F1-model_v4_TED03:343-443	1	AF-A0A011QB39-F1-model_v4_TED03	343-443	0
+A0A011QB39.1	AF-A0A011QB39-F1-model_v4_TED05:605-729	1	AF-A0A011QB39-F1-model_v4_TED05	605-729	100.0%
+A0A011QB39.1	AF-A0A011QB39-F1-model_v4_TED01:22-107	1	AF-A0A011QB39-F1-model_v4_TED01	22-107	0
+A0A011QB39.1	AF-A0A011QB39-F1-model_v4_TED04:512-569	1	AF-A0A011QB39-F1-model_v4_TED04	512-569	0
+A0A024HI26.1	AF-A0A024HI26-F1-model_v4_TED01:17-109	1	AF-A0A024HI26-F1-model_v4_TED01	17-109	0
+A0A024HI26.1	AF-A0A024HI26-F1-model_v4_TED02:117-312	1	AF-A0A024HI26-F1-model_v4_TED02	117-312	0
+A0A024HI26.1	AF-A0A024HI26-F1-model_v4_TED03:315-432	1	AF-A0A024HI26-F1-model_v4_TED03	315-432	0
+A0A024HI26.1	AF-A0A024HI26-F1-model_v4_TED04:456-562	1	AF-A0A024HI26-F1-model_v4_TED04	456-562	0
+A0A024HI26.1	AF-A0A024HI26-F1-model_v4_TED05:567-697	1	AF-A0A024HI26-F1-model_v4_TED05	567-697	100.0%
+A0A024HJ17.1	AF-A0A024HJ17-F1-model_v4_TED01:12-107	1	AF-A0A024HJ17-F1-model_v4_TED01	12-107	0
+A0A024HJ17.1	AF-A0A024HJ17-F1-model_v4_TED02:116-308	1	AF-A0A024HJ17-F1-model_v4_TED02	116-308	0
+A0A024HJ17.1	AF-A0A024HJ17-F1-model_v4_TED03:312-428	1	AF-A0A024HJ17-F1-model_v4_TED03	312-428	0
+A0A024HJ17.1	AF-A0A024HJ17-F1-model_v4_TED04:446-569	1	AF-A0A024HJ17-F1-model_v4_TED04	446-569	0
+A0A024HJ17.1	AF-A0A024HJ17-F1-model_v4_TED05:573-698	1	AF-A0A024HJ17-F1-model_v4_TED05	573-698	100.0%
+A0A071LRL9.1	AF-A0A071LRL9-F1-model_v4_TED01:17-102	1	AF-A0A071LRL9-F1-model_v4_TED01	17-102	0
+A0A071LRL9.1	AF-A0A071LRL9-F1-model_v4_TED02:108-298	1	AF-A0A071LRL9-F1-model_v4_TED02	108-298	0
+A0A071LRL9.1	AF-A0A071LRL9-F1-model_v4_TED03:300-398	1	AF-A0A071LRL9-F1-model_v4_TED03	300-398	0
+A0A071LRL9.1	AF-A0A071LRL9-F1-model_v4_TED04:436-557	1	AF-A0A071LRL9-F1-model_v4_TED04	436-557	0
+A0A071LRL9.1	AF-A0A071LRL9-F1-model_v4_TED05:564-689	1	AF-A0A071LRL9-F1-model_v4_TED05	564-689	100.0%
+A0A077LAC8.1	AF-A0A077LAC8-F1-model_v4_TED01:23-101	1	AF-A0A077LAC8-F1-model_v4_TED01	23-101	0
+A0A077LAC8.1	AF-A0A077LAC8-F1-model_v4_TED02:124-303	1	AF-A0A077LAC8-F1-model_v4_TED02	124-303	0
+A0A077LAC8.1	AF-A0A077LAC8-F1-model_v4_TED03:322-418	1	AF-A0A077LAC8-F1-model_v4_TED03	322-418	0
+A0A077LAC8.1	AF-A0A077LAC8-F1-model_v4_TED04:457-578	1	AF-A0A077LAC8-F1-model_v4_TED04	457-578	0
+A0A077LAC8.1	AF-A0A077LAC8-F1-model_v4_TED05:583-709	1	AF-A0A077LAC8-F1-model_v4_TED05	583-709	100.0%
+A0A085GLS0.1	AF-A0A085GLS0-F1-model_v4_TED01:20-93	1	AF-A0A085GLS0-F1-model_v4_TED01	20-93	0
+A0A085GLS0.1	AF-A0A085GLS0-F1-model_v4_TED02:110-304	1	AF-A0A085GLS0-F1-model_v4_TED02	110-304	0
+A0A085GLS0.1	AF-A0A085GLS0-F1-model_v4_TED03:309-425	1	AF-A0A085GLS0-F1-model_v4_TED03	309-425	0
+A0A085GLS0.1	AF-A0A085GLS0-F1-model_v4_TED04:431-438_562-696	1	AF-A0A085GLS0-F1-model_v4_TED04	431-696	100.0%
+A0A085GLS0.1	AF-A0A085GLS0-F1-model_v4_TED05:449-558	1	AF-A0A085GLS0-F1-model_v4_TED05	449-558	0
+A0A086W951.1	AF-A0A086W951-F1-model_v4_TED01:17-112	1	AF-A0A086W951-F1-model_v4_TED01	17-112	0
+A0A086W951.1	AF-A0A086W951-F1-model_v4_TED02:114-315	1	AF-A0A086W951-F1-model_v4_TED02	114-315	0
+A0A086W951.1	AF-A0A086W951-F1-model_v4_TED03:316-415	1	AF-A0A086W951-F1-model_v4_TED03	316-415	0
+A0A086W951.1	AF-A0A086W951-F1-model_v4_TED04:452-571	1	AF-A0A086W951-F1-model_v4_TED04	452-571	0
+A0A086W951.1	AF-A0A086W951-F1-model_v4_TED05:580-705	1	AF-A0A086W951-F1-model_v4_TED05	580-705	100.0%
+A0A090CXZ3.1	AF-A0A090CXZ3-F1-model_v4_TED01:4-101	1	AF-A0A090CXZ3-F1-model_v4_TED01	4-101	0
+A0A090CXZ3.1	AF-A0A090CXZ3-F1-model_v4_TED02:126-315	1	AF-A0A090CXZ3-F1-model_v4_TED02	126-315	0
+A0A090CXZ3.1	AF-A0A090CXZ3-F1-model_v4_TED03:317-418	1	AF-A0A090CXZ3-F1-model_v4_TED03	317-418	0
+A0A090CXZ3.1	AF-A0A090CXZ3-F1-model_v4_TED04:443-448_571-704	1	AF-A0A090CXZ3-F1-model_v4_TED04	443-704	100.0%
+A0A090CXZ3.1	AF-A0A090CXZ3-F1-model_v4_TED05:461-566	1	AF-A0A090CXZ3-F1-model_v4_TED05	461-566	0
+A0A099PG24.1	AF-A0A099PG24-F1-model_v4_TED01:9-110	1	AF-A0A099PG24-F1-model_v4_TED01	9-110	0
+A0A099PG24.1	AF-A0A099PG24-F1-model_v4_TED02:116-311	1	AF-A0A099PG24-F1-model_v4_TED02	116-311	0
+A0A099PG24.1	AF-A0A099PG24-F1-model_v4_TED03:312-412	1	AF-A0A099PG24-F1-model_v4_TED03	312-412	0
+A0A099PG24.1	AF-A0A099PG24-F1-model_v4_TED04:450-571	1	AF-A0A099PG24-F1-model_v4_TED04	450-571	0
+A0A099PG24.1	AF-A0A099PG24-F1-model_v4_TED05:577-703	1	AF-A0A099PG24-F1-model_v4_TED05	577-703	100.0%
+A0A0A0DVT2.1	AF-A0A0A0DVT2-F1-model_v4_TED01:7-101	1	AF-A0A0A0DVT2-F1-model_v4_TED01	7-101	0
+A0A0A0DVT2.1	AF-A0A0A0DVT2-F1-model_v4_TED02:104-304	1	AF-A0A0A0DVT2-F1-model_v4_TED02	104-304	0
+A0A0A0DVT2.1	AF-A0A0A0DVT2-F1-model_v4_TED03:305-404	1	AF-A0A0A0DVT2-F1-model_v4_TED03	305-404	0
+A0A0A0DVT2.1	AF-A0A0A0DVT2-F1-model_v4_TED04:441-562	1	AF-A0A0A0DVT2-F1-model_v4_TED04	441-562	0
+A0A0A0DVT2.1	AF-A0A0A0DVT2-F1-model_v4_TED05:568-675	1	AF-A0A0A0DVT2-F1-model_v4_TED05	568-675	85.6%
+A0A0A1PW40.1	AF-A0A0A1PW40-F1-model_v4_TED01:2-99	1	AF-A0A0A1PW40-F1-model_v4_TED01	2-99	0
+A0A0A1PW40.1	AF-A0A0A1PW40-F1-model_v4_TED02:122-313	1	AF-A0A0A1PW40-F1-model_v4_TED02	122-313	0
+A0A0A1PW40.1	AF-A0A0A1PW40-F1-model_v4_TED03:318-434	1	AF-A0A0A1PW40-F1-model_v4_TED03	318-434	0
+A0A0A1PW40.1	AF-A0A0A1PW40-F1-model_v4_TED04:453-574	1	AF-A0A0A1PW40-F1-model_v4_TED04	453-574	0
+A0A0A1PW40.1	AF-A0A0A1PW40-F1-model_v4_TED05:579-707	1	AF-A0A0A1PW40-F1-model_v4_TED05	579-707	100.0%
+A0A0A1YJQ8.1	AF-A0A0A1YJQ8-F1-model_v4_TED01:12-107	1	AF-A0A0A1YJQ8-F1-model_v4_TED01	12-107	0
+A0A0A1YJQ8.1	AF-A0A0A1YJQ8-F1-model_v4_TED02:116-308	1	AF-A0A0A1YJQ8-F1-model_v4_TED02	116-308	0
+A0A0A1YJQ8.1	AF-A0A0A1YJQ8-F1-model_v4_TED03:329-428	1	AF-A0A0A1YJQ8-F1-model_v4_TED03	329-428	0
+A0A0A1YJQ8.1	AF-A0A0A1YJQ8-F1-model_v4_TED04:446-568	1	AF-A0A0A1YJQ8-F1-model_v4_TED04	446-568	0
+A0A0A1YJQ8.1	AF-A0A0A1YJQ8-F1-model_v4_TED05:573-698	1	AF-A0A0A1YJQ8-F1-model_v4_TED05	573-698	100.0%
+A0A0C4YUI0.1	AF-A0A0C4YUI0-F1-model_v4_TED01:11-106	1	AF-A0A0C4YUI0-F1-model_v4_TED01	11-106	0
+A0A0C4YUI0.1	AF-A0A0C4YUI0-F1-model_v4_TED02:108-308	1	AF-A0A0C4YUI0-F1-model_v4_TED02	108-308	0
+A0A0C4YUI0.1	AF-A0A0C4YUI0-F1-model_v4_TED03:310-428	1	AF-A0A0C4YUI0-F1-model_v4_TED03	310-428	0
+A0A0C4YUI0.1	AF-A0A0C4YUI0-F1-model_v4_TED04:446-567	1	AF-A0A0C4YUI0-F1-model_v4_TED04	446-567	0
+A0A0C4YUI0.1	AF-A0A0C4YUI0-F1-model_v4_TED05:575-699	1	AF-A0A0C4YUI0-F1-model_v4_TED05	575-699	100.0%
+A0A0D6ST15.1	AF-A0A0D6ST15-F1-model_v4_TED01:11-106	1	AF-A0A0D6ST15-F1-model_v4_TED01	11-106	0
+A0A0D6ST15.1	AF-A0A0D6ST15-F1-model_v4_TED02:115-307	1	AF-A0A0D6ST15-F1-model_v4_TED02	115-307	0
+A0A0D6ST15.1	AF-A0A0D6ST15-F1-model_v4_TED03:308-427	1	AF-A0A0D6ST15-F1-model_v4_TED03	308-427	0
+A0A0D6ST15.1	AF-A0A0D6ST15-F1-model_v4_TED04:452-559	1	AF-A0A0D6ST15-F1-model_v4_TED04	452-559	0
+A0A0D6ST15.1	AF-A0A0D6ST15-F1-model_v4_TED05:572-696	1	AF-A0A0D6ST15-F1-model_v4_TED05	572-696	100.0%
+A0A0G3ESZ1.1	AF-A0A0G3ESZ1-F1-model_v4_TED01:13-108	1	AF-A0A0G3ESZ1-F1-model_v4_TED01	13-108	0
+A0A0G3ESZ1.1	AF-A0A0G3ESZ1-F1-model_v4_TED02:111-311	1	AF-A0A0G3ESZ1-F1-model_v4_TED02	111-311	0
+A0A0G3ESZ1.1	AF-A0A0G3ESZ1-F1-model_v4_TED03:312-430	1	AF-A0A0G3ESZ1-F1-model_v4_TED03	312-430	0
+A0A0G3ESZ1.1	AF-A0A0G3ESZ1-F1-model_v4_TED04:449-571	1	AF-A0A0G3ESZ1-F1-model_v4_TED04	449-571	0
+A0A0G3ESZ1.1	AF-A0A0G3ESZ1-F1-model_v4_TED05:576-702	1	AF-A0A0G3ESZ1-F1-model_v4_TED05	576-702	100.0%
+A0A0H5DRA9.1	AF-A0A0H5DRA9-F1-model_v4_TED01:7-105	1	AF-A0A0H5DRA9-F1-model_v4_TED01	7-105	0
+A0A0H5DRA9.1	AF-A0A0H5DRA9-F1-model_v4_TED02:129-321	1	AF-A0A0H5DRA9-F1-model_v4_TED02	129-321	0
+A0A0H5DRA9.1	AF-A0A0H5DRA9-F1-model_v4_TED03:324-442	1	AF-A0A0H5DRA9-F1-model_v4_TED03	324-442	0
+A0A0H5DRA9.1	AF-A0A0H5DRA9-F1-model_v4_TED04:460-580	1	AF-A0A0H5DRA9-F1-model_v4_TED04	460-580	0
+A0A0H5DRA9.1	AF-A0A0H5DRA9-F1-model_v4_TED05:590-712	1	AF-A0A0H5DRA9-F1-model_v4_TED05	590-712	98.4%
+A0A0J6NC11.1	AF-A0A0J6NC11-F1-model_v4_TED01:3-95	1	AF-A0A0J6NC11-F1-model_v4_TED01	3-95	0
+A0A0J6NC11.1	AF-A0A0J6NC11-F1-model_v4_TED02:98-296	1	AF-A0A0J6NC11-F1-model_v4_TED02	98-296	0
+A0A0J6NC11.1	AF-A0A0J6NC11-F1-model_v4_TED03:300-418	1	AF-A0A0J6NC11-F1-model_v4_TED03	300-418	0
+A0A0J6NC11.1	AF-A0A0J6NC11-F1-model_v4_TED04:426-433_563-688	1	AF-A0A0J6NC11-F1-model_v4_TED04	426-688	100.0%
+A0A0J6NC11.1	AF-A0A0J6NC11-F1-model_v4_TED05:436-558	1	AF-A0A0J6NC11-F1-model_v4_TED05	436-558	0
+A0A0K1K2U3.1	AF-A0A0K1K2U3-F1-model_v4_TED01:12-106	1	AF-A0A0K1K2U3-F1-model_v4_TED01	12-106	0
+A0A0K1K2U3.1	AF-A0A0K1K2U3-F1-model_v4_TED02:109-308	1	AF-A0A0K1K2U3-F1-model_v4_TED02	109-308	0
+A0A0K1K2U3.1	AF-A0A0K1K2U3-F1-model_v4_TED03:310-415	1	AF-A0A0K1K2U3-F1-model_v4_TED03	310-415	0
+A0A0K1K2U3.1	AF-A0A0K1K2U3-F1-model_v4_TED04:576-673	1	AF-A0A0K1K2U3-F1-model_v4_TED04	576-673	78.4%
+A0A0Q4N263.1	AF-A0A0Q4N263-F1-model_v4_TED01:10-106	1	AF-A0A0Q4N263-F1-model_v4_TED01	10-106	0
+A0A0Q4N263.1	AF-A0A0Q4N263-F1-model_v4_TED02:109-307	1	AF-A0A0Q4N263-F1-model_v4_TED02	109-307	0
+A0A0Q4N263.1	AF-A0A0Q4N263-F1-model_v4_TED03:310-427	1	AF-A0A0Q4N263-F1-model_v4_TED03	310-427	0
+A0A0Q4N263.1	AF-A0A0Q4N263-F1-model_v4_TED04:445-567	1	AF-A0A0Q4N263-F1-model_v4_TED04	445-567	0
+A0A0Q4N263.1	AF-A0A0Q4N263-F1-model_v4_TED05:573-697	1	AF-A0A0Q4N263-F1-model_v4_TED05	573-697	100.0%
+A0A0Q8RF22.1	AF-A0A0Q8RF22-F1-model_v4_TED01:7-102	1	AF-A0A0Q8RF22-F1-model_v4_TED01	7-102	0
+A0A0Q8RF22.1	AF-A0A0Q8RF22-F1-model_v4_TED02:108-302	1	AF-A0A0Q8RF22-F1-model_v4_TED02	108-302	0
+A0A0Q8RF22.1	AF-A0A0Q8RF22-F1-model_v4_TED03:307-404	1	AF-A0A0Q8RF22-F1-model_v4_TED03	307-404	0
+A0A0Q8RF22.1	AF-A0A0Q8RF22-F1-model_v4_TED05:574-698	1	AF-A0A0Q8RF22-F1-model_v4_TED05	574-698	99.2%
+A0A0Q8RF22.1	AF-A0A0Q8RF22-F1-model_v4_TED04:478-535	1	AF-A0A0Q8RF22-F1-model_v4_TED04	478-535	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 50 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF02321	OEP	42	0.84	0.71
+PF00005	ABC_tran	37	0.74	0.60
+PF00873	ACR_tran	33	0.66	0.52
+PF02687	FtsX	33	0.66	0.52
+
+--- End STRING ---

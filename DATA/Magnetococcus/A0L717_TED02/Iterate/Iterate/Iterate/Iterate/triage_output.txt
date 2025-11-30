@@ -1,0 +1,340 @@
+--- DESC ---
+ID   HTH_ParB_Mtase
+DE   ParB-methyltransferase HTH domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L717_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CL   CL0123
+RN   [1]
+RM   22037402
+RT   Characterization of type II and III restriction-modification systems
+RT   from Bacillus cereus strains ATCC 10987 and ATCC 14579.
+RA   Xu S.Y., Corvaglia A.R., Chan S.H., Zheng Y., Linder P.;
+RL   J Bacteriol. 2011;193:6185-6196.
+CC   This entry represents a helix-turn-helix domain found in ParB-
+CC   methylase fusion proteins, located between the N-terminal ParB-like
+CC   nuclease domain (Pfam:PF02195) and the C-terminal N6/N4 adenine
+CC   methyltransferase domain (Pfam:PF01555). These bifunctional proteins
+CC   are components of restriction-modification systems and are often
+CC   associated with prophage regions [1]. The ParB domain of the Bacillus
+CC   cereus BCE_0392 protein possesses nonspecific nicking endonuclease
+CC   activity. The family is widely distributed in bacteria, including
+CC   Alphaproteobacteria and Bacillota. This HTH domain likely contributes
+CC   to DNA recognition specificity.
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+68	5	Paracoccaceae
+43	4	Acetobacterales
+42	4	Hyphomicrobiales
+109	4	Rhodobacterales
+60	3	Clostridia
+219	3	Alphaproteobacteria
+84	2	Bacillota
+261	2	Pseudomonadota
+86	1	Bacillati
+289	1	Pseudomonadati
+375	0	Bacteria
+Total of 375 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A0N1ETU5	METHYLTRANSFERASE {ECO:00     60.5    8.2e-13   1   1.4   8.8
+	Iterate                   	   103	   147	    59.7
+	PF02195	ParB_N          	     2	    92	    34.2
+	PF01555	N6_N4_Mtase     	   189	   382	    65.3
+
+A0A2Z6QTS6	DUF4912 DOMAIN-CONTAINING     93.4    4.4e-23  17  14.8  16.1
+	Iterate                   	   216	   241	     8.6
+
+A0A917L8N4	METHYLTRANSFERASE {ECO:00     60.1    1.1e-12   1   1.6   8.9
+	Iterate                   	   111	   155	    58.9
+	PF02195	ParB_N          	     3	   100	    26.2
+	PF01555	N6_N4_Mtase     	   197	   388	    55.7
+
+A0A941D4Y3	METHYLTRANSFERASE {ECO:00     62.6    1.8e-13   1   1.7   7.4
+	Iterate                   	   106	   153	    61.4
+	PF02195	ParB_N          	     2	    96	    31.6
+	PF01555	N6_N4_Mtase     	   191	   392	    88.2
+
+E1QK18	METHYLTRANSFERASE {ECO:000025     62.5      2e-13   1   2.4   7.0
+	Iterate                   	   100	   145	    59.4
+	PF02195	ParB_N          	     3	    90	    28.2
+	PF01555	N6_N4_Mtase     	   187	   379	    61.1
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS209125 (E-value: 5.8e-11, Score: 48.0)
+Mentioned as: DVU0192
+Description: adenine specific DNA methyltransferase, putative
+Organism: Desulfovibrio vulgaris Hildenborough
+PMID: 19293273
+Source: EuropePMC
+Title: Expression profiling of hypothetical genes in Desulfovibrio vulgaris leads to improved functional annotation
+Journal: Nucleic acids research (2009)
+Snippet: DVU2716 (open triangle; tail sheath protein). ( B ) Up-regulation of a four-gene operon of DVU0192 (filled diamond; adenine specific DNA methyltransferases) and DVU0194 (filled triangle; terminase) that are well-conserved while DVU0193 (closed square) and DVU0195 (closed circle) were annotated as hypothetical proteins. Another example of
+
+================================================================================
+Protein: VIMSS643660 (E-value: 2.6e-10, Score: 46.0)
+Mentioned as: BCE_0392
+Description: DNA methylase, family protein
+Organism: Bacillus cereus ATCC 10987
+PMID: 28559295
+Source: EuropePMC
+Title: Polyvalent Proteins, a Pervasive Theme in the Intergenomic Biological Conflicts of Bacteriophages and Conjugative Elements
+Journal: Journal of bacteriology (2017)
+Snippet: as a UTPase and a nonspecific nuclease ( 82 , 83 ). In Bacillus cereus Bce_0392 (ParB-methylase), the ParB domain, which is fused to an adenine methylase, was shown to possess nonspecific nicking endonuclease activity ( 84 ). In the Osa protein, the ParB-like domain was
+
+================================================================================
+Protein: VIMSS643660 (E-value: 2.6e-10, Score: 46.0)
+Mentioned as: BCE_0392
+Description: DNA methylase, family protein
+Organism: Bacillus cereus ATCC 10987
+PMID: 23028379
+Source: EuropePMC
+Title: A mimicking-of-DNA-methylation-patterns pipeline for overcoming the restriction barrier of bacteria
+Journal: PLoS genetics (2012)
+Snippet: cereus ATCC 10987 BCE_0841-CE_0842 I ND BCE_0839-CE_0842 I ND BCE_0365 II m5C G C WGC BCE_0392 II m6A a BCE_0393 II m5C G C WGC, GG C C, C C GG, GGNN C C, G C GCGC, GGW C C, C C WGG (P) BCE_4605 II
+
+================================================================================
+Protein: VIMSS643660 (E-value: 2.6e-10, Score: 46.0)
+Mentioned as: BCE_0392
+Description: DNA methylase, family protein
+Organism: Bacillus cereus ATCC 10987
+PMID: 22037402
+Source: EuropePMC
+Title: Characterization of type II and III restriction-modification systems from Bacillus cereus strains ATCC 10987 and ATCC 14579
+Journal: Journal of bacteriology (2012)
+Snippet: isoschizomer) in REBASE. An upstream gene, ORF Bce_0392, was predicted to be a ParB-like nuclease fused to an amino-methyltransferase. The ParB-methylase
+
+================================================================================
+Protein: VIMSS1166913 (E-value: 1.4e-08, Score: 40.4)
+Mentioned as: SAK_0738
+Description: prophage LambdaSa04, DNA methylase
+Organism: Streptococcus agalactiae A909
+PMID: 21633509
+Source: EuropePMC
+Title: Diversity of prophage DNA regions of Streptococcus agalactiae clonal lineages from adults and neonates with invasive infectious disease
+Journal: PloS one (2011)
+Snippet: SAK_2094, 50.5C for SAJ_2395, and SAK_1326, 52C for SAK_0748, or 54C for SAG0566, SAK_2090, and SAK_0738) and 30 s at 72C. The reaction products were then cooled to 35C and subjected to a post-PCR melting cycle by increasing the temperature by 0.2C for each 10-s cycle,
+
+================================================================================
+Protein: VIMSS1166913 (E-value: 1.4e-08, Score: 40.4)
+Mentioned as: SAK_0738
+Description: prophage LambdaSa04, DNA methylase
+Organism: Streptococcus agalactiae A909
+PMID: 20181908
+Source: EuropePMC
+Title: Molecular characterization and prophage DNA contents of Streptococcus agalactiae strains isolated from adult skin and osteoarticular infections
+Journal: Journal of clinical microbiology (2010)
+Snippet: TGC SAG0566 Single-strand binding protein prophage lambda Sa1 132 SAK_0738 DNA methylase Prophage lambda W4 CJB111 A909 Forward Reverse GGG ATA AGA AAG CCA ATC
+
+================================================================================
+Protein: VIMSS1166913 (E-value: 1.4e-08, Score: 40.4)
+Mentioned as: SAK_0738
+Description: prophage LambdaSa04, DNA methylase
+Organism: Streptococcus agalactiae A909
+PMID: 19465660
+Source: EuropePMC
+Title: Molecular characterization and lytic activities of Streptococcus agalactiae bacteriophages and determination of lysogenic-strain features
+Journal: Journal of bacteriology (2009)
+Snippet: putative SAK_0613 Prophage ps2; protein 07; excisionase SAK_0738 DNA methylase prophage lambda W4 SAK_0748 Phage major capsid protein; HK97 family SAK_2079
+
+================================================================================
+Protein: VIMSS2332418 (E-value: 1.2e-07, Score: 37.4)
+Mentioned as: WwAna0008
+Description: DNA methylase
+Organism: Wolbachia endosymbiont of Drosophila ananassae
+PMID: 20083406
+Source: EuropePMC
+Title: Phage WO of Wolbachia: lambda of the endosymbiont world
+Journal: Trends in microbiology (2010)
+Snippet: WO DNA methylase WRi_005640, WRi_010300 WPa_0258, WPa_0317, WPa_0429, WPa_1310 WD0263, WD0594 Wendoof_ 01000687, Wendoof_ 01000839 WwAna0008 Methylation of host DNA, protection of phage against restriction enzymes a Phages WOCauB1 (Accession No. AB161975.2), WOCauB2 (AB478515.1) and WOCauB3 (AB478516.1) from w CauB of Cadra cautella [ 28 ,
+
+================================================================================
+Protein: VIMSS577618 (E-value: 5.8e-07, Score: 35.2)
+Mentioned as: WD0594
+Description: prophage LambdaW4, DNA methylase
+Organism: Wolbachia endosymbiont of Drosophila melanogaster
+PMID: 32975515
+Source: EuropePMC
+Title: Symbiont-mediated cytoplasmic incompatibility: what have we learned in 50 years?
+Journal: eLife (2020)
+Snippet: WD0636, WD0754, and WD0776), two virulence-related genes (WD0579 and WD0580), and one phage-associated methylase gene (WD0594) ( Yamada et al., 2011 ). Since Wolbachia are not genetically tractable ( Iturbe-Ormaetxe et al., 2007 ; Thiem, 2014 ), D. melanogaster transgenic tools were used to test these
+
+================================================================================
+
+... (truncated, 132 total lines)
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A011QED3.1	AF-A0A011QED3-F1-model_v4_TED01:5-93	1	AF-A0A011QED3-F1-model_v4_TED01	5-93	0
+A0A011QED3.1	AF-A0A011QED3-F1-model_v4_TED02:100-130	1	AF-A0A011QED3-F1-model_v4_TED02	100-130	60.8%
+A0A011QED3.1	AF-A0A011QED3-F1-model_v4_TED03:143-397	1	AF-A0A011QED3-F1-model_v4_TED03	143-397	15.7%
+A0A011QU09.1	AF-A0A011QU09-F1-model_v4_TED01:7-102	1	AF-A0A011QU09-F1-model_v4_TED01	7-102	0
+A0A011QU09.1	AF-A0A011QU09-F1-model_v4_TED02:107-136	1	AF-A0A011QU09-F1-model_v4_TED02	107-136	58.8%
+A0A011QU09.1	AF-A0A011QU09-F1-model_v4_TED03:152-404	1	AF-A0A011QU09-F1-model_v4_TED03	152-404	11.8%
+A0A011R8H6.1	AF-A0A011R8H6-F1-model_v4_TED01:5-96	1	AF-A0A011R8H6-F1-model_v4_TED01	5-96	0
+A0A011R8H6.1	AF-A0A011R8H6-F1-model_v4_TED02:108-134	1	AF-A0A011R8H6-F1-model_v4_TED02	108-134	47.4%
+A0A011R8H6.1	AF-A0A011R8H6-F1-model_v4_TED03:163-319_343-464	1	AF-A0A011R8H6-F1-model_v4_TED03	163-464	0
+A0A081NI21.1	AF-A0A081NI21-F1-model_v4_TED01:10-101	1	AF-A0A081NI21-F1-model_v4_TED01	10-101	0
+A0A081NI21.1	AF-A0A081NI21-F1-model_v4_TED02:106-137	1	AF-A0A081NI21-F1-model_v4_TED02	106-137	65.3%
+A0A081NI21.1	AF-A0A081NI21-F1-model_v4_TED03:164-416	1	AF-A0A081NI21-F1-model_v4_TED03	164-416	0
+A0A099T6T7.1	AF-A0A099T6T7-F1-model_v4_TED01:12-101	1	AF-A0A099T6T7-F1-model_v4_TED01	12-101	0
+A0A099T6T7.1	AF-A0A099T6T7-F1-model_v4_TED02:107-138	1	AF-A0A099T6T7-F1-model_v4_TED02	107-138	60.4%
+A0A099T6T7.1	AF-A0A099T6T7-F1-model_v4_TED03:169-420	1	AF-A0A099T6T7-F1-model_v4_TED03	169-420	0
+A0A0A2THL7.1	AF-A0A0A2THL7-F1-model_v4_TED01:4-123	1	AF-A0A0A2THL7-F1-model_v4_TED01	4-123	45.1%
+A0A0A2THL7.1	AF-A0A0A2THL7-F1-model_v4_TED02:137-410	1	AF-A0A0A2THL7-F1-model_v4_TED02	137-410	29.4%
+A0A0C5IX96.1	AF-A0A0C5IX96-F1-model_v4_TED01:7-98	1	AF-A0A0C5IX96-F1-model_v4_TED01	7-98	0
+A0A0C5IX96.1	AF-A0A0C5IX96-F1-model_v4_TED02:103-138	1	AF-A0A0C5IX96-F1-model_v4_TED02	103-138	58.1%
+A0A0C5IX96.1	AF-A0A0C5IX96-F1-model_v4_TED03:174-246_254-276_381-475	1	AF-A0A0C5IX96-F1-model_v4_TED03	174-475	0
+A0A0C7NKK4.1	AF-A0A0C7NKK4-F1-model_v4_TED01:3-132	1	AF-A0A0C7NKK4-F1-model_v4_TED01	3-132	62.7%
+A0A0C7NKK4.1	AF-A0A0C7NKK4-F1-model_v4_TED02:152-414	1	AF-A0A0C7NKK4-F1-model_v4_TED02	152-414	0
+A0A0F5P8C0.1	AF-A0A0F5P8C0-F1-model_v4_TED01:9-98	1	AF-A0A0F5P8C0-F1-model_v4_TED01	9-98	0
+A0A0F5P8C0.1	AF-A0A0F5P8C0-F1-model_v4_TED02:105-138	1	AF-A0A0F5P8C0-F1-model_v4_TED02	105-138	70.8%
+A0A0F5P8C0.1	AF-A0A0F5P8C0-F1-model_v4_TED03:162-417	1	AF-A0A0F5P8C0-F1-model_v4_TED03	162-417	0
+A0A0F7KFC3.1	AF-A0A0F7KFC3-F1-model_v4_TED01:7-98	1	AF-A0A0F7KFC3-F1-model_v4_TED01	7-98	0
+A0A0F7KFC3.1	AF-A0A0F7KFC3-F1-model_v4_TED02:103-138	1	AF-A0A0F7KFC3-F1-model_v4_TED02	103-138	61.0%
+A0A0F7KFC3.1	AF-A0A0F7KFC3-F1-model_v4_TED03:156-312_364-372_380-466	1	AF-A0A0F7KFC3-F1-model_v4_TED03	156-466	10.2%
+A0A0F7KFC3.1	AF-A0A0F7KFC3-F1-model_v4_TED04:315-334_348-359	1	AF-A0A0F7KFC3-F1-model_v4_TED04	315-359	0
+A0A0K6I7T0.1	AF-A0A0K6I7T0-F1-model_v4_TED01:7-98	1	AF-A0A0K6I7T0-F1-model_v4_TED01	7-98	0
+A0A0K6I7T0.1	AF-A0A0K6I7T0-F1-model_v4_TED03:170-323_352-471	1	AF-A0A0K6I7T0-F1-model_v4_TED03	170-471	0
+A0A0K6I7T0.1	AF-A0A0K6I7T0-F1-model_v4_TED02:104-139	1	AF-A0A0K6I7T0-F1-model_v4_TED02	104-139	58.1%
+A0A0K6IXN3.1	AF-A0A0K6IXN3-F1-model_v4_TED01:61-150	1	AF-A0A0K6IXN3-F1-model_v4_TED01	61-150	0
+A0A0K6IXN3.1	AF-A0A0K6IXN3-F1-model_v4_TED02:157-192	1	AF-A0A0K6IXN3-F1-model_v4_TED02	157-192	60.0%
+A0A0K6IXN3.1	AF-A0A0K6IXN3-F1-model_v4_TED03:226-341_352-380_405-520	1	AF-A0A0K6IXN3-F1-model_v4_TED03	226-520	0
+A0A0K8JFL5.1	AF-A0A0K8JFL5-F1-model_v4_TED01:5-139	1	AF-A0A0K8JFL5-F1-model_v4_TED01	5-139	70.6%
+A0A0K8JFL5.1	AF-A0A0K8JFL5-F1-model_v4_TED02:150-417	1	AF-A0A0K8JFL5-F1-model_v4_TED02	150-417	9.8%
+A0A0L6JTB0.1	AF-A0A0L6JTB0-F1-model_v4_TED01:3-94	1	AF-A0A0L6JTB0-F1-model_v4_TED01	3-94	0
+A0A0L6JTB0.1	AF-A0A0L6JTB0-F1-model_v4_TED02:99-130	1	AF-A0A0L6JTB0-F1-model_v4_TED02	99-130	62.7%
+A0A0L6JTB0.1	AF-A0A0L6JTB0-F1-model_v4_TED03:147-441	1	AF-A0A0L6JTB0-F1-model_v4_TED03	147-441	5.9%
+A0A0P0A8E2.1	AF-A0A0P0A8E2-F1-model_v4_TED01:12-101	1	AF-A0A0P0A8E2-F1-model_v4_TED01	12-101	0
+A0A0P0A8E2.1	AF-A0A0P0A8E2-F1-model_v4_TED02:107-138	1	AF-A0A0P0A8E2-F1-model_v4_TED02	107-138	60.4%
+A0A0P0A8E2.1	AF-A0A0P0A8E2-F1-model_v4_TED03:169-420	1	AF-A0A0P0A8E2-F1-model_v4_TED03	169-420	0
+A0A0Q6K8W0.1	AF-A0A0Q6K8W0-F1-model_v4_TED01:7-98	1	AF-A0A0Q6K8W0-F1-model_v4_TED01	7-98	0
+A0A0Q6K8W0.1	AF-A0A0Q6K8W0-F1-model_v4_TED02:135-435	1	AF-A0A0Q6K8W0-F1-model_v4_TED02	135-435	38.5%
+A0A0Q8ABR4.1	AF-A0A0Q8ABR4-F1-model_v4_TED01:7-98	1	AF-A0A0Q8ABR4-F1-model_v4_TED01	7-98	0
+A0A0Q8ABR4.1	AF-A0A0Q8ABR4-F1-model_v4_TED02:141-422	1	AF-A0A0Q8ABR4-F1-model_v4_TED02	141-422	28.3%
+A0A0U1L1W0.1	AF-A0A0U1L1W0-F1-model_v4_TED01:13-104	1	AF-A0A0U1L1W0-F1-model_v4_TED01	13-104	0
+A0A0U1L1W0.1	AF-A0A0U1L1W0-F1-model_v4_TED02:109-138	1	AF-A0A0U1L1W0-F1-model_v4_TED02	109-138	61.2%
+A0A0U1L1W0.1	AF-A0A0U1L1W0-F1-model_v4_TED03:155-313_383-454	1	AF-A0A0U1L1W0-F1-model_v4_TED03	155-454	6.1%
+A0A0U1L5L6.1	AF-A0A0U1L5L6-F1-model_v4_TED01:7-97	1	AF-A0A0U1L5L6-F1-model_v4_TED01	7-97	0
+A0A0U1L5L6.1	AF-A0A0U1L5L6-F1-model_v4_TED02:102-136	1	AF-A0A0U1L5L6-F1-model_v4_TED02	102-136	68.6%
+A0A0U1L5L6.1	AF-A0A0U1L5L6-F1-model_v4_TED03:157-233	1	AF-A0A0U1L5L6-F1-model_v4_TED03	157-233	0
+A0A0U1L724.1	AF-A0A0U1L724-F1-model_v4_TED01:3-135	1	AF-A0A0U1L724-F1-model_v4_TED01	3-135	70.6%
+A0A0U1L724.1	AF-A0A0U1L724-F1-model_v4_TED02:148-408	1	AF-A0A0U1L724-F1-model_v4_TED02	148-408	5.9%
+A0A126V7G0.1	AF-A0A126V7G0-F1-model_v4_TED01:4-90	1	AF-A0A126V7G0-F1-model_v4_TED01	4-90	0
+A0A126V7G0.1	AF-A0A126V7G0-F1-model_v4_TED02:95-132	1	AF-A0A126V7G0-F1-model_v4_TED02	95-132	69.1%
+A0A126V7G0.1	AF-A0A126V7G0-F1-model_v4_TED03:153-274_294-308_348-445	1	AF-A0A126V7G0-F1-model_v4_TED03	153-445	0
+A0A127F0U6.1	AF-A0A127F0U6-F1-model_v4_TED01:9-100	1	AF-A0A127F0U6-F1-model_v4_TED01	9-100	0
+A0A127F0U6.1	AF-A0A127F0U6-F1-model_v4_TED02:137-411	1	AF-A0A127F0U6-F1-model_v4_TED02	137-411	33.3%
+A0A142XEC3.1	AF-A0A142XEC3-F1-model_v4_TED01:4-94	1	AF-A0A142XEC3-F1-model_v4_TED01	4-94	0
+A0A142XEC3.1	AF-A0A142XEC3-F1-model_v4_TED02:99-130	1	AF-A0A142XEC3-F1-model_v4_TED02	99-130	65.3%
+A0A142XEC3.1	AF-A0A142XEC3-F1-model_v4_TED03:157-393	1	AF-A0A142XEC3-F1-model_v4_TED03	157-393	0
+A0A142XYS8.1	AF-A0A142XYS8-F1-model_v4_TED01:10-100	1	AF-A0A142XYS8-F1-model_v4_TED01	10-100	0
+A0A142XYS8.1	AF-A0A142XYS8-F1-model_v4_TED02:106-136	1	AF-A0A142XYS8-F1-model_v4_TED02	106-136	63.3%
+A0A142XYS8.1	AF-A0A142XYS8-F1-model_v4_TED03:163-203_267-448	1	AF-A0A142XYS8-F1-model_v4_TED03	163-448	0
+A0A142Y7Q1.1	AF-A0A142Y7Q1-F1-model_v4_TED01:4-94	1	AF-A0A142Y7Q1-F1-model_v4_TED01	4-94	0
+A0A142Y7Q1.1	AF-A0A142Y7Q1-F1-model_v4_TED02:101-130	1	AF-A0A142Y7Q1-F1-model_v4_TED02	101-130	61.2%
+A0A142Y7Q1.1	AF-A0A142Y7Q1-F1-model_v4_TED03:157-197_262-442	1	AF-A0A142Y7Q1-F1-model_v4_TED03	157-442	0
+A0A143XE46.1	AF-A0A143XE46-F1-model_v4_TED01:5-98	1	AF-A0A143XE46-F1-model_v4_TED01	5-98	0
+A0A143XE46.1	AF-A0A143XE46-F1-model_v4_TED02:99-139	1	AF-A0A143XE46-F1-model_v4_TED02	99-139	84.4%
+A0A162UIQ9.1	AF-A0A162UIQ9-F1-model_v4_TED01:3-132	1	AF-A0A162UIQ9-F1-model_v4_TED01	3-132	67.3%
+A0A162UIQ9.1	AF-A0A162UIQ9-F1-model_v4_TED02:158-403	1	AF-A0A162UIQ9-F1-model_v4_TED02	158-403	0
+A0A178MTQ5.1	AF-A0A178MTQ5-F1-model_v4_TED01:12-103	1	AF-A0A178MTQ5-F1-model_v4_TED01	12-103	0
+A0A178MTQ5.1	AF-A0A178MTQ5-F1-model_v4_TED02:108-139	1	AF-A0A178MTQ5-F1-model_v4_TED02	108-139	59.3%
+A0A178MTQ5.1	AF-A0A178MTQ5-F1-model_v4_TED03:171-218_225-423	1	AF-A0A178MTQ5-F1-model_v4_TED03	171-423	0
+A0A1E3LYH1.1	AF-A0A1E3LYH1-F1-model_v4_TED01:6-97	1	AF-A0A1E3LYH1-F1-model_v4_TED01	6-97	0
+A0A1E3LYH1.1	AF-A0A1E3LYH1-F1-model_v4_TED03:144-434	1	AF-A0A1E3LYH1-F1-model_v4_TED03	144-434	20.8%
+A0A1E3LYH1.1	AF-A0A1E3LYH1-F1-model_v4_TED02:102-135	1	AF-A0A1E3LYH1-F1-model_v4_TED02	102-135	64.2%
+A0A1G6BI06.1	AF-A0A1G6BI06-F1-model_v4_TED01:28-118	1	AF-A0A1G6BI06-F1-model_v4_TED01	28-118	0
+A0A1G6BI06.1	AF-A0A1G6BI06-F1-model_v4_TED02:124-154	1	AF-A0A1G6BI06-F1-model_v4_TED02	124-154	64.6%
+A0A1G6BI06.1	AF-A0A1G6BI06-F1-model_v4_TED03:158-290_307-329_341-430	1	AF-A0A1G6BI06-F1-model_v4_TED03	158-430	29.2%
+A0A1G6EJU0.1	AF-A0A1G6EJU0-F1-model_v4_TED01:9-100	1	AF-A0A1G6EJU0-F1-model_v4_TED01	9-100	0
+A0A1G6EJU0.1	AF-A0A1G6EJU0-F1-model_v4_TED02:105-137	1	AF-A0A1G6EJU0-F1-model_v4_TED02	105-137	63.5%
+A0A1G6EJU0.1	AF-A0A1G6EJU0-F1-model_v4_TED03:166-209_218-418	1	AF-A0A1G6EJU0-F1-model_v4_TED03	166-418	0
+A0A1G8SDL1.1	AF-A0A1G8SDL1-F1-model_v4_TED01:27-116	1	AF-A0A1G8SDL1-F1-model_v4_TED01	27-116	0
+A0A1G8SDL1.1	AF-A0A1G8SDL1-F1-model_v4_TED02:151-360_367-457	1	AF-A0A1G8SDL1-F1-model_v4_TED02	151-457	49.1%
+A0A1G9DN13.1	AF-A0A1G9DN13-F1-model_v4_TED01:7-98	1	AF-A0A1G9DN13-F1-model_v4_TED01	7-98	0
+A0A1G9DN13.1	AF-A0A1G9DN13-F1-model_v4_TED02:142-420	1	AF-A0A1G9DN13-F1-model_v4_TED02	142-420	23.5%
+A0A1G9E0M4.1	AF-A0A1G9E0M4-F1-model_v4_TED01:10-101	1	AF-A0A1G9E0M4-F1-model_v4_TED01	10-101	0
+A0A1G9E0M4.1	AF-A0A1G9E0M4-F1-model_v4_TED02:106-138	1	AF-A0A1G9E0M4-F1-model_v4_TED02	106-138	58.9%
+A0A1G9E0M4.1	AF-A0A1G9E0M4-F1-model_v4_TED03:171-349_361-461	1	AF-A0A1G9E0M4-F1-model_v4_TED03	171-461	0
+A0A1H3IQN5.1	AF-A0A1H3IQN5-F1-model_v4_TED01:4-94	1	AF-A0A1H3IQN5-F1-model_v4_TED01	4-94	0
+A0A1H3IQN5.1	AF-A0A1H3IQN5-F1-model_v4_TED02:99-130	1	AF-A0A1H3IQN5-F1-model_v4_TED02	99-130	62.7%
+A0A1H3IQN5.1	AF-A0A1H3IQN5-F1-model_v4_TED03:137-418	1	AF-A0A1H3IQN5-F1-model_v4_TED03	137-418	25.5%
+A0A1H8IWD6.1	AF-A0A1H8IWD6-F1-model_v4_TED01:22-113	1	AF-A0A1H8IWD6-F1-model_v4_TED01	22-113	0
+A0A1H8IWD6.1	AF-A0A1H8IWD6-F1-model_v4_TED02:154-425	1	AF-A0A1H8IWD6-F1-model_v4_TED02	154-425	23.4%
+A0A1I1JDM5.1	AF-A0A1I1JDM5-F1-model_v4_TED01:4-95	1	AF-A0A1I1JDM5-F1-model_v4_TED01	4-95	0
+A0A1I1JDM5.1	AF-A0A1I1JDM5-F1-model_v4_TED03:165-345_366-455	1	AF-A0A1I1JDM5-F1-model_v4_TED03	165-455	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 50 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF01656	CbiA	46	0.92	0.81
+PF09140	MipZ	46	0.92	0.81
+PF13614	AAA_31	46	0.92	0.81
+PF10609	ParA	45	0.90	0.79
+PF02527	GidB	45	0.90	0.79
+PF00091	Tubulin	45	0.90	0.79
+PF12327	FtsZ_C	45	0.90	0.79
+PF02374	ArsA_ATPase	44	0.88	0.76
+PF06564	CBP_BcsQ	43	0.86	0.74
+PF02518	HATPase_c	39	0.78	0.65
+PF01131	Topoisom_bac	38	0.76	0.63
+PF01751	Toprim	38	0.76	0.63
+PF00072	Response_reg	37	0.74	0.60
+PF00512	HisKA	37	0.74	0.60
+PF00239	Resolvase	37	0.74	0.60
+PF07508	Recombinase	37	0.74	0.60
+PF00117	GATase	37	0.74	0.60
+PF00958	GMP_synt_C	37	0.74	0.60
+PF01396	Zn_ribbon_Top1	37	0.74	0.60
+PF00142	Fer4_NifH	36	0.72	0.58
+PF02540	NAD_synthase	35	0.70	0.56
+PF03054	tRNA_Me_trans	34	0.68	0.54
+PF07722	Peptidase_C26	34	0.68	0.54
+PF11994	DUF3489	33	0.66	0.52
+
+--- End STRING ---

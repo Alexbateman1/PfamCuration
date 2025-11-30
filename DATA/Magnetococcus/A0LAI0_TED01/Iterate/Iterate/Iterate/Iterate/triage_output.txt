@@ -1,0 +1,305 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LAI0_TED01/Iterate/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.50 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+13	5	Rhizobiaceae
+12	5	Phyllobacteriaceae
+81	4	Hyphomicrobiales
+95	3	Alphaproteobacteria
+96	2	Pseudomonadota
+99	1	Pseudomonadati
+99	0	Bacteria
+Total of 100 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+ID   Y867_RICPR              Reviewed;         231 AA.
+AC   Q9ZC99;
+DE   RecName: Full=Uncharacterized protein RP867;
+GN   OrderedLocusNames=RP867;
+OS   Rickettsia prowazekii (strain Madrid E).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Rickettsiales; Rickettsiaceae; Rickettsieae; Rickettsia; typhus group.
+OX   NCBI_TaxID=272947;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=Madrid E;
+RX   PubMed=9823893; DOI=10.1038/24094;
+RA   Andersson S.G.E., Zomorodipour A., Andersson J.O., Sicheritz-Ponten T.,
+RA   Alsmark U.C.M., Podowski R.M., Naeslund A.K., Eriksson A.-S., Winkler H.H.,
+RA   Kurland C.G.;
+RT   "The genome sequence of Rickettsia prowazekii and the origin of
+RT   mitochondria.";
+RL   Nature 396:133-140(1998).
+CC   -!- SUBCELLULAR LOCATION: Cell membrane {ECO:0000305}; Multi-pass membrane
+CC       protein {ECO:0000305}.
+DR   EMBL; AJ235273; CAA15291.1; -; Genomic_DNA.
+DR   PIR; C71649; C71649.
+DR   RefSeq; NP_221215.1; NC_000963.1.
+DR   RefSeq; WP_004596749.1; NC_000963.1.
+DR   AlphaFoldDB; Q9ZC99; -.
+DR   SMR; Q9ZC99; -.
+DR   STRING; 272947.gene:17555936; -.
+DR   MEROPS; A32.002; -.
+DR   EnsemblBacteria; CAA15291; CAA15291; CAA15291.
+DR   KEGG; rpr:RP867; -.
+DR   PATRIC; fig|272947.5.peg.906; -.
+DR   eggNOG; COG3577; Bacteria.
+DR   HOGENOM; CLU_099411_0_1_5; -.
+DR   OrthoDB; 7595324at2; -.
+DR   Proteomes; UP000002480; Chromosome.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0004190; F:aspartic-type endopeptidase activity; IEA:InterPro.
+DR   GO; GO:0006508; P:proteolysis; IEA:InterPro.
+DR   CDD; cd05483; retropepsin_like_bacteria; 1.
+DR   Gene3D; 2.40.70.10; Acid Proteases; 1.
+DR   InterPro; IPR001969; Aspartic_peptidase_AS.
+DR   InterPro; IPR011969; Clan_AA_Asp_peptidase_C.
+DR   InterPro; IPR021109; Peptidase_aspartic_dom_sf.
+DR   InterPro; IPR034122; Retropepsin-like_bacterial.
+DR   NCBIfam; TIGR02281; clan_AA_DTGA; 1.
+DR   Pfam; PF13975; gag-asp_proteas; 1.
+DR   SUPFAM; SSF50630; Acid proteases; 1.
+PE   4: Predicted;
+KW   Cell membrane; Membrane; Reference proteome; Transmembrane;
+KW   Transmembrane helix.
+FT   CHAIN           1..231
+FT                   /note="Uncharacterized protein RP867"
+FT                   /id="PRO_0000101425"
+FT   TRANSMEM        6..26
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        39..59
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+FT   TRANSMEM        66..86
+FT                   /note="Helical"
+FT                   /evidence="ECO:0000255"
+SQ   SEQUENCE   231 AA;  26472 MW;  4B3FFE686FA02343 CRC64;
+//
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A135HUR1	ASPARTIC PROTEASE {ECO:00     63.0    7.3e-14   1   2.6   2.2
+	Iterate                   	    69	   101	    63.0
+	PF13975	gag-asp_proteas 	   127	   219	    95.5
+	PF13650	Asp_protease_2  	   127	   216	      87
+
+A0A318T952	ASPARTYL PROTEASE FAMILY      65.4    1.3e-14   1   2.3   1.7
+	Iterate                   	    69	   101	    65.4
+	PF13650	Asp_protease_2  	   127	   216	    83.3
+	PF13975	gag-asp_proteas 	   127	   219	    89.5
+
+A0A5D4GVW9	TIGR02281 FAMILY CLAN AA      66.2    7.3e-15   1   2.0   1.7
+	Iterate                   	    58	    90	    64.4
+	PF13650	Asp_protease_2  	   116	   205	    86.7
+	PF13975	gag-asp_proteas 	   116	   208	    84.7
+
+A0A916S4K9	ASPARTIC PROTEASE {ECO:00     62.9    7.7e-14   1   2.4   1.9
+	Iterate                   	    69	   101	    62.9
+	PF13975	gag-asp_proteas 	   127	   219	    91.8
+	PF13650	Asp_protease_2  	   127	   216	    89.9
+
+Q9ZC99	UNCHARACTERIZED PROTEIN RP867       46.2    1.3e-08   1   2.0   0.5
+	Iterate                   	    72	   104	    46.2
+	PF13650	Asp_protease_2  	   126	   213	    64.8
+	PF13975	gag-asp_proteas 	   126	   216	    75.9
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS897825 (E-value: 1.2e-11, Score: 49.3)
+Mentioned as: YP_247382
+Description: hypothetical protein
+Organism: Rickettsia felis URRWXCal2
+PMID: 25144529
+Source: EuropePMC
+Title: RC1339/APRc from Rickettsia conorii is a novel aspartic protease with properties of retropepsin-like enzymes
+Journal: PLoS pathogens (2014)
+Snippet: NP_221215 R. prowazekii str. Madrid E 90.0% TG YP_067793 R. typhi str. Wilmington 88.3% TG YP_247382 R. felis str. URRWXCal2 95.2% TRG YP_001495500 R. bellii str. OSU 85389 84.0% AG (SFG: spotted fever group; TG: typhus group; TRG: transitional group; AG: ancestral group). Despite the high
+
+================================================================================
+Protein: VIMSS136267 (E-value: 1.6e-11, Score: 49.0)
+Mentioned as: RC1339
+Description: unknown
+Organism: Rickettsia conorii str. Malish 7
+PMID: 26455268
+Source: EuropePMC
+Title: Peptidase specificity from the substrate cleavage collection in the MEROPS database and a tool to measure cleavage site conservation
+Journal: Biochimie (2016)
+Snippet: and B (486) [32] ; meprin beta (891) and alpha subunits [33] ; and the RC1339 protein from Rickettsia conorii (799) [34] . There are 57 peptidases with 20 or more cleavages in synthetic substrates and neurolysin (139 cleavages) and thimet oligopeptidase (116) have the most.
+
+================================================================================
+Protein: VIMSS136267 (E-value: 1.6e-11, Score: 49.0)
+Mentioned as: RC1339
+Description: unknown
+Organism: Rickettsia conorii str. Malish 7
+PMID: 26457434
+Source: EuropePMC
+Title: Structure of RC1339/APRc from Rickettsia conorii, a retropepsin-like aspartic protease
+Journal: Acta crystallographica. Section D, Biological crystallography (2015)
+Snippet: (Cruz et al., 2014). Using R. conorii gene homolog rc1339 as a working model, the authors provided evidence that the encoded product, named APRc, indeed shares
+
+================================================================================
+Protein: VIMSS614963 (E-value: 3.8e-10, Score: 44.5)
+Mentioned as: RT0858
+Description: conserved hypothetical protein
+Organism: Rickettsia typhi str. wilmington
+PMID: 18641131
+Source: EuropePMC
+Title: Characterization of Sec-translocon-dependent extracytoplasmic proteins of Rickettsia typhi
+Journal: Journal of bacteriology (2008)
+Snippet: protein RT0810 RT0815 RT0816 RT0821 RT0825 RT0858 Rickettsial conserved hypothetical protein Rickettsial conserved hypothetical protein Hypothetical protein
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A061QF14.1	AF-A0A061QF14-F1-model_v4_TED01:22-43_52-61	1	AF-A0A061QF14-F1-model_v4_TED01	22-61	0
+A0A061QF14.1	AF-A0A061QF14-F1-model_v4_TED02:116-241	1	AF-A0A061QF14-F1-model_v4_TED02	116-241	0
+A0A068SNK6.1	AF-A0A068SNK6-F1-model_v4_TED01:4-99	1	AF-A0A068SNK6-F1-model_v4_TED01	4-99	93.9%
+A0A068SNK6.1	AF-A0A068SNK6-F1-model_v4_TED02:105-234	1	AF-A0A068SNK6-F1-model_v4_TED02	105-234	0
+A0A081BAY2.1	AF-A0A081BAY2-F1-model_v4_TED01:6-101	1	AF-A0A081BAY2-F1-model_v4_TED01	6-101	93.9%
+A0A081BAY2.1	AF-A0A081BAY2-F1-model_v4_TED02:107-231	1	AF-A0A081BAY2-F1-model_v4_TED02	107-231	0
+A0A084UAY8.1	AF-A0A084UAY8-F1-model_v4_TED02:113-232	1	AF-A0A084UAY8-F1-model_v4_TED02	113-232	0
+A0A084UAY8.1	AF-A0A084UAY8-F1-model_v4_TED01:2-55	1	AF-A0A084UAY8-F1-model_v4_TED01	2-55	0
+A0A095X4G7.1	AF-A0A095X4G7-F1-model_v4_TED01:4-98	1	AF-A0A095X4G7-F1-model_v4_TED01	4-98	90.9%
+A0A095X4G7.1	AF-A0A095X4G7-F1-model_v4_TED02:104-234	1	AF-A0A095X4G7-F1-model_v4_TED02	104-234	0
+A0A0B1Q5U6.1	AF-A0A0B1Q5U6-F1-model_v4_TED02:107-235	1	AF-A0A0B1Q5U6-F1-model_v4_TED02	107-235	0
+A0A0B1Q5U6.1	AF-A0A0B1Q5U6-F1-model_v4_TED01:4-59	1	AF-A0A0B1Q5U6-F1-model_v4_TED01	4-59	0
+A0A0D5LRN4.1	AF-A0A0D5LRN4-F1-model_v4_TED01:2-97	1	AF-A0A0D5LRN4-F1-model_v4_TED01	2-97	90.9%
+A0A0D5LRN4.1	AF-A0A0D5LRN4-F1-model_v4_TED02:104-233	1	AF-A0A0D5LRN4-F1-model_v4_TED02	104-233	0
+A0A0D6JIV3.1	AF-A0A0D6JIV3-F1-model_v4_TED01:2-84	1	AF-A0A0D6JIV3-F1-model_v4_TED01	2-84	51.5%
+A0A0D6JIV3.1	AF-A0A0D6JIV3-F1-model_v4_TED02:116-235	1	AF-A0A0D6JIV3-F1-model_v4_TED02	116-235	0
+A0A0E9MLZ6.1	AF-A0A0E9MLZ6-F1-model_v4_TED01:4-70	1	AF-A0A0E9MLZ6-F1-model_v4_TED01	4-70	97.0%
+A0A0E9MLZ6.1	AF-A0A0E9MLZ6-F1-model_v4_TED02:73-198	1	AF-A0A0E9MLZ6-F1-model_v4_TED02	73-198	0
+A0A0F5FU89.1	AF-A0A0F5FU89-F1-model_v4_TED01:2-96	1	AF-A0A0F5FU89-F1-model_v4_TED01	2-96	93.9%
+A0A0F5FU89.1	AF-A0A0F5FU89-F1-model_v4_TED02:102-228	1	AF-A0A0F5FU89-F1-model_v4_TED02	102-228	0
+A0A0F5LFT2.1	AF-A0A0F5LFT2-F1-model_v4_TED01:2-93	1	AF-A0A0F5LFT2-F1-model_v4_TED01	2-93	84.8%
+A0A0F5LFT2.1	AF-A0A0F5LFT2-F1-model_v4_TED02:109-228	1	AF-A0A0F5LFT2-F1-model_v4_TED02	109-228	0
+A0A0F7PKQ3.1	AF-A0A0F7PKQ3-F1-model_v4_TED01:2-94	1	AF-A0A0F7PKQ3-F1-model_v4_TED01	2-94	90.9%
+A0A0F7PKQ3.1	AF-A0A0F7PKQ3-F1-model_v4_TED02:101-229	1	AF-A0A0F7PKQ3-F1-model_v4_TED02	101-229	0
+A0A0L0J6C8.1	AF-A0A0L0J6C8-F1-model_v4_TED02:108-234	1	AF-A0A0L0J6C8-F1-model_v4_TED02	108-234	0
+A0A0L0J6C8.1	AF-A0A0L0J6C8-F1-model_v4_TED01:2-61	1	AF-A0A0L0J6C8-F1-model_v4_TED01	2-61	0
+A0A0M3BR06.1	AF-A0A0M3BR06-F1-model_v4_TED01:4-99	1	AF-A0A0M3BR06-F1-model_v4_TED01	4-99	93.9%
+A0A0M3BR06.1	AF-A0A0M3BR06-F1-model_v4_TED02:107-233	1	AF-A0A0M3BR06-F1-model_v4_TED02	107-233	0
+A0A0M6XWY4.1	AF-A0A0M6XWY4-F1-model_v4_TED01:5-100	1	AF-A0A0M6XWY4-F1-model_v4_TED01	5-100	75.8%
+A0A0M6XWY4.1	AF-A0A0M6XWY4-F1-model_v4_TED02:110-237	1	AF-A0A0M6XWY4-F1-model_v4_TED02	110-237	0
+A0A0N1BFP2.1	AF-A0A0N1BFP2-F1-model_v4_TED02:78-200	1	AF-A0A0N1BFP2-F1-model_v4_TED02	78-200	0
+A0A0N1BFP2.1	AF-A0A0N1BFP2-F1-model_v4_TED01:4-69	1	AF-A0A0N1BFP2-F1-model_v4_TED01	4-69	93.9%
+A0A0P0NWF6.1	AF-A0A0P0NWF6-F1-model_v4_TED01:25-76_85-112	1	AF-A0A0P0NWF6-F1-model_v4_TED01	25-112	72.7%
+A0A0P6W0P9.1	AF-A0A0P6W0P9-F1-model_v4_TED01:2-46_61-94	1	AF-A0A0P6W0P9-F1-model_v4_TED01	2-94	93.9%
+A0A0P6W0P9.1	AF-A0A0P6W0P9-F1-model_v4_TED02:99-225	1	AF-A0A0P6W0P9-F1-model_v4_TED02	99-225	0
+A0A0Q4X1K5.1	AF-A0A0Q4X1K5-F1-model_v4_TED02:103-228	1	AF-A0A0Q4X1K5-F1-model_v4_TED02	103-228	0
+A0A0Q4X1K5.1	AF-A0A0Q4X1K5-F1-model_v4_TED01:2-69	1	AF-A0A0Q4X1K5-F1-model_v4_TED01	2-69	9.1%
+A0A0Q5DAN8.1	AF-A0A0Q5DAN8-F1-model_v4_TED01:4-93	1	AF-A0A0Q5DAN8-F1-model_v4_TED01	4-93	75.8%
+A0A0Q5DAN8.1	AF-A0A0Q5DAN8-F1-model_v4_TED02:104-234	1	AF-A0A0Q5DAN8-F1-model_v4_TED02	104-234	0
+A0A0Q5H303.1	AF-A0A0Q5H303-F1-model_v4_TED02:105-233	1	AF-A0A0Q5H303-F1-model_v4_TED02	105-233	0
+A0A0Q5H303.1	AF-A0A0Q5H303-F1-model_v4_TED01:4-58	1	AF-A0A0Q5H303-F1-model_v4_TED01	4-58	0
+A0A0Q5WQ82.1	AF-A0A0Q5WQ82-F1-model_v4_TED01:4-96	1	AF-A0A0Q5WQ82-F1-model_v4_TED01	4-96	90.9%
+A0A0Q5WQ82.1	AF-A0A0Q5WQ82-F1-model_v4_TED02:103-232	1	AF-A0A0Q5WQ82-F1-model_v4_TED02	103-232	0
+A0A0Q5ZCR4.1	AF-A0A0Q5ZCR4-F1-model_v4_TED02:102-228	1	AF-A0A0Q5ZCR4-F1-model_v4_TED02	102-228	0
+A0A0Q5ZCR4.1	AF-A0A0Q5ZCR4-F1-model_v4_TED01:2-73	1	AF-A0A0Q5ZCR4-F1-model_v4_TED01	2-73	21.2%
+A0A0Q6EJN8.1	AF-A0A0Q6EJN8-F1-model_v4_TED01:1-84	1	AF-A0A0Q6EJN8-F1-model_v4_TED01	1-84	48.5%
+A0A0Q6EJN8.1	AF-A0A0Q6EJN8-F1-model_v4_TED02:101-231	1	AF-A0A0Q6EJN8-F1-model_v4_TED02	101-231	3.0%
+A0A0Q6F2H0.1	AF-A0A0Q6F2H0-F1-model_v4_TED01:6-101	1	AF-A0A0Q6F2H0-F1-model_v4_TED01	6-101	93.9%
+A0A0Q6F2H0.1	AF-A0A0Q6F2H0-F1-model_v4_TED02:116-235	1	AF-A0A0Q6F2H0-F1-model_v4_TED02	116-235	0
+A0A0Q6SBP3.1	AF-A0A0Q6SBP3-F1-model_v4_TED02:103-233	1	AF-A0A0Q6SBP3-F1-model_v4_TED02	103-233	0
+A0A0Q6SBP3.1	AF-A0A0Q6SBP3-F1-model_v4_TED01:2-55	1	AF-A0A0Q6SBP3-F1-model_v4_TED01	2-55	0
+A0A0Q7EBP3.1	AF-A0A0Q7EBP3-F1-model_v4_TED01:100-226	1	AF-A0A0Q7EBP3-F1-model_v4_TED01	100-226	0
+A0A0Q7I4M7.1	AF-A0A0Q7I4M7-F1-model_v4_TED01:2-96	1	AF-A0A0Q7I4M7-F1-model_v4_TED01	2-96	93.9%
+A0A0Q7I4M7.1	AF-A0A0Q7I4M7-F1-model_v4_TED02:102-228	1	AF-A0A0Q7I4M7-F1-model_v4_TED02	102-228	0
+A0A0Q7U569.1	AF-A0A0Q7U569-F1-model_v4_TED02:46-170	1	AF-A0A0Q7U569-F1-model_v4_TED02	46-170	0
+A0A0Q7U569.1	AF-A0A0Q7U569-F1-model_v4_TED01:2-41	1	AF-A0A0Q7U569-F1-model_v4_TED01	2-41	97.0%
+A0A0Q7YFA5.1	AF-A0A0Q7YFA5-F1-model_v4_TED01:2-96	1	AF-A0A0Q7YFA5-F1-model_v4_TED01	2-96	90.9%
+A0A0Q7YFA5.1	AF-A0A0Q7YFA5-F1-model_v4_TED02:103-232	1	AF-A0A0Q7YFA5-F1-model_v4_TED02	103-232	0
+A0A0Q8IYI0.1	AF-A0A0Q8IYI0-F1-model_v4_TED01:2-91	1	AF-A0A0Q8IYI0-F1-model_v4_TED01	2-91	78.8%
+A0A0Q8IYI0.1	AF-A0A0Q8IYI0-F1-model_v4_TED02:102-228	1	AF-A0A0Q8IYI0-F1-model_v4_TED02	102-228	0
+A0A0S2ERF3.1	AF-A0A0S2ERF3-F1-model_v4_TED02:104-231	1	AF-A0A0S2ERF3-F1-model_v4_TED02	104-231	0
+A0A0S2ERF3.1	AF-A0A0S2ERF3-F1-model_v4_TED01:2-58	1	AF-A0A0S2ERF3-F1-model_v4_TED01	2-58	0
+A0A0S3PZ65.1	AF-A0A0S3PZ65-F1-model_v4_TED01:2-97	1	AF-A0A0S3PZ65-F1-model_v4_TED01	2-97	39.4%
+A0A0S3PZ65.1	AF-A0A0S3PZ65-F1-model_v4_TED02:121-245	1	AF-A0A0S3PZ65-F1-model_v4_TED02	121-245	0
+A0A0T1XQB3.1	AF-A0A0T1XQB3-F1-model_v4_TED01:4-98	1	AF-A0A0T1XQB3-F1-model_v4_TED01	4-98	93.9%
+A0A0T1XQB3.1	AF-A0A0T1XQB3-F1-model_v4_TED02:104-233	1	AF-A0A0T1XQB3-F1-model_v4_TED02	104-233	0
+A0A0V7Z0S1.1	AF-A0A0V7Z0S1-F1-model_v4_TED02:103-229	1	AF-A0A0V7Z0S1-F1-model_v4_TED02	103-229	0
+A0A0V7Z0S1.1	AF-A0A0V7Z0S1-F1-model_v4_TED01:2-18_30-95	1	AF-A0A0V7Z0S1-F1-model_v4_TED01	2-95	84.8%
+A0A109BDH9.1	AF-A0A109BDH9-F1-model_v4_TED01:3-97	1	AF-A0A109BDH9-F1-model_v4_TED01	3-97	90.9%
+A0A109BDH9.1	AF-A0A109BDH9-F1-model_v4_TED02:109-235	1	AF-A0A109BDH9-F1-model_v4_TED02	109-235	0
+A0A127CPQ8.1	AF-A0A127CPQ8-F1-model_v4_TED01:1-83	1	AF-A0A127CPQ8-F1-model_v4_TED01	1-83	48.5%
+A0A127CPQ8.1	AF-A0A127CPQ8-F1-model_v4_TED02:101-231	1	AF-A0A127CPQ8-F1-model_v4_TED02	101-231	0
+A0A127ETE3.1	AF-A0A127ETE3-F1-model_v4_TED02:114-234	1	AF-A0A127ETE3-F1-model_v4_TED02	114-234	0
+A0A127ETE3.1	AF-A0A127ETE3-F1-model_v4_TED01:5-80	1	AF-A0A127ETE3-F1-model_v4_TED01	5-80	27.3%
+A0A135P601.1	AF-A0A135P601-F1-model_v4_TED01:4-98	1	AF-A0A135P601-F1-model_v4_TED01	4-98	90.9%
+A0A135P601.1	AF-A0A135P601-F1-model_v4_TED02:104-234	1	AF-A0A135P601-F1-model_v4_TED02	104-234	0
+A0A161V826.1	AF-A0A161V826-F1-model_v4_TED02:105-231	1	AF-A0A161V826-F1-model_v4_TED02	105-231	0
+A0A161V826.1	AF-A0A161V826-F1-model_v4_TED01:2-59	1	AF-A0A161V826-F1-model_v4_TED01	2-59	0
+A0A1B6Z5K3.1	AF-A0A1B6Z5K3-F1-model_v4_TED02:75-199	1	AF-A0A1B6Z5K3-F1-model_v4_TED02	75-199	0
+A0A1B6Z5K3.1	AF-A0A1B6Z5K3-F1-model_v4_TED01:4-70	1	AF-A0A1B6Z5K3-F1-model_v4_TED01	4-70	97.0%
+A0A1B9S0L2.1	AF-A0A1B9S0L2-F1-model_v4_TED01:4-80	1	AF-A0A1B9S0L2-F1-model_v4_TED01	4-80	39.4%
+A0A1B9S0L2.1	AF-A0A1B9S0L2-F1-model_v4_TED02:102-233	1	AF-A0A1B9S0L2-F1-model_v4_TED02	102-233	0
+A0A1C1YWH2.1	AF-A0A1C1YWH2-F1-model_v4_TED01:2-95	1	AF-A0A1C1YWH2-F1-model_v4_TED01	2-95	93.9%
+A0A1C1YWH2.1	AF-A0A1C1YWH2-F1-model_v4_TED02:100-229	1	AF-A0A1C1YWH2-F1-model_v4_TED02	100-229	0
+A0A1C2DRT7.1	AF-A0A1C2DRT7-F1-model_v4_TED01:4-98	1	AF-A0A1C2DRT7-F1-model_v4_TED01	4-98	90.9%
+A0A1C2DRT7.1	AF-A0A1C2DRT7-F1-model_v4_TED02:105-234	1	AF-A0A1C2DRT7-F1-model_v4_TED02	105-234	0
+A0A1C7NXP3.1	AF-A0A1C7NXP3-F1-model_v4_TED01:4-98	1	AF-A0A1C7NXP3-F1-model_v4_TED01	4-98	93.9%
+A0A1C7NXP3.1	AF-A0A1C7NXP3-F1-model_v4_TED02:103-233	1	AF-A0A1C7NXP3-F1-model_v4_TED02	103-233	0
+A0A1E2RXH2.1	AF-A0A1E2RXH2-F1-model_v4_TED01:2-96	1	AF-A0A1E2RXH2-F1-model_v4_TED01	2-96	90.9%
+A0A1E2RXH2.1	AF-A0A1E2RXH2-F1-model_v4_TED02:103-233	1	AF-A0A1E2RXH2-F1-model_v4_TED02	103-233	0
+A0A1E3VP20.1	AF-A0A1E3VP20-F1-model_v4_TED01:2-97	1	AF-A0A1E3VP20-F1-model_v4_TED01	2-97	93.9%
+A0A1E3VP20.1	AF-A0A1E3VP20-F1-model_v4_TED02:103-233	1	AF-A0A1E3VP20-F1-model_v4_TED02	103-233	0
+A0A1E3VY41.1	AF-A0A1E3VY41-F1-model_v4_TED01:2-93	1	AF-A0A1E3VY41-F1-model_v4_TED01	2-93	81.8%
+A0A1E3W2G6.1	AF-A0A1E3W2G6-F1-model_v4_TED01:30-83	1	AF-A0A1E3W2G6-F1-model_v4_TED01	30-83	51.5%
+A0A1G5ANP4.1	AF-A0A1G5ANP4-F1-model_v4_TED01:40-99	1	AF-A0A1G5ANP4-F1-model_v4_TED01	40-99	93.9%
+A0A1G5ANP4.1	AF-A0A1G5ANP4-F1-model_v4_TED02:105-229	1	AF-A0A1G5ANP4-F1-model_v4_TED02	105-229	0
+A0A1G5MK90.1	AF-A0A1G5MK90-F1-model_v4_TED02:84-214	1	AF-A0A1G5MK90-F1-model_v4_TED02	84-214	0
+A0A1G5MK90.1	AF-A0A1G5MK90-F1-model_v4_TED01:16-79	1	AF-A0A1G5MK90-F1-model_v4_TED01	16-79	93.9%
+A0A1G6CGE8.1	AF-A0A1G6CGE8-F1-model_v4_TED01:12-106	1	AF-A0A1G6CGE8-F1-model_v4_TED01	12-106	90.9%
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 39 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

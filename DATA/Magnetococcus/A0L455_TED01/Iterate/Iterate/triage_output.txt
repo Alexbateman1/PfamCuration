@@ -1,0 +1,96 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L455_TED01/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.00 27.60;
+NC   25.90 24.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+5	5	Chromatiaceae
+3	5	Lachnospiraceae
+5	4	Chromatiales
+3	4	Lachnospirales
+5	3	Gammaproteobacteria
+5	3	Clostridia
+3	3	Alphaproteobacteria
+6	2	Bacillota
+3	2	Bacteroidota
+10	2	Pseudomonadota
+6	1	Bacillati
+17	1	Pseudomonadati
+23	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1D2QYR7	CD-NTASE-ASSOCIATED PROTE    271.7    1.5e-77   1   1.2   5.1
+	Iterate                   	    16	   202	   271.2
+	PF10137	CAP12-PCTIR_TIR 	   214	   333	   122.6
+
+A0A2K8U4S6	UNCHARACTERIZED PROTEIN {    288.9    7.9e-83   1   1.0   0.3
+	Iterate                   	    16	   204	   288.6
+
+A0A9X1B5Z3	UNCHARACTERIZED PROTEIN {    287.6      2e-82   1   1.0   0.5
+	Iterate                   	    14	   202	   287.4
+
+A0L455	UNCHARACTERIZED PROTEIN {ECO:    275.9    7.9e-79   1   1.1   8.3
+	Iterate                   	    16	   204	   275.5
+
+V4JNL2	UNCHARACTERIZED PROTEIN {ECO:    294.1      2e-84   1   1.0   0.4
+	Iterate                   	    19	   207	   293.9
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0X3BPF5.1	AF-A0A0X3BPF5-F1-model_v4_TED01:25-206	1	AF-A0A0X3BPF5-F1-model_v4_TED01	25-206	97.3%
+A0A1D2QYR7.1	AF-A0A1D2QYR7-F1-model_v4_TED01:16-205	1	AF-A0A1D2QYR7-F1-model_v4_TED01	16-205	100.0%
+A0A1D2QYR7.1	AF-A0A1D2QYR7-F1-model_v4_TED02:215-349	1	AF-A0A1D2QYR7-F1-model_v4_TED02	215-349	0
+A0A1X1QVC4.1	AF-A0A1X1QVC4-F1-model_v4_TED01:18-213	1	AF-A0A1X1QVC4-F1-model_v4_TED01	18-213	100.0%
+A0A1Z5HDD4.1	AF-A0A1Z5HDD4-F1-model_v4_TED01:14-77_88-217	1	AF-A0A1Z5HDD4-F1-model_v4_TED01	14-217	100.0%
+A0A2K8U4S6.1	AF-A0A2K8U4S6-F1-model_v4_TED01:15-185	1	AF-A0A2K8U4S6-F1-model_v4_TED01	15-185	89.9%
+A0A2K8U4S6.1	AF-A0A2K8U4S6-F1-model_v4_TED02:194-223	1	AF-A0A2K8U4S6-F1-model_v4_TED02	194-223	5.8%
+A0A4Q5LL21.1	AF-A0A4Q5LL21-F1-model_v4_TED01:5-140_151-201	1	AF-A0A4Q5LL21-F1-model_v4_TED01	5-201	97.0%
+A0A6I3KHD0.1	AF-A0A6I3KHD0-F1-model_v4_TED01:5-183	1	AF-A0A6I3KHD0-F1-model_v4_TED01	5-183	100.0%
+I3Y9Y6.1	AF-I3Y9Y6-F1-model_v4_TED01:8-60	1	AF-I3Y9Y6-F1-model_v4_TED01	8-60	52.0%
+V4JNL2.1	AF-V4JNL2-F1-model_v4_TED01:19-205	1	AF-V4JNL2-F1-model_v4_TED01	19-205	98.9%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network analysis skipped: only 2 networks (minimum 5 required)
+
+--- End STRING ---

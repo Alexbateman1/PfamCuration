@@ -1,0 +1,122 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L4C3_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+10	7	Branchiostoma.
+10	6	Branchiostomatidae
+10	5	Amphioxiformes
+10	4	Streptosporangiales
+10	4	Leptocardii
+20	3	Actinomycetes
+10	3	Cephalochordata
+7	2	Pseudomonadota
+20	2	Actinomycetota
+14	2	Chordata
+9	1	Pseudomonadati
+22	1	Bacillati
+17	1	Metazoa
+31	0	Bacteria
+19	0	Eukaryota
+Total of 50 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A222FMU5	IMINOPHENYL-PYRUVATE DIME    147.6      8e-40   1   1.5   0.0
+	Iterate                   	   281	   405	   146.6
+	PF12902	Ferritin-like   	    32	   263	   114.8
+
+A0A7C9PIG9	IMINOPHENYL-PYRUVATE DIME    151.4    5.4e-41   1   1.4   0.1
+	Iterate                   	   279	   402	   150.6
+	PF12902	Ferritin-like   	    32	   261	     114
+
+A0A918N6E6	IMINOPHENYL-PYRUVATE DIME    152.7      2e-41   1   1.5   0.0
+	Iterate                   	   276	   402	   151.7
+	PF12902	Ferritin-like   	    30	   258	   106.9
+
+Q7NSZ8	IMINOPHENYL-PYRUVATE DIMER SY    148.2    5.1e-40   1   1.4   0.0
+	Iterate                   	   284	   413	   147.4
+	PF12902	Ferritin-like   	    36	   266	   123.4
+
+S2KJN1	IMINOPHENYL-PYRUVATE DIMER SY    152.9    1.8e-41   1   1.4   0.0
+	Iterate                   	   284	   410	   152.0
+	PF12902	Ferritin-like   	    37	   266	   115.2
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS3655014 (E-value: 0.00013, Score: 27.3)
+Mentioned as: SACE_4302
+Description: hypothetical protein
+Organism: Saccharopolyspora erythraea NRRL 2338
+PMID: 23603745
+Source: EuropePMC
+Title: Activation and products of the cryptic secondary metabolite biosynthetic gene clusters by rifampin resistance (rpoB) mutations in actinomycetes
+Journal: Journal of bacteriology (2013)
+Snippet: SACE_2622 SACE_2631 SACE_2703 SACE_2874 SACE_3226 SACE_3721 SACE_4130 SACE_4302 SACE_4471 SACE_4577 SACE_4647 SACE_5309 a Gene names are from Ohnishi et al.
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A222FMU5.1	AF-A0A222FMU5-F1-model_v4_TED01:15-216_236-268	1	AF-A0A222FMU5-F1-model_v4_TED01	15-268	0
+A0A222FMU5.1	AF-A0A222FMU5-F1-model_v4_TED02:287-411	1	AF-A0A222FMU5-F1-model_v4_TED02	287-411	95.2%
+A0A6P4YLC6.1	AF-A0A6P4YLC6-F1-model_v4_TED01:42-251	1	AF-A0A6P4YLC6-F1-model_v4_TED01	42-251	0
+A0A6P4YLC6.1	AF-A0A6P4YLC6-F1-model_v4_TED02:385-497	1	AF-A0A6P4YLC6-F1-model_v4_TED02	385-497	0
+A0A6P4YLC6.1	AF-A0A6P4YLC6-F1-model_v4_TED03:513-588	1	AF-A0A6P4YLC6-F1-model_v4_TED03	513-588	0
+A0A6P4YLC6.1	AF-A0A6P4YLC6-F1-model_v4_TED04:597-900	1	AF-A0A6P4YLC6-F1-model_v4_TED04	597-900	0
+A0A6P4YLC6.1	AF-A0A6P4YLC6-F1-model_v4_TED05:903-995	1	AF-A0A6P4YLC6-F1-model_v4_TED05	903-995	66.9%
+S2KJN1.1	AF-S2KJN1-F1-model_v4_TED01:19-268	1	AF-S2KJN1-F1-model_v4_TED01	19-268	0
+S2KJN1.1	AF-S2KJN1-F1-model_v4_TED02:284-416	1	AF-S2KJN1-F1-model_v4_TED02	284-416	100.0%
+W5W8Z9.1	AF-W5W8Z9-F1-model_v4_TED01:25-209_223-259	1	AF-W5W8Z9-F1-model_v4_TED01	25-259	0
+W5W8Z9.1	AF-W5W8Z9-F1-model_v4_TED02:276-398	1	AF-W5W8Z9-F1-model_v4_TED02	276-398	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 6 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

@@ -1,0 +1,169 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LAV4_TED04/Iterate/Iterate
+GA   27.00 27.00;
+TC   28.40 29.00;
+NC   26.40 20.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+5	6	Magnetococcus.
+3	6	Magnetofaba.
+8	5	Magnetococcaceae
+8	4	Magnetococcales
+8	3	Magnetococcia
+7	3	Alphaproteobacteria
+5	3	Betaproteobacteria
+21	2	Pseudomonadota
+23	1	Pseudomonadati
+23	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0L707	PLASMID AND PHAGE DNA PRIMASE    142.8    1.6e-38   1   1.7   0.0
+	Iterate                   	   611	   701	   141.5
+	PF13481	AAA_25          	   318	   521	   186.7
+
+A0L772	PLASMID AND PHAGE DNA PRIMASE    142.8    1.6e-38   1   1.7   0.0
+	Iterate                   	   611	   701	   141.5
+	PF13481	AAA_25          	   318	   521	   186.7
+
+A0L9C8	TOPRIM DOMAIN PROTEIN {ECO:00    143.4    1.1e-38   1   1.7   0.0
+	Iterate                   	   611	   702	   142.1
+	PF13481	AAA_25          	   318	   521	   181.6
+
+A0LAV4	PLASMID AND PHAGE REPLICATIVE    142.5    1.9e-38   1   1.5   0.0
+	Iterate                   	   611	   701	   141.5
+	PF13481	AAA_25          	   318	   521	   186.7
+
+A0LBJ1	PLASMID AND PHAGE REPLICATIVE    142.8    1.6e-38   1   1.7   0.0
+	Iterate                   	   611	   701	   141.5
+	PF13481	AAA_25          	   318	   521	   186.7
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS577608 (E-value: 3.7e-24, Score: 90.1)
+Mentioned as: WD0582
+Description: regulatory protein RepA, putative
+Organism: Wolbachia endosymbiont of Drosophila melanogaster
+PMID: 34003269
+Source: EuropePMC
+Title: Comparative Genomics Reveals Factors Associated with Phenotypic Expression of Wolbachia
+Journal: Genome biology and evolution (2021)
+Snippet: WD0024 WD0159 WD0433 WD0292 WD0403 WD0136 WD0954 WD0631 WD0582, WD0609 WD1187 WD0092 WD0762 WD1052 Resc Candidates To identify potential rescue candidates, we
+
+================================================================================
+Protein: VIMSS577608 (E-value: 3.7e-24, Score: 90.1)
+Mentioned as: WD0582
+Description: regulatory protein RepA, putative
+Organism: Wolbachia endosymbiont of Drosophila melanogaster
+PMID: 25341639
+Source: EuropePMC
+Title: Comparative genome analysis of Wolbachia strain wAu
+Journal: BMC genomics (2014)
+Snippet: repeat genes, grey, others. The region designated WO-B (Figure 3 ) in w Mel (spanning WD0582 WD0644 ) is closer to the origin of replication in w Au (spanning WPWAU0282 WPWAU0318 ). This region contains two segments, one closely related to P2 phage and the other
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A011PRK6.1	AF-A0A011PRK6-F1-model_v4_TED01:30-301	1	AF-A0A011PRK6-F1-model_v4_TED01	30-301	2.4%
+A0A011PRK6.1	AF-A0A011PRK6-F1-model_v4_TED02:305-373	1	AF-A0A011PRK6-F1-model_v4_TED02	305-373	84.1%
+A0A1Y2K523.1	AF-A0A1Y2K523-F1-model_v4_TED01:27-122	1	AF-A0A1Y2K523-F1-model_v4_TED01	27-122	0
+A0A1Y2K523.1	AF-A0A1Y2K523-F1-model_v4_TED02:148-315	1	AF-A0A1Y2K523-F1-model_v4_TED02	148-315	0
+A0A1Y2K523.1	AF-A0A1Y2K523-F1-model_v4_TED03:343-553	1	AF-A0A1Y2K523-F1-model_v4_TED03	343-553	0
+A0A1Y2K523.1	AF-A0A1Y2K523-F1-model_v4_TED04:616-694	1	AF-A0A1Y2K523-F1-model_v4_TED04	616-694	86.8%
+A0A1Y2KA30.1	AF-A0A1Y2KA30-F1-model_v4_TED01:26-122	1	AF-A0A1Y2KA30-F1-model_v4_TED01	26-122	0
+A0A1Y2KA30.1	AF-A0A1Y2KA30-F1-model_v4_TED02:151-315	1	AF-A0A1Y2KA30-F1-model_v4_TED02	151-315	0
+A0A1Y2KA30.1	AF-A0A1Y2KA30-F1-model_v4_TED03:344-557_580-592	1	AF-A0A1Y2KA30-F1-model_v4_TED03	344-592	0
+A0A1Y2KA30.1	AF-A0A1Y2KA30-F1-model_v4_TED04:612-703	1	AF-A0A1Y2KA30-F1-model_v4_TED04	612-703	100.0%
+A0A432VA40.1	AF-A0A432VA40-F1-model_v4_TED01:4-188	1	AF-A0A432VA40-F1-model_v4_TED01	4-188	0
+A0A432VA40.1	AF-A0A432VA40-F1-model_v4_TED03:354-621	1	AF-A0A432VA40-F1-model_v4_TED03	354-621	0
+A0A432VA40.1	AF-A0A432VA40-F1-model_v4_TED02:209-302	1	AF-A0A432VA40-F1-model_v4_TED02	209-302	0
+A0A432VA40.1	AF-A0A432VA40-F1-model_v4_TED04:630-706	1	AF-A0A432VA40-F1-model_v4_TED04	630-706	83.7%
+A0A4Y9R7K9.1	AF-A0A4Y9R7K9-F1-model_v4_TED02:140-412	1	AF-A0A4Y9R7K9-F1-model_v4_TED02	140-412	4.1%
+A0A4Y9R7K9.1	AF-A0A4Y9R7K9-F1-model_v4_TED03:415-492	1	AF-A0A4Y9R7K9-F1-model_v4_TED03	415-492	79.6%
+A0A4Y9R7K9.1	AF-A0A4Y9R7K9-F1-model_v4_TED01:4-27_42-100	1	AF-A0A4Y9R7K9-F1-model_v4_TED01	4-100	0
+A0A5K7Z4Z0.1	AF-A0A5K7Z4Z0-F1-model_v4_TED01:41-118	1	AF-A0A5K7Z4Z0-F1-model_v4_TED01	41-118	75.7%
+A0L772.1	AF-A0L772-F1-model_v4_TED01:27-122	1	AF-A0L772-F1-model_v4_TED01	27-122	0
+A0L772.1	AF-A0L772-F1-model_v4_TED02:151-314	1	AF-A0L772-F1-model_v4_TED02	151-314	0
+A0L772.1	AF-A0L772-F1-model_v4_TED03:342-608	1	AF-A0L772-F1-model_v4_TED03	342-608	0
+A0L772.1	AF-A0L772-F1-model_v4_TED04:616-701	1	AF-A0L772-F1-model_v4_TED04	616-701	94.5%
+A0L9C8.1	AF-A0L9C8-F1-model_v4_TED01:25-122	1	AF-A0L9C8-F1-model_v4_TED01	25-122	0
+A0L9C8.1	AF-A0L9C8-F1-model_v4_TED02:151-314	1	AF-A0L9C8-F1-model_v4_TED02	151-314	0
+A0L9C8.1	AF-A0L9C8-F1-model_v4_TED03:342-601	1	AF-A0L9C8-F1-model_v4_TED03	342-601	0
+A0L9C8.1	AF-A0L9C8-F1-model_v4_TED04:611-702	1	AF-A0L9C8-F1-model_v4_TED04	611-702	100.0%
+G1UQV2.1	AF-G1UQV2-F1-model_v4_TED01:107-205	1	AF-G1UQV2-F1-model_v4_TED01	107-205	0
+G1UQV2.1	AF-G1UQV2-F1-model_v4_TED02:222-405	1	AF-G1UQV2-F1-model_v4_TED02	222-405	0
+G1UQV2.1	AF-G1UQV2-F1-model_v4_TED03:427-464_477-689	1	AF-G1UQV2-F1-model_v4_TED03	427-689	0
+G1UQV2.1	AF-G1UQV2-F1-model_v4_TED04:699-782	1	AF-G1UQV2-F1-model_v4_TED04	699-782	91.3%
+K9H388.1	AF-K9H388-F1-model_v4_TED01:25-37_51-122	1	AF-K9H388-F1-model_v4_TED01	25-122	0
+K9H388.1	AF-K9H388-F1-model_v4_TED03:228-456	1	AF-K9H388-F1-model_v4_TED03	228-456	3.2%
+K9H388.1	AF-K9H388-F1-model_v4_TED04:469-536	1	AF-K9H388-F1-model_v4_TED04	469-536	72.3%
+K9H388.1	AF-K9H388-F1-model_v4_TED02:190-217	1	AF-K9H388-F1-model_v4_TED02	190-217	0
+Q5P8X2.1	AF-Q5P8X2-F1-model_v4_TED01:2-104	1	AF-Q5P8X2-F1-model_v4_TED01	2-104	0
+Q5P8X2.1	AF-Q5P8X2-F1-model_v4_TED02:121-196	1	AF-Q5P8X2-F1-model_v4_TED02	121-196	74.5%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 14 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF00476	DNA_pol_A	12	0.86	0.60
+PF01612	DNA_pol_A_exo1	12	0.86	0.60
+PF13481	AAA_25	11	0.79	0.52
+PF00310	GATase_2	11	0.79	0.52
+PF01645	Glu_synthase	11	0.79	0.52
+PF04898	Glu_syn_central	11	0.79	0.52
+PF01493	GXGXG	11	0.79	0.52
+PF01138	RNase_PH	11	0.79	0.52
+PF03725	RNase_PH_C	11	0.79	0.52
+PF01367	5_3_exonuc	11	0.79	0.52
+PF02739	5_3_exonuc_N	11	0.79	0.52
+PF01926	MMR_HSR1	11	0.79	0.52
+PF02421	FeoB_N	11	0.79	0.52
+PF00772	DnaB	11	0.79	0.52
+PF03796	DnaB_C	11	0.79	0.52
+PF00009	GTP_EFTU	11	0.79	0.52
+PF14714	KH_dom-like	11	0.79	0.52
+
+--- End STRING ---

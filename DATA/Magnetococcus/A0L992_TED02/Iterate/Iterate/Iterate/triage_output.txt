@@ -1,0 +1,133 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L992_TED02/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.40;
+NC   26.70 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+6	6	Magnetococcus.
+7	5	Magnetococcaceae
+5	5	Enterobacteriaceae
+4	5	Neisseriaceae
+7	4	Magnetococcales
+7	4	Enterobacterales
+5	4	Neisseriales
+3	4	Burkholderiales
+8	3	Betaproteobacteria
+7	3	Magnetococcia
+10	3	Gammaproteobacteria
+25	2	Pseudomonadota
+25	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1Y2K9N0	PUTATIVE TP901 FAMILY PHA    103.4    2.6e-26   1   6.2   7.9
+	Iterate                   	    13	    67	   103.4
+	PF10145	PhageMin_Tail   	   110	   303	   160.8
+
+A0L7A6	PHAGE TAIL TAPE MEASURE PROTE    104.3    1.4e-26   2   6.8   6.8
+	Iterate                   	   189	   243	   104.3
+	PF10145	PhageMin_Tail   	   286	   479	   155.2
+
+A0L992	PHAGE TAIL TAPE MEASURE PROTE    104.3    1.4e-26   2   6.4   6.8
+	Iterate                   	   189	   243	   104.3
+	PF10145	PhageMin_Tail   	   286	   479	     156
+
+A0LAR8	PHAGE TAIL TAPE MEASURE PROTE    104.9    9.2e-27   2   6.8  29.9
+	Iterate                   	   189	   243	   104.3
+	PF10145	PhageMin_Tail   	   286	   479	   155.3
+
+A0LBN0	PHAGE TAIL TAPE MEASURE PROTE    102.9    3.8e-26   1   6.0   5.3
+	Iterate                   	   189	   243	   102.9
+	PF10145	PhageMin_Tail   	   286	   479	   153.3
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS140201 (E-value: 0.00012, Score: 27.4)
+Mentioned as: NMB1108
+Description: hypothetical protein
+Organism: Neisseria meningitidis MC58
+PMID: 11254622
+Source: EuropePMC
+Title: Mu-like Prophage in serogroup B Neisseria meningitidis coding for surface-exposed antigens
+Journal: Infection and immunity (2001)
+Snippet: 140 NMB1102 1117746-1118336 NMB1103 NMB1104 NMB1105 NMB1106 NMB1107 NMB1108 235 80 661 Not annotated C repressor Ner MuA HI1476 HI1477 HI1478 NMA1884 NMA1883
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0L0GQS5.1	AF-A0A0L0GQS5-F1-model_v4_TED01:23-98	1	AF-A0A0L0GQS5-F1-model_v4_TED01	23-98	0
+A0A0L0GUX0.1	AF-A0A0L0GUX0-F1-model_v4_TED02:202-515	1	AF-A0A0L0GUX0-F1-model_v4_TED02	202-515	0
+A0A0L0GUX0.1	AF-A0A0L0GUX0-F1-model_v4_TED01:41-106	1	AF-A0A0L0GUX0-F1-model_v4_TED01	41-106	0
+A0A0L0GUX0.1	AF-A0A0L0GUX0-F1-model_v4_TED03:652-730	1	AF-A0A0L0GUX0-F1-model_v4_TED03	652-730	0
+A0A0M2KE31.1	AF-A0A0M2KE31-F1-model_v4_TED02:521-560	1	AF-A0A0M2KE31-F1-model_v4_TED02	521-560	0
+A0A0M2KE31.1	AF-A0A0M2KE31-F1-model_v4_TED01:26-98	1	AF-A0A0M2KE31-F1-model_v4_TED01	26-98	68.3%
+A0A161SD44.1	AF-A0A161SD44-F1-model_v4_TED01:276-465	1	AF-A0A161SD44-F1-model_v4_TED01	276-465	0
+A0A1J7D4R4.1	AF-A0A1J7D4R4-F1-model_v4_TED01:117-220_438-479	1	AF-A0A1J7D4R4-F1-model_v4_TED01	117-479	0
+A0A1J7D4R4.1	AF-A0A1J7D4R4-F1-model_v4_TED02:255-426	1	AF-A0A1J7D4R4-F1-model_v4_TED02	255-426	0
+A0A1Y2K9N0.1	AF-A0A1Y2K9N0-F1-model_v4_TED03:601-823	1	AF-A0A1Y2K9N0-F1-model_v4_TED03	601-823	0
+A0A1Y2K9N0.1	AF-A0A1Y2K9N0-F1-model_v4_TED04:971-1002	1	AF-A0A1Y2K9N0-F1-model_v4_TED04	971-1002	0
+A0A1Y2K9N0.1	AF-A0A1Y2K9N0-F1-model_v4_TED01:2-67	1	AF-A0A1Y2K9N0-F1-model_v4_TED01	2-67	100.0%
+A0A1Y2K9N0.1	AF-A0A1Y2K9N0-F1-model_v4_TED02:140-343	1	AF-A0A1Y2K9N0-F1-model_v4_TED02	140-343	0
+A0A484Z8B2.1	AF-A0A484Z8B2-F1-model_v4_TED02:222-523	1	AF-A0A484Z8B2-F1-model_v4_TED02	222-523	0
+A0A484Z8B2.1	AF-A0A484Z8B2-F1-model_v4_TED01:36-100	1	AF-A0A484Z8B2-F1-model_v4_TED01	36-100	71.7%
+A0A6I4V7B0.1	AF-A0A6I4V7B0-F1-model_v4_TED03:203-308	1	AF-A0A6I4V7B0-F1-model_v4_TED03	203-308	0
+A0A6I4V7B0.1	AF-A0A6I4V7B0-F1-model_v4_TED01:26-111	1	AF-A0A6I4V7B0-F1-model_v4_TED01	26-111	0
+A0A6I4V7B0.1	AF-A0A6I4V7B0-F1-model_v4_TED02:116-177	1	AF-A0A6I4V7B0-F1-model_v4_TED02	116-177	87.3%
+A0LAR8.1	AF-A0LAR8-F1-model_v4_TED02:261-351_512-548	1	AF-A0LAR8-F1-model_v4_TED02	261-548	0
+A0LAR8.1	AF-A0LAR8-F1-model_v4_TED03:373-509	1	AF-A0LAR8-F1-model_v4_TED03	373-509	0
+A0LAR8.1	AF-A0LAR8-F1-model_v4_TED04:781-870_891-1034	1	AF-A0LAR8-F1-model_v4_TED04	781-1034	0
+A0LAR8.1	AF-A0LAR8-F1-model_v4_TED05:1147-1181	1	AF-A0LAR8-F1-model_v4_TED05	1147-1181	0
+A0LAR8.1	AF-A0LAR8-F1-model_v4_TED01:20-166	1	AF-A0LAR8-F1-model_v4_TED01	20-166	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 12 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

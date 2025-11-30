@@ -1,0 +1,456 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L3V1_TED01/Iterate/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+29	5	Paracoccaceae
+25	5	Roseobacteraceae
+55	4	Rhodobacterales
+22	4	Hyphomicrobiales
+18	4	Burkholderiales
+87	3	Alphaproteobacteria
+40	3	Betaproteobacteria
+30	3	Gammaproteobacteria
+165	2	Pseudomonadota
+173	1	Pseudomonadati
+175	0	Bacteria
+Total of 175 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+ID   Y525_PSEAE              Reviewed;         612 AA.
+AC   Q51484; Q9R7U8;
+DE   RecName: Full=Uncharacterized protein PA0525;
+GN   OrderedLocusNames=PA0525;
+OS   Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM
+OS   14847 / LMG 12228 / 1C / PRS 101 / PAO1).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria;
+OC   Pseudomonadales; Pseudomonadaceae; Pseudomonas.
+OX   NCBI_TaxID=208964;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=7711073; DOI=10.1016/0167-4781(95)00018-c;
+RA   Arai H., Igarashi Y., Kodama T.;
+RT   "The structural genes for nitric oxide reductase from Pseudomonas
+RT   aeruginosa.";
+RL   Biochim. Biophys. Acta 1261:279-284(1995).
+RN   [2]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=10984043; DOI=10.1038/35023079;
+RA   Stover C.K., Pham X.-Q.T., Erwin A.L., Mizoguchi S.D., Warrener P.,
+RA   Hickey M.J., Brinkman F.S.L., Hufnagle W.O., Kowalik D.J., Lagrou M.,
+RA   Garber R.L., Goltry L., Tolentino E., Westbrock-Wadman S., Yuan Y.,
+RA   Brody L.L., Coulter S.N., Folger K.R., Kas A., Larbig K., Lim R.M.,
+RA   Smith K.A., Spencer D.H., Wong G.K.-S., Wu Z., Paulsen I.T., Reizer J.,
+RA   Saier M.H. Jr., Hancock R.E.W., Lory S., Olson M.V.;
+RT   "Complete genome sequence of Pseudomonas aeruginosa PAO1, an opportunistic
+RT   pathogen.";
+RL   Nature 406:959-964(2000).
+RN   [3]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 602-612.
+RC   STRAIN=ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 /
+RC   1C / PRS 101 / PAO1;
+RX   PubMed=7664887; DOI=10.1016/0014-5793(95)00885-d;
+RA   Arai H., Igarashi Y., Kodama T.;
+RT   "Expression of the nir and nor genes for denitrification of Pseudomonas
+RT   aeruginosa requires a novel CRP/FNR-related transcriptional regulator, DNR,
+RT   in addition to ANR.";
+RL   FEBS Lett. 371:73-76(1995).
+CC   -!- FUNCTION: Component of the anaerobic respiratory chain that transforms
+CC       nitrate to dinitrogen (denitrification). Function unknown, but
+CC       essential for the denitrification process.
+CC   -!- SUBCELLULAR LOCATION: Cytoplasm {ECO:0000305}.
+DR   EMBL; D38133; BAA07331.1; -; Genomic_DNA.
+DR   EMBL; AE004091; AAG03914.1; -; Genomic_DNA.
+DR   EMBL; D50019; BAA08746.1; -; Genomic_DNA.
+DR   PIR; S53714; S53714.
+DR   RefSeq; NP_249216.1; NC_002516.2.
+DR   RefSeq; WP_003113236.1; NZ_QZGE01000010.1.
+DR   AlphaFoldDB; Q51484; -.
+DR   STRING; 208964.PA0525; -.
+DR   PaxDb; 208964-PA0525; -.
+DR   GeneID; 882190; -.
+DR   KEGG; pae:PA0525; -.
+DR   PATRIC; fig|208964.12.peg.555; -.
+DR   PseudoCAP; PA0525; -.
+DR   HOGENOM; CLU_024042_0_0_6; -.
+DR   InParanoid; Q51484; -.
+DR   OrthoDB; 9758211at2; -.
+DR   PhylomeDB; Q51484; -.
+DR   BioCyc; PAER208964:G1FZ6-530-MONOMER; -.
+DR   Proteomes; UP000002438; Chromosome.
+DR   GO; GO:0005737; C:cytoplasm; IEA:UniProtKB-SubCell.
+DR   CDD; cd01454; vWA_norD_type; 1.
+DR   Gene3D; 3.40.50.410; von Willebrand factor, type A domain; 1.
+DR   InterPro; IPR051928; NorD/CobT.
+DR   InterPro; IPR002035; VWF_A.
+DR   InterPro; IPR036465; vWFA_dom_sf.
+DR   PANTHER; PTHR41248; NORD PROTEIN; 1.
+DR   PANTHER; PTHR41248:SF1; NORD PROTEIN; 1.
+DR   Pfam; PF00092; VWA; 1.
+DR   SMART; SM00327; VWA; 1.
+DR   SUPFAM; SSF53300; vWA-like; 1.
+DR   PROSITE; PS50234; VWFA; 1.
+PE   4: Predicted;
+KW   Cytoplasm; Reference proteome.
+FT   CHAIN           1..612
+FT                   /note="Uncharacterized protein PA0525"
+FT                   /id="PRO_0000206248"
+FT   DOMAIN          421..610
+FT                   /note="VWFA"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00219"
+FT   REGION          213..238
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   612 AA;  69467 MW;  5ADE6670D2C082E6 CRC64;
+//
+ID   NORD_BRUA2              Reviewed;         633 AA.
+AC   Q2YJT9;
+DE   RecName: Full=Protein NorD;
+GN   Name=norD; OrderedLocusNames=BAB2_0952;
+OS   Brucella abortus (strain 2308).
+OC   Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria;
+OC   Hyphomicrobiales; Brucellaceae; Brucella/Ochrobactrum group; Brucella.
+OX   NCBI_TaxID=359391;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=2308;
+RX   PubMed=16299333; DOI=10.1128/iai.73.12.8353-8361.2005;
+RA   Chain P.S., Comerci D.J., Tolmasky M.E., Larimer F.W., Malfatti S.A.,
+RA   Vergez L.M., Aguero F., Land M.L., Ugalde R.A., Garcia E.;
+RT   "Whole-genome analyses of speciation events in pathogenic Brucellae.";
+RL   Infect. Immun. 73:8353-8361(2005).
+CC   -!- FUNCTION: Part of the operon norEFCBQD encoding nitric oxide reductase.
+CC       Essential virulence factor, probably involved in the detoxification of
+CC       nitric oxide (NO) produced in the macrophages during the innate
+CC       response against infection (By similarity). {ECO:0000250}.
+DR   EMBL; AM040265; CAJ13118.1; -; Genomic_DNA.
+DR   RefSeq; WP_002966335.1; NZ_KN046823.1.
+DR   AlphaFoldDB; Q2YJT9; -.
+DR   STRING; 359391.BAB2_0952; -.
+DR   KEGG; bmf:BAB2_0952; -.
+DR   PATRIC; fig|359391.11.peg.637; -.
+DR   HOGENOM; CLU_024042_0_0_5; -.
+DR   PhylomeDB; Q2YJT9; -.
+DR   Proteomes; UP000002719; Chromosome II.
+DR   CDD; cd01454; vWA_norD_type; 1.
+DR   Gene3D; 3.40.50.410; von Willebrand factor, type A domain; 1.
+DR   InterPro; IPR051928; NorD/CobT.
+DR   InterPro; IPR002035; VWF_A.
+DR   InterPro; IPR036465; vWFA_dom_sf.
+DR   PANTHER; PTHR41248; NORD PROTEIN; 1.
+DR   PANTHER; PTHR41248:SF1; NORD PROTEIN; 1.
+DR   Pfam; PF00092; VWA; 1.
+DR   SMART; SM00327; VWA; 1.
+DR   SUPFAM; SSF53300; vWA-like; 1.
+DR   PROSITE; PS50234; VWFA; 1.
+PE   3: Inferred from homology;
+KW   Reference proteome; Virulence.
+FT   CHAIN           1..633
+FT                   /note="Protein NorD"
+FT                   /id="PRO_0000248305"
+FT   DOMAIN          445..633
+FT                   /note="VWFA"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00219"
+FT   REGION          232..270
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   REGION          290..314
+FT                   /note="Disordered"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        232..243
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        258..270
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+FT   COMPBIAS        292..306
+FT                   /note="Basic and acidic residues"
+FT                   /evidence="ECO:0000256|SAM:MobiDB-lite"
+SQ   SEQUENCE   633 AA;  70728 MW;  FE723B1ECE6579F4 CRC64;
+//
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1H5TKL0	NITRIC OXIDE REDUCTASE NO    259.8    9.1e-74   1   2.1  11.6
+	Iterate                   	    12	   229	   259.8
+	PF00092	VWA             	   458	   632	    24.5
+
+A0A1M4SNH2	NITRIC OXIDE REDUCTASE NO    261.5    2.6e-74   1   2.7   8.8
+	Iterate                   	    10	   228	   261.5
+	PF00092	VWA             	   482	   625	    28.5
+
+A0A4Q2ABV1	NITRIC OXIDE REDUCTASE D     260.3    6.2e-74   1   1.8   6.7
+	Iterate                   	    12	   228	   260.3
+
+Q2YJT9	PROTEIN NORD                       236.4    1.3e-66   1   2.2   5.3
+	Iterate                   	     8	   218	   236.4
+	PF00092	VWA             	   446	   620	    33.3
+	PF13519	VWA_2           	   446	   559	      30
+
+Q51484	UNCHARACTERIZED PROTEIN PA0525     168.9    6.1e-46   1   1.5  14.8
+	Iterate                   	     8	   219	   167.9
+	PF00092	VWA             	   424	   588	    24.5
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS318428 (E-value: 6.2e-72, Score: 247.0)
+Mentioned as: blr3217
+Description: NorD protein
+Organism: Bradyrhizobium japonicum USDA 110
+PMID: 31481951
+Source: EuropePMC
+Title: Expanding the Regulon of the <i>Bradyrhizobium diazoefficiens</i> NnrR Transcription Factor: New Insights Into the Denitrification Pathway
+Journal: Frontiers in microbiology (2019)
+Snippet: Bdiaspc4_16630 norB Nitric oxide reductase subunit B blr3216 69.9 56.3 Bdiaspc4_16635 norQ CbbQ/NirQ/NorQ/GpvN family protein blr3217 16.8 17.6 Bdiaspc4_16640 norD VWA domain-containing protein bll3611 4.3 2.3 Bdiaspc4_18640 Caspase family protein 330 TTGAACCACGTCAG bll3835 6.0 31.6 Bdiaspc4_19825 PepSY domain-containing protein 93 TTGCTGCAAATCAA blr4191 6.7 6.0 Bdiaspc4_21720 Histidine
+
+================================================================================
+Protein: VIMSS1056055 (E-value: 1.5e-71, Score: 245.8)
+Mentioned as: BAB2_0952
+Description: Von Willebrand factor, type A
+Organism: Brucella melitensis biovar Abortus 2308
+PMID: 37612737
+Source: EuropePMC
+Title: ClpP protease modulates bacterial growth, stress response, and bacterial virulence in Brucella abortus
+Journal: Veterinary research (2023)
+Snippet: results revealed that the top 10 upregulated genes were BAB2_0942, BAB2_0943, BAB2_0050, BAB2_0953, hemN -2, BAB2_0952, BAB1_1513, BAB1_0736, BAB1_0622, and BAB2_0929, while the top 10 down-regulated genes BAB2_0277, BAB1_1215, BAB1_0041, BAB2_0276, BAB2_0278, BAB1_1214, BAB1_0040, rplI , BAB1_1964, and rpsN . Figure 6 Transcriptomic analysis for differentially
+
+================================================================================
+Protein: VIMSS284367 (E-value: 2.3e-71, Score: 245.2)
+Mentioned as: BRA0251
+Description: norD protein
+Organism: Brucella suis 1330
+PMID: 17709411
+Source: EuropePMC
+Title: Identification and isolation of Brucella suis virulence genes involved in resistance to the human innate immune system
+Journal: Infection and immunity (2007)
+Snippet: to 99 T cells Attenuationa Clone BRA0042 BR2082 BR1274 BRA0251 BR1800 BRA0348 BRA0251 BR1622 Gene ? his? hom norD atpG pgm? norD omp31 Putative function DNA
+
+================================================================================
+Protein: VIMSS122010 (E-value: 1.4e-69, Score: 239.4)
+Mentioned as: SMa1269
+Description: NorD  protein required for nitric oxide reductase (Nor) activity
+Organism: Sinorhizobium meliloti 1021
+PMID: 28905000
+Source: EuropePMC
+Title: Transcriptome Analysis of Polyhydroxybutyrate Cycle Mutants Reveals Discrete Loci Connecting Nitrogen Utilization and Carbon Storage in <i>Sinorhizobium meliloti</i>
+Journal: mSystems (2017)
+Snippet: downregulated genes were SMa1099 , SMa1182 , SMa1183 , SMa1184 , SMa1213 , SMa1214 , SMa1269 , SMa1272 , and SMa1273 . These genes encode a hypothetical protein with sequence similarity to the cytochrome c oxidase genes, the nos operon (although the nosR regulator was upregulated),
+
+================================================================================
+Protein: VIMSS122010 (E-value: 1.4e-69, Score: 239.4)
+Mentioned as: SMa1269
+Description: NorD  protein required for nitric oxide reductase (Nor) activity
+Organism: Sinorhizobium meliloti 1021
+PMID: 11481432
+Source: EuropePMC
+Title: Nucleotide sequence and predicted functions of the entire Sinorhizobium meliloti pSymA megaplasmid
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2001)
+Snippet: -1188; fix-1, SMA107- 1229; nir, SMA1247-1250; nor, SMA1269 -1279; vir, SMA1302-1321; nuo, SMA1516 -1536; chepil, SMA1552-1578; arcDA, SMA1667-1670; argI2,
+
+================================================================================
+Protein: VIMSS129245 (E-value: 2.5e-69, Score: 238.5)
+Mentioned as: Atu4386
+Description: nitric oxide reductase NorD protein
+Organism: Agrobacterium tumefaciens str. C58 (Cereon)
+PMID: 33093235
+Source: EuropePMC
+Title: Arginine-Rich Small Proteins with a Domain of Unknown Function, DUF1127, Play a Role in Phosphate and Carbon Metabolism of Agrobacterium tumefaciens
+Journal: Journal of bacteriology (2020)
+
+================================================================================
+Protein: Q51665 (E-value: 1.3e-66, Score: 229.6)
+Mentioned as: Q51665
+Description: NorD protein
+Organism: Paracoccus denitrificans
+  TCDB:  - NorD protein, component of Nitric oxide reductase (EC #1.7.99.7) (NorBC) (component of the anerobic, respiratory chain that converts NO3- to N2; denitrification) [reaction catalyzed by Nor: 2 nitric oxide (NO) + 2e- + 2H+ &rarr; nitrous oxide (N20) + H2O]
+PMID: 36855050
+Source: EuropePMC
+Title: Insights into the structure-function relationship of the NorQ/NorD chaperones from Paracoccus denitrificans reveal shared principles of interacting MoxR AAA+/VWA domain proteins
+Journal: BMC biology (2023)
+Snippet: and multimer models of NorD and NorQ using AlphaFold. a Prediction of full-length NorD (Uniprot: Q51665) showing the N-terminal domain (gray), disordered region (yellow), and VWA domain (pink) with the MIDAS residues in red. b Multimer model of one NorD and one NorQ (blue, Uniprot: Q51663).
+
+================================================================================
+Protein: VIMSS368669 (E-value: 7.1e-61, Score: 210.9)
+Mentioned as: NE2006
+Description: von Willebrand factor type A domain
+Organism: Nitrosomonas europaea ATCC 19718
+PMID: 12700255
+Source: EuropePMC
+Title: Complete genome sequence of the ammonia-oxidizing bacterium and obligate chemolithoautotroph Nitrosomonas europaea
+Journal: Journal of bacteriology (2003)
+Snippet: nor gene cluster (norCBQD; NE2003, NE2004, NE2005, and NE2006) with an organization similar to that found in Pseudomonas sp. strain G-179 (6). Anaerobic
+
+================================================================================
+Protein: VIMSS2195111 (E-value: 5.1e-47, Score: 165.6)
+Mentioned as: PA14_06840
+Description: putative dinitrification protein NorD
+Organism: Pseudomonas aeruginosa UCBPP-PA14
+PMID: 38865268
+Source: EuropePMC
+Title: Widespread detoxifying NO reductases impart a distinct isotopic fingerprint on N<sub>2</sub>O under anoxia
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2024)
+Snippet: iNOR Rhamnose-induced expression of the nitric oxide reductase operon, norBCD ( PA14_16810 , PA14_16830 , PA14_06840 ), integrated into the att neutral chromosomal site of Pa with deletion of native nitrate reductase ( narGHJI ; PA14_13780-13830 ), nitrite reductase ( nirS ; PA14_06750 ), norBC ,
+
+================================================================================
+
+... (truncated, 165 total lines)
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A068SV18.1	AF-A0A068SV18-F1-model_v4_TED01:17-207_216-227	1	AF-A0A068SV18-F1-model_v4_TED01	17-227	95.7%
+A0A068SV18.1	AF-A0A068SV18-F1-model_v4_TED02:342-394_442-632	1	AF-A0A068SV18-F1-model_v4_TED02	342-632	0
+A0A068SV18.1	AF-A0A068SV18-F1-model_v4_TED03:399-439	1	AF-A0A068SV18-F1-model_v4_TED03	399-439	0
+A0A094IW26.1	AF-A0A094IW26-F1-model_v4_TED02:34-258	1	AF-A0A094IW26-F1-model_v4_TED02	34-258	87.2%
+A0A094IW26.1	AF-A0A094IW26-F1-model_v4_TED03:285-293_316-324_337-373	1	AF-A0A094IW26-F1-model_v4_TED03	285-373	0
+A0A094IW26.1	AF-A0A094IW26-F1-model_v4_TED04:420-444_491-572_581-634_665-682	1	AF-A0A094IW26-F1-model_v4_TED04	420-682	0
+A0A094IW26.1	AF-A0A094IW26-F1-model_v4_TED05:448-488	1	AF-A0A094IW26-F1-model_v4_TED05	448-488	0
+A0A094IW26.1	AF-A0A094IW26-F1-model_v4_TED01:2-32	1	AF-A0A094IW26-F1-model_v4_TED01	2-32	12.4%
+A0A099F568.1	AF-A0A099F568-F1-model_v4_TED01:11-239	1	AF-A0A099F568-F1-model_v4_TED01	11-239	100.0%
+A0A099F568.1	AF-A0A099F568-F1-model_v4_TED02:343-401_450-640	1	AF-A0A099F568-F1-model_v4_TED02	343-640	0
+A0A099F568.1	AF-A0A099F568-F1-model_v4_TED03:406-446	1	AF-A0A099F568-F1-model_v4_TED03	406-446	0
+A0A099F7R4.1	AF-A0A099F7R4-F1-model_v4_TED01:16-242	1	AF-A0A099F7R4-F1-model_v4_TED01	16-242	100.0%
+A0A099F7R4.1	AF-A0A099F7R4-F1-model_v4_TED02:358-412_460-651	1	AF-A0A099F7R4-F1-model_v4_TED02	358-651	0
+A0A099F7R4.1	AF-A0A099F7R4-F1-model_v4_TED03:417-457	1	AF-A0A099F7R4-F1-model_v4_TED03	417-457	0
+A0A0A0DWT8.1	AF-A0A0A0DWT8-F1-model_v4_TED01:2-231	1	AF-A0A0A0DWT8-F1-model_v4_TED01	2-231	100.0%
+A0A0A0DWT8.1	AF-A0A0A0DWT8-F1-model_v4_TED02:337-391_445-636	1	AF-A0A0A0DWT8-F1-model_v4_TED02	337-636	0
+A0A0A0DWT8.1	AF-A0A0A0DWT8-F1-model_v4_TED03:398-441	1	AF-A0A0A0DWT8-F1-model_v4_TED03	398-441	0
+A0A0A0M991.1	AF-A0A0A0M991-F1-model_v4_TED01:38-253	1	AF-A0A0A0M991-F1-model_v4_TED01	38-253	85.2%
+A0A0A0M991.1	AF-A0A0A0M991-F1-model_v4_TED02:282-289_320-350_358-365	1	AF-A0A0A0M991-F1-model_v4_TED02	282-365	0
+A0A0A0M991.1	AF-A0A0A0M991-F1-model_v4_TED03:444-483	1	AF-A0A0A0M991-F1-model_v4_TED03	444-483	0
+A0A0A0M991.1	AF-A0A0A0M991-F1-model_v4_TED04:487-678	1	AF-A0A0A0M991-F1-model_v4_TED04	487-678	0
+A0A0A1VKB9.1	AF-A0A0A1VKB9-F1-model_v4_TED01:38-216_228-271	1	AF-A0A0A1VKB9-F1-model_v4_TED01	38-271	86.4%
+A0A0A1VKB9.1	AF-A0A0A1VKB9-F1-model_v4_TED02:433-457_505-696	1	AF-A0A0A1VKB9-F1-model_v4_TED02	433-696	0
+A0A0A1VKB9.1	AF-A0A0A1VKB9-F1-model_v4_TED03:461-501	1	AF-A0A0A1VKB9-F1-model_v4_TED03	461-501	0
+A0A0B4ECA3.1	AF-A0A0B4ECA3-F1-model_v4_TED01:30-194	1	AF-A0A0B4ECA3-F1-model_v4_TED01	30-194	80.9%
+A0A0B4ECA3.1	AF-A0A0B4ECA3-F1-model_v4_TED02:331-385_434-626	1	AF-A0A0B4ECA3-F1-model_v4_TED02	331-626	0
+A0A0B4ECA3.1	AF-A0A0B4ECA3-F1-model_v4_TED03:390-431	1	AF-A0A0B4ECA3-F1-model_v4_TED03	390-431	0
+A0A0B4XHQ2.1	AF-A0A0B4XHQ2-F1-model_v4_TED01:19-227	1	AF-A0A0B4XHQ2-F1-model_v4_TED01	19-227	94.8%
+A0A0B4XHQ2.1	AF-A0A0B4XHQ2-F1-model_v4_TED02:338-391_440-629	1	AF-A0A0B4XHQ2-F1-model_v4_TED02	338-629	0
+A0A0B4XHQ2.1	AF-A0A0B4XHQ2-F1-model_v4_TED03:396-436	1	AF-A0A0B4XHQ2-F1-model_v4_TED03	396-436	0
+A0A0B5DRD8.1	AF-A0A0B5DRD8-F1-model_v4_TED01:21-72_82-225	1	AF-A0A0B5DRD8-F1-model_v4_TED01	21-225	94.7%
+A0A0B5DRD8.1	AF-A0A0B5DRD8-F1-model_v4_TED02:334-389_440-629	1	AF-A0A0B5DRD8-F1-model_v4_TED02	334-629	0
+A0A0B5DRD8.1	AF-A0A0B5DRD8-F1-model_v4_TED03:394-435	1	AF-A0A0B5DRD8-F1-model_v4_TED03	394-435	0
+A0A0D1EFS3.1	AF-A0A0D1EFS3-F1-model_v4_TED01:24-69_83-201_220-227	1	AF-A0A0D1EFS3-F1-model_v4_TED01	24-227	93.3%
+A0A0D1EFS3.1	AF-A0A0D1EFS3-F1-model_v4_TED02:349-391_440-632	1	AF-A0A0D1EFS3-F1-model_v4_TED02	349-632	0
+A0A0D1EFS3.1	AF-A0A0D1EFS3-F1-model_v4_TED03:396-437	1	AF-A0A0D1EFS3-F1-model_v4_TED03	396-437	0
+A0A0D6JI14.1	AF-A0A0D6JI14-F1-model_v4_TED01:15-235	1	AF-A0A0D6JI14-F1-model_v4_TED01	15-235	96.3%
+A0A0D6JI14.1	AF-A0A0D6JI14-F1-model_v4_TED02:346-400_449-638	1	AF-A0A0D6JI14-F1-model_v4_TED02	346-638	0
+A0A0D6JI14.1	AF-A0A0D6JI14-F1-model_v4_TED03:408-442	1	AF-A0A0D6JI14-F1-model_v4_TED03	408-442	0
+A0A0D7KFH5.1	AF-A0A0D7KFH5-F1-model_v4_TED01:22-199	1	AF-A0A0D7KFH5-F1-model_v4_TED01	22-199	89.2%
+A0A0D7KFH5.1	AF-A0A0D7KFH5-F1-model_v4_TED02:314-369_420-609	1	AF-A0A0D7KFH5-F1-model_v4_TED02	314-609	0
+A0A0D7KFH5.1	AF-A0A0D7KFH5-F1-model_v4_TED03:374-415	1	AF-A0A0D7KFH5-F1-model_v4_TED03	374-415	0
+A0A0H1R2S8.1	AF-A0A0H1R2S8-F1-model_v4_TED01:16-232	1	AF-A0A0H1R2S8-F1-model_v4_TED01	16-232	96.3%
+A0A0H1R2S8.1	AF-A0A0H1R2S8-F1-model_v4_TED02:345-400_447-637	1	AF-A0A0H1R2S8-F1-model_v4_TED02	345-637	0
+A0A0H1R2S8.1	AF-A0A0H1R2S8-F1-model_v4_TED03:404-444	1	AF-A0A0H1R2S8-F1-model_v4_TED03	404-444	0
+A0A0M6YBV8.1	AF-A0A0M6YBV8-F1-model_v4_TED01:12-238	1	AF-A0A0M6YBV8-F1-model_v4_TED01	12-238	100.0%
+A0A0M6YBV8.1	AF-A0A0M6YBV8-F1-model_v4_TED02:356-407_454-645	1	AF-A0A0M6YBV8-F1-model_v4_TED02	356-645	0
+A0A0M6YBV8.1	AF-A0A0M6YBV8-F1-model_v4_TED03:411-451	1	AF-A0A0M6YBV8-F1-model_v4_TED03	411-451	0
+A0A0M7A3T4.1	AF-A0A0M7A3T4-F1-model_v4_TED01:12-238	1	AF-A0A0M7A3T4-F1-model_v4_TED01	12-238	100.0%
+A0A0M7A3T4.1	AF-A0A0M7A3T4-F1-model_v4_TED02:346-407_454-645	1	AF-A0A0M7A3T4-F1-model_v4_TED02	346-645	0
+A0A0M7A3T4.1	AF-A0A0M7A3T4-F1-model_v4_TED03:417-450	1	AF-A0A0M7A3T4-F1-model_v4_TED03	417-450	0
+A0A0P1H476.1	AF-A0A0P1H476-F1-model_v4_TED01:28-203_217-226	1	AF-A0A0P1H476-F1-model_v4_TED01	28-226	91.7%
+A0A0P1H476.1	AF-A0A0P1H476-F1-model_v4_TED02:333-387_436-628	1	AF-A0A0P1H476-F1-model_v4_TED02	333-628	0
+A0A0P1H476.1	AF-A0A0P1H476-F1-model_v4_TED03:393-433	1	AF-A0A0P1H476-F1-model_v4_TED03	393-433	0
+A0A0P1IN07.1	AF-A0A0P1IN07-F1-model_v4_TED01:24-236	1	AF-A0A0P1IN07-F1-model_v4_TED01	24-236	94.4%
+A0A0P1IN07.1	AF-A0A0P1IN07-F1-model_v4_TED02:364-405_453-644	1	AF-A0A0P1IN07-F1-model_v4_TED02	364-644	0
+A0A0P1IN07.1	AF-A0A0P1IN07-F1-model_v4_TED03:413-447	1	AF-A0A0P1IN07-F1-model_v4_TED03	413-447	0
+A0A0P6W961.1	AF-A0A0P6W961-F1-model_v4_TED01:24-238	1	AF-A0A0P6W961-F1-model_v4_TED01	24-238	93.6%
+A0A0P6W961.1	AF-A0A0P6W961-F1-model_v4_TED02:380-408_456-646	1	AF-A0A0P6W961-F1-model_v4_TED02	380-646	0
+A0A0P6W961.1	AF-A0A0P6W961-F1-model_v4_TED03:413-453	1	AF-A0A0P6W961-F1-model_v4_TED03	413-453	0
+A0A0Q6GAQ2.1	AF-A0A0Q6GAQ2-F1-model_v4_TED01:23-227	1	AF-A0A0Q6GAQ2-F1-model_v4_TED01	23-227	92.9%
+A0A0Q6GAQ2.1	AF-A0A0Q6GAQ2-F1-model_v4_TED02:360-393_441-631	1	AF-A0A0Q6GAQ2-F1-model_v4_TED02	360-631	0
+A0A0Q6GAQ2.1	AF-A0A0Q6GAQ2-F1-model_v4_TED03:398-438	1	AF-A0A0Q6GAQ2-F1-model_v4_TED03	398-438	0
+A0A0Q6SIW5.1	AF-A0A0Q6SIW5-F1-model_v4_TED01:17-227	1	AF-A0A0Q6SIW5-F1-model_v4_TED01	17-227	95.7%
+A0A0Q6SIW5.1	AF-A0A0Q6SIW5-F1-model_v4_TED02:339-393_442-630	1	AF-A0A0Q6SIW5-F1-model_v4_TED02	339-630	0
+A0A0Q6SIW5.1	AF-A0A0Q6SIW5-F1-model_v4_TED03:399-438	1	AF-A0A0Q6SIW5-F1-model_v4_TED03	399-438	0
+A0A0Q9IKS7.1	AF-A0A0Q9IKS7-F1-model_v4_TED01:16-224	1	AF-A0A0Q9IKS7-F1-model_v4_TED01	16-224	96.1%
+A0A0Q9IKS7.1	AF-A0A0Q9IKS7-F1-model_v4_TED02:338-392_440-630	1	AF-A0A0Q9IKS7-F1-model_v4_TED02	338-630	0
+A0A0Q9IKS7.1	AF-A0A0Q9IKS7-F1-model_v4_TED03:397-437	1	AF-A0A0Q9IKS7-F1-model_v4_TED03	397-437	0
+A0A0T1WRB2.1	AF-A0A0T1WRB2-F1-model_v4_TED01:11-227	1	AF-A0A0T1WRB2-F1-model_v4_TED01	11-227	98.6%
+A0A0T1WRB2.1	AF-A0A0T1WRB2-F1-model_v4_TED02:342-371_387-394_442-632	1	AF-A0A0T1WRB2-F1-model_v4_TED02	342-632	0
+A0A0T1WRB2.1	AF-A0A0T1WRB2-F1-model_v4_TED03:400-439	1	AF-A0A0T1WRB2-F1-model_v4_TED03	400-439	0
+A0A0W7WIA7.1	AF-A0A0W7WIA7-F1-model_v4_TED01:34-74_82-201_214-224	1	AF-A0A0W7WIA7-F1-model_v4_TED01	34-224	88.7%
+A0A0W7WIA7.1	AF-A0A0W7WIA7-F1-model_v4_TED02:329-384_433-625	1	AF-A0A0W7WIA7-F1-model_v4_TED02	329-625	0
+A0A0W7WIA7.1	AF-A0A0W7WIA7-F1-model_v4_TED03:389-430	1	AF-A0A0W7WIA7-F1-model_v4_TED03	389-430	0
+A0A0X3TJS6.1	AF-A0A0X3TJS6-F1-model_v4_TED01:23-233	1	AF-A0A0X3TJS6-F1-model_v4_TED01	23-233	94.8%
+A0A0X3TJS6.1	AF-A0A0X3TJS6-F1-model_v4_TED02:385-402_449-640	1	AF-A0A0X3TJS6-F1-model_v4_TED02	385-640	0
+A0A0X3TJS6.1	AF-A0A0X3TJS6-F1-model_v4_TED03:406-446	1	AF-A0A0X3TJS6-F1-model_v4_TED03	406-446	0
+A0A124GBM2.1	AF-A0A124GBM2-F1-model_v4_TED01:14-224	1	AF-A0A124GBM2-F1-model_v4_TED01	14-224	97.1%
+A0A124GBM2.1	AF-A0A124GBM2-F1-model_v4_TED02:340-393_441-631	1	AF-A0A124GBM2-F1-model_v4_TED02	340-631	0
+A0A124GBM2.1	AF-A0A124GBM2-F1-model_v4_TED03:398-438	1	AF-A0A124GBM2-F1-model_v4_TED03	398-438	0
+A0A126UZ37.1	AF-A0A126UZ37-F1-model_v4_TED01:22-239	1	AF-A0A126UZ37-F1-model_v4_TED01	22-239	95.4%
+A0A126UZ37.1	AF-A0A126UZ37-F1-model_v4_TED02:378-410_456-647	1	AF-A0A126UZ37-F1-model_v4_TED02	378-647	0
+A0A126UZ37.1	AF-A0A126UZ37-F1-model_v4_TED03:413-453	1	AF-A0A126UZ37-F1-model_v4_TED03	413-453	0
+A0A165T1U4.1	AF-A0A165T1U4-F1-model_v4_TED01:32-238	1	AF-A0A165T1U4-F1-model_v4_TED01	32-238	90.8%
+A0A165T1U4.1	AF-A0A165T1U4-F1-model_v4_TED02:344-407_454-645	1	AF-A0A165T1U4-F1-model_v4_TED02	344-645	0
+A0A165T1U4.1	AF-A0A165T1U4-F1-model_v4_TED03:411-451	1	AF-A0A165T1U4-F1-model_v4_TED03	411-451	0
+A0A1B9SBQ9.1	AF-A0A1B9SBQ9-F1-model_v4_TED01:17-226	1	AF-A0A1B9SBQ9-F1-model_v4_TED01	17-226	95.7%
+A0A1B9SBQ9.1	AF-A0A1B9SBQ9-F1-model_v4_TED02:367-389_438-628	1	AF-A0A1B9SBQ9-F1-model_v4_TED02	367-628	0
+A0A1B9SBQ9.1	AF-A0A1B9SBQ9-F1-model_v4_TED03:396-435	1	AF-A0A1B9SBQ9-F1-model_v4_TED03	396-435	0
+A0A1D9ME46.1	AF-A0A1D9ME46-F1-model_v4_TED01:12-239	1	AF-A0A1D9ME46-F1-model_v4_TED01	12-239	100.0%
+A0A1D9ME46.1	AF-A0A1D9ME46-F1-model_v4_TED02:367-409_456-647	1	AF-A0A1D9ME46-F1-model_v4_TED02	367-647	0
+A0A1D9ME46.1	AF-A0A1D9ME46-F1-model_v4_TED03:413-453	1	AF-A0A1D9ME46-F1-model_v4_TED03	413-453	0
+A0A1E5Q2U1.1	AF-A0A1E5Q2U1-F1-model_v4_TED01:17-238	1	AF-A0A1E5Q2U1-F1-model_v4_TED01	17-238	96.8%
+A0A1E5Q2U1.1	AF-A0A1E5Q2U1-F1-model_v4_TED02:386-411_459-509_519-649	1	AF-A0A1E5Q2U1-F1-model_v4_TED02	386-649	0
+A0A1E5Q2U1.1	AF-A0A1E5Q2U1-F1-model_v4_TED03:416-456	1	AF-A0A1E5Q2U1-F1-model_v4_TED03	416-456	0
+A0A1G8PZ98.1	AF-A0A1G8PZ98-F1-model_v4_TED01:22-237	1	AF-A0A1G8PZ98-F1-model_v4_TED01	22-237	93.6%
+A0A1G8PZ98.1	AF-A0A1G8PZ98-F1-model_v4_TED02:356-408_456-647	1	AF-A0A1G8PZ98-F1-model_v4_TED02	356-647	0
+A0A1G8PZ98.1	AF-A0A1G8PZ98-F1-model_v4_TED03:412-453	1	AF-A0A1G8PZ98-F1-model_v4_TED03	412-453	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 50 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF07728	AAA_5	50	1.00	0.93
+PF08406	CbbQ_C	49	0.98	0.90
+PF00115	COX1	42	0.84	0.71
+PF00034	Cytochrom_C	41	0.82	0.69
+PF13442	Cytochrome_CBB3	37	0.74	0.60
+
+--- End STRING ---

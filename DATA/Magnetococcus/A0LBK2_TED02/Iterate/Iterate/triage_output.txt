@@ -1,0 +1,106 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LBK2_TED02/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.40 100.20;
+NC   26.50 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+9	11	Trichonephila.
+10	10	Nephilidae
+10	9	Araneoidea
+10	8	Entelegynae
+10	7	Araneomorphae
+4	6	Holospora.
+3	6	Magnetococcus.
+10	6	Araneae
+4	5	Holosporaceae
+3	5	Magnetococcaceae
+10	5	Arachnida
+4	4	Holosporales
+3	4	Magnetococcales
+10	4	Chelicerata
+5	3	Alphaproteobacteria
+3	3	Magnetococcia
+11	3	Arthropoda
+8	2	Pseudomonadota
+11	2	Ecdysozoa
+8	1	Pseudomonadati
+11	1	Metazoa
+8	0	Bacteria
+11	0	Eukaryota
+Total of 19 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A8I0FG46	GLYCYLPEPTIDE N-TETRADECA    205.9    6.5e-58   1   2.2   1.8
+	Iterate                   	   158	   280	   204.9
+
+A0A8J3HV96	PHAGE RELATED PROTEIN {EC    211.1    1.6e-59   1   2.5   2.3
+	Iterate                   	   161	   283	   211.1
+
+A0A8X6J664	PUTATIVE PHAGE RELATED PR    209.8      4e-59   1   2.7   4.3
+	Iterate                   	   205	   327	   208.6
+
+A0A8X6LD00	PUTATIVE PHAGE RELATED PR    210.0    3.5e-59   1   2.7   4.3
+	Iterate                   	   205	   327	   208.7
+
+A0A8X6LWS9	PUTATIVE PHAGE RELATED PR    213.1    3.9e-60   1   2.5   3.2
+	Iterate                   	   159	   281	   210.1
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A061JFK2.1	AF-A0A061JFK2-F1-model_v4_TED03:286-413	1	AF-A0A061JFK2-F1-model_v4_TED03	286-413	0
+A0A061JFK2.1	AF-A0A061JFK2-F1-model_v4_TED01:9-147	1	AF-A0A061JFK2-F1-model_v4_TED01	9-147	0
+A0A061JFK2.1	AF-A0A061JFK2-F1-model_v4_TED02:160-282	1	AF-A0A061JFK2-F1-model_v4_TED02	160-282	100.0%
+A0A5E4NTQ6.1	AF-A0A5E4NTQ6-F1-model_v4_TED01:12-55_75-160	1	AF-A0A5E4NTQ6-F1-model_v4_TED01	12-160	0
+A0A5E4NTQ6.1	AF-A0A5E4NTQ6-F1-model_v4_TED02:162-287	1	AF-A0A5E4NTQ6-F1-model_v4_TED02	162-287	100.0%
+A0A5E4NTQ6.1	AF-A0A5E4NTQ6-F1-model_v4_TED03:292-319_328-389	1	AF-A0A5E4NTQ6-F1-model_v4_TED03	292-389	0
+A0A5E4NTQ6.1	AF-A0A5E4NTQ6-F1-model_v4_TED04:399-470	1	AF-A0A5E4NTQ6-F1-model_v4_TED04	399-470	0
+A0A5E4NTQ6.1	AF-A0A5E4NTQ6-F1-model_v4_TED05:475-575	1	AF-A0A5E4NTQ6-F1-model_v4_TED05	475-575	0
+A0A5E4NTQ6.1	AF-A0A5E4NTQ6-F1-model_v4_TED06:606-732	1	AF-A0A5E4NTQ6-F1-model_v4_TED06	606-732	0
+A0LAW5.1	AF-A0LAW5-F1-model_v4_TED01:5-140	1	AF-A0LAW5-F1-model_v4_TED01	5-140	0
+A0LAW5.1	AF-A0LAW5-F1-model_v4_TED02:155-278	1	AF-A0LAW5-F1-model_v4_TED02	155-278	100.0%
+A0LAW5.1	AF-A0LAW5-F1-model_v4_TED03:283-407	1	AF-A0LAW5-F1-model_v4_TED03	283-407	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network analysis skipped: only 4 networks (minimum 5 required)
+
+--- End STRING ---

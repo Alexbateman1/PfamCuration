@@ -1,0 +1,289 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L7F4_TED04/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+10	5	Chromatiaceae
+7	4	Nitrosomonadales
+13	4	Chromatiales
+7	3	Desulfuromonadia
+21	3	Gammaproteobacteria
+13	3	Betaproteobacteria
+41	2	Pseudomonadota
+14	2	Thermodesulfobacteriota
+65	1	Pseudomonadati
+66	0	Bacteria
+Total of 67 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Foldseek ---
+Structural similarity matches. Can be suggestive of clan lines to add to DESC if results are consistent,
+or adding a CC line noting structural relationship to relevant Pfam families identified.
+
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+Iterate	query_model	PF03170	CBM_BcsB_1st	CL0202	PF03170_C6X7P7_1_res19-606	0.19	130	104	0	1.000	3.29e-04	107.0
+
+--- End Foldseek ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1H3IG35	PDZ DOMAIN-CONTAINING PRO    210.6    6.1e-59   1   2.0   1.1
+	Iterate                   	   542	   696	   210.6
+	PF01433	Peptidase_M1    	   298	   441	    43.6
+	PF04389	Peptidase_M28   	   808	  1012	   162.5
+	PF01546	Peptidase_M20   	   826	  1014	    34.6
+	PF13180	PDZ_2           	  1036	  1125	    41.7
+	PF00595	PDZ             	  1037	  1113	    29.2
+	PF17820	PDZ_6           	  1060	  1114	    40.6
+
+A0A1H8KR90	PDZ DOMAIN-CONTAINING PRO    209.7    1.2e-58   1   2.1   1.7
+	Iterate                   	   567	   721	   208.9
+	PF01433	Peptidase_M1    	   323	   466	    43.8
+	PF04389	Peptidase_M28   	   833	  1037	   150.8
+	PF01546	Peptidase_M20   	   851	  1039	    33.2
+	PF00595	PDZ             	  1061	  1138	      34
+	PF13180	PDZ_2           	  1064	  1150	    33.1
+	PF17820	PDZ_6           	  1085	  1139	      44
+
+D5BY26	PEPTIDASE M28 {ECO:0000313|EM    210.0    9.6e-59   1   2.0   0.9
+	Iterate                   	   528	   681	   209.0
+	PF01433	Peptidase_M1    	   285	   427	    40.4
+	PF04389	Peptidase_M28   	   812	  1014	     142
+	PF01546	Peptidase_M20   	   828	  1016	    32.7
+	PF13180	PDZ_2           	  1034	  1126	    47.6
+	PF17820	PDZ_6           	  1061	  1115	    30.4
+
+Q3JB49	PEPTIDASE M28 {ECO:0000313|EM    210.1      9e-59   1   1.8   0.5
+	Iterate                   	   526	   679	   208.6
+	PF01433	Peptidase_M1    	   283	   425	    44.7
+	PF04389	Peptidase_M28   	   786	   988	   133.3
+	PF01546	Peptidase_M20   	   802	   990	    29.8
+	PF13180	PDZ_2           	  1006	  1100	    49.2
+	PF00595	PDZ             	  1008	  1088	    27.3
+	PF17820	PDZ_6           	  1035	  1089	      37
+
+V4J7B8	UNCHARACTERIZED PROTEIN {ECO:    212.1    2.2e-59   1   1.7   0.0
+	Iterate                   	   541	   695	   210.8
+	PF01433	Peptidase_M1    	   299	   440	    39.2
+	PF04389	Peptidase_M28   	   802	  1005	   145.4
+	PF01546	Peptidase_M20   	   820	  1007	    42.3
+	PF13180	PDZ_2           	  1026	  1113	    40.7
+	PF17820	PDZ_6           	  1049	  1103	    33.8
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS1763667 (E-value: 1.2e-28, Score: 105.6)
+Mentioned as: Bd1518
+Description: aminopeptidase
+Organism: Bdellovibrio bacteriovorus HD100
+PMID: 24448451
+Source: EuropePMC
+Title: Bdellovibrio bacteriovorus inhibits Staphylococcus aureus biofilm formation and invasion into human epithelial cells
+Journal: Scientific reports (2014)
+Snippet: 45.6 Extracellular cpt Q6MIC9 Carboxypeptidase N/A dcp Q6MII6 Peptidyl-dipeptidase N/A pip Q6MHR0 Proline iminopeptidase N/A Bd1518 Q6MMV5 Aminopeptidase 78 Unknown
+
+================================================================================
+Protein: VIMSS550163 (E-value: 1.3e-11, Score: 50.3)
+Mentioned as: plu2670
+Organism: Photorhabdus luminescens subsp. laumondii TTO1
+PMID: 39628928
+Source: EuropePMC
+Title: Recent advances in the direct cloning of large natural product biosynthetic gene clusters
+Journal: Engineering microbiology (2023)
+Snippet: of the high background levels of capture vector recircularization, the tenth and largest gene cluster, plu2670 (52kb), could not be directly cloned using LLHR alone. The authors then tried an alternative two-step, double recombination fishing strategy by combining LLHR with Red-mediated linear plus circular homologous recombination
+
+================================================================================
+Protein: VIMSS550163 (E-value: 1.3e-11, Score: 50.3)
+Mentioned as: plu2670
+Organism: Photorhabdus luminescens subsp. laumondii TTO1
+PMID: 39628926
+Source: EuropePMC
+Title: The emerging role of recombineering in microbiology
+Journal: Engineering microbiology (2023)
+Snippet: different bacteria. For example, Jia et al. activated the 49-kb non-ribosomal peptide synthase (NRPS) BGC plu2670 by insertion of a tetracycline-inducible promoter (P tet ) using the Plu system [7] . Promoter engineering enables potentially scalable discovery of new NPs from many other bacteria [ 55
+
+================================================================================
+Protein: VIMSS550163 (E-value: 1.3e-11, Score: 50.3)
+Mentioned as: plu2670
+Organism: Photorhabdus luminescens subsp. laumondii TTO1
+PMID: 35422783
+Source: EuropePMC
+Title: <i>Heterorhabditis</i> and <i>Photorhabdus</i> Symbiosis: A Natural Mine of Bioactive Compounds
+Journal: Frontiers in microbiology (2022)
+Snippet: a fully functional uninterrupted gene that could produce 15 consecutive modules encoded by kol gene (plu2670, 49.1 kbp). Many gene clusters of its genome are involved in biosynthesis of diverse natural products ( Duchaud et al., 2003 ; Yin et al., 2015 ). Photorhabdus luminescens produces
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A011NKW0.1	AF-A0A011NKW0-F1-model_v4_TED01:21-200	1	AF-A0A011NKW0-F1-model_v4_TED01	21-200	0
+A0A011NKW0.1	AF-A0A011NKW0-F1-model_v4_TED02:204-300	1	AF-A0A011NKW0-F1-model_v4_TED02	204-300	0
+A0A011NKW0.1	AF-A0A011NKW0-F1-model_v4_TED03:308-436	1	AF-A0A011NKW0-F1-model_v4_TED03	308-436	0
+A0A011NKW0.1	AF-A0A011NKW0-F1-model_v4_TED05:530-666	1	AF-A0A011NKW0-F1-model_v4_TED05	530-666	100.0%
+A0A011NKW0.1	AF-A0A011NKW0-F1-model_v4_TED04:443-520	1	AF-A0A011NKW0-F1-model_v4_TED04	443-520	0
+A0A0B5FET3.1	AF-A0A0B5FET3-F1-model_v4_TED01:12-301	1	AF-A0A0B5FET3-F1-model_v4_TED01	12-301	0
+A0A0B5FET3.1	AF-A0A0B5FET3-F1-model_v4_TED02:308-438	1	AF-A0A0B5FET3-F1-model_v4_TED02	308-438	0
+A0A0B5FET3.1	AF-A0A0B5FET3-F1-model_v4_TED03:444-523	1	AF-A0A0B5FET3-F1-model_v4_TED03	444-523	0
+A0A0B5FET3.1	AF-A0A0B5FET3-F1-model_v4_TED04:532-681	1	AF-A0A0B5FET3-F1-model_v4_TED04	532-681	100.0%
+A0A0F7KC54.1	AF-A0A0F7KC54-F1-model_v4_TED01:13-118_138-204	1	AF-A0A0F7KC54-F1-model_v4_TED01	13-204	0
+A0A0F7KC54.1	AF-A0A0F7KC54-F1-model_v4_TED02:210-306	1	AF-A0A0F7KC54-F1-model_v4_TED02	210-306	0
+A0A0F7KC54.1	AF-A0A0F7KC54-F1-model_v4_TED03:310-436	1	AF-A0A0F7KC54-F1-model_v4_TED03	310-436	0
+A0A0F7KC54.1	AF-A0A0F7KC54-F1-model_v4_TED04:443-528	1	AF-A0A0F7KC54-F1-model_v4_TED04	443-528	0
+A0A0F7KC54.1	AF-A0A0F7KC54-F1-model_v4_TED05:539-688	1	AF-A0A0F7KC54-F1-model_v4_TED05	539-688	96.8%
+A0A0F7KC54.1	AF-A0A0F7KC54-F1-model_v4_TED06:732-1010	1	AF-A0A0F7KC54-F1-model_v4_TED06	732-1010	0
+A0A0F7KC54.1	AF-A0A0F7KC54-F1-model_v4_TED07:1037-1120	1	AF-A0A0F7KC54-F1-model_v4_TED07	1037-1120	0
+A0A0M2V2T4.1	AF-A0A0M2V2T4-F1-model_v4_TED01:44-224	1	AF-A0A0M2V2T4-F1-model_v4_TED01	44-224	0
+A0A0M2V2T4.1	AF-A0A0M2V2T4-F1-model_v4_TED02:323-453	1	AF-A0A0M2V2T4-F1-model_v4_TED02	323-453	0
+A0A0M2V2T4.1	AF-A0A0M2V2T4-F1-model_v4_TED03:459-538	1	AF-A0A0M2V2T4-F1-model_v4_TED03	459-538	0
+A0A0M2V2T4.1	AF-A0A0M2V2T4-F1-model_v4_TED04:547-698	1	AF-A0A0M2V2T4-F1-model_v4_TED04	547-698	100.0%
+A0A0M4D9I8.1	AF-A0A0M4D9I8-F1-model_v4_TED01:28-206	1	AF-A0A0M4D9I8-F1-model_v4_TED01	28-206	0
+A0A0M4D9I8.1	AF-A0A0M4D9I8-F1-model_v4_TED02:305-435	1	AF-A0A0M4D9I8-F1-model_v4_TED02	305-435	0
+A0A0M4D9I8.1	AF-A0A0M4D9I8-F1-model_v4_TED03:442-520	1	AF-A0A0M4D9I8-F1-model_v4_TED03	442-520	0
+A0A0M4D9I8.1	AF-A0A0M4D9I8-F1-model_v4_TED04:529-676	1	AF-A0A0M4D9I8-F1-model_v4_TED04	529-676	100.0%
+A0A0S2TDL4.1	AF-A0A0S2TDL4-F1-model_v4_TED01:9-179	1	AF-A0A0S2TDL4-F1-model_v4_TED01	9-179	0
+A0A0S2TDL4.1	AF-A0A0S2TDL4-F1-model_v4_TED02:277-406	1	AF-A0A0S2TDL4-F1-model_v4_TED02	277-406	0
+A0A0S2TDL4.1	AF-A0A0S2TDL4-F1-model_v4_TED03:413-490	1	AF-A0A0S2TDL4-F1-model_v4_TED03	413-490	0
+A0A0S2TDL4.1	AF-A0A0S2TDL4-F1-model_v4_TED04:504-658	1	AF-A0A0S2TDL4-F1-model_v4_TED04	504-658	100.0%
+A0A143PJ33.1	AF-A0A143PJ33-F1-model_v4_TED01:27-212	1	AF-A0A143PJ33-F1-model_v4_TED01	27-212	0
+A0A143PJ33.1	AF-A0A143PJ33-F1-model_v4_TED02:310-439	1	AF-A0A143PJ33-F1-model_v4_TED02	310-439	0
+A0A143PJ33.1	AF-A0A143PJ33-F1-model_v4_TED03:550-700	1	AF-A0A143PJ33-F1-model_v4_TED03	550-700	100.0%
+A0A143PJ33.1	AF-A0A143PJ33-F1-model_v4_TED04:742-1019	1	AF-A0A143PJ33-F1-model_v4_TED04	742-1019	0
+A0A143PJ33.1	AF-A0A143PJ33-F1-model_v4_TED05:1049-1132	1	AF-A0A143PJ33-F1-model_v4_TED05	1049-1132	0
+A0A150WMK1.1	AF-A0A150WMK1-F1-model_v4_TED01:30-199	1	AF-A0A150WMK1-F1-model_v4_TED01	30-199	0
+A0A150WMK1.1	AF-A0A150WMK1-F1-model_v4_TED02:300-431	1	AF-A0A150WMK1-F1-model_v4_TED02	300-431	0
+A0A150WMK1.1	AF-A0A150WMK1-F1-model_v4_TED03:438-519	1	AF-A0A150WMK1-F1-model_v4_TED03	438-519	0
+A0A150WMK1.1	AF-A0A150WMK1-F1-model_v4_TED04:528-675	1	AF-A0A150WMK1-F1-model_v4_TED04	528-675	100.0%
+A0A1B4VD55.1	AF-A0A1B4VD55-F1-model_v4_TED01:35-202	1	AF-A0A1B4VD55-F1-model_v4_TED01	35-202	0
+A0A1B4VD55.1	AF-A0A1B4VD55-F1-model_v4_TED02:301-429	1	AF-A0A1B4VD55-F1-model_v4_TED02	301-429	0
+A0A1B4VD55.1	AF-A0A1B4VD55-F1-model_v4_TED03:436-508	1	AF-A0A1B4VD55-F1-model_v4_TED03	436-508	0
+A0A1B4VD55.1	AF-A0A1B4VD55-F1-model_v4_TED04:527-675	1	AF-A0A1B4VD55-F1-model_v4_TED04	527-675	100.0%
+A0A1E2UP40.1	AF-A0A1E2UP40-F1-model_v4_TED01:23-202	1	AF-A0A1E2UP40-F1-model_v4_TED01	23-202	0
+A0A1E2UP40.1	AF-A0A1E2UP40-F1-model_v4_TED02:305-433	1	AF-A0A1E2UP40-F1-model_v4_TED02	305-433	0
+A0A1E2UP40.1	AF-A0A1E2UP40-F1-model_v4_TED03:440-522	1	AF-A0A1E2UP40-F1-model_v4_TED03	440-522	0
+A0A1E2UP40.1	AF-A0A1E2UP40-F1-model_v4_TED04:531-687	1	AF-A0A1E2UP40-F1-model_v4_TED04	531-687	100.0%
+A0A1E2UP40.1	AF-A0A1E2UP40-F1-model_v4_TED05:728-1001	1	AF-A0A1E2UP40-F1-model_v4_TED05	728-1001	0
+A0A1E2UP40.1	AF-A0A1E2UP40-F1-model_v4_TED06:1025-1108	1	AF-A0A1E2UP40-F1-model_v4_TED06	1025-1108	0
+A0A1G5Q6M2.1	AF-A0A1G5Q6M2-F1-model_v4_TED01:21-120_134-186	1	AF-A0A1G5Q6M2-F1-model_v4_TED01	21-186	0
+A0A1G5Q6M2.1	AF-A0A1G5Q6M2-F1-model_v4_TED02:197-288	1	AF-A0A1G5Q6M2-F1-model_v4_TED02	197-288	0
+A0A1G5Q6M2.1	AF-A0A1G5Q6M2-F1-model_v4_TED03:295-423	1	AF-A0A1G5Q6M2-F1-model_v4_TED03	295-423	0
+A0A1G5Q6M2.1	AF-A0A1G5Q6M2-F1-model_v4_TED04:429-497	1	AF-A0A1G5Q6M2-F1-model_v4_TED04	429-497	0
+A0A1G5Q6M2.1	AF-A0A1G5Q6M2-F1-model_v4_TED05:516-666	1	AF-A0A1G5Q6M2-F1-model_v4_TED05	516-666	100.0%
+A0A1H3BKM1.1	AF-A0A1H3BKM1-F1-model_v4_TED01:51-221	1	AF-A0A1H3BKM1-F1-model_v4_TED01	51-221	0
+A0A1H3BKM1.1	AF-A0A1H3BKM1-F1-model_v4_TED02:321-449	1	AF-A0A1H3BKM1-F1-model_v4_TED02	321-449	0
+A0A1H3BKM1.1	AF-A0A1H3BKM1-F1-model_v4_TED04:547-702	1	AF-A0A1H3BKM1-F1-model_v4_TED04	547-702	100.0%
+A0A1H3BKM1.1	AF-A0A1H3BKM1-F1-model_v4_TED03:457-528	1	AF-A0A1H3BKM1-F1-model_v4_TED03	457-528	0
+A0A1H3GXI7.1	AF-A0A1H3GXI7-F1-model_v4_TED04:538-673	1	AF-A0A1H3GXI7-F1-model_v4_TED04	538-673	100.0%
+A0A1H3GXI7.1	AF-A0A1H3GXI7-F1-model_v4_TED01:37-211	1	AF-A0A1H3GXI7-F1-model_v4_TED01	37-211	0
+A0A1H3GXI7.1	AF-A0A1H3GXI7-F1-model_v4_TED02:316-445	1	AF-A0A1H3GXI7-F1-model_v4_TED02	316-445	0
+A0A1H3GXI7.1	AF-A0A1H3GXI7-F1-model_v4_TED03:452-528	1	AF-A0A1H3GXI7-F1-model_v4_TED03	452-528	0
+A0A1H7GFB8.1	AF-A0A1H7GFB8-F1-model_v4_TED01:54-227	1	AF-A0A1H7GFB8-F1-model_v4_TED01	54-227	0
+A0A1H7GFB8.1	AF-A0A1H7GFB8-F1-model_v4_TED02:333-461	1	AF-A0A1H7GFB8-F1-model_v4_TED02	333-461	0
+A0A1H7GFB8.1	AF-A0A1H7GFB8-F1-model_v4_TED03:468-536	1	AF-A0A1H7GFB8-F1-model_v4_TED03	468-536	0
+A0A1H7GFB8.1	AF-A0A1H7GFB8-F1-model_v4_TED04:555-686	1	AF-A0A1H7GFB8-F1-model_v4_TED04	555-686	100.0%
+A0A1H8KR90.1	AF-A0A1H8KR90-F1-model_v4_TED01:54-155_162-242	1	AF-A0A1H8KR90-F1-model_v4_TED01	54-242	0
+A0A1H8KR90.1	AF-A0A1H8KR90-F1-model_v4_TED02:340-414_432-448	1	AF-A0A1H8KR90-F1-model_v4_TED02	340-448	0
+A0A1H8KR90.1	AF-A0A1H8KR90-F1-model_v4_TED03:476-560	1	AF-A0A1H8KR90-F1-model_v4_TED03	476-560	0
+A0A1H8KR90.1	AF-A0A1H8KR90-F1-model_v4_TED04:564-721	1	AF-A0A1H8KR90-F1-model_v4_TED04	564-721	100.0%
+A0A1H8KR90.1	AF-A0A1H8KR90-F1-model_v4_TED05:765-813_828-1043	1	AF-A0A1H8KR90-F1-model_v4_TED05	765-1043	0
+A0A1H8KR90.1	AF-A0A1H8KR90-F1-model_v4_TED06:1070-1153	1	AF-A0A1H8KR90-F1-model_v4_TED06	1070-1153	0
+A0A1H9RP19.1	AF-A0A1H9RP19-F1-model_v4_TED01:31-214	1	AF-A0A1H9RP19-F1-model_v4_TED01	31-214	0
+A0A1H9RP19.1	AF-A0A1H9RP19-F1-model_v4_TED02:308-441	1	AF-A0A1H9RP19-F1-model_v4_TED02	308-441	0
+A0A1H9RP19.1	AF-A0A1H9RP19-F1-model_v4_TED03:448-533_704-708	1	AF-A0A1H9RP19-F1-model_v4_TED03	448-708	100.0%
+A0A1H9RP19.1	AF-A0A1H9RP19-F1-model_v4_TED04:552-696	1	AF-A0A1H9RP19-F1-model_v4_TED04	552-696	91.8%
+A0A1H9RP19.1	AF-A0A1H9RP19-F1-model_v4_TED05:741-1018	1	AF-A0A1H9RP19-F1-model_v4_TED05	741-1018	0
+A0A1H9RP19.1	AF-A0A1H9RP19-F1-model_v4_TED06:1047-1130	1	AF-A0A1H9RP19-F1-model_v4_TED06	1047-1130	0
+A0A1I3ANY5.1	AF-A0A1I3ANY5-F1-model_v4_TED01:46-221	1	AF-A0A1I3ANY5-F1-model_v4_TED01	46-221	0
+A0A1I3ANY5.1	AF-A0A1I3ANY5-F1-model_v4_TED02:327-456	1	AF-A0A1I3ANY5-F1-model_v4_TED02	327-456	0
+A0A1I3ANY5.1	AF-A0A1I3ANY5-F1-model_v4_TED03:463-546	1	AF-A0A1I3ANY5-F1-model_v4_TED03	463-546	0
+A0A1I3ANY5.1	AF-A0A1I3ANY5-F1-model_v4_TED04:551-685	1	AF-A0A1I3ANY5-F1-model_v4_TED04	551-685	100.0%
+A0A1I3Y4E9.1	AF-A0A1I3Y4E9-F1-model_v4_TED01:315-444	1	AF-A0A1I3Y4E9-F1-model_v4_TED01	315-444	0
+A0A1I3Y4E9.1	AF-A0A1I3Y4E9-F1-model_v4_TED02:451-537_705-711	1	AF-A0A1I3Y4E9-F1-model_v4_TED02	451-711	100.0%
+A0A1I3Y4E9.1	AF-A0A1I3Y4E9-F1-model_v4_TED03:542-696	1	AF-A0A1I3Y4E9-F1-model_v4_TED03	542-696	100.0%
+A0A1I3Y4E9.1	AF-A0A1I3Y4E9-F1-model_v4_TED04:750-1021	1	AF-A0A1I3Y4E9-F1-model_v4_TED04	750-1021	0
+A0A1I3Y4E9.1	AF-A0A1I3Y4E9-F1-model_v4_TED05:1052-1135	1	AF-A0A1I3Y4E9-F1-model_v4_TED05	1052-1135	0
+A0A1I3Y5H9.1	AF-A0A1I3Y5H9-F1-model_v4_TED01:30-205	1	AF-A0A1I3Y5H9-F1-model_v4_TED01	30-205	0
+A0A1I3Y5H9.1	AF-A0A1I3Y5H9-F1-model_v4_TED02:209-303	1	AF-A0A1I3Y5H9-F1-model_v4_TED02	209-303	0
+A0A1I3Y5H9.1	AF-A0A1I3Y5H9-F1-model_v4_TED03:335-438	1	AF-A0A1I3Y5H9-F1-model_v4_TED03	335-438	0
+A0A1I3Y5H9.1	AF-A0A1I3Y5H9-F1-model_v4_TED04:445-513	1	AF-A0A1I3Y5H9-F1-model_v4_TED04	445-513	0
+A0A1I3Y5H9.1	AF-A0A1I3Y5H9-F1-model_v4_TED05:532-664	1	AF-A0A1I3Y5H9-F1-model_v4_TED05	532-664	100.0%
+A0A1I4PC42.1	AF-A0A1I4PC42-F1-model_v4_TED01:314-432	1	AF-A0A1I4PC42-F1-model_v4_TED01	314-432	0
+A0A1I4PC42.1	AF-A0A1I4PC42-F1-model_v4_TED02:450-536_703-710	1	AF-A0A1I4PC42-F1-model_v4_TED02	450-710	100.0%
+A0A1I4PC42.1	AF-A0A1I4PC42-F1-model_v4_TED03:541-695	1	AF-A0A1I4PC42-F1-model_v4_TED03	541-695	100.0%
+A0A1I4PC42.1	AF-A0A1I4PC42-F1-model_v4_TED04:746-1017	1	AF-A0A1I4PC42-F1-model_v4_TED04	746-1017	0
+A0A1I4PC42.1	AF-A0A1I4PC42-F1-model_v4_TED05:1044-1127	1	AF-A0A1I4PC42-F1-model_v4_TED05	1044-1127	0
+A0A1I5F1N3.1	AF-A0A1I5F1N3-F1-model_v4_TED01:56-223	1	AF-A0A1I5F1N3-F1-model_v4_TED01	56-223	0
+A0A1I5F1N3.1	AF-A0A1I5F1N3-F1-model_v4_TED02:327-456	1	AF-A0A1I5F1N3-F1-model_v4_TED02	327-456	0
+A0A1I5F1N3.1	AF-A0A1I5F1N3-F1-model_v4_TED03:463-546	1	AF-A0A1I5F1N3-F1-model_v4_TED03	463-546	0
+A0A1I5F1N3.1	AF-A0A1I5F1N3-F1-model_v4_TED04:551-683	1	AF-A0A1I5F1N3-F1-model_v4_TED04	551-683	100.0%
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 34 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF00009	GTP_EFTU	32	0.94	0.81
+PF00679	EFG_C	32	0.94	0.81
+PF03144	GTP_EFTU_D2	32	0.94	0.81
+PF03764	EFG_IV	32	0.94	0.81
+PF14492	EFG_III	32	0.94	0.81
+PF22042	EF-G_D2	32	0.94	0.81
+PF13180	PDZ_2	29	0.85	0.70
+PF04187	Cofac_haem_bdg	29	0.85	0.70
+PF00466	Ribosomal_L10	28	0.82	0.66
+PF27436	RL10_C	28	0.82	0.66
+PF00595	PDZ	28	0.82	0.66
+PF17136	ribosomal_L24	27	0.79	0.63
+PF00883	Peptidase_M17	27	0.79	0.63
+PF00155	Aminotran_1_2	27	0.79	0.63
+PF00464	SHMT	27	0.79	0.63
+PF00276	Ribosomal_L23	27	0.79	0.63
+PF02789	Peptidase_M17_N	26	0.76	0.60
+PF17820	PDZ_6	26	0.76	0.60
+PF00467	KOW	26	0.76	0.60
+PF00271	Helicase_C	25	0.74	0.57
+PF00270	DEAD	24	0.71	0.54
+PF04851	ResIII	24	0.71	0.54
+
+--- End STRING ---

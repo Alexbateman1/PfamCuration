@@ -1,0 +1,282 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LD19_TED04/Iterate/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+27	6	Paraburkholderia.
+48	5	Burkholderiaceae
+65	4	Burkholderiales
+74	3	Betaproteobacteria
+31	3	Gammaproteobacteria
+15	3	Alphaproteobacteria
+120	2	Pseudomonadota
+123	1	Pseudomonadati
+124	0	Bacteria
+Total of 125 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1M7FIN3	PARAQUAT-INDUCIBLE PROTEI     60.8    4.1e-13   1   2.8   0.4
+	Iterate                   	   439	   470	    60.8
+	PF02470	MlaD            	    54	   146	    49.6
+	PF02470	MlaD            	   169	   261	    40.8
+	PF02470	MlaD            	   297	   408	    40.3
+
+A0A244E380	MAMMALIAN CELL ENTRY PROT     61.3    2.8e-13   2   3.5   5.0
+	Iterate                   	   427	   464	    54.8
+	PF02470	MlaD            	    49	   141	    52.5
+	PF02470	MlaD            	   164	   257	    38.2
+	PF02470	MlaD            	   291	   396	    48.6
+
+A0A261RCQ9	PARAQUAT-INDUCIBLE PROTEI     60.0      7e-13   2   2.8   1.4
+	Iterate                   	   438	   469	    55.1
+	PF02470	MlaD            	    51	   143	    50.9
+	PF02470	MlaD            	   171	   261	    38.6
+	PF02470	MlaD            	   298	   407	    38.2
+
+A0A4Q2IWQ1	MCE FAMILY PROTEIN {ECO:0     60.3    5.5e-13   3   3.5   5.6
+	Iterate                   	   434	   465	    52.8
+	PF02470	MlaD            	    53	   145	    55.4
+	PF02470	MlaD            	   168	   256	      39
+	PF02470	MlaD            	   295	   403	    46.7
+
+E7RVG0	MCE/MLAD DOMAIN-CONTAINING PR     60.3    5.7e-13   2   3.6   6.8
+	Iterate                   	   466	   497	    56.1
+	PF02470	MlaD            	    76	   168	      56
+	PF02470	MlaD            	   191	   283	    41.6
+	PF02470	MlaD            	   318	   434	    37.7
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS514035 (E-value: 1.2e-13, Score: 56.0)
+Mentioned as: BP2751
+Description: putative membrane protein
+Organism: Bordetella pertussis Tohama I
+PMID: 36357372
+Source: EuropePMC
+Title: Avirulent phenotype promotes <i>Bordetella pertussis</i> adaptation to the intramacrophage environment
+Journal: Emerging microbes & infections (2023)
+Snippet: though only at later time points. In addition, the expression of paraquat-inducible genes pqiA ( BP2751 ) and pqiB ( BP2752 ) and glutathione peroxidase gene ( BP1301 ) was also increased during infection. Moreover, our analysis revealed several highly expressed genes involved in the repair
+
+================================================================================
+Protein: VIMSS514035 (E-value: 1.2e-13, Score: 56.0)
+Mentioned as: BP2751
+Description: putative membrane protein
+Organism: Bordetella pertussis Tohama I
+PMID: 28893915
+Source: EuropePMC
+Title: Hyperbiofilm Formation by Bordetella pertussis Strains Correlates with Enhanced Virulence Traits
+Journal: Infection and immunity (2017)
+Snippet: recently circulating strains from Argentina (Bp462, Bp892, and Bp2751) and the United States (H921, H973, and STO1-SEAT0004) with that of Bp536 (Fig. 2). AI
+
+================================================================================
+Protein: VIMSS517755 (E-value: 4.4e-10, Score: 44.6)
+Mentioned as: CV2547
+Description: paraquat-inducible protein B
+Organism: Chromobacterium violaceum ATCC 12472
+PMID: 14500782
+Source: EuropePMC
+Title: The complete genome sequence of Chromobacterium violaceum reveals remarkable and exploitable bacterial adaptability
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2003)
+Snippet: further studies. ORFs for two paraquat-inducible proteins (CV2547 and CV2548), potentially useful in bioengineering crops resistant to this herbicide, were
+
+================================================================================
+Protein: VIMSS875189 (E-value: 1.8e-08, Score: 39.4)
+Mentioned as: PFL_4554
+Description: PqiB family protein
+Organism: Pseudomonas fluorescens Pf-5
+PMID: 38591888
+Source: EuropePMC
+Title: Local control: a hub-based model for the c-di-GMP network
+Journal: mSphere (2024)
+Snippet: from the cluster of proteins near LapD (far right) in the lower left quadrant (Pfl_4552, Pfl_4554, Pfl_4876, and Pfl_5518) and the upper right quadrant (Pfl_0460, Pfl_5643, and Pfl_5150). These two clusters are separated in the second principal dimension, which has lower explanatory power. These proteins also
+
+================================================================================
+Protein: VIMSS3629532 (E-value: 1.3e-07, Score: 36.7)
+Mentioned as: A1S_2204
+Description: paraquat-inducible protein
+Organism: Acinetobacter baumannii ATCC 17978
+PMID: 27799293
+Source: EuropePMC
+Title: Global Dynamic Proteome Study of a Pellicle-forming Acinetobacter baumannii Strain
+Journal: Molecular & cellular proteomics : MCP (2017)
+Snippet: A1S_1458) in pellicles. The paraquat inducible protein (PqiB, A1S_2204) was also accumulated. Paraquat is a superoxide radical-generating agent that, in E. coli
+
+================================================================================
+Protein: VIMSS140738 (E-value: 2.6e-05, Score: 29.3)
+Mentioned as: NMB1671
+Description: pqiB protein
+Organism: Neisseria meningitidis MC58
+PMID: 38808060
+Source: EuropePMC
+Title: Sweet complexity: &lt;i&gt;O&lt;/i&gt;-linked protein glycosylation in pathogenic &lt;i&gt;Neisseria&lt;/i&gt;
+Journal: Frontiers in cellular and infection microbiology (2024)
+Snippet: NEIS1556, NMB1642 NusA Transcription elongation factor NusA Cytoplasm ( Hadjineophytou etal., 2024 ) NGO1320 NEIS1589, NMB1671 Putative paraquat-inducible protein B Membrane ( Hadjineophytou etal., 2024 ) NGO1328 NEIS1595, NMB1677 CycB C-type cytochrome Membrane, Transmembrane ( Vik etal., 2009 ; Anonsen etal., 2012b ; Hadjineophytou etal., 2024
+
+================================================================================
+Protein: VIMSS208646 (E-value: 5.4e-05, Score: 28.3)
+Mentioned as: DVU3127
+Description: paraquat-inducible protein B
+Organism: Desulfovibrio vulgaris Hildenborough
+PMID: 23098413
+Source: EuropePMC
+Title: High-throughput isolation and characterization of untagged membrane protein complexes: outer membrane complexes of Desulfovibrio vulgaris
+Journal: Journal of proteome research (2012)
+Snippet: DVU1306 rplB, ribosomal protein L2 DVU3125 lipoprotein, putative DVU1329 rpoA, DNA-directed RNA polymerase, alpha subunit DVU3127 pqiB, paraquat-inducible protein B DVU1372 membrane protein, putative DVU3150 rpsA, ribosomal protein S1 DVU1408 hypothetical protein DVU3158 vacJhomolog, vacJ lipoprotein, putative DVU1418 hydH, sensory box histidine kinase DVU3247 efflux transporter,
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A011MTG9.1	AF-A0A011MTG9-F1-model_v4_TED01:51-156	1	AF-A0A011MTG9-F1-model_v4_TED01	51-156	0
+A0A011MTG9.1	AF-A0A011MTG9-F1-model_v4_TED02:168-289	1	AF-A0A011MTG9-F1-model_v4_TED02	168-289	0
+A0A011MTG9.1	AF-A0A011MTG9-F1-model_v4_TED03:297-441	1	AF-A0A011MTG9-F1-model_v4_TED03	297-441	5.1%
+A0A011MTG9.1	AF-A0A011MTG9-F1-model_v4_TED04:452-478_488-511	1	AF-A0A011MTG9-F1-model_v4_TED04	452-511	69.2%
+A0A011PM21.1	AF-A0A011PM21-F1-model_v4_TED01:33-139	1	AF-A0A011PM21-F1-model_v4_TED01	33-139	0
+A0A011PM21.1	AF-A0A011PM21-F1-model_v4_TED02:151-272	1	AF-A0A011PM21-F1-model_v4_TED02	151-272	0
+A0A011PM21.1	AF-A0A011PM21-F1-model_v4_TED03:280-423	1	AF-A0A011PM21-F1-model_v4_TED03	280-423	2.6%
+A0A011PM21.1	AF-A0A011PM21-F1-model_v4_TED04:436-504	1	AF-A0A011PM21-F1-model_v4_TED04	436-504	66.7%
+A0A011QF39.1	AF-A0A011QF39-F1-model_v4_TED01:48-153	1	AF-A0A011QF39-F1-model_v4_TED01	48-153	0
+A0A011QF39.1	AF-A0A011QF39-F1-model_v4_TED02:165-286	1	AF-A0A011QF39-F1-model_v4_TED02	165-286	0
+A0A011QF39.1	AF-A0A011QF39-F1-model_v4_TED03:294-435	1	AF-A0A011QF39-F1-model_v4_TED03	294-435	0
+A0A011QF39.1	AF-A0A011QF39-F1-model_v4_TED04:449-549	1	AF-A0A011QF39-F1-model_v4_TED04	449-549	66.7%
+A0A014Q1U4.1	AF-A0A014Q1U4-F1-model_v4_TED01:46-146	1	AF-A0A014Q1U4-F1-model_v4_TED01	46-146	0
+A0A014Q1U4.1	AF-A0A014Q1U4-F1-model_v4_TED02:160-237_245-280	1	AF-A0A014Q1U4-F1-model_v4_TED02	160-280	0
+A0A014Q1U4.1	AF-A0A014Q1U4-F1-model_v4_TED03:288-423	1	AF-A0A014Q1U4-F1-model_v4_TED03	288-423	0
+A0A069PTD9.1	AF-A0A069PTD9-F1-model_v4_TED01:50-152	1	AF-A0A069PTD9-F1-model_v4_TED01	50-152	0
+A0A069PTD9.1	AF-A0A069PTD9-F1-model_v4_TED02:164-285	1	AF-A0A069PTD9-F1-model_v4_TED02	164-285	0
+A0A069PTD9.1	AF-A0A069PTD9-F1-model_v4_TED03:293-434	1	AF-A0A069PTD9-F1-model_v4_TED03	293-434	12.5%
+A0A075K0Y4.1	AF-A0A075K0Y4-F1-model_v4_TED01:46-151	1	AF-A0A075K0Y4-F1-model_v4_TED01	46-151	0
+A0A075K0Y4.1	AF-A0A075K0Y4-F1-model_v4_TED02:165-286	1	AF-A0A075K0Y4-F1-model_v4_TED02	165-286	0
+A0A075K0Y4.1	AF-A0A075K0Y4-F1-model_v4_TED03:294-432	1	AF-A0A075K0Y4-F1-model_v4_TED03	294-432	0
+A0A078M1M3.1	AF-A0A078M1M3-F1-model_v4_TED01:48-154	1	AF-A0A078M1M3-F1-model_v4_TED01	48-154	0
+A0A078M1M3.1	AF-A0A078M1M3-F1-model_v4_TED02:166-287	1	AF-A0A078M1M3-F1-model_v4_TED02	166-287	0
+A0A078M1M3.1	AF-A0A078M1M3-F1-model_v4_TED03:295-431	1	AF-A0A078M1M3-F1-model_v4_TED03	295-431	0
+A0A085JF93.1	AF-A0A085JF93-F1-model_v4_TED01:43-148	1	AF-A0A085JF93-F1-model_v4_TED01	43-148	0
+A0A085JF93.1	AF-A0A085JF93-F1-model_v4_TED02:160-281	1	AF-A0A085JF93-F1-model_v4_TED02	160-281	0
+A0A085JF93.1	AF-A0A085JF93-F1-model_v4_TED03:289-425	1	AF-A0A085JF93-F1-model_v4_TED03	289-425	0
+A0A085VDL2.1	AF-A0A085VDL2-F1-model_v4_TED01:55-156	1	AF-A0A085VDL2-F1-model_v4_TED01	55-156	0
+A0A085VDL2.1	AF-A0A085VDL2-F1-model_v4_TED02:168-289	1	AF-A0A085VDL2-F1-model_v4_TED02	168-289	0
+A0A085VDL2.1	AF-A0A085VDL2-F1-model_v4_TED03:297-353_367-434	1	AF-A0A085VDL2-F1-model_v4_TED03	297-434	6.2%
+A0A099CVR2.1	AF-A0A099CVR2-F1-model_v4_TED02:170-291	1	AF-A0A099CVR2-F1-model_v4_TED02	170-291	0
+A0A099CVR2.1	AF-A0A099CVR2-F1-model_v4_TED03:299-436	1	AF-A0A099CVR2-F1-model_v4_TED03	299-436	0
+A0A099CVR2.1	AF-A0A099CVR2-F1-model_v4_TED01:51-156	1	AF-A0A099CVR2-F1-model_v4_TED01	51-156	0
+A0A0C2BJL9.1	AF-A0A0C2BJL9-F1-model_v4_TED01:49-154	1	AF-A0A0C2BJL9-F1-model_v4_TED01	49-154	0
+A0A0C2BJL9.1	AF-A0A0C2BJL9-F1-model_v4_TED02:166-287	1	AF-A0A0C2BJL9-F1-model_v4_TED02	166-287	0
+A0A0C2BJL9.1	AF-A0A0C2BJL9-F1-model_v4_TED03:295-351_365-421	1	AF-A0A0C2BJL9-F1-model_v4_TED03	295-421	0
+A0A0C2BJL9.1	AF-A0A0C2BJL9-F1-model_v4_TED04:504-539	1	AF-A0A0C2BJL9-F1-model_v4_TED04	504-539	0
+A0A0C4Y056.1	AF-A0A0C4Y056-F1-model_v4_TED01:51-158	1	AF-A0A0C4Y056-F1-model_v4_TED01	51-158	0
+A0A0C4Y056.1	AF-A0A0C4Y056-F1-model_v4_TED02:170-291	1	AF-A0A0C4Y056-F1-model_v4_TED02	170-291	0
+A0A0C4Y056.1	AF-A0A0C4Y056-F1-model_v4_TED03:300-434	1	AF-A0A0C4Y056-F1-model_v4_TED03	300-434	7.7%
+A0A0C4Y056.1	AF-A0A0C4Y056-F1-model_v4_TED04:445-526	1	AF-A0A0C4Y056-F1-model_v4_TED04	445-526	66.7%
+A0A0C5EDV3.1	AF-A0A0C5EDV3-F1-model_v4_TED01:53-158	1	AF-A0A0C5EDV3-F1-model_v4_TED01	53-158	0
+A0A0C5EDV3.1	AF-A0A0C5EDV3-F1-model_v4_TED02:170-291	1	AF-A0A0C5EDV3-F1-model_v4_TED02	170-291	0
+A0A0C5EDV3.1	AF-A0A0C5EDV3-F1-model_v4_TED03:299-436	1	AF-A0A0C5EDV3-F1-model_v4_TED03	299-436	3.1%
+A0A0C5VMC0.1	AF-A0A0C5VMC0-F1-model_v4_TED01:48-153	1	AF-A0A0C5VMC0-F1-model_v4_TED01	48-153	0
+A0A0C5VMC0.1	AF-A0A0C5VMC0-F1-model_v4_TED02:165-285	1	AF-A0A0C5VMC0-F1-model_v4_TED02	165-285	0
+A0A0C5VMC0.1	AF-A0A0C5VMC0-F1-model_v4_TED03:293-427	1	AF-A0A0C5VMC0-F1-model_v4_TED03	293-427	0
+A0A0D6PDI4.1	AF-A0A0D6PDI4-F1-model_v4_TED01:52-152	1	AF-A0A0D6PDI4-F1-model_v4_TED01	52-152	0
+A0A0D6PDI4.1	AF-A0A0D6PDI4-F1-model_v4_TED02:166-289	1	AF-A0A0D6PDI4-F1-model_v4_TED02	166-289	0
+A0A0D6PDI4.1	AF-A0A0D6PDI4-F1-model_v4_TED03:296-353_360-424	1	AF-A0A0D6PDI4-F1-model_v4_TED03	296-424	0
+A0A0D6PDI4.1	AF-A0A0D6PDI4-F1-model_v4_TED04:437-485_492-520	1	AF-A0A0D6PDI4-F1-model_v4_TED04	437-520	65.6%
+A0A0F5K0N7.1	AF-A0A0F5K0N7-F1-model_v4_TED01:43-147	1	AF-A0A0F5K0N7-F1-model_v4_TED01	43-147	0
+A0A0F5K0N7.1	AF-A0A0F5K0N7-F1-model_v4_TED02:159-280	1	AF-A0A0F5K0N7-F1-model_v4_TED02	159-280	0
+A0A0F5K0N7.1	AF-A0A0F5K0N7-F1-model_v4_TED03:288-415	1	AF-A0A0F5K0N7-F1-model_v4_TED03	288-415	0
+A0A0F5K0N7.1	AF-A0A0F5K0N7-F1-model_v4_TED04:422-518	1	AF-A0A0F5K0N7-F1-model_v4_TED04	422-518	100.0%
+A0A0F5K2Z4.1	AF-A0A0F5K2Z4-F1-model_v4_TED01:45-152	1	AF-A0A0F5K2Z4-F1-model_v4_TED01	45-152	0
+A0A0F5K2Z4.1	AF-A0A0F5K2Z4-F1-model_v4_TED02:164-281	1	AF-A0A0F5K2Z4-F1-model_v4_TED02	164-281	0
+A0A0F5K2Z4.1	AF-A0A0F5K2Z4-F1-model_v4_TED03:289-424	1	AF-A0A0F5K2Z4-F1-model_v4_TED03	289-424	0
+A0A0H3KR51.1	AF-A0A0H3KR51-F1-model_v4_TED01:65-173	1	AF-A0A0H3KR51-F1-model_v4_TED01	65-173	0
+A0A0H3KR51.1	AF-A0A0H3KR51-F1-model_v4_TED02:185-306	1	AF-A0A0H3KR51-F1-model_v4_TED02	185-306	0
+A0A0H3KR51.1	AF-A0A0H3KR51-F1-model_v4_TED03:314-447	1	AF-A0A0H3KR51-F1-model_v4_TED03	314-447	0
+A0A0J5GKU2.1	AF-A0A0J5GKU2-F1-model_v4_TED01:55-160	1	AF-A0A0J5GKU2-F1-model_v4_TED01	55-160	0
+A0A0J5GKU2.1	AF-A0A0J5GKU2-F1-model_v4_TED02:172-293	1	AF-A0A0J5GKU2-F1-model_v4_TED02	172-293	0
+A0A0J5GKU2.1	AF-A0A0J5GKU2-F1-model_v4_TED03:301-436	1	AF-A0A0J5GKU2-F1-model_v4_TED03	301-436	5.1%
+A0A0J6RA79.1	AF-A0A0J6RA79-F1-model_v4_TED01:58-159	1	AF-A0A0J6RA79-F1-model_v4_TED01	58-159	0
+A0A0J6RA79.1	AF-A0A0J6RA79-F1-model_v4_TED02:171-292	1	AF-A0A0J6RA79-F1-model_v4_TED02	171-292	0
+A0A0J6RA79.1	AF-A0A0J6RA79-F1-model_v4_TED03:300-431	1	AF-A0A0J6RA79-F1-model_v4_TED03	300-431	5.1%
+A0A0K2G7F2.1	AF-A0A0K2G7F2-F1-model_v4_TED01:51-156	1	AF-A0A0K2G7F2-F1-model_v4_TED01	51-156	0
+A0A0K2G7F2.1	AF-A0A0K2G7F2-F1-model_v4_TED02:168-289	1	AF-A0A0K2G7F2-F1-model_v4_TED02	168-289	0
+A0A0K2G7F2.1	AF-A0A0K2G7F2-F1-model_v4_TED03:297-362_370-436	1	AF-A0A0K2G7F2-F1-model_v4_TED03	297-436	7.7%
+A0A0L0M7B8.1	AF-A0A0L0M7B8-F1-model_v4_TED01:74-179	1	AF-A0A0L0M7B8-F1-model_v4_TED01	74-179	0
+A0A0L0M7B8.1	AF-A0A0L0M7B8-F1-model_v4_TED02:191-312	1	AF-A0A0L0M7B8-F1-model_v4_TED02	191-312	0
+A0A0L0M7B8.1	AF-A0A0L0M7B8-F1-model_v4_TED03:320-376_401-454	1	AF-A0A0L0M7B8-F1-model_v4_TED03	320-454	0
+A0A0L0M9Q8.1	AF-A0A0L0M9Q8-F1-model_v4_TED01:57-158	1	AF-A0A0L0M9Q8-F1-model_v4_TED01	57-158	0
+A0A0L0M9Q8.1	AF-A0A0L0M9Q8-F1-model_v4_TED02:170-270_281-300	1	AF-A0A0L0M9Q8-F1-model_v4_TED02	170-300	0
+A0A0L0M9Q8.1	AF-A0A0L0M9Q8-F1-model_v4_TED03:308-365_380-435	1	AF-A0A0L0M9Q8-F1-model_v4_TED03	308-435	0
+A0A0L0M9Q8.1	AF-A0A0L0M9Q8-F1-model_v4_TED04:440-476	1	AF-A0A0L0M9Q8-F1-model_v4_TED04	440-476	100.0%
+A0A0M2WMP6.1	AF-A0A0M2WMP6-F1-model_v4_TED01:55-160	1	AF-A0A0M2WMP6-F1-model_v4_TED01	55-160	0
+A0A0M2WMP6.1	AF-A0A0M2WMP6-F1-model_v4_TED02:172-293	1	AF-A0A0M2WMP6-F1-model_v4_TED02	172-293	0
+A0A0M2WMP6.1	AF-A0A0M2WMP6-F1-model_v4_TED03:301-427	1	AF-A0A0M2WMP6-F1-model_v4_TED03	301-427	0
+A0A0M4CZ66.1	AF-A0A0M4CZ66-F1-model_v4_TED01:48-153	1	AF-A0A0M4CZ66-F1-model_v4_TED01	48-153	0
+A0A0M4CZ66.1	AF-A0A0M4CZ66-F1-model_v4_TED02:167-288	1	AF-A0A0M4CZ66-F1-model_v4_TED02	167-288	0
+A0A0M4CZ66.1	AF-A0A0M4CZ66-F1-model_v4_TED03:296-422	1	AF-A0A0M4CZ66-F1-model_v4_TED03	296-422	0
+A0A0M4CZ66.1	AF-A0A0M4CZ66-F1-model_v4_TED04:493-526	1	AF-A0A0M4CZ66-F1-model_v4_TED04	493-526	0
+A0A0Q4G8E2.1	AF-A0A0Q4G8E2-F1-model_v4_TED01:54-160	1	AF-A0A0Q4G8E2-F1-model_v4_TED01	54-160	0
+A0A0Q4G8E2.1	AF-A0A0Q4G8E2-F1-model_v4_TED02:172-292	1	AF-A0A0Q4G8E2-F1-model_v4_TED02	172-292	0
+A0A0Q4G8E2.1	AF-A0A0Q4G8E2-F1-model_v4_TED03:308-356_370-435	1	AF-A0A0Q4G8E2-F1-model_v4_TED03	308-435	5.1%
+A0A0Q4G8E2.1	AF-A0A0Q4G8E2-F1-model_v4_TED04:447-467_487-529	1	AF-A0A0Q4G8E2-F1-model_v4_TED04	447-529	66.7%
+A0A0Q6MMJ4.1	AF-A0A0Q6MMJ4-F1-model_v4_TED01:48-153	1	AF-A0A0Q6MMJ4-F1-model_v4_TED01	48-153	0
+A0A0Q6MMJ4.1	AF-A0A0Q6MMJ4-F1-model_v4_TED02:165-290	1	AF-A0A0Q6MMJ4-F1-model_v4_TED02	165-290	0
+A0A0Q6MMJ4.1	AF-A0A0Q6MMJ4-F1-model_v4_TED03:298-361_385-449	1	AF-A0A0Q6MMJ4-F1-model_v4_TED03	298-449	0
+A0A0Q6MMJ4.1	AF-A0A0Q6MMJ4-F1-model_v4_TED04:461-552	1	AF-A0A0Q6MMJ4-F1-model_v4_TED04	461-552	65.6%
+A0A0S1XW88.1	AF-A0A0S1XW88-F1-model_v4_TED02:178-276	1	AF-A0A0S1XW88-F1-model_v4_TED02	178-276	0
+A0A0S1XW88.1	AF-A0A0S1XW88-F1-model_v4_TED03:451-589	1	AF-A0A0S1XW88-F1-model_v4_TED03	451-589	0
+A0A0S1XW88.1	AF-A0A0S1XW88-F1-model_v4_TED01:47-145_158-166	1	AF-A0A0S1XW88-F1-model_v4_TED01	47-166	0
+A0A0S1XW88.1	AF-A0A0S1XW88-F1-model_v4_TED04:591-635	1	AF-A0A0S1XW88-F1-model_v4_TED04	591-635	100.0%
+A0A0U4WUB4.1	AF-A0A0U4WUB4-F1-model_v4_TED01:45-153	1	AF-A0A0U4WUB4-F1-model_v4_TED01	45-153	0
+A0A0U4WUB4.1	AF-A0A0U4WUB4-F1-model_v4_TED02:165-286	1	AF-A0A0U4WUB4-F1-model_v4_TED02	165-286	0
+A0A0U4WUB4.1	AF-A0A0U4WUB4-F1-model_v4_TED03:294-431	1	AF-A0A0U4WUB4-F1-model_v4_TED03	294-431	18.8%
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 39 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF03886	ABC_trans_aux	39	1.00	0.91
+PF04403	PqiA	38	0.97	0.87
+
+--- End STRING ---

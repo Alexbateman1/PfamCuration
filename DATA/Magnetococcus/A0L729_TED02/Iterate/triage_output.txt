@@ -1,0 +1,169 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L729_TED02/Iterate
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+7	6	Paracoccus.
+6	5	Burkholderiaceae
+19	5	Paracoccaceae
+15	5	Roseobacteraceae
+9	4	Burkholderiales
+34	4	Rhodobacterales
+36	3	Alphaproteobacteria
+12	3	Betaproteobacteria
+50	2	Pseudomonadota
+50	1	Pseudomonadati
+50	0	Bacteria
+Total of 50 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0L729	PROTEIN C, SERINE PEPTIDASE,     207.9    6.4e-59   1   1.8   0.9
+	Iterate                   	   329	   418	   206.5
+	PF01343	Peptidase_S49   	   111	   261	    98.4
+
+A0L794	PROTEIN C, SERINE PEPTIDASE,     197.6      1e-55   1   1.9   1.2
+	Iterate                   	   347	   436	   196.0
+	PF01343	Peptidase_S49   	   129	   279	    98.4
+
+A0L9A4	PROTEIN C, SERINE PEPTIDASE,     195.0    6.6e-55   1   1.9   1.0
+	Iterate                   	   345	   433	   193.5
+	PF01343	Peptidase_S49   	   127	   277	    99.5
+
+A0LB95	PROTEIN C, SERINE PEPTIDASE,     195.2    5.7e-55   1   1.7   1.2
+	Iterate                   	   321	   410	   193.9
+	PF01343	Peptidase_S49   	   129	   279	   102.8
+
+A0LBG6	PROTEIN C, SERINE PEPTIDASE,     201.8    5.1e-57   1   1.8   0.8
+	Iterate                   	   345	   433	   200.3
+	PF01343	Peptidase_S49   	   127	   277	      95
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS336371 (E-value: 5.6e-09, Score: 41.3)
+Mentioned as: PSPTO_3409
+Description: ATP-dependent Clp protease, proteolytic subunit ClpP
+Organism: Pseudomonas syringae pv. tomato str. DC3000
+PMID: 36533919
+Source: EuropePMC
+Title: Proteomic Profiling Reveals Distinct Bacterial Extracellular Vesicle Subpopulations with Possibly Unique Functionality
+Journal: Applied and environmental microbiology (2023)
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A011PZF7.1	AF-A0A011PZF7-F1-model_v4_TED01:5-32_54-186_202-265	1	AF-A0A011PZF7-F1-model_v4_TED01	5-265	0
+A0A011PZF7.1	AF-A0A011PZF7-F1-model_v4_TED02:345-390_419-431	1	AF-A0A011PZF7-F1-model_v4_TED02	345-431	94.5%
+A0A0G3BTF9.1	AF-A0A0G3BTF9-F1-model_v4_TED01:5-173_203-260	1	AF-A0A0G3BTF9-F1-model_v4_TED01	5-260	0
+A0A0G3BTF9.1	AF-A0A0G3BTF9-F1-model_v4_TED02:348-390	1	AF-A0A0G3BTF9-F1-model_v4_TED02	348-390	53.1%
+A0A0K6I7E6.1	AF-A0A0K6I7E6-F1-model_v4_TED01:5-171_203-276	1	AF-A0A0K6I7E6-F1-model_v4_TED01	5-276	0
+A0A0K6I7E6.1	AF-A0A0K6I7E6-F1-model_v4_TED02:348-406_418-434	1	AF-A0A0K6I7E6-F1-model_v4_TED02	348-434	100.0%
+A0A1G9DXH8.1	AF-A0A1G9DXH8-F1-model_v4_TED01:5-43_50-174_195-261	1	AF-A0A1G9DXH8-F1-model_v4_TED01	5-261	0
+A0A1G9DXH8.1	AF-A0A1G9DXH8-F1-model_v4_TED02:362-406	1	AF-A0A1G9DXH8-F1-model_v4_TED02	362-406	51.7%
+A0A1V2H6F3.1	AF-A0A1V2H6F3-F1-model_v4_TED01:2-40	1	AF-A0A1V2H6F3-F1-model_v4_TED01	2-40	0
+A0A1V2H6F3.1	AF-A0A1V2H6F3-F1-model_v4_TED02:56-171_250-283	1	AF-A0A1V2H6F3-F1-model_v4_TED02	56-283	0
+A0A1V2H6F3.1	AF-A0A1V2H6F3-F1-model_v4_TED03:177-190_203-245	1	AF-A0A1V2H6F3-F1-model_v4_TED03	177-245	0
+A0A1V2H6F3.1	AF-A0A1V2H6F3-F1-model_v4_TED04:345-384	1	AF-A0A1V2H6F3-F1-model_v4_TED04	345-384	40.8%
+A0A1Y2K9U9.1	AF-A0A1Y2K9U9-F1-model_v4_TED01:2-28_45-168_200-257	1	AF-A0A1Y2K9U9-F1-model_v4_TED01	2-257	0
+A0A1Y2K9U9.1	AF-A0A1Y2K9U9-F1-model_v4_TED02:312-361	1	AF-A0A1Y2K9U9-F1-model_v4_TED02	312-361	54.3%
+A0A1Y2KC11.1	AF-A0A1Y2KC11-F1-model_v4_TED01:2-48	1	AF-A0A1Y2KC11-F1-model_v4_TED01	2-48	0
+A0A1Y2KC11.1	AF-A0A1Y2KC11-F1-model_v4_TED02:58-171_242-265	1	AF-A0A1Y2KC11-F1-model_v4_TED02	58-265	0
+A0A1Y2KC11.1	AF-A0A1Y2KC11-F1-model_v4_TED03:330-374	1	AF-A0A1Y2KC11-F1-model_v4_TED03	330-374	48.9%
+A0A2K9LC21.1	AF-A0A2K9LC21-F1-model_v4_TED01:5-43_56-179_199-274	1	AF-A0A2K9LC21-F1-model_v4_TED01	5-274	0
+A0A2K9LC21.1	AF-A0A2K9LC21-F1-model_v4_TED02:333-372	1	AF-A0A2K9LC21-F1-model_v4_TED02	333-372	44.4%
+A0A2M6VE50.1	AF-A0A2M6VE50-F1-model_v4_TED01:2-177_209-286	1	AF-A0A2M6VE50-F1-model_v4_TED01	2-286	0
+A0A2S0PEM3.1	AF-A0A2S0PEM3-F1-model_v4_TED01:6-231	1	AF-A0A2S0PEM3-F1-model_v4_TED01	6-231	0
+A0A2S0PEM3.1	AF-A0A2S0PEM3-F1-model_v4_TED02:253-329	1	AF-A0A2S0PEM3-F1-model_v4_TED02	253-329	53.3%
+A0A3N0UYY0.1	AF-A0A3N0UYY0-F1-model_v4_TED01:2-42_56-175_195-261	1	AF-A0A3N0UYY0-F1-model_v4_TED01	2-261	0
+A0A3N0UYY0.1	AF-A0A3N0UYY0-F1-model_v4_TED02:361-393	1	AF-A0A3N0UYY0-F1-model_v4_TED02	361-393	37.1%
+A0A4R3JVF8.1	AF-A0A4R3JVF8-F1-model_v4_TED01:2-176_200-262	1	AF-A0A4R3JVF8-F1-model_v4_TED01	2-262	0
+A0A4R3JVF8.1	AF-A0A4R3JVF8-F1-model_v4_TED02:324-373	1	AF-A0A4R3JVF8-F1-model_v4_TED02	324-373	54.3%
+A0A4V3D5X6.1	AF-A0A4V3D5X6-F1-model_v4_TED01:4-38_52-261	1	AF-A0A4V3D5X6-F1-model_v4_TED01	4-261	0
+A0A4V3D5X6.1	AF-A0A4V3D5X6-F1-model_v4_TED02:324-355	1	AF-A0A4V3D5X6-F1-model_v4_TED02	324-355	36.4%
+A0A6F8VG85.1	AF-A0A6F8VG85-F1-model_v4_TED01:2-44	1	AF-A0A6F8VG85-F1-model_v4_TED01	2-44	0
+A0A6F8VG85.1	AF-A0A6F8VG85-F1-model_v4_TED02:58-169_215-260	1	AF-A0A6F8VG85-F1-model_v4_TED02	58-260	0
+A0A6F8VHR2.1	AF-A0A6F8VHR2-F1-model_v4_TED01:2-44	1	AF-A0A6F8VHR2-F1-model_v4_TED01	2-44	0
+A0A6F8VHR2.1	AF-A0A6F8VHR2-F1-model_v4_TED02:58-164_243-269	1	AF-A0A6F8VHR2-F1-model_v4_TED02	58-269	0
+A0A6F8VHR2.1	AF-A0A6F8VHR2-F1-model_v4_TED03:166-186_196-241	1	AF-A0A6F8VHR2-F1-model_v4_TED03	166-241	0
+A0A6N7ZS64.1	AF-A0A6N7ZS64-F1-model_v4_TED01:73-261	1	AF-A0A6N7ZS64-F1-model_v4_TED01	73-261	0
+A0A6N7ZS64.1	AF-A0A6N7ZS64-F1-model_v4_TED02:325-359	1	AF-A0A6N7ZS64-F1-model_v4_TED02	325-359	39.3%
+A0L729.1	AF-A0L729-F1-model_v4_TED01:39-158_184-247	1	AF-A0L729-F1-model_v4_TED01	39-247	0
+A0L729.1	AF-A0L729-F1-model_v4_TED02:329-380_408-418	1	AF-A0L729-F1-model_v4_TED02	329-418	100.0%
+B2FM24.1	AF-B2FM24-F1-model_v4_TED01:2-44	1	AF-B2FM24-F1-model_v4_TED01	2-44	0
+B2FM24.1	AF-B2FM24-F1-model_v4_TED02:54-165_244-274	1	AF-B2FM24-F1-model_v4_TED02	54-274	0
+B2FM24.1	AF-B2FM24-F1-model_v4_TED03:168-241	1	AF-B2FM24-F1-model_v4_TED03	168-241	0
+B2FM24.1	AF-B2FM24-F1-model_v4_TED04:323-359	1	AF-B2FM24-F1-model_v4_TED04	323-359	42.0%
+D8P9I0.1	AF-D8P9I0-F1-model_v4_TED01:4-43_52-273	1	AF-D8P9I0-F1-model_v4_TED01	4-273	0
+D8P9I0.1	AF-D8P9I0-F1-model_v4_TED02:326-360	1	AF-D8P9I0-F1-model_v4_TED02	326-360	39.8%
+Q2SAK0.1	AF-Q2SAK0-F1-model_v4_TED01:5-173_202-276	1	AF-Q2SAK0-F1-model_v4_TED01	5-276	0
+Q2SAK0.1	AF-Q2SAK0-F1-model_v4_TED02:331-368	1	AF-Q2SAK0-F1-model_v4_TED02	331-368	47.5%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 17 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF02924	HDPD	17	1.00	0.82
+PF03864	Phage_cap_E	17	1.00	0.82
+PF05136	Phage_portal_2	16	0.94	0.73
+PF05876	GpA_ATPase	16	0.94	0.73
+PF20454	GpA_nuclease	16	0.94	0.73
+PF00004	AAA	15	0.88	0.66
+PF00158	Sigma54_activat	15	0.88	0.66
+PF02861	Clp_N	15	0.88	0.66
+PF07724	AAA_2	15	0.88	0.66
+PF07728	AAA_5	15	0.88	0.66
+PF10431	ClpB_D2-small	15	0.88	0.66
+PF17871	AAA_lid_9	15	0.88	0.66
+PF00012	HSP70	14	0.82	0.59
+PF06723	MreB_Mbl	14	0.82	0.59
+PF00925	GTP_cyclohydro2	13	0.76	0.53
+PF00926	DHBP_synthase	13	0.76	0.53
+PF01628	HrcA	13	0.76	0.53
+PF01025	GrpE	13	0.76	0.53
+PF06689	zf-C4_ClpX	13	0.76	0.53
+
+--- End STRING ---

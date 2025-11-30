@@ -1,0 +1,100 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LBK2_TED01/Iterate
+GA   27.00 27.00;
+TC   30.70 29.80;
+NC   24.80 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+9	11	Trichonephila.
+10	10	Nephilidae
+10	9	Araneoidea
+10	8	Entelegynae
+10	7	Araneomorphae
+4	6	Holospora.
+3	6	Magnetococcus.
+10	6	Araneae
+4	5	Holosporaceae
+3	5	Magnetococcaceae
+10	5	Arachnida
+4	4	Holosporales
+3	4	Magnetococcales
+10	4	Chelicerata
+5	3	Alphaproteobacteria
+3	3	Magnetococcia
+11	3	Arthropoda
+8	2	Pseudomonadota
+11	2	Ecdysozoa
+8	1	Pseudomonadati
+11	1	Metazoa
+8	0	Bacteria
+11	0	Eukaryota
+Total of 19 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A061JFK2	UNCHARACTERIZED PROTEIN {     69.8      1e-15   1   2.1   0.2
+	Iterate                   	     8	   142	    67.5
+
+A0LAW5	WYL DOMAIN-CONTAINING PROTEIN    303.4    6.6e-88   1   1.7   0.7
+	Iterate                   	     5	   137	   302.4
+
+A0LB13	WYL DOMAIN-CONTAINING PROTEIN    305.2    1.8e-88   1   1.7   0.7
+	Iterate                   	     5	   137	   304.3
+
+A0LBK2	UNCHARACTERIZED PROTEIN {ECO:    307.2    4.4e-89   1   1.6   0.7
+	Iterate                   	     5	   137	   306.3
+
+W6TEM1	DUF4868 DOMAIN-CONTAINING PRO     69.2    1.5e-15   1   1.9   0.1
+	Iterate                   	     8	   142	    67.4
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A061JFK2.1	AF-A0A061JFK2-F1-model_v4_TED03:286-413	1	AF-A0A061JFK2-F1-model_v4_TED03	286-413	0
+A0A061JFK2.1	AF-A0A061JFK2-F1-model_v4_TED01:9-147	1	AF-A0A061JFK2-F1-model_v4_TED01	9-147	99.3%
+A0A061JFK2.1	AF-A0A061JFK2-F1-model_v4_TED02:160-282	1	AF-A0A061JFK2-F1-model_v4_TED02	160-282	0
+A0LBK2.1	AF-A0LBK2-F1-model_v4_TED01:5-137	1	AF-A0LBK2-F1-model_v4_TED01	5-137	100.0%
+A0LBK2.1	AF-A0LBK2-F1-model_v4_TED03:283-407	1	AF-A0LBK2-F1-model_v4_TED03	283-407	0
+A0LBK2.1	AF-A0LBK2-F1-model_v4_TED02:155-278	1	AF-A0LBK2-F1-model_v4_TED02	155-278	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network analysis skipped: only 4 networks (minimum 5 required)
+
+--- End STRING ---

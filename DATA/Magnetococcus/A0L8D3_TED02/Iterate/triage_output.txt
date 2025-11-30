@@ -1,0 +1,125 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L8D3_TED02/Iterate
+GA   27.00 27.00;
+TC   27.40 28.10;
+NC   26.90 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+3	5	Roseobacteraceae
+3	5	Paracoccaceae
+3	5	Burkholderiaceae
+6	4	Rhodobacterales
+6	4	Hyphomicrobiales
+4	4	Burkholderiales
+3	4	Caudoviricetes
+4	3	Betaproteobacteria
+3	3	Uroviricota
+14	3	Alphaproteobacteria
+3	2	Heunggongvirae
+20	2	Pseudomonadota
+3	1	Duplodnaviria
+20	1	Pseudomonadati
+3	0	Viruses
+22	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1H7L225	UNCHARACTERIZED PROTEIN {     60.1      1e-12   1   1.2   0.2
+	Iterate                   	   101	   192	    59.6
+
+A0A7S5V109	UNCHARACTERIZED PROTEIN {     55.5    2.9e-11   1   1.3   0.1
+	Iterate                   	    93	   179	    54.8
+
+A0ABF7QJN9	UNCHARACTERIZED PROTEIN {     66.9    8.1e-15   1   1.2   0.4
+	Iterate                   	    78	   170	    66.3
+
+A0L8D3	UNCHARACTERIZED PROTEIN {ECO:    203.5      2e-57   1   1.3   4.4
+	Iterate                   	    84	   177	   202.9
+
+Q2KB79	HYPOTHETICAL CONSERVED PROTEI     67.3    5.9e-15   1   1.3   0.8
+	Iterate                   	    95	   187	    66.7
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: T1HZ69 (E-value: 3.5e-08, Score: 38.9)
+Mentioned as: T1HZ69
+Description: CCDC113/CCDC96 coiled-coil domain-containing protein
+Organism: Rhodnius prolixus
+PMID: 32984079
+Source: EuropePMC
+Title: Proteomic Mapping of Multifunctional Complexes Within Triatomine Saliva
+Journal: Frontiers in cellular and infection microbiology (2020)
+Snippet: class, which are: (i) actin, (ii) thioredoxin peroxidase, (iii) triabin; and (iv) an uncharacterized protein (T1HZ69) from the Unknown class. The hemocyanin/hexamerin, the heat shock protein and the histone PGs were identified in the majority of the species, except for T. dimidiata, T. infestans , and
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1H7L225.1	AF-A0A1H7L225-F1-model_v4_TED01:2-102	1	AF-A0A1H7L225-F1-model_v4_TED01	2-102	2.2%
+A0A1H7L225.1	AF-A0A1H7L225-F1-model_v4_TED02:107-208	1	AF-A0A1H7L225-F1-model_v4_TED02	107-208	93.5%
+A0A1X7AB34.1	AF-A0A1X7AB34-F1-model_v4_TED01:5-88	1	AF-A0A1X7AB34-F1-model_v4_TED01	5-88	0
+A0A1Y2K4N3.1	AF-A0A1Y2K4N3-F1-model_v4_TED01:2-76	1	AF-A0A1Y2K4N3-F1-model_v4_TED01	2-76	0
+A0A1Y2K4N3.1	AF-A0A1Y2K4N3-F1-model_v4_TED02:79-169	1	AF-A0A1Y2K4N3-F1-model_v4_TED02	79-169	97.8%
+A0A328AEK6.1	AF-A0A328AEK6-F1-model_v4_TED01:16-86	1	AF-A0A328AEK6-F1-model_v4_TED01	16-86	0
+A0A328AEK6.1	AF-A0A328AEK6-F1-model_v4_TED02:88-194	1	AF-A0A328AEK6-F1-model_v4_TED02	88-194	100.0%
+A0A6G6WWH9.1	AF-A0A6G6WWH9-F1-model_v4_TED01:2-91	1	AF-A0A6G6WWH9-F1-model_v4_TED01	2-91	1.6%
+A0A6G6WWH9.1	AF-A0A6G6WWH9-F1-model_v4_TED03:211-247	1	AF-A0A6G6WWH9-F1-model_v4_TED03	211-247	6.2%
+A0A6G6WWH9.1	AF-A0A6G6WWH9-F1-model_v4_TED02:92-166	1	AF-A0A6G6WWH9-F1-model_v4_TED02	92-166	58.1%
+A0A6J5FK10.1	AF-A0A6J5FK10-F1-model_v4_TED01:11-102	1	AF-A0A6J5FK10-F1-model_v4_TED01	11-102	2.2%
+A0A6J5FK10.1	AF-A0A6J5FK10-F1-model_v4_TED02:103-197	1	AF-A0A6J5FK10-F1-model_v4_TED02	103-197	97.8%
+A0A839ZBE5.1	AF-A0A839ZBE5-F1-model_v4_TED01:9-139	1	AF-A0A839ZBE5-F1-model_v4_TED01	9-139	43.4%
+A0A839ZBE5.1	AF-A0A839ZBE5-F1-model_v4_TED02:196-242	1	AF-A0A839ZBE5-F1-model_v4_TED02	196-242	10.7%
+A0L8D3.1	AF-A0L8D3-F1-model_v4_TED02:84-177	1	AF-A0L8D3-F1-model_v4_TED02	84-177	100.0%
+A0L8D3.1	AF-A0L8D3-F1-model_v4_TED01:13-80	1	AF-A0L8D3-F1-model_v4_TED01	13-80	0
+Q2KB79.1	AF-Q2KB79-F1-model_v4_TED01:21-96	1	AF-Q2KB79-F1-model_v4_TED01	21-96	2.1%
+Q2KB79.1	AF-Q2KB79-F1-model_v4_TED02:97-171	1	AF-Q2KB79-F1-model_v4_TED02	97-171	79.8%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 8 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

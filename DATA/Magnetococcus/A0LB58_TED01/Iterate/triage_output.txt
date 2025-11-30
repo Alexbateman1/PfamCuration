@@ -1,0 +1,128 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LB58_TED01/Iterate
+GA   27.00 27.00;
+TC   27.10 63.20;
+NC   26.50 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+7	6	Aphanothecaceae
+3	6	Novipirellula.
+3	5	Pirellulaceae
+11	5	Chroococcales
+4	4	Pirellulales
+11	4	Oscillatoriophycideae
+4	3	Planctomycetia
+18	3	Cyanophyceae
+4	2	Planctomycetota
+18	2	Cyanobacteriota
+7	1	Pseudomonadati
+18	1	Bacillati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1Y2K430	UNCHARACTERIZED PROTEIN {    126.8    2.4e-33   1   1.1   0.1
+	Iterate                   	    45	   163	   126.5
+
+A0A928WBL5	UNCHARACTERIZED PROTEIN {    121.2    1.3e-31   1   1.1   0.2
+	Iterate                   	    48	   166	   120.9
+
+A0LB58	UNCHARACTERIZED PROTEIN {ECO:    279.5    1.2e-80   1   1.1   0.2
+	Iterate                   	    58	   177	   279.2
+
+E0U5Q2	UNCHARACTERIZED PROTEIN {ECO:    121.3    1.3e-31   1   1.1   0.1
+	Iterate                   	    46	   161	   120.9
+
+L8M829	UNCHARACTERIZED PROTEIN {ECO:    129.0    5.2e-34   1   1.1   0.2
+	Iterate                   	    50	   166	   128.7
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS11945 (E-value: 4.4e-45, Score: 158.0)
+Mentioned as: sll1389
+Description: unknown protein
+Organism: Synechocystis sp. PCC 6803
+PMID: 34295345
+Source: EuropePMC
+Title: Introduction of the Carotenoid Biosynthesis α-Branch Into <i>Synechocystis</i> sp. PCC 6803 for Lutein Production
+Journal: Frontiers in plant science (2021)
+Snippet: reading frame a specific terminator was set. Ter1 and Ter2 ( slr0012 derived), Ter3 ( sll1389 derived) and Ter4 ( slr1311 derived). See the NCBI BioProject: PRJNA731655 . The pKS-LUT vector includes a double selection cassette that confers kanamycin resistance ( nptI ) and sucrose sensitivity
+
+================================================================================
+Protein: VIMSS11945 (E-value: 4.4e-45, Score: 158.0)
+Mentioned as: sll1389
+Description: unknown protein
+Organism: Synechocystis sp. PCC 6803
+PMID: 34881166
+Source: EuropePMC
+Title: Identification of the key functional genes in salt-stress tolerance of Cyanobacterium <i>Phormidium tenue</i> using in silico analysis
+Journal: 3 Biotech (2021)
+Snippet: slr0517 hypA1, hypA, slr1675 hypothetical protein, sll1389 ycf21, sll1797 hypothetical protein, ssl2971 hypothetical protein, slr1915 nblB2, slr1687 abfB,
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Y2K430.1	AF-A0A1Y2K430-F1-model_v4_TED01:43-160	1	AF-A0A1Y2K430-F1-model_v4_TED01	43-160	96.7%
+A0A261KQA4.1	AF-A0A261KQA4-F1-model_v4_TED01:30-145	1	AF-A0A261KQA4-F1-model_v4_TED01	30-145	96.7%
+A0A2P8WB61.1	AF-A0A2P8WB61-F1-model_v4_TED01:51-172	1	AF-A0A2P8WB61-F1-model_v4_TED01	51-172	100.0%
+A0A4V0HW70.1	AF-A0A4V0HW70-F1-model_v4_TED01:46-163	1	AF-A0A4V0HW70-F1-model_v4_TED01	46-163	98.3%
+A0A562S042.1	AF-A0A562S042-F1-model_v4_TED01:46-167	1	AF-A0A562S042-F1-model_v4_TED01	46-167	100.0%
+A0A5J6PZ94.1	AF-A0A5J6PZ94-F1-model_v4_TED01:48-172	1	AF-A0A5J6PZ94-F1-model_v4_TED01	48-172	100.0%
+A0A6G7ZIP4.1	AF-A0A6G7ZIP4-F1-model_v4_TED01:39-157	1	AF-A0A6G7ZIP4-F1-model_v4_TED01	39-157	98.3%
+A0A7T5E415.1	AF-A0A7T5E415-F1-model_v4_TED01:53-171	1	AF-A0A7T5E415-F1-model_v4_TED01	53-171	99.2%
+A0LB58.1	AF-A0LB58-F1-model_v4_TED01:58-177	1	AF-A0LB58-F1-model_v4_TED01	58-177	100.0%
+A0YQU1.1	AF-A0YQU1-F1-model_v4_TED01:52-139_146-169	1	AF-A0YQU1-F1-model_v4_TED01	52-169	98.3%
+P74147.1	AF-P74147-F1-model_v4_TED01:53-138_145-170	1	AF-P74147-F1-model_v4_TED01	53-170	98.3%
+Q7NG27.1	AF-Q7NG27-F1-model_v4_TED01:43-165	1	AF-Q7NG27-F1-model_v4_TED01	43-165	100.0%
+U5DT44.1	AF-U5DT44-F1-model_v4_TED01:59-182	1	AF-U5DT44-F1-model_v4_TED01	59-182	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 6 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

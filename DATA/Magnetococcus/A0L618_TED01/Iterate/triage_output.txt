@@ -1,0 +1,112 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L618_TED01/Iterate
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.70 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+6	5	Desulfovibrionaceae
+5	5	Desulfovibrionaceae.
+4	5	Geobacteraceae
+3	5	Magnetococcaceae
+4	4	Geobacterales
+3	4	Magnetococcales
+14	4	Desulfovibrionales
+4	3	Desulfuromonadia
+3	3	Magnetococcia
+14	3	Desulfovibrionia
+4	2	Pseudomonadota
+19	2	Thermodesulfobacteriota
+25	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1Y2K2L5	SPORE PROTEIN YKVP/CGEB G     69.9    1.2e-15   1   1.5   0.1
+	Iterate                   	     8	   137	    68.9
+	PF13524	Glyco_trans_1_2 	   150	   296	    77.9
+
+A0A2P5HX15	UNCHARACTERIZED PROTEIN {     37.4    1.3e-05   6   8.1   2.1
+	Iterate                   	   167	   200	     5.2
+
+A0A9P3LVG9	UNCHARACTERIZED PROTEIN {     37.8    9.8e-06   4   6.6   0.0
+	Iterate                   	   186	   231	     7.4
+
+A0L5A5	SPORE PROTEIN YKVP/CGEB GLYCO     42.1    4.6e-07   1   1.6   0.0
+	Iterate                   	    22	   136	    41.0
+	PF13524	Glyco_trans_1_2 	   154	   297	    83.3
+
+A0L618	SPORE PROTEIN YKVP/CGEB GLYCO    308.1    3.1e-89   1   1.8   2.0
+	Iterate                   	    15	   147	   307.7
+	PF13524	Glyco_trans_1_2 	   154	   305	    41.3
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Y2K2L5.1	AF-A0A1Y2K2L5-F1-model_v4_TED01:7-141_290-300	1	AF-A0A1Y2K2L5-F1-model_v4_TED01	7-300	100.0%
+A0A1Y2K2L5.1	AF-A0A1Y2K2L5-F1-model_v4_TED02:157-285	1	AF-A0A1Y2K2L5-F1-model_v4_TED02	157-285	0
+A0A1Y2K2L5.1	AF-A0A1Y2K2L5-F1-model_v4_TED03:312-442	1	AF-A0A1Y2K2L5-F1-model_v4_TED03	312-442	0
+A0L5A5.1	AF-A0L5A5-F1-model_v4_TED01:5-142_291-300	1	AF-A0L5A5-F1-model_v4_TED01	5-300	100.0%
+A0L5A5.1	AF-A0L5A5-F1-model_v4_TED02:158-287	1	AF-A0L5A5-F1-model_v4_TED02	158-287	0
+A0L5A5.1	AF-A0L5A5-F1-model_v4_TED03:341-425	1	AF-A0L5A5-F1-model_v4_TED03	341-425	0
+A0L618.1	AF-A0L618-F1-model_v4_TED01:15-147	1	AF-A0L618-F1-model_v4_TED01	15-147	100.0%
+A0L618.1	AF-A0L618-F1-model_v4_TED02:166-294	1	AF-A0L618-F1-model_v4_TED02	166-294	0
+A0L618.1	AF-A0L618-F1-model_v4_TED03:325-451	1	AF-A0L618-F1-model_v4_TED03	325-451	0
+B3EBM9.1	AF-B3EBM9-F1-model_v4_TED01:9-152	1	AF-B3EBM9-F1-model_v4_TED01	9-152	100.0%
+B3EBM9.1	AF-B3EBM9-F1-model_v4_TED02:171-301_320-331	1	AF-B3EBM9-F1-model_v4_TED02	171-331	0
+B3EBM9.1	AF-B3EBM9-F1-model_v4_TED03:352-585	1	AF-B3EBM9-F1-model_v4_TED03	352-585	0
+B3EBM9.1	AF-B3EBM9-F1-model_v4_TED04:592-669	1	AF-B3EBM9-F1-model_v4_TED04	592-669	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 12 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF07719	TPR_2	10	0.83	0.55
+PF13176	TPR_7	10	0.83	0.55
+PF13181	TPR_8	10	0.83	0.55
+PF13432	TPR_16	10	0.83	0.55
+PF14559	TPR_19	10	0.83	0.55
+PF13174	TPR_6	10	0.83	0.55
+PF01075	Glyco_transf_9	10	0.83	0.55
+PF13424	TPR_12	10	0.83	0.55
+PF13524	Glyco_trans_1_2	10	0.83	0.55
+
+--- End STRING ---

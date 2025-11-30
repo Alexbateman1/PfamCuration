@@ -1,0 +1,320 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LB67_TED04/Iterate/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.90 25.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+8	6	Legionella.
+9	5	Paracoccaceae
+8	5	Legionellaceae
+8	4	Legionellales
+15	4	Rhodobacterales
+26	3	Alphaproteobacteria
+17	3	Actinomycetes
+12	3	Gammaproteobacteria
+45	2	Pseudomonadota
+18	2	Actinomycetota
+56	1	Pseudomonadati
+18	1	Bacillati
+74	0	Bacteria
+Total of 75 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1H8TJ13	AAA+ ATPASE DOMAIN-CONTAI     98.9    6.2e-25   1   1.7   0.1
+	Iterate                   	   556	   647	    97.7
+	PF13482	RNase_H_2       	   312	   485	    95.3
+	PF13604	AAA_30          	   703	   875	    44.5
+	PF13245	AAA_19          	   704	   870	    30.4
+	PF13086	AAA_11          	   775	   871	    35.2
+	PF13087	AAA_12          	   881	  1072	    93.2
+
+A0A1H9PJR4	AAA+ ATPASE DOMAIN-CONTAI     96.6    3.2e-24   1   2.9   0.1
+	Iterate                   	   560	   650	    92.8
+	PF13482	RNase_H_2       	   312	   489	    85.8
+	PF13604	AAA_30          	   701	   878	    46.5
+	PF13245	AAA_19          	   705	   873	    37.7
+	PF13086	AAA_11          	   799	   874	    38.9
+	PF13087	AAA_12          	   892	  1074	    78.8
+
+A0A365TPT7	NUCLEASE {ECO:0000313|EMB     98.1    1.1e-24   1   1.7   0.1
+	Iterate                   	   556	   647	    96.9
+	PF13482	RNase_H_2       	   312	   485	    90.3
+	PF13604	AAA_30          	   703	   876	    42.6
+	PF13245	AAA_19          	   704	   870	    31.1
+	PF13086	AAA_11          	   775	   871	    39.5
+	PF13087	AAA_12          	   886	  1072	    84.1
+
+A0A5C6TQ54	TM0106 FAMILY RECB-LIKE P     96.6    3.4e-24   1   1.7   0.1
+	Iterate                   	   557	   648	    95.4
+	PF13482	RNase_H_2       	   313	   486	    91.1
+	PF13604	AAA_30          	   703	   873	    44.7
+	PF13245	AAA_19          	   705	   868	    30.5
+	PF13086	AAA_11          	   795	   869	    34.9
+	PF13087	AAA_12          	   876	  1070	    76.6
+
+V4RT94	SUPERFAMILY I DNA AND RNA HEL     96.8    2.8e-24   1   1.9   0.0
+	Iterate                   	   556	   647	    95.4
+	PF13482	RNase_H_2       	   312	   485	    97.7
+	PF13604	AAA_30          	   702	   870	    46.7
+	PF13245	AAA_19          	   704	   865	    35.8
+	PF05127	NAT10_TcmA_helicase	   717	   855	    26.8
+	PF13086	AAA_11          	   776	   866	    32.2
+	PF13087	AAA_12          	   874	  1067	    84.9
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS3633521 (E-value: 4.7e-14, Score: 57.5)
+Mentioned as: LPC_2785
+Description: putative RNA helicase
+Organism: Legionella pneumophila str. Corby
+PMID: 20236513
+Source: EuropePMC
+Title: Legionella pneumophila pangenome reveals strain-specific virulence factors
+Journal: BMC genomics (2010)
+Snippet: alpA (lpa00278, LPC_0208). In the DT2 island, both strains share a putative RNA helicase (lpa00835, LPC_2785), two putative restriction enzymes (LPC_2788, LPC_2790, lpa00832, and lpa_00829) and the set of the tra and trb operons. Glckner and collaborators [ 7 ] described that Trb-1 (here DT2) is
+
+================================================================================
+Protein: VIMSS3009147 (E-value: 8.8e-07, Score: 34.2)
+Mentioned as: BL107_12101
+Description: Superfamily I DNA/RNA helicase
+Organism: Synechococcus sp. BL107
+PMID: 27790194
+Source: EuropePMC
+Title: A Sample-to-Sequence Protocol for Genus Targeted Transcriptomic Profiling: Application to Marine <i>Synechococcus</i>
+Journal: Frontiers in microbiology (2016)
+Snippet: 116,065,736 UMPS; uridine monophosphate synthetase 1.69 0.20 BL107_16080 116,066,585 Putative arylsulfatase regulatory protein 1.02 0.28 BL107_12101 116,065,052 Superfamily I DNA/RNA helicase 2.57 0.18 BL107_14195 116,066,208 Putative oxidoreductase 1.90 0.51 tRNA BL107_t08537 2.27 0.64 BL107_t17419 2.27 0.68 BL107_t09927 2.15 0.61 BL107_t10374 1.91 0.61 BL107_t12185 1.89 0.66 BL107_t17423
+
+================================================================================
+Protein: VIMSS3345446 (E-value: 0.00011, Score: 27.5)
+Mentioned as: MAB_2296
+Description: 30S ribosomal protein S1
+Organism: Mycobacterium abscessus ATCC 19977
+PMID: 38238893
+Source: EuropePMC
+Title: Mycobacterium abscessus extracellular vesicles increase mycobacterial resistance to clarithromycin in vitro
+Journal: Proteomics (2024)
+
+================================================================================
+Protein: A0QYY6 (E-value: 0.00025, Score: 26.3)
+Mentioned as: A0QYY6
+Description: Small ribosomal subunit protein bS1
+Organism: Mycolicibacterium smegmatis (strain ATCC 700084 / mc(2)155)
+  SwissProt:  - Small ribosomal subunit protein bS1; 30S ribosomal protein S1
+PMID: 37341639
+Source: EuropePMC
+Title: Interactome Analysis Identifies MSMEI_3879 as a Substrate of Mycolicibacterium smegmatis ClpC1
+Journal: Microbiology spectrum (2023)
+Snippet: 0.24 0.18 0.33 0.28 A0QVM7 infB , MSMEG_2628, MSMEI_2565 Translation initiation factor IF-2 0.46 0.46 A0QYY6 rpsA , MSMEG_3833, MSMEI_3743, LJ00_19040 30S ribosomal protein S1 0.16 0.2 A0R7F7 rpsR2 , rpsR1 , MSMEG_6895, MSMEI_6711 30S ribosomal protein S18 2 0.03 0.01 0.12 0.11 A0QSE0 rpsQ ,
+
+================================================================================
+Protein: A0QYY6 (E-value: 0.00025, Score: 26.3)
+Mentioned as: RS1_MYCS2
+Description: Small ribosomal subunit protein bS1
+Organism: Mycolicibacterium smegmatis (strain ATCC 700084 / mc(2)155)
+  SwissProt:  - Small ribosomal subunit protein bS1; 30S ribosomal protein S1
+PMID: 21835980
+Source: SwissProt
+Snippet: FUNCTION: Binds mRNA, facilitating recognition of most mRNAs by the 30S ribosomal subunit during translation initiation (By similarity). Plays a role in trans-translation; binds tmRNA (the product of the ssrA gene) (PubMed:25430994). Binds very poorly to pyrazinoic acid (POA), the active form of the prodrug pyrazinamide (PZA); POA does not disrupt trans-translation in this organism (PubMed:21835980). M.smegmatis is resistant to the antibiotic PZA (PubMed:25430994). In trans-translation Ala-amino...
+
+================================================================================
+Protein: A0QYY6 (E-value: 0.00025, Score: 26.3)
+Mentioned as: RS1_MYCS2
+Description: Small ribosomal subunit protein bS1
+Organism: Mycolicibacterium smegmatis (strain ATCC 700084 / mc(2)155)
+  SwissProt:  - Small ribosomal subunit protein bS1; 30S ribosomal protein S1
+PMID: 22590585
+Source: SwissProt
+Snippet: FUNCTION: Binds mRNA, facilitating recognition of most mRNAs by the 30S ribosomal subunit during translation initiation (By similarity). Plays a role in trans-translation; binds tmRNA (the product of the ssrA gene) (PubMed:25430994). Binds very poorly to pyrazinoic acid (POA), the active form of the prodrug pyrazinamide (PZA); POA does not disrupt trans-translation in this organism (PubMed:21835980). M.smegmatis is resistant to the antibiotic PZA (PubMed:25430994). In trans-translation Ala-amino...
+
+================================================================================
+Protein: VIMSS539965 (E-value: 0.00037, Score: 25.8)
+Mentioned as: Mb1656
+Description: PROBABLE RIBOSOMAL PROTEIN S1 RPSA
+Organism: Mycobacterium bovis AF2122/97
+PMID: 40303120
+Source: EuropePMC
+Title: Phylogenetically Informative Mutations in Drug Resistance Genes of Human-Infecting &lt;i&gt;Mycobacterium bovis&lt;/i&gt;
+Journal: Transboundary and emerging diseases (2024)
+
+================================================================================
+Protein: VIMSS539965 (E-value: 0.00037, Score: 25.8)
+Mentioned as: Mb1656
+Description: PROBABLE RIBOSOMAL PROTEIN S1 RPSA
+Organism: Mycobacterium bovis AF2122/97
+PMID: 36032666
+Source: EuropePMC
+Title: Towards Reverse Vaccinology for Bovine TB: High Throughput Expression of Full Length Recombinant <i>Mycobacterium bovis</i> Proteins
+Journal: Frontiers in molecular biosciences (2022)
+Snippet: Insect ++ + Mb0670 50s ribosomal protein l10 rplJ E. coli & Insect +++ ++ Mb1656 30s ribosomal protein s1 rpsA E. coli & Insect +++ +++ Virulence related proteins Mb3441 Possible antitoxin VapB47 Insect +++ +++ Mb2891 Toxin RelG E. coli & Insect +++ -
+
+================================================================================
+Protein: VIMSS109548 (E-value: 0.00037, Score: 25.7)
+Mentioned as: MT1666
+Description: 30S ribosomal protein S1
+Organism: Mycobacterium tuberculosis CDC1551
+PMID: 12034849
+Source: EuropePMC
+Title: Conserved codon composition of ribosomal protein coding genes in Escherichia coli, Mycobacterium tuberculosis and Saccharomyces cerevisiae: lessons from supervised machine learning in functional genomics
+Journal: Nucleic acids research (2002)
+Snippet: MT0742, MT0744, MT0681, MT0062 Small subunit 22 MT1666, MT0727, MT3566, MT0710, MT3567, MT2117, MT0742.1, MT2855, MT2977, MT0737, MT2116, MT0061, MT0732,
+
+================================================================================
+Protein: VIMSS535261 (E-value: 0.0004, Score: 25.6)
+Mentioned as: MAP1325
+Description: RpsA
+
+... (truncated, 140 total lines)
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A017HIV2.1	AF-A0A017HIV2-F1-model_v4_TED01:3-203	1	AF-A0A017HIV2-F1-model_v4_TED01	3-203	0
+A0A017HIV2.1	AF-A0A017HIV2-F1-model_v4_TED02:233-291	1	AF-A0A017HIV2-F1-model_v4_TED02	233-291	0
+A0A017HIV2.1	AF-A0A017HIV2-F1-model_v4_TED03:305-496	1	AF-A0A017HIV2-F1-model_v4_TED03	305-496	0
+A0A017HIV2.1	AF-A0A017HIV2-F1-model_v4_TED04:514-655	1	AF-A0A017HIV2-F1-model_v4_TED04	514-655	97.8%
+A0A017HIV2.1	AF-A0A017HIV2-F1-model_v4_TED05:682-911	1	AF-A0A017HIV2-F1-model_v4_TED05	682-911	0
+A0A077LHQ4.1	AF-A0A077LHQ4-F1-model_v4_TED01:43-130	1	AF-A0A077LHQ4-F1-model_v4_TED01	43-130	100.0%
+A0A077LHQ4.1	AF-A0A077LHQ4-F1-model_v4_TED02:157-384	1	AF-A0A077LHQ4-F1-model_v4_TED02	157-384	0
+A0A077LHQ4.1	AF-A0A077LHQ4-F1-model_v4_TED03:392-600	1	AF-A0A077LHQ4-F1-model_v4_TED03	392-600	0
+A0A081NAR8.1	AF-A0A081NAR8-F1-model_v4_TED01:3-201	1	AF-A0A081NAR8-F1-model_v4_TED01	3-201	0
+A0A081NAR8.1	AF-A0A081NAR8-F1-model_v4_TED02:232-290	1	AF-A0A081NAR8-F1-model_v4_TED02	232-290	0
+A0A081NAR8.1	AF-A0A081NAR8-F1-model_v4_TED03:309-515	1	AF-A0A081NAR8-F1-model_v4_TED03	309-515	0
+A0A081NAR8.1	AF-A0A081NAR8-F1-model_v4_TED05:704-936	1	AF-A0A081NAR8-F1-model_v4_TED05	704-936	0
+A0A081NAR8.1	AF-A0A081NAR8-F1-model_v4_TED06:944-1142	1	AF-A0A081NAR8-F1-model_v4_TED06	944-1142	0
+A0A081NAR8.1	AF-A0A081NAR8-F1-model_v4_TED04:600-685	1	AF-A0A081NAR8-F1-model_v4_TED04	600-685	88.7%
+A0A086PDS4.1	AF-A0A086PDS4-F1-model_v4_TED01:2-252	1	AF-A0A086PDS4-F1-model_v4_TED01	2-252	0
+A0A086PDS4.1	AF-A0A086PDS4-F1-model_v4_TED02:257-311	1	AF-A0A086PDS4-F1-model_v4_TED02	257-311	0
+A0A086PDS4.1	AF-A0A086PDS4-F1-model_v4_TED03:325-525	1	AF-A0A086PDS4-F1-model_v4_TED03	325-525	0
+A0A086PDS4.1	AF-A0A086PDS4-F1-model_v4_TED04:576-669	1	AF-A0A086PDS4-F1-model_v4_TED04	576-669	97.8%
+A0A086PDS4.1	AF-A0A086PDS4-F1-model_v4_TED05:697-806_816-920	1	AF-A0A086PDS4-F1-model_v4_TED05	697-920	0
+A0A086PDS4.1	AF-A0A086PDS4-F1-model_v4_TED06:928-1117	1	AF-A0A086PDS4-F1-model_v4_TED06	928-1117	0
+A0A0B2BS07.1	AF-A0A0B2BS07-F1-model_v4_TED01:3-21_47-197	1	AF-A0A0B2BS07-F1-model_v4_TED01	3-197	0
+A0A0B2BS07.1	AF-A0A0B2BS07-F1-model_v4_TED02:232-293	1	AF-A0A0B2BS07-F1-model_v4_TED02	232-293	0
+A0A0B2BS07.1	AF-A0A0B2BS07-F1-model_v4_TED03:307-498	1	AF-A0A0B2BS07-F1-model_v4_TED03	307-498	0
+A0A0B2BS07.1	AF-A0A0B2BS07-F1-model_v4_TED04:545-691	1	AF-A0A0B2BS07-F1-model_v4_TED04	545-691	100.0%
+A0A0B2BS07.1	AF-A0A0B2BS07-F1-model_v4_TED05:703-926	1	AF-A0A0B2BS07-F1-model_v4_TED05	703-926	0
+A0A0B2BS07.1	AF-A0A0B2BS07-F1-model_v4_TED06:935-1130	1	AF-A0A0B2BS07-F1-model_v4_TED06	935-1130	0
+A0A0C1IND8.1	AF-A0A0C1IND8-F1-model_v4_TED01:3-201	1	AF-A0A0C1IND8-F1-model_v4_TED01	3-201	0
+A0A0C1IND8.1	AF-A0A0C1IND8-F1-model_v4_TED02:252-297	1	AF-A0A0C1IND8-F1-model_v4_TED02	252-297	0
+A0A0C1IND8.1	AF-A0A0C1IND8-F1-model_v4_TED03:311-515	1	AF-A0A0C1IND8-F1-model_v4_TED03	311-515	0
+A0A0C1IND8.1	AF-A0A0C1IND8-F1-model_v4_TED04:592-679	1	AF-A0A0C1IND8-F1-model_v4_TED04	592-679	100.0%
+A0A0C1IND8.1	AF-A0A0C1IND8-F1-model_v4_TED05:701-930	1	AF-A0A0C1IND8-F1-model_v4_TED05	701-930	0
+A0A0C1IND8.1	AF-A0A0C1IND8-F1-model_v4_TED06:938-1129	1	AF-A0A0C1IND8-F1-model_v4_TED06	938-1129	0
+A0A0D6JJE4.1	AF-A0A0D6JJE4-F1-model_v4_TED01:43-203	1	AF-A0A0D6JJE4-F1-model_v4_TED01	43-203	0
+A0A0D6JJE4.1	AF-A0A0D6JJE4-F1-model_v4_TED02:235-299	1	AF-A0A0D6JJE4-F1-model_v4_TED02	235-299	0
+A0A0D6JJE4.1	AF-A0A0D6JJE4-F1-model_v4_TED03:312-516	1	AF-A0A0D6JJE4-F1-model_v4_TED03	312-516	0
+A0A0D6JJE4.1	AF-A0A0D6JJE4-F1-model_v4_TED04:547-683	1	AF-A0A0D6JJE4-F1-model_v4_TED04	547-683	100.0%
+A0A0D6JJE4.1	AF-A0A0D6JJE4-F1-model_v4_TED05:706-930	1	AF-A0A0D6JJE4-F1-model_v4_TED05	706-930	0
+A0A0D6JJE4.1	AF-A0A0D6JJE4-F1-model_v4_TED06:938-1128	1	AF-A0A0D6JJE4-F1-model_v4_TED06	938-1128	0
+A0A0F5LBJ9.1	AF-A0A0F5LBJ9-F1-model_v4_TED01:9-27_44-199	1	AF-A0A0F5LBJ9-F1-model_v4_TED01	9-199	0
+A0A0F5LBJ9.1	AF-A0A0F5LBJ9-F1-model_v4_TED02:233-287	1	AF-A0A0F5LBJ9-F1-model_v4_TED02	233-287	0
+A0A0F5LBJ9.1	AF-A0A0F5LBJ9-F1-model_v4_TED03:301-499	1	AF-A0A0F5LBJ9-F1-model_v4_TED03	301-499	0
+A0A0F5LBJ9.1	AF-A0A0F5LBJ9-F1-model_v4_TED04:555-644	1	AF-A0A0F5LBJ9-F1-model_v4_TED04	555-644	97.8%
+A0A0F5LBJ9.1	AF-A0A0F5LBJ9-F1-model_v4_TED05:652-894	1	AF-A0A0F5LBJ9-F1-model_v4_TED05	652-894	0
+A0A0F5LBJ9.1	AF-A0A0F5LBJ9-F1-model_v4_TED06:902-1089	1	AF-A0A0F5LBJ9-F1-model_v4_TED06	902-1089	0
+A0A0H5D096.1	AF-A0A0H5D096-F1-model_v4_TED01:3-204	1	AF-A0A0H5D096-F1-model_v4_TED01	3-204	0
+A0A0H5D096.1	AF-A0A0H5D096-F1-model_v4_TED02:234-294	1	AF-A0A0H5D096-F1-model_v4_TED02	234-294	0
+A0A0H5D096.1	AF-A0A0H5D096-F1-model_v4_TED03:308-507	1	AF-A0A0H5D096-F1-model_v4_TED03	308-507	0
+A0A0H5D096.1	AF-A0A0H5D096-F1-model_v4_TED04:561-656	1	AF-A0A0H5D096-F1-model_v4_TED04	561-656	98.9%
+A0A0H5D096.1	AF-A0A0H5D096-F1-model_v4_TED05:663-902	1	AF-A0A0H5D096-F1-model_v4_TED05	663-902	0
+A0A0H5D096.1	AF-A0A0H5D096-F1-model_v4_TED06:910-1100	1	AF-A0A0H5D096-F1-model_v4_TED06	910-1100	0
+A0A0K1JKL8.1	AF-A0A0K1JKL8-F1-model_v4_TED01:46-201	1	AF-A0A0K1JKL8-F1-model_v4_TED01	46-201	0
+A0A0K1JKL8.1	AF-A0A0K1JKL8-F1-model_v4_TED02:235-293	1	AF-A0A0K1JKL8-F1-model_v4_TED02	235-293	0
+A0A0K1JKL8.1	AF-A0A0K1JKL8-F1-model_v4_TED03:306-508	1	AF-A0A0K1JKL8-F1-model_v4_TED03	306-508	0
+A0A0K1JKL8.1	AF-A0A0K1JKL8-F1-model_v4_TED04:580-659	1	AF-A0A0K1JKL8-F1-model_v4_TED04	580-659	87.0%
+A0A0K1JKL8.1	AF-A0A0K1JKL8-F1-model_v4_TED05:666-897	1	AF-A0A0K1JKL8-F1-model_v4_TED05	666-897	0
+A0A0K1JKL8.1	AF-A0A0K1JKL8-F1-model_v4_TED06:905-1098	1	AF-A0A0K1JKL8-F1-model_v4_TED06	905-1098	0
+A0A0K8R1V1.1	AF-A0A0K8R1V1-F1-model_v4_TED01:3-197	1	AF-A0A0K8R1V1-F1-model_v4_TED01	3-197	0
+A0A0K8R1V1.1	AF-A0A0K8R1V1-F1-model_v4_TED03:305-509	1	AF-A0A0K8R1V1-F1-model_v4_TED03	305-509	0
+A0A0K8R1V1.1	AF-A0A0K8R1V1-F1-model_v4_TED04:597-673	1	AF-A0A0K8R1V1-F1-model_v4_TED04	597-673	87.4%
+A0A0K8R1V1.1	AF-A0A0K8R1V1-F1-model_v4_TED05:702-926	1	AF-A0A0K8R1V1-F1-model_v4_TED05	702-926	0
+A0A0K8R1V1.1	AF-A0A0K8R1V1-F1-model_v4_TED06:934-1127	1	AF-A0A0K8R1V1-F1-model_v4_TED06	934-1127	0
+A0A0K8R1V1.1	AF-A0A0K8R1V1-F1-model_v4_TED02:228-292	1	AF-A0A0K8R1V1-F1-model_v4_TED02	228-292	0
+A0A0L6CG99.1	AF-A0A0L6CG99-F1-model_v4_TED01:3-201	1	AF-A0A0L6CG99-F1-model_v4_TED01	3-201	0
+A0A0L6CG99.1	AF-A0A0L6CG99-F1-model_v4_TED02:231-293	1	AF-A0A0L6CG99-F1-model_v4_TED02	231-293	0
+A0A0L6CG99.1	AF-A0A0L6CG99-F1-model_v4_TED03:306-508	1	AF-A0A0L6CG99-F1-model_v4_TED03	306-508	0
+A0A0L6CG99.1	AF-A0A0L6CG99-F1-model_v4_TED05:671-899	1	AF-A0A0L6CG99-F1-model_v4_TED05	671-899	0
+A0A0L6CG99.1	AF-A0A0L6CG99-F1-model_v4_TED06:907-1096	1	AF-A0A0L6CG99-F1-model_v4_TED06	907-1096	0
+A0A0L6CG99.1	AF-A0A0L6CG99-F1-model_v4_TED04:580-661	1	AF-A0A0L6CG99-F1-model_v4_TED04	580-661	87.2%
+A0A0Q7RRQ6.1	AF-A0A0Q7RRQ6-F1-model_v4_TED01:32-170	1	AF-A0A0Q7RRQ6-F1-model_v4_TED01	32-170	0
+A0A0Q7RRQ6.1	AF-A0A0Q7RRQ6-F1-model_v4_TED02:218-279	1	AF-A0A0Q7RRQ6-F1-model_v4_TED02	218-279	0
+A0A0Q7RRQ6.1	AF-A0A0Q7RRQ6-F1-model_v4_TED03:293-486	1	AF-A0A0Q7RRQ6-F1-model_v4_TED03	293-486	0
+A0A0Q7RRQ6.1	AF-A0A0Q7RRQ6-F1-model_v4_TED04:576-650	1	AF-A0A0Q7RRQ6-F1-model_v4_TED04	576-650	85.2%
+A0A0Q7RRQ6.1	AF-A0A0Q7RRQ6-F1-model_v4_TED05:675-902	1	AF-A0A0Q7RRQ6-F1-model_v4_TED05	675-902	0
+A0A0Q7RRQ6.1	AF-A0A0Q7RRQ6-F1-model_v4_TED06:910-1102	1	AF-A0A0Q7RRQ6-F1-model_v4_TED06	910-1102	0
+A0A0Q7TIZ7.1	AF-A0A0Q7TIZ7-F1-model_v4_TED01:8-15_35-190	1	AF-A0A0Q7TIZ7-F1-model_v4_TED01	8-190	0
+A0A0Q7TIZ7.1	AF-A0A0Q7TIZ7-F1-model_v4_TED02:220-282	1	AF-A0A0Q7TIZ7-F1-model_v4_TED02	220-282	0
+A0A0Q7TIZ7.1	AF-A0A0Q7TIZ7-F1-model_v4_TED03:295-499	1	AF-A0A0Q7TIZ7-F1-model_v4_TED03	295-499	0
+A0A0Q7TIZ7.1	AF-A0A0Q7TIZ7-F1-model_v4_TED05:681-906	1	AF-A0A0Q7TIZ7-F1-model_v4_TED05	681-906	0
+A0A0Q7TIZ7.1	AF-A0A0Q7TIZ7-F1-model_v4_TED06:914-1109	1	AF-A0A0Q7TIZ7-F1-model_v4_TED06	914-1109	0
+A0A0Q7TIZ7.1	AF-A0A0Q7TIZ7-F1-model_v4_TED04:578-656	1	AF-A0A0Q7TIZ7-F1-model_v4_TED04	578-656	88.6%
+A0A0Q8XJT1.1	AF-A0A0Q8XJT1-F1-model_v4_TED01:3-202	1	AF-A0A0Q8XJT1-F1-model_v4_TED01	3-202	0
+A0A0Q8XJT1.1	AF-A0A0Q8XJT1-F1-model_v4_TED02:231-290	1	AF-A0A0Q8XJT1-F1-model_v4_TED02	231-290	0
+A0A0Q8XJT1.1	AF-A0A0Q8XJT1-F1-model_v4_TED04:573-660	1	AF-A0A0Q8XJT1-F1-model_v4_TED04	573-660	96.7%
+A0A0Q8XJT1.1	AF-A0A0Q8XJT1-F1-model_v4_TED05:667-910	1	AF-A0A0Q8XJT1-F1-model_v4_TED05	667-910	0
+A0A0Q8XJT1.1	AF-A0A0Q8XJT1-F1-model_v4_TED06:918-1108	1	AF-A0A0Q8XJT1-F1-model_v4_TED06	918-1108	0
+A0A0Q8XJT1.1	AF-A0A0Q8XJT1-F1-model_v4_TED03:304-499	1	AF-A0A0Q8XJT1-F1-model_v4_TED03	304-499	0
+A0A0S2JEU3.1	AF-A0A0S2JEU3-F1-model_v4_TED01:50-198	1	AF-A0A0S2JEU3-F1-model_v4_TED01	50-198	0
+A0A0S2JEU3.1	AF-A0A0S2JEU3-F1-model_v4_TED02:237-294	1	AF-A0A0S2JEU3-F1-model_v4_TED02	237-294	0
+A0A0S2JEU3.1	AF-A0A0S2JEU3-F1-model_v4_TED03:312-518	1	AF-A0A0S2JEU3-F1-model_v4_TED03	312-518	0
+A0A0S2JEU3.1	AF-A0A0S2JEU3-F1-model_v4_TED05:718-943	1	AF-A0A0S2JEU3-F1-model_v4_TED05	718-943	0
+A0A0S2JEU3.1	AF-A0A0S2JEU3-F1-model_v4_TED06:950-1142	1	AF-A0A0S2JEU3-F1-model_v4_TED06	950-1142	0
+A0A0S2JEU3.1	AF-A0A0S2JEU3-F1-model_v4_TED04:605-689	1	AF-A0A0S2JEU3-F1-model_v4_TED04	605-689	87.6%
+A0A0T5P2F0.1	AF-A0A0T5P2F0-F1-model_v4_TED01:3-199	1	AF-A0A0T5P2F0-F1-model_v4_TED01	3-199	0
+A0A0T5P2F0.1	AF-A0A0T5P2F0-F1-model_v4_TED02:229-287	1	AF-A0A0T5P2F0-F1-model_v4_TED02	229-287	0
+A0A0T5P2F0.1	AF-A0A0T5P2F0-F1-model_v4_TED03:301-499	1	AF-A0A0T5P2F0-F1-model_v4_TED03	301-499	0
+A0A0T5P2F0.1	AF-A0A0T5P2F0-F1-model_v4_TED04:552-645	1	AF-A0A0T5P2F0-F1-model_v4_TED04	552-645	97.8%
+A0A0T5P2F0.1	AF-A0A0T5P2F0-F1-model_v4_TED05:674-901	1	AF-A0A0T5P2F0-F1-model_v4_TED05	674-901	0
+A0A0T5P2F0.1	AF-A0A0T5P2F0-F1-model_v4_TED06:909-1093	1	AF-A0A0T5P2F0-F1-model_v4_TED06	909-1093	0
+A0A0W0TM10.1	AF-A0A0W0TM10-F1-model_v4_TED01:3-200	1	AF-A0A0W0TM10-F1-model_v4_TED01	3-200	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 23 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF01757	Acyl_transf_3	17	0.74	0.54
+
+--- End STRING ---

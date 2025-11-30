@@ -1,0 +1,144 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LBP9_TED01/Iterate/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 31.80;
+NC   26.90 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+6	6	Magnetococcus.
+6	6	Aquimarina.
+3	6	Magnetofaba.
+9	5	Magnetococcaceae
+6	5	Flavobacteriaceae
+9	4	Magnetococcales
+6	4	Flavobacteriales
+4	4	Burkholderiales
+9	3	Magnetococcia
+6	3	Flavobacteriia
+6	3	Betaproteobacteria
+6	2	Bacteroidota
+17	2	Pseudomonadota
+23	1	Pseudomonadati
+23	0	Bacteria
+Total of 23 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A554X0R6	UNCHARACTERIZED PROTEIN {    100.5    1.4e-25   1   1.0   0.1
+	Iterate                   	    11	    64	   100.3
+
+A0A927FIU6	UNCHARACTERIZED PROTEIN {     99.1    3.8e-25   1   1.0   0.1
+	Iterate                   	    11	    64	    98.9
+
+B8GKB4	NHL REPEAT CONTAINING PROTEIN    110.3    1.2e-28  10  12.1   4.2
+	Iterate                   	   127	   155	    13.5
+	PF01436	NHL             	    35	    62	      32
+	PF01436	NHL             	    82	   109	    37.6
+	PF01436	NHL             	   129	   156	    33.9
+	PF01436	NHL             	   176	   203	    32.1
+	PF01436	NHL             	   223	   250	    39.2
+	PF01436	NHL             	   270	   297	    33.2
+	PF01436	NHL             	   335	   362	    33.7
+	PF01436	NHL             	   382	   409	    37.6
+	PF01436	NHL             	   429	   456	    30.5
+	PF01436	NHL             	   476	   503	    32.1
+	PF01436	NHL             	   523	   550	    39.2
+	PF01436	NHL             	   570	   597	    33.2
+	PF00404	Dockerin_1      	   778	   831	    26.6
+
+K4HZY7	UNCHARACTERIZED PROTEIN {ECO:     99.6    2.7e-25   1   1.1   0.1
+	Iterate                   	    11	    64	    99.4
+
+Q8Y145	UNCHARACTERIZED PROTEIN {ECO:     99.2    3.6e-25   1   1.0   0.0
+	Iterate                   	     5	    58	    99.0
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS2231984 (E-value: 1.6e-08, Score: 39.2)
+Mentioned as: MAV_4238
+Description: serine/threonine-protein kinase PknD
+Organism: Mycobacterium avium 104
+PMID: 29740544
+Source: EuropePMC
+Title: Establishment of a Host-to-Host Transmission Model for <i>Mycobacterium avium</i> subsp. <i>hominissuis</i> Using <i>Caenorhabditis elegans</i> and Identification of Colonization-Associated Genes
+Journal: Frontiers in cellular and infection microbiology (2018)
+Snippet: 91.5 MAVA5_15805 Acyl-CoA dehydrogenase MAV_3616, Rv2724c, MAB_3040c/120 n N-terminus G5 90.1 MAVA5_18755 Serine/threonine protein kinase MAV_4238, Rv0931c/96 n C-terminus G10 89.3 MAVA5_04860 Major facilitator transporter MAV_1023, Rv2456c, MAB_3449c/146 n N-terminus D10 88.3 MAVA5_03005 Alcohol dehydrogenase MAV_0705, Rv0761c, MAB_4560/ middle of gene H3 88.0 MAVA5_15805 Acyl-CoA dehydrogenase
+
+================================================================================
+Protein: VIMSS2231984 (E-value: 1.6e-08, Score: 39.2)
+Mentioned as: MAV_4238
+Description: serine/threonine-protein kinase PknD
+Organism: Mycobacterium avium 104
+PMID: 25429354
+Source: EuropePMC
+Title: Mycobacterium tuberculosis Serine/Threonine Protein Kinases
+Journal: Microbiology spectrum (2014)
+Snippet: MMAR_0713 MMAR_1982 MMAR_1794 MMAR_1423 MMAR_2576 MMAR_32U MMAR_4174 MMAR_2444 MMAR_2408 MMAR_4156 MMAR_2941 MMAR_4171 Mav MAV_0019 MAV_0017 MAV_4238 MAV_3145 MAV_4751 MAV_1417 MAV_2318 MAV_2158 Map MAP0018C MAP0016C MAP3387C MAP1332 MAP3893C MAP2026 MAP1914 MAP2031C MAP2504 Msmeg MSMEG_0030 MSMEG_0028 MSMEG_0886 MSMEG_0786 MSMEG_4366 MSMEG_5513 MSMEG_0529 MSMEG_4243 MSMEG_3677 Mle ML0017 ML0016 ML0304 ML0897
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A2P8NDJ4.1	AF-A0A2P8NDJ4-F1-model_v4_TED01:59-101	1	AF-A0A2P8NDJ4-F1-model_v4_TED01	59-101	80.8%
+A0A315BLI0.1	AF-A0A315BLI0-F1-model_v4_TED01:6-65	1	AF-A0A315BLI0-F1-model_v4_TED01	6-65	100.0%
+A0A504IY29.1	AF-A0A504IY29-F1-model_v4_TED01:10-78	1	AF-A0A504IY29-F1-model_v4_TED01	10-78	0
+A0A504IY29.1	AF-A0A504IY29-F1-model_v4_TED02:147-212	1	AF-A0A504IY29-F1-model_v4_TED02	147-212	0
+A0A504J2T9.1	AF-A0A504J2T9-F1-model_v4_TED01:34-100	1	AF-A0A504J2T9-F1-model_v4_TED01	34-100	58.8%
+A0A504J9Q6.1	AF-A0A504J9Q6-F1-model_v4_TED01:5-65	1	AF-A0A504J9Q6-F1-model_v4_TED01	5-65	100.0%
+A0A553FAX4.1	AF-A0A553FAX4-F1-model_v4_TED01:7-59	1	AF-A0A553FAX4-F1-model_v4_TED01	7-59	100.0%
+A0A554VBK9.1	AF-A0A554VBK9-F1-model_v4_TED01:9-72	1	AF-A0A554VBK9-F1-model_v4_TED01	9-72	0
+A0A554VBK9.1	AF-A0A554VBK9-F1-model_v4_TED02:80-132	1	AF-A0A554VBK9-F1-model_v4_TED02	80-132	100.0%
+A0A554X0R6.1	AF-A0A554X0R6-F1-model_v4_TED01:10-66	1	AF-A0A554X0R6-F1-model_v4_TED01	10-66	100.0%
+A0A853I4E1.1	AF-A0A853I4E1-F1-model_v4_TED01:32-62	1	AF-A0A853I4E1-F1-model_v4_TED01	32-62	56.6%
+A0L789.1	AF-A0L789-F1-model_v4_TED01:8-59	1	AF-A0L789-F1-model_v4_TED01	8-59	100.0%
+Q8XSA4.1	AF-Q8XSA4-F1-model_v4_TED01:6-58	1	AF-Q8XSA4-F1-model_v4_TED01	6-58	98.1%
+Q8Y145.1	AF-Q8Y145-F1-model_v4_TED01:4-59	1	AF-Q8Y145-F1-model_v4_TED01	4-59	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 8 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF11994	DUF3489	7	0.88	0.53
+
+--- End STRING ---

@@ -1,0 +1,569 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L4R2_TED03/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.10 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RC   Function description for Q7M826
+RN   [1]
+RM   19170876
+RT   "Production, characterization and determination of the real catalytic
+RT   properties of the putative 'succinate dehydrogenase' from Wolinella
+RT   succinogenes.";
+RA   Juhnke H.D., Hiltscher H., Nasiri H.R., Schwalbe H., Lancaster C.R.;
+RL   Mol. Microbiol. 71:1088-1101(2009).
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+25	4	Oscillatoriophycideae
+19	4	Nostocales
+69	3	Cyanophyceae
+18	3	Epsilonproteobacteria
+69	2	Cyanobacteriota
+20	2	Bacillota
+18	2	Campylobacterota
+55	1	Pseudomonadati
+103	1	Bacillati
+158	0	Bacteria
+Total of 170 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+ID   MFRB_WOLSU              Reviewed;         319 AA.
+AC   Q7M826;
+DE   RecName: Full=8-methylmenaquinol:fumarate reductase iron-sulfur subunit {ECO:0000303|PubMed:19170876};
+DE            Short=MFR iron-sulfur subunit {ECO:0000303|PubMed:19170876};
+DE            EC=1.3.5.- {ECO:0000269|PubMed:19170876};
+GN   Name=sdhB {ECO:0000303|PubMed:19170876, ECO:0000312|EMBL:CAE10930.1};
+GN   OrderedLocusNames=WS1921 {ECO:0000312|EMBL:CAE10930.1};
+OS   Wolinella succinogenes (strain ATCC 29543 / DSM 1740 / CCUG 13145 / JCM
+OS   31913 / LMG 7466 / NCTC 11488 / FDC 602W) (Vibrio succinogenes).
+OC   Bacteria; Pseudomonadati; Campylobacterota; Epsilonproteobacteria;
+OC   Campylobacterales; Helicobacteraceae; Wolinella.
+OX   NCBI_TaxID=273121;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [LARGE SCALE GENOMIC DNA].
+RC   STRAIN=ATCC 29543 / DSM 1740 / CCUG 13145 / JCM 31913 / LMG 7466 /
+RC   NCTC 11488 / FDC 602W;
+RX   PubMed=14500908; DOI=10.1073/pnas.1932838100;
+RA   Baar C., Eppinger M., Raddatz G., Simon J., Lanz C., Klimmek O.,
+RA   Nandakumar R., Gross R., Rosinus A., Keller H., Jagtap P., Linke B.,
+RA   Meyer F., Lederer H., Schuster S.C.;
+RT   "Complete genome sequence and analysis of Wolinella succinogenes.";
+RL   Proc. Natl. Acad. Sci. U.S.A. 100:11690-11695(2003).
+RN   [2]
+RP   FUNCTION, CATALYTIC ACTIVITY, SUBCELLULAR LOCATION, SUBUNIT, AND
+RP   IDENTIFICATION BY MASS SPECTROMETRY.
+RC   STRAIN=ATCC 29543 / DSM 1740 / CCUG 13145 / JCM 31913 / LMG 7466 /
+RC   NCTC 11488 / FDC 602W;
+RX   PubMed=19170876; DOI=10.1111/j.1365-2958.2008.06581.x;
+RA   Juhnke H.D., Hiltscher H., Nasiri H.R., Schwalbe H., Lancaster C.R.;
+RT   "Production, characterization and determination of the real catalytic
+RT   properties of the putative 'succinate dehydrogenase' from Wolinella
+RT   succinogenes.";
+RL   Mol. Microbiol. 71:1088-1101(2009).
+CC   -!- FUNCTION: Iron-sulfur subunit of 8-methylmenaquinol:fumarate reductase
+CC       (MFR), that catalyzes the reduction of fumarate using 8-
+CC       methylmenaquinol-6 as electron donor. The complex shows no succinate
+CC       oxidation activity. Is involved in anaerobic metabolism.
+CC       {ECO:0000269|PubMed:19170876}.
+CC   -!- CATALYTIC ACTIVITY:
+CC       Reaction=8-methylmenaquinone-6 + succinate = 8-methylmenaquinol-6 +
+CC         fumarate; Xref=Rhea:RHEA:51848, ChEBI:CHEBI:29806, ChEBI:CHEBI:30031,
+CC         ChEBI:CHEBI:134356, ChEBI:CHEBI:134357;
+CC         Evidence={ECO:0000269|PubMed:19170876};
+CC   -!- COFACTOR:
+CC       Name=[2Fe-2S] cluster; Xref=ChEBI:CHEBI:190135;
+CC         Evidence={ECO:0000255|PROSITE-ProRule:PRU00465};
+CC       Note=Binds 1 2Fe-2S cluster. {ECO:0000255|PROSITE-ProRule:PRU00465};
+CC   -!- COFACTOR:
+CC       Name=[4Fe-4S] cluster; Xref=ChEBI:CHEBI:49883;
+CC         Evidence={ECO:0000255|PROSITE-ProRule:PRU00711};
+CC       Note=Binds 2 [4Fe-4S] cluster. {ECO:0000255|PROSITE-ProRule:PRU00711};
+CC   -!- SUBUNIT: The MFR complex is composed of three subunits: a flavoprotein
+CC       (SdhA), an iron-sulfur protein (SdhB), and one hydrophobic anchor
+CC       protein (SdhE). {ECO:0000269|PubMed:19170876}.
+CC   -!- SUBCELLULAR LOCATION: Periplasm {ECO:0000269|PubMed:19170876}. Cell
+CC       membrane {ECO:0000269|PubMed:19170876}; Peripheral membrane protein
+CC       {ECO:0000305|PubMed:19170876}; Periplasmic side
+CC       {ECO:0000269|PubMed:19170876}.
+CC   -!- SIMILARITY: Belongs to the succinate dehydrogenase/fumarate reductase
+CC       iron-sulfur protein family. {ECO:0000305}.
+DR   EMBL; BX571662; CAE10930.1; -; Genomic_DNA.
+DR   RefSeq; WP_011139713.1; NC_005090.1.
+DR   AlphaFoldDB; Q7M826; -.
+DR   SMR; Q7M826; -.
+DR   STRING; 273121.WS1921; -.
+DR   KEGG; wsu:WS1921; -.
+DR   eggNOG; COG0479; Bacteria.
+DR   HOGENOM; CLU_044838_3_1_7; -.
+DR   Proteomes; UP000000422; Chromosome.
+DR   GO; GO:0042597; C:periplasmic space; IEA:UniProtKB-SubCell.
+DR   GO; GO:0005886; C:plasma membrane; IEA:UniProtKB-SubCell.
+DR   GO; GO:0051537; F:2 iron, 2 sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0051539; F:4 iron, 4 sulfur cluster binding; IEA:UniProtKB-KW.
+DR   GO; GO:0009055; F:electron transfer activity; IEA:InterPro.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0016491; F:oxidoreductase activity; IEA:UniProtKB-KW.
+DR   GO; GO:0022904; P:respiratory electron transport chain; IEA:TreeGrafter.
+DR   GO; GO:0006099; P:tricarboxylic acid cycle; IEA:InterPro.
+DR   Gene3D; 3.10.20.30; -; 1.
+DR   Gene3D; 1.10.1060.10; Alpha-helical ferredoxin; 1.
+DR   InterPro; IPR036010; 2Fe-2S_ferredoxin-like_sf.
+DR   InterPro; IPR006058; 2Fe2S_fd_BS.
+DR   InterPro; IPR017896; 4Fe4S_Fe-S-bd.
+DR   InterPro; IPR012675; Beta-grasp_dom_sf.
+DR   InterPro; IPR009051; Helical_ferredxn.
+DR   InterPro; IPR053608; SDH/FR_iron-sulfur_subunit.
+DR   InterPro; IPR050573; SDH/FRD_Iron-Sulfur.
+DR   InterPro; IPR004489; Succ_DH/fum_Rdtase_Fe-S.
+DR   InterPro; IPR025192; Succ_DH/fum_Rdtase_N.
+DR   NCBIfam; TIGR00384; dhsB; 1.
+DR   NCBIfam; NF042952; MFR_FeS_SdhB; 1.
+DR   PANTHER; PTHR11921:SF29; SUCCINATE DEHYDROGENASE [UBIQUINONE] IRON-SULFUR SUBUNIT, MITOCHONDRIAL; 1.
+DR   PANTHER; PTHR11921; SUCCINATE DEHYDROGENASE IRON-SULFUR PROTEIN; 1.
+DR   Pfam; PF13085; Fer2_3; 1.
+DR   Pfam; PF13183; Fer4_8; 1.
+DR   SUPFAM; SSF54292; 2Fe-2S ferredoxin-like; 1.
+DR   SUPFAM; SSF46548; alpha-helical ferredoxin; 1.
+DR   PROSITE; PS00197; 2FE2S_FER_1; 1.
+DR   PROSITE; PS00198; 4FE4S_FER_1; 1.
+DR   PROSITE; PS51379; 4FE4S_FER_2; 2.
+PE   1: Evidence at protein level;
+KW   2Fe-2S; 4Fe-4S; Cell membrane; Electron transport; Iron; Iron-sulfur;
+KW   Membrane; Metal-binding; Oxidoreductase; Periplasm; Reference proteome;
+KW   Transport.
+FT   CHAIN           1..319
+FT                   /note="8-methylmenaquinol:fumarate reductase iron-sulfur
+FT                   subunit"
+FT                   /id="PRO_0000437541"
+FT   DOMAIN          1..96
+FT                   /note="2Fe-2S ferredoxin-type"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00465"
+FT   DOMAIN          139..168
+FT                   /note="4Fe-4S ferredoxin-type 1"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   DOMAIN          193..224
+FT                   /note="4Fe-4S ferredoxin-type 2"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         51
+FT                   /ligand="[2Fe-2S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:190135"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00465"
+FT   BINDING         56
+FT                   /ligand="[2Fe-2S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:190135"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00465"
+FT   BINDING         59
+FT                   /ligand="[2Fe-2S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:190135"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00465"
+FT   BINDING         71
+FT                   /ligand="[2Fe-2S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:190135"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00465"
+FT   BINDING         148
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         151
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         154
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         158
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         204
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         207
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         210
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+FT   BINDING         214
+FT                   /ligand="[4Fe-4S] cluster"
+FT                   /ligand_id="ChEBI:CHEBI:49883"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00711"
+SQ   SEQUENCE   319 AA;  35554 MW;  11F00A2944A55463 CRC64;
+//
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1S2LQY4	FUMARATE REDUCTASE IRON-S    105.5    4.6e-27   1   1.4   0.5
+	Iterate                   	   241	   316	   104.7
+	PF13085	Fer2_3          	     5	   111	    99.7
+	PF13237	Fer4_10         	   140	   215	      31
+	PF13183	Fer4_8          	   144	   218	    46.4
+	PF13534	Fer4_17         	   147	   219	    30.8
+	PF13187	Fer4_9          	   147	   218	    28.6
+	PF12838	Fer4_7          	   147	   218	    29.4
+
+A0A1S2M020	SUCCINATE DEHYDROGENASE {    107.5    1.1e-27   1   1.4   0.5
+	Iterate                   	   241	   316	   106.8
+	PF13085	Fer2_3          	     5	   111	   100.1
+	PF13237	Fer4_10         	   140	   215	    26.3
+	PF13183	Fer4_8          	   144	   218	    44.3
+	PF12838	Fer4_7          	   147	   218	    33.7
+	PF13534	Fer4_17         	   147	   219	    31.5
+	PF13187	Fer4_9          	   147	   218	    27.7
+
+A0A1S2M1S0	SUCCINATE DEHYDROGENASE {    107.5    1.1e-27   1   1.4   0.5
+	Iterate                   	   241	   316	   106.8
+	PF13085	Fer2_3          	     5	   111	   100.1
+	PF13237	Fer4_10         	   140	   215	    26.3
+	PF13183	Fer4_8          	   144	   218	    44.3
+	PF13534	Fer4_17         	   147	   219	    31.5
+	PF12838	Fer4_7          	   147	   218	    33.7
+	PF13187	Fer4_9          	   147	   218	    27.7
+
+A0A4Q1SXB0	FUMARATE REDUCTASE IRON-S    106.8    1.8e-27   1   1.3   0.6
+	Iterate                   	   241	   315	   106.1
+	PF13085	Fer2_3          	     5	   111	    93.7
+	PF13237	Fer4_10         	   140	   215	    29.9
+	PF13183	Fer4_8          	   144	   218	    42.5
+	PF13187	Fer4_9          	   147	   218	    29.8
+	PF12838	Fer4_7          	   147	   218	      30
+	PF13534	Fer4_17         	   147	   219	    28.6
+
+Q7M826	8-METHYLMENAQUINOL:FUMARATE RED     67.9    2.5e-15   1   1.7   0.2
+	Iterate                   	   241	   317	    66.7
+	PF13085	Fer2_3          	     2	   111	    78.9
+	PF13183	Fer4_8          	   144	   218	    40.4
+	PF13187	Fer4_9          	   147	   218	    28.5
+	PF13534	Fer4_17         	   147	   219	    28.5
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: T2G9F9 (E-value: 8.6e-22, Score: 82.1)
+Mentioned as: T2G9F9
+Description: Putative heterodisulfide reductase subunit C
+Organism: Megalodesulfovibrio gigas (strain ATCC 19364 / DSM 1382 / NCIMB 9332 / VKM B-1759)
+PMID: 34613754
+Source: EuropePMC
+Title: Metagenomic and Metatranscriptomic Characterization of a Microbial Community That Catalyzes Both Energy-Generating and Energy-Storing Electrode Reactions.
+Journal: Applied and environmental microbiology (2021)
+
+================================================================================
+Protein: VIMSS3509832 (E-value: 5e-21, Score: 79.7)
+Mentioned as: Dred_0358
+Description: putative heterodisulfide reductase, C subunit
+Organism: Desulfotomaculum reducens MI-1
+PMID: 20482743
+Source: EuropePMC
+Title: The genome of the Gram-positive metal- and sulfate-reducing bacterium Desulfotomaculum reducens strain MI-1
+Journal: Environmental microbiology (2010)
+Snippet: Locus II is dred_0633 to dred_0639 (includes qmo AB which are dred_0638-9); locus III is dred_0358 to dred_0354; locus IV is dred_1325 to dred_1330; locus V Is dred_1777 to dred_1786; locus VI is dred_0427 to dred_0433 and locus VII is dred_0689 to dred_0690. The asterisk *
+
+================================================================================
+Protein: VIMSS3510826 (E-value: 3.7e-20, Score: 76.9)
+Mentioned as: Dred_1325
+Description: heterodisulfide reductase, C subunit
+Organism: Desulfotomaculum reducens MI-1
+PMID: 26925055
+Source: EuropePMC
+Title: Comparative Proteomic Analysis of Desulfotomaculum reducens MI-1: Insights into the Metabolic Versatility of a Gram-Positive Sulfate- and Metal-Reducing Bacterium
+Journal: Frontiers in microbiology (2016)
+Snippet: 2.74 C Dred_0690 hypothetical protein (HdrD) 0.01 2.35 (<0.01) 1.05 CM LOCUS VI: Dred_1325-30, SULFATE-INDUCED Dred_1325 Heterodisulfide reductase, C subunit (HdrC) 1.88 (<0.01) 6.02 (<0.01) 0.06 C Dred_1326 Hypothetical protein (hdrB) 1.25 (<0.01) 4.1 (<0.01) 3.81 (<0.01) C Dred_1327 4Fe-4S ferredoxin iron-sulfur binding domain-containing protein (HdrA1)
+
+================================================================================
+Protein: VIMSS1112149 (E-value: 5.6e-20, Score: 76.3)
+Mentioned as: YP_430053
+Description: heterodisulfide reductase, C subunit
+Organism: Moorella thermoacetica ATCC 39073
+PMID: 30123204
+Source: EuropePMC
+Title: Origin and Evolution of Flavin-Based Electron Bifurcating Enzymes
+Journal: Frontiers in microbiology (2018)
+Snippet: 3e-08 All Mock et al., 2014 HdrB YP_430052 1e-03 All Mock et al., 2014 HdrC YP_430053 2e-06 All Mock et al., 2014 a Subunits in bold are the primary oxidoreductase catalytic subunits that were used as bait sequences when identifying Bf enzyme homologs. b Co-localization of
+
+================================================================================
+Protein: VIMSS207895 (E-value: 1.6e-19, Score: 74.8)
+Mentioned as: DVU2404
+Description: heterodisulfide reductase, C subunit
+Organism: Desulfovibrio vulgaris Hildenborough
+PMID: 29259088
+Source: EuropePMC
+Title: Homoacetogenesis in Deep-Sea <i>Chloroflexi</i>, as Inferred by Single-Cell Genomics, Provides a Link to Reductive Dehalogenation in Terrestrial <i>Dehalococcoidetes</i>
+Journal: mBio (2017)
+Snippet: Syntrophomonas wolfei (SWOL_RS02005 to -RS02050), Syntrophorhabdus aromaticivorans strain UI (SynarDRAFT_0715 to -0709), and Desulfovibrio vulgaris (DVU2404 to -2399) ( Fig.S6 ). In a study of Desulfovibrio vulgaris strain Hildenborough, it was revealed that this gene cassette, but not the Rnf operon, was expressed when grown in
+
+================================================================================
+Protein: VIMSS207895 (E-value: 1.6e-19, Score: 74.8)
+Mentioned as: DVU2404
+Description: heterodisulfide reductase, C subunit
+Organism: Desulfovibrio vulgaris Hildenborough
+PMID: 19581361
+Source: EuropePMC
+Title: The electron transfer system of syntrophically grown Desulfovibrio vulgaris
+Journal: Journal of bacteriology (2009)
+Snippet: Hdr, putative heterodisulfide reductase (DVU2399 to DVU2404); Fdred and Fdox, reduced and oxidized ferredoxin, respectively; Coo, cytoplasmic hydrogenase
+
+================================================================================
+Protein: VIMSS207895 (E-value: 1.6e-19, Score: 74.8)
+Mentioned as: DVU2404
+Description: heterodisulfide reductase, C subunit
+Organism: Desulfovibrio vulgaris Hildenborough
+PMID: 17601789
+Source: EuropePMC
+Title: Function of periplasmic hydrogenases in the sulfate-reducing bacterium Desulfovibrio vulgaris Hildenborough
+Journal: Journal of bacteriology (2007)
+Snippet: to DVU0434, heterodisulfide reductase genes DVU2402 to DVU2404, nickel transport genes DVU1057 and DVU1058, iron transport genes DVU0648 and DVU0649, formate
+
+================================================================================
+Protein: VIMSS395494 (E-value: 1.4e-18, Score: 71.8)
+Mentioned as: Dde_1207
+Description: Heterodisulfide reductase subunit C
+Organism: Desulfovibrio desulfuricans G20
+PMID: 37125195
+Source: EuropePMC
+Title: Integration of text mining and biological network analysis: Identification of essential genes in sulfate-reducing bacteria
+Journal: Frontiers in microbiology (2023)
+Snippet: enriched a total of 15 genes and other 10 genes include- dde_0706, dde_0718, dde_0812, dde_0813, dde_1207, dde_1210, dde_1211, dde_3513, dde_3514, dde_3515 (shown in Figure 4E ). As discussed in sulfur metabolism pathway, we know APS reductase is crucial in the conversion of sulfite to sulfide by
+
+================================================================================
+Protein: VIMSS5429919 (E-value: 3.7e-18, Score: 70.5)
+Mentioned as: cce_3244
+Description: succinate dehydrogenase iron-sulphur protein subunit
+Organism: Cyanothece sp. ATCC 51142
+PMID: 30216071
+Source: EuropePMC
+Title: Analysis of Protein Complexes in the Unicellular Cyanobacterium Cyanothece ATCC 51142
+Journal: Journal of proteome research (2018)
+Snippet: ( Figure 8B ). The citrate synthase; GltA (cce_1900), succinate dehydrogenase iron-sulfur protein subunit; SdhB (cce_3244), aconitase; AcnB (cce_3280), isocitrate dehydrogenase; Icsd (cce_3202), fumarate hydratase; FumC (cce_0396) and malate dehydrogenase; Mdh (cce_1850), and all but Icd, GabD and Mdh were identified as putative complexes ( Figure
+
+================================================================================
+Protein: VIMSS11482 (E-value: 4.8e-18, Score: 70.1)
+
+... (truncated, 218 total lines)
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: P73723
+PMID: 18000013
+Source: IntAct
+Gene ID: P73723
+Annotation: [Interaction]
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A031LPM2.1	AF-A0A031LPM2-F1-model_v4_TED01:46-140	1	AF-A0A031LPM2-F1-model_v4_TED01	46-140	0
+A0A031LPM2.1	AF-A0A031LPM2-F1-model_v4_TED02:147-224	1	AF-A0A031LPM2-F1-model_v4_TED02	147-224	92.9%
+A0A090BVB7.1	AF-A0A090BVB7-F1-model_v4_TED01:10-113	1	AF-A0A090BVB7-F1-model_v4_TED01	10-113	0
+A0A090BVB7.1	AF-A0A090BVB7-F1-model_v4_TED02:116-205	1	AF-A0A090BVB7-F1-model_v4_TED02	116-205	100.0%
+A0A091AIV5.1	AF-A0A091AIV5-F1-model_v4_TED01:7-112	1	AF-A0A091AIV5-F1-model_v4_TED01	7-112	0
+A0A091AIV5.1	AF-A0A091AIV5-F1-model_v4_TED02:114-243	1	AF-A0A091AIV5-F1-model_v4_TED02	114-243	0
+A0A091AIV5.1	AF-A0A091AIV5-F1-model_v4_TED03:250-321	1	AF-A0A091AIV5-F1-model_v4_TED03	250-321	96.0%
+A0A0A2HVT4.1	AF-A0A0A2HVT4-F1-model_v4_TED01:14-104	1	AF-A0A0A2HVT4-F1-model_v4_TED01	14-104	0
+A0A0A2HVT4.1	AF-A0A0A2HVT4-F1-model_v4_TED02:111-180	1	AF-A0A0A2HVT4-F1-model_v4_TED02	111-180	92.0%
+A0A0B7MIS5.1	AF-A0A0B7MIS5-F1-model_v4_TED01:7-105	1	AF-A0A0B7MIS5-F1-model_v4_TED01	7-105	0
+A0A0B7MIS5.1	AF-A0A0B7MIS5-F1-model_v4_TED02:111-185	1	AF-A0A0B7MIS5-F1-model_v4_TED02	111-185	100.0%
+A0A0B7MM86.1	AF-A0A0B7MM86-F1-model_v4_TED01:8-106	1	AF-A0A0B7MM86-F1-model_v4_TED01	8-106	0
+A0A0B7MM86.1	AF-A0A0B7MM86-F1-model_v4_TED02:112-187	1	AF-A0A0B7MM86-F1-model_v4_TED02	112-187	100.0%
+A0A0F7JZ37.1	AF-A0A0F7JZ37-F1-model_v4_TED01:4-108	1	AF-A0A0F7JZ37-F1-model_v4_TED01	4-108	0
+A0A0F7JZ37.1	AF-A0A0F7JZ37-F1-model_v4_TED02:116-207	1	AF-A0A0F7JZ37-F1-model_v4_TED02	116-207	100.0%
+A0A0J1F970.1	AF-A0A0J1F970-F1-model_v4_TED01:12-108	1	AF-A0A0J1F970-F1-model_v4_TED01	12-108	0
+A0A0J1F970.1	AF-A0A0J1F970-F1-model_v4_TED02:112-189	1	AF-A0A0J1F970-F1-model_v4_TED02	112-189	100.0%
+A0A0J1FJ04.1	AF-A0A0J1FJ04-F1-model_v4_TED01:12-101	1	AF-A0A0J1FJ04-F1-model_v4_TED01	12-101	0
+A0A0J1FJ04.1	AF-A0A0J1FJ04-F1-model_v4_TED02:108-190	1	AF-A0A0J1FJ04-F1-model_v4_TED02	108-190	100.0%
+A0A0M2Q3H3.1	AF-A0A0M2Q3H3-F1-model_v4_TED01:3-111	1	AF-A0A0M2Q3H3-F1-model_v4_TED01	3-111	0
+A0A0M2Q3H3.1	AF-A0A0M2Q3H3-F1-model_v4_TED02:134-245	1	AF-A0A0M2Q3H3-F1-model_v4_TED02	134-245	0
+A0A0M2Q3H3.1	AF-A0A0M2Q3H3-F1-model_v4_TED03:253-329	1	AF-A0A0M2Q3H3-F1-model_v4_TED03	253-329	98.7%
+A0A0M2U0D4.1	AF-A0A0M2U0D4-F1-model_v4_TED01:16-107	1	AF-A0A0M2U0D4-F1-model_v4_TED01	16-107	0
+A0A0M2U0D4.1	AF-A0A0M2U0D4-F1-model_v4_TED02:115-188	1	AF-A0A0M2U0D4-F1-model_v4_TED02	115-188	100.0%
+A0A0M2U7P6.1	AF-A0A0M2U7P6-F1-model_v4_TED01:7-106	1	AF-A0A0M2U7P6-F1-model_v4_TED01	7-106	0
+A0A0M2U7P6.1	AF-A0A0M2U7P6-F1-model_v4_TED02:113-186	1	AF-A0A0M2U7P6-F1-model_v4_TED02	113-186	100.0%
+A0A0S3QVE3.1	AF-A0A0S3QVE3-F1-model_v4_TED01:4-97	1	AF-A0A0S3QVE3-F1-model_v4_TED01	4-97	0
+A0A0S3QVE3.1	AF-A0A0S3QVE3-F1-model_v4_TED02:105-182	1	AF-A0A0S3QVE3-F1-model_v4_TED02	105-182	100.0%
+A0A101J503.1	AF-A0A101J503-F1-model_v4_TED01:16-108	1	AF-A0A101J503-F1-model_v4_TED01	16-108	0
+A0A101J503.1	AF-A0A101J503-F1-model_v4_TED02:349-508	1	AF-A0A101J503-F1-model_v4_TED02	349-508	0
+A0A133U4U8.1	AF-A0A133U4U8-F1-model_v4_TED01:13-112	1	AF-A0A133U4U8-F1-model_v4_TED01	13-112	0
+A0A133U4U8.1	AF-A0A133U4U8-F1-model_v4_TED02:121-195	1	AF-A0A133U4U8-F1-model_v4_TED02	121-195	98.7%
+A0A177Q788.1	AF-A0A177Q788-F1-model_v4_TED01:3-101	1	AF-A0A177Q788-F1-model_v4_TED01	3-101	0
+A0A177Q788.1	AF-A0A177Q788-F1-model_v4_TED02:107-124_143-240	1	AF-A0A177Q788-F1-model_v4_TED02	107-240	0
+A0A177Q788.1	AF-A0A177Q788-F1-model_v4_TED03:246-321	1	AF-A0A177Q788-F1-model_v4_TED03	246-321	100.0%
+A0A1B4XJ29.1	AF-A0A1B4XJ29-F1-model_v4_TED01:4-108	1	AF-A0A1B4XJ29-F1-model_v4_TED01	4-108	0
+A0A1B4XJ29.1	AF-A0A1B4XJ29-F1-model_v4_TED02:116-204	1	AF-A0A1B4XJ29-F1-model_v4_TED02	116-204	100.0%
+A0A1B7LI16.1	AF-A0A1B7LI16-F1-model_v4_TED01:2-112	1	AF-A0A1B7LI16-F1-model_v4_TED01	2-112	0
+A0A1B7LI16.1	AF-A0A1B7LI16-F1-model_v4_TED02:114-198	1	AF-A0A1B7LI16-F1-model_v4_TED02	114-198	100.0%
+A0A1B7LKK5.1	AF-A0A1B7LKK5-F1-model_v4_TED01:18-102	1	AF-A0A1B7LKK5-F1-model_v4_TED01	18-102	0
+A0A1B7LKK5.1	AF-A0A1B7LKK5-F1-model_v4_TED02:109-168	1	AF-A0A1B7LKK5-F1-model_v4_TED02	109-168	82.4%
+A0A1D2QU84.1	AF-A0A1D2QU84-F1-model_v4_TED01:12-98	1	AF-A0A1D2QU84-F1-model_v4_TED01	12-98	0
+A0A1D2QU84.1	AF-A0A1D2QU84-F1-model_v4_TED02:106-184	1	AF-A0A1D2QU84-F1-model_v4_TED02	106-184	100.0%
+A0A1D8TNW2.1	AF-A0A1D8TNW2-F1-model_v4_TED01:3-107	1	AF-A0A1D8TNW2-F1-model_v4_TED01	3-107	0
+A0A1D8TNW2.1	AF-A0A1D8TNW2-F1-model_v4_TED02:112-242	1	AF-A0A1D8TNW2-F1-model_v4_TED02	112-242	0
+A0A1D8TNW2.1	AF-A0A1D8TNW2-F1-model_v4_TED03:249-332	1	AF-A0A1D8TNW2-F1-model_v4_TED03	249-332	100.0%
+A0A1G5PRY0.1	AF-A0A1G5PRY0-F1-model_v4_TED01:4-113	1	AF-A0A1G5PRY0-F1-model_v4_TED01	4-113	0
+A0A1G5PRY0.1	AF-A0A1G5PRY0-F1-model_v4_TED02:117-199	1	AF-A0A1G5PRY0-F1-model_v4_TED02	117-199	98.8%
+A0A1H0LGF5.1	AF-A0A1H0LGF5-F1-model_v4_TED01:14-104	1	AF-A0A1H0LGF5-F1-model_v4_TED01	14-104	0
+A0A1H0LGF5.1	AF-A0A1H0LGF5-F1-model_v4_TED02:111-180	1	AF-A0A1H0LGF5-F1-model_v4_TED02	111-180	92.0%
+A0A1H0SQ19.1	AF-A0A1H0SQ19-F1-model_v4_TED01:7-103	1	AF-A0A1H0SQ19-F1-model_v4_TED01	7-103	0
+A0A1H0SQ19.1	AF-A0A1H0SQ19-F1-model_v4_TED02:109-185	1	AF-A0A1H0SQ19-F1-model_v4_TED02	109-185	100.0%
+A0A1H6F361.1	AF-A0A1H6F361-F1-model_v4_TED01:4-106	1	AF-A0A1H6F361-F1-model_v4_TED01	4-106	0
+A0A1H6F361.1	AF-A0A1H6F361-F1-model_v4_TED02:116-203	1	AF-A0A1H6F361-F1-model_v4_TED02	116-203	97.6%
+A0A1H6FI85.1	AF-A0A1H6FI85-F1-model_v4_TED01:4-108	1	AF-A0A1H6FI85-F1-model_v4_TED01	4-108	0
+A0A1H6FI85.1	AF-A0A1H6FI85-F1-model_v4_TED02:113-241	1	AF-A0A1H6FI85-F1-model_v4_TED02	113-241	0
+A0A1H6FI85.1	AF-A0A1H6FI85-F1-model_v4_TED03:259-334	1	AF-A0A1H6FI85-F1-model_v4_TED03	259-334	83.5%
+A0A1H7CLH9.1	AF-A0A1H7CLH9-F1-model_v4_TED01:3-103	1	AF-A0A1H7CLH9-F1-model_v4_TED01	3-103	0
+A0A1H7CLH9.1	AF-A0A1H7CLH9-F1-model_v4_TED02:105-234	1	AF-A0A1H7CLH9-F1-model_v4_TED02	105-234	0
+A0A1H7CLH9.1	AF-A0A1H7CLH9-F1-model_v4_TED03:240-315	1	AF-A0A1H7CLH9-F1-model_v4_TED03	240-315	100.0%
+A0A1I4V9F5.1	AF-A0A1I4V9F5-F1-model_v4_TED01:11-101	1	AF-A0A1I4V9F5-F1-model_v4_TED01	11-101	0
+A0A1I4V9F5.1	AF-A0A1I4V9F5-F1-model_v4_TED02:108-177	1	AF-A0A1I4V9F5-F1-model_v4_TED02	108-177	93.2%
+A0A1J1LMP0.1	AF-A0A1J1LMP0-F1-model_v4_TED01:3-115	1	AF-A0A1J1LMP0-F1-model_v4_TED01	3-115	0
+A0A1J1LMP0.1	AF-A0A1J1LMP0-F1-model_v4_TED03:257-336	1	AF-A0A1J1LMP0-F1-model_v4_TED03	257-336	100.0%
+A0A1J1LMP0.1	AF-A0A1J1LMP0-F1-model_v4_TED02:121-250	1	AF-A0A1J1LMP0-F1-model_v4_TED02	121-250	0
+A0A1J5NC37.1	AF-A0A1J5NC37-F1-model_v4_TED01:12-107	1	AF-A0A1J5NC37-F1-model_v4_TED01	12-107	0
+A0A1J5NC37.1	AF-A0A1J5NC37-F1-model_v4_TED02:111-189	1	AF-A0A1J5NC37-F1-model_v4_TED02	111-189	100.0%
+A0A1J5NCD2.1	AF-A0A1J5NCD2-F1-model_v4_TED01:11-102	1	AF-A0A1J5NCD2-F1-model_v4_TED01	11-102	0
+A0A1J5NCD2.1	AF-A0A1J5NCD2-F1-model_v4_TED02:108-182	1	AF-A0A1J5NCD2-F1-model_v4_TED02	108-182	100.0%
+A0A1J5NML1.1	AF-A0A1J5NML1-F1-model_v4_TED01:13-102	1	AF-A0A1J5NML1-F1-model_v4_TED01	13-102	0
+A0A1J5NML1.1	AF-A0A1J5NML1-F1-model_v4_TED02:109-178	1	AF-A0A1J5NML1-F1-model_v4_TED02	109-178	94.5%
+A0A1K1PUK3.1	AF-A0A1K1PUK3-F1-model_v4_TED01:3-103	1	AF-A0A1K1PUK3-F1-model_v4_TED01	3-103	0
+A0A1K1PUK3.1	AF-A0A1K1PUK3-F1-model_v4_TED02:116-234	1	AF-A0A1K1PUK3-F1-model_v4_TED02	116-234	0
+A0A1K1PUK3.1	AF-A0A1K1PUK3-F1-model_v4_TED03:246-317	1	AF-A0A1K1PUK3-F1-model_v4_TED03	246-317	91.1%
+A0A1L9QT42.1	AF-A0A1L9QT42-F1-model_v4_TED01:3-108	1	AF-A0A1L9QT42-F1-model_v4_TED01	3-108	0
+A0A1L9QT42.1	AF-A0A1L9QT42-F1-model_v4_TED02:137-240	1	AF-A0A1L9QT42-F1-model_v4_TED02	137-240	0
+A0A1L9QT42.1	AF-A0A1L9QT42-F1-model_v4_TED03:247-327	1	AF-A0A1L9QT42-F1-model_v4_TED03	247-327	100.0%
+A0A1M5A4D8.1	AF-A0A1M5A4D8-F1-model_v4_TED01:3-103	1	AF-A0A1M5A4D8-F1-model_v4_TED01	3-103	0
+A0A1M5A4D8.1	AF-A0A1M5A4D8-F1-model_v4_TED02:108-182	1	AF-A0A1M5A4D8-F1-model_v4_TED02	108-182	100.0%
+A0A1M5QCB7.1	AF-A0A1M5QCB7-F1-model_v4_TED01:13-107	1	AF-A0A1M5QCB7-F1-model_v4_TED01	13-107	0
+A0A1M5QCB7.1	AF-A0A1M5QCB7-F1-model_v4_TED02:113-188	1	AF-A0A1M5QCB7-F1-model_v4_TED02	113-188	100.0%
+A0A1M5TPF4.1	AF-A0A1M5TPF4-F1-model_v4_TED01:14-104	1	AF-A0A1M5TPF4-F1-model_v4_TED01	14-104	0
+A0A1M5TPF4.1	AF-A0A1M5TPF4-F1-model_v4_TED02:111-180	1	AF-A0A1M5TPF4-F1-model_v4_TED02	111-180	92.0%
+A0A1M7Y3E5.1	AF-A0A1M7Y3E5-F1-model_v4_TED01:9-104	1	AF-A0A1M7Y3E5-F1-model_v4_TED01	9-104	0
+A0A1M7Y3E5.1	AF-A0A1M7Y3E5-F1-model_v4_TED02:111-180	1	AF-A0A1M7Y3E5-F1-model_v4_TED02	111-180	92.0%
+A0A1P8F729.1	AF-A0A1P8F729-F1-model_v4_TED01:20-110	1	AF-A0A1P8F729-F1-model_v4_TED01	20-110	0
+A0A1P8F729.1	AF-A0A1P8F729-F1-model_v4_TED02:117-196	1	AF-A0A1P8F729-F1-model_v4_TED02	117-196	100.0%
+A0A1Q4R8D7.1	AF-A0A1Q4R8D7-F1-model_v4_TED01:3-110	1	AF-A0A1Q4R8D7-F1-model_v4_TED01	3-110	0
+A0A1Q4R8D7.1	AF-A0A1Q4R8D7-F1-model_v4_TED02:116-132_146-245	1	AF-A0A1Q4R8D7-F1-model_v4_TED02	116-245	0
+A0A1Q4R8D7.1	AF-A0A1Q4R8D7-F1-model_v4_TED03:252-327	1	AF-A0A1Q4R8D7-F1-model_v4_TED03	252-327	100.0%
+A0A1Q8QZP0.1	AF-A0A1Q8QZP0-F1-model_v4_TED01:11-101	1	AF-A0A1Q8QZP0-F1-model_v4_TED01	11-101	0
+A0A1Q8QZP0.1	AF-A0A1Q8QZP0-F1-model_v4_TED02:108-190	1	AF-A0A1Q8QZP0-F1-model_v4_TED02	108-190	100.0%
+A0A1Q8Z613.1	AF-A0A1Q8Z613-F1-model_v4_TED01:3-111	1	AF-A0A1Q8Z613-F1-model_v4_TED01	3-111	0
+A0A1Q8Z613.1	AF-A0A1Q8Z613-F1-model_v4_TED02:117-247	1	AF-A0A1Q8Z613-F1-model_v4_TED02	117-247	0
+A0A1Q8Z613.1	AF-A0A1Q8Z613-F1-model_v4_TED03:255-334	1	AF-A0A1Q8Z613-F1-model_v4_TED03	255-334	98.7%
+A0A1R1MJN2.1	AF-A0A1R1MJN2-F1-model_v4_TED01:5-107	1	AF-A0A1R1MJN2-F1-model_v4_TED01	5-107	0
+A0A1R1MJN2.1	AF-A0A1R1MJN2-F1-model_v4_TED02:112-243	1	AF-A0A1R1MJN2-F1-model_v4_TED02	112-243	0
+A0A1R1MJN2.1	AF-A0A1R1MJN2-F1-model_v4_TED03:249-321	1	AF-A0A1R1MJN2-F1-model_v4_TED03	249-321	98.6%
+A0A1S2M020.1	AF-A0A1S2M020-F1-model_v4_TED01:4-104	1	AF-A0A1S2M020-F1-model_v4_TED01	4-104	0
+
+... (truncated)
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 50 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF02754	CCG	50	1.00	0.93
+PF00037	Fer4	49	0.98	0.90
+PF12838	Fer4_7	49	0.98	0.90
+PF13237	Fer4_10	49	0.98	0.90
+PF00890	FAD_binding_2	49	0.98	0.90
+PF13187	Fer4_9	48	0.96	0.87
+PF02910	Succ_DH_flav_C	48	0.96	0.87
+PF07992	Pyr_redox_2	48	0.96	0.87
+PF00330	Aconitase	47	0.94	0.84
+PF00206	Lyase_1	47	0.94	0.84
+PF00155	Aminotran_1_2	47	0.94	0.84
+PF00346	Complex1_49kDa	47	0.94	0.84
+PF01058	Oxidored_q6	47	0.94	0.84
+PF00213	OSCP	46	0.92	0.81
+PF00329	Complex1_30kDa	46	0.92	0.81
+PF00006	ATP-synt_ab	46	0.92	0.81
+PF00306	ATP-synt_ab_C	46	0.92	0.81
+PF02874	ATP-synt_ab_N	46	0.92	0.81
+PF00231	ATP-synt	46	0.92	0.81
+PF00361	Proton_antipo_M	45	0.90	0.79
+PF00285	Citrate_synt	45	0.90	0.79
+PF02823	ATP-synt_DE_N	45	0.90	0.79
+PF00146	NADHdh	44	0.88	0.76
+PF00920	ILVD_EDD_N	44	0.88	0.76
+PF24877	ILV_EDD_C	44	0.88	0.76
+PF01134	GIDA	44	0.88	0.76
+PF14698	ASL_C2	44	0.88	0.76
+PF13183	Fer4_8	44	0.88	0.76
+PF01041	DegT_DnrJ_EryC1	44	0.88	0.76
+PF12800	Fer4_4	43	0.86	0.74
+PF00070	Pyr_redox	43	0.86	0.74
+PF00355	Rieske	42	0.84	0.71
+PF00364	Biotin_lipoyl	42	0.84	0.71
+PF00056	Ldh_1_N	40	0.80	0.67
+PF02866	Ldh_1_C	40	0.80	0.67
+PF02852	Pyr_redox_dim	40	0.80	0.67
+PF12831	FAD_oxidored	40	0.80	0.67
+PF01266	DAO	39	0.78	0.65
+PF00675	Peptidase_M16	39	0.78	0.65
+PF05193	Peptidase_M16_C	39	0.78	0.65
+PF02629	CoA_binding	39	0.78	0.65
+PF00171	Aldedh	39	0.78	0.65
+PF01256	Carb_kinase	39	0.78	0.65
+PF03853	YjeF_N	39	0.78	0.65
+PF00180	Iso_dh	38	0.76	0.63
+PF01106	NifU	38	0.76	0.63
+PF08442	ATP-grasp_2	38	0.76	0.63
+PF00033	Cytochrome_B	38	0.76	0.63
+PF13631	Cytochrom_B_N_2	38	0.76	0.63
+PF13738	Pyr_redox_3	38	0.76	0.63
+PF13607	Succ_CoA_lig	37	0.74	0.60
+PF10415	FumaraseC_C	37	0.74	0.60
+PF13534	Fer4_17	37	0.74	0.60
+PF13450	NAD_binding_8	36	0.72	0.58
+PF12837	Fer4_6	36	0.72	0.58
+PF00549	Ligase_CoA	35	0.70	0.56
+PF01855	POR_N	34	0.68	0.54
+PF00183	HSP90	34	0.68	0.54
+PF13589	HATPase_c_3	34	0.68	0.54
+PF12797	Fer4_2	34	0.68	0.54
+PF02347	GDC-P	34	0.68	0.54
+PF21478	GcvP2_C	34	0.68	0.54
+PF01558	POR	33	0.66	0.52
+PF02780	Transketolase_C	33	0.66	0.52
+PF17147	PFOR_II	33	0.66	0.52
+PF13460	NAD_binding_10	33	0.66	0.52
+PF01370	Epimerase	33	0.66	0.52
+PF00420	Oxidored_q2	32	0.64	0.50
+PF13510	Fer2_4	32	0.64	0.50
+PF00198	2-oxoacid_dh	32	0.64	0.50
+PF02779	Transket_pyr	32	0.64	0.50
+
+--- End STRING ---

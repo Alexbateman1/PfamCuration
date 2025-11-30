@@ -1,0 +1,150 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L657_TED01/Iterate/Iterate/Iterate/Iterate
+GA   27.00 27.00;
+TC   30.80 29.90;
+NC   26.50 24.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+3	6	Luteimonas.
+2	6	Stenotrophomonas.
+7	5	Lysobacteraceae
+2	5	Magnetococcaceae
+2	5	Desulfovibrionaceae
+2	5	Comamonadaceae
+7	4	Lysobacterales
+3	4	Desulfovibrionales
+3	4	Burkholderiales
+2	4	Magnetococcales
+8	3	Gammaproteobacteria
+4	3	Betaproteobacteria
+3	3	Desulfovibrionia
+2	3	Magnetococcia
+4	2	Thermodesulfobacteriota
+14	2	Pseudomonadota
+18	1	Pseudomonadati
+18	0	Bacteria
+Total of 18 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A0R0AUM5	SECRETION SYSTEM PROTEIN     100.2    2.3e-25   1   2.2   0.2
+	Iterate                   	     3	    64	    98.1
+	PF00482	T2SSF           	    75	   201	    86.3
+	PF00482	T2SSF           	   282	   404	    75.3
+
+A0A0R0E1U9	SECRETION SYSTEM PROTEIN      99.7    3.2e-25   1   2.2   0.4
+	Iterate                   	     3	    64	    97.8
+	PF00482	T2SSF           	    75	   200	    85.9
+	PF00482	T2SSF           	   281	   403	    71.1
+
+A0A518N6B2	TYPE II SECRETION SYSTEM     100.3    2.2e-25   1   2.0   0.3
+	Iterate                   	     3	    64	    98.6
+	PF00482	T2SSF           	    75	   201	    84.9
+	PF00482	T2SSF           	   282	   404	    71.5
+
+A0A7V8GNX1	SECRETION SYSTEM PROTEIN      98.4    8.2e-25   1   2.0   0.3
+	Iterate                   	     3	    64	    96.7
+	PF00482	T2SSF           	    75	   201	    88.1
+	PF00482	T2SSF           	   282	   404	    70.8
+
+A0A927Q7F7	TYPE II SECRETION SYSTEM      98.5    7.5e-25   1   1.9   0.5
+	Iterate                   	     3	    64	    97.0
+	PF00482	T2SSF           	    75	   201	    84.5
+	PF00482	T2SSF           	   282	   404	    73.5
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS172358 (E-value: 0.00085, Score: 24.5)
+Mentioned as: RS05860
+Description: PROBABLE PEPTIDE SYNTHETASE PROTEIN
+Organism: Ralstonia solanacearum GMI1000
+PMID: 12735797
+Source: EuropePMC
+Title: Molecular evolution of adenylating domain of aminoadipate reductase
+Journal: BMC evolutionary biology (2003)
+Snippet: Pseudomonas aeruginosa PA01 probable non-ribosomal peptide synthetase; RS05859, Ralstonia solanacearum GMI1000 probable peptide synthetase protein; RS05860, Ralstonia solanacearum GMI1000 probable peptide synthetase protein; Rv2380c, Mycobacterium tuberculosis H37Rv mbtE; SCO0492, Streptomyces coelicolor A3(2) putative peptide synthetase; SCO3230, Streptomyces coelicolor A3(2) CDA peptide synthetase I; SCO3231, Streptomyces coelicolor
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0Q4GAN6.1	AF-A0A0Q4GAN6-F1-model_v4_TED01:3-64	1	AF-A0A0Q4GAN6-F1-model_v4_TED01	3-64	100.0%
+A0A0Q4GAN6.1	AF-A0A0Q4GAN6-F1-model_v4_TED02:68-213	1	AF-A0A0Q4GAN6-F1-model_v4_TED02	68-213	0
+A0A0Q4GAN6.1	AF-A0A0Q4GAN6-F1-model_v4_TED03:267-374	1	AF-A0A0Q4GAN6-F1-model_v4_TED03	267-374	0
+A0A2T4IIM3.1	AF-A0A2T4IIM3-F1-model_v4_TED01:3-61	1	AF-A0A2T4IIM3-F1-model_v4_TED01	3-61	100.0%
+A0A2T4IIM3.1	AF-A0A2T4IIM3-F1-model_v4_TED02:67-166	1	AF-A0A2T4IIM3-F1-model_v4_TED02	67-166	0
+A0A2T5CAK1.1	AF-A0A2T5CAK1-F1-model_v4_TED01:3-58	1	AF-A0A2T5CAK1-F1-model_v4_TED01	3-58	91.8%
+A0A2T5CAK1.1	AF-A0A2T5CAK1-F1-model_v4_TED02:68-163	1	AF-A0A2T5CAK1-F1-model_v4_TED02	68-163	0
+A0A3N4AKW1.1	AF-A0A3N4AKW1-F1-model_v4_TED01:7-69	1	AF-A0A3N4AKW1-F1-model_v4_TED01	7-69	100.0%
+A0A3N4AKW1.1	AF-A0A3N4AKW1-F1-model_v4_TED02:74-217	1	AF-A0A3N4AKW1-F1-model_v4_TED02	74-217	0
+A0A3N4AKW1.1	AF-A0A3N4AKW1-F1-model_v4_TED03:271-371	1	AF-A0A3N4AKW1-F1-model_v4_TED03	271-371	0
+A0A518N6B2.1	AF-A0A518N6B2-F1-model_v4_TED01:3-63	1	AF-A0A518N6B2-F1-model_v4_TED01	3-63	98.4%
+A0A518N6B2.1	AF-A0A518N6B2-F1-model_v4_TED02:70-169	1	AF-A0A518N6B2-F1-model_v4_TED02	70-169	0
+A0A562LF29.1	AF-A0A562LF29-F1-model_v4_TED01:3-64	1	AF-A0A562LF29-F1-model_v4_TED01	3-64	100.0%
+A0A562LF29.1	AF-A0A562LF29-F1-model_v4_TED02:70-168	1	AF-A0A562LF29-F1-model_v4_TED02	70-168	0
+A0A562LF29.1	AF-A0A562LF29-F1-model_v4_TED03:264-375	1	AF-A0A562LF29-F1-model_v4_TED03	264-375	0
+A0A7H4GLB1.1	AF-A0A7H4GLB1-F1-model_v4_TED01:6-67	1	AF-A0A7H4GLB1-F1-model_v4_TED01	6-67	100.0%
+A0A7H4GLB1.1	AF-A0A7H4GLB1-F1-model_v4_TED02:73-159	1	AF-A0A7H4GLB1-F1-model_v4_TED02	73-159	0
+A0A843BCV8.1	AF-A0A843BCV8-F1-model_v4_TED01:6-67	1	AF-A0A843BCV8-F1-model_v4_TED01	6-67	100.0%
+A0A843BCV8.1	AF-A0A843BCV8-F1-model_v4_TED02:73-171	1	AF-A0A843BCV8-F1-model_v4_TED02	73-171	0
+A0A843BCV8.1	AF-A0A843BCV8-F1-model_v4_TED03:267-378	1	AF-A0A843BCV8-F1-model_v4_TED03	267-378	0
+A0A846QRP9.1	AF-A0A846QRP9-F1-model_v4_TED01:4-62	1	AF-A0A846QRP9-F1-model_v4_TED01	4-62	96.7%
+A0A846QRP9.1	AF-A0A846QRP9-F1-model_v4_TED02:68-148	1	AF-A0A846QRP9-F1-model_v4_TED02	68-148	0
+A0L657.1	AF-A0L657-F1-model_v4_TED01:3-63	1	AF-A0L657-F1-model_v4_TED01	3-63	100.0%
+A0L657.1	AF-A0L657-F1-model_v4_TED02:69-164	1	AF-A0L657-F1-model_v4_TED02	69-164	0
+C5T4G4.1	AF-C5T4G4-F1-model_v4_TED01:6-67	1	AF-C5T4G4-F1-model_v4_TED01	6-67	100.0%
+C5T4G4.1	AF-C5T4G4-F1-model_v4_TED02:73-171	1	AF-C5T4G4-F1-model_v4_TED02	73-171	0
+D6SKP1.1	AF-D6SKP1-F1-model_v4_TED01:3-61	1	AF-D6SKP1-F1-model_v4_TED01	3-61	96.7%
+D6SKP1.1	AF-D6SKP1-F1-model_v4_TED02:68-163	1	AF-D6SKP1-F1-model_v4_TED02	68-163	0
+G2FIU4.1	AF-G2FIU4-F1-model_v4_TED01:4-60	1	AF-G2FIU4-F1-model_v4_TED01	4-60	93.4%
+G2FIU4.1	AF-G2FIU4-F1-model_v4_TED02:68-162	1	AF-G2FIU4-F1-model_v4_TED02	68-162	0
+G2FIU4.1	AF-G2FIU4-F1-model_v4_TED03:264-370	1	AF-G2FIU4-F1-model_v4_TED03	264-370	0
+J0KTP6.1	AF-J0KTP6-F1-model_v4_TED01:7-68	1	AF-J0KTP6-F1-model_v4_TED01	7-68	100.0%
+J0KTP6.1	AF-J0KTP6-F1-model_v4_TED02:72-217	1	AF-J0KTP6-F1-model_v4_TED02	72-217	0
+J0KTP6.1	AF-J0KTP6-F1-model_v4_TED03:271-379	1	AF-J0KTP6-F1-model_v4_TED03	271-379	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network analysis skipped: only 3 networks (minimum 5 required)
+
+--- End STRING ---

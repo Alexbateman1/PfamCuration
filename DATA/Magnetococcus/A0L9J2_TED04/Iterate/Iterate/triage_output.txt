@@ -1,0 +1,182 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L9J2_TED04/Iterate/Iterate
+GA   27.00 27.00;
+TC   27.30 27.60;
+NC   24.60 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+4	6	Oceanospirillum.
+7	5	Oceanospirillaceae
+4	5	Polyangiaceae
+7	4	Oceanospirillales
+4	4	Polyangiales
+4	3	Polyangia
+11	3	Gammaproteobacteria
+4	2	Myxococcota
+4	2	Bacillota
+15	2	Pseudomonadota
+4	1	Bacillati
+21	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Foldseek ---
+Structural similarity matches. Can be suggestive of clan lines to add to DESC if results are consistent,
+or adding a CC line noting structural relationship to relevant Pfam families identified.
+
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+Iterate	query_model	PF07520	SrfB	No_clan	PF07520_H9L472_1_res1-991	0.15	329	254	0	1.000	2.44e-06	116.0
+Iterate	query_model	PF00012	HSP70	CL0108	PF00012_P32589_4_res4-644	0.11	307	200	0	1.000	3.07e-06	126.0
+Iterate	query_model	PF06723	MreB_Mbl	CL0108	PF06723_O67013_1_res11-337	0.09	333	173	0	1.000	5.81e-05	107.0
+Iterate	query_model	PF00022	Actin	CL0108	PF00022_Q54HF0_1_res3-385	0.09	330	186	0	1.000	1.95e-04	87.0
+
+--- End Foldseek ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1H6SFY0	MOLECULAR CHAPERONE DNAK     242.3    3.7e-68   2   2.3   0.3
+	Iterate                   	   781	   925	   175.0
+	Iterate                   	   917	  1085	    65.4
+
+A0A1T1HEP7	MOLECULAR CHAPERONE DNAK     248.9    3.6e-70   2   2.1   0.0
+	Iterate                   	   525	   666	   172.4
+	Iterate                   	   661	   825	    74.6
+
+A0A1Y2K7X6	MOLECULAR CHAPERONE {ECO:    766.5   1.5e-227   1   1.2   0.0
+	Iterate                   	   495	   844	   766.0
+
+A0A839IX10	MOLECULAR CHAPERONE DNAK     249.5    2.5e-70   2   2.2   0.0
+	Iterate                   	   520	   662	   175.5
+	Iterate                   	   655	   815	    72.1
+
+A0L9J2	MOLECULAR CHAPERONE-LIKE PROT    764.9   4.7e-227   1   1.1   0.0
+	Iterate                   	   495	   843	   764.5
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS18482 (E-value: 7.4e-26, Score: 96.4)
+Mentioned as: HP0060
+Description: hypothetical protein
+Organism: Helicobacter pylori 26695
+PMID: 35433748
+Source: EuropePMC
+Title: AI-2 Induces Urease Expression Through Downregulation of Orphan Response Regulator HP1021 in <i>Helicobacter pylori</i>
+Journal: Frontiers in medicine (2022)
+Snippet: deaminase SdaA 1.4147 HP0191 Fumarate reductase iron-sulfur subunit 1.3888 HP1452 tRNA modification GTPase TrmE 1.3687 HP0060 Hypothetical protein 1.3398 HP0160 Beta-lactamase HcpD 1.3271 HP1209 Pseudogene 1.325 HP1095 IS605 transposase TnpB 1.3236 HP1131 ATP synthase subunit epsilon 1.2961 HP1461 Cytochrome c551 peroxidase 1.2931 HP1291 Thiamine pyrophosphokinase 1.2902
+
+================================================================================
+Protein: VIMSS18482 (E-value: 7.4e-26, Score: 96.4)
+Mentioned as: HP0060
+Description: hypothetical protein
+Organism: Helicobacter pylori 26695
+PMID: 33526561
+Source: EuropePMC
+Title: Delineation of the pH-Responsive Regulon Controlled by the Helicobacter pylori ArsRS Two-Component System
+Journal: Infection and immunity (2021)
+
+================================================================================
+Protein: VIMSS18482 (E-value: 7.4e-26, Score: 96.4)
+Mentioned as: HP0060
+Description: hypothetical protein
+Organism: Helicobacter pylori 26695
+PMID: 31640588
+Source: EuropePMC
+Title: Broad spectrum resistance in Helicobacter pylori isolated from gastric biopsies of patients with dyspepsia in Cameroon and efflux-mediated multiresistance detection in MDR isolates
+Journal: BMC infectious diseases (2019)
+Snippet: 31.2 / / HP00105 128 4 31.2 8 0.25 31.2 / / 1 <0.2 250 HP0060 128 16 125 1 0.25 250 / / HP0063 128 8 62.5 8 <0.2 31.2 / HP0050 128 8 62.5 4 <0.2 62.5 / / HP0048 128 16 125 4
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: O24900
+PMID: 11196647
+Source: IntAct
+Gene ID: O24900
+Annotation: [Interaction]
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Y2K7X6.1	AF-A0A1Y2K7X6-F1-model_v4_TED01:44-177	1	AF-A0A1Y2K7X6-F1-model_v4_TED01	44-177	0
+A0A1Y2K7X6.1	AF-A0A1Y2K7X6-F1-model_v4_TED02:203-265	1	AF-A0A1Y2K7X6-F1-model_v4_TED02	203-265	0
+A0A1Y2K7X6.1	AF-A0A1Y2K7X6-F1-model_v4_TED03:272-487	1	AF-A0A1Y2K7X6-F1-model_v4_TED03	272-487	0
+A0A1Y2K7X6.1	AF-A0A1Y2K7X6-F1-model_v4_TED04:497-557_725-839	1	AF-A0A1Y2K7X6-F1-model_v4_TED04	497-839	98.0%
+A0A1Y2K7X6.1	AF-A0A1Y2K7X6-F1-model_v4_TED05:565-719	1	AF-A0A1Y2K7X6-F1-model_v4_TED05	565-719	44.3%
+A0A1Y2K7X6.1	AF-A0A1Y2K7X6-F1-model_v4_TED06:855-961	1	AF-A0A1Y2K7X6-F1-model_v4_TED06	855-961	0
+A0L9J2.1	AF-A0L9J2-F1-model_v4_TED01:45-175	1	AF-A0L9J2-F1-model_v4_TED01	45-175	0
+A0L9J2.1	AF-A0L9J2-F1-model_v4_TED02:206-266	1	AF-A0L9J2-F1-model_v4_TED02	206-266	0
+A0L9J2.1	AF-A0L9J2-F1-model_v4_TED03:270-487	1	AF-A0L9J2-F1-model_v4_TED03	270-487	0
+A0L9J2.1	AF-A0L9J2-F1-model_v4_TED05:854-960	1	AF-A0L9J2-F1-model_v4_TED05	854-960	0
+A0L9J2.1	AF-A0L9J2-F1-model_v4_TED04:495-561_626-643_653-685_713-843	1	AF-A0L9J2-F1-model_v4_TED04	495-843	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 13 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF00226	DnaJ	13	1.00	0.77
+PF00004	AAA	13	1.00	0.77
+PF07724	AAA_2	13	1.00	0.77
+PF07728	AAA_5	13	1.00	0.77
+PF10431	ClpB_D2-small	13	1.00	0.77
+PF00158	Sigma54_activat	13	1.00	0.77
+PF02861	Clp_N	13	1.00	0.77
+PF17871	AAA_lid_9	13	1.00	0.77
+PF00574	CLP_protease	13	1.00	0.77
+PF00809	Pterin_bind	13	1.00	0.77
+PF01556	DnaJ_C	13	1.00	0.77
+PF01025	GrpE	13	1.00	0.77
+PF00118	Cpn60_TCP1	13	1.00	0.77
+PF00166	Cpn10	13	1.00	0.77
+PF00181	Ribosomal_L2_N	12	0.92	0.67
+PF03947	Ribosomal_L2_C	12	0.92	0.67
+PF00684	DnaJ_CXXCXGXG	12	0.92	0.67
+PF00318	Ribosomal_S2	12	0.92	0.67
+PF00183	HSP90	12	0.92	0.67
+PF13589	HATPase_c_3	12	0.92	0.67
+PF00252	Ribosomal_L16	12	0.92	0.67
+PF00572	Ribosomal_L13	12	0.92	0.67
+PF00072	Response_reg	11	0.85	0.58
+PF02518	HATPase_c	11	0.85	0.58
+PF23569	NBD_SMAX1	11	0.85	0.58
+PF27439	DnaJ_C_2	11	0.85	0.58
+PF00571	CBS	11	0.85	0.58
+
+--- End STRING ---

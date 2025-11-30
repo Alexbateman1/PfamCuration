@@ -1,0 +1,218 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0LB01_TED02/Iterate
+GA   27.00 27.00;
+TC   27.90 27.60;
+NC   26.20 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+3	6	Alteromonas/Salinimonas group
+4	5	Alteromonadaceae
+7	4	Burkholderiales
+5	4	Alteromonadales
+3	4	Rhodospirillales
+7	3	Gammaproteobacteria
+3	3	Alphaproteobacteria
+10	3	Betaproteobacteria
+3	2	Thermodesulfobacteriota
+20	2	Pseudomonadota
+25	1	Pseudomonadati
+25	0	Bacteria
+Total of 25 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Foldseek ---
+Structural similarity matches. Can be suggestive of clan lines to add to DESC if results are consistent,
+or adding a CC line noting structural relationship to relevant Pfam families identified.
+
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+Iterate	query_model	PF09308	LuxQ-periplasm	CL0165	PF09308_H2G0X9_1_res42-274	0.21	114	85	0	1.000	1.88e-04	109.0
+Iterate	query_model	PF08448	PAS_4	CL0183	PF08448_Q8GF82_1_res19-133	0.12	102	65	0	1.000	2.60e-04	111.0
+Iterate	query_model	PF16736	sCache_like	CL0165	PF16736_Q9K851_1_res33-149	0.17	105	79	0	1.000	3.17e-04	121.0
+Iterate	query_model	PF18719	ArlS_N	CL0165	PF18719_A0A160F322_1_res34-156	0.11	107	80	0	1.000	3.86e-04	126.0
+Iterate	query_model	PF05228	CHASE4	CL0165	PF05228_C7LX06_1_res52-206	0.21	85	57	0	1.000	5.01e-04	112.0
+Iterate	query_model	PF23846	Cache_WalK	CL0165	PF23846_A0A1S1V7X9_1_res59-142	0.14	89	70	0	1.000	5.35e-04	116.0
+Iterate	query_model	PF14827	dCache_3	CL0165	PF14827_Q7M861_1_res41-289	0.15	111	91	0	1.000	6.10e-04	117.0
+Iterate	query_model	PF13596	PAS_10	CL0183	PF13596_A8MEH3_1_res277-382	0.12	102	78	0	1.000	6.95e-04	104.0
+Iterate	query_model	PF21563	Mcp40H-20_sensor	CL0183	PF21563_B9M7K2_1_res50-160	0.15	108	89	0	1.000	6.95e-04	94.0
+Iterate	query_model	PF17203	sCache_3_2	CL0165	PF17203_B3EA57_1_res33-179	0.11	137	96	0	1.000	8.47e-04	100.0
+Iterate	query_model	PF22309	HK-GC-Chemotax_sensor	CL0165	PF22309_C8WZ86_1_res369-490	0.10	116	93	0	1.000	9.65e-04	103.0
+
+--- End Foldseek ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A1E5Q309	HISTIDINE KINASE {ECO:000     70.6    5.3e-16   1   1.7   0.2
+	Iterate                   	    56	   165	    69.4
+	PF00672	HAMP            	   265	   317	    31.1
+	PF00989	PAS             	   332	   443	      53
+	PF13188	PAS_8           	   332	   399	    32.4
+	PF08448	PAS_4           	   338	   448	    40.5
+	PF13426	PAS_9           	   341	   445	    74.9
+	PF08447	PAS_3           	   354	   440	    35.4
+	PF00512	HisKA           	   466	   534	      66
+	PF02518	HATPase_c       	   579	   691	    87.8
+
+A0A370DQP2	HISTIDINE KINASE {ECO:000     50.5    9.7e-10   1   1.5   0.0
+	Iterate                   	    81	   189	    49.6
+	PF00672	HAMP            	   288	   341	    25.8
+	PF00512	HisKA           	   373	   439	    74.4
+	PF02518	HATPase_c       	   486	   603	    89.2
+	PF00072	Response_reg    	   630	   742	    81.2
+
+A0A519ZT70	HISTIDINE KINASE {ECO:000     50.4    1.1e-09   1   1.8   0.1
+	Iterate                   	    80	   191	    48.9
+	PF00512	HisKA           	   349	   415	    57.6
+	PF02518	HATPase_c       	   461	   574	    96.4
+	PF00072	Response_reg    	   596	   708	    73.1
+
+A0A975GJW2	DIGUANYLATE CYCLASE {ECO:     52.1      3e-10   1   2.0   0.1
+	Iterate                   	    77	   186	    50.1
+	PF00672	HAMP            	   279	   332	    28.9
+	PF13188	PAS_8           	   350	   414	    28.3
+	PF00990	GGDEF           	   644	   802	   153.9
+
+A0LB01	SENSORY/REGULATORY PROTEIN RP    246.1    1.8e-70   1   1.9   0.4
+	Iterate                   	    73	   183	   244.4
+	PF00989	PAS             	   354	   454	    26.2
+	PF13188	PAS_8           	   354	   421	    27.1
+	PF08448	PAS_4           	   360	   468	    29.1
+	PF00512	HisKA           	   486	   551	    67.4
+	PF02518	HATPase_c       	   598	   714	    92.3
+	PF00072	Response_reg    	   873	   990	    79.8
+
+
+--- End arch ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A0A8WRF4.1	AF-A0A0A8WRF4-F1-model_v4_TED01:19-253	1	AF-A0A0A8WRF4-F1-model_v4_TED01	19-253	100.0%
+A0A0A8WRF4.1	AF-A0A0A8WRF4-F1-model_v4_TED02:439-586	1	AF-A0A0A8WRF4-F1-model_v4_TED02	439-586	0
+A0A0Q6XAY7.1	AF-A0A0Q6XAY7-F1-model_v4_TED01:67-187	1	AF-A0A0Q6XAY7-F1-model_v4_TED01	67-187	99.1%
+A0A0Q6XAY7.1	AF-A0A0Q6XAY7-F1-model_v4_TED02:290-407	1	AF-A0A0Q6XAY7-F1-model_v4_TED02	290-407	0
+A0A0Q6XAY7.1	AF-A0A0Q6XAY7-F1-model_v4_TED03:410-514_525-562	1	AF-A0A0Q6XAY7-F1-model_v4_TED03	410-562	0
+A0A0Q6XAY7.1	AF-A0A0Q6XAY7-F1-model_v4_TED04:586-700	1	AF-A0A0Q6XAY7-F1-model_v4_TED04	586-700	0
+A0A1E5Q309.1	AF-A0A1E5Q309-F1-model_v4_TED01:12-233	1	AF-A0A1E5Q309-F1-model_v4_TED01	12-233	100.0%
+A0A1E5Q309.1	AF-A0A1E5Q309-F1-model_v4_TED02:538-692	1	AF-A0A1E5Q309-F1-model_v4_TED02	538-692	0
+A0A1Y2QG86.1	AF-A0A1Y2QG86-F1-model_v4_TED01:47-230	1	AF-A0A1Y2QG86-F1-model_v4_TED01	47-230	100.0%
+A0A1Y2QG86.1	AF-A0A1Y2QG86-F1-model_v4_TED02:340-449	1	AF-A0A1Y2QG86-F1-model_v4_TED02	340-449	0
+A0A1Y2QG86.1	AF-A0A1Y2QG86-F1-model_v4_TED03:479-586	1	AF-A0A1Y2QG86-F1-model_v4_TED03	479-586	0
+A0A1Y2QG86.1	AF-A0A1Y2QG86-F1-model_v4_TED04:670-749_764-834	1	AF-A0A1Y2QG86-F1-model_v4_TED04	670-834	0
+A0A1Y2QG86.1	AF-A0A1Y2QG86-F1-model_v4_TED05:865-981	1	AF-A0A1Y2QG86-F1-model_v4_TED05	865-981	0
+A0A2G8T8H7.1	AF-A0A2G8T8H7-F1-model_v4_TED01:50-228	1	AF-A0A2G8T8H7-F1-model_v4_TED01	50-228	100.0%
+A0A2G8T8H7.1	AF-A0A2G8T8H7-F1-model_v4_TED02:336-443	1	AF-A0A2G8T8H7-F1-model_v4_TED02	336-443	0
+A0A2G8T8H7.1	AF-A0A2G8T8H7-F1-model_v4_TED03:446-558	1	AF-A0A2G8T8H7-F1-model_v4_TED03	446-558	0
+A0A2G8T8H7.1	AF-A0A2G8T8H7-F1-model_v4_TED04:648-805	1	AF-A0A2G8T8H7-F1-model_v4_TED04	648-805	0
+A0A2N1D229.1	AF-A0A2N1D229-F1-model_v4_TED02:449-611	1	AF-A0A2N1D229-F1-model_v4_TED02	449-611	0
+A0A2N1D229.1	AF-A0A2N1D229-F1-model_v4_TED03:635-756	1	AF-A0A2N1D229-F1-model_v4_TED03	635-756	0
+A0A2N1D229.1	AF-A0A2N1D229-F1-model_v4_TED01:5-48_267-310	1	AF-A0A2N1D229-F1-model_v4_TED01	5-310	100.0%
+A0A2S2CL40.1	AF-A0A2S2CL40-F1-model_v4_TED01:55-249	1	AF-A0A2S2CL40-F1-model_v4_TED01	55-249	100.0%
+A0A2S2CL40.1	AF-A0A2S2CL40-F1-model_v4_TED02:455-604	1	AF-A0A2S2CL40-F1-model_v4_TED02	455-604	0
+A0A2S2CL40.1	AF-A0A2S2CL40-F1-model_v4_TED03:628-750	1	AF-A0A2S2CL40-F1-model_v4_TED03	628-750	0
+A0A370DQP2.1	AF-A0A370DQP2-F1-model_v4_TED01:81-190	1	AF-A0A370DQP2-F1-model_v4_TED01	81-190	100.0%
+A0A370DQP2.1	AF-A0A370DQP2-F1-model_v4_TED02:325-441	1	AF-A0A370DQP2-F1-model_v4_TED02	325-441	0
+A0A370DQP2.1	AF-A0A370DQP2-F1-model_v4_TED03:443-554_563-611	1	AF-A0A370DQP2-F1-model_v4_TED03	443-611	0
+A0A370DQP2.1	AF-A0A370DQP2-F1-model_v4_TED04:617-752	1	AF-A0A370DQP2-F1-model_v4_TED04	617-752	0
+A0A370DQP2.1	AF-A0A370DQP2-F1-model_v4_TED05:768-828	1	AF-A0A370DQP2-F1-model_v4_TED05	768-828	0
+A0A3D9HX52.1	AF-A0A3D9HX52-F1-model_v4_TED01:48-253	1	AF-A0A3D9HX52-F1-model_v4_TED01	48-253	100.0%
+A0A3D9HX52.1	AF-A0A3D9HX52-F1-model_v4_TED02:353-462	1	AF-A0A3D9HX52-F1-model_v4_TED02	353-462	0
+A0A3D9HX52.1	AF-A0A3D9HX52-F1-model_v4_TED03:675-785_793-832	1	AF-A0A3D9HX52-F1-model_v4_TED03	675-832	0
+A0A3D9HX52.1	AF-A0A3D9HX52-F1-model_v4_TED04:857-981	1	AF-A0A3D9HX52-F1-model_v4_TED04	857-981	0
+A0A3D9HX52.1	AF-A0A3D9HX52-F1-model_v4_TED05:1008-1117	1	AF-A0A3D9HX52-F1-model_v4_TED05	1008-1117	0
+A0A519ZT70.1	AF-A0A519ZT70-F1-model_v4_TED01:66-192	1	AF-A0A519ZT70-F1-model_v4_TED01	66-192	100.0%
+A0A519ZT70.1	AF-A0A519ZT70-F1-model_v4_TED02:421-524_536-572	1	AF-A0A519ZT70-F1-model_v4_TED02	421-572	0
+A0A519ZT70.1	AF-A0A519ZT70-F1-model_v4_TED03:596-710	1	AF-A0A519ZT70-F1-model_v4_TED03	596-710	0
+A0A562RHK8.1	AF-A0A562RHK8-F1-model_v4_TED01:10-177_251-288	1	AF-A0A562RHK8-F1-model_v4_TED01	10-288	100.0%
+A0A562RHK8.1	AF-A0A562RHK8-F1-model_v4_TED02:359-467	1	AF-A0A562RHK8-F1-model_v4_TED02	359-467	0
+A0A562RHK8.1	AF-A0A562RHK8-F1-model_v4_TED03:576-738	1	AF-A0A562RHK8-F1-model_v4_TED03	576-738	0
+A0A562RHK8.1	AF-A0A562RHK8-F1-model_v4_TED04:754-882	1	AF-A0A562RHK8-F1-model_v4_TED04	754-882	0
+A0A562RHK8.1	AF-A0A562RHK8-F1-model_v4_TED05:904-962	1	AF-A0A562RHK8-F1-model_v4_TED05	904-962	0
+A0A7C9UZR4.1	AF-A0A7C9UZR4-F1-model_v4_TED01:61-249	1	AF-A0A7C9UZR4-F1-model_v4_TED01	61-249	100.0%
+A0A7C9UZR4.1	AF-A0A7C9UZR4-F1-model_v4_TED02:355-465	1	AF-A0A7C9UZR4-F1-model_v4_TED02	355-465	0
+A0A7C9UZR4.1	AF-A0A7C9UZR4-F1-model_v4_TED03:466-543	1	AF-A0A7C9UZR4-F1-model_v4_TED03	466-543	0
+A0A7C9UZR4.1	AF-A0A7C9UZR4-F1-model_v4_TED04:552-700	1	AF-A0A7C9UZR4-F1-model_v4_TED04	552-700	0
+A0LB01.1	AF-A0LB01-F1-model_v4_TED01:18-62_185-234_243-280	1	AF-A0LB01-F1-model_v4_TED01	18-280	100.0%
+A0LB01.1	AF-A0LB01-F1-model_v4_TED02:73-183	1	AF-A0LB01-F1-model_v4_TED02	73-183	100.0%
+A0LB01.1	AF-A0LB01-F1-model_v4_TED03:315-363	1	AF-A0LB01-F1-model_v4_TED03	315-363	0
+A0LB01.1	AF-A0LB01-F1-model_v4_TED04:364-414_423-464	1	AF-A0LB01-F1-model_v4_TED04	364-464	0
+A0LB01.1	AF-A0LB01-F1-model_v4_TED05:470-550	1	AF-A0LB01-F1-model_v4_TED05	470-550	0
+A0LB01.1	AF-A0LB01-F1-model_v4_TED06:557-667_674-714	1	AF-A0LB01-F1-model_v4_TED06	557-714	0
+A0LB01.1	AF-A0LB01-F1-model_v4_TED07:732-856	1	AF-A0LB01-F1-model_v4_TED07	732-856	0
+A0LB01.1	AF-A0LB01-F1-model_v4_TED08:873-996	1	AF-A0LB01-F1-model_v4_TED08	873-996	0
+D3P5R2.1	AF-D3P5R2-F1-model_v4_TED01:57-250	1	AF-D3P5R2-F1-model_v4_TED01	57-250	100.0%
+D3P5R2.1	AF-D3P5R2-F1-model_v4_TED02:460-609	1	AF-D3P5R2-F1-model_v4_TED02	460-609	0
+D3P5R2.1	AF-D3P5R2-F1-model_v4_TED03:635-760	1	AF-D3P5R2-F1-model_v4_TED03	635-760	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 7 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+PF00072	Response_reg	7	1.00	0.65
+PF00158	Sigma54_activat	7	1.00	0.65
+PF02954	HTH_8	7	1.00	0.65
+PF14532	Sigma54_activ_2	7	1.00	0.65
+PF25601	AAA_lid_14	7	1.00	0.65
+PF01627	Hpt	7	1.00	0.65
+PF00990	GGDEF	7	1.00	0.65
+PF00004	AAA	7	1.00	0.65
+PF07728	AAA_5	7	1.00	0.65
+PF01966	HD	7	1.00	0.65
+PF13487	HD_5	7	1.00	0.65
+PF00989	PAS	7	1.00	0.65
+PF02518	HATPase_c	7	1.00	0.65
+PF08448	PAS_4	7	1.00	0.65
+PF13188	PAS_8	7	1.00	0.65
+PF13426	PAS_9	7	1.00	0.65
+PF00563	EAL	7	1.00	0.65
+PF00512	HisKA	7	1.00	0.65
+PF00486	Trans_reg_C	7	1.00	0.65
+PF00672	HAMP	7	1.00	0.65
+PF08447	PAS_3	7	1.00	0.65
+PF01584	CheW	7	1.00	0.65
+PF02895	H-kinase_dim	7	1.00	0.65
+PF13589	HATPase_c_3	7	1.00	0.65
+PF02743	dCache_1	7	1.00	0.65
+PF00497	SBP_bac_3	7	1.00	0.65
+PF08668	HDOD	7	1.00	0.65
+PF13181	TPR_8	7	1.00	0.65
+PF17201	Cache_3-Cache_2	7	1.00	0.65
+PF01590	GAF	7	1.00	0.65
+PF13185	GAF_2	7	1.00	0.65
+PF17202	sCache_3_3	7	1.00	0.65
+PF13458	Peripla_BP_6	7	1.00	0.65
+PF13174	TPR_6	7	1.00	0.65
+
+--- End STRING ---

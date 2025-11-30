@@ -1,0 +1,117 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L6Z8_TED01/Iterate
+GA   27.00 27.00;
+TC   31.80 27.00;
+NC   26.20 25.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+6	6	Streptomyces.
+8	5	Streptomycetaceae
+8	4	Kitasatosporales
+8	3	Alphaproteobacteria
+29	3	Actinomycetes
+30	2	Actinomycetota
+16	2	Pseudomonadota
+30	1	Bacillati
+18	1	Pseudomonadati
+48	0	Bacteria
+Total of 50 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Foldseek ---
+Structural similarity matches. Can be suggestive of clan lines to add to DESC if results are consistent,
+or adding a CC line noting structural relationship to relevant Pfam families identified.
+
+Curation_Dir	Query	Pfam_Accession	Pfam_ID	Clan_Accession	Target_Full	Identity	Aln_Length	Query_Length	Target_Length	Overlap	E-value	Bitscore
+Iterate	query_model	PF14072	DndB	No_clan	PF14072_A3DEK4_1_res7-349	0.15	138	85	0	1.000	9.68e-04	95.0
+
+--- End Foldseek ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A0F5QBA5	PARB/SULFIREDOXIN DOMAIN-     98.9    1.1e-24   2   2.6   0.0
+	Iterate                   	   279	   382	    50.5
+	Iterate                   	     3	    97	    45.5
+
+A0A1Y2K515	PARB/SULFIREDOXIN DOMAIN-    217.5    1.8e-61   1   1.3   0.0
+	Iterate                   	    18	   137	   216.8
+
+A0A2C7A7T0	PARB/SULFIREDOXIN DOMAIN-     84.9    2.2e-20   2   2.4   0.0
+	Iterate                   	   331	   424	    54.0
+	Iterate                   	    13	   123	    28.6
+
+A0L6Z8	PARB/SULFIREDOXIN DOMAIN-CONT    281.5    2.6e-81   1   1.6   0.1
+	Iterate                   	    19	   138	   280.3
+
+H0A2B0	PARB/SULFIREDOXIN DOMAIN-CONT     85.7    1.3e-20   2   2.4   0.0
+	Iterate                   	   335	   429	    52.5
+	Iterate                   	    23	   128	    30.7
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS341413 (E-value: 1.2e-10, Score: 47.0)
+Mentioned as: VP2901
+Description: hypothetical protein
+Organism: Vibrio parahaemolyticus RIMD 2210633
+PMID: 16672049
+Source: EuropePMC
+Title: Four genomic islands that mark post-1995 pandemic Vibrio parahaemolyticus isolates
+Journal: BMC genomics (2006)
+Snippet: VPaI-4-positives isolates by PCR assay amplified a 2.6 kb product with a primer pair encompassing VP2901 to VP2903 (Figure 6B ). Identical results were obtained with primer pairs encompassing VP2903 to VP2905 and VP2906 to VP2908 with DNA from VPaI-5-positive isolates as template for PCR assays.
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1Y2K515.1	AF-A0A1Y2K515-F1-model_v4_TED01:18-130	1	AF-A0A1Y2K515-F1-model_v4_TED01	18-130	94.2%
+A0A1Y2K515.1	AF-A0A1Y2K515-F1-model_v4_TED02:146-295	1	AF-A0A1Y2K515-F1-model_v4_TED02	146-295	0
+A0L6Z8.1	AF-A0L6Z8-F1-model_v4_TED01:19-138	1	AF-A0L6Z8-F1-model_v4_TED01	19-138	100.0%
+A0L6Z8.1	AF-A0L6Z8-F1-model_v4_TED02:147-321	1	AF-A0L6Z8-F1-model_v4_TED02	147-321	0
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network domains for PFXXXXX/ShortName
+# Analyzed 11 networks, showing domains in >=5 networks with Wilson >=50%
+# Columns: Pfam_acc Pfam_id networks frequency wilson_lower_bound
+# No domains met significance thresholds
+
+--- End STRING ---

@@ -1,0 +1,146 @@
+--- DESC ---
+ID   ShortName
+DE   Family description
+AU   Bateman A;0000-0002-6982-4660
+SE   ECOD:A0L3V1_TED03/Iterate
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+
+--- End DESC ---
+
+--- species summary ---
+The species distribution showing number of matches at each taxonomic rank.
+
+Number  Rank    Taxon
+2	6	Marinobacter.
+2	5	Pseudomonadaceae
+2	5	Marinobacteraceae
+2	5	Alcaligenaceae
+4	4	Pseudomonadales
+2	4	Oceanospirillales
+2	4	Burkholderiales
+9	3	Gammaproteobacteria
+3	3	Betaproteobacteria
+14	2	Pseudomonadota
+14	1	Pseudomonadati
+15	0	Bacteria
+Total of 15 proteins found
+
+--- End species ---
+
+--- sp.seq_info (SwissProt entries) ---
+SwissProt/UniProt annotations for sequences in this family.
+
+
+--- End sp.seq_info ---
+
+--- Domain architectures ---
+Example domain architectures. Indented lines show domain regions in the protein.
+Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.
+
+A0A4R8IGB3	NITRIC OXIDE REDUCTASE NO     30.8     0.0011   2   2.5   0.1
+	Iterate                   	   378	   416	    24.7
+	PF00092	VWA             	   426	   598	      37
+
+A0A7H9ALA5	COLLAGEN-LIKE PROTEIN {EC     75.3    1.3e-17   2  24.4   7.1
+	Iterate                   	   324	   356	     2.6
+	PF01391	Collagen        	   205	   261	    31.8
+	PF01391	Collagen        	   913	   973	    27.5
+	PF01391	Collagen        	   990	  1046	    32.8
+	PF01391	Collagen        	  1221	  1271	    29.4
+	PF01391	Collagen        	  1461	  1513	    29.7
+	PF01391	Collagen        	  1595	  1653	    32.6
+	PF01391	Collagen        	  1673	  1732	    28.6
+
+A0L3V1	PUTATIVE NITRIC OXIDE REDUCTA    103.3    2.4e-26   1   1.7   8.6
+	Iterate                   	   380	   419	   102.0
+
+A2D999	UNCHARACTERIZED PROTEIN {ECO:     36.5    1.7e-05   7   7.1   0.0
+	Iterate                   	     6	    28	     3.7
+
+T1HDH1	UNCHARACTERIZED PROTEIN {ECO:     54.5      4e-11   0  15.3   0.0
+
+
+--- End arch ---
+
+--- PaperBLAST ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+================================================================================
+Protein: VIMSS2195111 (E-value: 0.00057, Score: 24.9)
+Mentioned as: PA14_06840
+Description: putative dinitrification protein NorD
+Organism: Pseudomonas aeruginosa UCBPP-PA14
+PMID: 38865268
+Source: EuropePMC
+Title: Widespread detoxifying NO reductases impart a distinct isotopic fingerprint on N<sub>2</sub>O under anoxia
+Journal: Proceedings of the National Academy of Sciences of the United States of America (2024)
+Snippet: iNOR Rhamnose-induced expression of the nitric oxide reductase operon, norBCD ( PA14_16810 , PA14_16830 , PA14_06840 ), integrated into the att neutral chromosomal site of Pa with deletion of native nitrate reductase ( narGHJI ; PA14_13780-13830 ), nitrite reductase ( nirS ; PA14_06750 ), norBC ,
+
+================================================================================
+Protein: VIMSS2195111 (E-value: 0.00057, Score: 24.9)
+Mentioned as: PA14_06840
+Description: putative dinitrification protein NorD
+Organism: Pseudomonas aeruginosa UCBPP-PA14
+PMID: 33407113
+Source: EuropePMC
+Title: A metabolic and physiological design study of Pseudomonas putida KT2440 capable of anaerobic respiration
+Journal: BMC microbiology (2021)
+Snippet: 2012 PA14_06830 PF00115 nitric-oxide reductase NorB-NorC Subunit B, C PDC, T, Steen et al., 2012 PA14_06840 PF00092 NorD Putative dinitrification protein PDC, T, Steen et al., 2012 PA14_20230 PF04205 NosR Regulatory protein for N2O reductase PDC, T T Trancriptomics, PDC Protein Domain Comparisons, GSM Genome Scale
+
+================================================================================
+Protein: VIMSS2195111 (E-value: 0.00057, Score: 24.9)
+Mentioned as: PA14_06840
+Description: putative dinitrification protein NorD
+Organism: Pseudomonas aeruginosa UCBPP-PA14
+PMID: 33995291
+Source: EuropePMC
+Title: Gene Expression Profiling of &lt;i&gt;Pseudomonas aeruginosa&lt;/i&gt; Upon Exposure to Colistin and Tobramycin
+Journal: Frontiers in microbiology (2021)
+Snippet: Nitric-oxide reductase subunit C 87.15 3.2 norB PA14_06830 Nitric-oxide reductase subunit B 134.06 3.35 norD PA14_06840 Dinitrification protein NorD 328.15 2.77 narK1 PA14_13750 Nitrite extrusion protein 1 59.67 X narK2 PA14_13770 Nitrite extrusion protein 2 22.48 X narG PA14_13780 Respiratory nitrate reductase alpha subunit 2.33 X
+
+================================================================================
+Protein: Q51484 (E-value: 0.00058, Score: 24.9)
+Mentioned as: Q51484
+Description: Uncharacterized protein PA0525
+Organism: Pseudomonas aeruginosa (strain ATCC 15692 / DSM 22644 / CIP 104116 / JCM 14847 / LMG 12228 / 1C / PRS 101 / PAO1)
+PMID: 40066032
+Source: EuropePMC
+Title: Proteome-wide identification of druggable targets and inhibitors for multidrug-resistant &lt;i&gt;Pseudomonas aeruginosa&lt;/i&gt; using an integrative subtractive proteomics and virtual screening approach
+Journal: Heliyon (2025)
+Snippet: 4417 Q9I2Y3 90 Q9HUI9 1172 Q51480 2254 G3XD02 3336 Q9HY93 4418 Q9I2Y4 91 Q9HUK9 1173 Q51484 2255 G3XD03 3337 Q9HY94 4419 Q9I2Y6 92 Q9HUU1 1174 Q51551 2256 G3XD06 3338 Q9HY95 4420 Q9I2Y8 93 Q9HV27 1175 Q51553 2257 G3XD07 3339 Q9HY96 4421 Q9I2Y9 94 Q9HVD1 1176 Q51576
+
+
+--- End PaperBLAST ---
+
+--- UniProt Bibliography ---
+Potentially relevant papers to include. Use Pubmed connector to add highly relevant papers to DESC.
+
+# No bibliography entries found
+
+--- End UniProt Bibliography ---
+
+--- TED ---
+TED domain architectures. The percentage value at the end is the percentage overlap
+with the domain/family of interest.
+
+Protein_Accession	TED_Domains	Domain_Count	Domain_IDs	Domain_Ranges	Overlap_with_Pfam
+A0A1S2CF81.1	AF-A0A1S2CF81-F1-model_v4_TED01:2-177	1	AF-A0A1S2CF81-F1-model_v4_TED01	2-177	0
+A0A1S2CF81.1	AF-A0A1S2CF81-F1-model_v4_TED02:311-366_416-606	1	AF-A0A1S2CF81-F1-model_v4_TED02	311-606	100.0%
+A0A1S2CF81.1	AF-A0A1S2CF81-F1-model_v4_TED03:371-413	1	AF-A0A1S2CF81-F1-model_v4_TED03	371-413	100.0%
+A0L3V1.1	AF-A0L3V1-F1-model_v4_TED01:2-194	1	AF-A0L3V1-F1-model_v4_TED01	2-194	0
+A0L3V1.1	AF-A0L3V1-F1-model_v4_TED02:347-376_424-533	1	AF-A0L3V1-F1-model_v4_TED02	347-533	100.0%
+A0L3V1.1	AF-A0L3V1-F1-model_v4_TED03:380-419	1	AF-A0L3V1-F1-model_v4_TED03	380-419	100.0%
+
+--- End TED ---
+
+--- STRING ---
+Pfam families predicted to be functionally related by STRING. Mostly not relevant for inclusion.
+
+# STRING network analysis skipped: only 4 networks (minimum 5 required)
+
+--- End STRING ---
