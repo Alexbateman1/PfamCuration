@@ -1,0 +1,15 @@
+ID   YfdF_2nd
+DE   YfdF/IcaT family middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:P76505_TED02
+GA   27.00 27.00;
+TC   260.50 260.50;
+NC   25.20 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the middle domain of proteins belonging to the
+CC   IcaT/YfdF family, typified by YfdF from Escherichia coli. This
+CC   domain is found in Enterobacteriaceae, primarily in Escherichia and
+CC   Shigella species. The function of this protein family remains to be
+CC   determined.
