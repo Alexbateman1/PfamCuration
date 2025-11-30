@@ -1,0 +1,23 @@
+ID   ResIII_linker
+DE   Type III restriction enzyme linker domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5R8_TED02
+GA   27.00 27.00;
+TC   27.40 27.50;
+NC   26.90 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a linker domain (approximately 80-88 residues)
+CC   found in Type III restriction-modification system endonucleases. This
+CC   domain is positioned between the N-terminal ResIII domain
+CC   (Pfam:PF04851) and the central SNF2-related helicase domain
+CC   (Pfam:PF00176), typically at residues 290-380. Type III
+CC   restriction-modification systems recognise short asymmetric DNA
+CC   sequences and cleave DNA at sites distant from the recognition
+CC   sequence. The family is found in diverse bacteria, including
+CC   Pseudomonadota (Gammaproteobacteria, Betaproteobacteria,
+CC   Alphaproteobacteria), Bacillota (Clostridia, Bacilli), Actinomycetota
+CC   and Bacteroidota. The specific function of this linker domain remains
+CC   to be determined, but it may play a role in domain orientation or
+CC   protein flexibility.

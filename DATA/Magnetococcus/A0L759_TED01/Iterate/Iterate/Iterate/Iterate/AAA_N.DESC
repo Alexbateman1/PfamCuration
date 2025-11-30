@@ -1,0 +1,30 @@
+ID   AAA_N
+DE   AAA ATPase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L759_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   19447904
+RT   Novel toxin-antitoxin system composed of serine protease and
+RT   AAA-ATPase homologues determines the high level of stability and
+RT   incompatibility of the tumor-inducing plasmid pTiC58.
+RA   Huang ML., Cangelosi GA., Halperin W., Nester EW.;
+RL   J. Bacteriol. 2009;191:4656-4661.
+CC   This entry represents an N-terminal domain (approximately 50-67
+CC   residues) found in AAA+ family ATPases. This domain precedes the AAA
+CC   ATPase catalytic domain (Pfam:PF00004) and is typically found at the
+CC   protein N-terminus. Many proteins containing this domain are encoded
+CC   on plasmids and may function in plasmid stability or partitioning
+CC   systems. Some members have been implicated in toxin-antitoxin systems
+CC   where the AAA ATPase acts as an antitoxin component paired with
+CC   serine protease toxins [1]. The family is found predominantly in
+CC   Pseudomonadota, particularly Alphaproteobacteria (Hyphomicrobiales,
+CC   Rhodobacterales), and is also present in Actinomycetota and other
+CC   bacterial phyla. The specific biochemical function of this N-terminal
+CC   domain remains to be determined, but it may contribute to protein-
+CC   protein interactions or substrate recognition.
