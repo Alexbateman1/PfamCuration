@@ -1,0 +1,21 @@
+ID   DUF1156_C
+DE   DUF1156 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LB69_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain (approximately 80-90
+CC   residues, positions 706-807) found in DUF1156 domain-containing
+CC   proteins. This domain follows the DUF1156 domain (Pfam:PF06634) in a
+CC   two-domain architecture. Some proteins containing this domain are
+CC   annotated as putative DNA methylases, suggesting potential involvement
+CC   in DNA modification processes. The family shows a broad bacterial
+CC   distribution, found in Actinomycetota (Actinomycetes) and
+CC   Pseudomonadota (Alphaproteobacteria, Gammaproteobacteria). The
+CC   specific function of this C-terminal region remains to be determined,
+CC   but the association with DUF1156 and putative DNA methylases suggests
+CC   a role in nucleic acid metabolism or regulation.

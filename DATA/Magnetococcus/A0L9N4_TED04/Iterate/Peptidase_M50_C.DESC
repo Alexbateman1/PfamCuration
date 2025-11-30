@@ -1,0 +1,22 @@
+ID   Peptidase_M50_C
+DE   Peptidase M50 family C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L9N4_TED04
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal region (approximately 130 residues,
+CC   positions 588-720) found in peptidase M50 family proteins. M50
+CC   peptidases are membrane-associated zinc metalloproteases involved in
+CC   intramembrane proteolysis and processing of membrane-anchored
+CC   substrates. Some proteins in this family are annotated as hemolysin D
+CC   or zinc-dependent proteases. This C-terminal region may co-occur with
+CC   PqqD domains (Pfam:PF05402), which are involved in peptide
+CC   modifications. The family is distributed across diverse bacterial
+CC   lineages including Planctomycetota (Pirellulaceae, Pirellulales) and
+CC   Pseudomonadota (Alphaproteobacteria, Betaproteobacteria,
+CC   Gammaproteobacteria), particularly Rhodobacterales, Oceanospirillales
+CC   and Burkholderiales.
