@@ -1,0 +1,22 @@
+ID   PqiA_C
+DE   Paraquat-inducible protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LD19_TED04
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain (approximately 30-40
+CC   residues) found in paraquat-inducible proteins (PqiA/PqiB) and
+CC   mammalian cell entry (MCE) family proteins. These proteins contain
+CC   multiple MlaD domains (Pfam:PF02470) followed by this C-terminal
+CC   region. Paraquat-inducible genes are upregulated in response to
+CC   oxidative stress and during bacterial infection. The family is found
+CC   predominantly in Pseudomonadota, particularly Betaproteobacteria
+CC   (Burkholderiales, Burkholderiaceae including Paraburkholderia and
+CC   Bordetella), with additional representation in Gammaproteobacteria and
+CC   Alphaproteobacteria. These proteins may function in membrane transport
+CC   or stress response pathways, with reported roles in intramacrophage
+CC   adaptation and virulence in pathogenic bacteria.
