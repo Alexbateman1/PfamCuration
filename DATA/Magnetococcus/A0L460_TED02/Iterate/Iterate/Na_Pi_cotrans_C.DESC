@@ -1,0 +1,21 @@
+ID   Na_Pi_cotrans_C
+DE   Sodium-phosphate cotransporter C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L460_TED02
+GA   27.00 27.00;
+TC   27.10 27.40;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal region (approximately 218-235
+CC   residues, positions 343-578) found in sodium-phosphate cotransporter
+CC   proteins. These transporters mediate sodium-coupled phosphate uptake
+CC   across membranes and are essential for phosphate homeostasis. This
+CC   C-terminal region follows the sodium/phosphate cotransporter domains
+CC   (Pfam:PF02690). The family shows a broad bacterial distribution,
+CC   found in Pseudomonadota (Gammaproteobacteria including
+CC   Rhodobacterales and Oceanospirillales, Alphaproteobacteria,
+CC   Betaproteobacteria, Epsilonproteobacteria), Bacteroidota
+CC   (Flavobacteriia, Flavobacteriales including Flavobacteriaceae), and
+CC   Campylobacterota (Campylobacterales).

@@ -1,0 +1,20 @@
+ID   SHOCT_N
+DE   SHOCT N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LCV0_TED01
+GA   27.00 27.00;
+TC   27.80 52.20;
+NC   23.30 21.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain (approximately 80-110
+CC   residues, positions 7-113) found in SHOCT domain-containing proteins.
+CC   This domain precedes the SHOCT domain (Pfam:PF09851) in a conserved
+CC   two-domain architecture. SHOCT (Small hydrophobic outward conducting
+CC   transporter) domains are involved in transmembrane transport. The
+CC   family is found in Pseudomonadota, particularly Alphaproteobacteria
+CC   (Hyphomicrobiales, Rhodobacterales) and Gammaproteobacteria. The
+CC   specific function of this N-terminal region remains to be determined,
+CC   but it likely plays a role in the overall transport mechanism or
+CC   regulation of SHOCT domain-containing proteins.

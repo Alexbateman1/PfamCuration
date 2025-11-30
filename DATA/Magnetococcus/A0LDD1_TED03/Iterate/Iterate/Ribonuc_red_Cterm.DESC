@@ -1,0 +1,20 @@
+ID   Ribonuc_red_Cterm
+DE   Ribonucleotide reductase C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LDD1_TED03
+GA   27.00 27.00;
+TC   27.30 52.00;
+NC   26.90 22.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal region (approximately 44-45
+CC   residues, positions 409-715) found in ribonucleotide reductase
+CC   proteins. Ribonucleotide reductases catalyse the formation of
+CC   deoxyribonucleotides from ribonucleotides, providing precursors for
+CC   DNA synthesis. This family includes vitamin B12-dependent
+CC   ribonucleotide reductases that co-occur with ribonucleotide reductase
+CC   N-terminal (Pfam:PF00317) and C-terminal (Pfam:PF02867) domains. The
+CC   family is found exclusively in Gammaproteobacteria, particularly
+CC   Lysobacterales (Lysobacteraceae, Rhodanobacteraceae),
+CC   Pseudomonadales (Pseudomonadaceae), and Oceanospirillales.
