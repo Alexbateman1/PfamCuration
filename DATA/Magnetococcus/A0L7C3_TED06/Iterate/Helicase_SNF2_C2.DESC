@@ -1,0 +1,21 @@
+ID   Helicase_SNF2_C2
+DE   SNF2 family helicase C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7C3_TED06
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.60 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal region (approximately 177-190
+CC   residues, positions 771-955) found in SNF2 family helicase proteins.
+CC   This extreme C-terminal region follows the helicase core domains
+CC   (ResIII, DEAD, SNF2-rel_dom, Helicase_C; Pfam:PF04851, Pfam:PF00270,
+CC   Pfam:PF00176, Pfam:PF00271) in a conserved multi-domain architecture.
+CC   SNF2 family helicases are ATP-dependent DNA/RNA helicases involved in
+CC   chromatin remodelling, DNA repair, and transcription regulation. The
+CC   family is found predominantly in Actinomycetota, particularly
+CC   Actinomycetes including Streptomyces and Mycobacteriales, with some
+CC   representation in Pseudomonadota. The specific function of this
+CC   extreme C-terminal region remains to be determined.
