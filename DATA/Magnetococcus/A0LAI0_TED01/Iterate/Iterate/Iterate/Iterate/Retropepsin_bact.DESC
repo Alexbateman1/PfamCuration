@@ -1,0 +1,21 @@
+ID   Retropepsin_bact
+DE   Bacterial retropepsin-like aspartic peptidase
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LAI0_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.50 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a retropepsin-like aspartic peptidase domain
+CC   found in bacteria. Retropepsins are aspartic-type endopeptidases
+CC   (EC 3.4.23.-) that belong to the acid protease family (clan AA).
+CC   These enzymes use an aspartic acid residue in their catalytic
+CC   mechanism for proteolysis. The family includes the gag-asp protease
+CC   domain (Pfam:PF13975) and is related to retroviral aspartic proteases.
+CC   The family is found exclusively in Alphaproteobacteria, particularly
+CC   Hyphomicrobiales (Rhizobiaceae, Phyllobacteriaceae) and Rickettsiales.
+CC   These bacterial retropepsin-like proteases are predicted to be cell
+CC   membrane proteins and may function in protein processing or
+CC   degradation pathways.
