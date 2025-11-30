@@ -477,14 +477,38 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, skip_to_pfne
                 print("Unrecognized option, please try again.")
         
         # Now continue with annotation workflow
-        
-        # Check for sp.seq_info file and output to STDERR
+        # Display information files in order for annotation
+
+        # 1. DESC file first
+        desc_file = Path('DESC')
+        print("\n--- DESC ---", file=sys.stderr)
+        print("The DESC file contains family metadata including name, description, references, etc.", file=sys.stderr)
+        if desc_file.exists():
+            with open(desc_file, 'r') as f:
+                print(f.read(), file=sys.stderr)
+        else:
+            print("Note: DESC file not found", file=sys.stderr)
+        print("--- End DESC ---", file=sys.stderr)
+
+        # 2. species
+        species_file = Path('species')
+        print("\n--- species summary ---", file=sys.stderr)
+        print("The species distribution showing number of matches at each taxonomic rank.", file=sys.stderr)
+        if species_file.exists():
+            with open(species_file, 'r') as f:
+                print(f.read(), file=sys.stderr)
+        else:
+            print("Note: species file not found", file=sys.stderr)
+        print("--- End species ---", file=sys.stderr)
+
+        # 3. SwissProt entries (sp.seq_info)
         sp_file = Path('sp.seq_info')
         if sp_file.exists():
-            print("\n--- sp.seq_info content (copy to Claude) ---", file=sys.stderr)
+            print("\n--- sp.seq_info (SwissProt entries) ---", file=sys.stderr)
+            print("SwissProt protein entries with curated functional annotations.", file=sys.stderr)
             with open(sp_file, 'r') as f:
                 print(f.read(), file=sys.stderr)
-            print("--- End of sp.seq_info ---", file=sys.stderr)
+            print("--- End sp.seq_info ---", file=sys.stderr)
         else:
             print(f"\nNote: sp.seq_info file not found", file=sys.stderr)
             # Print current path which often contains useful protein accession
@@ -498,94 +522,88 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, skip_to_pfne
                 if '_TED' in dir_name_local:
                     protein_acc = dir_name_local.split('_TED')[0]
                     print(f"Potential protein accession for UniProt search: {protein_acc}", file=sys.stderr)
-        
-        # Check for species file and output to STDERR
-        species_file = Path('species')
-        print("\n--- species summary (copy to Claude) ---", file=sys.stderr)
-        if species_file.exists():
-            with open(species_file, 'r') as f:
-                print(f.read(), file=sys.stderr)
-        else:
-            print("Note: species file not found", file=sys.stderr)
-        print("--- End of species summary ---", file=sys.stderr)
-        
-        # Check for arch file and output to STDERR
+
+        # 4. Foldseek (only if more than header line)
+        foldseek_file = Path('foldseek')
+        if foldseek_file.exists():
+            with open(foldseek_file, 'r') as f:
+                lines = f.readlines()
+                if len(lines) > 1:
+                    print("\n--- Foldseek ---", file=sys.stderr)
+                    print("Foldseek structure search results against AFDB/PDB.", file=sys.stderr)
+                    if len(lines) > 100:
+                        print(''.join(lines[:100]), file=sys.stderr)
+                        print(f"... (truncated)", file=sys.stderr)
+                    else:
+                        print(''.join(lines), file=sys.stderr)
+                    print("--- End Foldseek ---", file=sys.stderr)
+
+        # 5. Domain architectures (arch)
         arch_file = Path('arch')
-        print("\n--- Domain architectures (copy to Claude) ---", file=sys.stderr)
+        print("\n--- Domain architectures ---", file=sys.stderr)
+        print("Domain architecture summary showing how this domain combines with other Pfam domains.", file=sys.stderr)
         if arch_file.exists():
             with open(arch_file, 'r') as f:
                 print(f.read(), file=sys.stderr)
         else:
             print("Note: arch file not found", file=sys.stderr)
-        print("--- End of Domain architectures ---", file=sys.stderr)
-        
-        # Check for paperblast file and output to STDERR if it has content
+        print("--- End arch ---", file=sys.stderr)
+
+        # 6. PaperBLAST (truncated)
         paperblast_file = Path('paperblast')
         if paperblast_file.exists() and paperblast_file.stat().st_size > 0:
-            print("\n--- PaperBLAST literature results (copy to Claude) ---", file=sys.stderr)
+            print("\n--- PaperBLAST ---", file=sys.stderr)
+            print("Literature references from PaperBLAST for similar sequences.", file=sys.stderr)
             with open(paperblast_file, 'r') as f:
                 lines = f.readlines()
-                # Truncate if too long (similar to TED file)
                 if len(lines) > 100:
                     print(''.join(lines[:100]), file=sys.stderr)
-                    print(f"... (truncated - showing first 100 of {len(lines)} lines)", file=sys.stderr)
+                    print(f"... (truncated, {len(lines)} total lines)", file=sys.stderr)
                 else:
                     print(''.join(lines), file=sys.stderr)
-            print("--- End of PaperBLAST literature results ---", file=sys.stderr)
-        
-        # Check for TED file and output to STDERR (truncated to 100 lines)
+            print("--- End PaperBLAST ---", file=sys.stderr)
+
+        # 7. UniProt bibliography
+        bibl_file = Path('uniprot_bibl')
+        if bibl_file.exists() and bibl_file.stat().st_size > 0:
+            print("\n--- UniProt Bibliography ---", file=sys.stderr)
+            print("Bibliography from UniProt curated entries.", file=sys.stderr)
+            with open(bibl_file, 'r') as f:
+                lines = f.readlines()
+                if len(lines) > 100:
+                    print(''.join(lines[:100]), file=sys.stderr)
+                    print(f"... (truncated, {len(lines)} total lines)", file=sys.stderr)
+                else:
+                    print(''.join(lines), file=sys.stderr)
+            print("--- End UniProt Bibliography ---", file=sys.stderr)
+
+        # 8. TED (truncated)
         ted_file = Path('TED')
-        print("\n--- TED domain information (copy to Claude) ---", file=sys.stderr)
         if ted_file.exists():
+            print("\n--- TED ---", file=sys.stderr)
+            print("TED domain mapping information.", file=sys.stderr)
             with open(ted_file, 'r') as f:
                 lines = f.readlines()
                 if len(lines) > 100:
                     print(''.join(lines[:100]), file=sys.stderr)
-                    print(f"... (truncated - showing first 100 of {len(lines)} lines)", file=sys.stderr)
+                    print(f"... (truncated)", file=sys.stderr)
                 else:
                     print(''.join(lines), file=sys.stderr)
-        else:
-            print("Note: TED file not found", file=sys.stderr)
-        print("--- End of TED domain information ---", file=sys.stderr)
+            print("--- End TED ---", file=sys.stderr)
 
-        # Check for STRING file and output to STDERR
+        # 9. STRING (truncated)
         string_file = Path('STRING')
         if string_file.exists() and string_file.stat().st_size > 0:
-            print("\n--- STRING protein interaction network (copy to Claude) ---", file=sys.stderr)
+            print("\n--- STRING ---", file=sys.stderr)
+            print("STRING protein interaction network associations.", file=sys.stderr)
             with open(string_file, 'r') as f:
                 lines = f.readlines()
-                # Truncate if too long
                 if len(lines) > 100:
                     print(''.join(lines[:100]), file=sys.stderr)
-                    print(f"... (truncated - showing first 100 of {len(lines)} lines)", file=sys.stderr)
+                    print(f"... (truncated)", file=sys.stderr)
                 else:
                     print(''.join(lines), file=sys.stderr)
-            print("--- End of STRING protein interaction network ---", file=sys.stderr)
-
-        # Check for foldseek file and output to STDERR if it has more than header line
-        foldseek_file = Path('foldseek')
-        if foldseek_file.exists():
-            with open(foldseek_file, 'r') as f:
-                lines = f.readlines()
-                # Only output if more than header line
-                if len(lines) > 1:
-                    print("\n--- Foldseek structural matches (copy to Claude) ---", file=sys.stderr)
-                    if len(lines) > 100:
-                        print(''.join(lines[:100]), file=sys.stderr)
-                        print(f"... (truncated - showing first 100 of {len(lines)} lines)", file=sys.stderr)
-                    else:
-                        print(''.join(lines), file=sys.stderr)
-                    print("--- End of Foldseek structural matches ---", file=sys.stderr)
-        
-        # Check for DESC file and output to STDERR
-        desc_file = Path('DESC')
-        print("\n--- Current DESC file (copy to Claude) ---", file=sys.stderr)
-        if desc_file.exists():
-            with open(desc_file, 'r') as f:
-                print(f.read(), file=sys.stderr)
-        else:
-            print("Note: DESC file not found", file=sys.stderr)
-        print("--- End of Current DESC file ---", file=sys.stderr)
+            print("--- End STRING ---", file=sys.stderr)
         
         # Ask if wish to continue after annotation
         print("\nPlease create annotation using Claude with the sp.seq_info above.")
@@ -782,27 +800,51 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, skip_to_pfne
 
 def collect_directory_info(dir_name, start_dir):
     """Collect all information for a directory without interactive curation"""
-    
+
     # Change to start directory
     os.chdir(start_dir)
-    
+
     if not Path(dir_name).exists():
         return None, f"Directory {dir_name} not found"
-    
+
     os.chdir(dir_name)
-    
-    # Collect all the information
+
+    # Collect all the information in order
     info_sections = []
-    
-    # sp.seq_info content
+
+    # 1. DESC file first
+    info_sections.append("--- DESC ---")
+    info_sections.append("The DESC file contains family metadata including name, description, references, etc.")
+    desc_file = Path('DESC')
+    if desc_file.exists():
+        with open(desc_file, 'r') as f:
+            info_sections.append(f.read())
+    else:
+        info_sections.append("Note: DESC file not found")
+    info_sections.append("--- End DESC ---")
+
+    # 2. species summary
+    info_sections.append("\n--- species summary ---")
+    info_sections.append("The species distribution showing number of matches at each taxonomic rank.")
+    species_file = Path('species')
+    if species_file.exists():
+        with open(species_file, 'r') as f:
+            info_sections.append(f.read())
+    else:
+        info_sections.append("Note: species file not found")
+    info_sections.append("--- End species ---")
+
+    # 3. SwissProt entries (sp.seq_info)
     sp_file = Path('sp.seq_info')
     if sp_file.exists():
-        info_sections.append("--- sp.seq_info content (copy to Claude) ---")
+        info_sections.append("\n--- sp.seq_info (SwissProt entries) ---")
+        info_sections.append("SwissProt protein entries with curated functional annotations.")
         with open(sp_file, 'r') as f:
             info_sections.append(f.read())
-        info_sections.append("--- End of sp.seq_info ---")
+        info_sections.append("--- End sp.seq_info ---")
     else:
-        info_sections.append("--- sp.seq_info content (copy to Claude) ---")
+        info_sections.append("\n--- sp.seq_info (SwissProt entries) ---")
+        info_sections.append("SwissProt protein entries with curated functional annotations.")
         info_sections.append("Note: sp.seq_info file not found")
         # Extract potential protein accession
         current_path = os.getcwd()
@@ -810,97 +852,94 @@ def collect_directory_info(dir_name, start_dir):
         if '_TED' in dir_name:
             protein_acc = dir_name.split('_TED')[0]
             info_sections.append(f"Potential protein accession for UniProt search: {protein_acc}")
-        info_sections.append("--- End of sp.seq_info ---")
-    
-    # species summary
-    info_sections.append("\n--- species summary (copy to Claude) ---")
-    species_file = Path('species')
-    if species_file.exists():
-        with open(species_file, 'r') as f:
-            info_sections.append(f.read())
-    else:
-        info_sections.append("Note: species file not found")
-    info_sections.append("--- End of species summary ---")
-    
-    # Domain architectures
-    info_sections.append("\n--- Domain architectures (copy to Claude) ---")
-    arch_file = Path('arch')
-    if arch_file.exists():
-        with open(arch_file, 'r') as f:
-            info_sections.append(f.read())
-    else:
-        info_sections.append("Note: arch file not found")
-    info_sections.append("--- End of Domain architectures ---")
-    
-    # PaperBLAST literature results
-    paperblast_file = Path('paperblast')
-    if paperblast_file.exists() and paperblast_file.stat().st_size > 0:
-        info_sections.append("\n--- PaperBLAST literature results (copy to Claude) ---")
-        with open(paperblast_file, 'r') as f:
-            lines = f.readlines()
-            if len(lines) > 100:
-                info_sections.append(''.join(lines[:100]))
-                info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
-            else:
-                info_sections.append(''.join(lines))
-        info_sections.append("--- End of PaperBLAST literature results ---")
-    
-    # TED domain information
-    info_sections.append("\n--- TED domain information (copy to Claude) ---")
-    ted_file = Path('TED')
-    if ted_file.exists():
-        with open(ted_file, 'r') as f:
-            lines = f.readlines()
-            if len(lines) > 100:
-                info_sections.append(''.join(lines[:100]))
-                info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
-            else:
-                info_sections.append(''.join(lines))
-    else:
-        info_sections.append("Note: TED file not found")
-    info_sections.append("--- End of TED domain information ---")
+        info_sections.append("--- End sp.seq_info ---")
 
-    # STRING protein interaction network
-    string_file = Path('STRING')
-    if string_file.exists() and string_file.stat().st_size > 0:
-        info_sections.append("\n--- STRING protein interaction network (copy to Claude) ---")
-        with open(string_file, 'r') as f:
-            lines = f.readlines()
-            if len(lines) > 100:
-                info_sections.append(''.join(lines[:100]))
-                info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
-            else:
-                info_sections.append(''.join(lines))
-        info_sections.append("--- End of STRING protein interaction network ---")
-
-    # Foldseek results
+    # 4. Foldseek results (only if more than header line)
     foldseek_file = Path('foldseek')
     if foldseek_file.exists():
         with open(foldseek_file, 'r') as f:
             lines = f.readlines()
             # Only include if more than header line
             if len(lines) > 1:
-                info_sections.append("\n--- Foldseek structural matches (copy to Claude) ---")
+                info_sections.append("\n--- Foldseek ---")
+                info_sections.append("Foldseek structure search results against AFDB/PDB.")
                 if len(lines) > 100:
                     info_sections.append(''.join(lines[:100]))
-                    info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
+                    info_sections.append(f"... (truncated)")
                 else:
                     info_sections.append(''.join(lines))
-                info_sections.append("--- End of Foldseek structural matches ---")
-    
-    # Current DESC file
-    info_sections.append("\n--- Current DESC file (copy to Claude) ---")
-    desc_file = Path('DESC')
-    if desc_file.exists():
-        with open(desc_file, 'r') as f:
+                info_sections.append("--- End Foldseek ---")
+
+    # 5. Domain architectures
+    info_sections.append("\n--- Domain architectures ---")
+    info_sections.append("Domain architecture summary showing how this domain combines with other Pfam domains.")
+    arch_file = Path('arch')
+    if arch_file.exists():
+        with open(arch_file, 'r') as f:
             info_sections.append(f.read())
     else:
-        info_sections.append("Note: DESC file not found")
-    info_sections.append("--- End of Current DESC file ---")
-    
+        info_sections.append("Note: arch file not found")
+    info_sections.append("--- End arch ---")
+
+    # 6. PaperBLAST literature results
+    paperblast_file = Path('paperblast')
+    if paperblast_file.exists() and paperblast_file.stat().st_size > 0:
+        info_sections.append("\n--- PaperBLAST ---")
+        info_sections.append("Literature references from PaperBLAST for similar sequences.")
+        with open(paperblast_file, 'r') as f:
+            lines = f.readlines()
+            if len(lines) > 100:
+                info_sections.append(''.join(lines[:100]))
+                info_sections.append(f"... (truncated, {len(lines)} total lines)")
+            else:
+                info_sections.append(''.join(lines))
+        info_sections.append("--- End PaperBLAST ---")
+
+    # 7. UniProt bibliography
+    bibl_file = Path('uniprot_bibl')
+    if bibl_file.exists() and bibl_file.stat().st_size > 0:
+        info_sections.append("\n--- UniProt Bibliography ---")
+        info_sections.append("Bibliography from UniProt curated entries.")
+        with open(bibl_file, 'r') as f:
+            lines = f.readlines()
+            if len(lines) > 100:
+                info_sections.append(''.join(lines[:100]))
+                info_sections.append(f"... (truncated, {len(lines)} total lines)")
+            else:
+                info_sections.append(''.join(lines))
+        info_sections.append("--- End UniProt Bibliography ---")
+
+    # 8. TED domain information
+    ted_file = Path('TED')
+    if ted_file.exists():
+        info_sections.append("\n--- TED ---")
+        info_sections.append("TED domain mapping information.")
+        with open(ted_file, 'r') as f:
+            lines = f.readlines()
+            if len(lines) > 100:
+                info_sections.append(''.join(lines[:100]))
+                info_sections.append(f"... (truncated)")
+            else:
+                info_sections.append(''.join(lines))
+        info_sections.append("--- End TED ---")
+
+    # 9. STRING protein interaction network
+    string_file = Path('STRING')
+    if string_file.exists() and string_file.stat().st_size > 0:
+        info_sections.append("\n--- STRING ---")
+        info_sections.append("STRING protein interaction network associations.")
+        with open(string_file, 'r') as f:
+            lines = f.readlines()
+            if len(lines) > 100:
+                info_sections.append(''.join(lines[:100]))
+                info_sections.append(f"... (truncated)")
+            else:
+                info_sections.append(''.join(lines))
+        info_sections.append("--- End STRING ---")
+
     # Return to start directory
     os.chdir(start_dir)
-    
+
     return '\n'.join(info_sections), None
 
 
