@@ -1,0 +1,13 @@
+ID   HofO
+DE   DNA utilisation protein HofO family
+AU   Bateman A;0000-0002-6982-4660
+SE   UniProtKB:P45751
+GA   27.00 27.00;
+TC   27.00 41.40;
+NC   24.50 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents HofO, a DNA utilisation protein found in
+CC   bacteria. HofO is involved in the uptake and processing of
+CC   extracellular DNA.
