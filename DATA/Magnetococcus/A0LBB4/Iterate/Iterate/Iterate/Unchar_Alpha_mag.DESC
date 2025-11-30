@@ -1,0 +1,25 @@
+ID   Unchar_Alpha_mag
+DE   Uncharacterised domain in Alphaproteobacteria
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBB4
+GA   27.00 27.00;
+TC   27.90 27.70;
+NC   26.40 23.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain (approximately 69-73
+CC   residues) found in Alphaproteobacteria and Betaproteobacteria. The
+CC   family is particularly prevalent in Rhodobacterales (Paracoccaceae
+CC   including Paracoccus and Roseobacteraceae) and Burkholderiales. One
+CC   family member (amb0360 in Magnetospirillum magneticum AMB-1) has been
+CC   identified in a global analysis of biomineralization genes and shows
+CC   magnetic defects when disrupted, suggesting a potential role in
+CC   bacterial magnetosome formation or related processes. The specific
+CC   molecular function of this domain remains to be determined.
+RN   [1]
+RM   35076272
+RT   Global Analysis of Biomineralization Genes in Magnetospirillum
+RT   magneticum AMB-1.
+RA   Barber-Zucker S, Zarivach R;
+RL   mSystems 2022;7:e0112021.

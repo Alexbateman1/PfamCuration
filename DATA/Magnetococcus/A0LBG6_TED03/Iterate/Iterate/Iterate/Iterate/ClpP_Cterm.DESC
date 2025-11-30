@@ -1,0 +1,21 @@
+ID   ClpP_Cterm
+DE   ClpP protease C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBG6_TED03
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain (approximately 40-80
+CC   residues, positions 209-327) found in ATP-dependent ClpP protease
+CC   proteolytic subunits. This domain follows the ClpP protease catalytic
+CC   domain (Pfam:PF00574) in ClpP and related proteins. ClpP proteases are
+CC   serine peptidases that form barrel-shaped proteolytic chambers and
+CC   degrade proteins delivered by ClpA, ClpX, or other AAA+ ATPases. The
+CC   family is found in Pseudomonadota, particularly Alphaproteobacteria
+CC   (Rhodobacterales including Paracoccaceae and Roseobacteraceae) and
+CC   Betaproteobacteria (Burkholderiales). Some family members co-occur
+CC   with SDH protease domains (Pfam:PF01972) or peptidase S49 domains
+CC   (Pfam:PF01343).
