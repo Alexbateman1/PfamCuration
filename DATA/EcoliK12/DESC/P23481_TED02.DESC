@@ -1,0 +1,16 @@
+ID   HyfA_C
+DE   Hydrogenase-4 component A C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   UniProtKB:P23481
+GA   27.00 27.00;
+TC   27.00 41.40;
+NC   24.50 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal domain of hydrogenase-4
+CC   component A (HyfA), found in Enterobacteriaceae. HyfA is a probable
+CC   electron transfer protein that binds four [4Fe-4S] clusters.
+CC   Hydrogenase-4 is part of the formate hydrogenlyase complex that
+CC   catalyses the disproportionation of formate to produce hydrogen and
+CC   carbon dioxide under anaerobic conditions.
