@@ -1,0 +1,23 @@
+ID   SNF2_heli
+DE   SNF2-related helicase central domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5R1_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a central helicase domain (approximately
+CC   155-165 residues) found in SNF2/RAD54 family helicases. This domain
+CC   is positioned between the N-terminal Type III restriction enzyme-like
+CC   domain (ResIII, Pfam:PF04851) and the C-terminal helicase domain
+CC   (Pfam:PF00271), typically at residues 500-680. SNF2-related helicases
+CC   are ATP-dependent DNA translocases that use the energy of ATP
+CC   hydrolysis to alter DNA-protein interactions or DNA structure. These
+CC   proteins are often associated with restriction-modification systems
+CC   and CRISPR-Cas systems, where they function in DNA metabolism and
+CC   defence against foreign DNA. The family is found predominantly in
+CC   Pseudomonadota (particularly Alphaproteobacteria and
+CC   Gammaproteobacteria), Bacillota, Actinomycetota (Actinomycetes) and
+CC   Bacteroidota.

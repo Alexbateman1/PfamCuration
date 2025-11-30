@@ -1,0 +1,21 @@
+ID   Primase_N
+DE   DnaG-type primase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L9C8_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain (approximately 95-105
+CC   residues) found in DnaG-type primases associated with plasmids and
+CC   bacteriophages. This domain precedes the TOPRIM domain
+CC   (Pfam:PF01751), which is a conserved catalytic domain found in
+CC   topoisomerases and primases. The full-length proteins typically
+CC   contain this N-terminal domain, a TOPRIM domain, and an AAA+ ATPase
+CC   domain (Pfam:PF13481), functioning in DNA replication initiation. The
+CC   family is found predominantly in Alphaproteobacteria, particularly
+CC   Hyphomicrobiales (including Paracoccaceae), Rhodobacterales,
+CC   Sphingomonadales and Acetobacterales. These primases synthesise short
+CC   RNA primers that are required for DNA replication.
