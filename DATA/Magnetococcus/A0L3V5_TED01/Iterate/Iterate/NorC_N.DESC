@@ -1,0 +1,30 @@
+ID   NorC_N
+DE   Nitric oxide reductase subunit C N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L3V5_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.60 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal region (approximately 35-45
+CC   residues) of the small cytochrome c subunit (NorC) of bacterial
+CC   nitric oxide reductase (NOR). This region precedes the cytochrome c
+CC   domain (Pfam:PF00034) that binds heme c and is involved in electron
+CC   transfer. NorC forms a heterodimeric complex with the large NorB
+CC   subunit, functioning in the anaerobic respiratory chain that converts
+CC   nitrate to dinitrogen during denitrification. The family is found in
+CC   Alphaproteobacteria (particularly Rhodobacterales including
+CC   Paracoccaceae and Roseobacteraceae, and Hyphomicrobiales),
+CC   Betaproteobacteria (Burkholderiales), and Gammaproteobacteria
+CC   (Pseudomonadales). Crystal structures of NorC from Pseudomonas
+CC   aeruginosa and Roseobacter denitrificans have been determined,
+CC   revealing the structural basis of biological N2O generation.
+RN   [1]
+RM   21109633
+RT   Structural basis of biological N2O generation by bacterial nitric
+RT   oxide reductase.
+RA   Hino T., Matsumoto Y., Nagano S., Sugimoto H., Fukumori Y., Murata T.,
+RA   Iwata S., Shiro Y.;
+RL   Science 330:1666-1670(2010).
