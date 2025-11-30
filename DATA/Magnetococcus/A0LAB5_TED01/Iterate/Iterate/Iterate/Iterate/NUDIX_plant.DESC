@@ -1,0 +1,30 @@
+ID   NUDIX_plant
+DE   Plant NUDIX hydrolase domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LAB5_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   26049160
+RT   Identification and characterisation of Arabidopsis AtNUDX9 as a
+RT   GDP-D-mannose pyrophosphohydrolase: its involvement in root growth
+RT   inhibition in response to ammonium.
+RA   Jung B., Flörchinger M., Kunz HH., Traub M., Wartenberg R., Jeblick
+RA   W., Neuhaus HE., Mohlmann T.;
+RL   J. Exp. Bot. 2015;66:7193-7205.
+CC   This entry represents a NUDIX hydrolase domain (approximately 70-80
+CC   residues) found predominantly in plant proteins. NUDIX (nucleoside
+CC   diphosphate linked to X) hydrolases are a superfamily of enzymes
+CC   that hydrolyse nucleoside diphosphate derivatives. The prototype
+CC   protein AtNUDX9 from Arabidopsis thaliana functions as a GDP-D-
+CC   mannose pyrophosphohydrolase, hydrolysing GDP-D-mannose to GMP and
+CC   mannose 1-phosphate [1]. This enzyme is involved in regulating GDP-
+CC   D-mannose levels and affects ammonium sensitivity through modulation
+CC   of protein N-glycosylation in plant roots. The family is found
+CC   predominantly in flowering plants (eudicots and monocots), with some
+CC   representatives in bacteria. STRING analysis shows association with
+CC   the canonical NUDIX domain (Pfam:PF00293).

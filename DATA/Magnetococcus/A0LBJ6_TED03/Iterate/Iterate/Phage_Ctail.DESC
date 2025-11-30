@@ -1,0 +1,20 @@
+ID   Phage_Ctail
+DE   Bacteriophage protein C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBJ6_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal region (approximately 42-49
+CC   residues) found in bacteriophage proteins and prophage elements. The
+CC   domain is typically located at the extreme C-terminus of the protein
+CC   (residues 172-220 in the prototype). The family shows unusual
+CC   taxonomic distribution, being found in bacteria (Alphaproteobacteria,
+CC   Betaproteobacteria, Bacillales), bacteriophages (Caudoviricetes),
+CC   and monocot plants (Poaceae family including rice). STRING analysis
+CC   indicates functional association with RNA polymerase components
+CC   (RNA_pol_A_bac, RNA_pol_L, RNA_pol_A_CTD), suggesting possible
+CC   involvement in transcriptional regulation or phage-host interaction.
