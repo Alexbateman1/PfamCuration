@@ -1,0 +1,30 @@
+ID   Hyd_ShortChain
+DE   Hydrogenase short-chain subunit
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L609_TED02
+GA   27.00 27.00;
+TC   27.20 27.90;
+NC   25.40 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain (approximately 200-240 residues)
+CC   found in [NiFe] and [NiFeSe] hydrogenase small subunits. These
+CC   metalloproteases contain multiple iron-sulfur clusters and function
+CC   in hydrogen metabolism. This domain is typically located at residues
+CC   2-237 in proteins that catalyse the reversible oxidation of
+CC   molecular hydrogen. The family is found predominantly in Archaea
+CC   (particularly Methanobacteriota, including hyperthermophilic
+CC   Thermococci such as Pyrococcus furiosus) and Bacteria
+CC   (Pseudomonadota, Actinomycetota, Thermodesulfobacteriota). These
+CC   enzymes are components of complex hydrogenase systems that couple
+CC   hydrogen oxidation to various electron acceptors. The domain
+CC   contains binding sites for [3Fe-4S] and [4Fe-4S] clusters essential
+CC   for electron transfer.
+RN   [1]
+RM   10714990
+RT   Characterization of hydrogenase II from the hyperthermophilic
+RT   archaeon Pyrococcus furiosus and assessment of its role in sulfur
+RT   reduction.
+RA   Ma K., Weiss R., Adams M.W.;
+RL   J. Bacteriol. 182:1864-1871(2000).

@@ -1,0 +1,24 @@
+ID   GpW_phage
+DE   Bacteriophage gpW family protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L792_TED01
+GA   27.00 27.00;
+TC   27.70 27.40;
+NC   26.80 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a small domain (approximately 50-60 residues)
+CC   found in bacteriophage gpW family proteins. The gpW protein is
+CC   involved in phage head completion and virion assembly. These
+CC   proteins are typically associated with gene transfer agents (GTAs)
+CC   and prophage regions in bacterial genomes. The family is broadly
+CC   distributed in Alphaproteobacteria, particularly within
+CC   Rhodobacterales (Paracoccaceae including Paracoccus species, and
+CC   Roseobacteraceae) and Hyphomicrobiales, as well as in
+CC   Betaproteobacteria. Proteins in this family show similarity to
+CC   bacteriophage P21 head completion protein gp3. STRING analysis
+CC   indicates functional association with phage portal proteins
+CC   (Pfam:PF05136), GpA ATPase (Pfam:PF05876), and GpA nuclease domains
+CC   (Pfam:PF20454), reflecting the role of these proteins in phage
+CC   morphogenesis and DNA packaging.
