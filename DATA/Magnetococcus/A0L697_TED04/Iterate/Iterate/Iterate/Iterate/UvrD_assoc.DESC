@@ -1,0 +1,20 @@
+ID   UvrD_assoc
+DE   UvrD helicase-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L697_TED04
+GA   27.00 27.00;
+TC   27.20 27.20;
+NC   26.40 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain (approximately 166-178 residues,
+CC   positions 297-480) found in ATP-dependent helicase/deoxyribonuclease
+CC   proteins. This domain is associated with UvrD-like helicases and RecB
+CC   family exonucleases involved in DNA repair and recombination. These
+CC   proteins typically co-occur with UvrD helicase domains
+CC   (Pfam:PF00580, Pfam:PF13361), AAA+ ATPase domains (Pfam:PF13245), and
+CC   PD-(D/E)XK nuclease domains (Pfam:PF12705). The family is found in
+CC   Pseudomonadota, particularly Gammaproteobacteria (Cellvibrionales,
+CC   Legionellales) and Betaproteobacteria (Burkholderiales including
+CC   Alcaligenaceae).

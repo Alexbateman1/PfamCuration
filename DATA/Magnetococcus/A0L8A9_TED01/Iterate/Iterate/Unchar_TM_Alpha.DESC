@@ -1,0 +1,20 @@
+ID   Unchar_TM_Alpha
+DE   Uncharacterised transmembrane domain in Alphaproteobacteria
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L8A9_TED01
+GA   27.00 27.00;
+TC   27.10 59.10;
+NC   25.40 23.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised transmembrane domain
+CC   (approximately 121-136 residues, positions 7-143) found exclusively in
+CC   Alphaproteobacteria. This domain is found in transmembrane proteins
+CC   with no assigned function. The family is found predominantly in
+CC   Hyphomicrobiales (particularly Rhizobiaceae) and Caulobacterales. Some
+CC   family members may be associated with type II or type III secretion
+CC   system pilus proteins (Pfam:PF13629), pilus assembly proteins
+CC   (Pfam:PF09476), TadE-like proteins (Pfam:PF07811), or peptidase A24
+CC   family proteins (Pfam:PF01478). The specific function of this
+CC   transmembrane domain remains to be determined.
