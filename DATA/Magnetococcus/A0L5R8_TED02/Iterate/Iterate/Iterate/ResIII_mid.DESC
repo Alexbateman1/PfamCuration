@@ -1,0 +1,26 @@
+ID   ResIII_mid
+DE   Type III restriction enzyme middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5R8_TED02
+GA   27.00 27.00;
+TC   27.40 27.50;
+NC   26.90 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle domain (approximately 80-90 residues)
+CC   found in Type III restriction-modification system endonucle ases.
+CC   This domain is typically located at approximately residues 296-380,
+CC   positioned between the N-terminal ResIII helicase-like domain
+CC   (Pfam:PF04851) and the C-terminal restriction endonuclease domains.
+CC   Type III restriction-modification systems protect bacteria against
+CC   foreign DNA by recognising specific DNA sequences and cleaving at
+CC   distant sites. The family is broadly distributed across bacteria,
+CC   particularly in Pseudomonadota (Gammaproteobacteria,
+CC   Betaproteobacteria, Alphaproteobacteria), Bacillota (Clostridia,
+CC   Bacilli), Actinomycetota (Actinomycetes) and Bacteroidota. STRING
+CC   analysis indicates functional association with DNA methyltransferases
+CC   (N6_N4_Mtase), SNF2-family helicases (Pfam:PF00176) and helicase
+CC   C-terminal domains (Pfam:PF00271). The specific function of this
+CC   middle domain remains to be determined, but it may play a role in
+CC   protein-protein interactions or domain organisation.
