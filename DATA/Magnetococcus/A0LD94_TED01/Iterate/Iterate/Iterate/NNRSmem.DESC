@@ -1,0 +1,27 @@
+ID   NNRSmem
+DE   NNRS family membrane domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LD94_TED01
+GA   27.00 27.00;
+TC   27.40 27.40;
+NC   26.90 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   24931479
+RT   Conserved evolutionary units in the heme-copper oxidase superfamily
+RT   revealed by novel homologous protein families.
+RA   Refojo PN., Sousa FL., Teixeira M., Pereira MM.;
+RL   Protein Sci. 2014;23:1179-1198.
+CC   This entry represents a membrane domain (approximately 118-119
+CC   residues, positions 250-368) found in NNRS family proteins. These
+CC   proteins are associated with heme-copper oxidase homolog (HCOH)
+CC   families and putative nitrite reductases. Some members are annotated
+CC   as cytochrome c oxidase subunits or conserved membrane proteins. The
+CC   family is found exclusively in Actinomycetota (Actinomycetes),
+CC   particularly Micrococcales (Microbacteriaceae, Micrococcaceae),
+CC   Streptosporangiales (Streptosporangiaceae), and Propionibacteriales.
+CC   These proteins may function in electron transfer or respiratory
+CC   pathways, with structural studies on PPA0092 from Propionibacterium
+CC   acnes suggesting a role in nitrogen metabolism.

@@ -1,0 +1,22 @@
+ID   Prepilin_proc
+DE   Prepilin processing domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LDN7_TED01
+GA   27.00 27.00;
+TC   27.30 27.00;
+NC   25.60 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a processing domain (approximately 200-220
+CC   residues, positions 19-261) found in prepilin-type proteins. Prepilins
+CC   are the precursors of pilins, the structural components of bacterial
+CC   pili. These proteins undergo N-terminal processing, including cleavage
+CC   and N-methylation, before assembly into pilus structures. This domain
+CC   represents the main processed region of the prepilin. The family is
+CC   found in Pseudomonadota, particularly Betaproteobacteria
+CC   (Rhodocyclales, Nitrosomonadales, Thiotrichales, Burkholderiales
+CC   including Oxalobacteraceae, Lysobacterales including
+CC   Piscirickettsiaceae), with additional representation in
+CC   Gammaproteobacteria and Alphaproteobacteria. Prepilins are involved in
+CC   bacterial motility, adhesion, and biofilm formation.
