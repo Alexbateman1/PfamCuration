@@ -1,0 +1,23 @@
+ID   Peptidase_M50_C
+DE   Peptidase M50 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L9Q6_TED05
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain (approximately 125-130
+CC   residues) found in peptidase M50 family proteins. The M50 family
+CC   comprises zinc-dependent metalloproteases that process membrane-
+CC   associated substrates. These proteins typically contain multiple
+CC   domains including transmembrane regions and catalytic domains. This
+CC   C-terminal domain is found at the extreme C-terminus (approximately
+CC   residues 590-715) and may be involved in substrate recognition or
+CC   protein-protein interactions. The family is found in bacteria,
+CC   particularly Pseudomonadota (Gammaproteobacteria,
+CC   Alphaproteobacteria and Betaproteobacteria) and Planctomycetota
+CC   (Planctomycetia, Pirellulales). STRING analysis suggests functional
+CC   association with ABC transporters and OEP (outer envelope protein)
+CC   systems.

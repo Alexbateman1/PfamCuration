@@ -1,0 +1,21 @@
+ID   DUF3489_N
+DE   DUF3489 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBH3_TED01
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   26.90 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain (approximately 75-80
+CC   residues) associated with DUF3489 (Pfam:PF11994). This domain is
+CC   found in uncharacterised proteins from Alphaproteobacteria,
+CC   particularly within the Rhodobacterales order (Paracoccaceae,
+CC   Roseobacteraceae). The domain typically precedes a DUF3489 domain
+CC   and is found in proteins that appear to be associated with mobile
+CC   genetic elements and prophage regions. STRING analysis suggests
+CC   functional links to ParB-methyltransferase systems, RNA polymerases
+CC   and phage-related proteins. The family is exclusively bacterial,
+CC   distributed predominantly in Alphaproteobacteria. The specific
+CC   function of this N-terminal domain remains to be determined.
