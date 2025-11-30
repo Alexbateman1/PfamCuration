@@ -1,0 +1,22 @@
+ID   Peptidase_S49_C
+DE   Peptidase S49 C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L9A4_TED03
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   26.20 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal region (approximately 41-85
+CC   residues, positions 260-346) found in peptidase S49 family proteins.
+CC   This region follows the peptidase S49 catalytic domain (Pfam:PF01343)
+CC   in signal peptide peptidases and related serine proteases. Some
+CC   proteins in this family co-occur with ClpP protease domains
+CC   (Pfam:PF00574) or SDH protease domains (Pfam:PF01972). The peptidase
+CC   S49 family includes signal peptide peptidases involved in intramembrane
+CC   proteolysis and bacteriophage capsid assembly proteases. The family
+CC   is found in Pseudomonadota, particularly Alphaproteobacteria
+CC   (Rhodobacterales including Paracoccaceae and Roseobacteraceae) and
+CC   Betaproteobacteria (Burkholderiales). The specific function of this
+CC   C-terminal region remains to be determined.

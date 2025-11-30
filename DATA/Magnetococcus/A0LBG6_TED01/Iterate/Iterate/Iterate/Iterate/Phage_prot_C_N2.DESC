@@ -1,0 +1,30 @@
+ID   Phage_prot_C_N2
+DE   Bacteriophage capsid assembly protein C N-terminal domain 2
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBG6_TED01
+GA   27.00 27.00;
+TC   27.40 27.30;
+NC   26.40 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain (approximately 30-67
+CC   residues, positions 4-67) found in bacteriophage capsid assembly
+CC   proteins. This domain precedes the peptidase S49 domain
+CC   (Pfam:PF01343) in capsid assembly protease C and related proteins.
+CC   These proteins function as both scaffolding proteins and proteases in
+CC   bacteriophage procapsid assembly and maturation. The protease
+CC   catalyses cleavage of the scaffolding protein after procapsid
+CC   formation, and cleavage products are evicted before DNA packaging.
+CC   The family is found in bacterial prophage sequences and temperate
+CC   bacteriophages, particularly in Pseudomonadota (Alphaproteobacteria
+CC   including Rhodobacterales and Paracoccaceae, Gammaproteobacteria,
+CC   Betaproteobacteria). Some family members co-occur with phage capsid,
+CC   portal, and DNA packaging domains (Pfam:PF03864, Pfam:PF05136,
+CC   Pfam:PF05876, Pfam:PF20454).
+RN   [1]
+RM   20620152
+RT   Assembly and maturation of the bacteriophage lambda procapsid: gpC is
+RT   the viral protease.
+RA   Medina E, Wieczorek D, Medina EM, Yang Q, Feiss M, Catalano CE;
+RL   J Mol Biol 2010;401:813-830.
