@@ -999,17 +999,17 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=
 
 def display_info_files(dir_path):
     """Display information files for annotation"""
-    # sp.seq_info
-    sp_file = Path(dir_path) / 'sp.seq_info'
-    if sp_file.exists():
-        print("\n--- sp.seq_info (copy to Claude) ---", file=sys.stderr)
-        with open(sp_file, 'r') as f:
+    # 1. DESC file first
+    desc_file = Path(dir_path) / 'DESC'
+    print("\n--- DESC ---", file=sys.stderr)
+    if desc_file.exists():
+        with open(desc_file, 'r') as f:
             print(f.read(), file=sys.stderr)
-        print("--- End sp.seq_info ---", file=sys.stderr)
     else:
-        print("\nNote: sp.seq_info not found", file=sys.stderr)
+        print("Not found", file=sys.stderr)
+    print("--- End DESC ---", file=sys.stderr)
 
-    # species
+    # 2. species
     species_file = Path(dir_path) / 'species'
     print("\n--- species summary ---", file=sys.stderr)
     if species_file.exists():
@@ -1019,7 +1019,17 @@ def display_info_files(dir_path):
         print("Not found", file=sys.stderr)
     print("--- End species ---", file=sys.stderr)
 
-    # arch
+    # 3. SwissProt entries (sp.seq_info)
+    sp_file = Path(dir_path) / 'sp.seq_info'
+    if sp_file.exists():
+        print("\n--- sp.seq_info (SwissProt entries) ---", file=sys.stderr)
+        with open(sp_file, 'r') as f:
+            print(f.read(), file=sys.stderr)
+        print("--- End sp.seq_info ---", file=sys.stderr)
+    else:
+        print("\nNote: sp.seq_info not found", file=sys.stderr)
+
+    # 4. Domain architectures (arch)
     arch_file = Path(dir_path) / 'arch'
     print("\n--- Domain architectures ---", file=sys.stderr)
     if arch_file.exists():
@@ -1029,7 +1039,7 @@ def display_info_files(dir_path):
         print("Not found", file=sys.stderr)
     print("--- End arch ---", file=sys.stderr)
 
-    # paperblast (truncated)
+    # 5. PaperBLAST (truncated)
     pb_file = Path(dir_path) / 'paperblast'
     if pb_file.exists() and pb_file.stat().st_size > 0:
         print("\n--- PaperBLAST ---", file=sys.stderr)
@@ -1041,19 +1051,19 @@ def display_info_files(dir_path):
                 print(f"... (truncated, {len(lines)} total lines)", file=sys.stderr)
         print("--- End PaperBLAST ---", file=sys.stderr)
 
-    # TED (truncated)
-    ted_file = Path(dir_path) / 'TED'
-    if ted_file.exists():
-        print("\n--- TED ---", file=sys.stderr)
-        with open(ted_file, 'r') as f:
+    # 6. UniProt bibliography
+    bibl_file = Path(dir_path) / 'uniprot_bibl'
+    if bibl_file.exists() and bibl_file.stat().st_size > 0:
+        print("\n--- UniProt Bibliography ---", file=sys.stderr)
+        with open(bibl_file, 'r') as f:
             lines = f.readlines()
             for line in lines[:100]:
                 print(line, end='', file=sys.stderr)
             if len(lines) > 100:
-                print(f"... (truncated)", file=sys.stderr)
-        print("--- End TED ---", file=sys.stderr)
+                print(f"... (truncated, {len(lines)} total lines)", file=sys.stderr)
+        print("--- End UniProt Bibliography ---", file=sys.stderr)
 
-    # STRING (truncated)
+    # 7. STRING (truncated)
     string_file = Path(dir_path) / 'STRING'
     if string_file.exists() and string_file.stat().st_size > 0:
         print("\n--- STRING ---", file=sys.stderr)
@@ -1065,7 +1075,19 @@ def display_info_files(dir_path):
                 print(f"... (truncated)", file=sys.stderr)
         print("--- End STRING ---", file=sys.stderr)
 
-    # foldseek
+    # 8. TED (truncated)
+    ted_file = Path(dir_path) / 'TED'
+    if ted_file.exists():
+        print("\n--- TED ---", file=sys.stderr)
+        with open(ted_file, 'r') as f:
+            lines = f.readlines()
+            for line in lines[:100]:
+                print(line, end='', file=sys.stderr)
+            if len(lines) > 100:
+                print(f"... (truncated)", file=sys.stderr)
+        print("--- End TED ---", file=sys.stderr)
+
+    # 9. Foldseek
     fs_file = Path(dir_path) / 'foldseek'
     if fs_file.exists():
         with open(fs_file, 'r') as f:
@@ -1077,16 +1099,6 @@ def display_info_files(dir_path):
                 if len(lines) > 100:
                     print(f"... (truncated)", file=sys.stderr)
                 print("--- End Foldseek ---", file=sys.stderr)
-
-    # DESC
-    desc_file = Path(dir_path) / 'DESC'
-    print("\n--- DESC ---", file=sys.stderr)
-    if desc_file.exists():
-        with open(desc_file, 'r') as f:
-            print(f.read(), file=sys.stderr)
-    else:
-        print("Not found", file=sys.stderr)
-    print("--- End DESC ---", file=sys.stderr)
 
 
 def count_align_sequences(dir_path):
@@ -1106,18 +1118,38 @@ def collect_directory_info(dir_name, start_dir):
 
     os.chdir(dir_name)
 
-    # Collect all the information
+    # Collect all the information in order
     info_sections = []
 
-    # sp.seq_info content
+    # 1. DESC file first
+    info_sections.append("--- DESC ---")
+    desc_file = Path('DESC')
+    if desc_file.exists():
+        with open(desc_file, 'r') as f:
+            info_sections.append(f.read())
+    else:
+        info_sections.append("Note: DESC file not found")
+    info_sections.append("--- End DESC ---")
+
+    # 2. species summary
+    info_sections.append("\n--- species summary ---")
+    species_file = Path('species')
+    if species_file.exists():
+        with open(species_file, 'r') as f:
+            info_sections.append(f.read())
+    else:
+        info_sections.append("Note: species file not found")
+    info_sections.append("--- End species ---")
+
+    # 3. SwissProt entries (sp.seq_info)
     sp_file = Path('sp.seq_info')
     if sp_file.exists():
-        info_sections.append("--- sp.seq_info content (copy to Claude) ---")
+        info_sections.append("\n--- sp.seq_info (SwissProt entries) ---")
         with open(sp_file, 'r') as f:
             info_sections.append(f.read())
-        info_sections.append("--- End of sp.seq_info ---")
+        info_sections.append("--- End sp.seq_info ---")
     else:
-        info_sections.append("--- sp.seq_info content (copy to Claude) ---")
+        info_sections.append("\n--- sp.seq_info (SwissProt entries) ---")
         info_sections.append("Note: sp.seq_info file not found")
         # Extract potential protein accession
         current_path = os.getcwd()
@@ -1125,93 +1157,84 @@ def collect_directory_info(dir_name, start_dir):
         if '_TED' in dir_name:
             protein_acc = dir_name.split('_TED')[0]
             info_sections.append(f"Potential protein accession for UniProt search: {protein_acc}")
-        info_sections.append("--- End of sp.seq_info ---")
+        info_sections.append("--- End sp.seq_info ---")
 
-    # species summary
-    info_sections.append("\n--- species summary (copy to Claude) ---")
-    species_file = Path('species')
-    if species_file.exists():
-        with open(species_file, 'r') as f:
-            info_sections.append(f.read())
-    else:
-        info_sections.append("Note: species file not found")
-    info_sections.append("--- End of species summary ---")
-
-    # Domain architectures
-    info_sections.append("\n--- Domain architectures (copy to Claude) ---")
+    # 4. Domain architectures
+    info_sections.append("\n--- Domain architectures ---")
     arch_file = Path('arch')
     if arch_file.exists():
         with open(arch_file, 'r') as f:
             info_sections.append(f.read())
     else:
         info_sections.append("Note: arch file not found")
-    info_sections.append("--- End of Domain architectures ---")
+    info_sections.append("--- End arch ---")
 
-    # PaperBLAST literature results
+    # 5. PaperBLAST literature results
     paperblast_file = Path('paperblast')
     if paperblast_file.exists() and paperblast_file.stat().st_size > 0:
-        info_sections.append("\n--- PaperBLAST literature results (copy to Claude) ---")
+        info_sections.append("\n--- PaperBLAST ---")
         with open(paperblast_file, 'r') as f:
             lines = f.readlines()
             if len(lines) > 100:
                 info_sections.append(''.join(lines[:100]))
-                info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
+                info_sections.append(f"... (truncated, {len(lines)} total lines)")
             else:
                 info_sections.append(''.join(lines))
-        info_sections.append("--- End of PaperBLAST literature results ---")
+        info_sections.append("--- End PaperBLAST ---")
 
-    # TED domain information
-    info_sections.append("\n--- TED domain information (copy to Claude) ---")
-    ted_file = Path('TED')
-    if ted_file.exists():
-        with open(ted_file, 'r') as f:
+    # 6. UniProt bibliography
+    bibl_file = Path('uniprot_bibl')
+    if bibl_file.exists() and bibl_file.stat().st_size > 0:
+        info_sections.append("\n--- UniProt Bibliography ---")
+        with open(bibl_file, 'r') as f:
             lines = f.readlines()
             if len(lines) > 100:
                 info_sections.append(''.join(lines[:100]))
-                info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
+                info_sections.append(f"... (truncated, {len(lines)} total lines)")
             else:
                 info_sections.append(''.join(lines))
-    else:
-        info_sections.append("Note: TED file not found")
-    info_sections.append("--- End of TED domain information ---")
+        info_sections.append("--- End UniProt Bibliography ---")
 
-    # STRING protein interaction network
+    # 7. STRING protein interaction network
     string_file = Path('STRING')
     if string_file.exists() and string_file.stat().st_size > 0:
-        info_sections.append("\n--- STRING protein interaction network (copy to Claude) ---")
+        info_sections.append("\n--- STRING ---")
         with open(string_file, 'r') as f:
             lines = f.readlines()
             if len(lines) > 100:
                 info_sections.append(''.join(lines[:100]))
-                info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
+                info_sections.append(f"... (truncated)")
             else:
                 info_sections.append(''.join(lines))
-        info_sections.append("--- End of STRING protein interaction network ---")
+        info_sections.append("--- End STRING ---")
 
-    # Foldseek results
+    # 8. TED domain information
+    ted_file = Path('TED')
+    if ted_file.exists():
+        info_sections.append("\n--- TED ---")
+        with open(ted_file, 'r') as f:
+            lines = f.readlines()
+            if len(lines) > 100:
+                info_sections.append(''.join(lines[:100]))
+                info_sections.append(f"... (truncated)")
+            else:
+                info_sections.append(''.join(lines))
+        info_sections.append("--- End TED ---")
+
+    # 9. Foldseek results
     foldseek_file = Path('foldseek')
     if foldseek_file.exists():
         with open(foldseek_file, 'r') as f:
             lines = f.readlines()
             # Only include if more than header line
             if len(lines) > 1:
-                info_sections.append("\n--- Foldseek structural matches (copy to Claude) ---")
+                info_sections.append("\n--- Foldseek ---")
                 if len(lines) > 100:
                     info_sections.append(''.join(lines[:100]))
-                    info_sections.append(f"... (truncated - showing first 100 of {len(lines)} lines)")
+                    info_sections.append(f"... (truncated)")
                 else:
                     info_sections.append(''.join(lines))
-                info_sections.append("--- End of Foldseek structural matches ---")
-
-    # Current DESC file
-    info_sections.append("\n--- Current DESC file (copy to Claude) ---")
-    desc_file = Path('DESC')
-    if desc_file.exists():
-        with open(desc_file, 'r') as f:
-            info_sections.append(f.read())
-    else:
-        info_sections.append("Note: DESC file not found")
-    info_sections.append("--- End of Current DESC file ---")
+                info_sections.append("--- End Foldseek ---")
 
     # Return to start directory
     os.chdir(start_dir)
