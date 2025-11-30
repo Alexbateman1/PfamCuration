@@ -1,0 +1,31 @@
+ID   SNF2_hel_fungal
+DE   SNF2 family helicase fungal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBC0_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27611590
+RT   Pfh1 Is an Accessory Replicative Helicase that Interacts with the
+RT   Replisome to Facilitate Fork Progression and Preserve Genome
+RT   Integrity.
+RA   Mehta K.P.M., Lovejoy C.A., Zhao R., Heintzman D.R., Cortez D.;
+RL   PLoS Genet. 2016;12:e1006238.
+CC   This entry represents a domain (approximately 125-155 residues)
+CC   found in SNF2 family DNA helicases from fungi. The domain is located
+CC   at approximately residues 425-555 and follows helicase domains
+CC   including ResIII (Pfam:PF04851), DEAD-box (Pfam:PF00270), and
+CC   Helicase_C (Pfam:PF00271). It may also be associated with UPF0547
+CC   (Pfam:PF10571) domains. The family is found exclusively in fungi,
+CC   particularly in Ascomycota (Pezizomycotina), including Sordariomycetes,
+CC   Eurotiomycetes and Dothideomycetes. Members include putative
+CC   mitochondrial ATP-dependent helicases. STRING analysis shows strong
+CC   functional association with mitochondrial proteins including ATP
+CC   synthase subunits, ribosomal proteins, mitochondrial carrier
+CC   proteins and respiratory chain components. The specific function of
+CC   this domain in helicase activity or mitochondrial DNA maintenance
+CC   remains to be determined.
