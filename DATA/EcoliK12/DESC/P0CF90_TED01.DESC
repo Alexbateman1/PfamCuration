@@ -1,0 +1,14 @@
+ID   InsI_IS30D
+DE   Transposase InsI for insertion sequence element IS30 family
+AU   Bateman A;0000-0002-6982-4660
+SE   UniProtKB:P0CF90
+GA   27.00 27.00;
+TC   27.00 41.40;
+NC   24.50 19.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents InsI, a transposase from insertion sequence
+CC   element IS30. Transposases facilitate the movement of insertion
+CC   sequences, which are simple mobile genetic elements found in
+CC   bacterial genomes.
