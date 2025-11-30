@@ -690,7 +690,7 @@ def try_resolve_overlaps(entry, start_dir):
             print("Unrecognized option")
 
 
-def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=None):
+def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=None, skip_to_annotation=False):
     """
     Guide curator through family curation.
 
@@ -700,6 +700,7 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=
         se_prefix: Optional SE line prefix
         use_nano: Use nano instead of emacs
         working_dir: Override directory to work in (for overlap resolution)
+        skip_to_annotation: Skip SEED editing and go directly to annotation (after overlap resolution)
     """
     dir_name = working_dir if working_dir else entry['dir']
     root_dir = entry['root']
@@ -712,7 +713,7 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=
     if entry.get('swissprot_count', 0) > 0:
         print(f"SwissProt proteins: {entry['swissprot_count']}")
 
-    # Warn about deeper overlaps that weren't resolvable
+    # Warn about deeper overlaps that weren't resolvable (only when not using deeper dir)
     if entry.get('deeper_overlaps') and not working_dir:
         print("\nNote: Deeper iterations have overlaps (not resolvable):")
         for warning in entry['deeper_overlaps'][:3]:
@@ -753,111 +754,115 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, working_dir=
             print(f"Warning: Could not move to IGNORE: {e}", file=sys.stderr)
         return False
 
-    # Display images if available
-    ted_png = Path('ted.png')
-    if ted_png.exists():
-        print("\nDisplaying ted.png...")
-        run_command(f"imgcat {ted_png}", wait=False)
+    # Skip SEED editing if coming from successful overlap resolution
+    if not skip_to_annotation:
+        # Display images if available
+        ted_png = Path('ted.png')
+        if ted_png.exists():
+            print("\nDisplaying ted.png...")
+            run_command(f"imgcat {ted_png}", wait=False)
 
-    ted_web_png = Path('ted_web.png')
-    if ted_web_png.exists():
-        print("\nDisplaying ted_web.png...")
-        run_command(f"imgcat {ted_web_png}", wait=False)
+        ted_web_png = Path('ted_web.png')
+        if ted_web_png.exists():
+            print("\nDisplaying ted_web.png...")
+            run_command(f"imgcat {ted_web_png}", wait=False)
 
-    # Launch belvu for SEED review
-    print("\nLaunching belvu for SEED alignment review...")
-    run_command("belvu SEED", wait=True)
+        # Launch belvu for SEED review
+        print("\nLaunching belvu for SEED alignment review...")
+        run_command("belvu SEED", wait=True)
 
-    # SEED editing loop
-    while True:
-        print("\n" + "="*60)
-        print("SEED editing options:")
-        print("  y/yes     - Happy with SEED, continue to annotation")
-        print("  n/no      - Skip to next family")
-        print("  i/ignore  - Move to IGNORE directory")
-        print("  b/build   - Run pfbuild on this family")
-        print("  w/wholeseq - Run wholeseq on SEED")
-        print("  e/extend  - Extend N/C termini")
-        print("  p/pad     - Pad alignment ends")
-        print("  r/remove  - Remove family to archive")
-        print("="*60)
+        # SEED editing loop
+        while True:
+            print("\n" + "="*60)
+            print("SEED editing options:")
+            print("  y/yes     - Happy with SEED, continue to annotation")
+            print("  n/no      - Skip to next family")
+            print("  i/ignore  - Move to IGNORE directory")
+            print("  b/build   - Run pfbuild on this family")
+            print("  w/wholeseq - Run wholeseq on SEED")
+            print("  e/extend  - Extend N/C termini")
+            print("  p/pad     - Pad alignment ends")
+            print("  r/remove  - Remove family to archive")
+            print("="*60)
 
-        response = input("\nWhat would you like to do? ").strip().lower()
+            response = input("\nWhat would you like to do? ").strip().lower()
 
-        if response in ['y', 'yes']:
-            print("\nSEED looks good, continuing to annotation...")
-            break
+            if response in ['y', 'yes']:
+                print("\nSEED looks good, continuing to annotation...")
+                break
 
-        elif response in ['n', 'no']:
-            os.chdir(start_dir)
-            print("Skipping this family")
-            return False
+            elif response in ['n', 'no']:
+                os.chdir(start_dir)
+                print("Skipping this family")
+                return False
 
-        elif response in ['i', 'ignore']:
-            os.chdir(start_dir)
-            ignore_dir = Path("IGNORE")
-            if not ignore_dir.exists():
-                ignore_dir.mkdir()
-            try:
-                shutil.move(root_dir, str(ignore_dir / root_dir))
-                print(f"Moved {root_dir} to IGNORE/")
-            except Exception as e:
-                print(f"Warning: Could not move to IGNORE: {e}", file=sys.stderr)
-            return False
+            elif response in ['i', 'ignore']:
+                os.chdir(start_dir)
+                ignore_dir = Path("IGNORE")
+                if not ignore_dir.exists():
+                    ignore_dir.mkdir()
+                try:
+                    shutil.move(root_dir, str(ignore_dir / root_dir))
+                    print(f"Moved {root_dir} to IGNORE/")
+                except Exception as e:
+                    print(f"Warning: Could not move to IGNORE: {e}", file=sys.stderr)
+                return False
 
-        elif response in ['b', 'build']:
-            print("\nRunning pfbuild -withpfmake...")
-            run_command("pfbuild -withpfmake", wait=False)
-            print("pfbuild started, moving to next family...")
-            os.chdir(start_dir)
-            return False
+            elif response in ['b', 'build']:
+                print("\nRunning pfbuild -withpfmake...")
+                run_command("pfbuild -withpfmake", wait=False)
+                print("pfbuild started, moving to next family...")
+                os.chdir(start_dir)
+                return False
 
-        elif response in ['w', 'wholeseq']:
-            print("\nRunning wholeseq on SEED...")
-            shutil.copy("SEED", "SEED.beforewholeseq")
-            cmd = "wholeseq.pl -align SEED.beforewholeseq -m > SEED.tmp && mv SEED.tmp SEED"
-            if run_command(cmd, wait=True):
-                print("Wholeseq completed")
-                run_command("belvu SEED", wait=True)
+            elif response in ['w', 'wholeseq']:
+                print("\nRunning wholeseq on SEED...")
+                shutil.copy("SEED", "SEED.beforewholeseq")
+                cmd = "wholeseq.pl -align SEED.beforewholeseq -m > SEED.tmp && mv SEED.tmp SEED"
+                if run_command(cmd, wait=True):
+                    print("Wholeseq completed")
+                    run_command("belvu SEED", wait=True)
+                else:
+                    print("Warning: wholeseq may have failed", file=sys.stderr)
+
+            elif response in ['e', 'extend']:
+                n = input("N-terminus extension [0]: ").strip() or "0"
+                c = input("C-terminus extension [0]: ").strip() or "0"
+                print(f"\nExtending SEED N:{n} C:{c}")
+                shutil.copy("SEED", "SEED.beforeextend")
+                cmd = f"extend.pl -align SEED.beforeextend -n {n} -c {c} -m > SEED.tmp && mv SEED.tmp SEED"
+                if run_command(cmd, wait=True):
+                    print("Extension completed")
+                    run_command("belvu SEED", wait=True)
+                else:
+                    print("Warning: extend may have failed", file=sys.stderr)
+
+            elif response in ['p', 'pad']:
+                print("\nPadding SEED alignment...")
+                shutil.copy("SEED", "SEED.beforepad")
+                cmd = "pad_ends.pl -align SEED.beforepad > SEED.tmp && mv SEED.tmp SEED"
+                if run_command(cmd, wait=True):
+                    print("Padding completed")
+                    run_command("belvu SEED", wait=True)
+                else:
+                    print("Warning: pad_ends may have failed", file=sys.stderr)
+
+            elif response in ['r', 'remove']:
+                os.chdir(start_dir)
+                removed_dir = Path("REMOVED")
+                if not removed_dir.exists():
+                    removed_dir.mkdir()
+                try:
+                    shutil.move(root_dir, str(removed_dir / root_dir))
+                    print(f"Moved {root_dir} to REMOVED/")
+                except Exception as e:
+                    print(f"Warning: Could not move to REMOVED: {e}", file=sys.stderr)
+                return False
+
             else:
-                print("Warning: wholeseq may have failed", file=sys.stderr)
-
-        elif response in ['e', 'extend']:
-            n = input("N-terminus extension [0]: ").strip() or "0"
-            c = input("C-terminus extension [0]: ").strip() or "0"
-            print(f"\nExtending SEED N:{n} C:{c}")
-            shutil.copy("SEED", "SEED.beforeextend")
-            cmd = f"extend.pl -align SEED.beforeextend -n {n} -c {c} -m > SEED.tmp && mv SEED.tmp SEED"
-            if run_command(cmd, wait=True):
-                print("Extension completed")
-                run_command("belvu SEED", wait=True)
-            else:
-                print("Warning: extend may have failed", file=sys.stderr)
-
-        elif response in ['p', 'pad']:
-            print("\nPadding SEED alignment...")
-            shutil.copy("SEED", "SEED.beforepad")
-            cmd = "pad_ends.pl -align SEED.beforepad > SEED.tmp && mv SEED.tmp SEED"
-            if run_command(cmd, wait=True):
-                print("Padding completed")
-                run_command("belvu SEED", wait=True)
-            else:
-                print("Warning: pad_ends may have failed", file=sys.stderr)
-
-        elif response in ['r', 'remove']:
-            os.chdir(start_dir)
-            removed_dir = Path("REMOVED")
-            if not removed_dir.exists():
-                removed_dir.mkdir()
-            try:
-                shutil.move(root_dir, str(removed_dir / root_dir))
-                print(f"Moved {root_dir} to REMOVED/")
-            except Exception as e:
-                print(f"Warning: Could not move to REMOVED: {e}", file=sys.stderr)
-            return False
-
-        else:
-            print("Unrecognized option, please try again.")
+                print("Unrecognized option, please try again.")
+    else:
+        print("\n(Skipping SEED review - overlaps already resolved)")
 
     # Display information files for annotation
     display_info_files('.')
@@ -1445,6 +1450,10 @@ Example:
                     working_dir = best_deeper['dir']
                     entry['seed_count'] = best_deeper['seed_count']
                     entry['total_seqs'] = best_deeper['total_seqs']
+                    # Skip to annotation since overlaps are already resolved
+                    if curate_family(entry, start_dir, args.se_prefix, args.nano, working_dir, skip_to_annotation=True):
+                        families_added += 1
+                    continue
                 elif result is None:
                     # Family was moved to IGNORE
                     continue
@@ -1453,7 +1462,7 @@ Example:
                     print(f"\nFalling back to non-overlapping version: {entry['dir']}")
                     working_dir = None
 
-        # Curate the family
+        # Curate the family (normal flow without overlap resolution)
         if curate_family(entry, start_dir, args.se_prefix, args.nano, working_dir):
             families_added += 1
 
