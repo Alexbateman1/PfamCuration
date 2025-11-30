@@ -1,0 +1,33 @@
+ID   Cas3_C
+DE   CRISPR-associated helicase Cas3 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LDG1_TED04
+GA   27.00 27.00;
+TC   27.00 27.40;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   31980818
+RT   Cas3/I-C mediated target DNA recognition and cleavage during CRISPR
+RT   interference are independent of the composition and architecture of
+RT   Cascade surveillance complex.
+RA   Mukherjee S., Poddar S., Big
+
+ar P., Shah R., Saha S., Dutta D.,
+RA   Chowdhury S., Saha R.P., Bhattacharya A.;
+RL   Nucleic Acids Res. 2020;48:5770-5788.
+CC   This entry represents a C-terminal domain (approximately 75-90
+CC   residues) found in Cas3 proteins, which are multifunctional
+CC   helicase-nuclease enzymes essential for CRISPR-mediated interference
+CC   in Type I CRISPR-Cas systems [1]. Cas3 combines ATP-dependent helicase
+CC   activity with single-stranded DNase activity to degrade target DNA.
+CC   Full-length Cas3 contains an N-terminal HD nuclease domain
+CC   (Pfam:PF01966), a central RecA-like helicase domain (Pfam:PF00270),
+CC   and this C-terminal domain. The protein functions in concert with the
+CC   Cascade surveillance complex (Cas5, Cas6, Cas7, Csd1) to cleave
+CC   foreign DNA [1]. The family is found in diverse bacteria, including
+CC   Bacillota (Clostridia, Bacilli) and Pseudomonadota
+CC   (Gammaproteobacteria, Alphaproteobacteria). The specific function of
+CC   this C-terminal domain remains to be determined.

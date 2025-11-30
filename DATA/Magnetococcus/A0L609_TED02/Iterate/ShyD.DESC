@@ -1,0 +1,35 @@
+ID   ShyD
+DE   Sulfhydrogenase delta subunit
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L609_TED02
+GA   27.00 27.00;
+TC   27.20 27.90;
+NC   25.40 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   7704275
+RT   Characterization of the locus encoding the [Ni-Fe] sulfhydrogenase
+RT   from the archaeon Pyrococcus furiosus: evidence for a relationship to
+RT   bacterial sulfite reductases.
+RA   Pedroni P., Della Volpe A., Galli G., Mura G.M., Pratesi C., Grandi G.;
+RL   Microbiology 141:449-458(1995).
+RN   [2]
+RM   10714990
+RT   Characterization of hydrogenase II from the hyperthermophilic archaeon
+RT   Pyrococcus furiosus and assessment of its role in sulfur reduction.
+RA   Ma K., Weiss R., Adams M.W.;
+RL   J. Bacteriol. 182:1864-1871(2000).
+CC   This entry represents the delta subunit of sulfhydrogenases (ShyD and
+CC   HydD), which are small subunits of [NiFe] hydrogenases found in
+CC   archaea and bacteria [1,2]. These proteins, typically 237-261 residues,
+CC   contain multiple iron-sulfur clusters (two [4Fe-4S] and one [3Fe-4S])
+CC   and bind nickel. In Pyrococcus furiosus, the delta subunit forms part
+CC   of a heterotetrameric complex (alpha, beta, gamma and delta subunits)
+CC   that functions as an NADP(H)-dependent hydrogen-evolving hydrogenase
+CC   with sulfur-reducing activity [1,2]. The alpha and delta subunits
+CC   together constitute the hydrogenase component that catalyses the
+CC   reduction of protons to evolve hydrogen. The family is found across
+CC   diverse taxa including Actinomycetota, Pseudomonadota and
+CC   Methanobacteriota.
