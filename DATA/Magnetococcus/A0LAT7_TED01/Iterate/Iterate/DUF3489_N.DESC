@@ -1,0 +1,22 @@
+ID   DUF3489_N
+DE   DUF3489-associated N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LAT7_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.60 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain (approximately 77-84
+CC   residues, positions 7-84) found in DUF3489 domain-containing proteins.
+CC   This domain precedes the DUF3489 domain (Pfam:PF11994) and appears to
+CC   be functionally associated with it in a two-domain architecture. The
+CC   family is found exclusively in Alphaproteobacteria, particularly
+CC   within Rhodobacterales including Paracoccaceae (especially Paracoccus)
+CC   and Roseobacteraceae, with additional representation in
+CC   Sphingomonadales (Sphingomonadaceae). The proteins containing this
+CC   domain are largely uncharacterised, with no clear functional
+CC   annotation beyond the presence of the DUF3489 domain. The conserved
+CC   domain architecture and restricted taxonomic distribution suggest a
+CC   specialised function within these bacterial lineages.
