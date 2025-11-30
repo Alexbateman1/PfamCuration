@@ -1,0 +1,21 @@
+ID   Phage_rep_2
+DE   Bacteriophage repeat domain 2
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L9D3_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a repeat domain (approximately 55-65 residues)
+CC   found in bacteriophage proteins and bacterial prophage regions. The
+CC   domain is present in tandem copies within proteins, suggesting a role
+CC   in protein oligomerisation or structural organisation. The family is
+CC   found in Bacillota (particularly Lactobacillaceae, Clostridia,
+CC   Bacilli) and bacteriophages (Caudoviricetes, Uroviricota), with some
+CC   representation in Pseudomonadota. Representative proteins include
+CC   lmo2276 from Listeria monocytogenes prophages and uncharacterised
+CC   proteins from Lactobacillus and Corynebacterium species associated
+CC   with prophage regions. The repetitive architecture suggests
+CC   involvement in phage structural assembly or host-phage interaction.
