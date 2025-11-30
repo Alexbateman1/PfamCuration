@@ -1,0 +1,22 @@
+ID   Integrase_N
+DE   Integrase N-terminal catalytic domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBD2_TED01
+GA   27.00 27.00;
+TC   27.20 27.20;
+NC   26.40 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain (approximately 50-75
+CC   residues) containing the catalytic region of integrase enzymes. This
+CC   domain is typically located at residues 18-72 or 19-72 in integrase
+CC   proteins and precedes additional domains including a middle region
+CC   and an RVE-type integrase core domain (Pfam:PF13683) located at the
+CC   C-terminus. Integrases catalyse the integration of viral or mobile
+CC   genetic element DNA into host chromosomes through site-specific
+CC   recombination. The family is found predominantly in Actinomycetota
+CC   (particularly Actinomycetes including Kitasatosporales,
+CC   Pseudonocardiales, Micromonosporales, and Streptosporangiales),
+CC   suggesting association with mobile genetic elements and horizontal
+CC   gene transfer in these lineages.
