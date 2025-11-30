@@ -1,0 +1,31 @@
+ID   NorC_TM
+DE   Nitric oxide reductase subunit C transmembrane domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L3V5_TED01
+GA   27.00 27.00;
+TC   27.30 27.10;
+NC   26.70 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   21109633
+RT   Structural basis of biological N2O generation by bacterial nitric
+RT   oxide reductase.
+RA   Hino T., Matsumoto Y., Nagano S., Sugimoto H., Fukumori Y., Murata
+RA   T., Iwata S., Shiro Y.;
+RL   Science 2010;330:1666-1670.
+CC   This entry represents an N-terminal transmembrane domain
+CC   (approximately 30-42 residues) found in nitric oxide reductase
+CC   subunit C (NorC). This domain precedes the cytochrome c domain
+CC   (Pfam:PF00034) and anchors the protein to the membrane via a single
+CC   transmembrane helix (signal-anchor). NorC is the small subunit of
+CC   nitric oxide reductase, which catalyses the reduction of nitric oxide
+CC   to nitrous oxide during bacterial denitrification. The enzyme is a
+CC   heterodimer of cytochrome b (NorB, large subunit) and cytochrome c
+CC   (NorC, small subunit). NorC functions in electron transfer from the
+CC   quinol pool to the catalytic site in NorB [1]. The family is found
+CC   predominantly in Pseudomonadota, particularly Alphaproteobacteria
+CC   (Rhodobacterales, Hyphomicrobiales), Betaproteobacteria and
+CC   Gammaproteobacteria. The transmembrane domain is essential for
+CC   membrane localisation and proper assembly of the NorBC complex.
