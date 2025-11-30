@@ -1,0 +1,29 @@
+ID   HTH_ParB_Mtase
+DE   ParB-methyltransferase HTH domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L717_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CL   CL0123
+RN   [1]
+RM   22037402
+RT   Characterization of type II and III restriction-modification systems
+RT   from Bacillus cereus strains ATCC 10987 and ATCC 14579.
+RA   Xu SY., Corvaglia AR., Chan SH., Zheng Y., Linder P.;
+RL   J. Bacteriol. 2011;193:6185-6196.
+CC   This entry represents a helix-turn-helix domain (approximately 45-50
+CC   residues) found in ParB-methylase fusion proteins, located between
+CC   the N-terminal ParB-like nuclease domain (Pfam:PF02195) and the
+CC   C-terminal N6/N4 adenine methyltransferase domain (Pfam:PF01555).
+CC   These bifunctional proteins are components of restriction-
+CC   modification systems and are often associated with prophage regions
+CC   [1]. The ParB domain of the Bacillus cereus BCE_0392 protein
+CC   possesses nonspecific nicking endonuclease activity. The family is
+CC   widely distributed in bacteria, particularly Alphaproteobacteria
+CC   (Rhodobacterales, Hyphomicrobiales, Paracoccaceae, Acetobacterales)
+CC   and Bacillota (Clostridia). This HTH domain likely contributes to DNA
+CC   recognition specificity for the restriction-modification system.
