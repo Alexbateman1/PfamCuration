@@ -1,0 +1,26 @@
+ID   Unchar_Alpha_bac2
+DE   Uncharacterised domain in Alphaproteobacteria 2
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L774_TED01
+GA   27.00 27.00;
+TC   28.00 33.20;
+NC   26.70 21.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain (approximately 42-50
+CC   residues, positions 14-58) found in Alphaproteobacteria and
+CC   Betaproteobacteria. The family is particularly prevalent in
+CC   Rhodobacterales (Paracoccaceae including Paracoccus and
+CC   Roseobacteraceae) and Hyphomicrobiales. This family shows similarity
+CC   to amb0360 from Magnetospirillum magneticum AMB-1, which has been
+CC   identified in biomineralization studies and shows magnetic defects
+CC   when disrupted, suggesting a potential role in bacterial magnetosome
+CC   formation or related processes. The specific molecular function of
+CC   this domain remains to be determined.
+RN   [1]
+RM   35076272
+RT   Global Analysis of Biomineralization Genes in Magnetospirillum
+RT   magneticum AMB-1.
+RA   Barber-Zucker S, Zarivach R;
+RL   mSystems 2022;7:e0112021.

@@ -1,0 +1,22 @@
+ID   PAS_sig_trans
+DE   PAS domain in signal transduction proteins
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LAX2_TED01
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   24.30 22.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a PAS (Per-ARNT-Sim) domain-containing region
+CC   (approximately 205-221 residues, positions 25-245) found in bacterial
+CC   signal transduction proteins. This domain typically precedes histidine
+CC   kinase domains (Pfam:PF00512, Pfam:PF02518), GGDEF domains
+CC   (Pfam:PF00990), and EAL domains (Pfam:PF00563) involved in c-di-GMP
+CC   signalling. PAS domains function as environmental sensors that detect
+CC   various stimuli including light, oxygen, redox potential and small
+CC   ligands. The family is found in diverse bacteria including
+CC   Pseudomonadota (Gammaproteobacteria, Betaproteobacteria) and
+CC   Bacteroidota (Sphingobacteriia, Chitinophagia, Balneolia). Many
+CC   family members are involved in biofilm formation and c-di-GMP
+CC   metabolism.
