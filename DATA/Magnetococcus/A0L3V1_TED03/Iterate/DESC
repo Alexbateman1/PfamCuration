@@ -1,0 +1,17 @@
+ID   NorD_linker
+DE   NorD protein linker region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L3V1_TED03
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a short linker region (approximately 380-419
+CC   residues) found in NorD proteins, connecting the N-terminal domain to
+CC   the C-terminal VWA domain. These proteins are components of the nitric
+CC   oxide reductase (Nor) system involved in bacterial denitrification.
+CC   The family is found in Pseudomonadota (Gammaproteobacteria,
+CC   Pseudomonadales, Pseudomonadaceae; Betaproteobacteria,
+CC   Burkholderiales; Oceanospirillales, Marinobacteraceae).
