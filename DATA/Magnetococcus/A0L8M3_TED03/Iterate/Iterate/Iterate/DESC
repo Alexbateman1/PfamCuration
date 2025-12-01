@@ -1,0 +1,21 @@
+ID   ABC_perm_C
+DE   ABC transporter permease C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L8M3_TED03
+GA   27.00 27.00;
+TC   28.30 28.30;
+NC   26.60 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 331-434
+CC   residues) found in ABC transporter permease proteins. ABC
+CC   transporters are integral membrane proteins that translocate a wide
+CC   variety of substrates across cellular membranes using ATP
+CC   hydrolysis. The permease component forms the transmembrane channel.
+CC   This region is found adjacent to ABC2_membrane_3 domain (PF12698).
+CC   The family is found in Pseudomonadota, particularly
+CC   Betaproteobacteria (Burkholderiales, Comamonadaceae),
+CC   Gammaproteobacteria and Alphaproteobacteria (Rhodospirillales,
+CC   Rhodospirillaceae).
+//

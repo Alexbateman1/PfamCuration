@@ -1,0 +1,19 @@
+ID   Phage_tape_C3
+DE   Phage tail tape measure protein C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7A6_TED04
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 643-1016
+CC   residues) found in bacteriophage tail tape measure proteins. Tape
+CC   measure proteins determine the length of the phage tail during
+CC   assembly. This region is often found adjacent to the PhageMin_Tail
+CC   domain (PF10145). The family is found in Thermodesulfobacteriota
+CC   (Magnetococcaceae, Magnetococcales, Magnetococcia) and
+CC   Pseudomonadota (Betaproteobacteria, Burkholderiales,
+CC   Comamonadaceae).
+//
