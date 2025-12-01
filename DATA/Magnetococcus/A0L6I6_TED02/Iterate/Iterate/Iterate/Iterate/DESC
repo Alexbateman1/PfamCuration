@@ -1,0 +1,18 @@
+ID   HAD_like_S
+DE   Small HAD-like hydrolase domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L6I6_TED02
+GA   27.00 27.00;
+TC   27.00 28.50;
+NC   26.90 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a small region (approximately 15-67 residues)
+CC   found in bacterial proteins with haloacid dehalogenase (HAD)-like
+CC   hydrolase activity. The HAD superfamily comprises phosphatases,
+CC   phosphomutases and other enzymes involved in metabolic processes.
+CC   The family is found in Pseudomonadota (Alphaproteobacteria,
+CC   Rhodospirillales, Hyphomicrobiales, Gammaproteobacteria) and
+CC   Thermodesulfobacteriota.
+//
