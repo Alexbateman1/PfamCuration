@@ -1,0 +1,22 @@
+ID   Phage_term_N
+DE   Phage terminase small subunit N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBP8_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.70 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   20799976
+RT   Global gene expression under nitrogen starvation in Xylella
+RT   fastidiosa: contribution of the sigma54 regulon.
+RA   da Silva Neto JF, Koide T, Gomes SL, Marques MV;
+RL   BMC Microbiol. 2010;10:231.
+CC   This entry represents an N-terminal region (approximately 44 residues,
+CC   positions 6-49) found in bacteriophage terminase small subunits. These
+CC   proteins are involved in DNA packaging during phage assembly. The
+CC   family is found in bacteria, particularly Pseudomonadota
+CC   (Alphaproteobacteria, Betaproteobacteria, Gammaproteobacteria).
+//
