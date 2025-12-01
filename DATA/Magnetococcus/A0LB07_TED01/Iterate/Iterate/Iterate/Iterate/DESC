@@ -1,0 +1,19 @@
+ID   Phage_rpt_Bac3
+DE   Bacteriophage repeat domain in Bacillota
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LB07_TED01
+GA   27.00 27.00;
+TC   27.30 27.20;
+NC   26.80 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Repeat
+CC   This entry represents a repeat domain found in bacteriophage and
+CC   prophage proteins in Bacillota. These proteins are components of mobile
+CC   genetic elements and prophages. The domain typically occurs in multiple
+CC   copies (4-8 repeats) within a single protein. The family is associated
+CC   with prophage integration and lateral gene transfer. It is found in
+CC   bacteria, predominantly Bacillota (Bacilli including Lactobacillaceae
+CC   and Lactobacillales; Clostridia), and in bacteriophages
+CC   (Caudoviricetes, Uroviricota), with some Pseudomonadota
+CC   representatives.
