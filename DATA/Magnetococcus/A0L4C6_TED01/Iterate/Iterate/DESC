@@ -1,0 +1,24 @@
+ID   Bac_lipoprot
+DE   Bacterial lipoprotein domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L4C6_TED01
+GA   27.00 27.00;
+TC   27.30 38.70;
+NC   24.20 20.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   40697188
+RT   Time-resolved dual transcriptomics of Pseudomonas aeruginosa biofilm
+RT   formation in cystic fibrosis.
+RA   [Authors not available]
+RL   Biofilm. 2025;[E-pub ahead of print]
+CC   This entry represents a bacterial lipoprotein domain (approximately
+CC   147-178 residues, positions 27-193). Lipoproteins are anchored to
+CC   bacterial membranes via lipid modifications and perform various
+CC   functions. This family includes proteins involved in biofilm
+CC   formation. The family is found in Pseudomonadota, particularly
+CC   Gammaproteobacteria (Pseudomonas) and Betaproteobacteria
+CC   (Burkholderiales), and Thermodesulfobacteriota.
+//

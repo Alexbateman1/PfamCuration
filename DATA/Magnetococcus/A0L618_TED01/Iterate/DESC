@@ -1,0 +1,17 @@
+ID   YkvP_N
+DE   YkvP spore protein N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L618_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.70 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal region (approximately 133
+CC   residues, positions 15-147) found in YkvP/CgeB family spore
+CC   proteins. These proteins contain glycosyltransferase activity and are
+CC   involved in bacterial spore formation. The family is found in
+CC   bacteria, particularly Thermodesulfobacteriota (Desulfovibrionia,
+CC   Magnetococcia) and Pseudomonadota.
+//
