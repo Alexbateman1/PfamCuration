@@ -1,0 +1,17 @@
+ID   Bac_prot_N2
+DE   Bacterial protein N-terminal domain variant 2
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L420_TED01
+GA   27.00 27.00;
+TC   27.80 28.80;
+NC   26.40 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal region (approximately 11-192
+CC   residues) found in uncharacterised bacterial proteins. The family is
+CC   found in Pseudomonadota, particularly Alphaproteobacteria
+CC   (Terasakiellaceae, Hyphomicrobiales, Rhodospirillales,
+CC   Methylobacteriaceae) and Gammaproteobacteria (Alteromonadales,
+CC   Alteromonadaceae).
+//
