@@ -1,0 +1,17 @@
+ID   Mtd_N_term_2
+DE   Major tropism determinant N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LAR6_TED01
+GA   27.00 27.00;
+TC   27.40 27.00;
+NC   26.40 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents the N-terminal region (approximately 339
+CC   residues, positions 6-344) of major tropism determinant proteins.
+CC   Foldseek analysis shows structural similarity to TSP_Ig-like
+CC   (Pfam:PF20745). The family is found in Pseudomonadota, particularly
+CC   Betaproteobacteria (Burkholderiales, Neisseriales) and
+CC   Gammaproteobacteria.
+//
