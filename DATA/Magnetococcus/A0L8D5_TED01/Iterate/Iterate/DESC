@@ -1,0 +1,18 @@
+ID   Phage_stabilise_ext
+DE   Phage stabilization protein extension
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L8D5_TED01
+GA   27.00 27.00;
+TC   27.20 27.30;
+NC   26.70 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CL   CL0186
+CC   This entry represents an extension region (approximately 505 residues,
+CC   positions 24-528) of phage stabilization proteins. These proteins are
+CC   structural components of bacteriophages. The family is found in
+CC   bacteria, particularly Bacillota (Bacilli, Lactobacillales,
+CC   Paenibacillaceae) and Pseudomonadota (Alphaproteobacteria,
+CC   Rhizobiaceae, Roseobacteraceae).
+//

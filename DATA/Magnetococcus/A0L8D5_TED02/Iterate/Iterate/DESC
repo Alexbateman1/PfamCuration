@@ -1,0 +1,17 @@
+ID   Phage_stab_mid
+DE   Phage stabilization protein middle region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L8D5_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.80 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CL   CL0186
+CC   This entry represents a middle region (approximately 326 residues,
+CC   positions 62-413) of phage stabilization proteins. These proteins are
+CC   structural components of bacteriophages. The family is found in
+CC   Pseudomonadota, particularly Alphaproteobacteria (Hyphomicrobiales,
+CC   Rhizobiaceae, Rhodobacterales, Roseobacteraceae).
+//
