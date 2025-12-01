@@ -1,0 +1,19 @@
+ID   Nif_assoc
+DE   Nitrogen fixation-associated protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L6Y1_TED01
+GA   27.00 27.00;
+TC   77.90 77.70;
+NC   24.60 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a protein (approximately 164-194 residues,
+CC   positions 9-194) found in nitrogen fixation gene clusters. This
+CC   family is consistently found adjacent to core nitrogen fixation
+CC   genes including nifHDK (nitrogenase structural genes), nifZ, nifT,
+CC   nifW, and nifQ. The family is found in nitrogen-fixing bacteria in
+CC   Pseudomonadota, particularly in Betaproteobacteria (Burkholderiales,
+CC   Rhodocyclales), Gammaproteobacteria, and Alphaproteobacteria
+CC   (Hyphomicrobiales including Bradyrhizobium and Azorhizobium).
+//

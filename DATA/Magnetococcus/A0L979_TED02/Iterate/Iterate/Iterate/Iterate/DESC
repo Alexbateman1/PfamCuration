@@ -1,0 +1,26 @@
+ID   HrgA_C
+DE   HrgA protein C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L979_TED02
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.20 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the C-terminal region (approximately 38-68
+CC   residues, positions 71-309) of HrgA, a protein found in type I
+CC   restriction-modification systems. HrgA (Helicobacter pylori
+CC   restriction endonuclease-replacing gene) replaces the restriction
+CC   endonuclease in some type I R-M systems and has been associated with
+CC   gastric cancer in Helicobacter pylori. The family is found in
+CC   Pseudomonadota (Betaproteobacteria, Gammaproteobacteria) and
+CC   Bacteroidota.
+RN   [1]
+RM   11956101
+RT   A Helicobacter pylori restriction endonuclease-replacing gene, hrgA,
+RT   is associated with gastric cancer in Asian strains.
+RA   Higashi H, Tsutsumi R, Fujita A, Yamazaki S, Asaka M, Azuma T,
+RA   Hatakeyama M;
+RL   Cancer Res 2002;62:2385-2389.
+//
