@@ -1,0 +1,25 @@
+ID   SdhB_C_Cyano
+DE   Succinate dehydrogenase iron-sulfur subunit C-terminal region in Cyanobacteriota
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L4R2_TED03
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.10 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   19170876
+RT   Production, characterization and determination of the real catalytic
+RT   properties of the putative 'succinate dehydrogenase' from Wolinella
+RT   succinogenes.
+RA   Juhnke HD, Hiltscher H, Nasiri HR, Schwalbe H, Lancaster CR;
+RL   Mol. Microbiol. 2009;71:1088-1101.
+CC   This entry represents a C-terminal region (approximately 241-317
+CC   residues) found in the iron-sulfur subunit of succinate dehydrogenase
+CC   and fumarate reductase complexes. These proteins are components of the
+CC   respiratory chain involved in electron transfer. The family is
+CC   associated with Fer2_3, Fer4_8 and related iron-sulfur cluster binding
+CC   families. It is found in bacteria, predominantly Cyanobacteriota
+CC   (Cyanophyceae, Oscillatoriophycideae, Nostocales), Campylobacterota
+CC   (Epsilonproteobacteria) and Bacillota.

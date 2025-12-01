@@ -1,0 +1,18 @@
+ID   GpW_GTA
+DE   Phage gpW-like protein in gene transfer agents
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L9A7_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a domain (approximately 4-54 residues) found in
+CC   phage gpW-like proteins associated with gene transfer agents in
+CC   Alphaproteobacteria. These proteins belong to the phage gpW family and
+CC   are components of bacteriophage-like particles involved in lateral gene
+CC   transfer. The family is associated with Phage_portal_2, GpA_ATPase and
+CC   GpA_nuclease families. It is found in bacteria, predominantly
+CC   Pseudomonadota Alphaproteobacteria (Rhodobacterales including
+CC   Paracoccaceae and Roseobacteraceae, and Hyphomicrobiales).
