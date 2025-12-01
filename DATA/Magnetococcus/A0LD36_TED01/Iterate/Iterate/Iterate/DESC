@@ -1,0 +1,20 @@
+ID   CheR_CheB_C
+DE   Chemotaxis protein methyltransferase/methylesterase C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LD36_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CL   CL0183
+CC   This entry represents a C-terminal region (approximately 565-730
+CC   residues) found in two-component system chemotaxis proteins with
+CC   methyltransferase (CheR) and methylesterase (CheB) activity. These
+CC   proteins contain CheB_methylest, CheR_N, CheR and PAS domains and are
+CC   involved in bacterial chemotaxis signalling. The family belongs to
+CC   clan CL0183. It is found in Thermodesulfobacteriota (Desulfovibrionia,
+CC   Desulfovibrionales), Pseudomonadota, Bacillota (Bacilli, Bacillales,
+CC   Paenibacillaceae, Paenibacillus, Clostridia) and Bacteroidota
+CC   (Cytophagia, Cytophagales, Hymenobacteraceae, Pontibacter).

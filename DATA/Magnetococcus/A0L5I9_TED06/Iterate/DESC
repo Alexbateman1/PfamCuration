@@ -1,0 +1,20 @@
+ID   TPR_glyco_C
+DE   TPR-glycosyltransferase C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5I9_TED06
+GA   27.00 27.00;
+TC   28.10 28.30;
+NC   25.80 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 750-885
+CC   residues) found in spore proteins and glycosyltransferase-containing
+CC   proteins with tetratricopeptide (TPR) repeats. These proteins contain
+CC   TPR repeat domains and Glyco_trans_1_2 domains. The family is found in
+CC   Pseudomonadota (Gammaproteobacteria, Methylococcales,
+CC   Methylococcaceae, Methylobacter; Epsilonproteobacteria,
+CC   Campylobacterales, Sulfurimonadaceae, Sulfurimonas),
+CC   Campylobacterota, Planctomycetota (Phycisphaerae, Phycisphaerales,
+CC   Phycisphaeraceae) and Thermodesulfobacteriota (Magnetococcia,
+CC   Magnetococcales, Magnetococcaceae).
