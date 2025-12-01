@@ -1,0 +1,16 @@
+ID   AAA_ATPase_bac_C
+DE   Bacterial AAA ATPase C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L6K2_TED04
+GA   27.00 27.00;
+TC   27.00 74.30;
+NC   26.90 24.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 68-69
+CC   residues, positions ~470-560) found in AAA family ATPases. The
+CC   family is found in bacteria, particularly Pseudomonadota
+CC   (Burkholderiales, Hyphomicrobiales, Methylococcales) and
+CC   Actinomycetota (Mycobacteriales).
+//
