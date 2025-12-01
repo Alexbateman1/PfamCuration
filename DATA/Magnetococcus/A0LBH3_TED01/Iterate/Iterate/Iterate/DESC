@@ -1,0 +1,19 @@
+ID   DUF3489_N
+DE   DUF3489 N-terminal region in Alphaproteobacteria
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBH3_TED01
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   26.90 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal region (approximately 7-84
+CC   residues) found in association with DUF3489 (PF11994) domains. Based on
+CC   sequence associations with phage portal proteins, RNA polymerase
+CC   subunits, methyltransferases and related mobile genetic element
+CC   components, these proteins likely function in bacteriophage-related
+CC   processes or gene transfer. The family is found predominantly in
+CC   Alphaproteobacteria (Rhodobacterales including Paracoccaceae,
+CC   Roseobacteraceae and Paracoccus; Sphingomonadales including
+CC   Sphingomonadaceae; Hyphomicrobiales).
