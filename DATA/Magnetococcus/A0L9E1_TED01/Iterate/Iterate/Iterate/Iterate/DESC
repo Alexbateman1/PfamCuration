@@ -1,0 +1,16 @@
+ID   Bac_prot_reg
+DE   Bacterial protein region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L9E1_TED01
+GA   27.00 27.00;
+TC   28.80 47.90;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a region (approximately 122-134 residues,
+CC   positions 13-134) of unknown function found in bacteria. The family
+CC   is found in Alphaproteobacteria (Rhodobacterales, Acetobacterales,
+CC   Paracoccaceae, Roseomonadaceae), Planctomycetia (Pirellulales), and
+CC   Thermodesulfobacteriota.
+//

@@ -1,0 +1,24 @@
+ID   DUF3037_phage
+DE   DUF3037 phage-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L6J3_TED02
+GA   27.00 27.00;
+TC   28.60 27.70;
+NC   26.60 23.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CL   CL0236
+CC   This entry represents a region (approximately 137-143 residues,
+CC   positions 140-279) found in DUF3037 domain-containing proteins,
+CC   which are typically phage-associated proteins. The family is found
+CC   in bacteria, particularly Pseudomonadota (Gammaproteobacteria,
+CC   Betaproteobacteria, Alphaproteobacteria) and Bacteroidota.
+RN   [1]
+RM   17615066
+RT   Characterization of the dsDNA prophage sequences in the genome of
+RT   Neisseria gonorrhoeae and visualization of productive
+RT   bacteriophage.
+RA   BMC Microbiol 2007;7:66.
+RL   BMC Microbiol 2007;7:66.
+//

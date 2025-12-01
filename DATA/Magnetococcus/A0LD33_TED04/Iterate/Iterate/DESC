@@ -1,0 +1,19 @@
+ID   CheB_CheR_link
+DE   CheB-CheR linker region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LD33_TED04
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CL   CL0183
+CC   This entry represents a linker region (approximately 45 residues,
+CC   positions ~549-593) found in hybrid chemotaxis proteins containing
+CC   both CheB methylesterase and CheR methyltransferase domains. These
+CC   bifunctional proteins are involved in bacterial chemotaxis signal
+CC   transduction. The family is found in diverse bacteria including
+CC   Pseudomonadota, Cyanobacteriota, Bacteroidota, and
+CC   Planctomycetota.
+//
