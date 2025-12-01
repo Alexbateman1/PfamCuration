@@ -1,0 +1,20 @@
+ID   Flag_assem_N
+DE   Flagellar assembly protein N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L968_TED01
+GA   27.00 27.00;
+TC   29.10 28.10;
+NC   25.70 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CL   CL0342
+CC   This entry represents an N-terminal region (approximately 39-214
+CC   residues, positions 47-210) found in bacterial flagellar assembly
+CC   proteins and lipoproteins. These proteins are involved in flagellar
+CC   biogenesis and cell envelope structure. The family shows structural
+CC   similarity to outer membrane protein families. It is found in
+CC   Pseudomonadota, particularly Alphaproteobacteria
+CC   (Hyphomicrobiales, Rhodospirillales, Rhodobacterales) and
+CC   Gammaproteobacteria (Alteromonadales).
+//
