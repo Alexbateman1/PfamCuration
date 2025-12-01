@@ -1,0 +1,17 @@
+ID   AAA_MPhos_C
+DE   AAA domain metallophosphatase C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LDI2_TED03
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.80 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 488-637
+CC   residues) found in proteins containing AAA domains (AAA_27, PF13514;
+CC   AAA_23, PF13476). These proteins are characterised by a strong
+CC   association with metallophosphatase domains (Metallophos, PF00149),
+CC   suggesting involvement in ATP-dependent phosphoesterase activities. The
+CC   family is found predominantly in bacteria, particularly Alphaproteobacteria
+CC   (Hyphomicrobiales), Betaproteobacteria (Burkholderiales) and Bacillati.
