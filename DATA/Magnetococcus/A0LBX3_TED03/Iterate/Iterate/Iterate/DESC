@@ -1,0 +1,27 @@
+ID   PelA_C
+DE   PelA C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBX3_TED03
+GA   27.00 27.00;
+TC   27.00 27.50;
+NC   26.00 22.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain (approximately 142-170
+CC   residues, positions 772-943) found in PelA, a glycoside hydrolase
+CC   family 114 protein involved in Pel exopolysaccharide biosynthesis.
+CC   This domain follows the glycoside hydrolase 114 domain
+CC   (Pfam:PF03537). PelA modifies the Pel exopolysaccharide, which is
+CC   important for biofilm formation in Pseudomonas aeruginosa and related
+CC   bacteria. The family is found in Pseudomonadota, particularly in
+CC   Betaproteobacteria (Burkholderiaceae, Burkholderiales),
+CC   Gammaproteobacteria, and Alphaproteobacteria.
+RN   [1]
+RM   40120681
+RT   Structural and functional analysis of Pseudomonas aeruginosa PelA
+RT   provides insight into the modification of the Pel exopolysaccharide.
+RA   Van Loon JC, Le Mauff F, Vargas MA, Gilbert S, Pfoh R, Morrison ZA,
+RA   Razvi E, Nitz M, Sheppard DC, Howell PL;
+RL   J Biol Chem 2025;301:108432.
+//

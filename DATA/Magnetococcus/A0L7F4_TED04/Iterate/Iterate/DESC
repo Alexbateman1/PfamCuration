@@ -1,0 +1,18 @@
+ID   Peptidase_M1_C_ext
+DE   Peptidase M1 C-terminal extension domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7F4_TED04
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain (approximately 148-158 residues,
+CC   positions 526-684) found in multi-domain peptidases following
+CC   peptidase M1 (Pfam:PF01433) and preceding peptidase M28
+CC   (Pfam:PF04389) domains. Foldseek analysis shows structural similarity
+CC   to cellulose biosynthesis domains (Pfam:PF03170, clan CL0202). The
+CC   family is found in Pseudomonadota (Gammaproteobacteria,
+CC   Betaproteobacteria) and Thermodesulfobacteriota.
+//

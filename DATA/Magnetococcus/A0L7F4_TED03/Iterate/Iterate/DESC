@@ -1,0 +1,19 @@
+ID   Peptidase_linked_Prot
+DE   Domain linking peptidase M1 and M28 domains
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7F4_TED03
+GA   27.00 27.00;
+TC   27.20 27.10;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain (approximately 265-273 residues,
+CC   positions 443-716) found in multi-domain peptidases. This domain is
+CC   located between peptidase M1 (Pfam:PF01433) and peptidase M28
+CC   (Pfam:PF04389) domains, upstream of PDZ domains (Pfam:PF00595,
+CC   Pfam:PF13180). The family is found predominantly in Pseudomonadota,
+CC   particularly in Gammaproteobacteria (Chromatiaceae, Chromatiales,
+CC   Nitrosomonadales), Betaproteobacteria (Nitrosomonadales), and in
+CC   Thermodesulfobacteriota.
+//

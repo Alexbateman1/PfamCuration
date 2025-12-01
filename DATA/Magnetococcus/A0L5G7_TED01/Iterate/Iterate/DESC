@@ -1,0 +1,27 @@
+ID   RnfB_N_hydr
+DE   RnfB N-terminal hydrophobic region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5G7_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents the N-terminal hydrophobic region
+CC   (approximately 26-29 residues, positions 1-29) of RnfB, the subunit
+CC   B of the ion-translocating oxidoreductase complex (Rnf/Rsx complex).
+CC   This region likely anchors the RnfB protein to the membrane and
+CC   precedes the FeS domain (Pfam:PF04060) and ferredoxin domains
+CC   (Pfam:PF14697). The Rnf complex couples electron transfer with ion
+CC   translocation across membranes. The family is found predominantly in
+CC   Bacillota (Clostridia, Clostridiaceae, Peptostreptococcaceae) and
+CC   Pseudomonadota (Gammaproteobacteria).
+RN   [1]
+RM   36274063
+RT   Purification and structural characterization of the
+RT   Na(+)-translocating ferredoxin: NAD(+) reductase (Rnf) complex of
+RT   Clostridium tetanomorphum.
+RA   Vitt S, Prinz S, Eisinger M, Ermler U, Buckel W;
+RL   Nat Commun 2022;13:6315.
+//
