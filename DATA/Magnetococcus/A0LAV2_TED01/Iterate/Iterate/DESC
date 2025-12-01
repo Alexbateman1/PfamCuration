@@ -1,0 +1,27 @@
+ID   Unchar_Alpha_bac7
+DE   Uncharacterised domain in Alphaproteobacteria
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LAV2_TED01
+GA   27.00 27.00;
+TC   29.70 37.20;
+NC   26.90 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a small uncharacterised domain (approximately
+CC   42-43 residues, positions 20-62) found predominantly in
+CC   Alphaproteobacteria, particularly in Rhodobacterales (Paracoccus,
+CC   Paracoccaceae, Roseobacteraceae) and Hyphomicrobiales. This family
+CC   includes the amb0360 protein homologs from Magnetospirillum
+CC   magneticum AMB-1, which has been implicated in biomineralization
+CC   processes.
+RN   [1]
+RM   35076272
+RT   Global Analysis of Biomineralization Genes in Magnetospirillum
+RT   magneticum AMB-1.
+RA   Monteil CL, Menguy N, Prevoteau A, Warren J, Alonso B, Waigh T,
+RA   Benzerara K, Lefevre CT, Bazylinski DA, Guyot F, Pradel N, Taib N,
+RA   Mandon K, Cornejo-Castillo FM, Acinas SG, Gaill F, Tamburini C,
+RA   Philippe N, Armengaud J;
+RL   mSystems 2022;7:e0158821.
+//

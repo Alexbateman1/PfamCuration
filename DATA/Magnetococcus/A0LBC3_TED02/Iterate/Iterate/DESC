@@ -1,0 +1,18 @@
+ID   Phage_Gam_like_N
+DE   Bacteriophage Gam-like protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBC3_TED02
+GA   27.00 27.00;
+TC   27.30 31.40;
+NC   25.00 21.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a small N-terminal domain (approximately
+CC   49-50 residues, positions 40-89) found in bacteriophage-related
+CC   proteins. The family is found in Alphaproteobacteria
+CC   (Rhodobacterales, Paracoccaceae, Roseobacteraceae,
+CC   Roseomonadaceae, Acetobacterales) and Betaproteobacteria
+CC   (Burkholderiales). STRING analysis shows associations with AAA
+CC   ATPase domains and DUF3489.
+//

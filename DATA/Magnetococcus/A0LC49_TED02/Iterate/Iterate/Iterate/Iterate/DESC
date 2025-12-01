@@ -1,0 +1,17 @@
+ID   WYL_reg_N
+DE   WYL domain transcriptional regulator N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LC49_TED02
+GA   27.00 27.00;
+TC   27.00 28.00;
+NC   26.50 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain (approximately 39-64
+CC   residues, positions 74-150) found in transcriptional regulators
+CC   containing WYL (Pfam:PF13280) and WCX (Pfam:PF25583) domains. The
+CC   family is found in Gammaproteobacteria, particularly in
+CC   Pseudomonadales (Pseudomonadaceae, Moraxellaceae),
+CC   Oceanospirillales, and Chromatiales (Ectothiorhodospiraceae).
+//
