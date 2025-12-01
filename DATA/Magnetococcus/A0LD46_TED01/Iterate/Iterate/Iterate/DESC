@@ -1,0 +1,21 @@
+ID   HisK_sens_N
+DE   Histidine kinase sensor N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LD46_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.50 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CL   CL0165
+CC   This entry represents an N-terminal sensor domain (approximately
+CC   29-143 residues) found in histidine kinases and related signal
+CC   transduction proteins. Histidine kinases are part of two-component
+CC   regulatory systems that sense environmental stimuli and phosphorylate
+CC   response regulators. The family shows structural similarity to SMP_2
+CC   and CHASE8 domains in clan CL0165. It is found in
+CC   Thermodesulfobacteriota (Magnetococcaceae, Magnetococcales,
+CC   Magnetococcia) and Pseudomonadota (Gammaproteobacteria,
+CC   Alphaproteobacteria, Rhodospirillales).
+//

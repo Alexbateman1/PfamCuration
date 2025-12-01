@@ -1,0 +1,29 @@
+ID   HisK_sens_N
+DE   Histidine kinase sensor N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LD46_TED01
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CL   CL0165
+RN   [1]
+RM   39230277
+RT   The HmrABCX pathway regulates the transition between motile and
+RT   sessile lifestyles in Caulobacter crescentus by a mechanism
+RT   independent of hfiA transcription.
+RA   [Authors not available]
+RL   mBio. 2024;
+CC   This entry represents an N-terminal sensor domain (approximately
+CC   29-143 residues) found in histidine kinases and related signal
+CC   transduction proteins. Histidine kinases are part of two-component
+CC   regulatory systems that sense environmental stimuli and phosphorylate
+CC   response regulators. The family includes HmrA, an histidine kinase
+CC   involved in the switch from motile to sessile lifestyle. The family
+CC   shows structural similarity to SMP_2, CHASE8 and GAPES3 domains in
+CC   clan CL0165. It is found in Pseudomonadota, particularly
+CC   Gammaproteobacteria (Thiotrichales, Chromatiales, Oceanospirillales),
+CC   Alphaproteobacteria and Betaproteobacteria (Burkholderiales).
+//

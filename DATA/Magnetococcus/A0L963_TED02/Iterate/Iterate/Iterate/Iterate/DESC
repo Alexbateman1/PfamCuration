@@ -1,0 +1,18 @@
+ID   Bac_trans_r
+DE   Bacterial transcription-related region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L963_TED02
+GA   27.00 27.00;
+TC   28.30 28.30;
+NC   25.60 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a conserved region (approximately 76-180
+CC   residues) found in bacterial proteins, including some annotated as
+CC   transcription elongation factors and various uncharacterised
+CC   proteins. The family is found in Pseudomonadota, particularly
+CC   Alphaproteobacteria (Hyphomicrobiales, Rhodospirillales,
+CC   Terasakiellaceae, Methylobacteriaceae, Thalassobaculaceae) and
+CC   Gammaproteobacteria.
+//
