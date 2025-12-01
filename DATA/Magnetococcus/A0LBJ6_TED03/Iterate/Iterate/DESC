@@ -1,0 +1,18 @@
+ID   Phage_C_Bac
+DE   Bacteriophage C-terminal domain in Bacillota
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBJ6_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain found in bacteriophage and
+CC   prophage proteins. These proteins are components of mobile genetic
+CC   elements. The domain typically occurs in multiple copies (3-7
+CC   repeats) within a single protein. The family is found in bacteria,
+CC   predominantly Bacillota (Bacilli, Bacillales) and Pseudomonadota
+CC   (Alphaproteobacteria including Hyphomicrobiales;
+CC   Betaproteobacteria), and in bacteriophages (Caudoviricetes,
+CC   Uroviricota).

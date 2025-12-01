@@ -1,0 +1,20 @@
+ID   Excisionase_mob
+DE   Excisionase DNA binding domain in mobile genetic elements
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5H3_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal DNA binding domain (approximately
+CC   3-71 residues) found in excisionase proteins from mobile genetic
+CC   elements. These proteins are components of integrative conjugative
+CC   elements (ICEs) and prophages involved in site-specific recombination
+CC   and excision from bacterial chromosomes. The family is associated with
+CC   helix-turn-helix DNA binding domains (HTH_17) and is found in
+CC   toxin-antitoxin systems. It is found in bacteria, predominantly
+CC   Pseudomonadota (Gammaproteobacteria, Betaproteobacteria including
+CC   Burkholderiales; Alphaproteobacteria), Actinomycetota (Actinomycetes)
+CC   and Bacteroidota.
