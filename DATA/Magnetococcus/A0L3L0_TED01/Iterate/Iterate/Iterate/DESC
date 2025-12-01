@@ -1,0 +1,16 @@
+ID   DUF_bac_large
+DE   Large uncharacterised bacterial protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L3L0_TED01
+GA   27.00 27.00;
+TC   261.60 261.40;
+NC   22.10 20.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a large conserved region (approximately 309-332
+CC   residues, positions 24-332) of uncharacterised function found in
+CC   bacterial proteins. The family is found in Thermodesulfobacteriota,
+CC   particularly Desulfovibrionia (Desulfovibrionales, Desulfovibrion-
+CC   aceae) and Desulfobacteria (Desulfobacterales).
+//

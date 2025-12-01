@@ -1,0 +1,24 @@
+ID   PilZ_N
+DE   PilZ domain N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L531_TED02
+GA   27.00 27.00;
+TC   28.20 37.40;
+NC   26.70 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   36838314
+RT   Polyphasic characterisation of Geotalea uranireducens NIT-SL11 newly
+RT   isolated from a complex of sewage sludge and microbially reduced
+RT   graphene oxide.
+RA   [Authors not available]
+RL   Microorganisms. 2023;11(2):410.
+CC   This entry represents an N-terminal region (approximately 76 residues,
+CC   positions 37-112) found preceding PilZ domains. PilZ domains bind
+CC   cyclic di-GMP and regulate bacterial motility and biofilm formation.
+CC   The family is found in bacteria, particularly Thermodesulfobacteriota
+CC   (Desulfuromonadia, Magnetococcia, Desulfobacteria), Pseudomonadota
+CC   and Campylobacterota (Epsilonproteobacteria).
+//

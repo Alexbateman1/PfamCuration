@@ -1,0 +1,18 @@
+ID   Prepilin_pepN
+DE   Prepilin peptidase N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L3L6_TED01
+GA   27.00 27.00;
+TC   27.10 27.50;
+NC   26.50 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal region (approximately 190-217
+CC   residues, positions 46-237) found in prepilin-type N-terminal
+CC   cleavage proteins and type II secretion system components. These
+CC   enzymes cleave and methylate prepilin and pseudopilin proteins during
+CC   pilus assembly. The family is found in Pseudomonadota (Gammaproteo-
+CC   bacteria, Betaproteobacteria) and Thermodesulfobacteriota
+CC   (Desulfovibrionia).
+//
