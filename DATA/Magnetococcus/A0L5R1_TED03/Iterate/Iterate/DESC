@@ -1,0 +1,18 @@
+ID   SNF2_ResIII_2
+DE   SNF2 family helicase associated with type III restriction systems 2
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5R1_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CL   CL0023
+CC   This entry represents a helicase domain (approximately 523-688
+CC   residues) found in SNF2 family proteins associated with type III
+CC   restriction-modification systems. These proteins are ATP-dependent DNA
+CC   helicases involved in chromatin remodelling and DNA repair. The family
+CC   is associated with ResIII, SNF2-rel_dom, DEAD and Helicase_C families.
+CC   It is found in bacteria including Pseudomonadota (Alphaproteobacteria),
+CC   Bacillota, Actinomycetota (Actinomycetes) and Bacteroidota.

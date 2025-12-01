@@ -1,0 +1,24 @@
+ID   Cas3_C
+DE   CRISPR-associated helicase Cas3 C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LDG1_TED04
+GA   27.00 27.00;
+TC   27.00 27.40;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   31980818
+RT   Cas3/I-C mediated target DNA recognition and cleavage during CRISPR
+RT   interference are independent of the composition and architecture of
+RT   Cascade surveillance complex.
+RA   Nucleic acids research (2020)
+CC   This entry represents a C-terminal region (approximately 720-796
+CC   residues) found in CRISPR-associated helicase Cas3 proteins. These
+CC   proteins are components of type I CRISPR-Cas systems that provide
+CC   adaptive immunity against foreign genetic elements. The family is
+CC   associated with HD, ResIII, DEAD, Helicase_C and Cas3-like_C_2
+CC   families. It is found in bacteria including Bacillota (Clostridia,
+CC   Bacilli), Pseudomonadota (Gammaproteobacteria, Betaproteobacteria,
+CC   Alphaproteobacteria) and Actinomycetota.
