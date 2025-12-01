@@ -1,0 +1,20 @@
+ID   Lytic_transgly_N
+DE   Lytic transglycosylase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5A2_TED01
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain (approximately 140-170
+CC   residues, positions 27-279) found in lytic transglycosylase
+CC   proteins. This domain precedes the catalytic SLT domain
+CC   (Pfam:PF01464). Lytic transglycosylases cleave the beta-1,4-glycosidic
+CC   bond between N-acetylmuramic acid and N-acetylglucosamine in
+CC   peptidoglycan, playing important roles in cell wall remodelling and
+CC   recycling. The family is found in Alphaproteobacteria, particularly
+CC   in Rhodospirillales, Caulobacterales (Caulobacteraceae), and
+CC   Acetobacterales (Roseomonadaceae).
+//

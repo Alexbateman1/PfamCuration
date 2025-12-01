@@ -1,0 +1,18 @@
+ID   YjeJ_like
+DE   YjeJ-like domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LA81_TED01
+GA   27.00 27.00;
+TC   28.00 28.60;
+NC   25.20 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain (approximately 120-198 residues,
+CC   positions 2-200) found in DUF1631 family proteins. Foldseek analysis
+CC   shows structural similarity to YjeJ (Pfam:PF15922), a domain of
+CC   unknown function. The family is found in Pseudomonadota,
+CC   particularly in Alphaproteobacteria, Betaproteobacteria
+CC   (Burkholderiales, Comamonadaceae, Nitrosomonadales), and
+CC   Gammaproteobacteria.
+//

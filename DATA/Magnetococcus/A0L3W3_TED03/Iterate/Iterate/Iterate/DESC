@@ -1,0 +1,20 @@
+ID   Type_I_RM_M_C
+DE   Type I restriction-modification system M subunit C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L3W3_TED03
+GA   27.00 27.00;
+TC   29.20 28.00;
+NC   26.40 25.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain (approximately 35-48
+CC   residues, positions 499-547) found in the methyltransferase (M)
+CC   subunit of type I restriction-modification systems. This domain
+CC   follows the N6-adenine DNA methyltransferase domain (Pfam:PF02384).
+CC   Type I restriction-modification systems provide bacteria with
+CC   protection against foreign DNA through sequence-specific DNA
+CC   methylation and restriction. The family is found in Pseudomonadota
+CC   (Alphaproteobacteria, Betaproteobacteria, Gammaproteobacteria) and
+CC   Bacteroidota.
+//
