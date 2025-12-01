@@ -1,0 +1,19 @@
+ID   DUF1156_C_2
+DE   DUF1156 C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LB69_TED04
+GA   27.00 27.00;
+TC   27.10 29.40;
+NC   26.50 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CL   CL0063
+CC   This entry represents a C-terminal region (approximately 794-967
+CC   residues) found in DUF1156 (PF06634) domain-containing proteins. These
+CC   proteins are characterised by strong associations with DNA helicases and
+CC   related proteins, including SNF2-related domains (SNF2-rel_dom, PF00176),
+CC   DEAD box helicases (DEAD, PF00270; Helicase_C, PF00271), restriction
+CC   endonuclease type III (ResIII, PF04851) and DUF499 (PF04465). The family
+CC   is found predominantly in bacteria, particularly Actinomycetes,
+CC   Alphaproteobacteria and Gammaproteobacteria.
