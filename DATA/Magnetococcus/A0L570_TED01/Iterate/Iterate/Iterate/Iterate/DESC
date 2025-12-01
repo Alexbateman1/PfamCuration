@@ -1,0 +1,24 @@
+ID   TAT_signal_prot
+DE   TAT signal sequence containing protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L570_TED01
+GA   27.00 27.00;
+TC   27.00 27.40;
+NC   26.90 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+RN   [1]
+RM   23520142
+RT   EmbRS, a new two-component system that inhibits biofilm formation
+RT   and saves Rubrivivax gelatinosus from sinking.
+RA   [Authors not available]
+RL   Microbiol Open. 2013;2(1):200-213.
+CC   This entry represents a region (approximately 111-143 residues,
+CC   positions 14-156) found in bacterial proteins containing twin-
+CC   arginine translocation (TAT) signal sequences. The TAT pathway
+CC   transports folded proteins across bacterial membranes. The family is
+CC   found in Pseudomonadota, particularly Betaproteobacteria
+CC   (Nitrosomonadales, Rhodocyclales, Burkholderiales), Gammaproteo-
+CC   bacteria (Chromatiales) and Alphaproteobacteria.
+//

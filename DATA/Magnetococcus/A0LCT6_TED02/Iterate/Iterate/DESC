@@ -1,0 +1,17 @@
+ID   Guanylate_cyc_C
+DE   Guanylate cyclase-associated C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LCT6_TED02
+GA   27.00 27.00;
+TC   30.00 50.30;
+NC   26.60 25.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 149-172
+CC   residues, positions 145-316) found in bacterial proteins associated
+CC   with guanylate and adenylate cyclase domains. These proteins are
+CC   involved in cyclic nucleotide signalling. The family is found in
+CC   bacteria, particularly Pseudomonadota (Alphaproteobacteria),
+CC   Actinomycetota (Actinomycetes, Mycobacteriales) and Bacillota.
+//
