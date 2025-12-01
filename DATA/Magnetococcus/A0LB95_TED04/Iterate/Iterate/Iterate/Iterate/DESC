@@ -1,0 +1,17 @@
+ID   ClpP_Cterm2
+DE   ClpP protease C-terminal extension
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LB95_TED04
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.80 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal extension (approximately 39-80
+CC   residues, positions 211-324) that follows the ClpP protease
+CC   domain (Pfam:PF00574) in ATP-dependent Clp protease proteolytic
+CC   subunits. The family is found in Alphaproteobacteria
+CC   (Rhodobacterales, Paracoccaceae, Roseobacteraceae) and
+CC   Betaproteobacteria (Burkholderiales).
+//

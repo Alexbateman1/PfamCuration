@@ -1,0 +1,19 @@
+ID   Phage_Gam_like
+DE   Bacteriophage Gam-like domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L764_TED02
+GA   27.00 27.00;
+TC   28.60 41.00;
+NC   26.00 18.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a small domain (approximately 45-52
+CC   residues, positions 98-143) related to bacteriophage Mu Gam-like
+CC   proteins. The family is found in Alphaproteobacteria
+CC   (Rhodobacterales, Roseobacteraceae, Paracoccaceae,
+CC   Roseomonadaceae, Hyphomicrobiales, Acetobacterales) and
+CC   Betaproteobacteria (Burkholderiales). STRING analysis shows
+CC   functional associations with AAA ATPase domains, DUF3489, DUF6362,
+CC   DUF6511, and N6_N4_Mtase.
+//
