@@ -1,0 +1,20 @@
+ID   Bac_phage_N
+DE   Bacterial and phage protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L8D3_TED01
+GA   27.00 27.00;
+TC   28.20 29.30;
+NC   26.30 18.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal region (approximately 5-102
+CC   residues) found in chromosome partitioning proteins and
+CC   uncharacterised proteins from bacteria and bacteriophages. The family
+CC   is found in Pseudomonadota, particularly Alphaproteobacteria
+CC   (Rhodobacterales, Paracoccaceae, Rhizobiaceae, Hyphomicrobiales),
+CC   Betaproteobacteria (Burkholderiales, Burkholderiaceae),
+CC   Thermodesulfobacteriota (Magnetococcaceae, Magnetococcales) and
+CC   bacteriophages (Duplodnaviria, Heunggongvirae, Uroviricota,
+CC   Caudoviricetes, Perisivirus).
+//

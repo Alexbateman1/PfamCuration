@@ -1,0 +1,21 @@
+ID   PAS_sens_N
+DE   PAS sensor N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5L3_TED01
+GA   27.00 27.00;
+TC   29.20 28.10;
+NC   26.20 24.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CL   CL0165
+CC   This entry represents an N-terminal sensor domain (approximately 17-
+CC   137 residues) found in PAS/PAC sensor proteins, histidine kinases and
+CC   cyclic-guanylate-specific phosphodiesterases. These proteins are
+CC   involved in signal transduction and contain PAS and GAF domains. The
+CC   family shows structural similarity to SMP_2 and GAPES3 domains in clan
+CC   CL0165. It is found in Thermodesulfobacteriota (Magnetococcus,
+CC   Magnetococcaceae, Magnetococcales, Magnetococcia), Pseudomonadota
+CC   (Gammaproteobacteria, Alphaproteobacteria, Rhodospirillales,
+CC   Desulfobulbales) and Desulfobulbia.
+//

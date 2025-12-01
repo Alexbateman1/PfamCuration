@@ -1,0 +1,19 @@
+ID   RepA_C
+DE   Plasmid replication protein RepA C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L772_TED04
+GA   27.00 27.00;
+TC   27.40 27.90;
+NC   26.00 21.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 41-118
+CC   residues) found in plasmid and phage replication regulatory proteins,
+CC   including RepA-like proteins and DNA primase proteins. These proteins
+CC   are involved in plasmid and phage replication processes and are often
+CC   associated with AAA family ATPase domains. The family is found in
+CC   Pseudomonadota (Thermodesulfobacteriota, Magnetococcus, Magnetofaba,
+CC   Magnetococcaceae, Magnetococcales, Magnetococcia, Alphaproteobacteria,
+CC   Betaproteobacteria) and eukaryotes (Metazoa, Ecdysozoa, Arthropoda).
+//
