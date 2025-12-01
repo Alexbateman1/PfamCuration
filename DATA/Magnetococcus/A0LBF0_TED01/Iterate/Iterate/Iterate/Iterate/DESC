@@ -1,0 +1,16 @@
+ID   Unchar_Phage_Bact1
+DE   Uncharacterised bacteriophage-related protein 1
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBF0_TED01
+GA   27.00 27.00;
+TC   27.10 27.30;
+NC   24.60 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a small uncharacterised protein (approximately
+CC   100-150 residues) found in bacteria and bacteriophages. The family
+CC   is found in Pseudomonadota, particularly in Alphaproteobacteria
+CC   (Hyphomicrobiales) and Betaproteobacteria (Burkholderiales,
+CC   Comamonadaceae), and in bacteriophages (Caudoviricetes, Uroviricota).
+//
