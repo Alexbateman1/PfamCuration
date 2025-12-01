@@ -1,0 +1,15 @@
+ID   Virion_struct_prot
+DE   Virion structural protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7B3_TED03
+GA   27.00 27.00;
+TC   27.00 28.80;
+NC   26.60 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a virion structural protein (approximately
+CC   138-139 residues, positions 27-165) found in bacteriophages. The
+CC   family is found in Magnetococcia, Desulfovibrionia, Deferribacteres,
+CC   Desulfobulbia, and Thermodesulfovibrionia.
+//

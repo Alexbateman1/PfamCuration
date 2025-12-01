@@ -1,0 +1,17 @@
+ID   Phage_baseplate_hub
+DE   Bacteriophage baseplate hub protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7B3_TED01
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a bacteriophage baseplate hub protein
+CC   (approximately 166 residues, positions 16-181) found in minor tail
+CC   proteins and tip attachment proteins. Foldseek analysis shows
+CC   structural similarity to E217_GP41 (Pfam:PF22759) and Phage_GPD
+CC   (Pfam:PF05954, clan CL0504). The family is found in Pseudomonadota,
+CC   particularly Betaproteobacteria and Gammaproteobacteria.
+//

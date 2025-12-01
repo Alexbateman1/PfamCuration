@@ -1,0 +1,15 @@
+ID   Lipocalin_like_bac_2
+DE   Lipocalin-like bacterial domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7D4_TED01
+GA   27.00 27.00;
+TC   28.10 28.90;
+NC   26.50 24.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a small lipocalin-like domain (approximately
+CC   96-106 residues, positions 6-112) found in bacteria. The family is
+CC   found in Alphaproteobacteria (Hyphomicrobiales) and Actinomycetes
+CC   (particularly Pseudonocardiales).
+//
