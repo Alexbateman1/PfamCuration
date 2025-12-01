@@ -1,0 +1,17 @@
+ID   Glyco_tr_2_C
+DE   Glycosyltransferase family 2 C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L599_TED02
+GA   27.00 27.00;
+TC   33.60 57.90;
+NC   26.30 19.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 136-150
+CC   residues) found in glycosyltransferase family 2 proteins. These
+CC   enzymes transfer sugar moieties from activated donor molecules to
+CC   specific acceptor molecules. The family is found in Pseudomonadota
+CC   (Gammaproteobacteria) and Thermodesulfobacteriota (Desulfuromonadia,
+CC   Desulfuromonadales, Geobacterales, Geobacteraceae).
+//
