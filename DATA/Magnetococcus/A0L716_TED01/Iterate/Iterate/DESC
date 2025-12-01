@@ -1,0 +1,16 @@
+ID   Unchar_bac_prot
+DE   Uncharacterised bacterial protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L716_TED01
+GA   27.00 27.00;
+TC   28.20 29.30;
+NC   26.70 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an uncharacterised protein (approximately
+CC   117-210 residues) found in bacteria. The family is found in
+CC   Actinomycetota (Actinomycetes, Streptosporangiaceae),
+CC   Planctomycetota (Planctomycetia, Pirellulaceae), Bacteroidota, and
+CC   Pseudomonadota.
+//
