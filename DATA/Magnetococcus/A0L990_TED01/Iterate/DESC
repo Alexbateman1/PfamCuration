@@ -1,0 +1,17 @@
+ID   Mtd_N_term_5
+DE   Major tropism determinant N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L990_TED01
+GA   27.00 27.00;
+TC   57.20 71.00;
+NC   24.70 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal region (approximately 339
+CC   residues, positions 6-344) found in major tropism determinant proteins
+CC   and related uncharacterised proteins. The family is found in
+CC   Pseudomonadota, particularly Betaproteobacteria (Neisseriales,
+CC   Burkholderiales, Comamonadaceae) and Gammaproteobacteria
+CC   (Chromatiales, Chromatiaceae).
+//

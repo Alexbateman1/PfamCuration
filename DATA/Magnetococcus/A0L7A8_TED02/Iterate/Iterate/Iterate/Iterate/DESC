@@ -1,0 +1,16 @@
+ID   Curculin_like_C_4
+DE   Curculin-like domain C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7A8_TED02
+GA   27.00 27.00;
+TC   27.20 46.90;
+NC   26.70 19.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal region (approximately 110 residues,
+CC   positions 1051-1169) found in curculin domain-containing proteins and
+CC   related uncharacterised proteins. The family is found in
+CC   Pseudomonadota, particularly Betaproteobacteria (Neisseriales,
+CC   Burkholderiales, Comamonadaceae) and Gammaproteobacteria.
+//
