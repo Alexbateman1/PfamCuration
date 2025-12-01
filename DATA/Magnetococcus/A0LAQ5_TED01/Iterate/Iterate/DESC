@@ -1,0 +1,18 @@
+ID   Int_N_Act2
+DE   Integrase N-terminal domain 2 in Actinomycetota
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LAQ5_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.70 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal domain (approximately 18-72
+CC   residues) found in integrases from mobile genetic elements in
+CC   Actinomycetota. These proteins are site-specific recombinases that
+CC   catalyse the integration and excision of mobile genetic elements. The
+CC   family is associated with the rve_3 family. It is found in bacteria,
+CC   predominantly Actinomycetota Actinomycetes (Kitasatosporales including
+CC   Streptomycetaceae and Streptomyces, Pseudonocardiales, Micromonosporales,
+CC   Streptosporangiales).
