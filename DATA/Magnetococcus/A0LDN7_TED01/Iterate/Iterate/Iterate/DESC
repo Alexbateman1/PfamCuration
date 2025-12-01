@@ -1,0 +1,20 @@
+ID   T2S_Prepil_2
+DE   Type II secretion system prepilin
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LDN7_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.80 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a prepilin-type domain (approximately 33-287
+CC   residues) found in components of type II secretion systems. These
+CC   proteins undergo prepilin-type N-terminal cleavage and methylation
+CC   (N_methyl, PF07963). The family is associated with type II secretion
+CC   system components including T2SSE (PF00437), T2SSF (PF00482), secretin
+CC   (PF00263) and MshEN (PF05157). Type II secretion systems are used for
+CC   protein secretion across the outer membrane in Gram-negative bacteria.
+CC   The family is found predominantly in Betaproteobacteria
+CC   (Burkholderiales, Rhodocyclales, Nitrosomonadales, Thiotrichales),
+CC   Gammaproteobacteria and Alphaproteobacteria.
