@@ -1,0 +1,16 @@
+ID   GGDEF_N
+DE   Diguanylate cyclase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L814_TED01
+GA   27.00 27.00;
+TC   27.40 90.80;
+NC   25.50 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal domain (approximately 28-169
+CC   residues) found in diguanylate cyclase proteins. These proteins
+CC   contain GGDEF domains and are involved in cyclic-di-GMP signalling.
+CC   The family is often associated with PAS sensor domains and histidine
+CC   kinase domains. It is found in Pseudomonadota, particularly
+CC   Gammaproteobacteria (Chromatiales, Chromatiaceae).
