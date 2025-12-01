@@ -1,0 +1,17 @@
+ID   MCP_sensor_N
+DE   Methyl-accepting chemotaxis protein N-terminal sensor region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L8K4_TED01
+GA   27.00 27.00;
+TC   27.00 28.20;
+NC   26.20 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal sensor region (approximately
+CC   57-348 residues) found in bacterial methyl-accepting chemotaxis
+CC   proteins (MCPs). This domain precedes HAMP and MCPsignal domains and
+CC   is involved in environmental signal detection. The family is found
+CC   in Pseudomonadota, particularly Alphaproteobacteria and
+CC   Gammaproteobacteria, and Thermodesulfobacteriota.
+//

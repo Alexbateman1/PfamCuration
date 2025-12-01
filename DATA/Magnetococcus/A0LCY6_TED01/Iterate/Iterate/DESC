@@ -1,0 +1,18 @@
+ID   HisK_sensor
+DE   Histidine kinase N-terminal sensor domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LCY6_TED01
+GA   27.00 27.00;
+TC   27.40 27.50;
+NC   25.80 25.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal sensor domain (approximately
+CC   60-234 residues) found in bacterial histidine kinases. This region
+CC   precedes PAS domains and histidine kinase catalytic domains, and is
+CC   involved in signal perception in two-component regulatory systems.
+CC   The family is found in Pseudomonadota (Marinilabiliales,
+CC   Rhodospirillales, Gammaproteobacteria, Alphaproteobacteria),
+CC   Thermodesulfobacteriota and Bacteroidota.
+//
