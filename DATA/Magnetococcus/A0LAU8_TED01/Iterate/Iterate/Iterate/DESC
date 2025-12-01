@@ -1,0 +1,16 @@
+ID   Tnp_IS3_N3
+DE   IS3 family transposase N-terminal region 3
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LAU8_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal region (approximately 2-29
+CC   residues) found in IS3/IS911 family transposases. These proteins are
+CC   mobile genetic elements involved in DNA transposition. The family is
+CC   associated with HTH_Tnp_1, HTH_21, rve and rva_4 families. It is
+CC   widely distributed in bacteria including Alphaproteobacteria, Bacillota
+CC   (Clostridia, Bacilli) and Bacteroidota.
