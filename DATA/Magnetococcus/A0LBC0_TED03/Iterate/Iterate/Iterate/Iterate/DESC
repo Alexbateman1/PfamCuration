@@ -1,0 +1,17 @@
+ID   SNF2_fungi
+DE   SNF2 family helicase domain in fungi
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBC0_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a helicase domain (approximately 425-553
+CC   residues) found in SNF2 family ATP-dependent helicases in fungi. These
+CC   proteins are involved in chromatin remodelling and DNA repair. The
+CC   family is associated with ResIII, DEAD, SWI2_SNF2, Helicase_C and
+CC   UPF0547 families. It is found in eukaryotes, specifically fungi
+CC   including Ascomycota (Pezizomycotina, Sordariomycetes, Eurotiomycetes,
+CC   Dothideomycetes).
