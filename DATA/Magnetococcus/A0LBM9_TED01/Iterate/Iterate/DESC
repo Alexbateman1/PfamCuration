@@ -1,0 +1,23 @@
+ID   Transmem_prot_bac_4
+DE   Bacterial transmembrane protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBM9_TED01
+GA   27.00 27.00;
+TC   27.90 32.80;
+NC   26.30 23.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a probable transmembrane protein (approximately
+CC   120-135 residues, positions 2-132) found in bacteria. The family is
+CC   found in Pseudomonadota, particularly Betaproteobacteria
+CC   (Burkholderiales, Neisseriales, Comamonadaceae) and
+CC   Gammaproteobacteria, as well as Magnetococcia (Magnetococcales),
+CC   Desulfovibrionia (Desulfovibrionales), and Thermodesulfobacteriota.
+RN   [1]
+RM   38113281
+RT   Gene expression changes throughout the life cycle allow a bacterial
+RT   plant pathogen to persist in diverse environmental habitats.
+RA   Bartoli C, Chandnani R, Roux F;
+RL   PLoS Pathog 2023;19:e1011861.
+//
