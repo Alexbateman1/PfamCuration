@@ -1,0 +1,19 @@
+ID   HepA_helicase_C_2
+DE   HepA superfamily II helicase C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L974_TED05
+GA   27.00 27.00;
+TC   27.70 27.10;
+NC   26.80 25.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 703-797
+CC   residues) found in HepA superfamily II DNA/RNA helicase proteins. These
+CC   ATP-dependent helicases are characterised by the presence of DEAD box
+CC   helicase domains (DEAD, PF00270; Helicase_C, PF00271), SNF2-related
+CC   domains (SNF2-rel_dom, PF00176) and restriction endonuclease type III
+CC   domains (ResIII, PF04851). HepA helicases are involved in DNA repair
+CC   and maintenance of genomic stability. The family is found predominantly
+CC   in bacteria, particularly Actinomycetes (Streptomycetaceae) and
+CC   Alphaproteobacteria.

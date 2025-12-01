@@ -1,0 +1,17 @@
+ID   Pep_M50_OEP_C
+DE   Peptidase M50 outer membrane efflux associated C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L6R7_TED05
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.80 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 587-713
+CC   residues) found in peptidase M50 family proteins. These zinc
+CC   metalloproteases are characterised by strong associations with outer
+CC   membrane efflux protein (OEP, PF02321) domains and RND efflux pump
+CC   components. The family is found predominantly in bacteria,
+CC   particularly Alphaproteobacteria (Rhodospirillales), Betaproteobacteria
+CC   (Burkholderiales), Gammaproteobacteria and Planctomycetia.
