@@ -1,0 +1,17 @@
+ID   Sensory_dom_bac
+DE   Bacterial sensory domain-associated region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L6L4_TED02
+GA   27.00 27.00;
+TC   27.80 29.20;
+NC   25.60 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a region (approximately 150-157 residues,
+CC   positions 157-311) found in proteins containing sensory domains such
+CC   as CACHE and GAF domains. These proteins are involved in bacterial
+CC   signal transduction. The family is found in Pseudomonadota,
+CC   particularly Gammaproteobacteria (Chromatiales, Thiotrichales) and
+CC   Betaproteobacteria (Nitrosomonadales).
+//

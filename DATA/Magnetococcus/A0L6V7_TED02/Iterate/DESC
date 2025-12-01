@@ -1,0 +1,32 @@
+ID   NifZ_ext
+DE   NifZ nitrogen fixation protein extension
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L6V7_TED02
+GA   27.00 27.00;
+TC   27.00 27.50;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CL   CL0010
+CC   This entry represents a C-terminal extension (approximately 59
+CC   residues, positions 99-157) of NifZ family proteins (PF04319) involved
+CC   in nitrogen fixation. NifZ proteins participate in Fe-S cofactor
+CC   synthesis for nitrogenase. The family is found in Pseudomonadota,
+CC   particularly Gammaproteobacteria (Chromatiales, Enterobacterales) and
+CC   Betaproteobacteria.
+RN   [1]
+RM   38747590
+RT   Integrated Hfq-interacting RNAome and transcriptomic analysis reveals
+RT   complex regulatory networks of nitrogen fixation in root-associated
+RT   Pseudomonas stutzeri A1501.
+RA   mSphere 2024;9:e0088023.
+RL   mSphere 2024;9:e0088023.
+RN   [2]
+RM   25251496
+RT   The nitrogen-fixation island insertion site is conserved in
+RT   diazotrophic Pseudomonas stutzeri and Pseudomonas sp. isolated from
+RT   distal and close geographical regions.
+RA   PLoS ONE 2014;9:e108203.
+RL   PLoS ONE 2014;9:e108203.
+//

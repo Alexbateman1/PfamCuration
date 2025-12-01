@@ -1,0 +1,16 @@
+ID   N_acetyltransf_bac
+DE   N-acetyltransferase-associated region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LCV6_TED02
+GA   27.00 27.00;
+TC   27.80 27.10;
+NC   26.60 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a region (approximately 109-124 residues,
+CC   positions 140-248) associated with N-acetyltransferase domains. The
+CC   family is found in bacteria, particularly Actinomycetota
+CC   (Actinomycetes, Micrococcales, Microbacteriaceae) and Pseudomonadota
+CC   (Alphaproteobacteria).
+//

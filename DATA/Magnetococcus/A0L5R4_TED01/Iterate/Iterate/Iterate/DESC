@@ -1,0 +1,16 @@
+ID   DUF2292_like
+DE   DUF2292-like small bacterial protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L5R4_TED01
+GA   27.00 27.00;
+TC   27.20 27.20;
+NC   26.60 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a small region (approximately 53-59 residues,
+CC   positions 9-63) related to DUF2292 domain-containing proteins. The
+CC   family is found in Pseudomonadota, particularly Betaproteobacteria
+CC   (Burkholderiales, Comamonadaceae) and Gammaproteobacteria
+CC   (Chromatiales, Chromatiaceae).
+//
