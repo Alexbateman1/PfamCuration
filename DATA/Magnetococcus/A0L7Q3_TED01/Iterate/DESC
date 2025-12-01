@@ -1,0 +1,17 @@
+ID   Bac_reg_prot
+DE   Bacterial regulatory protein region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7Q3_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CL   CL0469
+CC   This entry represents a region (approximately 131-132 residues,
+CC   positions 7-137) found in bacterial regulatory proteins. Some proteins
+CC   contain HTH domains. The family is found in Bacillota (Bacilli,
+CC   Lactobacillales, Lactobacillaceae), Actinomycetota (Actinomycetes),
+CC   and Methanobacteriota.
+//
