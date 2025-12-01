@@ -1,0 +1,19 @@
+ID   Pept_S74_N
+DE   Peptidase S74 associated N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L6D9_TED01
+GA   27.00 27.00;
+TC   28.70 30.90;
+NC   24.90 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal region (approximately 110-224
+CC   residues) found in proteins containing a peptidase S74 domain. The
+CC   family is found in Pseudomonadota, particularly Alphaproteobacteria
+CC   (Hyphomicrobiales, Rhodobacterales, Rhizobiaceae) and
+CC   Betaproteobacteria (Burkholderiales, Burkholderiaceae), and also in
+CC   bacteriophages (Caudoviricetes, Uroviricota). The peptidase S74
+CC   family (PF13884) is associated with signal peptidase and related
+CC   proteolytic activities.
+//
