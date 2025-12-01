@@ -1,0 +1,20 @@
+ID   Polyket_cyc
+DE   Polyketide cyclase-like domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7H6_TED01
+GA   27.00 27.00;
+TC   27.80 50.00;
+NC   26.30 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CL   CL0209
+CC   This entry represents a conserved region (approximately 3-134
+CC   residues) found in bacterial proteins with polyketide cyclase-like
+CC   function. Polyketide cyclases catalyse cyclisation reactions during
+CC   polyketide biosynthesis. The family shows structural similarity to
+CC   the Polyketide_cyc2 domain. It is found in Pseudomonadota,
+CC   particularly Gammaproteobacteria (Chromatiales, Chromatiaceae,
+CC   Ectothiorhodospiraceae), and Bacteroidota (Flavobacteriia,
+CC   Flavobacteriales, Flavobacteriaceae).
+//

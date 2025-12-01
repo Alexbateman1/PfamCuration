@@ -1,0 +1,18 @@
+ID   Phage_chap2
+DE   Phage chaperone protein variant
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L738_TED01
+GA   27.00 27.00;
+TC   27.40 28.20;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a small conserved region (approximately 4-111
+CC   residues) found in bacteriophage chaperone proteins and related
+CC   bacterial proteins. These proteins assist in phage assembly
+CC   processes. The family is found in Thermodesulfobacteriota
+CC   (Magnetococcaceae, Magnetococcales, Magnetococcia), Pseudomonadota
+CC   (Neisseriales, Betaproteobacteria, Gammaproteobacteria) and
+CC   Bacillota (Clostridia).
+//

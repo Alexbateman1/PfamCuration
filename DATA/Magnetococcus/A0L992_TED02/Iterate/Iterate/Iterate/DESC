@@ -1,0 +1,25 @@
+ID   Phage_tape_N
+DE   Phage tail tape measure protein N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L992_TED02
+GA   27.00 27.00;
+TC   27.00 27.40;
+NC   26.70 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+RN   [1]
+RM   11254622
+RT   Mu-like Prophage in serogroup B Neisseria meningitidis coding for
+RT   surface-exposed antigens.
+RA   [Authors not available]
+RL   Infection and immunity. 2001;69:2580-2588.
+CC   This entry represents an N-terminal region (approximately 13-243
+CC   residues, positions 13-67) found in bacteriophage tail tape measure
+CC   proteins. Tape measure proteins determine the length of the phage
+CC   tail during assembly. The family is found in Pseudomonadota,
+CC   particularly Gammaproteobacteria (Enterobacterales,
+CC   Enterobacteriaceae), Betaproteobacteria (Neisseriales,
+CC   Neisseriaceae, Burkholderiales) and Thermodesulfobacteriota
+CC   (Magnetococcaceae).
+//

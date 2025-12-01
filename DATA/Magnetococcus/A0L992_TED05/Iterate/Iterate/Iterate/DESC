@@ -1,0 +1,19 @@
+ID   Phage_tape_M
+DE   Phage tail tape measure protein middle region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L992_TED05
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.30 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a middle region (approximately 669-1021
+CC   residues) found in bacteriophage tail tape measure proteins. Tape
+CC   measure proteins determine the length of the phage tail during
+CC   assembly. This region is often found adjacent to the PhageMin_Tail
+CC   domain. The family is found in Thermodesulfobacteriota
+CC   (Magnetococcaceae, Magnetococcales, Magnetococcia) and
+CC   Pseudomonadota (Betaproteobacteria, Burkholderiales,
+CC   Comamonadaceae).
+//
