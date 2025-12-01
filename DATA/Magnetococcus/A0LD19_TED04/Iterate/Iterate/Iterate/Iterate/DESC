@@ -1,0 +1,19 @@
+ID   PqiB_C
+DE   Paraquat-inducible protein B C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LD19_TED04
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 427-497
+CC   residues) found in paraquat-inducible protein B (PqiB). These proteins
+CC   are membrane proteins that respond to oxidative stress induced by
+CC   paraquat, a superoxide radical-generating agent. The proteins are
+CC   characterised by the presence of MlaD (PF02470) domains and are
+CC   associated with ABC transporter auxiliary proteins (PqiA). The family
+CC   is found predominantly in bacteria, particularly Betaproteobacteria
+CC   (Burkholderiales including Burkholderiaceae and Paraburkholderia),
+CC   Gammaproteobacteria and Alphaproteobacteria.
