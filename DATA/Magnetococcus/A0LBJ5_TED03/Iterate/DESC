@@ -1,0 +1,16 @@
+ID   ResIII_CTD_3
+DE   Type III restriction enzyme C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBJ5_TED03
+GA   27.00 27.00;
+TC   32.90 47.20;
+NC   26.60 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain (approximately 133 residues,
+CC   positions 428-560) found following the ResIII (Pfam:PF04851), DEAD
+CC   (Pfam:PF00270), and Helicase_C (Pfam:PF00271) domains in type III
+CC   restriction enzyme proteins. The family is found in Alphaproteobacteria,
+CC   particularly Paracoccaceae, Rhodobacterales, and Hyphomicrobiales.
+//
