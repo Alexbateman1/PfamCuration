@@ -1,0 +1,20 @@
+ID   Beta_barrel_C
+DE   Beta-barrel C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBX5_TED03
+GA   27.00 27.00;
+TC   27.30 43.00;
+NC   24.80 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CL   CL0193
+CC   This entry represents a C-terminal region (approximately 225-303
+CC   residues) found in bacterial proteins containing tetratricopeptide
+CC   repeat domains. The family shows structural similarity to beta-barrel
+CC   domains including B-barrel_PelB_C, PgaA_barrel and other families in
+CC   clan CL0193. It is found in Pseudomonadota, particularly
+CC   Alphaproteobacteria (Azospirillaceae, Rhodospirillales,
+CC   Sphingomonadales), Desulfovibrionia (Desulfovibrionales) and
+CC   Thermodesulfobacteriota (Magnetococcales).
+//

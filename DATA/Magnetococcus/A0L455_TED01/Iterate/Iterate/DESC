@@ -1,0 +1,18 @@
+ID   CDNT_assoc
+DE   CD-NTase-associated protein domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L455_TED01
+GA   27.00 27.00;
+TC   28.00 27.60;
+NC   25.90 24.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a conserved region (approximately 14-207
+CC   residues) found in proteins associated with CD-NTase (cyclic
+CC   dinucleotide synthetase) systems and uncharacterised bacterial
+CC   proteins. Some family members contain CAP12-PCTIR_TIR domains. The
+CC   family is found in Pseudomonadota (Gammaproteobacteria,
+CC   Chromatiaceae, Chromatiales, Alphaproteobacteria), Bacillota
+CC   (Clostridia, Lachnospiraceae, Lachnospirales) and Bacteroidota.
+//
