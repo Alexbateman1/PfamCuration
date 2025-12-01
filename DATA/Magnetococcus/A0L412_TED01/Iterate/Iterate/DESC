@@ -1,0 +1,16 @@
+ID   Bac_prot_unc
+DE   Bacterial uncharacterised protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L412_TED01
+GA   27.00 27.00;
+TC   110.00 109.30;
+NC   23.20 21.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a conserved domain (approximately 106-428
+CC   residues) found in uncharacterised bacterial proteins. The family is
+CC   found in Pseudomonadota, particularly Gammaproteobacteria
+CC   (Alteromonadales, Alteromonadaceae, Paraglaciecola; Thalassobaculaceae,
+CC   Thalassobaculum; Terasakiellaceae, Terasakiella) and
+CC   Alphaproteobacteria (Rhodospirillales).
