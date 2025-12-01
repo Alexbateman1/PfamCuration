@@ -1,0 +1,18 @@
+ID   Transposon_prot_2
+DE   Transposon-associated protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LAW8
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a small protein (approximately 69-77 residues)
+CC   found in transposon-associated contexts. STRING analysis shows strong
+CC   associations with resolvase (Pfam:PF00239), recombinase
+CC   (Pfam:PF07508), and DUF2924 (Pfam:PF11149), indicating a role in
+CC   transposition or DNA recombination. The family is found in
+CC   Alphaproteobacteria, particularly in Rhodobacterales (Paracoccus,
+CC   Paracoccaceae, Roseobacteraceae).
+//

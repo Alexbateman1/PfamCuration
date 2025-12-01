@@ -1,0 +1,16 @@
+ID   Phage_Bact_small
+DE   Small bacteriophage-bacterial protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L767_TED03
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a small protein or domain (approximately 40-43
+CC   residues, positions 164-214) found in bacteriophages and bacteria.
+CC   The family includes bacteriophage f237 ORF8 (PMID:38014954,
+CC   PMID:28099500) and is found in Alphaproteobacteria, Bacillota,
+CC   bacteriophages (Caudoviricetes), and plants.
+//
