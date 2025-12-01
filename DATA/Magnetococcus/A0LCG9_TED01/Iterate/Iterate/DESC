@@ -1,0 +1,17 @@
+ID   Ig_like_bac_unch
+DE   Uncharacterised Ig-like domain in bacteria
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LCG9_TED01
+GA   27.00 27.00;
+TC   27.40 27.10;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain (approximately
+CC   175-183 residues, positions 27-209) found in bacteria.
+CC   Foldseek analysis indicates structural similarity to
+CC   immunoglobulin-like beta-sandwich domains. The family is found
+CC   in Alphaproteobacteria (Roseobacteraceae, Rhodobacterales),
+CC   Bacteroidota (Flavobacteriia, Flavobacterium), and Myxococcota.
+//

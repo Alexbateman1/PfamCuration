@@ -1,0 +1,16 @@
+ID   Unchar_Alpha_bac6
+DE   Uncharacterised domain in Alphaproteobacteria
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7B7_TED01
+GA   27.00 27.00;
+TC   27.90 68.90;
+NC   26.00 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an uncharacterised domain (approximately
+CC   85-86 residues, positions 74-159) found predominantly in
+CC   Alphaproteobacteria, particularly Rhodobacterales
+CC   (Paracoccaceae, Roseobacteraceae), with some representation in
+CC   Gammaproteobacteria and Betaproteobacteria.
+//
