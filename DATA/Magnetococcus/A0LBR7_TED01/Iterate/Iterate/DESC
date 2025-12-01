@@ -1,0 +1,15 @@
+ID   Bac_sm_prot7
+DE   Small bacterial protein domain variant 7
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBR7_TED01
+GA   27.00 27.00;
+TC   84.20 83.50;
+NC   23.50 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a small conserved domain (approximately 20-121
+CC   residues) found in uncharacterised bacterial proteins. The family is
+CC   found in Pseudomonadota, particularly Alphaproteobacteria
+CC   (Rhodobacterales, Roseobacteraceae, Paracoccaceae, Paracoccus,
+CC   Hyphomicrobiales).

@@ -1,0 +1,18 @@
+ID   Phage_port_C
+DE   Phage portal protein C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L6D7_TED03
+GA   27.00 27.00;
+TC   27.90 38.20;
+NC   26.70 22.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 483-641
+CC   residues) found in bacteriophage portal proteins and uncharacterised
+CC   proteins. Portal proteins are essential components of tailed
+CC   bacteriophages involved in DNA packaging. The family is found in
+CC   Pseudomonadota (Alphaproteobacteria, Betaproteobacteria,
+CC   Rhodobacterales, Roseobacteraceae, Hyphomicrobiales, Burkholderiales,
+CC   Burkholderiaceae) and bacteriophages (Duplodnaviria, Heunggongvirae,
+CC   Uroviricota, Caudoviricetes).
