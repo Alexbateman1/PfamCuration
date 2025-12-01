@@ -1,0 +1,15 @@
+ID   Glyco_transf_bac
+DE   Bacterial glycosyltransferase-associated region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LCV5_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.70 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a short region (approximately 37-40 residues,
+CC   positions 213-252) found in bacterial glycosyltransferase and WalW
+CC   proteins. The family is found in Alphaproteobacteria, particularly
+CC   Sphingomonadales (Sphingomonadaceae, Erythrobacteraceae).
+//
