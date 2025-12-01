@@ -1,0 +1,16 @@
+ID   SH3_3_C
+DE   SH3 type 3 C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LDX5_TED02
+GA   27.00 27.00;
+TC   27.60 27.60;
+NC   26.80 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 95-189
+CC   residues) found in SH3 type 3 domain-containing proteins. These
+CC   proteins contain SH3_3 domains. The family is found in Pseudomonadota,
+CC   particularly Gammaproteobacteria (Oceanospirillales,
+CC   Oceanospirillaceae, Marinobacteraceae, Marinobacter,
+CC   Pseudomonadales).

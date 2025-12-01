@@ -1,0 +1,18 @@
+ID   Integrase_N
+DE   Integrase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L7E7_TED01
+GA   27.00 27.00;
+TC   27.20 35.50;
+NC   26.70 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents an N-terminal domain (approximately 1-49
+CC   residues) found in integrase proteins. These proteins contain
+CC   integrase catalytic domains (rve_3) and are involved in DNA
+CC   recombination and integration. The family is found in Pseudomonadota
+CC   (Alphaproteobacteria, Rhodobacterales, Paracoccaceae, Paracoccus),
+CC   Thermodesulfobacteriota (Magnetococcia, Magnetococcales,
+CC   Magnetococcaceae, Magnetococcus) and Kiritimatiellota
+CC   (Kiritimatiellia, Kiritimatiellales, Pontiellaceae, Pontiella).

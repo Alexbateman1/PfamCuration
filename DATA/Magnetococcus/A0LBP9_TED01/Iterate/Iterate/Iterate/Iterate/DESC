@@ -1,0 +1,16 @@
+ID   Mag_prot2
+DE   Magnetococcus protein domain variant 2
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBP9_TED01
+GA   27.00 27.00;
+TC   27.00 31.80;
+NC   26.90 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This entry represents a small conserved domain (approximately 5-64
+CC   residues) found in uncharacterised bacterial proteins. The family is
+CC   found in Thermodesulfobacteriota (Magnetococcia, Magnetococcales,
+CC   Magnetococcaceae, Magnetococcus, Magnetofaba), Pseudomonadota
+CC   (Betaproteobacteria, Burkholderiales) and Bacteroidota
+CC   (Flavobacteriia, Flavobacteriales, Flavobacteriaceae, Aquimarina).
