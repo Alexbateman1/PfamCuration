@@ -1,0 +1,18 @@
+ID   DUF4384_N
+DE   Domain of unknown function (DUF4384) N-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0L418_TED01
+GA   27.00 27.00;
+TC   30.70 29.50;
+NC   26.90 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CL   CL0329
+CC   This entry represents an N-terminal region (approximately 13-113
+CC   residues) found in DUF4384 domain-containing proteins. The family
+CC   shows structural similarity to the Lon_C domain in clan CL0329. It is
+CC   found in Pseudomonadota, particularly Alphaproteobacteria
+CC   (Rhodospirillales, Acetobacterales, Caulobacterales) and
+CC   Gammaproteobacteria (Chromatiales, Thiotrichales).
+//

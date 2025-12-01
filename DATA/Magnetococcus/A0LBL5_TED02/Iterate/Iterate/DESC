@@ -1,0 +1,19 @@
+ID   Glyco_trans_C
+DE   Glycosyltransferase C-terminal region
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0LBL5_TED02
+GA   27.00 27.00;
+TC   29.10 27.60;
+NC   26.90 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a C-terminal region (approximately 65-222
+CC   residues) found in glycosyltransferases, including
+CC   dolichyl-phosphate-mannose-protein mannosyltransferases (RgtA/PimA
+CC   family) and related proteins. These enzymes transfer glycosyl groups
+CC   to various acceptor molecules. The family is found in
+CC   Verrucomicrobiota (Verrucomicrobiales, Akkermansiaceae),
+CC   Actinomycetota (Propionibacteriales) and Pseudomonadota
+CC   (Alphaproteobacteria).
+//
