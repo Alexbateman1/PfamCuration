@@ -12,7 +12,9 @@ Usage:
     python filter_ted_no_pfam_overlap.py [options]
 
 Output format (TSV):
-    ted_id<TAB>chopping<TAB>consensus_level
+    uniprot_acc<TAB>start<TAB>end
+
+For discontinuous domains, start is the first coordinate and end is the last.
 """
 
 import argparse
@@ -26,7 +28,7 @@ from typing import Dict, List, Set, Tuple
 
 # Default paths
 DEFAULT_TED_TSV = '/nfs/production/agb/pfam/data/TED/ted_365m_domain_boundaries_consensus_level.tsv.gz'
-DEFAULT_OUTPUT = 'ted_high_no_pfam_overlap.tsv.gz'
+DEFAULT_OUTPUT = 'ted_high_no_pfam_overlap.tsv'
 DEFAULT_PFAM_CACHE = 'pfam_domains_cache.tsv'
 
 
@@ -318,7 +320,10 @@ def filter_ted_domains(ted_file: str, pfam_domains: Dict[str, List[Tuple[int, in
                 overlap_count += 1
             else:
                 # No overlap - keep this domain
-                out_f.write(f"{ted_id}\t{chopping}\t{consensus_level}\n")
+                # Get overall start (first coord) and end (last coord)
+                overall_start = ted_segments[0][0]
+                overall_end = ted_segments[-1][1]
+                out_f.write(f"{uniprot_acc}\t{overall_start}\t{overall_end}\n")
                 kept_count += 1
 
             # Progress update
