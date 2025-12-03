@@ -2,30 +2,19 @@
 """
 Filter TED domains that don't overlap with existing Pfam domains.
 
-This script uses an external sort approach to keep memory usage low:
-1. Extracts high-confidence TED domains to a temp file
-2. Combines Pfam and TED domains into one file with source markers
-3. Sorts by UniProt accession using Unix sort (disk-based, memory efficient)
-4. Processes one protein at a time, comparing TED vs Pfam domains
-5. Outputs non-overlapping TED domains
+Uses fast shell commands (zgrep, awk, sort) for processing large files.
 
 Usage:
     python filter_ted_no_pfam_overlap.py [options]
 
 Output format (TSV):
     uniprot_acc<TAB>start<TAB>end<TAB>ted_suffix
-
-For discontinuous domains, start is the first coordinate and end is the last.
 """
 
 import argparse
-import gzip
 import os
-import re
 import subprocess
 import sys
-import tempfile
-from typing import List, Tuple
 
 # Default paths
 DEFAULT_TED_TSV = '/nfs/production/agb/pfam/data/TED/ted_365m_domain_boundaries_consensus_level.tsv.gz'
@@ -59,107 +48,122 @@ def parse_arguments():
         help='Path to MySQL config file (default: ~/.my.cnf)'
     )
     parser.add_argument(
-        '--progress-interval',
-        type=int,
-        default=1000000,
-        help='Print progress every N TED domains (default: 1000000)'
-    )
-    parser.add_argument(
         '--sort-memory',
-        default='4G',
-        help='Memory limit for Unix sort (default: 4G)'
+        default='8G',
+        help='Memory limit for Unix sort (default: 8G)'
     )
     parser.add_argument(
         '--sort-parallel',
         type=int,
-        default=4,
-        help='Number of parallel sort threads (default: 4)'
+        default=8,
+        help='Number of parallel sort threads (default: 8)'
     )
     parser.add_argument(
-        '--temp-dir',
-        default=None,
-        help='Temporary directory for sort (default: system temp)'
+        '--work-dir',
+        default='.',
+        help='Working directory for intermediate files (default: current dir)'
+    )
+    parser.add_argument(
+        '--cleanup',
+        action='store_true',
+        help='Clean up intermediate files after successful completion'
     )
     return parser.parse_args()
 
 
-def fetch_pfam_domains(config_file: str, output_file: str) -> int:
-    """
-    Fetch all Pfam domain regions from pfamlive database.
+def run_cmd(cmd, description, shell=False):
+    """Run a command and handle errors."""
+    print(f"  Running: {cmd if shell else ' '.join(cmd)}")
+    result = subprocess.run(cmd, shell=shell, capture_output=True, text=True)
+    if result.returncode != 0:
+        print(f"ERROR: {description} failed with code {result.returncode}")
+        if result.stderr:
+            print(f"  stderr: {result.stderr}")
+        sys.exit(1)
+    return result
 
-    Args:
-        config_file: Path to MySQL config file
-        output_file: Path to save the domain data
 
-    Returns:
-        Number of domain records fetched
-    """
-    print("Fetching Pfam domain regions from pfamlive database...")
-    print("This may take several minutes...")
+def fetch_pfam_domains(config_file: str, output_file: str):
+    """Fetch all Pfam domain regions from pfamlive database."""
+    print("\nStep 1: Fetching Pfam domain regions from pfamlive...")
 
     config_file = os.path.expanduser(config_file)
 
-    # Query to get all significant Pfam domain regions
-    # Columns: pfamseq_acc, seq_start, seq_end
-    query = """
-        SELECT pfamseq_acc, seq_start, seq_end
-        FROM pfamA_reg_full_significant
-        WHERE in_full = 1
-    """
+    query = "SELECT pfamseq_acc, seq_start, seq_end FROM pfamA_reg_full_significant WHERE in_full = 1"
 
-    cmd = [
-        'mysql',
-        f'--defaults-file={config_file}',
-        'pfam_live',
-        '--quick',
-        '--silent',
-        '--skip-column-names',
-        '-e',
-        query
-    ]
+    cmd = f"mysql --defaults-file={config_file} pfam_live --quick --silent --skip-column-names -e \"{query}\" > {output_file}"
 
-    try:
-        print("Running MySQL query...")
-        with open(output_file, 'w') as out_f:
-            result = subprocess.run(
-                cmd,
-                stdout=out_f,
-                stderr=subprocess.PIPE,
-                text=True,
-                timeout=3600  # 1 hour timeout for large query
-            )
+    run_cmd(cmd, "MySQL query", shell=True)
 
-        if result.returncode != 0:
-            print(f"ERROR: MySQL query failed with code {result.returncode}")
-            if result.stderr:
-                print(f"  {result.stderr}")
-            sys.exit(1)
-
-        # Count lines
-        with open(output_file, 'r') as f:
-            count = sum(1 for _ in f)
-
-        print(f"Fetched {count:,} Pfam domain regions to {output_file}")
-        return count
-
-    except subprocess.TimeoutExpired:
-        print("ERROR: MySQL query timed out after 1 hour")
-        sys.exit(1)
-    except Exception as e:
-        print(f"ERROR: Failed to fetch Pfam domains: {e}")
-        sys.exit(1)
+    # Count lines
+    result = subprocess.run(f"wc -l < {output_file}", shell=True, capture_output=True, text=True)
+    count = int(result.stdout.strip())
+    print(f"  Fetched {count:,} Pfam domain regions")
 
 
-def parse_chopping(chopping: str) -> List[Tuple[int, int]]:
-    """
-    Parse TED chopping string into list of (start, end) tuples.
+def extract_ted_high(ted_file: str, output_file: str):
+    """Extract high-confidence TED domains using zgrep and awk."""
+    print("\nStep 2: Extracting high-confidence TED domains...")
 
-    Args:
-        chopping: Chopping string like "11-41_290-389"
+    # Use zgrep to filter 'high' lines, awk to parse and reformat
+    # Input: AF-A0A000-F1-model_v4_TED01	11-41_290-389	high
+    # Output: A0A000	11	389	TED01	11-41_290-389
+    cmd = f"""zgrep $'\\thigh$' {ted_file} | awk -F'\\t' '{{
+        # Extract UniProt acc from ted_id (AF-XXX-F1-model_v4_TEDNN)
+        split($1, a, "-");
+        acc = a[2];
 
-    Returns:
-        List of (start, end) tuples
-    """
+        # Extract TED suffix (last part after underscore)
+        n = split($1, b, "_");
+        ted_suffix = b[n];
+
+        # Parse chopping to get first start and last end
+        split($2, segs, "_");
+        split(segs[1], first, "-");
+        start = first[1];
+        n_segs = split($2, segs, "_");
+        split(segs[n_segs], last, "-");
+        end = last[2];
+
+        print acc "\\t" start "\\t" end "\\t" ted_suffix "\\t" $2
+    }}' > {output_file}"""
+
+    run_cmd(cmd, "TED extraction", shell=True)
+
+    result = subprocess.run(f"wc -l < {output_file}", shell=True, capture_output=True, text=True)
+    count = int(result.stdout.strip())
+    print(f"  Extracted {count:,} high-confidence TED domains")
+
+
+def create_combined_file(pfam_file: str, ted_file: str, combined_file: str):
+    """Combine Pfam and TED domains into single file with source markers."""
+    print("\nStep 3: Creating combined domains file...")
+
+    # Pfam format: acc, start, end -> add P marker
+    # TED format: acc, start, end, suffix, segments -> add T marker
+    cmd = f"""awk -F'\\t' '{{print $1 "\\t" $2 "\\t" $3 "\\tP\\t"}}' {pfam_file} > {combined_file} && \
+awk -F'\\t' '{{print $1 "\\t" $2 "\\t" $3 "\\tT\\t" $4 ":" $5}}' {ted_file} >> {combined_file}"""
+
+    run_cmd(cmd, "Combine files", shell=True)
+
+    result = subprocess.run(f"wc -l < {combined_file}", shell=True, capture_output=True, text=True)
+    count = int(result.stdout.strip())
+    print(f"  Combined file: {count:,} total domains")
+
+
+def sort_combined_file(input_file: str, output_file: str, memory: str, parallel: int, work_dir: str):
+    """Sort combined file by UniProt accession."""
+    print("\nStep 4: Sorting by UniProt accession...")
+    print(f"  Memory: {memory}, Parallel: {parallel}")
+
+    cmd = f"sort -t $'\\t' -k1,1 -S {memory} --parallel={parallel} -T {work_dir} {input_file} -o {output_file}"
+
+    run_cmd(cmd, "Sort", shell=True)
+    print("  Sort completed")
+
+
+def parse_chopping(chopping):
+    """Parse chopping string into list of (start, end) tuples."""
     segments = []
     for segment in chopping.split('_'):
         if '-' in segment:
@@ -171,221 +175,8 @@ def parse_chopping(chopping: str) -> List[Tuple[int, int]]:
     return segments
 
 
-def extract_uniprot_acc(ted_id: str) -> str:
-    """
-    Extract UniProt accession from TED ID.
-
-    Args:
-        ted_id: TED ID like "AF-A0A000-F1-model_v4_TED01"
-
-    Returns:
-        UniProt accession like "A0A000"
-    """
-    match = re.match(r'^AF-([A-Z0-9]+)-F\d+-', ted_id)
-    if match:
-        return match.group(1)
-    return None
-
-
-def extract_ted_suffix(ted_id: str) -> str:
-    """
-    Extract TED suffix from TED ID.
-
-    Args:
-        ted_id: TED ID like "AF-A0A000-F1-model_v4_TED01"
-
-    Returns:
-        TED suffix like "TED01"
-    """
-    if '_' in ted_id:
-        return ted_id.split('_')[-1]
-    return None
-
-
-def extract_ted_domains(ted_file: str, output_file: str, progress_interval: int) -> Tuple[int, int]:
-    """
-    Extract high-confidence TED domains to a file.
-
-    Output format: uniprot_acc<TAB>start<TAB>end<TAB>ted_suffix
-
-    Args:
-        ted_file: Path to TED TSV file (gzipped)
-        output_file: Path to output file
-        progress_interval: Print progress every N records
-
-    Returns:
-        Tuple of (total_count, high_count)
-    """
-    print(f"\nExtracting high-confidence TED domains from {ted_file}...")
-
-    total_count = 0
-    high_count = 0
-    no_acc_count = 0
-
-    if ted_file.endswith('.gz'):
-        in_f = gzip.open(ted_file, 'rt')
-    else:
-        in_f = open(ted_file, 'r')
-
-    out_f = open(output_file, 'w')
-
-    try:
-        for line in in_f:
-            line = line.rstrip('\n\r')
-            if not line:
-                continue
-
-            total_count += 1
-
-            parts = line.split('\t')
-            if len(parts) < 3:
-                continue
-
-            ted_id = parts[0]
-            chopping = parts[1]
-            consensus_level = parts[2]
-
-            # Only process high confidence domains
-            if consensus_level != 'high':
-                continue
-
-            # Extract UniProt accession and TED suffix
-            uniprot_acc = extract_uniprot_acc(ted_id)
-            if not uniprot_acc:
-                no_acc_count += 1
-                continue
-
-            ted_suffix = extract_ted_suffix(ted_id)
-
-            # Parse TED domain segments
-            ted_segments = parse_chopping(chopping)
-            if not ted_segments:
-                continue
-
-            # Get overall start (first coord) and end (last coord)
-            overall_start = ted_segments[0][0]
-            overall_end = ted_segments[-1][1]
-
-            # Write with all segment info for overlap checking
-            # Format: uniprot_acc, start, end, ted_suffix, all_segments
-            segments_str = chopping
-            out_f.write(f"{uniprot_acc}\t{overall_start}\t{overall_end}\t{ted_suffix}\t{segments_str}\n")
-            high_count += 1
-
-            if total_count % progress_interval == 0:
-                print(f"  Processed {total_count:,} total, {high_count:,} high-confidence...")
-
-    finally:
-        in_f.close()
-        out_f.close()
-
-    print(f"Extracted {high_count:,} high-confidence TED domains")
-    print(f"  (from {total_count:,} total, {no_acc_count:,} without valid accession)")
-
-    return total_count, high_count
-
-
-def create_combined_file(pfam_file: str, ted_file: str, combined_file: str):
-    """
-    Create a combined file with both Pfam and TED domains.
-
-    Format: uniprot_acc<TAB>start<TAB>end<TAB>source<TAB>extra
-    - source: 'P' for Pfam, 'T' for TED
-    - extra: for TED, contains ted_suffix and segments_str
-
-    Args:
-        pfam_file: Path to Pfam domains file
-        ted_file: Path to TED domains file
-        combined_file: Path to output combined file
-    """
-    print(f"\nCreating combined domains file...")
-
-    pfam_count = 0
-    ted_count = 0
-
-    with open(combined_file, 'w') as out_f:
-        # Add Pfam domains (format: acc, start, end)
-        print(f"  Adding Pfam domains from {pfam_file}...")
-        with open(pfam_file, 'r') as f:
-            for line in f:
-                line = line.rstrip('\n\r')
-                if not line:
-                    continue
-                parts = line.split('\t')
-                if len(parts) >= 3:
-                    # Format: acc, start, end, source='P', extra=''
-                    out_f.write(f"{parts[0]}\t{parts[1]}\t{parts[2]}\tP\t\n")
-                    pfam_count += 1
-
-        # Add TED domains (format: acc, start, end, ted_suffix, segments)
-        print(f"  Adding TED domains from {ted_file}...")
-        with open(ted_file, 'r') as f:
-            for line in f:
-                line = line.rstrip('\n\r')
-                if not line:
-                    continue
-                parts = line.split('\t')
-                if len(parts) >= 5:
-                    # Format: acc, start, end, source='T', extra=ted_suffix:segments
-                    extra = f"{parts[3]}:{parts[4]}"
-                    out_f.write(f"{parts[0]}\t{parts[1]}\t{parts[2]}\tT\t{extra}\n")
-                    ted_count += 1
-
-    print(f"Combined file created: {pfam_count:,} Pfam + {ted_count:,} TED = {pfam_count + ted_count:,} total")
-
-
-def sort_file(input_file: str, output_file: str, memory: str, parallel: int, temp_dir: str = None):
-    """
-    Sort file by first column using Unix sort.
-
-    Args:
-        input_file: Path to input file
-        output_file: Path to output sorted file
-        memory: Memory limit (e.g., '4G')
-        parallel: Number of parallel threads
-        temp_dir: Temporary directory for sort
-    """
-    print(f"\nSorting combined file by UniProt accession...")
-    print(f"  Memory limit: {memory}, Parallel threads: {parallel}")
-
-    cmd = [
-        'sort',
-        '-t', '\t',
-        '-k1,1',  # Sort by first column
-        f'-S{memory}',
-        f'--parallel={parallel}',
-        '-o', output_file,
-        input_file
-    ]
-
-    if temp_dir:
-        cmd.insert(-2, f'-T{temp_dir}')
-
-    try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=7200)
-        if result.returncode != 0:
-            print(f"ERROR: Sort failed with code {result.returncode}")
-            if result.stderr:
-                print(f"  {result.stderr}")
-            sys.exit(1)
-        print("Sort completed successfully")
-    except subprocess.TimeoutExpired:
-        print("ERROR: Sort timed out after 2 hours")
-        sys.exit(1)
-
-
-def segments_overlap(ted_segments: List[Tuple[int, int]],
-                     pfam_regions: List[Tuple[int, int]]) -> bool:
-    """
-    Check if any TED segment overlaps with any Pfam region.
-
-    Args:
-        ted_segments: List of (start, end) tuples for TED domain
-        pfam_regions: List of (start, end) tuples for Pfam domains
-
-    Returns:
-        True if any overlap exists, False otherwise
-    """
+def segments_overlap(ted_segments, pfam_regions):
+    """Check if any TED segment overlaps with any Pfam region."""
     for ted_start, ted_end in ted_segments:
         for pfam_start, pfam_end in pfam_regions:
             if max(ted_start, pfam_start) <= min(ted_end, pfam_end):
@@ -393,16 +184,9 @@ def segments_overlap(ted_segments: List[Tuple[int, int]],
     return False
 
 
-def process_sorted_file(sorted_file: str, output_file: str, progress_interval: int):
-    """
-    Process sorted file one protein at a time.
-
-    Args:
-        sorted_file: Path to sorted combined file
-        output_file: Path to output file
-        progress_interval: Print progress every N proteins
-    """
-    print(f"\nProcessing sorted file to find non-overlapping TED domains...")
+def process_sorted_file(sorted_file: str, output_file: str):
+    """Process sorted file one protein at a time."""
+    print("\nStep 5: Finding non-overlapping TED domains...")
 
     proteins_processed = 0
     ted_total = 0
@@ -413,8 +197,9 @@ def process_sorted_file(sorted_file: str, output_file: str, progress_interval: i
     current_pfam_regions = []
     current_ted_domains = []
 
+    out_f = open(output_file, 'w')
+
     def process_protein():
-        """Process all domains for current protein."""
         nonlocal ted_total, ted_kept, ted_overlap
 
         if not current_acc:
@@ -423,7 +208,6 @@ def process_sorted_file(sorted_file: str, output_file: str, progress_interval: i
         for ted_start, ted_end, ted_suffix, segments_str in current_ted_domains:
             ted_total += 1
 
-            # Parse segments for overlap checking
             ted_segments = parse_chopping(segments_str)
             if not ted_segments:
                 ted_segments = [(ted_start, ted_end)]
@@ -431,17 +215,12 @@ def process_sorted_file(sorted_file: str, output_file: str, progress_interval: i
             if current_pfam_regions and segments_overlap(ted_segments, current_pfam_regions):
                 ted_overlap += 1
             else:
-                # No overlap - output this domain
                 out_f.write(f"{current_acc}\t{ted_start}\t{ted_end}\t{ted_suffix}\n")
                 ted_kept += 1
 
-    with open(sorted_file, 'r') as in_f, open(output_file, 'w') as out_f:
+    with open(sorted_file, 'r') as in_f:
         for line in in_f:
-            line = line.rstrip('\n\r')
-            if not line:
-                continue
-
-            parts = line.split('\t')
+            parts = line.rstrip('\n').split('\t')
             if len(parts) < 4:
                 continue
 
@@ -451,26 +230,19 @@ def process_sorted_file(sorted_file: str, output_file: str, progress_interval: i
             source = parts[3]
             extra = parts[4] if len(parts) > 4 else ''
 
-            # Check if we've moved to a new protein
             if acc != current_acc:
-                # Process previous protein
                 process_protein()
-
-                # Reset for new protein
                 current_acc = acc
                 current_pfam_regions = []
                 current_ted_domains = []
                 proteins_processed += 1
 
-                if proteins_processed % progress_interval == 0:
-                    print(f"  Processed {proteins_processed:,} proteins, "
-                          f"kept {ted_kept:,}/{ted_total:,} TED domains...")
+                if proteins_processed % 10000000 == 0:
+                    print(f"  {proteins_processed:,} proteins, kept {ted_kept:,}/{ted_total:,} TED...")
 
-            # Add domain to current protein
             if source == 'P':
                 current_pfam_regions.append((start, end))
             elif source == 'T':
-                # Parse extra field: ted_suffix:segments_str
                 if ':' in extra:
                     ted_suffix, segments_str = extra.split(':', 1)
                 else:
@@ -478,18 +250,19 @@ def process_sorted_file(sorted_file: str, output_file: str, progress_interval: i
                     segments_str = f"{start}-{end}"
                 current_ted_domains.append((start, end, ted_suffix, segments_str))
 
-        # Process last protein
         process_protein()
 
+    out_f.close()
+
     print(f"\n{'='*60}")
-    print("FILTERING COMPLETE")
+    print("COMPLETE")
     print(f"{'='*60}")
-    print(f"Proteins processed:                {proteins_processed:,}")
-    print(f"TED domains checked:               {ted_total:,}")
-    print(f"TED domains with Pfam overlap:     {ted_overlap:,}")
-    print(f"TED domains kept (no overlap):     {ted_kept:,}")
+    print(f"Proteins processed:            {proteins_processed:,}")
+    print(f"TED domains checked:           {ted_total:,}")
+    print(f"TED domains with overlap:      {ted_overlap:,}")
+    print(f"TED domains kept:              {ted_kept:,}")
     print(f"{'='*60}")
-    print(f"Output written to: {output_file}")
+    print(f"Output: {output_file}")
 
 
 def main():
@@ -497,44 +270,58 @@ def main():
 
     print(f"\n{'='*60}")
     print("TED Domain Filter - Remove Pfam Overlapping Domains")
-    print("(Memory-efficient external sort approach)")
     print(f"{'='*60}")
 
-    # Step 1: Fetch Pfam domains if cache doesn't exist
-    if os.path.exists(args.pfam_cache):
-        print(f"\nPfam cache already exists: {args.pfam_cache}")
-        print("Skipping database fetch (delete file to re-fetch)")
+    work_dir = os.path.abspath(args.work_dir)
+
+    # File paths
+    pfam_cache = os.path.join(work_dir, args.pfam_cache)
+    ted_extracted = os.path.join(work_dir, 'ted_high_extracted.tsv')
+    combined_file = os.path.join(work_dir, 'combined_domains.tsv')
+    sorted_file = os.path.join(work_dir, 'combined_domains_sorted.tsv')
+    output_file = os.path.join(work_dir, args.output)
+
+    # Step 1: Pfam domains
+    if os.path.exists(pfam_cache):
+        result = subprocess.run(f"wc -l < {pfam_cache}", shell=True, capture_output=True, text=True)
+        count = int(result.stdout.strip())
+        print(f"\nStep 1: Using existing Pfam cache ({count:,} domains)")
     else:
-        fetch_pfam_domains(args.mysql_config, args.pfam_cache)
+        fetch_pfam_domains(args.mysql_config, pfam_cache)
 
-    # Create temp directory for intermediate files
-    temp_dir = args.temp_dir or tempfile.gettempdir()
-    ted_extracted_file = os.path.join(temp_dir, 'ted_high_extracted.tsv')
-    combined_file = os.path.join(temp_dir, 'combined_domains.tsv')
-    sorted_file = os.path.join(temp_dir, 'combined_domains_sorted.tsv')
+    # Step 2: Extract TED high-confidence
+    if os.path.exists(ted_extracted):
+        result = subprocess.run(f"wc -l < {ted_extracted}", shell=True, capture_output=True, text=True)
+        count = int(result.stdout.strip())
+        print(f"\nStep 2: Using existing TED extraction ({count:,} domains)")
+    else:
+        extract_ted_high(args.ted_file, ted_extracted)
 
-    try:
-        # Step 2: Extract high-confidence TED domains
-        extract_ted_domains(args.ted_file, ted_extracted_file, args.progress_interval)
+    # Step 3: Combine files
+    if os.path.exists(combined_file):
+        result = subprocess.run(f"wc -l < {combined_file}", shell=True, capture_output=True, text=True)
+        count = int(result.stdout.strip())
+        print(f"\nStep 3: Using existing combined file ({count:,} domains)")
+    else:
+        create_combined_file(pfam_cache, ted_extracted, combined_file)
 
-        # Step 3: Create combined file
-        create_combined_file(args.pfam_cache, ted_extracted_file, combined_file)
+    # Step 4: Sort
+    if os.path.exists(sorted_file):
+        result = subprocess.run(f"wc -l < {sorted_file}", shell=True, capture_output=True, text=True)
+        count = int(result.stdout.strip())
+        print(f"\nStep 4: Using existing sorted file ({count:,} domains)")
+    else:
+        sort_combined_file(combined_file, sorted_file, args.sort_memory, args.sort_parallel, work_dir)
 
-        # Step 4: Sort by UniProt accession
-        sort_file(combined_file, sorted_file, args.sort_memory, args.sort_parallel, temp_dir)
+    # Step 5: Process
+    process_sorted_file(sorted_file, output_file)
 
-        # Step 5: Process sorted file
-        process_sorted_file(sorted_file, args.output, args.progress_interval)
-
-    finally:
-        # Clean up temp files
-        for f in [ted_extracted_file, combined_file, sorted_file]:
+    # Cleanup only if requested and successful
+    if args.cleanup:
+        for f in [ted_extracted, combined_file, sorted_file]:
             if os.path.exists(f):
-                try:
-                    os.remove(f)
-                    print(f"Cleaned up: {f}")
-                except:
-                    pass
+                os.remove(f)
+                print(f"Cleaned up: {f}")
 
     print("\nDone!")
 
