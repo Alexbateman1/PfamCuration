@@ -49,14 +49,8 @@ def parse_arguments():
     )
     parser.add_argument(
         '--sort-memory',
-        default='4G',
-        help='Memory limit for Unix sort (default: 4G)'
-    )
-    parser.add_argument(
-        '--sort-parallel',
-        type=int,
-        default=4,
-        help='Number of parallel sort threads (default: 4)'
+        default='1G',
+        help='Memory limit for Unix sort (default: 1G)'
     )
     parser.add_argument(
         '--work-dir',
@@ -116,11 +110,10 @@ def extract_ted_high(ted_file: str, output_file: str):
     print(f"  Extracted {count_lines(output_file):,} high-confidence TED domains")
 
 
-def sort_file(input_file: str, output_file: str, memory: str, parallel: int, work_dir: str, description: str):
+def sort_file(input_file: str, output_file: str, memory: str, description: str):
     """Sort file by first column."""
     print(f"\n{description}")
-    print(f"  Memory: {memory}, Parallel: {parallel}")
-    cmd = f"sort -t $'\\t' -k1,1 -S {memory} --parallel={parallel} -T {work_dir} {input_file} -o {output_file}"
+    cmd = f"sort -S {memory} -k1 {input_file} > {output_file}"
     run_cmd(cmd, "Sort")
     print("  Sort completed")
 
@@ -271,15 +264,13 @@ def main():
     if os.path.exists(pfam_sorted):
         print(f"\nStep 3: Using existing sorted Pfam file ({count_lines(pfam_sorted):,} domains)")
     else:
-        sort_file(pfam_cache, pfam_sorted, args.sort_memory, args.sort_parallel, work_dir,
-                  "Step 3: Sorting Pfam domains...")
+        sort_file(pfam_cache, pfam_sorted, args.sort_memory, "Step 3: Sorting Pfam domains...")
 
     # Step 4: Sort TED file
     if os.path.exists(ted_sorted):
         print(f"\nStep 4: Using existing sorted TED file ({count_lines(ted_sorted):,} domains)")
     else:
-        sort_file(ted_extracted, ted_sorted, args.sort_memory, args.sort_parallel, work_dir,
-                  "Step 4: Sorting TED domains...")
+        sort_file(ted_extracted, ted_sorted, args.sort_memory, "Step 4: Sorting TED domains...")
 
     # Step 5: Merge and filter
     merge_and_filter(pfam_sorted, ted_sorted, output_file)
