@@ -12,7 +12,7 @@ Usage:
     python filter_ted_no_pfam_overlap.py [options]
 
 Output format (TSV):
-    uniprot_acc<TAB>start<TAB>end
+    uniprot_acc<TAB>start<TAB>end<TAB>ted_suffix
 
 For discontinuous domains, start is the first coordinate and end is the last.
 """
@@ -248,6 +248,22 @@ def extract_uniprot_acc(ted_id: str) -> str:
     return None
 
 
+def extract_ted_suffix(ted_id: str) -> str:
+    """
+    Extract TED suffix from TED ID.
+
+    Args:
+        ted_id: TED ID like "AF-A0A000-F1-model_v4_TED01"
+
+    Returns:
+        TED suffix like "TED01"
+    """
+    # The TED suffix is at the end after the last underscore
+    if '_' in ted_id:
+        return ted_id.split('_')[-1]
+    return None
+
+
 def filter_ted_domains(ted_file: str, pfam_domains: Dict[str, List[Tuple[int, int]]],
                        output_file: str, progress_interval: int):
     """
@@ -302,11 +318,13 @@ def filter_ted_domains(ted_file: str, pfam_domains: Dict[str, List[Tuple[int, in
 
             high_count += 1
 
-            # Extract UniProt accession
+            # Extract UniProt accession and TED suffix
             uniprot_acc = extract_uniprot_acc(ted_id)
             if not uniprot_acc:
                 no_acc_count += 1
                 continue
+
+            ted_suffix = extract_ted_suffix(ted_id)
 
             # Parse TED domain segments
             ted_segments = parse_chopping(chopping)
@@ -323,7 +341,7 @@ def filter_ted_domains(ted_file: str, pfam_domains: Dict[str, List[Tuple[int, in
                 # Get overall start (first coord) and end (last coord)
                 overall_start = ted_segments[0][0]
                 overall_end = ted_segments[-1][1]
-                out_f.write(f"{uniprot_acc}\t{overall_start}\t{overall_end}\n")
+                out_f.write(f"{uniprot_acc}\t{overall_start}\t{overall_end}\t{ted_suffix}\n")
                 kept_count += 1
 
             # Progress update
