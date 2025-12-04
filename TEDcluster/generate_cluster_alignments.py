@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 """
-Generate alignments for TED domain clusters with >9 sequences.
+Generate Pfam-style curation directories for TED domain clusters.
 
-Uses the original sequences from ted_domains.fasta (correct coordinates)
+For each cluster with >N sequences, creates a directory named after
+the representative (e.g., M3XIJ8_TED01) containing:
+  - FA: FASTA sequences for the cluster
+  - SEED: Initial multiple sequence alignment
+
+Uses original sequences from ted_domains.fasta (correct coordinates)
 and runs create_alignment.pl to build proper MSAs.
 
 Usage:
@@ -18,7 +23,7 @@ from collections import defaultdict
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description='Generate alignments for large TED clusters'
+        description='Generate Pfam-style curation directories for TED clusters'
     )
     parser.add_argument(
         '--cluster-tsv',
@@ -31,9 +36,14 @@ def parse_arguments():
         help='Original domain sequences FASTA (default: ted_domains.fasta)'
     )
     parser.add_argument(
+        '--domain-info',
+        default='ted_high_no_pfam_overlap.tsv',
+        help='Domain info TSV with TED suffixes (default: ted_high_no_pfam_overlap.tsv)'
+    )
+    parser.add_argument(
         '--output-dir',
         default='cluster_alignments',
-        help='Output directory for alignments (default: cluster_alignments)'
+        help='Output directory for cluster directories (default: cluster_alignments)'
     )
     parser.add_argument(
         '--min-seqs',
@@ -47,6 +57,50 @@ def parse_arguments():
         help='Working directory (default: current dir)'
     )
     return parser.parse_args()
+
+
+def load_ted_suffixes(domain_info_file):
+    """
+    Load TED suffixes from domain info file.
+
+    Returns dict: (acc, start, end) -> ted_suffix
+    """
+    print(f"Loading TED suffixes from {domain_info_file}...")
+
+    suffixes = {}
+
+    with open(domain_info_file, 'r') as f:
+        for line in f:
+            parts = line.rstrip('\n').split('\t')
+            if len(parts) >= 4:
+                acc = parts[0]
+                start = parts[1]
+                end = parts[2]
+                suffix = parts[3]
+                suffixes[(acc, start, end)] = suffix
+
+    print(f"  Loaded {len(suffixes):,} domain entries")
+    return suffixes
+
+
+def parse_seq_id(seq_id):
+    """
+    Parse sequence ID like 'A0A8J8BLT5.1/1-100' into components.
+
+    Returns: (acc_with_version, acc_base, start, end)
+    """
+    # Split on /
+    if '/' in seq_id:
+        acc_part, coords = seq_id.rsplit('/', 1)
+        start, end = coords.split('-')
+    else:
+        acc_part = seq_id
+        start, end = None, None
+
+    # Get base accession without version
+    acc_base = acc_part.split('.')[0]
+
+    return acc_part, acc_base, start, end
 
 
 def load_clusters(cluster_tsv, min_seqs):
@@ -81,7 +135,7 @@ def load_fasta_index(fasta_file):
     """
     Build index of sequence positions in FASTA file.
 
-    Returns dict: seq_id -> (file_offset, seq_length)
+    Returns dict: seq_id -> sequence
     """
     print(f"Indexing FASTA file {fasta_file}...")
 
@@ -89,7 +143,6 @@ def load_fasta_index(fasta_file):
 
     with open(fasta_file, 'r') as f:
         current_id = None
-        seq_start = None
         seq_lines = []
 
         while True:
@@ -148,26 +201,45 @@ def run_alignment(fasta_file, output_seed):
     return True, None
 
 
+def get_cluster_name(rep_id, ted_suffixes):
+    """
+    Generate cluster directory name from representative ID.
+
+    Format: ACC_TEDXX (e.g., M3XIJ8_TED01)
+    """
+    acc_full, acc_base, start, end = parse_seq_id(rep_id)
+
+    # Look up TED suffix
+    suffix = ted_suffixes.get((acc_base, start, end), None)
+
+    if suffix:
+        return f"{acc_base}_{suffix}"
+    else:
+        # Fallback: use accession and coordinates
+        return f"{acc_base}_{start}_{end}"
+
+
 def main():
     args = parse_arguments()
 
     work_dir = os.path.abspath(args.work_dir)
     cluster_tsv = os.path.join(work_dir, args.cluster_tsv) if not os.path.isabs(args.cluster_tsv) else args.cluster_tsv
     fasta_file = os.path.join(work_dir, args.fasta) if not os.path.isabs(args.fasta) else args.fasta
+    domain_info = os.path.join(work_dir, args.domain_info) if not os.path.isabs(args.domain_info) else args.domain_info
     output_dir = os.path.join(work_dir, args.output_dir) if not os.path.isabs(args.output_dir) else args.output_dir
 
     print(f"\n{'='*60}")
-    print("TED Cluster Alignment Generator")
+    print("TED Cluster Pfam Directory Generator")
     print(f"{'='*60}")
 
     # Check inputs exist
-    if not os.path.exists(cluster_tsv):
-        print(f"ERROR: Cluster TSV not found: {cluster_tsv}")
-        sys.exit(1)
+    for path, name in [(cluster_tsv, 'Cluster TSV'), (fasta_file, 'FASTA'), (domain_info, 'Domain info')]:
+        if not os.path.exists(path):
+            print(f"ERROR: {name} not found: {path}")
+            sys.exit(1)
 
-    if not os.path.exists(fasta_file):
-        print(f"ERROR: FASTA file not found: {fasta_file}")
-        sys.exit(1)
+    # Load TED suffixes
+    ted_suffixes = load_ted_suffixes(domain_info)
 
     # Load clusters
     clusters = load_clusters(cluster_tsv, args.min_seqs)
@@ -177,40 +249,43 @@ def main():
         sys.exit(0)
 
     # Load FASTA sequences into memory
-    # For 14M sequences this might use significant RAM, but should be manageable
     fasta_index = load_fasta_index(fasta_file)
 
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
 
     # Process each cluster
-    print(f"\nGenerating alignments in {output_dir}/...")
+    print(f"\nGenerating Pfam directories in {output_dir}/...")
 
     successful = 0
     failed = 0
 
     for i, (rep_id, members) in enumerate(clusters.items()):
-        # Create safe filename from rep_id
-        safe_name = rep_id.replace('/', '_').replace('|', '_')
+        # Get cluster name (ACC_TEDXX format)
+        cluster_name = get_cluster_name(rep_id, ted_suffixes)
 
-        cluster_fasta = os.path.join(output_dir, f"{safe_name}.fa")
-        cluster_seed = os.path.join(output_dir, f"{safe_name}.SEED")
+        # Create cluster directory
+        cluster_dir = os.path.join(output_dir, cluster_name)
+        os.makedirs(cluster_dir, exist_ok=True)
+
+        fa_file = os.path.join(cluster_dir, 'FA')
+        seed_file = os.path.join(cluster_dir, 'SEED')
 
         # Extract sequences
-        seq_count = extract_cluster_fasta(members, fasta_index, cluster_fasta)
+        seq_count = extract_cluster_fasta(members, fasta_index, fa_file)
 
         if seq_count < args.min_seqs:
-            print(f"  Warning: {rep_id} - only found {seq_count}/{len(members)} sequences in FASTA")
+            print(f"  Warning: {cluster_name} - only found {seq_count}/{len(members)} sequences in FASTA")
             continue
 
         # Run alignment
-        success, error = run_alignment(cluster_fasta, cluster_seed)
+        success, error = run_alignment(fa_file, seed_file)
 
         if success:
             successful += 1
         else:
             failed += 1
-            print(f"  Failed: {rep_id} - {error}")
+            print(f"  Failed: {cluster_name} - {error}")
 
         # Progress update
         if (i + 1) % 100 == 0:
@@ -222,6 +297,7 @@ def main():
     print(f"Successful alignments: {successful:,}")
     print(f"Failed alignments: {failed:,}")
     print(f"Output directory: {output_dir}/")
+    print(f"  Each subdirectory contains FA and SEED files")
     print(f"{'='*60}")
 
 
