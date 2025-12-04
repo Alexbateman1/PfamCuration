@@ -208,14 +208,18 @@ def extract_sequences_batch(pfamseq_file, domain_regions, output_fasta, append=F
         if current_acc_base and current_acc_base in domain_regions:
             proteins_matched += 1
             full_seq = ''.join(current_seq)
+            seq_len = len(full_seq)
 
             for start, end, suffix in domain_regions[current_acc_base]:
+                # Clamp end to actual sequence length
+                actual_end = min(end, seq_len)
+
                 # Extract region (1-indexed, inclusive)
-                region_seq = full_seq[start - 1:end]
+                region_seq = full_seq[start - 1:actual_end]
 
                 if region_seq:
-                    # Write with format: >ACC.version/start-end
-                    out_f.write(f">{current_acc_full}/{start}-{end}\n")
+                    # Write with format: >ACC.version/start-end (using actual coordinates)
+                    out_f.write(f">{current_acc_full}/{start}-{actual_end}\n")
                     # Write sequence in lines of 60 characters
                     for i in range(0, len(region_seq), 60):
                         out_f.write(region_seq[i:i + 60] + '\n')
@@ -328,28 +332,31 @@ def run_mmseqs_cluster(fasta_file, tmp_dir, min_seq_id, coverage, threads, work_
     return db_name, clu_name
 
 
-def generate_msas(db_name, clu_name, msa_dir, threads):
-    """Generate MSAs for each cluster."""
+def generate_msas(db_name, clu_name, threads):
+    """Generate MSAs for each cluster, keeping in mmseqs database format."""
     print(f"\nStep 3: Generating MSAs...")
 
     msa_name = f"{clu_name}_msa"
 
-    # Generate MSAs
+    # Generate MSAs (stays in mmseqs database format - single file)
     print("  Running result2msa...")
     cmd = f"mmseqs result2msa {db_name} {db_name} {clu_name} {msa_name} --msa-format-mode 2 --threads {threads}"
     run_cmd(cmd, "result2msa")
 
-    # Unpack to individual files
-    print(f"\n  Unpacking MSAs to {msa_dir}/...")
-    os.makedirs(msa_dir, exist_ok=True)
-    cmd = f"mmseqs unpackdb {msa_name} {msa_dir} --unpack-suffix .afa"
-    run_cmd(cmd, "unpackdb")
+    # Count clusters from the index
+    index_file = f"{msa_name}.index"
+    if os.path.exists(index_file):
+        msa_count = count_lines(index_file)
+    else:
+        msa_count = 0
 
-    # Count MSA files
-    msa_count = len([f for f in os.listdir(msa_dir) if f.endswith('.afa')])
-    print(f"  Generated {msa_count:,} MSA files")
+    print(f"  Generated {msa_count:,} MSAs (stored in mmseqs database: {msa_name})")
+    print(f"\n  To extract a specific MSA by cluster rep ID:")
+    print(f"    mmseqs result2flat {db_name} {db_name} {msa_name} <output.afa> --use-fasta-header")
+    print(f"\n  To extract all to a single file:")
+    print(f"    mmseqs unpackdb {msa_name} <output_dir> --unpack-suffix .afa")
 
-    return msa_count
+    return msa_count, msa_name
 
 
 def main():
@@ -362,7 +369,6 @@ def main():
     work_dir = os.path.abspath(args.work_dir)
     input_file = os.path.join(work_dir, args.input) if not os.path.isabs(args.input) else args.input
     fasta_file = os.path.join(work_dir, args.fasta) if not os.path.isabs(args.fasta) else args.fasta
-    msa_dir = os.path.join(work_dir, args.msa_dir) if not os.path.isabs(args.msa_dir) else args.msa_dir
     tmp_dir = os.path.join(work_dir, args.tmp_dir) if not os.path.isabs(args.tmp_dir) else args.tmp_dir
     pfamseq_file = args.pfamseq
 
@@ -399,14 +405,14 @@ def main():
         )
 
     # Step 3: Generate MSAs
-    msa_count = generate_msas(db_name, clu_name, msa_dir, args.threads)
+    msa_count, msa_name = generate_msas(db_name, clu_name, args.threads)
 
     print(f"\n{'='*60}")
     print("COMPLETE")
     print(f"{'='*60}")
     print(f"FASTA file: {fasta_file}")
     print(f"Cluster TSV: {clu_name}.tsv")
-    print(f"MSA directory: {msa_dir}/ ({msa_count:,} clusters)")
+    print(f"MSA database: {msa_name} ({msa_count:,} clusters)")
     print(f"{'='*60}")
 
     print("\nDone!")
