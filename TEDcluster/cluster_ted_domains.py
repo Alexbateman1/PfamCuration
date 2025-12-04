@@ -93,7 +93,12 @@ def parse_arguments():
     parser.add_argument(
         '--skip-fetch',
         action='store_true',
-        help='Skip sequence fetching (use existing FASTA)'
+        help='Skip sequence fetching (use existing FASTA) - DEPRECATED: auto-detected'
+    )
+    parser.add_argument(
+        '--force-fetch',
+        action='store_true',
+        help='Force re-extraction of sequences even if FASTA exists'
     )
     parser.add_argument(
         '--skip-cluster',
@@ -360,19 +365,19 @@ def main():
         print(f"ERROR: Input file not found: {input_file}")
         sys.exit(1)
 
-    if not args.skip_fetch and not os.path.exists(pfamseq_file):
-        print(f"ERROR: Pfamseq file not found: {pfamseq_file}")
-        sys.exit(1)
-
     # Step 1: Extract sequences
-    if args.skip_fetch:
-        if not os.path.exists(fasta_file):
-            print(f"ERROR: FASTA file not found: {fasta_file}")
-            sys.exit(1)
+    # Auto-detect existing FASTA file unless --force-fetch is specified
+    fasta_exists = os.path.exists(fasta_file) and os.path.getsize(fasta_file) > 0
+
+    if fasta_exists and not args.force_fetch:
         seq_result = subprocess.run(f"grep -c '^>' {fasta_file}", shell=True, capture_output=True, text=True)
         seq_count = int(seq_result.stdout.strip()) if seq_result.returncode == 0 else 0
         print(f"\nStep 1: Using existing FASTA: {fasta_file} ({seq_count:,} sequences)")
+        print(f"  (use --force-fetch to re-extract)")
     else:
+        if not os.path.exists(pfamseq_file):
+            print(f"ERROR: Pfamseq file not found: {pfamseq_file}")
+            sys.exit(1)
         extract_sequences(input_file, pfamseq_file, fasta_file, args.batch_size)
 
     # Step 2: Cluster
