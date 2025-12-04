@@ -312,10 +312,10 @@ def run_mmseqs_cluster(fasta_file, tmp_dir, min_seq_id, coverage, threads, work_
     cmd = f"mmseqs createdb {fasta_file} {db_name}"
     run_cmd(cmd, "createdb")
 
-    # Cluster with memory limit
+    # Cluster with memory limit (use linclust for large datasets - more memory efficient)
     print("\n  Clustering (this may take a while)...")
-    cmd = f"mmseqs cluster {db_name} {clu_name} {tmp_dir} --min-seq-id {min_seq_id} -c {coverage} --threads {threads} --split-memory-limit {split_memory_limit}"
-    run_cmd(cmd, "cluster")
+    cmd = f"mmseqs linclust {db_name} {clu_name} {tmp_dir} --min-seq-id {min_seq_id} -c {coverage} --threads {threads} --split-memory-limit {split_memory_limit}"
+    run_cmd(cmd, "linclust")
 
     # Get cluster statistics
     print("\n  Generating cluster TSV...")
