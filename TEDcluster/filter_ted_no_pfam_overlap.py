@@ -85,12 +85,22 @@ def count_lines(filepath):
 
 def fetch_pfam_domains(config_file: str, output_file: str):
     """Fetch all Pfam domain regions from pfamlive database."""
-    print("\nStep 1: Fetching Pfam domain regions from pfamlive...")
+    print("\nStep 1a: Fetching Pfam domain regions from pfamlive...")
     config_file = os.path.expanduser(config_file)
     query = "SELECT pfamseq_acc, seq_start, seq_end FROM pfamA_reg_full_significant WHERE in_full = 1"
     cmd = f"mysql --defaults-file={config_file} pfam_live --quick --silent --skip-column-names -e \"{query}\" > {output_file}"
     run_cmd(cmd, "MySQL query")
     print(f"  Fetched {count_lines(output_file):,} Pfam domain regions")
+
+
+def fetch_pfamseq_accessions(config_file: str, output_file: str):
+    """Fetch all pfamseq accessions from pfamlive database."""
+    print("\nStep 1b: Fetching pfamseq accessions from pfamlive...")
+    config_file = os.path.expanduser(config_file)
+    query = "SELECT pfamseq_acc FROM pfamseq"
+    cmd = f"mysql --defaults-file={config_file} pfam_live --quick --silent --skip-column-names -e \"{query}\" > {output_file}"
+    run_cmd(cmd, "MySQL query")
+    print(f"  Fetched {count_lines(output_file):,} pfamseq accessions")
 
 
 def extract_ted_high(ted_file: str, output_file: str):
@@ -116,6 +126,16 @@ def sort_file(input_file: str, output_file: str, memory: str, description: str):
     cmd = f"sort -S {memory} -k1 {input_file} > {output_file}"
     run_cmd(cmd, "Sort")
     print("  Sort completed")
+
+
+def filter_ted_by_pfamseq(ted_sorted: str, pfamseq_sorted: str, output_file: str):
+    """Filter TED domains to only those with accessions in pfamseq."""
+    print("\nStep 4: Filtering TED domains to pfamseq proteins only...")
+    # Use join to keep only TED entries where accession is in pfamseq
+    # join -t $'\t' matches on first field by default
+    cmd = f"join -t $'\\t' {pfamseq_sorted} {ted_sorted} > {output_file}"
+    run_cmd(cmd, "Filter by pfamseq")
+    print(f"  Filtered to {count_lines(output_file):,} TED domains in pfamseq")
 
 
 def parse_chopping(chopping):
@@ -146,7 +166,7 @@ def merge_and_filter(pfam_sorted: str, ted_sorted: str, output_file: str):
 
     Reads both files in parallel, processing one protein at a time.
     """
-    print("\nStep 5: Merging and filtering (one protein at a time)...")
+    print("\nStep 5: Comparing TED vs Pfam domains (one protein at a time)...")
 
     proteins_processed = 0
     ted_total = 0
@@ -244,40 +264,61 @@ def main():
     # File paths
     pfam_cache = os.path.join(work_dir, args.pfam_cache)
     pfam_sorted = os.path.join(work_dir, 'pfam_domains_sorted.tsv')
+    pfamseq_cache = os.path.join(work_dir, 'pfamseq_accessions.tsv')
+    pfamseq_sorted = os.path.join(work_dir, 'pfamseq_accessions_sorted.tsv')
     ted_extracted = os.path.join(work_dir, 'ted_high_extracted.tsv')
     ted_sorted = os.path.join(work_dir, 'ted_high_sorted.tsv')
+    ted_filtered = os.path.join(work_dir, 'ted_high_in_pfamseq.tsv')
     output_file = os.path.join(work_dir, args.output)
 
-    # Step 1: Pfam domains
+    # Step 1a: Pfam domains
     if os.path.exists(pfam_cache):
-        print(f"\nStep 1: Using existing Pfam cache ({count_lines(pfam_cache):,} domains)")
+        print(f"\nStep 1a: Using existing Pfam cache ({count_lines(pfam_cache):,} domains)")
     else:
         fetch_pfam_domains(args.mysql_config, pfam_cache)
 
-    # Step 2: Extract TED high-confidence
+    # Step 1b: Pfamseq accessions
+    if os.path.exists(pfamseq_cache):
+        print(f"\nStep 1b: Using existing pfamseq cache ({count_lines(pfamseq_cache):,} accessions)")
+    else:
+        fetch_pfamseq_accessions(args.mysql_config, pfamseq_cache)
+
+    # Step 2a: Extract TED high-confidence
     if os.path.exists(ted_extracted):
-        print(f"\nStep 2: Using existing TED extraction ({count_lines(ted_extracted):,} domains)")
+        print(f"\nStep 2a: Using existing TED extraction ({count_lines(ted_extracted):,} domains)")
     else:
         extract_ted_high(args.ted_file, ted_extracted)
 
-    # Step 3: Sort Pfam file
-    if os.path.exists(pfam_sorted):
-        print(f"\nStep 3: Using existing sorted Pfam file ({count_lines(pfam_sorted):,} domains)")
+    # Step 2b: Sort pfamseq accessions
+    if os.path.exists(pfamseq_sorted):
+        print(f"\nStep 2b: Using existing sorted pfamseq ({count_lines(pfamseq_sorted):,} accessions)")
     else:
-        sort_file(pfam_cache, pfam_sorted, args.sort_memory, "Step 3: Sorting Pfam domains...")
+        sort_file(pfamseq_cache, pfamseq_sorted, args.sort_memory, "Step 2b: Sorting pfamseq accessions...")
 
-    # Step 4: Sort TED file
-    if os.path.exists(ted_sorted):
-        print(f"\nStep 4: Using existing sorted TED file ({count_lines(ted_sorted):,} domains)")
+    # Step 3a: Sort Pfam file
+    if os.path.exists(pfam_sorted):
+        print(f"\nStep 3a: Using existing sorted Pfam file ({count_lines(pfam_sorted):,} domains)")
     else:
-        sort_file(ted_extracted, ted_sorted, args.sort_memory, "Step 4: Sorting TED domains...")
+        sort_file(pfam_cache, pfam_sorted, args.sort_memory, "Step 3a: Sorting Pfam domains...")
+
+    # Step 3b: Sort TED file
+    if os.path.exists(ted_sorted):
+        print(f"\nStep 3b: Using existing sorted TED file ({count_lines(ted_sorted):,} domains)")
+    else:
+        sort_file(ted_extracted, ted_sorted, args.sort_memory, "Step 3b: Sorting TED domains...")
+
+    # Step 4: Filter TED to pfamseq proteins only
+    if os.path.exists(ted_filtered):
+        print(f"\nStep 4: Using existing filtered TED file ({count_lines(ted_filtered):,} domains)")
+    else:
+        filter_ted_by_pfamseq(ted_sorted, pfamseq_sorted, ted_filtered)
 
     # Step 5: Merge and filter
-    merge_and_filter(pfam_sorted, ted_sorted, output_file)
+    merge_and_filter(pfam_sorted, ted_filtered, output_file)
 
     # Cleanup only if requested
     if args.cleanup:
-        for f in [ted_extracted, pfam_sorted, ted_sorted]:
+        for f in [ted_extracted, pfam_sorted, ted_sorted, pfamseq_cache, pfamseq_sorted, ted_filtered]:
             if os.path.exists(f):
                 os.remove(f)
                 print(f"Cleaned up: {f}")
