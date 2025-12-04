@@ -106,6 +106,11 @@ def parse_arguments():
         help='Skip clustering (use existing clusters)'
     )
     parser.add_argument(
+        '--split-memory-limit',
+        default='16G',
+        help='Memory limit for mmseqs split mode (default: 16G)'
+    )
+    parser.add_argument(
         '--work-dir',
         default='.',
         help='Working directory (default: current dir)'
@@ -287,12 +292,13 @@ def extract_sequences(input_file, pfamseq_file, output_fasta, batch_size):
     return total_sequences
 
 
-def run_mmseqs_cluster(fasta_file, tmp_dir, min_seq_id, coverage, threads, work_dir):
+def run_mmseqs_cluster(fasta_file, tmp_dir, min_seq_id, coverage, threads, work_dir, split_memory_limit):
     """Run mmseqs clustering."""
     print(f"\nStep 2: Clustering with mmseqs...")
     print(f"  Min sequence identity: {min_seq_id}")
     print(f"  Coverage: {coverage}")
     print(f"  Threads: {threads}")
+    print(f"  Memory limit: {split_memory_limit}")
 
     db_name = os.path.join(work_dir, 'ted_db')
     clu_name = os.path.join(work_dir, 'ted_clu')
@@ -302,9 +308,9 @@ def run_mmseqs_cluster(fasta_file, tmp_dir, min_seq_id, coverage, threads, work_
     cmd = f"mmseqs createdb {fasta_file} {db_name}"
     run_cmd(cmd, "createdb")
 
-    # Cluster
+    # Cluster with memory limit
     print("\n  Clustering (this may take a while)...")
-    cmd = f"mmseqs cluster {db_name} {clu_name} {tmp_dir} --min-seq-id {min_seq_id} -c {coverage} --threads {threads}"
+    cmd = f"mmseqs cluster {db_name} {clu_name} {tmp_dir} --min-seq-id {min_seq_id} -c {coverage} --threads {threads} --split-memory-limit {split_memory_limit}"
     run_cmd(cmd, "cluster")
 
     # Get cluster statistics
@@ -388,7 +394,8 @@ def main():
     else:
         os.makedirs(tmp_dir, exist_ok=True)
         db_name, clu_name = run_mmseqs_cluster(
-            fasta_file, tmp_dir, args.min_seq_id, args.coverage, args.threads, work_dir
+            fasta_file, tmp_dir, args.min_seq_id, args.coverage, args.threads, work_dir,
+            args.split_memory_limit
         )
 
     # Step 3: Generate MSAs
