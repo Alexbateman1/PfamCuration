@@ -208,14 +208,18 @@ def extract_sequences_batch(pfamseq_file, domain_regions, output_fasta, append=F
         if current_acc_base and current_acc_base in domain_regions:
             proteins_matched += 1
             full_seq = ''.join(current_seq)
+            seq_len = len(full_seq)
 
             for start, end, suffix in domain_regions[current_acc_base]:
+                # Clamp end to actual sequence length
+                actual_end = min(end, seq_len)
+
                 # Extract region (1-indexed, inclusive)
-                region_seq = full_seq[start - 1:end]
+                region_seq = full_seq[start - 1:actual_end]
 
                 if region_seq:
-                    # Write with format: >ACC.version/start-end
-                    out_f.write(f">{current_acc_full}/{start}-{end}\n")
+                    # Write with format: >ACC.version/start-end (using actual coordinates)
+                    out_f.write(f">{current_acc_full}/{start}-{actual_end}\n")
                     # Write sequence in lines of 60 characters
                     for i in range(0, len(region_seq), 60):
                         out_f.write(region_seq[i:i + 60] + '\n')
