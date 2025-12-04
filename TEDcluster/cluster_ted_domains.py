@@ -3,7 +3,7 @@
 Cluster TED domains using mmseqs2.
 
 This script:
-1. Extracts domain sequences from UniProt using pfetch (in batches via xargs)
+1. Extracts domain sequences directly from pfamseq FASTA file (single pass)
 2. Creates mmseqs2 database and clusters
 3. Generates MSAs for each cluster
 
@@ -22,11 +22,13 @@ import argparse
 import os
 import subprocess
 import sys
+from collections import defaultdict
 
 # Default paths
 DEFAULT_INPUT = 'ted_high_no_pfam_overlap.tsv'
 DEFAULT_FASTA = 'ted_domains.fasta'
 DEFAULT_MSA_DIR = 'ted_msas'
+DEFAULT_PFAMSEQ = '/nfs/production/agb/pfam/data/pfamseq/pfamseq'
 
 
 def parse_arguments():
@@ -43,6 +45,11 @@ def parse_arguments():
         '--fasta',
         default=DEFAULT_FASTA,
         help=f'Output FASTA file (default: {DEFAULT_FASTA})'
+    )
+    parser.add_argument(
+        '--pfamseq',
+        default=DEFAULT_PFAMSEQ,
+        help=f'Path to pfamseq FASTA file (default: {DEFAULT_PFAMSEQ})'
     )
     parser.add_argument(
         '--msa-dir',
@@ -66,12 +73,6 @@ def parse_arguments():
         type=int,
         default=8,
         help='Number of threads for mmseqs (default: 8)'
-    )
-    parser.add_argument(
-        '--parallel-pfetch',
-        type=int,
-        default=32,
-        help='Number of parallel pfetch processes (default: 32)'
     )
     parser.add_argument(
         '--tmp-dir',
@@ -114,42 +115,115 @@ def count_lines(filepath):
     return int(result.stdout.strip())
 
 
-def extract_sequences(input_file, output_fasta, parallel, work_dir):
+def load_domain_regions(input_file):
     """
-    Extract all domain sequences using pfetch via GNU parallel.
-    Uses fetch_domain_seq.sh helper script for cleaner processing.
+    Load TED domain regions from input file.
+
+    Returns dict: base_acc -> list of (start, end, suffix)
+    """
+    print(f"  Loading domain regions from {input_file}...")
+
+    regions = defaultdict(list)
+    count = 0
+
+    with open(input_file, 'r') as f:
+        for line in f:
+            parts = line.rstrip('\n').split('\t')
+            if len(parts) >= 4:
+                acc = parts[0]  # Base accession without version
+                start = int(parts[1])
+                end = int(parts[2])
+                suffix = parts[3]
+                regions[acc].append((start, end, suffix))
+                count += 1
+
+    print(f"  Loaded {count:,} domain regions for {len(regions):,} proteins")
+    return regions
+
+
+def extract_sequences_from_pfamseq(pfamseq_file, domain_regions, output_fasta):
+    """
+    Extract domain sequences from pfamseq FASTA file in a single pass.
+
+    Args:
+        pfamseq_file: Path to pfamseq FASTA file
+        domain_regions: Dict mapping base_acc -> list of (start, end, suffix)
+        output_fasta: Output FASTA file path
+    """
+    print(f"\n  Reading pfamseq FASTA: {pfamseq_file}")
+    print(f"  This may take a while for a large file...")
+
+    sequences_written = 0
+    proteins_matched = 0
+    proteins_total = 0
+
+    current_acc_full = None  # e.g., A0A8J8BLT5.1
+    current_acc_base = None  # e.g., A0A8J8BLT5
+    current_seq = []
+
+    def process_sequence():
+        """Process current sequence if we have domain regions for it."""
+        nonlocal sequences_written, proteins_matched
+
+        if current_acc_base and current_acc_base in domain_regions:
+            proteins_matched += 1
+            full_seq = ''.join(current_seq)
+
+            for start, end, suffix in domain_regions[current_acc_base]:
+                # Extract region (1-indexed, inclusive)
+                region_seq = full_seq[start - 1:end]
+
+                if region_seq:
+                    # Write with format: >ACC.version/start-end
+                    out_f.write(f">{current_acc_full}/{start}-{end}\n")
+                    # Write sequence in lines of 60 characters
+                    for i in range(0, len(region_seq), 60):
+                        out_f.write(region_seq[i:i + 60] + '\n')
+                    sequences_written += 1
+
+    with open(pfamseq_file, 'r') as in_f, open(output_fasta, 'w') as out_f:
+        for line in in_f:
+            if line.startswith('>'):
+                # Process previous sequence
+                process_sequence()
+
+                # Parse new header: >A0A8J8BLT5.1 A0A8J8BLT5_9EURY Description
+                proteins_total += 1
+                header = line[1:].split()[0]  # Get first word after >
+                current_acc_full = header  # e.g., A0A8J8BLT5.1
+                current_acc_base = header.split('.')[0]  # e.g., A0A8J8BLT5
+                current_seq = []
+
+                if proteins_total % 10000000 == 0:
+                    print(f"    Processed {proteins_total:,} proteins, "
+                          f"matched {proteins_matched:,}, wrote {sequences_written:,} sequences...")
+            else:
+                current_seq.append(line.rstrip('\n'))
+
+        # Process last sequence
+        process_sequence()
+
+    print(f"  Processed {proteins_total:,} proteins from pfamseq")
+    print(f"  Matched {proteins_matched:,} proteins with TED domains")
+    print(f"  Wrote {sequences_written:,} domain sequences")
+
+    return sequences_written
+
+
+def extract_sequences(input_file, pfamseq_file, output_fasta):
+    """
+    Extract all domain sequences from pfamseq FASTA file.
     """
     print(f"\nStep 1: Extracting domain sequences...")
-    print(f"  Input: {input_file}")
-    print(f"  Parallel pfetch processes: {parallel}")
+    print(f"  Input domains: {input_file}")
+    print(f"  Pfamseq file: {pfamseq_file}")
 
-    total = count_lines(input_file)
-    print(f"  Total domains: {total:,}")
+    # Load domain regions
+    domain_regions = load_domain_regions(input_file)
 
-    # Find helper script (same directory as this script)
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    helper_script = os.path.join(script_dir, 'fetch_domain_seq.sh')
+    # Extract sequences from pfamseq
+    seq_count = extract_sequences_from_pfamseq(pfamseq_file, domain_regions, output_fasta)
 
-    if not os.path.exists(helper_script):
-        print(f"ERROR: Helper script not found: {helper_script}")
-        sys.exit(1)
-
-    print(f"  Running pfetch in parallel (this will take a while for {total:,} sequences)...")
-    print(f"  Helper script: {helper_script}")
-
-    # Use parallel with the helper script
-    # Input format: acc\tstart\tend\tsuffix
-    cmd = f"parallel --colsep '\\t' -j {parallel} --progress {helper_script} {{1}} {{2}} {{3}} {{4}} < {input_file} > {output_fasta}"
-
-    run_cmd(cmd, "pfetch extraction")
-
-    # Count sequences
-    seq_count_result = subprocess.run(
-        f"grep -c '^>' {output_fasta}", shell=True, capture_output=True, text=True
-    )
-    seq_count = int(seq_count_result.stdout.strip()) if seq_count_result.returncode == 0 else 0
-
-    print(f"  Extracted {seq_count:,} sequences")
     print(f"  Output: {output_fasta}")
 
     return seq_count
@@ -226,10 +300,15 @@ def main():
     fasta_file = os.path.join(work_dir, args.fasta) if not os.path.isabs(args.fasta) else args.fasta
     msa_dir = os.path.join(work_dir, args.msa_dir) if not os.path.isabs(args.msa_dir) else args.msa_dir
     tmp_dir = os.path.join(work_dir, args.tmp_dir) if not os.path.isabs(args.tmp_dir) else args.tmp_dir
+    pfamseq_file = args.pfamseq
 
     # Check input exists
     if not os.path.exists(input_file):
         print(f"ERROR: Input file not found: {input_file}")
+        sys.exit(1)
+
+    if not args.skip_fetch and not os.path.exists(pfamseq_file):
+        print(f"ERROR: Pfamseq file not found: {pfamseq_file}")
         sys.exit(1)
 
     # Step 1: Extract sequences
@@ -241,7 +320,7 @@ def main():
         seq_count = int(seq_result.stdout.strip()) if seq_result.returncode == 0 else 0
         print(f"\nStep 1: Using existing FASTA: {fasta_file} ({seq_count:,} sequences)")
     else:
-        extract_sequences(input_file, fasta_file, args.parallel_pfetch, work_dir)
+        extract_sequences(input_file, pfamseq_file, fasta_file)
 
     # Step 2: Cluster
     if args.skip_cluster:
