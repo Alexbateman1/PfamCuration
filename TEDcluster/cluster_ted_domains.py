@@ -3,9 +3,14 @@
 Cluster TED domains using mmseqs2.
 
 This script:
-1. Extracts domain sequences directly from pfamseq FASTA file (single pass)
+1. Extracts domain sequences from pfamseq FASTA file in batches (multiple passes)
 2. Creates mmseqs2 database and clusters
 3. Generates MSAs for each cluster
+
+Uses batched processing to handle large numbers of domains without OOM:
+- Processes ~1M domain regions per batch
+- Reads pfamseq FASTA file once per batch
+- Appends extracted sequences to output FASTA
 
 Usage:
     python cluster_ted_domains.py [options]
@@ -80,6 +85,12 @@ def parse_arguments():
         help='Temporary directory for mmseqs (default: mmseqs_tmp)'
     )
     parser.add_argument(
+        '--batch-size',
+        type=int,
+        default=1000000,
+        help='Number of domains per batch (default: 1000000)'
+    )
+    parser.add_argument(
         '--skip-fetch',
         action='store_true',
         help='Skip sequence fetching (use existing FASTA)'
@@ -115,19 +126,36 @@ def count_lines(filepath):
     return int(result.stdout.strip())
 
 
-def load_domain_regions(input_file):
-    """
-    Load TED domain regions from input file.
+def count_domains(input_file):
+    """Count total number of domains in input file."""
+    result = subprocess.run(f"wc -l < {input_file}", shell=True, capture_output=True, text=True)
+    return int(result.stdout.strip())
 
-    Returns dict: base_acc -> list of (start, end, suffix)
-    """
-    print(f"  Loading domain regions from {input_file}...")
 
+def load_domain_regions_batch(input_file, start_line, batch_size):
+    """
+    Load a batch of TED domain regions from input file.
+
+    Args:
+        input_file: Path to input TSV file
+        start_line: Line number to start from (0-indexed)
+        batch_size: Maximum number of lines to read
+
+    Returns:
+        tuple: (dict of base_acc -> list of (start, end, suffix), count of domains loaded)
+    """
     regions = defaultdict(list)
     count = 0
 
     with open(input_file, 'r') as f:
-        for line in f:
+        # Skip to start line
+        for _ in range(start_line):
+            next(f, None)
+
+        # Read batch_size lines
+        for i, line in enumerate(f):
+            if i >= batch_size:
+                break
             parts = line.rstrip('\n').split('\t')
             if len(parts) >= 4:
                 acc = parts[0]  # Base accession without version
@@ -137,22 +165,22 @@ def load_domain_regions(input_file):
                 regions[acc].append((start, end, suffix))
                 count += 1
 
-    print(f"  Loaded {count:,} domain regions for {len(regions):,} proteins")
-    return regions
+    return regions, count
 
 
-def extract_sequences_from_pfamseq(pfamseq_file, domain_regions, output_fasta):
+def extract_sequences_batch(pfamseq_file, domain_regions, output_fasta, append=False):
     """
-    Extract domain sequences from pfamseq FASTA file in a single pass.
+    Extract domain sequences from pfamseq FASTA file for a batch of regions.
 
     Args:
         pfamseq_file: Path to pfamseq FASTA file
         domain_regions: Dict mapping base_acc -> list of (start, end, suffix)
         output_fasta: Output FASTA file path
-    """
-    print(f"\n  Reading pfamseq FASTA: {pfamseq_file}")
-    print(f"  This may take a while for a large file...")
+        append: If True, append to existing file; otherwise overwrite
 
+    Returns:
+        tuple: (sequences_written, proteins_matched, proteins_total)
+    """
     sequences_written = 0
     proteins_matched = 0
     proteins_total = 0
@@ -161,7 +189,9 @@ def extract_sequences_from_pfamseq(pfamseq_file, domain_regions, output_fasta):
     current_acc_base = None  # e.g., A0A8J8BLT5
     current_seq = []
 
-    def process_sequence():
+    mode = 'a' if append else 'w'
+
+    def process_sequence(out_f):
         """Process current sequence if we have domain regions for it."""
         nonlocal sequences_written, proteins_matched
 
@@ -181,11 +211,11 @@ def extract_sequences_from_pfamseq(pfamseq_file, domain_regions, output_fasta):
                         out_f.write(region_seq[i:i + 60] + '\n')
                     sequences_written += 1
 
-    with open(pfamseq_file, 'r') as in_f, open(output_fasta, 'w') as out_f:
+    with open(pfamseq_file, 'r') as in_f, open(output_fasta, mode) as out_f:
         for line in in_f:
             if line.startswith('>'):
                 # Process previous sequence
-                process_sequence()
+                process_sequence(out_f)
 
                 # Parse new header: >A0A8J8BLT5.1 A0A8J8BLT5_9EURY Description
                 proteins_total += 1
@@ -193,40 +223,63 @@ def extract_sequences_from_pfamseq(pfamseq_file, domain_regions, output_fasta):
                 current_acc_full = header  # e.g., A0A8J8BLT5.1
                 current_acc_base = header.split('.')[0]  # e.g., A0A8J8BLT5
                 current_seq = []
-
-                if proteins_total % 10000000 == 0:
-                    print(f"    Processed {proteins_total:,} proteins, "
-                          f"matched {proteins_matched:,}, wrote {sequences_written:,} sequences...")
             else:
                 current_seq.append(line.rstrip('\n'))
 
         # Process last sequence
-        process_sequence()
+        process_sequence(out_f)
 
-    print(f"  Processed {proteins_total:,} proteins from pfamseq")
-    print(f"  Matched {proteins_matched:,} proteins with TED domains")
-    print(f"  Wrote {sequences_written:,} domain sequences")
-
-    return sequences_written
+    return sequences_written, proteins_matched, proteins_total
 
 
-def extract_sequences(input_file, pfamseq_file, output_fasta):
+def extract_sequences(input_file, pfamseq_file, output_fasta, batch_size):
     """
-    Extract all domain sequences from pfamseq FASTA file.
+    Extract all domain sequences from pfamseq FASTA file using batched processing.
+
+    Processes domains in batches to avoid memory issues with large domain lists.
+    Reads through pfamseq file once per batch.
     """
-    print(f"\nStep 1: Extracting domain sequences...")
+    print(f"\nStep 1: Extracting domain sequences (batched)...")
     print(f"  Input domains: {input_file}")
     print(f"  Pfamseq file: {pfamseq_file}")
+    print(f"  Batch size: {batch_size:,} domains")
 
-    # Load domain regions
-    domain_regions = load_domain_regions(input_file)
+    # Count total domains
+    total_domains = count_domains(input_file)
+    num_batches = (total_domains + batch_size - 1) // batch_size
+    print(f"  Total domains: {total_domains:,}")
+    print(f"  Number of batches: {num_batches}")
 
-    # Extract sequences from pfamseq
-    seq_count = extract_sequences_from_pfamseq(pfamseq_file, domain_regions, output_fasta)
+    total_sequences = 0
+    total_proteins_matched = 0
 
+    for batch_num in range(num_batches):
+        start_line = batch_num * batch_size
+        print(f"\n  Batch {batch_num + 1}/{num_batches}: domains {start_line + 1:,} to {min(start_line + batch_size, total_domains):,}")
+
+        # Load this batch of domain regions
+        print(f"    Loading domain regions...")
+        domain_regions, domains_loaded = load_domain_regions_batch(input_file, start_line, batch_size)
+        print(f"    Loaded {domains_loaded:,} domains for {len(domain_regions):,} proteins")
+
+        # Extract sequences for this batch
+        print(f"    Reading pfamseq FASTA...")
+        append = batch_num > 0  # Append after first batch
+        seqs_written, prots_matched, prots_total = extract_sequences_batch(
+            pfamseq_file, domain_regions, output_fasta, append
+        )
+        print(f"    Wrote {seqs_written:,} sequences (matched {prots_matched:,} proteins)")
+
+        total_sequences += seqs_written
+        total_proteins_matched += prots_matched
+
+        # Clear memory
+        del domain_regions
+
+    print(f"\n  Total sequences extracted: {total_sequences:,}")
     print(f"  Output: {output_fasta}")
 
-    return seq_count
+    return total_sequences
 
 
 def run_mmseqs_cluster(fasta_file, tmp_dir, min_seq_id, coverage, threads, work_dir):
@@ -320,7 +373,7 @@ def main():
         seq_count = int(seq_result.stdout.strip()) if seq_result.returncode == 0 else 0
         print(f"\nStep 1: Using existing FASTA: {fasta_file} ({seq_count:,} sequences)")
     else:
-        extract_sequences(input_file, pfamseq_file, fasta_file)
+        extract_sequences(input_file, pfamseq_file, fasta_file, args.batch_size)
 
     # Step 2: Cluster
     if args.skip_cluster:
