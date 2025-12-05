@@ -33,18 +33,13 @@ def parse_arguments():
     )
     parser.add_argument(
         '--input-dir',
-        default='cluster_alignments',
-        help='Directory containing cluster subdirectories (default: cluster_alignments)'
+        default='.',
+        help='Directory containing cluster subdirectories (default: current directory)'
     )
     parser.add_argument(
         '--overwrite',
         action='store_true',
         help='Overwrite existing DESC files'
-    )
-    parser.add_argument(
-        '--work-dir',
-        default='.',
-        help='Working directory (default: current dir)'
     )
     return parser.parse_args()
 
@@ -52,8 +47,7 @@ def parse_arguments():
 def main():
     args = parse_arguments()
 
-    work_dir = os.path.abspath(args.work_dir)
-    input_dir = os.path.join(work_dir, args.input_dir) if not os.path.isabs(args.input_dir) else args.input_dir
+    input_dir = os.path.abspath(args.input_dir)
 
     print(f"\n{'='*60}")
     print("TED Cluster DESC File Generator")
