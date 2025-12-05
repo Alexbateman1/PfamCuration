@@ -49,7 +49,7 @@ def parse_seed_alignment(seed_file):
 
 def download_alphafold_model(uniprot_acc, output_dir):
     """
-    Download AlphaFold CIF model for a given UniProt accession.
+    Download AlphaFold v6 CIF model for a given UniProt accession.
 
     Args:
         uniprot_acc: UniProt accession (may include version like "P12345.2")
@@ -61,20 +61,16 @@ def download_alphafold_model(uniprot_acc, output_dir):
     # Strip version number from accession for AlphaFold API (P12345.2 -> P12345)
     base_acc = uniprot_acc.split('.')[0]
 
-    url = f"https://alphafold.ebi.ac.uk/files/AF-{base_acc}-F1-model_v4.cif"
-    output_file = os.path.join(output_dir, f"AF-{base_acc}-F1-model_v4.cif")
+    url = f"https://alphafold.ebi.ac.uk/files/AF-{base_acc}-F1-model_v6.cif"
+    output_file = os.path.join(output_dir, f"AF-{base_acc}-F1-model_v6.cif")
 
     try:
+        print(f"  Downloading {url}...", file=sys.stderr)
         urllib.request.urlretrieve(url, output_file)
         return output_file
-    except Exception:
-        # Try v3 as fallback
-        try:
-            url = f"https://alphafold.ebi.ac.uk/files/AF-{base_acc}-F1-model_v3.cif"
-            urllib.request.urlretrieve(url, output_file)
-            return output_file
-        except Exception:
-            return None
+    except Exception as e:
+        print(f"  Failed to download {uniprot_acc}: {e}", file=sys.stderr)
+        return None
 
 
 def calculate_mean_plddt(cif_file, start, end):
@@ -107,10 +103,15 @@ def calculate_mean_plddt(cif_file, start, end):
                     break  # Only need one atom per residue
 
         if plddt_scores:
-            return sum(plddt_scores) / len(plddt_scores)
-        return 0.0
+            mean_plddt = sum(plddt_scores) / len(plddt_scores)
+            print(f"  pLDDT calculated over {len(plddt_scores)} residues (region {start}-{end}): {mean_plddt:.1f}", file=sys.stderr)
+            return mean_plddt
+        else:
+            print(f"  Warning: No residues found in region {start}-{end}", file=sys.stderr)
+            return 0.0
 
-    except Exception:
+    except Exception as e:
+        print(f"  Error calculating pLDDT: {e}", file=sys.stderr)
         return 0.0
 
 
