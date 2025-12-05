@@ -599,7 +599,7 @@ def create_pfam_visualization(proteins_data: List[Dict], curation_dir: str,
         total_lines += protein['lines_needed']
 
     # Add space for legend
-    legend_lines = (len(pfam_families) + 4) // 5  # 5 items per row
+    legend_lines = (len(pfam_families) + 3) // 4  # 4 items per row
     legend_height = legend_lines * 25 + 20
 
     fig_width = margin_left + residues_per_line + margin_right
@@ -698,7 +698,7 @@ def create_pfam_visualization(proteins_data: List[Dict], curation_dir: str,
     # Draw legend
     legend_y = margin_bottom + legend_height - 20
     legend_x = margin_left
-    items_per_row = 5
+    items_per_row = 4  # Fewer items per row to fit longer labels with accession
     item_width = (residues_per_line) // items_per_row
 
     ax.text(legend_x, legend_y + 15, "Legend:", fontsize=9, weight='bold')
@@ -725,7 +725,7 @@ def create_pfam_visualization(proteins_data: List[Dict], curation_dir: str,
                     pfam_id = domain['pfam_id']
                     break
 
-        ax.text(x + 20, y, f"{pfam_id}", fontsize=7, va='center')
+        ax.text(x + 20, y, f"{pfam_acc} ({pfam_id})", fontsize=7, va='center')
 
     # Save figure
     output_path = os.path.join(curation_dir, output_file)
