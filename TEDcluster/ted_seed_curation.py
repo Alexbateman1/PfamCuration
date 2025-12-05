@@ -132,24 +132,12 @@ def curate_seed(cluster_name, start_dir):
 
             if pfbuild_success:
                 print("pfbuild completed successfully")
-
-                # Move to DONE directory
-                os.chdir(start_dir)
-                done_dir = Path("DONE")
-                if not done_dir.exists():
-                    done_dir.mkdir()
-                    print("Created DONE directory")
-
-                try:
-                    shutil.move(cluster_name, str(done_dir / cluster_name))
-                    print(f"Moved {cluster_name} to DONE/")
-                except Exception as e:
-                    print(f"Warning: Could not move to DONE: {e}", file=sys.stderr)
-
-                return True
             else:
                 print("Warning: pfbuild may have failed", file=sys.stderr)
-                # Stay in menu to let user decide what to do
+
+            # Return to start directory and move to next family
+            os.chdir(start_dir)
+            return True
 
         elif response in ['n', 'no']:
             os.chdir(start_dir)
