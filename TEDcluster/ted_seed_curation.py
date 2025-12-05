@@ -48,17 +48,35 @@ def count_sequences(file_path):
     return count
 
 
+def is_already_built(dir_path):
+    """Check if pfbuild has already been run (HMM file exists)"""
+    hmm_path = os.path.join(dir_path, 'HMM')
+    return os.path.exists(hmm_path)
+
+
 def get_cluster_directories(input_dir):
-    """Get list of cluster directories sorted by name"""
+    """Get list of cluster directories sorted by name, skipping already built ones"""
     dirs = []
+    skipped = 0
     for d in os.listdir(input_dir):
         dir_path = os.path.join(input_dir, d)
         if os.path.isdir(dir_path):
+            # Skip DONE, IGNORE, and other special directories
+            if d in ['DONE', 'IGNORE', 'REMOVED']:
+                continue
             # Check if it has SEED and FA files
             seed_path = os.path.join(dir_path, 'SEED')
             fa_path = os.path.join(dir_path, 'FA')
             if os.path.exists(seed_path) and os.path.exists(fa_path):
+                # Skip if already built
+                if is_already_built(dir_path):
+                    skipped += 1
+                    continue
                 dirs.append(d)
+
+    if skipped > 0:
+        print(f"Skipped {skipped} directories that already have HMM (pfbuild already run)")
+
     return sorted(dirs)
 
 
