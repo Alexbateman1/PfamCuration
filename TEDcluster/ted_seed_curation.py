@@ -13,6 +13,7 @@ import sys
 import os
 import subprocess
 import shutil
+import random
 from pathlib import Path
 
 
@@ -77,7 +78,9 @@ def get_cluster_directories(input_dir):
     if skipped > 0:
         print(f"Skipped {skipped} directories that already have HMM (pfbuild already run)")
 
-    return sorted(dirs)
+    # Randomize order to allow multiple curators to work simultaneously
+    random.shuffle(dirs)
+    return dirs
 
 
 def curate_seed(cluster_name, start_dir):
