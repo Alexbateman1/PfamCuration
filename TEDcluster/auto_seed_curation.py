@@ -242,11 +242,7 @@ def process_cluster(cluster_name, start_dir, dry_run=False, verbose=False):
             else:
                 print("  pfbuild completed successfully")
 
-        # Clean up temporary files
-        if not dry_run:
-            for tmpfile in ['1', '2', '3']:
-                if os.path.exists(tmpfile):
-                    os.remove(tmpfile)
+        # Keep temporary files (1, 2, 3) for debugging
 
         print(f"  DONE: {cluster_name}")
         os.chdir(start_dir)
