@@ -116,7 +116,8 @@ def parse_alignment(filename: str) -> List[AlignedSequence]:
                 continue
 
             # Match lines like: A0A068TQG2.1/265-412 -------RKLALYMVVCTLITPFLVYKYLDCAPP...
-            match = re.match(r'^(\S+)/(\d+)-(\d+)\s+(\S+)$', line)
+            # Note: no $ anchor to allow trailing whitespace
+            match = re.match(r'^(\S+)/(\d+)-(\d+)\s+(\S+)', line)
             if match:
                 base_id = match.group(1)
                 orig_start = int(match.group(2))
