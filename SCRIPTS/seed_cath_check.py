@@ -250,6 +250,9 @@ def summarize_results(results: List[Dict]) -> Dict:
     # Track which sequences go to which groups
     h_group_seqs = defaultdict(list)
 
+    # Track sequences with multiple H-groups
+    multi_h_seqs = []
+
     for r in results:
         if not r['cath_matches']:
             seqs_without_cath += 1
@@ -289,6 +292,11 @@ def summarize_results(results: List[Dict]) -> Dict:
 
         if len(unique_h) > 1:
             seqs_multi_cath += 1
+            multi_h_seqs.append({
+                'seq_id': f"{r['acc']}/{r['seed_start']}-{r['seed_end']}",
+                'h_groups': sorted(unique_h),
+                'matches': r['cath_matches']
+            })
 
     return {
         'total_sequences': len(results),
@@ -298,7 +306,8 @@ def summarize_results(results: List[Dict]) -> Dict:
         'h_group_counts': dict(h_group_counts),
         't_group_counts': dict(t_group_counts),
         'ca_counts': dict(ca_counts),
-        'h_group_seqs': dict(h_group_seqs)
+        'h_group_seqs': dict(h_group_seqs),
+        'multi_h_seqs': multi_h_seqs
     }
 
 
@@ -338,6 +347,19 @@ def print_summary(summary: Dict, show_sequences: bool = False):
     print("-" * 30)
     for h_group, count in sorted(summary['h_group_counts'].items(), key=lambda x: -x[1]):
         print(f"{h_group:<20} {count:>8}")
+
+    # Show sequences with multiple H-groups (always show if present)
+    if summary['multi_h_seqs']:
+        print(f"\n{'-'*70}")
+        print(f"SEQUENCES WITH MULTIPLE H-GROUPS ({len(summary['multi_h_seqs'])}):")
+        print("-" * 70)
+        for entry in summary['multi_h_seqs']:
+            print(f"\n  {entry['seq_id']}")
+            print(f"    H-groups: {', '.join(entry['h_groups'])}")
+            for m in entry['matches']:
+                if m['cath_level'] == 'H':
+                    print(f"      {m['cath_label']}: TED {m['ted_suffix']} "
+                          f"({m['ted_start']}-{m['ted_end']}, overlap: {m['overlap']:.1%})")
 
     # Show sequences per H-group if requested
     if show_sequences and summary['h_group_seqs']:
