@@ -64,9 +64,9 @@ def parse_seed_accessions(seed_file: str) -> List[Tuple[str, int, int]]:
     """
     accessions = []
 
-    # Pattern for Stockholm format sequence lines: ACC/start-end
-    # e.g., A0A009H7F2/4-116
-    seq_pattern = re.compile(r'^([A-Z0-9]+)/(\d+)-(\d+)\s+')
+    # Pattern for Stockholm format sequence lines: ACC.version/start-end
+    # e.g., Q7PS17.5/408-520 or A0A009H7F2/4-116
+    seq_pattern = re.compile(r'^([A-Z0-9]+)(?:\.\d+)?/(\d+)-(\d+)\s+')
 
     with open(seed_file, 'r') as f:
         for line in f:
