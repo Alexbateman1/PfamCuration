@@ -6,9 +6,13 @@ This script takes sorted TED domain data (with CATH labels) and sorted Pfam
 domain regions, finds overlapping domains on the same UniProt sequences,
 and produces a mapping of CATH classifications to Pfam clans.
 
+Handles multi-segment TED domains properly by calculating overlap with each
+segment separately and summing the overlapping residues.
+
 Prerequisites:
-    1. ted_cath_high_sorted.tsv.gz - TED domains with CATH labels, sorted by UniProt
-       Format: uniprot_acc, ted_suffix, start, end, cath_label, cath_level
+    1. ted_cath_high_segments_sorted.tsv.gz - TED domains with CATH labels, sorted by UniProt
+       Format: uniprot_acc, ted_suffix, chopping, cath_label, cath_level
+       Where chopping is like "11-41_290-389" for multi-segment domains
 
     2. pfam_clan_regions_sorted.tsv.gz - Pfam domain regions for clan families, sorted by UniProt
        Format: pfamseq_acc, seq_start, seq_end, pfamA_acc
@@ -33,7 +37,7 @@ from typing import Dict, List, Tuple, Optional
 
 
 # Default paths
-DEFAULT_TED_FILE = '/nfs/production/agb/pfam/data/TED/ted_cath_high_sorted.tsv.gz'
+DEFAULT_TED_FILE = '/nfs/production/agb/pfam/data/TED/ted_cath_high_segments_sorted.tsv.gz'
 DEFAULT_PFAM_FILE = '/nfs/production/agb/pfam/data/TED/pfam_clan_regions_sorted.tsv.gz'
 DEFAULT_CLAN_FILE = '/nfs/production/agb/pfam/data/TED/pfam_clan_membership.tsv'
 DEFAULT_OUTPUT_DIR = '/nfs/production/agb/pfam/data/TED'
@@ -111,23 +115,41 @@ def open_file(filepath: str):
     return open(filepath, 'r')
 
 
-def parse_ted_line(line: str) -> Optional[Tuple[str, str, int, int, str, str]]:
+def parse_chopping(chopping: str) -> List[Tuple[int, int]]:
+    """
+    Parse chopping string into list of (start, end) tuples.
+
+    Examples:
+        "11-41" -> [(11, 41)]
+        "11-41_290-389" -> [(11, 41), (290, 389)]
+    """
+    segments = []
+    for segment in chopping.split('_'):
+        if '-' in segment:
+            try:
+                start, end = segment.split('-')
+                segments.append((int(start), int(end)))
+            except ValueError:
+                continue
+    return segments
+
+
+def parse_ted_line(line: str) -> Optional[Tuple[str, str, str, str, str]]:
     """
     Parse a TED domain line.
 
-    Returns: (uniprot_acc, ted_suffix, start, end, cath_label, cath_level) or None
+    Returns: (uniprot_acc, ted_suffix, chopping, cath_label, cath_level) or None
     """
     parts = line.rstrip('\n').split('\t')
-    if len(parts) < 6:
+    if len(parts) < 5:
         return None
     try:
         return (
             parts[0],           # uniprot_acc
             parts[1],           # ted_suffix
-            int(parts[2]),      # start
-            int(parts[3]),      # end
-            parts[4],           # cath_label
-            parts[5]            # cath_level
+            parts[2],           # chopping (e.g., "11-41_290-389")
+            parts[3],           # cath_label
+            parts[4]            # cath_level
         )
     except (ValueError, IndexError):
         return None
@@ -153,29 +175,63 @@ def parse_pfam_line(line: str) -> Optional[Tuple[str, int, int, str]]:
         return None
 
 
-def calculate_overlap(start1: int, end1: int, start2: int, end2: int) -> Tuple[float, float]:
+def calculate_overlap(start1: int, end1: int, start2: int, end2: int) -> int:
     """
-    Calculate reciprocal overlap fractions between two regions.
+    Calculate overlap in residues between two regions.
 
-    Returns: (overlap_fraction_1, overlap_fraction_2)
-        overlap_fraction_1: fraction of region 1 covered by overlap
-        overlap_fraction_2: fraction of region 2 covered by overlap
+    Returns: number of overlapping residues (0 if no overlap)
     """
     overlap_start = max(start1, start2)
     overlap_end = min(end1, end2)
 
     if overlap_start > overlap_end:
-        return 0.0, 0.0
+        return 0
 
-    overlap_length = overlap_end - overlap_start + 1
-    length1 = end1 - start1 + 1
-    length2 = end2 - start2 + 1
+    return overlap_end - overlap_start + 1
 
-    return overlap_length / length1, overlap_length / length2
+
+def calculate_segment_overlap(
+    ted_segments: List[Tuple[int, int]],
+    pfam_start: int,
+    pfam_end: int,
+    min_overlap: float
+) -> bool:
+    """
+    Calculate if TED segments overlap sufficiently with a Pfam domain.
+
+    For multi-segment TED domains, we sum the overlapping residues from each
+    segment and compare to the total TED domain length (sum of segment lengths).
+
+    Args:
+        ted_segments: List of (start, end) tuples for TED domain segments
+        pfam_start: Start of Pfam domain
+        pfam_end: End of Pfam domain
+        min_overlap: Minimum overlap fraction required in both directions
+
+    Returns:
+        True if overlap meets threshold in both directions
+    """
+    # Calculate total TED domain length and total overlap
+    ted_total_length = sum(end - start + 1 for start, end in ted_segments)
+    total_overlap = sum(
+        calculate_overlap(seg_start, seg_end, pfam_start, pfam_end)
+        for seg_start, seg_end in ted_segments
+    )
+
+    if total_overlap == 0:
+        return False
+
+    pfam_length = pfam_end - pfam_start + 1
+
+    # Check bidirectional overlap threshold
+    ted_overlap_frac = total_overlap / ted_total_length
+    pfam_overlap_frac = total_overlap / pfam_length
+
+    return ted_overlap_frac >= min_overlap and pfam_overlap_frac >= min_overlap
 
 
 def find_overlapping_pairs(
-    ted_domains: List[Tuple[int, int, str, str]],
+    ted_domains: List[Tuple[List[Tuple[int, int]], str, str]],
     pfam_domains: List[Tuple[int, int, str]],
     min_overlap: float
 ) -> List[Tuple[str, str, str]]:
@@ -183,7 +239,8 @@ def find_overlapping_pairs(
     Find all pairs of overlapping TED and Pfam domains.
 
     Args:
-        ted_domains: List of (start, end, cath_label, cath_level)
+        ted_domains: List of (segments, cath_label, cath_level)
+            where segments is List[(start, end)]
         pfam_domains: List of (start, end, pfamA_acc)
         min_overlap: Minimum overlap fraction required in both directions
 
@@ -192,13 +249,9 @@ def find_overlapping_pairs(
     """
     pairs = []
 
-    for ted_start, ted_end, cath_label, cath_level in ted_domains:
+    for ted_segments, cath_label, cath_level in ted_domains:
         for pfam_start, pfam_end, pfamA_acc in pfam_domains:
-            overlap_ted, overlap_pfam = calculate_overlap(
-                ted_start, ted_end, pfam_start, pfam_end
-            )
-
-            if overlap_ted >= min_overlap and overlap_pfam >= min_overlap:
+            if calculate_segment_overlap(ted_segments, pfam_start, pfam_end, min_overlap):
                 pairs.append((cath_label, cath_level, pfamA_acc))
 
     return pairs
@@ -258,8 +311,10 @@ def process_files(
         while ted_line and get_acc(ted_line) == current_acc:
             parsed = parse_ted_line(ted_line)
             if parsed:
-                _, _, start, end, cath_label, cath_level = parsed
-                ted_domains.append((start, end, cath_label, cath_level))
+                _, _, chopping, cath_label, cath_level = parsed
+                segments = parse_chopping(chopping)
+                if segments:
+                    ted_domains.append((segments, cath_label, cath_level))
             ted_line = ted_f.readline()
 
         # Collect all Pfam domains for current accession

@@ -33,31 +33,27 @@ File: `ted_365m.domain_summary.cath.globularity.taxid.tsv.gz` (~20GB)
 
 ### Step 2: Extract TED Domains with CATH Labels
 
-Extract only high-confidence domains that have a CATH classification:
+Extract only high-confidence domains that have a CATH classification. The chopping column is preserved to enable segment-aware overlap calculation for multi-segment domains:
 
 ```bash
 zcat ted_365m.domain_summary.cath.globularity.taxid.tsv.gz | awk -F'\t' '
 $3=="high" && $14!="-" {
     split($1, a, "-"); uniprot = a[2]
     n = split($1, b, "_"); ted_suffix = b[n]
-    split($4, segs, "_")
-    split(segs[1], first, "-"); start = first[1]
-    n_segs = split($4, segs, "_")
-    split(segs[n_segs], last, "-"); end = last[2]
-    print uniprot "\t" ted_suffix "\t" start "\t" end "\t" $14 "\t" $15
-}' | gzip > ted_cath_high.tsv.gz
+    print uniprot "\t" ted_suffix "\t" $4 "\t" $14 "\t" $15
+}' | gzip > ted_cath_high_segments.tsv.gz
 ```
 
 **Input columns from TED file:**
 - Column 1: TED ID (e.g., `AF-A0A000-F1-model_v4_TED01`)
 - Column 3: Consensus level (`high`, `medium`)
-- Column 4: Chopping/boundaries (e.g., `11-41_290-389`)
+- Column 4: Chopping/boundaries (e.g., `11-41_290-389` for multi-segment, `100-250` for single segment)
 - Column 14: CATH label (e.g., `3.40.50.300` or `-`)
 - Column 15: CATH assignment level (`H` for homologous superfamily, `T` for topology/fold)
 
-**Output format:** `uniprot_acc, ted_suffix, start, end, cath_label, cath_level`
+**Output format:** `uniprot_acc, ted_suffix, chopping, cath_label, cath_level`
 
-**Expected output:** ~174 million rows, ~1.5GB compressed
+**Expected output:** ~174 million rows, ~1.3GB compressed
 
 ### Step 3: Extract Pfam Clan Membership
 
@@ -96,7 +92,7 @@ The mapping script uses a merge-join algorithm that requires both files to be so
 
 ```bash
 # Sort TED file
-zcat ted_cath_high.tsv.gz | sort -S 1G -k1,1 | gzip > ted_cath_high_sorted.tsv.gz
+zcat ted_cath_high_segments.tsv.gz | sort -S 1G -k1,1 | gzip > ted_cath_high_segments_sorted.tsv.gz
 
 # Sort Pfam file
 zcat pfam_clan_regions.tsv.gz | sort -S 1G -k1,1 | gzip > pfam_clan_regions_sorted.tsv.gz
@@ -108,7 +104,7 @@ zcat pfam_clan_regions.tsv.gz | sort -S 1G -k1,1 | gzip > pfam_clan_regions_sort
 
 ```bash
 python3 /path/to/PfamCuration/SCRIPTS/cath_to_pfam_mapping.py \
-    --ted-file ted_cath_high_sorted.tsv.gz \
+    --ted-file ted_cath_high_segments_sorted.tsv.gz \
     --pfam-file pfam_clan_regions_sorted.tsv.gz \
     --clan-file pfam_clan_membership.tsv \
     --output-dir .
@@ -162,6 +158,16 @@ Two domains are considered overlapping if **both** of the following are true:
 
 This bidirectional requirement ensures meaningful structural correspondence.
 
+### Multi-Segment Domain Handling
+
+TED domains can be discontinuous (e.g., `11-41_290-389` for a domain with two segments). For these multi-segment domains:
+
+1. The chopping string is preserved in the data file
+2. Overlap is calculated **per segment** and summed
+3. The total overlap is compared against the total TED domain length (sum of segment lengths)
+
+This prevents false positives from nested domain scenarios where a contiguous interpretation would incorrectly inflate overlaps.
+
 ### Merge-Join Streaming
 
 The script processes both sorted files simultaneously without loading them entirely into memory:
@@ -194,7 +200,7 @@ Run Steps 3-6 to regenerate with updated data.
 | File | Rows | Compressed Size |
 |------|------|-----------------|
 | `ted_365m.domain_summary.cath.globularity.taxid.tsv.gz` | 365M | ~20GB |
-| `ted_cath_high.tsv.gz` | 174M | ~1.5GB |
+| `ted_cath_high_segments.tsv.gz` | 174M | ~1.3GB |
 | `pfam_clan_regions.tsv.gz` | 144M | ~2GB |
 | `pfam_clan_membership.tsv` | 13.6K | ~500KB |
 
