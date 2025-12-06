@@ -13,11 +13,14 @@ Usage:
     ted_ali.py SEED --force
 
 Output files:
-    TED      - Tab-separated report of TED domains with overlap information
+    TED      - Report of TED domains in arch-like format
     TED_NUM  - Mean TED domains per protein (single number)
 
-The TED file contains one line per TED domain found, with columns:
-    Protein_Accession  TED_Domains  Domain_Count  Domain_IDs  Domain_Ranges  Overlap_with_Pfam
+Output format (similar to Pfam arch file):
+    P12345.1/10-200  3 domains
+        TED01       10      150     85.0
+        TED02      160      250     45.0
+        TED03      300      400      0.0
 """
 
 import argparse
@@ -192,14 +195,15 @@ def main():
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
 
-    # Process sequences and collect results
+    # Process sequences and collect results grouped by protein
     seq_count = len(sequences)
     processed = 0
     with_ted = 0
     total_domains = 0
     errors = 0
 
-    results = []
+    # Results grouped by sequence ID
+    protein_results = {}
 
     for seq_id in sorted(sequences.keys()):
         processed += 1
@@ -230,14 +234,13 @@ def main():
         with_ted += 1
         total_domains += domain_count
 
-        # Process each domain separately
+        # Process each domain
         pfam_start = seq_info['pfam_start']
         pfam_end = seq_info['pfam_end']
 
+        domain_list = []
         for domain in domains:
-            ted_id = domain['ted_id']
             ted_suffix = domain['ted_suffix']
-            chopping = domain['chopping']
             segments = domain['segments']
 
             # Calculate overall domain boundaries
@@ -252,31 +255,31 @@ def main():
                 ted_start, ted_end, pfam_start, pfam_end
             )
 
-            # Format overlap as percentage string
-            if overlap_percent > 0:
-                overlap_str = f"{overlap_percent:.1f}%"
-            else:
-                overlap_str = "0"
-
-            results.append({
-                'seq_id': seq_id,
-                'ted_info': f"{ted_suffix}:{chopping}",
-                'domain_count': 1,  # Each line reports one domain
+            domain_list.append({
                 'ted_id': ted_suffix,
-                'domain_range': f"{ted_start}-{ted_end}",
-                'overlap': overlap_str
+                'start': ted_start,
+                'end': ted_end,
+                'overlap': overlap_percent
             })
 
-    # Write output file
-    with open(args.output, 'w') as f:
-        # Header
-        f.write("Protein_Accession\tTED_Domains\tDomain_Count\tDomain_IDs\t"
-                "Domain_Ranges\tOverlap_with_Pfam\n")
+        protein_results[seq_id] = {
+            'domain_count': domain_count,
+            'domains': domain_list
+        }
 
-        # Data
-        for r in results:
-            f.write(f"{r['seq_id']}\t{r['ted_info']}\t{r['domain_count']}\t"
-                    f"{r['ted_id']}\t{r['domain_range']}\t{r['overlap']}\n")
+    # Write output file in arch-like format
+    with open(args.output, 'w') as f:
+        for seq_id in sorted(protein_results.keys()):
+            result = protein_results[seq_id]
+            domain_count = result['domain_count']
+
+            # Summary line for the protein
+            domain_word = "domain" if domain_count == 1 else "domains"
+            f.write(f"{seq_id}\t{domain_count} {domain_word}\n")
+
+            # One line per domain, indented
+            for d in result['domains']:
+                f.write(f"\t{d['ted_id']}\t{d['start']}\t{d['end']}\t{d['overlap']:.1f}\n")
 
     # Calculate mean domains per protein
     mean_domains = total_domains / with_ted if with_ted > 0 else 0
