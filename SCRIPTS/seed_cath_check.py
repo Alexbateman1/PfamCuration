@@ -26,7 +26,7 @@ from typing import Dict, List, Set, Tuple
 
 
 # Default paths
-DEFAULT_TED_FILE = '/nfs/production/agb/pfam/data/TED/ted_cath_high_sorted.tsv.gz'
+DEFAULT_TED_FILE = '/nfs/production/agb/pfam/data/TED/ted_cath_high_segments_sorted.tsv.gz'
 
 
 def parse_arguments():
@@ -111,6 +111,25 @@ def parse_seed_accessions(seed_file: str) -> List[Tuple[str, int, int]]:
     return [(acc, start, end) for acc, start, end, _ in accessions]
 
 
+def parse_chopping(chopping: str) -> List[Tuple[int, int]]:
+    """
+    Parse chopping string into list of (start, end) tuples.
+
+    Examples:
+        "11-41" -> [(11, 41)]
+        "11-41_290-389" -> [(11, 41), (290, 389)]
+    """
+    segments = []
+    for segment in chopping.split('_'):
+        if '-' in segment:
+            try:
+                start, end = segment.split('-')
+                segments.append((int(start), int(end)))
+            except ValueError:
+                continue
+    return segments
+
+
 def lookup_cath_assignments(
     accessions: List[Tuple[str, int, int]],
     ted_file: str
@@ -120,6 +139,7 @@ def lookup_cath_assignments(
 
     Returns:
         Dict mapping uniprot_acc -> list of TED domain dicts
+        Each dict has: ted_suffix, segments (list of tuples), cath_label, cath_level
     """
     if not accessions:
         return {}
@@ -145,7 +165,7 @@ def lookup_cath_assignments(
             text=True
         )
 
-        # Parse results
+        # Parse results - new format: acc, ted_suffix, chopping, cath_label, cath_level
         cath_by_acc = defaultdict(list)
 
         for line in result.stdout.strip().split('\n'):
@@ -153,21 +173,22 @@ def lookup_cath_assignments(
                 continue
 
             parts = line.split('\t')
-            if len(parts) >= 6:
+            if len(parts) >= 5:
                 acc = parts[0]
                 ted_suffix = parts[1]
-                start = int(parts[2])
-                end = int(parts[3])
-                cath_label = parts[4]
-                cath_level = parts[5]
+                chopping = parts[2]
+                cath_label = parts[3]
+                cath_level = parts[4]
 
-                cath_by_acc[acc].append({
-                    'ted_suffix': ted_suffix,
-                    'start': start,
-                    'end': end,
-                    'cath_label': cath_label,
-                    'cath_level': cath_level
-                })
+                segments = parse_chopping(chopping)
+                if segments:
+                    cath_by_acc[acc].append({
+                        'ted_suffix': ted_suffix,
+                        'segments': segments,
+                        'chopping': chopping,
+                        'cath_label': cath_label,
+                        'cath_level': cath_level
+                    })
 
         return cath_by_acc
 
@@ -175,18 +196,38 @@ def lookup_cath_assignments(
         os.unlink(tmp_path)
 
 
-def calculate_overlap(start1: int, end1: int, start2: int, end2: int) -> float:
-    """Calculate overlap fraction (of first region)."""
+def calculate_region_overlap(start1: int, end1: int, start2: int, end2: int) -> int:
+    """Calculate overlap in residues between two regions."""
     overlap_start = max(start1, start2)
     overlap_end = min(end1, end2)
 
     if overlap_start > overlap_end:
-        return 0.0
+        return 0
 
-    overlap_length = overlap_end - overlap_start + 1
-    length1 = end1 - start1 + 1
+    return overlap_end - overlap_start + 1
 
-    return overlap_length / length1
+
+def calculate_segment_overlap(
+    seed_start: int,
+    seed_end: int,
+    ted_segments: List[Tuple[int, int]]
+) -> float:
+    """
+    Calculate overlap fraction between SEED region and TED domain segments.
+
+    For multi-segment TED domains, we sum the overlapping residues from each
+    segment and compare to the SEED region length.
+
+    Returns:
+        Fraction of SEED region covered by TED segments
+    """
+    seed_length = seed_end - seed_start + 1
+    total_overlap = sum(
+        calculate_region_overlap(seed_start, seed_end, seg_start, seg_end)
+        for seg_start, seg_end in ted_segments
+    )
+
+    return total_overlap / seed_length if seed_length > 0 else 0.0
 
 
 def match_seed_to_cath(
@@ -196,6 +237,8 @@ def match_seed_to_cath(
 ) -> List[Dict]:
     """
     Match SEED sequences to overlapping CATH domains.
+
+    Uses segment-aware overlap calculation for multi-segment TED domains.
 
     Returns:
         List of match results with SEED coords and CATH info
@@ -207,9 +250,9 @@ def match_seed_to_cath(
 
         matched_cath = []
         for ted in ted_domains:
-            overlap = calculate_overlap(
+            overlap = calculate_segment_overlap(
                 seed_start, seed_end,
-                ted['start'], ted['end']
+                ted['segments']
             )
 
             if overlap >= min_overlap:
@@ -217,8 +260,7 @@ def match_seed_to_cath(
                     'cath_label': ted['cath_label'],
                     'cath_level': ted['cath_level'],
                     'ted_suffix': ted['ted_suffix'],
-                    'ted_start': ted['start'],
-                    'ted_end': ted['end'],
+                    'chopping': ted['chopping'],
                     'overlap': overlap
                 })
 
@@ -359,7 +401,7 @@ def print_summary(summary: Dict, show_sequences: bool = False):
             for m in entry['matches']:
                 if m['cath_level'] == 'H':
                     print(f"      {m['cath_label']}: TED {m['ted_suffix']} "
-                          f"({m['ted_start']}-{m['ted_end']}, overlap: {m['overlap']:.1%})")
+                          f"({m['chopping']}, overlap: {m['overlap']:.1%})")
 
     # Show sequences per H-group if requested
     if show_sequences and summary['h_group_seqs']:
@@ -379,16 +421,16 @@ def write_detailed_output(results: List[Dict], output_file: str):
     """Write detailed results to file."""
 
     with open(output_file, 'w') as f:
-        f.write("acc\tseed_start\tseed_end\tcath_label\tcath_level\tted_suffix\tted_start\tted_end\toverlap\n")
+        f.write("acc\tseed_start\tseed_end\tcath_label\tcath_level\tted_suffix\tchopping\toverlap\n")
 
         for r in results:
             if r['cath_matches']:
                 for m in r['cath_matches']:
                     f.write(f"{r['acc']}\t{r['seed_start']}\t{r['seed_end']}\t"
                             f"{m['cath_label']}\t{m['cath_level']}\t{m['ted_suffix']}\t"
-                            f"{m['ted_start']}\t{m['ted_end']}\t{m['overlap']:.3f}\n")
+                            f"{m['chopping']}\t{m['overlap']:.3f}\n")
             else:
-                f.write(f"{r['acc']}\t{r['seed_start']}\t{r['seed_end']}\t-\t-\t-\t-\t-\t-\n")
+                f.write(f"{r['acc']}\t{r['seed_start']}\t{r['seed_end']}\t-\t-\t-\t-\t-\n")
 
 
 def write_split_alignments(
