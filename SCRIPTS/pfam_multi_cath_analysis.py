@@ -2,6 +2,9 @@
 """
 Identify Pfam families that map to multiple CATH H-level superfamilies.
 
+Uses only high-confidence CATH->Clan mappings (confidence > 0.8, count >= 10)
+to identify families that genuinely span multiple CATH superfamilies.
+
 These families may need review as they could:
 - Be too broad and need splitting
 - Contain multiple structural domains
@@ -11,7 +14,8 @@ Usage:
     python pfam_multi_cath_analysis.py [options]
 
 Input:
-    cath_to_pfam_family_counts.tsv - Output from cath_to_pfam_mapping.py
+    cath_to_pfam_clan_mapping.tsv - Clan-level mappings with confidence scores
+    cath_to_pfam_family_counts.tsv - Detailed family counts
 
 Output:
     pfam_multi_cath_families.tsv - Families mapping to multiple CATH superfamilies
@@ -21,11 +25,12 @@ import argparse
 import os
 import sys
 from collections import defaultdict
-from typing import Dict, List, Tuple
+from typing import Dict, List, Set, Tuple
 
 
 # Default paths
-DEFAULT_INPUT = '/nfs/production/agb/pfam/data/TED/cath_to_pfam_family_counts.tsv'
+DEFAULT_CLAN_MAPPING = '/nfs/production/agb/pfam/data/TED/cath_to_pfam_clan_mapping.tsv'
+DEFAULT_FAMILY_COUNTS = '/nfs/production/agb/pfam/data/TED/cath_to_pfam_family_counts.tsv'
 DEFAULT_OUTPUT = '/nfs/production/agb/pfam/data/TED/pfam_multi_cath_families.tsv'
 DEFAULT_CLAN_FILE = '/nfs/production/agb/pfam/data/TED/pfam_clan_membership.tsv'
 
@@ -36,9 +41,14 @@ def parse_arguments():
         description='Identify Pfam families mapping to multiple CATH superfamilies'
     )
     parser.add_argument(
-        '--input',
-        default=DEFAULT_INPUT,
-        help=f'Path to family counts file (default: {DEFAULT_INPUT})'
+        '--clan-mapping',
+        default=DEFAULT_CLAN_MAPPING,
+        help=f'Path to clan mapping file (default: {DEFAULT_CLAN_MAPPING})'
+    )
+    parser.add_argument(
+        '--family-counts',
+        default=DEFAULT_FAMILY_COUNTS,
+        help=f'Path to family counts file (default: {DEFAULT_FAMILY_COUNTS})'
     )
     parser.add_argument(
         '--output',
@@ -51,16 +61,22 @@ def parse_arguments():
         help=f'Path to clan membership file (default: {DEFAULT_CLAN_FILE})'
     )
     parser.add_argument(
-        '--min-cath-groups',
-        type=int,
-        default=2,
-        help='Minimum number of CATH H-groups to report (default: 2)'
+        '--min-confidence',
+        type=float,
+        default=0.8,
+        help='Minimum confidence for CATH->Clan mapping (default: 0.8)'
     )
     parser.add_argument(
         '--min-count',
         type=int,
         default=10,
-        help='Minimum overlap count per CATH group to consider (default: 10)'
+        help='Minimum overlap count for CATH->Clan mapping (default: 10)'
+    )
+    parser.add_argument(
+        '--min-cath-groups',
+        type=int,
+        default=2,
+        help='Minimum number of CATH H-groups to report (default: 2)'
     )
     return parser.parse_args()
 
@@ -88,18 +104,64 @@ def load_clan_membership(clan_file: str) -> Dict[str, Tuple[str, str]]:
     return family_to_clan
 
 
-def load_family_counts(input_file: str, min_count: int) -> Dict[str, Dict[str, int]]:
+def load_confident_cath_mappings(
+    clan_mapping_file: str,
+    min_confidence: float,
+    min_count: int
+) -> Set[Tuple[str, str]]:
     """
-    Load family to CATH mapping counts.
+    Load high-confidence CATH -> Clan mappings.
 
-    Only considers H-level (superfamily) assignments and filters by min_count.
+    Returns:
+        Set of (cath_label, clan_acc) tuples that meet confidence/count thresholds
+    """
+    confident_mappings = set()
+
+    with open(clan_mapping_file, 'r') as f:
+        # Skip header
+        header = f.readline()
+
+        for line in f:
+            parts = line.rstrip('\n').split('\t')
+            if len(parts) < 6:
+                continue
+
+            cath_label = parts[0]
+            cath_level = parts[1]
+            clan_acc = parts[2]
+            overlap_count = int(parts[4])
+            confidence = float(parts[5])
+
+            # Only H-level (superfamily) mappings
+            if cath_level != 'H':
+                continue
+
+            # Filter by confidence and count
+            if confidence >= min_confidence and overlap_count >= min_count:
+                confident_mappings.add((cath_label, clan_acc))
+
+    return confident_mappings
+
+
+def load_family_counts_for_confident_mappings(
+    family_counts_file: str,
+    confident_mappings: Set[Tuple[str, str]],
+    family_to_clan: Dict[str, Tuple[str, str]]
+) -> Dict[str, Dict[str, int]]:
+    """
+    Load family counts, but only for CATH labels that have confident clan mappings.
 
     Returns:
         Dict mapping pfamA_acc -> {cath_label: count}
     """
+    # Build set of confident CATH labels per clan
+    confident_cath_by_clan = defaultdict(set)
+    for cath_label, clan_acc in confident_mappings:
+        confident_cath_by_clan[clan_acc].add(cath_label)
+
     family_cath = defaultdict(dict)
 
-    with open(input_file, 'r') as f:
+    with open(family_counts_file, 'r') as f:
         # Skip header
         header = f.readline()
 
@@ -110,15 +172,20 @@ def load_family_counts(input_file: str, min_count: int) -> Dict[str, Dict[str, i
 
             cath_label, cath_level, pfamA_acc, count = parts[0], parts[1], parts[2], int(parts[3])
 
-            # Only consider H-level (homologous superfamily) assignments
+            # Only H-level
             if cath_level != 'H':
                 continue
 
-            # Filter by minimum count
-            if count < min_count:
+            # Get clan for this family
+            clan_info = family_to_clan.get(pfamA_acc)
+            if not clan_info:
                 continue
 
-            family_cath[pfamA_acc][cath_label] = count
+            clan_acc = clan_info[0]
+
+            # Check if this CATH label has a confident mapping to this family's clan
+            if (cath_label, clan_acc) in confident_mappings:
+                family_cath[pfamA_acc][cath_label] = count
 
     return family_cath
 
@@ -149,8 +216,7 @@ def analyze_multi_cath_families(
         # Get clan info
         clan_info = family_to_clan.get(pfamA_acc, ('', ''))
 
-        # Calculate entropy-like measure of how spread out the mappings are
-        # If one CATH dominates, ratio will be high; if spread evenly, ratio will be low
+        # Calculate dominance ratio
         top_count = sorted_cath[0][1]
         dominance_ratio = top_count / total_count if total_count > 0 else 0
 
@@ -210,26 +276,26 @@ def print_summary(results: List[Dict]):
     for num_cath in sorted(cath_dist.keys()):
         print(f"  {num_cath} CATH groups: {cath_dist[num_cath]} families")
 
-    # Top 10 families by CATH group count
-    print(f"\nTop 10 families with most CATH superfamily mappings:")
-    print(f"{'Family':<12} {'Clan':<10} {'#CATH':>6} {'Total':>8} {'Dom.':>6}  Top CATH groups")
-    print("-" * 80)
+    # Top 20 families by CATH group count
+    print(f"\nTop 20 families with most CATH superfamily mappings:")
+    print(f"{'Family':<12} {'Clan':<12} {'#CATH':>6} {'Total':>8} {'Dom.':>6}  Top CATH groups")
+    print("-" * 90)
 
-    for r in results[:10]:
+    for r in results[:20]:
         top_3 = ', '.join(f"{label}" for label, count in r['cath_groups'][:3])
-        print(f"{r['pfamA_acc']:<12} {r['clan_acc']:<10} {r['num_cath_groups']:>6} "
+        print(f"{r['pfamA_acc']:<12} {r['clan_acc']:<12} {r['num_cath_groups']:>6} "
               f"{r['total_overlaps']:>8} {r['dominance_ratio']:>6.2f}  {top_3}")
 
     # Families with low dominance (evenly spread across CATH groups)
-    low_dom = [r for r in results if r['dominance_ratio'] < 0.5 and r['num_cath_groups'] >= 3]
+    low_dom = [r for r in results if r['dominance_ratio'] < 0.5 and r['num_cath_groups'] >= 2]
     if low_dom:
-        print(f"\nFamilies with spread mappings (dominance < 0.5, ≥3 CATH groups): {len(low_dom)}")
-        print("These may be most likely to need splitting:")
-        print(f"{'Family':<12} {'Clan':<10} {'#CATH':>6} {'Dom.':>6}  CATH groups")
-        print("-" * 70)
-        for r in low_dom[:10]:
+        print(f"\nFamilies with spread mappings (dominance < 0.5): {len(low_dom)}")
+        print("These are most likely to need review/splitting:")
+        print(f"{'Family':<12} {'Clan':<12} {'#CATH':>6} {'Dom.':>6}  CATH groups")
+        print("-" * 80)
+        for r in low_dom[:15]:
             cath_str = ', '.join(f"{label}:{count}" for label, count in r['cath_groups'][:4])
-            print(f"{r['pfamA_acc']:<12} {r['clan_acc']:<10} {r['num_cath_groups']:>6} "
+            print(f"{r['pfamA_acc']:<12} {r['clan_acc']:<12} {r['num_cath_groups']:>6} "
                   f"{r['dominance_ratio']:>6.2f}  {cath_str}")
 
 
@@ -239,26 +305,41 @@ def main():
     print("=" * 70)
     print("Pfam Multi-CATH Superfamily Analysis")
     print("=" * 70)
-    print(f"\nInput file:  {args.input}")
-    print(f"Clan file:   {args.clan_file}")
-    print(f"Output file: {args.output}")
+    print(f"\nInput files:")
+    print(f"  Clan mapping:   {args.clan_mapping}")
+    print(f"  Family counts:  {args.family_counts}")
+    print(f"  Clan membership: {args.clan_file}")
+    print(f"\nOutput file: {args.output}")
     print(f"\nFilters:")
+    print(f"  Min confidence: {args.min_confidence}")
+    print(f"  Min count: {args.min_count}")
     print(f"  Min CATH groups: {args.min_cath_groups}")
-    print(f"  Min count per CATH: {args.min_count}")
 
-    # Check input file exists
-    if not os.path.exists(args.input):
-        print(f"\nError: Input file not found: {args.input}")
-        sys.exit(1)
+    # Check input files exist
+    for filepath in [args.clan_mapping, args.family_counts]:
+        if not os.path.exists(filepath):
+            print(f"\nError: Input file not found: {filepath}")
+            sys.exit(1)
 
-    # Load data
-    print("\nLoading clan membership...")
+    # Load clan membership
+    print("\n" + "-" * 70)
+    print("Loading clan membership...")
     family_to_clan = load_clan_membership(args.clan_file)
     print(f"  Loaded {len(family_to_clan)} family->clan mappings")
 
-    print("\nLoading family counts (H-level only)...")
-    family_cath = load_family_counts(args.input, args.min_count)
-    print(f"  Loaded {len(family_cath)} families with CATH mappings")
+    # Load confident CATH->Clan mappings
+    print("\nLoading confident CATH->Clan mappings...")
+    confident_mappings = load_confident_cath_mappings(
+        args.clan_mapping, args.min_confidence, args.min_count
+    )
+    print(f"  Found {len(confident_mappings)} confident (CATH, Clan) pairs")
+
+    # Load family counts for confident mappings only
+    print("\nLoading family counts for confident mappings...")
+    family_cath = load_family_counts_for_confident_mappings(
+        args.family_counts, confident_mappings, family_to_clan
+    )
+    print(f"  Loaded {len(family_cath)} families with confident CATH mappings")
 
     # Analyze
     print("\nAnalyzing multi-CATH families...")
