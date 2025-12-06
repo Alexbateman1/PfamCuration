@@ -340,6 +340,12 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, skip_to_pfne
             print("\nDisplaying ted.png...")
             run_command("imgcat ted.png", wait=False)
 
+        # Check for pfam.png and display it if it exists
+        pfam_png = Path('pfam.png')
+        if pfam_png.exists():
+            print("\nDisplaying pfam.png...")
+            run_command("imgcat pfam.png", wait=False)
+
         # Check for ted_web.png and display it if it exists
         ted_web_png = Path('ted_web.png')
         if ted_web_png.exists():
@@ -481,47 +487,30 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, skip_to_pfne
 
         # 1. DESC file first
         desc_file = Path('DESC')
-        print("\n--- DESC ---", file=sys.stderr)
-        print("The DESC file contains family metadata including name, description, references, etc.", file=sys.stderr)
         if desc_file.exists():
+            print("\n--- DESC ---", file=sys.stderr)
+            print("The DESC file contains family metadata including name, description, references, etc.", file=sys.stderr)
             with open(desc_file, 'r') as f:
                 print(f.read(), file=sys.stderr)
-        else:
-            print("Note: DESC file not found", file=sys.stderr)
-        print("--- End DESC ---", file=sys.stderr)
+            print("--- End DESC ---", file=sys.stderr)
 
         # 2. species
         species_file = Path('species')
-        print("\n--- species summary ---", file=sys.stderr)
-        print("The species distribution showing number of matches at each taxonomic rank.", file=sys.stderr)
         if species_file.exists():
+            print("\n--- species summary ---", file=sys.stderr)
+            print("The species distribution showing number of matches at each taxonomic rank.", file=sys.stderr)
             with open(species_file, 'r') as f:
                 print(f.read(), file=sys.stderr)
-        else:
-            print("Note: species file not found", file=sys.stderr)
-        print("--- End species ---", file=sys.stderr)
+            print("--- End species ---", file=sys.stderr)
 
         # 3. SwissProt entries (sp.seq_info)
         sp_file = Path('sp.seq_info')
-        if sp_file.exists():
+        if sp_file.exists() and sp_file.stat().st_size > 0:
             print("\n--- sp.seq_info (SwissProt entries) ---", file=sys.stderr)
             print("SwissProt protein entries with curated functional annotations.", file=sys.stderr)
             with open(sp_file, 'r') as f:
                 print(f.read(), file=sys.stderr)
             print("--- End sp.seq_info ---", file=sys.stderr)
-        else:
-            print(f"\nNote: sp.seq_info file not found", file=sys.stderr)
-            # Print current path which often contains useful protein accession
-            current_path = os.getcwd()
-            print(f"Current directory: {current_path}", file=sys.stderr)
-            # Extract potential protein accession from path
-            path_parts = current_path.split('/')
-            if path_parts:
-                dir_name_local = path_parts[-1]
-                # Check if it looks like a protein accession (e.g., A0A073CEA3_TED01)
-                if '_TED' in dir_name_local:
-                    protein_acc = dir_name_local.split('_TED')[0]
-                    print(f"Potential protein accession for UniProt search: {protein_acc}", file=sys.stderr)
 
         # 4. Foldseek (only if more than header line)
         foldseek_file = Path('foldseek')
@@ -540,14 +529,14 @@ def curate_family(entry, start_dir, se_prefix=None, use_nano=False, skip_to_pfne
 
         # 5. Domain architectures (arch)
         arch_file = Path('arch')
-        print("\n--- Domain architectures ---", file=sys.stderr)
-        print("Domain architecture summary showing how this domain combines with other Pfam domains.", file=sys.stderr)
         if arch_file.exists():
+            print("\n--- Domain architectures ---", file=sys.stderr)
+            print("Example domain architectures. Indented lines show domain regions in the protein.", file=sys.stderr)
+            print("Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.", file=sys.stderr)
+            print("Note that the protein descriptions in this section are often unreliable.", file=sys.stderr)
             with open(arch_file, 'r') as f:
                 print(f.read(), file=sys.stderr)
-        else:
-            print("Note: arch file not found", file=sys.stderr)
-        print("--- End arch ---", file=sys.stderr)
+            print("--- End arch ---", file=sys.stderr)
 
         # 6. PaperBLAST (truncated)
         paperblast_file = Path('paperblast')
@@ -813,45 +802,30 @@ def collect_directory_info(dir_name, start_dir):
     info_sections = []
 
     # 1. DESC file first
-    info_sections.append("--- DESC ---")
-    info_sections.append("The DESC file contains family metadata including name, description, references, etc.")
     desc_file = Path('DESC')
     if desc_file.exists():
+        info_sections.append("--- DESC ---")
+        info_sections.append("The DESC file contains family metadata including name, description, references, etc.")
         with open(desc_file, 'r') as f:
             info_sections.append(f.read())
-    else:
-        info_sections.append("Note: DESC file not found")
-    info_sections.append("--- End DESC ---")
+        info_sections.append("--- End DESC ---")
 
     # 2. species summary
-    info_sections.append("\n--- species summary ---")
-    info_sections.append("The species distribution showing number of matches at each taxonomic rank.")
     species_file = Path('species')
     if species_file.exists():
+        info_sections.append("\n--- species summary ---")
+        info_sections.append("The species distribution showing number of matches at each taxonomic rank.")
         with open(species_file, 'r') as f:
             info_sections.append(f.read())
-    else:
-        info_sections.append("Note: species file not found")
-    info_sections.append("--- End species ---")
+        info_sections.append("--- End species ---")
 
     # 3. SwissProt entries (sp.seq_info)
     sp_file = Path('sp.seq_info')
-    if sp_file.exists():
+    if sp_file.exists() and sp_file.stat().st_size > 0:
         info_sections.append("\n--- sp.seq_info (SwissProt entries) ---")
         info_sections.append("SwissProt protein entries with curated functional annotations.")
         with open(sp_file, 'r') as f:
             info_sections.append(f.read())
-        info_sections.append("--- End sp.seq_info ---")
-    else:
-        info_sections.append("\n--- sp.seq_info (SwissProt entries) ---")
-        info_sections.append("SwissProt protein entries with curated functional annotations.")
-        info_sections.append("Note: sp.seq_info file not found")
-        # Extract potential protein accession
-        current_path = os.getcwd()
-        info_sections.append(f"Current directory: {current_path}")
-        if '_TED' in dir_name:
-            protein_acc = dir_name.split('_TED')[0]
-            info_sections.append(f"Potential protein accession for UniProt search: {protein_acc}")
         info_sections.append("--- End sp.seq_info ---")
 
     # 4. Foldseek results (only if more than header line)
@@ -871,15 +845,15 @@ def collect_directory_info(dir_name, start_dir):
                 info_sections.append("--- End Foldseek ---")
 
     # 5. Domain architectures
-    info_sections.append("\n--- Domain architectures ---")
-    info_sections.append("Domain architecture summary showing how this domain combines with other Pfam domains.")
     arch_file = Path('arch')
     if arch_file.exists():
+        info_sections.append("\n--- Domain architectures ---")
+        info_sections.append("Example domain architectures. Indented lines show domain regions in the protein.")
+        info_sections.append("Lines starting with 'Iterate' or not starting with PFXXXXX are the domain we are considering.")
+        info_sections.append("Note that the protein descriptions in this section are often unreliable.")
         with open(arch_file, 'r') as f:
             info_sections.append(f.read())
-    else:
-        info_sections.append("Note: arch file not found")
-    info_sections.append("--- End arch ---")
+        info_sections.append("--- End arch ---")
 
     # 6. PaperBLAST literature results
     paperblast_file = Path('paperblast')
