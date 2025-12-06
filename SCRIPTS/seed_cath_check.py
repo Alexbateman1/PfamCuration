@@ -52,7 +52,52 @@ def parse_arguments():
         '--output',
         help='Output file for detailed results (optional)'
     )
+    parser.add_argument(
+        '--split',
+        action='store_true',
+        help='Write separate alignment files for each CATH H-group'
+    )
+    parser.add_argument(
+        '--split-prefix',
+        default='SEED',
+        help='Prefix for split alignment files (default: SEED)'
+    )
     return parser.parse_args()
+
+
+def parse_seed_file(seed_file: str) -> Tuple[List[Tuple[str, int, int, str]], List[str]]:
+    """
+    Parse SEED file and extract UniProt accessions with coordinates and original lines.
+
+    Returns:
+        Tuple of:
+        - List of (uniprot_acc, start, end, original_line) tuples
+        - List of header lines (comments, Stockholm headers)
+    """
+    accessions = []
+    header_lines = []
+
+    # Pattern for Stockholm format sequence lines: ACC.version/start-end
+    # e.g., Q7PS17.5/408-520 or A0A009H7F2/4-116
+    seq_pattern = re.compile(r'^([A-Z0-9]+)(?:\.\d+)?/(\d+)-(\d+)\s+')
+
+    with open(seed_file, 'r') as f:
+        for line in f:
+            original_line = line.rstrip()
+
+            # Collect header lines
+            if not original_line or original_line.startswith('#') or original_line.startswith('//'):
+                header_lines.append(original_line)
+                continue
+
+            match = seq_pattern.match(original_line)
+            if match:
+                acc = match.group(1)
+                start = int(match.group(2))
+                end = int(match.group(3))
+                accessions.append((acc, start, end, original_line))
+
+    return accessions, header_lines
 
 
 def parse_seed_accessions(seed_file: str) -> List[Tuple[str, int, int]]:
@@ -62,28 +107,8 @@ def parse_seed_accessions(seed_file: str) -> List[Tuple[str, int, int]]:
     Returns:
         List of (uniprot_acc, start, end) tuples
     """
-    accessions = []
-
-    # Pattern for Stockholm format sequence lines: ACC.version/start-end
-    # e.g., Q7PS17.5/408-520 or A0A009H7F2/4-116
-    seq_pattern = re.compile(r'^([A-Z0-9]+)(?:\.\d+)?/(\d+)-(\d+)\s+')
-
-    with open(seed_file, 'r') as f:
-        for line in f:
-            line = line.rstrip()
-
-            # Skip comment lines, blank lines, and Stockholm headers
-            if not line or line.startswith('#') or line.startswith('//'):
-                continue
-
-            match = seq_pattern.match(line)
-            if match:
-                acc = match.group(1)
-                start = int(match.group(2))
-                end = int(match.group(3))
-                accessions.append((acc, start, end))
-
-    return accessions
+    accessions, _ = parse_seed_file(seed_file)
+    return [(acc, start, end) for acc, start, end, _ in accessions]
 
 
 def lookup_cath_assignments(
@@ -344,6 +369,89 @@ def write_detailed_output(results: List[Dict], output_file: str):
                 f.write(f"{r['acc']}\t{r['seed_start']}\t{r['seed_end']}\t-\t-\t-\t-\t-\t-\n")
 
 
+def write_split_alignments(
+    results: List[Dict],
+    seed_lines: Dict[Tuple[str, int, int], str],
+    header_lines: List[str],
+    output_prefix: str
+):
+    """
+    Write separate alignment files for each CATH H-group.
+
+    Creates files:
+    - {prefix}_CATH_{h_group}.seed - sequences for each H-group
+    - {prefix}_NO_CATH.seed - sequences with no CATH match
+    """
+    # Group sequences by their primary CATH H-group
+    h_group_lines = defaultdict(list)
+    no_cath_lines = []
+
+    for r in results:
+        key = (r['acc'], r['seed_start'], r['seed_end'])
+        original_line = seed_lines.get(key)
+
+        if not original_line:
+            continue
+
+        # Find H-level matches
+        h_matches = [m for m in r['cath_matches'] if m['cath_level'] == 'H']
+
+        if h_matches:
+            # Use the best (highest overlap) H-group
+            best_match = max(h_matches, key=lambda x: x['overlap'])
+            h_group = best_match['cath_label']
+            h_group_lines[h_group].append(original_line)
+        else:
+            no_cath_lines.append(original_line)
+
+    # Write files for each H-group
+    files_written = []
+
+    for h_group, lines in sorted(h_group_lines.items()):
+        # Make filename safe (replace dots with underscores)
+        safe_name = h_group.replace('.', '_')
+        filename = f"{output_prefix}_CATH_{safe_name}.seed"
+
+        with open(filename, 'w') as f:
+            # Write header
+            for hline in header_lines:
+                if hline.startswith('# STOCKHOLM') or hline.startswith('#=GF'):
+                    f.write(hline + '\n')
+
+            # Add CATH annotation
+            f.write(f"#=GF CC   CATH H-group: {h_group}\n")
+            f.write(f"#=GF CC   Sequences: {len(lines)}\n")
+
+            # Write sequences
+            for line in lines:
+                f.write(line + '\n')
+
+            f.write('//\n')
+
+        files_written.append((filename, h_group, len(lines)))
+
+    # Write file for sequences with no CATH match
+    if no_cath_lines:
+        filename = f"{output_prefix}_NO_CATH.seed"
+
+        with open(filename, 'w') as f:
+            for hline in header_lines:
+                if hline.startswith('# STOCKHOLM') or hline.startswith('#=GF'):
+                    f.write(hline + '\n')
+
+            f.write(f"#=GF CC   No CATH H-group match\n")
+            f.write(f"#=GF CC   Sequences: {len(no_cath_lines)}\n")
+
+            for line in no_cath_lines:
+                f.write(line + '\n')
+
+            f.write('//\n')
+
+        files_written.append((filename, 'NO_CATH', len(no_cath_lines)))
+
+    return files_written
+
+
 def main():
     args = parse_arguments()
 
@@ -359,9 +467,18 @@ def main():
     print(f"Analyzing SEED: {args.seed_file}")
     print(f"Using TED data: {args.ted_file}")
 
-    # Parse SEED
+    # Parse SEED - get both accessions and original lines if splitting
     print("\nParsing SEED file...")
-    seed_accessions = parse_seed_accessions(args.seed_file)
+    if args.split:
+        parsed_seqs, header_lines = parse_seed_file(args.seed_file)
+        seed_accessions = [(acc, start, end) for acc, start, end, _ in parsed_seqs]
+        # Create lookup dict for original lines
+        seed_lines = {(acc, start, end): line for acc, start, end, line in parsed_seqs}
+    else:
+        seed_accessions = parse_seed_accessions(args.seed_file)
+        seed_lines = {}
+        header_lines = []
+
     print(f"  Found {len(seed_accessions)} sequences")
 
     if not seed_accessions:
@@ -385,6 +502,16 @@ def main():
     if args.output:
         write_detailed_output(results, args.output)
         print(f"\nDetailed results written to: {args.output}")
+
+    # Write split alignment files if requested
+    if args.split:
+        print("\nWriting split alignment files...")
+        files_written = write_split_alignments(
+            results, seed_lines, header_lines, args.split_prefix
+        )
+        print(f"\nSplit alignment files created:")
+        for filename, h_group, count in files_written:
+            print(f"  {filename}: {count} sequences ({h_group})")
 
     print("\nDone!")
 
