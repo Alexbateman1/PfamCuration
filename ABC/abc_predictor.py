@@ -602,7 +602,11 @@ class ABCPredictor:
         max_isolation_distance: int = 30,
     ) -> Tuple[List[Tuple[int, int]], List[int]]:
         """
-        Filter out tiny isolated segments that are far from the domain core.
+        Filter out isolated segments that are far from the domain core.
+
+        The core is built starting from the largest segment, then iteratively
+        adding segments that are close to the current core. Segments that
+        remain far from the core are removed regardless of their size.
 
         Returns:
             (filtered_segments, removed_residue_indices)
@@ -610,47 +614,63 @@ class ABCPredictor:
         if len(segments) <= 1:
             return segments, []
 
-        # Calculate segment sizes
-        seg_sizes = [(end - start + 1, start, end) for start, end in segments]
+        # Calculate segment sizes and sort by size (largest first)
+        seg_with_sizes = [(end - start + 1, start, end) for start, end in segments]
+        seg_with_sizes.sort(reverse=True)
 
-        # Find the largest segment as the "core"
-        seg_sizes.sort(reverse=True)
-        core_segments = []
-        small_segments = []
+        # Start core with the largest segment
+        largest_size, largest_start, largest_end = seg_with_sizes[0]
+        core_segments = [(largest_start, largest_end)]
+        remaining = [(s, e, sz) for sz, s, e in seg_with_sizes[1:]]
 
-        for size, start, end in seg_sizes:
-            if size >= min_segment_size:
-                core_segments.append((start, end))
-            else:
-                small_segments.append((start, end, size))
+        # Iteratively add segments that are close to current core
+        # Keep iterating until no more segments can be added
+        changed = True
+        while changed and remaining:
+            changed = False
+            still_remaining = []
 
-        # If no core segments, keep the largest one
-        if not core_segments and seg_sizes:
-            size, start, end = seg_sizes[0]
-            core_segments.append((start, end))
-            small_segments = [(s, e, sz) for sz, s, e in seg_sizes[1:]]
+            for start, end, size in remaining:
+                # Check distance to nearest core segment
+                min_dist = float('inf')
+                for core_start, core_end in core_segments:
+                    if end < core_start:
+                        dist = core_start - end
+                    elif start > core_end:
+                        dist = start - core_end
+                    else:
+                        dist = 0  # Overlapping
+                    min_dist = min(min_dist, dist)
 
-        # Check each small segment - keep only if close to a core segment
+                if min_dist <= max_isolation_distance:
+                    # Add to core - it's close enough
+                    core_segments.append((start, end))
+                    changed = True
+                else:
+                    still_remaining.append((start, end, size))
+
+            remaining = still_remaining
+
+        # All remaining segments are too far from core - remove them
         removed_residues = []
-        for start, end, size in small_segments:
-            # Check distance to nearest core segment
+        for start, end, size in remaining:
+            # Only remove if it's a small segment OR very far from core
             min_dist = float('inf')
             for core_start, core_end in core_segments:
-                # Distance is gap between segments
                 if end < core_start:
                     dist = core_start - end
                 elif start > core_end:
                     dist = start - core_end
                 else:
-                    dist = 0  # Overlapping
+                    dist = 0
                 min_dist = min(min_dist, dist)
 
-            if min_dist <= max_isolation_distance:
-                # Keep this segment, it's close to core
-                core_segments.append((start, end))
-            else:
-                # Remove this segment, it's isolated
+            # Remove if: small segment, OR far away (>50 residues)
+            if size < min_segment_size or min_dist > 50:
                 removed_residues.extend(range(start, end + 1))
+            else:
+                # Large segment that's moderately far - keep it but warn
+                core_segments.append((start, end))
 
         # Sort segments by start position
         core_segments.sort()

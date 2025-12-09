@@ -121,8 +121,9 @@ class DomainVisualizer:
         # Color each domain
         for i, domain in enumerate(prediction.domains):
             color = self.colors[i % len(self.colors)]
-            sel = self._segments_to_chimerax_selection(domain.segments)
-            lines.append(f"color {sel} {color}  # Domain {domain.domain_id}")
+            # ChimeraX: color each segment separately for reliability
+            for start, end in domain.segments:
+                lines.append(f"color :{start}-{end} {color}  # Domain {domain.domain_id}")
 
         # Color NDRs
         for ndr in prediction.ndr_regions:
