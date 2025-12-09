@@ -607,6 +607,8 @@ class ABCPredictor:
 
         # Step 6c: NOW filter by ContactRatio (after merging is complete)
         # This allows repeat protein blades to be merged before CR assessment
+        # Note: CR threshold is adjusted for larger domains since they naturally
+        # have more surface area and thus more external contacts
         if self.min_contact_ratio > 0:
             filtered_domains = []
             rejected_for_cr = []
@@ -616,7 +618,19 @@ class ABCPredictor:
                 domain.quality_metrics = metrics
                 contact_ratio = metrics.get('contact_density_ratio', 0)
 
-                if contact_ratio < self.min_contact_ratio and contact_ratio != float('inf'):
+                # Size-aware CR threshold: larger domains get a lower threshold
+                # Rationale: a 200-residue domain has ~2x the surface area of a 50-residue domain
+                # so it naturally has more external contacts and lower CR
+                if domain.size <= 50:
+                    effective_cr_threshold = self.min_contact_ratio
+                elif domain.size <= 100:
+                    effective_cr_threshold = self.min_contact_ratio * 0.8  # 20% lower
+                elif domain.size <= 200:
+                    effective_cr_threshold = self.min_contact_ratio * 0.7  # 30% lower
+                else:
+                    effective_cr_threshold = self.min_contact_ratio * 0.6  # 40% lower for large domains
+
+                if contact_ratio < effective_cr_threshold and contact_ratio != float('inf'):
                     rejected_for_cr.append({
                         'segments': domain.segments,
                         'size': domain.size,
@@ -625,7 +639,7 @@ class ABCPredictor:
                     })
                     logger.info(
                         f"Rejecting domain {domain.segments}: ContactRatio={contact_ratio:.2f} "
-                        f"< {self.min_contact_ratio} (size={domain.size}, pLDDT={metrics.get('avg_plddt', 0):.1f})"
+                        f"< {effective_cr_threshold:.2f} (size={domain.size}, pLDDT={metrics.get('avg_plddt', 0):.1f})"
                     )
                     ndr_residue_indices.update(domain.residue_indices)
                 else:
