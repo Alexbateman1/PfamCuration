@@ -624,7 +624,7 @@ class ABCPredictor:
         remaining = [(s, e, sz) for sz, s, e in seg_with_sizes[1:]]
 
         # Iteratively add segments that are close to current core
-        # Keep iterating until no more segments can be added
+        # Small segments need to be VERY close (adjacent), larger segments can be further
         changed = True
         while changed and remaining:
             changed = False
@@ -642,7 +642,14 @@ class ABCPredictor:
                         dist = 0  # Overlapping
                     min_dist = min(min_dist, dist)
 
-                if min_dist <= max_isolation_distance:
+                # Small segments (< 10 residues) must be truly adjacent (gap <= 5)
+                # Larger segments can be up to max_isolation_distance away
+                if size < 10:
+                    allowed_distance = 5  # Tiny segments must be adjacent
+                else:
+                    allowed_distance = max_isolation_distance
+
+                if min_dist <= allowed_distance:
                     # Add to core - it's close enough
                     core_segments.append((start, end))
                     changed = True

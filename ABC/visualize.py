@@ -115,7 +115,7 @@ class DomainVisualizer:
             f"# {len(prediction.domains)} domains, {len(prediction.ndr_regions)} NDR regions",
             "",
             "# Color by domain",
-            "color white  # Reset",
+            "color all white  # Reset all to white",
         ]
 
         # Color each domain
