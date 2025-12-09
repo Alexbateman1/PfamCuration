@@ -288,11 +288,13 @@ def parse_chopping(chopping_str: str, method: str) -> List[Domain]:
 
 
 def fetch_ted_predictions(uniprot_acc: str, max_retries: int = 3,
-                          retry_delay: float = 1.0) -> Optional[ProteinPredictions]:
+                          retry_delay: float = 1.0,
+                          include_consensus: bool = True) -> Optional[ProteinPredictions]:
     """
-    Fetch domain predictions from all three TED methods for a UniProt accession.
+    Fetch domain predictions from TED methods for a UniProt accession.
 
     Uses the chainparse endpoint which returns chainsaw, merizo, and unidoc-ndr predictions.
+    Also fetches the TED consensus if include_consensus is True.
     """
     url = f"{TED_API_BASE}/uniprot/chainparse/{uniprot_acc}"
 
@@ -308,12 +310,15 @@ def fetch_ted_predictions(uniprot_acc: str, max_retries: int = 3,
             data = response.json()
 
             predictions = {}
+            nres_chain = 0
 
             for item in data.get('data', []):
                 method = item.get('method', '')
                 chopping = item.get('chopping', '')
                 score = item.get('score', 0.0)
                 nres = item.get('nres_chain', 0)
+                if nres > nres_chain:
+                    nres_chain = nres
 
                 domains = parse_chopping(chopping, method)
                 for d in domains:
@@ -328,6 +333,12 @@ def fetch_ted_predictions(uniprot_acc: str, max_retries: int = 3,
                 )
                 predictions[method] = pred
 
+            # Fetch TED consensus from the consensus endpoint
+            if include_consensus:
+                consensus_pred = fetch_ted_consensus(uniprot_acc, nres_chain, max_retries, retry_delay)
+                if consensus_pred:
+                    predictions['ted_consensus'] = consensus_pred
+
             return ProteinPredictions(
                 uniprot_acc=uniprot_acc,
                 predictions=predictions
@@ -339,6 +350,60 @@ def fetch_ted_predictions(uniprot_acc: str, max_retries: int = 3,
             else:
                 print(f"Warning: Failed to fetch predictions for {uniprot_acc}: {e}",
                       file=sys.stderr)
+                return None
+
+    return None
+
+
+def fetch_ted_consensus(uniprot_acc: str, nres_chain: int = 0,
+                        max_retries: int = 3, retry_delay: float = 1.0) -> Optional[MethodPrediction]:
+    """
+    Fetch TED consensus domain predictions for a UniProt accession.
+
+    The TED consensus is derived by TED from the three method predictions.
+    """
+    url = f"{TED_API_BASE}/uniprot/consensus/{uniprot_acc}"
+
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(url, timeout=30)
+
+            if response.status_code == 404:
+                return None
+
+            response.raise_for_status()
+            data = response.json()
+
+            # Parse consensus response
+            chopping = data.get('chopping', '')
+            if not chopping:
+                # Try alternate field names
+                chopping = data.get('consensus_chopping', '')
+                if not chopping:
+                    # Check if data is a list
+                    if isinstance(data.get('data'), list):
+                        for item in data['data']:
+                            if item.get('method') == 'consensus' or 'consensus' in item.get('method', '').lower():
+                                chopping = item.get('chopping', '')
+                                break
+
+            domains = parse_chopping(chopping, 'ted_consensus')
+            score = data.get('score', 0.0)
+            nres = data.get('nres_chain', nres_chain)
+
+            return MethodPrediction(
+                method='ted_consensus',
+                uniprot_acc=uniprot_acc,
+                domains=domains,
+                nres_chain=nres,
+                score=score
+            )
+
+        except requests.exceptions.RequestException as e:
+            if attempt < max_retries - 1:
+                time.sleep(retry_delay * (attempt + 1))
+            else:
+                # Silently fail - consensus may not be available for all proteins
                 return None
 
     return None
@@ -730,6 +795,198 @@ class WeightedMethodStrategy(ConsensusStrategy):
 
 
 # ============================================================================
+# Method Consistency Scoring
+# ============================================================================
+
+@dataclass
+class MethodConsistencyScore:
+    """Consistency score for a single method across the family."""
+    method: str
+    consistency_score: float  # 0-1, higher = more consistent
+    sequences_with_predictions: int
+    sequences_in_main_cluster: int
+    total_domains_predicted: int
+    dominant_domain_count: int  # Number of domains predicted by most sequences
+    boundary_std_start: float  # Std dev of domain start positions
+    boundary_std_end: float    # Std dev of domain end positions
+
+
+def calculate_method_consistency(entries: List[SequenceEntry],
+                                  predictions: Dict[str, ProteinPredictions],
+                                  tolerance: int = 10) -> Dict[str, MethodConsistencyScore]:
+    """
+    Calculate consistency scores for each TED method across the family.
+
+    Consistency is measured by:
+    1. How many sequences have the same number of domains
+    2. How well domain boundaries cluster together
+    3. What fraction of sequences agree on domain positions
+
+    A high score means the method makes uniform predictions across the family.
+
+    Returns:
+        Dict mapping method name to MethodConsistencyScore
+    """
+    methods = ['chainsaw', 'merizo', 'unidoc-ndr', 'ted_consensus']
+    results = {}
+
+    for method in methods:
+        # Collect alignment-mapped domains for this method
+        ali_domains = []
+        sequences_with_predictions = 0
+        domain_counts = []  # Number of domains per sequence
+
+        for entry in entries:
+            pred = predictions.get(entry.base_accession)
+            if not pred or method not in pred.predictions:
+                continue
+
+            method_pred = pred.predictions[method]
+            if method_pred.domains:
+                sequences_with_predictions += 1
+                domain_counts.append(len(method_pred.domains))
+
+                for domain in method_pred.domains:
+                    ali_domain = map_domain_to_alignment(domain, entry)
+                    if ali_domain:
+                        ali_domains.append(ali_domain)
+
+        if sequences_with_predictions == 0:
+            results[method] = MethodConsistencyScore(
+                method=method,
+                consistency_score=0.0,
+                sequences_with_predictions=0,
+                sequences_in_main_cluster=0,
+                total_domains_predicted=0,
+                dominant_domain_count=0,
+                boundary_std_start=0.0,
+                boundary_std_end=0.0
+            )
+            continue
+
+        # Find dominant domain count (mode)
+        from collections import Counter
+        count_distribution = Counter(domain_counts)
+        dominant_count = count_distribution.most_common(1)[0][0]
+        seqs_with_dominant_count = count_distribution[dominant_count]
+
+        # Cluster domains by position
+        clusters = cluster_domains_by_position(ali_domains, tolerance)
+
+        # Find the largest cluster
+        main_cluster = max(clusters, key=len) if clusters else []
+        seqs_in_main = len(set(d.seq_entry.accession for d in main_cluster))
+
+        # Calculate boundary standard deviations for the main cluster
+        if main_cluster:
+            starts = [d.ali_start for d in main_cluster]
+            ends = [d.ali_end for d in main_cluster]
+            import statistics
+            std_start = statistics.stdev(starts) if len(starts) > 1 else 0.0
+            std_end = statistics.stdev(ends) if len(ends) > 1 else 0.0
+        else:
+            std_start = 0.0
+            std_end = 0.0
+
+        # Calculate consistency score components
+        # Component 1: Fraction of sequences in main cluster
+        cluster_consistency = seqs_in_main / sequences_with_predictions if sequences_with_predictions > 0 else 0
+
+        # Component 2: Domain count uniformity
+        count_uniformity = seqs_with_dominant_count / sequences_with_predictions if sequences_with_predictions > 0 else 0
+
+        # Component 3: Boundary tightness (inverse of standard deviation, normalized)
+        max_std = 50  # Consider std > 50 as very inconsistent
+        boundary_tightness = 1 - min((std_start + std_end) / 2, max_std) / max_std
+
+        # Combined consistency score (weighted average)
+        consistency_score = (
+            0.5 * cluster_consistency +
+            0.25 * count_uniformity +
+            0.25 * boundary_tightness
+        )
+
+        results[method] = MethodConsistencyScore(
+            method=method,
+            consistency_score=consistency_score,
+            sequences_with_predictions=sequences_with_predictions,
+            sequences_in_main_cluster=seqs_in_main,
+            total_domains_predicted=len(ali_domains),
+            dominant_domain_count=dominant_count,
+            boundary_std_start=std_start,
+            boundary_std_end=std_end
+        )
+
+    return results
+
+
+def get_per_method_consensus_domains(entries: List[SequenceEntry],
+                                      predictions: Dict[str, ProteinPredictions],
+                                      method: str,
+                                      tolerance: int = 10) -> List[Tuple[int, int, float]]:
+    """
+    Calculate consensus domain boundaries for a single method.
+
+    Clusters all domain predictions from this method and returns
+    the median boundaries for each cluster.
+
+    Returns:
+        List of (ali_start, ali_end, coverage) tuples for consensus domains
+    """
+    # Collect alignment-mapped domains for this method
+    ali_domains = []
+    sequences_with_predictions = set()
+
+    for entry in entries:
+        pred = predictions.get(entry.base_accession)
+        if not pred or method not in pred.predictions:
+            continue
+
+        method_pred = pred.predictions[method]
+        if method_pred.domains:
+            sequences_with_predictions.add(entry.accession)
+            for domain in method_pred.domains:
+                ali_domain = map_domain_to_alignment(domain, entry)
+                if ali_domain:
+                    ali_domains.append(ali_domain)
+
+    if not ali_domains:
+        return []
+
+    # Cluster domains by position
+    clusters = cluster_domains_by_position(ali_domains, tolerance)
+
+    # For each cluster, calculate median boundaries and coverage
+    consensus_domains = []
+    total_seqs = len(sequences_with_predictions)
+
+    for cluster in clusters:
+        if not cluster:
+            continue
+
+        # Calculate median boundaries
+        starts = sorted([d.ali_start for d in cluster])
+        ends = sorted([d.ali_end for d in cluster])
+        mid = len(starts) // 2
+        if len(starts) % 2 == 0:
+            consensus_start = (starts[mid - 1] + starts[mid]) // 2
+            consensus_end = (ends[mid - 1] + ends[mid]) // 2
+        else:
+            consensus_start = starts[mid]
+            consensus_end = ends[mid]
+
+        # Calculate coverage
+        seqs_in_cluster = len(set(d.seq_entry.accession for d in cluster))
+        coverage = seqs_in_cluster / total_seqs if total_seqs > 0 else 0
+
+        consensus_domains.append((consensus_start, consensus_end, coverage))
+
+    # Sort by start position
+    consensus_domains.sort(key=lambda x: x[0])
+    return consensus_domains
+
+
+# ============================================================================
 # Main Analysis Functions
 # ============================================================================
 
@@ -829,7 +1086,9 @@ def get_per_sequence_consensus(entries: List[SequenceEntry],
 def generate_summary_report(entries: List[SequenceEntry],
                              predictions: Dict[str, ProteinPredictions],
                              results: Dict[str, List[ConsensusResult]],
-                             output_file: str = None) -> str:
+                             output_file: str = None,
+                             consistency_scores: Dict[str, MethodConsistencyScore] = None,
+                             tolerance: int = 10) -> str:
     """
     Generate a comprehensive summary report.
     """
@@ -862,11 +1121,49 @@ def generate_summary_report(entries: List[SequenceEntry],
 
     lines.append("METHOD COVERAGE")
     lines.append("-" * 40)
-    for method in ['chainsaw', 'merizo', 'unidoc-ndr']:
+    for method in ['chainsaw', 'merizo', 'unidoc-ndr', 'ted_consensus']:
         count = method_counts.get(method, 0)
         domains = total_domains_per_method.get(method, 0)
-        lines.append(f"  {method:15s}: {count:4d} proteins, {domains:4d} total domains")
+        if count > 0 or method != 'ted_consensus':  # Always show the 3 main methods
+            lines.append(f"  {method:15s}: {count:4d} proteins, {domains:4d} total domains")
     lines.append("")
+
+    # Method Consistency Scores
+    if consistency_scores is None:
+        consistency_scores = calculate_method_consistency(entries, predictions, tolerance)
+
+    lines.append("METHOD CONSISTENCY SCORES")
+    lines.append("-" * 40)
+    lines.append("  (Higher score = more consistent predictions across the family)")
+    lines.append("")
+    lines.append(f"  {'Method':<15s}  {'Score':>8s}  {'Seqs':>5s}  {'Cluster':>7s}  {'Domains':>7s}  {'StdDev':>10s}")
+    lines.append("  " + "-" * 60)
+
+    # Sort by consistency score descending
+    sorted_methods = sorted(
+        [(m, s) for m, s in consistency_scores.items() if s.sequences_with_predictions > 0],
+        key=lambda x: x[1].consistency_score,
+        reverse=True
+    )
+
+    for method, score in sorted_methods:
+        std_str = f"{score.boundary_std_start:.1f}/{score.boundary_std_end:.1f}"
+        lines.append(
+            f"  {method:<15s}  {score.consistency_score:8.3f}  "
+            f"{score.sequences_with_predictions:5d}  {score.sequences_in_main_cluster:7d}  "
+            f"{score.total_domains_predicted:7d}  {std_str:>10s}"
+        )
+
+    lines.append("")
+    lines.append("  Legend: Seqs = sequences with predictions, Cluster = sequences in main cluster,")
+    lines.append("          Domains = total domains predicted, StdDev = boundary std dev (start/end)")
+    lines.append("")
+
+    # Best method recommendation
+    if sorted_methods:
+        best_method, best_score = sorted_methods[0]
+        lines.append(f"  ** Best method for this family: {best_method} (score: {best_score.consistency_score:.3f}) **")
+        lines.append("")
 
     # Results by strategy
     lines.append("CONSENSUS RESULTS BY STRATEGY")
@@ -984,7 +1281,7 @@ def generate_per_method_reports(entries: List[SequenceEntry],
     """
     Generate separate per-sequence domain reports for each TED method.
 
-    Creates one TSV file per method (chainsaw, merizo, unidoc-ndr) with
+    Creates one TSV file per method (chainsaw, merizo, unidoc-ndr, ted_consensus) with
     domain boundaries for each sequence.
 
     Args:
@@ -995,7 +1292,7 @@ def generate_per_method_reports(entries: List[SequenceEntry],
     Returns:
         Dict mapping method name to output file path
     """
-    methods = ['chainsaw', 'merizo', 'unidoc-ndr']
+    methods = ['chainsaw', 'merizo', 'unidoc-ndr', 'ted_consensus']
     output_files = {}
 
     for method in methods:
@@ -1214,7 +1511,7 @@ def create_all_method_visualizations(entries: List[SequenceEntry],
                                       output_prefix: str,
                                       view_mode: str = 'sequence') -> Dict[str, str]:
     """
-    Create visualization images for all three TED methods.
+    Create visualization images for all TED methods (including ted_consensus if available).
 
     Args:
         entries: List of sequence entries from alignment
@@ -1225,14 +1522,21 @@ def create_all_method_visualizations(entries: List[SequenceEntry],
     Returns:
         Dict mapping method name to output file path
     """
-    methods = ['chainsaw', 'merizo', 'unidoc-ndr']
+    methods = ['chainsaw', 'merizo', 'unidoc-ndr', 'ted_consensus']
     output_files = {}
 
     for method in methods:
-        output_file = f"{output_prefix}_{method}.png"
-        title = f"TED {method.capitalize()} Domain Predictions"
-        create_method_visualization(entries, predictions, method, output_file, title, view_mode)
-        output_files[method] = output_file
+        # Check if this method has any predictions
+        has_predictions = any(
+            method in pred.predictions and pred.predictions[method].domains
+            for pred in predictions.values()
+        )
+
+        if has_predictions:
+            output_file = f"{output_prefix}_{method}.png"
+            title = f"TED {method.replace('_', ' ').title()} Domain Predictions"
+            create_method_visualization(entries, predictions, method, output_file, title, view_mode)
+            output_files[method] = output_file
 
     return output_files
 
@@ -1413,6 +1717,209 @@ def create_consensus_visualization(entries: List[SequenceEntry],
     print(f"Created consensus visualization: {output_file}", file=sys.stderr)
 
 
+def create_computed_consensus_visualization(entries: List[SequenceEntry],
+                                             predictions: Dict[str, ProteinPredictions],
+                                             method: str,
+                                             output_file: str,
+                                             tolerance: int = 10,
+                                             title: str = None):
+    """
+    Create a visualization showing computed consensus domains for a single method.
+
+    Shows each sequence with:
+    - Grey backbone representing the protein length
+    - Colored consensus domains (computed from clustering all predictions)
+    - Black outline box for SEED region
+
+    The consensus domains are computed by clustering all domain predictions
+    from this method across all sequences and taking the median boundaries.
+
+    Args:
+        entries: List of sequence entries from alignment
+        predictions: Dict of protein predictions
+        method: Method name ('chainsaw', 'merizo', 'unidoc-ndr', 'ted_consensus')
+        output_file: Output PNG file path
+        tolerance: Tolerance for boundary clustering
+        title: Optional title for the figure
+    """
+    try:
+        import matplotlib
+        matplotlib.use('Agg')
+        import matplotlib.pyplot as plt
+        import matplotlib.patches as patches
+    except ImportError:
+        print(f"Warning: matplotlib not available, skipping {method} consensus visualization", file=sys.stderr)
+        return
+
+    # Get computed consensus domains for this method (in alignment coordinates)
+    consensus_domains = get_per_method_consensus_domains(entries, predictions, method, tolerance)
+
+    if not consensus_domains:
+        print(f"Warning: No consensus domains found for {method}", file=sys.stderr)
+        return
+
+    # Color scheme for consensus domains
+    domain_colors = ['#4A79A7', '#F28E2C', '#E15759', '#76B7B2', '#59A14F',
+                     '#EDC949', '#AF7AA1', '#FF9DA7', '#9C755F', '#BAB0AB']
+
+    # Calculate dimensions
+    row_height = 25
+    margin_left = 180
+    margin_right = 100
+    margin_top = 70
+    margin_bottom = 30
+
+    # Use alignment coordinates
+    ali_length = len(entries[0].aligned_seq) if entries else 0
+    pixels_per_unit = 2
+    max_length = ali_length
+
+    fig_width = margin_left + (max_length * pixels_per_unit) + margin_right
+    fig_height = margin_top + (len(entries) * row_height) + margin_bottom
+
+    # Create figure
+    fig, ax = plt.subplots(figsize=(fig_width / 100, fig_height / 100), dpi=100)
+    ax.set_xlim(0, fig_width)
+    ax.set_ylim(0, fig_height)
+    ax.axis('off')
+
+    # Add title
+    if title is None:
+        title = f"Computed Consensus Domains - {method}"
+    ax.text(fig_width / 2, fig_height - 12, title,
+            ha='center', va='top', fontsize=11, weight='bold')
+
+    # Add legend for consensus domains
+    legend_y = fig_height - 35
+    legend_x = margin_left
+    ax.text(legend_x - 10, legend_y, "Consensus domains:", fontsize=8, va='center')
+    for i, (ali_start, ali_end, coverage) in enumerate(consensus_domains):
+        x = legend_x + 100 + i * 120
+        color = domain_colors[i % len(domain_colors)]
+        legend_box = patches.Rectangle(
+            (x, legend_y - 4), 12, 8,
+            linewidth=1, edgecolor='black', facecolor=color, alpha=0.8
+        )
+        ax.add_patch(legend_box)
+        ax.text(x + 16, legend_y, f"D{i+1} ({coverage:.0%})", fontsize=8, va='center')
+
+    # Add axis labels
+    ax.text(margin_left, fig_height - margin_top + 10, "1",
+            ha='left', va='bottom', fontsize=8)
+    ax.text(margin_left + max_length * pixels_per_unit, fig_height - margin_top + 10,
+            str(ali_length), ha='right', va='bottom', fontsize=8)
+    ax.text(margin_left + (max_length * pixels_per_unit) / 2, fig_height - margin_top + 10,
+            "Alignment Position", ha='center', va='bottom', fontsize=9)
+
+    # Draw each sequence
+    current_y = fig_height - margin_top - row_height / 2
+
+    for entry in entries:
+        # Draw label
+        label = f"{entry.accession}"
+        ax.text(margin_left - 5, current_y, label,
+                ha='right', va='center', fontsize=7, family='monospace')
+
+        # Draw backbone (alignment length)
+        backbone_length = len(entry.aligned_seq)
+        backbone_height = 6
+        backbone = patches.Rectangle(
+            (margin_left, current_y - backbone_height / 2),
+            backbone_length * pixels_per_unit, backbone_height,
+            linewidth=0, facecolor='#CCCCCC'
+        )
+        ax.add_patch(backbone)
+
+        # Draw consensus domains
+        for i, (ali_start, ali_end, coverage) in enumerate(consensus_domains):
+            color = domain_colors[i % len(domain_colors)]
+            domain_x = margin_left + (ali_start - 1) * pixels_per_unit
+            domain_width = (ali_end - ali_start + 1) * pixels_per_unit
+
+            domain_height = 16
+            domain_rect = patches.Rectangle(
+                (domain_x, current_y - domain_height / 2),
+                domain_width, domain_height,
+                linewidth=1, edgecolor='black', facecolor=color, alpha=0.8
+            )
+            ax.add_patch(domain_rect)
+
+            # Add domain label if space permits
+            if domain_width > 30:
+                label_text = f"D{i + 1}"
+                ax.text(domain_x + domain_width / 2, current_y,
+                        label_text, ha='center', va='center',
+                        fontsize=6, weight='bold', color='white')
+
+        # Draw SEED region (mapped to alignment coordinates)
+        seq_to_ali = build_seq_to_ali_map(entry.aligned_seq, entry.region_start)
+        if entry.region_start in seq_to_ali and entry.region_end in seq_to_ali:
+            seed_ali_start = seq_to_ali[entry.region_start]
+            seed_ali_end = seq_to_ali[entry.region_end]
+            seed_x = margin_left + (seed_ali_start - 1) * pixels_per_unit
+            seed_width = (seed_ali_end - seed_ali_start + 1) * pixels_per_unit
+            seed_height = 22
+            seed_rect = patches.Rectangle(
+                (seed_x, current_y - seed_height / 2),
+                seed_width, seed_height,
+                linewidth=2, edgecolor='black', facecolor='none'
+            )
+            ax.add_patch(seed_rect)
+
+        current_y -= row_height
+
+    # Add summary info
+    info_text = f"Consensus domains: {len(consensus_domains)}, Tolerance: {tolerance} residues"
+    ax.text(fig_width / 2, 10, info_text, ha='center', va='bottom', fontsize=8, style='italic')
+
+    # Save figure
+    plt.tight_layout()
+    plt.savefig(output_file, dpi=100, bbox_inches='tight', facecolor='white')
+    plt.close()
+
+    print(f"Created {method} computed consensus visualization: {output_file}", file=sys.stderr)
+
+
+def create_all_computed_consensus_visualizations(entries: List[SequenceEntry],
+                                                  predictions: Dict[str, ProteinPredictions],
+                                                  output_prefix: str,
+                                                  tolerance: int = 10) -> Dict[str, str]:
+    """
+    Create computed consensus domain visualizations for all methods.
+
+    These images show the consensus domains computed by clustering all predictions
+    from each method, rather than the raw individual predictions.
+
+    Args:
+        entries: List of sequence entries from alignment
+        predictions: Dict of protein predictions
+        output_prefix: Prefix for output files
+        tolerance: Tolerance for boundary clustering
+
+    Returns:
+        Dict mapping method name to output file path
+    """
+    methods = ['chainsaw', 'merizo', 'unidoc-ndr', 'ted_consensus']
+    output_files = {}
+
+    for method in methods:
+        # Check if this method has any predictions
+        has_predictions = any(
+            method in pred.predictions and pred.predictions[method].domains
+            for pred in predictions.values()
+        )
+
+        if has_predictions:
+            output_file = f"{output_prefix}_{method}_computed_consensus.png"
+            title = f"Computed Consensus Domains - {method}"
+            create_computed_consensus_visualization(
+                entries, predictions, method, output_file, tolerance, title
+            )
+            output_files[method] = output_file
+
+    return output_files
+
+
 # ============================================================================
 # Mock Data for Testing
 # ============================================================================
@@ -1422,12 +1929,13 @@ def generate_mock_predictions(entries: List[SequenceEntry]) -> Dict[str, Protein
     Generate mock TED predictions for testing without network access.
 
     Creates realistic-looking domain predictions based on sequence regions.
+    Includes all four methods: chainsaw, merizo, unidoc-ndr, and ted_consensus.
     """
     import random
     random.seed(42)  # Reproducible mock data
 
     predictions = {}
-    methods = ['chainsaw', 'merizo', 'unidoc-ndr']
+    methods = ['chainsaw', 'merizo', 'unidoc-ndr', 'ted_consensus']
 
     for entry in entries:
         # Create predictions for each method with slight variations
@@ -1440,7 +1948,12 @@ def generate_mock_predictions(entries: List[SequenceEntry]) -> Dict[str, Protein
 
         for method in methods:
             # Add random variation to boundaries (±5 residues)
-            variation = random.randint(-5, 5)
+            # ted_consensus has less variation (more consistent)
+            if method == 'ted_consensus':
+                variation = random.randint(-2, 2)
+            else:
+                variation = random.randint(-5, 5)
+
             start = max(1, base_start + variation)
             end = base_end + random.randint(-3, 3)
 
@@ -1485,8 +1998,13 @@ Examples:
     python ted_family_consensus.py SEED --strategy combined --tolerance 15
     python ted_family_consensus.py SEED --all-strategies
     python ted_family_consensus.py SEED --per-method domains  # Creates domains_chainsaw.tsv, etc.
-    python ted_family_consensus.py SEED --images family       # Creates family_chainsaw.png, etc.
-    python ted_family_consensus.py SEED --images family --view-mode alignment  # Alignment view
+    python ted_family_consensus.py SEED --images family       # Raw prediction images
+    python ted_family_consensus.py SEED --consensus-images family  # Computed consensus images
+    python ted_family_consensus.py SEED --images family --consensus-images family  # Both types
+
+Output Images:
+    --images PREFIX creates raw prediction images showing domains as predicted by each method
+    --consensus-images PREFIX creates computed consensus images showing clustered domain boundaries
 
 Consensus Strategies:
     majority         - Score by fraction of sequences with the domain
@@ -1495,6 +2013,11 @@ Consensus Strategies:
     any_two_methods  - Require at least 2 methods to agree
     all_three_methods - Require all 3 methods to agree
     weighted_method  - Weight methods by reliability (customizable)
+
+Method Consistency Scores:
+    The report includes a consistency score (0-1) for each method measuring how
+    uniformly it predicts domains across all sequences in the family. Higher
+    scores indicate the method is more reliable for this particular family.
         """
     )
 
@@ -1516,6 +2039,8 @@ Consensus Strategies:
                         help="Generate per-method TSV files (PREFIX_chainsaw.tsv, PREFIX_merizo.tsv, PREFIX_unidoc-ndr.tsv)")
     parser.add_argument("--images", metavar="PREFIX",
                         help="Generate visualization images (PREFIX_chainsaw.png, PREFIX_merizo.png, PREFIX_unidoc-ndr.png, PREFIX_consensus.png)")
+    parser.add_argument("--consensus-images", metavar="PREFIX",
+                        help="Generate computed consensus domain images for each method (PREFIX_chainsaw_computed_consensus.png, etc.)")
     parser.add_argument("--view-mode", choices=['sequence', 'alignment'], default='sequence',
                         help="Image view mode: 'sequence' (proteins at actual length with SEED box) or 'alignment' (domains mapped to alignment coordinates)")
     parser.add_argument("--mock", action="store_true",
@@ -1586,8 +2111,16 @@ Consensus Strategies:
         min_score=args.min_score
     )
 
+    # Calculate method consistency scores
+    if args.verbose:
+        print("Calculating method consistency scores...", file=sys.stderr)
+    consistency_scores = calculate_method_consistency(entries, predictions, args.tolerance)
+
     # Generate reports
-    summary_report = generate_summary_report(entries, predictions, results, args.output)
+    summary_report = generate_summary_report(
+        entries, predictions, results, args.output,
+        consistency_scores=consistency_scores, tolerance=args.tolerance
+    )
 
     if not args.output:
         print(summary_report)
@@ -1633,6 +2166,18 @@ Consensus Strategies:
         create_consensus_visualization(entries, predictions, consensus_file, view_mode=args.view_mode)
         if args.verbose:
             print(f"  consensus: {consensus_file}", file=sys.stderr)
+
+    # Computed consensus images (per-method)
+    if args.consensus_images:
+        if args.verbose:
+            print(f"Generating computed consensus domain images...", file=sys.stderr)
+
+        consensus_image_files = create_all_computed_consensus_visualizations(
+            entries, predictions, args.consensus_images, tolerance=args.tolerance
+        )
+        for method, filepath in consensus_image_files.items():
+            if args.verbose:
+                print(f"  {method}: {filepath}", file=sys.stderr)
 
     if args.verbose:
         print("Analysis complete!", file=sys.stderr)
