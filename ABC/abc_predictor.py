@@ -889,14 +889,21 @@ class ABCPredictor:
         domains: List[Domain],
     ) -> List[NDRRegion]:
         """Build NDR regions from collected indices."""
-        # Get all indices covered by domains
+        # Get all indices covered by domains - use SEGMENTS not residue_indices
+        # This ensures continuous domains don't have internal NDR holes
         domain_indices = set()
         for domain in domains:
-            domain_indices.update(domain.residue_indices)
+            for seg_start, seg_end in domain.segments:
+                # Find all residue indices within this segment range
+                for idx, res in enumerate(residues):
+                    if seg_start <= res.resnum <= seg_end:
+                        domain_indices.add(idx)
 
         # All remaining indices are NDR
         all_ndr = set(range(len(residues))) - domain_indices
         all_ndr.update(ndr_indices)
+        # Remove any indices that are within domain segments
+        all_ndr -= domain_indices
 
         if not all_ndr:
             return []
