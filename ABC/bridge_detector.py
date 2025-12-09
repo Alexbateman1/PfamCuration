@@ -24,7 +24,7 @@ if TYPE_CHECKING:
     from .abc_predictor import Residue
 
 
-@dataclass
+@dataclass(frozen=True)
 class Bridge:
     """A long-range contact between sequence-distant residues."""
     start_idx: int  # Index of first residue (earlier in sequence)
