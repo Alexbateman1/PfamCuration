@@ -31,6 +31,10 @@ def main():
                         help="Minimum domain size (default: 30)")
     parser.add_argument("--output", "-o", type=str, default=None,
                         help="Output filename prefix (default: UniProt accession)")
+    parser.add_argument("--debug", action="store_true",
+                        help="Show debug information about clustering and NDR detection")
+    parser.add_argument("--debug-region", type=str, default=None,
+                        help="Focus debug output on specific region (e.g., '1014-1085')")
 
     args = parser.parse_args()
 
@@ -41,8 +45,11 @@ def main():
         resolution=args.resolution,
     )
 
-    # Run prediction
-    prediction = predictor.predict_from_uniprot(args.uniprot)
+    # Run prediction (with debug if requested)
+    if args.debug:
+        prediction = predictor.predict_from_uniprot_debug(args.uniprot, args.debug_region)
+    else:
+        prediction = predictor.predict_from_uniprot(args.uniprot)
 
     # Print summary
     print(prediction.summary())

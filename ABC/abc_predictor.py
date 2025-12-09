@@ -302,6 +302,158 @@ class ABCPredictor:
 
             return self.predict_from_file(str(cif_path), str(pae_path) if pae_path else None, uniprot_acc)
 
+    def predict_from_uniprot_debug(self, uniprot_acc: str, debug_region: Optional[str] = None) -> ABCPrediction:
+        """
+        Predict domains with debug output to understand classification decisions.
+
+        Parameters:
+        -----------
+        uniprot_acc : str
+            UniProt accession
+        debug_region : str, optional
+            Region to focus debug output on (e.g., '1014-1085')
+        """
+        import tempfile
+
+        # Parse debug region
+        region_start, region_end = None, None
+        if debug_region:
+            parts = debug_region.split('-')
+            if len(parts) == 2:
+                region_start, region_end = int(parts[0]), int(parts[1])
+
+        # Download structure
+        logger.info(f"Downloading AlphaFold model for {uniprot_acc}")
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            cif_path = Path(tmpdir) / f"{uniprot_acc}.cif"
+            pae_path = Path(tmpdir) / f"{uniprot_acc}_pae.json"
+
+            versions = ["v6", "v4", "v3", "v2"]
+            cif_downloaded = False
+
+            for version in versions:
+                cif_url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-model_{version}.cif"
+                try:
+                    urllib.request.urlretrieve(cif_url, cif_path)
+                    logger.info(f"Downloaded structure ({version})")
+                    cif_downloaded = True
+
+                    pae_url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-predicted_aligned_error_{version}.json"
+                    try:
+                        urllib.request.urlretrieve(pae_url, pae_path)
+                        logger.info(f"Downloaded PAE ({version})")
+                    except Exception:
+                        pae_path = None
+                    break
+                except Exception:
+                    continue
+
+            if not cif_downloaded:
+                raise RuntimeError(f"Failed to download structure for {uniprot_acc}")
+
+            # Parse structure
+            residues = self._parse_structure(str(cif_path))
+            pae_matrix = self._load_pae(str(pae_path)) if pae_path else None
+
+            # DEBUG: Show pLDDT for region of interest
+            print("\n" + "="*60)
+            print("DEBUG: pLDDT Analysis")
+            print("="*60)
+
+            if region_start and region_end:
+                print(f"\nRegion of interest: {region_start}-{region_end}")
+                print("\npLDDT values in region:")
+                region_plddts = []
+                for res in residues:
+                    if region_start <= res.resnum <= region_end:
+                        region_plddts.append(res.plddt)
+                        if res.resnum % 10 == 0 or res.resnum == region_start or res.resnum == region_end:
+                            print(f"  Residue {res.resnum}: pLDDT = {res.plddt:.1f}")
+
+                print(f"\nRegion statistics ({region_start}-{region_end}):")
+                print(f"  Average pLDDT: {np.mean(region_plddts):.1f}")
+                print(f"  Min pLDDT: {np.min(region_plddts):.1f}")
+                print(f"  Max pLDDT: {np.max(region_plddts):.1f}")
+                print(f"  Residues above 70: {sum(1 for p in region_plddts if p >= 70)}/{len(region_plddts)}")
+                print(f"  Residues above 60: {sum(1 for p in region_plddts if p >= 60)}/{len(region_plddts)}")
+
+                # Show context around the region
+                print(f"\nContext around region:")
+                for res in residues:
+                    if region_start - 20 <= res.resnum <= region_end + 20:
+                        marker = " <--" if region_start <= res.resnum <= region_end else ""
+                        if res.resnum % 5 == 0 or res.resnum in [region_start, region_end]:
+                            print(f"  {res.resnum}: pLDDT={res.plddt:.1f}{marker}")
+
+            # Build graph and cluster
+            print("\n" + "="*60)
+            print("DEBUG: Clustering Analysis")
+            print("="*60)
+
+            graph = self.graph_builder.build(residues, pae_matrix)
+            cluster_assignments = self._cluster_graph(graph)
+
+            # Show what clusters the region belongs to
+            if region_start and region_end:
+                print(f"\nCluster assignments in region {region_start}-{region_end}:")
+                cluster_counts = {}
+                for res in residues:
+                    if region_start <= res.resnum <= region_end:
+                        idx = res.index
+                        cluster = cluster_assignments.get(idx, -1)
+                        cluster_counts[cluster] = cluster_counts.get(cluster, 0) + 1
+
+                for cluster, count in sorted(cluster_counts.items(), key=lambda x: -x[1]):
+                    print(f"  Cluster {cluster}: {count} residues")
+
+                # Show contacts within region
+                print(f"\nContact analysis for region:")
+                region_indices = [res.index for res in residues if region_start <= res.resnum <= region_end]
+                internal_contacts = 0
+                external_contacts = 0
+                for idx in region_indices:
+                    if idx in graph:
+                        for neighbor in graph.neighbors(idx):
+                            if neighbor in region_indices:
+                                internal_contacts += 1
+                            else:
+                                external_contacts += 1
+                internal_contacts //= 2  # Each edge counted twice
+                print(f"  Internal contacts: {internal_contacts}")
+                print(f"  External contacts: {external_contacts}")
+
+            # Run NDR detection and show which methods flag the region
+            print("\n" + "="*60)
+            print("DEBUG: NDR Detection Analysis")
+            print("="*60)
+
+            low_plddt_ndr = self.ndr_detector._detect_low_plddt(residues)
+            isolated_ndr = self.ndr_detector._detect_isolated(residues, graph)
+            terminal_ndr = self.ndr_detector._detect_terminal_disorder(residues)
+
+            if region_start and region_end:
+                region_indices = set(res.index for res in residues if region_start <= res.resnum <= region_end)
+
+                low_plddt_in_region = region_indices & low_plddt_ndr
+                isolated_in_region = region_indices & isolated_ndr
+                terminal_in_region = region_indices & terminal_ndr
+
+                print(f"\nNDR flags in region {region_start}-{region_end}:")
+                print(f"  Flagged by low_plddt: {len(low_plddt_in_region)}/{len(region_indices)} residues")
+                print(f"  Flagged by isolated: {len(isolated_in_region)}/{len(region_indices)} residues")
+                print(f"  Flagged by terminal_disorder: {len(terminal_in_region)}/{len(region_indices)} residues")
+
+                total_flagged = region_indices & (low_plddt_ndr | isolated_ndr | terminal_ndr)
+                print(f"  Total flagged as NDR: {len(total_flagged)}/{len(region_indices)} residues")
+
+            print("\n" + "="*60)
+            print("Proceeding with normal prediction...")
+            print("="*60 + "\n")
+
+            # Now run normal prediction
+            return self._predict(residues, pae_matrix, uniprot_acc)
+
     def _parse_structure(self, pdb_path: str) -> List[Residue]:
         """Parse PDB/CIF file and extract Cα coordinates and pLDDT scores."""
         from Bio.PDB import MMCIFParser, PDBParser
@@ -391,6 +543,12 @@ class ABCPredictor:
         # Step 3: Identify NDRs (low pLDDT, isolated residues)
         logger.info("Identifying NDR regions...")
         ndr_residue_indices = self.ndr_detector.detect(residues, cluster_assignments, graph)
+
+        # Step 3b: Rescue structured regions with moderate pLDDT
+        # Some domains have moderate pLDDT (50-70) but are still structured
+        ndr_residue_indices = self._rescue_structured_regions(
+            residues, cluster_assignments, graph, ndr_residue_indices
+        )
 
         # Step 4: Build initial domains from clusters
         raw_domains = self._build_domains_from_clusters(residues, cluster_assignments, ndr_residue_indices)
@@ -503,6 +661,104 @@ class ABCPredictor:
                 return assignments
 
         raise ValueError(f"Unknown clustering method: {self.clustering_method}")
+
+    def _rescue_structured_regions(
+        self,
+        residues: List[Residue],
+        cluster_assignments: Dict[int, int],
+        graph,
+        ndr_indices: set,
+    ) -> set:
+        """
+        Rescue structured regions that were marked as NDR due to moderate pLDDT.
+
+        Some domains have pLDDT in the 50-70 range but are still well-structured.
+        We rescue regions that:
+        1. Form a coherent cluster (same cluster assignment)
+        2. Have good internal contact density
+        3. Have reasonable pLDDT (>= 50)
+        4. Have sufficient size (>= min_domain_size)
+
+        Returns:
+            Updated NDR indices with rescued residues removed
+        """
+        if not ndr_indices:
+            return ndr_indices
+
+        # Group NDR residues by their cluster assignment
+        ndr_by_cluster = {}
+        for idx in ndr_indices:
+            cluster = cluster_assignments.get(idx, -1)
+            if cluster == -1:
+                continue  # Skip unassigned residues
+            if cluster not in ndr_by_cluster:
+                ndr_by_cluster[cluster] = []
+            ndr_by_cluster[cluster].append(idx)
+
+        rescued = set()
+        moderate_plddt_threshold = 50.0  # Lower threshold for potential rescue
+
+        for cluster_id, indices in ndr_by_cluster.items():
+            if len(indices) < self.min_domain_size:
+                continue
+
+            # Check average pLDDT of the cluster
+            avg_plddt = np.mean([residues[i].plddt for i in indices])
+            if avg_plddt < moderate_plddt_threshold:
+                continue  # Too low pLDDT, likely truly disordered
+
+            # Check if the cluster is contiguous (not scattered)
+            sorted_indices = sorted(indices)
+            max_gap = 0
+            for i in range(1, len(sorted_indices)):
+                gap = sorted_indices[i] - sorted_indices[i-1]
+                max_gap = max(max_gap, gap)
+
+            if max_gap > 20:  # Too fragmented
+                continue
+
+            # Check internal contact density
+            internal_contacts = 0
+            external_contacts = 0
+            for idx in indices:
+                if idx not in graph:
+                    continue
+                for neighbor in graph.neighbors(idx):
+                    if neighbor in indices:
+                        internal_contacts += 1
+                    else:
+                        external_contacts += 1
+
+            internal_contacts //= 2  # Each edge counted twice
+
+            # Calculate contact density ratio
+            if external_contacts > 0:
+                contact_ratio = internal_contacts / external_contacts
+            else:
+                contact_ratio = internal_contacts if internal_contacts > 0 else 0
+
+            # Calculate internal contact density (contacts per residue)
+            contacts_per_residue = (internal_contacts * 2) / len(indices)
+
+            # Rescue if:
+            # - Good contact ratio (internal > external) OR
+            # - High internal contact density (>= 3 contacts/residue on average)
+            # - AND pLDDT is not terrible
+            should_rescue = (
+                (contact_ratio >= 1.0 or contacts_per_residue >= 3.0) and
+                avg_plddt >= moderate_plddt_threshold
+            )
+
+            if should_rescue:
+                logger.info(
+                    f"Rescuing cluster {cluster_id} from NDR: "
+                    f"{len(indices)} residues, pLDDT={avg_plddt:.1f}, "
+                    f"contact_ratio={contact_ratio:.2f}, contacts/res={contacts_per_residue:.1f}"
+                )
+                rescued.update(indices)
+
+        # Return NDR indices with rescued residues removed
+        return ndr_indices - rescued
 
     def _build_domains_from_clusters(
         self,

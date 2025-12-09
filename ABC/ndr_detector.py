@@ -88,26 +88,37 @@ class NDRDetector:
         """
         Identify residues with low pLDDT scores.
 
-        Uses a sliding window approach to identify regions
-        (not just individual residues) with low confidence.
+        Uses a conservative approach to only mark truly disordered regions,
+        not moderate-pLDDT regions that might still have structure.
+
+        The rescue mechanism will recover structured regions with moderate pLDDT
+        based on contact density analysis.
         """
         n = len(residues)
         ndr = set()
 
-        # Sliding window for low pLDDT regions
-        window_size = 5
+        # Very low pLDDT threshold - below this is almost certainly disordered
+        very_low_threshold = self.plddt_cutoff - 20  # 50 by default
+
+        # Sliding window for truly disordered regions
+        # Use a larger window (10 residues) and stricter threshold
+        window_size = 10
         for i in range(n - window_size + 1):
             window_plddt = [residues[j].plddt for j in range(i, i + window_size)]
             avg_plddt = np.mean(window_plddt)
+            min_plddt = np.min(window_plddt)
 
-            if avg_plddt < self.plddt_cutoff:
+            # Only mark as NDR if the window is consistently very low pLDDT
+            # This is conservative - borderline cases will be handled by rescue
+            if avg_plddt < very_low_threshold and min_plddt < very_low_threshold:
                 # Mark entire window as NDR
                 for j in range(i, i + window_size):
                     ndr.add(j)
 
-        # Also mark individual very low pLDDT residues
+        # Also mark individual very low pLDDT residues (< 40)
+        # These are almost certainly disordered
         for i, res in enumerate(residues):
-            if res.plddt < self.plddt_cutoff - 10:  # Extra stringent cutoff
+            if res.plddt < 40:
                 ndr.add(i)
 
         return ndr
@@ -146,21 +157,44 @@ class NDRDetector:
 
         Terminal regions often have lower pLDDT and should be marked as NDR
         if they don't fold into the protein core.
+
+        IMPORTANT: We're conservative here - only mark truly disordered tails,
+        not moderate-pLDDT regions that might still be structured.
+        The rescue mechanism will handle borderline cases.
         """
         n = len(residues)
         ndr = set()
 
-        # Check N-terminus
-        for i in range(min(30, n)):
-            if residues[i].plddt < self.plddt_cutoff:
-                ndr.add(i)
-            else:
-                break  # Stop when we hit good confidence
+        # More conservative approach: only mark regions with consistently
+        # LOW pLDDT (< plddt_cutoff - 10, i.e., < 60 by default)
+        very_low_threshold = self.plddt_cutoff - 10  # 60 by default
 
-        # Check C-terminus
-        for i in range(n - 1, max(n - 31, -1), -1):
-            if residues[i].plddt < self.plddt_cutoff:
+        # Check N-terminus - only truly disordered tails
+        for i in range(min(30, n)):
+            if residues[i].plddt < very_low_threshold:
                 ndr.add(i)
+            elif residues[i].plddt < self.plddt_cutoff:
+                # Moderate pLDDT - check if surrounded by very low pLDDT
+                # Only mark as NDR if next few residues are also low
+                window = [residues[j].plddt for j in range(i, min(i + 5, n))]
+                if np.mean(window) < very_low_threshold:
+                    ndr.add(i)
+                else:
+                    break  # Stop - might be start of structured region
+            else:
+                break  # Good confidence, stop
+
+        # Check C-terminus - only truly disordered tails
+        for i in range(n - 1, max(n - 31, -1), -1):
+            if residues[i].plddt < very_low_threshold:
+                ndr.add(i)
+            elif residues[i].plddt < self.plddt_cutoff:
+                # Moderate pLDDT - check if surrounded by very low pLDDT
+                window = [residues[j].plddt for j in range(max(0, i - 4), i + 1)]
+                if np.mean(window) < very_low_threshold:
+                    ndr.add(i)
+                else:
+                    break  # Stop - might be end of structured region
             else:
                 break
 
