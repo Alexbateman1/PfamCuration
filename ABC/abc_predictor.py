@@ -456,10 +456,11 @@ class ABCPredictor:
                 ig_graph = ig.Graph(n=len(mapping), edges=edges, directed=False)
                 ig_graph.es["weight"] = weights
 
-                # Run Leiden
+                # Run Leiden with Modularity (more robust than CPM for variable weights)
+                # Use RBConfigurationVertexPartition for resolution parameter support
                 partition = la.find_partition(
                     ig_graph,
-                    la.CPMVertexPartition,
+                    la.RBConfigurationVertexPartition,
                     weights="weight",
                     resolution_parameter=self.resolution,
                 )
