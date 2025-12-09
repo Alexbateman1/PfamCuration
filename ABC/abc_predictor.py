@@ -413,6 +413,10 @@ class ABCPredictor:
         logger.info("Refining domain boundaries...")
         domains = self._refine_domains(domains, residues, graph)
 
+        # Step 6b: Resolve interdigitations and enforce continuity
+        domains, extra_ndr = self._enforce_domain_continuity(domains, residues)
+        ndr_residue_indices.update(extra_ndr)
+
         # Renumber domains
         for i, domain in enumerate(domains):
             domain.domain_id = i + 1
@@ -756,6 +760,127 @@ class ABCPredictor:
                 final_domains.append(merged_domain)
 
         return final_domains
+
+    def _enforce_domain_continuity(
+        self,
+        domains: List[Domain],
+        residues: List[Residue],
+    ) -> Tuple[List[Domain], set]:
+        """
+        Enforce domain continuity by:
+        1. Resolving interdigitations (small segments of one domain within another's range)
+        2. Filling small internal gaps within domains
+        3. Converting boundary interdigitations to NDR
+
+        Returns:
+            (cleaned_domains, residues_to_add_to_ndr)
+        """
+        if not domains:
+            return domains, set()
+
+        extra_ndr = set()
+
+        # First, identify each domain's "primary range" (min to max residue number)
+        domain_ranges = []
+        for domain in domains:
+            all_resnums = []
+            for start, end in domain.segments:
+                all_resnums.extend(range(start, end + 1))
+            if all_resnums:
+                domain_ranges.append((min(all_resnums), max(all_resnums), domain))
+
+        # Sort domains by their start position
+        domain_ranges.sort(key=lambda x: x[0])
+
+        # Check for interdigitations: small segments of domain A within domain B's range
+        cleaned_domains = []
+        for i, (start_i, end_i, domain_i) in enumerate(domain_ranges):
+            new_segments = []
+            removed_indices = set()
+
+            for seg_start, seg_end in domain_i.segments:
+                seg_size = seg_end - seg_start + 1
+                seg_dominated = False
+
+                # Check if this segment is "dominated" by another domain
+                for j, (start_j, end_j, domain_j) in enumerate(domain_ranges):
+                    if i == j:
+                        continue
+
+                    # Is this segment entirely within another domain's main range?
+                    # And is that other domain much larger in this region?
+                    if seg_start >= start_j and seg_end <= end_j:
+                        # This segment is within domain_j's range
+                        # Check if domain_j has substantial presence here
+                        j_residues_in_range = sum(
+                            1 for s, e in domain_j.segments
+                            for r in range(s, e + 1)
+                            if r >= seg_start - 20 and r <= seg_end + 20
+                        )
+
+                        # If the other domain has more residues nearby, this segment is an intrusion
+                        if j_residues_in_range > seg_size * 2 and seg_size < 15:
+                            seg_dominated = True
+                            # Mark these residues for NDR
+                            for idx in domain_i.residue_indices:
+                                if seg_start <= residues[idx].resnum <= seg_end:
+                                    removed_indices.add(idx)
+                                    extra_ndr.add(idx)
+                            break
+
+                if not seg_dominated:
+                    new_segments.append((seg_start, seg_end))
+
+            if new_segments:
+                # Merge adjacent segments (fill small gaps)
+                merged_segments = self._merge_adjacent_segments(new_segments, max_gap=10)
+
+                # Update domain
+                new_indices = [idx for idx in domain_i.residue_indices if idx not in removed_indices]
+
+                # Also add indices for filled gaps
+                for seg_start, seg_end in merged_segments:
+                    for idx, res in enumerate(residues):
+                        if seg_start <= res.resnum <= seg_end and idx not in new_indices:
+                            new_indices.append(idx)
+
+                new_indices = sorted(set(new_indices))
+
+                if len(new_indices) >= self.min_domain_size:
+                    cleaned_domains.append(Domain(
+                        domain_id=domain_i.domain_id,
+                        segments=merged_segments,
+                        residue_indices=new_indices,
+                        quality_metrics=domain_i.quality_metrics,
+                    ))
+                else:
+                    # Domain too small after cleaning, convert to NDR
+                    extra_ndr.update(new_indices)
+
+        return cleaned_domains, extra_ndr
+
+    def _merge_adjacent_segments(
+        self,
+        segments: List[Tuple[int, int]],
+        max_gap: int = 10,
+    ) -> List[Tuple[int, int]]:
+        """Merge segments that are separated by small gaps."""
+        if not segments:
+            return []
+
+        sorted_segs = sorted(segments)
+        merged = [sorted_segs[0]]
+
+        for start, end in sorted_segs[1:]:
+            prev_start, prev_end = merged[-1]
+
+            # If gap is small enough, merge
+            if start - prev_end <= max_gap:
+                merged[-1] = (prev_start, end)
+            else:
+                merged.append((start, end))
+
+        return merged
 
     def _build_ndr_regions(
         self,
