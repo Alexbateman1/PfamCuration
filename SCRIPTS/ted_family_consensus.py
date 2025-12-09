@@ -1934,6 +1934,196 @@ def create_all_computed_consensus_visualizations(entries: List[SequenceEntry],
     return output_files
 
 
+def create_cross_method_consensus_visualization(entries: List[SequenceEntry],
+                                                 consensus_results: List['ConsensusResult'],
+                                                 output_file: str,
+                                                 title: str = "Cross-Method Consensus Domains",
+                                                 min_coverage: float = 0.0):
+    """
+    Create a visualization showing the cross-method consensus domains.
+
+    These are the domains computed by clustering predictions from ALL methods
+    together, as shown in the "CONSENSUS RESULTS BY STRATEGY" table.
+
+    Args:
+        entries: List of sequence entries from alignment
+        consensus_results: List of ConsensusResult objects from run_consensus_analysis
+        output_file: Output PNG file path
+        title: Title for the figure
+        min_coverage: Minimum sequence coverage to display a domain (0-1)
+    """
+    try:
+        import matplotlib
+        matplotlib.use('Agg')
+        import matplotlib.pyplot as plt
+        import matplotlib.patches as patches
+    except ImportError:
+        print(f"Warning: matplotlib not available, skipping cross-method consensus visualization", file=sys.stderr)
+        return
+
+    if not consensus_results:
+        print("Warning: No consensus results to visualize", file=sys.stderr)
+        return
+
+    # Filter by minimum coverage
+    filtered_results = [r for r in consensus_results
+                        if calculate_sequence_coverage(r.supporting_domains, r.total_sequences) >= min_coverage]
+
+    if not filtered_results:
+        print(f"Warning: No consensus domains meet minimum coverage threshold ({min_coverage:.0%})", file=sys.stderr)
+        return
+
+    # Sort by alignment start position
+    filtered_results = sorted(filtered_results, key=lambda r: r.ali_start)
+
+    # Color scheme - color by coverage level
+    def get_coverage_color(coverage):
+        """Return color based on coverage: green (high) -> yellow (medium) -> red (low)"""
+        if coverage >= 0.7:
+            return '#2E7D32'  # Dark green
+        elif coverage >= 0.5:
+            return '#4CAF50'  # Green
+        elif coverage >= 0.3:
+            return '#FFC107'  # Amber
+        elif coverage >= 0.1:
+            return '#FF9800'  # Orange
+        else:
+            return '#F44336'  # Red
+
+    # Calculate dimensions
+    row_height = 25
+    margin_left = 180
+    margin_right = 150
+    margin_top = 90
+    margin_bottom = 30
+
+    # Use alignment coordinates
+    ali_length = len(entries[0].aligned_seq) if entries else 0
+    pixels_per_unit = 2
+    max_length = ali_length
+
+    fig_width = margin_left + (max_length * pixels_per_unit) + margin_right
+    fig_height = margin_top + (len(entries) * row_height) + margin_bottom
+
+    # Create figure
+    fig, ax = plt.subplots(figsize=(fig_width / 100, fig_height / 100), dpi=100)
+    ax.set_xlim(0, fig_width)
+    ax.set_ylim(0, fig_height)
+    ax.axis('off')
+
+    # Add title
+    ax.text(fig_width / 2, fig_height - 12, title,
+            ha='center', va='top', fontsize=11, weight='bold')
+
+    # Add legend for consensus domains
+    legend_y = fig_height - 35
+    legend_x = margin_left
+    ax.text(legend_x - 10, legend_y, "Consensus domains (colored by coverage):", fontsize=8, va='center')
+
+    for i, result in enumerate(filtered_results[:8]):  # Show up to 8 in legend
+        coverage = calculate_sequence_coverage(result.supporting_domains, result.total_sequences)
+        color = get_coverage_color(coverage)
+        x = legend_x + 220 + i * 100
+        legend_box = patches.Rectangle(
+            (x, legend_y - 4), 12, 8,
+            linewidth=1, edgecolor='black', facecolor=color, alpha=0.8
+        )
+        ax.add_patch(legend_box)
+        ax.text(x + 16, legend_y, f"D{i+1} ({coverage:.0%})", fontsize=7, va='center')
+
+    # Add second legend row for coverage scale
+    legend_y2 = fig_height - 50
+    ax.text(legend_x - 10, legend_y2, "Coverage scale:", fontsize=7, va='center')
+    coverage_levels = [(0.7, '≥70%'), (0.5, '50-70%'), (0.3, '30-50%'), (0.1, '10-30%'), (0.05, '<10%')]
+    for i, (cov, label) in enumerate(coverage_levels):
+        x = legend_x + 80 + i * 90
+        color = get_coverage_color(cov)
+        legend_box = patches.Rectangle(
+            (x, legend_y2 - 4), 12, 8,
+            linewidth=1, edgecolor='black', facecolor=color, alpha=0.8
+        )
+        ax.add_patch(legend_box)
+        ax.text(x + 16, legend_y2, label, fontsize=7, va='center')
+
+    # Add axis labels
+    ax.text(margin_left, fig_height - margin_top + 10, "1",
+            ha='left', va='bottom', fontsize=8)
+    ax.text(margin_left + max_length * pixels_per_unit, fig_height - margin_top + 10,
+            str(ali_length), ha='right', va='bottom', fontsize=8)
+    ax.text(margin_left + (max_length * pixels_per_unit) / 2, fig_height - margin_top + 10,
+            "Alignment Position", ha='center', va='bottom', fontsize=9)
+
+    # Draw each sequence
+    current_y = fig_height - margin_top - row_height / 2
+
+    for entry in entries:
+        # Draw label
+        label = f"{entry.accession}"
+        ax.text(margin_left - 5, current_y, label,
+                ha='right', va='center', fontsize=7, family='monospace')
+
+        # Draw backbone (alignment length)
+        backbone_length = len(entry.aligned_seq)
+        backbone_height = 6
+        backbone = patches.Rectangle(
+            (margin_left, current_y - backbone_height / 2),
+            backbone_length * pixels_per_unit, backbone_height,
+            linewidth=0, facecolor='#CCCCCC'
+        )
+        ax.add_patch(backbone)
+
+        # Draw consensus domains
+        for i, result in enumerate(filtered_results):
+            coverage = calculate_sequence_coverage(result.supporting_domains, result.total_sequences)
+            color = get_coverage_color(coverage)
+
+            domain_x = margin_left + (result.ali_start - 1) * pixels_per_unit
+            domain_width = (result.ali_end - result.ali_start + 1) * pixels_per_unit
+
+            domain_height = 16
+            domain_rect = patches.Rectangle(
+                (domain_x, current_y - domain_height / 2),
+                domain_width, domain_height,
+                linewidth=1, edgecolor='black', facecolor=color, alpha=0.8
+            )
+            ax.add_patch(domain_rect)
+
+            # Add domain label if space permits
+            if domain_width > 30:
+                label_text = f"D{i + 1}"
+                ax.text(domain_x + domain_width / 2, current_y,
+                        label_text, ha='center', va='center',
+                        fontsize=6, weight='bold', color='white')
+
+        # Draw SEED region (mapped to alignment coordinates)
+        seq_to_ali = build_seq_to_ali_map(entry.aligned_seq, entry.region_start)
+        if entry.region_start in seq_to_ali and entry.region_end in seq_to_ali:
+            seed_ali_start = seq_to_ali[entry.region_start]
+            seed_ali_end = seq_to_ali[entry.region_end]
+            seed_x = margin_left + (seed_ali_start - 1) * pixels_per_unit
+            seed_width = (seed_ali_end - seed_ali_start + 1) * pixels_per_unit
+            seed_height = 22
+            seed_rect = patches.Rectangle(
+                (seed_x, current_y - seed_height / 2),
+                seed_width, seed_height,
+                linewidth=2, edgecolor='black', facecolor='none'
+            )
+            ax.add_patch(seed_rect)
+
+        current_y -= row_height
+
+    # Add summary info
+    info_text = f"Cross-method consensus: {len(filtered_results)} domains shown"
+    ax.text(fig_width / 2, 10, info_text, ha='center', va='bottom', fontsize=8, style='italic')
+
+    # Save figure
+    plt.tight_layout()
+    plt.savefig(output_file, dpi=100, bbox_inches='tight', facecolor='white')
+    plt.close()
+
+    print(f"Created cross-method consensus visualization: {output_file}", file=sys.stderr)
+
+
 # ============================================================================
 # Mock Data for Testing
 # ============================================================================
@@ -2013,12 +2203,14 @@ Examples:
     python ted_family_consensus.py SEED --all-strategies
     python ted_family_consensus.py SEED --per-method domains  # Creates domains_chainsaw.tsv, etc.
     python ted_family_consensus.py SEED --images family       # Raw prediction images
-    python ted_family_consensus.py SEED --consensus-images family  # Computed consensus images
-    python ted_family_consensus.py SEED --images family --consensus-images family  # Both types
+    python ted_family_consensus.py SEED --cross-method-image cross_consensus.png  # Cross-method consensus
 
 Output Images:
     --images PREFIX creates raw prediction images showing domains as predicted by each method
-    --consensus-images PREFIX creates computed consensus images showing clustered domain boundaries
+    --consensus-images PREFIX creates per-method consensus images (clustering within each method)
+    --cross-method-image FILE creates the cross-method consensus image showing domains
+                              computed by clustering predictions from ALL methods together
+                              (this visualizes the "CONSENSUS RESULTS BY STRATEGY" table)
 
 Consensus Strategies:
     majority         - Score by fraction of sequences with the domain
@@ -2055,6 +2247,8 @@ Method Consistency Scores:
                         help="Generate visualization images (PREFIX_chainsaw.png, PREFIX_merizo.png, PREFIX_unidoc-ndr.png, PREFIX_consensus.png)")
     parser.add_argument("--consensus-images", metavar="PREFIX",
                         help="Generate computed consensus domain images for each method (PREFIX_chainsaw_computed_consensus.png, etc.)")
+    parser.add_argument("--cross-method-image", metavar="FILE",
+                        help="Generate cross-method consensus image showing domains from the combined strategy (alignment view)")
     parser.add_argument("--view-mode", choices=['sequence', 'alignment'], default='sequence',
                         help="Image view mode: 'sequence' (proteins at actual length with SEED box) or 'alignment' (domains mapped to alignment coordinates)")
     parser.add_argument("--mock", action="store_true",
@@ -2192,6 +2386,20 @@ Method Consistency Scores:
         for method, filepath in consensus_image_files.items():
             if args.verbose:
                 print(f"  {method}: {filepath}", file=sys.stderr)
+
+    # Cross-method consensus image
+    if args.cross_method_image:
+        if args.verbose:
+            print(f"Generating cross-method consensus image...", file=sys.stderr)
+
+        # Get the primary strategy results (usually 'combined')
+        primary_strategy = strategies[0].name
+        primary_results = results.get(primary_strategy, [])
+
+        create_cross_method_consensus_visualization(
+            entries, primary_results, args.cross_method_image,
+            title=f"Cross-Method Consensus Domains ({primary_strategy} strategy)"
+        )
 
     if args.verbose:
         print("Analysis complete!", file=sys.stderr)
