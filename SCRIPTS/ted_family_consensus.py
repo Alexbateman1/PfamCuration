@@ -651,6 +651,64 @@ def calculate_sequence_coverage(cluster: List[AlignmentDomain],
 # Consensus Strategies
 # ============================================================================
 
+def calculate_overlap_fraction(r1: 'ConsensusResult', r2: 'ConsensusResult') -> float:
+    """
+    Calculate the fraction of overlap between two consensus results.
+
+    Returns the overlap as a fraction of the smaller domain's length.
+    """
+    overlap_start = max(r1.ali_start, r2.ali_start)
+    overlap_end = min(r1.ali_end, r2.ali_end)
+
+    if overlap_start >= overlap_end:
+        return 0.0
+
+    overlap_len = overlap_end - overlap_start + 1
+    len1 = r1.ali_end - r1.ali_start + 1
+    len2 = r2.ali_end - r2.ali_start + 1
+
+    # Return overlap as fraction of smaller domain
+    return overlap_len / min(len1, len2)
+
+
+def remove_overlapping_domains(results: List['ConsensusResult'],
+                                max_overlap: float = 0.5) -> List['ConsensusResult']:
+    """
+    Remove heavily overlapping consensus domains, keeping higher-scoring ones.
+
+    This post-processing step ensures consensus domains don't heavily overlap.
+    Domains are processed in order of score (highest first), and any subsequent
+    domain that overlaps more than max_overlap with an already-accepted domain
+    is discarded.
+
+    Args:
+        results: List of ConsensusResult objects, should already be sorted by score
+        max_overlap: Maximum allowed overlap fraction (default 0.5 = 50%)
+
+    Returns:
+        Filtered list with overlapping domains removed
+    """
+    if not results:
+        return []
+
+    # Results should already be sorted by score descending
+    filtered = []
+
+    for result in results:
+        # Check if this result overlaps too much with any accepted result
+        dominated = False
+        for accepted in filtered:
+            overlap = calculate_overlap_fraction(result, accepted)
+            if overlap > max_overlap:
+                dominated = True
+                break
+
+        if not dominated:
+            filtered.append(result)
+
+    return filtered
+
+
 class ConsensusStrategy:
     """Base class for consensus strategies."""
 
@@ -664,8 +722,16 @@ class ConsensusStrategy:
 
     def filter_clusters(self, clusters: List[List[AlignmentDomain]],
                         total_sequences: int,
-                        min_score: float = 0.0) -> List[ConsensusResult]:
-        """Filter and score clusters, returning ConsensusResult objects."""
+                        min_score: float = 0.0,
+                        max_overlap: float = 0.5) -> List[ConsensusResult]:
+        """Filter and score clusters, returning ConsensusResult objects.
+
+        Args:
+            clusters: List of domain clusters
+            total_sequences: Total number of sequences in alignment
+            min_score: Minimum score threshold
+            max_overlap: Maximum allowed overlap between consensus domains (0-1)
+        """
         results = []
 
         for cluster in clusters:
@@ -687,6 +753,10 @@ class ConsensusStrategy:
 
         # Sort by score descending
         results.sort(key=lambda r: r.score, reverse=True)
+
+        # Remove heavily overlapping domains
+        results = remove_overlapping_domains(results, max_overlap)
+
         return results
 
 
@@ -1029,9 +1099,19 @@ def run_consensus_analysis(entries: List[SequenceEntry],
                             predictions: Dict[str, ProteinPredictions],
                             strategies: List[ConsensusStrategy],
                             tolerance: int = 10,
-                            min_score: float = 0.1) -> Dict[str, List[ConsensusResult]]:
+                            min_score: float = 0.1,
+                            max_overlap: float = 0.5) -> Dict[str, List[ConsensusResult]]:
     """
     Run consensus analysis using multiple strategies.
+
+    Consensus domains are determined by:
+    1. Clustering domain predictions from all methods by boundary similarity
+    2. Scoring clusters using the specified strategy (coverage, method agreement, etc.)
+    3. Sorting by score and removing heavily overlapping domains
+
+    The max_overlap parameter controls how much overlap is allowed between
+    consensus domains. Higher-scoring domains are kept, and lower-scoring
+    overlapping domains are filtered out.
 
     Returns dict mapping strategy name to list of ConsensusResult objects.
     """
@@ -1049,7 +1129,7 @@ def run_consensus_analysis(entries: List[SequenceEntry],
     # Apply each strategy
     results = {}
     for strategy in strategies:
-        strategy_results = strategy.filter_clusters(clusters, total_sequences, min_score)
+        strategy_results = strategy.filter_clusters(clusters, total_sequences, min_score, max_overlap)
         results[strategy.name] = strategy_results
 
     return results
@@ -2212,6 +2292,11 @@ Output Images:
                               computed by clustering predictions from ALL methods together
                               (this visualizes the "CONSENSUS RESULTS BY STRATEGY" table)
 
+Overlap Filtering:
+    Consensus domains are placed in order of score (highest first). Overlapping
+    domains are filtered out to avoid redundancy. Use --max-overlap to control
+    the allowed overlap (default 0.5 = 50%). Set to 1.0 to disable filtering.
+
 Consensus Strategies:
     majority         - Score by fraction of sequences with the domain
     method_agreement - Score by number of methods agreeing
@@ -2235,6 +2320,9 @@ Method Consistency Scores:
                         help="Tolerance for boundary matching (default: 10 residues)")
     parser.add_argument("-m", "--min-score", type=float, default=0.1,
                         help="Minimum score threshold for consensus domains (default: 0.1)")
+    parser.add_argument("--max-overlap", type=float, default=0.5,
+                        help="Maximum allowed overlap between consensus domains as fraction 0-1 (default: 0.5). "
+                             "Higher-scoring domains are kept; overlapping lower-scoring domains are filtered out.")
     parser.add_argument("--strategy", choices=['majority', 'method_agreement', 'combined',
                                                 'any_two_methods', 'all_three_methods', 'weighted_method'],
                         default='combined',
@@ -2316,7 +2404,8 @@ Method Consistency Scores:
     results = run_consensus_analysis(
         entries, predictions, strategies,
         tolerance=args.tolerance,
-        min_score=args.min_score
+        min_score=args.min_score,
+        max_overlap=args.max_overlap
     )
 
     # Calculate method consistency scores
