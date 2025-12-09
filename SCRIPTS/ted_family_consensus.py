@@ -975,6 +975,339 @@ def generate_detailed_json(entries: List[SequenceEntry],
 
 
 # ============================================================================
+# Per-Method Reports and Visualization
+# ============================================================================
+
+def generate_per_method_reports(entries: List[SequenceEntry],
+                                 predictions: Dict[str, ProteinPredictions],
+                                 output_prefix: str) -> Dict[str, str]:
+    """
+    Generate separate per-sequence domain reports for each TED method.
+
+    Creates one TSV file per method (chainsaw, merizo, unidoc-ndr) with
+    domain boundaries for each sequence.
+
+    Args:
+        entries: List of sequence entries from alignment
+        predictions: Dict of protein predictions
+        output_prefix: Prefix for output files (e.g., "family" -> "family_chainsaw.tsv")
+
+    Returns:
+        Dict mapping method name to output file path
+    """
+    methods = ['chainsaw', 'merizo', 'unidoc-ndr']
+    output_files = {}
+
+    for method in methods:
+        lines = []
+        lines.append(f"# TED {method} domain predictions")
+        lines.append("# Accession\tRegion\tDomain_Num\tSeq_Start\tSeq_End\tDomain_Chopping")
+
+        for entry in entries:
+            pred = predictions.get(entry.base_accession)
+            region_str = f"{entry.region_start}-{entry.region_end}"
+
+            if pred and method in pred.predictions:
+                method_pred = pred.predictions[method]
+                if method_pred.domains:
+                    for i, domain in enumerate(method_pred.domains, 1):
+                        # Build chopping string for all segments
+                        chopping = "_".join(f"{s.start}-{s.end}" for s in domain.segments)
+                        lines.append(f"{entry.accession}\t{region_str}\t{i}\t{domain.start}\t{domain.end}\t{chopping}")
+                else:
+                    lines.append(f"{entry.accession}\t{region_str}\t-\t-\t-\t-")
+            else:
+                lines.append(f"{entry.accession}\t{region_str}\t-\t-\t-\tno_prediction")
+
+        output_file = f"{output_prefix}_{method}.tsv"
+        with open(output_file, 'w') as f:
+            f.write("\n".join(lines))
+        output_files[method] = output_file
+
+    return output_files
+
+
+def create_method_visualization(entries: List[SequenceEntry],
+                                 predictions: Dict[str, ProteinPredictions],
+                                 method: str,
+                                 output_file: str,
+                                 title: str = None):
+    """
+    Create a visualization of domain predictions from a single method mapped to alignment.
+
+    Shows each sequence as a row with:
+    - Grey backbone for alignment length
+    - Colored rectangles for predicted domains (mapped to alignment coordinates)
+    - Label with accession on the left
+
+    Args:
+        entries: List of sequence entries from alignment
+        predictions: Dict of protein predictions
+        method: Method name ('chainsaw', 'merizo', or 'unidoc-ndr')
+        output_file: Output PNG file path
+        title: Optional title for the figure
+    """
+    try:
+        import matplotlib
+        matplotlib.use('Agg')  # Non-interactive backend
+        import matplotlib.pyplot as plt
+        import matplotlib.patches as patches
+    except ImportError:
+        print(f"Warning: matplotlib not available, skipping {method} visualization", file=sys.stderr)
+        return
+
+    # Color scheme for domains (from add_image.py)
+    domain_colors = ['#4A79A7', '#F28E2C', '#E15759', '#76B7B2', '#59A14F',
+                     '#EDC949', '#AF7AA1', '#FF9DA7', '#9C755F', '#BAB0AB']
+
+    # Get alignment length
+    ali_length = len(entries[0].aligned_seq) if entries else 0
+
+    # Calculate figure dimensions
+    row_height = 25
+    margin_left = 180
+    margin_right = 50
+    margin_top = 50
+    margin_bottom = 30
+    pixels_per_column = 2  # Scale alignment columns to pixels
+
+    fig_width = margin_left + (ali_length * pixels_per_column) + margin_right
+    fig_height = margin_top + (len(entries) * row_height) + margin_bottom
+
+    # Create figure
+    fig, ax = plt.subplots(figsize=(fig_width / 100, fig_height / 100), dpi=100)
+    ax.set_xlim(0, fig_width)
+    ax.set_ylim(0, fig_height)
+    ax.axis('off')
+
+    # Add title
+    if title:
+        ax.text(fig_width / 2, fig_height - 15, title,
+                ha='center', va='top', fontsize=11, weight='bold')
+
+    # Add axis labels
+    ax.text(margin_left, fig_height - margin_top + 10, "1",
+            ha='left', va='bottom', fontsize=8)
+    ax.text(margin_left + ali_length * pixels_per_column, fig_height - margin_top + 10,
+            str(ali_length), ha='right', va='bottom', fontsize=8)
+    ax.text(margin_left + (ali_length * pixels_per_column) / 2, fig_height - margin_top + 10,
+            "Alignment Position", ha='center', va='bottom', fontsize=9)
+
+    # Draw each sequence
+    current_y = fig_height - margin_top - row_height / 2
+
+    for entry in entries:
+        pred = predictions.get(entry.base_accession)
+
+        # Draw label
+        label = f"{entry.accession}"
+        ax.text(margin_left - 5, current_y, label,
+                ha='right', va='center', fontsize=7, family='monospace')
+
+        # Draw backbone (grey line for alignment length)
+        backbone_height = 6
+        backbone = patches.Rectangle(
+            (margin_left, current_y - backbone_height / 2),
+            ali_length * pixels_per_column, backbone_height,
+            linewidth=0, facecolor='#DDDDDD'
+        )
+        ax.add_patch(backbone)
+
+        # Build sequence to alignment mapping
+        seq_to_ali = build_seq_to_ali_map(entry.aligned_seq, entry.region_start)
+
+        # Draw domains for this method
+        if pred and method in pred.predictions:
+            method_pred = pred.predictions[method]
+
+            for domain_idx, domain in enumerate(method_pred.domains):
+                color = domain_colors[domain_idx % len(domain_colors)]
+
+                # Map domain to alignment coordinates
+                ali_domain = map_domain_to_alignment(domain, entry)
+                if ali_domain:
+                    # Draw domain rectangle
+                    domain_x = margin_left + (ali_domain.ali_start - 1) * pixels_per_column
+                    domain_width = (ali_domain.ali_end - ali_domain.ali_start + 1) * pixels_per_column
+
+                    domain_height = 16
+                    domain_rect = patches.Rectangle(
+                        (domain_x, current_y - domain_height / 2),
+                        domain_width, domain_height,
+                        linewidth=1, edgecolor='black', facecolor=color, alpha=0.8
+                    )
+                    ax.add_patch(domain_rect)
+
+                    # Add domain label if space permits
+                    if domain_width > 30:
+                        label_text = f"D{domain_idx + 1}"
+                        ax.text(domain_x + domain_width / 2, current_y,
+                                label_text, ha='center', va='center',
+                                fontsize=6, weight='bold', color='white')
+
+        current_y -= row_height
+
+    # Save figure
+    plt.tight_layout()
+    plt.savefig(output_file, dpi=100, bbox_inches='tight', facecolor='white')
+    plt.close()
+
+    print(f"Created {method} visualization: {output_file}", file=sys.stderr)
+
+
+def create_all_method_visualizations(entries: List[SequenceEntry],
+                                      predictions: Dict[str, ProteinPredictions],
+                                      output_prefix: str) -> Dict[str, str]:
+    """
+    Create visualization images for all three TED methods.
+
+    Args:
+        entries: List of sequence entries from alignment
+        predictions: Dict of protein predictions
+        output_prefix: Prefix for output files (e.g., "family" -> "family_chainsaw.png")
+
+    Returns:
+        Dict mapping method name to output file path
+    """
+    methods = ['chainsaw', 'merizo', 'unidoc-ndr']
+    output_files = {}
+
+    for method in methods:
+        output_file = f"{output_prefix}_{method}.png"
+        title = f"TED {method.capitalize()} Domain Predictions"
+        create_method_visualization(entries, predictions, method, output_file, title)
+        output_files[method] = output_file
+
+    return output_files
+
+
+def create_consensus_visualization(entries: List[SequenceEntry],
+                                    predictions: Dict[str, ProteinPredictions],
+                                    output_file: str,
+                                    title: str = "TED Consensus Domain Predictions"):
+    """
+    Create a visualization showing all three methods side-by-side for comparison.
+
+    Each sequence gets three rows (one per method) to easily compare predictions.
+
+    Args:
+        entries: List of sequence entries from alignment
+        predictions: Dict of protein predictions
+        output_file: Output PNG file path
+        title: Title for the figure
+    """
+    try:
+        import matplotlib
+        matplotlib.use('Agg')
+        import matplotlib.pyplot as plt
+        import matplotlib.patches as patches
+    except ImportError:
+        print(f"Warning: matplotlib not available, skipping consensus visualization", file=sys.stderr)
+        return
+
+    methods = ['chainsaw', 'merizo', 'unidoc-ndr']
+    method_colors = {
+        'chainsaw': '#4A79A7',
+        'merizo': '#F28E2C',
+        'unidoc-ndr': '#E15759'
+    }
+
+    # Get alignment length
+    ali_length = len(entries[0].aligned_seq) if entries else 0
+
+    # Calculate figure dimensions
+    method_row_height = 12
+    seq_spacing = 8
+    seq_block_height = len(methods) * method_row_height + seq_spacing
+    margin_left = 180
+    margin_right = 80
+    margin_top = 60
+    margin_bottom = 30
+    pixels_per_column = 2
+
+    fig_width = margin_left + (ali_length * pixels_per_column) + margin_right
+    fig_height = margin_top + (len(entries) * seq_block_height) + margin_bottom
+
+    # Create figure
+    fig, ax = plt.subplots(figsize=(fig_width / 100, fig_height / 100), dpi=100)
+    ax.set_xlim(0, fig_width)
+    ax.set_ylim(0, fig_height)
+    ax.axis('off')
+
+    # Add title
+    ax.text(fig_width / 2, fig_height - 15, title,
+            ha='center', va='top', fontsize=11, weight='bold')
+
+    # Add legend
+    legend_y = fig_height - 35
+    legend_x = margin_left
+    for i, method in enumerate(methods):
+        x = legend_x + i * 150
+        legend_box = patches.Rectangle(
+            (x, legend_y - 4), 12, 8,
+            linewidth=1, edgecolor='black', facecolor=method_colors[method], alpha=0.8
+        )
+        ax.add_patch(legend_box)
+        ax.text(x + 16, legend_y, method, fontsize=8, va='center')
+
+    # Add axis labels
+    ax.text(margin_left + (ali_length * pixels_per_column) / 2, fig_height - margin_top + 5,
+            f"Alignment Position (1-{ali_length})", ha='center', va='bottom', fontsize=9)
+
+    # Draw each sequence
+    current_y = fig_height - margin_top - seq_block_height / 2
+
+    for entry in entries:
+        pred = predictions.get(entry.base_accession)
+
+        # Draw label (centered on sequence block)
+        label = f"{entry.accession}"
+        ax.text(margin_left - 5, current_y + method_row_height,
+                label, ha='right', va='center', fontsize=7, family='monospace')
+
+        # Draw each method row
+        for method_idx, method in enumerate(methods):
+            row_y = current_y + (len(methods) - 1 - method_idx) * method_row_height
+
+            # Draw backbone
+            backbone_height = 4
+            backbone = patches.Rectangle(
+                (margin_left, row_y - backbone_height / 2),
+                ali_length * pixels_per_column, backbone_height,
+                linewidth=0, facecolor='#EEEEEE'
+            )
+            ax.add_patch(backbone)
+
+            # Draw domains
+            if pred and method in pred.predictions:
+                method_pred = pred.predictions[method]
+
+                for domain in method_pred.domains:
+                    ali_domain = map_domain_to_alignment(domain, entry)
+                    if ali_domain:
+                        domain_x = margin_left + (ali_domain.ali_start - 1) * pixels_per_column
+                        domain_width = (ali_domain.ali_end - ali_domain.ali_start + 1) * pixels_per_column
+
+                        domain_height = 10
+                        domain_rect = patches.Rectangle(
+                            (domain_x, row_y - domain_height / 2),
+                            domain_width, domain_height,
+                            linewidth=0.5, edgecolor='black',
+                            facecolor=method_colors[method], alpha=0.8
+                        )
+                        ax.add_patch(domain_rect)
+
+        current_y -= seq_block_height
+
+    # Save figure
+    plt.tight_layout()
+    plt.savefig(output_file, dpi=100, bbox_inches='tight', facecolor='white')
+    plt.close()
+
+    print(f"Created consensus visualization: {output_file}", file=sys.stderr)
+
+
+# ============================================================================
 # Mock Data for Testing
 # ============================================================================
 
@@ -1045,6 +1378,8 @@ Examples:
     python ted_family_consensus.py SEED -o report.txt -j results.json
     python ted_family_consensus.py SEED --strategy combined --tolerance 15
     python ted_family_consensus.py SEED --all-strategies
+    python ted_family_consensus.py SEED --per-method domains  # Creates domains_chainsaw.tsv, etc.
+    python ted_family_consensus.py SEED --images family       # Creates family_chainsaw.png, etc.
 
 Consensus Strategies:
     majority         - Score by fraction of sequences with the domain
@@ -1058,7 +1393,7 @@ Consensus Strategies:
 
     parser.add_argument("seed_file", help="Path to SEED alignment file (MUL format)")
     parser.add_argument("-o", "--output", help="Output file for summary report")
-    parser.add_argument("-s", "--seq-output", help="Output file for per-sequence domains")
+    parser.add_argument("-s", "--seq-output", help="Output file for per-sequence consensus domains")
     parser.add_argument("-j", "--json-output", help="Output file for detailed JSON results")
     parser.add_argument("-t", "--tolerance", type=int, default=10,
                         help="Tolerance for boundary matching (default: 10 residues)")
@@ -1070,6 +1405,10 @@ Consensus Strategies:
                         help="Consensus strategy to use (default: combined)")
     parser.add_argument("--all-strategies", action="store_true",
                         help="Run all consensus strategies and compare results")
+    parser.add_argument("--per-method", metavar="PREFIX",
+                        help="Generate per-method TSV files (PREFIX_chainsaw.tsv, PREFIX_merizo.tsv, PREFIX_unidoc-ndr.tsv)")
+    parser.add_argument("--images", metavar="PREFIX",
+                        help="Generate visualization images (PREFIX_chainsaw.png, PREFIX_merizo.png, PREFIX_unidoc-ndr.png, PREFIX_consensus.png)")
     parser.add_argument("--mock", action="store_true",
                         help="Use mock data for testing (no API calls)")
     parser.add_argument("-v", "--verbose", action="store_true",
@@ -1159,6 +1498,32 @@ Consensus Strategies:
         generate_detailed_json(entries, predictions, results, args.json_output)
         if args.verbose:
             print(f"JSON results written to: {args.json_output}", file=sys.stderr)
+
+    # Per-method TSV files
+    if args.per_method:
+        if args.verbose:
+            print("Generating per-method domain reports...", file=sys.stderr)
+        method_files = generate_per_method_reports(entries, predictions, args.per_method)
+        for method, filepath in method_files.items():
+            if args.verbose:
+                print(f"  {method}: {filepath}", file=sys.stderr)
+
+    # Visualization images
+    if args.images:
+        if args.verbose:
+            print("Generating visualization images...", file=sys.stderr)
+
+        # Create per-method images
+        image_files = create_all_method_visualizations(entries, predictions, args.images)
+        for method, filepath in image_files.items():
+            if args.verbose:
+                print(f"  {method}: {filepath}", file=sys.stderr)
+
+        # Create consensus comparison image
+        consensus_file = f"{args.images}_consensus.png"
+        create_consensus_visualization(entries, predictions, consensus_file)
+        if args.verbose:
+            print(f"  consensus: {consensus_file}", file=sys.stderr)
 
     if args.verbose:
         print("Analysis complete!", file=sys.stderr)
