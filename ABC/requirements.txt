@@ -1,0 +1,17 @@
+# ABC Domain Predictor Dependencies
+
+# Core requirements
+biopython>=1.80
+networkx>=3.0
+numpy>=1.24
+scipy>=1.10
+
+# Visualization
+matplotlib>=3.7
+
+# Clustering (Leiden algorithm - recommended)
+leidenalg>=0.10
+igraph>=0.11
+
+# Note: If leidenalg/igraph installation fails, the code will
+# fall back to NetworkX's Louvain implementation
