@@ -12,7 +12,8 @@ import sys
 from pathlib import Path
 
 # Add the parent directory to path so we can import ABC
-script_dir = Path(__file__).parent.parent
+# Use .resolve() to handle relative paths like ../abc_predict.py
+script_dir = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(script_dir))
 
 from ABC import ABCPredictor
