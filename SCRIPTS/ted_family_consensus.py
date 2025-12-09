@@ -360,9 +360,11 @@ def fetch_ted_consensus(uniprot_acc: str, nres_chain: int = 0,
     """
     Fetch TED consensus domain predictions for a UniProt accession.
 
-    The TED consensus is derived by TED from the three method predictions.
+    Uses the /summary endpoint which returns consensus domains derived by TED
+    from the three prediction methods. Each domain entry has a 'chopping' field
+    and 'consensus_level' (high/medium/low).
     """
-    url = f"{TED_API_BASE}/uniprot/consensus/{uniprot_acc}"
+    url = f"{TED_API_BASE}/uniprot/summary/{uniprot_acc}"
 
     for attempt in range(max_retries):
         try:
@@ -374,29 +376,41 @@ def fetch_ted_consensus(uniprot_acc: str, nres_chain: int = 0,
             response.raise_for_status()
             data = response.json()
 
-            # Parse consensus response
-            chopping = data.get('chopping', '')
-            if not chopping:
-                # Try alternate field names
-                chopping = data.get('consensus_chopping', '')
-                if not chopping:
-                    # Check if data is a list
-                    if isinstance(data.get('data'), list):
-                        for item in data['data']:
-                            if item.get('method') == 'consensus' or 'consensus' in item.get('method', '').lower():
-                                chopping = item.get('chopping', '')
-                                break
+            # Parse the summary response - it contains a list of consensus domains
+            domains = []
+            data_list = data.get('data', [])
 
-            domains = parse_chopping(chopping, 'ted_consensus')
-            score = data.get('score', 0.0)
-            nres = data.get('nres_chain', nres_chain)
+            if not data_list:
+                return None
+
+            for idx, item in enumerate(data_list):
+                chopping = item.get('chopping', '')
+                if chopping:
+                    # Parse the chopping string for this domain
+                    domain_domains = parse_chopping(chopping, 'ted_consensus')
+                    for d in domain_domains:
+                        d.domain_idx = idx
+                        # Use plddt as a quality score if available
+                        d.score = item.get('plddt', 0.0) / 100.0  # Normalize to 0-1
+                        domains.append(d)
+
+            if not domains:
+                return None
+
+            # Get nres from the first domain if available
+            nres = nres_chain
+            if data_list and 'nres_domain' in data_list[0]:
+                # Sum up all domain residues as rough estimate of chain length
+                total_nres = sum(item.get('nres_domain', 0) for item in data_list)
+                if total_nres > nres:
+                    nres = total_nres
 
             return MethodPrediction(
                 method='ted_consensus',
                 uniprot_acc=uniprot_acc,
                 domains=domains,
                 nres_chain=nres,
-                score=score
+                score=sum(d.score for d in domains) / len(domains) if domains else 0.0
             )
 
         except requests.exceptions.RequestException as e:
