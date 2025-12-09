@@ -266,25 +266,39 @@ class ABCPredictor:
         """
         import tempfile
 
-        # Download structure
+        # Download structure - try multiple AlphaFold DB versions
         logger.info(f"Downloading AlphaFold model for {uniprot_acc}")
-        cif_url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-model_v4.cif"
-        pae_url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-predicted_aligned_error_v4.json"
 
         with tempfile.TemporaryDirectory() as tmpdir:
             cif_path = Path(tmpdir) / f"{uniprot_acc}.cif"
             pae_path = Path(tmpdir) / f"{uniprot_acc}_pae.json"
 
-            try:
-                urllib.request.urlretrieve(cif_url, cif_path)
-            except Exception as e:
-                raise RuntimeError(f"Failed to download structure for {uniprot_acc}: {e}")
+            # Try different AlphaFold DB versions (newest first)
+            versions = ["v6", "v4", "v3", "v2"]
+            cif_downloaded = False
 
-            try:
-                urllib.request.urlretrieve(pae_url, pae_path)
-            except Exception:
-                logger.warning(f"Could not download PAE for {uniprot_acc}, continuing without it")
-                pae_path = None
+            for version in versions:
+                cif_url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-model_{version}.cif"
+                try:
+                    urllib.request.urlretrieve(cif_url, cif_path)
+                    logger.info(f"Downloaded structure ({version})")
+                    cif_downloaded = True
+
+                    # Try to get PAE for same version
+                    pae_url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-predicted_aligned_error_{version}.json"
+                    try:
+                        urllib.request.urlretrieve(pae_url, pae_path)
+                        logger.info(f"Downloaded PAE ({version})")
+                    except Exception:
+                        logger.warning(f"Could not download PAE for {uniprot_acc}, continuing without it")
+                        pae_path = None
+
+                    break
+                except Exception:
+                    continue
+
+            if not cif_downloaded:
+                raise RuntimeError(f"Failed to download structure for {uniprot_acc} (tried versions: {versions})")
 
             return self.predict_from_file(str(cif_path), str(pae_path) if pae_path else None, uniprot_acc)
 
