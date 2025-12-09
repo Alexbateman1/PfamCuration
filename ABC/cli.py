@@ -31,6 +31,7 @@ def cmd_predict(args):
     predictor = ABCPredictor(
         distance_threshold=args.distance_threshold,
         min_domain_size=args.min_domain_size,
+        min_contact_ratio=args.min_contact_ratio,
         ndr_plddt_cutoff=args.ndr_cutoff,
         clustering_method=args.clustering,
         resolution=args.resolution,
@@ -90,6 +91,7 @@ def cmd_batch(args):
     predictor = ABCPredictor(
         distance_threshold=args.distance_threshold,
         min_domain_size=args.min_domain_size,
+        min_contact_ratio=args.min_contact_ratio,
         ndr_plddt_cutoff=args.ndr_cutoff,
         clustering_method=args.clustering,
         resolution=args.resolution,
@@ -191,6 +193,8 @@ Examples:
                                help="Contact distance threshold (default: 10Å)")
     predict_parser.add_argument("--min-domain-size", type=int, default=30,
                                help="Minimum domain size (default: 30)")
+    predict_parser.add_argument("--min-contact-ratio", type=float, default=1.5,
+                               help="Minimum internal/external contact ratio for domains (default: 1.5)")
     predict_parser.add_argument("--ndr-cutoff", type=float, default=70.0,
                                help="pLDDT cutoff for NDR (default: 70)")
     predict_parser.add_argument("--clustering", type=str, default="leiden",
@@ -214,6 +218,8 @@ Examples:
                              help="Contact distance threshold")
     batch_parser.add_argument("--min-domain-size", type=int, default=30,
                              help="Minimum domain size")
+    batch_parser.add_argument("--min-contact-ratio", type=float, default=1.5,
+                             help="Minimum internal/external contact ratio for domains (default: 1.5)")
     batch_parser.add_argument("--ndr-cutoff", type=float, default=70.0,
                              help="pLDDT cutoff for NDR")
     batch_parser.add_argument("--clustering", type=str, default="leiden",

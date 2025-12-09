@@ -77,6 +77,7 @@ python -m ABC.cli predict --uniprot P12345 \
     --distance-threshold 12 \
     --resolution 0.8 \
     --min-domain-size 25 \
+    --min-contact-ratio 1.5 \
     --ndr-cutoff 70
 ```
 
@@ -89,6 +90,7 @@ from ABC import ABCPredictor
 predictor = ABCPredictor(
     distance_threshold=10.0,   # Å
     min_domain_size=30,        # residues
+    min_contact_ratio=1.5,     # internal/external contact threshold
     ndr_plddt_cutoff=70.0,     # pLDDT threshold for NDR
     clustering_method="leiden",
     resolution=1.0,
@@ -124,11 +126,24 @@ For each prediction, the following files are generated:
 |-----------|---------|-------------|
 | `distance_threshold` | 10.0 Å | Maximum Cα-Cα distance for contact |
 | `min_domain_size` | 30 | Minimum residues for valid domain |
+| `min_contact_ratio` | 1.5 | Minimum internal/external contact ratio for valid domain |
 | `ndr_plddt_cutoff` | 70.0 | pLDDT below which residues may be NDR |
 | `clustering_method` | "leiden" | Clustering algorithm ("leiden" or "louvain") |
 | `resolution` | 1.0 | Clustering resolution (higher = more clusters) |
 | `sigma` | 8.0 | Gaussian decay parameter for edge weights |
 | `use_pae` | True | Use PAE for edge weighting if available |
+
+### Contact Ratio Filtering
+
+Domains must have a minimum internal/external contact ratio to be considered valid.
+This filters out clusters that have more contacts to other parts of the protein than
+to themselves - such clusters are not compact domain-like units.
+
+- `min_contact_ratio=1.5` (default): Domains must have 1.5× more internal than external contacts
+- Lower values (e.g., 1.0): Accept less compact domains
+- Higher values (e.g., 2.0): Require more compact, well-defined domains
+
+Rejected domains are logged with their contact ratio and converted to NDR regions.
 
 ### Parameter Exploration
 

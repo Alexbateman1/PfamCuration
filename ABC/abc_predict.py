@@ -29,6 +29,8 @@ def main():
                         help="Contact distance threshold in Angstroms (default: 10)")
     parser.add_argument("--min-size", type=int, default=30,
                         help="Minimum domain size (default: 30)")
+    parser.add_argument("--min-contact-ratio", type=float, default=1.5,
+                        help="Minimum internal/external contact ratio for domains (default: 1.5)")
     parser.add_argument("--output", "-o", type=str, default=None,
                         help="Output filename prefix (default: UniProt accession)")
     parser.add_argument("--debug", action="store_true",
@@ -42,6 +44,7 @@ def main():
     predictor = ABCPredictor(
         distance_threshold=args.distance,
         min_domain_size=args.min_size,
+        min_contact_ratio=args.min_contact_ratio,
         resolution=args.resolution,
     )
 

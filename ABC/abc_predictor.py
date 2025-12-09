@@ -153,6 +153,10 @@ class ABCPredictor:
         Maximum Cα-Cα distance for contact (default: 10Å)
     min_domain_size : int
         Minimum residues for a valid domain (default: 30)
+    min_contact_ratio : float
+        Minimum internal/external contact ratio for valid domain (default: 1.5)
+        Domains with lower ratio are rejected as they have more external
+        contacts than internal, suggesting they are not compact units.
     ndr_plddt_cutoff : float
         pLDDT below which residues may be NDR (default: 70)
     clustering_method : str
@@ -169,6 +173,7 @@ class ABCPredictor:
         self,
         distance_threshold: float = 10.0,
         min_domain_size: int = 30,
+        min_contact_ratio: float = 1.5,
         ndr_plddt_cutoff: float = 70.0,
         clustering_method: str = "leiden",
         resolution: float = 1.0,
@@ -177,6 +182,7 @@ class ABCPredictor:
     ):
         self.distance_threshold = distance_threshold
         self.min_domain_size = min_domain_size
+        self.min_contact_ratio = min_contact_ratio
         self.ndr_plddt_cutoff = ndr_plddt_cutoff
         self.clustering_method = clustering_method
         self.resolution = resolution
@@ -199,6 +205,7 @@ class ABCPredictor:
         return {
             "distance_threshold": self.distance_threshold,
             "min_domain_size": self.min_domain_size,
+            "min_contact_ratio": self.min_contact_ratio,
             "ndr_plddt_cutoff": self.ndr_plddt_cutoff,
             "clustering_method": self.clustering_method,
             "resolution": self.resolution,
@@ -556,16 +563,48 @@ class ABCPredictor:
         # Step 5: Evaluate quality and filter
         logger.info("Assessing domain quality...")
         domains = []
+        rejected_domains = []  # Track rejected domains for debugging
         for domain in raw_domains:
             metrics = self.quality_assessor.assess(domain, residues, graph)
             domain.quality_metrics = metrics
 
+            # Get key metrics for filtering decisions
+            contact_ratio = metrics.get('contact_density_ratio', 0)
+            avg_plddt = metrics.get('avg_plddt', 0)
+
             # Filter by minimum size
-            if domain.size >= self.min_domain_size:
-                domains.append(domain)
-            else:
-                # Add small clusters to NDR
+            if domain.size < self.min_domain_size:
+                rejected_domains.append({
+                    'segments': domain.segments,
+                    'size': domain.size,
+                    'reason': 'too_small',
+                    'contact_ratio': contact_ratio,
+                    'plddt': avg_plddt,
+                })
                 ndr_residue_indices.update(domain.residue_indices)
+            # Filter by contact ratio - domains must have more internal than external contacts
+            elif contact_ratio < self.min_contact_ratio and contact_ratio != float('inf'):
+                rejected_domains.append({
+                    'segments': domain.segments,
+                    'size': domain.size,
+                    'reason': 'low_contact_ratio',
+                    'contact_ratio': contact_ratio,
+                    'plddt': avg_plddt,
+                })
+                logger.info(
+                    f"Rejecting domain {domain.segments}: ContactRatio={contact_ratio:.2f} "
+                    f"< {self.min_contact_ratio} (size={domain.size}, pLDDT={avg_plddt:.1f})"
+                )
+                ndr_residue_indices.update(domain.residue_indices)
+            else:
+                domains.append(domain)
+
+        # Log summary of rejected domains
+        if rejected_domains:
+            logger.info(f"Rejected {len(rejected_domains)} candidate domains:")
+            for rej in rejected_domains:
+                logger.info(f"  {rej['segments']}: {rej['reason']} "
+                           f"(size={rej['size']}, CR={rej['contact_ratio']:.2f}, pLDDT={rej['plddt']:.1f})")
 
         # Step 6: Refinement - merge over-split domains
         logger.info("Refining domain boundaries...")
