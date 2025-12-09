@@ -167,6 +167,11 @@ class ABCPredictor:
         Gaussian decay parameter for edge weights (default: 8.0)
     use_pae : bool
         Whether to use PAE for edge weighting if available (default: True)
+    min_bridge_seq_sep : int
+        Minimum sequence separation for a contact to be considered a "bridge"
+        for discontinuous domain detection (default: 50)
+    min_bridge_count : int
+        Minimum number of bridges needed between domains to merge them (default: 2)
     """
 
     def __init__(
@@ -179,6 +184,8 @@ class ABCPredictor:
         resolution: float = 1.0,
         sigma: float = 8.0,
         use_pae: bool = True,
+        min_bridge_seq_sep: int = 50,
+        min_bridge_count: int = 2,
     ):
         self.distance_threshold = distance_threshold
         self.min_domain_size = min_domain_size
@@ -188,6 +195,8 @@ class ABCPredictor:
         self.resolution = resolution
         self.sigma = sigma
         self.use_pae = use_pae
+        self.min_bridge_seq_sep = min_bridge_seq_sep
+        self.min_bridge_count = min_bridge_count
 
         # Component modules
         self.graph_builder = ContactGraphBuilder(
@@ -211,6 +220,8 @@ class ABCPredictor:
             "resolution": self.resolution,
             "sigma": self.sigma,
             "use_pae": self.use_pae,
+            "min_bridge_seq_sep": self.min_bridge_seq_sep,
+            "min_bridge_count": self.min_bridge_count,
         }
 
     def predict_from_file(
@@ -1083,6 +1094,13 @@ class ABCPredictor:
                 intermediate_domains, residues, graph
             )
 
+        # Third pass: merge non-adjacent domains connected by bridges
+        # This handles discontinuous domains like A-B-A' topology
+        if len(intermediate_domains) > 1:
+            intermediate_domains = self._merge_bridged_domains(
+                intermediate_domains, residues, graph
+            )
+
         return intermediate_domains
 
     def _merge_repeat_domains(
@@ -1180,6 +1198,151 @@ class ABCPredictor:
                 logger.info(
                     f"Merged {len(group)} repeat-like domains into one: "
                     f"size={merged_domain.size}, ContactRatio={metrics.get('contact_density_ratio', 0):.2f}"
+                )
+
+                final_domains.append(merged_domain)
+
+        return final_domains
+
+    def _merge_bridged_domains(
+        self,
+        domains: List[Domain],
+        residues: List[Residue],
+        graph,
+    ) -> List[Domain]:
+        """
+        Merge non-adjacent domains that are connected by long-range contacts (bridges).
+
+        This handles discontinuous domains with A-B-A' topology where:
+        - Domain A has segments at positions 1-50 and 200-250
+        - Domain B (inserted) is at positions 51-199
+        - A and A' are connected by bridges (long-range contacts)
+
+        The key insight is that bridges indicate structural continuity despite
+        sequence discontinuity. If two non-adjacent domains share many bridges,
+        they likely belong to the same discontinuous fold.
+        """
+        if len(domains) <= 1:
+            return domains
+
+        # Sort domains by start position
+        domains = sorted(domains, key=lambda d: min(s[0] for s in d.segments))
+
+        # Detect bridges between all domain pairs
+        # A bridge is when residue i from domain A contacts residue j from domain B
+        # where |i - j| > min_sequence_separation
+        min_sequence_separation = self.min_bridge_seq_sep
+        min_bridge_strength = 3.0  # Minimum total edge weight for bridge
+        min_bridges_to_merge = self.min_bridge_count
+
+        n_domains = len(domains)
+        bridge_counts = np.zeros((n_domains, n_domains))
+        bridge_strengths = np.zeros((n_domains, n_domains))
+
+        for i, dom_i in enumerate(domains):
+            for j, dom_j in enumerate(domains):
+                if i >= j:
+                    continue
+
+                # Count bridges between domain i and domain j
+                bridges = 0
+                total_strength = 0.0
+
+                for idx_i in dom_i.residue_indices:
+                    for idx_j in dom_j.residue_indices:
+                        if not graph.has_edge(idx_i, idx_j):
+                            continue
+
+                        # Check sequence separation
+                        seq_dist = abs(residues[idx_i].resnum - residues[idx_j].resnum)
+                        if seq_dist >= min_sequence_separation:
+                            bridges += 1
+                            total_strength += graph[idx_i][idx_j].get("weight", 1.0)
+
+                bridge_counts[i, j] = bridges
+                bridge_counts[j, i] = bridges
+                bridge_strengths[i, j] = total_strength
+                bridge_strengths[j, i] = total_strength
+
+        # Find domain pairs to merge based on bridge connections
+        # Use Union-Find to track merge groups
+        parent = list(range(n_domains))
+
+        def find(x):
+            if parent[x] != x:
+                parent[x] = find(parent[x])
+            return parent[x]
+
+        def union(x, y):
+            px, py = find(x), find(y)
+            if px != py:
+                parent[px] = py
+
+        # Merge domains connected by strong bridges
+        for i in range(n_domains):
+            for j in range(i + 1, n_domains):
+                # Check if domains are connected by enough bridges
+                if (bridge_counts[i, j] >= min_bridges_to_merge and
+                    bridge_strengths[i, j] >= min_bridge_strength):
+
+                    # Additional check: domains should not overlap too much in sequence
+                    # (if they overlap, they're probably already merged correctly)
+                    i_range = (min(s[0] for s in domains[i].segments),
+                               max(s[1] for s in domains[i].segments))
+                    j_range = (min(s[0] for s in domains[j].segments),
+                               max(s[1] for s in domains[j].segments))
+
+                    # Calculate overlap
+                    overlap_start = max(i_range[0], j_range[0])
+                    overlap_end = min(i_range[1], j_range[1])
+                    overlap = max(0, overlap_end - overlap_start)
+
+                    # Only merge if minimal overlap (discontinuous case)
+                    i_size = i_range[1] - i_range[0]
+                    j_size = j_range[1] - j_range[0]
+                    min_size = min(i_size, j_size)
+
+                    if overlap < min_size * 0.3:  # Less than 30% overlap
+                        logger.info(
+                            f"Bridge connection: domains {i} ({domains[i].segments}) and "
+                            f"{j} ({domains[j].segments}): {int(bridge_counts[i, j])} bridges, "
+                            f"strength={bridge_strengths[i, j]:.1f}"
+                        )
+                        union(i, j)
+
+        # Group domains by their root parent
+        groups = {}
+        for i in range(n_domains):
+            root = find(i)
+            if root not in groups:
+                groups[root] = []
+            groups[root].append(i)
+
+        # Merge domains within each group
+        final_domains = []
+        for root, group in groups.items():
+            if len(group) == 1:
+                final_domains.append(domains[group[0]])
+            else:
+                # Merge all domains in this group
+                all_indices = []
+                for idx in group:
+                    all_indices.extend(domains[idx].residue_indices)
+                all_indices = sorted(set(all_indices))
+
+                segments = self._indices_to_segments(residues, all_indices)
+                merged_domain = Domain(
+                    domain_id=domains[group[0]].domain_id,
+                    segments=segments,
+                    residue_indices=all_indices,
+                )
+                metrics = self.quality_assessor.assess(merged_domain, residues, graph)
+                merged_domain.quality_metrics = metrics
+
+                logger.info(
+                    f"Merged {len(group)} bridge-connected domains into discontinuous domain: "
+                    f"segments={segments}, size={merged_domain.size}, "
+                    f"ContactRatio={metrics.get('contact_density_ratio', 0):.2f}"
                 )
 
                 final_domains.append(merged_domain)

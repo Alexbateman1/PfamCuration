@@ -31,6 +31,10 @@ def main():
                         help="Minimum domain size (default: 30)")
     parser.add_argument("--min-contact-ratio", type=float, default=1.5,
                         help="Minimum internal/external contact ratio for domains (default: 1.5)")
+    parser.add_argument("--min-bridge-sep", type=int, default=50,
+                        help="Minimum sequence separation for bridge detection (default: 50)")
+    parser.add_argument("--min-bridge-count", type=int, default=2,
+                        help="Minimum bridges to merge discontinuous domains (default: 2)")
     parser.add_argument("--output", "-o", type=str, default=None,
                         help="Output filename prefix (default: UniProt accession)")
     parser.add_argument("--debug", action="store_true",
@@ -46,6 +50,8 @@ def main():
         min_domain_size=args.min_size,
         min_contact_ratio=args.min_contact_ratio,
         resolution=args.resolution,
+        min_bridge_seq_sep=args.min_bridge_sep,
+        min_bridge_count=args.min_bridge_count,
     )
 
     # Run prediction (with debug if requested)
