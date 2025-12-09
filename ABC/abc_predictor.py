@@ -517,6 +517,8 @@ class ABCPredictor:
             clusters[cluster_id].append(idx)
 
         domains = []
+        reassigned_to_ndr = set()
+
         for cluster_id, indices in clusters.items():
             indices = sorted(indices)
             if not indices:
@@ -525,11 +527,36 @@ class ABCPredictor:
             # Convert indices to residue numbers and find segments
             segments = self._indices_to_segments(residues, indices)
 
-            domains.append(Domain(
-                domain_id=cluster_id,
-                segments=segments,
-                residue_indices=indices,
-            ))
+            # Filter out tiny isolated segments (e.g., single residues far from core)
+            filtered_segments, removed_resnums = self._filter_isolated_segments(
+                segments,
+                min_segment_size=5,
+                max_isolation_distance=30,
+            )
+
+            # Track removed residues for NDR assignment
+            for resnum in removed_resnums:
+                # Convert resnum back to index
+                for idx in indices:
+                    if residues[idx].resnum == resnum:
+                        reassigned_to_ndr.add(idx)
+                        break
+
+            # Update indices to only include kept segments
+            kept_indices = [
+                idx for idx in indices
+                if idx not in reassigned_to_ndr
+            ]
+
+            if filtered_segments and kept_indices:
+                domains.append(Domain(
+                    domain_id=cluster_id,
+                    segments=filtered_segments,
+                    residue_indices=kept_indices,
+                ))
+
+        # Add reassigned residues to ndr_indices
+        ndr_indices.update(reassigned_to_ndr)
 
         return domains
 
@@ -567,6 +594,67 @@ class ABCPredictor:
         ))
 
         return segments
+
+    def _filter_isolated_segments(
+        self,
+        segments: List[Tuple[int, int]],
+        min_segment_size: int = 5,
+        max_isolation_distance: int = 30,
+    ) -> Tuple[List[Tuple[int, int]], List[int]]:
+        """
+        Filter out tiny isolated segments that are far from the domain core.
+
+        Returns:
+            (filtered_segments, removed_residue_indices)
+        """
+        if len(segments) <= 1:
+            return segments, []
+
+        # Calculate segment sizes
+        seg_sizes = [(end - start + 1, start, end) for start, end in segments]
+
+        # Find the largest segment as the "core"
+        seg_sizes.sort(reverse=True)
+        core_segments = []
+        small_segments = []
+
+        for size, start, end in seg_sizes:
+            if size >= min_segment_size:
+                core_segments.append((start, end))
+            else:
+                small_segments.append((start, end, size))
+
+        # If no core segments, keep the largest one
+        if not core_segments and seg_sizes:
+            size, start, end = seg_sizes[0]
+            core_segments.append((start, end))
+            small_segments = [(s, e, sz) for sz, s, e in seg_sizes[1:]]
+
+        # Check each small segment - keep only if close to a core segment
+        removed_residues = []
+        for start, end, size in small_segments:
+            # Check distance to nearest core segment
+            min_dist = float('inf')
+            for core_start, core_end in core_segments:
+                # Distance is gap between segments
+                if end < core_start:
+                    dist = core_start - end
+                elif start > core_end:
+                    dist = start - core_end
+                else:
+                    dist = 0  # Overlapping
+                min_dist = min(min_dist, dist)
+
+            if min_dist <= max_isolation_distance:
+                # Keep this segment, it's close to core
+                core_segments.append((start, end))
+            else:
+                # Remove this segment, it's isolated
+                removed_residues.extend(range(start, end + 1))
+
+        # Sort segments by start position
+        core_segments.sort()
+        return core_segments, removed_residues
 
     def _refine_domains(
         self,
