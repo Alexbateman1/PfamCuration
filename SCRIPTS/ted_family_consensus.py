@@ -151,6 +151,8 @@ def parse_seed_alignment(seed_file: str) -> List[SequenceEntry]:
     and then the aligned sequence. Alignments may be wrapped across multiple lines.
     Continuation lines (without sequence names) are appended to the previous entry.
 
+    Gap characters can be '.' or '-'. Amino acids can be upper or lower case.
+
     Returns list of SequenceEntry objects.
     """
     # First pass: collect all lines grouped by sequence
@@ -158,10 +160,12 @@ def parse_seed_alignment(seed_file: str) -> List[SequenceEntry]:
     seq_order = []  # Preserve order of first occurrence
 
     # Pattern to match sequence header lines: ACC.version/start-end  SEQUENCE
-    seq_pattern = re.compile(r'^(\S+)/(\d+)-(\d+)\s+(\S+)$')
+    # Note: no $ anchor to allow trailing whitespace
+    seq_pattern = re.compile(r'^(\S+)/(\d+)-(\d+)\s+(\S+)')
 
     # Pattern to match continuation lines (just sequence, possibly with leading whitespace)
-    cont_pattern = re.compile(r'^\s*([A-Za-z.]+)$')
+    # Includes: letters (upper/lower), dots, and dashes for gaps
+    cont_pattern = re.compile(r'^\s*([A-Za-z.\-]+)\s*$')
 
     current_acc = None
 
