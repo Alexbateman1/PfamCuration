@@ -1031,14 +1031,16 @@ def create_method_visualization(entries: List[SequenceEntry],
                                  predictions: Dict[str, ProteinPredictions],
                                  method: str,
                                  output_file: str,
-                                 title: str = None):
+                                 title: str = None,
+                                 view_mode: str = 'sequence'):
     """
-    Create a visualization of domain predictions from a single method mapped to alignment.
+    Create a visualization of domain predictions from a single method.
 
-    Shows each sequence as a row with:
-    - Grey backbone for alignment length
-    - Colored rectangles for predicted domains (mapped to alignment coordinates)
-    - Label with accession on the left
+    Two view modes available:
+    - 'sequence': Shows each protein at its actual length with domains at sequence
+                  coordinates and SEED region as black outline box (like add_image.py)
+    - 'alignment': Shows all sequences at alignment length with domains mapped to
+                   alignment coordinates (useful for comparing domain positions)
 
     Args:
         entries: List of sequence entries from alignment
@@ -1046,6 +1048,7 @@ def create_method_visualization(entries: List[SequenceEntry],
         method: Method name ('chainsaw', 'merizo', or 'unidoc-ndr')
         output_file: Output PNG file path
         title: Optional title for the figure
+        view_mode: 'sequence' (default) or 'alignment'
     """
     try:
         import matplotlib
@@ -1060,18 +1063,37 @@ def create_method_visualization(entries: List[SequenceEntry],
     domain_colors = ['#4A79A7', '#F28E2C', '#E15759', '#76B7B2', '#59A14F',
                      '#EDC949', '#AF7AA1', '#FF9DA7', '#9C755F', '#BAB0AB']
 
-    # Get alignment length
-    ali_length = len(entries[0].aligned_seq) if entries else 0
-
-    # Calculate figure dimensions
+    # Calculate dimensions based on view mode
     row_height = 25
     margin_left = 180
     margin_right = 50
     margin_top = 50
     margin_bottom = 30
-    pixels_per_column = 2  # Scale alignment columns to pixels
 
-    fig_width = margin_left + (ali_length * pixels_per_column) + margin_right
+    if view_mode == 'alignment':
+        # Alignment view: all sequences shown at alignment length
+        ali_length = len(entries[0].aligned_seq) if entries else 0
+        pixels_per_unit = 2
+        max_length = ali_length
+        axis_label = "Alignment Position"
+    else:
+        # Sequence view: proteins shown at actual length
+        max_protein_length = 0
+        for entry in entries:
+            pred = predictions.get(entry.base_accession)
+            if pred:
+                for method_pred in pred.predictions.values():
+                    if method_pred.nres_chain > 0:
+                        max_protein_length = max(max_protein_length, method_pred.nres_chain)
+                        break
+            max_protein_length = max(max_protein_length, entry.region_end)
+        if max_protein_length == 0:
+            max_protein_length = 500
+        pixels_per_unit = max(1, 1500 // max_protein_length)
+        max_length = max_protein_length
+        axis_label = "Sequence Position"
+
+    fig_width = margin_left + (max_length * pixels_per_unit) + margin_right
     fig_height = margin_top + (len(entries) * row_height) + margin_bottom
 
     # Create figure
@@ -1088,10 +1110,10 @@ def create_method_visualization(entries: List[SequenceEntry],
     # Add axis labels
     ax.text(margin_left, fig_height - margin_top + 10, "1",
             ha='left', va='bottom', fontsize=8)
-    ax.text(margin_left + ali_length * pixels_per_column, fig_height - margin_top + 10,
-            str(ali_length), ha='right', va='bottom', fontsize=8)
-    ax.text(margin_left + (ali_length * pixels_per_column) / 2, fig_height - margin_top + 10,
-            "Alignment Position", ha='center', va='bottom', fontsize=9)
+    ax.text(margin_left + max_length * pixels_per_unit, fig_height - margin_top + 10,
+            str(max_length), ha='right', va='bottom', fontsize=8)
+    ax.text(margin_left + (max_length * pixels_per_unit) / 2, fig_height - margin_top + 10,
+            axis_label, ha='center', va='bottom', fontsize=9)
 
     # Draw each sequence
     current_y = fig_height - margin_top - row_height / 2
@@ -1104,17 +1126,26 @@ def create_method_visualization(entries: List[SequenceEntry],
         ax.text(margin_left - 5, current_y, label,
                 ha='right', va='center', fontsize=7, family='monospace')
 
-        # Draw backbone (grey line for alignment length)
+        if view_mode == 'alignment':
+            # Alignment view: backbone spans alignment length
+            backbone_length = len(entry.aligned_seq)
+        else:
+            # Sequence view: backbone spans actual protein length
+            backbone_length = entry.region_end
+            if pred:
+                for method_pred in pred.predictions.values():
+                    if method_pred.nres_chain > 0:
+                        backbone_length = method_pred.nres_chain
+                        break
+
+        # Draw backbone (grey line)
         backbone_height = 6
         backbone = patches.Rectangle(
             (margin_left, current_y - backbone_height / 2),
-            ali_length * pixels_per_column, backbone_height,
-            linewidth=0, facecolor='#DDDDDD'
+            backbone_length * pixels_per_unit, backbone_height,
+            linewidth=0, facecolor='#CCCCCC'
         )
         ax.add_patch(backbone)
-
-        # Build sequence to alignment mapping
-        seq_to_ali = build_seq_to_ali_map(entry.aligned_seq, entry.region_start)
 
         # Draw domains for this method
         if pred and method in pred.predictions:
@@ -1123,27 +1154,50 @@ def create_method_visualization(entries: List[SequenceEntry],
             for domain_idx, domain in enumerate(method_pred.domains):
                 color = domain_colors[domain_idx % len(domain_colors)]
 
-                # Map domain to alignment coordinates
-                ali_domain = map_domain_to_alignment(domain, entry)
-                if ali_domain:
-                    # Draw domain rectangle
-                    domain_x = margin_left + (ali_domain.ali_start - 1) * pixels_per_column
-                    domain_width = (ali_domain.ali_end - ali_domain.ali_start + 1) * pixels_per_column
+                if view_mode == 'alignment':
+                    # Map domain to alignment coordinates
+                    ali_domain = map_domain_to_alignment(domain, entry)
+                    if ali_domain:
+                        domain_x = margin_left + (ali_domain.ali_start - 1) * pixels_per_unit
+                        domain_width = (ali_domain.ali_end - ali_domain.ali_start + 1) * pixels_per_unit
+                    else:
+                        continue
+                else:
+                    # Use sequence coordinates directly
+                    domain_x = margin_left + (domain.start - 1) * pixels_per_unit
+                    domain_width = (domain.end - domain.start + 1) * pixels_per_unit
 
-                    domain_height = 16
-                    domain_rect = patches.Rectangle(
-                        (domain_x, current_y - domain_height / 2),
-                        domain_width, domain_height,
-                        linewidth=1, edgecolor='black', facecolor=color, alpha=0.8
-                    )
-                    ax.add_patch(domain_rect)
+                domain_height = 16
+                domain_rect = patches.Rectangle(
+                    (domain_x, current_y - domain_height / 2),
+                    domain_width, domain_height,
+                    linewidth=1, edgecolor='black', facecolor=color, alpha=0.8
+                )
+                ax.add_patch(domain_rect)
 
-                    # Add domain label if space permits
-                    if domain_width > 30:
-                        label_text = f"D{domain_idx + 1}"
-                        ax.text(domain_x + domain_width / 2, current_y,
-                                label_text, ha='center', va='center',
-                                fontsize=6, weight='bold', color='white')
+                # Add domain label if space permits
+                if domain_width > 30:
+                    label_text = f"D{domain_idx + 1}"
+                    ax.text(domain_x + domain_width / 2, current_y,
+                            label_text, ha='center', va='center',
+                            fontsize=6, weight='bold', color='white')
+
+        # Draw SEED region (black outline box)
+        if view_mode == 'alignment':
+            # In alignment view, SEED region spans the non-gap portion
+            # For simplicity, show as full alignment width
+            pass  # Skip SEED box in alignment view
+        else:
+            # In sequence view, show SEED region
+            seed_x = margin_left + (entry.region_start - 1) * pixels_per_unit
+            seed_width = (entry.region_end - entry.region_start + 1) * pixels_per_unit
+            seed_height = 22
+            seed_rect = patches.Rectangle(
+                (seed_x, current_y - seed_height / 2),
+                seed_width, seed_height,
+                linewidth=2, edgecolor='black', facecolor='none'
+            )
+            ax.add_patch(seed_rect)
 
         current_y -= row_height
 
@@ -1157,7 +1211,8 @@ def create_method_visualization(entries: List[SequenceEntry],
 
 def create_all_method_visualizations(entries: List[SequenceEntry],
                                       predictions: Dict[str, ProteinPredictions],
-                                      output_prefix: str) -> Dict[str, str]:
+                                      output_prefix: str,
+                                      view_mode: str = 'sequence') -> Dict[str, str]:
     """
     Create visualization images for all three TED methods.
 
@@ -1165,6 +1220,7 @@ def create_all_method_visualizations(entries: List[SequenceEntry],
         entries: List of sequence entries from alignment
         predictions: Dict of protein predictions
         output_prefix: Prefix for output files (e.g., "family" -> "family_chainsaw.png")
+        view_mode: 'sequence' (default) or 'alignment'
 
     Returns:
         Dict mapping method name to output file path
@@ -1175,7 +1231,7 @@ def create_all_method_visualizations(entries: List[SequenceEntry],
     for method in methods:
         output_file = f"{output_prefix}_{method}.png"
         title = f"TED {method.capitalize()} Domain Predictions"
-        create_method_visualization(entries, predictions, method, output_file, title)
+        create_method_visualization(entries, predictions, method, output_file, title, view_mode)
         output_files[method] = output_file
 
     return output_files
@@ -1184,7 +1240,8 @@ def create_all_method_visualizations(entries: List[SequenceEntry],
 def create_consensus_visualization(entries: List[SequenceEntry],
                                     predictions: Dict[str, ProteinPredictions],
                                     output_file: str,
-                                    title: str = "TED Consensus Domain Predictions"):
+                                    title: str = "TED Consensus Domain Predictions",
+                                    view_mode: str = 'sequence'):
     """
     Create a visualization showing all three methods side-by-side for comparison.
 
@@ -1195,6 +1252,7 @@ def create_consensus_visualization(entries: List[SequenceEntry],
         predictions: Dict of protein predictions
         output_file: Output PNG file path
         title: Title for the figure
+        view_mode: 'sequence' (default) or 'alignment'
     """
     try:
         import matplotlib
@@ -1212,10 +1270,7 @@ def create_consensus_visualization(entries: List[SequenceEntry],
         'unidoc-ndr': '#E15759'
     }
 
-    # Get alignment length
-    ali_length = len(entries[0].aligned_seq) if entries else 0
-
-    # Calculate figure dimensions
+    # Calculate dimensions based on view mode
     method_row_height = 12
     seq_spacing = 8
     seq_block_height = len(methods) * method_row_height + seq_spacing
@@ -1223,9 +1278,29 @@ def create_consensus_visualization(entries: List[SequenceEntry],
     margin_right = 80
     margin_top = 60
     margin_bottom = 30
-    pixels_per_column = 2
 
-    fig_width = margin_left + (ali_length * pixels_per_column) + margin_right
+    if view_mode == 'alignment':
+        ali_length = len(entries[0].aligned_seq) if entries else 0
+        pixels_per_unit = 2
+        max_length = ali_length
+        axis_label = f"Alignment Position (1-{ali_length})"
+    else:
+        max_protein_length = 0
+        for entry in entries:
+            pred = predictions.get(entry.base_accession)
+            if pred:
+                for method_pred in pred.predictions.values():
+                    if method_pred.nres_chain > 0:
+                        max_protein_length = max(max_protein_length, method_pred.nres_chain)
+                        break
+            max_protein_length = max(max_protein_length, entry.region_end)
+        if max_protein_length == 0:
+            max_protein_length = 500
+        pixels_per_unit = max(1, 1500 // max_protein_length)
+        max_length = max_protein_length
+        axis_label = f"Sequence Position (1-{max_length})"
+
+    fig_width = margin_left + (max_length * pixels_per_unit) + margin_right
     fig_height = margin_top + (len(entries) * seq_block_height) + margin_bottom
 
     # Create figure
@@ -1251,14 +1326,22 @@ def create_consensus_visualization(entries: List[SequenceEntry],
         ax.text(x + 16, legend_y, method, fontsize=8, va='center')
 
     # Add axis labels
-    ax.text(margin_left + (ali_length * pixels_per_column) / 2, fig_height - margin_top + 5,
-            f"Alignment Position (1-{ali_length})", ha='center', va='bottom', fontsize=9)
+    ax.text(margin_left + (max_length * pixels_per_unit) / 2, fig_height - margin_top + 5,
+            axis_label, ha='center', va='bottom', fontsize=9)
 
     # Draw each sequence
     current_y = fig_height - margin_top - seq_block_height / 2
 
     for entry in entries:
         pred = predictions.get(entry.base_accession)
+
+        # Get protein length for sequence view
+        protein_length = entry.region_end
+        if pred:
+            for method_pred in pred.predictions.values():
+                if method_pred.nres_chain > 0:
+                    protein_length = method_pred.nres_chain
+                    break
 
         # Draw label (centered on sequence block)
         label = f"{entry.accession}"
@@ -1271,9 +1354,14 @@ def create_consensus_visualization(entries: List[SequenceEntry],
 
             # Draw backbone
             backbone_height = 4
+            if view_mode == 'alignment':
+                backbone_length = len(entry.aligned_seq)
+            else:
+                backbone_length = protein_length
+
             backbone = patches.Rectangle(
                 (margin_left, row_y - backbone_height / 2),
-                ali_length * pixels_per_column, backbone_height,
+                backbone_length * pixels_per_unit, backbone_height,
                 linewidth=0, facecolor='#EEEEEE'
             )
             ax.add_patch(backbone)
@@ -1283,19 +1371,37 @@ def create_consensus_visualization(entries: List[SequenceEntry],
                 method_pred = pred.predictions[method]
 
                 for domain in method_pred.domains:
-                    ali_domain = map_domain_to_alignment(domain, entry)
-                    if ali_domain:
-                        domain_x = margin_left + (ali_domain.ali_start - 1) * pixels_per_column
-                        domain_width = (ali_domain.ali_end - ali_domain.ali_start + 1) * pixels_per_column
+                    if view_mode == 'alignment':
+                        ali_domain = map_domain_to_alignment(domain, entry)
+                        if ali_domain:
+                            domain_x = margin_left + (ali_domain.ali_start - 1) * pixels_per_unit
+                            domain_width = (ali_domain.ali_end - ali_domain.ali_start + 1) * pixels_per_unit
+                        else:
+                            continue
+                    else:
+                        domain_x = margin_left + (domain.start - 1) * pixels_per_unit
+                        domain_width = (domain.end - domain.start + 1) * pixels_per_unit
 
-                        domain_height = 10
-                        domain_rect = patches.Rectangle(
-                            (domain_x, row_y - domain_height / 2),
-                            domain_width, domain_height,
-                            linewidth=0.5, edgecolor='black',
-                            facecolor=method_colors[method], alpha=0.8
-                        )
-                        ax.add_patch(domain_rect)
+                    domain_height = 10
+                    domain_rect = patches.Rectangle(
+                        (domain_x, row_y - domain_height / 2),
+                        domain_width, domain_height,
+                        linewidth=0.5, edgecolor='black',
+                        facecolor=method_colors[method], alpha=0.8
+                    )
+                    ax.add_patch(domain_rect)
+
+        # Draw SEED region in sequence view
+        if view_mode != 'alignment':
+            seed_x = margin_left + (entry.region_start - 1) * pixels_per_unit
+            seed_width = (entry.region_end - entry.region_start + 1) * pixels_per_unit
+            seed_height = seq_block_height - 4
+            seed_rect = patches.Rectangle(
+                (seed_x, current_y - seed_height / 2 + method_row_height / 2),
+                seed_width, seed_height,
+                linewidth=1.5, edgecolor='black', facecolor='none'
+            )
+            ax.add_patch(seed_rect)
 
         current_y -= seq_block_height
 
@@ -1380,6 +1486,7 @@ Examples:
     python ted_family_consensus.py SEED --all-strategies
     python ted_family_consensus.py SEED --per-method domains  # Creates domains_chainsaw.tsv, etc.
     python ted_family_consensus.py SEED --images family       # Creates family_chainsaw.png, etc.
+    python ted_family_consensus.py SEED --images family --view-mode alignment  # Alignment view
 
 Consensus Strategies:
     majority         - Score by fraction of sequences with the domain
@@ -1409,6 +1516,8 @@ Consensus Strategies:
                         help="Generate per-method TSV files (PREFIX_chainsaw.tsv, PREFIX_merizo.tsv, PREFIX_unidoc-ndr.tsv)")
     parser.add_argument("--images", metavar="PREFIX",
                         help="Generate visualization images (PREFIX_chainsaw.png, PREFIX_merizo.png, PREFIX_unidoc-ndr.png, PREFIX_consensus.png)")
+    parser.add_argument("--view-mode", choices=['sequence', 'alignment'], default='sequence',
+                        help="Image view mode: 'sequence' (proteins at actual length with SEED box) or 'alignment' (domains mapped to alignment coordinates)")
     parser.add_argument("--mock", action="store_true",
                         help="Use mock data for testing (no API calls)")
     parser.add_argument("-v", "--verbose", action="store_true",
@@ -1511,17 +1620,17 @@ Consensus Strategies:
     # Visualization images
     if args.images:
         if args.verbose:
-            print("Generating visualization images...", file=sys.stderr)
+            print(f"Generating visualization images (view mode: {args.view_mode})...", file=sys.stderr)
 
         # Create per-method images
-        image_files = create_all_method_visualizations(entries, predictions, args.images)
+        image_files = create_all_method_visualizations(entries, predictions, args.images, args.view_mode)
         for method, filepath in image_files.items():
             if args.verbose:
                 print(f"  {method}: {filepath}", file=sys.stderr)
 
         # Create consensus comparison image
         consensus_file = f"{args.images}_consensus.png"
-        create_consensus_visualization(entries, predictions, consensus_file)
+        create_consensus_visualization(entries, predictions, consensus_file, view_mode=args.view_mode)
         if args.verbose:
             print(f"  consensus: {consensus_file}", file=sys.stderr)
 
