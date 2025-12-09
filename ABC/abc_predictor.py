@@ -949,11 +949,24 @@ class ABCPredictor:
         residues: List[Residue],
         graph,
     ) -> List[Domain]:
-        """Refine domain boundaries by merging over-split domains."""
+        """
+        Refine domain boundaries by merging over-split domains.
+
+        This is especially important for repeat proteins (e.g., WD40 beta-propellers)
+        where the clustering algorithm may split each repeat into a separate domain.
+
+        We merge domains that:
+        1. Have low ContactRatio (< 4) - indicating many external contacts
+        2. Have high inter-domain contact density with each other
+        3. Are adjacent or nearly adjacent in sequence
+        """
         if len(domains) <= 1:
             return domains
 
-        # Calculate inter-domain contact density
+        # Sort domains by start position
+        domains = sorted(domains, key=lambda d: min(s[0] for s in d.segments))
+
+        # Calculate inter-domain contact density matrix
         n_domains = len(domains)
         contact_matrix = np.zeros((n_domains, n_domains))
 
@@ -975,16 +988,15 @@ class ABCPredictor:
                     contact_matrix[i, j] = contacts / boundary_size
                     contact_matrix[j, i] = contact_matrix[i, j]
 
-        # Merge domains with high inter-domain contact density
-        merge_threshold = 0.5  # Threshold for merging
+        # First pass: standard merge for high inter-domain contact density
+        merge_threshold = 0.5
         merged = set()
-        final_domains = []
+        intermediate_domains = []
 
         for i, domain in enumerate(domains):
             if i in merged:
                 continue
 
-            # Find domains to merge with this one
             to_merge = [i]
             for j in range(i + 1, n_domains):
                 if j in merged:
@@ -994,7 +1006,7 @@ class ABCPredictor:
                     merged.add(j)
 
             if len(to_merge) == 1:
-                final_domains.append(domain)
+                intermediate_domains.append(domain)
             else:
                 # Merge domains
                 all_indices = []
@@ -1008,10 +1020,115 @@ class ABCPredictor:
                     segments=segments,
                     residue_indices=all_indices,
                 )
-
-                # Recalculate quality metrics
                 metrics = self.quality_assessor.assess(merged_domain, residues, graph)
                 merged_domain.quality_metrics = metrics
+                intermediate_domains.append(merged_domain)
+
+        # Second pass: merge adjacent domains with low ContactRatio
+        # This handles repeat proteins like WD40 beta-propellers
+        if len(intermediate_domains) > 1:
+            intermediate_domains = self._merge_repeat_domains(
+                intermediate_domains, residues, graph
+            )
+
+        return intermediate_domains
+
+    def _merge_repeat_domains(
+        self,
+        domains: List[Domain],
+        residues: List[Residue],
+        graph,
+    ) -> List[Domain]:
+        """
+        Merge domains that appear to be parts of a repeat protein.
+
+        Repeat proteins (WD40, TPR, HEAT, etc.) have domains with:
+        - Low ContactRatio (< 4) because repeats contact each other
+        - High inter-domain contacts between adjacent domains
+        - Similar sizes (roughly)
+        """
+        if len(domains) <= 1:
+            return domains
+
+        # Sort by position
+        domains = sorted(domains, key=lambda d: min(s[0] for s in d.segments))
+
+        # Threshold for "low" contact ratio - domains below this might be repeat units
+        low_contact_ratio_threshold = 4.0
+
+        # Check if we should merge adjacent low-ContactRatio domains
+        # Build a list of domains to merge together
+        merge_groups = []
+        current_group = [0]
+
+        for i in range(1, len(domains)):
+            prev_domain = domains[i - 1]
+            curr_domain = domains[i]
+
+            # Get ContactRatio for both domains
+            prev_ratio = prev_domain.quality_metrics.get('contact_density_ratio', float('inf'))
+            curr_ratio = curr_domain.quality_metrics.get('contact_density_ratio', float('inf'))
+
+            # Check if domains are adjacent in sequence
+            prev_end = max(e for s, e in prev_domain.segments)
+            curr_start = min(s for s, e in curr_domain.segments)
+            gap = curr_start - prev_end
+
+            # Calculate inter-domain contacts
+            inter_contacts = 0
+            for idx_i in prev_domain.residue_indices:
+                for idx_j in curr_domain.residue_indices:
+                    if graph.has_edge(idx_i, idx_j):
+                        inter_contacts += 1
+
+            # Normalize by smaller domain size
+            smaller_size = min(len(prev_domain.residue_indices), len(curr_domain.residue_indices))
+            normalized_contacts = inter_contacts / smaller_size if smaller_size > 0 else 0
+
+            # Merge if:
+            # 1. Both domains have low ContactRatio (likely parts of repeat)
+            # 2. They are adjacent or nearly adjacent (gap < 30 residues)
+            # 3. They have significant inter-domain contacts (> 0.3 per residue)
+            should_merge = (
+                prev_ratio < low_contact_ratio_threshold and
+                curr_ratio < low_contact_ratio_threshold and
+                gap < 30 and
+                normalized_contacts > 0.3
+            )
+
+            if should_merge:
+                current_group.append(i)
+            else:
+                merge_groups.append(current_group)
+                current_group = [i]
+
+        merge_groups.append(current_group)
+
+        # Now merge domains within each group
+        final_domains = []
+        for group in merge_groups:
+            if len(group) == 1:
+                final_domains.append(domains[group[0]])
+            else:
+                # Merge all domains in this group
+                all_indices = []
+                for idx in group:
+                    all_indices.extend(domains[idx].residue_indices)
+                all_indices = sorted(set(all_indices))
+
+                segments = self._indices_to_segments(residues, all_indices)
+                merged_domain = Domain(
+                    domain_id=domains[group[0]].domain_id,
+                    segments=segments,
+                    residue_indices=all_indices,
+                )
+                metrics = self.quality_assessor.assess(merged_domain, residues, graph)
+                merged_domain.quality_metrics = metrics
+
+                logger.info(
+                    f"Merged {len(group)} repeat-like domains into one: "
+                    f"size={merged_domain.size}, ContactRatio={metrics.get('contact_density_ratio', 0):.2f}"
+                )
 
                 final_domains.append(merged_domain)
 
