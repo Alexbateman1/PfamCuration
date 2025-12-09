@@ -115,20 +115,22 @@ class DomainVisualizer:
             f"# {len(prediction.domains)} domains, {len(prediction.ndr_regions)} NDR regions",
             "",
             "# Color by domain",
-            "color all white  # Reset all to white",
+            "color all white",
         ]
 
         # Color each domain
         for i, domain in enumerate(prediction.domains):
             color = self.colors[i % len(self.colors)]
             # ChimeraX: color each segment separately for reliability
+            lines.append(f"# Domain {domain.domain_id}: {domain.to_chopping_string()}")
             for start, end in domain.segments:
-                lines.append(f"color :{start}-{end} {color}  # Domain {domain.domain_id}")
+                lines.append(f"color :{start}-{end} {color}")
 
         # Color NDRs
+        lines.append("")
+        lines.append("# NDR regions")
         for ndr in prediction.ndr_regions:
-            sel = f":{ndr.start}-{ndr.end}"
-            lines.append(f"color {sel} {self.ndr_color}  # NDR")
+            lines.append(f"color :{ndr.start}-{ndr.end} {self.ndr_color}")
 
         lines.extend([
             "",
