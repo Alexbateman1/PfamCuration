@@ -1089,7 +1089,7 @@ class ABCPredictor:
 
             if new_segments:
                 # Merge adjacent segments (fill small gaps)
-                merged_segments = self._merge_adjacent_segments(new_segments, max_gap=10)
+                merged_segments = self._merge_adjacent_segments(new_segments, max_gap=20)
 
                 # Update domain
                 new_indices = [idx for idx in domain_i.residue_indices if idx not in removed_indices]
