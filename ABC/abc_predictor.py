@@ -560,51 +560,31 @@ class ABCPredictor:
         # Step 4: Build initial domains from clusters
         raw_domains = self._build_domains_from_clusters(residues, cluster_assignments, ndr_residue_indices)
 
-        # Step 5: Evaluate quality and filter
+        # Step 5: Evaluate quality and filter by SIZE only
+        # (ContactRatio filtering happens AFTER merging, so repeat units can be combined first)
         logger.info("Assessing domain quality...")
         domains = []
-        rejected_domains = []  # Track rejected domains for debugging
+        rejected_for_size = []
         for domain in raw_domains:
             metrics = self.quality_assessor.assess(domain, residues, graph)
             domain.quality_metrics = metrics
 
-            # Get key metrics for filtering decisions
-            contact_ratio = metrics.get('contact_density_ratio', 0)
-            avg_plddt = metrics.get('avg_plddt', 0)
-
-            # Filter by minimum size
+            # Filter by minimum size only at this stage
             if domain.size < self.min_domain_size:
-                rejected_domains.append({
+                rejected_for_size.append({
                     'segments': domain.segments,
                     'size': domain.size,
-                    'reason': 'too_small',
-                    'contact_ratio': contact_ratio,
-                    'plddt': avg_plddt,
+                    'contact_ratio': metrics.get('contact_density_ratio', 0),
+                    'plddt': metrics.get('avg_plddt', 0),
                 })
-                ndr_residue_indices.update(domain.residue_indices)
-            # Filter by contact ratio - domains must have more internal than external contacts
-            elif contact_ratio < self.min_contact_ratio and contact_ratio != float('inf'):
-                rejected_domains.append({
-                    'segments': domain.segments,
-                    'size': domain.size,
-                    'reason': 'low_contact_ratio',
-                    'contact_ratio': contact_ratio,
-                    'plddt': avg_plddt,
-                })
-                logger.info(
-                    f"Rejecting domain {domain.segments}: ContactRatio={contact_ratio:.2f} "
-                    f"< {self.min_contact_ratio} (size={domain.size}, pLDDT={avg_plddt:.1f})"
-                )
                 ndr_residue_indices.update(domain.residue_indices)
             else:
                 domains.append(domain)
 
-        # Log summary of rejected domains
-        if rejected_domains:
-            logger.info(f"Rejected {len(rejected_domains)} candidate domains:")
-            for rej in rejected_domains:
-                logger.info(f"  {rej['segments']}: {rej['reason']} "
-                           f"(size={rej['size']}, CR={rej['contact_ratio']:.2f}, pLDDT={rej['plddt']:.1f})")
+        if rejected_for_size:
+            logger.info(f"Rejected {len(rejected_for_size)} domains for being too small:")
+            for rej in rejected_for_size:
+                logger.info(f"  {rej['segments']}: size={rej['size']}, CR={rej['contact_ratio']:.2f}, pLDDT={rej['plddt']:.1f}")
 
         # Step 6: Refinement - merge over-split domains
         logger.info("Refining domain boundaries...")
@@ -613,6 +593,39 @@ class ABCPredictor:
         # Step 6b: Resolve interdigitations and enforce continuity
         domains, extra_ndr = self._enforce_domain_continuity(domains, residues)
         ndr_residue_indices.update(extra_ndr)
+
+        # Step 6c: NOW filter by ContactRatio (after merging is complete)
+        # This allows repeat protein blades to be merged before CR assessment
+        if self.min_contact_ratio > 0:
+            filtered_domains = []
+            rejected_for_cr = []
+            for domain in domains:
+                # Re-assess quality after merging
+                metrics = self.quality_assessor.assess(domain, residues, graph)
+                domain.quality_metrics = metrics
+                contact_ratio = metrics.get('contact_density_ratio', 0)
+
+                if contact_ratio < self.min_contact_ratio and contact_ratio != float('inf'):
+                    rejected_for_cr.append({
+                        'segments': domain.segments,
+                        'size': domain.size,
+                        'contact_ratio': contact_ratio,
+                        'plddt': metrics.get('avg_plddt', 0),
+                    })
+                    logger.info(
+                        f"Rejecting domain {domain.segments}: ContactRatio={contact_ratio:.2f} "
+                        f"< {self.min_contact_ratio} (size={domain.size}, pLDDT={metrics.get('avg_plddt', 0):.1f})"
+                    )
+                    ndr_residue_indices.update(domain.residue_indices)
+                else:
+                    filtered_domains.append(domain)
+
+            if rejected_for_cr:
+                logger.info(f"Rejected {len(rejected_for_cr)} domains for low ContactRatio:")
+                for rej in rejected_for_cr:
+                    logger.info(f"  {rej['segments']}: CR={rej['contact_ratio']:.2f}, size={rej['size']}, pLDDT={rej['plddt']:.1f}")
+
+            domains = filtered_domains
 
         # Renumber domains
         for i, domain in enumerate(domains):
