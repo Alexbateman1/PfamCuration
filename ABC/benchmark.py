@@ -102,6 +102,37 @@ class ProteinResult:
     missing_domains: List[Domain] = field(default_factory=list)
     false_domains: List[Domain] = field(default_factory=list)
 
+    @property
+    def score(self) -> float:
+        """
+        Combined score (0-1) where 1 is perfect prediction.
+
+        Combines:
+        - IoU (70% weight): measures boundary accuracy
+        - Domain count accuracy (30% weight): penalizes wrong number of domains
+        """
+        # IoU component (0-1)
+        iou_score = self.weighted_iou
+
+        # Domain count component (0-1)
+        # Penalize based on relative error
+        n_true = max(len(self.true_domains), 1)  # Avoid division by zero
+        count_error_ratio = abs(self.domain_count_error) / n_true
+        count_score = max(0, 1 - count_error_ratio)
+
+        # Combined score
+        return 0.7 * iou_score + 0.3 * count_score
+
+    @property
+    def status(self) -> str:
+        """Simple status: GOOD, OK, or BAD based on score."""
+        if self.score >= 0.9:
+            return "GOOD"
+        elif self.score >= 0.7:
+            return "OK"
+        else:
+            return "BAD"
+
 
 @dataclass
 class BenchmarkResults:
@@ -537,18 +568,55 @@ def generate_detailed_report(results: BenchmarkResults, output_dir: Path):
     """Generate detailed report files."""
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Per-protein results
+    # Sort proteins by score (worst first for easy review)
+    sorted_results = sorted(results.protein_results, key=lambda r: r.score)
+
+    # Print console summary sorted by score
+    print("\n" + "=" * 80)
+    print("Per-Protein Results (sorted by score, worst first)")
+    print("=" * 80)
+    print(f"{'Accession':<15} {'Score':>6} {'Status':<5} {'IoU':>5} {'#True':>5} {'#Pred':>5} {'Error Type':<15}")
+    print("-" * 80)
+
+    for r in sorted_results:
+        print(f"{r.uniprot_acc:<15} {r.score:>6.3f} {r.status:<5} {r.weighted_iou:>5.2f} "
+              f"{len(r.true_domains):>5} {len(r.pred_domains):>5} {r.error_type:<15}")
+
+    print("-" * 80)
+
+    # Show details for BAD predictions
+    bad_results = [r for r in sorted_results if r.status == "BAD"]
+    if bad_results:
+        print(f"\n{'='*80}")
+        print(f"Details for {len(bad_results)} BAD predictions:")
+        print("=" * 80)
+
+        for r in bad_results:
+            print(f"\n{r.uniprot_acc} (score={r.score:.3f}):")
+            print(f"  True:    {'; '.join(str(d) for d in r.true_domains) or 'none'}")
+            print(f"  Pred:    {'; '.join(str(d) for d in r.pred_domains) or 'none'}")
+            if r.missing_domains:
+                print(f"  Missing: {'; '.join(str(d) for d in r.missing_domains)}")
+            if r.false_domains:
+                print(f"  False:   {'; '.join(str(d) for d in r.false_domains)}")
+            if r.matches:
+                print(f"  Matches:")
+                for m in r.matches:
+                    status = "✓" if m.iou >= 0.8 else "✗"
+                    print(f"    {status} {m.true_domain} <-> {m.pred_domain} (IoU={m.iou:.3f})")
+
+    # Per-protein results file (sorted by score)
     with open(output_dir / "protein_results.tsv", "w") as f:
-        f.write("Accession\tTrue_Domains\tPred_Domains\tTrue_Count\tPred_Count\t"
+        f.write("Accession\tScore\tStatus\tTrue_Domains\tPred_Domains\tTrue_Count\tPred_Count\t"
                 "Weighted_IoU\tCount_Error\tError_Type\tMissing\tFalse\n")
 
-        for r in results.protein_results:
+        for r in sorted_results:
             true_str = "; ".join(str(d) for d in r.true_domains) or "none"
             pred_str = "; ".join(str(d) for d in r.pred_domains) or "none"
             missing_str = "; ".join(str(d) for d in r.missing_domains) or ""
             false_str = "; ".join(str(d) for d in r.false_domains) or ""
 
-            f.write(f"{r.uniprot_acc}\t{true_str}\t{pred_str}\t"
+            f.write(f"{r.uniprot_acc}\t{r.score:.3f}\t{r.status}\t{true_str}\t{pred_str}\t"
                     f"{len(r.true_domains)}\t{len(r.pred_domains)}\t"
                     f"{r.weighted_iou:.3f}\t{r.domain_count_error}\t"
                     f"{r.error_type}\t{missing_str}\t{false_str}\n")
