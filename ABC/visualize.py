@@ -111,36 +111,22 @@ class DomainVisualizer:
         str: ChimeraX commands
         """
         lines = [
-            f"# ABC Domain Prediction for {prediction.uniprot_acc}",
-            f"# {len(prediction.domains)} domains, {len(prediction.ndr_regions)} NDR regions",
-            "",
-            "# Color by domain",
             "color all white",
         ]
 
         # Color each domain
         for i, domain in enumerate(prediction.domains):
             color = self.colors[i % len(self.colors)]
-            # ChimeraX: color each segment separately for reliability
-            lines.append(f"# Domain {domain.domain_id}: {domain.to_chopping_string()}")
             for start, end in domain.segments:
                 lines.append(f"color :{start}-{end} {color}")
 
         # Color NDRs
-        lines.append("")
-        lines.append("# NDR regions")
         for ndr in prediction.ndr_regions:
             lines.append(f"color :{ndr.start}-{ndr.end} {self.ndr_color}")
 
         lines.extend([
-            "",
-            "# Show cartoon representation",
             "hide atoms",
             "show cartoons",
-            "",
-            "# Optional: show surface",
-            "# surface",
-            "# transparency 50",
         ])
 
         return "\n".join(lines)
