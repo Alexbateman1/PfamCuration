@@ -737,11 +737,13 @@ class ABCPredictor:
 
                 # Run Leiden with Modularity (more robust than CPM for variable weights)
                 # Use RBConfigurationVertexPartition for resolution parameter support
+                # Set seed for reproducibility (Leiden is stochastic by default)
                 partition = la.find_partition(
                     ig_graph,
                     la.RBConfigurationVertexPartition,
                     weights="weight",
                     resolution_parameter=self.resolution,
+                    seed=42,
                 )
 
                 return {reverse_mapping[i]: partition.membership[i] for i in range(len(mapping))}
@@ -758,6 +760,7 @@ class ABCPredictor:
                     graph,
                     weight="weight",
                     resolution=self.resolution,
+                    seed=42,
                 )
 
                 assignments = {}
