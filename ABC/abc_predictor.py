@@ -175,6 +175,9 @@ class ABCPredictor:
     cache_dir : str, optional
         Directory to cache downloaded AlphaFold files (default: ./.abc_cache)
         Set to None to disable caching
+    use_dssp : bool
+        Whether to use DSSP hydrogen bond information (default: False)
+        When enabled, long-range H-bonds (beta sheets) add/boost graph edges
     """
 
     def __init__(
@@ -190,6 +193,7 @@ class ABCPredictor:
         min_bridge_seq_sep: int = 50,
         min_bridge_count: int = 2,
         cache_dir: Optional[str] = None,
+        use_dssp: bool = False,
     ):
         self.distance_threshold = distance_threshold
         self.min_domain_size = min_domain_size
@@ -201,6 +205,7 @@ class ABCPredictor:
         self.use_pae = use_pae
         self.min_bridge_seq_sep = min_bridge_seq_sep
         self.min_bridge_count = min_bridge_count
+        self.use_dssp = use_dssp
 
         # Set up cache directory in current working directory
         if cache_dir is None:
@@ -233,6 +238,7 @@ class ABCPredictor:
             "use_pae": self.use_pae,
             "min_bridge_seq_sep": self.min_bridge_seq_sep,
             "min_bridge_count": self.min_bridge_count,
+            "use_dssp": self.use_dssp,
         }
 
     def predict_from_file(
@@ -278,7 +284,13 @@ class ABCPredictor:
             logger.info(f"Loading PAE from {pae_path}")
             pae_matrix = self._load_pae(pae_path)
 
-        return self._predict(residues, pae_matrix, uniprot_acc)
+        # Get DSSP data if enabled
+        dssp_data = None
+        if self.use_dssp:
+            from .dssp_parser import get_dssp_for_structure
+            dssp_data = get_dssp_for_structure(pdb_path, cache_dir=self.cache_dir)
+
+        return self._predict(residues, pae_matrix, uniprot_acc, dssp_data)
 
     def _get_alphafold_files(self, uniprot_acc: str) -> Tuple[Path, Optional[Path]]:
         """
@@ -542,13 +554,14 @@ class ABCPredictor:
         residues: List[Residue],
         pae_matrix: Optional[np.ndarray],
         uniprot_acc: str,
+        dssp_data=None,
     ) -> ABCPrediction:
         """Main prediction pipeline."""
         n_residues = len(residues)
 
         # Step 1: Build contact graph
         logger.info("Building contact graph...")
-        graph = self.graph_builder.build(residues, pae_matrix)
+        graph = self.graph_builder.build(residues, pae_matrix, dssp_data)
         logger.info(f"Graph has {graph.number_of_nodes()} nodes and {graph.number_of_edges()} edges")
 
         # Step 2: Cluster the graph

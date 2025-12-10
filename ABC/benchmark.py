@@ -444,15 +444,25 @@ def calculate_boundary_mcc(
     return f1
 
 
-def run_predictions(annotations: List[ProteinAnnotation]) -> Dict[str, List[Domain]]:
+def run_predictions(
+    annotations: List[ProteinAnnotation],
+    use_dssp: bool = False,
+) -> Dict[str, List[Domain]]:
     """
     Run ABC predictions for all proteins.
+
+    Parameters:
+    -----------
+    annotations : List[ProteinAnnotation]
+        Ground truth annotations
+    use_dssp : bool
+        Whether to use DSSP hydrogen bonds
 
     Returns dict mapping accession to list of predicted domains.
     """
     from ABC.abc_predictor import ABCPredictor
 
-    predictor = ABCPredictor()
+    predictor = ABCPredictor(use_dssp=use_dssp)
     predictions = {}
 
     for ann in annotations:
@@ -792,6 +802,11 @@ def main():
         default=0.8,
         help="IoU threshold for correct domain match (default: 0.8)"
     )
+    parser.add_argument(
+        "--use-dssp",
+        action="store_true",
+        help="Use DSSP hydrogen bonds to enhance contact graph (requires mkdssp)"
+    )
 
     args = parser.parse_args()
 
@@ -821,8 +836,11 @@ def main():
             predictions[acc] = dom_list
 
     elif args.run_predictions:
-        print("Running ABC predictions...")
-        predictions = run_predictions(annotations)
+        if args.use_dssp:
+            print("Running ABC predictions with DSSP enhancement...")
+        else:
+            print("Running ABC predictions...")
+        predictions = run_predictions(annotations, use_dssp=args.use_dssp)
 
         if args.save_predictions:
             # Save for future use

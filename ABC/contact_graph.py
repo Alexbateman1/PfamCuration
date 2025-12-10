@@ -5,8 +5,13 @@ Builds a weighted graph where:
 - Nodes = Cα atoms (one per residue)
 - Edges = spatial proximity (residues within distance threshold)
 - Edge weights = f(distance, pLDDT_i, pLDDT_j, PAE_ij)
+
+Optionally enhanced with DSSP hydrogen bond information:
+- Long-range H-bonds (beta sheets) add strong edges
+- Helps capture structurally important contacts missed by distance alone
 """
 
+import logging
 from typing import TYPE_CHECKING, List, Optional
 
 import networkx as nx
@@ -15,6 +20,9 @@ from scipy.spatial.distance import cdist
 
 if TYPE_CHECKING:
     from .abc_predictor import Residue
+    from .dssp_parser import DSSPData
+
+logger = logging.getLogger(__name__)
 
 
 class ContactGraphBuilder:
@@ -26,6 +34,10 @@ class ContactGraphBuilder:
 
     If PAE available, reduce weight for high PAE pairs:
         w_ij *= exp(-PAE_ij / pae_scale)
+
+    If DSSP available, add/boost edges for hydrogen-bonded pairs:
+        - Long-range H-bonds (|i-j| > 5) get strong edges
+        - Helps beta sheets and discontinuous domains
 
     Parameters:
     -----------
@@ -41,6 +53,8 @@ class ContactGraphBuilder:
         Minimum sequence separation for contacts (default: 6)
         Contacts closer than this in sequence are ignored
         (they're trivially close due to backbone connectivity)
+    hbond_weight : float
+        Weight to add for hydrogen-bonded residue pairs (default: 0.5)
     """
 
     def __init__(
@@ -50,17 +64,20 @@ class ContactGraphBuilder:
         use_pae: bool = True,
         pae_scale: float = 10.0,
         min_sequence_separation: int = 6,
+        hbond_weight: float = 0.5,
     ):
         self.distance_threshold = distance_threshold
         self.sigma = sigma
         self.use_pae = use_pae
         self.pae_scale = pae_scale
         self.min_sequence_separation = min_sequence_separation
+        self.hbond_weight = hbond_weight
 
     def build(
         self,
         residues: List["Residue"],
         pae_matrix: Optional[np.ndarray] = None,
+        dssp_data: Optional["DSSPData"] = None,
     ) -> nx.Graph:
         """
         Build contact graph from residues.
@@ -71,6 +88,8 @@ class ContactGraphBuilder:
             List of Residue objects with coordinates and pLDDT
         pae_matrix : np.ndarray, optional
             NxN PAE matrix from AlphaFold
+        dssp_data : DSSPData, optional
+            DSSP analysis with H-bond information
 
         Returns:
         --------
@@ -84,6 +103,9 @@ class ContactGraphBuilder:
         # Extract coordinates and pLDDT
         coords = np.array([r.ca_coord for r in residues])
         plddt = np.array([r.plddt for r in residues])
+
+        # Build residue number to index mapping
+        resnum_to_idx = {res.resnum: i for i, res in enumerate(residues)}
 
         # Calculate distance matrix
         dist_matrix = cdist(coords, coords)
@@ -101,7 +123,7 @@ class ContactGraphBuilder:
                 chain=res.chain_id,
             )
 
-        # Add edges
+        # Add distance-based edges
         sigma_sq = self.sigma ** 2
 
         for i in range(n):
@@ -122,6 +144,47 @@ class ContactGraphBuilder:
 
                 if weight > 0.01:  # Minimum weight threshold
                     graph.add_edge(i, j, weight=weight, distance=d)
+
+        # Add/boost edges for DSSP hydrogen bonds
+        if dssp_data is not None:
+            hbond_edges_added = 0
+            hbond_edges_boosted = 0
+
+            for hbond in dssp_data.hbonds:
+                # Only use long-range H-bonds (beta sheets)
+                if not hbond.is_long_range:
+                    continue
+
+                # Map residue numbers to indices
+                donor_idx = resnum_to_idx.get(hbond.donor_resnum)
+                acceptor_idx = resnum_to_idx.get(hbond.acceptor_resnum)
+
+                if donor_idx is None or acceptor_idx is None:
+                    continue
+
+                i, j = min(donor_idx, acceptor_idx), max(donor_idx, acceptor_idx)
+
+                # Calculate H-bond weight based on energy
+                # Energy is negative (more negative = stronger)
+                # Typical range: -0.5 to -3.0 kcal/mol
+                hbond_strength = min(1.0, abs(hbond.energy) / 2.0)
+                hbond_edge_weight = self.hbond_weight * hbond_strength
+
+                if graph.has_edge(i, j):
+                    # Boost existing edge
+                    current_weight = graph[i][j]['weight']
+                    graph[i][j]['weight'] = current_weight + hbond_edge_weight
+                    graph[i][j]['hbond'] = True
+                    hbond_edges_boosted += 1
+                else:
+                    # Add new edge for H-bonded pair
+                    d = dist_matrix[i, j]
+                    graph.add_edge(i, j, weight=hbond_edge_weight, distance=d, hbond=True)
+                    hbond_edges_added += 1
+
+            if hbond_edges_added > 0 or hbond_edges_boosted > 0:
+                logger.info(f"DSSP H-bonds: {hbond_edges_added} edges added, "
+                           f"{hbond_edges_boosted} edges boosted")
 
         return graph
 
