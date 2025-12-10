@@ -1689,10 +1689,10 @@ class ABCPredictor:
         if iteration > 1:
             logger.info(f"Domain extension completed after {iteration} iterations")
 
-        # Post-process: fill small internal gaps in domains
-        # This handles cases like 737-752_758-995 where a small gap (753-757)
-        # creates artificial discontinuity
-        max_gap_to_fill = 10
+        # Post-process: fill internal gaps in domains
+        # Fill small gaps unconditionally, larger gaps only if high pLDDT
+        max_gap_unconditional = 10  # Always fill gaps up to this size
+        max_gap_high_plddt = 20     # Fill larger gaps if pLDDT >= threshold
         for domain in domains:
             if len(domain.segments) > 1:
                 # Check gaps between segments
@@ -1701,15 +1701,35 @@ class ABCPredictor:
                     seg1_end = domain.segments[i][1]
                     seg2_start = domain.segments[i + 1][0]
                     gap_size = seg2_start - seg1_end - 1
-                    if 0 < gap_size <= max_gap_to_fill:
-                        # Fill the gap
-                        for idx, res in enumerate(residues):
-                            if seg1_end < res.resnum < seg2_start:
-                                filled_indices.append(idx)
+
+                    if gap_size <= 0:
+                        continue
+
+                    # Find gap residue indices and calculate pLDDT
+                    gap_indices = []
+                    for idx, res in enumerate(residues):
+                        if seg1_end < res.resnum < seg2_start:
+                            gap_indices.append(idx)
+
+                    if not gap_indices:
+                        continue
+
+                    gap_plddt = np.mean([residues[i].plddt for i in gap_indices])
+
+                    # Decide whether to fill
+                    should_fill = False
+                    if gap_size <= max_gap_unconditional:
+                        should_fill = True
+                    elif gap_size <= max_gap_high_plddt and gap_plddt >= self.ndr_plddt_cutoff:
+                        should_fill = True
+
+                    if should_fill:
+                        filled_indices.extend(gap_indices)
                         logger.info(
                             f"Filling internal gap {seg1_end+1}-{seg2_start-1} "
-                            f"({gap_size} residues) in domain"
+                            f"({gap_size} residues, pLDDT={gap_plddt:.1f}) in domain"
                         )
+
                 if len(filled_indices) > len(domain.residue_indices):
                     domain.residue_indices = sorted(set(filled_indices))
                     domain.segments = self._indices_to_segments(residues, domain.residue_indices)
