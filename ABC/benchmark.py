@@ -14,6 +14,7 @@ Usage:
 """
 
 import argparse
+import copy
 import json
 import sys
 from collections import defaultdict
@@ -447,6 +448,7 @@ def calculate_boundary_mcc(
 def run_predictions(
     annotations: List[ProteinAnnotation],
     use_dssp: bool = False,
+    verbose: bool = False,
 ) -> Dict[str, List[Domain]]:
     """
     Run ABC predictions for all proteins.
@@ -457,16 +459,32 @@ def run_predictions(
         Ground truth annotations
     use_dssp : bool
         Whether to use DSSP hydrogen bonds
+    verbose : bool
+        If True, print detailed prediction info for debugging
 
     Returns dict mapping accession to list of predicted domains.
     """
     from ABC.abc_predictor import ABCPredictor
 
     # Use same defaults as CLI (resolution=0.5)
+    # All other parameters use ABCPredictor defaults which match CLI defaults
     predictor = ABCPredictor(
         resolution=0.5,
         use_dssp=use_dssp,
     )
+
+    if verbose:
+        print(f"\n=== ABCPredictor Configuration ===")
+        print(f"resolution: {predictor.resolution}")
+        print(f"use_dssp: {predictor.use_dssp}")
+        print(f"distance_threshold: {predictor.distance_threshold}")
+        print(f"min_domain_size: {predictor.min_domain_size}")
+        print(f"min_contact_ratio: {predictor.min_contact_ratio}")
+        print(f"min_bridge_seq_sep: {predictor.min_bridge_seq_sep}")
+        print(f"min_bridge_count: {predictor.min_bridge_count}")
+        print(f"cache_dir: {predictor.cache_dir}")
+        print("=" * 40 + "\n")
+
     predictions = {}
 
     for ann in annotations:
@@ -477,15 +495,47 @@ def run_predictions(
         try:
             result = predictor.predict_from_uniprot(ann.uniprot_acc)
 
-            # Convert to Domain objects
+            # Convert to Domain objects - use list() to create a copy
+            # This ensures the benchmark Domain is independent of the ABCPredictor Domain
             domains = []
             for d in result.domains:
-                domains.append(Domain(segments=d.segments))
+                # Create a new list of tuples (tuples are immutable, so shallow copy is fine)
+                segments_copy = list(d.segments)
+                domains.append(Domain(segments=segments_copy))
+
+            # Verbose output for debugging - print IMMEDIATELY after prediction
+            # This ensures we see the raw prediction before any processing
+            print(f"  {ann.uniprot_acc}: {len(result.domains)} domains predicted")
+            for i, d in enumerate(result.domains):
+                seg_str = d.to_chopping_string()
+                print(f"    Domain {i+1}: {seg_str}")
+
+            if verbose:
+                # More detailed output
+                for i, d in enumerate(result.domains):
+                    print(f"  Domain {i+1} details:")
+                    print(f"    segments: {d.segments}")
+                    print(f"    size: {d.size}")
+                    print(f"    residue_indices count: {len(d.residue_indices)}")
+                    if d.quality_metrics:
+                        cr = d.quality_metrics.get('contact_density_ratio', 'N/A')
+                        rg = d.quality_metrics.get('radius_of_gyration', 'N/A')
+                        plddt = d.quality_metrics.get('avg_plddt', 'N/A')
+                        if isinstance(cr, float):
+                            cr = f"{cr:.2f}"
+                        if isinstance(rg, float):
+                            rg = f"{rg:.1f}"
+                        if isinstance(plddt, float):
+                            plddt = f"{plddt:.1f}"
+                        print(f"    ContactRatio={cr}, Rg={rg}, pLDDT={plddt}")
 
             predictions[ann.uniprot_acc] = domains
 
         except Exception as e:
             print(f"  Error: {e}")
+            import traceback
+            if verbose:
+                traceback.print_exc()
             predictions[ann.uniprot_acc] = []
 
     return predictions
@@ -811,6 +861,11 @@ def main():
         action="store_true",
         help="Use DSSP hydrogen bonds to enhance contact graph (requires mkdssp)"
     )
+    parser.add_argument(
+        "--verbose", "-v",
+        action="store_true",
+        help="Print detailed prediction info for debugging"
+    )
 
     args = parser.parse_args()
 
@@ -844,7 +899,7 @@ def main():
             print("Running ABC predictions with DSSP enhancement...")
         else:
             print("Running ABC predictions...")
-        predictions = run_predictions(annotations, use_dssp=args.use_dssp)
+        predictions = run_predictions(annotations, use_dssp=args.use_dssp, verbose=args.verbose)
 
         if args.save_predictions:
             # Save for future use
