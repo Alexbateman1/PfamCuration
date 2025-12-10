@@ -449,6 +449,10 @@ def run_predictions(
     annotations: List[ProteinAnnotation],
     use_dssp: bool = False,
     verbose: bool = False,
+    distance_threshold: float = 10.0,
+    resolution: float = 0.5,
+    min_contact_ratio: float = 1.5,
+    min_domain_size: int = 30,
 ) -> Dict[str, List[Domain]]:
     """
     Run ABC predictions for all proteins.
@@ -461,15 +465,27 @@ def run_predictions(
         Whether to use DSSP hydrogen bonds
     verbose : bool
         If True, print detailed prediction info for debugging
+    distance_threshold : float
+        Maximum Cα-Cα distance for contact (default: 10.0Å)
+    resolution : float
+        Leiden clustering resolution parameter (default: 0.5)
+    min_contact_ratio : float
+        Minimum internal/external contact ratio (default: 1.5)
+    min_domain_size : int
+        Minimum residues for a valid domain (default: 30)
 
     Returns dict mapping accession to list of predicted domains.
     """
     from ABC.abc_predictor import ABCPredictor
 
-    # Use same defaults as CLI (resolution=0.5)
-    # All other parameters use ABCPredictor defaults which match CLI defaults
+    print(f"  Parameters: distance={distance_threshold}, resolution={resolution}, "
+          f"min_contact_ratio={min_contact_ratio}, min_domain_size={min_domain_size}")
+
     predictor = ABCPredictor(
-        resolution=0.5,
+        distance_threshold=distance_threshold,
+        resolution=resolution,
+        min_contact_ratio=min_contact_ratio,
+        min_domain_size=min_domain_size,
         use_dssp=use_dssp,
     )
 
@@ -866,6 +882,30 @@ def main():
         action="store_true",
         help="Print detailed prediction info for debugging"
     )
+    parser.add_argument(
+        "--distance",
+        type=float,
+        default=10.0,
+        help="Distance threshold for contacts in Angstroms (default: 10.0)"
+    )
+    parser.add_argument(
+        "--resolution",
+        type=float,
+        default=0.5,
+        help="Leiden clustering resolution parameter (default: 0.5)"
+    )
+    parser.add_argument(
+        "--min-contact-ratio",
+        type=float,
+        default=1.5,
+        help="Minimum contact ratio for valid domain (default: 1.5)"
+    )
+    parser.add_argument(
+        "--min-domain-size",
+        type=int,
+        default=30,
+        help="Minimum domain size in residues (default: 30)"
+    )
 
     args = parser.parse_args()
 
@@ -899,7 +939,15 @@ def main():
             print("Running ABC predictions with DSSP enhancement...")
         else:
             print("Running ABC predictions...")
-        predictions = run_predictions(annotations, use_dssp=args.use_dssp, verbose=args.verbose)
+        predictions = run_predictions(
+            annotations,
+            use_dssp=args.use_dssp,
+            verbose=args.verbose,
+            distance_threshold=args.distance,
+            resolution=args.resolution,
+            min_contact_ratio=args.min_contact_ratio,
+            min_domain_size=args.min_domain_size,
+        )
 
         if args.save_predictions:
             # Save for future use

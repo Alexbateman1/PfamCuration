@@ -162,7 +162,7 @@ class ABCPredictor:
     clustering_method : str
         'leiden' or 'louvain' (default: 'leiden')
     resolution : float
-        Clustering resolution parameter (default: 1.0)
+        Clustering resolution parameter (default: 0.5)
     sigma : float
         Gaussian decay parameter for edge weights (default: 8.0)
     use_pae : bool
@@ -187,7 +187,7 @@ class ABCPredictor:
         min_contact_ratio: float = 1.5,
         ndr_plddt_cutoff: float = 70.0,
         clustering_method: str = "leiden",
-        resolution: float = 1.0,
+        resolution: float = 0.5,
         sigma: float = 8.0,
         use_pae: bool = True,
         min_bridge_seq_sep: int = 50,
