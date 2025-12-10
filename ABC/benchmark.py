@@ -143,27 +143,30 @@ class BenchmarkResults:
     domain_mae: float
     under_splits: int
     over_splits: int
-    correct_count: int
+    correct_domain_count: int  # proteins with right number of domains
+    perfect_predictions: int   # proteins with correct boundaries too
 
     def summary(self) -> str:
+        n = len(self.protein_results)
         lines = [
             "=" * 60,
             "ABC Domain Predictor Benchmark Results",
             "=" * 60,
             "",
-            f"Proteins evaluated: {len(self.protein_results)}",
+            f"Proteins evaluated: {n}",
             f"Overall length-weighted IoU: {self.overall_iou:.3f}",
             "",
             "Domain Count Analysis:",
-            f"  Correct count: {self.correct_count} ({100*self.correct_count/len(self.protein_results):.1f}%)",
-            f"  Under-splits: {self.under_splits} ({100*self.under_splits/len(self.protein_results):.1f}%)",
-            f"  Over-splits: {self.over_splits} ({100*self.over_splits/len(self.protein_results):.1f}%)",
+            f"  Correct domain count: {self.correct_domain_count} ({100*self.correct_domain_count/n:.1f}%)",
+            f"  Perfect predictions:  {self.perfect_predictions} ({100*self.perfect_predictions/n:.1f}%)",
+            f"  Under-splits: {self.under_splits} ({100*self.under_splits/n:.1f}%)",
+            f"  Over-splits:  {self.over_splits} ({100*self.over_splits/n:.1f}%)",
             f"  Domain count MAE: {self.domain_mae:.2f}",
             "",
-            "Boundary Accuracy (MCC):",
+            "Boundary Accuracy (F1):",
         ]
         for tol in sorted(self.boundary_mcc.keys()):
-            lines.append(f"  ±{tol:2d} residues: MCC = {self.boundary_mcc[tol]:.3f}")
+            lines.append(f"  ±{tol:2d} residues: F1 = {self.boundary_mcc[tol]:.3f}")
 
         return "\n".join(lines)
 
@@ -543,7 +546,17 @@ def run_benchmark(
     # Domain count analysis
     under_splits = sum(1 for r in protein_results if r.error_type == "under_split")
     over_splits = sum(1 for r in protein_results if r.error_type == "over_split")
-    correct_count = sum(1 for r in protein_results if r.error_type in ["correct", "no_domains_correct"])
+
+    # Correct domain count = right number of domains (includes boundary_error)
+    correct_domain_count = sum(
+        1 for r in protein_results
+        if r.error_type in ["correct", "no_domains_correct", "boundary_error"]
+    )
+    # Perfect predictions = correct count AND good boundaries
+    perfect_predictions = sum(
+        1 for r in protein_results
+        if r.error_type in ["correct", "no_domains_correct"]
+    )
 
     domain_mae = np.mean([abs(r.domain_count_error) for r in protein_results])
 
@@ -560,7 +573,8 @@ def run_benchmark(
         domain_mae=domain_mae,
         under_splits=under_splits,
         over_splits=over_splits,
-        correct_count=correct_count,
+        correct_domain_count=correct_domain_count,
+        perfect_predictions=perfect_predictions,
     )
 
 
