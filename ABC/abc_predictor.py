@@ -1689,6 +1689,77 @@ class ABCPredictor:
         if iteration > 1:
             logger.info(f"Domain extension completed after {iteration} iterations")
 
+        # Post-process: fill small internal gaps in domains
+        # This handles cases like 737-752_758-995 where a small gap (753-757)
+        # creates artificial discontinuity
+        max_gap_to_fill = 10
+        for domain in domains:
+            if len(domain.segments) > 1:
+                # Check gaps between segments
+                filled_indices = list(domain.residue_indices)
+                for i in range(len(domain.segments) - 1):
+                    seg1_end = domain.segments[i][1]
+                    seg2_start = domain.segments[i + 1][0]
+                    gap_size = seg2_start - seg1_end - 1
+                    if 0 < gap_size <= max_gap_to_fill:
+                        # Fill the gap
+                        for idx, res in enumerate(residues):
+                            if seg1_end < res.resnum < seg2_start:
+                                filled_indices.append(idx)
+                        logger.info(
+                            f"Filling internal gap {seg1_end+1}-{seg2_start-1} "
+                            f"({gap_size} residues) in domain"
+                        )
+                if len(filled_indices) > len(domain.residue_indices):
+                    domain.residue_indices = sorted(set(filled_indices))
+                    domain.segments = self._indices_to_segments(residues, domain.residue_indices)
+                    metrics = self.quality_assessor.assess(domain, residues, graph)
+                    domain.quality_metrics = metrics
+
+        # Post-process: merge adjacent domains with sufficient contacts
+        # This handles cases where separate clusters should be one domain (e.g., WD40 blades)
+        merged = True
+        while merged:
+            merged = False
+            domains_sorted = sorted(domains, key=lambda d: min(s[0] for s in d.segments))
+            for i in range(len(domains_sorted) - 1):
+                d1 = domains_sorted[i]
+                d2 = domains_sorted[i + 1]
+                d1_end = max(s[1] for s in d1.segments)
+                d2_start = min(s[0] for s in d2.segments)
+
+                # Check if adjacent (within 20 residues)
+                if d2_start - d1_end > 20:
+                    continue
+
+                # Count contacts between domains
+                contacts = 0
+                d1_indices = set(d1.residue_indices)
+                d2_indices = set(d2.residue_indices)
+                for idx in d1_indices:
+                    if idx not in graph:
+                        continue
+                    for neighbor in graph.neighbors(idx):
+                        if neighbor in d2_indices:
+                            contacts += 1
+
+                # Merge if sufficient contacts (0.3 per residue of smaller domain)
+                min_size = min(len(d1_indices), len(d2_indices))
+                if contacts >= min_size * 0.3:
+                    logger.info(
+                        f"Merging adjacent domains {d1.segments} and {d2.segments} "
+                        f"({contacts} contacts)"
+                    )
+                    # Merge into d1
+                    new_indices = sorted(set(d1.residue_indices + d2.residue_indices))
+                    d1.residue_indices = new_indices
+                    d1.segments = self._indices_to_segments(residues, new_indices)
+                    metrics = self.quality_assessor.assess(d1, residues, graph)
+                    d1.quality_metrics = metrics
+                    domains.remove(d2)
+                    merged = True
+                    break
+
         return domains
 
     def _build_ndr_regions(
