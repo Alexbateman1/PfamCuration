@@ -1597,15 +1597,26 @@ class ABCPredictor:
         if len(current_stretch) >= 10:
             stretches.append(current_stretch)
 
-        # For each high-pLDDT stretch, try to extend an adjacent domain
+        # For each stretch, find high-pLDDT sub-regions that should be rescued
+        high_plddt_stretches = []
         for stretch in stretches:
-            # Calculate average pLDDT for this stretch
+            # Split stretch into high and low pLDDT sub-regions
+            # This handles cases like 679-806 where 679-737 is low pLDDT
+            # but 738-806 is high pLDDT
+            current_sub = []
+            for idx in stretch:
+                if residues[idx].plddt >= self.ndr_plddt_cutoff:
+                    current_sub.append(idx)
+                else:
+                    if len(current_sub) >= 10:  # Minimum size for high-pLDDT sub-region
+                        high_plddt_stretches.append(current_sub)
+                    current_sub = []
+            if len(current_sub) >= 10:
+                high_plddt_stretches.append(current_sub)
+
+        # Now process each high-pLDDT sub-region
+        for stretch in high_plddt_stretches:
             avg_plddt = np.mean([residues[i].plddt for i in stretch])
-
-            # Skip if low pLDDT (truly disordered)
-            if avg_plddt < self.ndr_plddt_cutoff:
-                continue
-
             stretch_start = residues[stretch[0]].resnum
             stretch_end = residues[stretch[-1]].resnum
 
