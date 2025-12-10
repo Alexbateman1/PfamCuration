@@ -644,6 +644,15 @@ class ABCPredictor:
                 else:
                     effective_cr_threshold = self.min_contact_ratio * 0.6  # 40% lower for large domains
 
+                # pLDDT-aware adjustment: high pLDDT is strong evidence of structure
+                # If pLDDT >= 90, significantly lower the CR threshold
+                # If pLDDT >= 80, moderately lower the CR threshold
+                avg_plddt = metrics.get('avg_plddt', 0)
+                if avg_plddt >= 90:
+                    effective_cr_threshold *= 0.5  # 50% lower for very high pLDDT
+                elif avg_plddt >= 80:
+                    effective_cr_threshold *= 0.7  # 30% lower for high pLDDT
+
                 if contact_ratio < effective_cr_threshold and contact_ratio != float('inf'):
                     rejected_for_cr.append({
                         'segments': domain.segments,
