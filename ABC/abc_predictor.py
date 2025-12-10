@@ -712,6 +712,14 @@ class ABCPredictor:
             domains, residues, ndr_residue_indices, graph
         )
 
+        # Step 6f: If no domains remain, create domains from high-pLDDT regions
+        # This handles cases where clustering fragments the structure and all
+        # assembled domains get rejected, but there's clearly structured content
+        if not domains:
+            domains = self._create_domains_from_high_plddt_regions(
+                residues, ndr_residue_indices, graph
+            )
+
         # Renumber domains
         for i, domain in enumerate(domains):
             domain.domain_id = i + 1
@@ -1546,6 +1554,79 @@ class ABCPredictor:
                 merged.append((start, end))
 
         return merged
+
+    def _create_domains_from_high_plddt_regions(
+        self,
+        residues: List[Residue],
+        ndr_indices: set,
+        graph,
+    ) -> List[Domain]:
+        """
+        Create domains from high-pLDDT regions when all other domains were rejected.
+
+        This is a fallback for cases like A6NG13 where clustering fragments the
+        structure and all assembled domains get rejected, but there's clearly
+        structured content (high overall pLDDT).
+        """
+        # Find contiguous high-pLDDT regions
+        high_plddt_indices = []
+        for idx, res in enumerate(residues):
+            if res.plddt >= self.ndr_plddt_cutoff:
+                high_plddt_indices.append(idx)
+
+        if not high_plddt_indices:
+            return []
+
+        # Group into contiguous stretches
+        stretches = []
+        current_stretch = [high_plddt_indices[0]]
+
+        for idx in high_plddt_indices[1:]:
+            # Allow gaps up to 15 residues within a stretch
+            if idx - current_stretch[-1] <= 15:
+                current_stretch.append(idx)
+            else:
+                if len(current_stretch) >= self.min_domain_size:
+                    stretches.append(current_stretch)
+                current_stretch = [idx]
+
+        if len(current_stretch) >= self.min_domain_size:
+            stretches.append(current_stretch)
+
+        if not stretches:
+            return []
+
+        logger.info(f"Creating {len(stretches)} domain(s) from high-pLDDT regions (fallback)")
+
+        domains = []
+        for i, stretch in enumerate(stretches):
+            # Fill in any small gaps within the stretch
+            filled_indices = list(range(min(stretch), max(stretch) + 1))
+
+            segments = self._indices_to_segments(residues, filled_indices)
+            avg_plddt = np.mean([residues[idx].plddt for idx in filled_indices])
+
+            domain = Domain(
+                domain_id=i + 1,
+                segments=segments,
+                residue_indices=filled_indices,
+                quality_metrics={},
+            )
+
+            # Assess quality
+            metrics = self.quality_assessor.assess(domain, residues, graph)
+            domain.quality_metrics = metrics
+
+            start = residues[filled_indices[0]].resnum
+            end = residues[filled_indices[-1]].resnum
+            logger.info(
+                f"  Created domain {start}-{end} "
+                f"(size={len(filled_indices)}, pLDDT={avg_plddt:.1f}, CR={metrics.get('contact_ratio', 0):.2f})"
+            )
+
+            domains.append(domain)
+
+        return domains
 
     def _extend_domains_to_structured_regions(
         self,
