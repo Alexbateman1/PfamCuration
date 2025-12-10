@@ -705,6 +705,13 @@ class ABCPredictor:
 
         domains = filtered_domains
 
+        # Step 6e: Extend domains to absorb adjacent high-pLDDT unassigned regions
+        # This rescues structured regions that were clustered separately but should
+        # be part of an adjacent domain (common in repeat proteins like WD40)
+        domains = self._extend_domains_to_structured_regions(
+            domains, residues, ndr_residue_indices, graph
+        )
+
         # Renumber domains
         for i, domain in enumerate(domains):
             domain.domain_id = i + 1
@@ -1539,6 +1546,122 @@ class ABCPredictor:
                 merged.append((start, end))
 
         return merged
+
+    def _extend_domains_to_structured_regions(
+        self,
+        domains: List[Domain],
+        residues: List[Residue],
+        ndr_indices: set,
+        graph,
+    ) -> List[Domain]:
+        """
+        Extend domains to absorb adjacent high-pLDDT unassigned regions.
+
+        This handles cases where a structured region (high pLDDT) was clustered
+        separately from an adjacent domain but should be part of it. Common in
+        repeat proteins like WD40 where blades may be split.
+
+        The function:
+        1. Finds unassigned regions with high average pLDDT
+        2. Checks if they're adjacent to existing domains
+        3. If they have contacts with the adjacent domain, extends the domain
+        """
+        if not domains:
+            return domains
+
+        # Get all residue indices currently in domains
+        domain_indices = set()
+        for domain in domains:
+            domain_indices.update(domain.residue_indices)
+
+        # Find unassigned indices (not in domains)
+        all_indices = set(range(len(residues)))
+        unassigned = all_indices - domain_indices
+
+        if not unassigned:
+            return domains
+
+        # Group unassigned indices into contiguous stretches
+        unassigned_sorted = sorted(unassigned)
+        stretches = []
+        current_stretch = [unassigned_sorted[0]]
+
+        for idx in unassigned_sorted[1:]:
+            if idx - current_stretch[-1] <= 3:  # Allow small gaps
+                current_stretch.append(idx)
+            else:
+                if len(current_stretch) >= 10:  # Minimum size to consider
+                    stretches.append(current_stretch)
+                current_stretch = [idx]
+
+        if len(current_stretch) >= 10:
+            stretches.append(current_stretch)
+
+        # For each high-pLDDT stretch, try to extend an adjacent domain
+        for stretch in stretches:
+            # Calculate average pLDDT for this stretch
+            avg_plddt = np.mean([residues[i].plddt for i in stretch])
+
+            # Skip if low pLDDT (truly disordered)
+            if avg_plddt < self.ndr_plddt_cutoff:
+                continue
+
+            stretch_start = residues[stretch[0]].resnum
+            stretch_end = residues[stretch[-1]].resnum
+
+            logger.info(
+                f"Found high-pLDDT unassigned region: {stretch_start}-{stretch_end} "
+                f"(pLDDT={avg_plddt:.1f}, size={len(stretch)})"
+            )
+
+            # Find adjacent domain(s)
+            best_domain = None
+            best_contacts = 0
+
+            for domain in domains:
+                dom_start = min(s[0] for s in domain.segments)
+                dom_end = max(s[1] for s in domain.segments)
+
+                # Check if stretch is adjacent (within 50 residues)
+                if stretch_end < dom_start - 50 or stretch_start > dom_end + 50:
+                    continue
+
+                # Count contacts between stretch and domain
+                contacts = 0
+                for idx in stretch:
+                    if idx not in graph:
+                        continue
+                    for neighbor in graph.neighbors(idx):
+                        if neighbor in domain.residue_indices:
+                            contacts += 1
+
+                if contacts > best_contacts:
+                    best_contacts = contacts
+                    best_domain = domain
+
+            # Extend the domain if sufficient contacts
+            min_contacts_per_residue = 0.5  # At least 0.5 contacts per residue
+            if best_domain is not None and best_contacts >= len(stretch) * min_contacts_per_residue:
+                logger.info(
+                    f"  Extending domain {best_domain.segments} to include "
+                    f"{stretch_start}-{stretch_end} ({best_contacts} contacts)"
+                )
+
+                # Add stretch residues to domain
+                new_indices = sorted(set(best_domain.residue_indices + stretch))
+
+                # Rebuild segments
+                new_segments = self._indices_to_segments(residues, new_indices)
+
+                # Update domain
+                best_domain.residue_indices = new_indices
+                best_domain.segments = new_segments
+
+                # Re-assess quality
+                metrics = self.quality_assessor.assess(best_domain, residues, graph)
+                best_domain.quality_metrics = metrics
+
+        return domains
 
     def _build_ndr_regions(
         self,
