@@ -653,6 +653,45 @@ class ABCPredictor:
 
             domains = filtered_domains
 
+        # Step 6d: Filter by compactness (Rg vs expected for globular domain)
+        # Extended structures like alpha helices have high Rg relative to their size
+        # For globular proteins: Rg ≈ 2.5 * N^(1/3) Å
+        # Reject domains where actual Rg > 2.0 * expected Rg
+        filtered_domains = []
+        rejected_for_rg = []
+        for domain in domains:
+            metrics = domain.quality_metrics
+            rg = metrics.get('radius_of_gyration', 0)
+
+            # Expected Rg for a globular domain of this size
+            expected_rg = 2.5 * (domain.size ** (1/3))
+            rg_ratio = rg / expected_rg if expected_rg > 0 else 0
+
+            # Reject if Rg is more than 2x expected (too extended)
+            if rg_ratio > 2.0:
+                rejected_for_rg.append({
+                    'segments': domain.segments,
+                    'size': domain.size,
+                    'rg': rg,
+                    'expected_rg': expected_rg,
+                    'rg_ratio': rg_ratio,
+                    'plddt': metrics.get('avg_plddt', 0),
+                })
+                logger.info(
+                    f"Rejecting domain {domain.segments}: too extended "
+                    f"(Rg={rg:.1f}Å, expected={expected_rg:.1f}Å, ratio={rg_ratio:.1f}x)"
+                )
+                ndr_residue_indices.update(domain.residue_indices)
+            else:
+                filtered_domains.append(domain)
+
+        if rejected_for_rg:
+            logger.info(f"Rejected {len(rejected_for_rg)} domains for being too extended (high Rg):")
+            for rej in rejected_for_rg:
+                logger.info(f"  {rej['segments']}: Rg={rej['rg']:.1f}Å (expected {rej['expected_rg']:.1f}Å, {rej['rg_ratio']:.1f}x)")
+
+        domains = filtered_domains
+
         # Renumber domains
         for i, domain in enumerate(domains):
             domain.domain_id = i + 1
