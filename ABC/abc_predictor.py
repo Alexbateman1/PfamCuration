@@ -1561,116 +1561,133 @@ class ABCPredictor:
         separately from an adjacent domain but should be part of it. Common in
         repeat proteins like WD40 where blades may be split.
 
-        The function:
+        The function iterates until no more extensions can be made:
         1. Finds unassigned regions with high average pLDDT
         2. Checks if they're adjacent to existing domains
         3. If they have contacts with the adjacent domain, extends the domain
+        4. Repeats to catch regions that become adjacent after extension
         """
         if not domains:
             return domains
 
-        # Get all residue indices currently in domains
-        domain_indices = set()
-        for domain in domains:
-            domain_indices.update(domain.residue_indices)
+        max_iterations = 10  # Safety limit
+        iteration = 0
 
-        # Find unassigned indices (not in domains)
-        all_indices = set(range(len(residues)))
-        unassigned = all_indices - domain_indices
+        while iteration < max_iterations:
+            iteration += 1
+            made_extension = False
 
-        if not unassigned:
-            return domains
-
-        # Group unassigned indices into contiguous stretches
-        unassigned_sorted = sorted(unassigned)
-        stretches = []
-        current_stretch = [unassigned_sorted[0]]
-
-        for idx in unassigned_sorted[1:]:
-            if idx - current_stretch[-1] <= 3:  # Allow small gaps
-                current_stretch.append(idx)
-            else:
-                if len(current_stretch) >= 10:  # Minimum size to consider
-                    stretches.append(current_stretch)
-                current_stretch = [idx]
-
-        if len(current_stretch) >= 10:
-            stretches.append(current_stretch)
-
-        # For each stretch, find high-pLDDT sub-regions that should be rescued
-        high_plddt_stretches = []
-        for stretch in stretches:
-            # Split stretch into high and low pLDDT sub-regions
-            # This handles cases like 679-806 where 679-737 is low pLDDT
-            # but 738-806 is high pLDDT
-            current_sub = []
-            for idx in stretch:
-                if residues[idx].plddt >= self.ndr_plddt_cutoff:
-                    current_sub.append(idx)
-                else:
-                    if len(current_sub) >= 10:  # Minimum size for high-pLDDT sub-region
-                        high_plddt_stretches.append(current_sub)
-                    current_sub = []
-            if len(current_sub) >= 10:
-                high_plddt_stretches.append(current_sub)
-
-        # Now process each high-pLDDT sub-region
-        for stretch in high_plddt_stretches:
-            avg_plddt = np.mean([residues[i].plddt for i in stretch])
-            stretch_start = residues[stretch[0]].resnum
-            stretch_end = residues[stretch[-1]].resnum
-
-            logger.info(
-                f"Found high-pLDDT unassigned region: {stretch_start}-{stretch_end} "
-                f"(pLDDT={avg_plddt:.1f}, size={len(stretch)})"
-            )
-
-            # Find adjacent domain(s)
-            best_domain = None
-            best_contacts = 0
-
+            # Get all residue indices currently in domains
+            domain_indices = set()
             for domain in domains:
-                dom_start = min(s[0] for s in domain.segments)
-                dom_end = max(s[1] for s in domain.segments)
+                domain_indices.update(domain.residue_indices)
 
-                # Check if stretch is adjacent (within 50 residues)
-                if stretch_end < dom_start - 50 or stretch_start > dom_end + 50:
-                    continue
+            # Find unassigned indices (not in domains)
+            all_indices = set(range(len(residues)))
+            unassigned = all_indices - domain_indices
 
-                # Count contacts between stretch and domain
-                contacts = 0
+            if not unassigned:
+                break
+
+            # Group unassigned indices into contiguous stretches
+            unassigned_sorted = sorted(unassigned)
+            stretches = []
+            current_stretch = [unassigned_sorted[0]]
+
+            for idx in unassigned_sorted[1:]:
+                if idx - current_stretch[-1] <= 3:  # Allow small gaps
+                    current_stretch.append(idx)
+                else:
+                    if len(current_stretch) >= 10:  # Minimum size to consider
+                        stretches.append(current_stretch)
+                    current_stretch = [idx]
+
+            if len(current_stretch) >= 10:
+                stretches.append(current_stretch)
+
+            # For each stretch, find high-pLDDT sub-regions that should be rescued
+            high_plddt_stretches = []
+            for stretch in stretches:
+                # Split stretch into high and low pLDDT sub-regions
+                # This handles cases like 679-806 where 679-737 is low pLDDT
+                # but 738-806 is high pLDDT
+                current_sub = []
                 for idx in stretch:
-                    if idx not in graph:
-                        continue
-                    for neighbor in graph.neighbors(idx):
-                        if neighbor in domain.residue_indices:
-                            contacts += 1
+                    if residues[idx].plddt >= self.ndr_plddt_cutoff:
+                        current_sub.append(idx)
+                    else:
+                        if len(current_sub) >= 10:  # Minimum size for high-pLDDT sub-region
+                            high_plddt_stretches.append(current_sub)
+                        current_sub = []
+                if len(current_sub) >= 10:
+                    high_plddt_stretches.append(current_sub)
 
-                if contacts > best_contacts:
-                    best_contacts = contacts
-                    best_domain = domain
+            # Now process each high-pLDDT sub-region
+            for stretch in high_plddt_stretches:
+                avg_plddt = np.mean([residues[i].plddt for i in stretch])
+                stretch_start = residues[stretch[0]].resnum
+                stretch_end = residues[stretch[-1]].resnum
 
-            # Extend the domain if sufficient contacts
-            min_contacts_per_residue = 0.5  # At least 0.5 contacts per residue
-            if best_domain is not None and best_contacts >= len(stretch) * min_contacts_per_residue:
                 logger.info(
-                    f"  Extending domain {best_domain.segments} to include "
-                    f"{stretch_start}-{stretch_end} ({best_contacts} contacts)"
+                    f"Found high-pLDDT unassigned region: {stretch_start}-{stretch_end} "
+                    f"(pLDDT={avg_plddt:.1f}, size={len(stretch)})"
                 )
 
-                # Add stretch residues to domain
-                new_indices = sorted(set(best_domain.residue_indices + stretch))
+                # Find adjacent domain(s)
+                best_domain = None
+                best_contacts = 0
 
-                # Rebuild segments
-                new_segments = self._indices_to_segments(residues, new_indices)
+                for domain in domains:
+                    dom_start = min(s[0] for s in domain.segments)
+                    dom_end = max(s[1] for s in domain.segments)
 
-                # Update domain
-                best_domain.residue_indices = new_indices
-                best_domain.segments = new_segments
+                    # Check if stretch is adjacent (within 50 residues)
+                    if stretch_end < dom_start - 50 or stretch_start > dom_end + 50:
+                        continue
 
-                # Re-assess quality
-                metrics = self.quality_assessor.assess(best_domain, residues, graph)
-                best_domain.quality_metrics = metrics
+                    # Count contacts between stretch and domain
+                    contacts = 0
+                    for idx in stretch:
+                        if idx not in graph:
+                            continue
+                        for neighbor in graph.neighbors(idx):
+                            if neighbor in domain.residue_indices:
+                                contacts += 1
+
+                    if contacts > best_contacts:
+                        best_contacts = contacts
+                        best_domain = domain
+
+                # Extend the domain if sufficient contacts
+                min_contacts_per_residue = 0.5  # At least 0.5 contacts per residue
+                if best_domain is not None and best_contacts >= len(stretch) * min_contacts_per_residue:
+                    logger.info(
+                        f"  Extending domain {best_domain.segments} to include "
+                        f"{stretch_start}-{stretch_end} ({best_contacts} contacts)"
+                    )
+
+                    # Add stretch residues to domain
+                    new_indices = sorted(set(best_domain.residue_indices + stretch))
+
+                    # Rebuild segments
+                    new_segments = self._indices_to_segments(residues, new_indices)
+
+                    # Update domain
+                    best_domain.residue_indices = new_indices
+                    best_domain.segments = new_segments
+
+                    # Re-assess quality
+                    metrics = self.quality_assessor.assess(best_domain, residues, graph)
+                    best_domain.quality_metrics = metrics
+
+                    made_extension = True
+
+            # If no extensions were made this iteration, we're done
+            if not made_extension:
+                break
+
+        if iteration > 1:
+            logger.info(f"Domain extension completed after {iteration} iterations")
 
         return domains
 
