@@ -462,7 +462,11 @@ def run_predictions(
     """
     from ABC.abc_predictor import ABCPredictor
 
-    predictor = ABCPredictor(use_dssp=use_dssp)
+    # Use same defaults as CLI (resolution=0.5)
+    predictor = ABCPredictor(
+        resolution=0.5,
+        use_dssp=use_dssp,
+    )
     predictions = {}
 
     for ann in annotations:
