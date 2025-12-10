@@ -37,7 +37,7 @@ def main():
     parser.add_argument("--min-bridge-count", type=int, default=2,
                         help="Minimum bridges to merge discontinuous domains (default: 2)")
     parser.add_argument("--cache-dir", type=str, default=None,
-                        help="Directory to cache AlphaFold files (default: ~/.abc_cache)")
+                        help="Directory to cache AlphaFold files (default: ./.abc_cache)")
     parser.add_argument("--output", "-o", type=str, default=None,
                         help="Output filename prefix (default: UniProt accession)")
     parser.add_argument("--debug", action="store_true",

@@ -173,7 +173,7 @@ class ABCPredictor:
     min_bridge_count : int
         Minimum number of bridges needed between domains to merge them (default: 2)
     cache_dir : str, optional
-        Directory to cache downloaded AlphaFold files (default: ~/.abc_cache)
+        Directory to cache downloaded AlphaFold files (default: ./.abc_cache)
         Set to None to disable caching
     """
 
@@ -202,9 +202,9 @@ class ABCPredictor:
         self.min_bridge_seq_sep = min_bridge_seq_sep
         self.min_bridge_count = min_bridge_count
 
-        # Set up cache directory
+        # Set up cache directory in current working directory
         if cache_dir is None:
-            self.cache_dir = Path.home() / ".abc_cache"
+            self.cache_dir = Path.cwd() / ".abc_cache"
         else:
             self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
