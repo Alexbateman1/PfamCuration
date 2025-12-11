@@ -319,24 +319,27 @@ class CCCPredictor:
         logger.info(f"Downloading AlphaFold model for {uniprot_acc}")
         base_url = "https://alphafold.ebi.ac.uk/files"
 
-        for version in ['v4', 'v3', 'v2']:
+        versions = ['v6', 'v4', 'v3', 'v2']
+        for version in versions:
             try:
                 # Download structure
                 cif_url = f"{base_url}/AF-{uniprot_acc}-F1-model_{version}.cif"
                 urllib.request.urlretrieve(cif_url, cif_path)
+                logger.info(f"Downloaded structure ({version})")
 
                 # Download PAE
                 pae_url = f"{base_url}/AF-{uniprot_acc}-F1-predicted_aligned_error_{version}.json"
                 try:
                     urllib.request.urlretrieve(pae_url, pae_path)
-                except:
-                    pass  # PAE is optional
+                    logger.info(f"Downloaded PAE ({version})")
+                except Exception:
+                    logger.warning(f"Could not download PAE, continuing without it")
 
                 return cif_path, pae_path
-            except:
+            except Exception:
                 continue
 
-        raise RuntimeError(f"Failed to download structure for {uniprot_acc}")
+        raise RuntimeError(f"Failed to download structure for {uniprot_acc} (tried versions: {versions})")
 
     def _parse_structure(self, cif_path: Path) -> List[Residue]:
         """Parse mmCIF structure file."""
