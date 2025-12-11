@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 # Import VoronoiPredictor - add current directory to path for direct import
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from voronoi_predictor import VoronoiPredictor
+from voronoi_predictor import VoronoiPredictor, setup_file_logging
 
 # Import ABC benchmark infrastructure
 from ABC.benchmark import (
@@ -90,8 +90,17 @@ def main():
         action="store_true",
         help="Print detailed info for debugging"
     )
+    parser.add_argument(
+        "--log", "-l",
+        default="3dvc_benchmark.log",
+        help="Log file for detailed scores (default: 3dvc_benchmark.log)"
+    )
 
     args = parser.parse_args()
+
+    # Set up file logging
+    setup_file_logging(args.log)
+    print(f"Logging to {args.log}")
 
     # Parse ground truth
     print(f"Loading ground truth from {args.dev_set}...")

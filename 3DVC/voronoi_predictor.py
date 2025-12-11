@@ -20,6 +20,7 @@ import json
 import logging
 import urllib.request
 from dataclasses import dataclass, field
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -27,8 +28,31 @@ import numpy as np
 from scipy.spatial.distance import cdist
 
 # Set up logging
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+# Add console handler if not already present
+if not logger.handlers:
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    logger.addHandler(console_handler)
+
+
+def setup_file_logging(log_file: str = "3dvc_predictions.log"):
+    """
+    Set up file logging for prediction results.
+
+    Parameters:
+    -----------
+    log_file : str
+        Path to log file (default: 3dvc_predictions.log)
+    """
+    file_handler = logging.FileHandler(log_file)
+    file_handler.setLevel(logging.INFO)
+    formatter = logging.Formatter('%(asctime)s\t%(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+    return file_handler
 
 
 @dataclass
@@ -322,19 +346,21 @@ class VoronoiPredictor:
         best_k = 1
         best_seeds = None
         best_assignments = None
+        all_scores = {}  # Track all scores for logging
 
         # Determine max K to try based on protein size
-        max_k = min(self.max_domains, len(structured_indices) // self.min_domain_size)
+        n_structured = len(structured_indices)
+        max_k = min(self.max_domains, n_structured // self.min_domain_size)
         max_k = max(1, max_k)
 
         for k in range(1, max_k + 1):
-            logger.info(f"  Trying K={k} domains...")
-
             seeds, assignments, score = self._optimize_voronoi(
                 coords, contacts, resnums, k
             )
 
-            logger.info(f"    K={k}: score={score:.2f}")
+            score_per_res = score / n_structured if n_structured > 0 else 0
+            all_scores[k] = (score, score_per_res)
+            logger.info(f"  K={k}: score={score:.2f} ({score_per_res:.2f}/res)")
 
             if score > best_score:
                 best_score = score
@@ -342,7 +368,11 @@ class VoronoiPredictor:
                 best_seeds = seeds
                 best_assignments = assignments
 
-        logger.info(f"Best partition: K={best_k} with score={best_score:.2f}")
+        # Log summary line for easy parsing
+        scores_str = " ".join([f"K{k}={s:.1f}" for k, (s, _) in sorted(all_scores.items())])
+        best_score_per_res = best_score / n_structured if n_structured > 0 else 0
+        logger.info(f"SCORES\t{uniprot_acc}\tn_struct={n_structured}\tbest_K={best_k}\t"
+                   f"best_score={best_score:.2f}\tscore_per_res={best_score_per_res:.2f}\t{scores_str}")
 
         # Check if best score meets minimum threshold (per-residue)
         # If score is too negative, the structure doesn't form coherent domains
@@ -353,6 +383,8 @@ class VoronoiPredictor:
         if score_per_residue < min_score_per_residue:
             logger.info(f"Score per residue ({score_per_residue:.2f}) below threshold "
                        f"({min_score_per_residue}), predicting 0 domains")
+            logger.info(f"RESULT\t{uniprot_acc}\tn_domains=0\t"
+                       f"score_per_res={score_per_residue:.2f}\tdomains=NONE (below threshold)")
             return VoronoiPrediction(
                 uniprot_acc=uniprot_acc,
                 sequence_length=n_residues,
@@ -383,7 +415,11 @@ class VoronoiPredictor:
         # Build NDR regions
         ndr_regions = self._build_ndr_regions(residues, ndr_indices)
 
-        logger.info(f"Final: {len(domains)} domains, {len(ndr_regions)} NDR regions")
+        # Log final result summary (easy to grep)
+        domain_strs = [d.to_chopping_string() for d in domains]
+        domains_output = "; ".join(domain_strs) if domain_strs else "NONE"
+        logger.info(f"RESULT\t{uniprot_acc}\tn_domains={len(domains)}\t"
+                   f"score_per_res={best_score_per_res:.2f}\tdomains={domains_output}")
 
         return VoronoiPrediction(
             uniprot_acc=uniprot_acc,
