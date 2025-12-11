@@ -170,11 +170,11 @@ class VoronoiPrediction:
                         f"color {color}")
 
         lines.append("")
-        lines.append("# Voronoi boundary planes (as disks)")
+        lines.append("# Voronoi boundary planes (as rectangles)")
 
-        # Create boundary disks between each pair of seeds
+        # Create boundary rectangles between each pair of seeds
         n_seeds = len(self.seed_positions)
-        disk_id = 0
+        plane_size = plane_radius * 2  # Convert radius to width/height
 
         for i in range(n_seeds):
             for j in range(i + 1, n_seeds):
@@ -188,13 +188,29 @@ class VoronoiPrediction:
                 normal = seed_j - seed_i
                 normal = normal / np.linalg.norm(normal)
 
-                # ChimeraX shape disk syntax: radius first, then other options
+                # Calculate rotation to align Z-axis with normal
+                # Default rectangle is in XY plane (normal = Z = [0,0,1])
+                z_axis = np.array([0, 0, 1])
+
+                # Rotation axis = cross(Z, normal)
+                rot_axis = np.cross(z_axis, normal)
+                rot_axis_len = np.linalg.norm(rot_axis)
+
+                if rot_axis_len > 0.001:  # Not parallel to Z
+                    rot_axis = rot_axis / rot_axis_len
+                    # Rotation angle = acos(dot(Z, normal))
+                    rot_angle = np.degrees(np.arccos(np.clip(np.dot(z_axis, normal), -1, 1)))
+                    rotation_str = f"rotation {rot_axis[0]:.4f},{rot_axis[1]:.4f},{rot_axis[2]:.4f},{rot_angle:.2f}"
+                elif normal[2] < 0:  # Anti-parallel to Z (flip 180)
+                    rotation_str = "rotation 1,0,0,180"
+                else:  # Parallel to Z (no rotation needed)
+                    rotation_str = ""
+
                 lines.append(
-                    f"shape disk radius {plane_radius} center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
-                    f"normal {normal[0]:.4f},{normal[1]:.4f},{normal[2]:.4f} "
-                    f"color gray"
+                    f"shape rectangle width {plane_size} height {plane_size} "
+                    f"center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
+                    f"{rotation_str} color #808080"
                 )
-                disk_id += 1
 
         lines.append("")
         lines.append("# Make boundary planes semi-transparent")
