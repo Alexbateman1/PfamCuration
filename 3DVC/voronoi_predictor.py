@@ -123,9 +123,13 @@ class VoronoiPrediction:
                         f"(size={d.size}, discontinuous={d.is_discontinuous})")
         return "\n".join(lines)
 
-    def chimerax_commands(self, structure_model: str = "#1", plane_size: float = 50.0) -> str:
+    def chimerax_commands(self, structure_model: str = "#1", plane_size: float = 50.0,
+                           grid_spacing: float = 5.0, marker_radius: float = 1.5) -> str:
         """
         Generate ChimeraX commands to visualize Voronoi boundaries.
+
+        Creates a grid of small markers on each boundary plane to visualize
+        the Voronoi partitioning.
 
         Parameters:
         -----------
@@ -133,6 +137,10 @@ class VoronoiPrediction:
             ChimeraX model ID for the structure (default: "#1")
         plane_size : float
             Size of boundary planes in Angstroms (default: 50.0)
+        grid_spacing : float
+            Spacing between markers on planes (default: 5.0)
+        marker_radius : float
+            Radius of plane markers (default: 1.5)
 
         Returns:
         --------
@@ -164,38 +172,79 @@ class VoronoiPrediction:
         for i, seed in enumerate(self.seed_positions):
             color = colors[i % len(colors)]
             lines.append(f"marker #{i+10} position {seed[0]:.2f},{seed[1]:.2f},{seed[2]:.2f} "
-                        f"color {color} radius 3")
+                        f"color {color} radius 4")
 
         lines.append("")
-        lines.append("# Voronoi boundary planes (perpendicular bisectors between seeds)")
+        lines.append("# Voronoi boundary planes (as marker grids)")
 
-        # Add boundary planes between each pair of seeds
-        plane_id = 100
+        # Calculate protein center and extent for clipping
+        all_seeds = self.seed_positions
+        center = all_seeds.mean(axis=0)
+
+        # Create boundary plane markers between each pair of seeds
+        marker_id = 100
         n_seeds = len(self.seed_positions)
+
         for i in range(n_seeds):
             for j in range(i + 1, n_seeds):
                 seed_i = self.seed_positions[i]
                 seed_j = self.seed_positions[j]
 
-                # Midpoint
+                # Midpoint (plane passes through here)
                 midpoint = (seed_i + seed_j) / 2
 
-                # Normal vector (from i to j)
+                # Normal vector (perpendicular to plane)
                 normal = seed_j - seed_i
                 normal = normal / np.linalg.norm(normal)
 
-                # Create plane command
-                lines.append(
-                    f"shape plane #{plane_id} center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
-                    f"normal {normal[0]:.3f},{normal[1]:.3f},{normal[2]:.3f} "
-                    f"size {plane_size} color gray transparency 0.7"
-                )
-                plane_id += 1
+                # Create two orthogonal vectors in the plane
+                if abs(normal[0]) < 0.9:
+                    v1 = np.cross(normal, np.array([1, 0, 0]))
+                else:
+                    v1 = np.cross(normal, np.array([0, 1, 0]))
+                v1 = v1 / np.linalg.norm(v1)
+                v2 = np.cross(normal, v1)
+
+                # Generate grid of points on the plane
+                half_size = plane_size / 2
+                n_points = int(plane_size / grid_spacing) + 1
+
+                lines.append(f"# Boundary plane between seeds {i} and {j}")
+
+                for gi in range(n_points):
+                    for gj in range(n_points):
+                        # Position on plane
+                        u = -half_size + gi * grid_spacing
+                        v = -half_size + gj * grid_spacing
+
+                        # Check if within circular region
+                        if u*u + v*v > half_size * half_size:
+                            continue
+
+                        point = midpoint + u * v1 + v * v2
+
+                        lines.append(
+                            f"marker #{marker_id} position {point[0]:.1f},{point[1]:.1f},{point[2]:.1f} "
+                            f"color gray radius {marker_radius}"
+                        )
+                        marker_id += 1
+
+                        # Limit total markers to keep file manageable
+                        if marker_id > 500:
+                            break
+                    if marker_id > 500:
+                        break
+                if marker_id > 500:
+                    lines.append("# (marker limit reached)")
+                    break
+            if marker_id > 500:
+                break
 
         lines.append("")
         lines.append("# Show ribbon representation")
         lines.append(f"cartoon {structure_model}")
         lines.append(f"hide {structure_model} atoms")
+        lines.append(f"transparency #10-99 70")
 
         return "\n".join(lines)
 
