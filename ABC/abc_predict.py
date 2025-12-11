@@ -41,8 +41,8 @@ def main():
                         help="Minimum bridges to merge discontinuous domains (default: 2)")
     parser.add_argument("--cache-dir", type=str, default=None,
                         help="Directory to cache AlphaFold files (default: ./.abc_cache)")
-    parser.add_argument("--use-dssp", action="store_true",
-                        help="Use DSSP hydrogen bonds to enhance contact graph (requires mkdssp)")
+    parser.add_argument("--no-dssp", action="store_true",
+                        help="Disable DSSP hydrogen bond analysis (enabled by default)")
     parser.add_argument("--output", "-o", type=str, default=None,
                         help="Output filename prefix (default: UniProt accession)")
     parser.add_argument("--debug", action="store_true",
@@ -71,7 +71,7 @@ def main():
         min_bridge_seq_sep=args.min_bridge_sep,
         min_bridge_count=args.min_bridge_count,
         cache_dir=args.cache_dir,
-        use_dssp=args.use_dssp,
+        use_dssp=not args.no_dssp,  # DSSP enabled by default
     )
 
     # Graph visualization mode

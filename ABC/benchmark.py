@@ -447,7 +447,7 @@ def calculate_boundary_mcc(
 
 def run_predictions(
     annotations: List[ProteinAnnotation],
-    use_dssp: bool = False,
+    use_dssp: bool = True,
     verbose: bool = False,
     distance_threshold: float = 10.0,
     resolution: float = 0.5,
@@ -462,7 +462,7 @@ def run_predictions(
     annotations : List[ProteinAnnotation]
         Ground truth annotations
     use_dssp : bool
-        Whether to use DSSP hydrogen bonds
+        Whether to use DSSP hydrogen bonds (default: True)
     verbose : bool
         If True, print detailed prediction info for debugging
     distance_threshold : float
@@ -873,9 +873,9 @@ def main():
         help="IoU threshold for correct domain match (default: 0.8)"
     )
     parser.add_argument(
-        "--use-dssp",
+        "--no-dssp",
         action="store_true",
-        help="Use DSSP hydrogen bonds to enhance contact graph (requires mkdssp)"
+        help="Disable DSSP hydrogen bond analysis (enabled by default)"
     )
     parser.add_argument(
         "--verbose", "-v",
@@ -935,13 +935,14 @@ def main():
             predictions[acc] = dom_list
 
     elif args.run_predictions:
-        if args.use_dssp:
+        use_dssp = not args.no_dssp  # DSSP enabled by default
+        if use_dssp:
             print("Running ABC predictions with DSSP enhancement...")
         else:
-            print("Running ABC predictions...")
+            print("Running ABC predictions (DSSP disabled)...")
         predictions = run_predictions(
             annotations,
-            use_dssp=args.use_dssp,
+            use_dssp=use_dssp,
             verbose=args.verbose,
             distance_threshold=args.distance,
             resolution=args.resolution,

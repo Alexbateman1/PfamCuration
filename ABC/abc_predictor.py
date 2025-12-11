@@ -176,7 +176,7 @@ class ABCPredictor:
         Directory to cache downloaded AlphaFold files (default: ./.abc_cache)
         Set to None to disable caching
     use_dssp : bool
-        Whether to use DSSP hydrogen bond information (default: False)
+        Whether to use DSSP hydrogen bond information (default: True)
         When enabled, long-range H-bonds (beta sheets) add/boost graph edges
     """
 
@@ -193,7 +193,7 @@ class ABCPredictor:
         min_bridge_seq_sep: int = 50,
         min_bridge_count: int = 2,
         cache_dir: Optional[str] = None,
-        use_dssp: bool = False,
+        use_dssp: bool = True,
     ):
         self.distance_threshold = distance_threshold
         self.min_domain_size = min_domain_size
