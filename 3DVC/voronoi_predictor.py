@@ -123,6 +123,89 @@ class VoronoiPrediction:
                         f"(size={d.size}, discontinuous={d.is_discontinuous})")
         return "\n".join(lines)
 
+    def chimerax_commands(self, structure_model: str = "#1", plane_size: float = 50.0) -> str:
+        """
+        Generate ChimeraX commands to visualize Voronoi boundaries.
+
+        Parameters:
+        -----------
+        structure_model : str
+            ChimeraX model ID for the structure (default: "#1")
+        plane_size : float
+            Size of boundary planes in Angstroms (default: 50.0)
+
+        Returns:
+        --------
+        String of ChimeraX commands
+        """
+        if self.seed_positions is None or len(self.seed_positions) < 2:
+            return "# No Voronoi boundaries to display (single domain or no seeds)"
+
+        lines = [
+            f"# ChimeraX commands for 3DVC visualization of {self.uniprot_acc}",
+            f"# {len(self.domains)} domains predicted",
+            "",
+            "# Color domains",
+        ]
+
+        # Domain colors
+        colors = ["red", "blue", "green", "yellow", "orange", "purple",
+                  "cyan", "magenta", "lime", "pink"]
+
+        for i, domain in enumerate(self.domains):
+            color = colors[i % len(colors)]
+            segments_sel = " ".join([f":{s}-{e}" for s, e in domain.segments])
+            lines.append(f"color {structure_model}/{segments_sel} {color}")
+
+        lines.append("")
+        lines.append("# Voronoi seed positions (as markers)")
+
+        # Add seed markers
+        for i, seed in enumerate(self.seed_positions):
+            color = colors[i % len(colors)]
+            lines.append(f"marker #{i+10} position {seed[0]:.2f},{seed[1]:.2f},{seed[2]:.2f} "
+                        f"color {color} radius 3")
+
+        lines.append("")
+        lines.append("# Voronoi boundary planes (perpendicular bisectors between seeds)")
+
+        # Add boundary planes between each pair of seeds
+        plane_id = 100
+        n_seeds = len(self.seed_positions)
+        for i in range(n_seeds):
+            for j in range(i + 1, n_seeds):
+                seed_i = self.seed_positions[i]
+                seed_j = self.seed_positions[j]
+
+                # Midpoint
+                midpoint = (seed_i + seed_j) / 2
+
+                # Normal vector (from i to j)
+                normal = seed_j - seed_i
+                normal = normal / np.linalg.norm(normal)
+
+                # Create plane command
+                lines.append(
+                    f"shape plane #{plane_id} center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
+                    f"normal {normal[0]:.3f},{normal[1]:.3f},{normal[2]:.3f} "
+                    f"size {plane_size} color gray transparency 0.7"
+                )
+                plane_id += 1
+
+        lines.append("")
+        lines.append("# Show ribbon representation")
+        lines.append(f"cartoon {structure_model}")
+        lines.append(f"hide {structure_model} atoms")
+
+        return "\n".join(lines)
+
+    def save_chimerax_script(self, output_path: str, **kwargs):
+        """Save ChimeraX commands to a file."""
+        commands = self.chimerax_commands(**kwargs)
+        with open(output_path, 'w') as f:
+            f.write(commands)
+        return output_path
+
     def to_dict(self) -> Dict:
         return {
             "uniprot_acc": self.uniprot_acc,
