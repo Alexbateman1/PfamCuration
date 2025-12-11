@@ -5,6 +5,9 @@ ABC Domain Predictor - Standalone script
 Run from anywhere:
     python /path/to/abc_predict.py P12931
     python /path/to/abc_predict.py P12931 --resolution 0.5
+
+Graph visualization:
+    python /path/to/abc_predict.py P12931 --visualize-graph dev_set
 """
 
 import argparse
@@ -46,6 +49,10 @@ def main():
                         help="Show debug information about clustering and NDR detection")
     parser.add_argument("--debug-region", type=str, default=None,
                         help="Focus debug output on specific region (e.g., '1014-1085')")
+    parser.add_argument("--visualize-graph", type=str, default=None,
+                        metavar="DEV_FILE",
+                        help="Generate interactive HTML visualization of the contact graph. "
+                             "Provide path to dev file with ground truth domain definitions.")
 
     args = parser.parse_args()
 
@@ -60,6 +67,41 @@ def main():
         cache_dir=args.cache_dir,
         use_dssp=args.use_dssp,
     )
+
+    # Graph visualization mode
+    if args.visualize_graph:
+        from ABC.graph_visualizer import parse_dev_file, create_graph_visualization
+
+        # Parse dev file for ground truth
+        dev_annotations = parse_dev_file(args.visualize_graph)
+        ground_truth = dev_annotations.get(args.uniprot, [])
+
+        if not ground_truth:
+            print(f"Warning: No ground truth found for {args.uniprot} in {args.visualize_graph}")
+
+        # Run prediction with intermediate data capture
+        prediction, graph, clusters, residues = predictor.predict_with_intermediates(args.uniprot)
+
+        # Generate visualization
+        output_prefix = args.output or args.uniprot
+        output_file = f"{output_prefix}_graph.html"
+
+        create_graph_visualization(
+            graph=graph,
+            residues=residues,
+            cluster_assignments=clusters,
+            ground_truth_domains=ground_truth if ground_truth else None,
+            predicted_domains=prediction.domains if prediction.domains else None,
+            output_path=output_file,
+            title=f"Contact Graph: {args.uniprot}",
+        )
+
+        print(f"\nGraph visualization saved to: {output_file}")
+        print(f"Open in browser to explore interactively.")
+
+        # Also print prediction summary
+        print("\n" + prediction.summary())
+        return
 
     # Run prediction (with debug if requested)
     if args.debug:

@@ -362,6 +362,42 @@ class ABCPredictor:
         cif_path, pae_path = self._get_alphafold_files(uniprot_acc)
         return self.predict_from_file(str(cif_path), str(pae_path) if pae_path else None, uniprot_acc)
 
+    def predict_with_intermediates(self, uniprot_acc: str):
+        """
+        Predict domains and return intermediate data for visualization.
+
+        Parameters:
+        -----------
+        uniprot_acc : str
+            UniProt accession (e.g., 'P12345')
+
+        Returns:
+        --------
+        Tuple of (ABCPrediction, graph, cluster_assignments, residues)
+        """
+        cif_path, pae_path = self._get_alphafold_files(uniprot_acc)
+
+        # Parse structure
+        residues = self._parse_structure(str(cif_path))
+        pae_matrix = self._load_pae(str(pae_path)) if pae_path else None
+
+        # Get DSSP data if requested
+        dssp_data = None
+        if self.use_dssp:
+            from .dssp_parser import run_dssp
+            dssp_data = run_dssp(str(cif_path), cache_dir=self.cache_dir)
+
+        # Build graph
+        graph = self.graph_builder.build(residues, pae_matrix, dssp_data)
+
+        # Cluster
+        cluster_assignments = self._cluster_graph(graph)
+
+        # Run full prediction
+        prediction = self._predict(residues, pae_matrix, uniprot_acc, dssp_data)
+
+        return prediction, graph, cluster_assignments, residues
+
     def predict_from_uniprot_debug(self, uniprot_acc: str, debug_region: Optional[str] = None) -> ABCPrediction:
         """
         Predict domains with debug output to understand classification decisions.
