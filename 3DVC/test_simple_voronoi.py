@@ -75,31 +75,79 @@ def assign_to_seeds(coords, seeds):
     return np.argmin(distances, axis=1)
 
 
-def count_crossings(assignments, resnums):
+def count_crossings(assignments, resnums, max_intrusion_length=3):
     """
-    Count chain crossings.
-    A crossing occurs when sequential residues (by resnum) are in different partitions.
+    Count chain crossings, distinguishing brief intrusions from real crossings.
+
+    A brief intrusion is when the chain dips into another domain for a short
+    stretch (≤ max_intrusion_length residues) then returns to the original domain.
+    These should be penalized less than real crossings.
+
+    Returns: (real_crossings, brief_intrusions)
     """
-    crossings = 0
     sorted_indices = np.argsort(resnums)
     sorted_assignments = assignments[sorted_indices]
     sorted_resnums = resnums[sorted_indices]
 
-    for i in range(len(sorted_resnums) - 1):
-        # Check if residues are sequential in original numbering
-        if sorted_resnums[i + 1] - sorted_resnums[i] == 1:
-            # Sequential - check if crossing
-            if sorted_assignments[i] != sorted_assignments[i + 1]:
-                crossings += 1
+    # Build list of sequential assignment changes
+    # Find runs of same assignment
+    runs = []  # List of (domain, start_idx, end_idx)
+    if len(sorted_assignments) == 0:
+        return 0, 0
 
-    return crossings
+    current_domain = sorted_assignments[0]
+    run_start = 0
+
+    for i in range(1, len(sorted_assignments)):
+        # Check if sequential in original numbering
+        if sorted_resnums[i] - sorted_resnums[i-1] != 1:
+            # Gap in sequence - end current run, start new one
+            runs.append((current_domain, run_start, i-1))
+            current_domain = sorted_assignments[i]
+            run_start = i
+        elif sorted_assignments[i] != current_domain:
+            # Domain change
+            runs.append((current_domain, run_start, i-1))
+            current_domain = sorted_assignments[i]
+            run_start = i
+
+    # Don't forget the last run
+    runs.append((current_domain, run_start, len(sorted_assignments)-1))
+
+    # Now analyze the runs to find brief intrusions vs real crossings
+    real_crossings = 0
+    brief_intrusions = 0
+
+    for i in range(1, len(runs)):
+        prev_domain, prev_start, prev_end = runs[i-1]
+        curr_domain, curr_start, curr_end = runs[i]
+
+        run_length = curr_end - curr_start + 1
+
+        # Check if this is a brief intrusion (returns to previous domain)
+        is_brief_intrusion = False
+        if run_length <= max_intrusion_length and i + 1 < len(runs):
+            next_domain, _, _ = runs[i + 1]
+            if next_domain == prev_domain:
+                # Pattern: A -> B -> A with short B segment
+                is_brief_intrusion = True
+
+        if is_brief_intrusion:
+            brief_intrusions += 1
+        else:
+            real_crossings += 1
+
+    return real_crossings, brief_intrusions
 
 
-def score_partition(assignments, resnums, k, domain_bonus=50, crossing_penalty=50, min_size=30):
+def score_partition(assignments, resnums, k, domain_bonus=50, crossing_penalty=50,
+                    intrusion_penalty=10, min_size=30):
     """
     Score a partition.
 
-    Score = domain_bonus * num_valid_domains - crossing_penalty * crossings
+    Score = domain_bonus * num_valid_domains
+            - crossing_penalty * real_crossings
+            - intrusion_penalty * brief_intrusions
 
     Domains smaller than min_size are invalid (don't count for bonus, add penalty).
     """
@@ -108,17 +156,18 @@ def score_partition(assignments, resnums, k, domain_bonus=50, crossing_penalty=5
     valid_domains = np.sum(domain_sizes >= min_size)
     invalid_domains = k - valid_domains
 
-    # Count crossings
-    crossings = count_crossings(assignments, resnums)
+    # Count crossings (real vs brief intrusions)
+    real_crossings, brief_intrusions = count_crossings(assignments, resnums)
 
     # Score: reward valid domains, penalize crossings and invalid tiny domains
     score = (
         domain_bonus * valid_domains
-        - crossing_penalty * crossings
+        - crossing_penalty * real_crossings
+        - intrusion_penalty * brief_intrusions
         - 50 * invalid_domains  # Penalty for undersized domains
     )
 
-    return score, crossings, valid_domains
+    return score, real_crossings, brief_intrusions, valid_domains
 
 
 def kmeans_optimize(coords, resnums, k, max_iter=100):
@@ -148,7 +197,7 @@ def kmeans_optimize(coords, resnums, k, max_iter=100):
         assignments = assign_to_seeds(coords, seeds)
 
         # Compute score
-        score, crossings, valid_domains = score_partition(assignments, resnums, k)
+        score, _, _, _ = score_partition(assignments, resnums, k)
 
         if score > best_score:
             best_score = score
@@ -327,14 +376,15 @@ def generate_chimerax_commands(seeds, assignments, resnums, coords, uniprot_acc)
     return "\n".join(lines)
 
 
-def predict_domains(coords, resnums, max_k=10, domain_bonus=50, crossing_penalty=50, min_size=30,
-                    output_prefix=None, uniprot_acc="protein"):
+def predict_domains(coords, resnums, max_k=10, domain_bonus=50, crossing_penalty=50,
+                    intrusion_penalty=10, min_size=30, output_prefix=None, uniprot_acc="protein"):
     """
     Predict domains by trying different K values.
     Saves ChimeraX files for each K if output_prefix is provided.
     """
     print(f"\nOptimizing with {len(coords)} residues...")
-    print(f"Parameters: domain_bonus={domain_bonus}, crossing_penalty={crossing_penalty}, min_size={min_size}")
+    print(f"Parameters: domain_bonus={domain_bonus}, crossing_penalty={crossing_penalty}, "
+          f"intrusion_penalty={intrusion_penalty}, min_size={min_size}")
 
     best_overall_score = -float('inf')
     best_k = 1
@@ -343,10 +393,12 @@ def predict_domains(coords, resnums, max_k=10, domain_bonus=50, crossing_penalty
     for k in range(1, max_k + 1):
         seeds, assignments, score = kmeans_optimize(coords, resnums, k)
 
-        _, crossings, valid_domains = score_partition(assignments, resnums, k,
-                                                       domain_bonus, crossing_penalty, min_size)
+        _, real_crossings, brief_intrusions, valid_domains = score_partition(
+            assignments, resnums, k, domain_bonus, crossing_penalty, intrusion_penalty, min_size
+        )
 
-        print(f"  K={k}: score={score:.1f}, crossings={crossings}, valid_domains={valid_domains}")
+        print(f"  K={k}: score={score:.1f}, real_crossings={real_crossings}, "
+              f"intrusions={brief_intrusions}, valid_domains={valid_domains}")
 
         # Save ChimeraX file for this K
         if output_prefix:
@@ -446,7 +498,9 @@ if __name__ == "__main__":
     parser.add_argument("--domain-bonus", type=float, default=50,
                         help="Reward for each valid domain (default: 50)")
     parser.add_argument("--crossing-penalty", type=float, default=50,
-                        help="Penalty per chain crossing (default: 50)")
+                        help="Penalty per real chain crossing (default: 50)")
+    parser.add_argument("--intrusion-penalty", type=float, default=10,
+                        help="Penalty per brief intrusion (default: 10)")
     parser.add_argument("--min-size", type=int, default=30,
                         help="Minimum domain size (default: 30)")
     parser.add_argument("--max-k", type=int, default=10,
@@ -459,6 +513,7 @@ if __name__ == "__main__":
         output_chimerax=args.chimerax,
         domain_bonus=args.domain_bonus,
         crossing_penalty=args.crossing_penalty,
+        intrusion_penalty=args.intrusion_penalty,
         min_size=args.min_size,
         max_k=args.max_k,
     )
