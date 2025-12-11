@@ -150,6 +150,7 @@ def create_graph_visualization(
     predicted_domains: Optional[List] = None,  # List of Domain objects
     output_path: str = "graph_visualization.html",
     title: str = "Contact Graph Visualization",
+    uniprot_acc: str = None,
 ) -> str:
     """
     Create an interactive HTML visualization of the contact graph.
@@ -214,6 +215,9 @@ def create_graph_visualization(
         gt_domain_id = gt_domain_map.get(res.resnum, 0)
         pred_domain_id = pred_domain_map.get(res.resnum, 0)
 
+        # Track if residue is in GT but missed by prediction (false negative)
+        is_missed = gt_domain_id > 0 and pred_domain_id == 0
+
         node = {
             'id': i,
             'resnum': res.resnum,
@@ -221,6 +225,7 @@ def create_graph_visualization(
             'cluster': cluster_id,
             'gt_domain': gt_domain_id,
             'pred_domain': pred_domain_id,
+            'is_missed': is_missed,  # In GT but not in prediction
             'cluster_color': cluster_color_map.get(cluster_id, '#cccccc'),
             'gt_color': gt_colors[gt_domain_id % len(gt_colors)] if gt_domain_id > 0 else '#cccccc',
             'pred_color': pred_colors[pred_domain_id % len(pred_colors)] if pred_domain_id > 0 else '#cccccc',
@@ -247,6 +252,7 @@ def create_graph_visualization(
         n_clusters=n_clusters,
         n_gt_domains=len(ground_truth_domains) if ground_truth_domains else 0,
         n_pred_domains=len(predicted_domains) if predicted_domains else 0,
+        uniprot_acc=uniprot_acc,
     )
 
     # Write to file
@@ -264,11 +270,18 @@ def _generate_html(
     n_clusters: int,
     n_gt_domains: int,
     n_pred_domains: int,
+    uniprot_acc: str = None,
 ) -> str:
     """Generate the HTML content with vis.js visualization."""
 
     nodes_json = json.dumps(nodes_data)
     edges_json = json.dumps(edges_data)
+
+    # Create clickable title with TED link if UniProt accession provided
+    if uniprot_acc:
+        title_html = f'Contact Graph: <a href="https://ted.cathdb.info/uniprot/{uniprot_acc}" target="_blank" style="color: #0066cc;">{uniprot_acc}</a>'
+    else:
+        title_html = title
 
     html = f'''<!DOCTYPE html>
 <html>
@@ -285,6 +298,12 @@ def _generate_html(
         h1 {{
             margin: 0 0 10px 0;
             color: #333;
+        }}
+        h1 a {{
+            text-decoration: none;
+        }}
+        h1 a:hover {{
+            text-decoration: underline;
         }}
         .container {{
             display: flex;
@@ -372,7 +391,7 @@ def _generate_html(
     </style>
 </head>
 <body>
-    <h1>{title}</h1>
+    <h1>{title_html}</h1>
     <div class="container">
         <div id="graph"></div>
         <div class="controls">
@@ -442,13 +461,15 @@ def _generate_html(
             nodes.add({{
                 id: n.id,
                 label: String(n.resnum),
-                title: `Residue ${{n.resnum}}\\npLDDT: ${{n.plddt}}\\nCluster: ${{n.cluster}}\\nGT Domain: ${{n.gt_domain}}\\nPred Domain: ${{n.pred_domain}}`,
+                title: `Residue ${{n.resnum}}\\npLDDT: ${{n.plddt}}\\nCluster: ${{n.cluster}}\\nGT Domain: ${{n.gt_domain}}\\nPred Domain: ${{n.pred_domain}}${{n.is_missed ? '\\n⚠️ MISSED (in GT, not predicted)' : ''}}`,
                 color: n.cluster_color,
+                shape: 'dot',
                 resnum: n.resnum,
                 plddt: n.plddt,
                 cluster: n.cluster,
                 gt_domain: n.gt_domain,
                 pred_domain: n.pred_domain,
+                is_missed: n.is_missed,
                 cluster_color: n.cluster_color,
                 gt_color: n.gt_color,
                 pred_color: n.pred_color,
@@ -512,21 +533,28 @@ def _generate_html(
             const mode = this.value;
             nodes.forEach(node => {{
                 let color;
+                let shape = 'dot';  // Default shape
+
                 if (mode === 'cluster') {{
                     color = node.cluster_color;
                 }} else if (mode === 'gt_domain') {{
                     color = node.gt_color;
                 }} else if (mode === 'pred_domain') {{
                     color = node.pred_color;
+                    // Show missed residues (in GT but not predicted) as squares
+                    if (node.is_missed) {{
+                        shape = 'square';
+                        color = node.gt_color;  // Use GT domain color for missed residues
+                    }}
                 }} else if (mode === 'plddt') {{
-                    // Color by pLDDT: red (low) -> yellow -> green (high)
+                    // AlphaFold standard pLDDT coloring
                     const plddt = node.plddt;
-                    if (plddt < 50) color = '#e74c3c';
-                    else if (plddt < 70) color = '#f39c12';
-                    else if (plddt < 90) color = '#3498db';
-                    else color = '#27ae60';
+                    if (plddt >= 90) color = '#0053D6';      // Very high - dark blue
+                    else if (plddt >= 70) color = '#65CBF3'; // Confident - light blue
+                    else if (plddt >= 50) color = '#FFDB13'; // Low - yellow
+                    else color = '#FF7D45';                   // Very low - orange
                 }}
-                nodes.update({{ id: node.id, color: color }});
+                nodes.update({{ id: node.id, color: color, shape: shape }});
             }});
             updateLegend(mode);
         }});
@@ -606,11 +634,14 @@ def _generate_html(
 
             if (mode === 'plddt') {{
                 html += `
-                    <div class="legend-item"><div class="legend-color" style="background:#e74c3c"></div>pLDDT < 50</div>
-                    <div class="legend-item"><div class="legend-color" style="background:#f39c12"></div>pLDDT 50-70</div>
-                    <div class="legend-item"><div class="legend-color" style="background:#3498db"></div>pLDDT 70-90</div>
-                    <div class="legend-item"><div class="legend-color" style="background:#27ae60"></div>pLDDT > 90</div>
+                    <div class="legend-item"><div class="legend-color" style="background:#0053D6"></div>pLDDT ≥ 90 (very high)</div>
+                    <div class="legend-item"><div class="legend-color" style="background:#65CBF3"></div>pLDDT 70-90 (confident)</div>
+                    <div class="legend-item"><div class="legend-color" style="background:#FFDB13"></div>pLDDT 50-70 (low)</div>
+                    <div class="legend-item"><div class="legend-color" style="background:#FF7D45"></div>pLDDT < 50 (very low)</div>
                 `;
+            }} else if (mode === 'pred_domain') {{
+                html += '<div class="legend-item"><div class="legend-color" style="background:#cccccc"></div>No predicted domain</div>';
+                html += '<div class="legend-item"><div class="legend-color" style="background:#cccccc; border-radius:0"></div>■ Missed (in GT, not predicted)</div>';
             }} else {{
                 html += '<div class="legend-item"><div class="legend-color" style="background:#cccccc"></div>No domain / Cluster</div>';
             }}

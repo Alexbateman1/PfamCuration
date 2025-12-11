@@ -94,6 +94,7 @@ def main():
             predicted_domains=prediction.domains if prediction.domains else None,
             output_path=output_file,
             title=f"Contact Graph: {args.uniprot}",
+            uniprot_acc=args.uniprot,
         )
 
         print(f"\nGraph visualization saved to: {output_file}")
