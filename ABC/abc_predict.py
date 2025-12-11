@@ -94,7 +94,7 @@ def main():
 
         # Generate visualization
         output_prefix = args.output or args.uniprot
-        output_file = f"{output_prefix}_graph.html"
+        output_file = f"{output_prefix}_contact_graph.html"
 
         create_graph_visualization(
             graph=graph,
