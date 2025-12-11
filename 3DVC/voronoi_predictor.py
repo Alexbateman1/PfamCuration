@@ -167,7 +167,7 @@ class VoronoiPredictor:
         contact_threshold: float = 10.0,
         lambda_boundary: float = 1.0,
         mu_crossing: float = 2.0,
-        nu_domains: float = 50.0,
+        nu_domains: float = 500.0,
         max_iterations: int = 100,
         convergence_tol: float = 0.1,
         cache_dir: Optional[str] = None,

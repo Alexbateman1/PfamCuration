@@ -222,7 +222,7 @@ def test_objective_function():
     predictor = VoronoiPredictor(
         lambda_boundary=1.0,
         mu_crossing=2.0,
-        nu_domains=50.0,
+        nu_domains=50.0,  # Lower for small test cases
     )
 
     # Simple case: 4 points with 2 contacts
