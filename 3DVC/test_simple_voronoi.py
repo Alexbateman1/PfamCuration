@@ -11,6 +11,7 @@ Idea: Partition 3D space to minimize chain crossings while rewarding domain crea
 - Minimum domain size to avoid trivial solutions
 """
 
+import argparse
 import numpy as np
 from scipy.spatial.distance import cdist
 from pathlib import Path
@@ -18,13 +19,26 @@ import urllib.request
 from Bio.PDB import MMCIFParser
 
 
-def load_structure(uniprot_acc: str, cache_dir: str = "/home/user/PfamCuration/3DVC/.3dvc_cache"):
+CACHE_DIR = Path(__file__).parent / ".3dvc_cache"
+
+
+def load_structure(uniprot_acc: str):
     """Load AlphaFold structure, return CA coords and pLDDT values."""
-    cache_path = Path(cache_dir)
-    cif_path = cache_path / f"{uniprot_acc}.cif"
+    CACHE_DIR.mkdir(exist_ok=True)
+    cif_path = CACHE_DIR / f"{uniprot_acc}.cif"
 
     if not cif_path.exists():
-        raise FileNotFoundError(f"Structure not found: {cif_path}. Run predict.py first to download.")
+        print(f"Downloading AlphaFold model for {uniprot_acc}...")
+        for version in ["v4", "v3", "v2"]:
+            url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-model_{version}.cif"
+            try:
+                urllib.request.urlretrieve(url, cif_path)
+                print(f"  Downloaded {version}")
+                break
+            except Exception as e:
+                continue
+        else:
+            raise RuntimeError(f"Failed to download structure for {uniprot_acc}")
 
     parser = MMCIFParser(QUIET=True)
     structure = parser.get_structure("protein", cif_path)
@@ -222,7 +236,7 @@ def assignments_to_domains(assignments, resnums, min_size=30):
     return domains
 
 
-def test_protein(uniprot_acc, expected_domains=None, **kwargs):
+def test_protein(uniprot_acc, expected_domains=None, max_k=10, **kwargs):
     """Test on a specific protein."""
     print(f"\n{'='*60}")
     print(f"Testing {uniprot_acc}")
@@ -237,7 +251,7 @@ def test_protein(uniprot_acc, expected_domains=None, **kwargs):
     print(f"After pLDDT filter: {len(coords)} residues")
 
     # Predict
-    best_k, seeds, assignments = predict_domains(coords, resnums, **kwargs)
+    best_k, seeds, assignments = predict_domains(coords, resnums, max_k=max_k, **kwargs)
 
     # Convert to domains
     domains = assignments_to_domains(assignments, resnums)
@@ -253,20 +267,25 @@ def test_protein(uniprot_acc, expected_domains=None, **kwargs):
 
 
 if __name__ == "__main__":
-    # Test cases
+    parser = argparse.ArgumentParser(
+        description="Simple Voronoi domain predictor - minimize crossings, reward domains"
+    )
+    parser.add_argument("accession", help="UniProt accession")
+    parser.add_argument("--domain-bonus", type=float, default=100,
+                        help="Reward for each valid domain (default: 100)")
+    parser.add_argument("--crossing-penalty", type=float, default=20,
+                        help="Penalty per chain crossing (default: 20)")
+    parser.add_argument("--min-size", type=int, default=30,
+                        help="Minimum domain size (default: 30)")
+    parser.add_argument("--max-k", type=int, default=10,
+                        help="Maximum number of domains to try (default: 10)")
 
-    # Q0WV90: 3 well-separated domains
-    # Expected: ~6-157, ~347-669, ~738-1081
-    test_protein("Q0WV90",
-                 expected_domains="6-157; 347-669; 738-1081",
-                 domain_bonus=100, crossing_penalty=20, min_size=30)
+    args = parser.parse_args()
 
-    # P12931: Src kinase - SH3, SH2, Kinase domains
-    # Expected: ~87-145 (SH3), ~151-248 (SH2), ~270-520 (Kinase)
-    test_protein("P12931",
-                 expected_domains="87-145 (SH3); 151-248 (SH2); 270-520 (Kinase)",
-                 domain_bonus=100, crossing_penalty=20, min_size=30)
-
-    print("\n" + "="*60)
-    print("Tests complete!")
-    print("="*60)
+    test_protein(
+        args.accession,
+        domain_bonus=args.domain_bonus,
+        crossing_penalty=args.crossing_penalty,
+        min_size=args.min_size,
+        max_k=args.max_k,
+    )
