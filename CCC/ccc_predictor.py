@@ -217,24 +217,48 @@ class CCCPredictor:
         # Method 2: Skip recursive spectral partitioning (produces overlapping domains)
         # Just use the candidate-based methods below
 
+        # If no valid candidates, return single domain (no need for expensive DP)
+        if not candidates:
+            logger.info("No valid split candidates - returning single domain")
+            single_domain = [(filtered_residue_numbers[0], filtered_residue_numbers[-1])]
+            trimmed = self._trim_domains_to_structured(single_domain, residue_numbers, plddt)
+
+            final_domains = []
+            scorer = DomainScorer(graph, coords, plddt, residue_numbers, pae_matrix)
+            for i, (start, end) in enumerate(trimmed):
+                metrics = scorer.get_metrics(start, end)
+                final_domains.append(Domain(
+                    domain_id=i + 1,
+                    start=start,
+                    end=end,
+                    size=end - start + 1,
+                    score=scorer.score(start, end),
+                    metrics={
+                        'contact_density': metrics.contact_density,
+                        'contact_ratio': metrics.contact_ratio,
+                        'radius_of_gyration': metrics.radius_of_gyration,
+                        'compactness': metrics.compactness,
+                        'avg_plddt': metrics.avg_plddt,
+                    }
+                ))
+
+            return CCCPrediction(
+                uniprot_acc=uniprot_acc,
+                sequence_length=residue_numbers[-1],
+                domains=final_domains,
+                method_used="single_domain",
+                spectral_info=spectral_info
+            )
+
         # Method 3: DP optimization with spectral candidates
         logger.info("Running DP optimization with spectral candidates...")
-        if candidates:
-            dp_result = dp_with_candidates(
-                seq_length=residue_numbers[-1],
-                candidates=candidates,
-                score_fn=score_fn,
-                min_domain_size=self.min_domain_size,
-                domain_penalty=self.domain_penalty
-            )
-        else:
-            # Fall back to full DP
-            dp_result = dp_optimal_segmentation(
-                seq_length=residue_numbers[-1],
-                score_fn=score_fn,
-                min_domain_size=self.min_domain_size,
-                domain_penalty=self.domain_penalty
-            )
+        dp_result = dp_with_candidates(
+            seq_length=residue_numbers[-1],
+            candidates=candidates,
+            score_fn=score_fn,
+            min_domain_size=self.min_domain_size,
+            domain_penalty=self.domain_penalty
+        )
 
         logger.info(f"DP found {len(dp_result.domains)} domains")
 
@@ -243,21 +267,13 @@ class CCCPredictor:
         logger.info("Running multi-scale DP with candidates...")
         multi_results = []
         for penalty in [0, 5, 20, 50]:
-            if candidates:
-                result = dp_with_candidates(
-                    seq_length=residue_numbers[-1],
-                    candidates=candidates,
-                    score_fn=score_fn,
-                    min_domain_size=self.min_domain_size,
-                    domain_penalty=penalty
-                )
-            else:
-                result = dp_optimal_segmentation(
-                    seq_length=residue_numbers[-1],
-                    score_fn=score_fn,
-                    min_domain_size=self.min_domain_size,
-                    domain_penalty=penalty
-                )
+            result = dp_with_candidates(
+                seq_length=residue_numbers[-1],
+                candidates=candidates,
+                score_fn=score_fn,
+                min_domain_size=self.min_domain_size,
+                domain_penalty=penalty
+            )
             multi_results.append(result)
 
         best_multi = select_best_assignment(multi_results, residue_numbers[-1])
