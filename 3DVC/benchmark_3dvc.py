@@ -27,13 +27,13 @@ from ABC.benchmark import (
 )
 
 
-def run_3dvc_predictions(annotations, verbose=False):
+def run_3dvc_predictions(annotations, nu_domains=100.0, verbose=False):
     """
     Run 3DVC predictions for all proteins.
 
     Returns dict mapping accession to list of benchmark Domain objects.
     """
-    predictor = VoronoiPredictor()
+    predictor = VoronoiPredictor(nu_domains=nu_domains)
 
     predictions = {}
 
@@ -95,6 +95,12 @@ def main():
         default="3dvc_benchmark.log",
         help="Log file for detailed scores (default: 3dvc_benchmark.log)"
     )
+    parser.add_argument(
+        "--nu-domains",
+        type=float,
+        default=100.0,
+        help="Domain count penalty - higher=fewer domains, lower=more splits (default: 100)"
+    )
 
     args = parser.parse_args()
 
@@ -111,8 +117,8 @@ def main():
     print(f"Found {len(valid)} proteins for evaluation ({len(annotations) - len(valid)} excluded)")
 
     # Run 3DVC predictions
-    print("\nRunning 3DVC predictions...")
-    predictions = run_3dvc_predictions(annotations, verbose=args.verbose)
+    print(f"\nRunning 3DVC predictions (nu_domains={args.nu_domains})...")
+    predictions = run_3dvc_predictions(annotations, nu_domains=args.nu_domains, verbose=args.verbose)
 
     # Run benchmark
     print("\nRunning benchmark evaluation...")
