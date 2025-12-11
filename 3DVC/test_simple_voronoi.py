@@ -170,14 +170,9 @@ def score_partition(assignments, resnums, k, domain_bonus=50, crossing_penalty=5
     return score, real_crossings, brief_intrusions, valid_domains
 
 
-def kmeans_optimize(coords, resnums, k, max_iter=100):
-    """
-    K-means style optimization for Voronoi seeds.
-    Optimize seed positions to maximize score.
-    """
+def kmeans_initialize(coords, k):
+    """Initialize seeds using k-means++ for good spread."""
     n = len(coords)
-
-    # Initialize with k-means++
     seeds = np.zeros((k, 3))
     seeds[0] = coords[np.random.randint(n)]
 
@@ -187,6 +182,111 @@ def kmeans_optimize(coords, resnums, k, max_iter=100):
         probs /= probs.sum()
         idx = np.random.choice(n, p=probs)
         seeds[i] = coords[idx]
+
+    return seeds
+
+
+def hillclimb_optimize(coords, resnums, k, domain_bonus=50, crossing_penalty=50,
+                       intrusion_penalty=10, min_size=30, max_iter=500,
+                       step_size=5.0, restarts=3):
+    """
+    Hill-climbing optimization that directly minimizes crossings.
+
+    Unlike k-means which optimizes spatial compactness, this directly
+    optimizes the crossing-based score by perturbing seed positions.
+    """
+    n = len(coords)
+
+    # Calculate coordinate bounds for random restarts
+    coord_min = coords.min(axis=0)
+    coord_max = coords.max(axis=0)
+    coord_range = coord_max - coord_min
+
+    global_best_score = -float('inf')
+    global_best_seeds = None
+    global_best_assignments = None
+
+    for restart in range(restarts):
+        # Initialize with k-means++ for good starting positions
+        seeds = kmeans_initialize(coords, k)
+
+        # Compute initial score
+        assignments = assign_to_seeds(coords, seeds)
+        score, _, _, _ = score_partition(assignments, resnums, k, domain_bonus,
+                                         crossing_penalty, intrusion_penalty, min_size)
+
+        best_score = score
+        best_seeds = seeds.copy()
+        best_assignments = assignments.copy()
+
+        no_improve_count = 0
+        current_step = step_size
+
+        for iteration in range(max_iter):
+            improved = False
+
+            # Try moving each seed in random directions
+            for seed_idx in range(k):
+                # Try several random perturbations for this seed
+                for _ in range(6):  # Try 6 random directions
+                    # Random direction
+                    direction = np.random.randn(3)
+                    direction /= np.linalg.norm(direction)
+
+                    # Try the perturbation
+                    new_seeds = seeds.copy()
+                    new_seeds[seed_idx] = seeds[seed_idx] + current_step * direction
+
+                    # Evaluate
+                    new_assignments = assign_to_seeds(coords, new_seeds)
+                    new_score, _, _, _ = score_partition(
+                        new_assignments, resnums, k, domain_bonus,
+                        crossing_penalty, intrusion_penalty, min_size
+                    )
+
+                    if new_score > best_score:
+                        best_score = new_score
+                        best_seeds = new_seeds.copy()
+                        best_assignments = new_assignments.copy()
+                        seeds = new_seeds
+                        improved = True
+                        break  # Move to next seed
+
+                if improved:
+                    break  # Restart outer loop to re-evaluate all seeds
+
+            if improved:
+                no_improve_count = 0
+            else:
+                no_improve_count += 1
+
+                # Reduce step size if stuck
+                if no_improve_count >= 10:
+                    current_step *= 0.7
+                    no_improve_count = 0
+
+                    # Stop if step size gets too small
+                    if current_step < 0.5:
+                        break
+
+        if best_score > global_best_score:
+            global_best_score = best_score
+            global_best_seeds = best_seeds.copy()
+            global_best_assignments = best_assignments.copy()
+
+    return global_best_seeds, global_best_assignments, global_best_score
+
+
+def kmeans_optimize(coords, resnums, k, max_iter=100):
+    """
+    K-means style optimization for Voronoi seeds.
+    NOTE: This optimizes spatial compactness, NOT crossings.
+    Use hillclimb_optimize instead for crossing minimization.
+    """
+    n = len(coords)
+
+    # Initialize with k-means++
+    seeds = kmeans_initialize(coords, k)
 
     best_score = -float('inf')
     best_seeds = seeds.copy()
@@ -380,9 +480,10 @@ def predict_domains(coords, resnums, max_k=10, domain_bonus=50, crossing_penalty
                     intrusion_penalty=10, min_size=30, output_prefix=None, uniprot_acc="protein"):
     """
     Predict domains by trying different K values.
+    Uses hill-climbing optimization to directly minimize crossings.
     Saves ChimeraX files for each K if output_prefix is provided.
     """
-    print(f"\nOptimizing with {len(coords)} residues...")
+    print(f"\nOptimizing with {len(coords)} residues (hill-climbing)...")
     print(f"Parameters: domain_bonus={domain_bonus}, crossing_penalty={crossing_penalty}, "
           f"intrusion_penalty={intrusion_penalty}, min_size={min_size}")
 
@@ -391,7 +492,14 @@ def predict_domains(coords, resnums, max_k=10, domain_bonus=50, crossing_penalty
     best_result = None
 
     for k in range(1, max_k + 1):
-        seeds, assignments, score = kmeans_optimize(coords, resnums, k)
+        # Use hill-climbing to directly optimize crossings
+        seeds, assignments, score = hillclimb_optimize(
+            coords, resnums, k,
+            domain_bonus=domain_bonus,
+            crossing_penalty=crossing_penalty,
+            intrusion_penalty=intrusion_penalty,
+            min_size=min_size
+        )
 
         _, real_crossings, brief_intrusions, valid_domains = score_partition(
             assignments, resnums, k, domain_bonus, crossing_penalty, intrusion_penalty, min_size
@@ -488,15 +596,57 @@ def test_protein(uniprot_acc, expected_domains=None, max_k=10, output_chimerax=F
     return domains
 
 
+def synthetic_test():
+    """Test with synthetic data to verify hill-climbing works."""
+    print("\n" + "="*60)
+    print("Synthetic test: 3 well-separated domains")
+    print("="*60)
+
+    np.random.seed(42)
+
+    # Create 3 clearly separated domains
+    domain1 = np.random.randn(50, 3) * 5 + np.array([0, 0, 0])
+    domain2 = np.random.randn(50, 3) * 5 + np.array([50, 0, 0])
+    domain3 = np.random.randn(50, 3) * 5 + np.array([100, 0, 0])
+
+    coords = np.vstack([domain1, domain2, domain3])
+    resnums = np.arange(1, 151)
+
+    print(f"Created 150 residues in 3 separated groups")
+    print("Note: For sequential domains, there are always K-1 unavoidable crossings")
+    print("      at domain boundaries (50→51 and 100→101)")
+
+    # Test hill-climbing with domain_bonus > crossing_penalty
+    # This encourages finding multiple domains even when there are unavoidable boundary crossings
+    print("\n--- Hill-climbing optimization ---")
+    best_k, seeds, assignments = predict_domains(
+        coords, resnums, max_k=5,
+        domain_bonus=100,      # Reward for each domain
+        crossing_penalty=50,   # Cost per boundary crossing
+        output_prefix=None, uniprot_acc="synthetic"
+    )
+
+    domains = assignments_to_domains(assignments, resnums)
+    print(f"\nPredicted {len(domains)} domains:")
+    for i, d in enumerate(domains):
+        print(f"  {i+1}: {d['chopping']} (size={d['size']})")
+
+    # Expected: 3 domains at 1-50, 51-100, 101-150
+    if len(domains) == 3:
+        print("\n✓ Correctly identified 3 domains!")
+    else:
+        print(f"\n✗ Expected 3 domains, got {len(domains)}")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Simple Voronoi domain predictor - minimize crossings, reward domains"
     )
-    parser.add_argument("accession", help="UniProt accession")
+    parser.add_argument("accession", nargs='?', help="UniProt accession")
     parser.add_argument("--chimerax", action="store_true",
                         help="Output ChimeraX .cxc files for each K value")
-    parser.add_argument("--domain-bonus", type=float, default=50,
-                        help="Reward for each valid domain (default: 50)")
+    parser.add_argument("--domain-bonus", type=float, default=100,
+                        help="Reward for each valid domain (default: 100)")
     parser.add_argument("--crossing-penalty", type=float, default=50,
                         help="Penalty per real chain crossing (default: 50)")
     parser.add_argument("--intrusion-penalty", type=float, default=10,
@@ -505,15 +655,22 @@ if __name__ == "__main__":
                         help="Minimum domain size (default: 30)")
     parser.add_argument("--max-k", type=int, default=10,
                         help="Maximum number of domains to try (default: 10)")
+    parser.add_argument("--synthetic", action="store_true",
+                        help="Run synthetic test (no network needed)")
 
     args = parser.parse_args()
 
-    test_protein(
-        args.accession,
-        output_chimerax=args.chimerax,
-        domain_bonus=args.domain_bonus,
-        crossing_penalty=args.crossing_penalty,
-        intrusion_penalty=args.intrusion_penalty,
-        min_size=args.min_size,
-        max_k=args.max_k,
-    )
+    if args.synthetic:
+        synthetic_test()
+    elif args.accession:
+        test_protein(
+            args.accession,
+            output_chimerax=args.chimerax,
+            domain_bonus=args.domain_bonus,
+            crossing_penalty=args.crossing_penalty,
+            intrusion_penalty=args.intrusion_penalty,
+            min_size=args.min_size,
+            max_k=args.max_k,
+        )
+    else:
+        parser.print_help()
