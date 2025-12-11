@@ -137,8 +137,8 @@ def main():
     parser.add_argument(
         "--domain-bonus",
         type=float,
-        default=105,
-        help="Reward for each valid domain (default: 105)"
+        default=100,
+        help="Reward for each valid domain (default: 100)"
     )
     parser.add_argument(
         "--crossing-penalty",
