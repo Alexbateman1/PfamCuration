@@ -224,7 +224,7 @@ class VoronoiPrediction:
             lines.append(
                 f"shape rectangle width {plane_size} height {plane_size} "
                 f"center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
-                f"{rotation_str} color gray transparency 80"
+                f"{rotation_str} color 128,128,128,51"
             )
 
         lines.append("")
