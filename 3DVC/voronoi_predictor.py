@@ -344,6 +344,23 @@ class VoronoiPredictor:
 
         logger.info(f"Best partition: K={best_k} with score={best_score:.2f}")
 
+        # Check if best score meets minimum threshold (per-residue)
+        # If score is too negative, the structure doesn't form coherent domains
+        n_structured = len(structured_indices)
+        score_per_residue = best_score / n_structured if n_structured > 0 else 0
+        min_score_per_residue = -20.0  # Threshold for acceptable domain structure
+
+        if score_per_residue < min_score_per_residue:
+            logger.info(f"Score per residue ({score_per_residue:.2f}) below threshold "
+                       f"({min_score_per_residue}), predicting 0 domains")
+            return VoronoiPrediction(
+                uniprot_acc=uniprot_acc,
+                sequence_length=n_residues,
+                domains=[],
+                ndr_regions=self._build_ndr_regions(residues, set(range(n_residues))),
+                parameters=self.parameters,
+            )
+
         # Step 4: Convert assignments to domains
         domains = self._build_domains(
             residues, structured_indices, best_assignments, coords
