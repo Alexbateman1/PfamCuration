@@ -683,9 +683,11 @@ class VoronoiPredictor:
             # Get original residue indices
             cluster_orig_indices = [structured_indices[i] for i in np.where(mask)[0]]
 
-            # Convert to segments and stitch over short gaps
+            # Convert to segments and stitch over short NDR gaps only
+            # Pass structured_indices so we don't bridge over other domains
             segments = self._indices_to_segments(residues, cluster_orig_indices)
-            segments = self._stitch_segments(segments, max_gap=30)
+            structured_set = set(structured_indices)
+            segments = self._stitch_segments(segments, max_gap=30, structured_indices=structured_set)
 
             domains.append(Domain(
                 domain_id=c,
@@ -732,18 +734,22 @@ class VoronoiPredictor:
         self,
         segments: List[Tuple[int, int]],
         max_gap: int = 30,
+        structured_indices: set = None,
     ) -> List[Tuple[int, int]]:
         """
-        Stitch together segments separated by short gaps.
+        Stitch together segments separated by short NDR gaps.
 
-        This handles cases where low-pLDDT regions create small gaps
-        within what should be a continuous domain.
+        Only bridges gaps where the intervening residues are NOT structured
+        (i.e., they are low-pLDDT NDR regions, not other domains).
 
         Parameters:
         -----------
         segments : list of (start, end) tuples
         max_gap : int
             Maximum gap size to bridge (default: 30 residues)
+        structured_indices : set
+            Set of residue indices that are structured (pLDDT >= threshold).
+            If provided, only bridge gaps where gap residues are NOT in this set.
 
         Returns:
         --------
@@ -761,8 +767,19 @@ class VoronoiPredictor:
             gap = start - prev_end - 1
 
             if gap <= max_gap:
-                # Merge: extend previous segment to include this one
-                merged[-1] = (prev_start, end)
+                # Check if gap contains structured residues (other domains)
+                can_bridge = True
+                if structured_indices is not None:
+                    gap_residues = set(range(prev_end + 1, start))
+                    if gap_residues & structured_indices:
+                        # Gap contains residues from other domains - don't bridge
+                        can_bridge = False
+
+                if can_bridge:
+                    # Merge: extend previous segment to include this one
+                    merged[-1] = (prev_start, end)
+                else:
+                    merged.append((start, end))
             else:
                 merged.append((start, end))
 
