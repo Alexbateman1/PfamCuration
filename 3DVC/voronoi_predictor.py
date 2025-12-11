@@ -108,6 +108,7 @@ class VoronoiPrediction:
     ndr_regions: List[NDRRegion]
     parameters: Dict
     seed_positions: Optional[np.ndarray] = None  # Final seed positions
+    boundary_pairs: Optional[List[Tuple[int, int]]] = None  # Domain pairs with shared boundaries
 
     def summary(self) -> str:
         lines = [
@@ -172,49 +173,55 @@ class VoronoiPrediction:
         lines.append("")
         lines.append("# Voronoi boundary planes (as rectangles)")
 
-        # Create boundary rectangles between each pair of seeds
-        n_seeds = len(self.seed_positions)
+        # Create boundary rectangles only between domains that share a boundary
         plane_size = plane_radius * 2  # Convert radius to width/height
 
-        for i in range(n_seeds):
-            for j in range(i + 1, n_seeds):
-                seed_i = self.seed_positions[i]
-                seed_j = self.seed_positions[j]
+        # Determine which pairs to draw
+        if self.boundary_pairs:
+            pairs_to_draw = self.boundary_pairs
+        else:
+            # Fallback: draw all pairs (legacy behavior)
+            n_seeds = len(self.seed_positions)
+            pairs_to_draw = [(i, j) for i in range(n_seeds) for j in range(i + 1, n_seeds)]
 
-                # Midpoint (plane passes through here)
-                midpoint = (seed_i + seed_j) / 2
+        for i, j in pairs_to_draw:
+            seed_i = self.seed_positions[i]
+            seed_j = self.seed_positions[j]
 
-                # Normal vector (perpendicular to plane, pointing from i to j)
-                normal = seed_j - seed_i
-                normal = normal / np.linalg.norm(normal)
+            # Midpoint (plane passes through here)
+            midpoint = (seed_i + seed_j) / 2
 
-                # Calculate rotation to align Z-axis with normal
-                # Default rectangle is in XY plane (normal = Z = [0,0,1])
-                z_axis = np.array([0, 0, 1])
+            # Normal vector (perpendicular to plane, pointing from i to j)
+            normal = seed_j - seed_i
+            normal = normal / np.linalg.norm(normal)
 
-                # Rotation axis = cross(Z, normal)
-                rot_axis = np.cross(z_axis, normal)
-                rot_axis_len = np.linalg.norm(rot_axis)
+            # Calculate rotation to align Z-axis with normal
+            # Default rectangle is in XY plane (normal = Z = [0,0,1])
+            z_axis = np.array([0, 0, 1])
 
-                if rot_axis_len > 0.001:  # Not parallel to Z
-                    rot_axis = rot_axis / rot_axis_len
-                    # Rotation angle = acos(dot(Z, normal))
-                    rot_angle = np.degrees(np.arccos(np.clip(np.dot(z_axis, normal), -1, 1)))
-                    rotation_str = f"rotation {rot_axis[0]:.4f},{rot_axis[1]:.4f},{rot_axis[2]:.4f},{rot_angle:.2f}"
-                elif normal[2] < 0:  # Anti-parallel to Z (flip 180)
-                    rotation_str = "rotation 1,0,0,180"
-                else:  # Parallel to Z (no rotation needed)
-                    rotation_str = ""
+            # Rotation axis = cross(Z, normal)
+            rot_axis = np.cross(z_axis, normal)
+            rot_axis_len = np.linalg.norm(rot_axis)
 
-                lines.append(
-                    f"shape rectangle width {plane_size} height {plane_size} "
-                    f"center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
-                    f"{rotation_str} color #808080"
-                )
+            if rot_axis_len > 0.001:  # Not parallel to Z
+                rot_axis = rot_axis / rot_axis_len
+                # Rotation angle = acos(dot(Z, normal))
+                rot_angle = np.degrees(np.arccos(np.clip(np.dot(z_axis, normal), -1, 1)))
+                rotation_str = f"rotation {rot_axis[0]:.4f},{rot_axis[1]:.4f},{rot_axis[2]:.4f},{rot_angle:.2f}"
+            elif normal[2] < 0:  # Anti-parallel to Z (flip 180)
+                rotation_str = "rotation 1,0,0,180"
+            else:  # Parallel to Z (no rotation needed)
+                rotation_str = ""
+
+            lines.append(
+                f"shape rectangle width {plane_size} height {plane_size} "
+                f"center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
+                f"{rotation_str} color #808080"
+            )
 
         lines.append("")
         lines.append("# Make boundary planes semi-transparent")
-        lines.append("transparency shapes 60")
+        lines.append("transparency shapes 80")
         lines.append("")
         lines.append("# Display settings")
         lines.append(f"cartoon {structure_model}")
@@ -527,6 +534,39 @@ class VoronoiPredictor:
         logger.info(f"RESULT\t{uniprot_acc}\tn_domains={len(domains)}\t"
                    f"score_per_res={best_score_per_res:.2f}\tdomains={domains_output}")
 
+        # Compute boundary pairs: which domains share contacts (for ChimeraX visualization)
+        boundary_pairs = []
+        if len(domains) > 1:
+            # Build mapping from original residue index to domain index
+            res_to_domain = {}
+            for di, dom in enumerate(domains):
+                for ri in dom.residue_indices:
+                    res_to_domain[ri] = di
+
+            # Check contacts between domains
+            for di in range(len(domains)):
+                for dj in range(di + 1, len(domains)):
+                    has_contact = False
+                    for ri in domains[di].residue_indices:
+                        if has_contact:
+                            break
+                        if ri not in [structured_indices[k] for k in range(len(structured_indices))]:
+                            continue
+                        si = structured_indices.index(ri) if ri in structured_indices else -1
+                        if si < 0:
+                            continue
+                        for rj in domains[dj].residue_indices:
+                            if rj not in structured_indices:
+                                continue
+                            sj = structured_indices.index(rj) if rj in structured_indices else -1
+                            if sj < 0:
+                                continue
+                            if contacts[si, sj]:
+                                has_contact = True
+                                break
+                    if has_contact:
+                        boundary_pairs.append((di, dj))
+
         return VoronoiPrediction(
             uniprot_acc=uniprot_acc,
             sequence_length=n_residues,
@@ -534,6 +574,7 @@ class VoronoiPredictor:
             ndr_regions=ndr_regions,
             parameters=self.parameters,
             seed_positions=best_seeds,
+            boundary_pairs=boundary_pairs,
         )
 
     def _kmeans_plusplus_init(self, coords: np.ndarray, k: int) -> np.ndarray:
