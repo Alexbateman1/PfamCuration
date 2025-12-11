@@ -99,11 +99,13 @@ class CCCPredictor:
         domain_penalty: float = 2.0,  # Lower penalty to allow more domains
         use_pae: bool = True,
         cache_dir: Optional[str] = None,
+        plddt_threshold: float = 70.0,  # Filter disordered regions
     ):
         self.distance_threshold = distance_threshold
         self.min_domain_size = min_domain_size
         self.domain_penalty = domain_penalty
         self.use_pae = use_pae
+        self.plddt_threshold = plddt_threshold
 
         if cache_dir is None:
             # Try to use existing ABC cache first, then fall back to CCC cache
@@ -156,25 +158,49 @@ class CCCPredictor:
         coords = np.array([r.ca_coord for r in residues])
         plddt = np.array([r.plddt for r in residues])
 
-        # Create scoring function
+        # Create scoring function (uses full graph)
         score_fn = create_score_function(
             graph, coords, plddt, residue_numbers, pae_matrix
         )
 
         spectral_info = {}
 
-        # Method 1: Spectral partitioning for candidate boundaries
-        logger.info("Computing spectral analysis...")
-        eigenvalues, eigenvectors = compute_fiedler_vector(graph, num_vectors=5)
+        # Filter out disordered regions (low pLDDT) before spectral analysis
+        # This prevents Fiedler from finding disorder/structure boundaries instead of domain boundaries
+        structured_mask = plddt >= self.plddt_threshold
+        structured_indices = np.where(structured_mask)[0]
+        logger.info(f"Structured residues (pLDDT >= {self.plddt_threshold}): {len(structured_indices)}/{len(residues)}")
+
+        if len(structured_indices) < self.min_domain_size:
+            # Mostly disordered - return no domains
+            logger.warning("Protein is mostly disordered, no domains predicted")
+            return CCCPrediction(
+                uniprot_acc=uniprot_acc,
+                sequence_length=residue_numbers[-1],
+                domains=[],
+                method_used="none",
+                spectral_info={'reason': 'mostly_disordered'}
+            )
+
+        # Build filtered graph with only structured residues
+        filtered_graph = graph.subgraph(structured_indices).copy()
+        # Relabel nodes to be 0-indexed within the filtered graph
+        old_to_new = {old: new for new, old in enumerate(sorted(structured_indices))}
+        filtered_graph = nx.relabel_nodes(filtered_graph, old_to_new)
+        filtered_residue_numbers = [residue_numbers[i] for i in structured_indices]
+
+        # Method 1: Spectral partitioning for candidate boundaries (on filtered graph)
+        logger.info("Computing spectral analysis on structured regions...")
+        eigenvalues, eigenvectors = compute_fiedler_vector(filtered_graph, num_vectors=5)
 
         spectral_info['algebraic_connectivity'] = float(eigenvalues[1]) if len(eigenvalues) > 1 else 0
         spectral_info['num_eigenvectors'] = len(eigenvalues)
 
-        fiedler = eigenvectors[:, 1] if eigenvectors.shape[1] > 1 else np.zeros(len(residues))
+        fiedler = eigenvectors[:, 1] if eigenvectors.shape[1] > 1 else np.zeros(len(filtered_residue_numbers))
 
-        # Find candidate split points from Fiedler vector
+        # Find candidate split points from Fiedler vector (using filtered residue numbers)
         raw_candidates = find_split_candidates_from_fiedler(
-            fiedler, residue_numbers, self.min_domain_size
+            fiedler, filtered_residue_numbers, self.min_domain_size
         )
         logger.info(f"Found {len(raw_candidates)} raw candidate split points")
 
@@ -186,15 +212,8 @@ class CCCPredictor:
         spectral_info['raw_candidates'] = raw_candidates
         spectral_info['candidate_boundaries'] = candidates
 
-        # Method 2: Try recursive spectral partitioning
-        logger.info("Trying recursive spectral partition...")
-        spectral_partitions = recursive_spectral_partition(
-            graph,
-            list(range(len(residues))),
-            min_domain_size=self.min_domain_size,
-            conductance_threshold=0.3
-        )
-        logger.info(f"Spectral partitioning found {len(spectral_partitions)} regions")
+        # Method 2: Skip recursive spectral partitioning (produces overlapping domains)
+        # Just use the candidate-based methods below
 
         # Method 3: DP optimization with spectral candidates
         logger.info("Running DP optimization with spectral candidates...")
@@ -247,9 +266,8 @@ class CCCPredictor:
         logger.info(f"Direct candidate split: {len(candidate_domains)} domains")
 
         # Choose best result
-        # Compare all methods
+        # Compare methods (excluding spectral - it produces overlapping domains that inflate scores)
         results = [
-            ("spectral", self._partition_to_domains(spectral_partitions, residue_numbers)),
             ("dp_spectral", dp_result.domains),
             ("dp_multiscale", best_multi.domains),
             ("candidates", candidate_domains),
