@@ -210,14 +210,27 @@ class CCCPredictor:
 
         logger.info(f"DP found {len(dp_result.domains)} domains")
 
-        # Method 4: Multi-scale DP for comparison
-        logger.info("Running multi-scale DP...")
-        multi_results = multi_scale_dp(
-            seq_length=residue_numbers[-1],
-            score_fn=score_fn,
-            min_domain_size=self.min_domain_size,
-            penalties=[0, 5, 10, 20, 50]
-        )
+        # Method 4: Multi-scale DP with candidates (fast version)
+        # Only try a few penalty values using candidate-restricted DP
+        logger.info("Running multi-scale DP with candidates...")
+        multi_results = []
+        for penalty in [0, 5, 20, 50]:
+            if candidates:
+                result = dp_with_candidates(
+                    seq_length=residue_numbers[-1],
+                    candidates=candidates,
+                    score_fn=score_fn,
+                    min_domain_size=self.min_domain_size,
+                    domain_penalty=penalty
+                )
+            else:
+                result = dp_optimal_segmentation(
+                    seq_length=residue_numbers[-1],
+                    score_fn=score_fn,
+                    min_domain_size=self.min_domain_size,
+                    domain_penalty=penalty
+                )
+            multi_results.append(result)
 
         best_multi = select_best_assignment(multi_results, residue_numbers[-1])
         logger.info(f"Multi-scale DP selected {len(best_multi.domains)} domains")
