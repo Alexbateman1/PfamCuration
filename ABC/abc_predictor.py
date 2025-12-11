@@ -773,6 +773,11 @@ class ABCPredictor:
                         if seq_sep >= MIN_LONG_RANGE_SEQ_SEP:
                             long_range_contacts += 1
 
+            # Log the count for all domains (helps debugging)
+            logger.info(
+                f"Domain {domain.segments}: {long_range_contacts} long-range contacts (threshold={MIN_LONG_RANGE_CONTACTS})"
+            )
+
             if long_range_contacts < MIN_LONG_RANGE_CONTACTS:
                 rejected_for_lr.append({
                     'segments': domain.segments,
