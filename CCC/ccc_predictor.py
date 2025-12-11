@@ -373,13 +373,18 @@ class CCCPredictor:
         candidates: List[int],
         residue_numbers: List[int],
         graph: nx.Graph,
-        min_ratio: float = 1.0
+        min_ratio: float = 1.0,
+        max_cut_fraction: float = 0.15
     ) -> List[int]:
         """
-        Filter candidate split points by contact ratio.
+        Filter candidate split points by contact ratio AND cut quality.
 
-        Only keep candidates where BOTH sides of the split would have
-        contact_ratio >= min_ratio (more internal than external contacts).
+        Only keep candidates where:
+        1. BOTH sides of the split have contact_ratio >= min_ratio
+        2. The inter-domain contacts (cut) are < max_cut_fraction of total contacts
+
+        The second criterion prevents splitting a single domain that happens
+        to have two internally compact halves (like horseshoe-shaped domains).
         """
         if not candidates:
             return []
@@ -388,17 +393,16 @@ class CCCPredictor:
         seq_end = residue_numbers[-1]
         resnum_to_idx = {rn: i for i, rn in enumerate(residue_numbers)}
 
-        def compute_contact_ratio(start_res: int, end_res: int) -> float:
-            """Compute contact ratio for a region."""
-            # Get indices for this region
-            region_indices = set()
+        def get_region_indices(start_res: int, end_res: int) -> set:
+            """Get graph indices for a residue range."""
+            indices = set()
             for rn in range(start_res, end_res + 1):
                 if rn in resnum_to_idx:
-                    region_indices.add(resnum_to_idx[rn])
+                    indices.add(resnum_to_idx[rn])
+            return indices
 
-            if len(region_indices) < self.min_domain_size:
-                return 0.0
-
+        def compute_contacts(region_indices: set) -> tuple:
+            """Compute internal and external contacts for a region."""
             internal = 0
             external = 0
             for idx in region_indices:
@@ -411,8 +415,19 @@ class CCCPredictor:
                             internal += weight
                     else:
                         external += weight
+            return internal, external
 
-            return internal / max(external, 0.1)
+        def compute_cut_contacts(left_indices: set, right_indices: set) -> float:
+            """Compute contacts between left and right regions."""
+            cut_contacts = 0
+            for idx in left_indices:
+                if idx not in graph:
+                    continue
+                for neighbor in graph.neighbors(idx):
+                    if neighbor in right_indices:
+                        weight = graph[idx][neighbor].get('weight', 1.0)
+                        cut_contacts += weight
+            return cut_contacts
 
         # Test each candidate
         valid_candidates = []
@@ -427,14 +442,35 @@ class CCCPredictor:
             right_start = cand
             right_end = sorted_candidates[i+1] - 1 if i < len(sorted_candidates) - 1 else seq_end
 
-            left_ratio = compute_contact_ratio(left_start, left_end)
-            right_ratio = compute_contact_ratio(right_start, right_end)
+            left_indices = get_region_indices(left_start, left_end)
+            right_indices = get_region_indices(right_start, right_end)
 
-            if left_ratio >= min_ratio and right_ratio >= min_ratio:
-                valid_candidates.append(cand)
-                logger.debug(f"  Candidate {cand}: left_ratio={left_ratio:.2f}, right_ratio={right_ratio:.2f} - VALID")
-            else:
-                logger.debug(f"  Candidate {cand}: left_ratio={left_ratio:.2f}, right_ratio={right_ratio:.2f} - rejected")
+            if len(left_indices) < self.min_domain_size or len(right_indices) < self.min_domain_size:
+                logger.debug(f"  Candidate {cand}: region too small - rejected")
+                continue
+
+            left_internal, left_external = compute_contacts(left_indices)
+            right_internal, right_external = compute_contacts(right_indices)
+
+            left_ratio = left_internal / max(left_external, 0.1)
+            right_ratio = right_internal / max(right_external, 0.1)
+
+            # Check contact ratios
+            if left_ratio < min_ratio or right_ratio < min_ratio:
+                logger.debug(f"  Candidate {cand}: left_ratio={left_ratio:.2f}, right_ratio={right_ratio:.2f} - rejected (low ratio)")
+                continue
+
+            # Check cut quality - how many contacts cross the boundary?
+            cut_contacts = compute_cut_contacts(left_indices, right_indices)
+            total_internal = left_internal + right_internal
+            cut_fraction = cut_contacts / max(total_internal, 0.1)
+
+            if cut_fraction > max_cut_fraction:
+                logger.debug(f"  Candidate {cand}: cut_fraction={cut_fraction:.2f} > {max_cut_fraction} - rejected (too many inter-domain contacts)")
+                continue
+
+            valid_candidates.append(cand)
+            logger.info(f"  Candidate {cand}: left_ratio={left_ratio:.2f}, right_ratio={right_ratio:.2f}, cut_fraction={cut_fraction:.2f} - VALID")
 
         return valid_candidates
 
