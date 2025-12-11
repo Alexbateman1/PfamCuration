@@ -520,6 +520,12 @@ def _generate_html(
             nodes.add(nodeData);
         }});
 
+        // Pre-calculate node angles for circos-style edge curves
+        const nodeAngles = {{}};
+        nodesData.forEach((n, idx) => {{
+            nodeAngles[n.id] = (2 * Math.PI * idx) / numNodes - Math.PI / 2;
+        }});
+
         // Initialize edges
         edgesData.forEach((e, i) => {{
             let edgeWidth, edgeColor, edgeTitle;
@@ -534,6 +540,35 @@ def _generate_html(
                 edgeColor = e.hbond ? '#e74c3c' : '#999999';
                 edgeTitle = `Weight: ${{e.weight}}\\nDistance: ${{e.distance}}Å${{e.hbond ? '\\nH-bonded' : ''}}`;
             }}
+
+            // Calculate edge curve settings for circos layout
+            let smoothSettings = {{ type: 'continuous' }};
+            if (circleLayout) {{
+                const angle1 = nodeAngles[e.from];
+                const angle2 = nodeAngles[e.to];
+
+                // Calculate angular distance (0 to PI)
+                let angleDiff = Math.abs(angle2 - angle1);
+                if (angleDiff > Math.PI) angleDiff = 2 * Math.PI - angleDiff;
+
+                // Roundness: closer nodes = tighter arc, distant nodes = flatter arc toward center
+                // Scale from 0.1 (close, tight arc) to 0.5 (opposite, passes near center)
+                const roundness = 0.1 + (angleDiff / Math.PI) * 0.4;
+
+                // Determine curve direction to go INSIDE the circle
+                // We need to curve toward the center, which depends on relative node positions
+                let deltaAngle = angle2 - angle1;
+                // Normalize to -PI to PI
+                while (deltaAngle > Math.PI) deltaAngle -= 2 * Math.PI;
+                while (deltaAngle < -Math.PI) deltaAngle += 2 * Math.PI;
+
+                // If going clockwise (positive delta), curve CCW to go inside
+                // If going counter-clockwise (negative delta), curve CW to go inside
+                const curveType = deltaAngle > 0 ? 'curvedCCW' : 'curvedCW';
+
+                smoothSettings = {{ type: curveType, roundness: roundness }};
+            }}
+
             edges.add({{
                 id: i,
                 from: e.from,
@@ -545,6 +580,7 @@ def _generate_html(
                 title: edgeTitle,
                 width: edgeWidth,
                 color: edgeColor,
+                smooth: smoothSettings,
             }});
         }});
 
@@ -560,7 +596,7 @@ def _generate_html(
                 borderWidthSelected: 3,
             }},
             edges: {{
-                smooth: circleLayout ? {{ type: 'curvedCW', roundness: 0.2 }} : {{ type: 'continuous' }},
+                smooth: {{ enabled: true }},  // Per-edge smooth settings are set individually
                 color: {{ inherit: false }},
             }},
             physics: {{
