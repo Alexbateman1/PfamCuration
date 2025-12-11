@@ -373,9 +373,9 @@ class VoronoiPredictor:
         min_domain_size: int = 30,
         ndr_plddt_cutoff: float = 70.0,
         contact_threshold: float = 10.0,
-        lambda_boundary: float = 2.0,
+        lambda_boundary: float = 2.0,  # No longer used (modularity handles this)
         mu_crossing: float = 5.0,
-        nu_domains: float = 100.0,
+        nu_domains: float = 20.0,  # Reduced - modularity-based scoring needs less penalty
         max_iterations: int = 100,
         convergence_tol: float = 0.1,
         cache_dir: Optional[str] = None,
@@ -819,48 +819,44 @@ class VoronoiPredictor:
         coords: np.ndarray = None,
     ) -> float:
         """
-        Compute objective function score for a partition.
+        Compute objective function score for a partition using modularity.
 
-        Score = internal_contacts - lambda * boundary_contacts
-                - mu * chain_crossings - nu * K - rho * void_penalty
+        Modularity Q measures whether there are more internal contacts than
+        expected by chance given the degree distribution. This handles
+        tightly-packed domains better than raw contact counting.
 
-        The void penalty penalizes domains with large spatial extent but sparse contacts.
+        Score = modularity * scale - mu * chain_crossings - nu * K
         """
         n = len(assignments)
 
-        # Count internal contacts and compute void penalty for each cluster
-        total_internal = 0
-        void_penalty = 0
+        # Compute modularity
+        # Q = (1/2m) * sum_ij [A_ij - (k_i * k_j)/(2m)] * delta(c_i, c_j)
+        degrees = contacts.sum(axis=1)  # k_i = number of contacts for each residue
+        m = contacts.sum() / 2  # Total edges (each contact counted once)
+
+        if m == 0:
+            return -float('inf')
+
+        modularity = 0.0
         for c in range(k):
             mask = assignments == c
-            cluster_size = mask.sum()
-            if cluster_size == 0:
+            if mask.sum() == 0:
                 continue
 
+            # Sum of A_ij for pairs in same cluster
             cluster_contacts = contacts[np.ix_(mask, mask)]
-            internal = cluster_contacts.sum() / 2
-            total_internal += internal
+            actual_internal = cluster_contacts.sum() / 2
 
-            # Void penalty based on spatial spread
-            # If coords provided, penalize clusters where points are far from centroid
-            if coords is not None and cluster_size > 1:
-                cluster_coords = coords[mask]
-                centroid = cluster_coords.mean(axis=0)
-                distances = np.sqrt(np.sum((cluster_coords - centroid) ** 2, axis=1))
-                avg_distance = distances.mean()
-                # Penalty: large average distance = scattered cluster
-                void_penalty += avg_distance * cluster_size * 0.5
+            # Sum of (k_i * k_j) / (2m) for pairs in same cluster (expected by null model)
+            cluster_degrees = degrees[mask]
+            expected_internal = (cluster_degrees.sum() ** 2) / (4 * m)
 
-        # Count boundary contacts (between different clusters)
-        boundary_contacts = 0
-        for i in range(n):
-            for j in range(i + 1, n):
-                if contacts[i, j] and assignments[i] != assignments[j]:
-                    boundary_contacts += 1
+            modularity += (actual_internal - expected_internal) / m
+
+        # Scale modularity to be comparable to other terms (modularity is typically 0-1)
+        modularity_score = modularity * 1000
 
         # Count chain crossings
-        # A crossing occurs when residues i, j, k have i < j < k in sequence
-        # but i and k are in same cluster while j is in different cluster
         chain_crossings = 0
         for c in range(k):
             mask = assignments == c
@@ -869,24 +865,19 @@ class VoronoiPredictor:
             if len(cluster_resnums) < 2:
                 continue
 
-            # For each pair of residues in cluster, count different-cluster residues between them
             for i, r1 in enumerate(cluster_resnums[:-1]):
                 for r2 in cluster_resnums[i+1:]:
-                    # Count residues with resnum between r1 and r2 that are NOT in this cluster
                     between_mask = (resnums > r1) & (resnums < r2) & (~mask)
                     chain_crossings += between_mask.sum()
 
-        # Normalize chain crossings by sequence length
         chain_crossings = chain_crossings / max(n, 1)
 
         # Compute final score
-        # Maximize internal contacts, minimize boundary contacts, domain count, and void
+        # Modularity handles internal vs boundary naturally, so no lambda_boundary term
         score = (
-            total_internal
-            - self.lambda_boundary * boundary_contacts
+            modularity_score
             - self.mu_crossing * chain_crossings
             - self.nu_domains * k
-            - void_penalty
         )
 
         return score

@@ -222,7 +222,7 @@ def test_objective_function():
     predictor = VoronoiPredictor(
         lambda_boundary=1.0,
         mu_crossing=2.0,
-        nu_domains=50.0,  # Lower for small test cases
+        nu_domains=20.0,  # Default for modularity-based scoring
     )
 
     # Simple case: 4 points with 2 contacts
@@ -246,12 +246,12 @@ def test_objective_function():
     print(f"  Score K=1: {score1:.2f}")
     print(f"  Score K=2: {score2:.2f}")
 
-    # With raw contact scoring:
-    # K=1: 2 internal, 0 boundary, penalty = 50 → score = 2 - 0 - 50 = -48
-    # K=2: 2 internal, 0 boundary, penalty = 100 → score = 2 - 0 - 100 = -98
-    # K=1 should score higher due to domain count penalty
+    # With modularity-based scoring:
+    # K=2 perfectly captures the two separate communities (0-1 and 2-3)
+    # K=1 groups everything together, lower modularity
+    # K=2 should score higher because it correctly identifies the community structure
 
-    assert score1 > score2, "Fewer domains should score higher when no boundary contacts"
+    assert score2 > score1, "K=2 should score higher when there are two clear separate clusters"
 
     print("  PASSED\n")
 
