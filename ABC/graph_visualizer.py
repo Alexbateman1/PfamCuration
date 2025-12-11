@@ -151,6 +151,7 @@ def create_graph_visualization(
     output_path: str = "graph_visualization.html",
     title: str = "Contact Graph Visualization",
     uniprot_acc: str = None,
+    show_chain_trace: bool = False,
 ) -> str:
     """
     Create an interactive HTML visualization of the contact graph.
@@ -171,6 +172,8 @@ def create_graph_visualization(
         Path for output HTML file
     title : str
         Title for the visualization
+    show_chain_trace : bool
+        If True, add backbone edges connecting sequential residues
 
     Returns:
     --------
@@ -241,8 +244,29 @@ def create_graph_visualization(
             'weight': round(data.get('weight', 1.0), 3),
             'distance': round(data.get('distance', 0), 1),
             'hbond': data.get('hbond', False),
+            'backbone': False,
         }
         edges_data.append(edge)
+
+    # Add backbone chain trace edges if requested
+    if show_chain_trace:
+        # Create set of existing edges to avoid duplicates
+        existing_edges = {(e['from'], e['to']) for e in edges_data}
+        existing_edges.update({(e['to'], e['from']) for e in edges_data})
+
+        # Add backbone edges (connecting sequential residues by index)
+        for i in range(len(residues) - 1):
+            # Check if residues are actually sequential (no gaps)
+            if residues[i + 1].resnum - residues[i].resnum == 1:
+                if (i, i + 1) not in existing_edges:
+                    edges_data.append({
+                        'from': i,
+                        'to': i + 1,
+                        'weight': 0,
+                        'distance': 3.8,  # Typical CA-CA distance
+                        'hbond': False,
+                        'backbone': True,
+                    })
 
     # Generate HTML
     html = _generate_html(
@@ -478,6 +502,18 @@ def _generate_html(
 
         // Initialize edges
         edgesData.forEach((e, i) => {{
+            let edgeWidth, edgeColor, edgeTitle;
+            if (e.backbone) {{
+                // Backbone chain trace - thicker, dark gray
+                edgeWidth = 3;
+                edgeColor = '#333333';
+                edgeTitle = 'Backbone chain trace';
+            }} else {{
+                // Contact edge
+                edgeWidth = Math.max(0.5, e.weight * 2);
+                edgeColor = e.hbond ? '#e74c3c' : '#999999';
+                edgeTitle = `Weight: ${{e.weight}}\\nDistance: ${{e.distance}}Å${{e.hbond ? '\\nH-bonded' : ''}}`;
+            }}
             edges.add({{
                 id: i,
                 from: e.from,
@@ -485,9 +521,10 @@ def _generate_html(
                 weight: e.weight,
                 distance: e.distance,
                 hbond: e.hbond,
-                title: `Weight: ${{e.weight}}\\nDistance: ${{e.distance}}Å${{e.hbond ? '\\nH-bonded' : ''}}`,
-                width: Math.max(0.5, e.weight * 2),
-                color: e.hbond ? '#e74c3c' : '#999999',
+                backbone: e.backbone,
+                title: edgeTitle,
+                width: edgeWidth,
+                color: edgeColor,
             }});
         }});
 
@@ -583,6 +620,8 @@ def _generate_html(
             const hbondOnly = document.getElementById('hbondOnly').checked;
 
             edges.forEach(edge => {{
+                // Backbone edges are always shown (not affected by filters)
+                if (edge.backbone) return;
                 const hidden = edge.weight < minWeight || (hbondOnly && !edge.hbond);
                 edges.update({{ id: edge.id, hidden: hidden }});
             }});
@@ -594,6 +633,8 @@ def _generate_html(
             const minWeight = parseFloat(document.getElementById('edgeFilter').value);
 
             edges.forEach(edge => {{
+                // Backbone edges are always shown (not affected by filters)
+                if (edge.backbone) return;
                 const hidden = edge.weight < minWeight || (hbondOnly && !edge.hbond);
                 edges.update({{ id: edge.id, hidden: hidden }});
             }});
@@ -646,7 +687,8 @@ def _generate_html(
                 html += '<div class="legend-item"><div class="legend-color" style="background:#cccccc"></div>No domain / Cluster</div>';
             }}
 
-            html += '<br><div class="legend-item"><div class="legend-color" style="background:#e74c3c"></div>H-bonded edge</div>';
+            html += '<br><div class="legend-item"><div class="legend-color" style="background:#333333"></div>Backbone trace</div>';
+            html += '<div class="legend-item"><div class="legend-color" style="background:#e74c3c"></div>H-bonded edge</div>';
             html += '<div class="legend-item"><div class="legend-color" style="background:#999999"></div>Regular edge</div>';
 
             legend.innerHTML = html;

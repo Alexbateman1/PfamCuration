@@ -53,6 +53,9 @@ def main():
                         metavar="DEV_FILE",
                         help="Generate interactive HTML visualization of the contact graph. "
                              "Provide path to dev file with ground truth domain definitions.")
+    parser.add_argument("--chain-trace", action="store_true",
+                        help="Add backbone chain trace edges to graph visualization "
+                             "(connects sequential residues with thicker lines)")
 
     args = parser.parse_args()
 
@@ -99,6 +102,7 @@ def main():
             output_path=output_file,
             title=f"Contact Graph: {args.uniprot}",
             uniprot_acc=args.uniprot,
+            show_chain_trace=args.chain_trace,
         )
 
         # Generate ChimeraX commands for cluster coloring
