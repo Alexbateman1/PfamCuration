@@ -128,15 +128,12 @@ class VoronoiPrediction:
         """
         Generate ChimeraX commands to visualize Voronoi boundaries.
 
-        Uses ChimeraX 'shape disk' to create flat circular planes at
-        each Voronoi boundary.
-
         Parameters:
         -----------
         structure_model : str
             ChimeraX model ID for the structure (default: "#1")
         plane_radius : float
-            Radius of boundary disks in Angstroms (default: 40.0)
+            Radius of boundary planes in Angstroms (default: 40.0)
 
         Returns:
         --------
@@ -144,6 +141,8 @@ class VoronoiPrediction:
         """
         if self.seed_positions is None or len(self.seed_positions) < 2:
             return "# No Voronoi boundaries to display (single domain or no seeds)"
+
+        from scipy.spatial import Voronoi
 
         lines = [
             f"# ChimeraX commands for 3DVC visualization of {self.uniprot_acc}",
@@ -156,10 +155,12 @@ class VoronoiPrediction:
         colors = ["red", "blue", "green", "yellow", "orange", "purple",
                   "cyan", "magenta", "lime", "pink"]
 
+        # Color each domain - use comma-separated residue ranges
         for i, domain in enumerate(self.domains):
             color = colors[i % len(colors)]
-            segments_sel = " ".join([f":{s}-{e}" for s, e in domain.segments])
-            lines.append(f"color {structure_model}/{segments_sel} {color}")
+            # ChimeraX syntax: color #1:10-50,60-80 red
+            ranges = ",".join([f"{s}-{e}" for s, e in domain.segments])
+            lines.append(f"color {structure_model}:{ranges} {color}")
 
         lines.append("")
         lines.append("# Voronoi seed positions (as spheres)")
@@ -173,55 +174,46 @@ class VoronoiPrediction:
         lines.append("")
         lines.append("# Voronoi boundary planes (as rectangles)")
 
-        # Create boundary rectangles only between domains that share a boundary
-        plane_size = plane_radius * 2  # Convert radius to width/height
+        # Use scipy Voronoi to compute actual ridges between seeds
+        vor = Voronoi(self.seed_positions)
 
-        # Determine which pairs to draw
-        if self.boundary_pairs:
-            pairs_to_draw = self.boundary_pairs
-        else:
-            # Fallback: draw all pairs (legacy behavior)
-            n_seeds = len(self.seed_positions)
-            pairs_to_draw = [(i, j) for i in range(n_seeds) for j in range(i + 1, n_seeds)]
+        # ridge_points contains pairs of seed indices that share a Voronoi face
+        plane_size = plane_radius * 2
 
-        for i, j in pairs_to_draw:
+        for ridge_idx, (i, j) in enumerate(vor.ridge_points):
+            if i < 0 or j < 0:
+                continue  # Skip ridges at infinity
+
             seed_i = self.seed_positions[i]
             seed_j = self.seed_positions[j]
 
             # Midpoint (plane passes through here)
             midpoint = (seed_i + seed_j) / 2
 
-            # Normal vector (perpendicular to plane, pointing from i to j)
+            # Normal vector (perpendicular to plane)
             normal = seed_j - seed_i
             normal = normal / np.linalg.norm(normal)
 
             # Calculate rotation to align Z-axis with normal
-            # Default rectangle is in XY plane (normal = Z = [0,0,1])
             z_axis = np.array([0, 0, 1])
-
-            # Rotation axis = cross(Z, normal)
             rot_axis = np.cross(z_axis, normal)
             rot_axis_len = np.linalg.norm(rot_axis)
 
             if rot_axis_len > 0.001:  # Not parallel to Z
                 rot_axis = rot_axis / rot_axis_len
-                # Rotation angle = acos(dot(Z, normal))
                 rot_angle = np.degrees(np.arccos(np.clip(np.dot(z_axis, normal), -1, 1)))
                 rotation_str = f"rotation {rot_axis[0]:.4f},{rot_axis[1]:.4f},{rot_axis[2]:.4f},{rot_angle:.2f}"
-            elif normal[2] < 0:  # Anti-parallel to Z (flip 180)
+            elif normal[2] < 0:  # Anti-parallel to Z
                 rotation_str = "rotation 1,0,0,180"
-            else:  # Parallel to Z (no rotation needed)
+            else:  # Parallel to Z
                 rotation_str = ""
 
             lines.append(
                 f"shape rectangle width {plane_size} height {plane_size} "
                 f"center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
-                f"{rotation_str} color #808080"
+                f"{rotation_str} color gray transparency 80"
             )
 
-        lines.append("")
-        lines.append("# Make boundary planes semi-transparent")
-        lines.append("transparency shapes 80")
         lines.append("")
         lines.append("# Display settings")
         lines.append(f"cartoon {structure_model}")
