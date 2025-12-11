@@ -174,9 +174,164 @@ def kmeans_optimize(coords, resnums, k, max_iter=100):
     return best_seeds, best_assignments, best_score
 
 
-def predict_domains(coords, resnums, max_k=10, domain_bonus=50, crossing_penalty=50, min_size=30):
+def clip_polygon_by_plane(vertices, plane_point, plane_normal):
+    """Clip a polygon by a half-plane (Sutherland-Hodgman)."""
+    if len(vertices) < 3:
+        return []
+
+    result = []
+    n = len(vertices)
+
+    for idx in range(n):
+        v1 = vertices[idx]
+        v2 = vertices[(idx + 1) % n]
+
+        d1 = np.dot(v1 - plane_point, plane_normal)
+        d2 = np.dot(v2 - plane_point, plane_normal)
+
+        if d1 >= 0:
+            result.append(v1)
+
+        if (d1 >= 0 and d2 < 0) or (d1 < 0 and d2 >= 0):
+            t = d1 / (d1 - d2)
+            intersection = v1 + t * (v2 - v1)
+            result.append(intersection)
+
+    return result
+
+
+def compute_voronoi_face(seeds, i, j, max_radius=50.0):
+    """Compute the polygon boundary between Voronoi cells i and j."""
+    midpoint = (seeds[i] + seeds[j]) / 2
+    normal = seeds[j] - seeds[i]
+    normal = normal / np.linalg.norm(normal)
+
+    # Create orthogonal vectors in the bisector plane
+    if abs(normal[0]) < 0.9:
+        u = np.cross(normal, np.array([1.0, 0.0, 0.0]))
+    else:
+        u = np.cross(normal, np.array([0.0, 1.0, 0.0]))
+    u = u / np.linalg.norm(u)
+    v = np.cross(normal, u)
+
+    # Initial polygon: large square
+    vertices = [
+        midpoint + max_radius * u + max_radius * v,
+        midpoint - max_radius * u + max_radius * v,
+        midpoint - max_radius * u - max_radius * v,
+        midpoint + max_radius * u - max_radius * v,
+    ]
+
+    # Clip by each other seed's bisector plane
+    for k in range(len(seeds)):
+        if k == i or k == j:
+            continue
+        mid_ik = (seeds[i] + seeds[k]) / 2
+        norm_ik = seeds[k] - seeds[i]
+        norm_ik = norm_ik / np.linalg.norm(norm_ik)
+        vertices = clip_polygon_by_plane(vertices, mid_ik, -norm_ik)
+        if len(vertices) < 3:
+            break
+
+    return vertices
+
+
+def generate_chimerax_commands(seeds, assignments, resnums, coords, uniprot_acc):
+    """Generate ChimeraX commands for visualization."""
+    lines = [
+        f"# ChimeraX commands for {uniprot_acc} with K={len(seeds)} domains",
+        "",
+        "# Color domains",
+    ]
+
+    colors = ["red", "blue", "green", "yellow", "orange", "purple",
+              "cyan", "magenta", "lime", "pink"]
+
+    k = len(seeds)
+
+    # Color each domain
+    for c in range(k):
+        mask = assignments == c
+        if mask.sum() == 0:
+            continue
+        domain_resnums = resnums[mask]
+        color = colors[c % len(colors)]
+
+        # Build segments
+        sorted_resnums = sorted(domain_resnums)
+        segments = []
+        start = sorted_resnums[0]
+        end = sorted_resnums[0]
+        for r in sorted_resnums[1:]:
+            if r == end + 1:
+                end = r
+            else:
+                segments.append((start, end))
+                start = end = r
+        segments.append((start, end))
+
+        ranges = ",".join([f"{s}-{e}" for s, e in segments])
+        lines.append(f"color #1:{ranges} {color}")
+
+    lines.append("")
+    lines.append("# Voronoi seed positions (as spheres)")
+
+    for i, seed in enumerate(seeds):
+        color = colors[i % len(colors)]
+        lines.append(f"shape sphere radius 4 center {seed[0]:.2f},{seed[1]:.2f},{seed[2]:.2f} color {color}")
+
+    if k >= 2:
+        lines.append("")
+        lines.append("# Voronoi boundary polygons")
+
+        # Find which pairs are neighbors
+        pairs_to_draw = []
+        for i in range(k):
+            for j in range(i + 1, k):
+                midpoint = (seeds[i] + seeds[j]) / 2
+                dist_ij = np.linalg.norm(seeds[i] - midpoint)
+                is_neighbor = True
+                for m in range(k):
+                    if m == i or m == j:
+                        continue
+                    dist_m = np.linalg.norm(seeds[m] - midpoint)
+                    if dist_m < dist_ij:
+                        is_neighbor = False
+                        break
+                if is_neighbor:
+                    pairs_to_draw.append((i, j))
+
+        # Draw polygons as triangles
+        for i, j in pairs_to_draw:
+            vertices = compute_voronoi_face(seeds, i, j)
+            if len(vertices) < 3:
+                continue
+
+            centroid = np.mean(vertices, axis=0)
+            for idx in range(len(vertices)):
+                v1 = vertices[idx]
+                v2 = vertices[(idx + 1) % len(vertices)]
+                lines.append(
+                    f"shape triangle "
+                    f"point {centroid[0]:.2f},{centroid[1]:.2f},{centroid[2]:.2f} "
+                    f"point {v1[0]:.2f},{v1[1]:.2f},{v1[2]:.2f} "
+                    f"point {v2[0]:.2f},{v2[1]:.2f},{v2[2]:.2f} "
+                    f"color 128,128,128,51"
+                )
+
+    lines.append("")
+    lines.append("# Display settings")
+    lines.append("cartoon #1")
+    lines.append("hide #1 atoms")
+
+    return "\n".join(lines)
+
+
+def predict_domains(coords, resnums, max_k=10, domain_bonus=50, crossing_penalty=50, min_size=30,
+                    output_prefix=None, uniprot_acc="protein"):
     """
     Predict domains by trying different K values.
+    Saves ChimeraX files for each K if output_prefix is provided.
     """
     print(f"\nOptimizing with {len(coords)} residues...")
     print(f"Parameters: domain_bonus={domain_bonus}, crossing_penalty={crossing_penalty}, min_size={min_size}")
@@ -192,6 +347,14 @@ def predict_domains(coords, resnums, max_k=10, domain_bonus=50, crossing_penalty
                                                        domain_bonus, crossing_penalty, min_size)
 
         print(f"  K={k}: score={score:.1f}, crossings={crossings}, valid_domains={valid_domains}")
+
+        # Save ChimeraX file for this K
+        if output_prefix:
+            cxc_content = generate_chimerax_commands(seeds, assignments, resnums, coords, uniprot_acc)
+            cxc_path = f"{output_prefix}_K{k}.cxc"
+            with open(cxc_path, 'w') as f:
+                f.write(cxc_content)
+            print(f"       -> Saved {cxc_path}")
 
         if score > best_overall_score:
             best_overall_score = score
@@ -236,7 +399,7 @@ def assignments_to_domains(assignments, resnums, min_size=30):
     return domains
 
 
-def test_protein(uniprot_acc, expected_domains=None, max_k=10, **kwargs):
+def test_protein(uniprot_acc, expected_domains=None, max_k=10, output_chimerax=False, **kwargs):
     """Test on a specific protein."""
     print(f"\n{'='*60}")
     print(f"Testing {uniprot_acc}")
@@ -250,8 +413,15 @@ def test_protein(uniprot_acc, expected_domains=None, max_k=10, **kwargs):
     coords, plddts, resnums = filter_structured(coords, plddts, resnums)
     print(f"After pLDDT filter: {len(coords)} residues")
 
+    # Set output prefix for ChimeraX files
+    output_prefix = uniprot_acc if output_chimerax else None
+
     # Predict
-    best_k, seeds, assignments = predict_domains(coords, resnums, max_k=max_k, **kwargs)
+    best_k, seeds, assignments = predict_domains(
+        coords, resnums, max_k=max_k,
+        output_prefix=output_prefix, uniprot_acc=uniprot_acc,
+        **kwargs
+    )
 
     # Convert to domains
     domains = assignments_to_domains(assignments, resnums)
@@ -271,6 +441,8 @@ if __name__ == "__main__":
         description="Simple Voronoi domain predictor - minimize crossings, reward domains"
     )
     parser.add_argument("accession", help="UniProt accession")
+    parser.add_argument("--chimerax", action="store_true",
+                        help="Output ChimeraX .cxc files for each K value")
     parser.add_argument("--domain-bonus", type=float, default=50,
                         help="Reward for each valid domain (default: 50)")
     parser.add_argument("--crossing-penalty", type=float, default=50,
@@ -284,6 +456,7 @@ if __name__ == "__main__":
 
     test_protein(
         args.accession,
+        output_chimerax=args.chimerax,
         domain_bonus=args.domain_bonus,
         crossing_penalty=args.crossing_penalty,
         min_size=args.min_size,
