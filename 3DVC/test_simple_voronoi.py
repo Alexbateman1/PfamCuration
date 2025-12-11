@@ -510,7 +510,7 @@ def generate_chimerax_commands(seeds, assignments, resnums, coords, uniprot_acc)
     return "\n".join(lines)
 
 
-def predict_domains(coords, resnums, max_k=10, domain_bonus=50, crossing_penalty=50,
+def predict_domains(coords, resnums, max_k=10, domain_bonus=100, crossing_penalty=100,
                     intrusion_penalty=10, min_size=30, output_prefix=None, uniprot_acc="protein"):
     """
     Predict domains by trying different K values.
@@ -633,30 +633,38 @@ def test_protein(uniprot_acc, expected_domains=None, max_k=10, output_chimerax=F
 def synthetic_test():
     """Test with synthetic data to verify hill-climbing works."""
     print("\n" + "="*60)
-    print("Synthetic test: 3 well-separated domains")
+    print("Synthetic test: 3 well-separated domains with gaps")
     print("="*60)
 
     np.random.seed(42)
 
-    # Create 3 clearly separated domains
+    # Create 3 clearly separated domains with gaps between them
+    # (simulating filtered low-pLDDT linker regions)
     domain1 = np.random.randn(50, 3) * 5 + np.array([0, 0, 0])
     domain2 = np.random.randn(50, 3) * 5 + np.array([50, 0, 0])
     domain3 = np.random.randn(50, 3) * 5 + np.array([100, 0, 0])
 
     coords = np.vstack([domain1, domain2, domain3])
-    resnums = np.arange(1, 151)
+    # Residue numbers with gaps (simulating filtered linkers)
+    # Domain 1: 1-50, Domain 2: 70-119, Domain 3: 140-189
+    resnums = np.concatenate([
+        np.arange(1, 51),      # Domain 1: 1-50
+        np.arange(70, 120),    # Domain 2: 70-119 (gap 51-69)
+        np.arange(140, 190),   # Domain 3: 140-189 (gap 120-139)
+    ])
 
-    print(f"Created 150 residues in 3 separated groups")
-    print("Note: For sequential domains, there are always K-1 unavoidable crossings")
-    print("      at domain boundaries (50→51 and 100→101)")
+    print(f"Created 150 residues in 3 separated groups with sequence gaps")
+    print("  Domain 1: residues 1-50")
+    print("  Domain 2: residues 70-119 (gap 51-69 filtered)")
+    print("  Domain 3: residues 140-189 (gap 120-139 filtered)")
 
-    # Test hill-climbing with domain_bonus > crossing_penalty
-    # This encourages finding multiple domains even when there are unavoidable boundary crossings
+    # Test hill-climbing with domain_bonus = crossing_penalty
+    # This balances finding domains vs avoiding unnecessary crossings
     print("\n--- Hill-climbing optimization ---")
     best_k, seeds, assignments = predict_domains(
         coords, resnums, max_k=5,
-        domain_bonus=100,      # Reward for each domain
-        crossing_penalty=50,   # Cost per boundary crossing
+        domain_bonus=100,       # Reward for each domain
+        crossing_penalty=100,   # Cost per boundary crossing
         output_prefix=None, uniprot_acc="synthetic"
     )
 
@@ -665,7 +673,7 @@ def synthetic_test():
     for i, d in enumerate(domains):
         print(f"  {i+1}: {d['chopping']} (size={d['size']})")
 
-    # Expected: 3 domains at 1-50, 51-100, 101-150
+    # Expected: 3 domains
     if len(domains) == 3:
         print("\n✓ Correctly identified 3 domains!")
     else:
@@ -681,8 +689,8 @@ if __name__ == "__main__":
                         help="Output ChimeraX .cxc files for each K value")
     parser.add_argument("--domain-bonus", type=float, default=100,
                         help="Reward for each valid domain (default: 100)")
-    parser.add_argument("--crossing-penalty", type=float, default=50,
-                        help="Penalty per real chain crossing (default: 50)")
+    parser.add_argument("--crossing-penalty", type=float, default=100,
+                        help="Penalty per real chain crossing (default: 100)")
     parser.add_argument("--intrusion-penalty", type=float, default=10,
                         help="Penalty per brief intrusion (default: 10)")
     parser.add_argument("--min-size", type=int, default=30,
