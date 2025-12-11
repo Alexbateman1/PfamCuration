@@ -204,9 +204,11 @@ class CCCPredictor:
         )
         logger.info(f"Found {len(raw_candidates)} raw candidate split points")
 
-        # Filter candidates: only keep splits that create valid domains (contact_ratio >= 1)
+        # Filter candidates: only keep splits that create valid domains
+        # - contact_ratio >= 1 (more internal than external contacts)
+        # - cut_fraction < 0.05 (few contacts between proposed domains)
         candidates = self._filter_candidates_by_contact_ratio(
-            raw_candidates, residue_numbers, graph, min_ratio=1.0
+            raw_candidates, residue_numbers, graph, min_ratio=1.0, max_cut_fraction=0.05
         )
         logger.info(f"After contact-ratio filtering: {len(candidates)} candidates")
         spectral_info['raw_candidates'] = raw_candidates
@@ -291,9 +293,16 @@ class CCCPredictor:
                 best_method = method
                 best_domains = domains
 
+        # Trim domains to exclude disordered regions
+        # This ensures domain boundaries only include structured residues
+        trimmed_domains = self._trim_domains_to_structured(
+            best_domains, residue_numbers, plddt
+        )
+        logger.info(f"After trimming to structured regions: {len(trimmed_domains)} domains")
+
         # Build final prediction
         final_domains = []
-        for i, (start, end) in enumerate(best_domains):
+        for i, (start, end) in enumerate(trimmed_domains):
             metrics = scorer.get_metrics(start, end)
             final_domains.append(Domain(
                 domain_id=i + 1,
@@ -367,6 +376,51 @@ class CCCPredictor:
                 domains.append((start, end))
 
         return domains
+
+    def _trim_domains_to_structured(
+        self,
+        domains: List[Tuple[int, int]],
+        residue_numbers: List[int],
+        plddt: np.ndarray
+    ) -> List[Tuple[int, int]]:
+        """
+        Trim domain boundaries to exclude disordered regions.
+
+        Domains should only include structured residues (pLDDT >= threshold).
+        This removes N/C-terminal disorder and internal disordered linkers.
+        """
+        if not domains:
+            return []
+
+        resnum_to_idx = {rn: i for i, rn in enumerate(residue_numbers)}
+        trimmed = []
+
+        for start, end in domains:
+            # Find the first structured residue from start
+            new_start = start
+            while new_start <= end:
+                if new_start in resnum_to_idx:
+                    idx = resnum_to_idx[new_start]
+                    if plddt[idx] >= self.plddt_threshold:
+                        break
+                new_start += 1
+
+            # Find the last structured residue from end
+            new_end = end
+            while new_end >= new_start:
+                if new_end in resnum_to_idx:
+                    idx = resnum_to_idx[new_end]
+                    if plddt[idx] >= self.plddt_threshold:
+                        break
+                new_end -= 1
+
+            # Only keep if remaining region is large enough
+            if new_end - new_start + 1 >= self.min_domain_size:
+                trimmed.append((new_start, new_end))
+            else:
+                logger.debug(f"Domain {start}-{end} trimmed to {new_start}-{new_end}, too small - removed")
+
+        return trimmed
 
     def _filter_candidates_by_contact_ratio(
         self,
