@@ -106,7 +106,12 @@ class CCCPredictor:
         self.use_pae = use_pae
 
         if cache_dir is None:
-            self.cache_dir = Path.cwd() / ".ccc_cache"
+            # Try to use existing ABC cache first, then fall back to CCC cache
+            abc_cache = Path.cwd() / ".abc_cache"
+            if abc_cache.exists():
+                self.cache_dir = abc_cache
+            else:
+                self.cache_dir = Path.cwd() / ".ccc_cache"
         else:
             self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
