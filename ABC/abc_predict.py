@@ -70,7 +70,11 @@ def main():
 
     # Graph visualization mode
     if args.visualize_graph:
-        from ABC.graph_visualizer import parse_dev_file, create_graph_visualization
+        from ABC.graph_visualizer import (
+            parse_dev_file,
+            create_graph_visualization,
+            generate_chimerax_cluster_commands,
+        )
 
         # Parse dev file for ground truth
         dev_annotations = parse_dev_file(args.visualize_graph)
@@ -97,8 +101,19 @@ def main():
             uniprot_acc=args.uniprot,
         )
 
+        # Generate ChimeraX commands for cluster coloring
+        cxc_file = f"{output_prefix}_clusters.cxc"
+        generate_chimerax_cluster_commands(
+            residues=residues,
+            cluster_assignments=clusters,
+            output_path=cxc_file,
+            uniprot_acc=args.uniprot,
+            max_clusters=20,
+        )
+
         print(f"\nGraph visualization saved to: {output_file}")
-        print(f"Open in browser to explore interactively.")
+        print(f"ChimeraX cluster coloring: {cxc_file}")
+        print(f"Open HTML in browser to explore interactively.")
 
         # Also print prediction summary
         print("\n" + prediction.summary())
