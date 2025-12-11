@@ -56,6 +56,9 @@ def main():
     parser.add_argument("--chain-trace", action="store_true",
                         help="Add backbone chain trace edges to graph visualization "
                              "(connects sequential residues with thicker lines)")
+    parser.add_argument("--circle-layout", action="store_true",
+                        help="Arrange nodes sequentially around a circle in graph visualization "
+                             "(useful for seeing sequence-distant contacts)")
 
     args = parser.parse_args()
 
@@ -103,6 +106,7 @@ def main():
             title=f"Contact Graph: {args.uniprot}",
             uniprot_acc=args.uniprot,
             show_chain_trace=args.chain_trace,
+            circle_layout=args.circle_layout,
         )
 
         # Generate ChimeraX commands for cluster coloring

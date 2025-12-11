@@ -152,6 +152,7 @@ def create_graph_visualization(
     title: str = "Contact Graph Visualization",
     uniprot_acc: str = None,
     show_chain_trace: bool = False,
+    circle_layout: bool = False,
 ) -> str:
     """
     Create an interactive HTML visualization of the contact graph.
@@ -174,6 +175,8 @@ def create_graph_visualization(
         Title for the visualization
     show_chain_trace : bool
         If True, add backbone edges connecting sequential residues
+    circle_layout : bool
+        If True, arrange nodes sequentially around a circle
 
     Returns:
     --------
@@ -277,6 +280,7 @@ def create_graph_visualization(
         n_gt_domains=len(ground_truth_domains) if ground_truth_domains else 0,
         n_pred_domains=len(predicted_domains) if predicted_domains else 0,
         uniprot_acc=uniprot_acc,
+        circle_layout=circle_layout,
     )
 
     # Write to file
@@ -295,6 +299,7 @@ def _generate_html(
     n_gt_domains: int,
     n_pred_domains: int,
     uniprot_acc: str = None,
+    circle_layout: bool = False,
 ) -> str:
     """Generate the HTML content with vis.js visualization."""
 
@@ -475,14 +480,19 @@ def _generate_html(
         // Data
         const nodesData = {nodes_json};
         const edgesData = {edges_json};
+        const circleLayout = {'true' if circle_layout else 'false'};
 
         // Build vis.js dataset
         let nodes = new vis.DataSet();
         let edges = new vis.DataSet();
 
+        // Calculate circle positions if needed
+        const numNodes = nodesData.length;
+        const radius = Math.max(300, numNodes * 2);  // Scale radius with number of nodes
+
         // Initialize nodes
-        nodesData.forEach(n => {{
-            nodes.add({{
+        nodesData.forEach((n, idx) => {{
+            const nodeData = {{
                 id: n.id,
                 label: String(n.resnum),
                 title: `Residue ${{n.resnum}}\\npLDDT: ${{n.plddt}}\\nCluster: ${{n.cluster}}\\nGT Domain: ${{n.gt_domain}}\\nPred Domain: ${{n.pred_domain}}${{n.is_missed ? '\\n⚠️ MISSED (in GT, not predicted)' : ''}}`,
@@ -497,7 +507,17 @@ def _generate_html(
                 cluster_color: n.cluster_color,
                 gt_color: n.gt_color,
                 pred_color: n.pred_color,
-            }});
+            }};
+
+            // Add fixed positions for circle layout
+            if (circleLayout) {{
+                const angle = (2 * Math.PI * idx) / numNodes - Math.PI / 2;  // Start from top
+                nodeData.x = radius * Math.cos(angle);
+                nodeData.y = radius * Math.sin(angle);
+                nodeData.fixed = {{ x: true, y: true }};
+            }}
+
+            nodes.add(nodeData);
         }});
 
         // Initialize edges
@@ -540,11 +560,11 @@ def _generate_html(
                 borderWidthSelected: 3,
             }},
             edges: {{
-                smooth: {{ type: 'continuous' }},
+                smooth: circleLayout ? {{ type: 'curvedCW', roundness: 0.2 }} : {{ type: 'continuous' }},
                 color: {{ inherit: false }},
             }},
             physics: {{
-                enabled: true,
+                enabled: !circleLayout,  // Disable physics for circle layout (fixed positions)
                 solver: 'forceAtlas2Based',
                 forceAtlas2Based: {{
                     gravitationalConstant: -50,
