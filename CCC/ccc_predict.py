@@ -28,8 +28,8 @@ def main():
                         help="Contact distance threshold (default: 10)")
     parser.add_argument("--min-size", type=int, default=30,
                         help="Minimum domain size (default: 30)")
-    parser.add_argument("--penalty", "-p", type=float, default=10.0,
-                        help="Domain penalty for MDL (default: 10). "
+    parser.add_argument("--penalty", "-p", type=float, default=2.0,
+                        help="Domain penalty for MDL (default: 2). "
                              "Higher = fewer domains")
     parser.add_argument("--no-pae", action="store_true",
                         help="Don't use PAE for scoring")

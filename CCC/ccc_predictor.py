@@ -96,7 +96,7 @@ class CCCPredictor:
         self,
         distance_threshold: float = 10.0,
         min_domain_size: int = 30,
-        domain_penalty: float = 10.0,
+        domain_penalty: float = 2.0,  # Lower penalty to allow more domains
         use_pae: bool = True,
         cache_dir: Optional[str] = None,
     ):
@@ -235,12 +235,17 @@ class CCCPredictor:
         best_multi = select_best_assignment(multi_results, residue_numbers[-1])
         logger.info(f"Multi-scale DP selected {len(best_multi.domains)} domains")
 
+        # Also try direct candidate-to-domain conversion
+        candidate_domains = self._candidates_to_domains(candidates, residue_numbers[-1])
+        logger.info(f"Direct candidate split: {len(candidate_domains)} domains")
+
         # Choose best result
-        # Compare spectral partition, DP with candidates, and multi-scale DP
+        # Compare all methods
         results = [
             ("spectral", self._partition_to_domains(spectral_partitions, residue_numbers)),
             ("dp_spectral", dp_result.domains),
             ("dp_multiscale", best_multi.domains),
+            ("candidates", candidate_domains),
         ]
 
         # Score each result
@@ -300,24 +305,43 @@ class CCCPredictor:
                 continue
             # Get residue numbers for this partition
             resnums = sorted([residue_numbers[i] for i in part])
-            # Find contiguous segments
-            segments = []
-            seg_start = resnums[0]
-            seg_end = resnums[0]
-
-            for rn in resnums[1:]:
-                if rn == seg_end + 1:
-                    seg_end = rn
-                else:
-                    segments.append((seg_start, seg_end))
-                    seg_start = rn
-                    seg_end = rn
-            segments.append((seg_start, seg_end))
-
-            # For now, just use the full span
             domains.append((resnums[0], resnums[-1]))
 
-        return sorted(domains)
+        # Remove overlapping domains - keep only non-nested ones
+        domains = sorted(domains, key=lambda d: (d[0], -d[1]))  # Sort by start, then larger first
+        non_overlapping = []
+        for d in domains:
+            # Check if this domain is contained within any existing domain
+            is_nested = False
+            for existing in non_overlapping:
+                if d[0] >= existing[0] and d[1] <= existing[1]:
+                    is_nested = True
+                    break
+            if not is_nested:
+                non_overlapping.append(d)
+
+        return sorted(non_overlapping)
+
+    def _candidates_to_domains(
+        self,
+        candidates: List[int],
+        seq_length: int
+    ) -> List[Tuple[int, int]]:
+        """Convert candidate split points directly to non-overlapping domains."""
+        if not candidates:
+            return [(1, seq_length)]
+
+        # Add start and end
+        boundaries = sorted(set([1] + candidates + [seq_length + 1]))
+
+        domains = []
+        for i in range(len(boundaries) - 1):
+            start = boundaries[i]
+            end = boundaries[i + 1] - 1
+            if end - start + 1 >= self.min_domain_size:
+                domains.append((start, end))
+
+        return domains
 
     def _get_alphafold_files(self, uniprot_acc: str) -> Tuple[Path, Path]:
         """Download or locate AlphaFold structure files."""
