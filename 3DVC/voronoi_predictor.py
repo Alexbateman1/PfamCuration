@@ -124,7 +124,83 @@ class VoronoiPrediction:
                         f"(size={d.size}, discontinuous={d.is_discontinuous})")
         return "\n".join(lines)
 
-    def chimerax_commands(self, structure_model: str = "#1", plane_radius: float = 40.0) -> str:
+    def _clip_polygon_by_plane(self, vertices: List[np.ndarray],
+                                plane_point: np.ndarray, plane_normal: np.ndarray) -> List[np.ndarray]:
+        """
+        Clip a polygon by a half-plane.
+        Keep vertices on the side where dot(v - plane_point, plane_normal) >= 0
+        """
+        if len(vertices) < 3:
+            return []
+
+        result = []
+        n = len(vertices)
+
+        for idx in range(n):
+            v1 = vertices[idx]
+            v2 = vertices[(idx + 1) % n]
+
+            d1 = np.dot(v1 - plane_point, plane_normal)
+            d2 = np.dot(v2 - plane_point, plane_normal)
+
+            if d1 >= 0:
+                result.append(v1)
+
+            # Edge crosses plane
+            if (d1 >= 0 and d2 < 0) or (d1 < 0 and d2 >= 0):
+                # Compute intersection
+                t = d1 / (d1 - d2)
+                intersection = v1 + t * (v2 - v1)
+                result.append(intersection)
+
+        return result
+
+    def _compute_voronoi_face(self, seeds: np.ndarray, i: int, j: int,
+                              max_radius: float = 50.0) -> List[np.ndarray]:
+        """
+        Compute the polygon boundary between Voronoi cells i and j.
+        Returns list of vertices forming the polygon.
+        """
+        # Bisector plane between i and j
+        midpoint = (seeds[i] + seeds[j]) / 2
+        normal = seeds[j] - seeds[i]
+        normal = normal / np.linalg.norm(normal)
+
+        # Create two orthogonal vectors in the bisector plane
+        if abs(normal[0]) < 0.9:
+            u = np.cross(normal, np.array([1.0, 0.0, 0.0]))
+        else:
+            u = np.cross(normal, np.array([0.0, 1.0, 0.0]))
+        u = u / np.linalg.norm(u)
+        v = np.cross(normal, u)
+
+        # Initial polygon: large square on the bisector plane
+        vertices = [
+            midpoint + max_radius * u + max_radius * v,
+            midpoint - max_radius * u + max_radius * v,
+            midpoint - max_radius * u - max_radius * v,
+            midpoint + max_radius * u - max_radius * v,
+        ]
+
+        # Clip by each other seed's bisector plane
+        for k in range(len(seeds)):
+            if k == i or k == j:
+                continue
+
+            # Bisector plane between i and k
+            mid_ik = (seeds[i] + seeds[k]) / 2
+            norm_ik = seeds[k] - seeds[i]
+            norm_ik = norm_ik / np.linalg.norm(norm_ik)
+
+            # Clip polygon by this half-plane (keep side closer to i)
+            vertices = self._clip_polygon_by_plane(vertices, mid_ik, -norm_ik)
+
+            if len(vertices) < 3:
+                break
+
+        return vertices
+
+    def chimerax_commands(self, structure_model: str = "#1", plane_radius: float = 50.0) -> str:
         """
         Generate ChimeraX commands to visualize Voronoi boundaries.
 
@@ -133,7 +209,7 @@ class VoronoiPrediction:
         structure_model : str
             ChimeraX model ID for the structure (default: "#1")
         plane_radius : float
-            Radius of boundary planes in Angstroms (default: 40.0)
+            Max radius for boundary polygons in Angstroms (default: 50.0)
 
         Returns:
         --------
@@ -170,18 +246,16 @@ class VoronoiPrediction:
                         f"color {color}")
 
         lines.append("")
-        lines.append("# Voronoi boundary planes (as rectangles)")
+        lines.append("# Voronoi boundary polygons (as triangles)")
 
         # Compute which seed pairs share a Voronoi face
-        # Two seeds share a boundary iff no other seed is closer to their midpoint
         n_seeds = len(self.seed_positions)
-        plane_size = plane_radius * 2
 
         pairs_to_draw = []
         for i in range(n_seeds):
             for j in range(i + 1, n_seeds):
                 midpoint = (self.seed_positions[i] + self.seed_positions[j]) / 2
-                dist_ij = np.linalg.norm(self.seed_positions[i] - midpoint)  # = dist to j
+                dist_ij = np.linalg.norm(self.seed_positions[i] - midpoint)
 
                 # Check if any other seed is closer to midpoint
                 is_neighbor = True
@@ -196,36 +270,28 @@ class VoronoiPrediction:
                 if is_neighbor:
                     pairs_to_draw.append((i, j))
 
+        # For each Voronoi face, compute polygon and render as triangles
         for i, j in pairs_to_draw:
-            seed_i = self.seed_positions[i]
-            seed_j = self.seed_positions[j]
+            vertices = self._compute_voronoi_face(self.seed_positions, i, j, plane_radius)
 
-            # Midpoint (plane passes through here)
-            midpoint = (seed_i + seed_j) / 2
+            if len(vertices) < 3:
+                continue
 
-            # Normal vector (perpendicular to plane)
-            normal = seed_j - seed_i
-            normal = normal / np.linalg.norm(normal)
+            # Triangulate using fan from centroid
+            centroid = np.mean(vertices, axis=0)
 
-            # Calculate rotation to align Z-axis with normal
-            z_axis = np.array([0, 0, 1])
-            rot_axis = np.cross(z_axis, normal)
-            rot_axis_len = np.linalg.norm(rot_axis)
+            for idx in range(len(vertices)):
+                v1 = vertices[idx]
+                v2 = vertices[(idx + 1) % len(vertices)]
 
-            if rot_axis_len > 0.001:  # Not parallel to Z
-                rot_axis = rot_axis / rot_axis_len
-                rot_angle = np.degrees(np.arccos(np.clip(np.dot(z_axis, normal), -1, 1)))
-                rotation_str = f"rotation {rot_axis[0]:.4f},{rot_axis[1]:.4f},{rot_axis[2]:.4f},{rot_angle:.2f}"
-            elif normal[2] < 0:  # Anti-parallel to Z
-                rotation_str = "rotation 1,0,0,180"
-            else:  # Parallel to Z
-                rotation_str = ""
-
-            lines.append(
-                f"shape rectangle width {plane_size} height {plane_size} "
-                f"center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
-                f"{rotation_str} color 128,128,128,51"
-            )
+                # ChimeraX shape triangle: atom1 atom2 atom3
+                lines.append(
+                    f"shape triangle "
+                    f"{centroid[0]:.2f},{centroid[1]:.2f},{centroid[2]:.2f} "
+                    f"{v1[0]:.2f},{v1[1]:.2f},{v1[2]:.2f} "
+                    f"{v2[0]:.2f},{v2[1]:.2f},{v2[2]:.2f} "
+                    f"color 128,128,128,51"
+                )
 
         lines.append("")
         lines.append("# Display settings")
