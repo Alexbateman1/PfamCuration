@@ -95,7 +95,7 @@ def count_crossings(assignments, resnums):
     return crossings
 
 
-def score_partition(assignments, resnums, k, domain_bonus=100, crossing_penalty=20, min_size=30):
+def score_partition(assignments, resnums, k, domain_bonus=50, crossing_penalty=50, min_size=30):
     """
     Score a partition.
 
@@ -174,7 +174,7 @@ def kmeans_optimize(coords, resnums, k, max_iter=100):
     return best_seeds, best_assignments, best_score
 
 
-def predict_domains(coords, resnums, max_k=10, domain_bonus=100, crossing_penalty=20, min_size=30):
+def predict_domains(coords, resnums, max_k=10, domain_bonus=50, crossing_penalty=50, min_size=30):
     """
     Predict domains by trying different K values.
     """
@@ -271,10 +271,10 @@ if __name__ == "__main__":
         description="Simple Voronoi domain predictor - minimize crossings, reward domains"
     )
     parser.add_argument("accession", help="UniProt accession")
-    parser.add_argument("--domain-bonus", type=float, default=100,
-                        help="Reward for each valid domain (default: 100)")
-    parser.add_argument("--crossing-penalty", type=float, default=20,
-                        help="Penalty per chain crossing (default: 20)")
+    parser.add_argument("--domain-bonus", type=float, default=50,
+                        help="Reward for each valid domain (default: 50)")
+    parser.add_argument("--crossing-penalty", type=float, default=50,
+                        help="Penalty per chain crossing (default: 50)")
     parser.add_argument("--min-size", type=int, default=30,
                         help="Minimum domain size (default: 30)")
     parser.add_argument("--max-k", type=int, default=10,
