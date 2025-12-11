@@ -750,16 +750,16 @@ class ABCPredictor:
 
         domains = filtered_domains
 
-        # Step 6e: Filter by minimum long-range internal contacts
+        # Step 6e: Filter by minimum long-range internal contacts per residue
         # This catches extended structures (like isolated helices) that have high CR
         # only because they have few external contacts, but no real internal structure
         # Long-range = sequence separation >= 10 (excludes intra-helix contacts)
         # Note: In alpha helix with 10Å threshold:
         #   i->i+6 is ~9.8Å CA-CA distance (within threshold)
         #   i->i+7 is ~10.5Å CA-CA distance (outside threshold)
-        # So seq_sep >= 10 ensures we only count inter-secondary-structure contacts
+        # Real domains typically have 2+ LR contacts per residue; isolated helices have ~0.07
         MIN_LONG_RANGE_SEQ_SEP = 10  # Excludes all intra-helix contacts
-        MIN_LONG_RANGE_CONTACTS = 5  # Minimum long-range contacts required
+        MIN_LR_PER_RESIDUE = 0.5  # Minimum long-range contacts per residue
 
         filtered_domains = []
         rejected_for_lr = []
@@ -781,25 +781,29 @@ class ABCPredictor:
                         if seq_sep >= MIN_LONG_RANGE_SEQ_SEP:
                             long_range_contacts += 1
 
+            lr_per_residue = long_range_contacts / domain.size if domain.size > 0 else 0
+
             # Log histogram of sequence separations for debugging
             hist_str = ", ".join(f"{k}-{k+4}:{v}" for k, v in sorted(seq_sep_histogram.items()))
             logger.info(f"Domain {domain.segments} seq_sep histogram: {hist_str}")
 
-            # Log the count for all domains (helps debugging)
+            # Log the count for all domains
             logger.info(
-                f"Domain {domain.segments}: {long_range_contacts} long-range contacts (seq_sep>={MIN_LONG_RANGE_SEQ_SEP}, threshold={MIN_LONG_RANGE_CONTACTS})"
+                f"Domain {domain.segments}: {long_range_contacts} long-range contacts, "
+                f"{lr_per_residue:.2f}/res (threshold={MIN_LR_PER_RESIDUE})"
             )
 
-            if long_range_contacts < MIN_LONG_RANGE_CONTACTS:
+            if lr_per_residue < MIN_LR_PER_RESIDUE:
                 rejected_for_lr.append({
                     'segments': domain.segments,
                     'size': domain.size,
                     'long_range_contacts': long_range_contacts,
+                    'lr_per_residue': lr_per_residue,
                     'plddt': domain.quality_metrics.get('avg_plddt', 0),
                 })
                 logger.info(
                     f"Rejecting domain {domain.segments}: insufficient long-range contacts "
-                    f"(only {long_range_contacts} contacts with seq_sep >= {MIN_LONG_RANGE_SEQ_SEP})"
+                    f"({lr_per_residue:.2f}/res < {MIN_LR_PER_RESIDUE})"
                 )
                 ndr_residue_indices.update(domain.residue_indices)
             else:
@@ -808,7 +812,7 @@ class ABCPredictor:
         if rejected_for_lr:
             logger.info(f"Rejected {len(rejected_for_lr)} domains for lacking long-range contacts:")
             for rej in rejected_for_lr:
-                logger.info(f"  {rej['segments']}: {rej['long_range_contacts']} long-range contacts, pLDDT={rej['plddt']:.1f}")
+                logger.info(f"  {rej['segments']}: {rej['lr_per_residue']:.2f}/res, pLDDT={rej['plddt']:.1f}")
 
         domains = filtered_domains
 
