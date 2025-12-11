@@ -541,10 +541,10 @@ def _generate_html(
                     color = node.gt_color;
                 }} else if (mode === 'pred_domain') {{
                     color = node.pred_color;
-                    // Show missed residues (in GT but not predicted) as squares
+                    // Show missed residues (in GT but not predicted) as grey squares
                     if (node.is_missed) {{
                         shape = 'square';
-                        color = node.gt_color;  // Use GT domain color for missed residues
+                        color = '#cccccc';  // Grey - not in any predicted domain
                     }}
                 }} else if (mode === 'plddt') {{
                     // AlphaFold standard pLDDT coloring
