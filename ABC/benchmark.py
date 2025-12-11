@@ -169,6 +169,45 @@ class BenchmarkResults:
         for tol in sorted(self.boundary_mcc.keys()):
             lines.append(f"  ±{tol:2d} residues: F1 = {self.boundary_mcc[tol]:.3f}")
 
+        # Per-protein results table (sorted by score, worst first)
+        sorted_results = sorted(self.protein_results, key=lambda r: r.score)
+        lines.extend([
+            "",
+            "=" * 80,
+            "Per-Protein Results (sorted by score, worst first)",
+            "=" * 80,
+            f"{'Accession':<16} {'Score':>5} {'Status':<6} {'IoU':>5} {'#True':>5} {'#Pred':>5} {'Error Type'}",
+            "-" * 80,
+        ])
+        for r in sorted_results:
+            lines.append(
+                f"{r.uniprot_acc:<16} {r.score:>5.2f} {r.status:<6} {r.weighted_iou:>5.2f} "
+                f"{len(r.true_domains):>5} {len(r.pred_domains):>5} {r.error_type}"
+            )
+
+        # Details for BAD predictions
+        bad_results = [r for r in sorted_results if r.status == "BAD"]
+        if bad_results:
+            lines.extend([
+                "",
+                "=" * 80,
+                f"Details for {len(bad_results)} BAD predictions:",
+                "=" * 80,
+            ])
+            for r in bad_results:
+                true_str = "; ".join(str(d) for d in r.true_domains) or "none"
+                pred_str = "; ".join(str(d) for d in r.pred_domains) or "none"
+                missing_str = "; ".join(str(d) for d in r.missing_domains) or "none"
+                false_str = "; ".join(str(d) for d in r.false_domains) or "none"
+
+                lines.append(f"\n{r.uniprot_acc} (score={r.score:.3f}):")
+                lines.append(f"  True:    {true_str}")
+                lines.append(f"  Pred:    {pred_str}")
+                if r.missing_domains:
+                    lines.append(f"  Missing: {missing_str}")
+                if r.false_domains:
+                    lines.append(f"  False:   {false_str}")
+
         return "\n".join(lines)
 
 
