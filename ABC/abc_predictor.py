@@ -753,8 +753,12 @@ class ABCPredictor:
         # Step 6e: Filter by minimum long-range internal contacts
         # This catches extended structures (like isolated helices) that have high CR
         # only because they have few external contacts, but no real internal structure
-        # Long-range = sequence separation > 5 (excludes i to i+4 helix contacts)
-        MIN_LONG_RANGE_SEQ_SEP = 6  # Excludes alpha helix i->i+4 contacts
+        # Long-range = sequence separation >= 10 (excludes intra-helix contacts)
+        # Note: In alpha helix with 10Å threshold:
+        #   i->i+6 is ~9.8Å CA-CA distance (within threshold)
+        #   i->i+7 is ~10.5Å CA-CA distance (outside threshold)
+        # So seq_sep >= 10 ensures we only count inter-secondary-structure contacts
+        MIN_LONG_RANGE_SEQ_SEP = 10  # Excludes all intra-helix contacts
         MIN_LONG_RANGE_CONTACTS = 5  # Minimum long-range contacts required
 
         filtered_domains = []
@@ -763,6 +767,7 @@ class ABCPredictor:
             # Count long-range internal contacts
             indices_set = set(domain.residue_indices)
             long_range_contacts = 0
+            seq_sep_histogram = {}  # Debug: track sequence separations
             for idx in domain.residue_indices:
                 if idx not in graph:
                     continue
@@ -770,12 +775,19 @@ class ABCPredictor:
                     if neighbor in indices_set and neighbor > idx:  # Count each edge once
                         # Check sequence separation
                         seq_sep = abs(residues[neighbor].resnum - residues[idx].resnum)
+                        # Debug: track all seq separations
+                        bucket = (seq_sep // 5) * 5  # Group by 5s
+                        seq_sep_histogram[bucket] = seq_sep_histogram.get(bucket, 0) + 1
                         if seq_sep >= MIN_LONG_RANGE_SEQ_SEP:
                             long_range_contacts += 1
 
+            # Log histogram of sequence separations for debugging
+            hist_str = ", ".join(f"{k}-{k+4}:{v}" for k, v in sorted(seq_sep_histogram.items()))
+            logger.info(f"Domain {domain.segments} seq_sep histogram: {hist_str}")
+
             # Log the count for all domains (helps debugging)
             logger.info(
-                f"Domain {domain.segments}: {long_range_contacts} long-range contacts (threshold={MIN_LONG_RANGE_CONTACTS})"
+                f"Domain {domain.segments}: {long_range_contacts} long-range contacts (seq_sep>={MIN_LONG_RANGE_SEQ_SEP}, threshold={MIN_LONG_RANGE_CONTACTS})"
             )
 
             if long_range_contacts < MIN_LONG_RANGE_CONTACTS:
