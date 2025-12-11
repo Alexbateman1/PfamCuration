@@ -142,8 +142,6 @@ class VoronoiPrediction:
         if self.seed_positions is None or len(self.seed_positions) < 2:
             return "# No Voronoi boundaries to display (single domain or no seeds)"
 
-        from scipy.spatial import Voronoi
-
         lines = [
             f"# ChimeraX commands for 3DVC visualization of {self.uniprot_acc}",
             f"# {len(self.domains)} domains predicted",
@@ -174,16 +172,31 @@ class VoronoiPrediction:
         lines.append("")
         lines.append("# Voronoi boundary planes (as rectangles)")
 
-        # Use scipy Voronoi to compute actual ridges between seeds
-        vor = Voronoi(self.seed_positions)
-
-        # ridge_points contains pairs of seed indices that share a Voronoi face
+        # Compute which seed pairs share a Voronoi face
+        # Two seeds share a boundary iff no other seed is closer to their midpoint
+        n_seeds = len(self.seed_positions)
         plane_size = plane_radius * 2
 
-        for ridge_idx, (i, j) in enumerate(vor.ridge_points):
-            if i < 0 or j < 0:
-                continue  # Skip ridges at infinity
+        pairs_to_draw = []
+        for i in range(n_seeds):
+            for j in range(i + 1, n_seeds):
+                midpoint = (self.seed_positions[i] + self.seed_positions[j]) / 2
+                dist_ij = np.linalg.norm(self.seed_positions[i] - midpoint)  # = dist to j
 
+                # Check if any other seed is closer to midpoint
+                is_neighbor = True
+                for k in range(n_seeds):
+                    if k == i or k == j:
+                        continue
+                    dist_k = np.linalg.norm(self.seed_positions[k] - midpoint)
+                    if dist_k < dist_ij:
+                        is_neighbor = False
+                        break
+
+                if is_neighbor:
+                    pairs_to_draw.append((i, j))
+
+        for i, j in pairs_to_draw:
             seed_i = self.seed_positions[i]
             seed_j = self.seed_positions[j]
 
