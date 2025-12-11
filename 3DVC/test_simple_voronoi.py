@@ -83,6 +83,9 @@ def count_crossings(assignments, resnums, max_intrusion_length=3):
     stretch (≤ max_intrusion_length residues) then returns to the original domain.
     These should be penalized less than real crossings.
 
+    Only counts crossings where residues are actually sequential in the chain
+    (i.e., ignores gaps from filtered residues).
+
     Returns: (real_crossings, brief_intrusions)
     """
     sorted_indices = np.argsort(resnums)
@@ -90,8 +93,9 @@ def count_crossings(assignments, resnums, max_intrusion_length=3):
     sorted_resnums = resnums[sorted_indices]
 
     # Build list of sequential assignment changes
-    # Find runs of same assignment
-    runs = []  # List of (domain, start_idx, end_idx)
+    # Find runs of same assignment, tracking if transition was due to gap or domain change
+    # runs: List of (domain, start_idx, end_idx, was_gap_before)
+    runs = []
     if len(sorted_assignments) == 0:
         return 0, 0
 
@@ -99,38 +103,68 @@ def count_crossings(assignments, resnums, max_intrusion_length=3):
     run_start = 0
 
     for i in range(1, len(sorted_assignments)):
-        # Check if sequential in original numbering
-        if sorted_resnums[i] - sorted_resnums[i-1] != 1:
-            # Gap in sequence - end current run, start new one
-            runs.append((current_domain, run_start, i-1))
+        is_gap = sorted_resnums[i] - sorted_resnums[i-1] != 1
+        domain_changed = sorted_assignments[i] != current_domain
+
+        if is_gap or domain_changed:
+            # End current run
+            runs.append((current_domain, run_start, i-1, False))  # was_gap_before set later
             current_domain = sorted_assignments[i]
             run_start = i
-        elif sorted_assignments[i] != current_domain:
-            # Domain change
-            runs.append((current_domain, run_start, i-1))
-            current_domain = sorted_assignments[i]
-            run_start = i
+            # Mark if this new run started due to a gap
+            if len(runs) > 0:
+                runs[-1] = (runs[-1][0], runs[-1][1], runs[-1][2], is_gap)
 
     # Don't forget the last run
-    runs.append((current_domain, run_start, len(sorted_assignments)-1))
+    runs.append((current_domain, run_start, len(sorted_assignments)-1, False))
 
     # Now analyze the runs to find brief intrusions vs real crossings
+    # Only count transitions where there was NO gap (actual chain connectivity)
     real_crossings = 0
     brief_intrusions = 0
 
+    # We need to track which transitions had gaps
+    # Rebuild to track gap info properly
+    transitions = []  # List of (prev_domain, curr_domain, curr_run_length, had_gap, next_domain_or_none)
+
     for i in range(1, len(runs)):
-        prev_domain, prev_start, prev_end = runs[i-1]
-        curr_domain, curr_start, curr_end = runs[i]
+        prev_domain, prev_start, prev_end, _ = runs[i-1]
+        curr_domain, curr_start, curr_end, _ = runs[i]
+
+        # Check if there was a gap between these runs
+        prev_last_resnum = sorted_resnums[prev_end]
+        curr_first_resnum = sorted_resnums[curr_start]
+        had_gap = (curr_first_resnum - prev_last_resnum) != 1
+
+        # Get next domain if exists
+        next_domain = runs[i+1][0] if i + 1 < len(runs) else None
 
         run_length = curr_end - curr_start + 1
+        transitions.append((prev_domain, curr_domain, run_length, had_gap, next_domain))
+
+    skip_next = False
+    for i, (prev_domain, curr_domain, run_length, had_gap, next_domain) in enumerate(transitions):
+        # Skip if this is the return from a brief intrusion
+        if skip_next:
+            skip_next = False
+            continue
+
+        # Skip if there was a sequence gap (no actual chain crossing)
+        if had_gap:
+            continue
+
+        # Skip if same domain (shouldn't happen, but safety check)
+        if prev_domain == curr_domain:
+            continue
 
         # Check if this is a brief intrusion (returns to previous domain)
         is_brief_intrusion = False
-        if run_length <= max_intrusion_length and i + 1 < len(runs):
-            next_domain, _, _ = runs[i + 1]
+        if run_length <= max_intrusion_length and next_domain is not None:
             if next_domain == prev_domain:
                 # Pattern: A -> B -> A with short B segment
+                # Count as one brief intrusion, skip the return transition
                 is_brief_intrusion = True
+                skip_next = True  # Skip the B->A return
 
         if is_brief_intrusion:
             brief_intrusions += 1
