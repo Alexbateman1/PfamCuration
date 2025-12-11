@@ -37,8 +37,8 @@ def main():
                         help="Minimum internal/external contact ratio for domains (default: 1.5)")
     parser.add_argument("--min-bridge-sep", type=int, default=50,
                         help="Minimum sequence separation for bridge detection (default: 50)")
-    parser.add_argument("--min-bridge-count", type=int, default=2,
-                        help="Minimum bridges to merge discontinuous domains (default: 2)")
+    parser.add_argument("--min-bridge-count", type=int, default=10,
+                        help="Minimum bridges to merge discontinuous domains (default: 10)")
     parser.add_argument("--cache-dir", type=str, default=None,
                         help="Directory to cache AlphaFold files (default: ./.abc_cache)")
     parser.add_argument("--no-dssp", action="store_true",

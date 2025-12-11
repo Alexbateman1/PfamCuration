@@ -171,7 +171,7 @@ class ABCPredictor:
         Minimum sequence separation for a contact to be considered a "bridge"
         for discontinuous domain detection (default: 50)
     min_bridge_count : int
-        Minimum number of bridges needed between domains to merge them (default: 2)
+        Minimum number of bridges needed between domains to merge them (default: 10)
     cache_dir : str, optional
         Directory to cache downloaded AlphaFold files (default: ./.abc_cache)
         Set to None to disable caching
@@ -191,7 +191,7 @@ class ABCPredictor:
         sigma: float = 8.0,
         use_pae: bool = True,
         min_bridge_seq_sep: int = 50,
-        min_bridge_count: int = 2,
+        min_bridge_count: int = 10,
         cache_dir: Optional[str] = None,
         use_dssp: bool = True,
     ):

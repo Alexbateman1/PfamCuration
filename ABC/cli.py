@@ -212,8 +212,8 @@ Examples:
                                help="Don't use PAE for edge weighting")
     predict_parser.add_argument("--min-bridge-sep", type=int, default=50,
                                help="Minimum sequence separation for bridge detection (default: 50)")
-    predict_parser.add_argument("--min-bridge-count", type=int, default=2,
-                               help="Minimum bridges to merge discontinuous domains (default: 2)")
+    predict_parser.add_argument("--min-bridge-count", type=int, default=10,
+                               help="Minimum bridges to merge discontinuous domains (default: 10)")
     predict_parser.set_defaults(func=cmd_predict)
 
     # Batch command
@@ -237,8 +237,8 @@ Examples:
                              help="Clustering resolution (default: 0.2)")
     batch_parser.add_argument("--min-bridge-sep", type=int, default=50,
                              help="Minimum sequence separation for bridge detection (default: 50)")
-    batch_parser.add_argument("--min-bridge-count", type=int, default=2,
-                             help="Minimum bridges to merge discontinuous domains (default: 2)")
+    batch_parser.add_argument("--min-bridge-count", type=int, default=10,
+                             help="Minimum bridges to merge discontinuous domains (default: 10)")
     batch_parser.set_defaults(func=cmd_batch)
 
     # Compare command (placeholder)
