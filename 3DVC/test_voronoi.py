@@ -246,12 +246,12 @@ def test_objective_function():
     print(f"  Score K=1: {score1:.2f}")
     print(f"  Score K=2: {score2:.2f}")
 
-    # With contact fraction scoring:
-    # K=1: 2 contacts / 6 possible = 0.33 fraction, score = 0.33*4*100 - 50 = ~83
-    # K=2: Each cluster has 1/1 = 1.0 fraction, score = 1.0*2*100 + 1.0*2*100 - 100 = 300
-    # K=2 should score HIGHER because both clusters have perfect contact fraction
+    # With raw contact scoring:
+    # K=1: 2 internal, 0 boundary, penalty = 50 → score = 2 - 0 - 50 = -48
+    # K=2: 2 internal, 0 boundary, penalty = 100 → score = 2 - 0 - 100 = -98
+    # K=1 should score higher due to domain count penalty
 
-    assert score2 > score1, "Two compact domains should score higher than one scattered domain"
+    assert score1 > score2, "Fewer domains should score higher when no boundary contacts"
 
     print("  PASSED\n")
 

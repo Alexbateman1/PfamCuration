@@ -165,9 +165,9 @@ class VoronoiPredictor:
         min_domain_size: int = 30,
         ndr_plddt_cutoff: float = 70.0,
         contact_threshold: float = 10.0,
-        lambda_boundary: float = 1.0,
-        mu_crossing: float = 2.0,
-        nu_domains: float = 500.0,
+        lambda_boundary: float = 2.0,
+        mu_crossing: float = 5.0,
+        nu_domains: float = 100.0,
         max_iterations: int = 100,
         convergence_tol: float = 0.1,
         cache_dir: Optional[str] = None,
@@ -416,7 +416,7 @@ class VoronoiPredictor:
         if k == 1:
             seeds = np.array([coords.mean(axis=0)])
             assignments = np.zeros(n, dtype=int)
-            score = self._compute_score(assignments, contacts, resnums, k)
+            score = self._compute_score(assignments, contacts, resnums, k, coords)
             return seeds, assignments, score
 
         # Initialize with k-means++
@@ -473,7 +473,7 @@ class VoronoiPredictor:
             assignments = np.argmin(distances, axis=1)
 
             # Score this partition
-            score = self._compute_score(assignments, contacts, resnums, k)
+            score = self._compute_score(assignments, contacts, resnums, k, coords)
 
             if score > best_score:
                 best_score = score
@@ -541,40 +541,35 @@ class VoronoiPredictor:
         """
         Compute objective function score for a partition.
 
-        Score = sum_k(contact_density_k * size_k) - lambda * boundary_contacts
-                - mu * chain_crossings - nu * K
+        Score = internal_contacts - lambda * boundary_contacts
+                - mu * chain_crossings - nu * K - rho * void_penalty
 
-        Using contact density (contacts/residue) instead of raw contact count
-        prevents merging of well-separated domains that don't contact each other.
+        The void penalty penalizes domains with large spatial extent but sparse contacts.
         """
         n = len(assignments)
 
-        # Compute contact density for each cluster
-        # This rewards compact clusters and penalizes scattered ones
-        total_density_score = 0
+        # Count internal contacts and compute void penalty for each cluster
         total_internal = 0
+        void_penalty = 0
         for c in range(k):
             mask = assignments == c
             cluster_size = mask.sum()
             if cluster_size == 0:
                 continue
 
-            # Contacts within cluster
             cluster_contacts = contacts[np.ix_(mask, mask)]
-            internal_contacts = cluster_contacts.sum() / 2  # Undirected
-            total_internal += internal_contacts
+            internal = cluster_contacts.sum() / 2
+            total_internal += internal
 
-            # Possible pairs within cluster
-            possible_pairs = cluster_size * (cluster_size - 1) / 2
-            if possible_pairs > 0:
-                # Contact fraction = actual / possible
-                # For compact domains, this is high (~0.1-0.2)
-                # For scattered domains (merged separate blobs), this is low
-                contact_fraction = internal_contacts / possible_pairs
-
-                # Score contribution: reward high contact fraction
-                # Weight by cluster size to make larger domains count more
-                total_density_score += contact_fraction * cluster_size * 100
+            # Void penalty based on spatial spread
+            # If coords provided, penalize clusters where points are far from centroid
+            if coords is not None and cluster_size > 1:
+                cluster_coords = coords[mask]
+                centroid = cluster_coords.mean(axis=0)
+                distances = np.sqrt(np.sum((cluster_coords - centroid) ** 2, axis=1))
+                avg_distance = distances.mean()
+                # Penalty: large average distance = scattered cluster
+                void_penalty += avg_distance * cluster_size * 0.5
 
         # Count boundary contacts (between different clusters)
         boundary_contacts = 0
@@ -605,12 +600,13 @@ class VoronoiPredictor:
         chain_crossings = chain_crossings / max(n, 1)
 
         # Compute final score
-        # Using density-weighted score instead of raw contact count
+        # Maximize internal contacts, minimize boundary contacts, domain count, and void
         score = (
-            total_density_score
+            total_internal
             - self.lambda_boundary * boundary_contacts
             - self.mu_crossing * chain_crossings
             - self.nu_domains * k
+            - void_penalty
         )
 
         return score
