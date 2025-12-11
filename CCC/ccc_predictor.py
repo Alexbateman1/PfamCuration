@@ -173,10 +173,17 @@ class CCCPredictor:
         fiedler = eigenvectors[:, 1] if eigenvectors.shape[1] > 1 else np.zeros(len(residues))
 
         # Find candidate split points from Fiedler vector
-        candidates = find_split_candidates_from_fiedler(
+        raw_candidates = find_split_candidates_from_fiedler(
             fiedler, residue_numbers, self.min_domain_size
         )
-        logger.info(f"Found {len(candidates)} candidate split points from spectral analysis")
+        logger.info(f"Found {len(raw_candidates)} raw candidate split points")
+
+        # Filter candidates: only keep splits that create valid domains (contact_ratio >= 1)
+        candidates = self._filter_candidates_by_contact_ratio(
+            raw_candidates, residue_numbers, graph, min_ratio=1.0
+        )
+        logger.info(f"After contact-ratio filtering: {len(candidates)} candidates")
+        spectral_info['raw_candidates'] = raw_candidates
         spectral_info['candidate_boundaries'] = candidates
 
         # Method 2: Try recursive spectral partitioning
@@ -342,6 +349,76 @@ class CCCPredictor:
                 domains.append((start, end))
 
         return domains
+
+    def _filter_candidates_by_contact_ratio(
+        self,
+        candidates: List[int],
+        residue_numbers: List[int],
+        graph: nx.Graph,
+        min_ratio: float = 1.0
+    ) -> List[int]:
+        """
+        Filter candidate split points by contact ratio.
+
+        Only keep candidates where BOTH sides of the split would have
+        contact_ratio >= min_ratio (more internal than external contacts).
+        """
+        if not candidates:
+            return []
+
+        seq_start = residue_numbers[0]
+        seq_end = residue_numbers[-1]
+        resnum_to_idx = {rn: i for i, rn in enumerate(residue_numbers)}
+
+        def compute_contact_ratio(start_res: int, end_res: int) -> float:
+            """Compute contact ratio for a region."""
+            # Get indices for this region
+            region_indices = set()
+            for rn in range(start_res, end_res + 1):
+                if rn in resnum_to_idx:
+                    region_indices.add(resnum_to_idx[rn])
+
+            if len(region_indices) < self.min_domain_size:
+                return 0.0
+
+            internal = 0
+            external = 0
+            for idx in region_indices:
+                if idx not in graph:
+                    continue
+                for neighbor in graph.neighbors(idx):
+                    weight = graph[idx][neighbor].get('weight', 1.0)
+                    if neighbor in region_indices:
+                        if neighbor > idx:
+                            internal += weight
+                    else:
+                        external += weight
+
+            return internal / max(external, 0.1)
+
+        # Test each candidate
+        valid_candidates = []
+        sorted_candidates = sorted(candidates)
+
+        for i, cand in enumerate(sorted_candidates):
+            # Left region: from start (or previous candidate) to cand-1
+            left_start = sorted_candidates[i-1] if i > 0 else seq_start
+            left_end = cand - 1
+
+            # Right region: from cand to end (or next candidate)
+            right_start = cand
+            right_end = sorted_candidates[i+1] - 1 if i < len(sorted_candidates) - 1 else seq_end
+
+            left_ratio = compute_contact_ratio(left_start, left_end)
+            right_ratio = compute_contact_ratio(right_start, right_end)
+
+            if left_ratio >= min_ratio and right_ratio >= min_ratio:
+                valid_candidates.append(cand)
+                logger.debug(f"  Candidate {cand}: left_ratio={left_ratio:.2f}, right_ratio={right_ratio:.2f} - VALID")
+            else:
+                logger.debug(f"  Candidate {cand}: left_ratio={left_ratio:.2f}, right_ratio={right_ratio:.2f} - rejected")
+
+        return valid_candidates
 
     def _get_alphafold_files(self, uniprot_acc: str) -> Tuple[Path, Path]:
         """Download or locate AlphaFold structure files."""
