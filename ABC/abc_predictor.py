@@ -384,8 +384,8 @@ class ABCPredictor:
         # Get DSSP data if requested
         dssp_data = None
         if self.use_dssp:
-            from .dssp_parser import run_dssp
-            dssp_data = run_dssp(str(cif_path), cache_dir=self.cache_dir)
+            from .dssp_parser import get_dssp_for_structure
+            dssp_data = get_dssp_for_structure(str(cif_path), cache_dir=self.cache_dir)
 
         # Build graph
         graph = self.graph_builder.build(residues, pae_matrix, dssp_data)
