@@ -147,7 +147,8 @@ class BenchmarkResults:
     correct_domain_count: int  # proteins with right number of domains
     perfect_predictions: int   # proteins with correct boundaries too
 
-    def summary(self) -> str:
+    def summary_brief(self) -> str:
+        """Brief summary for stdout."""
         n = len(self.protein_results)
         lines = [
             "=" * 60,
@@ -168,6 +169,12 @@ class BenchmarkResults:
         ]
         for tol in sorted(self.boundary_mcc.keys()):
             lines.append(f"  ±{tol:2d} residues: F1 = {self.boundary_mcc[tol]:.3f}")
+
+        return "\n".join(lines)
+
+    def summary(self) -> str:
+        """Full summary including per-protein table and BAD details for file output."""
+        lines = [self.summary_brief()]
 
         # Per-protein results table (sorted by score, worst first)
         sorted_results = sorted(self.protein_results, key=lambda r: r.score)
@@ -1008,7 +1015,7 @@ def main():
     results = run_benchmark(annotations, predictions, args.iou_threshold)
 
     # Print summary
-    print("\n" + results.summary())
+    print("\n" + results.summary_brief())
 
     # Generate reports and plots
     output_dir = Path(args.output)
