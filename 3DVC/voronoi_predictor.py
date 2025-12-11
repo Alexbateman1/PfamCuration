@@ -638,13 +638,22 @@ class VoronoiPredictor:
                     if has_contact:
                         boundary_pairs.append((di, dj))
 
+        # Compute seed positions from final domain centroids (not from optimization)
+        # This ensures seeds match the actual domains after merging/filtering
+        final_seeds = []
+        for dom in domains:
+            domain_coords = np.array([residues[ri].ca_coord for ri in dom.residue_indices])
+            centroid = np.mean(domain_coords, axis=0)
+            final_seeds.append(centroid)
+        final_seeds = np.array(final_seeds) if final_seeds else None
+
         return VoronoiPrediction(
             uniprot_acc=uniprot_acc,
             sequence_length=n_residues,
             domains=domains,
             ndr_regions=ndr_regions,
             parameters=self.parameters,
-            seed_positions=best_seeds,
+            seed_positions=final_seeds,
             boundary_pairs=boundary_pairs,
         )
 
