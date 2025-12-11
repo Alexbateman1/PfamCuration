@@ -450,7 +450,7 @@ def run_predictions(
     use_dssp: bool = True,
     verbose: bool = False,
     distance_threshold: float = 10.0,
-    resolution: float = 0.5,
+    resolution: float = 0.2,
     min_contact_ratio: float = 1.5,
     min_domain_size: int = 30,
 ) -> Dict[str, List[Domain]]:
@@ -468,7 +468,7 @@ def run_predictions(
     distance_threshold : float
         Maximum Cα-Cα distance for contact (default: 10.0Å)
     resolution : float
-        Leiden clustering resolution parameter (default: 0.5)
+        Leiden clustering resolution parameter (default: 0.2)
     min_contact_ratio : float
         Minimum internal/external contact ratio (default: 1.5)
     min_domain_size : int
@@ -891,8 +891,8 @@ def main():
     parser.add_argument(
         "--resolution",
         type=float,
-        default=0.5,
-        help="Leiden clustering resolution parameter (default: 0.5)"
+        default=0.2,
+        help="Leiden clustering resolution parameter (default: 0.2)"
     )
     parser.add_argument(
         "--min-contact-ratio",

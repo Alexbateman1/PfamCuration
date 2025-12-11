@@ -204,8 +204,8 @@ Examples:
     predict_parser.add_argument("--clustering", type=str, default="leiden",
                                choices=["leiden", "louvain"],
                                help="Clustering algorithm (default: leiden)")
-    predict_parser.add_argument("--resolution", type=float, default=1.0,
-                               help="Clustering resolution (default: 1.0)")
+    predict_parser.add_argument("--resolution", type=float, default=0.2,
+                               help="Clustering resolution (default: 0.2)")
     predict_parser.add_argument("--sigma", type=float, default=8.0,
                                help="Gaussian decay sigma (default: 8.0)")
     predict_parser.add_argument("--no-pae", action="store_true",
@@ -233,8 +233,8 @@ Examples:
     batch_parser.add_argument("--clustering", type=str, default="leiden",
                              choices=["leiden", "louvain"],
                              help="Clustering algorithm")
-    batch_parser.add_argument("--resolution", type=float, default=1.0,
-                             help="Clustering resolution")
+    batch_parser.add_argument("--resolution", type=float, default=0.2,
+                             help="Clustering resolution (default: 0.2)")
     batch_parser.add_argument("--min-bridge-sep", type=int, default=50,
                              help="Minimum sequence separation for bridge detection (default: 50)")
     batch_parser.add_argument("--min-bridge-count", type=int, default=2,

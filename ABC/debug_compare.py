@@ -34,7 +34,7 @@ def main():
     # Create predictor with same settings as benchmark
     print("\n--- Creating ABCPredictor (benchmark settings) ---")
     predictor = ABCPredictor(
-        resolution=0.5,
+        resolution=0.2,
         use_dssp=args.use_dssp,
     )
 

@@ -27,8 +27,8 @@ def main():
         description="ABC Domain Predictor - Predict domains from AlphaFold structures"
     )
     parser.add_argument("uniprot", help="UniProt accession (e.g., P12931)")
-    parser.add_argument("--resolution", "-r", type=float, default=0.5,
-                        help="Clustering resolution (default: 0.5)")
+    parser.add_argument("--resolution", "-r", type=float, default=0.2,
+                        help="Clustering resolution (default: 0.2)")
     parser.add_argument("--distance", "-d", type=float, default=10.0,
                         help="Contact distance threshold in Angstroms (default: 10)")
     parser.add_argument("--min-size", type=int, default=30,
