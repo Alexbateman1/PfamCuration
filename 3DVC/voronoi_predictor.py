@@ -630,8 +630,9 @@ class VoronoiPredictor:
             # Get original residue indices
             cluster_orig_indices = [structured_indices[i] for i in np.where(mask)[0]]
 
-            # Convert to segments
+            # Convert to segments and stitch over short gaps
             segments = self._indices_to_segments(residues, cluster_orig_indices)
+            segments = self._stitch_segments(segments, max_gap=30)
 
             domains.append(Domain(
                 domain_id=c,
@@ -673,6 +674,46 @@ class VoronoiPredictor:
         ))
 
         return segments
+
+    def _stitch_segments(
+        self,
+        segments: List[Tuple[int, int]],
+        max_gap: int = 30,
+    ) -> List[Tuple[int, int]]:
+        """
+        Stitch together segments separated by short gaps.
+
+        This handles cases where low-pLDDT regions create small gaps
+        within what should be a continuous domain.
+
+        Parameters:
+        -----------
+        segments : list of (start, end) tuples
+        max_gap : int
+            Maximum gap size to bridge (default: 30 residues)
+
+        Returns:
+        --------
+        List of merged segments
+        """
+        if len(segments) <= 1:
+            return segments
+
+        # Sort by start position
+        segments = sorted(segments)
+        merged = [segments[0]]
+
+        for start, end in segments[1:]:
+            prev_start, prev_end = merged[-1]
+            gap = start - prev_end - 1
+
+            if gap <= max_gap:
+                # Merge: extend previous segment to include this one
+                merged[-1] = (prev_start, end)
+            else:
+                merged.append((start, end))
+
+        return merged
 
     def _merge_small_domains(
         self,
