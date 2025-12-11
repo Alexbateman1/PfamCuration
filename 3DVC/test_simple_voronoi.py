@@ -511,13 +511,13 @@ def generate_chimerax_commands(seeds, assignments, resnums, coords, uniprot_acc)
 
 
 def predict_domains(coords, resnums, max_k=10, domain_bonus=105, crossing_penalty=100,
-                    intrusion_penalty=10, min_size=30, output_prefix=None, uniprot_acc="protein"):
+                    intrusion_penalty=10, min_size=30, restarts=10, output_prefix=None, uniprot_acc="protein"):
     """
     Predict domains by trying different K values.
     Uses hill-climbing optimization to directly minimize crossings.
     Saves ChimeraX files for each K if output_prefix is provided.
     """
-    print(f"\nOptimizing with {len(coords)} residues (hill-climbing)...")
+    print(f"\nOptimizing with {len(coords)} residues (hill-climbing, {restarts} restarts)...")
     print(f"Parameters: domain_bonus={domain_bonus}, crossing_penalty={crossing_penalty}, "
           f"intrusion_penalty={intrusion_penalty}, min_size={min_size}")
 
@@ -532,7 +532,8 @@ def predict_domains(coords, resnums, max_k=10, domain_bonus=105, crossing_penalt
             domain_bonus=domain_bonus,
             crossing_penalty=crossing_penalty,
             intrusion_penalty=intrusion_penalty,
-            min_size=min_size
+            min_size=min_size,
+            restarts=restarts
         )
 
         _, real_crossings, brief_intrusions, valid_domains = score_partition(
@@ -697,6 +698,8 @@ if __name__ == "__main__":
                         help="Minimum domain size (default: 30)")
     parser.add_argument("--max-k", type=int, default=10,
                         help="Maximum number of domains to try (default: 10)")
+    parser.add_argument("--restarts", type=int, default=10,
+                        help="Number of random restarts for hill-climbing (default: 10)")
     parser.add_argument("--synthetic", action="store_true",
                         help="Run synthetic test (no network needed)")
 
@@ -713,6 +716,7 @@ if __name__ == "__main__":
             intrusion_penalty=args.intrusion_penalty,
             min_size=args.min_size,
             max_k=args.max_k,
+            restarts=args.restarts,
         )
     else:
         parser.print_help()
