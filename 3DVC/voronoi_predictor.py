@@ -270,29 +270,14 @@ class VoronoiPrediction:
                 if is_neighbor:
                     pairs_to_draw.append((i, j))
 
-        # For each Voronoi face, compute polygon and render as triangles
+        # Store polygon data for BILD file generation
+        self._voronoi_polygons = []
         for i, j in pairs_to_draw:
             vertices = self._compute_voronoi_face(self.seed_positions, i, j, plane_radius)
+            if len(vertices) >= 3:
+                self._voronoi_polygons.append(vertices)
 
-            if len(vertices) < 3:
-                continue
-
-            # Triangulate using fan from centroid
-            centroid = np.mean(vertices, axis=0)
-
-            for idx in range(len(vertices)):
-                v1 = vertices[idx]
-                v2 = vertices[(idx + 1) % len(vertices)]
-
-                # ChimeraX shape triangle: atom1 atom2 atom3
-                lines.append(
-                    f"shape triangle "
-                    f"{centroid[0]:.2f},{centroid[1]:.2f},{centroid[2]:.2f} "
-                    f"{v1[0]:.2f},{v1[1]:.2f},{v1[2]:.2f} "
-                    f"{v2[0]:.2f},{v2[1]:.2f},{v2[2]:.2f} "
-                    f"color 128,128,128,51"
-                )
-
+        lines.append("# Voronoi boundary polygons will be loaded from .bild file")
         lines.append("")
         lines.append("# Display settings")
         lines.append(f"cartoon {structure_model}")
@@ -300,12 +285,48 @@ class VoronoiPrediction:
 
         return "\n".join(lines)
 
+    def bild_content(self) -> str:
+        """
+        Generate BILD format content for Voronoi boundary polygons.
+        BILD is a simple format ChimeraX can read for geometric shapes.
+        """
+        lines = [
+            "# BILD format file for Voronoi boundaries",
+            ".color 0.5 0.5 0.5",
+            ".transparency 0.8",
+        ]
+
+        # Output each polygon
+        if hasattr(self, '_voronoi_polygons'):
+            for vertices in self._voronoi_polygons:
+                # BILD .polygon takes space-separated coordinates
+                coords = " ".join([f"{v[0]:.2f} {v[1]:.2f} {v[2]:.2f}" for v in vertices])
+                lines.append(f".polygon {coords}")
+
+        return "\n".join(lines)
+
     def save_chimerax_script(self, output_path: str, **kwargs):
-        """Save ChimeraX commands to a file."""
+        """Save ChimeraX commands and BILD file for Voronoi boundaries."""
+        from pathlib import Path
+
+        # Generate commands (this also populates _voronoi_polygons)
         commands = self.chimerax_commands(**kwargs)
+
+        # Save BILD file for Voronoi polygons
+        output_path = Path(output_path)
+        bild_path = output_path.with_suffix('.bild')
+
+        bild_content = self.bild_content()
+        with open(bild_path, 'w') as f:
+            f.write(bild_content)
+
+        # Add command to open the BILD file
+        commands += f"\n# Load Voronoi boundaries\nopen {bild_path.name}\n"
+
         with open(output_path, 'w') as f:
             f.write(commands)
-        return output_path
+
+        return str(output_path)
 
     def to_dict(self) -> Dict:
         return {
