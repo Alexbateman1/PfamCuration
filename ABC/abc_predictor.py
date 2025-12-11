@@ -750,7 +750,52 @@ class ABCPredictor:
 
         domains = filtered_domains
 
-        # Step 6e: Extend domains to absorb adjacent high-pLDDT unassigned regions
+        # Step 6e: Filter by minimum long-range internal contacts
+        # This catches extended structures (like isolated helices) that have high CR
+        # only because they have few external contacts, but no real internal structure
+        # Long-range = sequence separation > 5 (excludes i to i+4 helix contacts)
+        MIN_LONG_RANGE_SEQ_SEP = 6  # Excludes alpha helix i->i+4 contacts
+        MIN_LONG_RANGE_CONTACTS = 5  # Minimum long-range contacts required
+
+        filtered_domains = []
+        rejected_for_lr = []
+        for domain in domains:
+            # Count long-range internal contacts
+            indices_set = set(domain.residue_indices)
+            long_range_contacts = 0
+            for idx in domain.residue_indices:
+                if idx not in graph:
+                    continue
+                for neighbor in graph.neighbors(idx):
+                    if neighbor in indices_set and neighbor > idx:  # Count each edge once
+                        # Check sequence separation
+                        seq_sep = abs(residues[neighbor].resnum - residues[idx].resnum)
+                        if seq_sep >= MIN_LONG_RANGE_SEQ_SEP:
+                            long_range_contacts += 1
+
+            if long_range_contacts < MIN_LONG_RANGE_CONTACTS:
+                rejected_for_lr.append({
+                    'segments': domain.segments,
+                    'size': domain.size,
+                    'long_range_contacts': long_range_contacts,
+                    'plddt': domain.quality_metrics.get('avg_plddt', 0),
+                })
+                logger.info(
+                    f"Rejecting domain {domain.segments}: insufficient long-range contacts "
+                    f"(only {long_range_contacts} contacts with seq_sep >= {MIN_LONG_RANGE_SEQ_SEP})"
+                )
+                ndr_residue_indices.update(domain.residue_indices)
+            else:
+                filtered_domains.append(domain)
+
+        if rejected_for_lr:
+            logger.info(f"Rejected {len(rejected_for_lr)} domains for lacking long-range contacts:")
+            for rej in rejected_for_lr:
+                logger.info(f"  {rej['segments']}: {rej['long_range_contacts']} long-range contacts, pLDDT={rej['plddt']:.1f}")
+
+        domains = filtered_domains
+
+        # Step 6f: Extend domains to absorb adjacent high-pLDDT unassigned regions
         # This rescues structured regions that were clustered separately but should
         # be part of an adjacent domain (common in repeat proteins like WD40)
         domains = self._extend_domains_to_structured_regions(
