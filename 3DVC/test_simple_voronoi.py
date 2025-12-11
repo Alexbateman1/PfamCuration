@@ -594,6 +594,111 @@ def assignments_to_domains(assignments, resnums, min_size=30):
     return domains
 
 
+def merge_short_gaps(domains, max_gap=10):
+    """
+    Post-process domains to merge segments separated by short gaps.
+
+    If two segments of the same domain are separated by ≤ max_gap residues,
+    merge them into a single segment (filling in the gap).
+
+    This cleans up fragmented predictions like:
+        558-558_560-570_572-573 → 558-573
+    """
+    merged_domains = []
+
+    for domain in domains:
+        segments = sorted(domain['segments'])  # Sort by start position
+
+        if len(segments) <= 1:
+            merged_domains.append(domain)
+            continue
+
+        # Merge segments with short gaps
+        merged_segments = [segments[0]]
+
+        for seg in segments[1:]:
+            prev_end = merged_segments[-1][1]
+            curr_start = seg[0]
+            gap = curr_start - prev_end - 1
+
+            if gap <= max_gap:
+                # Merge: extend previous segment to include current
+                merged_segments[-1] = (merged_segments[-1][0], seg[1])
+            else:
+                # Gap too large, keep as separate segment
+                merged_segments.append(seg)
+
+        # Recalculate size (now includes filled gaps)
+        new_size = sum(e - s + 1 for s, e in merged_segments)
+
+        merged_domains.append({
+            'segments': merged_segments,
+            'size': new_size,
+            'chopping': '_'.join(f"{s}-{e}" for s, e in merged_segments)
+        })
+
+    return merged_domains
+
+
+def remove_small_fragments(domains, min_segment_size=5):
+    """
+    Remove very small isolated segments from domains.
+
+    A segment is removed if:
+    - It's smaller than min_segment_size residues AND
+    - The domain has other larger segments
+
+    This cleans up tiny outlier fragments like single-residue assignments.
+    """
+    cleaned_domains = []
+
+    for domain in domains:
+        segments = domain['segments']
+
+        if len(segments) == 1:
+            # Single segment domain - keep as is
+            cleaned_domains.append(domain)
+            continue
+
+        # Filter out tiny segments if there are larger ones
+        large_segments = [s for s in segments if (s[1] - s[0] + 1) >= min_segment_size]
+        small_segments = [s for s in segments if (s[1] - s[0] + 1) < min_segment_size]
+
+        if large_segments:
+            # Keep only the large segments
+            new_size = sum(e - s + 1 for s, e in large_segments)
+            cleaned_domains.append({
+                'segments': large_segments,
+                'size': new_size,
+                'chopping': '_'.join(f"{s}-{e}" for s, e in sorted(large_segments))
+            })
+        elif small_segments:
+            # All segments are small - keep them all (might form one valid domain together)
+            cleaned_domains.append(domain)
+
+    return cleaned_domains
+
+
+def postprocess_domains(domains, max_gap=10, min_segment_size=5, min_domain_size=30):
+    """
+    Apply post-processing to clean up domain predictions.
+
+    1. Merge segments separated by short gaps (≤ max_gap residues)
+    2. Remove very small isolated fragments (< min_segment_size)
+    3. Filter out domains smaller than min_domain_size
+    """
+    # Step 1: Merge short gaps
+    domains = merge_short_gaps(domains, max_gap=max_gap)
+
+    # Step 2: Remove small fragments
+    domains = remove_small_fragments(domains, min_segment_size=min_segment_size)
+
+    # Step 3: Filter by minimum domain size
+    domains = [d for d in domains if d['size'] >= min_domain_size]
+
+    return domains
+
+
 def test_protein(uniprot_acc, expected_domains=None, max_k=10, output_chimerax=False, **kwargs):
     """Test on a specific protein."""
     print(f"\n{'='*60}")
@@ -620,6 +725,9 @@ def test_protein(uniprot_acc, expected_domains=None, max_k=10, output_chimerax=F
 
     # Convert to domains
     domains = assignments_to_domains(assignments, resnums)
+
+    # Post-process to clean up fragments
+    domains = postprocess_domains(domains, max_gap=10, min_segment_size=5, min_domain_size=kwargs.get('min_size', 30))
 
     print(f"\nPredicted {len(domains)} domains:")
     for i, d in enumerate(domains):

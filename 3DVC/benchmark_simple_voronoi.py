@@ -22,6 +22,7 @@ from test_simple_voronoi import (
     filter_structured,
     predict_domains,
     assignments_to_domains,
+    postprocess_domains,
 )
 
 # Import ABC benchmark infrastructure
@@ -87,6 +88,9 @@ def run_simple_voronoi_predictions(
 
             # Convert to domains
             domain_list = assignments_to_domains(assignments, resnums, min_size)
+
+            # Post-process to clean up fragments
+            domain_list = postprocess_domains(domain_list, max_gap=10, min_segment_size=5, min_domain_size=min_size)
 
             # Convert to benchmark Domain objects
             domains = []
