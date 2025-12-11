@@ -166,8 +166,8 @@ class VoronoiPrediction:
         # Add seed markers
         for i, seed in enumerate(self.seed_positions):
             color = colors[i % len(colors)]
-            lines.append(f"shape sphere center {seed[0]:.2f},{seed[1]:.2f},{seed[2]:.2f} "
-                        f"radius 4 color {color} name seed{i}")
+            lines.append(f"shape sphere radius 4 center {seed[0]:.2f},{seed[1]:.2f},{seed[2]:.2f} "
+                        f"color {color}")
 
         lines.append("")
         lines.append("# Voronoi boundary planes (as disks)")
@@ -188,13 +188,17 @@ class VoronoiPrediction:
                 normal = seed_j - seed_i
                 normal = normal / np.linalg.norm(normal)
 
+                # ChimeraX shape disk syntax: radius first, then other options
                 lines.append(
-                    f"shape disk center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
-                    f"radius {plane_radius} normal {normal[0]:.4f},{normal[1]:.4f},{normal[2]:.4f} "
-                    f"color #808080 transparency 0.6 name boundary{disk_id}"
+                    f"shape disk radius {plane_radius} center {midpoint[0]:.2f},{midpoint[1]:.2f},{midpoint[2]:.2f} "
+                    f"normal {normal[0]:.4f},{normal[1]:.4f},{normal[2]:.4f} "
+                    f"color gray"
                 )
                 disk_id += 1
 
+        lines.append("")
+        lines.append("# Make boundary planes semi-transparent")
+        lines.append("transparency shapes 60")
         lines.append("")
         lines.append("# Display settings")
         lines.append(f"cartoon {structure_model}")
