@@ -221,8 +221,8 @@ def kmeans_initialize(coords, k):
 
 
 def hillclimb_optimize(coords, resnums, k, domain_bonus=50, crossing_penalty=50,
-                       intrusion_penalty=10, min_size=30, max_iter=500,
-                       step_size=5.0, restarts=3):
+                       intrusion_penalty=10, min_size=30, max_iter=1000,
+                       step_size=5.0, restarts=10):
     """
     Hill-climbing optimization that directly minimizes crossings.
 
@@ -510,7 +510,7 @@ def generate_chimerax_commands(seeds, assignments, resnums, coords, uniprot_acc)
     return "\n".join(lines)
 
 
-def predict_domains(coords, resnums, max_k=10, domain_bonus=100, crossing_penalty=100,
+def predict_domains(coords, resnums, max_k=10, domain_bonus=105, crossing_penalty=100,
                     intrusion_penalty=10, min_size=30, output_prefix=None, uniprot_acc="protein"):
     """
     Predict domains by trying different K values.
@@ -658,12 +658,12 @@ def synthetic_test():
     print("  Domain 2: residues 70-119 (gap 51-69 filtered)")
     print("  Domain 3: residues 140-189 (gap 120-139 filtered)")
 
-    # Test hill-climbing with domain_bonus = crossing_penalty
-    # This balances finding domains vs avoiding unnecessary crossings
+    # Test hill-climbing with domain_bonus slightly > crossing_penalty
+    # This slightly favors finding domains when crossings are minimal
     print("\n--- Hill-climbing optimization ---")
     best_k, seeds, assignments = predict_domains(
         coords, resnums, max_k=5,
-        domain_bonus=100,       # Reward for each domain
+        domain_bonus=105,       # Reward for each domain
         crossing_penalty=100,   # Cost per boundary crossing
         output_prefix=None, uniprot_acc="synthetic"
     )
@@ -687,8 +687,8 @@ if __name__ == "__main__":
     parser.add_argument("accession", nargs='?', help="UniProt accession")
     parser.add_argument("--chimerax", action="store_true",
                         help="Output ChimeraX .cxc files for each K value")
-    parser.add_argument("--domain-bonus", type=float, default=100,
-                        help="Reward for each valid domain (default: 100)")
+    parser.add_argument("--domain-bonus", type=float, default=105,
+                        help="Reward for each valid domain (default: 105)")
     parser.add_argument("--crossing-penalty", type=float, default=100,
                         help="Penalty per real chain crossing (default: 100)")
     parser.add_argument("--intrusion-penalty", type=float, default=10,
