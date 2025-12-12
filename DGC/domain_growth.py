@@ -1178,11 +1178,14 @@ def calculate_adaptive_threshold(
     logger.info(f"PAE stats (domain regions): min={pae_min:.1f}, median={pae_median:.1f}, "
                f"75th={pae_75:.1f}, max={pae_max:.1f}")
 
-    # For proteins with uniform low PAE in domain regions, use percentile-based threshold
-    if pae_median < 4.0:
-        # Very high confidence - use relative threshold at 65th percentile
-        adapted = np.percentile(pae_values, 65)
-        logger.info(f"High-confidence domains: using 65th percentile = {adapted:.1f}Å as threshold")
+    # For proteins with relatively low PAE in domain regions, use percentile-based threshold
+    # Domain boundaries should have relatively higher PAE than within-domain regions
+    if pae_median < 6.0:
+        # High confidence protein - use ~80th percentile as threshold
+        # This ensures we only merge within domains, not across boundaries
+        pae_80 = np.percentile(pae_values, 80)
+        adapted = pae_80
+        logger.info(f"High-confidence domains: using 80th percentile = {adapted:.1f}Å as threshold")
     else:
         # Normal protein - use scaled threshold
         scale_factor = pae_median / reference_pae
