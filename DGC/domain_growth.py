@@ -1003,6 +1003,162 @@ class AlphaFoldLoader:
 # Domain Quality Filtering
 # =============================================================================
 
+def build_contact_map(coords: np.ndarray, contact_threshold: float = 10.0) -> np.ndarray:
+    """
+    Build a contact map from CA coordinates.
+
+    Parameters:
+        coords: CA coordinates (Nx3)
+        contact_threshold: Distance threshold for contact (Angstroms)
+
+    Returns:
+        NxN boolean contact map
+    """
+    distances = cdist(coords, coords)
+    return distances < contact_threshold
+
+
+def count_long_range_contacts(
+    members: Set[int],
+    contact_map: np.ndarray,
+    min_seq_separation: int = 10,
+) -> Tuple[int, float]:
+    """
+    Count long-range contacts within a domain.
+
+    Long-range contacts are those between residues far apart in sequence,
+    which distinguishes globular domains from extended structures like helices.
+
+    Parameters:
+        members: Set of residue indices in the domain
+        contact_map: NxN boolean contact map
+        min_seq_separation: Minimum sequence separation for "long-range"
+
+    Returns:
+        (total_lr_contacts, lr_contacts_per_residue)
+    """
+    if len(members) < 2:
+        return 0, 0.0
+
+    member_list = sorted(members)
+    lr_contacts = 0
+
+    for i, idx1 in enumerate(member_list):
+        for idx2 in member_list[i+1:]:
+            seq_sep = abs(idx2 - idx1)
+            if seq_sep >= min_seq_separation and contact_map[idx1, idx2]:
+                lr_contacts += 1
+
+    lr_per_residue = lr_contacts / len(members)
+    return lr_contacts, lr_per_residue
+
+
+def trim_terminal_extensions(
+    members: Set[int],
+    contact_map: np.ndarray,
+    min_seq_separation: int = 10,
+    min_contacts_to_keep: int = 2,
+) -> Set[int]:
+    """
+    Trim terminal extensions that lack long-range contacts to the domain core.
+
+    Works inward from each terminus, removing residues that don't have
+    sufficient long-range contacts to the remaining domain.
+
+    Parameters:
+        members: Set of residue indices in the domain
+        contact_map: NxN boolean contact map
+        min_seq_separation: Minimum sequence separation for long-range contact
+        min_contacts_to_keep: Minimum long-range contacts to keep a residue
+
+    Returns:
+        Set of trimmed member indices
+    """
+    member_list = sorted(members)
+    if len(member_list) < 10:
+        return set(member_list)
+
+    trimmed = set(member_list)
+
+    # Trim from N-terminus
+    for idx in member_list:
+        if idx not in trimmed:
+            continue
+
+        lr_contacts = 0
+        for other_idx in trimmed:
+            if other_idx == idx:
+                continue
+            seq_sep = abs(other_idx - idx)
+            if seq_sep >= min_seq_separation and contact_map[idx, other_idx]:
+                lr_contacts += 1
+
+        if lr_contacts < min_contacts_to_keep:
+            trimmed.discard(idx)
+        else:
+            break
+
+    # Trim from C-terminus
+    for idx in reversed(member_list):
+        if idx not in trimmed:
+            continue
+
+        lr_contacts = 0
+        for other_idx in trimmed:
+            if other_idx == idx:
+                continue
+            seq_sep = abs(other_idx - idx)
+            if seq_sep >= min_seq_separation and contact_map[idx, other_idx]:
+                lr_contacts += 1
+
+        if lr_contacts < min_contacts_to_keep:
+            trimmed.discard(idx)
+        else:
+            break
+
+    return trimmed
+
+
+def calculate_adaptive_threshold(
+    pae_matrix: np.ndarray,
+    base_threshold: float,
+    percentile: float = 50.0,
+    reference_pae: float = 5.0,
+) -> float:
+    """
+    Calculate an adaptive PAE threshold based on the protein's PAE distribution.
+
+    For proteins with very low PAE throughout (high confidence), this lowers
+    the threshold to better distinguish domain boundaries.
+
+    Parameters:
+        pae_matrix: NxN PAE matrix
+        base_threshold: The default threshold to adapt
+        percentile: Percentile of PAE distribution to use as reference
+        reference_pae: Expected median PAE for "normal" proteins
+
+    Returns:
+        Adapted threshold
+    """
+    n = pae_matrix.shape[0]
+    mask = ~np.eye(n, dtype=bool)
+    pae_values = pae_matrix[mask]
+
+    protein_pae = np.percentile(pae_values, percentile)
+
+    # Scale: if protein has lower PAE than reference, lower the threshold
+    scale_factor = protein_pae / reference_pae
+    adapted = base_threshold * scale_factor
+
+    # Clamp to reasonable range (20% to 200% of base)
+    adapted = max(base_threshold * 0.2, min(base_threshold * 2.0, adapted))
+
+    logger.debug(f"Adaptive PAE: median={protein_pae:.1f}, scale={scale_factor:.2f}, "
+                 f"threshold {base_threshold:.1f} -> {adapted:.1f}")
+
+    return adapted
+
+
 def calculate_radius_of_gyration(coords: np.ndarray, members: Set[int]) -> float:
     """
     Calculate radius of gyration for a domain.
@@ -1032,20 +1188,25 @@ def filter_domains_by_quality(
     coords: np.ndarray,
     min_size: int = 30,
     max_rg_ratio: float = 2.0,
+    min_lr_contacts_per_res: float = 0.5,
+    trim_terminals: bool = True,
 ) -> Tuple[List[NonConvexDomain], List[dict]]:
     """
-    Filter domains by size and compactness (radius of gyration).
+    Filter domains by size, compactness, and long-range contacts.
 
-    Extended structures like isolated alpha helices have high Rg relative
-    to their size and are filtered out.
-
-    For globular proteins: expected Rg ≈ 2.5 * N^(1/3) Å
+    Filtering steps:
+    1. Trim terminal extensions lacking long-range contacts
+    2. Filter by minimum size
+    3. Filter by Rg ratio (compactness)
+    4. Filter by long-range contacts per residue
 
     Parameters:
         domains: List of NonConvexDomain objects
         coords: CA coordinates (Nx3)
         min_size: Minimum residues for a valid domain
         max_rg_ratio: Maximum allowed Rg / expected_Rg ratio
+        min_lr_contacts_per_res: Minimum long-range contacts per residue
+        trim_terminals: Whether to trim terminal extensions
 
     Returns:
         (filtered_domains, rejected_info): Filtered domains and info about rejected ones
@@ -1053,10 +1214,26 @@ def filter_domains_by_quality(
     filtered = []
     rejected = []
 
+    # Build contact map once for all domains
+    contact_map = build_contact_map(coords, contact_threshold=10.0)
+
     for domain in domains:
+        original_size = len(domain.members)
+
+        # Step 1: Trim terminal extensions
+        if trim_terminals and original_size >= 10:
+            trimmed_members = trim_terminal_extensions(
+                domain.members, contact_map,
+                min_seq_separation=10, min_contacts_to_keep=2
+            )
+            n_trimmed = original_size - len(trimmed_members)
+            if n_trimmed > 0:
+                logger.info(f"Domain {domain.domain_id}: trimmed {n_trimmed} terminal residues")
+                domain.members = trimmed_members
+
         size = len(domain.members)
 
-        # Filter by minimum size
+        # Step 2: Filter by minimum size
         if size < min_size:
             rejected.append({
                 'domain_id': domain.domain_id,
@@ -1066,12 +1243,11 @@ def filter_domains_by_quality(
             logger.info(f"Rejecting domain {domain.domain_id}: too small ({size} < {min_size} residues)")
             continue
 
-        # Calculate Rg and expected Rg
+        # Step 3: Calculate Rg and filter by compactness
         rg = calculate_radius_of_gyration(coords, domain.members)
         expected_rg = 2.5 * (size ** (1/3))
         rg_ratio = rg / expected_rg if expected_rg > 0 else 0
 
-        # Filter by compactness
         if rg_ratio > max_rg_ratio:
             rejected.append({
                 'domain_id': domain.domain_id,
@@ -1084,6 +1260,22 @@ def filter_domains_by_quality(
             logger.info(
                 f"Rejecting domain {domain.domain_id}: too extended "
                 f"(Rg={rg:.1f}Å, expected={expected_rg:.1f}Å, ratio={rg_ratio:.1f}x > {max_rg_ratio}x)"
+            )
+            continue
+
+        # Step 4: Filter by long-range contacts
+        _, lr_per_res = count_long_range_contacts(domain.members, contact_map)
+
+        if lr_per_res < min_lr_contacts_per_res:
+            rejected.append({
+                'domain_id': domain.domain_id,
+                'size': size,
+                'lr_per_res': lr_per_res,
+                'reason': 'low_lr_contacts',
+            })
+            logger.info(
+                f"Rejecting domain {domain.domain_id}: insufficient long-range contacts "
+                f"({lr_per_res:.2f}/res < {min_lr_contacts_per_res}/res)"
             )
             continue
 
@@ -1111,6 +1303,9 @@ class DomainGrowthPredictor:
         max_iterations: Maximum growth iterations
         min_final_size: Minimum residues for final domain (after merging)
         max_rg_ratio: Maximum Rg/expected_Rg ratio (filters extended structures)
+        min_lr_contacts: Minimum long-range contacts per residue
+        trim_terminals: Whether to trim terminal extensions
+        adaptive_pae: Whether to adapt thresholds based on PAE distribution
     """
 
     def __init__(
@@ -1125,6 +1320,9 @@ class DomainGrowthPredictor:
         cache_dir: Optional[str] = None,
         min_final_size: int = 30,
         max_rg_ratio: float = 2.0,
+        min_lr_contacts: float = 0.5,
+        trim_terminals: bool = True,
+        adaptive_pae: bool = False,
     ):
         self.max_reach = max_reach
         self.acceptance_threshold = acceptance_threshold
@@ -1135,6 +1333,9 @@ class DomainGrowthPredictor:
         self.max_iterations = max_iterations
         self.min_final_size = min_final_size
         self.max_rg_ratio = max_rg_ratio
+        self.min_lr_contacts = min_lr_contacts
+        self.trim_terminals = trim_terminals
+        self.adaptive_pae = adaptive_pae
 
         self.loader = AlphaFoldLoader(cache_dir)
 
@@ -1151,6 +1352,16 @@ class DomainGrowthPredictor:
         # Load data
         coords, plddt, resnums = self.loader.get_structure(uniprot_acc)
         pae_matrix = self.loader.get_pae_matrix(uniprot_acc)
+
+        # Calculate adaptive thresholds if enabled
+        merge_threshold = self.merge_threshold
+        if self.adaptive_pae:
+            merge_threshold = calculate_adaptive_threshold(
+                pae_matrix, self.merge_threshold,
+                percentile=50.0, reference_pae=5.0
+            )
+            logger.info(f"{uniprot_acc}: adaptive merge threshold = {merge_threshold:.1f}Å "
+                       f"(base={self.merge_threshold})")
 
         # Get seeds
         seeds = get_seeds(coords, plddt, self.seed_strategy)
@@ -1172,23 +1383,25 @@ class DomainGrowthPredictor:
 
         logger.info(f"{uniprot_acc}: {len(domains)} domains after growth")
 
-        # Apply merge strategy
+        # Apply merge strategy with potentially adapted threshold
         domains = apply_merge_strategy(
             domains=domains,
             coords=coords,
             pae_matrix=pae_matrix,
             strategy=self.merge_strategy,
-            merge_threshold=self.merge_threshold,
+            merge_threshold=merge_threshold,
         )
 
         logger.info(f"{uniprot_acc}: {len(domains)} domains after {self.merge_strategy}")
 
-        # Filter by quality (size and compactness)
+        # Filter by quality (size, compactness, and long-range contacts)
         domains, rejected = filter_domains_by_quality(
             domains=domains,
             coords=coords,
             min_size=self.min_final_size,
             max_rg_ratio=self.max_rg_ratio,
+            min_lr_contacts_per_res=self.min_lr_contacts,
+            trim_terminals=self.trim_terminals,
         )
 
         if rejected:
@@ -1758,6 +1971,22 @@ Examples:
         default=2.0,
         help="Maximum Rg/expected_Rg ratio - filters extended structures (default: 2.0)"
     )
+    parser.add_argument(
+        "--min-lr-contacts",
+        type=float,
+        default=0.5,
+        help="Minimum long-range contacts per residue (default: 0.5)"
+    )
+    parser.add_argument(
+        "--no-trim-terminals",
+        action="store_true",
+        help="Disable trimming of terminal extensions"
+    )
+    parser.add_argument(
+        "--adaptive-pae",
+        action="store_true",
+        help="Enable adaptive PAE thresholds based on protein's PAE distribution"
+    )
 
     # Evaluation options
     parser.add_argument(
@@ -1833,6 +2062,9 @@ def main():
                 cache_dir=args.cache_dir,
                 min_final_size=args.min_final_size,
                 max_rg_ratio=args.max_rg_ratio,
+                min_lr_contacts=args.min_lr_contacts,
+                trim_terminals=not args.no_trim_terminals,
+                adaptive_pae=args.adaptive_pae,
             )
 
             predictions = {}
@@ -1881,6 +2113,9 @@ def main():
             cache_dir=args.cache_dir,
             min_final_size=args.min_final_size,
             max_rg_ratio=args.max_rg_ratio,
+            min_lr_contacts=args.min_lr_contacts,
+            trim_terminals=not args.no_trim_terminals,
+            adaptive_pae=args.adaptive_pae,
         )
 
         predictions = {}

@@ -23,6 +23,10 @@ from .domain_growth import (
     DOMAIN_COLORS,
     calculate_radius_of_gyration,
     filter_domains_by_quality,
+    build_contact_map,
+    count_long_range_contacts,
+    trim_terminal_extensions,
+    calculate_adaptive_threshold,
 )
 
 __all__ = [
@@ -43,4 +47,8 @@ __all__ = [
     "DOMAIN_COLORS",
     "calculate_radius_of_gyration",
     "filter_domains_by_quality",
+    "build_contact_map",
+    "count_long_range_contacts",
+    "trim_terminal_extensions",
+    "calculate_adaptive_threshold",
 ]
