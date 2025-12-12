@@ -902,8 +902,8 @@ class AlphaFoldLoader:
             if cached.exists():
                 return cached
 
-        # Download
-        versions = ["v4", "v3", "v2"]
+        # Download (try newest version first)
+        versions = ["v6", "v4", "v3", "v2"]
         for version in versions:
             for ext, url_ext in [(".cif", ".cif"), (".pdb", ".pdb")]:
                 url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-model_{version}{url_ext}"
@@ -923,7 +923,7 @@ class AlphaFoldLoader:
         if cached.exists():
             return cached
 
-        versions = ["v4", "v3", "v2"]
+        versions = ["v6", "v4", "v3", "v2"]
         for version in versions:
             url = f"https://alphafold.ebi.ac.uk/files/AF-{uniprot_acc}-F1-predicted_aligned_error_{version}.json"
             try:
