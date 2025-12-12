@@ -1122,39 +1122,73 @@ def trim_terminal_extensions(
 def calculate_adaptive_threshold(
     pae_matrix: np.ndarray,
     base_threshold: float,
-    percentile: float = 50.0,
+    plddt: np.ndarray = None,
+    plddt_cutoff: float = 70.0,
     reference_pae: float = 5.0,
 ) -> float:
     """
     Calculate an adaptive PAE threshold based on the protein's PAE distribution.
 
-    For proteins with very low PAE throughout (high confidence), this lowers
-    the threshold to better distinguish domain boundaries.
+    For proteins with very low PAE in domain regions, this uses relative PAE
+    structure to find domain boundaries. Only considers high-pLDDT regions
+    to avoid skewing stats with disordered regions.
 
     Parameters:
         pae_matrix: NxN PAE matrix
         base_threshold: The default threshold to adapt
-        percentile: Percentile of PAE distribution to use as reference
+        plddt: Per-residue pLDDT scores (optional, for masking IDRs)
+        plddt_cutoff: Only consider residues with pLDDT >= this value
         reference_pae: Expected median PAE for "normal" proteins
 
     Returns:
         Adapted threshold
     """
     n = pae_matrix.shape[0]
-    mask = ~np.eye(n, dtype=bool)
-    pae_values = pae_matrix[mask]
 
-    protein_pae = np.percentile(pae_values, percentile)
+    # If pLDDT provided, only look at PAE between high-confidence residues
+    if plddt is not None:
+        high_conf_mask = plddt >= plddt_cutoff
+        n_high_conf = np.sum(high_conf_mask)
 
-    # Scale: if protein has lower PAE than reference, lower the threshold
-    scale_factor = protein_pae / reference_pae
-    adapted = base_threshold * scale_factor
+        if n_high_conf >= 50:  # Need enough residues for meaningful stats
+            # Get PAE submatrix for high-confidence residues
+            high_conf_idx = np.where(high_conf_mask)[0]
+            pae_submatrix = pae_matrix[np.ix_(high_conf_idx, high_conf_idx)]
 
-    # Clamp to reasonable range (20% to 200% of base)
-    adapted = max(base_threshold * 0.2, min(base_threshold * 2.0, adapted))
+            # Exclude diagonal
+            sub_n = pae_submatrix.shape[0]
+            sub_mask = ~np.eye(sub_n, dtype=bool)
+            pae_values = pae_submatrix[sub_mask]
 
-    logger.debug(f"Adaptive PAE: median={protein_pae:.1f}, scale={scale_factor:.2f}, "
-                 f"threshold {base_threshold:.1f} -> {adapted:.1f}")
+            logger.info(f"Adaptive PAE: using {n_high_conf} high-pLDDT residues (>= {plddt_cutoff})")
+        else:
+            # Fall back to full matrix
+            mask = ~np.eye(n, dtype=bool)
+            pae_values = pae_matrix[mask]
+            logger.info(f"Adaptive PAE: using all residues (only {n_high_conf} with pLDDT >= {plddt_cutoff})")
+    else:
+        mask = ~np.eye(n, dtype=bool)
+        pae_values = pae_matrix[mask]
+
+    pae_median = np.percentile(pae_values, 50)
+    pae_min = np.min(pae_values)
+    pae_max = np.max(pae_values)
+    pae_75 = np.percentile(pae_values, 75)
+
+    logger.info(f"PAE stats (domain regions): min={pae_min:.1f}, median={pae_median:.1f}, "
+               f"75th={pae_75:.1f}, max={pae_max:.1f}")
+
+    # For proteins with uniform low PAE in domain regions, use percentile-based threshold
+    if pae_median < 4.0:
+        # Very high confidence - use relative threshold at 65th percentile
+        adapted = np.percentile(pae_values, 65)
+        logger.info(f"High-confidence domains: using 65th percentile = {adapted:.1f}Å as threshold")
+    else:
+        # Normal protein - use scaled threshold
+        scale_factor = pae_median / reference_pae
+        adapted = base_threshold * scale_factor
+        adapted = max(base_threshold * 0.2, min(base_threshold * 2.0, adapted))
+        logger.info(f"Adaptive threshold: {base_threshold:.1f} -> {adapted:.1f} (scale={scale_factor:.2f})")
 
     return adapted
 
@@ -1358,7 +1392,7 @@ class DomainGrowthPredictor:
         if self.adaptive_pae:
             merge_threshold = calculate_adaptive_threshold(
                 pae_matrix, self.merge_threshold,
-                percentile=50.0, reference_pae=5.0
+                plddt=plddt, plddt_cutoff=70.0, reference_pae=5.0
             )
             logger.info(f"{uniprot_acc}: adaptive merge threshold = {merge_threshold:.1f}Å "
                        f"(base={self.merge_threshold})")
