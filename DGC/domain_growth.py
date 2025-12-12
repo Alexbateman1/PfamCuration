@@ -165,7 +165,7 @@ class NonConvexDomain:
         self,
         seed_index: int,
         coords: np.ndarray,
-        max_reach: float = 10.0,
+        max_reach: float = 15.0,
         domain_id: int = 0,
     ):
         """
@@ -506,8 +506,8 @@ def competitive_domain_growth(
     coords: np.ndarray,
     pae_matrix: np.ndarray,
     seeds: List[int],
-    max_reach: float = 10.0,
-    acceptance_threshold: float = 0.4,
+    max_reach: float = 15.0,
+    acceptance_threshold: float = 0.1,
     min_domain_size: int = 15,
     max_iterations: int = 100,
 ) -> Tuple[List[NonConvexDomain], Set[int]]:
@@ -1005,8 +1005,8 @@ class DomainGrowthPredictor:
 
     def __init__(
         self,
-        max_reach: float = 10.0,
-        acceptance_threshold: float = 0.4,
+        max_reach: float = 15.0,
+        acceptance_threshold: float = 0.1,
         min_domain_size: int = 15,
         merge_strategy: str = "simple_merge",
         merge_threshold: float = 8.0,
@@ -1081,8 +1081,14 @@ class DomainGrowthPredictor:
         self,
         members: List[int],
         resnums: List[int],
+        max_gap: int = 20,
     ) -> List[Tuple[int, int]]:
-        """Convert member indices to residue number segments."""
+        """
+        Convert member indices to residue number segments.
+
+        Stitches together segments separated by gaps up to max_gap residues.
+        This prevents over-fragmentation of domains.
+        """
         if not members:
             return []
 
@@ -1093,8 +1099,8 @@ class DomainGrowthPredictor:
         for idx in members[1:]:
             resnum = resnums[idx]
 
-            # Check for gap > 3 residues
-            if resnum - prev_resnum > 3:
+            # Check for gap > max_gap residues
+            if resnum - prev_resnum > max_gap:
                 segments.append((start_resnum, prev_resnum))
                 start_resnum = resnum
 
@@ -1554,14 +1560,14 @@ Examples:
     parser.add_argument(
         "--max-reach",
         type=float,
-        default=10.0,
-        help="Spatial reach for domain growth in Angstroms (default: 10.0)"
+        default=15.0,
+        help="Spatial reach for domain growth in Angstroms (default: 15.0)"
     )
     parser.add_argument(
         "--acceptance-threshold",
         type=float,
-        default=0.4,
-        help="Minimum desire score to add residue (default: 0.4)"
+        default=0.1,
+        help="Minimum desire score to add residue (default: 0.1)"
     )
     parser.add_argument(
         "--min-domain-size",
