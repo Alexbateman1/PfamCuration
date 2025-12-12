@@ -21,6 +21,8 @@ from .domain_growth import (
     generate_chimerax_commands,
     save_chimerax_file,
     DOMAIN_COLORS,
+    calculate_radius_of_gyration,
+    filter_domains_by_quality,
 )
 
 __all__ = [
@@ -39,4 +41,6 @@ __all__ = [
     "generate_chimerax_commands",
     "save_chimerax_file",
     "DOMAIN_COLORS",
+    "calculate_radius_of_gyration",
+    "filter_domains_by_quality",
 ]

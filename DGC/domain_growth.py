@@ -1000,6 +1000,99 @@ class AlphaFoldLoader:
 
 
 # =============================================================================
+# Domain Quality Filtering
+# =============================================================================
+
+def calculate_radius_of_gyration(coords: np.ndarray, members: Set[int]) -> float:
+    """
+    Calculate radius of gyration for a domain.
+
+    Rg = sqrt(sum((r_i - r_mean)^2) / N)
+
+    Lower values indicate more compact structures.
+
+    Parameters:
+        coords: Full CA coordinate array (Nx3)
+        members: Set of residue indices in the domain
+
+    Returns:
+        Radius of gyration in Angstroms
+    """
+    if len(members) == 0:
+        return 0.0
+
+    member_coords = coords[list(members)]
+    center = np.mean(member_coords, axis=0)
+    distances_sq = np.sum((member_coords - center) ** 2, axis=1)
+    return float(np.sqrt(np.mean(distances_sq)))
+
+
+def filter_domains_by_quality(
+    domains: List[NonConvexDomain],
+    coords: np.ndarray,
+    min_size: int = 30,
+    max_rg_ratio: float = 2.0,
+) -> Tuple[List[NonConvexDomain], List[dict]]:
+    """
+    Filter domains by size and compactness (radius of gyration).
+
+    Extended structures like isolated alpha helices have high Rg relative
+    to their size and are filtered out.
+
+    For globular proteins: expected Rg ≈ 2.5 * N^(1/3) Å
+
+    Parameters:
+        domains: List of NonConvexDomain objects
+        coords: CA coordinates (Nx3)
+        min_size: Minimum residues for a valid domain
+        max_rg_ratio: Maximum allowed Rg / expected_Rg ratio
+
+    Returns:
+        (filtered_domains, rejected_info): Filtered domains and info about rejected ones
+    """
+    filtered = []
+    rejected = []
+
+    for domain in domains:
+        size = len(domain.members)
+
+        # Filter by minimum size
+        if size < min_size:
+            rejected.append({
+                'domain_id': domain.domain_id,
+                'size': size,
+                'reason': 'too_small',
+            })
+            logger.info(f"Rejecting domain {domain.domain_id}: too small ({size} < {min_size} residues)")
+            continue
+
+        # Calculate Rg and expected Rg
+        rg = calculate_radius_of_gyration(coords, domain.members)
+        expected_rg = 2.5 * (size ** (1/3))
+        rg_ratio = rg / expected_rg if expected_rg > 0 else 0
+
+        # Filter by compactness
+        if rg_ratio > max_rg_ratio:
+            rejected.append({
+                'domain_id': domain.domain_id,
+                'size': size,
+                'rg': rg,
+                'expected_rg': expected_rg,
+                'rg_ratio': rg_ratio,
+                'reason': 'too_extended',
+            })
+            logger.info(
+                f"Rejecting domain {domain.domain_id}: too extended "
+                f"(Rg={rg:.1f}Å, expected={expected_rg:.1f}Å, ratio={rg_ratio:.1f}x > {max_rg_ratio}x)"
+            )
+            continue
+
+        filtered.append(domain)
+
+    return filtered, rejected
+
+
+# =============================================================================
 # Domain Prediction Pipeline
 # =============================================================================
 
@@ -1010,12 +1103,14 @@ class DomainGrowthPredictor:
     Parameters:
         max_reach: Spatial reach for domain growth (Angstroms)
         acceptance_threshold: Minimum desire score to add residue
-        min_domain_size: Minimum residues for domain survival
+        min_domain_size: Minimum residues for domain survival during growth
         merge_strategy: One of "simple_merge", "boundary_strength",
                        "size_weighted", "spatial_merge", "none"
         merge_threshold: PAE threshold for merging
         seed_strategy: One of "plddt_peaks", "grid", "random"
         max_iterations: Maximum growth iterations
+        min_final_size: Minimum residues for final domain (after merging)
+        max_rg_ratio: Maximum Rg/expected_Rg ratio (filters extended structures)
     """
 
     def __init__(
@@ -1028,6 +1123,8 @@ class DomainGrowthPredictor:
         seed_strategy: str = "plddt_peaks",
         max_iterations: int = 100,
         cache_dir: Optional[str] = None,
+        min_final_size: int = 30,
+        max_rg_ratio: float = 2.0,
     ):
         self.max_reach = max_reach
         self.acceptance_threshold = acceptance_threshold
@@ -1036,6 +1133,8 @@ class DomainGrowthPredictor:
         self.merge_threshold = merge_threshold
         self.seed_strategy = seed_strategy
         self.max_iterations = max_iterations
+        self.min_final_size = min_final_size
+        self.max_rg_ratio = max_rg_ratio
 
         self.loader = AlphaFoldLoader(cache_dir)
 
@@ -1083,6 +1182,18 @@ class DomainGrowthPredictor:
         )
 
         logger.info(f"{uniprot_acc}: {len(domains)} domains after {self.merge_strategy}")
+
+        # Filter by quality (size and compactness)
+        domains, rejected = filter_domains_by_quality(
+            domains=domains,
+            coords=coords,
+            min_size=self.min_final_size,
+            max_rg_ratio=self.max_rg_ratio,
+        )
+
+        if rejected:
+            logger.info(f"{uniprot_acc}: {len(rejected)} domains rejected by quality filter")
+        logger.info(f"{uniprot_acc}: {len(domains)} domains after quality filtering")
 
         # Convert to BenchmarkDomain objects
         benchmark_domains = []
@@ -1635,6 +1746,18 @@ Examples:
         default=100,
         help="Maximum growth iterations (default: 100)"
     )
+    parser.add_argument(
+        "--min-final-size",
+        type=int,
+        default=30,
+        help="Minimum residues for final domain after filtering (default: 30)"
+    )
+    parser.add_argument(
+        "--max-rg-ratio",
+        type=float,
+        default=2.0,
+        help="Maximum Rg/expected_Rg ratio - filters extended structures (default: 2.0)"
+    )
 
     # Evaluation options
     parser.add_argument(
@@ -1708,6 +1831,8 @@ def main():
                 seed_strategy=args.seed_strategy,
                 max_iterations=args.max_iterations,
                 cache_dir=args.cache_dir,
+                min_final_size=args.min_final_size,
+                max_rg_ratio=args.max_rg_ratio,
             )
 
             predictions = {}
@@ -1754,6 +1879,8 @@ def main():
             seed_strategy=args.seed_strategy,
             max_iterations=args.max_iterations,
             cache_dir=args.cache_dir,
+            min_final_size=args.min_final_size,
+            max_rg_ratio=args.max_rg_ratio,
         )
 
         predictions = {}
