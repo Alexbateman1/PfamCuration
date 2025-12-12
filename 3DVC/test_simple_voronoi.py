@@ -177,13 +177,22 @@ def count_crossings(assignments, resnums, max_intrusion_length=3):
 def score_partition(assignments, resnums, k, domain_bonus=50, crossing_penalty=50,
                     intrusion_penalty=10, min_size=30):
     """
-    Score a partition.
+    Score a partition using expected vs excess crossings.
+
+    Key insight: K sequential domains need exactly K-1 crossings (unavoidable).
+    We should only penalize EXCESS crossings beyond that expectation.
 
     Score = domain_bonus * num_valid_domains
-            - crossing_penalty * real_crossings
+            - crossing_penalty * excess_crossings
             - intrusion_penalty * brief_intrusions
 
-    Domains smaller than min_size are invalid (don't count for bonus, add penalty).
+    Where:
+        expected_crossings = valid_domains - 1
+        excess_crossings = max(0, real_crossings - expected_crossings)
+
+    This means:
+    - Sequential multi-domain proteins are rewarded (not score-neutral)
+    - Only "extra" crossings (from insertions or fragmentation) are penalized
     """
     # Count domain sizes
     domain_sizes = np.bincount(assignments, minlength=k)
@@ -193,10 +202,15 @@ def score_partition(assignments, resnums, k, domain_bonus=50, crossing_penalty=5
     # Count crossings (real vs brief intrusions)
     real_crossings, brief_intrusions = count_crossings(assignments, resnums)
 
-    # Score: reward valid domains, penalize crossings and invalid tiny domains
+    # Calculate expected crossings for this number of valid domains
+    # K sequential domains need K-1 boundary crossings
+    expected_crossings = max(0, valid_domains - 1)
+    excess_crossings = max(0, real_crossings - expected_crossings)
+
+    # Score: reward valid domains, penalize only EXCESS crossings
     score = (
         domain_bonus * valid_domains
-        - crossing_penalty * real_crossings
+        - crossing_penalty * excess_crossings
         - intrusion_penalty * brief_intrusions
         - 50 * invalid_domains  # Penalty for undersized domains
     )
