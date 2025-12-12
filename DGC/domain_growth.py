@@ -39,6 +39,21 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+# Domain color palette for visualization (10 distinct colors)
+DOMAIN_COLORS = [
+    "#4A79A7",  # Blue
+    "#F28E2C",  # Orange
+    "#E15759",  # Red
+    "#76B7B2",  # Teal
+    "#59A14F",  # Green
+    "#EDC949",  # Yellow
+    "#AF7AA1",  # Purple
+    "#FF9DA7",  # Pink
+    "#9C755F",  # Brown
+    "#BAB0AB",  # Gray
+]
+
+
 # =============================================================================
 # Data Classes
 # =============================================================================
@@ -1433,6 +1448,39 @@ def run_benchmark(
 # Output Generation
 # =============================================================================
 
+def generate_chimerax_commands(
+    domains: List[BenchmarkDomain],
+    colors: List[str] = None,
+) -> str:
+    """Generate ChimeraX coloring commands for predicted domains."""
+    if colors is None:
+        colors = DOMAIN_COLORS
+
+    lines = ["color all white"]
+
+    for i, domain in enumerate(domains):
+        color = colors[i % len(colors)]
+        for start, end in domain.segments:
+            lines.append(f"color :{start}-{end} {color}")
+
+    lines.extend(["hide atoms", "show cartoons"])
+
+    return "\n".join(lines)
+
+
+def save_chimerax_file(
+    uniprot_acc: str,
+    domains: List[BenchmarkDomain],
+    output_dir: Path,
+):
+    """Save ChimeraX commands to a .cxc file."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+    commands = generate_chimerax_commands(domains)
+    cxc_path = output_dir / f"{uniprot_acc}.cxc"
+    with open(cxc_path, 'w') as f:
+        f.write(commands)
+
+
 def save_results(
     results: BenchmarkResults,
     output_dir: Path,
@@ -1668,6 +1716,10 @@ def main():
                     pred_domains = predictor.predict(ann.uniprot_acc)
                     predictions[ann.uniprot_acc] = pred_domains
 
+                    # Save ChimeraX visualization file
+                    chimerax_dir = output_dir / f"chimerax_{strategy}"
+                    save_chimerax_file(ann.uniprot_acc, pred_domains, chimerax_dir)
+
                     # Print prediction summary
                     pred_str = "; ".join(str(d) for d in pred_domains) or "none"
                     true_str = "; ".join(str(d) for d in ann.domains) or "none"
@@ -1709,6 +1761,10 @@ def main():
             try:
                 pred_domains = predictor.predict(ann.uniprot_acc)
                 predictions[ann.uniprot_acc] = pred_domains
+
+                # Save ChimeraX visualization file
+                chimerax_dir = output_dir / "chimerax"
+                save_chimerax_file(ann.uniprot_acc, pred_domains, chimerax_dir)
 
                 # Print prediction summary
                 pred_str = "; ".join(str(d) for d in pred_domains) or "none"

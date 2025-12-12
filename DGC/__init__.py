@@ -18,6 +18,9 @@ from .domain_growth import (
     AlphaFoldLoader,
     BenchmarkDomain,
     run_benchmark,
+    generate_chimerax_commands,
+    save_chimerax_file,
+    DOMAIN_COLORS,
 )
 
 __all__ = [
@@ -33,4 +36,7 @@ __all__ = [
     "AlphaFoldLoader",
     "BenchmarkDomain",
     "run_benchmark",
+    "generate_chimerax_commands",
+    "save_chimerax_file",
+    "DOMAIN_COLORS",
 ]
