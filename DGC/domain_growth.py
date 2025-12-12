@@ -1519,32 +1519,32 @@ def parse_args():
         epilog="""
 Examples:
   # Test simple_merge strategy on 10 proteins
-  python domain_growth.py --test_file ecod_100.txt --n_proteins 10 --merge_strategy simple_merge
+  python domain_growth.py --test-file ecod_100.txt --n-proteins 10 --merge-strategy simple_merge
 
   # Compare all strategies
-  python domain_growth.py --test_file ecod_100.txt --n_proteins 10 --compare_all
+  python domain_growth.py --test-file ecod_100.txt --n-proteins 10 --compare-all
 
   # Full evaluation with tuned parameters
-  python domain_growth.py --test_file ecod_100.txt --merge_strategy simple_merge --max_reach 12.0
+  python domain_growth.py --test-file ecod_100.txt --merge-strategy simple_merge --max-reach 12.0
         """
     )
 
     # Required arguments
     parser.add_argument(
-        "--test_file",
+        "--test-file",
         required=True,
         help="Path to test file with ground truth (ECOD format)"
     )
 
     # Strategy selection
     parser.add_argument(
-        "--merge_strategy",
+        "--merge-strategy",
         choices=["simple_merge", "boundary_strength", "size_weighted", "spatial_merge", "none"],
         default="simple_merge",
         help="Merging strategy to use (default: simple_merge)"
     )
     parser.add_argument(
-        "--seed_strategy",
+        "--seed-strategy",
         choices=["plddt_peaks", "grid", "random"],
         default="plddt_peaks",
         help="Seeding strategy to use (default: plddt_peaks)"
@@ -1552,31 +1552,31 @@ Examples:
 
     # Algorithm parameters
     parser.add_argument(
-        "--max_reach",
+        "--max-reach",
         type=float,
         default=10.0,
         help="Spatial reach for domain growth in Angstroms (default: 10.0)"
     )
     parser.add_argument(
-        "--acceptance_threshold",
+        "--acceptance-threshold",
         type=float,
         default=0.4,
         help="Minimum desire score to add residue (default: 0.4)"
     )
     parser.add_argument(
-        "--min_domain_size",
+        "--min-domain-size",
         type=int,
         default=15,
         help="Minimum residues for domain survival (default: 15)"
     )
     parser.add_argument(
-        "--merge_threshold",
+        "--merge-threshold",
         type=float,
         default=8.0,
         help="PAE threshold for merging (default: 8.0)"
     )
     parser.add_argument(
-        "--max_iterations",
+        "--max-iterations",
         type=int,
         default=100,
         help="Maximum growth iterations (default: 100)"
@@ -1584,18 +1584,18 @@ Examples:
 
     # Evaluation options
     parser.add_argument(
-        "--n_proteins",
+        "--n-proteins",
         type=int,
         default=None,
         help="Test on first N proteins (default: all)"
     )
     parser.add_argument(
-        "--output_dir",
+        "--output-dir",
         default="./results/",
         help="Output directory for results (default: ./results/)"
     )
     parser.add_argument(
-        "--compare_all",
+        "--compare-all",
         action="store_true",
         help="Compare all merging strategies"
     )
@@ -1605,7 +1605,7 @@ Examples:
         help="Print detailed progress"
     )
     parser.add_argument(
-        "--cache_dir",
+        "--cache-dir",
         default=None,
         help="Directory for caching AlphaFold files"
     )
