@@ -858,8 +858,14 @@ def apply_merge_strategy(
     elif strategy == "simple_merge":
         return simple_merge(domains, pae_matrix, merge_threshold)
     elif strategy == "boundary_strength":
-        strength_threshold = kwargs.get("strength_threshold", 3.0)
-        return boundary_strength_merge(domains, pae_matrix, strength_threshold)
+        # Scale strength_threshold proportionally to merge_threshold
+        # Default: merge_threshold=8.0 -> strength_threshold=3.0
+        # If merge_threshold is higher (adapted), scale strength up too
+        base_strength = kwargs.get("strength_threshold", 3.0)
+        scaled_strength = base_strength * (merge_threshold / 8.0)
+        logger.info(f"boundary_strength: using strength_threshold={scaled_strength:.1f} "
+                   f"(scaled from {base_strength} by merge_threshold={merge_threshold:.1f})")
+        return boundary_strength_merge(domains, pae_matrix, scaled_strength)
     elif strategy == "size_weighted":
         return size_weighted_merge(domains, pae_matrix, merge_threshold)
     elif strategy == "spatial_merge":
