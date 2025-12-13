@@ -218,19 +218,22 @@ class NonConvexDomain:
 
         return min_dist < self.max_reach
 
-    def desire_score(self, point_idx: int, pae_matrix: np.ndarray) -> float:
+    def desire_score(
+        self, point_idx: int, pae_matrix: np.ndarray, continuity_bonus: float = 0.3
+    ) -> float:
         """
         Calculate how much this domain "wants" a residue.
 
         Score is based on PAE connectivity - lower mean PAE to members
-        means higher desire.
+        means higher desire. Includes a bonus for sequence continuity.
 
         Parameters:
             point_idx: Index of the point to score
             pae_matrix: NxN PAE matrix (predicted aligned error)
+            continuity_bonus: Bonus added if residue is adjacent in sequence
 
         Returns:
-            Desire score (0-1), or -inf if point not in reach
+            Desire score (0-1+bonus), or -inf if point not in reach
         """
         if not self.is_in_reach(point_idx):
             return float('-inf')
@@ -244,6 +247,11 @@ class NonConvexDomain:
         # Convert to score: lower PAE = higher score
         # PAE typically 0-30 Angstroms, with <5 being very good
         score = 1.0 / (1.0 + mean_pae)
+
+        # Add continuity bonus if adjacent to existing members in sequence
+        has_neighbor = (point_idx - 1) in self.members or (point_idx + 1) in self.members
+        if has_neighbor:
+            score += continuity_bonus
 
         return score
 
@@ -525,6 +533,8 @@ def competitive_domain_growth(
     acceptance_threshold: float = 0.1,
     min_domain_size: int = 15,
     max_iterations: int = 100,
+    plddt: np.ndarray = None,
+    plddt_threshold: float = 50.0,
 ) -> Tuple[List[NonConvexDomain], Set[int]]:
     """
     Grow domains competitively from seed positions.
@@ -541,6 +551,8 @@ def competitive_domain_growth(
         acceptance_threshold: Minimum desire score to join a domain
         min_domain_size: Minimum residues for a domain to survive
         max_iterations: Maximum growth iterations
+        plddt: Per-residue pLDDT scores (optional). If provided, excludes low-confidence residues.
+        plddt_threshold: Minimum pLDDT to include residue in domain growth (default 50.0)
 
     Returns:
         (domains, unassigned): List of NonConvexDomain objects and set of unassigned indices
@@ -558,9 +570,15 @@ def competitive_domain_growth(
         )
         domains.append(domain)
 
+    # Exclude low-pLDDT residues from consideration
+    excluded = set()
+    if plddt is not None:
+        excluded = {i for i in range(n_residues) if plddt[i] < plddt_threshold}
+        logger.debug(f"Excluding {len(excluded)} low-pLDDT residues (< {plddt_threshold})")
+
     # Track assigned residues
     assigned = set(seeds)
-    unassigned = set(range(n_residues)) - assigned
+    unassigned = set(range(n_residues)) - assigned - excluded
 
     for iteration in range(max_iterations):
         changes = False
@@ -656,6 +674,96 @@ def simple_merge(
         logger.debug(f"Merging domains {best_i} and {best_j} (inter-PAE: {min_inter_pae:.2f})")
         domains[best_i].merge_with(domains[best_j])
         domains.pop(best_j)
+
+    return domains
+
+
+def consolidate_overlapping_domains(
+    domains: List[NonConvexDomain],
+    overlap_threshold: float = 0.5,
+) -> List[NonConvexDomain]:
+    """
+    Consolidate fragmented domains with overlapping sequence ranges.
+
+    Merges domains whose sequence ranges (min-max) overlap significantly.
+    Uses a two-phase approach:
+    1. First merge pairs with very high overlap (>= 0.8) - clear fragments
+    2. Then merge remaining pairs with moderate overlap (>= threshold)
+
+    Parameters:
+        domains: List of NonConvexDomain objects
+        overlap_threshold: Minimum overlap ratio to trigger merge (0-1)
+
+    Returns:
+        List of consolidated domains
+    """
+    if len(domains) <= 1:
+        return domains
+
+    def get_range(d):
+        members = sorted(d.members)
+        return min(members), max(members)
+
+    def range_overlap_ratio(r1, r2):
+        """Calculate range overlap as fraction of the smaller range."""
+        s1, e1 = r1
+        s2, e2 = r2
+        overlap_start = max(s1, s2)
+        overlap_end = min(e1, e2)
+        if overlap_start >= overlap_end:
+            return 0.0
+        overlap_len = overlap_end - overlap_start
+        smaller_len = min(e1 - s1, e2 - s2)
+        return overlap_len / smaller_len if smaller_len > 0 else 0.0
+
+    # Phase 1: Merge pairs with very high overlap (clear fragments of same domain)
+    changed = True
+    while changed and len(domains) > 1:
+        changed = False
+        best_overlap = 0.0
+        best_pair = None
+
+        for i in range(len(domains)):
+            for j in range(i + 1, len(domains)):
+                r1 = get_range(domains[i])
+                r2 = get_range(domains[j])
+                overlap = range_overlap_ratio(r1, r2)
+
+                if overlap > best_overlap:
+                    best_overlap = overlap
+                    best_pair = (i, j)
+
+        # High threshold for first phase - only merge clear fragments
+        if best_pair and best_overlap >= 0.8:
+            i, j = best_pair
+            logger.debug(f"Consolidating domains {i} and {j} (overlap: {best_overlap:.2f})")
+            domains[i].merge_with(domains[j])
+            domains.pop(j)
+            changed = True
+
+    # Phase 2: Merge remaining pairs above threshold
+    changed = True
+    while changed and len(domains) > 1:
+        changed = False
+        best_overlap = 0.0
+        best_pair = None
+
+        for i in range(len(domains)):
+            for j in range(i + 1, len(domains)):
+                r1 = get_range(domains[i])
+                r2 = get_range(domains[j])
+                overlap = range_overlap_ratio(r1, r2)
+
+                if overlap > best_overlap:
+                    best_overlap = overlap
+                    best_pair = (i, j)
+
+        if best_pair and best_overlap >= overlap_threshold:
+            i, j = best_pair
+            logger.debug(f"Consolidating domains {i} and {j} (overlap: {best_overlap:.2f})")
+            domains[i].merge_with(domains[j])
+            domains.pop(j)
+            changed = True
 
     return domains
 
@@ -858,10 +966,16 @@ def apply_merge_strategy(
     elif strategy == "simple_merge":
         return simple_merge(domains, pae_matrix, merge_threshold)
     elif strategy == "boundary_strength":
+        # First consolidate domains with overlapping sequence ranges
+        # This fixes fragmentation from multiple seeds in the same domain
+        domains = consolidate_overlapping_domains(domains, overlap_threshold=0.5)
+        logger.info(f"After consolidation: {len(domains)} domains")
+
         # Scale strength_threshold proportionally to merge_threshold
-        # Default: merge_threshold=8.0 -> strength_threshold=3.0
-        # If merge_threshold is higher (adapted), scale strength up too
-        base_strength = kwargs.get("strength_threshold", 3.0)
+        # Default: merge_threshold=8.0 -> strength_threshold=2.4
+        # Lower base (2.4 vs 3.0) works better for multi-domain proteins
+        # with interacting domains like SRC kinase
+        base_strength = kwargs.get("strength_threshold", 2.4)
         scaled_strength = base_strength * (merge_threshold / 8.0)
         logger.info(f"boundary_strength: using strength_threshold={scaled_strength:.1f} "
                    f"(scaled from {base_strength} by merge_threshold={merge_threshold:.1f})")
@@ -1188,11 +1302,12 @@ def calculate_adaptive_threshold(
     # Domain boundaries should have relatively higher PAE than within-domain regions
     if pae_median < 6.0:
         # High confidence protein - threshold should be above within-domain PAE
-        # but below inter-domain PAE. Use a point between 75th percentile and max.
-        # This handles cases where many values cluster at 75th percentile.
-        adapted = pae_75 + (pae_max - pae_75) * 0.25
+        # but below inter-domain PAE. For multi-domain proteins, inter-domain PAE
+        # is typically 6-10Å, so use the 75th percentile as threshold.
+        # Cap at base_threshold to avoid over-merging.
+        adapted = min(pae_75, base_threshold)
         logger.info(f"High-confidence domains: using threshold = {adapted:.1f}Å "
-                   f"(75th + 25% towards max)")
+                   f"(capped 75th percentile)")
     else:
         # Normal protein - use scaled threshold
         scale_factor = pae_median / reference_pae
@@ -1414,7 +1529,7 @@ class DomainGrowthPredictor:
         if len(seeds) == 0:
             return []
 
-        # Grow domains
+        # Grow domains (exclude low-pLDDT residues from growth)
         domains, unassigned = competitive_domain_growth(
             coords=coords,
             pae_matrix=pae_matrix,
@@ -1423,6 +1538,8 @@ class DomainGrowthPredictor:
             acceptance_threshold=self.acceptance_threshold,
             min_domain_size=self.min_domain_size,
             max_iterations=self.max_iterations,
+            plddt=plddt,
+            plddt_threshold=50.0,
         )
 
         logger.info(f"{uniprot_acc}: {len(domains)} domains after growth")
@@ -1982,8 +2099,8 @@ Examples:
     parser.add_argument(
         "--acceptance-threshold",
         type=float,
-        default=0.1,
-        help="Minimum desire score to add residue (default: 0.1)"
+        default=0.15,
+        help="Minimum desire score to add residue (default: 0.15)"
     )
     parser.add_argument(
         "--min-domain-size",
