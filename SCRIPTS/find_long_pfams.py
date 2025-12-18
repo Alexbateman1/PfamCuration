@@ -147,10 +147,12 @@ def main():
         description='Find Pfam families with long models and process them',
         epilog="""
 This script queries pfam_live for families with model_length > 600 (or custom value),
-then for each family:
+then for each family of type 'Family' or 'Domain':
   1. Runs: pfco PFXXXXX
   2. Runs: add_image.py PFXXXXX
   3. Runs: swissprot.pl (inside the family directory)
+
+Families with other types (e.g., Repeat, Motif) are skipped.
 
 Examples:
   %(prog)s --dry-run           # Show what would be done
@@ -197,11 +199,18 @@ Examples:
         print(f"  {pfamA_acc}\t{pfamA_id}\t{family_type}")
     print("-" * 50)
 
-    # Process each family
+    # Process each family (only if type is Family or Domain)
+    allowed_types = {'Family', 'Domain'}
     success_count = 0
     fail_count = 0
+    skipped_count = 0
 
     for pfamA_acc, pfamA_id, family_type in families:
+        if family_type not in allowed_types:
+            print(f"\nSkipping {pfamA_acc} ({pfamA_id}) - Type '{family_type}' not in {allowed_types}")
+            skipped_count += 1
+            continue
+
         if process_family(pfamA_acc, pfamA_id, family_type, args.dry_run):
             success_count += 1
         else:
@@ -211,8 +220,9 @@ Examples:
     print("\n" + "=" * 60)
     print("SUMMARY")
     print("=" * 60)
-    print(f"Total families: {len(families)}")
-    print(f"Successful: {success_count}")
+    print(f"Total families found: {len(families)}")
+    print(f"Skipped (type not Family/Domain): {skipped_count}")
+    print(f"Processed successfully: {success_count}")
     print(f"Failed: {fail_count}")
 
     if args.dry_run:
