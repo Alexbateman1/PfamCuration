@@ -1,0 +1,16 @@
+ID   DUF
+DE   Domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   UniProtKB:A0A3S0Z5P6
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+WK   Domain_of_unknown_function
+CC   This entry represents a domain found in cohesin subunit SA proteins
+CC   (STAG2/STAG3) and related proteins in eukaryotes. The domain is
+CC   approximately 100 residues long and is found in proteins involved in
+CC   sister chromatid cohesion during cell division. The function of this
+CC   specific domain remains to be determined.
