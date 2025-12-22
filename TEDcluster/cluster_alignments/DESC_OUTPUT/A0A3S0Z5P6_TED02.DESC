@@ -1,16 +1,55 @@
 ID   DUF
 DE   Domain of unknown function
 AU   Bateman A;0000-0002-6982-4660
-SE   UniProtKB:A0A3S0Z5P6
+SE   TED:A0A3S0Z5P6_TED02
 GA   27.00 27.00;
 TC   27.20 27.00;
 NC   26.90 26.90;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
 TP   Domain
+RN   [1]
+RM   10698974
+RT   STAG3, a novel gene encoding a protein involved in meiotic chromosome
+RT   pairing and location of STAG3-related genes flanking the
+RT   Williams-Beuren syndrome deletion.
+RA   Pezzi N, Prieto I, Kremer L, Perez Jurado LA, Valero C, Del Mazo J,
+RA   Martinez-A C, Barbero JL;
+RL   FASEB J. 2000;14:581-592.
+RN   [2]
+RM   11483963
+RT   Mammalian STAG3 is a cohesin specific to sister chromatid arms in
+RT   meiosis I.
+RA   Prieto I, Suja JA, Pezzi N, Kremer L, Martinez-A C, Rufas JS,
+RA   Barbero JL;
+RL   Nat Cell Biol. 2001;3:761-766.
+RN   [3]
+RM   24597867
+RT   Mutant cohesin in premature ovarian failure.
+RA   Caburet S, Arboleda VA, Llano E, Overbeek PA, Barbero JL, Oka K,
+RA   Harrison W, Vaiman D, Ben-Neriah Z, Garcia-Tunon I, Fellous M,
+RA   Pendas AM, Veitia RA, Vilain E;
+RL   N Engl J Med. 2014;370:943-949.
+RN   [4]
+RM   31682730
+RT   Mutations in the stromal antigen 3 (STAG3) gene cause male infertility
+RT   due to meiotic arrest.
+RA   van der Bijl N, Roepke A, Biswas U, Woeste M, Jessberger R, Kliesch S,
+RA   Friedrich C, Tuettelmann F;
+RL   Hum Reprod. 2019;34:2112-2119.
+RN   [5]
+RM   16176934
+RT   AtREC8 and AtSCC3 are essential to the monopolar orientation of the
+RT   kinetochores during meiosis.
+RA   Chelysheva L, Diallo S, Vezon D, Gendrot G, Vrielynck N, Belcram K,
+RA   Rocques N, Marquez-Lema A, Bhatt AM, Horlow C, Mercier R, Mezard C,
+RA   Grelon M;
+RL   J Cell Sci. 2005;118:4621-4632.
 WK   Domain_of_unknown_function
-CC   This entry represents a domain found in cohesin subunit SA proteins
-CC   (STAG2/STAG3) and related proteins in eukaryotes. The domain is
-CC   approximately 100 residues long and is found in proteins involved in
-CC   sister chromatid cohesion during cell division. The function of this
-CC   specific domain remains to be determined.
+CC   This entry represents a domain of approximately 140 residues found in
+CC   cohesin subunit SA proteins (STAG1, STAG2, STAG3) in eukaryotes. These
+CC   proteins also contain the STAG domain (Pfam:PF08514) and function as
+CC   components of the cohesin complex required for sister chromatid
+CC   cohesion after DNA replication. Mutations in STAG genes cause meiotic
+CC   arrest, premature ovarian failure, and developmental disorders. The
+CC   precise function of this domain remains to be determined.
