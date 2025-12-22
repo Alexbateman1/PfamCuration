@@ -28,6 +28,125 @@ from collections import defaultdict
 from datetime import datetime
 
 
+def filter_swissprot_content(content):
+    """
+    Filter SwissProt entry content to reduce token usage by removing:
+    - Complete references that contain "NUCLEOTIDE SEQUENCE" in RP lines
+    - DR lines except for STRING, InterPro, Pfam, SMART, Gene3D
+    - FT sections for COMPBIAS, MOD_RES, VAR_SEQ, and disordered REGION
+
+    Args:
+        content: Raw SwissProt entry content as a string
+
+    Returns:
+        Filtered content string
+    """
+    lines = content.split('\n')
+    filtered_lines = []
+
+    # Databases to keep in DR lines
+    keep_databases = {'STRING', 'InterPro', 'Pfam', 'SMART', 'Gene3D'}
+
+    # FT feature types to skip
+    skip_ft_types = {'COMPBIAS', 'MOD_RES', 'VAR_SEQ'}
+
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+
+        # Handle reference blocks (RN starts a reference)
+        if line.startswith('RN   '):
+            # Collect the entire reference block
+            ref_block = [line]
+            i += 1
+            while i < len(lines) and lines[i][:2] in ('RP', 'RC', 'RX', 'RG', 'RA', 'RT', 'RL'):
+                ref_block.append(lines[i])
+                i += 1
+
+            # Check if any RP line contains "NUCLEOTIDE SEQUENCE"
+            has_nucleotide_seq = any(
+                l.startswith('RP   ') and 'NUCLEOTIDE SEQUENCE' in l
+                for l in ref_block
+            )
+
+            # Only include reference if it doesn't have NUCLEOTIDE SEQUENCE
+            if not has_nucleotide_seq:
+                filtered_lines.extend(ref_block)
+            continue
+
+        # Handle DR (database reference) lines
+        if line.startswith('DR   '):
+            # Extract database name (first field after DR)
+            # Format: DR   DATABASE; ...
+            parts = line[5:].split(';')
+            if parts:
+                db_name = parts[0].strip()
+                if db_name in keep_databases:
+                    filtered_lines.append(line)
+            i += 1
+            continue
+
+        # Handle FT (feature table) lines
+        if line.startswith('FT   '):
+            # In UniProt flat file format:
+            # - New feature lines: "FT   TYPE            position" - feature type at column 5
+            # - Continuation lines: "FT                   /qualifier" or "FT                   text" - whitespace at column 5
+            # Check if this starts a new feature (character at position 5 is not a space)
+            is_continuation = len(line) > 5 and line[5] == ' '
+
+            if not is_continuation:
+                # This is a new feature type line
+                ft_content = line[5:].strip()
+                parts = ft_content.split()
+                if parts:
+                    feature_type = parts[0]
+
+                    # Check if it's a feature type to skip
+                    if feature_type in skip_ft_types:
+                        # Skip this feature and all its continuation lines
+                        i += 1
+                        while i < len(lines) and lines[i].startswith('FT   '):
+                            if len(lines[i]) > 5 and lines[i][5] == ' ':
+                                # Continuation line, skip it
+                                i += 1
+                            else:
+                                # New feature type, stop skipping
+                                break
+                        continue
+
+                    elif feature_type == 'REGION':
+                        # Need to check if it's a disordered region by looking ahead
+                        j = i + 1
+                        feature_lines = [line]
+                        while j < len(lines) and lines[j].startswith('FT   '):
+                            if len(lines[j]) > 5 and lines[j][5] == ' ':
+                                # Continuation line
+                                feature_lines.append(lines[j])
+                                j += 1
+                            else:
+                                # New feature type
+                                break
+
+                        # Check if any line contains "Disordered"
+                        feature_text = '\n'.join(feature_lines)
+                        if 'Disordered' in feature_text:
+                            # Skip the entire disordered REGION block
+                            i = j
+                            continue
+                        # Otherwise, keep REGION - fall through to append
+
+            # Keep this FT line (either a kept feature type or a continuation of a kept feature)
+            filtered_lines.append(line)
+            i += 1
+            continue
+
+        # Keep all other lines
+        filtered_lines.append(line)
+        i += 1
+
+    return '\n'.join(filtered_lines)
+
+
 def run_command(cmd, cwd=None, capture_output=False, wait=True):
     """Execute shell command and optionally capture output"""
     try:
@@ -1054,14 +1173,17 @@ def display_info_files(dir_path):
             print(f.read(), file=sys.stderr)
         print("--- End species ---", file=sys.stderr)
 
-    # 3. SwissProt entries (sp.seq_info)
+    # 3. SwissProt entries (sp.seq_info) - filtered to reduce token usage
     sp_file = Path(dir_path) / 'sp.seq_info'
     if sp_file.exists() and sp_file.stat().st_size > 0:
         print("\n--- sp.seq_info (SwissProt entries) ---", file=sys.stderr)
         print("SwissProt/UniProt annotations for sequences in this family.", file=sys.stderr)
+        print("(Filtered: removed NUCLEOTIDE SEQUENCE refs, most DR lines, COMPBIAS/MOD_RES/VAR_SEQ/disordered FT sections)", file=sys.stderr)
         print("", file=sys.stderr)
         with open(sp_file, 'r') as f:
-            print(f.read(), file=sys.stderr)
+            raw_content = f.read()
+        filtered_content = filter_swissprot_content(raw_content)
+        print(filtered_content, file=sys.stderr)
         print("--- End sp.seq_info ---", file=sys.stderr)
 
     # 4. Foldseek (after sp.seq_info, only if matches beyond header)
@@ -1188,14 +1310,17 @@ def collect_directory_info(dir_name, start_dir):
             info_sections.append(f.read())
         info_sections.append("--- End species ---")
 
-    # 3. SwissProt entries (sp.seq_info)
+    # 3. SwissProt entries (sp.seq_info) - filtered to reduce token usage
     sp_file = Path('sp.seq_info')
     if sp_file.exists() and sp_file.stat().st_size > 0:
         info_sections.append("\n--- sp.seq_info (SwissProt entries) ---")
         info_sections.append("SwissProt/UniProt annotations for sequences in this family.")
+        info_sections.append("(Filtered: removed NUCLEOTIDE SEQUENCE refs, most DR lines, COMPBIAS/MOD_RES/VAR_SEQ/disordered FT sections)")
         info_sections.append("")
         with open(sp_file, 'r') as f:
-            info_sections.append(f.read())
+            raw_content = f.read()
+        filtered_content = filter_swissprot_content(raw_content)
+        info_sections.append(filtered_content)
         info_sections.append("--- End sp.seq_info ---")
 
     # 4. Foldseek (after sp.seq_info, only if matches beyond header)
