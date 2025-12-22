@@ -31,9 +31,10 @@ from datetime import datetime
 def filter_swissprot_content(content):
     """
     Filter SwissProt entry content to reduce token usage by removing:
-    - Complete references that contain "NUCLEOTIDE SEQUENCE" in RP lines
+    - References containing in RP lines: NUCLEOTIDE SEQUENCE, LARGE SCALE ANALYSIS,
+      TISSUE SPECIFICITY, or VARIANT
     - DR lines except for STRING, InterPro, Pfam, SMART, Gene3D
-    - FT sections for COMPBIAS, MOD_RES, VAR_SEQ, and disordered REGION
+    - FT sections for COMPBIAS, MOD_RES, VAR_SEQ, CONFLICT, VARIANT, and disordered REGION
 
     Args:
         content: Raw SwissProt entry content as a string
@@ -48,7 +49,14 @@ def filter_swissprot_content(content):
     keep_databases = {'STRING', 'InterPro', 'Pfam', 'SMART', 'Gene3D'}
 
     # FT feature types to skip
-    skip_ft_types = {'COMPBIAS', 'MOD_RES', 'VAR_SEQ'}
+    skip_ft_types = {'COMPBIAS', 'MOD_RES', 'VAR_SEQ', 'CONFLICT', 'VARIANT'}
+
+    # RP line patterns that trigger reference exclusion
+    skip_rp_patterns = [
+        'NUCLEOTIDE SEQUENCE',
+        'LARGE SCALE ANALYSIS',
+        'TISSUE SPECIFICITY',
+    ]
 
     i = 0
     while i < len(lines):
@@ -63,14 +71,23 @@ def filter_swissprot_content(content):
                 ref_block.append(lines[i])
                 i += 1
 
-            # Check if any RP line contains "NUCLEOTIDE SEQUENCE"
-            has_nucleotide_seq = any(
-                l.startswith('RP   ') and 'NUCLEOTIDE SEQUENCE' in l
-                for l in ref_block
-            )
+            # Check if any RP line contains patterns we want to skip
+            skip_reference = False
+            for ref_line in ref_block:
+                if ref_line.startswith('RP   '):
+                    # Check for skip patterns
+                    for pattern in skip_rp_patterns:
+                        if pattern in ref_line:
+                            skip_reference = True
+                            break
+                    # Also check if RP line is just "VARIANT" (e.g., "RP   VARIANT ARG-763.")
+                    if ref_line.startswith('RP   VARIANT'):
+                        skip_reference = True
+                    if skip_reference:
+                        break
 
-            # Only include reference if it doesn't have NUCLEOTIDE SEQUENCE
-            if not has_nucleotide_seq:
+            # Only include reference if it doesn't match skip patterns
+            if not skip_reference:
                 filtered_lines.extend(ref_block)
             continue
 
@@ -1178,7 +1195,7 @@ def display_info_files(dir_path):
     if sp_file.exists() and sp_file.stat().st_size > 0:
         print("\n--- sp.seq_info (SwissProt entries) ---", file=sys.stderr)
         print("SwissProt/UniProt annotations for sequences in this family.", file=sys.stderr)
-        print("(Filtered: removed NUCLEOTIDE SEQUENCE refs, most DR lines, COMPBIAS/MOD_RES/VAR_SEQ/disordered FT sections)", file=sys.stderr)
+        print("(Filtered: removed low-value refs and FT sections to reduce tokens)", file=sys.stderr)
         print("", file=sys.stderr)
         with open(sp_file, 'r') as f:
             raw_content = f.read()
@@ -1315,7 +1332,7 @@ def collect_directory_info(dir_name, start_dir):
     if sp_file.exists() and sp_file.stat().st_size > 0:
         info_sections.append("\n--- sp.seq_info (SwissProt entries) ---")
         info_sections.append("SwissProt/UniProt annotations for sequences in this family.")
-        info_sections.append("(Filtered: removed NUCLEOTIDE SEQUENCE refs, most DR lines, COMPBIAS/MOD_RES/VAR_SEQ/disordered FT sections)")
+        info_sections.append("(Filtered: removed low-value refs and FT sections to reduce tokens)")
         info_sections.append("")
         with open(sp_file, 'r') as f:
             raw_content = f.read()
