@@ -34,7 +34,8 @@ def filter_swissprot_content(content):
     - References containing in RP lines: NUCLEOTIDE SEQUENCE, LARGE SCALE ANALYSIS,
       TISSUE SPECIFICITY, or VARIANT
     - DR lines except for STRING, InterPro, Pfam, SMART, Gene3D
-    - FT sections for COMPBIAS, MOD_RES, VAR_SEQ, CONFLICT, VARIANT, and disordered REGION
+    - FT sections for COMPBIAS, MOD_RES, VAR_SEQ, CONFLICT, VARIANT,
+      HELIX, STRAND, TURN, and disordered REGION
 
     Args:
         content: Raw SwissProt entry content as a string
@@ -49,7 +50,8 @@ def filter_swissprot_content(content):
     keep_databases = {'STRING', 'InterPro', 'Pfam', 'SMART', 'Gene3D'}
 
     # FT feature types to skip
-    skip_ft_types = {'COMPBIAS', 'MOD_RES', 'VAR_SEQ', 'CONFLICT', 'VARIANT'}
+    skip_ft_types = {'COMPBIAS', 'MOD_RES', 'VAR_SEQ', 'CONFLICT', 'VARIANT',
+                     'HELIX', 'STRAND', 'TURN'}
 
     # RP line patterns that trigger reference exclusion
     skip_rp_patterns = [
