@@ -1,0 +1,25 @@
+ID   CCR1_like
+DE   CCR1-like C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1C5F8M2_TED04
+GA   27.00 27.00;
+TC   27.00 29.10;
+NC   26.90 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   39070263
+RT   Transcriptionally induced nucleoid-associated protein-like ccr1 in
+RT   combined-culture serves as a global effector of Streptomyces
+RT   secondary metabolism.
+RA   Lei X, Zeng G, Deng Y, Fu L, Huang Z, Wu S, Chen J, Shao H,
+RA   Shimizu K, Nishizawa T, Onaka H, Oikawa H, Wang P, Zhang Y;
+RL   Front Microbiol. 2024;15:1396610.
+CC   This entry represents a C-terminal domain of approximately 80
+CC   residues found in proteins in Actinomycetes, particularly
+CC   Streptomycetaceae and Streptosporangiaceae. The prototype is
+CC   SCO1842 (ccr1) in Streptomyces coelicolor, which encodes a
+CC   nucleoid-associated protein-like regulator of secondary metabolite
+CC   production. These proteins are typically multi-domain, often
+CC   containing HEAT repeat regions upstream of this domain.

@@ -1,0 +1,24 @@
+ID   XPB_N
+DE   XPB/SSL2 helicase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1C6QR31_TED03
+GA   27.00 27.00;
+TC   27.60 27.30;
+NC   26.80 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   31552302
+RT   Mycobacterium tuberculosis sensor kinase DosS modulates the
+RT   autophagosome in a DosR-independent manner.
+RA   Kundu M, Basu J;
+RL   Commun Biol. 2019;2:349.
+CC   This entry represents an N-terminal domain of approximately 221
+CC   residues found in XPB/SSL2-like helicases in Actinomycetes
+CC   (Streptomycetaceae, Mycobacteriales, Streptosporangiales). This
+CC   domain precedes the Helicase_C_3 domain (Pfam:PF13625) and is
+CC   often found in proteins containing a C-terminal WYL domain
+CC   (Pfam:PF13280). The prototype is Rv0862c in Mycobacterium
+CC   tuberculosis. STRING analysis indicates strong functional
+CC   association with DNA repair helicases (ERCC3/RAD25).

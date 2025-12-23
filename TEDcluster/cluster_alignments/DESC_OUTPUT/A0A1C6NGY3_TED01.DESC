@@ -1,0 +1,26 @@
+ID   Hydrolase_sig
+DE   Secreted hydrolase signal/N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1C6NGY3_TED01
+GA   27.00 27.00;
+TC   27.00 28.20;
+NC   26.60 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   39070263
+RT   Transcriptionally induced nucleoid-associated protein-like ccr1 in
+RT   combined-culture serves as a global effector of Streptomyces
+RT   secondary metabolism.
+RA   Lei X, Zeng G, Deng Y, Fu L, Huang Z, Wu S, Chen J, Shao H,
+RA   Shimizu K, Nishizawa T, Onaka H, Oikawa H, Wang P, Zhang Y;
+RL   Front Microbiol. 2024;15:1396610.
+CC   This entry represents an N-terminal domain of approximately 71
+CC   residues found in secreted alpha/beta hydrolases in Actinomycetes,
+CC   particularly Streptomycetaceae, Microbacteriaceae, and
+CC   Micrococcaceae. This domain precedes Abhydrolase_1 (Pfam:PF00561)
+CC   and Peptidase_S9 (Pfam:PF00326) catalytic domains. The prototype
+CC   is SCO1843 in Streptomyces coelicolor. STRING analysis indicates
+CC   functional association with DUF8185 (Pfam:PF26572) and DUF8010
+CC   (Pfam:PF26035).

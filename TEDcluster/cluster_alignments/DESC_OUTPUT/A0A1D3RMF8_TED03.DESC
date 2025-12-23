@@ -1,0 +1,25 @@
+ID   NrdJ_C
+DE   B12-dependent ribonucleotide reductase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1D3RMF8_TED03
+GA   27.00 27.00;
+TC   27.10 53.30;
+NC   26.80 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   38198506
+RT   Pseudomonas aeruginosa two-component system CprRS regulates HigBA
+RT   expression and bacterial cytotoxicity in response to LL-37 stress.
+RA   Zhang Y, Shi Q, Zhou L, Chen L, Xia H, Zhang X, Chen K,
+RA   Zhuang Q, Liang H;
+RL   PLoS Pathog. 2024;20:e1011897.
+CC   This entry represents a C-terminal domain of approximately 38
+CC   residues found in vitamin B12-dependent (class II) ribonucleotide
+CC   reductases (NrdJ/NrdJa) in Gammaproteobacteria, particularly
+CC   Pseudomonadaceae, Lysobacteraceae, and Halomonadaceae. This domain
+CC   follows the catalytic Ribonuc_red_lgC domain (Pfam:PF02867).
+CC   Ribonucleotide reductases catalyze the reduction of ribonucleotides
+CC   to deoxyribonucleotides for DNA synthesis. STRING analysis indicates
+CC   strong functional association with nucleotide biosynthesis enzymes.

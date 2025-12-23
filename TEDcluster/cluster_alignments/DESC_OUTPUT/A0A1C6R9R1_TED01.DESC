@@ -1,0 +1,26 @@
+ID   Ig_Cu_rpt
+DE   Copper-associated Ig-like repeat
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1C6R9R1_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Repeat
+CL   CL0159
+RN   [1]
+RM   30862861
+RT   Cytosolic copper is a major modulator of germination, development
+RT   and secondary metabolism in Streptomyces coelicolor.
+RA   Gomez-Escribano JP, Bibb MJ, Leskiw BK;
+RL   Sci Rep. 2019;9:3631.
+CC   This entry represents an Ig-like repeat domain of approximately
+CC   108 residues found in secreted proteins in Actinomycetes and
+CC   Bacillota. Proteins typically contain two tandem repeats. The
+CC   prototype is SCO1044 in Streptomyces coelicolor, which is
+CC   regulated by the copper-sensing regulator CsoR. Foldseek analysis
+CC   suggests structural similarity to Ig-like domains, placing this
+CC   family in clan CL0159. STRING analysis indicates functional
+CC   association with heavy metal-binding (HMA, Pfam:PF00403) and
+CC   short-chain dehydrogenase domains.
