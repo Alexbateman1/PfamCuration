@@ -1,0 +1,35 @@
+ID   TMC_N
+DE   Transmembrane channel-like protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3Q3FXG8_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   11850618
+RT   Dominant and recessive deafness caused by mutations of a novel
+RT   gene, TMC1, required for cochlear hair-cell function.
+RA   Kurima K, Peters LM, Yang Y, Riazuddin S, Ahmed ZM, Naz S, Arnaud D,
+RA   Drury S, Mo J, Makishima T, Ghosh M, Menon PSN, Deshmukh D, Oddoux C,
+RA   Ostrer H, Khan S, Raizuddin S, Deininger PL, Hampton LL, Sullivan SL,
+RA   Battey JF, Keats BJB, Wilcox ER, Friedman TB, Griffith AJ;
+RL   Nat Genet. 2002;30:277-284.
+RN   [2]
+RM   30138589
+RT   TMC1 Forms the Pore of Mechanosensory Transduction Channels in
+RT   Vertebrate Inner Ear Hair Cells.
+RA   Pan B, Akyuz N, Liu XP, Asai Y, Nist-Lund C, Kurima K, Derfler BH,
+RA   Gyoergy B, Limapichat W, Walujkar S, Wimalasena LN, Sotomayor M,
+RA   Corey DP, Holt JR;
+RL   Neuron. 2018;99:736-753.e6.
+CC   This entry represents an N-terminal cytoplasmic domain of approximately
+CC   70 residues found in transmembrane channel-like (TMC) proteins in
+CC   vertebrates. This domain precedes the transmembrane TMC domain
+CC   (Pfam:PF07810). TMC1 and TMC2 are pore-forming subunits of the
+CC   mechanotransducer (MET) channel complex at the tips of stereocilia
+CC   in cochlear hair cells. The N-terminus is phosphorylated and interacts
+CC   with tip-link protein PCDH15. Mutations in TMC1 cause autosomal
+CC   dominant and recessive forms of nonsyndromic deafness (DFNA36, DFNB7).
