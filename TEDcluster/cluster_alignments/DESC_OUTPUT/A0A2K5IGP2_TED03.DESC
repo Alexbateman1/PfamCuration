@@ -1,0 +1,31 @@
+ID   BAG6_mid
+DE   BAG6 chaperone middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2K5IGP2_TED03
+GA   27.00 27.00;
+TC   27.30 27.90;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   20676083
+RT   A ribosome-associating factor chaperones tail-anchored membrane
+RT   proteins.
+RA   Mariappan M, Li X, Stefanovic S, Sharma A, Mateja A, Keenan RJ,
+RA   Hegde RS;
+RL   Nature. 2010;466:1120-1124.
+RN   [2]
+RM   17403783
+RT   HLA-B-associated transcript 3 (Bat3)/Scythe is essential for
+RT   p300-mediated acetylation of p53.
+RA   Sasaki T, Gan EC, Wakeham A, Kornbluth S, Mak TW, Okada H;
+RL   Genes Dev. 2007;21:848-861.
+CC   This entry represents a middle domain of approximately 215 residues
+CC   found in BAG6/BAT3 (BCL2-associated athanogene 6) in metazoans.
+CC   This domain is located after the N-terminal ubiquitin-like and
+CC   BAG6 domains (Pfam:PF12057), and before the C-terminal Bag6_BAGS
+CC   domain (Pfam:PF20960). BAG6 is a cytosolic chaperone that functions
+CC   in the targeting of tail-anchored proteins to the ER membrane
+CC   and in the degradation of mislocalized membrane proteins via
+CC   the ubiquitin-proteasome system.

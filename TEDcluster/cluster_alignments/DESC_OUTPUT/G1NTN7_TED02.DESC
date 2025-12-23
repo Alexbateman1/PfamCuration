@@ -1,0 +1,30 @@
+ID   WDR59_mid
+DE   GATOR2 complex WDR59 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:G1NTN7_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23723238
+RT   A tumor suppressor complex with GAP activity for the Rag GTPases
+RT   that signal amino acid sufficiency to mTORC1.
+RA   Bar-Peled L, Chantranupong L, Cherniack AD, Chen WW, Ottina KA,
+RA   Grabiner BC, Spear ED, Carter SL, Meyerson M, Sabatini DM;
+RL   Science. 2013;340:1100-1106.
+RN   [2]
+RM   35831510
+RT   Structure of the nutrient-sensing hub GATOR2.
+RA   Valenstein ML, Rogala KB, Lalgudi PV, Brignole EJ, Gu X, Saxton RA,
+RA   Chantranupong L, Kolibius J, Quast JP, Sabatini DM;
+RL   Nature. 2022;607:610-616.
+CC   This entry represents a middle domain of approximately 225 residues
+CC   found in WDR59 (WD repeat-containing protein 59) in eukaryotes.
+CC   This domain is located after the N-terminal WD40 repeats
+CC   (Pfam:PF00400) and before the C-terminal RING-type zinc finger
+CC   (Pfam:PF17120). WDR59 is a component of the GATOR2 complex, which
+CC   opposes the GATOR1 complex in regulating mTORC1 signaling in
+CC   response to amino acid availability.

@@ -1,0 +1,30 @@
+ID   HEXD_C
+DE   Hexosaminidase D C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:K7FT17_TED02
+GA   27.00 27.00;
+TC   27.30 27.00;
+NC   26.50 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27149221
+RT   Mechanism of human nucleocytoplasmic hexosaminidase D.
+RA   Alteen MG, Oehler V, Nemcovicova I, Wilson IB, Vocadlo DJ,
+RA   Gloster TM;
+RL   Biochemistry. 2016;55:2735-2747.
+RN   [2]
+RM   23099419
+RT   Identification, molecular cloning and characterization of
+RT   human hexosaminidase D.
+RA   Gutternigg M, Rendic D, Paschinger K, Kolarich D, Wilson IB;
+RL   Glycobiology. 2012;22:1514-1523.
+CC   This entry represents a C-terminal domain of approximately 100
+CC   residues found in hexosaminidase D (HEXD/HEXDC) in metazoans.
+CC   This domain is located after the glycoside hydrolase family 20
+CC   catalytic domain (Pfam:PF00728). HEXD is a beta-N-acetyl-
+CC   hexosaminidase that cleaves N-acetylglucosamine and
+CC   N-acetylgalactosamine from cellular substrates. Unlike lysosomal
+CC   hexosaminidases, HEXD is localized to the cytoplasm and nucleus
+CC   and preferentially cleaves galactosaminide substrates.

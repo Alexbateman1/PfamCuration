@@ -1,0 +1,18 @@
+ID   SDR_N
+DE   Short-chain dehydrogenase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:W7TCA0_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 65
+CC   residues found in short-chain dehydrogenases/reductases (SDRs) in
+CC   bacteria (predominantly Actinomycetes) and some fungi. This domain
+CC   precedes the classical short-chain dehydrogenase domain
+CC   (Pfam:PF00106, adh_short). SDRs are NAD(P)-dependent oxidoreductases
+CC   that catalyze a wide range of reactions including alcohol and
+CC   steroid metabolism, fatty acid biosynthesis, and secondary
+CC   metabolite production.
