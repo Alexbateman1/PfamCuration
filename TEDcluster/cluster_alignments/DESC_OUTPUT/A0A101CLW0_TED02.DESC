@@ -1,0 +1,18 @@
+ID   WYL_linker
+DE   WYL transcription regulator linker domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A101CLW0_TED02
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a linker domain of approximately 50 residues
+CC   found in WYL domain-containing transcriptional regulators in bacteria,
+CC   predominantly Actinomycetes (Streptomyces and related genera). This
+CC   domain is located between the N-terminal HTH_11 DNA-binding domain
+CC   (Pfam:PF08279) and the WYL domain (Pfam:PF13280), and before the
+CC   C-terminal WCX domain (Pfam:PF25583). These proteins are transcriptional
+CC   regulators involved in the control of gene expression, including genes
+CC   involved in antibiotic biosynthesis.

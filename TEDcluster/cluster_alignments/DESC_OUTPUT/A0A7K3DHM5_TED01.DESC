@@ -1,0 +1,25 @@
+ID   DasC_N
+DE   Sugar ABC transporter permease N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K3DHM5_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17351098
+RT   The dasABC gene cluster, adjacent to dasR, encodes a novel ABC
+RT   transporter for the uptake of N,N'-diacetylchitobiose in Streptomyces
+RT   coelicolor A3(2).
+RA   Saito A, Shinya T, Miyamoto K, Yokoyama T, Kaku H, Minami E, Shibuya N,
+RA   Tsujibo H, Nagata Y, Ando A, Fujii T, Miyashita K;
+RL   Appl Environ Microbiol. 2007;73:3000-3008.
+CC   This entry represents an N-terminal domain of approximately 45
+CC   residues found in sugar ABC transporter permease proteins in bacteria,
+CC   predominantly Actinomycetes (Streptomyces, Streptomycetaceae). This
+CC   domain precedes the BPD_transp_1 domain (Pfam:PF00528) which is the
+CC   ABC transmembrane type-1 domain. These proteins are part of ABC
+CC   transporter complexes involved in carbohydrate uptake, including
+CC   the DasABC system for N,N'-diacetylchitobiose uptake in Streptomyces.

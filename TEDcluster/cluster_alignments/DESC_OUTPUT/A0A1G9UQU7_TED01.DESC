@@ -1,0 +1,23 @@
+ID   CmdF_like
+DE   Cmd cell division membrane protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1G9UQU7_TED01
+GA   27.00 27.00;
+TC   27.00 94.20;
+NC   26.60 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   28062460
+RT   Large-Scale Transposition Mutagenesis of Streptomyces coelicolor
+RT   Identifies Hundreds of Genes Influencing Antibiotic Biosynthesis.
+RA   Xu Z, Wang Y, Chater KF, Ou HY, Xu HH, Deng Z, Tao M;
+RL   Appl Environ Microbiol. 2017;83:e02889-16.
+CC   This entry represents a membrane protein domain of approximately 70
+CC   residues found in Streptomyces and related Actinomycetes. This domain
+CC   corresponds to CmdF (SCO4131) and related proteins that are part of
+CC   the Cmd (conjugative DNA translocation) system, a type IV-like DNA
+CC   translocation system composed of membrane proteins CmdA-F. These
+CC   proteins are involved in cell-to-cell DNA transfer and affect
+CC   actinorhodin antibiotic biosynthesis.
