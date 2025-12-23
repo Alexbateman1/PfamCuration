@@ -1,0 +1,17 @@
+ID   Sial_like_fungi
+DE   Fungal trans-sialidase-like domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A194V5W9_TED02
+GA   27.00 27.00;
+TC   35.60 32.20;
+NC   22.40 20.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of approximately 222 residues found
+CC   in proteins annotated as trans-sialidase-like or reticulocyte-binding
+CC   protein-like in filamentous fungi, particularly Ascomycota
+CC   (Sordariomycetes, Eurotiomycetes, Dothideomycetes). The function of
+CC   these fungal proteins and this domain remains to be determined, though
+CC   the annotation suggests potential involvement in carbohydrate binding
+CC   or modification.

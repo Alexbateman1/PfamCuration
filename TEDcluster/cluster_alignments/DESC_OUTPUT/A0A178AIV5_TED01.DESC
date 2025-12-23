@@ -1,0 +1,19 @@
+ID   DUF_Fungi1
+DE   Fungal domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A178AIV5_TED01
+GA   27.00 27.00;
+TC   27.10 28.60;
+NC   26.50 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CL   CL0395
+CC   This entry represents a domain of approximately 236 residues found
+CC   in uncharacterized proteins in Dikarya (Ascomycota and Basidiomycota),
+CC   including Sordariomycetes, Eurotiomycetes, and Agaricomycetes.
+CC   Foldseek analysis suggests structural similarity to Tubby_C_like
+CC   (Pfam:PF23728) domains, placing this family in clan CL0395. Some
+CC   proteins containing this domain also have a C-terminal PGAP4 domain
+CC   (Pfam:PF30737). STRING analysis indicates functional association
+CC   with kinase and ubiquitin-related signaling components.

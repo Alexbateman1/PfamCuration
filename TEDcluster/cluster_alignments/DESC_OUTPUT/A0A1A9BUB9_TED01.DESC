@@ -1,0 +1,23 @@
+ID   Phasin_N
+DE   Phasin N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1A9BUB9_TED01
+GA   27.00 27.00;
+TC   27.00 75.90;
+NC   26.40 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   18375553
+RT   Genome sequence of the streptomycin-producing microorganism
+RT   Streptomyces griseus IFO 13350.
+RA   Ohnishi Y, Ishikawa J, Hara H, Suzuki H, Ikenoya M, Ikeda H,
+RA   Yamashita A, Hattori M, Horinouchi S;
+RL   J Bacteriol. 2008;190:4050-4060.
+CC   This entry represents an N-terminal domain of approximately 71
+CC   residues found in phasin proteins in Streptomycetaceae. Phasins
+CC   are polyhydroxyalkanoate (PHA) granule-associated proteins that
+CC   coat the surface of PHA granules and regulate their formation
+CC   and stability. STRING analysis indicates functional association
+CC   with His_Phos_1 (Pfam:PF00300) and AAA ATPase domains.
