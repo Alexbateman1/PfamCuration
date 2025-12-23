@@ -1,0 +1,25 @@
+ID   SENP_mid
+DE   Sentrin-specific protease middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K6LGR6_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.50 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   18799455
+RT   Structure of the human SENP7 catalytic domain and poly-SUMO
+RT   deconjugation activities for SENP6 and SENP7.
+RA   Lima CD, Reverter D;
+RL   J Biol Chem. 2008;283:32045-32055.
+CC   This entry represents a middle domain of approximately 160 residues
+CC   found in SENP6 and SENP7 (sentrin-specific protease 6/7) in
+CC   vertebrates. This domain precedes the Peptidase_C48 catalytic
+CC   domain (Pfam:PF02902). SENP6 and SENP7 are SUMO-specific proteases
+CC   that deconjugate SUMO2 and SUMO3 from targeted proteins and process
+CC   poly-SUMO chains. SENP6 is involved in chromosome alignment and
+CC   spindle assembly by regulating kinetochore proteins. SENP7
+CC   positively regulates the cGAS-STING pathway by desumoylating CGAS
+CC   to promote its DNA-binding activity.
