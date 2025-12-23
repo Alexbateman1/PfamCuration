@@ -1,0 +1,16 @@
+ID   DUF_ssDNA
+DE   Putative single-stranded DNA-binding domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0K8QR92_TED01
+GA   27.00 27.00;
+TC   27.10 27.40;
+NC   25.90 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of approximately 145 residues found in
+CC   uncharacterized proteins in Alphaproteobacteria, particularly
+CC   Rhodobacterales. These proteins are often annotated as single-stranded
+CC   DNA-binding proteins or phage proteins. The domain may be involved in
+CC   DNA binding or phage-related functions, but its precise role remains
+CC   to be determined.

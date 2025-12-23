@@ -1,0 +1,34 @@
+ID   COASY_N
+DE   COASY N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0D9S1S2_TED01
+GA   27.00 27.00;
+TC   27.20 28.00;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   11923312
+RT   Complete reconstitution of the human coenzyme A biosynthetic pathway via
+RT   comparative genomics.
+RA   Daugherty M, Polanuyer B, Farrell M, Scholle M, Lykidis A,
+RA   de Crecy-Lagard V, Osterman A;
+RL   J Biol Chem. 2002;277:21431-21439.
+RN   [2]
+RM   24360804
+RT   Exome sequence reveals mutations in CoA synthase as a cause of
+RT   neurodegeneration with brain iron accumulation.
+RA   Dusi S, Valletta L, Haack TB, Tsuchiya Y, Venco P, Pasqualato S,
+RA   Goffrini P, Tigano M, Demchenko N, Wieland T, Schwarzmayr T, Strom TM,
+RA   Invernizzi F, Garavaglia B, Gregory A, Sanford L, Hamada J, Bettencourt C,
+RA   Houlden H, Chiapparini L, Zorzi G, Kurian MA, Nardocci N, Prokisch H,
+RA   Hayflick S, Gout I, Tiranti V;
+RL   Am J Hum Genet. 2014;94:11-22.
+CC   This entry represents the N-terminal domain of approximately 150 residues
+CC   found in COASY (Bifunctional coenzyme A synthase) in vertebrates. This
+CC   domain is located N-terminal to the CTP_transf_like domain (Pfam:PF01467)
+CC   and CoaE domain (Pfam:PF01121). COASY is a bifunctional enzyme that
+CC   catalyzes the fourth and fifth steps of CoA biosynthesis. Mutations in
+CC   COASY cause neurodegeneration with brain iron accumulation (NBIA6) and
+CC   pontocerebellar hypoplasia.
