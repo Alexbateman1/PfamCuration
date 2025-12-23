@@ -1,0 +1,31 @@
+ID   DR6_C
+DE   Death receptor 6 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A087Y2N0_TED04
+GA   27.00 27.00;
+TC   27.00 29.20;
+NC   26.00 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   22761420
+RT   Death receptor 6 induces apoptosis not through type I or type II pathways,
+RT   but via a unique mitochondria-dependent pathway by interacting with Bax
+RT   protein.
+RA   Zeng L, Li T, Xu DC, Liu J, Mao G, Cui MZ, Fu X, Xu X;
+RL   J Biol Chem. 2012;287:29125-29133.
+RN   [2]
+RM   34012073
+RT   The metabolite alpha-KG induces GSDMC-dependent pyroptosis through death
+RT   receptor 6-activated caspase-8.
+RA   Zhang JY, Zhou B, Sun RY, Ai YL, Cheng K, Li FN, Wang BR, Liu FJ,
+RA   Jiang ZH, Wang WJ, Zhou D, Chen HZ, Wu Q;
+RL   Cell Res. 2021;31:980-997.
+CC   This entry represents the C-terminal domain of approximately 75 residues
+CC   found in TNFRSF21 (Death receptor 6/DR6) in vertebrates. This domain is
+CC   located C-terminal to the Death domain (Pfam:PF00531). DR6 promotes
+CC   apoptosis via a mitochondria-dependent pathway involving BAX and also
+CC   regulates pyroptosis through caspase-8. DR6 also contains TNFR repeats
+CC   (Pfam:PF00020) in its extracellular region. The C-terminal region has
+CC   been described as having a CARD-like fold based on NMR structure.
