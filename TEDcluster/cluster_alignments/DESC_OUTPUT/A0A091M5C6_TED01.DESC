@@ -1,0 +1,25 @@
+ID   ITFG2_C
+DE   ITFG2 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A091M5C6_TED01
+GA   27.00 27.00;
+TC   27.10 28.70;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   28199306
+RT   KICSTOR recruits GATOR1 to the lysosome and is necessary for nutrients to
+RT   regulate mTORC1.
+RA   Wolfson RL, Chantranupong L, Wyant GA, Gu X, Orozco JM, Shen K,
+RA   Condon KJ, Petri S, Kedir J, Scaria SM, Abu-Remaileh M, Frankel WN,
+RA   Sabatini DM;
+RL   Nature. 2017;543:438-442.
+CC   This entry represents a C-terminal domain of approximately 33 residues
+CC   found in ITFG2 (Integrin-alpha FG-GAP repeat-containing protein 2), a
+CC   component of the KICSTOR complex in vertebrates. This domain is located
+CC   C-terminal to the Itfg2 domain (Pfam:PF15907). The KICSTOR complex
+CC   (KPTN, ITFG2, KICS2, SZT2) functions in the amino acid-sensing branch
+CC   of the mTORC1 signaling pathway, recruiting GATOR1 to lysosomal
+CC   membranes to negatively regulate mTORC1 in the absence of amino acids.

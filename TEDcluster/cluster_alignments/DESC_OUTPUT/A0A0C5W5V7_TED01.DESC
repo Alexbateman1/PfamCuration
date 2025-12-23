@@ -1,0 +1,23 @@
+ID   BCCP_N
+DE   BCCP N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0C5W5V7_TED01
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   4934522
+RT   Acetyl CoA carboxylase: isolation and characterization of native biotin
+RT   carboxyl carrier protein.
+RA   Fall RR, Nervi AM, Alberts AW, Vagelos PR;
+RL   Proc Natl Acad Sci USA. 1971;68:1512-1515.
+CC   This entry represents the extreme N-terminal domain of approximately
+CC   30 residues found in BCCP (Biotin carboxyl carrier protein) of acetyl-CoA
+CC   carboxylase in Proteobacteria. This domain is located N-terminal to the
+CC   Biotin_lipoyl domain (Pfam:PF00364). BCCP is a component of the acetyl-CoA
+CC   carboxylase complex involved in fatty acid biosynthesis, where it
+CC   carries covalently attached biotin and shuttles the carboxyl group
+CC   between biotin carboxylase and carboxyltransferase active sites.

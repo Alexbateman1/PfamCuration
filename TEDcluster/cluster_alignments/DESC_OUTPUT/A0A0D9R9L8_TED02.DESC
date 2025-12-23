@@ -1,0 +1,29 @@
+ID   ELAC2
+DE   ELAC2 linker domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0D9R9L8_TED02
+GA   27.00 27.00;
+TC   27.10 27.50;
+NC   26.50 25.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   12711671
+RT   A candidate prostate cancer susceptibility gene encodes tRNA 3' processing
+RT   endoribonuclease.
+RA   Takaku H, Minagawa A, Takagi M, Nashimoto M;
+RL   Nucleic Acids Res. 2003;31:2272-2278.
+RN   [2]
+RM   21593607
+RT   Involvement of human ELAC2 gene product in 3' end processing of
+RT   mitochondrial tRNAs.
+RA   Brzezniak LK, Bijata M, Szczesny RJ, Stepien PP;
+RL   RNA Biol. 2011;8:616-626.
+CC   This entry represents a linker domain of approximately 40 residues found
+CC   in ELAC2 (Zinc phosphodiesterase ELAC protein 2/tRNase Z 2) in vertebrates.
+CC   This domain is located between the Lactamase_B_4 domain (Pfam:PF13691) and
+CC   the main catalytic Lactamase_B_2 domain (Pfam:PF12706). ELAC2 functions as
+CC   a mitochondrial tRNA 3'-processing endonuclease involved in tRNA maturation.
+CC   Variants in ELAC2 are associated with hereditary prostate cancer and
+CC   combined oxidative phosphorylation deficiency.

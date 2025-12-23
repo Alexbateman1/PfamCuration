@@ -1,0 +1,31 @@
+ID   LRAT_N
+DE   LRAT N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A091W1N0_TED02
+GA   27.00 27.00;
+TC   28.60 27.30;
+NC   25.30 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   9920938
+RT   Molecular and biochemical characterization of lecithin retinol
+RT   acyltransferase.
+RA   Ruiz A, Winston A, Lim YH, Gilbert BA, Rando RR, Bok D;
+RL   J Biol Chem. 1999;274:3834-3841.
+RN   [2]
+RM   25416279
+RT   Genetic deletion of S-opsin prevents rapid cone degeneration in a mouse
+RT   model of Leber congenital amaurosis.
+RA   Zhang T, Enemchukwu NO, Jones A, Wang S, Dennis E, Watt CB, Pugh EN Jr,
+RA   Fu Y;
+RL   Hum Mol Genet. 2015;24:1755-1763.
+CC   This entry represents an N-terminal domain of approximately 50 residues
+CC   found in LRAT (Lecithin retinol acyltransferase) proteins in vertebrates.
+CC   This domain is located N-terminal to the LRAT enzymatic domain
+CC   (Pfam:PF04970). LRAT transfers acyl groups from phosphatidylcholine to
+CC   all-trans retinol, producing retinyl esters as vitamin A storage forms.
+CC   LRAT plays a critical role in vision and provides substrates for the
+CC   visual cycle. Mutations in LRAT cause Leber congenital amaurosis, a
+CC   severe retinal dystrophy.

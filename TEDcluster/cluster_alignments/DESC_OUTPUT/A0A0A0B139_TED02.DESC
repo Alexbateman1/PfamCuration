@@ -1,0 +1,18 @@
+ID   DUF_CWB
+DE   Cell wall-binding domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0A0B139_TED02
+GA   27.00 27.00;
+TC   32.30 31.30;
+NC   26.90 24.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CL   CL0036
+CC   This entry represents a domain of approximately 250 residues found in
+CC   bacterial lipoproteins and cell wall-binding proteins, predominantly in
+CC   Sphingobacteriaceae, Micrococcales, and Actinomycetes. Proteins
+CC   containing this domain are often annotated as putative secreted or
+CC   cell surface proteins. Structural comparison suggests this domain may
+CC   have a Cellulase-like fold, although its precise function remains to
+CC   be determined.

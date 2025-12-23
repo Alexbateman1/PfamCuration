@@ -1,0 +1,17 @@
+ID   NifU_C
+DE   NifU-like C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0D0SEX7_TED02
+GA   27.00 27.00;
+TC   30.60 49.80;
+NC   26.00 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 73 residues
+CC   found in NifU-like proteins in anaerobic bacteria, particularly
+CC   Clostridia and Bacteroidetes. NifU proteins are involved in iron-sulfur
+CC   cluster biosynthesis and assembly. This domain is located at the
+CC   C-terminus of the protein, following an N-terminal region that typically
+CC   contains the main functional domains. NifU homologs play essential roles
+CC   in nitrogen fixation systems and general Fe-S protein maturation.

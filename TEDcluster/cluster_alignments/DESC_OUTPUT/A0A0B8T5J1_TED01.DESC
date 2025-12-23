@@ -1,0 +1,17 @@
+ID   FSA_N
+DE   Fructose-6-phosphate aldolase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0B8T5J1_TED01
+GA   27.00 27.00;
+TC   33.60 88.50;
+NC   23.30 19.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 65 residues
+CC   found in fructose-6-phosphate aldolase proteins in Bacteroidetes,
+CC   including members of Sphingobacteriaceae, Hymenobacteraceae, and
+CC   Cyclobacteriaceae. This domain is found at the extreme N-terminus of
+CC   the aldolase protein. Fructose-6-phosphate aldolases catalyze the
+CC   reversible aldol cleavage of fructose-6-phosphate, playing a role in
+CC   carbohydrate metabolism.
