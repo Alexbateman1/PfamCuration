@@ -1,0 +1,24 @@
+ID   DUF_GlnR
+DE   GlnR-regulated domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1B6ACI9_TED01
+GA   27.00 27.00;
+TC   28.50 36.00;
+NC   26.00 22.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   22821977
+RT   Characterization of a new GlnR binding box in the promoter of amtB
+RT   in Streptomyces coelicolor inferred a PhoP/GlnR competitive binding
+RT   mechanism for transcriptional regulation of amtB.
+RA   Wang Y, Cen XF, Zhao GP, Wang J;
+RL   J Bacteriol. 2012;194:5237-5244.
+CC   This entry represents a small domain of approximately 43 residues
+CC   found in uncharacterized proteins in Streptomycetaceae. The prototype
+CC   is SCO5163 in Streptomyces coelicolor. These genes are regulated by
+CC   GlnR, a transcriptional regulator involved in nitrogen metabolism.
+CC   STRING analysis indicates functional association with hydrolase
+CC   domains (Pfam:PF00561, PF12146, PF12697). The function of this
+CC   domain remains to be determined.

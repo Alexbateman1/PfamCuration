@@ -1,0 +1,29 @@
+ID   CapB_C
+DE   Poly-gamma-glutamate synthase CapB C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1C3N331_TED02
+GA   27.00 27.00;
+TC   27.70 27.60;
+NC   26.00 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   11751809
+RT   Characterization of the Bacillus subtilis ywsC gene, involved in
+RT   gamma-polyglutamic acid production.
+RA   Urushibata Y, Tokuyama S, Tahara Y;
+RL   J Bacteriol. 2002;184:337-343.
+RN   [2]
+RM   14702298
+RT   atxA controls Bacillus anthracis capsule synthesis via acpA and a
+RT   newly discovered regulator, acpB.
+RA   Drysdale M, Bourgogne A, Hilsenbeck SG, Koehler TM;
+RL   J Bacteriol. 2004;186:307-315.
+CC   This entry represents a C-terminal domain of approximately 140
+CC   residues found in poly-gamma-glutamate (PGA) synthase CapB proteins
+CC   in Bacteria, particularly Bacillales and Actinomycetes. This domain
+CC   follows the Mur_ligase_M domain (Pfam:PF08245). CapB, together with
+CC   CapA and CapC (Pfam:PF14102), forms a membrane-associated complex
+CC   that synthesizes the polyglutamate capsule in Bacillus species.
+CC   In Bacillus anthracis, this capsule is a major virulence factor.

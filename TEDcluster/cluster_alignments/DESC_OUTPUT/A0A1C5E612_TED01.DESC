@@ -1,0 +1,25 @@
+ID   DinB_like
+DE   DinB-like domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1C5E612_TED01
+GA   27.00 27.00;
+TC   27.00 57.70;
+NC   23.00 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17588127
+RT   Comparative genomics of Streptomyces avermitilis, Streptomyces
+RT   cattleya, Streptomyces maritimus and Kitasatospora aureofaciens
+RT   using a Streptomyces coelicolor microarray system.
+RA   Hsieh YJ, Chien IC, Tseng KH, Chang YM, Hu HT, Chen HH, Tsai HF,
+RA   Hsueh PR, Chang HY, Chen CW;
+RL   Antonie Van Leeuwenhoek. 2008;93:1-25.
+CC   This entry represents a domain of approximately 149 residues found
+CC   in DinB family proteins and uncharacterized proteins in
+CC   Streptomycetaceae. The prototype is SCO0943 in Streptomyces
+CC   coelicolor. DinB proteins are typically involved in DNA damage
+CC   tolerance and mutagenesis. STRING analysis indicates functional
+CC   association with capsule biosynthesis (PGA_cap, Pfam:PF09587)
+CC   and sigma factor (Sigma70) components.

@@ -1,0 +1,17 @@
+ID   Hydrolase_N
+DE   Hydrolase/acyltransferase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1B1MWK7_TED01
+GA   27.00 27.00;
+TC   28.30 146.90;
+NC   26.50 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 113
+CC   residues found in proteins annotated as hydrolases or acyltransferases
+CC   in Paenibacillaceae (Bacillota), particularly the genus Paenibacillus.
+CC   STRING analysis indicates functional association with SprT-like
+CC   (Pfam:PF10263) and Zn_ribbon_SprT (Pfam:PF17283) domains, which
+CC   are involved in metalloprotease activity. The function of this
+CC   N-terminal domain remains to be determined.
