@@ -1,0 +1,34 @@
+ID   SENP67_N
+DE   SENP6/SENP7 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2K6T4H6_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   18799455
+RT   Structure of the human SENP7 catalytic domain and poly-SUMO
+RT   deconjugation activities for SENP6 and SENP7.
+RA   Lima CD, Reverter D;
+RL   J Biol Chem. 2008;283:32045-32055.
+RN   [2]
+RM   20212317
+RT   The SUMO protease SENP6 is essential for inner kinetochore assembly.
+RA   Mukhopadhyay D, Arnaoutov A, Dasso M;
+RL   J Cell Biol. 2010;188:681-692.
+RN   [3]
+RM   21148299
+RT   The SUMO protease SENP6 is a direct regulator of PML nuclear bodies.
+RA   Hattersley N, Shen L, Jaffray EG, Hay RT;
+RL   Mol Biol Cell. 2011;22:78-90.
+CC   This entry represents an N-terminal domain of approximately 160
+CC   residues found in SENP6 and SENP7 (Sentrin-specific proteases) in
+CC   eukaryotes. These proteins also contain the Peptidase_C48 domain
+CC   (Pfam:PF02902) and function as SUMO proteases that deconjugate SUMO2
+CC   and SUMO3 from target proteins. SENP6 is involved in chromosome
+CC   alignment, spindle assembly, and regulation of PML nuclear bodies.
+CC   The precise function of this N-terminal domain remains to be
+CC   determined.
