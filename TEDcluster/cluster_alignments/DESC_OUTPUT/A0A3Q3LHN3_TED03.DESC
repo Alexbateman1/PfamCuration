@@ -1,0 +1,34 @@
+ID   WHD_PCL
+DE   Polycomb-like winged helix domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3Q3LHN3_TED03
+GA   27.00 27.00;
+TC   27.10 27.30;
+NC   26.90 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   31959557
+RT   A Dimeric Structural Scaffold for PRC2-PCL Targeting to CpG Island
+RT   Chromatin.
+RA   Chen S, Jiao L, Liu X, Yang X, Liu X;
+RL   Mol Cell. 2020;77:1265-1278.e7.
+RN   [2]
+RM   29499137
+RT   Unique Structural Platforms of Suz12 Dictate Distinct Classes of PRC2
+RT   for Chromatin Binding.
+RA   Chen S, Jiao L, Shubbar M, Yang X, Liu X;
+RL   Mol Cell. 2018;69:840-852.e5.
+CL   CL0123
+CC   This entry represents a winged helix domain of approximately 80
+CC   residues found in Polycomb-like (PCL) proteins including PHF1, PHF19,
+CC   and MTF2 in Metazoa. This domain is located between the second PHD
+CC   finger domain (Pfam:PF00628) and the C-terminal Mtf2_C domain
+CC   (Pfam:PF14061). PCL proteins are accessory components of the Polycomb
+CC   repressive complex 2 (PRC2) that bind histone H3 trimethylated at
+CC   lysine 36 (H3K36me3) via their Tudor domain (Pfam:PF18104) and enhance
+CC   PRC2 H3K27me3 methylation activity. PCL proteins form dimeric PRC2.1
+CC   complexes that stabilise PRC2 interaction with chromatin. PHF1 is
+CC   involved in the DNA damage response, while PHF19 promotes transition
+CC   from active to repressed chromatin states in embryonic stem cells.

@@ -1,0 +1,26 @@
+ID   ATAD2_C
+DE   ATAD2 ATPase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1U7TU45_TED04
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17998543
+RT   ANCCA, an estrogen-regulated AAA+ ATPase coactivator for ERalpha, is
+RT   required for coregulator occupancy and chromatin modification.
+RA   Zou JX, Revenko AS, Li LB, Gemo AT, Chen HW;
+RL   Proc Natl Acad Sci U S A. 2007;104:18067-18072.
+CC   This entry represents a C-terminal domain of approximately 60
+CC   residues found in ATAD2 and ATAD2B proteins in vertebrates. This
+CC   domain follows the AAA ATPase domain (Pfam:PF00004), AAA_lid_3
+CC   domain (Pfam:PF17862), and Bromodomain (Pfam:PF00439). ATAD2 is a
+CC   transcriptional coactivator of estrogen receptor alpha (ESR1) that
+CC   is upregulated in multiple cancers. The protein binds acetylated
+CC   histones via its bromodomain and is required for histone
+CC   hyperacetylation at ESR1 target gene promoters. ATAD2B localizes
+CC   to replication sites and is involved in chromatin dynamics during
+CC   DNA replication.
