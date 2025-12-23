@@ -1,0 +1,18 @@
+ID   HAM8
+DE   Hyphal anastomosis 8 domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2A9PLT5_TED01
+GA   27.00 27.00;
+TC   27.50 27.30;
+NC   26.50 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This entry represents a domain of approximately 200 residues found
+CC   in hyphal anastomosis 8 (HAM-8) proteins and MARVEL domain-containing
+CC   proteins in Ascomycota fungi (Pezizomycotina). HAM-8 proteins are
+CC   involved in cell-cell fusion during hyphal anastomosis, a process
+CC   where fungal hyphae recognize and fuse with each other to form
+CC   hyphal networks. Some family members are annotated as MARVEL
+CC   domain-containing proteins, though this domain is distinct from
+CC   the classical MARVEL transmembrane domain.

@@ -1,0 +1,32 @@
+ID   PHF14_mid
+DE   PHD finger protein 14 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4U1FH98_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23688586
+RT   Depletion of PHF14, a novel histone-binding protein gene, causes
+RT   neonatal lethality in mice due to respiratory failure.
+RA   Huang Q, Zhang L, Wang Y, Zhang C, Zhou S, Yang G, Li Z, Gao X,
+RA   Chen Z, Zhang Z;
+RL   Acta Biochim Biophys Sin. 2013;45:622-633.
+RN   [2]
+RM   34365506
+RT   Molecular basis for bipartite recognition of histone H3 by the
+RT   PZP domain of PHF14.
+RA   Zheng S, Bi Y, Chen H, Gong B, Jia S, Li H;
+RL   Nucleic Acids Res. 2021;49:8961-8973.
+CC   This entry represents a middle domain of approximately 85 residues
+CC   found in PHD finger protein 14 (PHF14) in metazoans. This domain is
+CC   located after the N-terminal PHD finger (Pfam:PF00628) and PZP
+CC   domain (zinc finger domains Pfam:PF13832) and before the C-terminal
+CC   PHD fingers. PHF14 is a histone-binding protein that preferentially
+CC   binds unmodified histone H3 and regulates gene expression. PHF14
+CC   represses PDGFRA expression and regulates mesenchyme proliferation.
+CC   Depletion of PHF14 causes neonatal lethality in mice due to
+CC   respiratory failure.
