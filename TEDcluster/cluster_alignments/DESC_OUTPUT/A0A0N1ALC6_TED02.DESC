@@ -1,0 +1,15 @@
+ID   DUF4139_N
+DE   DUF4139 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0N1ALC6_TED02
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 60 residues
+CC   found in DUF4139 domain-containing proteins in Alphaproteobacteria,
+CC   particularly Sphingomonadales and Erythrobacteraceae. These proteins
+CC   also contain the DUF4139 domain (Pfam:PF13598). The function of this
+CC   N-terminal extension remains to be determined.
