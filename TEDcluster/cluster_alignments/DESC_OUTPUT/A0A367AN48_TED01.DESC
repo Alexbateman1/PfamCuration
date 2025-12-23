@@ -1,0 +1,19 @@
+ID   Bact_Ig_sec2
+DE   Bacterial secreted Ig-like domain type 2
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A367AN48_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CL   CL0159
+CC   This entry represents a secreted domain of approximately 100
+CC   residues found in uncharacterized secreted proteins in bacteria,
+CC   predominantly in Actinomycetes (Streptomyces, Micromonospora) and
+CC   some Bacilli. This domain is structurally related to the
+CC   immunoglobulin fold (CL0159) based on Foldseek analysis. Many
+CC   proteins contain tandem copies of this domain. Some family members
+CC   are annotated as heavy metal-associated domain-containing proteins.
+CC   This entry is distinct from but related to the Bact_Ig_sec family.
