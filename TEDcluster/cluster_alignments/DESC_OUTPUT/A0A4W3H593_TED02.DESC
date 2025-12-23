@@ -1,0 +1,26 @@
+ID   SPase_CTS
+DE   Signal peptidase C-terminal short helix
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4W3H593_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   34388369
+RT   Structure of the human signal peptidase complex reveals the
+RT   determinants for signal peptide cleavage.
+RA   Liaci AM, Steigenberger B, Telles de Souza PC, Tamara S,
+RA   Groellers-Mulderij M, Ogrissek P, Marrink SJ, Scheltema RA,
+RA   Foerster F;
+RL   Mol Cell. 2021;81:3934-3948.e11.
+CC   This entry represents a C-terminal short (CTS) helix domain of
+CC   approximately 25 residues found in signal peptidase catalytic
+CC   subunits (SEC11A, SEC11C) in Eukaryotes. This domain follows the
+CC   Peptidase_S24 catalytic domain (Pfam:PF00717). The CTS helix is
+CC   essential for catalytic activity and may be accommodated as a
+CC   transmembrane helix in the thinned membrane environment of the
+CC   signal peptidase complex (SPC). The SPC cleaves N-terminal signal
+CC   peptides from nascent proteins as they enter the ER lumen.

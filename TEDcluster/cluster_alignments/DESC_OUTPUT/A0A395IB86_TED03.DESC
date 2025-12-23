@@ -1,0 +1,24 @@
+ID   TFIP11_rpt
+DE   TFIP11 repeat domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A395IB86_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Repeat
+RN   [1]
+RM   19103666
+RT   Isolation and characterization of post-splicing lariat-intron
+RT   complexes.
+RA   Yoshimoto R, Kataoka N, Okawa K, Ohno M;
+RL   Nucleic Acids Res. 2009;37:891-902.
+CC   This entry represents a repeat domain of approximately 65 residues
+CC   found in multiple copies in TFIP11 (tuftelin-interacting protein 11)
+CC   and related GCFC-containing proteins in Eukaryotes. These repeats
+CC   are associated with GCFC domains (Pfam:PF07842). TFIP11 is involved
+CC   in spliceosome disassembly during late-stage splicing events,
+CC   cooperating with DHX15 to mediate the transition from the Intron
+CC   Large (IL) complex to the snRNP-free Intron Small (IS) complex,
+CC   leading to efficient debranching and turnover of excised introns.
