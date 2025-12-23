@@ -1,0 +1,30 @@
+ID   FRMD3_N
+DE   FERM domain-containing protein 3 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A444V4E5_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.60 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17260017
+RT   FRMD3, a novel putative tumour suppressor in NSCLC.
+RA   Haase D, Meister M, Muley T, Hess J, Teurich S, Schnabel P,
+RA   Hartenstein B, Angel P;
+RL   Oncogene. 2007;26:4464-4468.
+RN   [2]
+RM   22846708
+RT   FERM-containing protein FRMD5 is a p120-catenin interacting
+RT   protein that regulates tumor progression.
+RA   Wang T, Pei X, Zhan J, Hu J, Yu Y, Zhang H;
+RL   FEBS Lett. 2012;586:3044-3050.
+CC   This entry represents an N-terminal domain of approximately 60
+CC   residues found in FRMD3 (FERM domain-containing protein 3) and
+CC   related FERM proteins in metazoans. In some proteins, this domain
+CC   precedes the FERM_N domain (Pfam:PF09379); in others it appears to
+CC   follow a short FA domain (Pfam:PF08736). FRMD3 is a putative tumor
+CC   suppressor that is downregulated in non-small cell lung cancer
+CC   (NSCLC). The related protein FRMD5 regulates cell motility through
+CC   interaction with integrin beta5 and ROCK1.

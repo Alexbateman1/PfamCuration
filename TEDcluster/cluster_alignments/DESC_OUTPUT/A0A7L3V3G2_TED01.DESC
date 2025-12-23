@@ -1,0 +1,29 @@
+ID   RPF1_N
+DE   Ribosome production factor 1 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L3V3G2_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   11864606
+RT   The sigma(70)-like motif: a eukaryotic RNA binding domain unique
+RT   to a superfamily of proteins required for ribosome biogenesis.
+RA   Wehner KA, Baserga SJ;
+RL   Mol Cell. 2002;9:329-339.
+RN   [2]
+RM   12702244
+RT   Functional analysis in yeast of the Brix protein superfamily
+RT   involved in the biogenesis of ribosomes.
+RA   Bogengruber E, Briza P, Doppler E, Wimmer H, Koller L, Fasiolo F,
+RA   Senger B, Hegemann JH, Breitenbach M;
+RL   FEMS Yeast Res. 2003;3:35-43.
+CC   This entry represents an N-terminal domain of approximately 50
+CC   residues found in RPF1 (Ribosome production factor 1) in eukaryotes.
+CC   This domain precedes the Brix domain (Pfam:PF04427). RPF1 is an
+CC   essential nucleolar protein required for biogenesis of the 60S
+CC   ribosomal subunit. It forms a complex with BRX1, RPF2, and SSF1/SSF2
+CC   proteins involved in rRNA processing and ribosome assembly.
