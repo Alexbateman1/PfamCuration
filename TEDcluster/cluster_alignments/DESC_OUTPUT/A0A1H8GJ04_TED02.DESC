@@ -1,0 +1,23 @@
+ID   DNA_bind_C
+DE   DNA-binding protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1H8GJ04_TED02
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   26002075
+RT   Transcriptional analysis of the cell division-related ssg genes in
+RT   Streptomyces coelicolor reveals direct control of ssgR by AtrA.
+RA   Traag BA, Swiatek MA, Kersten C, van Wezel GP;
+RL   Antonie Van Leeuwenhoek. 2015;108:201-213.
+CC   This entry represents a C-terminal domain of approximately 60
+CC   residues found in DNA-binding proteins in bacteria, predominantly
+CC   Actinomycetes (Streptomyces, Pseudonocardiaceae). This domain is
+CC   located after the N-terminal region in transcriptional regulators.
+CC   In Streptomyces coelicolor, proteins with this domain (such as
+CC   SCO3859) are phosphorylated during development and bind to promoters
+CC   of cell division-related genes.

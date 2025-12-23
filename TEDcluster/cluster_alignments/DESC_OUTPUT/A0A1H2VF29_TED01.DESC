@@ -1,0 +1,22 @@
+ID   SigF_reg
+DE   SigF-regulated uncharacterized domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1H2VF29_TED01
+GA   27.00 27.00;
+TC   27.00 36.20;
+NC   26.80 22.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   20233930
+RT   The SigF regulon in Mycobacterium smegmatis reveals roles in
+RT   adaptation to stationary phase, heat, and oxidative stress.
+RA   Gebhard S, Tran SL, Cook GM;
+RL   J Bacteriol. 2010;192:2491-2502.
+CC   This entry represents a domain of approximately 120 residues found in
+CC   uncharacterized proteins in Actinomycetes (including Streptomyces,
+CC   Mycobacterium) and some Archaea (Halobacteriales). In Mycobacterium
+CC   smegmatis, genes encoding proteins with this domain are regulated by
+CC   SigF, a sigma factor involved in adaptation to stationary phase, heat,
+CC   and oxidative stress.

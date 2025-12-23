@@ -1,0 +1,18 @@
+ID   GATase_N
+DE   Glutamine amidotransferase-associated N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1H6XYL3_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CL   CL0159
+CC   This entry represents a domain of approximately 100 residues found
+CC   in membrane proteins containing glutamine amidotransferase domains
+CC   in Alphaproteobacteria, predominantly Rhodobacterales and
+CC   Hyphomicrobiales. This domain is located before the GATase1_like
+CC   domain (Pfam:PF07090). Based on structural similarity analysis,
+CC   this domain has an immunoglobulin-like fold and belongs to the
+CC   Ig superfamily (CL0159).

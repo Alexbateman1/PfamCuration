@@ -1,0 +1,18 @@
+ID   SseB_C
+DE   SseB family C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1H9ISC3_TED02
+GA   27.00 27.00;
+TC   27.20 27.20;
+NC   26.60 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CL   CL0260
+CC   This entry represents a C-terminal domain of approximately 90
+CC   residues found in SseB family proteins in bacteria, predominantly
+CC   Actinomycetes (Streptomyces). This domain is located after the
+CC   SseB domain (Pfam:PF07179). Based on structural similarity analysis,
+CC   this domain belongs to the four-helical cytokine superfamily (CL0260).
+CC   SseB family proteins are involved in cell surface functions and may
+CC   be secreted.

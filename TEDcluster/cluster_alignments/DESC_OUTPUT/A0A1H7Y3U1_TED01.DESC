@@ -1,0 +1,16 @@
+ID   Bact_mem_unk
+DE   Bacterial membrane protein of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1H7Y3U1_TED01
+GA   27.00 27.00;
+TC   27.60 28.30;
+NC   25.40 24.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a membrane protein domain of approximately 120
+CC   residues found in bacteria, predominantly Actinomycetes (Streptomyces)
+CC   and Bacteroidota (Flavobacteriaceae, Chitinophagaceae). These proteins
+CC   are integral membrane proteins of unknown function. In Leptospira
+CC   species, the domain is upregulated during mammalian host infection,
+CC   suggesting a potential role in pathogenesis.
