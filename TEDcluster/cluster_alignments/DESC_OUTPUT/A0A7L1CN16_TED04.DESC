@@ -1,0 +1,31 @@
+ID   ANKFN1_C
+DE   ANKFN1 C-terminal conserved domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L1CN16_TED04
+GA   27.00 27.00;
+TC   27.60 27.00;
+NC   26.90 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   26131556
+RT   Nmf9 Encodes a Highly Conserved Protein Important to Neurological
+RT   Function in Mice and Flies.
+RA   Zhang S, Ross KD, Seidner GA, Gorman MR, Poon TH, Wang X,
+RA   Keithley EM, Lee PN, Martindale MQ, Joiner WJ, Hamilton BA;
+RL   PLoS Genet. 2015;11:e1005344.
+RN   [2]
+RM   35100349
+RT   Ankfn1-mutant vestibular defects require loss of both ancestral
+RT   and derived paralogs for penetrance in zebrafish.
+RA   Ross KD, Ren J, Zhang R, Chi NC, Hamilton BA;
+RL   G3 (Bethesda). 2022;12:jkab446.
+CC   This entry represents a C-terminal conserved domain of approximately
+CC   180 residues found in ANKFN1 (ankyrin repeat and fibronectin type-III
+CC   domain-containing 1) proteins in metazoans. This domain follows the
+CC   ankyrin repeat (Pfam:PF12796) and fibronectin type-III (Pfam:PF00041)
+CC   domains. ANKFN1 is required for neurological function including
+CC   vestibular function, circadian behavior and fear learning. The
+CC   domain contains a highly conserved 8-residue peptide sequence that
+CC   is essential for function.
