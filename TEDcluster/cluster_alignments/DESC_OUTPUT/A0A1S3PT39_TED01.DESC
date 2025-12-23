@@ -1,0 +1,22 @@
+ID   PARP_N
+DE   PARP6/PARP8 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1S3PT39_TED01
+GA   27.00 27.00;
+TC   28.00 27.10;
+NC   26.10 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   25043379
+RT   Family-wide analysis of poly(ADP-ribose) polymerase activity.
+RA   Vyas S, Matic I, Uchima L, Rood J, Zaja R, Hay RT, Ahel I, Chang P;
+RL   Nat Commun. 2014;5:4426.
+CC   This entry represents an N-terminal domain of approximately 110
+CC   residues found in PARP6 and PARP8 proteins in vertebrates. This
+CC   domain precedes the PARP catalytic domain (Pfam:PF00644). PARP6
+CC   and PARP8 are mono-ADP-ribosyltransferases that catalyze mono-
+CC   ADP-ribosylation of target proteins, rather than forming poly-
+CC   ADP-ribose chains like PARP1. Both enzymes undergo auto-mono-ADP-
+CC   ribosylation and modify cysteine and aspartate residues.

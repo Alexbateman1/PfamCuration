@@ -1,0 +1,25 @@
+ID   RELCH_LisH
+DE   RELCH LisH-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A232FA99_TED02
+GA   27.00 27.00;
+TC   27.30 27.20;
+NC   26.50 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   29514919
+RT   The Rab11-binding protein RELCH/KIAA1468 controls intracellular
+RT   cholesterol distribution.
+RA   Sobajima T, Yoshimura SI, Maeda T, Miyata H, Miyoshi E, Harada A;
+RL   J Cell Biol. 2018;217:1777-1796.
+CC   This entry represents a domain of approximately 55 residues
+CC   found in RELCH proteins in vertebrates. This domain is located
+CC   in the N-terminal region near the LisH domain (Pfam:PF08513)
+CC   and precedes the RELCH_N domain (Pfam:PF30357) and HEAT repeats.
+CC   RELCH regulates intracellular cholesterol distribution from
+CC   recycling endosomes to the trans-Golgi network through interactions
+CC   with RAB11 and OSBP. It promotes OSBP-mediated cholesterol transfer
+CC   between RAB11-bound recycling endosomes and OSBP-bound Golgi
+CC   membranes.
