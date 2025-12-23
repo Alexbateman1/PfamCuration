@@ -1,0 +1,18 @@
+ID   ResIII_C
+DE   Type III restriction enzyme helicase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K3DHK8_TED03
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.50 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 65
+CC   residues found in type III restriction enzyme helicases and
+CC   related superfamily II DNA/RNA helicases in bacteria, predominantly
+CC   in Actinomycetes (Streptomyces, Mycobacterium, Microbacteriaceae).
+CC   This domain is located after the ResIII domain (Pfam:PF04851) and
+CC   DEAD helicase domain (Pfam:PF00270). Type III restriction enzymes
+CC   are multi-subunit complexes that recognize specific DNA sequences
+CC   and require ATP hydrolysis for DNA translocation before cleavage.
