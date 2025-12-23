@@ -1,0 +1,16 @@
+ID   DUF_fungi
+DE   Fungal domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A074Y1R0_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   25.20 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of approximately 150 residues found in
+CC   uncharacterized proteins in filamentous fungi (Ascomycota). The domain
+CC   is found predominantly in Pezizomycotina, including Sordariomycetes,
+CC   Eurotiomycetes, and Dothideomycetes. Proteins containing this domain
+CC   often have a second uncharacterized domain at the C-terminus. The
+CC   precise function of this domain remains to be determined.
