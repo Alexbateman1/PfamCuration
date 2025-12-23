@@ -1,0 +1,27 @@
+ID   DACH_C
+DE   Dachshund C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K4W989_TED01
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   26.60 25.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   14525983
+RT   DACH1 inhibits transforming growth factor-beta signaling through
+RT   binding Smad4.
+RA   Wu K, Yang Y, Wang C, Davoli MA, D'Amico M, Li A, Cveklova K, Kozmik Z,
+RA   Lisanti MP, Russell RG, Cvekl A, Pestell RG;
+RL   J Biol Chem. 2003;278:51673-51684.
+CC   This entry represents the C-terminal domain (DACHbox-C) of
+CC   approximately 70 residues found in Dachshund homolog proteins
+CC   (DACH1, DACH2) in Metazoa. This domain follows the N-terminal
+CC   Ski_Sno_DHD domain (Pfam:PF02437) which contains the DNA-binding
+CC   DACHbox-N motif. This C-terminal region forms a coiled-coil and
+CC   interacts with the corepressor SIN3A. Dachshund proteins are
+CC   transcription factors that regulate organogenesis as part of the
+CC   retinal determination gene network (RDGN) with SIX1/6 and EYA
+CC   proteins. DACH1 inhibits TGF-beta signaling through interaction
+CC   with SMAD4 and NCOR1.
