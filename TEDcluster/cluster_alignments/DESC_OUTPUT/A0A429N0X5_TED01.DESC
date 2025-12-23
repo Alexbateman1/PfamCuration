@@ -1,0 +1,17 @@
+ID   AAA5_C
+DE   AAA ATPase family 5 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A429N0X5_TED01
+GA   27.00 27.00;
+TC   27.50 27.30;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 130
+CC   residues found in AAA family ATPases in bacteria, predominantly
+CC   in Actinomycetes (Streptomyces) and some Proteobacteria. This
+CC   domain is located after the AAA_5 ATPase domain (Pfam:PF07728).
+CC   These proteins belong to the MoxR-like AAA+ ATPase family, which
+CC   may function as chaperones for the folding or activation of
+CC   specific substrate proteins. The E. coli ortholog is YehL.

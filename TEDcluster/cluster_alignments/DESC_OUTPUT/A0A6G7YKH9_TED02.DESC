@@ -1,0 +1,17 @@
+ID   DNApol3d_mid
+DE   DNA polymerase III delta subunit middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6G7YKH9_TED02
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle domain of approximately 36 residues
+CC   found in DNA polymerase III delta subunit (holA) in Actinomycetes
+CC   bacteria. This domain is located between the DNA_pol3_delta2
+CC   AAA-ATPase domain (Pfam:PF13177) and the DNApol3-delta_C domain
+CC   (Pfam:PF09115). The delta subunit is part of the clamp loader
+CC   complex that loads the beta sliding clamp onto DNA for processive
+CC   DNA synthesis.
