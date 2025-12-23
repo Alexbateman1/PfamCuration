@@ -1,0 +1,22 @@
+ID   Strep_unk
+DE   Streptomyces uncharacterized domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1Q5GST9_TED01
+GA   27.00 27.00;
+TC   27.30 36.80;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23555999
+RT   Transcriptomic analysis of Streptomyces coelicolor differentiation
+RT   in solid sporulating cultures.
+RA   Yague P, Rodriguez-Garcia A, Lopez-Garcia MT, Martin JF, Rioseras B,
+RA   Sanchez J, Manteca A;
+RL   PLoS ONE. 2013;8:e60303.
+CC   This entry represents a domain of approximately 100 residues found
+CC   in uncharacterized proteins in bacteria, predominantly Streptomyces.
+CC   Some proteins are annotated as PH domain-containing. In Streptomyces
+CC   coelicolor, genes encoding proteins with this domain (such as SCO1029)
+CC   are upregulated during differentiation in sporulating cultures.

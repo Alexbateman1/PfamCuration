@@ -1,0 +1,17 @@
+ID   OmpR_N
+DE   OmpR/PhoB-type regulator N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1N7L4G0_TED01
+GA   27.00 27.00;
+TC   30.20 87.70;
+NC   24.60 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 120
+CC   residues found in OmpR/PhoB-type DNA-binding response regulators
+CC   in Alphaproteobacteria, predominantly Rhodobacterales. This domain
+CC   is located at the N-terminus before the response regulator receiver
+CC   domain. These proteins are transcriptional regulators that are part
+CC   of two-component signal transduction systems involved in sensing
+CC   and responding to environmental signals.
