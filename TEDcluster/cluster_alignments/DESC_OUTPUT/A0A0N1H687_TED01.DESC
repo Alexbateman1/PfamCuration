@@ -1,0 +1,16 @@
+ID   DUF7624_N
+DE   DUF7624 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0N1H687_TED01
+GA   27.00 27.00;
+TC   29.90 27.50;
+NC   26.60 20.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 200 residues
+CC   found in DUF7624 domain-containing proteins in Ascomycota, particularly
+CC   Sordariomycetes, Eurotiomycetes, and Dothideomycetes. These proteins
+CC   also contain the DUF7624 domain (Pfam:PF24616) C-terminal to this region.
+CC   The function of these proteins and this N-terminal domain remains to
+CC   be determined.
