@@ -1,0 +1,16 @@
+ID   DUF_TMEM
+DE   Plant transmembrane domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A072U1X4_TED01
+GA   27.00 27.00;
+TC   27.20 27.10;
+NC   25.40 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a large domain of approximately 340 residues
+CC   found in uncharacterized transmembrane proteins. The domain is found
+CC   predominantly in plants (Viridiplantae), including both monocots
+CC   (Poaceae) and dicots, as well as in some ciliates (Stentor). Proteins
+CC   are annotated as transmembrane proteins or monocopper oxidases. The
+CC   precise function of this domain remains to be determined.
