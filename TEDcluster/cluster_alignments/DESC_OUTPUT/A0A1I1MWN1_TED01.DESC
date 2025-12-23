@@ -1,0 +1,24 @@
+ID   SffA
+DE   SffA cell division membrane domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1I1MWN1_TED01
+GA   27.00 27.00;
+TC   27.30 35.60;
+NC   26.90 20.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   39511385
+RT   The DeoR-like pleiotropic regulator SCO1897 controls specialised
+RT   metabolism, sporulation, spore germination, and phosphorus accumulation
+RT   in Streptomyces coelicolor.
+RA   Huang J, Smyrnakou I, Chen Y, Tenconi E, Martin JF, Liras P, Rigali S;
+RL   Commun Biol. 2024;7:1479.
+CC   This entry represents a membrane domain of approximately 100
+CC   residues found in SffA (Small filaments forming protein A) and
+CC   related FtsK domain-containing proteins in bacteria, predominantly
+CC   Streptomyces. This domain is located N-terminal to the FtsK
+CC   DNA translocase domain. SffA proteins are involved in cell division
+CC   and chromosome segregation. Expression of sffA is controlled by
+CC   developmental regulators and affects sporulation in Streptomyces.

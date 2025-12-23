@@ -1,0 +1,17 @@
+ID   NagB_mid
+DE   Glucosamine-6-phosphate deaminase middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1I0RCZ6_TED02
+GA   27.00 27.00;
+TC   27.50 28.80;
+NC   26.70 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle domain of approximately 60 residues
+CC   found in glucosamine-6-phosphate deaminase-like proteins in
+CC   Bacteroidota, predominantly Flavobacteriaceae, Sphingobacteriaceae,
+CC   and Chitinophagaceae. This domain is located between the
+CC   Glucosamine_iso domain (Pfam:PF01182) and the PIG-L deacetylase
+CC   domain (Pfam:PF02585). The host proteins are multifunctional
+CC   enzymes involved in amino sugar metabolism.
