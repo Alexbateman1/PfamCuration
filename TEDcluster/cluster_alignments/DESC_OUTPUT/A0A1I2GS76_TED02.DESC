@@ -1,0 +1,18 @@
+ID   MoxR_C
+DE   MoxR-like AAA+ ATPase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1I2GS76_TED02
+GA   27.00 27.00;
+TC   28.20 28.20;
+NC   22.80 22.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 130
+CC   residues found in MoxR-like AAA+ ATPases in bacteria, predominantly
+CC   in Actinomycetes (Streptomyces, Micromonospora) and Proteobacteria.
+CC   This domain follows the N-terminal AAA+ ATPase domain (Pfam:PF07728).
+CC   MoxR-like ATPases form a widespread family of AAA+ proteins that
+CC   function as chaperones, often in complex with Von Willebrand Factor
+CC   type A (VWA) domain-containing proteins. They are involved in the
+CC   folding and activation of specific substrate proteins.

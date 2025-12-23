@@ -1,0 +1,32 @@
+ID   TMEM8_mid
+DE   PGAP6/TMEM8 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L1HS43_TED03
+GA   27.00 27.00;
+TC   28.50 27.60;
+NC   26.40 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27881714
+RT   A GPI processing phospholipase A2, PGAP6, modulates Nodal signaling
+RT   in embryos by shedding CRIPTO.
+RA   Lee GH, Fujita M, Takaoka K, Murakami Y, Fujihara Y, Kanzawa N,
+RA   Murakami KI, Kajikawa E, Takada Y, Saito K, et al.;
+RL   J Cell Biol. 2016;215:705-718.
+RN   [2]
+RM   15498789
+RT   Role of a novel EGF-like domain-containing gene NGX6 in cell
+RT   adhesion modulation in nasopharyngeal carcinoma cells.
+RA   Ma J, Zhou J, Fan S, Wang LL, Li XL, Yan Q, Zhou M, Liu HY,
+RA   Zhang Q, Zhou H, et al.;
+RL   Carcinogenesis. 2005;26:281-291.
+CC   This entry represents a middle domain of approximately 150 residues
+CC   found in PGAP6/TMEM8A and TMEM8B/NGX6 proteins in metazoans. This
+CC   domain is located in the N-terminal extracellular region before the
+CC   EGF-like domain and transmembrane regions. PGAP6 is a GPI processing
+CC   phospholipase A2 that removes acyl chains from GPI-anchored proteins,
+CC   required for shedding of the signaling molecule CRIPTO. TMEM8B/NGX6
+CC   is a tumor suppressor downregulated in nasopharyngeal carcinoma,
+CC   involved in cell adhesion and EGFR signaling.

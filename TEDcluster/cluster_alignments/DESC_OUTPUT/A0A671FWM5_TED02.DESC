@@ -1,0 +1,32 @@
+ID   HERPUD_mid
+DE   HERPUD middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A671FWM5_TED02
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16289116
+RT   The ubiquitin-domain protein HERP forms a complex with components
+RT   of the endoplasmic reticulum associated degradation pathway.
+RA   Schulze A, Standera S, Buerger E, Kikkert M, van Voorden S,
+RA   Wiertz E, Koning F, Kloetzel PM, Seeger M;
+RL   J Mol Biol. 2005;354:1021-1027.
+RN   [2]
+RM   28827405
+RT   Conserved cytoplasmic domains promote Hrd1 ubiquitin ligase complex
+RT   formation for ER-associated degradation (ERAD).
+RA   Schulz J, Avci D, Queisser MA, Gutschmidt A, Dreher LS, Fenech EJ,
+RA   Volkmar N, Hayashi Y, Hoppe T, Christianson JC;
+RL   J Cell Sci. 2017;130:3322-3335.
+CC   This entry represents a middle domain of approximately 70 residues
+CC   found in HERPUD1 and HERPUD2 proteins in vertebrates. This domain
+CC   is located between the N-terminal ubiquitin-like domain
+CC   (Pfam:PF00240) and the C-terminal transmembrane regions. This
+CC   region contains the interaction site for SYVN1/HRD1 E3 ligase and
+CC   ubiquilin proteins. HERPUD proteins are ER-resident proteins that
+CC   function in the ERAD pathway for degradation of misfolded ER
+CC   proteins. HERPUD1 expression is induced by ER stress.
