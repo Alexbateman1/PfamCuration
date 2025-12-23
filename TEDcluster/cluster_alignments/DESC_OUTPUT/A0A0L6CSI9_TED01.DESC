@@ -1,0 +1,15 @@
+ID   DUF3489_N
+DE   DUF3489 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0L6CSI9_TED01
+GA   27.00 27.00;
+TC   27.00 27.60;
+NC   26.90 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 80 residues
+CC   found N-terminal to the DUF3489 domain (Pfam:PF11994) in bacteria.
+CC   Proteins containing this domain architecture are annotated as
+CC   DUF3489 domain-containing proteins. The function of this N-terminal
+CC   extension remains to be determined.

@@ -1,0 +1,29 @@
+ID   TFB1_C
+DE   TFB1/TFIIH subunit C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0M9WIL2_TED04
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   7961739
+RT   RNA polymerase transcription factor IIH holoenzyme from yeast.
+RA   Svejstrup JQ, Feaver WJ, LaPointe J, Kornberg RD;
+RL   J Biol Chem. 1994;269:28044-28048.
+RN   [2]
+RM   7813015
+RT   Different forms of TFIIH for transcription and DNA repair: holo-TFIIH and
+RT   a nucleotide excision repairosome.
+RA   Svejstrup JQ, Wang Z, Feaver WJ, Wu X, Bushnell DA, Donahue TF,
+RA   Friedberg EC, Kornberg RD;
+RL   Cell. 1995;80:21-28.
+CC   This entry represents a C-terminal domain of approximately 125 residues
+CC   found in TFB1 (TFIIH subunit) proteins in fungi. TFB1 is a component of
+CC   the general transcription and DNA repair factor IIH (TFIIH) complex. These
+CC   proteins also contain PH_TFIIH (Pfam:PF08567) and BSD domains
+CC   (Pfam:PF03909). TFIIH is involved in RNA polymerase II transcription
+CC   initiation and nucleotide excision repair (NER). This C-terminal domain
+CC   may contribute to protein-protein interactions within the complex.
