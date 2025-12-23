@@ -1,0 +1,17 @@
+ID   PriA_N
+DE   Primosomal protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A160NWM6_TED01
+GA   27.00 27.00;
+TC   27.50 36.10;
+NC   26.40 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 54
+CC   residues found in primosomal proteins in Actinomycetes, particularly
+CC   Streptomycetaceae, Micromonosporaceae, and Micrococcaceae.
+CC   Primosomal proteins are involved in DNA replication restart.
+CC   STRING analysis indicates functional association with DUF5703
+CC   (Pfam:PF18963). The function of this N-terminal domain remains
+CC   to be determined.
