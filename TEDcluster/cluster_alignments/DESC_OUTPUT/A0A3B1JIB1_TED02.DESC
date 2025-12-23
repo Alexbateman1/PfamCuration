@@ -1,0 +1,28 @@
+ID   MARCH_N
+DE   MARCH E3 ligase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3B1JIB1_TED02
+GA   27.00 27.00;
+TC   27.80 27.80;
+NC   23.80 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   18389477
+RT   Interleukin-10-induced MARCH1 mediates intracellular sequestration
+RT   of MHC class II in monocytes.
+RA   Thibodeau J, Bourgeois-Daigneault MC, Huppe G, Tremblay J, Aumont A,
+RA   Houde M, Bartee E, Brunet A, Gauvreau ME, de Gassart A, Gatti E,
+RA   Baril M, Cloutier M, Bontron S, Fruh K, Lamarre D, Steimle V;
+RL   Eur J Immunol. 2008;38:1225-1230.
+CC   This entry represents an N-terminal domain of approximately 85
+CC   residues found in MARCH (Membrane-Associated RING-CH) E3 ubiquitin
+CC   ligases (MARCHF1, MARCHF8) in vertebrates. This domain precedes the
+CC   RINGv (RING-CH-type zinc finger) domain (Pfam:PF12906). This N-terminal
+CC   region is responsible for the low stability and short half-life of
+CC   MARCH proteins. MARCH ligases mediate ubiquitination of various
+CC   transmembrane proteins including MHC class II, CD86, and TFRC,
+CC   promoting their endocytosis and lysosomal degradation. MARCH1 is
+CC   induced by IL-10 and regulates MHC class II presentation in dendritic
+CC   cells. MARCH8 targets viral glycoproteins and has antiviral activity.
