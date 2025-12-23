@@ -1,0 +1,32 @@
+ID   Varp_N
+DE   ANKRD27/Varp N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4V6ANR5_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16525121
+RT   Varp is a Rab21 guanine nucleotide exchange factor and regulates
+RT   endosome dynamics.
+RA   Zhang X, He X, Fu XY, Chang Z;
+RL   J Cell Sci. 2006;119:1053-1062.
+RN   [2]
+RM   23104059
+RT   The binding of Varp to VAMP7 traps VAMP7 in a closed, fusogenically
+RT   inactive conformation.
+RA   Schafer IB, Hesketh GG, Bright NA, Gray SR, Pryor PR, Evans PR,
+RA   Luzio JP, Owen DJ;
+RL   Nat Struct Mol Biol. 2012;19:1300-1309.
+CC   This entry represents an N-terminal domain of approximately 105
+CC   residues found in ANKRD27/Varp (VPS9-ankyrin-repeat protein) in
+CC   metazoans. This domain precedes the ankyrin repeat region, Tudor
+CC   domain (Pfam:PF00567), and the VPS9 guanine exchange factor domain
+CC   (Pfam:PF02204). Varp functions as a guanine exchange factor (GEF)
+CC   for Rab21, Rab32, and Rab38, and regulates endosome dynamics and
+CC   vesicle trafficking. Varp also interacts with VAMP7, regulating
+CC   its fusogenic activity, and is involved in melanosome biogenesis
+CC   and neurite outgrowth.

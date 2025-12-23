@@ -1,0 +1,32 @@
+ID   COG3_ext
+DE   COG3 C-terminal extension domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A443N3K9_TED03
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   11929878
+RT   Sec34 is implicated in traffic from the endoplasmic reticulum to
+RT   the Golgi and exists in a complex with GTC-90 and ldlBp.
+RA   Loh E, Hong W;
+RL   J Biol Chem. 2002;277:21955-21961.
+RN   [2]
+RM   37711075
+RT   Biallelic missense variants in COG3 cause a congenital disorder of
+RT   glycosylation with impairment of retrograde vesicular trafficking.
+RA   Duan R, Marafi D, Xia ZJ, Ng BG, Maroofian R, Sumya FT, Saad AK,
+RA   Du H, Fatih JM, Hunter JV, et al.;
+RL   J Inherit Metab Dis. 2023;46:1195-1205.
+CC   This entry represents a C-terminal extension domain of approximately
+CC   145 residues found in COG3 (Conserved oligomeric Golgi complex
+CC   subunit 3) in eukaryotes. This domain is located after the COG3_N
+CC   (Pfam:PF04136) and COG3_C (Pfam:PF20671) domains. COG3 is a
+CC   component of the conserved oligomeric Golgi (COG) complex involved
+CC   in ER-to-Golgi and retrograde Golgi-to-ER vesicular trafficking.
+CC   Mutations in COG3 cause congenital disorders of glycosylation
+CC   (CDG) characterized by impaired glycosylation and developmental
+CC   abnormalities.

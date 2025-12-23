@@ -1,0 +1,34 @@
+ID   RNF213_mid
+DE   RNF213/Mysterin middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L4MF49_TED01
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   24658080
+RT   Moyamoya disease-associated protein mysterin/RNF213 is a novel AAA+
+RT   ATPase, which dynamically changes its oligomeric state.
+RA   Morito D, Nishikawa K, Hoseki J, Kitamura A, Kotani Y, Kiso K,
+RA   Kinjo M, Fujiyoshi Y, Nagata K;
+RL   Sci Rep. 2014;4:4442.
+RN   [2]
+RM   32139119
+RT   Moyamoya disease patient mutations in the RING domain of RNF213
+RT   reduce its ubiquitin ligase activity and enhance NFkappaB activation
+RT   and apoptosis in an AAA+ domain-dependent manner.
+RA   Takeda M, Tezuka T, Kim M, Choi J, Oichi Y, Kobayashi H, Harada KH,
+RA   Mizushima T, Taketani S, Koizumi A, Youssefian S;
+RL   Biochem Biophys Res Commun. 2020;525:668-674.
+CC   This entry represents a middle domain of approximately 80 residues
+CC   found in RNF213/Mysterin in metazoans. This domain is located in the
+CC   N-terminal region (around residues 1800-1950) of this giant protein
+CC   (over 5000 amino acids), before the AAA+ ATPase domains and C-terminal
+CC   RING finger E3 ligase domain (Pfam:PF00097). RNF213 is an unusual
+CC   AAA+ ATPase that also functions as an E3 ubiquitin ligase. Mutations
+CC   in RNF213 are the major genetic risk factor for Moyamoya disease,
+CC   a cerebrovascular disorder characterized by progressive stenosis
+CC   of intracranial arteries.

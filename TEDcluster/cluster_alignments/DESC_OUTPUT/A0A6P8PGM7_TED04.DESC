@@ -1,0 +1,30 @@
+ID   PHF1_mid
+DE   PHD finger protein 1 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6P8PGM7_TED04
+GA   27.00 27.00;
+TC   27.20 27.20;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23142980
+RT   Molecular basis for H3K36me3 recognition by the Tudor domain of PHF1.
+RA   Musselman CA, Avvakumov N, Watanabe R, Abraham CG, Lalonde ME,
+RA   Hong Z, Allen C, Roy S, Nunez JK, Nickoloff J, et al.;
+RL   Nat Struct Mol Biol. 2012;19:1266-1272.
+RN   [2]
+RM   18086877
+RT   Role of hPHF1 in H3K27 methylation and Hox gene silencing.
+RA   Cao R, Wang H, He J, Erdjument-Bromage H, Tempst P, Zhang Y;
+RL   Mol Cell Biol. 2008;28:1862-1872.
+CC   This entry represents a middle domain of approximately 80 residues
+CC   found in PHF1 (PHD finger protein 1) and related Polycomb-like
+CC   proteins (PCL1/PHF1, PCL2/MTF2, PCL3/PHF19) in metazoans. This
+CC   domain is located after the Tudor domain (Pfam:PF18104) and PHD
+CC   finger (Pfam:PF00628), but before the Mtf2_C domain (Pfam:PF14061)
+CC   in longer isoforms. PHF1 and related proteins are components of
+CC   PRC2 (Polycomb Repressive Complex 2) that enhance its histone
+CC   methyltransferase activity. The Tudor domain recognizes H3K36me3
+CC   marks, helping to target PRC2 to active chromatin regions.

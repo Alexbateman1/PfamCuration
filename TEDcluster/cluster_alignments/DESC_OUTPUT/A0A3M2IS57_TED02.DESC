@@ -1,0 +1,19 @@
+ID   DNApol3d_C
+DE   DNA polymerase III delta subunit C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3M2IS57_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 40
+CC   residues found in DNA polymerase III delta subunit (HolA) in
+CC   bacteria, particularly abundant in Actinomycetes (Streptomyces,
+CC   Mycobacteriaceae, Microbacteriaceae). This domain is located after
+CC   the DNA_pol3_delta2 domain (Pfam:PF13177) which contains the AAA+
+CC   ATPase fold. DNA polymerase III delta subunit is a component of
+CC   the clamp loader complex that loads the beta-clamp (processivity
+CC   factor) onto DNA during chromosomal replication. The delta subunit
+CC   directly interacts with the beta-clamp.
