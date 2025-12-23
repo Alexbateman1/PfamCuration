@@ -1,0 +1,18 @@
+ID   C2C1_N
+DE   C2-C1 domain protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0Q9XIV8_TED01
+GA   27.00 27.00;
+TC   27.10 27.60;
+NC   26.70 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CL   CL0648
+CC   This entry represents an N-terminal domain of approximately 175 residues
+CC   found in C2 and C1 domain-containing proteins in insects, particularly
+CC   Drosophila, Musca, and other Endopterygota. These proteins contain this
+CC   domain N-terminal to the C2 domain (Pfam:PF00168) and C-terminal C1_1
+CC   domain (Pfam:PF00130). Structural comparison using Foldseek suggests
+CC   this domain belongs to the CL0648 clan and is related to SMP domains.
+CC   The function of these insect proteins remains to be determined.

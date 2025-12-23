@@ -1,0 +1,17 @@
+ID   Sugar_kin_Strep
+DE   Streptomyces sugar kinase domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0T1T1Z9_TED02
+GA   27.00 27.00;
+TC   30.40 30.00;
+NC   26.40 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of approximately 120 residues found in
+CC   sugar kinases in Streptomycetaceae. The domain is often found as a
+CC   single-domain protein or with an N-terminal region. STRING analysis
+CC   indicates functional association with the ROK (Pfam:PF00480) family of
+CC   repressors and sugar kinases, as well as ABC transporters. These
+CC   proteins are likely involved in sugar phosphorylation and metabolism in
+CC   Streptomyces.

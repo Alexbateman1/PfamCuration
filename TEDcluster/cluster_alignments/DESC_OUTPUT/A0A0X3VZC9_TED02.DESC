@@ -1,0 +1,23 @@
+ID   NYN_C
+DE   NYN domain-containing protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0X3VZC9_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27268270
+RT   An ABC transporter involved in the control of streptomycin production
+RT   in Streptomyces griseus.
+RA   Sakamoto T, Tomura D, Tomoike A, Yoshida K, Gomi T, Ohnishi Y, Ishikawa J;
+RL   FEMS Microbiol Lett. 2016;363:fnw144.
+CC   This entry represents a C-terminal domain of approximately 115 residues
+CC   found in NYN domain-containing proteins in Streptomycetaceae. These
+CC   proteins contain the NYN domain (Pfam:PF01936) at the N-terminus and
+CC   this domain at the C-terminus. The corresponding gene SGR_5442 in
+CC   Streptomyces griseus is part of the rspABCD operon involved in
+CC   regulation of streptomycin production. NYN domains are nucleases
+CC   involved in RNA metabolism.

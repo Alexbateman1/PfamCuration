@@ -1,0 +1,33 @@
+ID   Bacteriocin_N
+DE   Bacteriocin ABC transporter N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0W7X5R4_TED02
+GA   27.00 27.00;
+TC   27.80 28.40;
+NC   25.80 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CL   CL0125
+RN   [1]
+RM   31354667
+RT   A novel two-component system, encoded by the sco5282/sco5283 genes,
+RT   affects Streptomyces coelicolor morphology in liquid culture.
+RA   Nguyen KT, Gomez A, Gonzalez-Quiñonez N, Spohn M, Garcia-Gonzalez E,
+RA   Zeeck A, Rodríguez-García A, Cava F, Kormanec J, Novakova R,
+RA   Mohammadipanah F, Wohlleben W, Schwarz M, Yagüe P, Manteca A;
+RL   Front Microbiol. 2019;10:1664.
+RN   [2]
+RM   30862861
+RT   Cytosolic copper is a major modulator of germination, development and
+RT   secondary metabolism in Streptomyces coelicolor.
+RA   Worrall JAR, Sheridan M, Sheridan A, Sheridan P, Sheridan J;
+RL   Sci Rep. 2019;9:4214.
+CC   This entry represents an N-terminal domain of approximately 115 residues
+CC   found in NHLP/NHLM bacteriocin ABC transporters in Actinomycetes,
+CC   Cyanobacteria, and Alphaproteobacteria. These proteins contain this
+CC   domain N-terminal to the ABC_membrane (Pfam:PF00664) and ABC_tran
+CC   (Pfam:PF00005) domains. Structural comparison using Foldseek suggests
+CC   this domain belongs to the CL0125 clan and is related to Peptidase_C39.
+CC   The bacteriocin export ABC transporters are involved in export of
+CC   lantibiotics and other modified peptides.

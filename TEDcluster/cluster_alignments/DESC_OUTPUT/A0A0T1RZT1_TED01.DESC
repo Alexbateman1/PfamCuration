@@ -1,0 +1,28 @@
+ID   Esterase_N
+DE   Esterase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A0T1RZT1_TED01
+GA   27.00 27.00;
+TC   27.00 27.50;
+NC   26.50 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   38184746
+RT   sigmaE of Streptomyces coelicolor can function both as a direct
+RT   activator or repressor of transcription.
+RA   Tong Y, Gorguner E, Torres R, Shake S, Bibb MJ, Buttner MJ;
+RL   Commun Biol. 2024;7:1-16.
+RN   [2]
+RM   30907454
+RT   Defining the regulon of genes controlled by sigmaE, a key regulator of
+RT   the cell envelope stress response in Streptomyces coelicolor.
+RA   Tong Y, Charusanti P, Zhang L, Weber T, Lee SY;
+RL   Mol Microbiol. 2019;113:461-481.
+CC   This entry represents an N-terminal domain of approximately 65 residues
+CC   found in esterases in Actinomycetes, particularly Streptomycetaceae.
+CC   These proteins contain this domain N-terminal to the Esterase domain
+CC   (Pfam:PF00756). The esterase genes (such as SCO3396) are regulated by
+CC   sigmaE and are involved in the cell envelope stress response in
+CC   Streptomyces.
