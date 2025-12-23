@@ -1,0 +1,18 @@
+ID   TARSH_N
+DE   Target of Nesh-SH3 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3Q2X7T4_TED01
+GA   27.00 27.00;
+TC   27.00 28.10;
+NC   26.90 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 65
+CC   residues found in the target of Nesh-SH3 protein (TARSH/ABI3BP)
+CC   in metazoans. This domain is located after the signal peptide and
+CC   precedes the fibronectin type-III domains (Pfam:PF00041). TARSH is
+CC   a secreted glycoprotein that probably interacts with ABI3. It is
+CC   expressed in brain, heart, lung, liver, pancreas, kidney and
+CC   placenta. Defects in ABI3BP have been found in patients with
+CC   isolated coloboma, a developmental defect of the eye.

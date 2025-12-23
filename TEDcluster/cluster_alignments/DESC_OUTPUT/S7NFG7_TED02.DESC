@@ -1,0 +1,30 @@
+ID   XKR4_C
+DE   XK-related protein 4 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:S7NFG7_TED02
+GA   27.00 27.00;
+TC   28.40 27.50;
+NC   25.30 19.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   25231987
+RT   Exposure of phosphatidylserine by Xk-related protein family members
+RT   during apoptosis.
+RA   Suzuki J, Imanishi E, Nagata S;
+RL   J Biol Chem. 2014;289:30257-30267.
+RN   [2]
+RM   33725486
+RT   Caspase cleavage releases a nuclear protein fragment that stimulates
+RT   phospholipid scrambling at the plasma membrane.
+RA   Maruoka M, Zhang P, Mori H, Imanishi E, Packwood DM, Harada H,
+RA   Kosako H, Suzuki J;
+RL   Mol Cell. 2021;81:1397-1410.
+CC   This entry represents a C-terminal domain of approximately 40 residues
+CC   found in XKR4 (XK-related protein 4) in vertebrates. This domain
+CC   is located after the XK-related transmembrane domain (Pfam:PF09815)
+CC   and is cleaved by caspases during apoptosis. XKR4 is a phospholipid
+CC   scramblase that exposes phosphatidylserine on the apoptotic cell
+CC   surface as an engulfment signal. The scramblase activity is activated
+CC   by caspase cleavage and the resulting processed form homodimerizes.
