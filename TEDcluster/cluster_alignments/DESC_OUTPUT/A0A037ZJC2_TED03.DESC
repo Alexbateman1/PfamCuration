@@ -1,0 +1,18 @@
+ID   ThyX_C
+DE   ThyX C-terminal extension
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A037ZJC2_TED03
+GA   27.00 27.00;
+TC   27.00 28.10;
+NC   26.60 25.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal extension of approximately 35
+CC   residues found in flavin-dependent thymidylate synthases (ThyX) in
+CC   Alphaproteobacteria, particularly Rhodobacterales and Acetobacterales.
+CC   These proteins also contain the Thy1 domain (Pfam:PF02511) and catalyze
+CC   the reductive methylation of dUMP to dTMP using FAD as a cofactor.
+CC   STRING analysis indicates functional association with nucleotide
+CC   biosynthesis enzymes. The precise function of this C-terminal extension
+CC   remains to be determined.
