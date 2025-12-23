@@ -1,0 +1,18 @@
+ID   GAPDH_N
+DE   Glyceraldehyde-3-phosphate dehydrogenase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1H5KYS8_TED01
+GA   27.00 27.00;
+TC   28.10 28.90;
+NC   26.60 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 115
+CC   residues found in glyceraldehyde-3-phosphate dehydrogenase (GAPDH)
+CC   in bacteria, predominantly Gammaproteobacteria, Actinomycetes, and
+CC   Bacteroidota. This domain precedes the Gp_dh_N NAD-binding domain
+CC   (Pfam:PF00044) and Gp_dh_C catalytic domain (Pfam:PF02800). GAPDH
+CC   catalyzes the oxidative phosphorylation of glyceraldehyde-3-phosphate
+CC   to 1,3-bisphosphoglycerate in glycolysis. Some bacteria contain
+CC   multiple GAPDH isoforms with different regulatory properties.
