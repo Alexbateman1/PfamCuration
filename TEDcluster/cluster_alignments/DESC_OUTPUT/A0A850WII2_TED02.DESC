@@ -1,0 +1,33 @@
+ID   BPTF_WSD
+DE   BPTF WSD domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A850WII2_TED02
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16728976
+RT   A PHD finger of NURF couples histone H3 lysine 4 trimethylation with
+RT   chromatin remodelling.
+RA   Wysocka J, Swigut T, Xiao H, Milne TA, Kwon SY, Landry J, Kauer M,
+RA   Tackett AJ, Chait BT, Badenhorst P, Wu C, Allis CD;
+RL   Nature. 2006;442:86-90.
+RN   [2]
+RM   28801535
+RT   Expansion of the ISWI chromatin remodeler family with new active
+RT   complexes.
+RA   Oppikofer M, Bai T, Gan Y, Haley B, Liu P, Sandoval W, Ciferri C,
+RA   Cochran AG;
+RL   EMBO Rep. 2017;18:1697-1706.
+CC   This entry represents the WSD (WHIM2) domain of approximately 90
+CC   residues found in BPTF (Bromodomain PHD finger transcription factor)
+CC   proteins in metazoans. BPTF is a subunit of the NURF (nucleosome-
+CC   remodeling factor) complex that catalyzes ATP-dependent nucleosome
+CC   sliding. The WSD domain (Pfam:PF15613) is located between the DDT
+CC   domain (Pfam:PF02791) and the C-terminal PHD fingers and bromodomain.
+CC   BPTF recognizes H3K4me3 through its PHD finger to recruit the NURF
+CC   complex to active chromatin regions. Mutations in BPTF cause
+CC   neurodevelopmental disorder NEDDFL.

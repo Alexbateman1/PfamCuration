@@ -1,0 +1,35 @@
+ID   PCL_Tudor
+DE   Polycomb-like Tudor domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L2B2C0_TED01
+GA   27.00 27.00;
+TC   27.80 27.20;
+NC   26.10 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23142980
+RT   Molecular basis for H3K36me3 recognition by the Tudor domain of
+RT   PHF1.
+RA   Musselman CA, Avvakumov N, Watanabe R, Abraham CG, Lalonde ME,
+RA   Hong Z, Allen C, Roy S, Nunez JK, Nickoloff J, Kulesza CA,
+RA   Yasui A, Cote J, Kutateladze TG;
+RL   Nat Struct Mol Biol. 2012;19:1266-1272.
+RN   [2]
+RM   23273982
+RT   An H3K36 methylation-engaging Tudor motif of Polycomb-like proteins
+RT   mediates PRC2 complex targeting.
+RA   Cai L, Rothbart SB, Lu R, Xu B, Chen WY, Tripathy A, Rockowitz S,
+RA   Zheng D, Patel DJ, Allis CD, Strahl BD, Song J, Wang GG;
+RL   Mol Cell. 2013;49:571-582.
+CL   CL0049
+CC   This entry represents the Tudor domain of approximately 60 residues
+CC   found in Polycomb-like proteins PHF1, MTF2 and PHF19 (PCL1-3) in
+CC   metazoans. This Tudor domain specifically recognizes and binds histone
+CC   H3 trimethylated at lysine 36 (H3K36me3), a mark associated with
+CC   transcriptional activation. This binding recruits the PRC2 complex to
+CC   active genes, facilitating the transition from active to repressed
+CC   chromatin states. PHF1 is associated with the PHD domain (Pfam:PF00628)
+CC   and the Mtf2_C domain (Pfam:PF14061). PHF1 is involved in DNA damage
+CC   response and regulates p53 stability.

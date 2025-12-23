@@ -1,0 +1,19 @@
+ID   FungTF_C2H2
+DE   Fungal C2H2 transcription factor C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4R8QZZ2_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 160
+CC   residues found in fungal-specific transcription factors belonging
+CC   to the C2H2 zinc finger family. This domain is found exclusively
+CC   in Ascomycota fungi including Aspergillus, Penicillium, and
+CC   Fusarium species. It follows the fungal-specific transcription
+CC   factor domain (Pfam:PF04082). These transcription factors typically
+CC   contain an N-terminal C2H2-type zinc finger DNA-binding domain and
+CC   are involved in regulation of various cellular processes including
+CC   secondary metabolism and stress responses.

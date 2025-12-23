@@ -1,0 +1,31 @@
+ID   NELL_VWC_C
+DE   NELL C-terminal VWC-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2J8WCN1_TED03
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.60 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   32198364
+RT   NELL2-Robo3 complex structure reveals mechanisms of receptor
+RT   activation for axon guidance.
+RA   Pak JS, DeLoughery ZJ, Wang J, Acharya N, Park Y, Jaworski A,
+RA   Ozkan E;
+RL   Nat Commun. 2020;11:1489.
+RN   [2]
+RM   21723284
+RT   NELL-1 binds to APR3 affecting human osteoblast proliferation and
+RT   differentiation.
+RA   Zou X, Shen J, Chen F, Ting K, Zheng Z, Pang S, Zara JN,
+RA   Adams JS, Soo C, Zhang X;
+RL   FEBS Lett. 2011;585:2410-2418.
+CC   This entry represents a C-terminal domain of approximately 60
+CC   residues found in NELL1 and NELL2 (NEL-like proteins) in vertebrates.
+CC   This domain is located after the VWC domains (Pfam:PF00093) and
+CC   multiple EGF-like domains (Pfam:PF07645). NELL proteins are secreted
+CC   glycoproteins that form homotrimers and function as PKC-binding
+CC   proteins. NELL1 promotes osteoblast differentiation while NELL2
+CC   functions in axon guidance through binding to ROBO3 receptor.
