@@ -1,0 +1,28 @@
+ID   BRD7_C
+DE   Bromodomain-containing protein 7 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2I3SRJ7_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   18809673
+RT   BRD7, a novel PBAF-specific SWI/SNF subunit, is required for target
+RT   gene activation and repression in embryonic stem cells.
+RA   Kaeser MD, Aslanian A, Dong MQ, Yates JR 3rd, Emerson BM;
+RL   J Biol Chem. 2008;283:32254-32263.
+RN   [2]
+RM   12941796
+RT   BP75, bromodomain-containing M(r) 75,000 protein, binds dishevelled-1
+RT   and enhances Wnt signaling by inactivating glycogen synthase
+RT   kinase-3 beta.
+RA   Kim S, Lee J, Park J, Chung J;
+RL   Cancer Res. 2003;63:4792-4795.
+CC   This entry represents a C-terminal domain found in bromodomain-
+CC   containing proteins BRD7 and BRD9 in metazoans. BRD7 and BRD9 are
+CC   subunits of PBAF (polybromo BRG1-associated factor) SWI/SNF chromatin
+CC   remodeling complexes. They play roles in gene regulation, Wnt
+CC   signaling, and DNA repair.
