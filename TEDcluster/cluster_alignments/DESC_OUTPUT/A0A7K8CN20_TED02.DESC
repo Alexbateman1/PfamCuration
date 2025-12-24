@@ -1,0 +1,24 @@
+ID   TDRD12_mid
+DE   TDRD12 Tudor-helicase linker domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K8CN20_TED02
+GA   27.00 27.00;
+TC   27.40 27.00;
+NC   24.90 23.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   24067652
+RT   TDRD12 is essential for germ cell development and secondary piRNA
+RT   biogenesis in mice.
+RA   Pandey RR, Tokuzawa Y, Yang Z, Hayashi E, Ichisaka T, Kajita S,
+RA   Asber M, Kuber N, Kobayashi M, Papayannopoulos V, Yamanaka S, Pillai RS;
+RL   EMBO J. 2013;32:1869-1885.
+CC   This entry represents a linker domain found in TDRD12 (Tudor domain-
+CC   containing protein 12) in Euteleostomi. TDRD12 is an ATP-dependent
+CC   RNA helicase essential for piRNA biogenesis and transposon silencing
+CC   during spermatogenesis. This domain links the N-terminal Tudor domain
+CC   (Pfam:PF00567) to the DEAD helicase domain (Pfam:PF00270). TDRD12
+CC   is part of the PET complex required for secondary piRNA loading.
+

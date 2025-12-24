@@ -1,0 +1,24 @@
+ID   RNF26_N
+DE   RNF26 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L2WKS3_TED01
+GA   27.00 27.00;
+TC   34.00 27.20;
+NC   23.00 23.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27368102
+RT   An ER-associated pathway defines endosomal architecture for
+RT   controlled cargo transport.
+RA   Jongsma ML, Berlin I, Wijdeven RH, Janssen L, Janssen GM, Garstka MA,
+RA   Janssen H, Mensink M, van Veelen PA, Spaapen RM, Neefjes J;
+RL   Cell 2016;166:152-166.
+CC   This entry represents an N-terminal domain found in RNF26 (E3
+CC   ubiquitin-protein ligase RNF26) in Euteleostomi. RNF26 is an ER-
+CC   embedded E3 ligase that controls perinuclear endosome organization
+CC   by ubiquitinating SQSTM1. It also regulates type I interferon
+CC   signaling and interacts with UBE2J1. The RING zinc finger domain
+CC   (Pfam:PF13920) is located C-terminal to this domain.
+
