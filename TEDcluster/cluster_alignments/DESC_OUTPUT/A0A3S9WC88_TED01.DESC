@@ -1,0 +1,17 @@
+ID   Actino_FHA_N
+DE   Actinomycete FHA-associated N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3S9WC88_TED01
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   25.80 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 102
+CC   residues found in uncharacterized FHA domain-containing proteins
+CC   in Actinomycetota (Microbacteriaceae, Intrasporangiaceae,
+CC   Mycobacteriales). These proteins often contain this domain alone
+CC   or N-terminal to an FHA domain (Pfam:PF00498). The FHA domain
+CC   is associated with phosphothreonine recognition and signal
+CC   transduction in serine/threonine kinase signaling pathways.

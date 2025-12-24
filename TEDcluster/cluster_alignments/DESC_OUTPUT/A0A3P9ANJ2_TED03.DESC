@@ -1,0 +1,17 @@
+ID   NudCD3_C
+DE   NudC domain-containing protein 3 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3P9ANJ2_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 53
+CC   residues found in NudC domain-containing protein 3 (NUDCD3) in
+CC   vertebrates (birds, mammals, fish) and plants. This domain is
+CC   found C-terminal to the CS domain (Pfam:PF04969) and Nudc_N
+CC   domain (Pfam:PF14050). NUDCD3 proteins interact with dynein
+CC   intermediate chain and are involved in stabilization of the
+CC   dynein complex and cell division processes.
