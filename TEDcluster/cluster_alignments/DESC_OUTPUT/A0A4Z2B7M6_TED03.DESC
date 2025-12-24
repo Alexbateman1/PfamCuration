@@ -1,0 +1,27 @@
+ID   CACHD1_Cache1
+DE   CACHD1 N-terminal Cache domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4Z2B7M6_TED03
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   38696577
+RT   Cachd1 interacts with Wnt receptors and regulates neuronal asymmetry
+RT   in the zebrafish brain.
+RA   Powell GT, Faro A, Zhao Y, Stickney H, Novellasdemunt L, Henriques P,
+RA   Gestri G, Redhouse White E, Ren J, Lu W, Young RM, Hawkins TA,
+RA   Cavodeassi F, Schwarz Q, Dreosti E, Raible DW, Li VSW, Wright GJ,
+RA   Jones EY, Wilson SW;
+RL   Science. 2024;384:573-579.
+CC   This entry represents the first Cache domain of approximately 110
+CC   residues found in CACHD1 (VWFA and cache domain-containing protein 1)
+CC   in vertebrates. This domain is located after the VWA domain
+CC   (Pfam:PF00092) and before the CACHD1_mid domain (Pfam:PF30734).
+CC   CACHD1 belongs to the calcium channel subunit alpha-2/delta family
+CC   and may regulate voltage-dependent calcium channels. Recent studies
+CC   show CACHD1 interacts with Wnt receptors and regulates neuronal
+CC   asymmetry during brain development.
