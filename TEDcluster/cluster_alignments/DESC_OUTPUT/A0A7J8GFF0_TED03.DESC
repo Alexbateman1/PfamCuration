@@ -1,0 +1,24 @@
+ID   RNF112_C
+DE   RING finger protein 112 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7J8GFF0_TED03
+GA   27.00 27.00;
+TC   27.50 27.10;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   21566658
+RT   A novel RING finger protein, Znf179, modulates cell cycle exit and
+RT   neuronal differentiation of P19 embryonal carcinoma cells.
+RA   Pao PC, Huang NK, Liu YW, Yeh SH, Lin ST, Hsieh CP, Huang AM,
+RA   Huang HS, Tseng JT, Chang WC, Lee YC;
+RL   Cell Death Differ. 2011;18:1791-1804.
+CC   This entry represents a C-terminal domain of approximately 102
+CC   residues found in RING finger protein 112 (RNF112, also known as
+CC   ZNF179) in mammals. This domain is located C-terminal to the RING
+CC   zinc finger domain (Pfam:PF00097) and GBP domain (Pfam:PF02263).
+CC   RNF112 is an E3 ubiquitin ligase that modulates cell cycle exit and
+CC   promotes neuronal differentiation. It also functions in the sigma-1
+CC   receptor pathway protecting against oxidative stress.
