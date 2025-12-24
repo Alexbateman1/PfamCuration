@@ -1,0 +1,33 @@
+ID   NELFA_C
+DE   NELF-A C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A337RXX1_TED02
+GA   27.00 27.00;
+TC   27.40 27.00;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   10199401
+RT   NELF, a multisubunit complex containing RD, cooperates with DSIF to
+RT   repress RNA polymerase II elongation.
+RA   Yamaguchi Y, Takagi T, Wada T, Yano K, Furuya A, Sugimoto S,
+RA   Hasegawa J, Handa H;
+RL   Cell. 1999;97:41-51.
+RN   [2]
+RM   27282391
+RT   Architecture and RNA binding of the human negative elongation factor.
+RA   Vos SM, Pollmann D, Caizzi L, Hofmann KB, Rombaut P, Zimniak T,
+RA   Herzog F, Cramer P;
+RL   Elife. 2016;5:e14981.
+CC   This entry represents a C-terminal domain found in NELF-A (Negative
+CC   elongation factor A, also known as WHSC2) in Metazoa. NELF-A is an
+CC   essential component of the NELF complex, which negatively regulates
+CC   transcription elongation by RNA polymerase II. The NELF complex
+CC   associates with the DSIF complex and causes transcriptional pausing,
+CC   which is counteracted by the P-TEFb kinase complex. This C-terminal
+CC   domain is located after the N-terminal NELF-A_N domain (Pfam:PF23553)
+CC   and the HDAg domain. NELF-A was originally identified as a candidate
+CC   gene for Wolf-Hirschhorn syndrome.
+

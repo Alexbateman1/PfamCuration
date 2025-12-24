@@ -1,0 +1,33 @@
+ID   HERC2_mid
+DE   HERC2 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L2A8Q6_TED01
+GA   27.00 27.00;
+TC   27.50 27.20;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   20023648
+RT   HERC2 coordinates ubiquitin-dependent assembly of DNA repair factors
+RT   on damaged chromosomes.
+RA   Bekker-Jensen S, Rendtlew Danielsen J, Fugger K, Gromova I,
+RA   Nerstedt A, Lukas C, Bartek J, Lukas J, Mailand N;
+RL   Nat Cell Biol. 2010;12:80-86.
+RN   [2]
+RM   20304803
+RT   Circadian control of XPA and excision repair of cisplatin-DNA damage
+RT   by cryptochrome and HERC2 ubiquitin ligase.
+RA   Kang TH, Lindsey-Boltz LA, Reardon JT, Sancar A;
+RL   Proc Natl Acad Sci USA. 2010;107:4890-4895.
+CC   This entry represents a domain found in the middle region of HERC2
+CC   (E3 ubiquitin-protein ligase HERC2) in Metazoa. This domain is
+CC   located between the Cytochrome b5 domain (Pfam:PF00173) and the
+CC   MIB/HERC2 domain (Pfam:PF06701). HERC2 is a large E3 ubiquitin-protein
+CC   ligase that regulates DNA damage response by coordinating recruitment
+CC   of repair factors to damaged chromosomes. It also controls circadian
+CC   oscillation of DNA excision repair through ubiquitination of XPA.
+CC   Mutations in HERC2 cause intellectual developmental disorder (MRT38)
+CC   and variants affect eye and hair pigmentation.
+

@@ -1,0 +1,18 @@
+ID   TIGD5_C
+DE   TIGD5 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A452IBT4_TED04
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain found in TIGD5 (Tigger
+CC   transposable element-derived protein 5) in Metazoa. TIGD5 belongs
+CC   to the tigger transposable element derived protein family and
+CC   localizes to the nucleus. The protein contains an N-terminal
+CC   HTH psq-type domain (Pfam:PF03221), a CENPB-type HTH domain
+CC   (Pfam:PF04218), and DDE-1 endonuclease domains (Pfam:PF03184). This
+CC   C-terminal domain is located after the DDE transposase domains.
+
