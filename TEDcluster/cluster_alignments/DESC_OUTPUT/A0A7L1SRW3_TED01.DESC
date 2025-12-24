@@ -1,0 +1,34 @@
+ID   METTL3_N
+DE   METTL3 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L1SRW3_TED01
+GA   27.00 27.00;
+TC   27.40 27.40;
+NC   26.60 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27281194
+RT   Structural basis of N(6)-adenosine methylation by the METTL3-METTL14
+RT   complex.
+RA   Wang X, Feng J, Xue Y, Guan Z, Zhang D, Liu Z, Gong Z, Wang Q,
+RA   Huang J, Tang C, Zou T, Yin P;
+RL   Nature. 2016;534:575-578.
+RN   [2]
+RM   27373337
+RT   Structural basis for cooperative function of Mettl3 and Mettl14
+RT   methyltransferases.
+RA   Wang P, Doxtader KA, Nam Y;
+RL   Mol Cell. 2016;63:306-317.
+CC   This entry represents an N-terminal domain found in METTL3 (N6-
+CC   adenosine-methyltransferase catalytic subunit) in Metazoa. METTL3
+CC   forms a heterodimer with METTL14 to catalyze N6-methyladenosine
+CC   (m6A) modification of mRNA, which regulates mRNA stability,
+CC   processing, translation, and the circadian clock. This N-terminal
+CC   domain is located before the catalytic MT-A70 domain (Pfam:PF05063).
+CC   The METTL3-METTL14 complex, together with WTAP and other factors,
+CC   forms the WMM m6A writer complex. M6A modification plays roles in
+CC   stem cell differentiation, T-cell homeostasis, and DNA damage
+CC   response.
+
