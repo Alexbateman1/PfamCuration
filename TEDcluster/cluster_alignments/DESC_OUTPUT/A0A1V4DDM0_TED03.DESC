@@ -1,0 +1,14 @@
+ID   Strep_mem_C
+DE   Streptomyces membrane protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1V4DDM0_TED03
+GA   27.00 27.00;
+TC   27.10 149.40;
+NC   25.80 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 104
+CC   residues found in integral membrane proteins in Streptomyces and
+CC   related Actinomycetes. The function of these membrane proteins is
+CC   unknown.

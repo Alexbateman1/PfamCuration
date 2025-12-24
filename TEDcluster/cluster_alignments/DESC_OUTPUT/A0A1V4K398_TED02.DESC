@@ -1,0 +1,16 @@
+ID   TraB_C
+DE   TraB domain-containing protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1V4K398_TED02
+GA   27.00 27.00;
+TC   28.80 29.00;
+NC   24.90 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 50
+CC   residues found in TraB domain-containing proteins (TRABD) in
+CC   metazoans. This domain is located after the TraB/PrgY/GumN domain
+CC   (Pfam:PF01963). TRABD proteins are found in mammals and other
+CC   vertebrates, but their function remains unknown. The TraB domain
+CC   is named after bacterial conjugative transfer proteins.
