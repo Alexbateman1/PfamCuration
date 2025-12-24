@@ -1,0 +1,16 @@
+ID   Actino_DUF3375
+DE   Actinobacterial DUF3375-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A652K3C5_TED02
+GA   27.00 27.00;
+TC   27.70 27.70;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of approximately 138 residues found
+CC   in uncharacterized DUF3375 domain-containing proteins in
+CC   Actinomycetota (Streptomyces, Pseudonocardiaceae). These proteins
+CC   typically consist of multiple domains including this one. STRING
+CC   analysis indicates functional association with ABC2_membrane
+CC   transporter proteins and universal stress proteins (Usp family).

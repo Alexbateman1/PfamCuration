@@ -1,0 +1,24 @@
+ID   LONP2_mid
+DE   Peroxisomal Lon protease middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A667IZ64_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   22002062
+RT   Two proteases, trypsin domain-containing 1 (Tysnd1) and peroxisomal
+RT   lon protease (PsLon), cooperatively regulate fatty acid
+RT   beta-oxidation in peroxisomal matrix.
+RA   Okumoto K, Kametani Y, Fujiki Y;
+RL   J. Biol. Chem. 2011;286:44367-44379.
+CC   This entry represents a middle domain of approximately 100
+CC   residues found in LONP2 (peroxisomal Lon protease) in vertebrates.
+CC   This domain is located between the N-terminal LON_substr_bdg
+CC   domain (Pfam:PF02190) and C-terminal AAA ATPase and proteolytic
+CC   domains. LONP2 is an ATP-dependent serine protease that mediates
+CC   selective degradation of misfolded proteins in the peroxisomal
+CC   matrix and regulates peroxisomal fatty acid beta-oxidation.

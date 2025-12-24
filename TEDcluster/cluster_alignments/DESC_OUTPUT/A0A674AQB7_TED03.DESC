@@ -1,0 +1,25 @@
+ID   Synip_mid
+DE   Synip/STXBP4 coiled-coil middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A674AQB7_TED03
+GA   27.00 27.00;
+TC   27.00 27.40;
+NC   26.90 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   10394363
+RT   Synip: a novel insulin-regulated syntaxin 4-binding protein
+RT   mediating GLUT4 translocation in adipocytes.
+RA   Min J, Okada S, Kanzaki M, Elmendorf JS, Coker KJ, Ceresa BP,
+RA   Syu LJ, Noda Y, Saltiel AR, Pessin JE;
+RL   Mol. Cell. 1999;3:751-760.
+CC   This entry represents a coiled-coil middle domain of approximately
+CC   82 residues found in syntaxin-binding protein 4 (STXBP4/Synip)
+CC   in vertebrates. This domain is located between the N-terminal
+CC   PDZ domain (Pfam:PF00595) and C-terminal WW domain (Pfam:PF00397).
+CC   STXBP4 inhibits GLUT4 translocation by binding syntaxin 4 and
+CC   preventing interaction with VAMP2. Insulin stimulation disrupts
+CC   this interaction through phosphorylation by AKT2, leading to
+CC   increased glucose uptake.
