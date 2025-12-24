@@ -1,0 +1,17 @@
+ID   R3HCC1L_C
+DE   R3HCC1L C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K6J3F0_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 46
+CC   residues found in R3HCC1L (coiled-coil domain-containing protein
+CC   R3HCC1L) in metazoans. This domain is located C-terminal to the
+CC   RRM_R3HCC1L domain (Pfam:PF28975). R3HCC1L may interact with the
+CC   exon junction complex (EJC) through a conserved EJC-binding motif
+CC   in the N-terminal region, suggesting a role in mRNA metabolism
+CC   or nonsense-mediated mRNA decay pathways.
