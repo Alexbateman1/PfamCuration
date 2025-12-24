@@ -1,0 +1,16 @@
+ID   RecJ_C
+DE   RecJ-like exonuclease C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A238USF7_TED04
+GA   27.00 27.00;
+TC   30.60 27.80;
+NC   24.80 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 123
+CC   residues found in RecJ-like exonuclease proteins in Archaea,
+CC   predominantly Halobacteriales and Methanobacteriota. This domain
+CC   is located after the DHH domain (Pfam:PF01368) and tRNA anticodon
+CC   binding domain (Pfam:PF01336). RecJ is a single-stranded DNA-specific
+CC   exonuclease involved in DNA repair and recombination.

@@ -1,0 +1,16 @@
+ID   PhyH_C
+DE   Phytanoyl-CoA dioxygenase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A238KHT7_TED02
+GA   27.00 27.00;
+TC   28.50 32.60;
+NC   25.40 24.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 85
+CC   residues found in phytanoyl-CoA dioxygenase proteins in bacteria.
+CC   This domain is located after the PhyH domain (Pfam:PF05721).
+CC   Phytanoyl-CoA dioxygenase is a 2-oxoglutarate-dependent dioxygenase
+CC   that alpha-hydroxylates phytanoyl-CoA, a key step in the degradation
+CC   of phytanic acid derived from dietary chlorophyll.
