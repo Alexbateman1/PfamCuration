@@ -1,0 +1,29 @@
+ID   CGRRF1_N
+DE   CGRRF1 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5N3XMP3_TED01
+GA   27.00 27.00;
+TC   28.80 27.20;
+NC   26.80 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   8968090
+RT   Induction of cell growth regulatory genes by p53.
+RA   Madden SL, Galella EA, Riley D, Bertelsen AH, Beaudry GA;
+RL   Cancer Res. 1996;56:5384-5390.
+RN   [2]
+RM   27485036
+RT   CGRRF1 is a novel ER membrane protein involved in ER stress signaling.
+RA   Chowdhury UR, Bhattacharya S, Bhattacharya R;
+RL   PLoS One 2016;11:e0159858.
+CC   This entry represents an N-terminal domain found in cell growth
+CC   regulator with RING finger domain protein 1 (CGRRF1, also known as
+CC   CGR19 or RNF197) in Metazoa. This domain is located N-terminal to
+CC   the C3HC4 RING-type zinc finger domain (Pfam:PF13920). CGRRF1 is a
+CC   p53-inducible gene that functions as a cell growth inhibitor. It is
+CC   localized to both the nucleus and endoplasmic reticulum, and is
+CC   upregulated by ER stress. CGRRF1 has been implicated as a tumor
+CC   suppressor in breast cancer.
+
