@@ -1,0 +1,17 @@
+ID   SMR_N
+DE   CCCH zinc finger and SMR domain-containing protein N-terminal
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A317X970_TED01
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain found in CCCH zinc finger
+CC   and SMR domain-containing proteins in Fungi (Ascomycota). These
+CC   proteins contain DUF8432 (Pfam:PF28536), CCCH zinc finger domains
+CC   (Pfam:PF14608), and DUF1771 (Pfam:PF08590) C-terminal to this domain.
+CC   Some members are annotated as polyadenylate-binding proteins and may
+CC   be involved in mRNA metabolism.
+
