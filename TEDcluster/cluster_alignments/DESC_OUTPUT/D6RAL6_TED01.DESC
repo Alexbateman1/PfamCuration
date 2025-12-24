@@ -1,0 +1,29 @@
+ID   PARP8_N
+DE   Poly(ADP-ribose) polymerase 8 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:D6RAL6_TED01
+GA   27.00 27.00;
+TC   27.70 28.00;
+NC   25.90 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   20106667
+RT   Toward a unified nomenclature for mammalian ADP-ribosyltransferases.
+RA   Hottiger MO, Hassa PO, Luscher B, Schuler H, Koch-Nolte F;
+RL   Trends Biochem. Sci. 2010;35:208-219.
+RN   [2]
+RM   25043379
+RT   Family-wide analysis of poly(ADP-ribose) polymerase activity.
+RA   Vyas S, Matic I, Uchima L, Rood J, Zaja R, Hay RT, Ahel I,
+RA   Chang P;
+RL   Nat. Commun. 2014;5:4426.
+CC   This entry represents an N-terminal domain found in poly(ADP-ribose)
+CC   polymerase 8 (PARP8/ARTD16) in Metazoa. This domain is located
+CC   N-terminal to the catalytic PARP domain (Pfam:PF00644). PARP8 is a
+CC   mono-ADP-ribosyltransferase that catalyses the transfer of ADP-ribose
+CC   from NAD+ to cysteine residues on target proteins. The protein
+CC   undergoes auto-mono-ADP-ribosylation at multiple cysteine residues.
+CC   PARP8 belongs to the ARTD/PARP family of ADP-ribosyltransferases.
+

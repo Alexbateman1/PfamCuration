@@ -1,0 +1,25 @@
+ID   PatA_N
+DE   PatA-like acetyltransferase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5N8WGU7_TED02
+GA   27.00 27.00;
+TC   29.50 30.20;
+NC   26.80 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   28539332
+RT   Identification and characterization of two types of amino
+RT   acid-regulated acetyltransferases in actinobacteria.
+RA   Xu H, Zhang L, Guo C, Deng H, Xu X;
+RL   Biosci. Rep. 2017;37:BSR20170157.
+CC   This entry represents an N-terminal domain found in bacterial GNAT
+CC   family N-acetyltransferases in Actinobacteria. This domain is
+CC   located N-terminal to the acetyltransferase catalytic domain
+CC   (Pfam:PF00583 or Pfam:PF13302). The full-length proteins are
+CC   related to PatA (protein acetyltransferase A) family acetyltransferases
+CC   that are involved in amino acid-regulated acetylation in
+CC   Streptomyces and related bacteria. These enzymes participate in
+CC   nitrogen metabolism and secondary metabolism regulation.
+
