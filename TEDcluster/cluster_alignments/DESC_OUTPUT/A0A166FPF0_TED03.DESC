@@ -1,0 +1,15 @@
+ID   CoQ_bind_C
+DE   Coenzyme Q-binding protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A166FPF0_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 55
+CC   residues found in coenzyme Q-binding proteins. This domain is located
+CC   after the polyketide cyclase domain (Pfam:PF03364). These proteins
+CC   contain two tandem copies of this domain. Coenzyme Q (ubiquinone)
+CC   is an essential lipid component of the electron transport chain.

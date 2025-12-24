@@ -1,0 +1,15 @@
+ID   Actino_mem2
+DE   Actinomycete membrane protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1T3P7M5_TED01
+GA   27.00 27.00;
+TC   27.00 27.40;
+NC   26.80 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a small membrane protein domain of approximately
+CC   110 residues found in Actinomycetes, predominantly Streptomyces and
+CC   Microbacteriaceae. These are small single-domain integral membrane
+CC   proteins whose function is unknown. Some are annotated as Fe-S
+CC   proteins, suggesting a potential role in electron transfer.

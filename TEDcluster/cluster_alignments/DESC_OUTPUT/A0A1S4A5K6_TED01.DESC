@@ -1,0 +1,29 @@
+ID   VIN3_N
+DE   Vernalization insensitive 3 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1S4A5K6_TED01
+GA   27.00 27.00;
+TC   29.40 28.60;
+NC   26.70 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   14712276
+RT   Vernalization in Arabidopsis thaliana is mediated by the PHD finger
+RT   protein VIN3.
+RA   Sung S, Amasino RM;
+RL   Nature. 2004;427:159-164.
+RN   [2]
+RM   18854416
+RT   A PHD-polycomb repressive complex 2 triggers the epigenetic silencing
+RT   of FLC during vernalization.
+RA   De Lucia F, Crevillen P, Jones AME, Greb T, Dean C;
+RL   Proc Natl Acad Sci USA. 2008;105:16831-16836.
+CC   This entry represents an N-terminal domain of approximately 70 residues
+CC   found in VIN3-like proteins in plants (Viridiplantae). This domain is
+CC   located before the PHD_Oberon domain (Pfam:PF07227). VIN3 proteins are
+CC   components of the plant homeodomain/polycomb repressive complex 2
+CC   (PHD-PRC2) that mediates epigenetic silencing of the floral repressor
+CC   FLC during vernalization, the process by which prolonged cold
+CC   exposure promotes flowering.

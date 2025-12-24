@@ -1,0 +1,22 @@
+ID   MORN5_C
+DE   MORN repeat-containing protein 5 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1U7QW16_TED02
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.80 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   28742876
+RT   MORN5 is required for sperm flagellar assembly.
+RA   Zhang Y, Liu H, Li W, Zhang Z, Zhang S, Teves ME, Stevens C,
+RA   Nagarkatti P, Bhalla S, Bhalla K, Bhalla KK, Orange JS, Zhang Z;
+RL   Cell Mol Life Sci. 2017;74:4329-4345.
+CC   This entry represents a C-terminal domain of approximately 50
+CC   residues found in MORN repeat-containing protein 5 (MORN5) in
+CC   metazoans (vertebrates and insects). This domain is located after
+CC   the MORN repeat region (Pfam:PF02493). MORN5 localizes to the sperm
+CC   flagellum and is required for proper flagellar assembly and sperm
+CC   motility.

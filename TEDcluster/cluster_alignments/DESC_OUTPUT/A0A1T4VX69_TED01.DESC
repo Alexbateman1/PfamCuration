@@ -1,0 +1,23 @@
+ID   Fuc_iso_N
+DE   Fucose/sulfoquinovose isomerase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1T4VX69_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   33036753
+RT   A transaldolase-dependent sulfoglycolysis pathway in Bacillus
+RT   megaterium DSM 1804.
+RA   Liu Y, Wei Y, Zhou Y, Ang EL, Zhao H, Zhang Y;
+RL   Biochem Biophys Res Commun. 2020;533:1109-1114.
+CC   This entry represents an N-terminal domain of approximately 170
+CC   residues found in L-fucose isomerases and sulfoquinovose isomerases
+CC   in bacteria, predominantly Clostridia, Bacilli, and Alphaproteobacteria.
+CC   This domain is located before the Fucose_iso_C domain (Pfam:PF02952).
+CC   L-fucose isomerases catalyze the isomerization of L-fucose to
+CC   L-fuculose. Sulfoquinovose isomerases (SqvD) are part of the
+CC   sulfoglycolysis pathway that degrades sulfoquinovose to sulfolactate.

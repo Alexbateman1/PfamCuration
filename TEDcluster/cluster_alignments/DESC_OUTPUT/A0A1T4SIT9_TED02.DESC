@@ -1,0 +1,29 @@
+ID   Sulfhyd_C
+DE   Sulfhydrogenase-associated C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1T4SIT9_TED02
+GA   27.00 27.00;
+TC   30.10 32.10;
+NC   26.10 21.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   7704275
+RT   Characterization of the locus encoding the [Ni-Fe] sulfhydrogenase
+RT   from the archaeon Pyrococcus furiosus: evidence for a relationship
+RT   to bacterial sulfite reductases.
+RA   Pedroni P, Della Volpe A, Galli G, Mura GM, Pratesi C, Grandi G;
+RL   Microbiology. 1995;141:449-458.
+RN   [2]
+RM   11054105
+RT   Enzymes of hydrogen metabolism in Pyrococcus furiosus.
+RA   Silva PJ, van den Ban EC, Wassink H, Haaker H, de Castro B,
+RA   Robb FT, Hagen WR;
+RL   Eur J Biochem. 2000;267:6541-6551.
+CC   This entry represents a C-terminal domain found in sulfhydrogenase
+CC   and F420-non-reducing hydrogenase subunits in Archaea (Thermococcales,
+CC   Methanobacteria) and Actinomycetes. This domain is located after the
+CC   Oxidored_q6 domain (Pfam:PF01058). Sulfhydrogenases are bifunctional
+CC   enzymes that function as hydrogen-evolving hydrogenases with
+CC   sulfur-reducing activity.

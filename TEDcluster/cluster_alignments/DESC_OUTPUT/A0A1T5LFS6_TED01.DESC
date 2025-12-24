@@ -1,0 +1,17 @@
+ID   Bacter_unk
+DE   Bacteroidetes uncharacterized domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1T5LFS6_TED01
+GA   27.00 27.00;
+TC   58.80 57.50;
+NC   25.80 19.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a small domain of approximately 112 residues
+CC   found in uncharacterized proteins in Bacteroidota, predominantly
+CC   Flavobacteriaceae, Sphingobacteriaceae, and Cytophagales. These are
+CC   small single-domain proteins whose function remains to be determined.
+CC   STRING analysis suggests functional association with DUF3276
+CC   (Pfam:PF11680), uroporphyrinogen-III synthase HEM4 (Pfam:PF02602),
+CC   and ClpS adaptor (Pfam:PF02617).
