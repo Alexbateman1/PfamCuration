@@ -1,0 +1,25 @@
+ID   CHAMP1_N
+DE   CHAMP1 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L0PYY3_TED01
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   21063390
+RT   CAMP (C13orf8, ZNF828) is a novel regulator of kinetochore-microtubule
+RT   attachment.
+RA   Itoh G, Kanno S, Uchida KS, Chiba S, Sugino S, Watanabe K, Mizuno K,
+RA   Yasui A, Hirota T, Tanaka K;
+RL   EMBO J. 2011;30:130-144.
+CC   This entry represents an N-terminal domain found in CHAMP1 (chromosome
+CC   alignment-maintaining phosphoprotein 1) in Euteleostomi. CHAMP1 is
+CC   required for proper chromosome alignment at metaphase and accurate
+CC   segregation during mitosis. It maintains spindle microtubule attachment
+CC   to kinetochores and recruits CENPE and CENPF. The C2H2 zinc finger
+CC   domains (Pfam:PF00096) are located C-terminal to this domain. De novo
+CC   mutations cause intellectual disability with speech impairment.
+

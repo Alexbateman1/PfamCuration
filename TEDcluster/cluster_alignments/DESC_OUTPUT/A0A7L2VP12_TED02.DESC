@@ -1,0 +1,25 @@
+ID   Spastizin_mid
+DE   Spastizin/ZFYVE26 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L2VP12_TED02
+GA   27.00 27.00;
+TC   27.20 38.70;
+NC   26.60 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   20208530
+RT   PtdIns(3)P controls cytokinesis through KIF13A-mediated recruitment
+RT   of FYVE-CENT to the midbody.
+RA   Sagona AP, Nezis IP, Pedersen NM, Liestol K, Poulton J, Rusten TE,
+RA   Skotheim RI, Raiborg C, Stenmark H;
+RL   Nat. Cell Biol. 2010;12:362-371.
+CC   This entry represents a middle domain found in ZFYVE26/spastizin
+CC   (zinc finger FYVE domain-containing protein 26) in Euteleostomi.
+CC   Spastizin is a phosphatidylinositol 3-phosphate-binding protein
+CC   essential for cytokinesis, localized to centrosomes and the midbody.
+CC   The FYVE domain (Pfam:PF01363) and TPR_ZFYVE26 domain (Pfam:PF25569)
+CC   are located C-terminal to this domain. Mutations cause SPG15, an
+CC   autosomal recessive form of hereditary spastic paraplegia.
+

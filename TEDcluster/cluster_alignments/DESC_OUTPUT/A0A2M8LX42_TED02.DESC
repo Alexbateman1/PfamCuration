@@ -1,0 +1,18 @@
+ID   ABC_C_actin
+DE   ABC transporter C-terminal domain (Actinomycetes)
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2M8LX42_TED02
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   26.70 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain found in ABC-2 type
+CC   transport system ATP-binding proteins in Actinomycetota. These ABC
+CC   transporters use ATP hydrolysis to transport various substrates
+CC   across membranes. The ABC transporter domain (Pfam:PF00005) and
+CC   AAA_21 domain (Pfam:PF13304) are located N-terminal to this domain.
+CC   Members of this family are found primarily in Streptomyces and
+CC   related genera.
+

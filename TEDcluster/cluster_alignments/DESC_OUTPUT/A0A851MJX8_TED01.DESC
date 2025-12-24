@@ -1,0 +1,25 @@
+ID   USP36_C
+DE   USP36 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A851MJX8_TED01
+GA   27.00 27.00;
+TC   27.50 30.90;
+NC   24.40 23.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   19208757
+RT   Nucleolar structure and function are regulated by the
+RT   deubiquitylating enzyme USP36.
+RA   Endo A, Matsumoto M, Inada T, Yamamoto A, Nakayama KI, Kitamura N,
+RA   Komada M;
+RL   J. Cell Sci. 2009;122:678-686.
+CC   This entry represents a C-terminal domain found in USP36 (ubiquitin-
+CC   specific protease 36) in Metazoa. USP36 is a nucleolar deubiquitinase
+CC   essential for ribosomal RNA processing and protein synthesis. It
+CC   deubiquitinates multiple substrates including MYC, DHX33, NPM1, FBL,
+CC   and histone H2B. The UCH domain (Pfam:PF00443) is located N-terminal
+CC   to this domain. USP36 also acts as a SUMO ligase promoting EXOSC10
+CC   sumoylation.
+

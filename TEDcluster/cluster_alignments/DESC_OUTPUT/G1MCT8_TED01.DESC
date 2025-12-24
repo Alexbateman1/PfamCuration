@@ -1,0 +1,24 @@
+ID   TADA3_N
+DE   TADA3 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:G1MCT8_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.20 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   11707411
+RT   hADA3 is required for p53 activity.
+RA   Wang T, Kobayashi T, Takimoto R, Denes AE, Snyder EL, el-Deiry WS,
+RA   Brachmann RK;
+RL   EMBO J. 2001;20:6404-6413.
+CC   This entry represents an N-terminal domain found in TADA3
+CC   (transcriptional adapter 3/hADA3) in Metazoa. TADA3 is a component of
+CC   the PCAF complex (human SAGA complex) and ATAC complex, both of which
+CC   have histone acetyltransferase activity. It functions as a coactivator
+CC   for p53-dependent transcriptional activation. The Ada3 domain
+CC   (Pfam:PF10198) is located C-terminal to this domain. High-risk HPV
+CC   oncoprotein E6 inactivates TADA3.
+
