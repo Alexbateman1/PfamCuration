@@ -1,0 +1,24 @@
+ID   BEND5_N
+DE   BEND5 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K4LPW6_TED01
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23468431
+RT   The BEN domain is a novel sequence-specific DNA-binding domain
+RT   conserved in neural transcriptional repressors.
+RA   Dai Q, Ren A, Westholm JO, Serganov AA, Patel DJ, Lai EC;
+RL   Genes Dev. 2013;27:602-614.
+CC   This entry represents an N-terminal domain found in BEN domain-
+CC   containing protein 5 (BEND5) in vertebrates. This domain is located
+CC   at the N-terminus, upstream of the C-terminal BEN domain
+CC   (Pfam:PF10523). BEND5 acts as a transcriptional repressor, where the
+CC   BEN domain mediates sequence-specific DNA binding. BEND5 has been
+CC   implicated in the suppression of Notch signaling and regulation of
+CC   cell proliferation.
+

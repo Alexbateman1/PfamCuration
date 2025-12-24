@@ -1,0 +1,32 @@
+ID   MutY_C
+DE   MutY adenine glycosylase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A367FH26_TED03
+GA   27.00 27.00;
+TC   27.00 27.40;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17698424
+RT   A distinct role of formamidopyrimidine DNA glycosylase (MutM) in down-
+RT   regulation of accumulation of G, C mutations and protection against
+RT   oxidative stress in mycobacteria.
+RA   Jain R, Kumar P, Varshney U;
+RL   DNA Repair 2007;6:1774-1785.
+RN   [2]
+RM   19778963
+RT   A distinct physiological role of MutY in mutation prevention in
+RT   mycobacteria.
+RA   Kurthkoti K, Srinath T, Kumar P, Malshetty VS, Sang PB, Jain R,
+RA   Manjunath R, Varshney U;
+RL   Microbiology 2010;156:88-93.
+CC   This entry represents a C-terminal domain found in adenine DNA
+CC   glycosylase MutY in Actinomycetota. This domain is located C-terminal
+CC   to the HhH-GPD catalytic domain (Pfam:PF00730), HhH domain
+CC   (Pfam:PF00633), and the 4Fe-4S binding domain (Pfam:PF10576). MutY is
+CC   a base excision repair enzyme that removes mispaired adenine residues
+CC   from DNA, particularly from 8-oxoguanine:adenine mismatches that arise
+CC   from oxidative damage, thereby preventing transversion mutations.
+

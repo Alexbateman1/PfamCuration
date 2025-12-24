@@ -1,0 +1,32 @@
+ID   PWD_link
+DE   Phosphoglucan water dikinase linker domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:D8RQ33_TED02
+GA   27.00 27.00;
+TC   27.10 28.20;
+NC   26.40 23.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   15686522
+RT   A novel isoform of glucan, water dikinase phosphorylates pre-
+RT   phosphorylated alpha-glucans and is involved in starch degradation in
+RT   Arabidopsis.
+RA   Baunsgaard L, Luetken H, Mikkelsen R, Glaring MA, Pham TT, Blennow A;
+RL   Plant J. 2005;41:595-605.
+RN   [2]
+RM   15618411
+RT   Identification of a novel enzyme required for starch metabolism in
+RT   Arabidopsis leaves. The phosphoglucan, water dikinase.
+RA   Koetting O, Pusch K, Tiessen A, Geigenberger P, Steup M, Ritte G;
+RL   Plant Physiol. 2005;137:242-252.
+CC   This entry represents a linker domain found in phosphoglucan water
+CC   dikinase (PWD, also known as GWD3) in Viridiplantae. This domain is
+CC   located between the N-terminal starch-binding CBM20 domain
+CC   (Pfam:PF00686) and the C-terminal GWD1_pHisD phosphohistidine domain
+CC   (Pfam:PF22973). PWD mediates the phosphorylation of starch at the C-3
+CC   position of glucose units during starch degradation. The enzyme
+CC   localizes to chloroplast starch granules during the dark phase, where
+CC   starch phosphorylation regulates its degradability.
+
