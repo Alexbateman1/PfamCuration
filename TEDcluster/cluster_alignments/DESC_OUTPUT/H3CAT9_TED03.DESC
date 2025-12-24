@@ -1,0 +1,25 @@
+ID   VCPIP1_C
+DE   Deubiquitinating protein VCPIP1 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:H3CAT9_TED03
+GA   27.00 27.00;
+TC   27.60 27.30;
+NC   26.00 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   32649882
+RT   Tandem deubiquitination and acetylation of SPRTN promotes DNA-protein
+RT   crosslink repair and protects against aging.
+RA   Huang J, Zhou Q, Gao M, Nowsheen S, Zhao F, Kim W, Zhu Q, Kojima Y,
+RA   Yin P, Zhang Y, Guo G, Tu X, Deng M, Luo K, Qin B, Machida Y, Lou Z;
+RL   Mol. Cell. 2020;79:176-189.
+CC   This entry represents a C-terminal domain found in VCPIP1 (VCP/p47
+CC   complex-interacting protein p135) in vertebrates. VCPIP1 is a
+CC   deubiquitinating enzyme that hydrolyzes Lys-11 and Lys-48 linked
+CC   polyubiquitin chains. It functions in DNA repair by deubiquitinating
+CC   SPRTN, enabling repair of DNA-protein crosslinks. VCPIP1 is also
+CC   required for VCP-mediated reassembly of Golgi stacks after mitosis.
+CC   It contains an OTU domain (Pfam:PF02338) and VCIP135_N domain
+CC   (Pfam:PF19437).

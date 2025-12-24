@@ -1,0 +1,24 @@
+ID   COG1_C
+DE   Conserved oligomeric Golgi complex subunit 1 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:L9L081_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   11980916
+RT   Characterization of a mammalian Golgi-localized protein complex,
+RT   COG, that is required for normal Golgi morphology and function.
+RA   Ungar D, Oka T, Brittle EE, Vasile E, Lupashin VV, Chatterton JE,
+RA   Heuser JE, Krieger M, Waters MG;
+RL   J. Cell Biol. 2002;157:405-415.
+CC   This entry represents a C-terminal domain found in COG1 (conserved
+CC   oligomeric Golgi complex subunit 1) in vertebrates. COG1 contains
+CC   the VPS51_Exo84_N domain (Pfam:PF08700) N-terminally. COG1 is a
+CC   component of the COG complex, which is required for normal Golgi
+CC   morphology and function. Mutations in COG1 cause congenital
+CC   disorder of glycosylation type 2G (CDG2G), characterized by
+CC   defects in both N- and O-glycosylation.

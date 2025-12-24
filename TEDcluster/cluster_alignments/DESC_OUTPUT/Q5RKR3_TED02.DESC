@@ -1,0 +1,23 @@
+ID   ISLR2_mid
+DE   ISLR2 leucine-rich repeat immunoglobulin protein middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q5RKR3_TED02
+GA   27.00 27.00;
+TC   27.00 37.30;
+NC   26.90 25.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   19755105
+RT   LIG family receptor tyrosine kinase-associated proteins modulate
+RT   growth factor signals during neural development.
+RA   Mandai K, Guo T, StHillaire C, Meabon JS, Kanning KC, Bothwell M,
+RA   Ginty DD;
+RL   Neuron. 2009;63:614-627.
+CC   This entry represents a middle domain found in ISLR2 (immunoglobulin
+CC   superfamily containing leucine-rich repeat protein 2, also known as
+CC   LINX) in vertebrates. ISLR2 contains leucine-rich repeats (LRR_8,
+CC   Pfam:PF13855) and a C-terminal LRRCT domain. ISLR2 is required for
+CC   axon extension during neural development and forms homomultimers
+CC   that interact with NTRK1/TrkA receptor tyrosine kinase.

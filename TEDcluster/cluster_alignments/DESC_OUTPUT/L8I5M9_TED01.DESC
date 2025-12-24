@@ -1,0 +1,23 @@
+ID   SKAP2_N
+DE   Src kinase-associated phosphoprotein 2 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:L8I5M9_TED01
+GA   27.00 27.00;
+TC   27.20 27.20;
+NC   26.70 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   12893833
+RT   The Src-like adaptor protein 2 regulates integrin-mediated adhesion
+RT   of T cells through a conserved mechanism.
+RA   Peterson EJ, Clements JL, Fang N, Koretzky GA;
+RL   J. Immunol. 2003;170:3697-3706.
+CC   This entry represents an N-terminal domain found in SKAP2 (Src
+CC   kinase-associated phosphoprotein 2, also known as SKAP-HOM) in
+CC   vertebrates. SKAP2 is located N-terminal to the PH domain
+CC   (Pfam:PF00169) and SH3 domain (Pfam:PF00018). SKAP2 is involved
+CC   in B-cell and macrophage adhesion processes, coupling the B-cell
+CC   receptor to integrin activation. It interacts with FYB1, LAT,
+CC   GRB2, and various kinases.
