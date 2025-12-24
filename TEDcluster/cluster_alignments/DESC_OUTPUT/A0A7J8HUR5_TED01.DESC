@@ -1,0 +1,23 @@
+ID   SENP7_N
+DE   Sentrin-specific protease 7 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7J8HUR5_TED01
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   26.70 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   18799455
+RT   Structure of the human SENP7 catalytic domain and poly-SUMO
+RT   deconjugation activities for SENP6 and SENP7.
+RA   Lima CD, Reverter D;
+RL   J. Biol. Chem. 2008;283:32045-32055.
+CC   This entry represents an N-terminal domain found in SENP7
+CC   (sentrin-specific protease 7) in vertebrates. SENP7 is a SUMO
+CC   protease that deconjugates SUMO2 and SUMO3 from target proteins
+CC   and catalyzes cleavage of poly-SUMO chains. It acts as a positive
+CC   regulator of the cGAS-STING innate immunity pathway by desumoylating
+CC   cGAS. This N-terminal domain is located before the C48 peptidase
+CC   catalytic domain (Pfam:PF02902).

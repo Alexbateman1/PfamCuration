@@ -1,0 +1,16 @@
+ID   Fung_N
+DE   Fungal N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:N1Q5G9_TED01
+GA   27.00 27.00;
+TC   28.40 29.60;
+NC   26.20 24.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a short N-terminal domain of approximately
+CC   42 residues found in uncharacterized proteins in Ascomycota fungi,
+CC   particularly Sordariomycetes, Dothideomycetes, and Eurotiomycetes.
+CC   Some members are annotated as LAMTOR1/MEH1-related proteins,
+CC   suggesting potential involvement in lysosomal or TORC1 signaling
+CC   pathways.
