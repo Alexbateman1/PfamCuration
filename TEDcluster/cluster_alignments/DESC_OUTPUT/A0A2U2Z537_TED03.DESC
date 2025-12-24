@@ -1,0 +1,15 @@
+ID   MFS_Strep_C
+DE   MFS transporter C-terminal domain in Streptomyces
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2U2Z537_TED03
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 113
+CC   residues found in MFS (major facilitator superfamily) transporters
+CC   in Actinomycetota (Streptomyces). These transporters are integral
+CC   membrane proteins involved in transport of various substrates
+CC   across the cell membrane.

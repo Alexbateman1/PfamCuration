@@ -1,0 +1,17 @@
+ID   AfsQ2_sensor
+DE   AfsQ2 histidine kinase sensor domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2U3C466_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CL   CL0183
+CC   This entry represents an extracellular sensor domain of approximately
+CC   171 residues found in AfsQ2 histidine kinases in Actinomycetota
+CC   (Streptomyces, Micromonospora). AfsQ2 is part of the two-component
+CC   regulatory system AfsQ1/AfsQ2 involved in secondary metabolism. The
+CC   C-terminal region contains HAMP (Pfam:PF00672), HisKA (Pfam:PF00512),
+CC   and HATPase_c (Pfam:PF02518) domains.
