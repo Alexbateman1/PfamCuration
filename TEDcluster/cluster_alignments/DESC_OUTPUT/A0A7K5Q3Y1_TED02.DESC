@@ -1,0 +1,27 @@
+ID   Chk1_reg_C
+DE   Checkpoint kinase 1 C-terminal regulatory domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K5Q3Y1_TED02
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   10859164
+RT   Chk1 is an essential kinase that is regulated by Atr and required for
+RT   the G(2)/M DNA damage checkpoint.
+RA   Liu Q, Guntuku S, Cui X-S, Matsuoka S, Cortez D, Tamai K, Luo G,
+RA   Carattini-Rivera S, DeMayo F, Bradley A, Donehower LA, Elledge SJ;
+RL   Genes Dev. 2000;14:1448-1459.
+CL   CL0573
+CC   This entry represents the C-terminal regulatory domain of
+CC   approximately 87 residues found in checkpoint kinase 1 (Chk1) in
+CC   metazoans. This domain is located C-terminal to the protein kinase
+CC   domain (Pfam:PF00069). Chk1 is a serine/threonine-protein kinase
+CC   that mediates the DNA damage checkpoint response by phosphorylating
+CC   Cdc25 phosphatases, preventing cell cycle progression. The domain
+CC   contains key phosphorylation sites (Ser-317, Ser-345) that regulate
+CC   Chk1 activity in response to ATR signaling. Foldseek analysis
+CC   indicates structural similarity to KA1 domains in clan CL0573.

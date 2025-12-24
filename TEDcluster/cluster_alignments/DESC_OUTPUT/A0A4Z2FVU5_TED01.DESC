@@ -1,0 +1,23 @@
+ID   BRAF_N
+DE   B-Raf kinase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4Z2FVU5_TED01
+GA   27.00 27.00;
+TC   28.10 27.20;
+NC   26.80 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   14654779
+RT   Identification of novel ERK-mediated feedback phosphorylation sites
+RT   at the C-terminus of B-Raf.
+RA   Brummer T, Naegele H, Reth M, Misawa Y;
+RL   Oncogene. 2003;22:8823-8834.
+CC   This entry represents the N-terminal domain of approximately 60
+CC   residues found in B-Raf (BRAF) serine/threonine-protein kinase in
+CC   vertebrates. This domain is located N-terminal to the RBD domain
+CC   (Pfam:PF02196), C1 domain (Pfam:PF00130), and protein kinase domain
+CC   (Pfam:PF00069). BRAF is a key component of the RAS-RAF-MEK-ERK
+CC   signaling pathway that regulates cell proliferation and survival.
+CC   Mutations in BRAF are found in many cancers, particularly melanoma.
