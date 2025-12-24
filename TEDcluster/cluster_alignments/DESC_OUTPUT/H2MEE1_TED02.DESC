@@ -1,0 +1,24 @@
+ID   TSPEAR_N
+DE   TSPEAR N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:H2MEE1_TED02
+GA   27.00 27.00;
+TC   27.00 27.60;
+NC   26.80 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   22678063
+RT   Defect in the gene encoding the EAR/EPTP domain-containing protein
+RT   TSPEAR causes DFNB98 profound deafness.
+RA   Delmaghani S, Aghaie A, Michalski N, Bonnet C, Weil D, Petit C;
+RL   Hum. Mol. Genet. 2012;21:3835-3844.
+CC   This entry represents an N-terminal domain found in TSPEAR
+CC   (thrombospondin-type laminin G domain and EAR repeat-containing
+CC   protein) in Metazoa. TSPEAR plays a critical role in tooth and hair
+CC   follicle morphogenesis through Notch signaling regulation. Multiple
+CC   EPTP/EAR repeats (Pfam:PF03736) are located C-terminal to this
+CC   domain. Mutations in TSPEAR cause autosomal recessive deafness
+CC   (DFNB98) and ectodermal dysplasia.
+

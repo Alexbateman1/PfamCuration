@@ -1,0 +1,18 @@
+ID   MFS_C
+DE   MFS transporter C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K2ZHK6_TED02
+GA   27.00 27.00;
+TC   27.20 69.00;
+NC   24.90 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CL   CL0111
+CC   This entry represents a C-terminal domain found in MFS (major
+CC   facilitator superfamily) transporter proteins in Actinomycetota
+CC   (Streptomyces). MFS transporters are membrane proteins that
+CC   transport small molecules across membranes. Structural similarity
+CC   to the PTPS_related domain (Pfam:PF10131) suggests membership in
+CC   the same clan (CL0111).
+
