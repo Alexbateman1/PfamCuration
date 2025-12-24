@@ -1,0 +1,28 @@
+ID   PGAP6_N
+DE   PGAP6/TMEM8 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6P3EML6_TED01
+GA   27.00 27.00;
+TC   27.20 27.30;
+NC   26.70 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CL   CL0202
+RN   [1]
+RM   27881714
+RT   A GPI processing phospholipase A2, PGAP6, modulates Nodal signaling
+RT   in embryos by shedding CRIPTO.
+RA   Lee GH, Fujita M, Takaoka K, Murakami Y, Fujihara Y, Kanzawa N,
+RA   Murakami KI, Kajikawa E, Takada Y, Saito K, Ikawa M, Hamada H,
+RA   Maeda Y, Kinoshita T;
+RL   J. Cell Biol. 2016;215:705-718.
+CC   This entry represents an N-terminal domain of approximately 140
+CC   residues found in PGAP6 (Post-GPI attachment to proteins factor 6)
+CC   and TMEM8 family proteins in metazoans (vertebrates and insects).
+CC   This domain is located N-terminal to the DUF3522 domain
+CC   (Pfam:PF12036) and an EGF-like domain. PGAP6 is a GPI processing
+CC   phospholipase A2 involved in lipid remodeling of GPI-anchored
+CC   proteins. It removes acyl chains at the sn-2 position during GPI
+CC   remodeling and is required for shedding of CRIPTO, which modulates
+CC   Nodal signaling during embryogenesis.

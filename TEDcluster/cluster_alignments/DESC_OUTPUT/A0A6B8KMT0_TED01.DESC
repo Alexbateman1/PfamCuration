@@ -1,0 +1,18 @@
+ID   Primase_N
+DE   Alphaproteobacterial primase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6B8KMT0_TED01
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 96
+CC   residues found in DNA primases in Alphaproteobacteria
+CC   (Hyphomicrobiales, Rhodobacterales, Sphingomonadales). This domain
+CC   is found N-terminal to the DUF7146 domain (Pfam:PF23639) and
+CC   Toprim_3 domain (Pfam:PF13362). These proteins are involved in
+CC   DNA replication initiation and may be phage-related. STRING
+CC   analysis indicates functional association with ParB_N partitioning
+CC   proteins and YbeY RNA processing enzymes.

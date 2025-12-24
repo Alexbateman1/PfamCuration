@@ -1,0 +1,17 @@
+ID   M14_Bact_C
+DE   Bacterial carboxypeptidase M14 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3S9MXE9_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 102
+CC   residues found in zinc carboxypeptidases (peptidase M14 family) in
+CC   Bacteroidota (Flavobacteriaceae, Chitinophagaceae) and Pseudomonadota.
+CC   This domain is found C-terminal to the Peptidase_M14 domain
+CC   (Pfam:PF00246). These secreted carboxypeptidases function in
+CC   protein degradation. STRING analysis suggests functional association
+CC   with amidohydrolases and other peptidases.

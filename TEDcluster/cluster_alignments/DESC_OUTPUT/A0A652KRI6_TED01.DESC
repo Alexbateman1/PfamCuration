@@ -1,0 +1,17 @@
+ID   Actino_Flot
+DE   Actinobacterial flotillin-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A652KRI6_TED01
+GA   27.00 27.00;
+TC   27.60 27.20;
+NC   26.90 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a small domain of approximately 58 residues
+CC   found in uncharacterized proteins in Actinomycetota (primarily
+CC   Streptomyces, Streptomycetaceae, Pseudonocardiaceae). These proteins
+CC   typically consist only of this domain and a signal peptide. STRING
+CC   analysis indicates functional association with Band_7 (Pfam:PF01145)
+CC   and Flotillin (Pfam:PF15975) domain proteins, suggesting a role in
+CC   membrane organization or lipid raft formation.

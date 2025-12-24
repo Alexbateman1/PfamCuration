@@ -1,0 +1,18 @@
+ID   RNase_EG_C
+DE   Ribonuclease E/G C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5C6ZJF3_TED04
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.60 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 85
+CC   residues found in ribonuclease E/G proteins in Bacteroidota
+CC   (Flavobacteriaceae, Sphingobacteriaceae, Bacteroidales). This
+CC   domain is located C-terminal to the RNase_E_G catalytic domain
+CC   (Pfam:PF10150). RNase E and RNase G are related endoribonucleases
+CC   that play essential roles in mRNA decay and processing of
+CC   ribosomal RNA precursors. RNase E is a major component of the
+CC   bacterial degradosome.
