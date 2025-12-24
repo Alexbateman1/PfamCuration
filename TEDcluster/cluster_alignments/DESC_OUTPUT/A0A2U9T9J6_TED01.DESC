@@ -1,0 +1,17 @@
+ID   SUF_P_N
+DE   SUF system assembly protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2U9T9J6_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.40 22.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 57
+CC   residues found in Fe-S cluster assembly SUF system proteins in
+CC   Gammaproteobacteria (Lysobacterales, Oceanospirillales) and
+CC   Verrucomicrobiota. This domain is found N-terminal to the
+CC   FeS_assembly_P domain (Pfam:PF01883). These proteins function in
+CC   the SUF (sulfur mobilization) pathway for iron-sulfur cluster
+CC   biogenesis.

@@ -1,0 +1,18 @@
+ID   PGI_C
+DE   Bifunctional transaldolase/glucose-6-phosphate isomerase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3N2P458_TED03
+GA   27.00 27.00;
+TC   35.10 40.50;
+NC   22.60 24.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 177
+CC   residues found in bifunctional transaldolase/glucose-6-phosphate
+CC   isomerase proteins in Actinomycetota (Pseudonocardiaceae,
+CC   Micrococcales) and Alphaproteobacteria (Acetobacteraceae,
+CC   Hyphomicrobiales). These bifunctional enzymes catalyze reactions
+CC   in both the pentose phosphate pathway and glycolysis. This
+CC   C-terminal domain is found downstream of the PGI domain
+CC   (Pfam:PF00342).

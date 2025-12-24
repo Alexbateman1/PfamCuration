@@ -1,0 +1,31 @@
+ID   GCN20_N
+DE   GCN20 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2L2T2X7_TED01
+GA   27.00 27.00;
+TC   27.30 27.80;
+NC   26.80 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   7621831
+RT   GCN20, a novel ATP binding cassette protein, and GCN1 reside in a
+RT   complex that mediates activation of the eIF-2 alpha kinase GCN2 in
+RT   amino acid-starved cells.
+RA   Vazquez de Aldana CR, Marton MJ, Hinnebusch AG;
+RL   EMBO J. 1995;14:3184-3199.
+RN   [2]
+RM   9234705
+RT   Evidence that GCN1 and GCN20, translational regulators of GCN4,
+RT   function on elongating ribosomes in activation of eIF2alpha kinase
+RT   GCN2.
+RA   Marton MJ, Vazquez de Aldana CR, Qiu H, Chakraburtty K, Hinnebusch AG;
+RL   Mol. Cell. Biol. 1997;17:4474-4489.
+CC   This entry represents an N-terminal domain of approximately 85
+CC   residues found in GCN20 proteins in fungi (Ascomycota). This domain
+CC   is found N-terminal to ABC transporter domains (Pfam:PF00005) and
+CC   ABC_tran_Xtn (Pfam:PF12848). GCN20 acts as a positive activator of
+CC   GCN2 kinase activity in response to amino acid starvation, forming
+CC   a complex with GCN1 on translating ribosomes to facilitate delivery
+CC   of uncharged tRNAs to GCN2, stimulating its kinase activity.

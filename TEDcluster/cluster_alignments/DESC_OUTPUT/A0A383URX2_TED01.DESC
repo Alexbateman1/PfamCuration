@@ -1,0 +1,17 @@
+ID   Fungi_RING_N
+DE   Fungal RING-associated N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A383URX2_TED01
+GA   27.00 27.00;
+TC   27.10 29.90;
+NC   26.80 22.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 55
+CC   residues found in uncharacterized proteins in filamentous fungi
+CC   (Ascomycota - Sordariomycetes, Eurotiomycetes, Dothideomycetes).
+CC   This domain is found N-terminal to a zf_RING-like domain
+CC   (Pfam:PF25080). Some proteins contain tandem copies of this
+CC   domain followed by an HhH-GPD domain (Pfam:PF00730), suggesting
+CC   a role in DNA binding or repair processes.
