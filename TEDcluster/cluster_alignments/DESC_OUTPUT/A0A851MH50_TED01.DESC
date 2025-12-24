@@ -1,0 +1,24 @@
+ID   NIPBL_N
+DE   NIPBL cohesin loader N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A851MH50_TED01
+GA   27.00 27.00;
+TC   27.00 27.60;
+NC   26.10 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   22628566
+RT   In vitro loading of human cohesin on DNA by the human Scc2-Scc4 loader
+RT   complex.
+RA   Bermudez VP, Farina A, Higashi TL, Du F, Tappin I, Takahashi TS,
+RA   Hurwitz J;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2012;109:9366-9371.
+CC   This entry represents an N-terminal domain of approximately 95
+CC   residues found in NIPBL (nipped-B-like protein, also known as SCC2)
+CC   in vertebrates. NIPBL is an essential component of the cohesin
+CC   loader complex that loads the cohesin ring complex onto chromosomes.
+CC   NIPBL interacts with MAU2 (SCC4) to form the functional loader.
+CC   Mutations in NIPBL cause Cornelia de Lange syndrome, a
+CC   developmental disorder affecting multiple organ systems.
