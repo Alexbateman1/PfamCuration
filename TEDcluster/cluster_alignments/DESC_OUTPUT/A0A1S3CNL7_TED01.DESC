@@ -1,0 +1,21 @@
+ID   DnaJ_C_plant
+DE   Plant DnaJ chaperone C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1S3CNL7_TED01
+GA   27.00 27.00;
+TC   29.40 34.00;
+NC   24.60 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23894646
+RT   Evolution of chloroplast J proteins.
+RA   Willmund F, Dorn KV, Schulz-Raffelt M, Schroda M;
+RL   PLoS ONE. 2013;8:e70387.
+CC   This entry represents a C-terminal domain of approximately 115
+CC   residues found in DnaJ domain-containing proteins in plants
+CC   (Viridiplantae), predominantly dicotyledons (Magnoliopsida). This
+CC   domain is located after the N-terminal DnaJ domain (Pfam:PF00226).
+CC   DnaJ proteins are molecular chaperones that regulate the activity
+CC   of Hsp70. Some of these plant DnaJ proteins are chloroplast-targeted.

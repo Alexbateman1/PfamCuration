@@ -1,0 +1,18 @@
+ID   TA_antitox
+DE   Toxin-antitoxin system antitoxin domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1S1T424_TED01
+GA   27.00 27.00;
+TC   27.10 27.30;
+NC   26.70 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of approximately 160 residues found
+CC   in antitoxin components of toxin-antitoxin systems in
+CC   Alphaproteobacteria, predominantly Rhodobacterales and
+CC   Sphingomonadales. Toxin-antitoxin systems are genetic modules
+CC   consisting of a stable toxin and its cognate antitoxin. Under
+CC   normal conditions, the antitoxin neutralizes the toxin; under
+CC   stress, the labile antitoxin is degraded, allowing the toxin to
+CC   inhibit cell growth.

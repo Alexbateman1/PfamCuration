@@ -1,0 +1,16 @@
+ID   MTC1
+DE   MTC1 family domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1S2QCI7_TED01
+GA   27.00 27.00;
+TC   27.40 29.40;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a small domain of approximately 60 residues
+CC   found in MTC1 family proteins in bacteria, predominantly
+CC   Actinomycetes (Streptomyces, Micromonospora, and related genera).
+CC   These are small single-domain proteins whose function is unknown.
+CC   The MTC1 designation comes from automated annotations but the
+CC   actual function of these proteins remains to be determined.
