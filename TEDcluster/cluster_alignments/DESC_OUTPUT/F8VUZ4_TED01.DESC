@@ -1,0 +1,18 @@
+ID   Deltex_N
+DE   Deltex N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:F8VUZ4_TED01
+GA   27.00 27.00;
+TC   27.20 32.50;
+NC   26.70 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain found in Deltex E3
+CC   ubiquitin-protein ligases (DTX3/DTX3L) in Metazoa. Deltex proteins are
+CC   regulators of Notch signaling, acting as both positive and negative
+CC   regulators depending on developmental context. The RING zinc finger
+CC   domain (Pfam:PF13923) and DTC domain (Pfam:PF18102) are located
+CC   C-terminal to this domain. Deltex proteins function as E3 ubiquitin
+CC   ligases regulating the Notch pathway.
+

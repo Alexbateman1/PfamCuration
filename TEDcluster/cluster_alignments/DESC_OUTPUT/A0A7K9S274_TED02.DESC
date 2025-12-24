@@ -1,0 +1,22 @@
+ID   DTWD2_C
+DE   DTWD2 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K9S274_TED02
+GA   27.00 27.00;
+TC   27.30 27.70;
+NC   26.50 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   31804502
+RT   Biogenesis and functions of aminocarboxypropyluridine in tRNA.
+RA   Takakura M, Ishiguro K, Akichika S, Miyauchi K, Suzuki T;
+RL   Nat. Commun. 2019;10:5542.
+CC   This entry represents a C-terminal domain found in DTWD2 (DTW domain-
+CC   containing protein 2/tRNA-uridine aminocarboxypropyltransferase 2) in
+CC   Metazoa. DTWD2 catalyzes formation of 3-(3-amino-3-carboxypropyl)
+CC   uridine (acp3U) in tRNA D-loops. This modification is involved in
+CC   glycoRNA biosynthesis, providing an attachment site for N-glycans. The
+CC   DTW domain (Pfam:PF03942) is located N-terminal to this domain.
+

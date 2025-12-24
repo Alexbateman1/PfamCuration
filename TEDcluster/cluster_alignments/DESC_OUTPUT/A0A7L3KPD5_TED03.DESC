@@ -1,0 +1,18 @@
+ID   NIK_C
+DE   NF-kappa-B-inducing kinase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L3KPD5_TED03
+GA   27.00 27.00;
+TC   27.30 41.00;
+NC   26.10 20.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain found in MAP3K14/NIK
+CC   (mitogen-activated protein kinase kinase kinase 14 / NF-kappa-B-
+CC   inducing kinase) in Euteleostomi. NIK is a key kinase in the non-
+CC   canonical NF-kappa-B signaling pathway, phosphorylating CHUK/IKKalpha
+CC   to promote NFKB2/p100 processing. The protein kinase domain
+CC   (Pfam:PF00069) is located N-terminal to this domain. NIK interacts
+CC   with TRAF proteins and is regulated by ubiquitination and degradation.
+

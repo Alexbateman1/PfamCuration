@@ -1,0 +1,26 @@
+ID   PorX_mid
+DE   PorX linker domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4R6IBM7_TED02
+GA   27.00 27.00;
+TC   28.40 42.30;
+NC   26.70 22.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   36464236
+RT   Response regulator PorX coordinates oligonucleotide signalling and
+RT   gene expression to control the secretion of virulence factors.
+RA   Schmitz C, Madej M, Nowakowska Z, Cuppari A, Jacula A, Ksiazek M,
+RA   Mikruta K, Wisniewski J, Pudelko-Malik N, Saran A, Zeytuni N, Mlynarz
+RA   P, Lamont RJ, Uson I, Siksnys V, Potempa J, Sola M;
+RL   Nucleic Acids Res. 2022;50:12558-12577.
+CC   This entry represents a linker domain found in PorX (response
+CC   regulator) proteins in Bacteroidota. PorX is a response regulator
+CC   that coordinates oligonucleotide signaling and gene expression to
+CC   control virulence factor secretion in Porphyromonas gingivalis. The
+CC   response regulator receiver domain (Pfam:PF00072) is located
+CC   N-terminal and the PglZ domain (Pfam:PF08665) is located C-terminal
+CC   to this linker domain.
+
