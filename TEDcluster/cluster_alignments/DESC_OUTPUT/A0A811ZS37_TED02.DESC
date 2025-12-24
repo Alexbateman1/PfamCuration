@@ -1,0 +1,17 @@
+ID   SAMD3_C
+DE   SAMD3 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A811ZS37_TED02
+GA   27.00 27.00;
+TC   27.10 27.20;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 142
+CC   residues found in SAMD3 (sterile alpha motif domain-containing
+CC   protein 3) in vertebrates. This domain is located C-terminal to
+CC   the SAM domains (Pfam:PF00536, PF07647) and SAMD3_helical domain
+CC   (Pfam:PF30809). SAMD3 has multiple protein-protein interaction
+CC   partners identified through two-hybrid screening, suggesting it
+CC   may function as a scaffolding protein in cellular signaling.
