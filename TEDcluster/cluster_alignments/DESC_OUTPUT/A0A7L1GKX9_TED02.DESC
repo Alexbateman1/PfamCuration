@@ -1,0 +1,32 @@
+ID   LIPT1_C
+DE   LIPT1 lipoyltransferase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L1GKX9_TED02
+GA   27.00 27.00;
+TC   27.20 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17570395
+RT   Crystal structure of bovine lipoyltransferase in complex with
+RT   lipoyl-AMP.
+RA   Fujiwara K, Hosaka H, Matsuda M, Okamura-Ikeda K, Motokawa Y,
+RA   Suzuki M, Nakagawa A, Taniguchi H;
+RL   J. Mol. Biol. 2007;371:222-234.
+RN   [2]
+RM   29987032
+RT   Protein moonlighting elucidates the essential human pathway
+RT   catalyzing lipoic acid assembly on its cognate enzymes.
+RA   Cao X, Zhu L, Song X, Hu Z, Cronan JE;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2018;115:E7063-E7072.
+CC   This entry represents a C-terminal domain found in lipoyltransferase
+CC   LIPT1 in Metazoa. This domain is located C-terminal to the BPL/LPL
+CC   catalytic domain (Pfam:PF21948). LIPT1 is a mitochondrial lipoyl
+CC   amidotransferase that catalyzes the transfer of lipoyl moieties from
+CC   lipoyl-GCSH to E2 subunits of the pyruvate dehydrogenase complex.
+CC   Mutations in this gene cause lipoyltransferase 1 deficiency, an
+CC   autosomal recessive disorder resulting in severe lactic acidosis and
+CC   metabolic decompensation.
+

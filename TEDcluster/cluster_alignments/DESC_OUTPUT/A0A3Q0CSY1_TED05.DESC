@@ -1,0 +1,32 @@
+ID   FBH1_C
+DE   FBH1 helicase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3Q0CSY1_TED05
+GA   27.00 27.00;
+TC   27.00 31.80;
+NC   26.20 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   19736316
+RT   Human Fbh1 helicase contributes to genome maintenance via pro- and
+RT   anti-recombinase activities.
+RA   Fugger K, Mistrik M, Danielsen JR, Dinant C, Falck J, Bartek J,
+RA   Lukas J, Mailand N;
+RL   J. Cell Biol. 2009;186:655-663.
+RN   [2]
+RM   25772361
+RT   FBH1 catalyzes regression of stalled replication forks.
+RA   Fugger K, Mistrik M, Neelsen KJ, Yao Q, Zellweger R, Kousholt AN,
+RA   Haahr P, Chu WK, Bartek J, Lopes M, Hickson ID, Soerensen CS;
+RL   Cell Rep. 2015;10:1749-1757.
+CC   This entry represents a C-terminal domain found in F-box DNA
+CC   helicase 1 (FBH1) in Metazoa. This domain is located C-terminal to
+CC   the UvrD_C domain (Pfam:PF13361), UvrD-helicase domain (Pfam:PF00580),
+CC   and F-box-like domain (Pfam:PF12937). FBH1 is a 3'-5' DNA helicase
+CC   that acts as an anti-recombinogenic factor, promoting RAD51 filament
+CC   dissolution from stalled replication forks. It also catalyzes fork
+CC   regression during replication stress and is a substrate-recognition
+CC   component of the SCF(FBH1) E3 ubiquitin ligase complex.
+

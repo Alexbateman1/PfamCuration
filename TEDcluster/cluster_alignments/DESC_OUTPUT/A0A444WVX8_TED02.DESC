@@ -1,0 +1,34 @@
+ID   KIN14_C
+DE   KIN-14 kinesin C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A444WVX8_TED02
+GA   27.00 27.00;
+TC   27.30 44.40;
+NC   25.30 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   20418504
+RT   Two kinesin-like proteins mediate actin-based chloroplast movement in
+RT   Arabidopsis thaliana.
+RA   Suetsugu N, Yamada N, Kagawa T, Yonekura H, Uyeda TQ, Kadota A,
+RA   Wada M;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2010;107:8860-8865.
+RN   [2]
+RM   15247388
+RT   A plant-specific subclass of C-terminal kinesins contains a conserved 
+RT   a-type cyclin-dependent kinase site implicated in folding and 
+RT   dimerization.
+RA   Vanstraelen M, Torres Acosta JA, De Veylder L, Inze D, Geelen D;
+RL   Plant Physiol. 2004;135:1417-1429.
+CC   This entry represents a C-terminal domain found in KIN-14 subfamily
+CC   kinesins (also known as KAC/KCA proteins) in Viridiplantae. This
+CC   domain is located C-terminal to the Kinesin motor domain (Pfam:PF00225)
+CC   and the microtubule-binding domain (Pfam:PF16796). These kinesin-like
+CC   proteins are required for chloroplast movement via chloroplast actin
+CC   (cp-actin) filaments and are essential for anchoring chloroplasts to
+CC   the plasma membrane. They mediate the chloroplast avoidance response
+CC   under high intensity blue light and are also involved in nuclear
+CC   photorelocation movements.
+

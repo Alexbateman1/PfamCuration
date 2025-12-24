@@ -1,0 +1,31 @@
+ID   WDR24_mid
+DE   WDR24 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K9FCN8_TED02
+GA   27.00 27.00;
+TC   27.50 41.00;
+NC   25.50 23.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23723238
+RT   A Tumor suppressor complex with GAP activity for the Rag GTPases that
+RT   signal amino acid sufficiency to mTORC1.
+RA   Bar-Peled L, Chantranupong L, Cherniack AD, Chen WW, Ottina KA,
+RA   Grabiner BC, Spear ED, Carter SL, Meyerson M, Sabatini DM;
+RL   Science 2013;340:1100-1106.
+RN   [2]
+RM   35831510
+RT   Structure of the nutrient-sensing hub GATOR2.
+RA   Valenstein ML, Rogala KB, Lalgudi PV, Brignole EJ, Gu X, Saxton RA,
+RA   Chantranupong L, Kolibius J, Quast JP, Sabatini DM;
+RL   Nature 2022;607:610-616.
+CC   This entry represents a middle domain found in WDR24 in Metazoa.
+CC   This domain is located between the N-terminal WD40 repeat region
+CC   (Pfam:PF00400) and the C-terminal RING-type zinc finger domain. WDR24
+CC   is the catalytic component of the GATOR2 complex, which acts as an
+CC   activator of the amino acid-sensing branch of the mTORC1 signaling
+CC   pathway. GATOR2 inhibits the GATOR1 subcomplex through ubiquitination
+CC   of NPRL2, thereby activating mTORC1 in the presence of amino acids.
+
