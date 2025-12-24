@@ -1,0 +1,23 @@
+ID   TWNK_N
+DE   Twinkle mtDNA helicase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L0IHS9_TED01
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   18039713
+RT   The N-terminal domain of TWINKLE contributes to single-stranded DNA
+RT   binding and DNA helicase activities.
+RA   Farge G, Holmlund T, Khvorostova J, Rofougaran R, Hofer A, Falkenberg M;
+RL   Nucleic Acids Res. 2008;36:393-403.
+CC   This entry represents an N-terminal domain found in TWNK/Twinkle
+CC   (mtDNA helicase) in Metazoa. Twinkle is a mitochondrial DNA helicase
+CC   essential for mtDNA replication. The AAA+ domain (Pfam:PF13481) and
+CC   DnaB_C domain (Pfam:PF03796) are located C-terminal to this domain.
+CC   Mutations in TWNK cause progressive external ophthalmoplegia (PEO)
+CC   and mitochondrial DNA depletion syndrome.
+

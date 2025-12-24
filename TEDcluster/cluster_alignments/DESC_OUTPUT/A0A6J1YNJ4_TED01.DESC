@@ -1,0 +1,17 @@
+ID   SEL1L3_N
+DE   Protein sel-1 homolog 3 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6J1YNJ4_TED01
+GA   27.00 27.00;
+TC   28.00 27.50;
+NC   26.80 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain found in SEL1L3 (protein
+CC   sel-1 homolog 3) in Metazoa. SEL1L3 is a membrane protein containing
+CC   multiple Sel1-like repeats (Pfam:PF08238) C-terminal to this domain.
+CC   The Sel1 repeats are structurally similar to TPR repeats. SEL1L3 is
+CC   a member of the SEL1 family which is involved in protein quality
+CC   control in the endoplasmic reticulum.
+
