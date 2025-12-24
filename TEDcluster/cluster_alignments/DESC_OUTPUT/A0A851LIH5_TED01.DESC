@@ -1,0 +1,31 @@
+ID   ARID5B_N
+DE   ARID5B N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A851LIH5_TED01
+GA   27.00 27.00;
+TC   27.20 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   21532585
+RT   PHF2 histone demethylase acts as a tumor suppressor in association
+RT   with the transcription factor ARID5B.
+RA   Baba A, Ohtake F, Okuno Y, Yokota K, Okada M, Imai Y, Ni M, Meyer CA,
+RA   Igarashi K, Kanno J, Brown M, Kato S;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2011;108:12299-12304.
+RN   [2]
+RM   9808040
+RT   A novel DNA-binding motif shares structural homology to DNA replication
+RT   and repair nucleases and polymerases.
+RA   Yuan YC, Whitson RH, Liu Q, Itakura K, Chen Y;
+RL   Nat. Struct. Biol. 1998;5:959-964.
+CC   This entry represents an N-terminal domain found in ARID5B (AT-rich
+CC   interactive domain-containing protein 5B/MRF-2) in Euteleostomi.
+CC   ARID5B is a transcription coactivator essential for adipogenesis and
+CC   liver development. It forms a complex with PHF2 histone demethylase
+CC   to activate target genes. The ARID DNA-binding domain (Pfam:PF01388)
+CC   is located C-terminal to this domain. Variants in ARID5B are
+CC   associated with risk of childhood acute lymphoblastic leukemia.
+
