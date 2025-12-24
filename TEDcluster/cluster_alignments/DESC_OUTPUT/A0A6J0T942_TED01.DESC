@@ -1,0 +1,17 @@
+ID   VPS9D1_N
+DE   VPS9D1 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6J0T942_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain found in VPS9D1 (VPS9
+CC   domain-containing protein 1/ATP-BL) in Euteleostomi. VPS9D1 is a
+CC   ubiquitously expressed protein that likely acts as a guanine
+CC   nucleotide exchange factor for Rab GTPases. The VPS9 domain
+CC   (Pfam:PF02204) is located C-terminal to this domain. VPS9D1
+CC   interacts with autophagy-related proteins including MAP1LC3A.
+
