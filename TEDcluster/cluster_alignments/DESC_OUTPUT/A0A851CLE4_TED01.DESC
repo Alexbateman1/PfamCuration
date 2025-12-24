@@ -1,0 +1,19 @@
+ID   TMEM130_N
+DE   TMEM130 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A851CLE4_TED01
+GA   27.00 27.00;
+TC   28.10 34.60;
+NC   25.00 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal extracellular domain found in
+CC   TMEM130 (transmembrane protein 130) in Euteleostomi. TMEM130 is a
+CC   single-pass type I membrane protein that localizes to the Golgi
+CC   apparatus membrane. The protein has a signal peptide, followed by
+CC   this N-terminal domain, a PKD domain (Pfam:PF00801), and the PKAT_KLD
+CC   domain (Pfam:PF20433) before the transmembrane helix. TMEM130
+CC   interacts with various membrane proteins including GRM2, SLC2A5, and
+CC   tetraspanins. The function of this protein remains largely unknown.
+

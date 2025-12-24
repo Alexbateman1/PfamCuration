@@ -1,0 +1,27 @@
+ID   SDH_memb_Act
+DE   Actinobacterial succinate dehydrogenase membrane anchor
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6H9Y8I8_TED01
+GA   27.00 27.00;
+TC   32.10 31.90;
+NC   21.90 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Family
+RN   [1]
+RM   33876763
+RT   Architecture of the mycobacterial succinate dehydrogenase with a
+RT   membrane-embedded Rieske FeS cluster.
+RA   Zhou X, Gao Y, Wang W, Yang X, Yang X, Liu F, Tang Y, Lam SM, Shui G,
+RA   Yu L, Tian C, Guddat LW, Wang Q, Rao Z, Gong H;
+RL   Proc Natl Acad Sci U S A. 2021;118:e2022308118.
+CC   This family represents an integral membrane subunit of the type II
+CC   succinate dehydrogenase complex (Sdh1) found in Actinobacteria
+CC   including Mycobacterium and Streptomyces species. This novel
+CC   architecture contains a membrane-embedded Rieske iron-sulfur cluster,
+CC   distinct from canonical succinate dehydrogenase structures. The
+CC   complex is involved in the electron transport chain and tricarboxylic
+CC   acid cycle, catalyzing succinate oxidation and fumarate reduction.
+CC   In Mycobacterium tuberculosis, this complex is important for
+CC   persistence during hypoxia and adaptation to anaerobic conditions.
+

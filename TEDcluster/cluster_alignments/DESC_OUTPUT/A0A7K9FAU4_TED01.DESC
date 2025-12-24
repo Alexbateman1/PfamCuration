@@ -1,0 +1,32 @@
+ID   FBXO5_N
+DE   FBXO5/EMI1 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K9FAU4_TED01
+GA   27.00 27.00;
+TC   27.40 29.90;
+NC   26.90 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16921029
+RT   Emi1 stably binds and inhibits the anaphase-promoting complex as a
+RT   pseudosubstrate inhibitor.
+RA   Miller JJ, Summers MK, Hansen DV, Nachury MV, Lehman NL, Loktev A,
+RA   Jackson PK;
+RL   Genes Dev. 2006;20:2410-2420.
+RN   [2]
+RM   29875408
+RT   EMI1 switches from being a substrate to an inhibitor of APC/CCDH1 to
+RT   start the cell cycle.
+RA   Cappell SD, Mark KG, Garbett D, Pack LR, Rape M, Meyer T;
+RL   Nature. 2018;558:313-317.
+CC   This entry represents an N-terminal domain found in FBXO5/EMI1
+CC   (F-box only protein 5/early mitotic inhibitor 1) in Euteleostomi.
+CC   EMI1 is a key regulator of cell cycle progression that acts as both
+CC   a substrate and inhibitor of the anaphase promoting complex (APC).
+CC   During S and G2 phases, EMI1 inhibits APC to stabilize cyclins and
+CC   geminin. This domain is located N-terminal to the F-box domain
+CC   (Pfam:PF00646) which mediates SCF complex interactions. Destruction
+CC   of EMI1 in mitosis allows APC activation for proper cell division.
+
