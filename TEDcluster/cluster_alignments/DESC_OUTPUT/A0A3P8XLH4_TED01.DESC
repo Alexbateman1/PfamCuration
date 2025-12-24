@@ -1,0 +1,27 @@
+ID   MRPS9_N
+DE   MRPS9 N-terminal extension domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3P8XLH4_TED01
+GA   27.00 27.00;
+TC   27.10 31.80;
+NC   26.50 25.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   25838379
+RT   Ribosome. The structure of the human mitochondrial ribosome.
+RA   Amunts A, Brown A, Toots J, Scheres SH, Ramakrishnan V;
+RL   Science 2015;348:95-98.
+RN   [2]
+RM   36482135
+RT   Principles of mitoribosomal small subunit assembly in eukaryotes.
+RA   Harper NJ, Burnside C, Klinge S;
+RL   Nature 2023;614:175-181.
+CC   This entry represents an N-terminal extension domain found in MRPS9
+CC   (mitochondrial ribosomal protein S9/uS9m) in Euteleostomi. MRPS9 is
+CC   a component of the small 28S subunit of the mammalian mitochondrial
+CC   55S ribosome. This domain is located between the transit peptide and
+CC   the Ribosomal_S9 domain (Pfam:PF00380). The mitoribosome contains 30
+CC   different proteins in its small subunit along with the 12S rRNA.
+
