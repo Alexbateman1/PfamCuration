@@ -1,45 +1,30 @@
-ID   RLSB
-DE   RLSB chloroplast RNA-binding domain
+ID   RLSB_S1
+DE   rbcL RNA S1-binding domain protein N-terminal S1 domain
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:A0A067H7Z3_TED01
 GA   27.00 27.00;
-TC   28.30 27.70;
-NC   24.80 24.40;
+TC   27.50 27.00;
+NC   25.70 25.20;
 BM   hmmbuild  -o /dev/null HMM SEED
-SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
 TP   Domain
 RN   [1]
-RM   24053212
-RT   A novel RNA binding protein affects rbcL gene expression and is specific
-RT   to bundle sheath chloroplasts in C4 plants.
-RA   Bowman SM, Patel M, Yerramsetty P, Mure CM, Zielinski AM, Bruenn JA,
-RA   Berry JO;
-RL   BMC Plant Biol. 2013;13:138.
-RN   [2]
-RM   21139083
-RT   Identification of nuclear genes encoding chloroplast-localized proteins
-RT   required for embryo development in Arabidopsis.
-RA   Bryant N, Lloyd J, Sweeney C, Myouga F, Meinke D;
-RL   Plant Physiol. 2011;155:1678-1689.
-RN   [3]
 RM   27462450
 RT   PBR1 selectively controls biogenesis of photosynthetic complexes by
-RT   modulating translation of the large chloroplast gene Ycf1 in Arabidopsis.
+RT   modulating translation of the large chloroplast gene Ycf1 in
+RT   Arabidopsis.
 RA   Yang XF, Wang YT, Chen ST, Li JK, Shen HT, Guo FQ;
 RL   Cell Discov. 2016;2:16003.
-RN   [4]
+RN   [2]
 RM   30962391
-RT   An RNA Chaperone-Like Protein Plays Critical Roles in Chloroplast mRNA
-RT   Stability and Translation in Arabidopsis and Maize.
+RT   An RNA Chaperone-Like Protein Plays Critical Roles in Chloroplast
+RT   mRNA Stability and Translation in Arabidopsis and Maize.
 RA   Jiang J, Chai X, Manavski N, Williams-Carrier R, He B, Brachmann A,
 RA   Ji D, Ouyang M, Liu Y, Barkan A, Meurer J, Zhang L, Chi W;
 RL   Plant Cell. 2019;31:1308-1327.
-CL   CL0021
-CC   This entry represents an RNA-binding domain of approximately 110 residues
-CC   found in RLSB (rbcL RNA S1-binding domain) proteins in plants. Also known
-CC   as PDE338, PBR1, or BSF, these chloroplastic proteins function as RNA
-CC   chaperones that regulate plastid mRNA stability and translation. RLSB is
-CC   required for chloroplast development and controls biogenesis of
-CC   photosynthetic complexes including Rubisco, PSI, and Cytb6f. Proteins
-CC   containing this domain also have S1 motifs (Pfam:PF00575). Mutations cause
-CC   pigment defects and pale-green seedlings.
+CC   This entry represents an N-terminal S1 domain region found in
+CC   RLSB/PBR1/BSF-like proteins in plants. This domain is found
+CC   N-terminal to other S1 motifs (Pfam:PF00575). These chloroplastic
+CC   RNA-binding proteins act as RNA chaperones that modulate translation
+CC   and stability of plastid-encoded mRNAs including rbcL, petA, petB,
+CC   petD and Ycf1, regulating biogenesis of photosynthetic complexes.
