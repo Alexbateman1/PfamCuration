@@ -1,0 +1,32 @@
+ID   SNX13_N
+DE   SNX13 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6I8S7J4_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.70 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17077144
+RT   Essential role of RGS-PX1/sorting nexin 13 in mouse development and
+RT   regulation of endocytosis dynamics.
+RA   Zheng B, Tang T, Tang N, Kudlicka K, Ohtsubo K, Ma P, Marth JD,
+RA   Farquhar MG, Lehtonen E;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2006;103:16776-16781.
+RN   [2]
+RM   11729322
+RT   RGS-PX1, a GAP for GalphaS and sorting nexin in vesicular trafficking.
+RA   Zheng B, Ma YC, Ostrom RS, Lavoie C, Gill GN, Insel PA, Huang XY,
+RA   Farquhar MG;
+RL   Science 2001;294:1939-1942.
+CC   This entry represents an N-terminal domain found in sorting nexin-13
+CC   (SNX13, also known as RGS-PX1) in Euteleostomi. This domain is
+CC   located at the N-terminus, upstream of the PXA domain (Pfam:PF02194),
+CC   RGS domain (Pfam:PF00615), PX domain (Pfam:PF00787), and Nexin_C
+CC   domain (Pfam:PF08628). SNX13 is involved in intracellular
+CC   trafficking and acts as a GTPase-activating protein (GAP) for
+CC   Galphas. The protein localizes to early endosome membranes via its
+CC   PX domain and is essential for embryonic development in mice.
+
