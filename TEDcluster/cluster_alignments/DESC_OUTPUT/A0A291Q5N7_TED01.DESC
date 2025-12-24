@@ -1,0 +1,16 @@
+ID   AcxG_N
+DE   Acetone carboxylase gamma subunit N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A291Q5N7_TED01
+GA   27.00 27.00;
+TC   27.20 32.80;
+NC   26.50 22.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 47
+CC   residues found in acetone carboxylase gamma subunit proteins in
+CC   Actinomycetes (Streptomycetaceae, Microbacteriaceae,
+CC   Micromonosporaceae). Acetone carboxylase is a three-subunit enzyme
+CC   that catalyzes the ATP-dependent carboxylation of acetone to
+CC   acetoacetate, an important step in acetone degradation.
