@@ -1,0 +1,24 @@
+ID   DPB2_N
+DE   DNA polymerase epsilon subunit B N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5Q4C2V4_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   12124389
+RT   Fidelity of DNA polymerase epsilon holoenzyme from budding yeast
+RT   Saccharomyces cerevisiae.
+RA   Shimizu K, Hashimoto K, Kirchner JM, Nakai W, Nishikawa H, Resnick
+RA   MA, Sugino A;
+RL   J. Biol. Chem. 2002;277:37422-37429.
+CC   This entry represents an N-terminal domain found in DPB2 (DNA
+CC   polymerase epsilon subunit B) in Fungi. DPB2 is an accessory component
+CC   of the DNA polymerase epsilon complex required for chromosomal DNA
+CC   replication. The OB fold domain (Pfam:PF29084) and DNA_pol_E_B domain
+CC   (Pfam:PF04042) are located C-terminal to this domain. DPB2 is
+CC   phosphorylated by CDC28 during the cell cycle.
+
