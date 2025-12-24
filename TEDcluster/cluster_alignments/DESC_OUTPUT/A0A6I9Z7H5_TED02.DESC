@@ -1,0 +1,23 @@
+ID   CNT2_N
+DE   Concentrative nucleoside transporter 2 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6I9Z7H5_TED02
+GA   27.00 27.00;
+TC   27.20 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   9435697
+RT   Molecular identification and characterization of the human SPNT, the
+RT   sodium-dependent purine nucleoside transporter.
+RA   Wang J, Su SF, Bhalla K, Bhalla RS, Bhalla VP, Belt JA;
+RL   J. Biol. Chem. 1997;272:28845-28848.
+CC   This entry represents an N-terminal domain found in SLC28A2
+CC   (sodium/nucleoside cotransporter 2, also known as CNT2 or SPNT)
+CC   in vertebrates. This domain is N-terminal to the Nucleos_tra2_N
+CC   (Pfam:PF01773), Gate (Pfam:PF07670), and Nucleos_tra2_C
+CC   (Pfam:PF07662) domains. CNT2 is a sodium-dependent purine-selective
+CC   transporter that mediates uptake and salvage of purine nucleosides
+CC   in kidney and other tissues.

@@ -1,0 +1,17 @@
+ID   LPXTG_N
+DE   LPXTG cell wall anchor protein repeat domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4U0MNV8_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Repeat
+CC   This entry represents a repeat domain of approximately 150
+CC   residues found in LPXTG cell wall anchor proteins and Gram-
+CC   positive cocci surface proteins in Streptomyces and related
+CC   Actinomycetota. These proteins typically contain two copies of
+CC   this repeat and are secreted via the LPXTG sortase pathway. They
+CC   may function as surface-exposed peptidases or adhesins on the
+CC   bacterial cell surface.

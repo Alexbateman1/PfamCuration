@@ -1,0 +1,25 @@
+ID   SORL1_N
+DE   Sortilin-related receptor N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A850ZHG0_TED01
+GA   27.00 27.00;
+TC   27.00 32.30;
+NC   26.90 24.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16407538
+RT   Interaction of the cytosolic domains of sorLA/LR11 with the amyloid
+RT   precursor protein (APP) and beta-secretase beta-site APP-cleaving
+RT   enzyme.
+RA   Spoelgen R, von Arnim CA, Thomas AV, Peltan ID, Koker M, Deng A,
+RA   Irizarry MC, Andersen OM, Willnow TE, Hyman BT;
+RL   J. Neurosci. 2006;26:418-428.
+CC   This entry represents an N-terminal domain found in SORL1 (sortilin-
+CC   related receptor, also known as SorLA or LR11) in vertebrates. SORL1
+CC   is a multifunctional receptor that interacts with APP (amyloid
+CC   precursor protein) and BACE1, regulating amyloid-beta production.
+CC   SORL1 also binds PDGF-BB, plasminogen activators, and lipoproteins.
+CC   Reduced SORL1 expression is associated with increased Alzheimer's
+CC   disease risk.
