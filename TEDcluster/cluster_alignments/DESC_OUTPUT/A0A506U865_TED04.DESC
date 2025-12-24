@@ -1,0 +1,17 @@
+ID   NicA_C
+DE   6-hydroxynicotinate reductase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A506U865_TED04
+GA   27.00 27.00;
+TC   27.40 45.10;
+NC   26.70 17.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 134
+CC   residues found in 6-hydroxynicotinate reductase enzymes in
+CC   Alphaproteobacteria, particularly Rhodobacteraceae and related
+CC   families. This domain is located in the C-terminal region of
+CC   these reductases. 6-hydroxynicotinate reductase catalyzes the
+CC   reduction of 6-hydroxynicotinate to 6-oxo-1,4,5,6-tetrahydro-
+CC   nicotinate in the nicotinate degradation pathway.

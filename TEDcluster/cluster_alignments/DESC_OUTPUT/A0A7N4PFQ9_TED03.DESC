@@ -1,0 +1,25 @@
+ID   TTLL5_C
+DE   Tubulin polyglutamylase TTLL5 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7N4PFQ9_TED03
+GA   27.00 27.00;
+TC   28.50 28.80;
+NC   24.50 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   25959773
+RT   Multivalent microtubule recognition by tubulin tyrosine ligase-like
+RT   family glutamylases.
+RA   Garnham CP, Vemu A, Wilson-Kubalek EM, Yu I, Szyk A, Lander GC,
+RA   Milligan RA, Roll-Mecak A;
+RL   Cell. 2015;161:1112-1123.
+CC   This entry represents a C-terminal domain found in tubulin
+CC   polyglutamylase TTLL5 (tubulin tyrosine ligase-like protein 5) in
+CC   metazoans. TTLL5 is an initiase that catalyzes the ATP-dependent
+CC   addition of glutamate to tubulin C-terminal tails, generating
+CC   polyglutamate side chains. The flexible c-MTBD (cationic microtubule
+CC   binding domain) is essential for proper binding to microtubules.
+CC   TTLL5 also acts as a transcriptional coactivator modulator. Mutations
+CC   cause cone-rod dystrophy 19.
