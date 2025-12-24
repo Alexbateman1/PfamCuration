@@ -1,0 +1,22 @@
+ID   PAIP1_C
+DE   PABP-interacting protein 1 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K9WSB5_TED02
+GA   27.00 27.00;
+TC   28.10 31.30;
+NC   26.40 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   9548260
+RT   Interaction of polyadenylate-binding protein with the eIF4G homologue
+RT   PAIP enhances translation.
+RA   Craig AW, Haghighat A, Yu AT, Sonenberg N;
+RL   Nature 1998;392:520-523.
+CC   This entry represents a C-terminal domain found in PAIP1 (poly(A)-
+CC   binding protein-interacting protein 1) in Metazoa. PAIP1 enhances
+CC   translation by interacting with PABPC1. The MIF4G domain (Pfam:PF02854)
+CC   is located N-terminal to this domain. PAIP1 is exploited by SARS-CoV
+CC   and SARS-CoV-2 viruses to enhance viral RNA translation.
+

@@ -1,0 +1,23 @@
+ID   INTS12_N
+DE   Integrator complex subunit 12 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L0NEJ0_TED01
+GA   27.00 27.00;
+TC   27.40 27.10;
+NC   25.90 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16239144
+RT   Integrator, a multiprotein mediator of small nuclear RNA processing,
+RT   associates with the C-terminal repeat of RNA polymerase II.
+RA   Baillat D, Hakimi MA, Naeaer AM, Shilatifard A, Cooch N, Shiekhattar R;
+RL   Cell 2005;123:265-276.
+CC   This entry represents an N-terminal domain found in INTS12 (integrator
+CC   complex subunit 12) in Metazoa. INTS12 is a component of the Integrator
+CC   complex that mediates small nuclear RNA (snRNA) processing. The
+CC   PHD finger domain (Pfam:PF00628) is located C-terminal to this domain.
+CC   The Integrator complex associates with the C-terminal domain of RNA
+CC   polymerase II and is involved in transcription termination.
+
