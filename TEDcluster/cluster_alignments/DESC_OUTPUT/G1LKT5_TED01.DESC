@@ -1,0 +1,24 @@
+ID   PIGQ_N
+DE   GPI-GnT subunit Q N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:G1LKT5_TED01
+GA   27.00 27.00;
+TC   27.80 27.80;
+NC   26.30 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16162815
+RT   The initial enzyme for glycosylphosphatidylinositol biosynthesis
+RT   requires PIG-Y, a seventh component.
+RA   Murakami Y, Siripanyaphinyo U, Hong Y, Tashima Y, Maeda Y, Kinoshita T;
+RL   Mol. Biol. Cell 2005;16:5236-5246.
+CC   This entry represents an N-terminal domain found in PIGQ
+CC   (phosphatidylinositol N-acetylglucosaminyltransferase subunit Q) in
+CC   Metazoa. PIGQ is a component of the GPI-GnT complex that catalyzes
+CC   the first step of glycosylphosphatidylinositol (GPI) anchor
+CC   biosynthesis. The Gpi1 domain (Pfam:PF05024) is located C-terminal
+CC   to this domain. Mutations in PIGQ cause multiple congenital anomalies-
+CC   hypotonia-seizures syndrome (MCAHS4).
+

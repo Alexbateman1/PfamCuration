@@ -1,0 +1,17 @@
+ID   DUF885_N
+DE   DUF885 domain-containing protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:B1MKN1_TED01
+GA   27.00 27.00;
+TC   27.00 32.60;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain found in DUF885 domain-
+CC   containing proteins in various bacteria including Actinomycetota,
+CC   Alphaproteobacteria, and Bacteroidota. The DUF885 domain
+CC   (Pfam:PF05916) is located C-terminal to this domain. Some members
+CC   are annotated as CalR9 proteins in Mycobacterium. The function of
+CC   these proteins is unknown.
+

@@ -1,5 +1,5 @@
 ID   SPOR_N
-DE   SPOR domain protein N-terminal domain
+DE   SPOR domain-containing protein N-terminal domain
 AU   Bateman A;0000-0002-6982-4660
 SE   TED:A0A017H9R7_TED01
 GA   27.00 27.00;
@@ -8,10 +8,10 @@ NC   26.80 26.20;
 BM   hmmbuild  -o /dev/null HMM SEED
 SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
 TP   Domain
-CC   This entry represents an N-terminal domain of approximately 93
-CC   residues found in SPOR domain-containing proteins in
-CC   Alphaproteobacteria (Rhodobacterales - Roseobacteraceae and
-CC   Paracoccaceae). This domain is found N-terminal to the SPOR
-CC   domain (Pfam:PF05036). Many of these proteins are annotated as
-CC   sporulation-related or rare lipoproteins and localize to the
-CC   outer membrane.
+CC   This entry represents an N-terminal domain found in SPOR domain-
+CC   containing proteins in Rhodobacterales (Alphaproteobacteria). The
+CC   SPOR domain (Pfam:PF05036) is located C-terminal to this domain and
+CC   binds peptidoglycan during cell division. SPOR domain-containing
+CC   proteins are often lipoproteins that localize to the septal ring
+CC   during bacterial cell division.
+

@@ -1,0 +1,25 @@
+ID   NrdJ_C
+DE   Vitamin B12-dependent ribonucleotide reductase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:D1PD38_TED01
+GA   27.00 27.00;
+TC   31.10 30.40;
+NC   22.80 20.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   35227073
+RT   Gut commensal Bacteroidetes encode a novel class of vitamin B12-
+RT   binding proteins.
+RA   Romine MF, Rodionov DA, Maezato Y, Anderson LN, Nanber P, Rodionova
+RA   IA, Carre A, Shi X, Renslow RS, Kim LJ, Gao Y;
+RL   mBio 2022;13:e0263321.
+CC   This entry represents a C-terminal domain found in vitamin B12-
+CC   dependent ribonucleoside-diphosphate reductase (NrdJ) in Bacteroidota.
+CC   NrdJ uses adenosylcobalamin (vitamin B12) as a cofactor for reducing
+CC   ribonucleotides to deoxyribonucleotides during DNA synthesis. The
+CC   catalytic domain (Pfam:PF02867) and the N-terminal domain (Pfam:PF00317)
+CC   are located N-terminal to this domain. This enzyme is found in gut
+CC   commensal bacteria including Bacteroides and Flavobacteria.
+
