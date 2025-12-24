@@ -1,0 +1,23 @@
+ID   YbhF_mid
+DE   ABC transporter YbhF middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:W1DSE0_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27112147
+RT   Transcription factor CecR (YbiH) regulates a set of genes affecting
+RT   the sensitivity of Escherichia coli against cefoperazone and
+RT   chloramphenicol.
+RA   Yamanaka Y, Shimada T, Yamamoto K, Ishihama A;
+RL   Microbiology. 2016;162:1253-1264.
+CC   This entry represents a middle domain found between the two ABC
+CC   transporter domains (Pfam:PF00005) in YbhF of Enterobacteriaceae.
+CC   YbhF is the ATP-binding component of the YbhFSR ABC transporter
+CC   complex that is involved in efflux of cefoperazone, a third-
+CC   generation cephalosporin antibiotic. The complex is repressed by
+CC   the transcriptional regulator CecR (YbiH).
