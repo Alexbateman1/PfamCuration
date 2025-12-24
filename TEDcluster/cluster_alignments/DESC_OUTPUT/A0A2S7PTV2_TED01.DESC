@@ -1,0 +1,23 @@
+ID   NcaA_N
+DE   Nuclear coactivator of AtrR N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2S7PTV2_TED01
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   36374043
+RT   Biochemical identification of a nuclear coactivator protein required
+RT   for AtrR-Dependent Gene Regulation in Aspergillus fumigatus.
+RA   Paul S, Ror S, McDonald WH, Moye-Rowley WS;
+RL   MSphere. 2022;7:e0047622.
+CC   This entry represents an N-terminal domain of approximately 46
+CC   residues containing a degenerate UBZ4-type zinc finger found in
+CC   ncaA (nuclear coactivator of AtrR) in filamentous fungi (Ascomycota).
+CC   The C-terminal region contains the NcaA_C domain (Pfam:PF28362).
+CC   NcaA is a transcription factor required for voriconazole resistance
+CC   that interacts with atrR and regulates expression of the ABC
+CC   transporter abcG1.
