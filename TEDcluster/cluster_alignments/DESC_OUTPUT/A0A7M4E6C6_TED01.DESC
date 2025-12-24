@@ -1,0 +1,24 @@
+ID   SPAG1_N
+DE   Sperm-associated antigen 1 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7M4E6C6_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.60 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   24055112
+RT   SPAG1 is mutated in primary ciliary dyskinesia associated with
+RT   defective outer and inner dynein arms.
+RA   Knowles MR, Ostrowski LE, Loges NT, Hurd T, Leigh MW, Huang L,
+RA   Wolf WE, Carson JL, Hazucha MJ, Yin W, et al;
+RL   Am. J. Hum. Genet. 2013;93:711-720.
+CC   This entry represents an N-terminal domain found in SPAG1 (sperm-
+CC   associated antigen 1) in Metazoa. SPAG1 is involved in the cytoplasmic
+CC   assembly of ciliary dynein arms and fertilization. TPR repeats
+CC   (Pfam:PF00515, PF13181) and RPAP3_C domain (Pfam:PF13877) are located
+CC   C-terminal to this domain. Mutations in SPAG1 cause primary ciliary
+CC   dyskinesia (Kartagener syndrome).
+
