@@ -1,0 +1,16 @@
+ID   Strep_small
+DE   Streptomyces small uncharacterized domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1Q5H9B3_TED01
+GA   27.00 27.00;
+TC   30.20 31.40;
+NC   24.20 18.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a small domain of approximately 55 residues
+CC   found in uncharacterized proteins in bacteria, predominantly
+CC   Streptomyces. Some proteins are annotated as DksA C4-type
+CC   domain-containing proteins. STRING analysis suggests functional
+CC   association with CTP transferases (PF01467), histidine phosphatases
+CC   (PF00300), and ribosome silencing factor RsfS (PF02410).

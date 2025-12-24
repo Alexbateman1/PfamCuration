@@ -1,0 +1,31 @@
+ID   CNT_mid
+DE   Concentrative nucleoside transporter middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A1S3EU49_TED04
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.70 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   9435697
+RT   Na+-dependent purine nucleoside transporter from human kidney:
+RT   cloning and functional characterization.
+RA   Wang J, Su SF, Dresser MJ, Schaner ME, Washington CB, Giacomini KM;
+RL   Am J Physiol. 1997;273:F1058-F1065.
+RN   [2]
+RM   30847922
+RT   Functional disruption of pyrimidine nucleoside transporter CNT1
+RT   results in a novel inborn error of metabolism with high excretion
+RT   of uridine and cytidine.
+RA   Wevers RA, Christensen M, Engelke UF, Geuer S, Coene KL, Kwast JT,
+RA   Lund AM, Vissers LE;
+RL   J Inherit Metab Dis. 2019;42:494-500.
+CC   This entry represents a middle domain found in concentrative
+CC   nucleoside transporters (CNTs) in metazoans, predominantly
+CC   vertebrates (mammals, birds). These proteins are sodium/nucleoside
+CC   symporters (SLC28 family) that import nucleosides by coupling
+CC   transport to the sodium electrochemical gradient. Mutations in
+CC   SLC28A1 (CNT1) cause uridine-cytidineuria, a metabolic disorder
+CC   with high urinary excretion of pyrimidine nucleosides.
