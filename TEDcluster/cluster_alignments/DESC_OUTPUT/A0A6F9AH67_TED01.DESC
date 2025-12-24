@@ -1,0 +1,31 @@
+ID   SAMTOR_N
+DE   SAMTOR N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6F9AH67_TED01
+GA   27.00 27.00;
+TC   27.30 27.00;
+NC   26.60 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   29123071
+RT   SAMTOR is an S-adenosylmethionine sensor for the mTORC1 pathway.
+RA   Gu X, Orozco JM, Saxton RA, Condon KJ, Liu GY, Krawczyk PA,
+RA   Scaria SM, Harper JW, Gygi SP, Sabatini DM;
+RL   Science. 2017;358:813-818.
+RN   [2]
+RM   35776786
+RT   Molecular mechanism of S-adenosylmethionine sensing by SAMTOR in
+RT   mTORC1 signaling.
+RA   Tang X, Zhang Y, Wang G, Zhang C, Wang F, Shi J, Zhang T, Ding J;
+RL   Sci Adv. 2022;8:eabn3868.
+CC   This entry represents an N-terminal domain found in SAMTOR
+CC   (S-adenosylmethionine sensor upstream of mTORC1) in Metazoa.
+CC   SAMTOR is a key regulator of the mTORC1 signaling pathway that
+CC   senses S-adenosylmethionine (SAM) levels to signal methionine
+CC   sufficiency. When methionine is available, SAM binds to SAMTOR,
+CC   disrupting its interaction with the GATOR1 and KICSTOR complexes
+CC   to promote mTORC1 signaling. This domain is located N-terminal
+CC   to the Bmt2/SAMTOR domain (Pfam:PF11968) which binds SAM.
+

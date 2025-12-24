@@ -1,0 +1,26 @@
+ID   Pep_M6_C
+DE   Peptidase M6-like C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A346Y4A7_TED02
+GA   27.00 27.00;
+TC   27.90 58.70;
+NC   25.20 26.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   21919205
+RT   Identification of novel secreted proteases during extracellular
+RT   proteolysis by dermatophytes at acidic pH.
+RA   Sriranganadane D, Waridel P, Salamin K, Feuermann M, Mignon B,
+RA   Staib P, Neuhaus JM, Quadroni M, Monod M;
+RL   Proteomics. 2011;11:4422-4433.
+CC   This entry represents a C-terminal domain found in secreted M6
+CC   family metallopeptidases in filamentous fungi including
+CC   dermatophytes (Trichophyton, Arthroderma) and other Ascomycota.
+CC   The domain is located C-terminal to the Peptidase_M6 catalytic
+CC   domain (Pfam:PF05547). These secreted metalloproteases are
+CC   involved in extracellular protein degradation during fungal
+CC   pathogenesis and nutrient acquisition. In dermatophytes, they
+CC   are secreted during growth on protein substrates at acidic pH.
+
