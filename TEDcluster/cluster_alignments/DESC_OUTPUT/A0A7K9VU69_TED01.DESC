@@ -1,0 +1,17 @@
+ID   TNF_N
+DE   Tumor necrosis factor ligand N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K9VU69_TED01
+GA   27.00 27.00;
+TC   27.50 32.00;
+NC   25.90 24.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain found in tumor necrosis
+CC   factor (TNF) superfamily ligands in Metazoa. The C-terminal TNF
+CC   domain (Pfam:PF00229) is the receptor-binding domain. TNF family
+CC   members are type II transmembrane proteins that function as
+CC   homotrimers and play important roles in immune regulation,
+CC   inflammation, and apoptosis.
+
