@@ -1,0 +1,28 @@
+ID   MRPS9_mid
+DE   Mitochondrial ribosomal protein S9 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A341B9X4_TED02
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   26.90 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   24799711
+RT   Cryo-EM structure of the small subunit of the mammalian
+RT   mitochondrial ribosome.
+RA   Kaushal PS, Sharma MR, Booth TM, Haque EM, Tung CS, Sanbonmatsu KY,
+RA   Spremulli LL, Agrawal RK;
+RL   Proc Natl Acad Sci USA. 2014;111:7284-7289.
+RN   [2]
+RM   25838379
+RT   The structure of the human mitochondrial ribosome.
+RA   Amunts A, Brown A, Toots J, Scheres SH, Ramakrishnan V;
+RL   Science. 2015;348:95-98.
+CC   This entry represents a middle region found in mitochondrial
+CC   ribosomal protein S9 (MRPS9/uS9m) in metazoans. MRPS9 is a
+CC   component of the mitochondrial small ribosomal subunit (28S).
+CC   The N-terminal region contains the Ribosomal_S9 domain
+CC   (Pfam:PF00380). Multiple cryo-EM structures of the human
+CC   mitochondrial ribosome have been determined.
