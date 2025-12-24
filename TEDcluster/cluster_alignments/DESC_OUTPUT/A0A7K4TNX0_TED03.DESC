@@ -1,0 +1,36 @@
+ID   FSP1_C
+DE   FSP1/AIFM2 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K4TNX0_TED03
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   31634899
+RT   FSP1 is a glutathione-independent ferroptosis suppressor.
+RA   Doll S, Freitas FP, Shah R, Aldrovandi M, da Silva MC, Ingold I,
+RA   Grocin AG, Xavier da Silva TN, Panzilius E, Scheel C, Mourao A,
+RA   Buday K, Sato M, Wanninger J, Vignane T, Mohana V, Rehberg M,
+RA   Flatley A, Schepers A, Kurz A, White D, Sauer M, Sattler M,
+RA   Tate EW, Schmitz W, Schulze A, O'Donnel V, Proneth B, Popowicz GM,
+RA   Pratt D, Angeli JPF, Conrad M;
+RL   Nature 2019;575:693-698.
+RN   [2]
+RM   31634900
+RT   The CoQ oxidoreductase FSP1 acts parallel to GPX4 to inhibit
+RT   ferroptosis.
+RA   Bersuker K, Hendricks J, Li Z, Magtanong L, Ford B, Tang PH,
+RA   Roberts MA, Tong B, Maimone TJ, Zoncu R, Bassik MC, Nomura DK,
+RA   Dixon SJ, Olzmann JA;
+RL   Nature 2019;575:688-692.
+CC   This entry represents a small C-terminal domain found in FSP1/AIFM2
+CC   (Ferroptosis suppressor protein 1) in Euteleostomi. FSP1 is a key
+CC   inhibitor of ferroptosis that reduces coenzyme Q to ubiquinol,
+CC   preventing lipid peroxidation. It acts in parallel to GPX4 and is
+CC   myristoylated at the N-terminus. The Pyr_redox_2 oxidoreductase
+CC   domain (Pfam:PF07992) is located N-terminal to this domain. FSP1
+CC   also mediates vitamin K reduction as a potent antioxidant.
+
