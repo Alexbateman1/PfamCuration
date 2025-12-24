@@ -1,0 +1,17 @@
+ID   TMPPE_TM
+DE   TMPPE transmembrane N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K4LKD1_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.70 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal transmembrane domain of
+CC   approximately 185 residues found in TMPPE (transmembrane protein
+CC   with metallophosphoesterase domain) in vertebrates (predominantly
+CC   birds with some mammals). This domain contains multiple predicted
+CC   transmembrane helices and is located N-terminal to the Metallophos
+CC   domain (Pfam:PF00149). TMPPE is a membrane-bound metallophospho-
+CC   esterase that binds divalent metal cations for catalytic activity.
