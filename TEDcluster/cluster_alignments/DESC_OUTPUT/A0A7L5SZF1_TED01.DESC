@@ -1,0 +1,25 @@
+ID   SUKH_imm_N
+DE   SUKH-4 immunity N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L5SZF1_TED01
+GA   27.00 27.00;
+TC   28.40 27.10;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   21306995
+RT   A novel immunity system for bacterial nucleic acid degrading toxins
+RT   and its recruitment in various eukaryotic and DNA viral systems.
+RA   Iyer LM, Koonin EV, Aravind L;
+RL   Nucleic Acids Res. 2011;39:4532-4552.
+CC   This entry represents an N-terminal domain found in SUKH-4 family
+CC   immunity proteins in Actinomycetota. This domain is located at the
+CC   N-terminus, upstream of the XOO_2897-deam domain (Pfam:PF14440) and
+CC   SUKH-4 immunity domain (Pfam:PF14435). These proteins are part of a
+CC   bacterial immunity system that protects against nucleic acid
+CC   degrading toxins. The immunity proteins are typically found as part
+CC   of toxin-immunity gene pairs, where they neutralize the toxin's
+CC   activity and prevent self-destruction.
+
