@@ -1,0 +1,18 @@
+ID   Burk_phage_N
+DE   Burkholderiaceae phage-related N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2N7W086_TED01
+GA   27.00 27.00;
+TC   27.00 57.00;
+NC   26.10 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 80
+CC   residues found in uncharacterized proteins and phage tail
+CC   proteins in Betaproteobacteria (Burkholderiales -
+CC   Burkholderiaceae, Oxalobacteraceae, Comamonadaceae). These small
+CC   proteins typically contain this domain followed by a short
+CC   C-terminal region. The function of these proteins is unknown but
+CC   they may be associated with prophage elements or phage-related
+CC   structures in these bacteria.

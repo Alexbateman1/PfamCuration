@@ -1,0 +1,26 @@
+ID   NIS_synth_N
+DE   NIS siderophore synthetase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2M9JV02_TED01
+GA   27.00 27.00;
+TC   27.30 27.00;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   32885650
+RT   Cofactor Complexes of DesD, a Model Enzyme in the Virulence-related
+RT   NIS Synthetase Family.
+RA   Hoffmann KM, Goncuian ES, Karimi KL, Amendola CR, Mojab Y, Wood KM,
+RA   Prussia GA, Nix J, Yamamoto M, Lathan K, Orion IW;
+RL   Biochemistry. 2020;59:3427-3437.
+CC   This entry represents an N-terminal domain of approximately 120
+CC   residues found in IucA/IucC family siderophore biosynthesis
+CC   proteins in Actinomycetota (Streptomyces, Streptomycetaceae) and
+CC   Alphaproteobacteria (Rhizobiaceae). This domain is found
+CC   N-terminal to the IucA_IucC domain (Pfam:PF04183) and FhuF domain
+CC   (Pfam:PF06276). These enzymes are NIS (NRPS-independent
+CC   siderophore) synthetases involved in biosynthesis of
+CC   desferrioxamine and related hydroxamate siderophores that mediate
+CC   iron uptake.
