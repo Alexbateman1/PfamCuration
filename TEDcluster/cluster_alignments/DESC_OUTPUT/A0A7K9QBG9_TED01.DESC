@@ -1,0 +1,34 @@
+ID   SETDB2_N
+DE   SETDB2 histone methyltransferase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K9QBG9_TED01
+GA   27.00 27.00;
+TC   28.20 27.30;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   20404330
+RT   CLLD8/KMT1F is a lysine methyltransferase that is important for
+RT   chromosome segregation.
+RA   Falandry C, Fourel G, Galy V, Ristriani T, Horard B, Bensimon E,
+RA   Salles G, Gilson E, Magdinier F;
+RL   J. Biol. Chem. 2010;285:20234-20241.
+RN   [2]
+RM   20133783
+RT   Setdb2 restricts dorsal organizer territory and regulates left-right
+RT   asymmetry through suppressing fgf8 activity.
+RA   Xu PF, Zhu KY, Jin Y, Chen Y, Sun XJ, Deng M, Chen SJ, Chen Z,
+RA   Liu TX;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2010;107:2521-2526.
+CC   This entry represents an N-terminal domain found in histone-lysine
+CC   N-methyltransferase SETDB2 (SET domain bifurcated 2) in Euteleostomi.
+CC   This domain is located at the N-terminus, upstream of the MBD domain
+CC   (Pfam:PF01429), Pre-SET domain (Pfam:PF05033), and SET domain
+CC   (Pfam:PF00856). SETDB2 is a histone H3K9 methyltransferase that
+CC   catalyzes H3K9me3 for transcriptional repression. It is important
+CC   for chromosome condensation and segregation during mitosis, and
+CC   regulates left-right asymmetry during embryonic development through
+CC   suppression of FGF8 signaling.
+
