@@ -1,0 +1,24 @@
+ID   FASTK_N
+DE   FAST kinase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7J7RLQ9_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17135269
+RT   Fas-activated serine/threonine kinase (FAST K) synergizes with
+RT   TIA-1/TIAR proteins to regulate Fas alternative splicing.
+RA   Izquierdo JM, Valcarcel J;
+RL   J. Biol. Chem. 2007;282:1539-1543.
+CC   This entry represents an N-terminal domain found in FASTK
+CC   (Fas-activated serine/threonine kinase) in Metazoa. FASTK is a
+CC   serine/threonine kinase that phosphorylates splicing regulator TIA1
+CC   and regulates FAS alternative splicing. The FAST_1 (Pfam:PF06743),
+CC   FAST_2 (Pfam:PF08368), and RAP (Pfam:PF08373) domains are located
+CC   C-terminal to this domain. A mitochondrial isoform of FASTK regulates
+CC   mitochondrial ND6 mRNA stability.
+
