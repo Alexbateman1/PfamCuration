@@ -1,0 +1,16 @@
+ID   SWT1_C
+DE   Transcriptional protein SWT1 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2K5DBZ3_TED03
+GA   27.00 27.00;
+TC   27.20 34.50;
+NC   26.90 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 145
+CC   residues found in the transcriptional protein SWT1 in vertebrates
+CC   and other metazoans. SWT1 is an RNA endoribonuclease that contains
+CC   a PIN_4 domain (Pfam:PF13638) and belongs to the SWT1 family. The
+CC   protein functions in transcriptional regulation and is weakly
+CC   expressed in testis in humans.

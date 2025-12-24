@@ -1,0 +1,28 @@
+ID   CP110_mid
+DE   Centriolar coiled-coil protein CP110 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2K6PK15_TED02
+GA   27.00 27.00;
+TC   27.00 27.70;
+NC   26.30 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17719545
+RT   Cep97 and CP110 suppress a cilia assembly program.
+RA   Spektor A, Tsang WY, Khoo D, Dynlacht BD;
+RL   Cell. 2007;130:678-690.
+RN   [2]
+RM   20596027
+RT   SCF(Cyclin F) controls centrosome homeostasis and mitotic fidelity
+RT   through CP110 degradation.
+RA   D'Angiolella V, Donato V, Vijayakumar S, Saraf A, Florens L,
+RA   Washburn MP, Dynlacht B, Pagano M;
+RL   Nature. 2010;466:138-142.
+CC   This entry represents a middle domain of approximately 86 residues
+CC   found in centriolar coiled-coil protein CP110 (CCP110/CEP110) in
+CC   vertebrates. CP110 contains a CaM_bind domain (Pfam:PF16025) at its
+CC   N-terminus. CP110 is a key negative regulator of ciliogenesis that
+CC   caps the mother centriole in collaboration with CEP97. It is also
+CC   involved in centrosome duplication, cytokinesis, and genome stability.
