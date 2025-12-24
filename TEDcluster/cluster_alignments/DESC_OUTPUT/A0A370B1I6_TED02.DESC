@@ -1,0 +1,17 @@
+ID   Actino_Ig
+DE   Actinomycete Ig-like domain hydrolase
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A370B1I6_TED02
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CL   CL0159
+CC   This entry represents an Ig-like domain of approximately 102
+CC   residues found in hydrolytic proteins in Actinomycetota
+CC   (Streptomyces, Micromonosporaceae) and Cyanobacteriota. This
+CC   domain shows structural similarity to Ig-like domains from the
+CC   E-set superfamily (CL0159). Many of these proteins also contain
+CC   ChW domain (Pfam:PF07538) or Ricin_B_lectin domain (Pfam:PF00652).
