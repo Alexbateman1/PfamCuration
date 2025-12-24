@@ -1,0 +1,32 @@
+ID   VCPIP1_C
+DE   VCPIP1/VCIP135 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4W5PCK1_TED04
+GA   27.00 27.00;
+TC   27.20 32.70;
+NC   26.20 23.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   12473691
+RT   VCIP135, a novel essential factor for p97/p47-mediated membrane
+RT   fusion, is required for Golgi and ER assembly in vivo.
+RA   Uchiyama K, Jokitalo E, Kano F, Murata M, Zhang X, Canas B,
+RA   Newman R, Rabouille C, Pappin D, Freemont P, Kondo H;
+RL   J Cell Biol. 2002;159:855-866.
+RN   [2]
+RM   15037600
+RT   VCIP135 acts as a deubiquitinating enzyme during p97-p47-mediated
+RT   reassembly of mitotic Golgi fragments.
+RA   Wang Y, Satoh A, Warren G, Meyer HH;
+RL   J Cell Biol. 2004;164:973-978.
+CC   This entry represents a C-terminal domain found in VCPIP1/VCIP135
+CC   (valosin-containing protein p97/p47 complex-interacting protein 1)
+CC   in Metazoa. This domain is located C-terminal to the VCIP135_N
+CC   domain (Pfam:PF19437), OTU deubiquitinase domain (Pfam:PF02338), and
+CC   OTU1_UBXL domain (Pfam:PF21403). VCPIP1 is a deubiquitinating enzyme
+CC   essential for p97/p47-mediated membrane fusion and Golgi/ER assembly.
+CC   It removes Lys-48 linked ubiquitin chains and is involved in
+CC   regulating SPRTN during DNA-protein crosslink repair.
+

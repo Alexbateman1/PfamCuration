@@ -1,0 +1,30 @@
+ID   L3MBTL3_N
+DE   L3MBTL3 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L2C1P6_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.00 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   29030483
+RT   RBPJ/CBF1 interacts with L3MBTL3/MBT1 to promote repression of Notch
+RT   signaling via histone demethylase KDM1A/LSD1.
+RA   Xu T, Park SS, Giaimo BD, Hall D, Ferrante F, Ho DM, Hori K,
+RA   Anhezini L, Ertl I, Bartkuhn M, Zhang H, Milon E, Ha K, Conlon KP,
+RA   Kuick R, Govindarajoo B, Zhang Y, Sun Y, Dou Y, Basrur V,
+RA   Elenitoba-Johnson KS, Nesvizhskii AI, Ceron J, Lee CY, Borggrefe T,
+RA   Kovall RA, Rual JF;
+RL   EMBO J. 2017;36:3232-3249.
+CC   This entry represents an N-terminal domain found in L3MBTL3
+CC   (Lethal(3)malignant brain tumor-like protein 3, also known as MBT-1)
+CC   in Metazoa. This domain is located N-terminal to the three MBT
+CC   repeats (Pfam:PF02820) and the C-terminal SAM domain (Pfam:PF00536).
+CC   L3MBTL3 is a negative regulator of Notch target gene expression. It
+CC   recruits KDM1A to Notch-responsive elements and promotes H3K4me
+CC   demethylation. It also acts as an adapter for CRL4-DCAF5 E3 ubiquitin
+CC   ligase to target methylated proteins (SOX2, DNMT1, E2F1) for
+CC   ubiquitin-dependent degradation.
+

@@ -1,0 +1,26 @@
+ID   SPIN90_mid
+DE   SPIN90/NCKIPSD middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4X2LGM5_TED02
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.90 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   22419821
+RT   Identification of IGPR-1 as a novel adhesion molecule involved in
+RT   angiogenesis.
+RA   Rahimi N, Rezazadeh K, Mahoney JE, Hartsough E, Meyer RD;
+RL   Mol Biol Cell. 2012;23:1646-1656.
+CC   This entry represents a middle domain found in NCKIPSD/SPIN90
+CC   (NCK-interacting protein with SH3 domain, also known as WISH, VIP54,
+CC   or DIP-1) in Metazoa. This domain is located between the N-terminal
+CC   SH3 domain (Pfam:PF00018) and the C-terminal SPIN90_LRD domain
+CC   (Pfam:PF09431). NCKIPSD plays important roles in stress fiber
+CC   formation, actin polymerization, cell adhesion, and angiogenesis.
+CC   It interacts with NCK, N-WASP, diaphanous proteins, GRB2, and
+CC   vimentin, and is implicated in the assembly of myofibrils into
+CC   sarcomeres.
+
