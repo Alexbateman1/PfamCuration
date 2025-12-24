@@ -1,0 +1,18 @@
+ID   Bacteroid_SprA
+DE   Bacteroidota SprA/TonB-dependent receptor domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A3J2M9_TED02
+GA   27.00 27.00;
+TC   27.00 29.60;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a domain of approximately 82 residues
+CC   found in TonB-dependent receptors, outer membrane beta-barrel
+CC   proteins, and cell surface SprA proteins in Bacteroidota
+CC   (Flavobacteriaceae, Cytophagales). This domain is typically
+CC   found in large multi-domain outer membrane proteins. STRING
+CC   analysis suggests these proteins are associated with the type
+CC   IX secretion system (T9SS/Por secretion system) and gliding
+CC   motility machinery characteristic of Bacteroidota.
