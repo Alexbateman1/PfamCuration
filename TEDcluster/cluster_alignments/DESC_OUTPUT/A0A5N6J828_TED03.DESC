@@ -1,0 +1,19 @@
+ID   CHY_mid
+DE   CHY zinc finger-associated middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5N6J828_TED03
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.90 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents a middle domain found in CHY-type zinc finger
+CC   domain-containing proteins in Eukaryota. This domain is located
+CC   between the N-terminal region and the C-terminal CHY-type zinc
+CC   finger domain (Pfam:PF05495). The domain has structural similarity
+CC   to CXXC zinc-binding domains. CHY zinc finger proteins are found in
+CC   fungi and animals and have been implicated in ubiquitin-related
+CC   processes based on STRING network analysis. The CHY zinc finger is
+CC   named after the Conserved His and Tyr residues in its sequence.
+
