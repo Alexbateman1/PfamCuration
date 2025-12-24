@@ -1,0 +1,17 @@
+ID   MoeA_N
+DE   Molybdopterin molybdenumtransferase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3P1Y3N0_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 55
+CC   residues found in molybdopterin molybdenumtransferase (MoeA)
+CC   proteins in Bacillota, Clostridia, and related bacteria. This
+CC   domain is located N-terminal to the MoCF_biosynth domain
+CC   (Pfam:PF00994). MoeA catalyzes the insertion of molybdenum into
+CC   molybdopterin to form molybdenum cofactor (MoCo), which is
+CC   essential for the activity of molybdoenzymes.

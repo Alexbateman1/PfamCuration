@@ -1,0 +1,17 @@
+ID   FtsK_N
+DE   FtsK cell division protein N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7X0C9E4_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 90
+CC   residues found in FtsK cell division proteins and DNA segregation
+CC   ATPases in Actinomycetota, particularly Streptomyces and related
+CC   genera. This domain is located N-terminal to the FtsK_SpoIIIE
+CC   domain (Pfam:PF01580). FtsK is an essential cell division protein
+CC   that coordinates chromosome segregation with cell division,
+CC   translocating DNA through the division septum during cytokinesis.
