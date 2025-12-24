@@ -1,0 +1,15 @@
+ID   NYN_C
+DE   NYN domain C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2G1XDR6_TED02
+GA   27.00 27.00;
+TC   27.00 27.40;
+NC   26.20 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain of approximately 74
+CC   residues found in NYN domain-containing proteins in Actinomycetes
+CC   (Streptomycetaceae, Corynebacteriaceae, Streptosporangiaceae). This
+CC   domain is located after the NYN domain (Pfam:PF01936). NYN is a
+CC   nuclease domain found in various RNA processing proteins.

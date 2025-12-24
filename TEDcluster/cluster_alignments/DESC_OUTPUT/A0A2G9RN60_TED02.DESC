@@ -1,0 +1,29 @@
+ID   RBM25_mid
+DE   RNA-binding protein 25 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2G9RN60_TED02
+GA   27.00 27.00;
+TC   27.20 27.20;
+NC   26.60 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   18663000
+RT   Novel splicing factor RBM25 modulates Bcl-x pre-mRNA 5' splice site
+RT   selection.
+RA   Zhou A, Ou AC, Cho A, Benz EJ Jr, Huang SC;
+RL   Mol Cell Biol. 2008;28:5924-5936.
+RN   [2]
+RM   21859973
+RT   Role of RBM25/LUC7L3 in abnormal cardiac sodium channel splicing
+RT   regulation in human heart failure.
+RA   Gao G, Xie A, Huang SC, Zhou A, Zhang J, Herman AM, Ghassemzadeh S,
+RA   Jeong EM, Kasturirangan S, Raicu M, Sobieski MA 2nd, Bhat G,
+RA   Tatooles A, Benz EJ Jr, Kamp TJ, Dudley SC Jr;
+RL   Circulation. 2011;124:1124-1131.
+CC   This entry represents a middle domain found in RNA-binding protein 25
+CC   (RBM25) in metazoans (vertebrates and insects). RBM25 is a splicing
+CC   factor that modulates pre-mRNA 5' splice site selection. It has
+CC   been implicated in alternative splicing of Bcl-x and cardiac sodium
+CC   channels, with dysregulation linked to heart failure.
