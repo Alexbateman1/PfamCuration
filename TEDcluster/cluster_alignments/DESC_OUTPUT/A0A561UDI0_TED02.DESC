@@ -1,0 +1,17 @@
+ID   GAF_C_actin
+DE   GAF-associated C-terminal domain (Actinomycetes)
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A561UDI0_TED02
+GA   27.00 27.00;
+TC   28.30 27.20;
+NC   26.70 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents a C-terminal domain found in GAF domain-
+CC   containing proteins in Actinomycetes (mainly Streptomyces). This
+CC   domain is located C-terminal to the MimR_N domain (Pfam:PF26965) and
+CC   GAF domain (Pfam:PF01590). These proteins are typically diguanylate
+CC   cyclases or transcriptional regulators involved in bacterial
+CC   signaling pathways.
+

@@ -1,0 +1,24 @@
+ID   STAB_N
+DE   Stabilin N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L2CFB4_TED01
+GA   27.00 27.00;
+TC   27.90 27.90;
+NC   23.90 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17675564
+RT   Stabilin-2 is a phosphatidylserine receptor required for the
+RT   engulfment of dead cells.
+RA   Park SY, Jung MY, Kim HJ, Lee SJ, Kim SY, Lee BH, Kwon TH,
+RA   Park RW, Kim IS;
+RL   Mol. Cell. Biol. 2007;27:6208-6220.
+CC   This entry represents an N-terminal domain found in stabilin proteins
+CC   (STAB1 and STAB2) in Euteleostomi. Stabilins are type I membrane
+CC   scavenger receptors that mediate endocytosis of hyaluronan, heparin,
+CC   and apoptotic cells. This domain is located N-terminal to the first
+CC   EGF_STAB1-2 domain (Pfam:PF24887). STAB2 recognizes phosphatidylserine
+CC   for engulfment of dead cells and clears circulating glycosaminoglycans.
+

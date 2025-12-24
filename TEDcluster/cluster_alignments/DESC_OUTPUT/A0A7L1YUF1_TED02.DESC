@@ -1,0 +1,29 @@
+ID   SPT20_C
+DE   SPT20 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L1YUF1_TED02
+GA   27.00 27.00;
+TC   27.30 27.50;
+NC   25.20 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   19893488
+RT   Coordinated regulation of autophagy by p38alpha MAPK through mAtg9
+RT   and p38IP.
+RA   Webber JL, Tooze SA;
+RL   EMBO J. 2010;29:27-40.
+RN   [2]
+RM   16751104
+RT   p38IP, a novel MAPK-interacting protein required for cell migration.
+RA   Zohn IE, Li Y, Bhargava A, Chen G, Bhargava A, Zhang X, Bhargava A,
+RA   Wang J, Bhargava A, Bhargava A;
+RL   Genes Dev. 2006;20:2055-2068.
+CC   This entry represents a C-terminal domain found in SPT20 (SAGA-
+CC   associated factor 20/p38-interacting protein) in Euteleostomi.
+CC   SPT20 (SUPT20H) is a component of the SAGA transcriptional
+CC   coactivator complex. It interacts with p38 MAPK and ATG9A, playing
+CC   roles in gastrulation, E-cadherin regulation, and autophagy. The
+CC   Spt20_SEP domain (Pfam:PF12090) is located N-terminal to this domain.
+

@@ -1,0 +1,26 @@
+ID   TMEM8_mid
+DE   TMEM8 family middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6P6BQ56_TED03
+GA   27.00 27.00;
+TC   27.40 27.20;
+NC   26.50 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27881714
+RT   A GPI processing phospholipase A2, PGAP6, modulates Nodal signaling in
+RT   embryos by shedding CRIPTO.
+RA   Lee GH, Fujita M, Takaoka K, Murakami Y, Fujihara Y, Kanzawa N,
+RA   Murakami KI, Kajikawa E, Takada Y, Saito K, Ikawa M, Hamada H,
+RA   Maeda Y, Kinoshita T;
+RL   J. Cell Biol. 2016;215:705-718.
+CC   This entry represents a middle domain found in TMEM8 family proteins
+CC   (PGAP6/TMEM8A and TMEM8B) in Euteleostomi. This domain lies between
+CC   the N-terminal region and the DUF3522 transmembrane domain
+CC   (Pfam:PF12036). PGAP6 is a GPI processing phospholipase A2 involved
+CC   in GPI-anchor remodeling and shedding of GPI-anchored proteins like
+CC   CRIPTO. TMEM8B (NGX6) is a tumor suppressor that regulates cell
+CC   adhesion and EGFR signaling.
+
