@@ -1,0 +1,30 @@
+ID   ZRANB3_mid
+DE   ZRANB3 DNA annealing helicase middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2Y9MTM2_TED03
+GA   27.00 27.00;
+TC   27.00 29.90;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   21078962
+RT   Annealing helicase 2 (AH2), a DNA-rewinding motor with an HNH
+RT   motif.
+RA   Yusufzai T, Kadonaga JT;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2010;107:20970-20973.
+RN   [2]
+RM   22759634
+RT   ZRANB3 is a structure-specific ATP-dependent endonuclease
+RT   involved in replication stress response.
+RA   Weston R, Peeters H, Ahel D;
+RL   Genes Dev. 2012;26:1558-1572.
+CC   This entry represents a middle domain of approximately 90
+CC   residues found in ZRANB3 (DNA annealing helicase and endonuclease)
+CC   in vertebrates. This domain is located between the Helicase_C
+CC   domain (Pfam:PF00271) and the HNH nuclease domain (Pfam:PF01844).
+CC   ZRANB3 is recruited to stalled replication forks by polyubiquiti-
+CC   nated PCNA and maintains genome stability by facilitating fork
+CC   restart. It acts both as a structure-specific endonuclease cleaving
+CC   D-loop intermediates and as an annealing helicase that rewinds DNA.

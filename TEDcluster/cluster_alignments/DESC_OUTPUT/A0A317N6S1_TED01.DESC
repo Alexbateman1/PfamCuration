@@ -1,0 +1,19 @@
+ID   PYNP_N
+DE   Thymidine phosphorylase family N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A317N6S1_TED01
+GA   27.00 27.00;
+TC   27.20 27.40;
+NC   26.60 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 95
+CC   residues found in thymidine/pyrimidine-nucleoside phosphorylases
+CC   and AMP phosphorylases in bacteria and archaea. This domain is
+CC   found N-terminal to the Glycos_trans_3N domain (Pfam:PF02885)
+CC   and Glycos_transf_3 domain (Pfam:PF00591). These enzymes catalyze
+CC   the phosphorolysis of nucleosides to their constituent bases
+CC   and sugar-1-phosphates. In archaea, AMP phosphorylases function
+CC   in an AMP degradation pathway together with ribose-1,5-bisphosphate
+CC   isomerase and RubisCO.
