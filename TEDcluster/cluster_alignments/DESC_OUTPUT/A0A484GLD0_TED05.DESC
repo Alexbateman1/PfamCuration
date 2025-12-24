@@ -1,0 +1,34 @@
+ID   PIDD_UPA
+DE   PIDD1 UPA domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A484GLD0_TED05
+GA   27.00 27.00;
+TC   27.30 28.00;
+NC   26.40 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CL   CL0842
+RN   [1]
+RM   15073321
+RT   The PIDDosome, a protein complex implicated in activation of
+RT   caspase-2 in response to genotoxic stress.
+RA   Tinel A, Tschopp J;
+RL   Science. 2004;304:843-846.
+RN   [2]
+RM   17159900
+RT   Autoproteolysis of PIDD marks the bifurcation between pro-death
+RT   caspase-2 and pro-survival NF-kappaB pathway.
+RA   Tinel A, Janssens S, Lippens S, Cuenin S, Logette E, Jaccard B,
+RA   Quadroni M, Tschopp J;
+RL   EMBO J. 2007;26:197-208.
+CC   This entry represents the UPA (UNC5, PIDD and ankyrins) domain
+CC   of approximately 140 residues found in PIDD1 (p53-induced death
+CC   domain-containing protein 1) in vertebrates. This domain is
+CC   located between ZU5 domains (Pfam:PF00791) and the Death domain
+CC   (Pfam:PF00531). PIDD1 functions downstream of p53 in the DNA
+CC   damage response, forming the PIDDosome complex with CRADD and
+CC   caspase-2 to trigger apoptosis, or alternatively activating
+CC   NF-kappaB for cell survival. This domain shows structural
+CC   similarity to UPA_2 (Pfam:PF17809) in the UPA superfamily
+CC   (CL0842).

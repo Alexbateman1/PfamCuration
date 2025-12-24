@@ -1,0 +1,17 @@
+ID   Fungi_STK
+DE   Fungal serine/threonine-protein kinase domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A484G3W7_TED01
+GA   27.00 27.00;
+TC   27.00 27.90;
+NC   26.80 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Family
+CC   This entry represents a domain of approximately 205 residues
+CC   found in serine/threonine-protein kinases in filamentous fungi
+CC   (Ascomycota - Sordariomycetes, Eurotiomycetes, Dothideomycetes).
+CC   These proteins typically consist of this single domain and are
+CC   likely involved in signal transduction pathways in fungal cells.
+CC   STRING analysis suggests functional association with chromatin
+CC   remodeling proteins including MRG and Tudor-knot domain proteins.

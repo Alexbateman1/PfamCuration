@@ -1,0 +1,19 @@
+ID   Rhodo_GlycoT
+DE   Rhodobacterales glycosyltransferase domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4R2NJI5_TED01
+GA   27.00 27.00;
+TC   27.30 27.00;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CL   CL0110
+CC   This entry represents a domain of approximately 226 residues
+CC   found in glycosyltransferases in Alphaproteobacteria
+CC   (Rhodobacterales - Paracoccaceae, Roseobacteraceae). This
+CC   domain shows structural similarity to glycosyltransferases
+CC   in the GT-B superfamily (CL0110), including Glyco_transf_24
+CC   (Pfam:PF18404), Mannosyl_trans3 (Pfam:PF11051) and
+CC   Glyco_transf_8 (Pfam:PF01501). These enzymes likely function
+CC   in capsule or polysaccharide biosynthesis pathways.
