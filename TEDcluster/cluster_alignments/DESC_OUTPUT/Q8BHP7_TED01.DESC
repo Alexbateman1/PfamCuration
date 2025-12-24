@@ -1,0 +1,24 @@
+ID   OLFML2_N
+DE   Olfactomedin-like protein 2 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:Q8BHP7_TED01
+GA   27.00 27.00;
+TC   28.60 32.90;
+NC   25.90 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   15836428
+RT   Photomedins: a family of olfactomedin-domain-containing proteins
+RT   with photoreceptor-specific expression.
+RA   Furutani Y, Murata T, Bhalla M, Tahara M, Nakamoto K, Toyoda-Ohno
+RA   H, Nagaya T, Ohba Y, Igarashi T, Shirai M, Miyamoto M, Sekimizu K;
+RL   Cell Tissue Res. 2005;320:91-99.
+CC   This entry represents an N-terminal domain found in olfactomedin-
+CC   like protein 2A (photomedin-1) and 2B (photomedin-2) in Metazoa.
+CC   These secreted glycoproteins contain a C-terminal olfactomedin-like
+CC   domain (Pfam:PF02191). OLFML2A and OLFML2B bind heparin and
+CC   chondroitin sulfate E and are expressed in photoreceptor layers
+CC   of the eye.
+
