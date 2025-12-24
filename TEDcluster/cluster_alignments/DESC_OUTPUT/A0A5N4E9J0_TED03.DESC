@@ -1,0 +1,29 @@
+ID   ADAMTS13_ins
+DE   ADAMTS13 insert domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5N4E9J0_TED03
+GA   27.00 27.00;
+TC   27.30 32.40;
+NC   25.90 26.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   12791682
+RT   Cleavage of von Willebrand factor requires the spacer domain of
+RT   the metalloprotease ADAMTS13.
+RA   Zheng X, Nishio K, Majerus EM, Sadler JE;
+RL   J. Biol. Chem. 2003;278:30136-30141.
+RN   [2]
+RM   19880749
+RT   Crystal structures of the noncatalytic domains of ADAMTS13 reveal
+RT   multiple discontinuous exosites for von Willebrand factor.
+RA   Akiyama M, Takeda S, Kokame K, Takagi J, Miyata T;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2009;106:19274-19279.
+CC   This entry represents an insert domain of approximately 110
+CC   residues found in ADAMTS13 (a disintegrin and metalloproteinase
+CC   with thrombospondin motifs 13) in vertebrates. ADAMTS13 is the
+CC   von Willebrand factor-cleaving protease that controls vWF-mediated
+CC   platelet thrombus formation. Deficiency causes hereditary
+CC   thrombotic thrombocytopenic purpura (TTP). The spacer domain is
+CC   required for substrate recognition and cleavage of vWF.

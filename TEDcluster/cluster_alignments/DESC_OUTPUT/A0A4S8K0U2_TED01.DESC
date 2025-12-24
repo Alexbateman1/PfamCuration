@@ -1,0 +1,18 @@
+ID   DnaJ_plant_N
+DE   Plant DnaJ-domain chaperone N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4S8K0U2_TED01
+GA   27.00 27.00;
+TC   28.10 27.00;
+NC   25.60 25.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain of approximately 129
+CC   residues found in DnaJ-domain containing chaperone proteins in
+CC   Viridiplantae (green plants, including Magnoliopsida and Poaceae).
+CC   This domain is found N-terminal to the DnaJ domain (Pfam:PF00226)
+CC   and Jiv90 domain (Pfam:PF14901). DnaJ proteins are molecular
+CC   chaperones that stimulate the ATPase activity of Hsp70 heat shock
+CC   proteins and are involved in protein folding, translocation, and
+CC   degradation.
