@@ -1,0 +1,16 @@
+ID   PBP_N
+DE   PBP-associated N-terminal repeat domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4R6A7L2_TED01
+GA   27.00 27.00;
+TC   27.10 31.30;
+NC   26.90 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a small N-terminal domain of approximately 44
+CC   amino acids found upstream of PBP_like_2 (Pfam:PF12849) and OmpA
+CC   (Pfam:PF00691) domains. The domain is found in Alphaproteobacteria,
+CC   particularly Rhodobacteraceae and Paracoccaceae. The domain can occur
+CC   in multiple tandem copies and may be involved in cell envelope
+CC   biogenesis or phosphate binding based on associated domains.
