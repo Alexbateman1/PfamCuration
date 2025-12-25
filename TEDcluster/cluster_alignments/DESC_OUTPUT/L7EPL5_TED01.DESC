@@ -1,0 +1,21 @@
+ID   HEAT_bact
+DE   Bacterial HEAT repeat-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:L7EPL5_TED01
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.60 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a domain of approximately 131 amino acids
+CC   found in HEAT repeat-containing proteins in bacteria, particularly
+CC   Actinomycetes (Streptomyces) and Pseudomonadota. The proteins are
+CC   often annotated as HEAT repeat domain-containing proteins, activators
+CC   of HSP90 ATPase, or secreted proteins. This domain can occur as a
+CC   single copy or as tandem repeats within larger HEAT repeat proteins.
+CC   HEAT repeats (named after Huntingtin, Elongation factor 3, protein
+CC   phosphatase 2A, and TOR1) form alpha-helical repeat structures
+CC   involved in protein-protein interactions. The specific function of
+CC   this bacterial HEAT-associated domain is unknown.
+

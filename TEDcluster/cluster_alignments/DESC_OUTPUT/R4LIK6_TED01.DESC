@@ -1,0 +1,20 @@
+ID   DUF_Strep_RCK
+DE   Streptomyces RCK-associated domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:R4LIK6_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a small domain of approximately 72 amino
+CC   acids found in uncharacterized proteins in Actinomycetes,
+CC   particularly Streptomyces and related genera (Streptosporangiales,
+CC   Pseudonocardiales). The proteins typically consist only of this
+CC   single domain. Some members are annotated as RCK C-terminal domain-
+CC   containing proteins. STRING network analysis shows functional
+CC   association with DUF6879, suggesting a possible regulatory role.
+CC   The specific function is unknown. The family is found in
+CC   Actinomycetota.
+
