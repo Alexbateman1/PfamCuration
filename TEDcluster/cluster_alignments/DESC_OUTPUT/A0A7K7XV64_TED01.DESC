@@ -1,0 +1,18 @@
+ID   WDR93_C
+DE   WDR93 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K7XV64_TED01
+GA   27.00 27.00;
+TC   27.00 28.80;
+NC   26.60 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents a C-terminal domain of approximately 77 amino
+CC   acids found in WD repeat-containing protein 93 (WDR93). The domain
+CC   is positioned at the extreme C-terminus, downstream of the WDR93
+CC   beta-propeller domain (Pfam:PF21030). In mice, WDR93 is testis-
+CC   specific and expressed in spermatogonia, spermatocytes and
+CC   spermatids, suggesting a role in spermatogenesis. The function of
+CC   this C-terminal extension is unknown. The family is found in
+CC   vertebrates.

@@ -1,0 +1,30 @@
+ID   CEP68_N
+DE   CEP68 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K8ZCV9_TED01
+GA   27.00 27.00;
+TC   31.60 35.60;
+NC   25.90 21.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   18042621
+RT   Cep68 and Cep215 (Cdk5rap2) are required for centrosome cohesion.
+RA   Graser S., Stierhof Y.D., Nigg E.A.;
+RL   J. Cell Sci. 120:4321-4331(2007).
+RN   [2]
+RM   25503564
+RT   Degradation of Cep68 and PCNT cleavage mediate Cep215 removal from the
+RT   PCM to allow centriole separation, disengagement and licensing.
+RA   Pagan J.K., Marzio A., Jones M.J., Saraf A., Jallepalli P.V.,
+RA   Florens L., Washburn M.P., Pagano M.;
+RL   Nat. Cell Biol. 17:31-43(2015).
+CC   This family represents a small domain of approximately 38 amino acids
+CC   found near the N-terminus of centrosomal protein of 68 kDa (CEP68).
+CC   CEP68 is involved in maintenance of centrosome cohesion as part of
+CC   a linker structure that prevents premature centrosome splitting. CEP68
+CC   is phosphorylated by PLK1 and NEK2 and degraded by SCF ubiquitin
+CC   ligases at the onset of mitosis to allow centriole separation.
+CC   CEP68 is required for localization of CDK5RAP2 to the centrosome.
+CC   The family is found in vertebrates.

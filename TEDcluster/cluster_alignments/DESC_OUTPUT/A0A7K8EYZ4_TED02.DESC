@@ -1,0 +1,30 @@
+ID   SMPD3_C
+DE   Neutral sphingomyelinase 3 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K8EYZ4_TED02
+GA   27.00 27.00;
+TC   32.10 31.20;
+NC   26.40 25.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   9520418
+RT   Cloned mammalian neutral sphingomyelinase: functions in sphingolipid
+RT   signaling?
+RA   Tomiuk S., Hofmann K., Nix M., Zumbansen M., Stoffel W.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 95:3638-3643(1998).
+RN   [2]
+RM   15764706
+RT   Neutral sphingomyelinase 2 (smpd3) in the control of postnatal growth
+RT   and development.
+RA   Stoffel W., Jenke B., Bloeck B., Zumbansen M., Koebke J.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 102:4554-4559(2005).
+CC   This family represents a C-terminal domain of approximately 117 amino
+CC   acids found in neutral sphingomyelinase 3 (SMPD3/nSMase2). The domain
+CC   is positioned at the extreme C-terminus, downstream of the Exo_endo_
+CC   phos catalytic domain (Pfam:PF03372). SMPD3 hydrolyzes sphingomyelin
+CC   to produce ceramide and phosphocholine, playing a key role in
+CC   sphingolipid signaling and postnatal development. Mice lacking SMPD3
+CC   show growth retardation and skeletal abnormalities. The family is
+CC   found in vertebrates, particularly fish and birds.
