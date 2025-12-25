@@ -1,0 +1,20 @@
+ID   DUF_Tricho
+DE   Trichomonas domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A2HB71_TED01
+GA   27.00 27.00;
+TC   27.00 27.40;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This family represents a large domain of approximately 270 amino
+CC   acids found exclusively in Trichomonas vaginalis and related
+CC   Parabasalia species (Metamonada). The domain is highly expanded
+CC   in T. vaginalis with approximately 300 proteins identified, all
+CC   currently uncharacterized. The proteins are typically small,
+CC   consisting primarily of this single domain. The specific function
+CC   is unknown. Such lineage-specific domain expansions in Trichomonas
+CC   may relate to the organism's parasitic lifestyle and adaptation
+CC   to its urogenital environment.
+

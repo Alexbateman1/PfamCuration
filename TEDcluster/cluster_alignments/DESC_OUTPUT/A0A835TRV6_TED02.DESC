@@ -1,0 +1,27 @@
+ID   HEXD_C
+DE   Hexosaminidase D C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A835TRV6_TED02
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.60 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27149221
+RT   Mechanism of Human Nucleocytoplasmic Hexosaminidase D.
+RA   Alteen M.G., Oehler V., Nemcovicova I., Wilson I.B., Vocadlo D.J.,
+RA   Gloster T.M.;
+RL   Biochemistry 55:2735-2747(2016).
+CC   This family represents a C-terminal domain of approximately 100
+CC   amino acids found in hexosaminidase D (HEXD) enzymes, positioned
+CC   after the glycosyl hydrolase 20 catalytic domain (Pfam:PF00728).
+CC   HEXD is a nucleocytoplasmic beta-N-acetylhexosaminidase that
+CC   cleaves terminal N-acetylglucosamine (GlcNAc) and N-acetyl-
+CC   galactosamine (GalNAc) from cellular substrates, with preference
+CC   for galactosaminides. The enzyme functions as a disulfide-linked
+CC   homodimer and is inhibited by PUGNAc. The C-terminal domain may
+CC   contribute to dimerization or substrate binding. The family is
+CC   found in vertebrates.
+
