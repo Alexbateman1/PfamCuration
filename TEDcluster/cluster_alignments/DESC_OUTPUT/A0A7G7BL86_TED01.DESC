@@ -1,0 +1,16 @@
+ID   FtsK_N
+DE   FtsK/SpoIIIE N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7G7BL86_TED01
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents an N-terminal domain of approximately 113 amino
+CC   acids found in FtsK/SpoIIIE family cell division proteins. The domain
+CC   is located upstream of the FtsK_SpoIIIE ATPase domain (Pfam:PF01580)
+CC   and is found predominantly in Actinomycetes. FtsK is involved in
+CC   chromosome segregation and cell division in bacteria, coupling
+CC   septum formation with DNA translocation.

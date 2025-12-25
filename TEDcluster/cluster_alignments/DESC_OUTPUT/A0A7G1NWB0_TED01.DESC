@@ -1,0 +1,19 @@
+ID   DUF2470_N
+DE   DUF2470-associated N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7G1NWB0_TED01
+GA   27.00 27.00;
+TC   27.00 27.20;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CL   CL0336
+CC   This family represents an N-terminal domain of approximately 150 amino
+CC   acids found in DUF2470 domain-containing proteins. The domain is located
+CC   upstream of the DUF2470 domain (Pfam:PF10615) and is found predominantly
+CC   in Actinomycetes including Streptomyces, Pseudonocardiaceae, and
+CC   Mycobacteriaceae. Structure prediction suggests similarity to the
+CC   pyridoxine 5'-phosphate oxidase-related superfamily. Some proteins
+CC   containing this domain may be involved in iron acquisition based on
+CC   phenotypic studies.

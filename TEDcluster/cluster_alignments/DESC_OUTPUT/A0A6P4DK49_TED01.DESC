@@ -1,0 +1,14 @@
+ID   DUF_TM
+DE   Transmembrane protein domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6P4DK49_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This family represents a domain of approximately 78 amino acids found
+CC   in transmembrane proteins. Some proteins containing this domain are
+CC   annotated as dimethylaniline monooxygenases. The function of this
+CC   conserved region remains to be determined.

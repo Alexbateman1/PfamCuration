@@ -1,0 +1,15 @@
+ID   Actino_peptid
+DE   Actinobacterial peptidase domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6I2FQD9_TED01
+GA   27.00 27.00;
+TC   41.80 201.00;
+NC   24.40 20.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents a peptidase domain of approximately 165 amino
+CC   acids found in Actinobacteria, particularly in Mycobacteriaceae and
+CC   Nocardiaceae. The domain is found as the sole domain in proteins
+CC   annotated as peptidases. Proteins containing this domain may be involved
+CC   in protein turnover or processing in actinobacterial species.
