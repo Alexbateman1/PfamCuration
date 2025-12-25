@@ -1,0 +1,32 @@
+ID   ZCCHC4_mid
+DE   ZCCHC4 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K9MBP8_TED02
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.00 25.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   30531910
+RT   N6-methyladenosine methyltransferase ZCCHC4 mediates ribosomal RNA
+RT   methylation.
+RA   Ma H., Wang X., Cai J., Dai Q., Natchiar S.K., Lv R., Chen K., Lu Z.,
+RA   Chen H., Shi Y.G., Lan F., Fan J., Klaholz B.P., Pan T., Shi Y.,
+RA   He C.;
+RL   Nat. Chem. Biol. 15:88-94(2019).
+RN   [2]
+RM   31695039
+RT   Structure and regulation of ZCCHC4 in m6A-methylation of 28S rRNA.
+RA   Ren W., Lu J., Huang M., Gao L., Li D., Wang G.G., Song J.;
+RL   Nat. Commun. 10:5042-5042(2019).
+CC   This family represents a middle domain of approximately 45 amino acids
+CC   found in rRNA N6-adenosine methyltransferase ZCCHC4. The domain is
+CC   positioned between the GRF-type zinc finger (Pfam:PF06839) and the
+CC   N6-adenosine methyltransferase domain (Pfam:PF10237). ZCCHC4
+CC   specifically methylates adenine at position 4220 of 28S rRNA, which
+CC   is required for efficient translation. This middle domain contains
+CC   zinc-binding residues that contribute to structural stability. The
+CC   family is found in vertebrates.
+
