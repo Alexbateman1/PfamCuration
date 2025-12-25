@@ -1,0 +1,18 @@
+ID   DUF_Strep_129
+DE   Small Streptomycetaceae domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7G1NYA3_TED02
+GA   27.00 27.00;
+TC   28.20 30.20;
+NC   24.00 23.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents a domain of approximately 129 amino acids
+CC   found exclusively in Streptomycetaceae bacteria, particularly
+CC   Streptomyces species. The proteins containing this domain are
+CC   uncharacterized and typically contain only this single domain.
+CC   STRING analysis shows weak associations with histidine phosphatase
+CC   (His_Phos_1) and aminotransferase (Aminotran_1_2) families,
+CC   suggesting possible roles in amino acid or phosphate metabolism.
+CC   The function of this domain is unknown.

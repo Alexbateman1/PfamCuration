@@ -1,0 +1,27 @@
+ID   SKI_C
+DE   SKI oncogene C-terminal coiled-coil domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6P9C9D4_TED01
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.90 26.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   19049980
+RT   SKI and MEL1 cooperate to inhibit transforming growth factor-beta
+RT   signal in gastric cancer cells.
+RA   Takahata M., Inoue Y., Tsuda H., Imoto I., Koinuma D., Hayashi M.,
+RA   Ichikura T., Yamori T., Nagasaki K., Yoshida M., Matsuoka M.,
+RA   Morishita K., Yuki K., Hanyu A., Miyazawa K., Inazawa J., Miyazono K.,
+RA   Imamura T.;
+RL   J. Biol. Chem. 284:3334-3344(2009).
+CC   This family represents the C-terminal coiled-coil domain of
+CC   approximately 87 amino acids found in SKI and SKI-like (SKIL/SnoN)
+CC   oncoproteins. The domain is downstream of the c-SKI_SMAD_bind
+CC   (Pfam:PF08782) and Ski_Sno_DHD (Pfam:PF02437) domains. SKI family
+CC   proteins function as transcriptional corepressors that inhibit
+CC   TGF-beta signaling by interacting with SMAD proteins. Mutations in
+CC   SKI cause Shprintzen-Goldberg craniosynostosis syndrome. The family
+CC   is found in vertebrates.

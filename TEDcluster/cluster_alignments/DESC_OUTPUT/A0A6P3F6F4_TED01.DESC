@@ -1,0 +1,30 @@
+ID   Melted_N
+DE   Melted/VEPH N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6P3F6F4_TED01
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   26039994
+RT   Human ortholog of Drosophila Melted impedes SMAD2 release from
+RT   TGF-beta receptor I to inhibit TGF-beta signaling.
+RA   Shathasivam P., Kollara A., Ringuette M.J., Virtanen C., Wrana J.L.,
+RA   Brown T.J.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 112:E3000-E3009(2015).
+RN   [2]
+RM   16054033
+RT   Drosophila Melted modulates FOXO and TOR activity.
+RA   Teleman A.A., Chen Y.-W., Cohen S.M.;
+RL   Dev. Cell 9:271-281(2005).
+CC   This family represents the N-terminal domain of approximately 155
+CC   amino acids found in the Melted/VEPH (Ventricular zone-expressed PH
+CC   domain-containing protein) family. The domain is positioned upstream
+CC   of the PH domain (Pfam:PF00169). Drosophila Melted and its human
+CC   ortholog VEPH1 function as modulators of TGF-beta, FOXO, and TOR
+CC   signaling pathways. VEPH1 interacts with TGF-beta receptor type-1 and
+CC   inhibits SMAD2 dissociation, thereby blocking TGF-beta signaling. The
+CC   family is found in Metazoa from nematodes to vertebrates.
