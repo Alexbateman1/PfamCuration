@@ -1,0 +1,19 @@
+ID   DUF_Actino_duplex
+DE   Actinomycete duplicated domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7X6HZF8_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Repeat
+CC   This family represents a domain of approximately 150 amino acids
+CC   that typically occurs in tandem repeats in Actinomycetes. The proteins
+CC   containing this domain are often annotated as aromatic ring-opening
+CC   dioxygenases or peptidases, though the specific function is uncharacterized.
+CC   Foldseek analysis suggests structural similarity to CUB-like folds
+CC   (CL0164) and von Willebrand factor A domains (VWA). STRING network
+CC   analysis shows functional association with VWA and VWA_2 domains.
+CC   The family is found in Actinomycetota, particularly Streptomyces.
+
