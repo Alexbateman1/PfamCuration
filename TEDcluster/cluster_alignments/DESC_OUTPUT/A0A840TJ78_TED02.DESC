@@ -1,0 +1,20 @@
+ID   AsnB_bact
+DE   Bacterial asparagine synthetase B domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A840TJ78_TED02
+GA   27.00 27.00;
+TC   69.40 34.20;
+NC   24.40 20.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an asparagine synthetase B domain found in
+CC   Bacteroidota, particularly Flavobacteriaceae and related families.
+CC   The proteins are annotated as asparagine synthetase B (AsnB), which
+CC   catalyzes the ATP-dependent synthesis of asparagine from aspartate
+CC   using glutamine as the nitrogen source. The domain shows structural
+CC   similarity to glutamine amidotransferase class I family domains
+CC   (Pfam clan CL0014). This domain is typically found as the
+CC   C-terminal catalytic domain following an N-terminal glutaminase
+CC   domain.
+
