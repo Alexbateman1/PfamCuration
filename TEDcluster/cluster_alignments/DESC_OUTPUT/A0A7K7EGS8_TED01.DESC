@@ -1,0 +1,35 @@
+ID   RTF1_N
+DE   RTF1 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K7EGS8_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   20178742
+RT   The human PAF1 complex acts in chromatin transcription elongation both
+RT   independently and cooperatively with SII/TFIIS.
+RA   Kim J., Guermah M., Roeder R.G.;
+RL   Cell 140:491-503(2010).
+RN   [2]
+RM   19345177
+RT   A genome-scale RNAi screen for Oct4 modulators defines a role of the
+RT   Paf1 complex for embryonic stem cell identity.
+RA   Ding L., Paszkowski-Rogacz M., Nitzsche A., Slabicki M.M.,
+RA   Heninger A.K., de Vries I., Kittler R., Junqueira M., Shevchenko A.,
+RA   Schulz H., Huebner N., Doss M.X., Sachinidis A., Hescheler J.,
+RA   Iacone R., Anastassiadis K., Stewart A.F., Pisabarro M.T.,
+RA   Caldarelli A., Poser I., Theis M., Buchholz F.;
+RL   Cell Stem Cell 4:403-415(2009).
+CC   This family represents an N-terminal domain of approximately 64 amino
+CC   acids found in RTF1 (RNA polymerase-associated protein RTF1 homolog).
+CC   The domain is positioned upstream of the Plus3 DNA-binding domain
+CC   (Pfam:PF03126). RTF1 is a component of the PAF1 complex (PAF1C) which
+CC   has multiple functions during transcription by RNA polymerase II. The
+CC   PAF1 complex is required for transcriptional elongation, histone H2B
+CC   ubiquitination, H3K4 methylation, and mRNA 3'-end formation. The PAF1
+CC   complex is implicated in maintenance of embryonic stem cell
+CC   pluripotency. The family is found in Metazoa.

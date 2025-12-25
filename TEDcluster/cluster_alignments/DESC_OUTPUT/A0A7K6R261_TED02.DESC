@@ -1,0 +1,18 @@
+ID   METTL25_C
+DE   METTL25 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K6R261_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a C-terminal domain of approximately 68 amino
+CC   acids found in methyltransferase-like protein 25 (METTL25). The
+CC   domain is positioned at the extreme C-terminus, downstream of the
+CC   SAM-dependent methyltransferase domain (Pfam:PF13679). METTL25 is a
+CC   probable methyltransferase whose substrate is unknown. The function
+CC   of this C-terminal extension is unknown but it may be involved in
+CC   substrate recognition or regulation of enzymatic activity. The family
+CC   is found in vertebrates.
