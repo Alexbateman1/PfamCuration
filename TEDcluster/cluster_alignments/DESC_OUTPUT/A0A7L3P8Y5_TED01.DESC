@@ -1,0 +1,40 @@
+ID   GFRAL_N
+DE   GFRAL N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L3P8Y5_TED01
+GA   27.00 27.00;
+TC   27.50 28.50;
+NC   26.80 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   28846097
+RT   GFRAL is the receptor for GDF15 and the ligand promotes weight loss
+RT   in mice and nonhuman primates.
+RA   Mullican S.E., Lin-Schmidt X., Chin C.N., Chavez J.A., Furman J.L.,
+RA   Armstrong A.A., Beck S.C., South V.J., Dinh T.Q., Cash-Mason T.D.,
+RA   Cavanaugh C.R., Nelson S., Huang C., Hunter M.J., Rangwala S.M.;
+RL   Nat. Med. 23:1150-1157(2017).
+RN   [2]
+RM   28953886
+RT   Non-homeostatic body weight regulation through a brainstem-restricted
+RT   receptor for GDF15.
+RA   Hsu J.Y., Crawley S., Chen M., Ayupova D.A., Lindhout D.A., Higbee J.,
+RA   Kutach A., Joo W., Gao Z., Fu D., To C., Mondal K., Li B.,
+RA   Kekatpure A., Wang M., Laird T., Horner G., Chan J., McEntee M.,
+RA   Lopez M., Lakshminarasimhan D., White A., Wang S.P., Yao J., Yie J.,
+RA   Matern H., Solloway M., Haldankar R., Parsons T., Tang J.,
+RA   Shen W.D., Alice Chen Y., Tian H., Allan B.B.;
+RL   Nature 550:255-259(2017).
+CC   This family represents an N-terminal domain of approximately 72
+CC   amino acids found in GDNF family receptor alpha-like (GFRAL). The
+CC   domain is positioned after the signal peptide and upstream of the
+CC   GDNF receptor domains (Pfam:PF02351). GFRAL is the brainstem-
+CC   restricted receptor for GDF15 hormone, which triggers an aversive
+CC   response characterized by nausea, vomiting, and loss of appetite
+CC   in response to various stresses. Upon GDF15 binding, GFRAL activates
+CC   the RET tyrosine kinase receptor, leading to activation of MAPK and
+CC   AKT signaling pathways. The GDF15-GFRAL axis is a target for
+CC   anti-obesity therapeutics. The family is found in vertebrates.
+

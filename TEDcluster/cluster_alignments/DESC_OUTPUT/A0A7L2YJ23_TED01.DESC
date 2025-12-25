@@ -1,0 +1,28 @@
+ID   PIGQ_N
+DE   PIGQ N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L2YJ23_TED01
+GA   27.00 27.00;
+TC   29.40 28.40;
+NC   24.10 24.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16162815
+RT   The initial enzyme for glycosylphosphatidylinositol biosynthesis
+RT   requires PIG-Y, a seventh component.
+RA   Murakami Y., Siripanyaphinyo U., Hong Y., Tashima Y., Maeda Y.,
+RA   Kinoshita T.;
+RL   Mol. Biol. Cell 16:5236-5246(2005).
+CC   This family represents an N-terminal domain of approximately 186
+CC   amino acids found in phosphatidylinositol N-acetylglucosaminyltransferase
+CC   subunit Q (PIGQ/GPI1). The domain is positioned upstream of the Gpi1
+CC   domain (Pfam:PF05024). PIGQ is a component of the GPI-GnT complex
+CC   that catalyzes the transfer of N-acetylglucosamine from UDP-GlcNAc
+CC   to phosphatidylinositol, participating in the first step of GPI
+CC   biosynthesis. Mutations in PIGQ cause multiple congenital anomalies-
+CC   hypotonia-seizures syndrome 4 (MCAHS4), characterized by refractory
+CC   seizures, developmental delay, and dysmorphic features. The family
+CC   is found in vertebrates.
+

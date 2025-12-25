@@ -1,0 +1,28 @@
+ID   SLX4_mid
+DE   SLX4 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L4MIL9_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   19596235
+RT   Mammalian BTBD12/SLX4 assembles a Holliday junction resolvase and
+RT   is required for DNA repair.
+RA   Svendsen J.M., Smogorzewska A., Sowa M.E., O'Connell B.C., Gygi S.P.,
+RA   Elledge S.J., Harper J.W.;
+RL   Cell 138:63-77(2009).
+CC   This family represents a middle domain of approximately 37 amino
+CC   acids found in structure-specific endonuclease subunit SLX4. The
+CC   domain is positioned between the BTB domain (Pfam:PF00651) and the
+CC   Slx4 C-terminal domain (Pfam:PF09494). SLX4 is a regulatory scaffold
+CC   that interacts with and increases the activity of multiple structure-
+CC   specific endonucleases including SLX1, XPF-ERCC1, and MUS81-EME1.
+CC   SLX4 has several roles in protecting genome stability by resolving
+CC   deleterious DNA structures from replication and recombination
+CC   intermediates. Mutations in SLX4 cause Fanconi anemia complementation
+CC   group P. The family is found in vertebrates.
+

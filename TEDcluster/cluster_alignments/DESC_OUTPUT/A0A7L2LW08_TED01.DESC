@@ -1,0 +1,29 @@
+ID   MED27_N
+DE   Mediator subunit 27 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7L2LW08_TED01
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.80 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   15175163
+RT   A set of consensus mammalian mediator subunits identified by
+RT   multidimensional protein identification technology.
+RA   Sato S., Tomomori-Sato C., Parmely T.J., Florens L., Zybailov B.,
+RA   Swanson S.K., Banks C.A.S., Jin J., Cai Y., Washburn M.P.,
+RA   Conaway J.W., Conaway R.C.;
+RL   Mol. Cell 14:685-691(2004).
+CC   This family represents an N-terminal domain of approximately 65
+CC   amino acids found in Mediator of RNA polymerase II transcription
+CC   subunit 27 (MED27). The domain is positioned upstream of the Med27
+CC   domain (Pfam:PF11571). MED27 is a component of the Mediator complex,
+CC   a coactivator involved in the regulated transcription of nearly all
+CC   RNA polymerase II-dependent genes. The Mediator complex functions as
+CC   a bridge to convey information from gene-specific regulatory proteins
+CC   to the basal transcription machinery. Mutations in MED27 cause a
+CC   neurodevelopmental disorder with spasticity, cataracts, and cerebellar
+CC   hypoplasia (NEDSCAC). The family is found in Metazoa.
+
