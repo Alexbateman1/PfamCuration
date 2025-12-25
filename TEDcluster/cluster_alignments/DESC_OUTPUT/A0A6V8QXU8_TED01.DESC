@@ -1,0 +1,19 @@
+ID   Fungal_TF_N
+DE   Fungal Zn(2)-C6 transcription factor N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6V8QXU8_TED01
+GA   27.00 27.00;
+TC   28.20 27.00;
+NC   26.70 24.20;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain found in fungal Zn(2)-C6
+CC   type DNA-binding transcription factors in Ascomycota (Pezizomycotina).
+CC   The domain is found in proteins from Sordariomycetes, Eurotiomycetes,
+CC   Dothideomycetes, and Leotiomycetes. In some family members, this
+CC   domain is associated with the fungal Zn(2)-C6 zinc cluster DNA-
+CC   binding domain (Pfam:PF00172) located in the C-terminal region of the
+CC   protein. These proteins are likely transcriptional regulators,
+CC   although specific functions remain to be characterized.
+
