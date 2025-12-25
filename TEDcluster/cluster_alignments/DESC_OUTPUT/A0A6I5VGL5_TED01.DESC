@@ -1,0 +1,17 @@
+ID   OsmC_N
+DE   OsmC peroxiredoxin N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6I5VGL5_TED01
+GA   27.00 27.00;
+TC   27.00 27.70;
+NC   26.90 26.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This family represents a small N-terminal domain of approximately 39
+CC   amino acids found upstream of the OsmC peroxiredoxin domain
+CC   (Pfam:PF02566). The domain is found in bacteria, particularly
+CC   Actinomycetes, Alphaproteobacteria, and Bacteroidota. OsmC proteins
+CC   are organic hydroperoxide reductases involved in oxidative stress
+CC   response. STRING analysis shows association with ferritin (PF00210),
+CC   suggesting a role in iron-dependent oxidative stress protection.

@@ -1,0 +1,26 @@
+ID   EXD2_C
+DE   EXD2 exonuclease C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6J3AN73_TED04
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   26807646
+RT   EXD2 promotes homologous recombination by facilitating DNA end
+RT   resection.
+RA   Broderick R., Nieminuszczy J., Baddock H.T., Deshpande R.A., Gileadi O.,
+RA   Paull T.T., McHugh P.J., Niedzwiedz W.;
+RL   Nat. Cell Biol. 18:271-280(2016).
+CC   This family represents the C-terminal domain of approximately 61 amino
+CC   acids found in exonuclease 3'-5' domain-containing protein 2 (EXD2).
+CC   EXD2 is a dual-function exonuclease with both exoribonuclease and
+CC   exodeoxyribonuclease activities. It localizes to mitochondria and
+CC   nucleus, where it functions in mitochondrial translation and DNA
+CC   double-strand break repair via homologous recombination. The C-terminal
+CC   domain is downstream of the DNA_pol_A_exo1 catalytic domain
+CC   (Pfam:PF01612). The function of this specific C-terminal domain is
+CC   unknown.
