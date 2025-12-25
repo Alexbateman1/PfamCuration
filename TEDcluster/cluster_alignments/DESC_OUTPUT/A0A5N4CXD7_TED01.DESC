@@ -1,0 +1,21 @@
+ID   TMEM130_N
+DE   Transmembrane protein 130 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5N4CXD7_TED01
+GA   27.00 27.00;
+TC   28.60 33.80;
+NC   26.90 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   11256614
+RT   Systematic subcellular localization of novel proteins identified by
+RT   large-scale cDNA sequencing.
+RA   Simpson J.C., Wellenreuther R., Poustka A., Pepperkok R., Wiemann S.;
+RL   EMBO Rep. 1:287-292(2000).
+CC   This family represents an N-terminal domain of approximately 100 amino
+CC   acids found in transmembrane protein 130 (TMEM130). The domain is
+CC   located upstream of the PKD domain (Pfam:PF00801) and PKAT_KLD domain
+CC   (Pfam:PF20433). TMEM130 is a type I transmembrane protein localized
+CC   to the Golgi apparatus membrane.

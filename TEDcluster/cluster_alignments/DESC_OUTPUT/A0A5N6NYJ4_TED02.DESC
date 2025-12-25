@@ -1,0 +1,15 @@
+ID   Rad60_C
+DE   Rad60/SUMO-like domain protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5N6NYJ4_TED02
+GA   27.00 27.00;
+TC   27.40 27.50;
+NC   26.30 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a C-terminal domain of approximately 140 amino
+CC   acids found in ubiquitin-like domain-containing proteins. The domain
+CC   is located downstream of the Rad60-SLD (Pfam:PF11976) and ubiquitin
+CC   (Pfam:PF00240) domains. These proteins may be involved in DNA damage
+CC   response or SUMO-related pathways.

@@ -1,0 +1,13 @@
+ID   DUF_fungal
+DE   Fungal domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5N5M6A3_TED01
+GA   27.00 27.00;
+TC   27.20 29.60;
+NC   23.60 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This family represents a domain of unknown function of approximately
+CC   107 amino acids found in uncharacterized proteins from fungi. The
+CC   domain is found as the sole domain in small proteins.
