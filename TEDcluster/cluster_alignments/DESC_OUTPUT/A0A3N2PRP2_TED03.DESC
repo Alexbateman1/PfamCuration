@@ -1,0 +1,24 @@
+ID   STE20_C
+DE   STE20-like kinase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3N2PRP2_TED03
+GA   27.00 27.00;
+TC   29.70 27.20;
+NC   26.90 25.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   26418262
+RT   Germinal Center Kinases SmKIN3 and SmKIN24 Are Associated with the
+RT   Sordaria macrospora Striatin-Interacting Phosphatase and Kinase
+RT   (STRIPAK) Complex.
+RA   Bloemendal S., Bernhards Y., Bartho K., Dettmann A., Voigt O.,
+RA   Seiler S., Wolters D.A., Poggeler S., Kuck U.;
+RL   PLoS ONE 10:e0139569-e0139569(2015).
+CC   This family represents a C-terminal domain of approximately 95 amino
+CC   acids found in STE20-like serine/threonine protein kinases. The domain
+CC   is located C-terminal to the kinase domain (Pfam:PF00069) and is found
+CC   in fungal GCK (germinal center kinase) subfamily members. These kinases
+CC   are associated with the STRIPAK (Striatin-Interacting Phosphatase and
+CC   Kinase) complex and play roles in cell signaling and morphogenesis.

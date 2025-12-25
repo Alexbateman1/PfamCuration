@@ -1,0 +1,16 @@
+ID   DUF_Streptom
+DE   Streptomyces domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A387HB61_TED01
+GA   27.00 27.00;
+TC   29.00 28.80;
+NC   26.10 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a domain of unknown function of approximately
+CC   140 amino acids found exclusively in Streptomyces and related
+CC   Streptomycetaceae species. The domain is found as the sole domain in
+CC   small uncharacterized proteins. Some members are annotated as
+CC   rhodanese domain-containing proteins, but this domain does not show
+CC   similarity to known rhodanese domains.
