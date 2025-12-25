@@ -1,0 +1,18 @@
+ID   DUF_Strep_sm3
+DE   Small Streptomyces domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6I5C0R4_TED01
+GA   27.00 27.00;
+TC   28.00 31.20;
+NC   26.50 24.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CC   This family represents a small domain of approximately 60 amino acids
+CC   found predominantly in Streptomyces and related Actinomycetes. The
+CC   domain is found in diverse protein contexts including integrases,
+CC   transposases, and transcriptional regulators. A representative member
+CC   is SCO2205 from Streptomyces coelicolor, which shows differential
+CC   expression during sporulation. STRING analysis shows association with
+CC   arsenate reductase (ArsC), suggesting possible involvement in stress
+CC   response or metal homeostasis.
