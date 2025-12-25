@@ -1,0 +1,19 @@
+ID   Strep_secr
+DE   Streptomyces secreted protein domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A6C0Q259_TED01
+GA   27.00 27.00;
+TC   27.30 62.30;
+NC   26.60 22.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This family represents a domain found in secreted proteins from
+CC   Streptomyces and related Actinomycetes (Kitasatosporales). These
+CC   proteins are exported via signal peptides and are functionally
+CC   associated with genes encoding thiolases (Pfam:PF00108), aminotrans-
+CC   ferases (Pfam:PF00291), CBS domain proteins (Pfam:PF00571), and
+CC   GDSL-like lipases. The domain is typically around 100 amino acids
+CC   in length and is found as a single-domain architecture in most
+CC   family members.
+

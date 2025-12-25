@@ -1,0 +1,43 @@
+ID   HMGR_anchor
+DE   HMG-CoA reductase N-terminal membrane anchor domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A498J2Z9_TED01
+GA   27.00 27.00;
+TC   27.60 30.40;
+NC   26.20 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   14871314
+RT   Loss of function of 3-hydroxy-3-methylglutaryl coenzyme A reductase 1
+RT   (HMG1) in Arabidopsis leads to dwarfing, early senescence and male
+RT   sterility, and reduced sterol levels.
+RA   Suzuki M, Kamide Y, Nagata N, Seki H, Ohyama K, Kato H, Masuda K, Sato S,
+RA   Kato T, Tabata S, Yoshida S, Muranaka T;
+RL   Plant J. 2004;37:750-761.
+RN   [2]
+RM   15618432
+RT   Subcellular localization of Arabidopsis 3-hydroxy-3-methylglutaryl-
+RT   coenzyme A reductase.
+RA   Leivar P, Gonzalez VM, Castel S, Trelease RN, Lopez-Iglesias C, Arro M,
+RA   Boronat A, Campos N, Ferrer A, Fernandez-Busquets X;
+RL   Plant Physiol. 2005;137:57-69.
+RN   [3]
+RM   19041104
+RT   Arabidopsis 3-hydroxy-3-methylglutaryl-CoA reductase is regulated at the
+RT   post-translational level in response to alterations of the sphingolipid
+RT   and the sterol biosynthetic pathways.
+RA   Nieto B, Fores O, Arro M, Ferrer A;
+RL   Phytochemistry 2009;70:53-59.
+CC   This entry represents an N-terminal membrane anchor domain found in
+CC   plant 3-hydroxy-3-methylglutaryl-coenzyme A reductase (HMGR) enzymes.
+CC   This domain contains transmembrane helices that target the enzyme to
+CC   the endoplasmic reticulum membrane. The domain is located N-terminal
+CC   to the catalytic HMG-CoA_red domain (Pfam:PF00368). HMGR catalyzes the
+CC   synthesis of mevalonate, a key intermediate in the biosynthesis of
+CC   isoprenoid compounds including sterols and triterpenes. In Arabidopsis,
+CC   loss of HMG1 function leads to dwarfing, early senescence and male
+CC   sterility. The enzyme is regulated post-translationally in response
+CC   to alterations of sphingolipid and sterol biosynthesis pathways.
+
