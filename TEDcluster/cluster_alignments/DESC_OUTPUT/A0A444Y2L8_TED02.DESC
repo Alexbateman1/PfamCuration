@@ -1,0 +1,15 @@
+ID   DDI1_C_plant
+DE   Plant DDI1 aspartic peptidase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A444Y2L8_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents a C-terminal domain of approximately 55 amino
+CC   acids found in DDI1-type aspartic peptidases from plants, particularly
+CC   legumes such as Arachis (peanut). The domain is located C-terminal to
+CC   the aspartic protease domain (Pfam:PF13650). DDI1 proteins are
+CC   involved in the ubiquitin-proteasome pathway and DNA damage response.

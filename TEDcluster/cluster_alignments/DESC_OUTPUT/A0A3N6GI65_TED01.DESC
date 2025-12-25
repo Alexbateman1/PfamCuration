@@ -1,0 +1,16 @@
+ID   SWIM_C
+DE   SWIM zinc finger C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3N6GI65_TED01
+GA   27.00 27.00;
+TC   27.10 27.90;
+NC   26.80 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents a C-terminal domain of approximately 105 amino
+CC   acids found in SWIM zinc finger proteins. It is located downstream of
+CC   the SWIM domain (Pfam:PF04434). SWIM proteins are found in bacteria
+CC   and archaea, particularly in Actinobacteria such as Streptomyces.
+CC   Proteins containing this domain may play roles in DNA repair and
+CC   radiation resistance.
