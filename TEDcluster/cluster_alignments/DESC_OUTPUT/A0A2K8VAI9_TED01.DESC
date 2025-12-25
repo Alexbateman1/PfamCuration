@@ -1,0 +1,15 @@
+ID   6PGD_N
+DE   6-phosphogluconate dehydrogenase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2K8VAI9_TED01
+GA   27.00 27.00;
+TC   27.30 30.50;
+NC   24.40 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents an N-terminal domain of approximately 85 amino
+CC   acids found in 6-phosphogluconate dehydrogenase (6PGD) enzymes. 6PGD is
+CC   a key enzyme in the pentose phosphate pathway that catalyzes the
+CC   oxidative decarboxylation of 6-phosphogluconate to ribulose 5-phosphate
+CC   with concurrent reduction of NADP+ to NADPH.

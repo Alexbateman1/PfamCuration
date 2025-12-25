@@ -1,0 +1,17 @@
+ID   ProRS_C
+DE   Proline-tRNA ligase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2S4YN13_TED03
+GA   27.00 27.00;
+TC   27.00 28.80;
+NC   26.80 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a C-terminal domain of approximately 65 amino
+CC   acids found in bacterial proline-tRNA ligases (ProRS). ProRS is a
+CC   class II aminoacyl-tRNA synthetase that catalyzes the attachment of
+CC   proline to tRNA(Pro) in a two-step reaction: proline is first activated
+CC   by ATP to form Pro-AMP and then transferred to the acceptor end of
+CC   tRNA(Pro). This domain is found predominantly in Actinobacteria
+CC   including Streptomyces and Frankia species.
