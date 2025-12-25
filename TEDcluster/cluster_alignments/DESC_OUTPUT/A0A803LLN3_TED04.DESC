@@ -1,0 +1,26 @@
+ID   GBPL_C
+DE   Guanylate-binding protein-like C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A803LLN3_TED04
+GA   27.00 27.00;
+TC   27.20 27.10;
+NC   26.50 26.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   34040255
+RT   A phase-separated nuclear GBPL circuit controls immunity in plants.
+RA   Huang S., Zhu S., Kumar P., MacMicking J.D.;
+RL   Nature 594:424-429(2021).
+CC   This family represents a small C-terminal domain of approximately
+CC   38 amino acids found at the extreme C-terminus of guanylate-binding
+CC   protein-like (GBPL) proteins in plants. These proteins contain GBP
+CC   (Pfam:PF02263) and GBP_C (Pfam:PF02841) domains upstream. Plant
+CC   GBPLs such as Arabidopsis GBPL3 form phase-separated condensates
+CC   in the nucleus that control plant immunity through concentration
+CC   of defense transcription machinery. The GDF15-GFRAL-like domain
+CC   at the C-terminus may contribute to protein-protein interactions
+CC   or condensate formation. The family is found in land plants
+CC   (Embryophyta).
+
