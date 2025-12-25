@@ -1,0 +1,19 @@
+ID   Pyr_redox_C
+DE   Pyridine nucleotide-disulphide oxidoreductase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5R9AVE7_TED03
+GA   27.00 27.00;
+TC   39.70 53.30;
+NC   26.90 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CL   CL0608
+CC   This family represents a C-terminal domain of approximately 122 amino
+CC   acids found in NADH dehydrogenases and FAD-dependent oxidoreductases
+CC   in Bacteroidota, particularly Flavobacteriaceae and Cytophagales. The
+CC   domain is positioned downstream of the pyridine nucleotide-disulphide
+CC   oxidoreductase domain (Pyr_redox_2, Pfam:PF07992). Structural similarity
+CC   to the Pyr_redox_dim domain (Pfam:PF02852) suggests this domain is
+CC   involved in dimerization. These enzymes are involved in electron
+CC   transfer and include nitrite reductases that convert nitrite to ammonia.
