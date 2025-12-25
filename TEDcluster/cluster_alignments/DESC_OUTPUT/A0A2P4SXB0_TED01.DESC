@@ -1,0 +1,24 @@
+ID   HPS4_mid
+DE   HPS4 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2P4SXB0_TED01
+GA   27.00 27.00;
+TC   27.20 27.40;
+NC   26.50 25.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23084991
+RT   BLOC-3 mutated in Hermansky-Pudlak syndrome is a Rab32/38 guanine
+RT   nucleotide exchange factor.
+RA   Gerondopoulos A., Langemeyer L., Liang J.R., Linford A., Barr F.A.;
+RL   Curr. Biol. 22:2135-2139(2012).
+CC   This family represents a middle domain of approximately 46 amino acids
+CC   found in HPS4 (Hermansky-Pudlak syndrome 4 protein). The domain is
+CC   located between the Intu_longin_1 (Pfam:PF19031) and Intu_longin_3
+CC   (Pfam:PF19033) domains. HPS4 is a component of the BLOC-3 complex,
+CC   which functions as a guanine nucleotide exchange factor for RAB32/38
+CC   GTPases and is involved in melanosome biogenesis. Mutations in HPS4
+CC   cause Hermansky-Pudlak syndrome type 4, characterized by albinism
+CC   and platelet defects.

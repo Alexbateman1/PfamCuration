@@ -1,0 +1,16 @@
+ID   DnaPol3_link
+DE   DNA polymerase III subunit delta linker domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A209BSU9_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.50;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents a small linker domain of approximately 36 amino
+CC   acids found in DNA polymerase III delta subunit proteins. The domain
+CC   is located downstream of the DNA_pol3_delta2 domain (Pfam:PF13177).
+CC   DNA polymerase III delta subunit is part of the clamp loader complex
+CC   that loads the beta-clamp processivity factor onto DNA. The family
+CC   is found predominantly in Actinobacteria.
