@@ -1,0 +1,14 @@
+ID   DUF_euk_C
+DE   Uncharacterized eukaryotic C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A540NSV0_TED02
+GA   27.00 27.00;
+TC   30.30 29.10;
+NC   25.10 25.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This family represents a domain of approximately 146 amino acids found
+CC   in uncharacterized eukaryotic proteins. The domain is typically located
+CC   in the C-terminal region of the protein. The function of this domain
+CC   is unknown.

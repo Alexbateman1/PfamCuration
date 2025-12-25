@@ -1,0 +1,18 @@
+ID   BAH_N
+DE   BAH domain-associated N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A540MQ72_TED01
+GA   27.00 27.00;
+TC   27.40 27.60;
+NC   26.70 26.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents an N-terminal domain of approximately 80 amino
+CC   acids found in plant BAH domain-containing proteins. The domain is
+CC   found exclusively in Viridiplantae, particularly in angiosperms
+CC   including Arabidopsis thaliana (AT1G68580). It is consistently
+CC   positioned at the N-terminus, upstream of the BAH domain (Pfam:PF01426)
+CC   and Agenet domain (Pfam:PF05641). BAH domain proteins are involved in
+CC   chromatin-related processes and epigenetic regulation. The function
+CC   of this N-terminal domain is unknown.

@@ -1,0 +1,17 @@
+ID   Gag_RVT_spider
+DE   Spider retrotransposon Gag-like domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4Y2VDQ7_TED03
+GA   27.00 27.00;
+TC   27.00 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a domain of approximately 84 amino acids found
+CC   in spider (Araneidae) retrotransposon-related proteins. The domain is
+CC   located upstream of reverse transcriptase (RVT_1, Pfam:PF00078) and
+CC   retroviral aspartyl protease (RVP, Pfam:PF00077) domains. Based on
+CC   its position in the protein architecture, it likely represents a
+CC   structural component of the Gag polyprotein precursor of LTR
+CC   retrotransposons that are prevalent in Araneus spider genomes.

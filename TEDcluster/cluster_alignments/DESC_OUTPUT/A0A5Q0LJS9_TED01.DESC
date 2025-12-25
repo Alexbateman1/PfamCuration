@@ -1,0 +1,19 @@
+ID   DUF_AbeC_like
+DE   Streptomyces AbeC-like membrane domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5Q0LJS9_TED01
+GA   27.00 27.00;
+TC   27.00 29.50;
+NC   26.20 23.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a large domain of approximately 270 amino acids
+CC   found predominantly in Streptomyces and related Actinomycetes. The
+CC   domain is found in membrane proteins including those annotated as
+CC   aromatic ring-opening dioxygenases and integral membrane proteins.
+CC   A representative member is SCO3289 (AbeC) from Streptomyces coelicolor,
+CC   which is part of a gene cluster (abe cluster) involved in antibiotic
+CC   production. STRING analysis shows association with protein kinases,
+CC   2-oxoacid dehydrogenases, and glutamate synthase enzymes, suggesting
+CC   involvement in nitrogen metabolism or secondary metabolite biosynthesis.
