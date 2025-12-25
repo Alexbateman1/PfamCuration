@@ -1,0 +1,32 @@
+ID   HIF1AN_C
+DE   Hypoxia-inducible factor inhibitor C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3M0KEY4_TED02
+GA   27.00 27.00;
+TC   27.20 35.80;
+NC   25.30 20.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   12080085
+RT   FIH-1 is an asparaginyl hydroxylase enzyme that regulates the
+RT   transcriptional activity of hypoxia-inducible factor.
+RA   Lando D, Peet DJ, Gorman JJ, Whelan DA, Whitelaw ML, Bruick RK;
+RL   Genes Dev. 2002;16:1466-1471.
+RN   [2]
+RM   12432100
+RT   Structure of factor-inhibiting hypoxia-inducible factor 1: an
+RT   asparaginyl hydroxylase involved in the hypoxic response pathway.
+RA   Dann CE III, Bruick RK, Deisenhofer J;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2002;99:15351-15356.
+CC   This entry represents a short C-terminal domain found in
+CC   hypoxia-inducible factor 1-alpha inhibitor (HIF1AN/FIH-1) in
+CC   Metazoa. This domain is located C-terminal to the JmjC/Cupin_8
+CC   catalytic domain (Pfam:PF13621). HIF1AN is an asparaginyl
+CC   hydroxylase that hydroxylates HIF-1 alpha, functioning as an
+CC   oxygen sensor. Under normoxic conditions, this hydroxylation
+CC   prevents interaction of HIF-1 with transcriptional coactivators.
+CC   HIF1AN also hydroxylates ankyrin repeat domain-containing
+CC   proteins including NFKB1, NOTCH1, and tankyrases.
+
