@@ -1,0 +1,19 @@
+ID   Fungi_UCH
+DE   Fungal ubiquitin C-terminal hydrolase-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:W9ITR8_TED01
+GA   27.00 27.00;
+TC   29.70 29.00;
+NC   26.10 21.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CL   CL0129
+CC   This family represents a domain of approximately 150 amino acids found
+CC   in fungal ubiquitin carboxyl-terminal hydrolase (UCH) proteins. The
+CC   family is found predominantly in Ascomycota, including Dothideomycetes,
+CC   Sordariomycetes, and Eurotiomycetes. Foldseek analysis reveals
+CC   structural similarity to aspartyl protease domains in the Asp clan
+CC   (CL0129). The domain is typically found in proteins annotated as
+CC   ubiquitin carboxyl-terminal hydrolase 19 or related enzymes.
+

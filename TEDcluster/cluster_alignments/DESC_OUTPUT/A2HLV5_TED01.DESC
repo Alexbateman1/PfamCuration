@@ -1,0 +1,15 @@
+ID   DUF_Tricho
+DE   Trichomonas domain of unknown function
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A2HLV5_TED01
+GA   27.00 27.00;
+TC   27.50 27.80;
+NC   26.30 25.70;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Family
+CC   This family represents a domain of unknown function found exclusively
+CC   in Trichomonas vaginalis and related Trichomonadidae. The domain is
+CC   approximately 110 amino acids in length and is found in single-domain
+CC   proteins. The function of this family is unknown.
+

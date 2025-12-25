@@ -1,0 +1,20 @@
+ID   AsnB_Bact
+DE   Bacteroidota asparagine synthetase domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K1Y535_TED02
+GA   27.00 27.00;
+TC   27.20 68.80;
+NC   22.80 22.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+CL   CL0014
+CC   This family represents a domain of approximately 300 amino acids found
+CC   in asparagine synthetase B enzymes in Bacteroidota, particularly
+CC   Flavobacteriaceae and related families. The domain is located C-terminal
+CC   to a small N-terminal domain. Foldseek analysis reveals structural
+CC   similarity to glutamine amidotransferase (GATase) domains in the
+CC   GATase superfamily (CL0014). Asparagine synthetase catalyzes the
+CC   ATP-dependent conversion of aspartate to asparagine using glutamine as
+CC   the nitrogen donor.
+
