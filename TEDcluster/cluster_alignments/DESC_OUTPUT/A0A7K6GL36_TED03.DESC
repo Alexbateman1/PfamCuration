@@ -1,0 +1,18 @@
+ID   MSANTD2_C
+DE   MSANTD2 C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K6GL36_TED03
+GA   27.00 27.00;
+TC   28.20 29.90;
+NC   22.70 21.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents the C-terminal domain of approximately 166
+CC   amino acids found in Myb/SANT-like DNA-binding domain-containing
+CC   protein 2 (MSANTD2). The domain is positioned downstream of the
+CC   Myb_DNA-bind_4 domain (Pfam:PF13837). MSANTD2 is a nuclear protein
+CC   that undergoes SUMOylation at multiple lysine residues. The function
+CC   of MSANTD2 is not well characterized, but it may be involved in
+CC   transcriptional regulation via its Myb-like DNA-binding domain. The
+CC   family is found in vertebrates.

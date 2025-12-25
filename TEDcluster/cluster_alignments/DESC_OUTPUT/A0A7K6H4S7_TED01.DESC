@@ -1,0 +1,30 @@
+ID   CIR1_mid
+DE   CIR1 middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K6H4S7_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   9874765
+RT   CIR, a corepressor linking the DNA binding factor CBF1 to the histone
+RT   deacetylase complex.
+RA   Hsieh J.J.-D., Zhou S., Chen L., Young D.B., Hayward S.D.;
+RL   Proc. Natl. Acad. Sci. U.S.A. 96:23-28(1999).
+RN   [2]
+RM   19409814
+RT   NKAP is a transcriptional repressor of notch signaling and is required
+RT   for T cell development.
+RA   Pajerowski A.G., Nguyen C., Aghajanian H., Shapiro M.J., Shapiro V.S.;
+RL   Immunity 30:696-707(2009).
+CC   This family represents a middle domain of approximately 65 amino acids
+CC   found in corepressor interacting with RBPJ 1 (CIR1). The domain is
+CC   positioned between the N-terminal Cir_N domain (Pfam:PF10197) and the
+CC   C-terminus. CIR1 functions as a corepressor for RBPJ (CBF1), linking
+CC   it to the Sin3-histone deacetylase complex. CIR1 also interacts with
+CC   splicing factors and may modulate alternative splicing. It is involved
+CC   in Notch signaling repression and is required for T cell development.
+CC   The family is found in Metazoa.

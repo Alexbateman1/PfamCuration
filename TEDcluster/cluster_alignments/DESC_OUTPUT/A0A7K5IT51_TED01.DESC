@@ -1,0 +1,22 @@
+ID   VWA3_N
+DE   VWA3 N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K5IT51_TED01
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   26157035
+RT   A novel VWA3B mutation causes a spinocerebellar ataxia.
+RL   Neurogenetics 16:313-315(2015).
+CC   This family represents an N-terminal domain of approximately 91 amino
+CC   acids found in von Willebrand factor A domain-containing proteins 3A
+CC   and 3B (VWA3A/VWA3B). The domain is positioned at the N-terminus of
+CC   these large proteins which contain multiple VWA domains (Pfam:PF13768)
+CC   and DUF4537 (Pfam:PF15057). Mutations in VWA3B cause spinocerebellar
+CC   ataxia type 22 (SCAR22), characterized by adult-onset cerebellar
+CC   ataxia with variable intellectual disability. VWA3B localizes to the
+CC   cytoplasm. The family is found in vertebrates.
