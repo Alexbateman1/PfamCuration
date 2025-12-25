@@ -1,0 +1,26 @@
+ID   Peptid_M14_C
+DE   Zinc carboxypeptidase C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3S8Y6K6_TED03
+GA   27.00 27.00;
+TC   30.60 30.90;
+NC   26.50 22.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 --cpu 8 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   17093047
+RT   The twin-arginine translocation pathway is a major route of protein
+RT   export in Streptomyces coelicolor.
+RA   Widdick DA, Dilks K, Chandra G, Bottrill A, Naldrett M, Pohlschroder M,
+RA   Palmer T;
+RL   Proc. Natl. Acad. Sci. U.S.A. 2006;103:17927-17932.
+CC   This entry represents a C-terminal domain found in bacterial zinc
+CC   carboxypeptidases of the M14 metallopeptidase family in Actinomycetes,
+CC   particularly Streptomyces and related genera. This domain is located
+CC   C-terminal to the catalytic Peptidase_M14 domain (Pfam:PF00246). The
+CC   full-length proteins are secreted zinc-binding carboxypeptidases that
+CC   are exported via the twin-arginine translocation (Tat) pathway. Some
+CC   members contain an additional C-terminal InhA-like_MAM domain
+CC   (Pfam:PF20773).
+
