@@ -1,0 +1,16 @@
+ID   DUF_Actino_sm2
+DE   Small Actinobacterial domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3A4B7Q9_TED01
+GA   27.00 27.00;
+TC   27.80 27.50;
+NC   24.40 24.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents a small domain of approximately 93 amino acids
+CC   found predominantly in Actinobacteria including Streptomyces,
+CC   Thermomonosporaceae, and Streptosporangiaceae. The domain is also
+CC   found in some cyanobacteria. The domain is typically found as the
+CC   sole domain in uncharacterized proteins and shows genomic context
+CC   association with DUF6745 domain proteins.

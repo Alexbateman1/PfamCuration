@@ -1,0 +1,16 @@
+ID   Forkhead_C
+DE   Forkhead domain protein C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A3F3Q638_TED03
+GA   27.00 27.00;
+TC   27.10 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a C-terminal domain of approximately 100 amino
+CC   acids found in fungal forkhead domain-containing transcription factors.
+CC   The domain is located downstream of the FHA (Pfam:PF00498) and
+CC   Forkhead (Pfam:PF00250) domains. Forkhead proteins are transcription
+CC   factors involved in diverse cellular processes including cell cycle
+CC   regulation and development.
