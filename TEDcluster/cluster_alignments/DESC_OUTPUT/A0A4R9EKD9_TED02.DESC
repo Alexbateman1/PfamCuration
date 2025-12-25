@@ -1,0 +1,25 @@
+ID   Strep_morph
+DE   Streptomyces morphological differentiation-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4R9EKD9_TED02
+GA   27.00 27.00;
+TC   27.00 27.60;
+NC   26.10 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   39182107
+RT   Functional connexion of bacterioferritin in antibiotic production and
+RT   morphological differentiation in Streptomyces coelicolor.
+RA   Garcia-Bravo E, Ruiz-Martinez L, Gonzalez-Quinonez N, Mateos LM,
+RA   Rioseras B, Yague P, Manteca A;
+RL   Microb. Cell Fact. 2024;23:230.
+CC   This entry represents a C-terminal domain found in Streptomyces and
+CC   related Actinomycetes. The domain has structural similarity to DUF5949
+CC   (Pfam:PF19374). In Streptomyces coelicolor, the characterized member
+CC   SCO1756 is linked to morphological differentiation and antibiotic
+CC   production. The protein is upregulated during sporulation and is
+CC   associated with bacterioferritin function. These proteins are found
+CC   as lipoproteins with a second N-terminal domain.
+

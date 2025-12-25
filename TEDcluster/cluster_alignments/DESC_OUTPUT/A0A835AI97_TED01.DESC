@@ -1,0 +1,27 @@
+ID   GALS_N
+DE   Galactan synthase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A835AI97_TED01
+GA   27.00 27.00;
+TC   27.00 27.80;
+NC   26.20 26.30;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   23243126
+RT   Identification and characterization of a galactan synthase from
+RT   Arabidopsis thaliana.
+RA   Liwanag AJ, Ebert B, Verhertbruggen Y, Rennie EA, Rautengarten C,
+RA   Oikawa A, Andersen MC, Clausen MH, Scheller HV;
+RL   Plant Cell 2012;24:5024-5036.
+CC   This entry represents an N-terminal domain found in galactan synthase
+CC   (GALS) proteins in plants (Viridiplantae). This domain is located
+CC   N-terminal to the Glyco_transf_92 domain (Pfam:PF01697). GALS enzymes
+CC   are beta-1,4-galactosyltransferases involved in the biosynthesis of
+CC   beta-1,4-galactan, an abundant polysaccharide in plant cell walls.
+CC   Beta-1,4-galactans are found as side chains of rhamnogalacturonan I,
+CC   a major component of pectin. In Arabidopsis, GALS1, GALS2 and GALS3
+CC   are Golgi-localized membrane proteins that can transfer galactose
+CC   residues from UDP-galactose to galactopentaose acceptors.
+

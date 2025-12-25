@@ -1,0 +1,18 @@
+ID   Fucose_iso_N
+DE   Fucose isomerase N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:C4GDX1_TED01
+GA   27.00 27.00;
+TC   27.00 27.80;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This entry represents an N-terminal domain found in L-fucose isomerase
+CC   enzymes. This domain is located N-terminal to the Fucose_iso_C domain
+CC   (Pfam:PF02952). L-fucose isomerase (EC 5.3.1.25) catalyzes the
+CC   reversible aldose-ketose isomerization between L-fucose and L-fuculose.
+CC   This reaction is the first step in L-fucose catabolism in bacteria.
+CC   L-fucose is a common component of glycoconjugates in mammals and
+CC   plants and is an important carbon source for intestinal bacteria.
+
