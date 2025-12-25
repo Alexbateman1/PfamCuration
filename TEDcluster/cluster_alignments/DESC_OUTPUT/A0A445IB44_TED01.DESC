@@ -1,0 +1,16 @@
+ID   WD40_N
+DE   WD40-associated N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A445IB44_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a small N-terminal domain of approximately 43
+CC   amino acids found upstream of WD40 repeat domains. The domain is
+CC   found in WD repeat-containing proteins and NADPH-protochlorophyllide
+CC   oxidoreductases. The WD40-associated proteins form beta-propeller
+CC   structures involved in diverse cellular functions including signal
+CC   transduction and protein-protein interactions.
