@@ -1,0 +1,33 @@
+ID   EDEM3_linker
+DE   EDEM3 alpha-mannosidase linker domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K4JAM3_TED03
+GA   27.00 27.00;
+TC   27.40 27.40;
+NC   26.60 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   16431915
+RT   EDEM3, a soluble EDEM homolog, enhances glycoprotein endoplasmic
+RT   reticulum-associated degradation and mannose trimming.
+RA   Hirao K., Natsuka Y., Tamura T., Wada I., Morito D., Natsuka S.,
+RA   Romero P., Sleno B., Tremblay L.O., Herscovics A., Nagata K.,
+RA   Hosokawa N.;
+RL   J. Biol. Chem. 281:9650-9658(2006).
+RN   [2]
+RM   34143952
+RT   Bi-allelic variants in the ER quality-control mannosidase gene EDEM3
+RT   cause a congenital disorder of glycosylation.
+RA   Polla D.L., Edmondson A.C., Duvet S., March M.E., Sousa A.B., Lehman A.,
+RA   Niyazov D., van Dijk F., Demirdas S., van Slegtenhorst M.A.;
+RL   Am. J. Hum. Genet. 108:1342-1349(2021).
+CC   This family represents a linker domain of approximately 60 amino acids
+CC   found in EDEM3 (ER degradation-enhancing alpha-mannosidase-like protein
+CC   3). The domain is located between the Glyco_hydro_47 catalytic domain
+CC   (Pfam:PF01532) and the PA domain (Pfam:PF02225). EDEM3 is involved in
+CC   endoplasmic reticulum-associated degradation (ERAD) by catalyzing
+CC   mannose trimming of misfolded glycoproteins. Mutations in EDEM3 cause
+CC   congenital disorder of glycosylation type 2V (CDG2V).
+
