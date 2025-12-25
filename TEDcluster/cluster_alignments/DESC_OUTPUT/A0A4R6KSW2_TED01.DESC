@@ -1,0 +1,16 @@
+ID   HicB_N
+DE   HicB antitoxin N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4R6KSW2_TED01
+GA   27.00 27.00;
+TC   29.50 28.30;
+NC   26.20 23.60;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This family represents an N-terminal domain of approximately 78 amino
+CC   acids found in HicB family proteins from Actinobacteria. HicB is the
+CC   antitoxin component of the HicAB toxin-antitoxin system. This domain
+CC   is located upstream of the HicB domain (Pfam:PF05534). The proteins
+CC   are sometimes annotated as histidine kinases, though they function
+CC   primarily in toxin-antitoxin systems.

@@ -1,0 +1,15 @@
+ID   HTH22_N
+DE   Helix-turn-helix transcriptional regulator N-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A4Q7XLA5_TED01
+GA   27.00 27.00;
+TC   27.30 35.30;
+NC   26.90 25.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This family represents an N-terminal domain of approximately 45 amino
+CC   acids found in helix-turn-helix transcriptional regulators from
+CC   Streptomyces and related Actinobacteria. The domain is located upstream
+CC   of the HTH_22 DNA-binding domain (Pfam:PF13309). These proteins function
+CC   as transcriptional regulators controlling various metabolic processes.
