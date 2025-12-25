@@ -1,0 +1,19 @@
+ID   Flavo_carot
+DE   Flavobacteria carotenoid metabolism-associated membrane protein
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A2U0HYK7_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Family
+CC   This family represents a membrane protein domain found in Bacteroidota,
+CC   particularly in Flavobacteriaceae. Many family members are annotated
+CC   as beta-carotene 15,15'-monooxygenase-related or membrane proteins.
+CC   The proteins are approximately 200 amino acids in length and are
+CC   predicted to be membrane-associated. They are functionally associated
+CC   with sigma-70 factors and other transcriptional regulators. The family
+CC   may be involved in carotenoid metabolism or membrane lipid processing
+CC   in marine and aquatic bacteria.
+

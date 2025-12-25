@@ -1,0 +1,29 @@
+ID   PGAP6_mid
+DE   PGAP6 GPI phospholipase middle domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A5N4E8J5_TED02
+GA   27.00 27.00;
+TC   27.10 27.10;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   27881714
+RT   A GPI processing phospholipase A2, PGAP6, modulates Nodal signaling in
+RT   embryos by shedding CRIPTO.
+RA   Lee GH, Fujita M, Takaoka K, Murakami Y, Fujihara Y, Kanzawa N,
+RA   Murakami KI, Kajikawa E, Takada Y, Saito K, Ikawa M, Hamada H, Maeda Y,
+RA   Kinoshita T;
+RL   J. Cell Biol. 2016;215:705-718.
+CC   This entry represents a middle domain found in PGAP6 (Post-GPI
+CC   attachment to proteins factor 6), also known as TMEM8A, in Metazoa.
+CC   This domain is located between the large N-terminal extracellular
+CC   region and the C-terminal DUF3522 transmembrane domain (Pfam:PF12036).
+CC   PGAP6 is a GPI processing phospholipase A2 involved in GPI-anchor
+CC   maturation. It has phospholipase A2 activity that removes an acyl-chain
+CC   at the sn-2 position of GPI-anchors. PGAP6 is required for shedding
+CC   of the GPI-anchored protein CRIPTO, which modulates Nodal signaling
+CC   during embryonic development. In mice, loss of PGAP6 causes embryonic
+CC   lethality with anterior-posterior axis formation defects.
+

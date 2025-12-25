@@ -1,0 +1,18 @@
+ID   Actino_FeoB
+DE   Actinomycete ferrous iron transport-associated domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A399HCL5_TED01
+GA   27.00 27.00;
+TC   27.60 29.30;
+NC   26.90 22.00;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -Z 90746521 -E 1000 --cpu 8 HMM pfamseq
+TP   Family
+CC   This family represents a small domain of approximately 65 amino acids
+CC   found in Actinomycetes (Streptomyces, Nonomuraea, Actinomadura, and
+CC   related genera). Many family members are annotated as ferrous iron
+CC   transport proteins or are associated with genes encoding iron trans-
+CC   porters. The family is also functionally associated with HTH_30
+CC   helix-turn-helix transcriptional regulators. These proteins may be
+CC   involved in regulating iron uptake in soil-dwelling Actinomycetes.
+
