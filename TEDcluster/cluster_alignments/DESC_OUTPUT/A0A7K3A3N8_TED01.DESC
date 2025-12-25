@@ -1,0 +1,19 @@
+ID   RNA_bind_NYN
+DE   RNA-binding domain associated with NYN nuclease
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K3A3N8_TED01
+GA   27.00 27.00;
+TC   27.30 27.30;
+NC   24.60 21.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This family represents an N-terminal domain of approximately 98 amino
+CC   acids found in RNA-binding proteins of Actinomycetota, particularly
+CC   Streptomyces and related genera. The domain is positioned upstream of
+CC   the NYN_YacP nuclease domain (Pfam:PF05991). STRING analysis shows
+CC   strong association with tRNA synthetases, SpoU methyltransferases,
+CC   and tRNA modification enzymes, suggesting involvement in RNA
+CC   metabolism or tRNA processing. The function of this N-terminal
+CC   RNA-binding domain is unknown but may be involved in substrate
+CC   recognition or RNA binding.

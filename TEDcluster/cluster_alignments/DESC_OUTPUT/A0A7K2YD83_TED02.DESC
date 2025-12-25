@@ -1,0 +1,19 @@
+ID   PadR_C
+DE   PadR transcriptional regulator C-terminal domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K2YD83_TED02
+GA   27.00 27.00;
+TC   27.00 27.30;
+NC   26.90 26.80;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a C-terminal domain of approximately 51 amino
+CC   acids found in PadR family transcriptional regulators of
+CC   Actinomycetota, particularly Streptomycetaceae, Microbacteriaceae, and
+CC   Mycobacteriales. The domain is positioned downstream of the PadR
+CC   DNA-binding domain (Pfam:PF03551). PadR regulators are bacterial
+CC   transcription factors involved in various stress responses including
+CC   detoxification and antibiotic resistance. The function of this
+CC   C-terminal extension is unknown but may be involved in dimerization
+CC   or effector binding.

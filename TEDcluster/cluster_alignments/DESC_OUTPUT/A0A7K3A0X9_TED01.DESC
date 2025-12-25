@@ -1,0 +1,19 @@
+ID   DUF_Strep_72
+DE   Small Streptomyces domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K3A0X9_TED01
+GA   27.00 27.00;
+TC   27.40 38.30;
+NC   25.10 23.40;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 -Z 90746521 --cpu 8 HMM pfamseq
+TP   Domain
+CC   This family represents a small domain of approximately 72 amino acids
+CC   found predominantly in Actinomycetota, particularly Streptomyces and
+CC   related genera. The proteins containing this domain are typically
+CC   small single-domain proteins of unknown function. SCO5555 from
+CC   Streptomyces coelicolor is a characterized member that is regulated
+CC   by the alternative sigma factor SigG. STRING analysis shows strong
+CC   association with aconitase, IclR family transcriptional regulators,
+CC   and LeuD domains, suggesting possible involvement in central
+CC   metabolism or regulation.

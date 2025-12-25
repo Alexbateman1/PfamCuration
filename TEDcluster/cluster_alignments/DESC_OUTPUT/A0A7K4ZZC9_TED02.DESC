@@ -1,0 +1,29 @@
+ID   LARP6_RRM
+DE   LARP6 RNA recognition motif domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7K4ZZC9_TED02
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.90 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+RN   [1]
+RM   20603131
+RT   Nonmuscle myosin-dependent synthesis of type I collagen.
+RA   Cai L., Fritz D., Stefanovic L., Stefanovic B.;
+RL   J. Mol. Biol. 401:564-578(2010).
+RN   [2]
+RM   21746880
+RT   A novel role of vimentin filaments: binding and stabilization of
+RT   collagen mRNAs.
+RA   Challa A.A., Stefanovic B.;
+RL   Mol. Cell. Biol. 31:3773-3789(2011).
+CC   This family represents the RNA recognition motif (RRM) domain of
+CC   approximately 65 amino acids found in La-related protein 6 (LARP6,
+CC   also known as Acheron). The domain is positioned between the La
+CC   domain (Pfam:PF05383) and the SUZ-C domain (Pfam:PF12901). LARP6
+CC   regulates the coordinated translation of type I collagen alpha-1 and
+CC   alpha-2 mRNAs through high-affinity binding to a stem-loop structure
+CC   in their 5' UTR. This regulation involves interactions with vimentin
+CC   filaments and non-muscle myosin. The family is found in Metazoa.
