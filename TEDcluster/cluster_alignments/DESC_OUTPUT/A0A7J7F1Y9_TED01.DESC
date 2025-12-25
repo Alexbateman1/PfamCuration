@@ -1,0 +1,17 @@
+ID   TMPPE_N
+DE   TMPPE N-terminal transmembrane domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A0A7J7F1Y9_TED01
+GA   27.00 27.00;
+TC   27.00 27.00;
+NC   26.80 26.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -Z 90746521 -E 1000 HMM pfamseq
+TP   Domain
+CC   This family represents the N-terminal domain of approximately 180 amino
+CC   acids found in transmembrane proteins with metallophosphoesterase domain
+CC   (TMPPE). The domain contains multiple transmembrane helices and is
+CC   located N-terminal to the Metallophos domain (Pfam:PF00149). TMPPE
+CC   belongs to the metallophosphoesterase superfamily and binds divalent
+CC   metal cations. The family is found in vertebrates including mammals,
+CC   birds, and fish.
