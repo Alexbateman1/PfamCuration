@@ -1,0 +1,22 @@
+ID   Pkinase_C_fungi
+DE   Fungal protein kinase C-terminal extension
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:B8MT55_TED03
+GA   27.00 27.00;
+TC   27.00 28.30;
+NC   26.40 22.90;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch --cpu 8 -E 1000 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a small C-terminal domain of approximately
+CC   45 amino acids found immediately downstream of the protein kinase
+CC   catalytic domain (Pfam:PF00069) in dual-specificity kinases of
+CC   ascomycete fungi. The kinases are found in diverse fungal lineages
+CC   including Sordariomycetes, Eurotiomycetes, and Dothideomycetes.
+CC   STRING network analysis reveals strong functional association with
+CC   spindle assembly checkpoint components (Spc7, MAD, Ndc80_HEC) and
+CC   the HORMA domain, suggesting these kinases function in cell cycle
+CC   regulation and chromosome segregation. The C-terminal extension
+CC   may contribute to substrate recognition or regulatory interactions
+CC   in the mitotic checkpoint pathway.
+

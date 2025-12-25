@@ -1,0 +1,22 @@
+ID   SAC_Tricho
+DE   Trichomonas spindle assembly domain
+AU   Bateman A;0000-0002-6982-4660
+SE   TED:A2HP33_TED01
+GA   27.00 27.00;
+TC   67.30 67.30;
+NC   26.80 23.10;
+BM   hmmbuild  -o /dev/null HMM SEED
+SM   hmmsearch -E 1000 --cpu 8 -Z 90746521 HMM pfamseq
+TP   Domain
+CC   This family represents a domain of approximately 147 amino acids
+CC   found in Trichomonas vaginalis proteins that are annotated as
+CC   spindle assembly abnormal proteins or HORMA domain-containing
+CC   proteins. The domain is highly expanded in T. vaginalis with
+CC   approximately 175 proteins identified. The proteins typically
+CC   contain this domain along with a second related domain. The name
+CC   reflects the annotation of several member proteins as spindle
+CC   assembly checkpoint-related. HORMA domains are known to function
+CC   in chromosome segregation and DNA repair. The specific function
+CC   of this Trichomonas-specific domain variant is unknown but may
+CC   relate to the unusual cell division mechanisms of this parasite.
+
